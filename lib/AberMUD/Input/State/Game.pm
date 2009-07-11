@@ -25,11 +25,13 @@ has dispatch => (
 );
 
 has universe => (
-    
+    is  => 'rw',
+    isa => 'AberMUD::Universe',
 );
+
 sub run {
     my $self = shift;
-    my ($universe, $you, $input) = @_;
+    my ($you, $input) = @_;
 
     # first word of the user input
     my $command = lc((split ' ', $input)[0]);

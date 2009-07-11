@@ -8,7 +8,8 @@ use MUD::Input::State;
 
 sub run {
     my $self = shift;
-    my ($universe, $you, $name) = @_;
+    my ($you, $name) = @_;
+    warn "@_";
     $name = ucfirst $name;
     $you->name($name);
     push @{$you->input_state}, AberMUD::Input::State::Game->new;

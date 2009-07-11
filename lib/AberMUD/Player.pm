@@ -4,15 +4,34 @@ use Moose;
 use AberMUD::Server;
 extends 'MUD::Player';
 
+=head1 NAME
+
+AberMUD::Player - AberMUD Player class for playing
+
+=head1 SYNOPSIS
+
+    my $player = AberMUD::Player->new;
+
+    ...
+
+    $player->save;
+
+=head1 DESCRIPTION
+
+AberMUD's player system is not very nomadic. A player's location and inventory does not stay on that person when he leaves the game. 
+
+=cut
+
 has 'prompt' => (
     is  => 'rw',
     isa => 'CodeRef'
 );
 
 has 'universe' => (
-    is   => 'rw',
-    isa  => 'AberMUD::Universe',
-    requires => 1
+    is        => 'rw',
+    isa       => 'AberMUD::Universe',
+    required  => 1,
+    weak_ref  => 1,
 );
 
 sub save {
