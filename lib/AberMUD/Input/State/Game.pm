@@ -19,7 +19,16 @@ has dispatch => (
                 my $dir = $_;
                 ($dir => sub { "You try to go $dir but the MUD sucks!\n" });
             }
-            qw/north south east west up down/
+            qw/north south east west up down/),
+            save => sub {
+                my $you = shift;
+                $you->save
+            },
+            who => sub {
+                my $you = shift;
+                join "\n" =>
+                    keys %{ $you->universe->players_in_game };
+            },
         }
     }
 );

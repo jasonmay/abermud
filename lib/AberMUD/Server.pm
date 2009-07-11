@@ -27,7 +27,7 @@ sub spawn_player {
                 "\e[1;36m$name\e[0m \e[1;33m\$\e[0m "
         },
         input_state => [$self->starting_state],
-	universe => $universe
+        universe => $universe
     );
 }
 
