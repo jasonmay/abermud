@@ -16,18 +16,14 @@ has '+universe' => (
 );
 
 sub spawn_player {
-    my $self = shift;
-    my ($universe) = @_;
+    my $self     = shift;
+    my $id       = shift;
+    my $universe = shift;
     return AberMUD::Player->new(
-        prompt => sub {
-            my $you = shift;
-            my $name = $you->name;
-
-            return
-                "\e[1;36m$name\e[0m \e[1;33m\$\e[0m "
-        },
+        id => $id,
+        prompt => "\e[1;33m\$\e[0m ",
         input_state => [$self->starting_state],
-        universe => $universe
+        universe => $universe,
     );
 }
 
