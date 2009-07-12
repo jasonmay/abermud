@@ -4,7 +4,6 @@ use Moose;
 extends 'MUD::Input::State';
 use AberMUD::Input::State::Login::Password;
 use MUD::Input::State;
-use Scalar::Util qw(weaken);
 
 sub run {
     my $self = shift;
