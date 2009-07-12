@@ -37,15 +37,18 @@ has 'prompt' => (
 has 'universe' => (
     is        => 'rw',
     isa       => 'AberMUD::Universe',
-#    required  => 1,
     weak_ref  => 1,
     metaclass => 'DoNotSerialize',
+);
+
+has 'password' => (
+    is => 'rw',
+    isa => 'Str',
 );
 
 has 'id' => (
     is        => 'rw',
     isa       => 'Int',
-#    required  => 1,
     metaclass => 'DoNotSerialize',
 );
 
@@ -80,9 +83,7 @@ sub load_data {
     if ($self->is_saved) {
         my $player = AberMUD::Player->load($load_file);
 
-        for (qw/id universe input_state/) {
-            $player->$_($self->$_);
-        }
+        $player->$_($self->$_) for qw/id universe input_state/;
 
         $self->universe->players->{$self->id} = $player;
         weaken($self->universe->players_in_game->{lc $self->name} = $player);
