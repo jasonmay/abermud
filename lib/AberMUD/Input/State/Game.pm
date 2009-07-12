@@ -37,6 +37,11 @@ has dispatch => (
 
                 $you->prompt($args);
             },
+            quit => sub {
+                my $you = shift;
+
+                $you->disconnect;
+            },
         }
     }
 );

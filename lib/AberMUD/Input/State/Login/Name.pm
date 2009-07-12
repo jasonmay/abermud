@@ -15,6 +15,7 @@ sub run {
     $you->name($name);
     $you = $you->load_data;
 
+    warn $you->io;
     return "Please enter your password: ";
 }
 

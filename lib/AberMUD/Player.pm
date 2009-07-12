@@ -1,8 +1,9 @@
 #!/usr/bin/env perl
 package AberMUD::Player;
 use Moose;
-use AberMUD::Server;
 extends 'MUD::Player';
+use AberMUD::Server;
+use POE::Wheel::ReadWrite;
 use MooseX::Storage;
 use Scalar::Util qw(weaken);
 use Carp qw(cluck);
@@ -52,6 +53,10 @@ has 'id' => (
     metaclass => 'DoNotSerialize',
 );
 
+has '+io' => (
+    metaclass => 'DoNotSerialize',
+);
+
 has '+input_state' => (
     metaclass => 'DoNotSerialize',
 );
@@ -83,7 +88,7 @@ sub load_data {
     if ($self->is_saved) {
         my $player = AberMUD::Player->load($load_file);
 
-        $player->$_($self->$_) for qw/id universe input_state/;
+        $player->$_($self->$_) for qw/id universe input_state io/;
 
         $self->universe->players->{$self->id} = $player;
         weaken($self->universe->players_in_game->{lc $self->name} = $player);
@@ -98,6 +103,14 @@ sub push_state {
     push @{$self->input_state}, @_;
 }
 
+sub disconnect {
+    my $self = shift;
+    my $id = $self->id;
+    $self->io->shutdown_output;
+    delete $self->universe->players->{$self->id};
+    delete $self->universe->players_in_game->{$self->name}
+        if exists $self->universe->players_in_game->{$self->name};
+    print STDERR "DISconnection [$id] :(\n\n";
 }
 
 1;
