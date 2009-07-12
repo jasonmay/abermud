@@ -11,7 +11,7 @@ sub run {
     my ($you, $name) = @_;
     $name = lc $name;
 
-    push @{$you->input_state}, AberMUD::Input::State::Login::Password->new;
+    $you->push_state(AberMUD::Input::State::Login::Password->new);
 
     $you->name($name);
     $you = $you->load_data;

@@ -93,7 +93,10 @@ sub load_data {
     return $self;
 }
 
-sub disconnect {
+sub push_state {
+    my $self = shift;
+    push @{$self->input_state}, @_;
+}
 
 }
 
