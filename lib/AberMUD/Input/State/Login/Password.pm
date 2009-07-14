@@ -7,12 +7,18 @@ use MUD::Input::State;
 
 sub run {
     my $self = shift;
-    my ($you, $name) = @_;
-    $name = lc $name;
+    my ($you, $pass) = @_;
 
-    $you->push_state(AberMUD::Input::State::Game->new);
+    if ($you->is_saved) {
+        if (crypt($pass, lc $you->name) eq $you->password) {
+            $you->push_state(AberMUD::Input::State::Game->new);
+            return "Welcome!\n";
+        }
+        else {
+            return "Nope. Try again.\nPlease enter your password: ";
+        }
+    }
 
-    return "Welcome!\n";
 }
 
 1;
