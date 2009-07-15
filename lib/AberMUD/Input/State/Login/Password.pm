@@ -11,7 +11,7 @@ sub run {
 
     if ($you->is_saved) {
         if (crypt($pass, lc $you->name) eq $you->password) {
-            $you->push_state(AberMUD::Input::State::Game->new);
+            $you->shift_state;
             return "Welcome!\n";
         }
         else {
