@@ -7,6 +7,7 @@ use POE::Wheel::ReadWrite;
 use MooseX::Storage;
 use Scalar::Util qw(weaken);
 use Carp qw(cluck);
+use DateTime;
 
 =head1 NAME
 
@@ -47,6 +48,12 @@ has 'password' => (
     isa => 'Str',
 );
 
+has 'confirmed_password' => (
+    is        => 'rw',
+    isa       => 'Str',
+    traits => ['DoNotSerialize'],
+);
+
 has 'id' => (
     is        => 'rw',
     isa       => 'Int',
@@ -59,6 +66,89 @@ has '+io' => (
 
 has '+input_state' => (
     traits => ['DoNotSerialize'],
+);
+
+has 'death_time' => (
+    is => 'rw',
+    isa => 'DateTime',
+    traits => ['DoNotSerialize'],
+);
+
+# TODO Location Spells 
+
+# the aber-convention for hitting power
+has 'damage' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 8,
+);
+
+# invisibility up to N level
+has 'visibility_level' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 0,
+);
+
+has 'level' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 1,
+);
+
+has 'fighting' => (
+    is => 'rw',
+    isa => 'Boolean',
+    default => 0,
+    traits => ['DoNotSerialize'],
+);
+
+has 'score' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 0,
+);
+
+# aber-convention for threshold of auto-flee
+has 'wimpy' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 25,
+);
+
+# aber-convention for the the base of your hit points
+has 'basestrength' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 40,
+);
+
+# aber-convention for the the level-based part of your hit points
+has 'levelstrength' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 0,
+);
+
+# aber-convention for the the base of your mana
+has 'basemana' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 40,
+);
+
+# aber-convention for the the level-based part of your mana
+has 'levelmana' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 0,
+);
+
+# highest level attained
+has 'max_level' => (
+    is => 'rw',
+    isa => 'Int',
+    default => 1,
 );
 
 sub unshift_state {
