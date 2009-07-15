@@ -103,6 +103,20 @@ has 'fighting' => (
     traits => ['DoNotSerialize'],
 );
 
+has 'sitting' => (
+    is => 'rw',
+    isa => 'Boolean',
+    default => 0,
+    traits => ['DoNotSerialize'],
+);
+
+has 'helping' => (
+    is => 'rw',
+    isa => 'Boolean',
+    default => 0,
+    traits => ['DoNotSerialize'],
+);
+
 has 'score' => (
     is => 'rw',
     isa => 'Int',
