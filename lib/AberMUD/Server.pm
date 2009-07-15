@@ -22,7 +22,14 @@ sub spawn_player {
     return AberMUD::Player->new(
         id => $id,
         prompt => "\e[1;33m\$\e[0m ",
-        input_state => [$self->starting_state],
+        input_state => [
+            map { eval "require $_"; $_->new }
+            qw(
+                AberMUD::Input::State::Login::Name
+                AberMUD::Input::State::Login::Password
+                AberMUD::Input::State::Game
+            )
+        ],
         universe => $universe,
     );
 }

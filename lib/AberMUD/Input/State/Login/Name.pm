@@ -10,7 +10,7 @@ sub run {
     my ($you, $name) = @_;
     $name = lc $name;
 
-    $you->push_state(AberMUD::Input::State::Login::Password->new);
+    $you->shift_state;
 
     $you->name($name);
     $you = $you->load_data;

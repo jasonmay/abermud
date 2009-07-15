@@ -39,7 +39,7 @@ has 'universe' => (
     is        => 'rw',
     isa       => 'AberMUD::Universe',
     weak_ref  => 1,
-    metaclass => 'DoNotSerialize',
+    traits => ['DoNotSerialize'],
 );
 
 has 'password' => (
@@ -50,16 +50,26 @@ has 'password' => (
 has 'id' => (
     is        => 'rw',
     isa       => 'Int',
-    metaclass => 'DoNotSerialize',
+    traits => ['DoNotSerialize'],
 );
 
 has '+io' => (
-    metaclass => 'DoNotSerialize',
+    traits => ['DoNotSerialize'],
 );
 
 has '+input_state' => (
-    metaclass => 'DoNotSerialize',
+    traits => ['DoNotSerialize'],
 );
+
+sub unshift_state {
+    my $self = shift;
+    unshift @{$self->input_state}, @_;
+}
+
+sub shift_state {
+    my $self = shift;
+    shift @{$self->input_state};
+}
 
 sub in_game {
     my $self = shift;
@@ -96,11 +106,6 @@ sub load_data {
     }
 
     return $self;
-}
-
-sub push_state {
-    my $self = shift;
-    push @{$self->input_state}, @_;
 }
 
 sub disconnect {
