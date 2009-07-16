@@ -48,12 +48,6 @@ has 'password' => (
     isa => 'Str',
 );
 
-has 'confirmed_password' => (
-    is        => 'rw',
-    isa       => 'Str',
-    traits => ['DoNotSerialize'],
-);
-
 has 'id' => (
     is        => 'rw',
     isa       => 'Int',
@@ -74,7 +68,7 @@ has 'death_time' => (
     traits => ['DoNotSerialize'],
 );
 
-# TODO Location Spells 
+# TODO Location, Spells 
 
 # the aber-convention for hitting power
 has 'damage' => (
