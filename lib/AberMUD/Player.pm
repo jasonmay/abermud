@@ -188,10 +188,22 @@ sub is_saved {
 sub save_data {
     my $self = shift;
 
-    cluck "Trying to call save when the player is not in-game"
-        unless $self->in_game;
+    if (!$self->in_game) {
+        cluck "Trying to call save when the player is not in-game";
+        return;
+    }
 
     $self->store('data/players/' . lc $self->name . '.yaml');
+}
+
+sub materialize {
+    my $self = shift;
+    weaken($self->universe->players_in_game->{lc $self->name} = $self);
+}
+
+sub dematerialize {
+    my $self = shift;
+    delete $self->universe->players_in_game->{lc $self->name};
 }
 
 sub load_data {
@@ -205,7 +217,6 @@ sub load_data {
         $player->$_($self->$_) for qw/id universe input_state io/;
 
         $self->universe->players->{$self->id} = $player;
-        weaken($self->universe->players_in_game->{lc $self->name} = $player);
         return $player;
     }
 
@@ -218,7 +229,7 @@ sub disconnect {
     $self->io->shutdown_output;
     delete $self->universe->players->{$self->id};
     delete $self->universe->players_in_game->{$self->name}
-        if exists $self->universe->players_in_game->{$self->name};
+    if exists $self->universe->players_in_game->{$self->name};
     print STDERR "DISconnection [$id] :(\n\n";
 }
 

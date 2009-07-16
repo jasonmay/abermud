@@ -1,9 +1,11 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State::Login::Password;
 use Moose;
-extends 'MUD::Input::State';
-use AberMUD::Input::State::Game;
-use MUD::Input::State;
+extends 'AberMUD::Input::State';
+
+has '+entry_message' => (
+    default => 'Please enter your password: ',
+);
 
 sub run {
     my $self = shift;
@@ -12,13 +14,16 @@ sub run {
     if ($you->is_saved) {
         if (crypt($pass, lc $you->name) eq $you->password) {
             $you->shift_state;
-            return "Welcome!\n";
+            return $you->input_state->[0]->entry_message;
         }
         else {
-            return "Nope. Try again.\nPlease enter your password: ";
+            return "Nope. Try again.\n" . $self->entry_message;
         }
     }
-
+    else {
+        warn "The player should have been saved by this input state";
+        $you->disconnect;
+    }
 }
 
 1;

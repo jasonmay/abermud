@@ -1,8 +1,26 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State::Game;
 use Moose;
-extends 'MUD::Input::State';
+extends 'AberMUD::Input::State';
 use DDS;
+
+sub welcome_message { "\e[2J" . << '_STOP_';
+    _    _               __  __ _   _ ____
+   / \  | |__   ___ _ __|  \/  | | | |  _ \
+  / _ \ | '_ \ / _ \ '__| |\/| | | | | | | |
+ / ___ \| |_) |  __/ |  | |  | | |_| | |_| |
+/_/   \_\_.__/ \___|_|  |_|  |_|\___/|____/
+
+
+
+
+The game starts now!
+_STOP_
+}
+
+has '+entry_message' => (
+    default => welcome_message(),
+);
 
 has dispatch => (
     is  => 'rw',
@@ -27,9 +45,7 @@ has dispatch => (
             who => sub {
                 my $you = shift;
                 join("\n" =>
-                    map { "$_ => " . $you->universe->players_in_game->{$_}->id }
                     keys %{ $you->universe->players_in_game })
-                    . $you->id;
             },
             prompt => sub {
                 my $you = shift;
@@ -64,9 +80,8 @@ sub run {
         exists $dispatch->{$command}
             ? $dispatch->{$command}->($you, $args)
             : "Sorry, I don't understand!";
-    my $prompt = $you->prompt;
-
-    return "$output\n$prompt";
+    return "$output";
 }
 
-1;
+1
+

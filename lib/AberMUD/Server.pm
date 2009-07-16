@@ -15,6 +15,23 @@ has '+universe' => (
     isa => 'AberMUD::Universe'
 );
 
+around '_response' => sub {
+    my $orig = shift;
+    my $self = shift;
+    my $id   = shift;
+    my $player = $self->universe->players->{$id};
+
+    my $response = $self->$orig($id, @_);
+    if (@{$player->input_state}
+        && ref $player->input_state->[0] eq 'AberMUD::Input::State::Game') {
+        $player->materialize;
+        $player->save_data;
+        my $prompt = $player->prompt;
+        return "$response\n$prompt";
+    }
+    return $response;
+};
+
 sub spawn_player {
     my $self     = shift;
     my $id       = shift;
@@ -26,7 +43,6 @@ sub spawn_player {
             map { eval "require $_"; $_->new }
             qw(
                 AberMUD::Input::State::Login::Name
-                AberMUD::Input::State::Login::Password
                 AberMUD::Input::State::Game
             )
         ],
