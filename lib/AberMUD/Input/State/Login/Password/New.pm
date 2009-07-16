@@ -11,7 +11,7 @@ sub run {
     my $self = shift;
     my ($you, $pass) = @_;
 
-        $you->password($pass);
+        $you->password(crypt($pass, $you->name));
 
         $you->shift_state;
         return $you->input_state->[0]->entry_message;
