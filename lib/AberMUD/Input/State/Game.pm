@@ -40,7 +40,8 @@ has dispatch => (
             qw/north south east west up down/),
             save => sub {
                 my $you = shift;
-                $you->save_data
+                $you->save_data;
+                return "Saved!\n";
             },
             who => sub {
                 my $you = shift;

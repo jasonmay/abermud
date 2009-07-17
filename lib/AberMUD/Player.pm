@@ -8,6 +8,7 @@ use MooseX::Storage;
 use Scalar::Util qw(weaken);
 use Carp qw(cluck);
 use DateTime;
+use KiokuDB;
 
 =head1 NAME
 
@@ -40,7 +41,7 @@ has 'universe' => (
     is        => 'rw',
     isa       => 'AberMUD::Universe',
     weak_ref  => 1,
-    traits => ['DoNotSerialize'],
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 has 'password' => (
@@ -51,21 +52,22 @@ has 'password' => (
 has 'id' => (
     is        => 'rw',
     isa       => 'Int',
-    traits => ['DoNotSerialize'],
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 has '+io' => (
-    traits => ['DoNotSerialize'],
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 has '+input_state' => (
-    traits => ['DoNotSerialize'],
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 has 'death_time' => (
     is => 'rw',
     isa => 'DateTime',
-    traits => ['DoNotSerialize'],
+    default => sub { DateTime->now },
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 # TODO Location, Spells 
@@ -94,21 +96,21 @@ has 'fighting' => (
     is => 'rw',
     isa => 'Bool',
     default => 0,
-    traits => ['DoNotSerialize'],
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 has 'sitting' => (
     is => 'rw',
     isa => 'Bool',
     default => 0,
-    traits => ['DoNotSerialize'],
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 has 'helping' => (
     is => 'rw',
     isa => 'Bool',
     default => 0,
-    traits => ['DoNotSerialize'],
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 has 'score' => (
@@ -176,7 +178,7 @@ sub in_game {
 
 sub is_saved {
     my $self = shift;
-    return -e('data/players/' . lc $self->name . '.yaml');
+    return $self->universe->directory->lookup($self->name);
 }
 
 sub save_data {
@@ -187,7 +189,7 @@ sub save_data {
         return;
     }
 
-    $self->store('data/players/' . lc $self->name . '.yaml');
+    $self->universe->directory->store($self);
 }
 
 sub materialize {
@@ -203,12 +205,14 @@ sub dematerialize {
 sub load_data {
     my $self = shift;
 
-    my $load_file = 'data/players/' . lc $self->name . '.yaml';
-
     if ($self->is_saved) {
-        my $player = AberMUD::Player->load($load_file);
-
-        $player->$_($self->$_) for qw/id universe input_state io/;
+        my $player = $self->universe->directory->lookup($self->name);
+        for ($player->meta->get_all_attributes) {
+            if ($_->does('KiokuDB::DoNotSerialize')) {
+                my $attr = $_->accessor;
+                $player->$attr($self->$attr)
+            }
+        }
 
         $self->universe->players->{$self->id} = $player;
         return $player;
