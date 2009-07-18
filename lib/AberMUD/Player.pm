@@ -190,7 +190,7 @@ sub save_data {
     }
 
     if ($self->universe->directory->lookup(lc $self->name)) {
-        $self->universe->directory->store($self);
+        $self->universe->directory->update($self);
     }
     else {
         $self->universe->directory->store(lc $self->name => $self);
@@ -227,7 +227,6 @@ sub dematerialize {
     my $self = shift;
     delete $self->universe->players_in_game->{lc $self->name};
 }
-
 
 sub disconnect {
     my $self = shift;
