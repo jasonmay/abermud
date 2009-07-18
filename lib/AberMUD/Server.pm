@@ -24,6 +24,9 @@ around '_response' => sub {
     my $response = $self->$orig($id, @_);
     if (@{$player->input_state}
         && ref $player->input_state->[0] eq 'AberMUD::Input::State::Game') {
+        $self->universe->broadcast("\n"
+            . $player->name . " has joined the game!\n"
+        ) unless $player->in_game;
         $player->materialize;
         $player->save_data;
         my $prompt = $player->prompt;
@@ -40,11 +43,11 @@ sub spawn_player {
         id => $id,
         prompt => "\e[1;33m\$\e[0m ",
         input_state => [
-            map { eval "require $_"; $_->new }
-            qw(
-                AberMUD::Input::State::Login::Name
-                AberMUD::Input::State::Game
-            )
+        map { eval "require $_"; $_->new }
+        qw(
+        AberMUD::Input::State::Login::Name
+        AberMUD::Input::State::Game
+        )
         ],
         universe => $universe,
     );

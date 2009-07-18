@@ -10,7 +10,7 @@ has directory => (
     is  => 'rw',
     isa => 'KiokuDB',
     default => sub {
-        KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1, serialize => 'yaml')
+        KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1, serializer => 'yaml')
     },
 );
 
@@ -34,7 +34,15 @@ sub load_player {
     my $self = shift;
     my $player = shift;
     my %args = @_;
+}
 
+sub broadcast {
+    my $self   = shift;
+    my $output = shift;
+
+    foreach my $player (values %{$self->players_in_game}) {
+        $player->io->put($output);
+    }
 }
 
 1;
