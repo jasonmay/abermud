@@ -218,7 +218,6 @@ sub load_data {
 
 sub materialize {
     my $self = shift;
-    warn "!!! " . $self->name;
     weaken($self->universe->players_in_game->{lc $self->name} = $self)
         unless exists $self->universe->players_in_game->{lc $self->name};
 }
