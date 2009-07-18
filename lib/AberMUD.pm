@@ -18,7 +18,7 @@ TODO TODO TODO TODO TODO
 
 =head1 AUTHOR
 
-Jason May C<< <jason.a.amy@gmail.com >>
+Jason May C<< <jason.a.may@gmail.com >>
 
 =head1 LICENSE
 
