@@ -178,7 +178,7 @@ sub in_game {
 
 sub is_saved {
     my $self = shift;
-    return $self->universe->directory->lookup($self->name);
+    return $self->universe->directory->lookup('player-' . lc $self->name);
 }
 
 sub save_data {
@@ -189,11 +189,11 @@ sub save_data {
         return;
     }
 
-    if ($self->universe->directory->lookup(lc $self->name)) {
+    if ($self->universe->directory->lookup('player-' . lc $self->name)) {
         $self->universe->directory->update($self);
     }
     else {
-        $self->universe->directory->store(lc $self->name => $self);
+        $self->universe->directory->store('player-' . lc $self->name => $self);
     }
 }
 
@@ -201,7 +201,8 @@ sub load_data {
     my $self = shift;
 
     if ($self->is_saved) {
-        my $player = $self->universe->directory->lookup(lc $self->name);
+        my $player
+            = $self->universe->directory->lookup('player-' . lc $self->name);
         for ($player->meta->get_all_attributes) {
             if ($_->does('KiokuDB::DoNotSerialize')) {
                 my $attr = $_->accessor;
@@ -235,8 +236,6 @@ sub disconnect {
 
     if (exists $self->universe->players_in_game->{$self->name}) {
         $self->dematerialize;
-        warn 'disconnect ' .
-            join ' ' => keys %{$self->universe->players_in_game};
         $self->universe->broadcast($self->name . " disconnected.\n");
         $self->shift_state;
         print STDERR "Disconnection [$id] :(\n\n";
