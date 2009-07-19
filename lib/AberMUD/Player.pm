@@ -280,11 +280,13 @@ sub dematerialize {
     delete $self->universe->players_in_game->{lc $self->name};
 }
 
-sub disconnect {
+around 'disconnect' => sub {
+    my $orig = shift;
     my $self = shift;
     my %args = @_;
     my $id = $self->id;
-    $self->io->shutdown_output;
+
+    $self->$orig(@_);
     delete $self->universe->players->{$self->id};
 
     if (exists $self->universe->players_in_game->{$self->name}) {
@@ -294,8 +296,8 @@ sub disconnect {
             unless $args{'silent'};
 
         $self->shift_state;
-        print STDERR "Disconnection [$id] :(\n\n";
+        $self->sys_message("Disconnection [$id] :(");
     }
-}
+};
 
 1;

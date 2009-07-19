@@ -1,9 +1,12 @@
 #!/usr/bin/env perl
 package AberMUD::Server;
 use Moose;
+use MooseX::POE;
 extends 'MUD::Server';
 use AberMUD::Player;
 use AberMUD::Universe;
+use POE::Session;
+use POE::Kernel;
 
 has player_data_path => (
     is  => 'rw',
@@ -41,7 +44,7 @@ around '_response' => sub {
 
     my $response = $self->$orig($id, @_);
     return "You are in a void of nothingness...\n"
-        unless @{$player->input_state};
+    unless @{$player->input_state};
 
     if (ref $player->input_state->[0] eq 'AberMUD::Input::State::Game') {
         $player->materialize;
@@ -49,6 +52,16 @@ around '_response' => sub {
         return "$response\n$prompt";
     }
     return $response;
+};
+
+around 'START' => sub {
+    my $orig = shift;
+    my ($self, $kernel, $session) = @_[0, KERNEL, SESSION];
+    $kernel->delay(tick => 1);
+};
+
+event 'tick' => sub {
+    $_[KERNEL]->delay(tick => 1);
 };
 
 1;
