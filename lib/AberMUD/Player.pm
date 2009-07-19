@@ -236,27 +236,32 @@ sub dump_states {
     $self->sys_message(join ' ' => map { ref } @{$self->input_states});
 }
 
+sub _map_unserializables {
+    my $self = shift;
+    my $player = shift;
+
+    for ($player->meta->get_all_attributes) {
+        if ($_->does('KiokuDB::DoNotSerialize')) {
+            my $attr = $_->accessor;
+            next if $attr eq 'id' or $attr eq 'io';
+            next if $attr eq 'dir_player';
+            $self->$attr($player->$attr);
+        }
+    }
+}
+
 sub materialize {
     my $self = shift;
     my $id = $self->id;
-    $self->sys_message("materialize");
     if (!$self->in_game) {
+        $self->sys_message("materialize");
         if ($self->dir_player) {
             my $dir_player = $self->dir_player;
             $self->universe->broadcast(
                 sprintf "\n%s is back!\n", $self->name
             );
 
-            # oh here's all my old attributes that you can't load
-            for ($self->meta->get_all_attributes) {
-                if ($_->does('KiokuDB::DoNotSerialize')) {
-                    my $attr = $_->accessor;
-                    next if $attr eq 'id' or $attr eq 'io';
-                    next if $attr eq 'dir_player';
-
-                    $dir_player->$attr($self->$attr);
-                }
-            }
+            $dir_player->_map_unserializables($self);
 
             if ($dir_player->in_game) { #ghost that sucker
                 $dir_player->io->shutdown_output;
