@@ -64,4 +64,7 @@ event 'tick' => sub {
     $_[KERNEL]->delay(tick => 1);
 };
 
+no Moose;
+__PACKAGE__->meta->make_immutable;
+
 1;

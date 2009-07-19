@@ -58,4 +58,7 @@ sub player_lookup {
     return $self->directory->lookup("player-$name");
 }
 
+no Moose;
+__PACKAGE__->meta->make_immutable;
+
 1;

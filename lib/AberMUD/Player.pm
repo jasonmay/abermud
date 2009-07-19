@@ -298,11 +298,13 @@ around 'disconnect' => sub {
         $self->dematerialize;
 
         $self->universe->broadcast($self->name . " disconnected.\n")
-            unless $args{'silent'};
+        unless $args{'silent'};
 
         $self->shift_state;
-        $self->sys_message("Disconnection [$id] :(");
     }
 };
+
+no Moose;
+__PACKAGE__->meta->make_immutable;
 
 1;

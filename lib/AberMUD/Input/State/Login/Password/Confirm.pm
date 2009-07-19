@@ -26,4 +26,7 @@ sub run {
     return $output . $you->input_state->[0]->entry_message;
 }
 
+no Moose;
+__PACKAGE__->meta->make_immutable;
+
 1;
