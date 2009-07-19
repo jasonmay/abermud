@@ -14,14 +14,14 @@ sub run {
     $name = lc $name;
 
     $you->name($name);
-    if ($you->is_saved) {
-        $you = $you->load_data;
+    $you->dir_player($you->universe->player_lookup($name));
+    if ($you->dir_player) {
         $you->input_state->[0]
             = AberMUD::Input::State::Login::Password->new;
     }
     else {
         # trash this state and add some new ones
-        $you->shift_state; #$you->shift_state;
+        $you->shift_state;
         $you->unshift_state(
             map { eval "require $_"; $_->new } qw(
                 AberMUD::Input::State::Login::Password::New

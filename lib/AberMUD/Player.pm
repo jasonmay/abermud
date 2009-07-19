@@ -55,6 +55,12 @@ has 'id' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
+has 'dir_player' => (
+    is        => 'rw',
+    isa       => 'AberMUD::Player',
+    traits => ['KiokuDB::DoNotSerialize'],
+);
+
 has '+io' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
@@ -173,7 +179,10 @@ sub shift_state {
 
 sub in_game {
     my $self = shift;
-    return exists($self->universe->players_in_game->{$self->name});
+    # one at a time to help with debug messages
+    return 0 unless $self->universe;
+    return 0 unless exists($self->universe->players_in_game->{$self->name});
+    return $self->universe->players_in_game->{$self->name}->id == $self->id;
 }
 
 sub is_saved {
@@ -189,7 +198,7 @@ sub save_data {
         return;
     }
 
-    if ($self->universe->directory->lookup('player-' . lc $self->name)) {
+    if ($self->universe->player_lookup($self->name)) {
         $self->universe->directory->update($self);
     }
     else {
@@ -230,13 +239,15 @@ sub dematerialize {
 
 sub disconnect {
     my $self = shift;
+    my %args = @_;
     my $id = $self->id;
     $self->io->shutdown_output;
     delete $self->universe->players->{$self->id};
 
     if (exists $self->universe->players_in_game->{$self->name}) {
         $self->dematerialize;
-        $self->universe->broadcast($self->name . " disconnected.\n");
+        $self->universe->broadcast($self->name . " disconnected.\n")
+            unless $args{'silent'};
         $self->shift_state;
         print STDERR "Disconnection [$id] :(\n\n";
     }

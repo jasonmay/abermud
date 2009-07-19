@@ -11,8 +11,8 @@ sub run {
     my $self = shift;
     my ($you, $pass) = @_;
 
-    if ($you->is_saved) {
-        if (crypt($pass, lc $you->name) eq $you->password) {
+    if ($you->dir_player) {
+        if (crypt($pass, lc $you->name) eq $you->dir_player->password) {
             $you->shift_state;
             return $you->input_state->[0]->entry_message;
         }

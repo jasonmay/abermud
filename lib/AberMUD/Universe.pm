@@ -45,4 +45,17 @@ sub broadcast {
     }
 }
 
+sub abermud_message {
+    return unless $ENV{'ABERMUD_DEBUG'} > 0;
+    my $self = shift;
+    my $msg = shift;
+    print STDERR sprintf("\e[0;36m[ABERMUD]\e[m ${msg}\n", @_);
+}
+
+sub player_lookup {
+    my $self = shift;
+    my $name = shift;
+    return $self->directory->lookup("player-$name");
+}
+
 1;
