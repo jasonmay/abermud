@@ -218,12 +218,22 @@ sub load_data {
                 $player->$attr($self->$attr)
             }
         }
-
         $self->universe->players->{$self->id} = $player;
         return $player;
     }
 
     return $self;
+}
+
+sub sys_message {
+    my $self = shift;
+    return unless $self->universe;
+    $self->universe->abermud_message(@_);
+}
+
+sub dump_states {
+    my $self = shift;
+    $self->sys_message(join ' ' => map { ref } @{$self->input_states});
 }
 
 sub materialize {
