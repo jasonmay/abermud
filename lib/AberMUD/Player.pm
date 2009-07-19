@@ -238,8 +238,41 @@ sub dump_states {
 
 sub materialize {
     my $self = shift;
-    weaken($self->universe->players_in_game->{lc $self->name} = $self)
-        unless exists $self->universe->players_in_game->{lc $self->name};
+    my $id = $self->id;
+    $self->sys_message("materialize");
+    if (!$self->in_game) {
+        if ($self->dir_player) {
+            my $dir_player = $self->dir_player;
+            $self->universe->broadcast(
+                sprintf "\n%s is back!\n", $self->name
+            );
+
+            # oh here's all my old attributes that you can't load
+            for ($self->meta->get_all_attributes) {
+                if ($_->does('KiokuDB::DoNotSerialize')) {
+                    my $attr = $_->accessor;
+                    next if $attr eq 'id' or $attr eq 'io';
+                    next if $attr eq 'dir_player';
+
+                    $dir_player->$attr($self->$attr);
+                }
+            }
+
+            if ($dir_player->in_game) { #ghost that sucker
+                $dir_player->io->shutdown_output;
+                weaken($dir_player->universe->players->{$self->id}
+                    = $dir_player);
+            }
+            else {
+                weaken(
+                    $dir_player->universe->players_in_game->{lc $self->name}
+                    = $dir_player
+                );
+            }
+            $dir_player->io($self->io);
+            $dir_player->id($self->id);
+        }
+    }
 }
 
 sub dematerialize {
@@ -256,8 +289,10 @@ sub disconnect {
 
     if (exists $self->universe->players_in_game->{$self->name}) {
         $self->dematerialize;
+
         $self->universe->broadcast($self->name . " disconnected.\n")
             unless $args{'silent'};
+
         $self->shift_state;
         print STDERR "Disconnection [$id] :(\n\n";
     }
