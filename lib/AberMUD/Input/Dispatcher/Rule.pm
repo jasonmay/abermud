@@ -18,7 +18,7 @@ sub _match {
         unless $self->prefix;
 
     my $truncated = substr($path->path, 0, length($self->string));
-    return 0 unless $truncated eq substr($self->string, 0, length($truncated));
+    return 0 unless $truncated eq $self->string;
 
     return (1, substr($path->path, length($self->string)));
 }
