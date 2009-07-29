@@ -7,6 +7,8 @@ use AberMUD::Location;
 use File::Basename;
 use Carp;
 use String::Util ':all';
+#use KiokuDB;
+#use KiokuDB::Backend::DBI;
 
 my @locations = (AberMUD::Location->new);
 my %locations;
@@ -55,7 +57,10 @@ sub parse_zone {
         $_ = <$fh> while $_ && lc($_) !~ /^lflags/;
         last unless $_;
 
+        my ($flags) = /\{(.+)\}/;
+
         #do something with lflags later
+        $loc->flags(+{map { $_ => 1 } split(' ', lc $flags)}) if $flags;
 
         $_ = <$fh>;
         die $_ unless /\^/;
