@@ -5,6 +5,8 @@ use lib 'lib';
 use AberMUD::Util;
 use AberMUD::Location;
 use File::Basename;
+use Carp;
+use String::Util ':all';
 
 my @locations = (AberMUD::Location->new);
 my %locations;
@@ -12,93 +14,79 @@ my %loc_map;
 
 sub parse_zone {
     my $file = shift;
-    my $zone = basename $file;
+    my $zone = lc(basename $file);
     $zone =~ s/\.zone$//;
     return unless -f $file;
     open my $fh, '<', $file;
     my $title;
     my $prev_line;
     my $n = 0;
+    $_ = <$fh> until $_ && /^%locations/ || !$_;
+
     while (<$fh>) {
         $n++;
         next if m{/\*} .. m{\*/};
-        if (/^%locations/ .. /^%(?!locations)/) {
-            next if /^%locations/;
-            if (/^lflags.*{(.*)}/) {
-                # something
-            }
-            elsif($prev_line && $prev_line =~ /^lflags/ && (/.+\^/ .. /^\^/)) {
-                next if ($prev_line && $prev_line !~ /^lflags/);
-                if (/^\^/) {
-                    if (!defined $locations[-1]->id) {
-                        die "zone parsing failed to grab location ID";
-                    }
-                    push @locations, AberMUD::Location->new(zone => $zone);
-                }
-                else { 
-                    if (/(.+)\^/) {
-                        warn "title: $_";
-                        $locations[-1]->title($1);
-                    }
-                    else {
-                        warn "desciprion: " . substr($_, 0, 40);
-                        my $loc = $locations[-1];
-                        $locations[-1]->description(($loc->description||'') . $_);
-                    }
-                    next; # don't mark previous line
-                }
-            }
-            else {
-                next if /^\s*$/;
-                if ($prev_line =~ /^\^/) {
-                    my ($location, $exit_data) = /\s*(\S+)\s*(.+)/;
-                    $locations[-1]->id($location);
-                    warn "ID being set: $_";
-                    my %exits = map { (lc substr($_, 0, 1)) => lc($_) }
-                    @{AberMUD::Location->directions};
+        next if /^%locations/;
+        next if /^\s*$/;
+        last if /^%(?!locations)/;
+        my ($id, $exit_info) = /(\S+)\s*(.*);/;
+        $id = trim $id;
+        my $loc = AberMUD::Location->new(zone => $zone);
+        croak "$file -> $_" unless $id;
+        $loc->id($id);
+        $locations{"$id\@$zone"} = $loc;
 
-                    my @dir_nodes = split ' ', $exit_data;
-                    for my $dir_node (@dir_nodes) {
-                        next unless $dir_node =~ /:/;
-                        my ($exit_letter, $id) = $dir_node =~ /(\w+):\^?(\w+)/;
-                        die "$dir_node" unless exists $exits{$exit_letter};
-                        my $exit = $exits{$exit_letter};
-                        $loc_map{$location}->{$exit} = $id;
-                    }
-                    $locations{$location} = $locations[-1];
-                }
-                else {
-                    # probably stuff like altitude etc
-                }
-            }
+        my @exit_nodes = split ' ', $exit_info;
+
+        foreach my $exit_node (@exit_nodes) {
+            # TODO check for doors
+            my ($dir_letter, $exit_loc) = $exit_node =~/\^?(.+):(.+)/;
+            $exit_loc .= "\@$zone" if $exit_loc !~ /@/;
+            $exit_loc =~ s/\@(.+)/'@' . lc $1/e;
+            $loc_map{"$id\@$zone"}->{$dir_letter} = $exit_loc;
         }
-        $prev_line = $_;
+
+        $_ = <$fh> while $_ && lc($_) !~ /^lflags/;
+        last unless $_;
+
+        #do something with lflags later
+
+        $_ = <$fh>;
+        die $_ unless /\^/;
+        my ($title) = /(.+)\^/;
+        $loc->title($title) if $title;
+
+        $_ = <$fh>; last unless $_;
+
+        while ($_ && $_ !~ /^\^/) {
+            $loc->description(($loc->description||'') . $_);
+            $_ = <$fh>;
+        }
     }
     close $fh;
-    for my $loc (@locations) {
-        if (!defined $loc->id) {
-#            warn "oh shit!";
-            next;
-        }
-        for (@{AberMUD::Location->directions}) {
-            next unless exists $loc_map{$loc->id};
-            next unless exists $loc_map{$loc->id}->{$_};
-
-            my $loc_id = $loc_map{$loc->id}->{$_};
-            next unless exists $locations{$loc_id};
-            #warn sprintf("$_ of %s is %s", $loc->id, $loc_id);
-            $loc->$_($locations{$loc_id});
-        }
-    }
+    warn "parsed $file";
 }
 
 my $zones_dir = 'cdirt/data/ZONES';
 opendir(my $dh, $zones_dir);
-
 for (readdir($dh)) {
+    next unless lc($_) =~ /\.zone$/;
     parse_zone "$zones_dir/$_";
 }
-
 closedir $dh;
+
+my %dir = map { substr($_, 0, 1) => $_ } (qw/north south east west up down/);
+while (my ($loc_id, $loc) = each %locations) {
+    next unless exists $loc_map{$loc_id};
+    while (my ($dir_letter, $exit) = each %dir) {
+        next unless exists $loc_map{$loc_id}->{$dir_letter};
+        #this is false negative with locations that depend on doors
+#        die "location ID not mapped correctly!: $loc_id $dir_letter"
+        next
+            unless exists $locations{$loc_map{$loc_id}->{$dir_letter}};
+        $loc->$exit($locations{$loc_map{$loc_id}->{$dir_letter}});
+    }
+#    die "$loc_id";
+}
 
 die;
