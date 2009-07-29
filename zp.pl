@@ -14,7 +14,8 @@ my %loc_map;
 
 sub parse_zone {
     my $file = shift;
-    my $zone = lc(basename $file);
+    my $zone_file = lc(basename $file);
+    my $zone = $zone_file;
     $zone =~ s/\.zone$//;
     return unless -f $file;
     open my $fh, '<', $file;
@@ -27,6 +28,11 @@ sub parse_zone {
         $n++;
         next if m{/\*} .. m{\*/};
         next if /^%locations/;
+        if (/^%zone:(\S+)/) {
+            $zone = $1;
+            $_ = <$fh> while $_ && !/^%locations/;
+            $_ = <$fh>; # skip
+        }
         next if /^\s*$/;
         last if /^%(?!locations)/;
         my ($id, $exit_info) = /(\S+)\s*(.*);/;
@@ -76,17 +82,18 @@ for (readdir($dh)) {
 closedir $dh;
 
 my %dir = map { substr($_, 0, 1) => $_ } (qw/north south east west up down/);
+my $count = 0;
 while (my ($loc_id, $loc) = each %locations) {
     next unless exists $loc_map{$loc_id};
     while (my ($dir_letter, $exit) = each %dir) {
         next unless exists $loc_map{$loc_id}->{$dir_letter};
         #this is false negative with locations that depend on doors
 #        die "location ID not mapped correctly!: $loc_id $dir_letter"
-        next
+        $count++, next
             unless exists $locations{$loc_map{$loc_id}->{$dir_letter}};
         $loc->$exit($locations{$loc_map{$loc_id}->{$dir_letter}});
     }
 #    die "$loc_id";
 }
 
-die;
+die $count;
