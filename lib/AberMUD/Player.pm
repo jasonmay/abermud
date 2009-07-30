@@ -44,6 +44,12 @@ has 'universe' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
+has 'location' => (
+    is => 'rw',
+    isa => 'AberMUD::Location',
+    traits => ['KiokuDB::DoNotSerialize'],
+);
+
 has 'password' => (
     is => 'rw',
     isa => 'Str',
@@ -250,6 +256,14 @@ sub _map_unserializables {
     }
 }
 
+# game stuff
+sub setup {
+    my $self = shift;
+    my $location = $self->universe->directory->lookup('location-start2');
+    $self->sys_message("locatino set TYPOS");
+    $self->location($location);
+}
+
 sub materialize {
     my $self = shift;
     my $id = $self->id;
@@ -262,8 +276,9 @@ sub materialize {
             );
 
             $dir_player->_map_unserializables($self);
+            $self->dump_states;
 
-            if ($dir_player->in_game) { #ghost that sucker
+            if ($dir_player->in_game) {
                 $dir_player->io->shutdown_output;
                 weaken($dir_player->universe->players->{$self->id}
                     = $dir_player);
@@ -276,6 +291,16 @@ sub materialize {
             }
             $dir_player->io($self->io);
             $dir_player->id($self->id);
+        }
+        else {
+            weaken(
+                $self->universe->players_in_game->{lc $self->name}
+                = $self
+            );
+            $self->save_data;
+            $self->universe->broadcast(
+                sprintf "\n%s has joined!\n", $self->name
+            );
         }
     }
 }
