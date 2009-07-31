@@ -66,7 +66,7 @@ sub show_exits {
         next unless $self->${\"has_$_"};
         $output .= ucfirst($_) . ': ' . $self->$_->title . "\n";
     }
-    return $output;
+    return $output||'';
 }
 
 sub look {

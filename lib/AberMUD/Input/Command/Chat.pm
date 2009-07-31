@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-package AberMUD::Input::Command::Who;
+package AberMUD::Input::Command::Chat;
 use Moose;
 extends 'AberMUD::Input::Command';
 
@@ -9,8 +9,7 @@ has '+name' => ( default => $command_name );
 
 sub run {
     my $you  = shift;
-
-    return join "\n" => keys %{$you->universe->players_in_game};
+    return "You try to talk but your mouth has been taped shut!";
 }
 
 no Moose;

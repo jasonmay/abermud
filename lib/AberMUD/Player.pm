@@ -7,6 +7,7 @@ use POE::Wheel::ReadWrite;
 use MooseX::Storage;
 use Scalar::Util qw(weaken);
 use Carp qw(cluck);
+use AberMUD::Location;
 use DateTime;
 use KiokuDB;
 
@@ -48,6 +49,11 @@ has 'location' => (
     is => 'rw',
     isa => 'AberMUD::Location',
     traits => ['KiokuDB::DoNotSerialize'],
+    handles => {
+        map {
+            ("can_go_$_" => "has_$_")
+        } @{AberMUD::Location->directions}
+    },
 );
 
 has 'password' => (
@@ -173,6 +179,21 @@ has 'max_level' => (
     default => 1,
 );
 
+foreach my $direction (@{AberMUD::Location->directions}) {
+    __PACKAGE__->meta->add_method("go_$direction" =>
+        sub {
+            my $self = shift;
+
+            return "You can't go that way."
+                unless $self->${\"can_go_$direction"};
+
+            $self->location($self->location->$direction);
+
+            return $self->location->look;
+        }
+    );
+}
+
 sub unshift_state {
     my $self = shift;
     unshift @{$self->input_state}, @_;
@@ -251,7 +272,7 @@ sub _map_unserializables {
             my $attr = $_->accessor;
             next if $attr eq 'id' or $attr eq 'io';
             next if $attr eq 'dir_player';
-            $self->$attr($player->$attr);
+            $self->$attr($player->$attr) if defined $player->$attr;
         }
     }
 }
@@ -260,7 +281,7 @@ sub _map_unserializables {
 sub setup {
     my $self = shift;
     my $location = $self->universe->directory->lookup('location-start2');
-    $self->sys_message("locatino set TYPOS");
+    die "No location found in directory" unless defined $location;
     $self->location($location);
 }
 
@@ -276,7 +297,6 @@ sub materialize {
             );
 
             $dir_player->_map_unserializables($self);
-            $self->dump_states;
 
             if ($dir_player->in_game) {
                 $dir_player->io->shutdown_output;
@@ -288,6 +308,7 @@ sub materialize {
                     $dir_player->universe->players_in_game->{lc $self->name}
                     = $dir_player
                 );
+                $self->setup;
             }
             $dir_player->io($self->io);
             $dir_player->id($self->id);
@@ -298,6 +319,7 @@ sub materialize {
                 = $self
             );
             $self->save_data;
+            $self->setup;
             $self->universe->broadcast(
                 sprintf "\n%s has joined!\n", $self->name
             );

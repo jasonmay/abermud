@@ -10,7 +10,7 @@ has directory => (
     is  => 'rw',
     isa => 'KiokuDB',
     default => sub {
-        KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1, serializer => 'yaml')
+        KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1)
     },
 );
 

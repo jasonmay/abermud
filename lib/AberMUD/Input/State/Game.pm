@@ -35,7 +35,7 @@ has dispatcher => (
 sub BUILD {
     my $self = shift;
 
-    foreach my $command ($self->commands) {
+    foreach my $command (sort $self->commands) {
         my $command_object = $command->new;
         $self->dispatcher->add_rule(
             AberMUD::Input::Dispatcher::Rule->new(
