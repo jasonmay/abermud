@@ -102,7 +102,7 @@ my $scope = $kdb->new_scope;
 my %dir = map { substr($_, 0, 1) => $_ } @{AberMUD::Location->directions};
 
 while (my ($dir_key, $dir_value) = each %dir_locations) {
-    $kdb->store("location_$dir_key" => $dir_value);
+    $kdb->store("location-$dir_key" => $dir_value);
 }
 
 warn "$locations{'Bones@abyss'}";
