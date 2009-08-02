@@ -189,7 +189,7 @@ foreach my $direction (@{AberMUD::Location->directions}) {
 
             $self->location($self->location->$direction);
 
-            return $self->location->look;
+            return $self->look;
         }
     );
 }
@@ -340,6 +340,22 @@ sub materialize {
 sub dematerialize {
     my $self = shift;
     delete $self->universe->players_in_game->{lc $self->name};
+}
+
+sub look {
+    my $self = shift;
+    my $loc = shift || $self->location;
+    my $output = $loc->title . "\n";
+
+    $output .= $loc->description;
+    foreach my $player (values %{$self->universe->players_in_game}) {
+        next if $player == $self;
+        $output .= ucfirst($player->name) . " is standing here.\n";
+    }
+
+    $output .= "\n" . $loc->show_exits;
+
+    return $output;
 }
 
 around 'disconnect' => sub {

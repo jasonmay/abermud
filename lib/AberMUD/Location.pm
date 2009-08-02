@@ -69,16 +69,6 @@ sub show_exits {
     return $output||'';
 }
 
-sub look {
-    my $self = shift;
-    my $output = $self->title . "\n";
-
-    $output .= $self->description . "\n";
-    $output .= $self->show_exits;
-
-    return $output;
-}
-
 no Moose;
 __PACKAGE__->meta->make_immutable;
 

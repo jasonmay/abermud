@@ -10,7 +10,7 @@ has '+name' => ( default => $command_name );
 sub run {
     my $you  = shift;
     return "You are somehow nowhere." unless defined $you->location;
-    return $you->location->look;
+    return $you->look;
 }
 
 no Moose;
