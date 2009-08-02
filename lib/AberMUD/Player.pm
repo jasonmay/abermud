@@ -298,20 +298,30 @@ sub materialize {
 
             $dir_player->_map_unserializables($self);
 
+            my $was_in_game = 0;
             if ($dir_player->in_game) {
                 $dir_player->io->shutdown_output;
                 weaken($dir_player->universe->players->{$self->id}
                     = $dir_player);
+                $was_in_game = 1;
             }
             else {
                 weaken(
                     $dir_player->universe->players_in_game->{lc $self->name}
                     = $dir_player
                 );
-                $self->setup;
             }
             $dir_player->io($self->io);
             $dir_player->id($self->id);
+                weaken(
+                    $dir_player->universe->players->{$self->id}
+                    = $dir_player
+                );
+            $dir_player->universe->players->{$self->id}
+                ->_map_unserializables($dir_player);
+            $dir_player->universe->players->{$self->id}->io($dir_player->io);
+            $dir_player->universe->players->{$self->id}->id($dir_player->id);
+            $dir_player->setup unless $was_in_game;
         }
         else {
             weaken(
