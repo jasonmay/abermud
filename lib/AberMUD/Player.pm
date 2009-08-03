@@ -263,7 +263,7 @@ sub dump_states {
     $self->sys_message(join ' ' => map { ref } @{$self->input_states});
 }
 
-sub _map_unserializables {
+sub _copy_unserializable_data {
     my $self = shift;
     my $player = shift;
 
@@ -275,6 +275,31 @@ sub _map_unserializables {
             $self->$attr($player->$attr) if defined $player->$attr;
         }
     }
+}
+
+sub _copy_socket_data {
+    my $self = shift;
+    my $player = shift;
+
+    $self->id($player->id) if defined $player->id;
+    $self->io($player->io) if defined $player->io;
+}
+
+sub _join_game {
+    my $self = shift;
+
+    warn "No universe!", return unless $self->universe;
+    warn "players_in_game undefined!" unless $self->universe->players_in_game;
+    weaken( $self->universe->players_in_game->{lc $self->name} = $self );
+}
+
+# TODO better name for this
+sub _join_server {
+    my $self = shift;
+
+    warn "No universe!", return unless $self->universe;
+    warn "players_in_game undefined!" unless $self->universe->players_in_game;
+    weaken( $self->universe->players->{$self->id} = $self );
 }
 
 # game stuff
@@ -290,44 +315,26 @@ sub materialize {
     my $id = $self->id;
     if (!$self->in_game) {
         $self->sys_message("materialize");
-        if ($self->dir_player) {
-            my $dir_player = $self->dir_player;
+        my $dir_player = $self->dir_player;
+        if ($dir_player) {
             $self->universe->broadcast(
                 sprintf "\n%s is back!\n", $self->name
             );
 
-            $dir_player->_map_unserializables($self);
+            $dir_player->_copy_unserializable_data($self);
 
-            my $was_in_game = 0;
             if ($dir_player->in_game) {
                 $dir_player->io->shutdown_output;
-                weaken($dir_player->universe->players->{$self->id}
-                    = $dir_player);
-                $was_in_game = 1;
             }
             else {
-                weaken(
-                    $dir_player->universe->players_in_game->{lc $self->name}
-                    = $dir_player
-                );
+                $dir_player->_join_game;
+                $dir_player->setup;
             }
-            $dir_player->io($self->io);
-            $dir_player->id($self->id);
-                weaken(
-                    $dir_player->universe->players->{$self->id}
-                    = $dir_player
-                );
-            $dir_player->universe->players->{$self->id}
-                ->_map_unserializables($dir_player);
-            $dir_player->universe->players->{$self->id}->io($dir_player->io);
-            $dir_player->universe->players->{$self->id}->id($dir_player->id);
-            $dir_player->setup unless $was_in_game;
+            $dir_player->_copy_socket_data($self);
+            $dir_player->_join_server;
         }
         else {
-            weaken(
-                $self->universe->players_in_game->{lc $self->name}
-                = $self
-            );
+            $self->_join_game;
             $self->save_data;
             $self->setup;
             $self->universe->broadcast(
