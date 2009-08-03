@@ -298,7 +298,7 @@ sub _join_server {
     my $self = shift;
 
     warn "No universe!", return unless $self->universe;
-    warn "players_in_game undefined!" unless $self->universe->players_in_game;
+    warn "universe->players undefined!" unless $self->universe->players;
     weaken( $self->universe->players->{$self->id} = $self );
 }
 
