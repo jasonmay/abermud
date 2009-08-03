@@ -288,8 +288,15 @@ sub _copy_socket_data {
 sub _join_game {
     my $self = shift;
 
-    warn "No universe!", return unless $self->universe;
-    warn "players_in_game undefined!" unless $self->universe->players_in_game;
+    if (!$self->universe) {
+        warn "No universe!";
+        return;
+    }
+
+    if (!$self->universe->players_in_game) {
+        warn "players_in_game undefined!";
+        return;
+    }
     weaken( $self->universe->players_in_game->{lc $self->name} = $self );
 }
 
@@ -297,8 +304,16 @@ sub _join_game {
 sub _join_server {
     my $self = shift;
 
-    warn "No universe!", return unless $self->universe;
-    warn "universe->players undefined!" unless $self->universe->players;
+    if (!$self->universe) {
+        warn "No universe!";
+        return;
+    }
+
+    if (!$self->universe->players) {
+        warn "universe->players undefined!";
+        return;
+    }
+
     weaken( $self->universe->players->{$self->id} = $self );
 }
 
