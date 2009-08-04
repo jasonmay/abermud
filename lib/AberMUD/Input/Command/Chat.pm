@@ -12,7 +12,10 @@ has '+alias' => ( default => '0' );
 sub run {
     my $you  = shift;
     my $args  = shift;
-    return "(test) $args";
+    my $message = sprintf("&+M[Chat] %s:&* %s", $you->name, $args);
+    $you->universe->broadcast($message, except => $you);
+
+    return $message;
 }
 
 no Moose;

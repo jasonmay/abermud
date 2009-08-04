@@ -5,6 +5,7 @@ use MooseX::POE;
 extends 'MUD::Server';
 use AberMUD::Player;
 use AberMUD::Universe;
+use AberMUD::Util;
 use POE::Session;
 use POE::Kernel;
 
@@ -24,7 +25,7 @@ sub spawn_player {
     my $universe = shift;
     return AberMUD::Player->new(
         id => $id,
-        prompt => "\e[1;33m\$\e[0m ",
+        prompt => "&+Y\$&* ",
         input_state => [
         map { eval "require $_"; $_->new }
         qw(
@@ -43,15 +44,21 @@ around '_response' => sub {
     my $player = $self->universe->players->{$id};
 
     my $response = $self->$orig($id, @_);
-    return "You are in a void of nothingness...\n"
-    unless @{$player->input_state};
+    my $output;
+
+    $output = "You are in a void of nothingness...\n"
+        unless @{$player->input_state};
 
     if (ref $player->input_state->[0] eq 'AberMUD::Input::State::Game') {
         $player->materialize;
         my $prompt = $player->prompt;
-        return "$response\n$prompt";
+        $output = "$response\n$prompt";
     }
-    return $response;
+    else {
+        $output = $response;
+    }
+
+    return AberMUD::Util::colorify($output);
 };
 
 around 'START' => sub {

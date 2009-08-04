@@ -6,6 +6,7 @@ use Scalar::Util qw(weaken);
 use KiokuDB;
 use KiokuDB::Backend::DBI;
 use List::MoreUtils qw(any);
+use AberMUD::Util;
 
 has directory => (
     is  => 'rw',
@@ -41,22 +42,28 @@ sub broadcast {
     my $self   = shift;
     my $output = shift;
     my %args = @_;
+    $args{prompt} ||= 1;
 
     my @except;
     @except = (ref($args{except}) eq 'ARRAY')
             ? @{$args{except}}
-            : ($args{except});
+            : (defined($args{except}) ? $args{except} : ());
 
     foreach my $player (values %{$self->players_in_game}) {
-        next if any { $_ == $player } @except;
-        $player->io->put($output);
+        next if @except && any { $_ == $player } @except;
+        my $player_output = $output;
+        $player_output .= sprintf("\n%s", $player->prompt)
+            if $args{prompt};
+        $player->io->put(AberMUD::Util::colorify("\n$player_output"));
     }
 }
 
 sub abermud_message {
     return unless $ENV{'ABERMUD_DEBUG'} > 0;
+
     my $self = shift;
     my $msg = shift;
+
     print STDERR sprintf("\e[0;36m[ABERMUD]\e[m ${msg}\n", @_);
 }
 

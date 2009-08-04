@@ -333,7 +333,7 @@ sub materialize {
         my $dir_player = $self->dir_player;
         if ($dir_player) {
             $self->universe->broadcast(
-                sprintf "\n%s is back!\n", $self->name
+                sprintf "%s is &+Wback&*!", $self->name
             );
 
             $dir_player->_copy_unserializable_data($self);
@@ -353,7 +353,7 @@ sub materialize {
             $self->save_data;
             $self->setup;
             $self->universe->broadcast(
-                sprintf "\n%s has joined!\n", $self->name
+                sprintf "\n%s has &+Yjoined&*!\n", $self->name
             );
         }
     }
