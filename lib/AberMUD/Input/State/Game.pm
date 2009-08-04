@@ -39,7 +39,7 @@ sub BUILD {
         my $command_object = $command->new;
         $self->dispatcher->add_rule(
             AberMUD::Input::Dispatcher::Rule->new(
-                string => $command_object->name,
+                command => $command_object,
                 block  => $command_object->can('run'),
             )
         );
@@ -50,16 +50,13 @@ sub run {
     my $self = shift;
     my ($you, $input) = @_;
 
-    # first word of the user input
-    my @words = split ' ', $input;
-    my $command = lc shift(@words);
-    my $args = join ' ', @words;
-    my $dispatch = $self->dispatcher->dispatch($command);
+    my $dispatch = $self->dispatcher->dispatch($input);
 
     return "I don't know any commands by that name.\n"
         unless $dispatch->has_matches;
 
-    return $dispatch->run($you, $args);
+     my $match = ($dispatch->matches)[0];
+     return $match->run($you, $match->leftover);
 }
 
 no Moose;

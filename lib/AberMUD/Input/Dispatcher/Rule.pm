@@ -4,26 +4,35 @@ use Moose;
 
 extends 'Path::Dispatcher::Rule';
 
-has string => (
-    is       => 'rw',
-    isa      => 'Str',
-    required => 1,
+has command => (
+    is      => 'rw',
+    isa     => 'AberMUD::Input::Command',
 );
 
 sub _match {
     my $self = shift;
     my $path = shift;
 
-    return $path->path eq substr($self->string, 0, length($path->path))
-        unless $self->prefix;
+    my $input = $path->path;
+    return 0 unless length($input);
+    if (defined $self->command->alias) {
+        my $truncated_input = substr($input, 0, length($self->command->alias));
+        if ($truncated_input eq $self->command->alias) {
+            $input =~ s/^$truncated_input/$self->command->name.' '/e;
+        }
+    }
 
-    my $truncated = substr($path->path, 0, length($self->string));
-    return 0 unless $truncated eq $self->string;
+    my @words = split ' ', $input;
+    my $entered_command = shift(@words);
+    my $truncated = substr($self->command->name, 0, length($entered_command));
 
-    return (1, substr($path->path, length($self->string)));
+    my $leftover = join ' ' => @words;
+
+    return 0 unless $truncated eq $entered_command;
+    return (1, $leftover);
 }
 
-sub readable_attributes { q{"} . shift->string . q{"} }
+sub readable_attributes { q{"} . shift->command->name . q{"} }
 
 no Moose;
 __PACKAGE__->meta->make_immutable;

@@ -8,6 +8,11 @@ has 'name' => (
     isa => 'Str',
 );
 
+has 'alias' => (
+    is => 'rw',
+    isa => 'Str',
+);
+
 sub run {
     croak "You need to override AberMUD::Input::Command::run";
 }

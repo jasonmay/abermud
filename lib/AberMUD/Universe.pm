@@ -5,6 +5,7 @@ extends 'MUD::Universe';
 use Scalar::Util qw(weaken);
 use KiokuDB;
 use KiokuDB::Backend::DBI;
+use List::MoreUtils qw(any);
 
 has directory => (
     is  => 'rw',
@@ -39,8 +40,15 @@ sub load_player {
 sub broadcast {
     my $self   = shift;
     my $output = shift;
+    my %args = @_;
+
+    my @except;
+    @except = (ref($args{except}) eq 'ARRAY')
+            ? @{$args{except}}
+            : ($args{except});
 
     foreach my $player (values %{$self->players_in_game}) {
+        next if any { $_ == $player } @except;
         $player->io->put($output);
     }
 }

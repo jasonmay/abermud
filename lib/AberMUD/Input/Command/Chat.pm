@@ -7,9 +7,12 @@ my $command_name = lc __PACKAGE__;
 $command_name =~ s/.+:://; $command_name =~ s/\.pm//;
 has '+name' => ( default => $command_name );
 
+has '+alias' => ( default => '0' );
+
 sub run {
     my $you  = shift;
-    return "You try to talk but your mouth has been taped shut!";
+    my $args  = shift;
+    return "(test) $args";
 }
 
 no Moose;
