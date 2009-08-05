@@ -372,7 +372,8 @@ sub look {
     $output .= $loc->description;
     foreach my $player (values %{$self->universe->players_in_game}) {
         next if $player == $self;
-        $output .= ucfirst($player->name) . " is standing here.\n";
+        $output .= ucfirst($player->name) . " is standing here.\n"
+            if $player->location == $self->location;
     }
 
     $output .= "\n" . $loc->show_exits;
