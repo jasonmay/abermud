@@ -47,9 +47,9 @@ around '_response' => sub {
     my $output;
 
     $output = "You are in a void of nothingness...\n"
-        unless @{$player->input_state};
+        unless $player && @{$player->input_state};
 
-    if (ref $player->input_state->[0] eq 'AberMUD::Input::State::Game') {
+    if ($player && ref $player->input_state->[0] eq 'AberMUD::Input::State::Game') {
         $player->materialize;
         my $prompt = $player->prompt;
         $output = "$response\n$prompt";
