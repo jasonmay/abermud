@@ -8,35 +8,30 @@ use KiokuDB::Backend::DBI;
 use List::MoreUtils qw(any);
 use AberMUD::Util;
 
-has directory => (
-    is  => 'rw',
-    isa => 'KiokuDB',
-    default => sub {
-        KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1)
-    },
-);
-
-has directory_scope => (
-    is  => 'rw',
-    isa => 'KiokuDB::LiveObjects::Scope',
-);
-
 has players_in_game => (
     is  => 'rw',
     isa => 'HashRef[AberMUD::Player]',
     default => sub { +{} },
 );
 
-sub BUILD {
-    my $self = shift;
-    $self->directory_scope($self->directory->new_scope);
-}
+has directory => (
+    is => 'rw',
+    isa => 'AberMUD::Directory',
+    required => 1,
+);
 
-sub load_player {
-    my $self = shift;
-    my $player = shift;
-    my %args = @_;
-}
+has nowhere_location => (
+    is => 'rw',
+    isa => 'AberMUD::Location',
+    default => sub {
+        AberMUD::Location->new(
+            id          => '__nowhere',
+            world_id    => '__nowhere@void',
+            title       => 'Nowhere',
+            description => 'You are nowhere...',
+        )
+    }
+);
 
 sub broadcast {
     my $self   = shift;
@@ -59,18 +54,12 @@ sub broadcast {
 }
 
 sub abermud_message {
-    return unless $ENV{'ABERMUD_DEBUG'} > 0;
+    return unless $ENV{'ABERMUD_DEBUG'} && $ENV{'ABERMUD_DEBUG'} > 0;
 
     my $self = shift;
     my $msg = shift;
 
     print STDERR sprintf("\e[0;36m[ABERMUD]\e[m ${msg}\n", @_);
-}
-
-sub player_lookup {
-    my $self = shift;
-    my $name = shift;
-    return $self->directory->lookup("player-$name");
 }
 
 no Moose;

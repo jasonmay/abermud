@@ -14,7 +14,7 @@ sub run {
     $name = lc $name;
 
     $you->name($name);
-    $you->dir_player($you->universe->player_lookup($name));
+    $you->dir_player($you->universe->directory->player_lookup($name));
     if ($you->dir_player) {
         $you->input_state->[0]
             = AberMUD::Input::State::Login::Password->new;

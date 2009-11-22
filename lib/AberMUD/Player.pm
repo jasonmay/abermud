@@ -41,6 +41,15 @@ has 'prompt' => (
 has 'universe' => (
     is        => 'rw',
     isa       => 'AberMUD::Universe',
+    required  => 1,
+    weak_ref  => 1,
+    traits => ['KiokuDB::DoNotSerialize'],
+);
+
+has 'directory' => (
+    is        => 'rw',
+    isa       => 'AberMUD::Directory',
+    required  => 1,
     weak_ref  => 1,
     traits => ['KiokuDB::DoNotSerialize'],
 );
@@ -78,6 +87,7 @@ has '+io' => (
 );
 
 has '+input_state' => (
+    isa    => 'ArrayRef[AberMUD::Input::State]',
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
@@ -225,7 +235,7 @@ sub save_data {
         return;
     }
 
-    if ($self->universe->player_lookup($self->name)) {
+    if ($self->directory->player_lookup($self->name)) {
         $self->universe->directory->update($self);
     }
     else {
@@ -260,7 +270,11 @@ sub sys_message {
 
 sub dump_states {
     my $self = shift;
-    $self->sys_message(join ' ' => map { ref } @{$self->input_states});
+    $self->sys_message(
+    join ' ' =>
+        map { my $ref = ref; $ref =~ s/AberMUD::Input::State:://; $ref }
+        @{$self->input_states}
+    );
 }
 
 sub _copy_unserializable_data {
@@ -300,7 +314,6 @@ sub _join_game {
     weaken( $self->universe->players_in_game->{lc $self->name} = $self );
 }
 
-# TODO better name for this
 sub _join_server {
     my $self = shift;
 
@@ -321,8 +334,8 @@ sub _join_server {
 sub setup {
     my $self = shift;
     my $location = $self->universe->directory->lookup('location-start2');
-    die "No location found in directory" unless defined $location;
-    $self->location($location);
+#    die "No location found in directory" unless defined $location;
+    $self->location($location || $self->universe->nowhere_location);
 }
 
 sub materialize {
