@@ -23,7 +23,6 @@ sub _build_container {
     my $self = shift;
 #    my $container = weaken($self);
     my $container = $self; # FIXME dunno why weaken undefs this
-    warn $self;
 
     my $c = container 'AberMUD' => as {
         service directory => (
@@ -38,17 +37,10 @@ sub _build_container {
                 my $b = shift;
                 AberMUD::Universe->new(
                     directory => $b->param('directory'),
-                    nowhere_location  => AberMUD::Location->new(
-                        id          => '__nowhere',
-                        world_id    => '__nowhere@void',
-                        title       => 'Nowhere',
-                        description => 'You are nowhere...',
-                    ),
                     spawn_player_code => sub {
                         my $self     = shift;
                         my $id       = shift;
-
-                        my $player = $container->fetch('player')->get(
+                        my $player   = $container->fetch('player')->get(
                             id          => $id,
                             prompt      => "&+Y\$&* ",
                             input_state => [

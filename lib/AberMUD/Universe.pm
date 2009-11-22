@@ -23,7 +23,14 @@ has directory => (
 has nowhere_location => (
     is => 'rw',
     isa => 'AberMUD::Location',
-    required => 1,
+    default => sub {
+        AberMUD::Location->new(
+            id          => '__nowhere',
+            world_id    => '__nowhere@void',
+            title       => 'Nowhere',
+            description => 'You are nowhere...',
+        )
+    }
 );
 
 sub broadcast {
