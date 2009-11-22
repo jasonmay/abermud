@@ -26,30 +26,6 @@ has nowhere_location => (
     required => 1,
 );
 
-sub spawn_player {
-    my $self     = shift;
-    my $id       = shift;
-
-    return AberMUD::Player->new(
-        id => $id,
-        prompt      => "&+Y\$&* ",
-        universe    => $self,
-        directory   => $self->directory,
-        input_state => [
-            map {
-                Class::MOP::load_class($_);
-                $_->new(
-                    universe => $self,
-                )
-            }
-            qw(
-                AberMUD::Input::State::Login::Name
-                AberMUD::Input::State::Game
-            )
-        ],
-    );
-}
-
 sub broadcast {
     my $self   = shift;
     my $output = shift;
