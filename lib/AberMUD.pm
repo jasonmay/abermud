@@ -1,4 +1,25 @@
 package AberMUD;
+use Moose;
+use namespace::autoclean;
+
+our $VERSION = '0.01';
+
+has server => (
+    is       => 'rw',
+    isa      => 'AberMUD::Server',
+    required => 1,
+    handles  => [ qw(run) ],
+);
+
+has universe => (
+    is  => 'rw',
+    isa => 'AberMUD::Universe',
+);
+
+has directory => (
+    is  => 'rw',
+    isa => 'AberMUD::Directory',
+);
 
 1;
 

@@ -15,28 +15,6 @@ has player_data_path => (
     default => "$ENV{PWD}/data"
 );
 
-has '+universe' => (
-    isa => 'AberMUD::Universe'
-);
-
-sub spawn_player {
-    my $self     = shift;
-    my $id       = shift;
-    my $universe = shift;
-    return AberMUD::Player->new(
-        id => $id,
-        prompt => "&+Y\$&* ",
-        input_state => [
-        map { eval "require $_"; $_->new }
-        qw(
-        AberMUD::Input::State::Login::Name
-        AberMUD::Input::State::Game
-        )
-        ],
-        universe => $universe,
-    );
-}
-
 around '_response' => sub {
     my $orig = shift;
     my $self = shift;
