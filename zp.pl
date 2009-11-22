@@ -96,7 +96,7 @@ for (readdir($dh)) {
 }
 closedir $dh;
 
-system 'rm -f abermud abermud-journal';
+unlink qw/abermud abermud-journal/;
 my $kdb = KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1);
 my $scope = $kdb->new_scope;
 my %dir = map { substr($_, 0, 1) => $_ } @{AberMUD::Location->directions};
