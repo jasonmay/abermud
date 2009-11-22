@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State;
 use Moose;
+use namespace::autoclean;
 extends 'MUD::Input::State';
 
 has 'entry_message' => (
@@ -8,7 +9,6 @@ has 'entry_message' => (
     isa => 'Str',
 );
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

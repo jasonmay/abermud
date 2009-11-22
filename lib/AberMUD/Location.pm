@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Location;
 use Moose;
+use namespace::autoclean;
 use MooseX::ClassAttribute;
 use KiokuDB::Class;
 
@@ -69,7 +70,6 @@ sub show_exits {
     return $output||'';
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

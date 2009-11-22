@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Player;
 use Moose;
+use namespace::autoclean;
 extends 'MUD::Player';
 use AberMUD::Server;
 use POE::Wheel::ReadWrite;
@@ -413,7 +414,6 @@ around 'disconnect' => sub {
     }
 };
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

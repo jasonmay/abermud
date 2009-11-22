@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Look;
 use Moose;
+use namespace::autoclean;
 extends 'AberMUD::Input::Command';
 
 my $command_name = lc __PACKAGE__;
@@ -13,7 +14,6 @@ sub run {
     return $you->look;
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

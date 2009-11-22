@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command;
 use Moose;
+use namespace::autoclean;
 use Carp;
 
 has 'name' => (
@@ -17,7 +18,6 @@ sub run {
     croak "You need to override AberMUD::Input::Command::run";
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

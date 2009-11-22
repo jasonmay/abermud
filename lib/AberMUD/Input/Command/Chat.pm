@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Chat;
 use Moose;
+use namespace::autoclean;
 extends 'AberMUD::Input::Command';
 
 my $command_name = lc __PACKAGE__;
@@ -18,7 +19,6 @@ sub run {
     return $message;
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

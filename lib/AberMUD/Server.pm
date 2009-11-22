@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Server;
 use Moose;
+use namespace::autoclean;
 use MooseX::POE;
 extends 'MUD::Server';
 use AberMUD::Player;
@@ -49,7 +50,6 @@ event 'tick' => sub {
     $_[KERNEL]->delay(tick => 1);
 };
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Who;
 use Moose;
+use namespace::autoclean;
 extends 'AberMUD::Input::Command';
 
 my $command_name = lc __PACKAGE__;
@@ -13,7 +14,6 @@ sub run {
     return join "\n" => keys %{$you->universe->players_in_game};
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

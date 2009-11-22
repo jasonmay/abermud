@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Util;
 use Moose;
+use namespace::autoclean;
 
 sub colorify {
     my $text = shift;
@@ -57,7 +58,6 @@ sub strip_color {
     my $text = shift;
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

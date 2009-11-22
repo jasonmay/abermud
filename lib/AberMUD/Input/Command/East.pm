@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::East;
 use Moose;
+use namespace::autoclean;
 extends 'AberMUD::Input::Command';
 
 my $command_name = lc __PACKAGE__;
@@ -14,7 +15,6 @@ sub run {
     return $you->${\"go_$direction"};
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

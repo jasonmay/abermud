@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Zone;
 use Moose;
+use namespace::autoclean;
 
 has name => (
     is => 'rw',
@@ -17,7 +18,6 @@ has rainfall => (
     isa => 'Int',
 );
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

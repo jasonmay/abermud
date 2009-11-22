@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State::Login::Password;
 use Moose;
+use namespace::autoclean;
 extends 'AberMUD::Input::State';
 
 has '+entry_message' => (
@@ -26,7 +27,6 @@ sub run {
     }
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

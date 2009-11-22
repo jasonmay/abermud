@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Universe;
 use Moose;
+use namespace::autoclean;
 extends 'MUD::Universe';
 use Scalar::Util qw(weaken);
 use KiokuDB;
@@ -62,7 +63,6 @@ sub abermud_message {
     print STDERR sprintf("\e[0;36m[ABERMUD]\e[m ${msg}\n", @_);
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

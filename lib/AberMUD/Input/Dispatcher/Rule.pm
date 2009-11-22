@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Dispatcher::Rule;
 use Moose;
+use namespace::autoclean;
 
 extends 'Path::Dispatcher::Rule';
 
@@ -34,7 +35,6 @@ sub _match {
 
 sub readable_attributes { q{"} . shift->command->name . q{"} }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;
