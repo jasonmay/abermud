@@ -88,7 +88,7 @@ sub parse_zone {
     print "parsed $file\n";
 }
 
-my $zones_dir = 'cdirt/data/ZONES';
+my $zones_dir = 'zones';
 opendir(my $dh, $zones_dir);
 for (readdir($dh)) {
     next unless lc($_) =~ /\.zone$/;
