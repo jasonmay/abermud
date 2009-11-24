@@ -3,7 +3,7 @@ package AberMUD::Player;
 use Moose;
 use namespace::autoclean;
 extends 'MUD::Player';
-use AberMUD::Server;
+use AberMUD::Controller;
 use POE::Wheel::ReadWrite;
 use MooseX::Storage;
 use Scalar::Util qw(weaken);
@@ -80,10 +80,6 @@ has 'id' => (
 has 'dir_player' => (
     is        => 'rw',
     isa       => 'AberMUD::Player',
-    traits => ['KiokuDB::DoNotSerialize'],
-);
-
-has '+io' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
@@ -285,19 +281,11 @@ sub _copy_unserializable_data {
     for ($player->meta->get_all_attributes) {
         if ($_->does('KiokuDB::DoNotSerialize')) {
             my $attr = $_->accessor;
-            next if $attr eq 'id' or $attr eq 'io';
+            next if $attr eq 'id';
             next if $attr eq 'dir_player';
             $self->$attr($player->$attr) if defined $player->$attr;
         }
     }
-}
-
-sub _copy_socket_data {
-    my $self = shift;
-    my $player = shift;
-
-    $self->id($player->id) if defined $player->id;
-    $self->io($player->io) if defined $player->io;
 }
 
 sub _join_game {
@@ -353,13 +341,13 @@ sub materialize {
             $dir_player->_copy_unserializable_data($self);
 
             if ($dir_player->in_game) {
-                $dir_player->io->shutdown_output;
+                # TODO
+                #$dir_player->io->shutdown_output;
             }
             else {
                 $dir_player->_join_game;
                 $dir_player->setup;
             }
-            $dir_player->_copy_socket_data($self);
             $dir_player->_join_server;
         }
         else {

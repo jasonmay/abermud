@@ -4,9 +4,9 @@ use namespace::autoclean;
 
 our $VERSION = '0.01';
 
-has server => (
+has controller => (
     is       => 'rw',
-    isa      => 'AberMUD::Server',
+    isa      => 'AberMUD::Controller',
     required => 1,
     handles  => [ qw(run) ],
 );

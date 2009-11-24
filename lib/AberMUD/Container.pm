@@ -5,7 +5,7 @@ use Bread::Board;
 use Scalar::Util qw(weaken);
 
 use AberMUD::Directory;
-use AberMUD::Server;
+use AberMUD::Controller;
 use AberMUD::Universe;
 use AberMUD::Player;
 use AberMUD::Location;
@@ -79,8 +79,8 @@ sub _build_container {
             },
         );
 
-        service server => (
-            class     => 'AberMUD::Server',
+        service controller => (
+            class     => 'AberMUD::Controller',
             lifecycle => 'Singleton',
             dependencies => [
                 depends_on('directory'),
@@ -93,7 +93,7 @@ sub _build_container {
             lifecycle => 'Singleton',
             dependencies => [
                 depends_on('directory'),
-                depends_on('server'),
+                depends_on('controller'),
                 depends_on('universe'),
             ]
         );
