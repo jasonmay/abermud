@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State::Login::Name;
 use Moose;
-use namespace::autoclean;
 extends 'AberMUD::Input::State';
 use AberMUD::Input::State::Login::Password;
 

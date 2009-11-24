@@ -59,7 +59,6 @@ sub run {
      return $match->run($you, $match->leftover);
 }
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;
