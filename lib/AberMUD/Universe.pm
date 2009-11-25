@@ -16,8 +16,14 @@ has players_in_game => (
 );
 
 has directory => (
-    is => 'rw',
+    is => 'ro',
     isa => 'AberMUD::Directory',
+    required => 1,
+);
+
+has _controller => (
+    is => 'ro',
+    isa => 'AberMUD::Controller',
     required => 1,
 );
 
@@ -50,7 +56,9 @@ sub broadcast {
         my $player_output = $output;
         $player_output .= sprintf("\n%s", $player->prompt)
             if $args{prompt};
-        $player->io->put(AberMUD::Util::colorify("\n$player_output"));
+        $self->_controller->send(
+            $player->id => AberMUD::Util::colorify("\n$player_output")
+        );
     }
 }
 

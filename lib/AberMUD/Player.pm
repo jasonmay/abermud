@@ -214,9 +214,8 @@ sub shift_state {
 sub in_game {
     my $self = shift;
     # one at a time to help with debug messages
-    return 0 unless $self->universe;
     return 0 unless exists($self->universe->players_in_game->{$self->name});
-    return $self->universe->players_in_game->{$self->name}->id == $self->id;
+    return $self->universe->players_in_game->{$self->name} == $self;
 }
 
 sub is_saved {
@@ -281,7 +280,7 @@ sub _copy_unserializable_data {
     for ($player->meta->get_all_attributes) {
         if ($_->does('KiokuDB::DoNotSerialize')) {
             my $attr = $_->accessor;
-            next if $attr eq 'id';
+#            next if $attr eq 'id';
             next if $attr eq 'dir_player';
             $self->$attr($player->$attr) if defined $player->$attr;
         }

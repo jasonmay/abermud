@@ -37,6 +37,7 @@ sub _build_container {
                 my $b = shift;
                 AberMUD::Universe->new(
                     directory => $b->param('directory'),
+                    _controller => $b->param('controller'),
                     spawn_player_code => sub {
                         my $self     = shift;
                         my $id       = shift;
@@ -63,6 +64,7 @@ sub _build_container {
             },
             dependencies => [
                 depends_on('directory'),
+                depends_on('controller'),
             ],
         );
 
