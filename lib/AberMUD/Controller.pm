@@ -49,7 +49,7 @@ around 'perform_connect_action' => sub {
 
     my $result = $self->$orig(@_);
 
-    return $result if $data->{param} ne 'null';
+    return $result if $data->{param} ne 'connect';
 
     my $id = $data->{data}->{id};
     return to_json(
