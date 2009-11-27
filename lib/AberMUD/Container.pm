@@ -2,7 +2,7 @@
 package AberMUD::Container;
 use Moose;
 use Bread::Board;
-use Scalar::Util qw(weaken);
+use Scalar::Util qw(weaken isweak);
 
 use AberMUD::Directory;
 use AberMUD::Controller;
@@ -35,9 +35,10 @@ sub _build_container {
             lifecycle => 'Singleton',
             block     => sub {
                 my $b = shift;
+                weaken(my $w = $b);
                 AberMUD::Universe->new(
-                    directory => $b->param('directory'),
-                    _controller => $b->param('controller'),
+                    directory => $w->param('directory'),
+                    _controller => $w->param('controller'),
                     spawn_player_code => sub {
                         my $self     = shift;
                         my $id       = shift;
