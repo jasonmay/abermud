@@ -342,6 +342,7 @@ sub materialize {
             if ($dir_player->in_game) {
                 # TODO
                 #$dir_player->io->shutdown_output;
+                $self->universe->_controller->force_disconnect($dir_player->id);
             }
             else {
                 $dir_player->_join_game;
