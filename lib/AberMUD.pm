@@ -35,7 +35,7 @@ AberMUD - A codebase for a quest-based MUD flavor
 
 =head1 DESCRIPTION
 
-TODO TODO TODO TODO TODO 
+TODO TODO TODO TODO TODO
 
 =head1 AUTHOR
 

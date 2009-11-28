@@ -62,8 +62,46 @@ around 'perform_connect_action' => sub {
         }
     );
 
+};
+
+before 'perform_input_action' => sub {
+    my $self = shift;
+    my ($data) = @_;
 
 };
+
+around 'perform_disconnect_action' => sub {
+    my $orig   = shift;
+    my $self   = shift;
+    my ($data) = @_;
+
+    my $u = $self->universe;
+    #warn "$data->{data}->{id} --> " . $self->universe->players->{ $data->{data}->{id} }->id;
+    warn $data->{data}->{ghost} ?  '(no ghost)' : '(GHOST)';
+    my $player = $self->universe->players->{ $data->{data}->{id} };
+    if ($player && exists $u->players_in_game->{$player->name}) {
+        warn $player->id . " vs " . $data->{data}->{id};
+        $player->dematerialize;
+
+        $u->broadcast($player->name . " disconnected.\n");
+
+        $player->shift_state;
+    }
+
+    my $result = $self->$orig(@_);
+
+    return $result;
+};
+
+#around 'disconnect' => sub {
+#    my $orig = shift;
+#    my $self = shift;
+#    my %args = @_;
+#    my $id = $self->id;
+#
+#    $self->$orig(@_);
+#};
+
 
 around 'START' => sub {
     my $orig = shift;

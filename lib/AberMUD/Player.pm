@@ -11,6 +11,8 @@ use Carp qw(cluck);
 use AberMUD::Location;
 use DateTime;
 use KiokuDB;
+use List::MoreUtils qw(first_value);
+use DDS;
 
 =head1 NAME
 
@@ -28,7 +30,7 @@ AberMUD::Player - AberMUD Player class for playing
 
 AberMUD's player system is very straightforward. Each player has a connection
 to the server. A player's location and inventory does not stay on that person
-when he leaves the game. 
+when he leaves the game.
 
 =cut
 
@@ -101,7 +103,7 @@ has 'death_time' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-# TODO Location, Spells 
+# TODO Location, Spells
 
 # the aber-convention for hitting power
 has 'damage' => (
@@ -219,9 +221,10 @@ sub shift_state {
 
 sub in_game {
     my $self = shift;
+    my $u    = $self->universe;
     # one at a time to help with debug messages
-    return 0 unless exists($self->universe->players_in_game->{$self->name});
-    return $self->universe->players_in_game->{$self->name} == $self;
+    return 0 unless exists($u->players_in_game->{$self->name});
+    return $u->players_in_game->{$self->name} == $self;
 }
 
 sub is_saved {
@@ -231,6 +234,7 @@ sub is_saved {
 
 sub save_data {
     my $self = shift;
+    my $u    = $self->universe;
 
     if (!$self->in_game) {
         cluck "Trying to call save when the player is not in-game";
@@ -238,26 +242,27 @@ sub save_data {
     }
 
     if ($self->directory->player_lookup($self->name)) {
-        $self->universe->directory->update($self);
+        $u->directory->update($self);
     }
     else {
-        $self->universe->directory->store('player-' . lc $self->name => $self);
+        $u->directory->store('player-' . lc $self->name => $self);
     }
 }
 
 sub load_data {
     my $self = shift;
+    my $u    = $self->universe;
 
     if ($self->is_saved) {
         my $player
-            = $self->universe->directory->lookup('player-' . lc $self->name);
+            = $u->directory->lookup('player-' . lc $self->name);
         for ($player->meta->get_all_attributes) {
             if ($_->does('KiokuDB::DoNotSerialize')) {
                 my $attr = $_->accessor;
                 $player->$attr($self->$attr)
             }
         }
-        $self->universe->players->{$self->id} = $player;
+        $u->players->{$self->id} = $player;
         return $player;
     }
 
@@ -286,7 +291,6 @@ sub _copy_unserializable_data {
     for ($player->meta->get_all_attributes) {
         if ($_->does('KiokuDB::DoNotSerialize')) {
             my $attr = $_->accessor;
-#            next if $attr eq 'id';
             next if $attr eq 'dir_player';
             $self->$attr($player->$attr) if defined $player->$attr;
         }
@@ -310,6 +314,7 @@ sub _join_game {
 
 sub _join_server {
     my $self = shift;
+    my $id   = shift;
 
     if (!$self->universe) {
         warn "No universe!";
@@ -321,7 +326,12 @@ sub _join_server {
         return;
     }
 
-    weaken( $self->universe->players->{$self->id} = $self );
+    if (!$self->id && !$id) {
+        warn "undefined id";
+        return;
+    }
+
+    weaken( $self->universe->players->{$id || $self->id} = $self );
 }
 
 # game stuff
@@ -333,36 +343,37 @@ sub setup {
 }
 
 sub materialize {
-    my $self = shift;
-    my $id = $self->id;
+    my $self       = shift;
+    my $current_id = $self->id;
+    my $u          = $self->universe;
+
     if (!$self->in_game) {
         $self->sys_message("materialize");
-        my $dir_player = $self->dir_player;
-        if ($dir_player) {
-            $self->universe->broadcast(
-                sprintf "%s is &+Wback&*!", $self->name
-            );
 
+        my $dir_player = $self->dir_player;
+
+        if ($dir_player) {
             $dir_player->_copy_unserializable_data($self);
 
+            my $player_in_game = $u->players_in_game ->{$dir_player->name};
+
             if ($dir_player->in_game) {
-                # TODO
-                #$dir_player->io->shutdown_output;
-                $self->universe->_controller->force_disconnect($dir_player->id);
+                my $id = $player_in_game->id;
+                $u->players->{$current_id}
+                    = delete $u->players->{$dir_player->id};
+                $u->_controller->force_disconnect($id, ghost => 1);
             }
             else {
+                $dir_player->_join_server($current_id);
                 $dir_player->_join_game;
                 $dir_player->setup;
             }
-            $dir_player->_join_server;
         }
         else {
+            $dir_player->_join_server($current_id);
             $self->_join_game;
             $self->save_data;
             $self->setup;
-            $self->universe->broadcast(
-                sprintf "\n%s has &+Yjoined&*!\n", $self->name
-            );
         }
     }
 }
@@ -388,25 +399,6 @@ sub look {
 
     return $output;
 }
-
-around 'disconnect' => sub {
-    my $orig = shift;
-    my $self = shift;
-    my %args = @_;
-    my $id = $self->id;
-
-    $self->$orig(@_);
-    delete $self->universe->players->{$self->id};
-
-    if (exists $self->universe->players_in_game->{$self->name}) {
-        $self->dematerialize;
-
-        $self->universe->broadcast($self->name . " disconnected.\n")
-        unless $args{'silent'};
-
-        $self->shift_state;
-    }
-};
 
 __PACKAGE__->meta->make_immutable;
 
