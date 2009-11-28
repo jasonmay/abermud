@@ -83,7 +83,8 @@ around 'perform_disconnect_action' => sub {
         warn $player->id . " vs " . $data->{data}->{id};
         $player->dematerialize;
 
-        $u->broadcast($player->name . " disconnected.\n");
+        $u->broadcast($player->name . " disconnected.\n")
+            unless $data->{data}->{ghost};
 
         $player->shift_state;
     }
