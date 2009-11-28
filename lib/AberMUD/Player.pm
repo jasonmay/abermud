@@ -71,11 +71,17 @@ has 'password' => (
     isa => 'Str',
 );
 
-has 'id' => (
-    is        => 'rw',
-    isa       => 'Int',
-    traits => ['KiokuDB::DoNotSerialize'],
-);
+#has 'id' => (
+#    is        => 'rw',
+#    isa       => 'Int',
+#    traits => ['KiokuDB::DoNotSerialize'],
+#);
+
+sub id {
+    my $self = shift;
+    return first_value { $self->universe->players->{$_} == $self }
+        keys %{ $self->universe->players || {} };
+}
 
 has 'dir_player' => (
     is        => 'rw',
