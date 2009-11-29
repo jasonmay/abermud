@@ -65,8 +65,9 @@ has 'password' => (
 
 sub id {
     my $self = shift;
-    return first_value { $self->universe->players->{$_} == $self }
-        keys %{ $self->universe->players || {} };
+    my $p = $self->universe->players || {};
+
+    return first_value { $p->{$_} == $self } keys %$p;
 }
 
 has 'dir_player' => (
@@ -111,7 +112,9 @@ sub in_game {
     # one at a time to help with debug messages
 
     return 0 unless $u;
+
     return 0 unless exists($u->players_in_game->{$self->name});
+
     return $u->players_in_game->{$self->name} == $self;
 }
 
@@ -126,10 +129,10 @@ sub save_data {
 
     my $u    = $self->universe;
 
-#    if (!$self->in_game) {
-#        cluck "Trying to call save when the player is not in-game";
-#        return;
-#    }
+    if (!$self->in_game) {
+        cluck "Trying to call save when the player is not in-game";
+        return;
+    }
 
     if ($self->directory->player_lookup($self->name)) {
         $u->directory->update($self);
@@ -189,29 +192,31 @@ sub _copy_unserializable_data {
 
 sub _join_game {
     my $self = shift;
+    my $u = $self->universe;
 
-    if (!$self->universe) {
+    if (!$u) {
         warn "No universe!";
         return;
     }
 
-    if (!$self->universe->players_in_game) {
+    if (!$u->players_in_game) {
         warn "players_in_game undefined!";
         return;
     }
-    weaken( $self->universe->players_in_game->{lc $self->name} = $self );
+    weaken( $u->players_in_game->{lc $self->name} = $self );
 }
 
 sub _join_server {
     my $self = shift;
     my $id   = shift;
+    my $u    = $self->universe;
 
-    if (!$self->universe) {
+    if (!$u) {
         warn "No universe!";
         return;
     }
 
-    if (!$self->universe->players) {
+    if (!$u->players) {
         warn "universe->players undefined!";
         return;
     }
@@ -221,7 +226,7 @@ sub _join_server {
         return;
     }
 
-    weaken( $self->universe->players->{$id || $self->id} = $self );
+    weaken( $u->players->{$id || $self->id} = $self );
 }
 
 # game stuff
