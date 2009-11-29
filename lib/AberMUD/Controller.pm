@@ -76,8 +76,6 @@ around 'perform_disconnect_action' => sub {
     my ($data) = @_;
 
     my $u = $self->universe;
-    #warn "$data->{data}->{id} --> " . $self->universe->players->{ $data->{data}->{id} }->id;
-    warn $data->{data}->{ghost} ?  '(no ghost)' : '(GHOST)';
     my $player = $self->universe->players->{ $data->{data}->{id} };
     if ($player && exists $u->players_in_game->{$player->name}) {
         warn $player->id . " vs " . $data->{data}->{id};

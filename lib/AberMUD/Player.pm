@@ -120,12 +120,14 @@ sub is_saved {
 
 sub save_data {
     my $self = shift;
+    my %args = @_;
+
     my $u    = $self->universe;
 
-    if (!$self->in_game) {
-        cluck "Trying to call save when the player is not in-game";
-        return;
-    }
+#    if (!$self->in_game) {
+#        cluck "Trying to call save when the player is not in-game";
+#        return;
+#    }
 
     if ($self->directory->player_lookup($self->name)) {
         $u->directory->update($self);
@@ -235,39 +237,38 @@ sub materialize {
 
     {
         my $new_player;
-        if (!$self->in_game) {
-            $self->sys_message("materialize");
 
-            my $dir_player = $self->dir_player;
+        last if $self->in_game;
+        $self->sys_message("materialize");
 
-            # if the player with this name has been saved in the db already
-            if ($dir_player) {
-                $dir_player->_copy_unserializable_data($self);
+        my $dir_player = $self->dir_player;
 
-                my $player_in_game = $u->players_in_game ->{$dir_player->name};
+        # if the player with this name has been saved in the db already
+        if ($dir_player) {
+            $dir_player->_copy_unserializable_data($self);
 
-                # if the kiokudb player is currently in the game
-                if ($dir_player->in_game) {
-                    my $id = $player_in_game->id;
+            my $player_in_game = $u->players_in_game ->{$dir_player->name};
 
-                    # s/dir_player's id/your id/ in $u->players
-                    $u->players->{$current_id}
-                        = delete $u->players->{$dir_player->id};
+            # if the kiokudb player is currently in the game
+            if ($dir_player->in_game) {
+                my $id = $player_in_game->id;
 
-                    #send a disconnect to the dir_player's old id
-                    $u->_controller->force_disconnect($id, ghost => 1);
+                # s/dir_player's id/your id/ in $u->players
+                $u->players->{$current_id}
+                    = delete $u->players->{$dir_player->id};
 
-                    last; # skip the _join_game and setup
-                }
-                else {
-                    $dir_player->_join_server($current_id); # $u->players
-                    $new_player = $dir_player;
-                }
+                #send a disconnect to the dir_player's old id
+                $u->_controller->force_disconnect($id, ghost => 1);
+
+                last; # the rest isn't necessary
             }
-            else {
-                $new_player = $self;
-                $self->save_data;
-            }
+
+            $dir_player->_join_server($current_id); # $u->players
+            $new_player = $dir_player;
+        }
+        else {
+            $self->save_data;
+            $new_player = $self;
         }
 
         $new_player->_join_game;
