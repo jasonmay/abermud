@@ -52,6 +52,8 @@ sub run {
 
     my $dispatch = $self->dispatcher->dispatch($input);
 
+    return "" unless $input =~ /\S/;
+
     return "I don't know any commands by that name.\n"
         unless $dispatch->has_matches;
 
