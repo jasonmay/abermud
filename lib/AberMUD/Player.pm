@@ -5,7 +5,6 @@ use namespace::autoclean;
 extends 'MUD::Player';
 use AberMUD::Controller;
 use POE::Wheel::ReadWrite;
-#use MooseX::Storage;
 use Scalar::Util qw(weaken);
 use Carp qw(cluck);
 use AberMUD::Location;
@@ -28,13 +27,18 @@ AberMUD::Player - AberMUD Player class for playing
 
 =head1 DESCRIPTION
 
+XXX
+
 AberMUD's player system is very straightforward. Each player has a connection
 to the server. A player's location and inventory does not stay on that person
 when he leaves the game.
 
 =cut
 
-#with Storage(format => 'YAML', 'io' => 'File');
+with qw(
+    AberMUD::Player::Role::InGame
+    AberMUD::Role::Killable
+);
 
 has 'prompt' => (
     is  => 'rw',
@@ -57,7 +61,6 @@ has 'directory' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-with qw(AberMUD::Player::Role::InGame);
 has 'password' => (
     is => 'rw',
     isa => 'Str',
