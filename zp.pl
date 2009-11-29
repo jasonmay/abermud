@@ -105,8 +105,6 @@ while (my ($dir_key, $dir_value) = each %dir_locations) {
     $kdb->store("location-$dir_key" => $dir_value);
 }
 
-warn "$locations{'Bones@abyss'}";
-
 while (my ($loc_id, $loc) = each %locations) {
     next unless exists $loc_map{$loc_id};
     while (my ($dir_letter, $exit) = each %dir) {
