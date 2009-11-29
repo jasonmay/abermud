@@ -347,34 +347,44 @@ sub materialize {
     my $current_id = $self->id;
     my $u          = $self->universe;
 
-    if (!$self->in_game) {
-        $self->sys_message("materialize");
+    {
+        if (!$self->in_game) {
+            $self->sys_message("materialize");
 
-        my $dir_player = $self->dir_player;
+            my $dir_player = $self->dir_player;
 
-        if ($dir_player) {
-            $dir_player->_copy_unserializable_data($self);
+            # if the player with this name has been saved in the db already
+            if ($dir_player) {
+                $dir_player->_copy_unserializable_data($self);
 
-            my $player_in_game = $u->players_in_game ->{$dir_player->name};
+                my $player_in_game = $u->players_in_game ->{$dir_player->name};
 
-            if ($dir_player->in_game) {
-                my $id = $player_in_game->id;
-                $u->players->{$current_id}
-                    = delete $u->players->{$dir_player->id};
-                $u->_controller->force_disconnect($id, ghost => 1);
+                # if the kiokudb player is currently in the game
+                if ($dir_player->in_game) {
+                    my $id = $player_in_game->id;
+
+                    # s/dir_player's id/your id/ in $u->players
+                    $u->players->{$current_id}
+                        = delete $u->players->{$dir_player->id};
+
+                    #send a disconnect to the dir_player's old id
+                    $u->_controller->force_disconnect($id, ghost => 1);
+
+                    last; # skip the _join_game and setup
+                }
+                else {
+                    $dir_player->_join_server($current_id); # $u->players
+                }
             }
             else {
-                $dir_player->_join_server($current_id);
-                $dir_player->_join_game;
-                $dir_player->setup;
+                $self->_join_game;
+                $self->save_data;
+                $self->setup;
             }
         }
-        else {
-            $dir_player->_join_server($current_id);
-            $self->_join_game;
-            $self->save_data;
-            $self->setup;
-        }
+
+        $dir_player->_join_game;
+        $dir_player->setup;
     }
 }
 
