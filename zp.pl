@@ -119,8 +119,4 @@ while (my ($loc_id, $loc) = each %locations) {
 #    die "$loc_id";
 }
 
-while (my ($dir_key, $dir_value) = each %dir_locations) {
-    $kdb->update($dir_value);
-}
-
-die;
+$kdb->update($_) foreach values %dir_locations;
