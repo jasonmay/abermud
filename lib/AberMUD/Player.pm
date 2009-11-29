@@ -109,6 +109,8 @@ sub in_game {
     my $self = shift;
     my $u    = $self->universe;
     # one at a time to help with debug messages
+
+    return 0 unless $u;
     return 0 unless exists($u->players_in_game->{$self->name});
     return $u->players_in_game->{$self->name} == $self;
 }
@@ -232,48 +234,28 @@ sub setup {
 
 sub materialize {
     my $self       = shift;
-    my $current_id = $self->id;
     my $u          = $self->universe;
 
-    {
-        my $new_player;
+    return if $self->in_game;
 
-        last if $self->in_game;
-        $self->sys_message("materialize");
+    $self->sys_message("materialize");
 
-        my $dir_player = $self->dir_player;
+    my $m_player = $self->dir_player || $self;
 
-        # if the player with this name has been saved in the db already
-        if ($dir_player) {
-            $dir_player->_copy_unserializable_data($self);
-
-            my $player_in_game = $u->players_in_game ->{$dir_player->name};
-
-            # if the kiokudb player is currently in the game
-            if ($dir_player->in_game) {
-                my $id = $player_in_game->id;
-
-                # s/dir_player's id/your id/ in $u->players
-                $u->players->{$current_id}
-                    = delete $u->players->{$dir_player->id};
-
-                #send a disconnect to the dir_player's old id
-                $u->_controller->force_disconnect($id, ghost => 1);
-
-                last; # the rest isn't necessary
-            }
-
-            $dir_player->_join_server($current_id); # $u->players
-            $new_player = $dir_player;
-        }
-        else {
-            $self->save_data;
-            $new_player = $self;
-        }
-
-        $new_player->_join_game;
-        $new_player->setup;
+    if ($m_player != $self && $m_player->in_game) {
+        $u->_controller->force_disconnect($m_player->id, ghost => 1);
+        $u->players->{$self->id} = delete $u->players->{$m_player->id};
+        return;
     }
+
+    if (!$m_player->in_game) {
+        $m_player->_copy_unserializable_data($self);
+        $m_player->_join_server($self->id);
+    }
+
+    $m_player->_join_game;
+    $m_player->save_data if $m_player == $self;
+    $m_player->setup;
 }
 
 sub dematerialize {

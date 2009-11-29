@@ -79,6 +79,7 @@ around 'perform_disconnect_action' => sub {
     my $player = $self->universe->players->{ $data->{data}->{id} };
     if ($player && exists $u->players_in_game->{$player->name}) {
         warn $player->id . " vs " . $data->{data}->{id};
+        $player->disconnect;
         $player->dematerialize;
 
         $u->broadcast($player->name . " disconnected.\n")
@@ -91,16 +92,6 @@ around 'perform_disconnect_action' => sub {
 
     return $result;
 };
-
-#around 'disconnect' => sub {
-#    my $orig = shift;
-#    my $self = shift;
-#    my %args = @_;
-#    my $id = $self->id;
-#
-#    $self->$orig(@_);
-#};
-
 
 around 'START' => sub {
     my $orig = shift;
