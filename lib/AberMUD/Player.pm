@@ -5,7 +5,7 @@ use namespace::autoclean;
 extends 'MUD::Player';
 use AberMUD::Controller;
 use POE::Wheel::ReadWrite;
-use MooseX::Storage;
+#use MooseX::Storage;
 use Scalar::Util qw(weaken);
 use Carp qw(cluck);
 use AberMUD::Location;
@@ -34,7 +34,7 @@ when he leaves the game.
 
 =cut
 
-with Storage(format => 'YAML', 'io' => 'File');
+#with Storage(format => 'YAML', 'io' => 'File');
 
 has 'prompt' => (
     is  => 'rw',
@@ -57,27 +57,11 @@ has 'directory' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-has 'location' => (
-    is => 'rw',
-    isa => 'AberMUD::Location',
-    traits => ['KiokuDB::DoNotSerialize'],
-    handles => {
-        map {
-            ("can_go_$_" => "has_$_")
-        } @{AberMUD::Location->directions}
-    },
-);
-
+with qw(AberMUD::Player::Role::InGame);
 has 'password' => (
     is => 'rw',
     isa => 'Str',
 );
-
-#has 'id' => (
-#    is        => 'rw',
-#    isa       => 'Int',
-#    traits => ['KiokuDB::DoNotSerialize'],
-#);
 
 sub id {
     my $self = shift;
@@ -94,104 +78,6 @@ has 'dir_player' => (
 has '+input_state' => (
     isa    => 'ArrayRef[AberMUD::Input::State]',
     traits => ['KiokuDB::DoNotSerialize'],
-);
-
-has 'death_time' => (
-    is => 'rw',
-    isa => 'DateTime',
-    default => sub { DateTime->now },
-    traits => ['KiokuDB::DoNotSerialize'],
-);
-
-# TODO Location, Spells
-
-# the aber-convention for hitting power
-has 'damage' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 8,
-);
-
-# invisibility up to N level
-has 'visibility_level' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 0,
-);
-
-has 'level' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 1,
-);
-
-has 'fighting' => (
-    is => 'rw',
-    isa => 'Bool',
-    default => 0,
-    traits => ['KiokuDB::DoNotSerialize'],
-);
-
-has 'sitting' => (
-    is => 'rw',
-    isa => 'Bool',
-    default => 0,
-    traits => ['KiokuDB::DoNotSerialize'],
-);
-
-has 'helping' => (
-    is => 'rw',
-    isa => 'Bool',
-    default => 0,
-    traits => ['KiokuDB::DoNotSerialize'],
-);
-
-has 'score' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 0,
-);
-
-# aber-convention for threshold of auto-flee
-has 'wimpy' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 25,
-);
-
-# aber-convention for the the base of your hit points
-has 'basestrength' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 40,
-);
-
-# aber-convention for the the level-based part of your hit points
-has 'levelstrength' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 0,
-);
-
-# aber-convention for the the base of your mana
-has 'basemana' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 40,
-);
-
-# aber-convention for the the level-based part of your mana
-has 'levelmana' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 0,
-);
-
-# highest level attained
-has 'max_level' => (
-    is => 'rw',
-    isa => 'Int',
-    default => 1,
 );
 
 foreach my $direction (@{AberMUD::Location->directions}) {
