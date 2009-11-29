@@ -234,6 +234,7 @@ sub materialize {
     my $u          = $self->universe;
 
     {
+        my $new_player;
         if (!$self->in_game) {
             $self->sys_message("materialize");
 
@@ -260,17 +261,17 @@ sub materialize {
                 }
                 else {
                     $dir_player->_join_server($current_id); # $u->players
+                    $new_player = $dir_player;
                 }
             }
             else {
-                $self->_join_game;
+                $new_player = $self;
                 $self->save_data;
-                $self->setup;
             }
         }
 
-        $dir_player->_join_game;
-        $dir_player->setup;
+        $new_player->_join_game;
+        $new_player->setup;
     }
 }
 
