@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 use lib 'lib';
-use lib '../mud/lib';
+#use lib '../mud/lib';
 use AberMUD;
 
 require AberMUD::Container;
