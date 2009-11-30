@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Role::Killable;
 use Moose::Role;
+use Moose::Util::TypeConstraints;
 
 has 'fighting' => (
     is => 'rw',
@@ -56,6 +57,11 @@ has 'levelmana' => (
     is => 'rw',
     isa => 'Int',
     default => 0,
+);
+
+has 'gender' => (
+    is => 'rw',
+    isa => subtype('Str' => where { !$_ or $_ eq 'Male' or $_ eq 'Female' }),
 );
 
 no Moose::Role;
