@@ -7,6 +7,11 @@ has pushed_description => (
     isa => 'Str',
 );
 
+has pushed => (
+    is  => 'rw',
+    isa => 'Bool',
+);
+
 no Moose::Role;
 
 1;

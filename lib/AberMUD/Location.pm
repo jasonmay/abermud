@@ -2,6 +2,7 @@
 package AberMUD::Location;
 use Moose;
 use namespace::autoclean;
+
 use MooseX::ClassAttribute;
 use KiokuDB::Class;
 
@@ -63,9 +64,10 @@ for (_directions) {
 sub show_exits {
     my $self = shift;
     my $output;
+    $output = "&+CObvious exits are:&*\n";
     for (@{$self->directions}) {
         next unless $self->${\"has_$_"};
-        $output .= ucfirst($_) . ': ' . $self->$_->title . "\n";
+        $output .= sprintf("%-5s &+Y: &+G%s&*\n", ucfirst($_), $self->$_->title);
     }
     return $output||'';
 }

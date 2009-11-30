@@ -9,6 +9,9 @@ use AberMUD::Controller;
 use AberMUD::Universe;
 use AberMUD::Player;
 use AberMUD::Location;
+use AberMUD::Object;
+use AberMUD::Object::Role::Getable;
+use AberMUD::Object::Role::Weapon;
 
 use namespace::autoclean;
 
@@ -34,11 +37,34 @@ sub _build_container {
             class => 'AberMUD::Universe',
             lifecycle => 'Singleton',
             block     => sub {
+                my @objs;
                 my $b = shift;
                 weaken(my $w = $b);
+
+                my $o;
+
+                $o = AberMUD::Object->new(
+                    location    => $w->param('directory')->lookup(
+                        'location-start2'
+                    ),
+                    description => 'There is a rock here.',
+                );
+                AberMUD::Object::Role::Getable->meta->apply($o);
+                push @objs, $o;
+
+                $o = AberMUD::Object->new(
+                    location    => $w->param('directory')->lookup(
+                        'location-start2'
+                    ),
+                    description => 'There is a sword here.',
+                );
+                AberMUD::Object::Role::Weapon->meta->apply($o);
+                push @objs, $o;
+
                 AberMUD::Universe->new(
-                    directory => $w->param('directory'),
+                    directory   => $w->param('directory'),
                     _controller => $w->param('controller'),
+                    objects     => [ @objs ],
                     spawn_player_code => sub {
                         my $self     = shift;
                         my $id       = shift;

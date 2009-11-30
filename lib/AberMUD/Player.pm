@@ -3,11 +3,13 @@ package AberMUD::Player;
 use Moose;
 use namespace::autoclean;
 extends 'MUD::Player';
+
 use AberMUD::Controller;
+use AberMUD::Location;
+
 use POE::Wheel::ReadWrite;
 use Scalar::Util qw(weaken);
 use Carp qw(cluck);
-use AberMUD::Location;
 use DateTime;
 use KiokuDB;
 use List::MoreUtils qw(first_value);
@@ -89,7 +91,7 @@ foreach my $direction (@{AberMUD::Location->directions}) {
         sub {
             my $self = shift;
 
-            return "You can't go that way."
+            return "You can't go that way.\n"
                 unless $self->${\"can_go_$direction"};
 
             $self->location($self->location->$direction);
@@ -274,9 +276,21 @@ sub dematerialize {
 sub look {
     my $self = shift;
     my $loc = shift || $self->location;
-    my $output = $loc->title . "\n";
+    my $output = sprintf(
+        "&+M%s&* &+B[&+C%s@%s&+B]&* (%s)\n",
+        $loc->title,
+        $loc->id,
+        $loc->zone->name,
+        $loc->world_id
+    );
 
     $output .= $loc->description;
+
+    $output .= sprintf("%s\n", $_->description)
+        for grep {
+            $_->location == $loc
+        } @{$self->universe->objects};
+
     foreach my $player (values %{$self->universe->players_in_game}) {
         next if $player == $self;
         $output .= ucfirst($player->name) . " is standing here.\n"

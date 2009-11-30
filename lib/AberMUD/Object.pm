@@ -15,7 +15,7 @@ has buy_value => (
     isa => 'Int',
 );
 
-has look_description => (
+has description => (
     is => 'rw',
     isa => 'Str',
 );

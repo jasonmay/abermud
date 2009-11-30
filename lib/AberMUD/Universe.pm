@@ -40,6 +40,12 @@ has nowhere_location => (
     }
 );
 
+has objects => (
+    is  => 'rw',
+    isa => 'ArrayRef[AberMUD::Object]',
+    default => sub { [] },
+);
+
 sub broadcast {
     my $self   = shift;
     my $output = shift;

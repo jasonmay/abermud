@@ -15,6 +15,16 @@ has 'location' => (
     },
 );
 
+has description => (
+    is  => 'rw',
+    isa => 'Str',
+);
+
+has examine_description => (
+    is  => 'rw',
+    isa => 'Str',
+);
+
 no Moose::Role;
 
 1;
