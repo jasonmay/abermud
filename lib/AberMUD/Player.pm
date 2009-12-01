@@ -94,7 +94,30 @@ foreach my $direction (@{AberMUD::Location->directions}) {
             return "You can't go that way.\n"
                 unless $self->${\"can_go_$direction"};
 
+            $_->sendf("\n%s goes %s.\n", $self->name, $direction)
+                for grep {
+                    $_ != $self && $_->location == $self->location
+                }
+                values %{ $self->universe->players_in_game };
+
             $self->location($self->location->$direction);
+
+            my %opp_dir = (
+                east  => 'west',
+                west  => 'east',
+                north => 'south',
+                south => 'north',
+                up    => 'down',
+                down  => 'up',
+            );
+
+            $_->sendf("\n%s arrives from the %s.\n",
+                $self->name, $opp_dir{$direction})
+                    for grep {
+                        $_ != $self && $_->location == $self->location
+                    }
+                    values %{ $self->universe->players_in_game };
+
 
             return $self->look;
         }
@@ -274,8 +297,9 @@ sub dematerialize {
 }
 
 sub look {
-    my $self = shift;
-    my $loc = shift || $self->location;
+    my $self   = shift;
+    my $loc    = shift || $self->location;
+
     my $output = sprintf(
         "&+M%s&* &+B[&+C%s@%s&+B]&* (%s)\n",
         $loc->title,
@@ -300,6 +324,25 @@ sub look {
     $output .= "\n" . $loc->show_exits;
 
     return $output;
+}
+
+sub send {
+    my $self    = shift;
+    my $message = shift;
+    my %args    = @_;
+
+    return unless $self->id;
+
+    $message .= AberMUD::Util::colorify($self->prompt) unless $args{no_prompt};
+
+    $self->universe->_controller->send($self->id => $message);
+}
+
+sub sendf {
+    my $self    = shift;
+    my $message = shift;
+
+    $self->send(sprintf($message, @_));
 }
 
 __PACKAGE__->meta->make_immutable;
