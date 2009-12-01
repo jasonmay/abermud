@@ -1,6 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Object::Role::Getable;
 use Moose::Role;
+
+use AberMUD::Player;
 use AberMUD::Mobile;
 
 has weight => (
