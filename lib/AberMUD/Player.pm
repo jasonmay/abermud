@@ -103,15 +103,15 @@ foreach my $direction (@{AberMUD::Location->directions}) {
             $self->location($self->location->$direction);
 
             my %opp_dir = (
-                east  => 'west',
-                west  => 'east',
-                north => 'south',
-                south => 'north',
-                up    => 'down',
-                down  => 'up',
+                east  => 'the west',
+                west  => 'the east',
+                north => 'the south',
+                south => 'the north',
+                up    => 'below',
+                down  => 'above',
             );
 
-            $_->sendf("\n%s arrives from the %s.\n",
+            $_->sendf("\n%s arrives from %s.\n",
                 $self->name, $opp_dir{$direction})
                     for grep {
                         $_ != $self && $_->location == $self->location
