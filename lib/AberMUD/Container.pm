@@ -23,9 +23,7 @@ has container => (
 );
 
 sub _build_container {
-    my $self = shift;
-#    my $container = weaken($self);
-    my $container = $self; # FIXME dunno why weaken undefs this
+    my $container = shift;
 
     my $c = container 'AberMUD' => as {
         service directory => (
@@ -37,25 +35,34 @@ sub _build_container {
             class => 'AberMUD::Universe',
             lifecycle => 'Singleton',
             block     => sub {
-                my @objs;
+                my(@objs, @mobs);
                 my $b = shift;
                 weaken(my $w = $b);
+                my $start_loc
+                    = $w->param('directory')->lookup('location-start2');
+
+                my $m;
+
+                $m = AberMUD::Mobile->new(
+                    name        => 'programmer',
+                    description => 'A programmer is looking at you.',
+                    location    => $start_loc,
+                    speed       => 20,
+                );
 
                 my $o;
 
                 $o = AberMUD::Object->new(
-                    location    => $w->param('directory')->lookup(
-                        'location-start2'
-                    ),
+                    name        => 'rock',
                     description => 'There is a rock here.',
+                    location    => $start_loc,
                 );
                 AberMUD::Object::Role::Getable->meta->apply($o);
                 push @objs, $o;
 
                 $o = AberMUD::Object->new(
-                    location    => $w->param('directory')->lookup(
-                        'location-start2'
-                    ),
+                    name        => 'sword',
+                    location    => $start_loc,
                     description => 'There is a sword here.',
                 );
                 AberMUD::Object::Role::Weapon->meta->apply($o);
@@ -65,10 +72,12 @@ sub _build_container {
                     directory   => $w->param('directory'),
                     _controller => $w->param('controller'),
                     objects     => [ @objs ],
+                    mobiles     => [ $m    ],
                     spawn_player_code => sub {
                         my $self     = shift;
                         my $id       = shift;
-                        my $player   = $container->fetch('player')->get(
+                        weaken(my $c = $container);
+                        my $player   = $c->fetch('player')->get(
                             id          => $id,
                             prompt      => "&+Y\$&* ",
                             input_state => [

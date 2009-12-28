@@ -25,6 +25,24 @@ has examine_description => (
     isa => 'Str',
 );
 
+sub say {
+    my $self    = shift;
+    my $message = shift;
+    my %args    = shift;
+
+   my @except = ref($args{except}) eq 'ARRAY'
+                    ? @{$args{except}}
+                    : $args{except};
+
+    my @players = grep {
+        my $p = $_;
+        all { $p != $_ } @except && $p->location == $self->location
+    }
+    values %{$self->universe->players_in_game};
+
+    $_->send($message) for @players;
+}
+
 no Moose::Role;
 
 1;

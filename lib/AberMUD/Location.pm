@@ -69,7 +69,7 @@ sub show_exits {
         next unless $self->${\"has_$_"};
         $output .= sprintf("%-5s &+Y: &+G%s&*\n", ucfirst($_), $self->$_->title);
     }
-    return $output||'';
+    return $output;
 }
 
 __PACKAGE__->meta->make_immutable;

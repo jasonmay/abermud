@@ -310,16 +310,20 @@ sub look {
 
     $output .= $loc->description;
 
-    $output .= sprintf("%s\n", $_->description)
-        for grep {
-            $_->location == $loc
-        } @{$self->universe->objects};
+    foreach my $mobile (@{$self->universe->mobiles || []}) {
+        $output .= $mobile->description . "\n";
+    }
 
     foreach my $player (values %{$self->universe->players_in_game}) {
         next if $player == $self;
         $output .= ucfirst($player->name) . " is standing here.\n"
             if $player->location == $self->location;
     }
+
+    $output .= sprintf("%s\n", $_->description)
+        for grep {
+            $_->location == $loc
+        } @{$self->universe->objects};
 
     $output .= "\n" . $loc->show_exits;
 

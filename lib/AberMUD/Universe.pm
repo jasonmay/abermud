@@ -46,6 +46,12 @@ has objects => (
     default => sub { [] },
 );
 
+has mobiles => (
+    is  => 'rw',
+    isa => 'ArrayRef[AberMUD::Mobile]',
+    default => sub { [] },
+);
+
 sub broadcast {
     my $self   = shift;
     my $output = shift;

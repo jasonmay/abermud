@@ -100,6 +100,8 @@ around 'START' => sub {
 };
 
 event 'tick' => sub {
+    my ($self) = @_;
+    $_->move for @{$self->universe->mobiles};
     $_[KERNEL]->delay(tick => 1);
 };
 
