@@ -38,41 +38,10 @@ sub _build_container {
                 my(@objs, @mobs);
                 my $b = shift;
                 weaken(my $w = $b);
-                my $start_loc
-                    = $w->param('directory')->lookup('location-start2');
 
-                my $m;
-
-                $m = AberMUD::Mobile->new(
-                    name        => 'programmer',
-                    description => 'A programmer is looking at you.',
-                    location    => $start_loc,
-                    speed       => 20,
-                );
-
-                my $o;
-
-                $o = AberMUD::Object->new(
-                    name        => 'rock',
-                    description => 'There is a rock here.',
-                    location    => $start_loc,
-                );
-                AberMUD::Object::Role::Getable->meta->apply($o);
-                push @objs, $o;
-
-                $o = AberMUD::Object->new(
-                    name        => 'sword',
-                    location    => $start_loc,
-                    description => 'There is a sword here.',
-                );
-                AberMUD::Object::Role::Weapon->meta->apply($o);
-                push @objs, $o;
-
-                AberMUD::Universe->new(
+                my $u = AberMUD::Universe->new(
                     directory   => $w->param('directory'),
                     _controller => $w->param('controller'),
-                    objects     => [ @objs ],
-                    mobiles     => [ $m    ],
                     spawn_player_code => sub {
                         my $self     = shift;
                         my $id       = shift;
@@ -97,6 +66,46 @@ sub _build_container {
                         return $player;
                     }
                 );
+
+
+                my $start_loc
+                    = $w->param('directory')->lookup('location-start2');
+
+                my $m;
+
+                $m = AberMUD::Mobile->new(
+                    name        => 'programmer',
+                    description => 'A programmer is looking at you.',
+                    location    => $start_loc,
+                    speed       => 20,
+                    universe    => $u,
+                );
+
+                my $o;
+
+                $o = AberMUD::Object->new(
+                    name        => 'rock',
+                    description => 'There is a rock here.',
+                    location    => $start_loc,
+                    universe    => $u,
+                );
+                AberMUD::Object::Role::Getable->meta->apply($o);
+                push @objs, $o;
+
+                $o = AberMUD::Object->new(
+                    name        => 'sword',
+                    location    => $start_loc,
+                    description => 'There is a sword here.',
+                    universe    => $u,
+                );
+                AberMUD::Object::Role::Weapon->meta->apply($o);
+                push @objs, $o;
+
+
+                $u->objects([ @objs ]);
+                $u->mobiles([ $m ]);
+
+                return $u;
             },
             dependencies => [
                 depends_on('directory'),

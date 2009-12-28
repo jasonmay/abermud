@@ -3,6 +3,13 @@ package AberMUD::Role::InGame;
 use Moose::Role;
 
 use AberMUD::Location;
+use List::MoreUtils qw(any);
+
+has 'universe' => (
+    is => 'rw',
+    isa => 'AberMUD::Universe',
+    traits => ['KiokuDB::DoNotSerialize'],
+);
 
 has 'location' => (
     is => 'rw',
