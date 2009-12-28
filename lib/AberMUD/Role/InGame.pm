@@ -35,19 +35,21 @@ has examine_description => (
 sub say {
     my $self    = shift;
     my $message = shift;
-    my %args    = shift;
+    my %args    = @_;
 
    my @except = ref($args{except}) eq 'ARRAY'
-                    ? @{$args{except}}
-                    : $args{except};
+                    ? @{$args{except}} || ()
+                    : ($args{except} || []);
 
     my @players = grep {
         my $p = $_;
-        all { $p != $_ } @except && $p->location == $self->location
+        $p->location == $self->location && !any { $p == $_ } @except
     }
     values %{$self->universe->players_in_game};
 
     $_->send($message) for @players;
+
+    return $self;
 }
 
 no Moose::Role;

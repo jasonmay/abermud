@@ -47,6 +47,8 @@ sub move {
     my $loc  = $self->location;
     my @dirs = grep { $self->${\"can_go_$_"} } @{$self->location->directions};
 
+    return $self unless @dirs;
+
     my $way = $dirs[rand @dirs];
     my %opp_dir = (
         east  => 'west',
