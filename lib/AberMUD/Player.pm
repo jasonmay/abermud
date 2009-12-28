@@ -311,7 +311,8 @@ sub look {
     $output .= $loc->description;
 
     foreach my $mobile (@{$self->universe->mobiles || []}) {
-        $output .= $mobile->description . "\n";
+        $output .= $mobile->description . "\n"
+            if $mobile->location == $self->location;
     }
 
     foreach my $player (values %{$self->universe->players_in_game}) {
