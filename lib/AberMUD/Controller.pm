@@ -78,7 +78,6 @@ around 'perform_disconnect_action' => sub {
     my $u = $self->universe;
     my $player = $self->universe->players->{ $data->{data}->{id} };
     if ($player && exists $u->players_in_game->{$player->name}) {
-        warn $player->id . " vs " . $data->{data}->{id};
         $player->disconnect;
         $player->dematerialize;
 

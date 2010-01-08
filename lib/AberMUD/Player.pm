@@ -94,11 +94,9 @@ foreach my $direction (@{AberMUD::Location->directions}) {
             return "You can't go that way.\n"
                 unless $self->${\"can_go_$direction"};
 
-            $_->sendf("\n%s goes %s.\n", $self->name, $direction)
-                for grep {
-                    $_ != $self && $_->location == $self->location
-                }
-                values %{ $self->universe->players_in_game };
+            my @players = values %{ $self->universe->players_in_game };
+
+            $self->say("\n" . $self->name . " goes " . $direction . "\n");
 
             $self->location($self->location->$direction);
 
@@ -111,13 +109,7 @@ foreach my $direction (@{AberMUD::Location->directions}) {
                 down  => 'above',
             );
 
-            $_->sendf("\n%s arrives from %s.\n",
-                $self->name, $opp_dir{$direction})
-                    for grep {
-                        $_ != $self && $_->location == $self->location
-                    }
-                    values %{ $self->universe->players_in_game };
-
+            $self->say("\n" . $self->name . " arrives from the " . $opp_dir{$direction} . "\n");
 
             return $self->look;
         }
@@ -137,12 +129,9 @@ sub shift_state {
 sub in_game {
     my $self = shift;
     my $u    = $self->universe;
-    # one at a time to help with debug messages
 
     return 0 unless $u;
-
     return 0 unless exists($u->players_in_game->{$self->name});
-
     return $u->players_in_game->{$self->name} == $self;
 }
 
@@ -261,7 +250,7 @@ sub _join_server {
 sub setup {
     my $self = shift;
     my $location = $self->universe->directory->lookup('location-start2');
-#    die "No location found in directory" unless defined $location;
+    warn "No location found in directory" unless defined $location;
     $self->location($location || $self->universe->nowhere_location);
 }
 
