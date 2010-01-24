@@ -16,11 +16,89 @@ use AberMUD::Object::Role::Weapon;
 use namespace::autoclean;
 
 has container => (
-    is      => 'rw',
-    isa     => 'Bread::Board::Container',
-    builder => '_build_container',
-    handles => [qw(fetch)],
+    is         => 'rw',
+    isa        => 'Bread::Board::Container',
+    lazy_build => 1,
+    builder    => '_build_container',
+    handles    => [qw(fetch param)],
 );
+
+sub new_universe {
+    my(@objs, @mobs);
+    my $self = shift;
+    my $container = shift;
+    my $b = shift;
+    weaken(my $w = $b);
+
+    my $u = AberMUD::Universe->new(
+        directory   => $w->param('directory'),
+        _controller => $w->param('controller'),
+        spawn_player_code => sub {
+            my $self     = shift;
+            my $id       = shift;
+            #weaken(my $c = $container);
+            my $player   = $container->fetch('player')->get(
+                id          => $id,
+                prompt      => "&+Y\$&* ",
+                input_state => [
+                map {
+                    Class::MOP::load_class($_);
+                    $_->new(
+                        universe => $self,
+                    )
+                }
+                qw(
+                AberMUD::Input::State::Login::Name
+                AberMUD::Input::State::Game
+                )
+                ],
+            );
+
+            return $player;
+        }
+    );
+
+
+    my $start_loc
+    = $w->param('directory')->lookup('location-start2')
+    || $u->default_loc;
+
+    my $m;
+
+    $m = AberMUD::Mobile->new(
+        name        => 'programmer',
+        description => 'A programmer is looking at you.',
+        location    => $start_loc,
+        speed       => 20,
+        universe    => $u,
+    );
+
+    my $o;
+
+    $o = AberMUD::Object->new(
+        name        => 'rock',
+        description => 'There is a rock here.',
+        location    => $start_loc,
+        universe    => $u,
+    );
+    AberMUD::Object::Role::Getable->meta->apply($o);
+    push @objs, $o;
+
+    $o = AberMUD::Object->new(
+        name        => 'sword',
+        location    => $start_loc,
+        description => 'There is a sword here.',
+        universe    => $u,
+    );
+    AberMUD::Object::Role::Weapon->meta->apply($o);
+    push @objs, $o;
+
+
+    $u->objects([ @objs ]);
+    $u->mobiles([ $m ]);
+
+    return $u;
+}
 
 sub _build_container {
     my $container = shift;
@@ -35,77 +113,8 @@ sub _build_container {
             class => 'AberMUD::Universe',
             lifecycle => 'Singleton',
             block     => sub {
-                my(@objs, @mobs);
-                my $b = shift;
-                weaken(my $w = $b);
-
-                my $u = AberMUD::Universe->new(
-                    directory   => $w->param('directory'),
-                    _controller => $w->param('controller'),
-                    spawn_player_code => sub {
-                        my $self     = shift;
-                        my $id       = shift;
-                        weaken(my $c = $container);
-                        my $player   = $c->fetch('player')->get(
-                            id          => $id,
-                            prompt      => "&+Y\$&* ",
-                            input_state => [
-                                map {
-                                    Class::MOP::load_class($_);
-                                    $_->new(
-                                        universe => $self,
-                                    )
-                                }
-                                qw(
-                                    AberMUD::Input::State::Login::Name
-                                    AberMUD::Input::State::Game
-                                )
-                            ],
-                        );
-
-                        return $player;
-                    }
-                );
-
-
-                my $start_loc
-                    = $w->param('directory')->lookup('location-start2');
-
-                my $m;
-
-                $m = AberMUD::Mobile->new(
-                    name        => 'programmer',
-                    description => 'A programmer is looking at you.',
-                    location    => $start_loc,
-                    speed       => 20,
-                    universe    => $u,
-                );
-
-                my $o;
-
-                $o = AberMUD::Object->new(
-                    name        => 'rock',
-                    description => 'There is a rock here.',
-                    location    => $start_loc,
-                    universe    => $u,
-                );
-                AberMUD::Object::Role::Getable->meta->apply($o);
-                push @objs, $o;
-
-                $o = AberMUD::Object->new(
-                    name        => 'sword',
-                    location    => $start_loc,
-                    description => 'There is a sword here.',
-                    universe    => $u,
-                );
-                AberMUD::Object::Role::Weapon->meta->apply($o);
-                push @objs, $o;
-
-
-                $u->objects([ @objs ]);
-                $u->mobiles([ $m ]);
-
-                return $u;
+                weaken(my $w = $container);
+                $container->new_universe($w, @_)
             },
             dependencies => [
                 depends_on('directory'),

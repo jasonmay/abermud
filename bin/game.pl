@@ -4,8 +4,7 @@ use warnings;
 use lib 'lib';
 #use lib '../mud/lib';
 use AberMUD;
-
-require AberMUD::Container;
+use AberMUD::Container;
 
 my $c = AberMUD::Container->new->container;
 
