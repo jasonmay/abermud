@@ -23,7 +23,7 @@ has directory => (
 
 has _controller => (
     is => 'ro',
-    isa => 'AberMUD::Controller',
+    isa => 'MUD::Controller',
     required => 1,
 );
 

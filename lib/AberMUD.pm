@@ -6,7 +6,7 @@ our $VERSION = '0.01';
 
 has controller => (
     is       => 'rw',
-    isa      => 'AberMUD::Controller',
+    isa      => 'MUD::Controller',
     required => 1,
     handles  => [ qw(run) ],
 );

@@ -1,8 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Controller;
 use Moose;
+#use MooseX::POE;
 use namespace::autoclean;
-use MooseX::POE;
 extends 'MUD::Controller';
 use AberMUD::Player;
 use AberMUD::Universe;
@@ -92,18 +92,24 @@ around 'perform_disconnect_action' => sub {
     return $result;
 };
 
-around 'START' => sub {
-    my $orig = shift;
+after 'custom_startup' => sub {
     my ($self, $kernel, $session) = @_[0, KERNEL, SESSION];
-    $kernel->delay(tick => 1);
+    POE::Session->create(
+        inline_states => {
+            _start => sub {
+                #warn "@_";
+                my ($self, $kernel) = @_[0, KERNEL];
+                $kernel->delay(tick => 1);
+            },
+            tick => sub {
+                $self->universe and do { $_->move for @{$self->universe->mobiles} };
+                $_[KERNEL]->delay(tick => 1);
+            },
+        }
+    );
 };
 
-event 'tick' => sub {
-    my ($self) = @_;
-    $_->move for @{$self->universe->mobiles};
-    $_[KERNEL]->delay(tick => 1);
-};
-
+no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

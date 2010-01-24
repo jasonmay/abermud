@@ -4,7 +4,7 @@ use Moose;
 use namespace::autoclean;
 extends 'MUD::Player';
 
-use AberMUD::Controller;
+#use AberMUD::Controller;
 use AberMUD::Location;
 
 use POE::Wheel::ReadWrite;
