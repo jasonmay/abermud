@@ -9,6 +9,7 @@ use Carp;
 use String::Util ':all';
 use KiokuDB;
 use KiokuDB::Backend::DBI;
+use AberMUD::Directory;
 use AberMUD::Zone;
 #use namespace::autoclean;
 
@@ -96,8 +97,9 @@ for (readdir($dh)) {
 }
 closedir $dh;
 
-unlink qw/abermud abermud-journal/;
-my $kdb = KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1);
+unlink qw(abermud abermud-journal);
+my $ad = AberMUD::Directory->new;
+my $kdb = $ad->kdb;
 my $scope = $kdb->new_scope;
 my %dir = map { substr($_, 0, 1) => $_ } @{AberMUD::Location->directions};
 

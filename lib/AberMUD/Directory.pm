@@ -12,7 +12,8 @@ has kdb => (
 );
 
 sub _build_kdb {
-    KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1)
+    #this can't POSSIBLY be right
+    KiokuDB->connect('dbi:SQLite:dbname=abermud', create => not -f 'abermud')
 }
 
 has scope => (
