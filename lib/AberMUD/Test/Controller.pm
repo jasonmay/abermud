@@ -10,12 +10,8 @@ use JSON;
 use DDS;
 
 override _mud_start => sub {
-    warn "override";
+    # warn "override"
 };
-
-#override START => sub {
-#    warn "override";
-#};
 
 override run => sub { }; # make run not do anything
 
