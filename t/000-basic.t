@@ -1,11 +1,10 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More tests => 15;
+use Test::More tests => 14;
 
 BEGIN {
     # main stuff
-    use_ok 'AberMUD::Server';
     use_ok 'AberMUD::Universe';
     use_ok 'AberMUD::Player';
     use_ok 'AberMUD::Util';
