@@ -44,7 +44,8 @@ with qw(
 
 has 'prompt' => (
     is  => 'rw',
-    isa => 'Str'
+    isa => 'Str',
+    default => '>',
 );
 
 has 'universe' => (
