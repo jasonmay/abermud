@@ -16,6 +16,11 @@ use List::Util qw(max);
 
 use namespace::autoclean;
 
+has test_directory => (
+    is  => 'ro',
+    isa => 'AberMUD::Directory',
+);
+
 override _build_container => sub {
     my $self = shift;
 
@@ -23,6 +28,10 @@ override _build_container => sub {
         service directory => (
             class     => 'AberMUD::Directory',
             lifecycle => 'Singleton',
+            block     => sub {
+                weaken(my $weak_self = $self);
+                $weak_self->test_directory || AberMUD::Directory->new
+            },
         );
 
         service universe => (

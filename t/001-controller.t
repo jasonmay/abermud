@@ -1,13 +1,20 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More tests => 5;
-use AberMUD;
+use Test::More tests => 10;
+use AberMUD::Directory;
+use KiokuDB;
 use AberMUD::Test::Container;
 use AberMUD::Input::State::Login::Name;
 use AberMUD::Input::State::Game;
 
-my $c = AberMUD::Test::Container->new->container;
+my $c = AberMUD::Test::Container->new(
+    test_directory => AberMUD::Directory->new(
+        kdb => KiokuDB->connect(
+            'dbi:SQLite:dbname=t/etc/kdb/001',
+        )
+    )
+)->container;
 
 sub player_joins_game {
     my $p = $c->fetch('player')->get;
