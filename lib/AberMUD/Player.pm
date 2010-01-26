@@ -220,7 +220,7 @@ sub _join_game {
         warn "players_in_game undefined!";
         return;
     }
-    weaken( $u->players_in_game->{lc $self->name} = $self );
+    $u->players_in_game->{lc $self->name} = $self;
 }
 
 sub _join_server {
@@ -238,12 +238,12 @@ sub _join_server {
         return;
     }
 
-    if (!$self->id && !$id) {
+    if (!$id && !$self->id) {
         warn "undefined id";
         return;
     }
 
-    weaken( $u->players->{$id || $self->id} = $self );
+    $u->players->{$id || $self->id} = $self;
 }
 
 # game stuff
