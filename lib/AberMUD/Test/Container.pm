@@ -12,8 +12,6 @@ use AberMUD::Universe;
 use AberMUD::Test::Player;
 use AberMUD::Location;
 use AberMUD::Object;
-use AberMUD::Object::Role::Getable;
-use AberMUD::Object::Role::Weapon;
 use List::Util qw(max);
 
 use namespace::autoclean;
