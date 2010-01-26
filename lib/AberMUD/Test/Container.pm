@@ -45,11 +45,6 @@ override _build_container => sub {
                 depends_on('directory'),
                 depends_on('universe'),
             ],
-            parameters => {
-                id          => { isa => 'Int' },
-                prompt      => { isa => 'Str' },
-                input_state => { isa => 'ArrayRef' },
-            },
         );
 
         service controller => (
