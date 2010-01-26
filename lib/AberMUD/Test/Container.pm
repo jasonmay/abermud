@@ -9,7 +9,7 @@ use Scalar::Util qw(weaken isweak);
 use AberMUD::Directory;
 use AberMUD::Test::Controller;
 use AberMUD::Universe;
-use AberMUD::Player;
+use AberMUD::Test::Player;
 use AberMUD::Location;
 use AberMUD::Object;
 use AberMUD::Object::Role::Getable;
@@ -41,14 +41,14 @@ override _build_container => sub {
         );
 
         service player => (
-            class => 'AberMUD::Player',
+            class => 'AberMUD::Test::Player',
             block => sub {
                 my $s      = shift;
                 my $u      = $s->param('universe');
                 my $id     = (
                     max(keys %{$u->players}) || 0
                 ) + 1;
-                my $player = AberMUD::Player->new(
+                my $player = AberMUD::Test::Player->new(
                     universe  => $u,
                     directory => $s->param('directory'),
                 );
