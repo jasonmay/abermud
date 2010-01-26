@@ -14,6 +14,7 @@ use AberMUD::Location;
 use AberMUD::Object;
 use AberMUD::Object::Role::Getable;
 use AberMUD::Object::Role::Weapon;
+use List::Util qw(max);
 
 use namespace::autoclean;
 
@@ -41,6 +42,21 @@ override _build_container => sub {
 
         service player => (
             class => 'AberMUD::Player',
+            block => sub {
+                my $s      = shift;
+                my $u      = $s->param('universe');
+                my $id     = (
+                    max(keys %{$u->players}) || 0
+                ) + 1;
+                my $player = AberMUD::Player->new(
+                    universe  => $u,
+                    directory => $s->param('directory'),
+                );
+
+                $player->_join_server($id);
+
+                return $player;
+            },
             dependencies => [
                 depends_on('directory'),
                 depends_on('universe'),
