@@ -255,8 +255,8 @@ sub setup {
 }
 
 sub materialize {
-    my $self       = shift;
-    my $u          = $self->universe;
+    my $self = shift;
+    my $u    = $self->universe;
 
     return if $self->in_game;
 

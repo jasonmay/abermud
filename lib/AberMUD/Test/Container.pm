@@ -66,15 +66,6 @@ override _build_container => sub {
         service controller => (
             class     => 'AberMUD::Test::Controller',
             lifecycle => 'Singleton',
-            block     => sub {
-                my $s = shift;
-
-                no warnings 'redefine';
-                my $controller = AberMUD::Test::Controller->new(
-                    universe  => $s->param('universe'),
-                    directory => $s->param('directory'),
-                );
-            },
             dependencies => [
                 depends_on('directory'),
                 depends_on('universe'),
