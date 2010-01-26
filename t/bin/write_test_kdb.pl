@@ -26,11 +26,12 @@ my %locations = (
     ),
 );
 
+my $file = 't/etc/kdb/001';
 
-unlink qw(test);
+unlink $file;
 my $kdb = AberMUD::Directory->new(
     kdb => KiokuDB->connect(
-        'dbi:SQLite:dbname=t/etc/kdb/001',
+        "dbi:SQLite:dbname=$file",
         create => 1,
     )
 );
