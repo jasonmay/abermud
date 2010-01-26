@@ -61,7 +61,7 @@ sub new_universe {
 
     my $start_loc
     = $w->param('directory')->lookup('location-start2')
-    || $u->default_loc;
+    || $u->nowhere_location;
 
     my $m;
 
