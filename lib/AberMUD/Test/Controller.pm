@@ -9,11 +9,16 @@ use AberMUD::Util;
 use JSON;
 use DDS;
 
-override _mud_start => sub {
-    # warn "override"
-};
+override _mud_start => sub { };
 
-override run => sub { }; # make run not do anything
+override run => sub { };
+
+override send => sub {
+    my $self = shift;
+    my ($id, $message) = @_;
+
+    #TODO append to test player's output queue
+};
 
 __PACKAGE__->meta->make_immutable;
 
