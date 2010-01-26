@@ -45,15 +45,13 @@ override _build_container => sub {
             block => sub {
                 my $s      = shift;
                 my $u      = $s->param('universe');
-                my $id     = (
-                    max(keys %{$u->players}) || 0
-                ) + 1;
+                my $max_id = max(keys %{$u->players}) || 0;
                 my $player = AberMUD::Test::Player->new(
                     universe  => $u,
                     directory => $s->param('directory'),
                 );
 
-                $player->_join_server($id);
+                $player->_join_server($max_id + 1);
 
                 return $player;
             },
