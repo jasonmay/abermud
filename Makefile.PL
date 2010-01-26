@@ -13,6 +13,7 @@ requires       'String::Util';
 requires       'Carp';
 requires       'Path::Dispatcher';
 requires       'Bread::Board';
+requires       'DateTime';
 
 auto_install;
 WriteAll;
