@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More tests => 10;
+use Test::More tests => 11;
 use AberMUD::Directory;
 use KiokuDB;
 use AberMUD::Test::Container;
@@ -62,8 +62,10 @@ is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password::C
 
 $p1->types_in('123456'); #re-enter password
 is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
+ok($c->fetch('directory')->get->lookup('player-foo'), 'player stored in kioku');
 
 ok(%{ $c->fetch('universe')->get->players_in_game });
+
 
 SKIP: {
     my $loc = $c->fetch('directory')->get->lookup('location-test1');
@@ -76,3 +78,5 @@ SKIP: {
         'player tries to see a road'
     ); #look
 }
+
+$c->fetch('directory')->get->kdb->delete($p1);
