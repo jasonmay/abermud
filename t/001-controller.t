@@ -4,11 +4,12 @@ use warnings;
 use Test::More tests => 14;
 use AberMUD::Directory;
 use KiokuDB;
-use AberMUD::Test::Container;
+use AberMUD::Container;
 use AberMUD::Input::State::Login::Name;
 use AberMUD::Input::State::Game;
 
-my $c = AberMUD::Test::Container->new(
+my $c = AberMUD::Container->new_with_traits(
+    traits         => ['AberMUD::Container::Role::Test'],
     test_directory => AberMUD::Directory->new(
         kdb => KiokuDB->connect(
             'dbi:SQLite:dbname=t/etc/kdb/001',

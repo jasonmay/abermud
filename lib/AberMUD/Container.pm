@@ -15,6 +15,10 @@ use AberMUD::Object::Role::Weapon;
 
 use namespace::autoclean;
 
+with qw(
+    MooseX::Traits
+);
+
 has container => (
     is         => 'rw',
     isa        => 'Bread::Board::Container',
