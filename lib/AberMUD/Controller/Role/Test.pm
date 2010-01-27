@@ -18,12 +18,12 @@ override send => sub {
         #warn "$id => $message";
         return;
     }
-    if ($p->does('AberMUD::Player::Role::Test')) {
+    if (!$p->does('AberMUD::Player::Role::Test')) {
         warn "not a test player";
         return;
     }
 
-    $p->add_output($message);
+    #$p->add_output($message);
 };
 
 override force_disconnect => sub {
