@@ -18,22 +18,22 @@ sub colorify {
     );
 
     # &+X
-        $text =~ s{(?<!&)&\+([rgybmcw])}{\e[0;3$letter_to_ansi{$1}m}g;
-        $text =~ s{(?<!&)&\+([RGYBMCW])}{\e[1;3$letter_to_ansi{$1}m}g;
+        $text =~ s|(?<!&)&\+([rgybmcw])|\e[0;3$letter_to_ansi{$1}m|g;
+        $text =~ s|(?<!&)&\+([RGYBMCW])|\e[1;3$letter_to_ansi{$1}m|g;
 
     # &-X
-    $text =~ s{(?<!&)&-([rgybmcw])}{\e[0;4$letter_to_ansi{$1}m}g;
-    $text =~ s{(?<!&)&-([RGYBMCW])}{\e[1;4$letter_to_ansi{$1}m}g;
+    $text =~ s|(?<!&)&-([rgybmcw])|\e[0;4$letter_to_ansi{$1}m|g;
+    $text =~ s|(?<!&)&-([RGYBMCW])|\e[1;4$letter_to_ansi{$1}m|g;
 
     # &=X
-    $text =~ s{
+    $text =~ s|
         (?<!&) & = ([rgybmcw]) ([RGYBMCWrgybmcw])
-    }{"\e[0;4$letter_to_ansi{$2};3$letter_to_ansi{$1}m"}gex;
+    |"\e[0;4$letter_to_ansi{$2};3$letter_to_ansi{$1}m"|gex;
 
     # &=X
-    $text =~ s{
+    $text =~ s|
         (?<!&) & = ([RGYBMCW]) ([RGYBMCWrgybmcw])
-    }{"\e[1;4$letter_to_ansi{$2};3$letter_to_ansi{$1}m"}gex;
+    |"\e[1;4$letter_to_ansi{$2};3$letter_to_ansi{$1}m"|gex;
 
     $text =~ s{\n(?!\r)}{\n\r}g;
     $text =~ s{(?<!&)&/}{\r\n}g;

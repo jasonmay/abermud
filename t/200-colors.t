@@ -70,12 +70,7 @@ is(AberMUD::Util::colorify("&&+Rfoo&+Gba&*r"), "&+Rfoo\e[1;32mba\e[40m\e[0mr", "
 is(AberMUD::Util::colorify("&+rfah&n"), "\e[0;31mfah\e[40m\e[0m", "\e[0;31mfah\e[40m\e[0m");
 is(AberMUD::Util::colorify("&Bfoo&*"), "foo\e[40m\e[0m", "foo\e[40m\e[0m");
 
-
-
-
 is(AberMUD::Util::colorify("&&&&&+++RR&+&++&+&+T&+R&+R&+Gfooooooobaz&*&*"), "&&&+++RR&+&++&+&+T\e[1;31m\e[1;31m\e[1;32mfooooooobaz\e[40m\e[0m\e[40m\e[0m", "&&&+++RR&+&++&+&+T\e[1;31m\e[1;31m\e[1;32mfooooooobaz\e[40m\e[0m\e[40m\e[0m");
-
-
 
 is(AberMUD::Util::colorify("&-rhello&*"), "\e[0;41mhello\e[40m\e[0m", "\e[0;41mhello\e[40m\e[0m");
 is(AberMUD::Util::colorify("&=GRtesting 1&* 2 &-M3&*"), "\e[1;41;32mtesting 1\e[40m\e[0m 2 \e[1;45m3\e[40m\e[0m", "\e[1;41;32mtesting 1\e[40m\e[0m 2 \e[1;45m3\e[40m\e[0m");
