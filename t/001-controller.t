@@ -87,9 +87,15 @@ is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password');
 $p4->types_in('123456');
 is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
 
+$p4 = $p4->dir_player; # server talks to this guy now
 ok($p4->id);
 
-warn $p4->types_in('chat sup dudes');
+$p4->types_in('chat sup dudes');
+
+$p2->types_in('bar');
+$p2->types_in('123') for 1..2;
+TODO: { local $TODO = "this fails"; is($u->players->{2}, $p2); }
+$p2->types_in('chat hey');
 
 my $kdb = $c->fetch('directory')->get->kdb;
 $kdb->delete($p1);
