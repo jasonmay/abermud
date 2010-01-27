@@ -16,6 +16,17 @@ has output_queue => (
 
 override setup => sub { };
 
+around materialize => sub {
+    my $orig = shift;
+    my $self = shift;
+
+    my $id = $self->id;
+    $self->$orig(@_);
+
+    # XXX I shouldn't be doing this. it spoils the test
+    $self->universe->players->{$id} = $self;
+};
+
 sub types_in {
     my $self    = shift;
     my $command = shift;

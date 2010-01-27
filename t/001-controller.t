@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More tests => 14;
+use Test::More 'no_plan';
 use AberMUD::Directory;
 use KiokuDB;
 use AberMUD::Container;
@@ -17,6 +17,8 @@ my $c = AberMUD::Container->new_with_traits(
     )
 )->container;
 
+my $u = $c->fetch('universe')->get;
+
 sub player_joins_game {
     my $p = $c->fetch('player')->get;
     $p->input_state([
@@ -31,20 +33,14 @@ sub player_joins_game {
     return $p;
 }
 
-#sub player_logs_in {
-#    my $p = shift;
-#
-#}
-
-# test the test stuff first..
-ok(!%{$c->fetch('universe')->get->players});
+ok(!%{$u->players});
 my $p1 = player_joins_game();
-ok(%{$c->fetch('universe')->get->players});
+ok(%{$u->players});
 
 my $p2 = player_joins_game();
 my $p3 = player_joins_game();
 
-is_deeply($c->fetch('universe')->get->players, +{1 => $p1, 2 => $p2, 3 => $p3});
+is_deeply($u->players, +{1 => $p1, 2 => $p2, 3 => $p3});
 
 my $beginning_state = $p1->input_state->[0];
 my $response        = $p1->types_in('foo');
@@ -65,7 +61,7 @@ $p1->types_in('123456'); #re-enter password
 is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
 ok($c->fetch('directory')->get->lookup('player-foo'), 'player stored in kioku');
 
-ok(%{ $c->fetch('universe')->get->players_in_game });
+ok(%{ $u->players_in_game });
 
 
 SKIP: {
@@ -90,6 +86,8 @@ $p4->types_in('123465'); # oops, typo the password!
 is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password');
 $p4->types_in('123456');
 is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
+
+ok($p4->id);
 
 warn $p4->types_in('chat sup dudes');
 

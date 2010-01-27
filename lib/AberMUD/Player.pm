@@ -256,6 +256,17 @@ sub setup {
     $self->location($location || $self->universe->nowhere_location);
 }
 
+sub _ghost {
+    my $self   = shift;
+    my $victim = shift;
+    my $u = $self->universe;
+
+    return unless $victim->id and $self->id;
+
+    $u->_controller->force_disconnect($victim->id, ghost => 1);
+    $u->players->{$self->id} = delete $u->players->{$victim->id};
+}
+
 sub materialize {
     my $self = shift;
     my $u    = $self->universe;
@@ -267,8 +278,7 @@ sub materialize {
     my $m_player = $self->dir_player || $self;
 
     if ($m_player != $self && $m_player->in_game) {
-        $u->_controller->force_disconnect($m_player->id, ghost => 1);
-        $u->players->{$self->id} = delete $u->players->{$m_player->id};
+        $self->_ghost($m_player);
         return;
     }
 

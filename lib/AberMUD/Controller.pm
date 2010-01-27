@@ -12,7 +12,6 @@ use POE::Kernel;
 use JSON;
 use DDS;
 
-
 with qw(
     MooseX::Traits
 );
@@ -102,7 +101,6 @@ after 'custom_startup' => sub {
     POE::Session->create(
         inline_states => {
             _start => sub {
-                #warn "@_";
                 my ($self, $kernel) = @_[0, KERNEL];
                 $kernel->delay(tick => 1);
             },
