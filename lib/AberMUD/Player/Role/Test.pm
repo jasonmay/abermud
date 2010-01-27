@@ -21,15 +21,19 @@ around materialize => sub {
     my $self = shift;
 
     my $id = $self->id;
-    $self->$orig(@_);
+    my $p = $self->$orig(@_) || return;
 
-    # XXX I shouldn't be doing this. it spoils the test
-    $self->universe->players->{$id} = $self;
+    $self->universe->players->{$id} = $p;
+
+    return $p;
 };
 
 sub types_in {
     my $self    = shift;
     my $command = shift;
+
+    #warn $self->id ? $command : "$command :(";
+    return unless $self->id;
 
     return $self->universe->_controller->_response(
         $self->id => $command

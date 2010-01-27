@@ -287,6 +287,8 @@ sub materialize {
     $m_player->_join_game;
     $m_player->save_data if $m_player == $self;
     $m_player->setup;
+
+    return $m_player;
 }
 
 sub dematerialize {
