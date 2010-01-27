@@ -7,9 +7,9 @@ use Bread::Board;
 use Scalar::Util qw(weaken isweak);
 
 use AberMUD::Directory;
-use AberMUD::Test::Controller;
+use AberMUD::Controller;
 use AberMUD::Universe;
-use AberMUD::Test::Player;
+use AberMUD::Player;
 use AberMUD::Location;
 use AberMUD::Object;
 use List::Util qw(max);
@@ -48,12 +48,13 @@ override _build_container => sub {
         );
 
         service player => (
-            class => 'AberMUD::Test::Player',
+            class => 'AberMUD::Player',
             block => sub {
                 my $s      = shift;
                 my $u      = $s->param('universe');
                 my $max_id = max(keys %{$u->players}) || 0;
-                my $player = AberMUD::Test::Player->new(
+                my $player = AberMUD::Player->new_with_traits(
+                    traits    => ['AberMUD::Player::Role::Test'],
                     universe  => $u,
                     directory => $s->param('directory'),
                 );
@@ -69,8 +70,16 @@ override _build_container => sub {
         );
 
         service controller => (
-            class     => 'AberMUD::Test::Controller',
+            class     => 'AberMUD::Controller',
             lifecycle => 'Singleton',
+            block     => sub {
+                my $s = shift;
+                AberMUD::Controller->new_with_traits(
+                    traits    => ['AberMUD::Controller::Role::Test'],
+                    directory => $s->param('directory'),
+                    universe  => $s->param('universe'),
+                );
+            },
             dependencies => [
                 depends_on('directory'),
                 depends_on('universe'),

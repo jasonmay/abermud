@@ -38,6 +38,7 @@ when he leaves the game.
 =cut
 
 with qw(
+    MooseX::Traits
     AberMUD::Player::Role::InGame
     AberMUD::Role::Killable
 );

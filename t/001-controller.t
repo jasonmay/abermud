@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More tests => 11;
+use Test::More tests => 14;
 use AberMUD::Directory;
 use KiokuDB;
 use AberMUD::Test::Container;
@@ -79,4 +79,18 @@ SKIP: {
     ); #look
 }
 
-$c->fetch('directory')->get->kdb->delete($p1);
+$p1->leaves_game;
+
+my $p4 = player_joins_game();
+
+$p4->types_in('foo');
+is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password');
+$p4->types_in('123465'); # oops, typo the password!
+is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password');
+$p4->types_in('123456');
+is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
+
+warn $p4->types_in('chat sup dudes');
+
+my $kdb = $c->fetch('directory')->get->kdb;
+$kdb->delete($p1);

@@ -12,6 +12,11 @@ use POE::Kernel;
 use JSON;
 use DDS;
 
+
+with qw(
+    MooseX::Traits
+);
+
 has player_data_path => (
     is  => 'rw',
     isa => 'Str',
