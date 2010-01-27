@@ -7,10 +7,7 @@ extends 'MUD::Player';
 #use AberMUD::Controller;
 use AberMUD::Location;
 
-use POE::Wheel::ReadWrite;
-use Scalar::Util qw(weaken);
 use Carp qw(cluck);
-use DateTime;
 use KiokuDB;
 use List::MoreUtils qw(first_value);
 use DDS;
