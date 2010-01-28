@@ -22,7 +22,7 @@ has player_data_path => (
     default => "$ENV{PWD}/data"
 );
 
-around '_response' => sub {
+around _response => sub {
     my $orig = shift;
     my $self = shift;
     my $id   = shift;
@@ -46,7 +46,7 @@ around '_response' => sub {
     return AberMUD::Util::colorify($output);
 };
 
-around 'perform_connect_action' => sub {
+around perform_connect_action => sub {
     my $orig   = shift;
     my $self   = shift;
     my ($data) = @_;
@@ -68,13 +68,13 @@ around 'perform_connect_action' => sub {
 
 };
 
-before 'perform_input_action' => sub {
+before perform_input_action => sub {
     my $self = shift;
     my ($data) = @_;
 
 };
 
-around 'perform_disconnect_action' => sub {
+around perform_disconnect_action => sub {
     my $orig   = shift;
     my $self   = shift;
     my ($data) = @_;
@@ -96,7 +96,7 @@ around 'perform_disconnect_action' => sub {
     return $result;
 };
 
-after 'custom_startup' => sub {
+after custom_startup => sub {
     my ($self, $kernel, $session) = @_[0, KERNEL, SESSION];
     POE::Session->create(
         inline_states => {
