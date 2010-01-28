@@ -44,4 +44,13 @@ $locations{test2}->south($locations{test1});
 
 $kdb->update($_) foreach values %locations;
 
-copy($file => 't/etc/kdb/002');
+copy $file => "t/etc/kdb/$_" for '002', '003';
+
+# my $kdb_003 = AberMUD::Directory->new(
+#     kdb => KiokuDB->connect(
+#         "dbi:SQLite:dbname=t/etc/kdb/003",
+#         create => 0,
+#     )
+# );
+# 
+# TODO come up with a plan for adding objects to kioku
