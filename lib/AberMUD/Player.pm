@@ -95,7 +95,10 @@ foreach my $direction (@{AberMUD::Location->directions}) {
 
             my @players = values %{ $self->universe->players_in_game };
 
-            $self->say("\n" . $self->name . " goes " . $direction . "\n");
+            $self->say(
+                sprintf("\n%s goes %s\n", $self->name, $direction),
+                except => $self,
+            );
 
             $self->location($self->location->$direction);
 
@@ -108,7 +111,13 @@ foreach my $direction (@{AberMUD::Location->directions}) {
                 down  => 'above',
             );
 
-            $self->say("\n" . $self->name . " arrives from the " . $opp_dir{$direction} . "\n");
+            $self->say(
+                sprintf(
+                    "\n%s arrives from %s\n",
+                    $self->name, $opp_dir{$direction}
+                ),
+                except => $self,
+            );
 
             return $self->look;
         }

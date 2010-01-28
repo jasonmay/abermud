@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More tests => 1;
+use Test::More tests => 5;
 use AberMUD::Container;
 use AberMUD::Input::State::Game;
 
@@ -28,4 +28,8 @@ sub player_logs_in {
 my $one = player_logs_in('playerone');
 my $two = player_logs_in('playertwo');
 
-like($one->types_in('look'), qr{playertwo is standing here}i);
+like($one->types_in('look'),  qr{playertwo is standing here}i);
+like($one->types_in('north'), qr{This path goes north and south});
+like($two->get_output,  qr{playerone goes north}i);
+like($two->types_in('north'), qr{playerone is standing here}i);
+like($one->get_output,  qr{playertwo arrives from the south}i);

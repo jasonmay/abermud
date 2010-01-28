@@ -38,8 +38,8 @@ sub say {
     my %args    = @_;
 
    my @except = ref($args{except}) eq 'ARRAY'
-                    ? @{$args{except}} || ()
-                    : ($args{except} || []);
+                    ? (@{$args{except} || []})
+                    : ($args{except} || ());
 
     my @players = grep {
         my $p = $_;
