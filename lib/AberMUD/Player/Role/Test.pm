@@ -12,6 +12,7 @@ has output_queue => (
         add_output => 'push',
         get_output => 'shift',
     },
+    default => sub { [] },
 );
 
 override setup => sub { };
@@ -32,7 +33,6 @@ sub types_in {
     my $self    = shift;
     my $command = shift;
 
-    #warn $self->id ? $command : "$command :(";
     return unless $self->id;
 
     return $self->universe->_controller->_response(

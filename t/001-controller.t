@@ -92,10 +92,17 @@ ok($p4->id);
 
 $p4->types_in('chat sup dudes');
 
+ok(!@{ $_->output_queue }) for $p1, $p2, $p3, $p4;
+
 $p2->types_in('bar');
 $p2->types_in('123') for 1..2;
-TODO: { local $TODO = "this fails"; is($u->players->{2}, $p2); }
+
+is($u->players->{2}, $p2);
+
 $p2->types_in('chat hey');
 
+like($p4->output_queue->[0], qr{hey}, 'foo saw bar chat "hey"');
+
 my $kdb = $c->fetch('directory')->get->kdb;
-$kdb->delete($p1);
+$kdb->delete($p4);
+$kdb->delete($p2);

@@ -23,7 +23,7 @@ override send => sub {
         return;
     }
 
-    #$p->add_output($message);
+    $p->add_output($message);
 };
 
 override force_disconnect => sub {
