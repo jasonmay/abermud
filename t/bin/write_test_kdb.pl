@@ -3,6 +3,7 @@ use lib 'lib';
 use AberMUD::Directory;
 use AberMUD::Location;
 use AberMUD::Zone;
+use File::Copy;
 
 my $zone = AberMUD::Zone->new(name => 'test');
 
@@ -43,3 +44,4 @@ $locations{test2}->south($locations{test1});
 
 $kdb->update($_) foreach values %locations;
 
+copy($file => 't/etc/kdb/002');
