@@ -4,12 +4,12 @@ use Moose;
 use namespace::autoclean;
 use Carp;
 
-has 'name' => (
+has name => (
     is => 'rw',
     isa => 'Str',
 );
 
-has 'alias' => (
+has alias => (
     is => 'rw',
     isa => 'Str',
 );

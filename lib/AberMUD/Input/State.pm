@@ -4,7 +4,7 @@ use Moose;
 use namespace::autoclean;
 extends 'MUD::Input::State';
 
-has 'entry_message' => (
+has entry_message => (
     is => 'rw',
     isa => 'Str',
 );

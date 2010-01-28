@@ -5,13 +5,13 @@ use Moose::Role;
 use AberMUD::Location;
 use List::MoreUtils qw(any);
 
-has 'universe' => (
+has universe => (
     is => 'rw',
     isa => 'AberMUD::Universe',
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-has 'location' => (
+has location => (
     is => 'rw',
     isa => 'AberMUD::Location',
     traits => ['KiokuDB::DoNotSerialize'],

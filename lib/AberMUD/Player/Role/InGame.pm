@@ -7,7 +7,7 @@ use DateTime;
 
 with qw(AberMUD::Role::InGame);
 
-has 'death_time' => (
+has death_time => (
     is => 'rw',
     isa => 'DateTime',
     default => sub { DateTime->now },
@@ -15,33 +15,33 @@ has 'death_time' => (
 );
 
 # invisibility up to N level
-has 'visibility_level' => (
+has visibility_level => (
     is => 'rw',
     isa => 'Int',
     default => 0,
 );
 
-has 'level' => (
+has level => (
     is => 'rw',
     isa => 'Int',
     default => 1,
 );
 
-has 'helping' => (
+has helping => (
     is => 'rw',
     isa => 'Bool',
     default => 0,
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-has 'score' => (
+has score => (
     is => 'rw',
     isa => 'Int',
     default => 0,
 );
 
 # highest level attained
-has 'max_level' => (
+has max_level => (
     is => 'rw',
     isa => 'Int',
     default => 1,

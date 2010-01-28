@@ -40,13 +40,13 @@ with qw(
     AberMUD::Role::Killable
 );
 
-has 'prompt' => (
+has prompt => (
     is  => 'rw',
     isa => 'Str',
     default => '>',
 );
 
-has 'universe' => (
+has universe => (
     is        => 'rw',
     isa       => 'AberMUD::Universe',
     required  => 1,
@@ -54,7 +54,7 @@ has 'universe' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-has 'directory' => (
+has directory => (
     is        => 'rw',
     isa       => 'AberMUD::Directory',
     required  => 1,
@@ -62,7 +62,7 @@ has 'directory' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-has 'password' => (
+has password => (
     is => 'rw',
     isa => 'Str',
 );
@@ -74,7 +74,7 @@ sub id {
     return first_value { $p->{$_} == $self } keys %$p;
 }
 
-has 'dir_player' => (
+has dir_player => (
     is        => 'rw',
     isa       => 'AberMUD::Player',
     traits => ['KiokuDB::DoNotSerialize'],
