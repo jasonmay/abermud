@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 package AberMUD::Object;
-use Moose;
+use KiokuDB::Class;
 use namespace::autoclean;
 
 with qw(AberMUD::Role::InGame);

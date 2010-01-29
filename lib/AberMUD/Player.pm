@@ -1,16 +1,13 @@
 #!/usr/bin/env perl
 package AberMUD::Player;
-use Moose;
+use KiokuDB::Class;
 use namespace::autoclean;
 extends 'MUD::Player';
 
-#use AberMUD::Controller;
 use AberMUD::Location;
 
 use Carp qw(cluck);
-use KiokuDB;
 use List::MoreUtils qw(first_value);
-use DDS;
 
 =head1 NAME
 

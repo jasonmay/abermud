@@ -1,10 +1,9 @@
 #!/usr/bin/env perl
 package AberMUD::Location;
-use Moose;
+use KiokuDB::Class;
 use namespace::autoclean;
 
 use MooseX::ClassAttribute;
-use KiokuDB::Class;
 
 has id => (
     is  => 'rw',
