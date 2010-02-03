@@ -20,17 +20,9 @@ AberMUD::Player - AberMUD Player class for playing
 
     my $player = AberMUD::Player->new;
 
-    ...
-
-    $player->save;
-
 =head1 DESCRIPTION
 
 XXX
-
-AberMUD's player system is very straightforward. Each player has a connection
-to the server. A player's location and inventory does not stay on that person
-when he leaves the game.
 
 =cut
 

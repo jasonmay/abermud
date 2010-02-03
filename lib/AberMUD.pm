@@ -35,11 +35,21 @@ AberMUD - A codebase for a quest-based MUD flavor
 
 =head1 DESCRIPTION
 
-TODO TODO TODO TODO TODO
+AberMUD is a MUD flavor that is known to be quest-driven and
+have a more organized item system. Unlike most bases for MUD
+development, this is a B<framework>, not a B<codebase>.
+
+=head1 RUNNING THE SERVER
+
+In order to run the server, you need to be running an intermediary
+that comes with the L<MUD> distribution (C<bin/server.pl>). See
+the L<MUD> documentation for more detail on this. Once run, you fire
+up C<bin/game.pl> found in this distribution. The default port is
+the canonical CDirt port (6715).
 
 =head1 AUTHOR
 
-Jason May C<< <jason.a.may@gmail.com >>
+Jason May C<< <jason.a.may@gmail.com> >>
 
 =head1 LICENSE
 

@@ -116,3 +116,29 @@ no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;
+
+__END__
+
+=head1 NAME
+
+AberMUD::Controller - Logic that coordinates gameplay and I/O
+
+=head1 SYNOPSIS
+
+  my $abermud = AberMUD::Controller->new(universe => $universe);
+
+=head1 DESCRIPTION
+
+This module is basically L<MUD::Controller> with some modifications
+involving player actions and POE-related enhancements.
+
+See L<MUD::Controller> documentation for more details on the functionality
+of this module.
+
+=head1 AUTHOR
+
+Jason May C<< <jason.a.may@gmail.com> >>
+
+=head1 LICENSE
+
+You may use this code under the same terms of Perl itself.
