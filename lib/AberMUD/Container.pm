@@ -162,3 +162,20 @@ sub _build_container {
 
 1;
 
+__END__
+
+=head1 NAME
+
+AberMUD::Container - wires all the AberMUD components together
+
+=head1 SYNOPSIS
+
+  use AberMUD::Container;
+  
+  my $c = AberMUD::Container->new->container;
+  $c->fetch('app')->get->run;
+
+=head1 DESCRIPTION
+
+See L<Bread::Board> for more information.
+
