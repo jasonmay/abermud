@@ -41,7 +41,7 @@ development, this is a B<framework>, not a B<codebase>.
 
 =head1 RUNNING THE SERVER
 
-In order to run the server, you need to be running an intermediary
+In order to run the server, you need to be running an B<intermediary>
 that comes with the L<MUD> distribution (C<bin/server.pl>). See
 the L<MUD> documentation for more detail on this. Once run, you fire
 up C<bin/game.pl> found in this distribution. The default port is
