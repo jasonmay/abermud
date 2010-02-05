@@ -7,5 +7,4 @@ use AberMUD;
 use AberMUD::Container;
 
 my $c = AberMUD::Container->new->container;
-
 $c->fetch('app')->get->run;

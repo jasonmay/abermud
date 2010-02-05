@@ -13,11 +13,7 @@ override send => sub {
 
     return unless $id;
 
-    my $p = $self->universe->players->{$id};
-    if (!$p) {
-        #warn "$id => $message";
-        return;
-    }
+    my $p = $self->universe->players->{$id} or return;
     if (!$p->does('AberMUD::Player::Role::Test')) {
         warn "not a test player";
         return;
@@ -32,11 +28,7 @@ override force_disconnect => sub {
 
     return unless $id;
 
-    my $p = $self->universe->players->{$id};
-    if (!$p) {
-        warn $id;
-        return;
-    }
+    my $p = $self->universe->players->{$id} or return;
     return unless $p->does('AberMUD::Player::Role::Test');
 
     $p->leaves_game;

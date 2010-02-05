@@ -79,3 +79,20 @@ sub show_exits {
 __PACKAGE__->meta->make_immutable;
 
 1;
+
+__END__
+
+=head1 NAME
+
+AberMUD::Location - "rooms" that players see when they play
+
+=head1 SYNOPSIS
+
+  my $loc = AberMUD::Location->new(
+      zone  => $zone,
+      north => $north_loc,
+      east  => $east_loc,
+      ...
+      title       => 'A path',
+      description => 'This place is awesome. It is sunny.',
+  );
