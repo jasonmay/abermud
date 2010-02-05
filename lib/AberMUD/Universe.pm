@@ -40,17 +40,19 @@ has nowhere_location => (
     }
 );
 
-has objects => (
-    is  => 'rw',
-    isa => 'ArrayRef[AberMUD::Object]',
-    default => sub { [] },
-);
-
 has mobiles => (
     is  => 'rw',
     isa => 'ArrayRef[AberMUD::Mobile]',
     default => sub { [] },
 );
+
+sub loaded_objects {
+    my $self = shift;
+    return grep {
+    $_->isa('AberMUD::Object')
+    }
+    $self->directory->kdb->live_objects->live_objects;
+}
 
 sub broadcast {
     my $self   = shift;

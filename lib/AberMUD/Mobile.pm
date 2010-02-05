@@ -40,6 +40,11 @@ has spells => (
     default => sub { +{} },
 );
 
+has _held_objects => (
+    is  => 'ro',
+    isa => 'Kioku::Set',
+);
+
 sub move {
     my $self = shift;
     return unless $self->location;
