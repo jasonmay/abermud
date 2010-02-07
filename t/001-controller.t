@@ -33,79 +33,77 @@ sub player_joins_game {
     return $p;
 }
 
-eval {
-    $c->fetch('directory')->get->kdb->txn_do(
-        sub {
-            ok(!%{$u->players});
-            my $p1 = player_joins_game();
-            ok(%{$u->players});
+my $txn_block = sub {
+    ok(!%{$u->players});
+    my $p1 = player_joins_game();
+    ok(%{$u->players});
 
-            my $p2 = player_joins_game();
-            my $p3 = player_joins_game();
+    my $p2 = player_joins_game();
+    my $p3 = player_joins_game();
 
-            is_deeply($u->players, +{1 => $p1, 2 => $p2, 3 => $p3});
+    is_deeply($u->players, +{1 => $p1, 2 => $p2, 3 => $p3});
 
-            my $beginning_state = $p1->input_state->[0];
-            my $response        = $p1->types_in('foo');
+    my $beginning_state = $p1->input_state->[0];
+    my $response        = $p1->types_in('foo');
 
-            is(
-                $response, $p1->input_state->[0]->entry_message,
-                'player is given response message'
-            );
-
-            isnt($beginning_state, $p1->input_state->[0], 'change player input state');
-            is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password::New');
-
-            $p1->types_in('123456'); #enter password
-            is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password::Confirm');
-
-            $p1->types_in('123456'); #re-enter password
-            is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
-            ok($c->fetch('directory')->get->lookup('player-foo'), 'player stored in kioku');
-
-            ok(%{ $u->players_in_game });
-
-
-            SKIP: {
-                my $loc = $c->fetch('directory')->get->lookup('location-test1');
-                skip 'missing locations in test kdb', 1 unless $loc;
-
-                $p1->location($loc);
-
-                like(
-                    $p1->types_in("look"), qr{A road},
-                    'player tries to see a road'
-                ); #look
-            }
-
-            $p1->leaves_game;
-
-            my $p4 = player_joins_game();
-
-            $p4->types_in('foo');
-            is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password');
-            $p4->types_in('123465'); # oops, typo the password!
-            is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password');
-            $p4->types_in('123456');
-            is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
-
-            $p4 = $p4->dir_player; # server talks to this guy now
-            ok($p4->id);
-
-            $p4->types_in('chat sup dudes');
-
-            ok(!@{ $_->output_queue }) for $p1, $p2, $p3, $p4;
-
-            $p2->types_in('bar');
-            $p2->types_in('123') for 1..2;
-
-            is($u->players->{2}, $p2);
-
-            $p2->types_in('chat hey');
-
-            like($p4->output_queue->[0], qr{hey}, 'foo saw bar chat "hey"');
-
-            die "rollback";
-        }
+    is(
+        $response, $p1->input_state->[0]->entry_message,
+        'player is given response message'
     );
-}
+
+    isnt($beginning_state, $p1->input_state->[0], 'change player input state');
+    is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password::New');
+
+    $p1->types_in('123456'); #enter password
+    is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password::Confirm');
+
+    $p1->types_in('123456'); #re-enter password
+    is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
+    ok($c->fetch('directory')->get->lookup('player-foo'), 'player stored in kioku');
+
+    ok(%{ $u->players_in_game });
+
+
+    SKIP: {
+        my $loc = $c->fetch('directory')->get->lookup('location-test1');
+        skip 'missing locations in test kdb', 1 unless $loc;
+
+        $p1->location($loc);
+
+        like(
+            $p1->types_in("look"), qr{A road},
+            'player tries to see a road'
+        ); #look
+    }
+
+    $p1->leaves_game;
+
+    my $p4 = player_joins_game();
+
+    $p4->types_in('foo');
+    is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password');
+    $p4->types_in('123465'); # oops, typo the password!
+    is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Login::Password');
+    $p4->types_in('123456');
+    is($p4->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
+
+    $p4 = $p4->dir_player; # server talks to this guy now
+    ok($p4->id);
+
+    $p4->types_in('chat sup dudes');
+
+    ok(!@{ $_->output_queue }) for $p1, $p2, $p3, $p4;
+
+    $p2->types_in('bar');
+    $p2->types_in('123') for 1..2;
+
+    is($u->players->{2}, $p2);
+
+    $p2->types_in('chat hey');
+
+    like($p4->output_queue->[0], qr{hey}, 'foo saw bar chat "hey"');
+
+    die "rollback";
+};
+
+eval { $c->fetch('directory')->get->kdb->txn_do($txn_block) }
