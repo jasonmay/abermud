@@ -39,14 +39,6 @@ has prompt => (
     default => '>',
 );
 
-#has universe => (
-#    is        => 'rw',
-#    isa       => 'AberMUD::Universe',
-#    required  => 1,
-#    weak_ref  => 1,
-#    traits => ['KiokuDB::DoNotSerialize'],
-#);
-
 has directory => (
     is        => 'rw',
     isa       => 'AberMUD::Directory',
