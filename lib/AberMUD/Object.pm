@@ -3,7 +3,10 @@ package AberMUD::Object;
 use KiokuDB::Class;
 use namespace::autoclean;
 
-with qw(AberMUD::Role::InGame);
+with qw(
+    MooseX::Traits
+    AberMUD::Role::InGame
+);
 
 has name => (
     is => 'rw',
