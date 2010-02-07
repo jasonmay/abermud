@@ -5,17 +5,22 @@ use namespace::autoclean;
 use Carp;
 
 has name => (
-    is => 'rw',
-    isa => 'Str',
+    is      => 'rw',
+    isa     => 'Str',
+    builder => '_build_name',
 );
 
+sub _build_name {
+    croak "Please override the '_build_name' method.";
+}
+
 has alias => (
-    is => 'rw',
+    is  => 'rw',
     isa => 'Str',
 );
 
 sub run {
-    croak "You need to override AberMUD::Input::Command::run";
+    croak "Please override the 'run' method.";
 }
 
 __PACKAGE__->meta->make_immutable;

@@ -6,7 +6,7 @@ extends 'AberMUD::Input::Command';
 
 my $command_name = lc __PACKAGE__;
 $command_name =~ s/.+:://; $command_name =~ s/\.pm//;
-has '+name' => ( default => $command_name );
+override _build_name => sub { $command_name };
 
 sub run {
     my $you  = shift;
