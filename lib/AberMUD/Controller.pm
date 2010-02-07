@@ -96,6 +96,7 @@ around perform_disconnect_action => sub {
     return $result;
 };
 
+# FIXME we want to lazy-load objects instead
 sub _load_objects {
     my $self = shift;
     my $k = $self->universe->directory->kdb;
