@@ -96,20 +96,42 @@ around perform_disconnect_action => sub {
     return $result;
 };
 
-after custom_startup => sub {
-    my ($self, $kernel, $session) = @_[0, KERNEL, SESSION];
-    POE::Session->create(
-        inline_states => {
-            _start => sub {
-                my ($self, $kernel) = @_[0, KERNEL];
-                $kernel->delay(tick => 1);
-            },
-            tick => sub {
-                $self->universe and do { $_->move for @{$self->universe->mobiles} };
-                $_[KERNEL]->delay(tick => 1);
-            },
+sub _load_objects {
+    my $self = shift;
+    my $k = $self->universe->directory->kdb;
+    my $s = $k->all_objects;
+
+    my @objs;
+    while (my $block = $s->next) {
+        foreach my $item (@$block) {
+            push @objs, $item if $item->isa('AberMUD::Object');
         }
-    );
+    }
+
+    $self->universe->objects([@objs]);
+}
+
+sub _custom_startup {
+    my ($self, $kernel, $session) = @_[0, KERNEL, SESSION];
+    if (my $u = $self->universe) {
+        POE::Session->create(
+            inline_states => {
+                _start => sub {
+                    $_[KERNEL]->delay(tick => 1);
+                },
+                tick => sub {
+                    $_->move for @{$u->mobiles};
+                    $_[KERNEL]->delay(tick => 1);
+                },
+            }
+        );
+        $self->_load_objects;
+    }
+}
+
+after custom_startup => sub {
+    my $self = shift;
+    $self->_custom_startup(@_);
 };
 
 no Moose;

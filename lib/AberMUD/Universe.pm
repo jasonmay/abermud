@@ -46,13 +46,11 @@ has mobiles => (
     default => sub { [] },
 );
 
-sub loaded_objects {
-    my $self = shift;
-    return grep {
-    $_->isa('AberMUD::Object')
-    }
-    $self->directory->kdb->live_objects->live_objects;
-}
+has objects => (
+    is  => 'rw',
+    isa => 'ArrayRef[AberMUD::Object]',
+    default => sub { [] },
+);
 
 sub broadcast {
     my $self   = shift;

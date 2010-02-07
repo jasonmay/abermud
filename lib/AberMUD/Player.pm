@@ -29,19 +29,23 @@ with qw(
     AberMUD::Role::Killable
 );
 
+has '+location' => (
+    traits => ['KiokuDB::DoNotSerialize'],
+);
+
 has prompt => (
     is  => 'rw',
     isa => 'Str',
     default => '>',
 );
 
-has universe => (
-    is        => 'rw',
-    isa       => 'AberMUD::Universe',
-    required  => 1,
-    weak_ref  => 1,
-    traits => ['KiokuDB::DoNotSerialize'],
-);
+#has universe => (
+#    is        => 'rw',
+#    isa       => 'AberMUD::Universe',
+#    required  => 1,
+#    weak_ref  => 1,
+#    traits => ['KiokuDB::DoNotSerialize'],
+#);
 
 has directory => (
     is        => 'rw',

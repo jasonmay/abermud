@@ -37,11 +37,6 @@ has flags => (
     default => sub { +{} },
 );
 
-has _objects_on_ground => (
-    is  => 'ro',
-    isa => 'KiokuDB::Set',
-);
-
 has active => (
     is  => 'rw',
     isa => 'Bool',

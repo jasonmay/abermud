@@ -77,28 +77,6 @@ sub new_universe {
         universe    => $u,
     );
 
-    my $o;
-
-    $o = AberMUD::Object->new(
-        name        => 'rock',
-        description => 'There is a rock here.',
-        location    => $start_loc,
-        universe    => $u,
-    );
-    AberMUD::Object::Role::Getable->meta->apply($o);
-    push @objs, $o;
-
-    $o = AberMUD::Object->new(
-        name        => 'sword',
-        location    => $start_loc,
-        description => 'There is a sword here.',
-        universe    => $u,
-    );
-    AberMUD::Object::Role::Weapon->meta->apply($o);
-    push @objs, $o;
-
-
-    $u->objects([ @objs ]);
     $u->mobiles([ $m ]);
 
     return $u;

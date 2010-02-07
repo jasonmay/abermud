@@ -6,15 +6,15 @@ use AberMUD::Location;
 use List::MoreUtils qw(any);
 
 has universe => (
-    is => 'rw',
-    isa => 'AberMUD::Universe',
-    traits => ['KiokuDB::DoNotSerialize'],
+    is       => 'rw',
+    isa      => 'AberMUD::Universe',
+    weak_ref => 1,
+    traits   => ['KiokuDB::DoNotSerialize'],
 );
 
 has location => (
     is => 'rw',
     isa => 'AberMUD::Location',
-    traits => ['KiokuDB::DoNotSerialize'],
     handles => {
         map {
             ("can_go_$_" => "has_$_")
