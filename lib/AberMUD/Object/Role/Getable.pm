@@ -16,8 +16,9 @@ has size => (
 );
 
 has held_by => (
-    is  => 'rw',
-    isa => 'AberMUD::Player | AberMUD::Mobile',
+    is      => 'rw',
+    isa     => 'AberMUD::Player|AberMUD::Mobile',
+    clearer => '_stop_being_held',
 );
 
 no Moose::Role;

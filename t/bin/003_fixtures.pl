@@ -31,21 +31,30 @@ my %locations = (
     ),
 );
 
-my $o1 = AberMUD::Object->new_with_traits(
-    name        => 'rock',
-    description => 'A rock is laying on the ground here.',
-    location    => $locations{test1},
-);
+my @objects = (
+    AberMUD::Object->new_with_traits(
+        name        => 'rock',
+        description => 'A rock is laying on the ground here.',
+        location    => $locations{test1},
+    ),
 
-my $o2 = AberMUD::Object->new_with_traits(
-    name        => 'sword',
-    description => 'Here lies a sword run into the ground.',
-    location    => $locations{test1},
-    traits      => ['AberMUD::Object::Role::Weapon'],
-);
+    AberMUD::Object->new_with_traits(
+        name        => 'sword',
+        description => 'Here lies a sword run into the ground.',
+        location    => $locations{test2},
+        traits      => ['AberMUD::Object::Role::Weapon'],
+    ),
 
-$o1->location($locations{test1});
-$o2->location($locations{test2});
+    AberMUD::Object->new_with_traits(
+        name                => 'sign',
+        description         => 'There is a sign here.',
+        examine_description => "Why do you care what it says? " .
+                            "You're just a perl script!",
+        location            => $locations{test1},
+        ungetable           => 1,
+        traits              => ['AberMUD::Object::Role::Weapon'],
+    ),
+);
 
 my $file = 't/etc/kdb/003';
 
@@ -65,7 +74,7 @@ $locations{test2}->south($locations{test1});
 
 $kdb->update($_) foreach values %locations;
 
-my @ids = $kdb->store($o1, $o2);
+my @ids = $kdb->store(@objects);
 
 warn $kdb->lookup($ids[0])->location->title;
 

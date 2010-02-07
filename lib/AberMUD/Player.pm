@@ -318,6 +318,10 @@ sub look {
     $output .= sprintf("%s\n", $_->description)
         for grep {
             $_->location == $loc
+            and not (
+                $_->can('held_by')
+                and $_->held_by
+            )
         } @{$self->universe->objects};
 
     $output .= "\n" . $loc->show_exits;
