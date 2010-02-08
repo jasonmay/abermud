@@ -49,3 +49,35 @@ like($two->get_output, qr{playerone picks up a rock\.}i);
 is($objects{rock}->held_by, $one);
 
 unlike($one->types_in('look'), qr{A rock is laying on the ground here\.});
+
+like($one->types_in('drop rock'), qr{You drop the rock\.});
+is_deeply($one->output_queue, []);
+
+like($two->get_output, qr{playerone drops a rock\.}i);
+is_deeply($one->output_queue, []);
+
+like($one->types_in('take sword'), qr{No object of that name is here\.});
+
+# make sure nothing broadcasts to self
+is_deeply($one->output_queue, []);
+
+$two->types_in('north');
+like($two->types_in('take sword'), qr{You take the sword\.});
+like($two->types_in('take sword'), qr{You are already carrying that!});
+$two->types_in('south');      $one->get_output;
+$two->types_in('drop sword'); $one->get_output;
+
+is($objects{sword}->location, $one->location);
+
+like($one->types_in('take all'), qr{You take everything you can\.});
+like($two->get_output, qr{playertwo takes everything he can\.});
+
+my @output_lines = split /\n/, $one->types_in('inventory');
+is($output_lines[0], q{Your backpack contains:});
+like($output_lines[1], qr{\brock\b});
+like($output_lines[1], qr{\sword\b});
+
+like($two->get_output, qr{playerone rummages through his backpack}i);
+is_deeply($one->output_queue, []);
+
+like($two->types_in('inventory'), qr{Your backpack contains nothing\.});
