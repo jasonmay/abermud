@@ -26,13 +26,17 @@ sub run {
             if ($matching_objects[0]->can('held_by')) {
                 $matching_objects[0]->held_by($you);
                 $you->say(
-                    sprintf
-                    "%s picks up a %s.\n",
-                    $you->name, $matching_objects[0]->name
+                    sprintf(
+                        "%s picks up a %s.\n",
+                        $you->name, $matching_objects[0]->name
+                    ),
+                    except => $you,
                 );
                 return sprintf("You take the %s.", $matching_objects[0]->name);
             }
         }
+
+        return "No object of that name is here.";
     }
     elsif (@args == 3 and lc($args[1]) eq 'from') {
         return "Not supported yet.";
