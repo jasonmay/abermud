@@ -46,6 +46,13 @@ sub run {
 
         if (@matching_objects) {
             if ($matching_objects[0]->can('held_by')) {
+                if ($matching_objects[0]->held_by) {
+                    return "You are already carrying that!"
+                        if $matching_objects[0]->held_by == $you;
+
+                    return "The " . $matching_objects[0]->name
+                        . " is not on the ground for you to take.";
+                }
                 $matching_objects[0]->held_by($you);
                 $you->say(
                     sprintf(
