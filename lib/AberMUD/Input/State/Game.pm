@@ -54,7 +54,7 @@ sub run {
 
     return "" unless $input =~ /\S/;
 
-    return "I don't know any commands by that name.\n"
+    return "I don't know any commands by that name."
         unless $dispatch->has_matches;
 
      my $match = ($dispatch->matches)[0];
