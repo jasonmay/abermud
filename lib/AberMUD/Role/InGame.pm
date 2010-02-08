@@ -47,7 +47,7 @@ sub say {
     }
     values %{$self->universe->players_in_game};
 
-    $_->send($message) for @players;
+    $_->send("\n$message") for @players;
 
     return $self;
 }
