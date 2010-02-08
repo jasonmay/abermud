@@ -38,6 +38,9 @@ sub BUILD {
     my $self = shift;
     my $args = shift;
 
+    # pass in ungetable => 1 and it won't load the Getable role
+    # otherwise it loads the role. Because I mean, who doesn't
+    # like taking stuff!
     if (!$args->{ungetable}) {
         my $getable_role = 'AberMUD::Object::Role::Getable';
         apply_all_roles($self, $getable_role);
