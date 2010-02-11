@@ -10,5 +10,7 @@ has all_objects => (
     default => sub { +{} },
 );
 
+__PACKAGE__->meta->make_immutable;
+
 1;
 
