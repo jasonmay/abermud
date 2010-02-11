@@ -2,6 +2,7 @@
 package AberMUD::Object::Role::Door;
 use Moose::Role;
 use Moose::Util::TypeConstraints;
+use namespace::autoclean;
 
 with qw(
     AberMUD::Object::Role::Openable
@@ -14,7 +15,6 @@ has opening_link => (
     })
 );
 
-no Moose::Role;
 
 1;
 

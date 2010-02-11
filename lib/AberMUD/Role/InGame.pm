@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Role::InGame;
 use Moose::Role;
+use namespace::autoclean;
 
 use AberMUD::Location;
 use List::MoreUtils qw(any);
@@ -51,7 +52,5 @@ sub say {
 
     return $self;
 }
-
-no Moose::Role;
 
 1;

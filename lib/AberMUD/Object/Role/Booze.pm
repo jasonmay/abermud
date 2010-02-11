@@ -1,12 +1,12 @@
 #!/usr/bin/env perl
 package AberMUD::Object::Role::Booze;
 use Moose::Role;
+use namespace::autoclean;
 
 with qw(
     AberMUD::Object::Role::Food
 );
 
-no Moose::Role;
 
 1;
 

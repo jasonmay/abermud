@@ -1,11 +1,7 @@
 #!/usr/bin/env perl
-package Magical;
 package AberMUD::Object::Role::Magical;
 use Moose::Role;
+use namespace::autoclean;
 
-# nothin' yet!
-
-no Moose::Role;
 
 1;
-

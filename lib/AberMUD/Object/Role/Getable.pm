@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Object::Role::Getable;
 use Moose::Role;
+use namespace::autoclean;
 
 use AberMUD::Player;
 use AberMUD::Mobile;
@@ -21,7 +22,6 @@ has held_by => (
     clearer => '_stop_being_held',
 );
 
-no Moose::Role;
 
 1;
 

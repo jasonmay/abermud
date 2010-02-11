@@ -129,7 +129,6 @@ after custom_startup => sub {
     $self->_custom_startup(@_);
 };
 
-no Moose;
 __PACKAGE__->meta->make_immutable;
 
 1;

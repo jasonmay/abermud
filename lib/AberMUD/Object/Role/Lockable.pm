@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Object::Role::Lockable;
 use Moose::Role;
+use namespace::autoclean;
 
 has lock_description => (
     is  => 'rw',
@@ -12,7 +13,6 @@ has lock_action => (
     isa => 'Str',
 );
 
-no Moose::Role;
 
 1;
 

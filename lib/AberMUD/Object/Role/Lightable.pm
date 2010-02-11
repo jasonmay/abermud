@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Object::Role::Lightable;
 use Moose::Role;
+use namespace::autoclean;
 
 has lit => (
     is  => 'rw',
@@ -8,7 +9,6 @@ has lit => (
     default => 0,
 );
 
-no Moose::Role;
 
 1;
 

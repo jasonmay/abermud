@@ -2,6 +2,7 @@
 package AberMUD::Object::Role::Openable;
 #use Moose::Role -excludes => qw(AberMUD::Object::Role::Closeable);
 use Moose::Role;
+use namespace::autoclean;
 
 has open_description => (
     is  => 'rw',
@@ -13,7 +14,6 @@ has opened => (
     isa => 'Str',
 );
 
-no Moose::Role;
 
 1;
 

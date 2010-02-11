@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Object::Role::Closeable;
 use Moose::Role excludes => qw(AberMUD::Object::Role::Openable);
+use namespace::autoclean;
 
 has close_description => (
     is  => 'rw',
@@ -12,7 +13,6 @@ has closed => (
     isa => 'Str',
 );
 
-no Moose::Role;
 
 1;
 

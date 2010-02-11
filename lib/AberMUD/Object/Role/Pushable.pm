@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Object::Role::Pushable;
 use Moose::Role;
+use namespace::autoclean;
 
 has pushed_description => (
     is  => 'rw',
@@ -12,7 +13,6 @@ has pushed => (
     isa => 'Bool',
 );
 
-no Moose::Role;
 
 1;
 
