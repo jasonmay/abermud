@@ -16,6 +16,21 @@ sub run {
     if (!@args) {
         return "Drop what?";
     }
+    elsif ($args[0] eq 'all') {
+        for ($you->carrying_loosely) {
+            $_->location($you->location);
+            $_->_stop_being_held;
+        }
+
+        $you->say(
+            sprintf(
+                "%s drops everything he can.\n",
+                $you->name,
+            ),
+            except => $you,
+        );
+        return "You drop everything you can.";
+    }
     else {
         my @matching_objects = grep {
             $_->can('held_by') and $_->held_by

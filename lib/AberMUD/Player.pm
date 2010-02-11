@@ -329,6 +329,26 @@ sub look {
     return $output;
 }
 
+sub carrying {
+    my $self = shift;
+
+    return grep {
+        $_->can('held_by') and $_->held_by and $_->held_by == $self
+    } @{ $self->universe->objects };
+}
+
+sub carrying_loosely {
+    my $self = shift;
+
+    return grep {
+        not
+        ($_->can('wielded_by') and $_->wielded_by and $_->wielded_by == $self)
+
+        and not
+        ($_->can('worn_by') and $_->worn_by and $_->worn_by == $self)
+    } $self->carrying;
+}
+
 sub send {
     my $self    = shift;
     my $message = shift;
