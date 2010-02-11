@@ -58,12 +58,12 @@ foreach my $color (keys %colors) {
 
 is(
     AberMUD::Util::colorify("&+rtest$_"),
-    "\e[0;31mfah\e[40m\e[0m",
+    "\e[0;31mtest\e[40m\e[0m",
 ) for '&*', '&n', '&N';
 
 is(
     AberMUD::Util::colorify("&+rtest${_}trailing"),
-    "\e[0;31mfah\e[40m\e[0mtrailing",
+    "\e[0;31mtest\e[40m\e[0mtrailing",
 ) for '&*', '&n', '&N';
 
 is(AberMUD::Util::colorify("foo&/bar"), "foo\r\nbar", "newlines");
