@@ -4,7 +4,6 @@ use Moose;
 use KiokuDB;
 use Moose::Util qw(apply_all_roles);
 use KiokuDB::LiveObjects::Scope;
-use AberMUD::Directory::Scope;
 use Carp;
 use namespace::autoclean;
 
