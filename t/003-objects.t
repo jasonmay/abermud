@@ -42,7 +42,6 @@ my $two = player_logs_in('playertwo');
 
 like($one->types_in('look'), qr{A rock is laying on the ground here\.});
 
-
 like($one->types_in('take rock'), qr{You take the rock\.});
 like($two->get_output, qr{playerone picks up a rock\.}i);
 
@@ -63,11 +62,15 @@ is_deeply($one->output_queue, []);
 
 $two->types_in('north'); $one->get_output;
 like($two->types_in('take sword'), qr{You take the sword\.}); $one->get_output;
+
 like($two->types_in('take sword'), qr{You are already carrying that!});
+
 $two->types_in('south');      $one->get_output;
 $two->types_in('drop sword'); $one->get_output;
 
-is($objects{sword}->location, $one->location);
+my $look_output = $one->types_in('look');
+like($look_output, qr{A rock});
+like($look_output, qr{a sword});
 
 like($one->types_in('take all'), qr{You take everything you can\.});
 like($two->get_output, qr{playerone takes everything he can\.});
@@ -84,3 +87,11 @@ like($two->get_output, qr{playerone rummages through his backpack}i);
 is_deeply($one->output_queue, []);
 
 like($two->types_in('inventory'), qr{Your backpack contains nothing\.});
+$one->get_output;
+
+like($one->types_in('drop all'), qr{You drop everything you can\.});
+like($two->get_output, qr{playerone drops everything he can\.}i);
+
+# test bug where I don't see the rock on the ground
+$one->types_in('take sword'); $two->get_output;
+like($two->types_in('take rock'), qr{You take the rock.});

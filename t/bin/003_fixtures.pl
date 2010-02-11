@@ -6,6 +6,7 @@ use AberMUD::Directory;
 use AberMUD::Location;
 use AberMUD::Object;
 use AberMUD::Zone;
+use AberMUD::Universe::Sets;
 
 my $zone = AberMUD::Zone->new(name => 'test');
 
@@ -17,7 +18,7 @@ my %locations = (
         description        => "There is a road here heading north. "
                               . "You hear noises in the distance. ",
         zone               => $zone,
-        _objects_on_ground => $set1,
+        #_objects_on_ground => $set1,
         active             => 1,
     ),
     test2 => AberMUD::Location->new(
@@ -26,7 +27,7 @@ my %locations = (
         title              => 'Path',
         description        => "This path goes north and south.",
         zone               => $zone,
-        _objects_on_ground => $set2,
+        #_objects_on_ground => $set2,
         active             => 1,
     ),
 );
@@ -56,6 +57,8 @@ my @objects = (
     ),
 );
 
+my $sets = AberMUD::Universe::Sets->new;
+
 my $file = 't/etc/kdb/003';
 
 unlink $file;
@@ -68,13 +71,14 @@ my $kdb = AberMUD::Directory->new(
 
 $kdb->store("location-$_" => $locations{$_}) foreach keys %locations;
 
-
 $locations{test1}->north($locations{test2});
 $locations{test2}->south($locations{test1});
 
 $kdb->update($_) foreach values %locations;
 
-my @ids = $kdb->store(@objects);
+for (@objects) {
+    my $id = $kdb->store($_);
+    $sets->all_objects->{$id} = $_;
+}
 
-warn $kdb->lookup($ids[0])->location->title;
-
+$kdb->store("universe-sets" => $sets);

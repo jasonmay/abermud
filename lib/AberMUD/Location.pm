@@ -52,10 +52,10 @@ class_has directions => (
 
 for (_directions) {
     has $_ => (
-        is => 'rw',
-        isa => 'AberMUD::Location',
-        weak_ref => 1,
-        traits => [ qw(KiokuDB::Lazy) ],
+        is        => 'rw',
+        isa       => 'AberMUD::Location',
+        weak_ref  => 1,
+        traits    => [ qw(KiokuDB::Lazy) ],
         predicate => "has_$_",
     );
 }
@@ -65,7 +65,7 @@ sub show_exits {
     my $output;
     $output = "&+CObvious exits are:&*\n";
     for (@{$self->directions}) {
-        next unless $self->${\"has_$_"};
+        next unless $self->$_;
         $output .= sprintf("%-5s &+Y: &+G%s&*\n", ucfirst($_), $self->$_->title);
     }
     return $output;

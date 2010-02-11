@@ -2,13 +2,17 @@
 package AberMUD::Directory;
 use Moose;
 use KiokuDB;
+use Moose::Util qw(apply_all_roles);
+use KiokuDB::LiveObjects::Scope;
+use AberMUD::Directory::Scope;
+use Carp;
 use namespace::autoclean;
 
 has kdb => (
-    is => 'ro',
-    isa => 'KiokuDB',
+    is         => 'ro',
+    isa        => 'KiokuDB',
     lazy_build => 1,
-    handles => [ qw/store lookup search update/ ],
+    handles    => [ qw/store lookup search update/ ],
 );
 
 sub _build_kdb {
