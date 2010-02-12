@@ -55,6 +55,13 @@ my @objects = (
         ungetable           => 1,
         traits              => ['AberMUD::Object::Role::Weapon'],
     ),
+
+    AberMUD::Object->new_with_traits(
+        name                => 'sack',
+        description         => 'There is a sack here.',
+        location            => $locations{test1},
+        traits              => ['AberMUD::Object::Role::Container'],
+    ),
 );
 
 my $sets = AberMUD::Universe::Sets->new;
