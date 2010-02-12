@@ -3,10 +3,11 @@ package AberMUD::Input::State::Game;
 use Moose;
 extends 'AberMUD::Input::State';
 use AberMUD::Input::Dispatcher;
-use Module::Pluggable
-    search_path => ['AberMUD::Input::Command'],
-    sub_name    => 'commands',
-    require     => 1;
+use AberMUD::Input::Commands;
+#use Module::Pluggable
+#    search_path => ['AberMUD::Input::Command'],
+#    sub_name    => 'commands',
+#    require     => 1;
 
 sub welcome_message { "\e[2J" . << '_STOP_';
     _    _               __  __ _   _ ____
@@ -35,12 +36,15 @@ has dispatcher => (
 sub BUILD {
     my $self = shift;
 
-    foreach my $command (sort $self->commands) {
-        my $command_object = $command->new;
+    my $commands = AberMUD::Input::Commands->new;
+    foreach my $command_class (sort $commands->commands) {
+        (my $command = lc $command_class) =~ s/.+:://;
+
+        Class::MOP::load_class($command_class);
         $self->dispatcher->add_rule(
             AberMUD::Input::Dispatcher::Rule->new(
-                command => $command_object,
-                block  => $command_object->can('run'),
+                command => $command_class->new,
+                block   => sub { $commands->$command(@_) },
             )
         );
     }

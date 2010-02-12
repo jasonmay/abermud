@@ -15,7 +15,6 @@ for (__PACKAGE__->commands) {
     __PACKAGE__->meta->add_method(
         $command => sub { shift; no strict 'refs'; &{"${module}::run"}(@_) },
     );
-    warn "$command loaded";
 }
 
 __PACKAGE__->meta->make_immutable;
