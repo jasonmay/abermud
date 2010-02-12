@@ -4,13 +4,9 @@ use Moose;
 use namespace::autoclean;
 extends 'AberMUD::Input::Command';
 
-my $command_name = lc __PACKAGE__;
-$command_name =~ s/.+:://; $command_name =~ s/\.pm//;
-override _build_name => sub { $command_name };
-
 sub run {
     my $you  = shift;
-    my $direction = $command_name;
+    my $direction = 'east';
     return "You are somehow nowhere." unless defined $you->location;
     return $you->${\"go_$direction"};
 }

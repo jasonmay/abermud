@@ -1,5 +1,6 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command;
+use Scalar::Util qw(blessed);
 use Moose;
 use namespace::autoclean;
 use Carp;
@@ -11,7 +12,11 @@ has name => (
 );
 
 sub _build_name {
-    croak "Please override the '_build_name' method.";
+    my $self = shift;
+    my $command_name = blessed $self;
+    $command_name =~ s/.+:://; $command_name =~ s/\.pm//;
+
+    return lc($command_name);
 }
 
 has alias => (

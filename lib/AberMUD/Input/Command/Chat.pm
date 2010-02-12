@@ -4,10 +4,6 @@ use Moose;
 use namespace::autoclean;
 extends 'AberMUD::Input::Command';
 
-my $command_name = lc __PACKAGE__;
-$command_name =~ s/.+:://; $command_name =~ s/\.pm//;
-override _build_name => sub { $command_name };
-
 has '+alias' => ( default => '0' );
 
 sub run {
