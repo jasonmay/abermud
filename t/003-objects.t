@@ -94,4 +94,10 @@ like($two->get_output, qr{playerone drops everything he can\.}i);
 
 # test bug where I don't see the rock on the ground
 $one->types_in('take sword'); $two->get_output;
-like($two->types_in('take rock'), qr{You take the rock.});
+like($two->types_in('take rock'), qr{You take the rock\.});
+
+$_->held_by($two) for grep { $_->can('held_by') } @o;
+
+# examine
+like($two->types_in('examine sign'), qr{Why do you care});
+like($two->types_in('examine rock'), qr{You don't notice anything special\.});
