@@ -12,7 +12,7 @@ sub run {
     if (!@args) {
         return "Take what?";
     }
-    elsif (@args) {
+    else {
         my @matching_objects = grep {
             $_->location == $you->location
             and lc($_->name) eq lc($args[0])
@@ -25,12 +25,6 @@ sub run {
         }
 
         return "No object of that name is here.";
-    }
-    elsif (@args == 3 and lc($args[1]) eq 'from') {
-        return "Not supported yet.";
-    }
-    else {
-        return "That command syntax is not recognized.";
     }
 }
 
