@@ -49,6 +49,7 @@ has mobiles => (
 has objects => (
     is  => 'rw',
     isa => 'ArrayRef[AberMUD::Object]',
+    auto_deref => 1,
     default => sub { [] },
 );
 
@@ -63,7 +64,7 @@ sub broadcast {
             ? @{$args{except}}
             : (defined($args{except}) ? $args{except} : ());
 
-    foreach my $player (values %{$self->players_in_game}) {
+    foreach my $player (values %{ $self->players_in_game }) {
         next if @except && any { $_ == $player } @except;
         my $player_output = $output;
         $player_output .= sprintf("\n%s", $player->prompt)

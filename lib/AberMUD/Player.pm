@@ -322,7 +322,7 @@ sub look {
                 $_->can('held_by')
                 and $_->held_by
             )
-        } @{$self->universe->objects};
+        } $self->universe->objects;
 
     $output .= "\n" . $loc->show_exits;
 
@@ -334,7 +334,7 @@ sub carrying {
 
     return grep {
         $_->can('held_by') and $_->held_by and $_->held_by == $self
-    } @{ $self->universe->objects };
+    } $self->universe->objects;
 }
 
 sub carrying_loosely {

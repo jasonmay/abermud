@@ -16,7 +16,7 @@ sub run {
         my @matching_objects = grep {
             $_->location == $you->location
             and lc($_->name) eq lc($args[0])
-        } @{ $you->universe->objects };
+        } $you->universe->objects;
 
         if (@matching_objects) {
             my $o = $matching_objects[0];

@@ -18,7 +18,7 @@ sub run {
             $_->location == $you->location
                 and $_->can('held_by')
                 and !$_->held_by
-            }  @{ $you->universe->objects };
+            }  $you->universe->objects;
 
             $_->held_by($you) for @objects_you_can_take;
 
@@ -38,7 +38,7 @@ sub run {
         my @matching_objects = grep {
             $_->location == $you->location
             and lc($_->name) eq lc($args[0])
-        } @{ $you->universe->objects };
+        } $you->universe->objects;
 
         if (@matching_objects) {
             if ($matching_objects[0]->can('held_by')) {

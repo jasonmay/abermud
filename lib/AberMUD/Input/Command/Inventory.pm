@@ -11,7 +11,7 @@ sub run {
     my @objects_you_carry = grep {
         $_->can('held_by') and $_->held_by
             and $_->held_by == $you
-    } @{ $you->universe->objects };
+    } $you->universe->objects;
 
     if (@objects_you_carry) {
         $output = "Your backpack contains:\n";
