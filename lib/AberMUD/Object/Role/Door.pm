@@ -10,11 +10,10 @@ with qw(
 
 has opening_link => (
     is  => 'rw',
-    isa => subtype('Moose::Object' => where {
+    isa => subtype('AberMUD::Object' => where {
         !$_ || $_->does('AberMUD::Object::Role::Door')
     })
 );
-
 
 1;
 
