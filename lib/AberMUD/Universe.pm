@@ -10,9 +10,9 @@ use List::MoreUtils qw(any);
 use AberMUD::Util;
 
 has players_in_game => (
-    is  => 'rw',
-    isa => 'HashRef[AberMUD::Player]',
-    default => sub { +{} },
+    is         => 'rw',
+    isa        => 'HashRef[AberMUD::Player]',
+    default    => sub { +{} },
 );
 
 has directory => (
