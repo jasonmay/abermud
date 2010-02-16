@@ -54,8 +54,8 @@ has password => (
 
 sub id {
     my $self = shift;
-    my $p = $self->universe->players || {};
 
+    my $p = $self->universe->players;
     return first_value { $p->{$_} == $self } keys %$p;
 }
 
