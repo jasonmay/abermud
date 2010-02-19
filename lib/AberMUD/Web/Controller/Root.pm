@@ -29,9 +29,27 @@ The root page (/)
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    # Hello World
-    $c->response->body( $c->welcome_message );
+    #$c->response->body( $c->view('TD')->template('main') );
+    $c->response->body("asdfkljjasdfkljasdfkljasdfkljdfkl");
+    $c->detach('View::TD');
 }
+
+#sub location :Global {
+#    my $self = shift;
+#    my $c    = shift;
+#    my $loc_str  = shift;
+#
+#    my $loc = $c->model('dir')->lookup("location-$loc_str");
+#    if ($loc) {
+#        $c->stash(loc => $loc);
+#        $c->response->body($c->view('TD')->template('look'));
+#        $c->detach('View::TD');
+#    }
+#    else {
+#        $c->response->body( 'Page not found' );
+#        $c->response->status(404);
+#    }
+#}
 
 =head2 default
 
