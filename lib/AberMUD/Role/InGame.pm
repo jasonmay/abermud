@@ -4,6 +4,7 @@ use Moose::Role;
 use namespace::autoclean;
 
 use AberMUD::Location;
+use AberMUD::Location::Util qw(directions);
 use List::MoreUtils qw(any);
 
 has universe => (
@@ -18,8 +19,8 @@ has location => (
     isa => 'AberMUD::Location',
     handles => {
         map {
-            ("can_go_$_" => "has_$_")
-        } @{AberMUD::Location->directions}
+            ("can_go_$_" => sub { $_ })
+        } directions()
     },
 );
 

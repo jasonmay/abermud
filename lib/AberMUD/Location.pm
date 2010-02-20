@@ -2,6 +2,7 @@
 package AberMUD::Location;
 use KiokuDB::Class;
 use namespace::autoclean;
+use AberMUD::Location::Util qw(directions);
 
 use MooseX::ClassAttribute;
 
@@ -42,29 +43,18 @@ has active => (
     isa => 'Bool',
 );
 
-use constant _directions => qw(north south east west up down);
-
-class_has directions => (
-    is => 'ro',
-    isa => 'ArrayRef[Str]',
-    default => sub { [ _directions ] },
+has [ directions() ] => (
+    is        => 'rw',
+    isa       => 'AberMUD::Location',
+    weak_ref  => 1,
+    traits    => [ qw(KiokuDB::Lazy) ],
 );
-
-for (_directions) {
-    has $_ => (
-        is        => 'rw',
-        isa       => 'AberMUD::Location',
-        weak_ref  => 1,
-        traits    => [ qw(KiokuDB::Lazy) ],
-        predicate => "has_$_",
-    );
-}
 
 sub show_exits {
     my $self = shift;
     my $output;
     $output = "&+CObvious exits are:&*\n";
-    for (@{$self->directions}) {
+    for ( directions() ) {
         next unless $self->$_;
         $output .= sprintf("%-5s &+Y: &+G%s&*\n", ucfirst($_), $self->$_->title);
     }

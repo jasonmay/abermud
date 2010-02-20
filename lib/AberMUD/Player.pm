@@ -5,6 +5,7 @@ use namespace::autoclean;
 extends 'MUD::Player';
 
 use AberMUD::Location;
+use AberMUD::Location::Util qw(directions);
 
 use Carp qw(cluck);
 use List::MoreUtils qw(first_value);
@@ -70,7 +71,7 @@ has '+input_state' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-foreach my $direction (@{AberMUD::Location->directions}) {
+foreach my $direction ( directions() ) {
     __PACKAGE__->meta->add_method("go_$direction" =>
         sub {
             my $self = shift;
