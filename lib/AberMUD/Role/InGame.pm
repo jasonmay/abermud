@@ -46,7 +46,7 @@ sub say {
         my $p = $_;
         $p->location == $self->location && !any { $p == $_ } @except
     }
-    values %{ $self->universe->players_in_game };
+    $self->universe->game_list;
 
     $_->send("\n$message") for @players;
 

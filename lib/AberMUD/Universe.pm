@@ -9,9 +9,16 @@ use KiokuDB::Backend::DBI;
 use List::MoreUtils qw(any);
 use AberMUD::Util;
 
+has '+players' => (
+    traits  => ['Hash'],
+    handles => {player_list => 'values'}
+);
+
 has players_in_game => (
     is         => 'rw',
     isa        => 'HashRef[AberMUD::Player]',
+    traits     => ['Hash'],
+    handles    => {game_list => 'values'},
     default    => sub { +{} },
 );
 

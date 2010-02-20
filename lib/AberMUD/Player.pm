@@ -78,7 +78,7 @@ foreach my $direction (@{AberMUD::Location->directions}) {
             return "You can't go that way.\n"
                 unless $self->${\"can_go_$direction"};
 
-            my @players = values %{ $self->universe->players_in_game };
+            my @players = $self->universe->game_list;
 
             $self->say(
                 sprintf("\n%s goes %s\n", $self->name, $direction),
