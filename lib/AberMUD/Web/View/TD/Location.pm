@@ -5,45 +5,62 @@ use warnings;
 use Template::Declare::Tags;
 use Data::Dumper;
 
+template 'locations.outer' => sub {
+    my $class = shift;
+    my $c     = shift;
+    my $inner_html = $c->stash->{content_template};
+#    $c->detach('View::TD');
+
+    html {
+        head {
+            title { 'AberMUD::Web KiokuDB Management Interface' }
+            link {
+                attr {
+                    rel => 'stylesheet',
+                    href => '/static/css/main.css',
+                    type => 'text/css',
+                    media => 'screen',
+                    charset => 'utf-8',
+                }
+            }
+        }
+        body {
+            show $inner_html, $c;
+        }
+    };
+};
+
 template 'locations.look' => sub {
     my $class = shift;
     my $c     = shift;
     my $loc = $c->stash->{loc};
 
-    html {
-        head {
-            title { 'AberMUD::Web KiokuDB Management Interface' }
-        }
-        body {
-            h1 { $loc->title }
-            p { $loc->description }
-            form {
-                attr {method => 'post', action => '/locations/new'};
-                foreach my $exit (@{ $loc->directions }) {
-                    ul {
-                        if ($loc->$exit) {
-                            my $id = $loc->$exit->world_id;
-                            li {
-                                outs(b { ucfirst($exit) });
-                                outs ': ';
-                                a {
-                                    attr { href => "/locations/look/$id" }
-                                    $loc->$exit->title
-                                }
-                            }
+    h1 { attr { id => 'loc_title' } $loc->title }
+    p { attr { class => 'description' } $loc->description }
+    form {
+        attr {method => 'post', action => '/locations/new'};
+        ul {
+            attr { class => 'exits' };
+            foreach my $exit (@{ $loc->directions }) {
+                li {
+                    label {
+                        attr { class => 'exit' }
+                        b { ucfirst("$exit:")  }
+                    };
+                    if ($loc->$exit) {
+                        my $id = $loc->$exit->world_id;
+                        a {
+                            attr { href => "/locations/look/$id" }
+                            $loc->$exit->title
                         }
-                        else {
-                            my $id = $loc->world_id;
-                            li {
-                                outs(b { ucfirst($exit) });
-                                outs(': ');
-                                input {
-                                    attr {
-                                        type => 'submit',
-                                        name => "edit_${id}_$exit",
-                                        value => 'Make an exit'
-                                    }
-                                }
+                    }
+                    else {
+                        my $id = $loc->world_id;
+                        input {
+                            attr {
+                                type => 'submit',
+                                name => "edit_${id}_$exit",
+                                value => 'Make an exit'
                             }
                         }
                     }
@@ -63,12 +80,19 @@ template 'locations.new' => sub {
             label { 'Title: ' }
             input {
                 attr {
+                    id   => 'new_title',
                     type => 'text',
                     name => "title",
                 }
             } br {}
             label { 'Description: ' }
-            textarea { attr { name => 'description' } } br {}
+            textarea {
+                attr {
+                    name => 'description',
+                    id   => 'new_description',
+                    rows => 5,
+                }
+            } br {}
             input {
                 attr {
                     type  => 'submit',
