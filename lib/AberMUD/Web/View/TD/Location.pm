@@ -25,7 +25,22 @@ template 'locations.outer' => sub {
             }
         }
         body {
-            show $inner_html, $c;
+            div {
+                attr { id => 'topmain'}
+                h1 { 'AberMUD - Locations' }
+            }
+            div {
+                attr { id => 'sidenav'}
+                'foo bar'
+            }
+            div {
+                attr { id => 'contentmain' };
+                show $inner_html, $c;
+            }
+            div {
+                attr { id => 'footer' }
+                'No rights reserved.'
+            }
         }
     };
 };
@@ -35,7 +50,7 @@ template 'locations.look' => sub {
     my $c     = shift;
     my $loc = $c->stash->{loc};
 
-    h1 { attr { id => 'loc_title' } $loc->title }
+    h2 { attr { id => 'loc_title' } $loc->title }
     p { attr { class => 'description' } $loc->description }
     form {
         attr {method => 'post', action => '/locations/new'};

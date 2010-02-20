@@ -1,8 +1,36 @@
 body {
-    background-color: #E6F0FA;
     font-family: helvetica,arial,freesans,clean,sans-serif;
     color: #555;
     font-size: 90%;
+}
+
+#container {
+    margin: 0 auto;
+    border-bottom: solid 1px black;
+}
+
+#topmain {
+    width: 100%;
+    border-bottom: solid 1px black;
+}
+
+#contentmain {
+    position: relative;
+    float: left;
+    border-left: solid 1px black;
+    margin-left: -1px;
+}
+
+#footer {
+    clear: both;
+    border-top: solid 1px black;
+}
+
+#sidenav {
+    width: 10em;
+    border-right: solid 1px black;
+    float: left;
+    margin-right: 0px;
 }
 
 /* locations.look */
@@ -18,10 +46,11 @@ body {
     letter-spacing: 1px;
 }
 
-h1#loc_title {
+h2#loc_title {
     color: #2C6639;
     font-family: verdana,sans-serif;
 }
+
 
 ul.exits {
     list-style-type: none;
