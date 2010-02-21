@@ -38,10 +38,10 @@ sub look :Path(/locations/look) {
     my $loc = $c->model('dir')->lookup("location-$loc_str");
     if ($loc) {
         $c->stash(loc => $loc);
-        $c->stash(content_template => 'locations.look');
-        warn $c->view('TD')->template('locations.outer');
-        $c->detach('View::TD');
-        $c->response->body($c->view('TD')->template('locations.outer'));
+        $c->stash(
+            template => 'locations.look',
+        );
+        $c->forward($c->view('HTML'));
     }
     else {
         $c->response->body( 'Page not found' );
@@ -74,10 +74,11 @@ sub new_location :Path(/locations/new) {
         return;
     }
 
-    $c->stash(loc => $loc);
-    $c->stash(content_template => 'locations.new');
-    $c->response->body($c->view('TD')->template('locations.outer'));
-    $c->detach('View::TD');
+    $c->stash(
+        loc      => $loc,
+        template => 'locations.new',
+    );
+    $c->forward($c->view('HTML'));
 }
 
 sub create :Path(/locations/create) {

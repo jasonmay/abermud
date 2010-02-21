@@ -30,7 +30,6 @@ sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
     $c->response->body("asdfkljjasdfkljasdfkljasdfkljdfkl");
-    $c->detach('View::TD');
 }
 
 =head2 default
