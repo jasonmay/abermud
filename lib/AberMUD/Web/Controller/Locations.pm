@@ -44,16 +44,17 @@ sub look :Path(/locations/look) {
         my $new_title       = $c->req->param('new_title');
         my $new_description = $c->req->param('new_description');
 
-
         if ($new_title or $new_description) {
             $loc->title($new_title             || $loc->title);
             $loc->description($new_description || $loc->description);
+            my $scope = $c->model('dir')->new_scope;
             $c->model('dir')->update($loc);
         }
 
-        $c->stash(loc => $loc);
         $c->stash(
-            template => 'locations.look',
+            template    => 'locations.look',
+            loc         => $loc,
+            scope       => $c->model('dir')->new_scope,
         );
         $c->forward($c->view('HTML'));
     }
@@ -138,9 +139,10 @@ sub new_location :Path(/locations/new) {
     }
 
     $c->stash(
-        loc       => $loc,
-        exit      => $exit,
         template  => 'locations.new',
+        loc       => $loc,
+        scope     => $c->model('dir')->new_scope,
+        exit      => $exit,
     );
     $c->forward($c->view('HTML'));
 }

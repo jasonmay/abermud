@@ -6,11 +6,6 @@ use AberMUD::Location;
 
 extends 'Catalyst::Model::KiokuDB';
 
-has _scope => (
-    is  => 'rw',
-    isa => 'KiokuDB::LiveObjects::Scope',
-);
-
 sub ACCEPT_CONTEXT {
     my $self = shift;
     my $c    = shift;
