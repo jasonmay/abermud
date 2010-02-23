@@ -128,7 +128,7 @@ sub new_location :Path(/locations/new) {
         return;
     }
 
-    if (not any { $exit eq $_ } @{$loc->directions}) {
+    if (not any { $exit eq $_ } directions()) {
         $c->response->body("What! That's not even a valid exit. >:(");
         return;
     }

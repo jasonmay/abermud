@@ -100,7 +100,7 @@ template 'locations.look' => sub {
             attr {method => 'post', action => '/locations/new'};
             ul {
                 attr { class => 'exits' };
-                foreach my $exit (@{ $loc->directions }) {
+                foreach my $exit (directions()) {
                     li {
                         label {
                             attr { class => 'exit' }
