@@ -3,6 +3,7 @@ use Moose;
 use namespace::autoclean;
 
 use AberMUD::Location;
+use List::Util qw(max);
 
 extends 'Catalyst::Model::KiokuDB';
 
