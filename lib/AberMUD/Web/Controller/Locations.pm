@@ -36,7 +36,18 @@ sub look :Path(/locations/look) {
     my $loc_str = shift;
 
     my $loc = $c->model('dir')->get_loc($loc_str);
+
     if ($loc) {
+        my $new_title       = $c->req->param('new_title');
+        my $new_description = $c->req->param('new_description');
+
+
+        if ($new_title or $new_description) {
+            $loc->title($new_title             || $loc->title);
+            $loc->description($new_description || $loc->description);
+            $c->model('dir')->update($loc);
+        }
+
         $c->stash(loc => $loc);
         $c->stash(
             template => 'locations.look',

@@ -45,13 +45,56 @@ BEGIN {
 }
 
 template 'locations.look' => sub {
-    my $class = shift;
-    my $vars     = shift;
-    my $loc = $vars->{loc};
+    my $class           = shift;
+    my $vars            = shift;
+    my $loc             = $vars->{loc};
+    my $dir             = $vars->{dir};
 
     locations {
-        h2 { attr { id => 'loc_title' } $loc->title }
-        p { attr { class => 'description' } $loc->description }
+        div {
+            p { attr { id => 'loc_title' } $loc->title }
+        }
+        div {
+            form {
+                attr { method => 'post' }
+                input {
+                    attr {
+                        type => 'text',
+                        name => 'new_title',
+                        value => $loc->title,
+                    }
+                }
+                input {
+                    attr {
+                        type => 'submit',
+                        name => 'submit',
+                        value => 'Edit',
+                    }
+                }
+            }
+        }
+        div {
+            p { attr { class => 'description' } $loc->description }
+        }
+        div {
+            form {
+                attr { method => 'post' }
+                textarea {
+                    attr {
+                        type => 'text',
+                        name => 'new_description',
+                    }
+                    $loc->description
+                }
+                input {
+                    attr {
+                        type => 'submit',
+                        name => 'submit',
+                        value => 'Edit',
+                    }
+                }
+            }
+        }
         form {
             attr {method => 'post', action => '/locations/new'};
             ul {
