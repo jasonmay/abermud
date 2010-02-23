@@ -35,7 +35,7 @@ sub look :Path(/locations/look) {
     my $c       = shift;
     my $loc_str = shift;
 
-    my $loc = $c->model('dir')->lookup("location-$loc_str");
+    my $loc = $c->model('dir')->get_loc($loc_str);
     if ($loc) {
         $c->stash(loc => $loc);
         $c->stash(

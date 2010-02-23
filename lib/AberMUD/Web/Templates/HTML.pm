@@ -5,16 +5,6 @@ use warnings;
 use parent 'Template::Declare::Catalyst';
 use Template::Declare::Tags;
 
-# See Template::Declare docs for details on creating templates, which look
-# something like this.
-# template hello => sub {
-#     my ($self, $vars) = @_;
-#     html {
-#         head { title { "Hello, $vars->{user}" } };
-#         body { h1    { "Hello, $vars->{user}" } };
-#     };
-# };
-
 BEGIN {
     create_wrapper locations => sub {
         my $inner = shift;

@@ -23,6 +23,12 @@ sub BUILD {
     $self->_scope($self->new_scope);
 }
 
+sub get_loc {
+    my $self = shift;
+    my $world_id = shift;
+    $self->lookup("location-$world_id");
+}
+
 __PACKAGE__->config(dsn => 'dbi:SQLite:dbname=abermud');
 
 =head1 NAME
