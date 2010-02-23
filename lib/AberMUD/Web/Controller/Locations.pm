@@ -4,6 +4,9 @@ use namespace::autoclean;
 
 use List::Util qw(first);
 use List::MoreUtils qw(any);
+use AberMUD::Location;
+use AberMUD::Location::Util qw(directions);
+use Data::Dumper;
 
 BEGIN {extends 'Catalyst::Controller'; }
 
@@ -82,7 +85,33 @@ sub new_location :Path(/locations/new) {
         );
 
         $loc->$exit($loc_link);
+        my $scope = $c->model('dir')->new_scope;
         $c->model('dir')->update($loc);
+        $c->forward('look', [$loc->world_id]);
+        return;
+    }
+
+    if ($c->req->param('new_location')) {
+        my $loc = $c->model('dir')->get_loc(
+            $c->req->param('world_id')
+        );
+        my $new_loc = AberMUD::Location->new(
+            title       => $c->req->param('title'),
+            description => $c->req->param('description'),
+        );
+        my $exit = $c->req->param('exit');
+
+        my $scope = $c->model('dir')->new_scope;
+        $c->model('dir')->txn_do(sub {
+
+            my $new_world_id = $c->model('dir')->gen_world_id($loc->zone);
+            $new_loc->zone($loc->zone);
+            $new_loc->world_id($new_world_id);
+
+            $c->model('dir')->store("location-$new_world_id" => $new_loc);
+            $loc->$exit($new_loc);
+            $c->model('dir')->update($loc);
+        });
         $c->forward('look', [$loc->world_id]);
         return;
     }

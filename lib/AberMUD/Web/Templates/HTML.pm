@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use parent 'Template::Declare::Catalyst';
 use Template::Declare::Tags;
+use AberMUD::Location::Util qw(directions);
 
 BEGIN {
     create_wrapper locations => sub {
@@ -155,8 +156,8 @@ template 'locations.new' => sub {
             input {
                 attr {
                     type  => 'submit',
-                    name  => "submit",
-                    value => "Submit",
+                    name  => "new_location",
+                    value => "Create",
                 }
             }
             input {
@@ -187,7 +188,7 @@ template 'locations.new' => sub {
             input {
                 attr {
                     type  => 'submit',
-                    name  => "submit",
+                    name  => "new_location",
                     value => "Submit",
                 }
             }

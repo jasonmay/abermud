@@ -18,15 +18,35 @@ sub ACCEPT_CONTEXT {
     return $self;
 }
 
-sub BUILD {
-    my $self = shift;
-    $self->_scope($self->new_scope);
-}
-
 sub get_loc {
     my $self = shift;
     my $world_id = shift;
+    my $scope = $self->new_scope;
     $self->lookup("location-$world_id");
+}
+
+sub gen_world_id {
+    my $self = shift;
+    my $zone = shift;
+    my $scope = $self->new_scope;
+    my $s = $self->grep(
+        sub {
+            $_->isa('AberMUD::Location')
+            and $_->zone == $zone
+        }
+    );
+
+    my @id_nums;
+    while (my $block = $s->next) {
+        for (@$block) {
+            my $z = $zone->name;
+            push @id_nums, ($_->world_id =~ /^$z(\d+)/);
+            warn "@id_nums";
+        }
+    }
+
+    my $new_num = max(@id_nums) + 1;
+    return $zone->name . $new_num;
 }
 
 __PACKAGE__->config(dsn => 'dbi:SQLite:dbname=abermud');
