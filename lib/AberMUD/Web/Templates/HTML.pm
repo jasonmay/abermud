@@ -87,29 +87,80 @@ template 'locations.look' => sub {
 };
 
 template 'locations.new' => sub {
+    my $class = shift;
+    my $vars  = shift;
+
     locations {
-        h2 { "New Location" }
-        label { 'Title: ' }
-        input {
-            attr {
-                id   => 'new_title',
-                type => 'text',
-                name => "title",
+        form {
+            h2 { "New Location" }
+            label { 'Title: ' }
+            input {
+                attr {
+                    id   => 'new_title',
+                    type => 'text',
+                    name => "title",
+                }
+            } br {}
+            label { 'Description: ' }
+            textarea {
+                attr {
+                    name => 'description',
+                    id   => 'new_description',
+                    rows => 5,
+                }
+            } br {}
+            input {
+                attr {
+                    type  => 'submit',
+                    name  => "submit",
+                    value => "Submit",
+                }
             }
-        } br {}
-        label { 'Description: ' }
-        textarea {
-            attr {
-                name => 'description',
-                id   => 'new_description',
-                rows => 5,
+            input {
+                attr {
+                    type  => 'hidden',
+                    name  => "world_id",
+                    value => $vars->{loc}->world_id,
+                }
             }
-        } br {}
-        input {
-            attr {
-                type  => 'submit',
-                name  => "submit",
-                value => "Submit",
+            input {
+                attr {
+                    type  => 'hidden',
+                    name  => "exit",
+                    value => $vars->{exit},
+                }
+            }
+        }
+        form {
+            h2 { "Link Existing Location" }
+            label { 'Location ID: ' }
+            input {
+                attr {
+                    id   => 'loc_link',
+                    type => 'text',
+                    name => "loc_link",
+                }
+            } br {}
+            input {
+                attr {
+                    type  => 'submit',
+                    name  => "submit",
+                    value => "Submit",
+                }
+            }
+            input {
+                attr {
+                    type  => 'hidden',
+                    name  => "world_id",
+                    value => $vars->{loc}->world_id,
+                }
+            }
+            input {
+                attr {
+                    type  => 'hidden',
+                    name  => "exit",
+                    value => $vars->{exit},
+                }
             }
         }
     }
