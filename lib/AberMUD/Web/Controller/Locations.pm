@@ -53,30 +53,54 @@ sub new_location :Path(/locations/new) {
     my $self    = shift;
     my $c       = shift;
 
-    my $action = first { /^edit_/ } keys %{$c->req->params};
-    my ($world_id, $exit) = $action =~ /^edit_(\w+)_(\w+)/;
-    my $loc = $c->model('dir')->lookup("location-$world_id");
+    if ($c->req->param('loc_link')) {
+        my $link = $c->req->param('loc_link');
+        my $current  = $c->req->param('world_id');
+        my $exit     = $c->req->param('exit');
 
+        my $loc = $c->model('dir')->get_loc($current)
+        or die sprintf(
+            "Could not lookup %s in kiokudb",
+            $current
+        );
+
+        my $loc_link = $c->model('dir')->get_loc($link)
+        or die sprintf(
+            "Could not lookup %s (for linking) in kiokudb",
+            $link
+        );
+
+        $loc->$exit($loc_link);
+        $c->model('dir')->update($loc);
+        $c->forward('look', [$loc->world_id]);
+        return;
+    }
+
+    my $action = first { /^edit_/ } keys %{$c->req->params}
+        or die "Could not find an appropriate parameter";
+    my ($world_id, $exit) = $action =~ /^edit_(\w+)_(\w+)/;
+    my $loc = $c->model('dir')->get_loc($world_id);
     warn $world_id;
-    warn $exit;
+
     if (!$loc) {
         $c->forward('create');
         return;
     }
 
-    if (not any { warn $_;$exit eq $_ } @{$loc->directions}) {
-        $c->body("What! That's not even a valid exit. >:(");
+    if (not any { $exit eq $_ } @{$loc->directions}) {
+        $c->response->body("What! That's not even a valid exit. >:(");
         return;
     }
 
     if ($loc->$exit) {
-        $c->body('There is already a location there! Hmm');
+        $c->response->body('There is already a location there! Hmm ' . $loc->$exit->title);
         return;
     }
 
     $c->stash(
-        loc      => $loc,
-        template => 'locations.new',
+        loc       => $loc,
+        exit      => $exit,
+        template  => 'locations.new',
     );
     $c->forward($c->view('HTML'));
 }
