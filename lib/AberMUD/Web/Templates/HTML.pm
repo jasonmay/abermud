@@ -22,6 +22,12 @@ BEGIN {
                         charset => 'utf-8',
                     }
                 }
+                script {
+                    attr {
+                        type    => 'text/javascript',
+                        src     => '/static/js/jquery.js',
+                    } ''
+                }
             }
             body {
                 div {
@@ -52,10 +58,18 @@ template 'locations.look' => sub {
     my $dir             = $vars->{dir};
 
     locations {
+        script {
+            attr {
+                type    => 'text/javascript',
+                src     => '/static/js/locations/look.js',
+            } ''
+        }
         div {
+            attr { id => 'show_title' }
             p { attr { id => 'loc_title' } $loc->title }
         }
         div {
+            attr { id => 'edit_title' }
             form {
                 attr { method => 'post' }
                 input {
@@ -72,12 +86,20 @@ template 'locations.look' => sub {
                         value => 'Edit',
                     }
                 }
+                a {
+                    attr {
+                        id   => 'cancel_edit_title',
+                        href => '#',
+                    } 'Cancel'
+                }
             }
         }
         div {
+            attr { id => 'show_description' }
             p { attr { class => 'description' } $loc->description }
         }
         div {
+            attr { id => 'edit_description' }
             form {
                 attr { method => 'post' }
                 textarea {
@@ -93,6 +115,12 @@ template 'locations.look' => sub {
                         name => 'submit',
                         value => 'Edit',
                     }
+                }
+                a {
+                    attr {
+                        id   => 'cancel_edit_description',
+                        href => '#',
+                    } 'Cancel'
                 }
             }
         }
