@@ -22,7 +22,7 @@ has player_data_path => (
     default => "$ENV{PWD}/data"
 );
 
-around _response => sub {
+around build_response => sub {
     my $orig = shift;
     my $self = shift;
     my $id   = shift;
@@ -46,7 +46,7 @@ around _response => sub {
     return AberMUD::Util::colorify($output);
 };
 
-around perform_connect_action => sub {
+around connect_hook => sub {
     my $orig   = shift;
     my $self   = shift;
     my ($data) = @_;
@@ -68,13 +68,13 @@ around perform_connect_action => sub {
 
 };
 
-before perform_input_action => sub {
+before input_hook => sub {
     my $self = shift;
     my ($data) = @_;
 
 };
 
-around perform_disconnect_action => sub {
+around disconnect_hook => sub {
     my $orig   = shift;
     my $self   = shift;
     my ($data) = @_;
