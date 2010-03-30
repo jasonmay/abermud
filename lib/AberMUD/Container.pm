@@ -111,7 +111,7 @@ sub _build_container {
                 depends_on('universe'),
             ],
             parameters => {
-                id          => { isa => 'Int' },
+                id          => { isa => 'Str' },
                 prompt      => { isa => 'Str' },
                 input_state => { isa => 'ArrayRef' },
             },
