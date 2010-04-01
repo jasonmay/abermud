@@ -4,6 +4,7 @@ use warnings;
 use lib 'lib';
 use AberMUD::Util;
 use AberMUD::Location;
+use AberMUD::Location::Util qw(directions);
 use File::Basename;
 use Carp;
 use String::Util ':all';
@@ -99,9 +100,9 @@ closedir $dh;
 
 unlink qw(abermud abermud-journal);
 my $ad = AberMUD::Directory->new;
-my $kdb = $ad->kdb;
+my $kdb = KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1);
 my $scope = $kdb->new_scope;
-my %dir = map { substr($_, 0, 1) => $_ } @{AberMUD::Location->directions};
+my %dir = map { substr($_, 0, 1) => $_ } directions();
 
 while (my ($dir_key, $dir_value) = each %dir_locations) {
     $kdb->store("location-$dir_key" => $dir_value);
