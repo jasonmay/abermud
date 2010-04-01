@@ -106,28 +106,10 @@ sub _load_objects {
     $self->universe->objects([values %{ $universe_sets->all_objects }]);
 }
 
-sub _custom_startup {
-    my ($self, $kernel, $session) = @_[0, KERNEL, SESSION];
-    if (my $u = $self->universe) {
-        POE::Session->create(
-            inline_states => {
-                _start => sub {
-                    $_[KERNEL]->delay(tick => 1);
-                },
-                tick => sub {
-                    $_->move for @{$u->mobiles};
-                    $_[KERNEL]->delay(tick => 1);
-                },
-            }
-        );
-        $self->_load_objects;
-    }
-}
-
-after custom_startup => sub {
+sub BUILD {
     my $self = shift;
-    $self->_custom_startup(@_);
-};
+    $self->_load_objects;
+}
 
 __PACKAGE__->meta->make_immutable;
 
