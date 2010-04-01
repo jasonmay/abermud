@@ -1,0 +1,722 @@
+%rainfall:1130
+
+%latitude:45
+
+%mobiles
+
+Name        = Jeremy
+Pname       = "Jeremy"
+Location    = hick3
+Strength    = 80
+Damage      = 6
+Armor       = 0
+Aggression  = 0
+Speed       = 5
+Description = "Jeremy is here looking very dumb and confused."
+Examine     = "
+Jeremy is truly a hick by definition, with a piece of straw in his mouth 
+and is wearing a pair of goofy looking dirty overalls."
+End         = Jeremy
+
+Name        = Tom
+Pname       = "Tom"
+Location    = hick8
+Strength    = 100
+Damage      = 8
+Armor       = 0
+Aggression  = 0
+Speed       = 5
+Description = "Tom, Jeremy's older brother, is here looking for Jeremy."
+End         = Tom
+
+Name        = CornWorker
+Pname       = "Corn Worker"
+Location    = field13
+Strength    = 100
+Damage      = 9
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "A cornworker is here examining the corn stalks."
+End         = CornWorker
+
+Name        = WheatWorker
+Pname       = "Wheat Worker"
+Location    = field14
+Strength    = 100
+Damage      = 9
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "A wheatworker is here looking at the wheat."
+End         = WheatWorker
+
+Name        = Worker
+Pname       = "Worker"
+Location    = field15
+Strength    = 100
+Damage      = 9
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "A worker is here walking around looking at things."
+End         = Worker
+
+Name        = Cow
+Pname       = "Cow"
+Location    = cattle4
+Strength    = 110
+Damage      = 10
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "A cow is here mooing softly."
+End         = Cow
+
+Name        = Horse
+Pname       = "Horse"
+Location    = cattle5
+Strength    = 110
+Damage      = 10
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "A horse is here looking at you curiously."
+End         = Horse
+
+Name        = FirstPig
+Pname       = "Pig"
+Location    = cattle7
+Strength    = 100
+Damage      = 9
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "A large, smelly pig is here oinking happily."
+End         = FirstPig
+
+Name        = SecondPig
+Pname       = "Pig"
+Location    = cattle8
+Strength    = 100
+Damage      = 9
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "A large, smelly pig is here oinking happily."
+End         = SecondPig
+
+Name        = Bull
+Pname       = "Bull"
+Location    = cattle9
+Strength    = 120
+Damage      = 11
+Armor       = 0
+Aggression  = 70
+Speed       = 0
+Description = "A very large bull is here snorting at you ready to charge."
+End         = Bull
+
+Name        = Grandpa
+Pname       = "Grandpa"
+Location    = house1
+Strength    = 100
+Damage      = 9
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "Grandpa Hickdale is sitting on the porch swing snoozing."
+End         = Grandpa
+
+Name        = Father
+Pname       = "Bill"
+Location    = house5
+Strength    = 100
+Damage      = 9
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "Bill, the Hickdale father is here going over bills."
+End         = Father
+
+Name        = Mother
+Pname       = "Jane"
+Sflags       {Female}
+Mflags       {NoGrab}
+Location    = house10
+Strength    = 100
+Damage      = 9
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "Jane, the Hickdale mother is here cooking food."
+End         = Mother
+
+Name        = Grandma
+Pname       = "Grandma"
+Sflags      {Female}
+Location    = house19
+Strength    = 90
+Damage      = 7
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "Grandma is here resting quietly."
+End         = Grandma
+
+%objects
+
+Name        = Corn
+Pname       = "Corn"
+Oflags      {Food}
+Bvalue      = 30
+Size        = 1
+Weight      = 2
+Location    = IN_ROOM:field13
+Desc[0]     = "An ear of corn is laying on the ground."
+End         = Corn
+
+Name        = Tomato
+Pname       = "Tomato"
+Oflags      {Food}
+Bvalue      = 30
+Size        = 1
+Weight      = 2
+Location    = IN_ROOM:field15
+Desc[0]     = "A ripe tomato has been dropped here."
+End         = Tomato
+
+Name        = Overalls
+Pname       = "Overalls"
+Oflags      {Armor Wearable}
+Aflags	    {Legs Chest Back}
+Bvalue      = 50
+Armor       = 30
+Size        = 5
+Weight      = 7
+Location    = IN_ROOM:cattle4
+Desc[0]     = "A protective looking pair of overalls is here."
+End         = Overalls
+
+Name        = Pitchfork
+Pname       = "Pitchfork"
+Oflags      {Weapon}
+Bvalue      = 50
+Damage      = 10
+Size        = 5
+Weight      = 7
+Location    = IN_ROOM:cattle4
+Desc[0]     = "A mean looking pitchfork has been placed here."
+End         = Pitchfork
+
+Name        = Boots
+Pname       = "Boots"
+Oflags      {Wearable}
+Aflags	    {Feet}
+Bvalue      = 40
+Size        = 2
+Weight      = 2
+Location    = IN_ROOM:cattle4
+Desc[0]     = "A pair of work boots rests on the ground."
+End         = Boots
+
+Name        = Oven
+Pname       = "Oven"
+Oflags      {Openable Container NoGet}
+Size        = 5
+Location    = IN_ROOM:house10
+Desc[0]     = "The oven door is open."
+Desc[1]     = "The over door is closed."
+End         = Oven
+
+Name        = Turkey
+Pname       = "Turkey"
+Oflags      {Food GetFlips}
+State       = 1
+MaxState    = 1
+Size        = 3
+Weight      = 3
+Location    = IN_CONTAINER:oven
+Desc[0]     = "A delicious looking turkey has been left here."
+Desc[1]     = "A delicious looking turkey is in the oven."
+End         = Turkey
+
+Name        = Sink
+Pname       = "Sink"
+Oflags      {NoGet Container}
+Size        = 5
+Location    = IN_ROOM:house10
+Desc[0]     = "A kitchen sink is here with a few dishes on one side."
+End         = Sink
+
+Name        = Apple
+Pname       = "Apple"
+Oflags      {Food GetFlips}
+State       = 1
+MaxState    = 1
+Size        = 1
+Weight      = 1
+Location    = IN_CONTAINER:sink
+Desc[0]     = "A nice red apple has been left here."
+Desc[1]     = "A nice red apple is in the sink that looks very delicious."
+End         = Apple
+
+Name        = jeremy_knife
+Pname       = "Knife"
+Oflags      {Weapon}
+Size        = 3
+Weight      = 3
+Location    = IN_ROOM:house16
+Desc[0]     = "A small knife has been left here."
+End         = jeremy_knife
+
+Name        = houseindoor
+Pname       = "Door"
+Location    = IN_ROOM:house2
+Oflags      {NoGet Openable}
+Linked      = houseoutdoor
+State       = 1
+MaxState    = 1
+Desc[0]     = "The door leading inside is open."
+Desc[1]     = "The door leading inside is closed."
+End         = houseindoor
+
+Name        = houseoutdoor
+Pname       = "Door"
+Location    = IN_ROOM:house1
+Oflags      {NoGet Openable}
+Linked      = houseindoor
+State       = 1
+MaxState    = 1
+Desc[0]     = "The door leading outside is open."
+Desc[1]     = "The door leading outside is closed."
+End         = houseoutdoor
+
+%locations
+hick1 n:hick2 s:Track@village;
+Altitude = 350
+lflags {NoMobiles Outdoors}
+Hickdale Farm Road Entrance^
+  You are on the start of a dusty old road that looks to lead up north to 
+the Hickdale Farm. This is beautiful country with flowers growing around 
+the road and tall grasses surround the small fence that prevents 
+livestock from wandering into the road.
+^
+hick2 n:hick3 e:hick5 s:hick1;
+Altitude = 400
+lflags {Outdoors}
+Main Road^
+  The road is very dirty and you cough a little from the dust that is 
+rising up from your feet. The road turns to the east here and leads to a 
+large field. The road also continues north and goes back to the south.
+^
+hick3 n:hick4 s:hick2;
+Altitude = 400
+lflags {Outdoors}
+Main Road^
+  You kick at the gravel in the road here as you continue on your way 
+down the road to Hickdale Farms. The road is surrounded by large trees 
+and beautiful flowers. The road leads to the north and goes back to the 
+south.
+^
+hick4 n:house1 e:hick8 s:hick3;
+Altitude = 400
+lflags {Outdoors}
+In Front of the Hickdale House^
+  You are at the end of the main road that leads up to the Hickdale 
+House. It is a nice looking house that seems to have been worn away by 
+the elements over the years. It is a dull white house made of wood that 
+looks to be a little rotted out. The porch of the house is to the north, 
+and the roads leads back to the south. To the east is the road to the 
+livestock area.
+^
+hick5 w:hick2 e:hick6;
+Altitude = 400
+lflags {Outdoors}
+Road to Crop Fields^
+  The road has a few weeds growing in the middle of it here and you 
+sneeze as a small piece of pollen wisks across your face. The road leads 
+to the east and goes back to the west.
+^
+hick6 w:hick5 n:hick7 e:hick9;
+Altitude = 400
+lflags {Outdoors}
+Road to Crop Fields^
+  The road has fresh footprints in it leading to the east towards the 
+fields, maybe someone is working out there? There are large trees to the 
+south of the road that are losing their leaves covering the grass with 
+orange and yellow colors. The road leads to the east and goes back to the 
+west. To the north is the road to the livestock area.
+^
+hick7 s:hick6 n:hick8;
+Altitude = 400
+lflags {Outdoors}
+Road to Livestock Area^
+  The road here is very bare and doesn't have that much dust on it. You 
+can smell the livestock to the north of here. The road leads to the north 
+and goes back to the south.
+^
+hick8 w:hick4 n:cattle1 s:hick7;
+Altitude = 400
+lflags {Outdoors}
+End of Road to Livestock Area^
+  You are at the end of the road to the livestock area. To the north is 
+the gate that leads into the area where the livestock is kept. You can 
+smell the animals from here and tears come to your eyes as you take a 
+deep breath. The road goes back to the south, and the road goes to the west.
+^
+hick9 e:field1 w:hick8;
+Altitude = 400
+lflags {Outdoors}
+End of Road to Crop Fields^
+  You are at the end of the road to the crop fields. There are giant 
+fields of corn, wheat, tomatoes, and other various vegetables. There is a 
+small irrigation ditch that leads to the east into the fields. The road 
+goes back to the west.
+^
+field1 w:hick9 e:field2 n:field12;
+Altitude = 400
+lflags {Outdoors}
+Southwestern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the north and to the east. The road is to the 
+west.
+^
+field2 w:field1 e:field3 n:field13;
+Altitude = 400
+lflags {Outdoors}
+Southern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the east and the west. To the north is a field 
+of corn.
+^
+field3 w:field2 e:field4 n:field14;
+Altitude = 400
+lflags {Outdoors}
+Southern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the east and the west. To the north is a field 
+of wheat.
+^
+field4 w:field3 n:field5;
+Altitude = 400
+lflags {Outdoors}
+Southeastern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the west and the north.
+^
+field5 s:field4 n:field6 w:field14;
+Altitude = 400
+lflags {Outdoors}
+Eastern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the north and the south. To the west is a field 
+of wheat.
+^
+field6 s:field5 n:field7 w:field15;
+Altitude = 400
+lflags {Outdoors}
+Eastern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the north and the south. To the west is a field 
+of tomatoes.
+^
+field7 s:field6 w:field8;
+Altitude = 400
+lflags {Outdoors}
+Northeastern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the west and the south.
+^
+field8 w:field9 e:field7 s:field15;
+Altitude = 400
+lflags {Outdoors}
+Northern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the west and the east. To the south is a field 
+of tomatoes.
+^
+field9 w:field10 e:field8 s:field16;
+Altitude = 400
+lflags {Outdoors}
+Northern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the west and the east. To the south is a field 
+full of assorted fruits.
+^
+field10 s:field11 e:field9;
+Altitude = 400
+lflags {Outdoors}
+Northwestern Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the south and the east. 
+^
+field11 n:field10 s:field12 e:field16;
+Altitude = 400
+lflags {Outdoors}
+Western Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the north and the south. To the east is a field 
+full of assorted fruits.
+^
+field12 n:field11 s:field1 e:field13;
+Altitude = 400
+lflags {Outdoors}
+Western Irrigation Ditch^
+  You are standing on a small path with an irrigation ditch running 
+through it that leads to the north and the south. To the east is a field 
+of corn.
+^
+field13 n:field16 e:field14 s:field2 w:field12;
+Altitude = 400
+lflags {Outdoors}
+Corn Field^
+  This is a large corn field. To the north is a strawberry patch, to the 
+east is a wheat field, and to the south and west there is an irrigation 
+ditch.
+^
+field14 n:field15 e:field5 s:field3 w:field13;
+Altitude = 400
+lflags {Outdoors}
+Wheat Field^
+  This is a large wheat field. To the north is a tomato patch, to the west 
+is a corn field, and to the east and south there is an irrigation ditch.
+^
+field15 n:field8 e:field6 s:field14 w:field16;
+Altitude = 400
+lflags {Outdoors}
+Tomato Patch^
+  This is a large tomato patch. To the south is a wheat field, to the 
+west is a strawberry patch, and to the north and east there is an 
+irrigation ditch.
+^
+field16 n:field9 e:field15 s:field13 w:field11;
+Altitude = 400
+lflags {Outdoors}
+Strawberry Patch^
+  This is a large strawberry patch. To the east is a tomato patch, to the 
+south is a corn field, and to the north and west there is an irrigation 
+ditch.
+^
+cattle1 s:hick8 n:cattle2;
+Altitude = 400
+lflags {Outdoors NoMobiles}
+Entrance to Livestock Area^
+  The smell of livestock enters your nose and you turn your head away and 
+cough loudly as water comes to your eyes. After a few moments your head 
+clears and you get used to the smell. A small path leads through the 
+livestock area to the north and you can leave to the south.
+^
+cattle2 n:cattle3 e:cattle4 s:cattle1 w:cattle5;
+Altitude = 400
+lflags {Outdoors}
+Southern Livestock Area Road^
+  The road is covered with all sorts of litter and you watch where you step 
+very carefully. There are stalls to the east and west of here. To the north 
+and road continues and you can see an exit to the south.
+^
+cattle3 n:cattle6 e:cattle7 s:cattle2 w:cattle8;
+Altitude = 400
+lflags {Outdoors}
+Northern Livestock Area Road^
+  This road is very muddy here and you can feel your feet sink deep into 
+the mud, a very disgusting feeling. You look around you and see pig 
+stalls to the east and west. To the north the road continues and to the 
+distant south you can see the exit.
+^
+cattle4 w:cattle2;
+Altitude = 400
+lflags {Outdoors}
+Cattle Stall^
+  Looking around this small pin you notice that this is where a cow is 
+taken to be milked. There are assorted pails and a few pairs of gloves 
+hanging on a nearby rack that look a little used and weathered. You can 
+leave this stall to the west.
+^
+cattle5 e:cattle2;
+Altitude = 400
+lflags {Outdoors}
+Horse Stall^
+  This is a very nice horse stall with a few bails of hay in the corner 
+and on a nearby table rests a couple of large brushes with a little bit 
+of hair on them. You can leave the stall to the east.
+^
+cattle6 n:cattle9 s:cattle3;
+Altitude = 400
+lflags {Outdoors NoMobiles}
+In Front of the Bull Pin^
+  To the north of here you can see a large bull pin and you wonder if it 
+is currently occupied. The road leads south into the livestock area.
+^
+cattle7 w:cattle3;
+Altitude = 400
+lflags {Outdoors}
+Pig Stall^
+  This stall is disgusting, covered with mud and old decaying food. You 
+can leave to the west.
+^
+cattle8 e:cattle3;
+Altitude = 400
+lflags {Outdoors}
+Pig Stall^
+  This stall is disgusting, covered with mud and old decaying food. You 
+can leave to the east.
+^
+cattle9 s:cattle6;
+Altitude = 400
+lflags {Outdoors}
+Bull Pin^
+  There are a few barrels laying around the pin, they must have rodeos 
+here from time to time. The pin is very large with enough room for a bull 
+to run around freely, a very large bull that is. You can exit to the south.
+^
+house1 n:^houseoutdoor s:hick4;
+Altitude = 400
+lflags {Outdoors}
+Hickdale House Porch^
+  This is a small porch with a swing on it and a large chair to sit in 
+during the warm evenings and watch the sun set in the distance. The door 
+leading to the inside of the house is to the north and a path is to the 
+south.
+^
+house2 s:^houseindoor n:house3;
+lflags {}
+Landing^
+  This is a small area with a floormat for wiping your feet clean of mud 
+and other dirt. There is a rack for coats and hats with a couple of small 
+jackets hanging on it. There in a hallway leading to the north and to the 
+south you can see the porch.
+^
+house3 n:house8 e:house4 s:house2 w:house6;
+lflags {}
+Main Hallway^
+  This is a large hallway with wooden floors that creak slightly under 
+you. The house is painted a dull white that seems a little boring to 
+you. The hall branches off to the east and west leading to other rooms 
+and continues north through the rest of the house. 
+^
+house4 e:house5 w:house3;
+lflags {}
+Hallway to the Study^
+  This is a short hallway that leads to a study. There are a few pictures 
+hanging on the wall that you assume to be the Hickdale family, some of 
+the pictures look very old and you wonder how long the Hickdales have 
+owned this farm. To the east you can see a study and the hallway leads 
+back to the west.
+^
+house5 w:house4;
+lflags {}
+Study^
+  This is a pleasent little study with decorative pictures hanging on the 
+wall with a few small houseplants on shelves against the walls. There is 
+a very large desk set against the south wall. You can leave the study to 
+the west.
+^
+house6 e:house3 w:house7;
+lflags {}
+Hallway to Living Room^
+  There is a warm draft rising up from the heater ducts against the wall 
+and it feels good as you walk across the cold hardwood floor. The walls 
+are very drab, painted white. To the west you can see the living room and 
+to the east you can see the main hallway.
+^
+house7 e:house6;
+lflags {}
+Living Room^
+  This is a very nice living room with a large rug covering the wooden 
+floor making it more comfortable to walk on. The furniture in this room 
+is very nice and plush, in fact it almost looks brand new. There is a 
+hallway leading to the east.
+^
+house8 n:house9 s:house3;
+lflags {}
+Main Hallway^
+  The hallway continues to the north and leads back to the south.
+^
+house9 n:house12 e:house10 s:house8 w:house11 u:house13;
+lflags {}
+Main Hallway^
+  The hallway seems to end here leading to a kitchen to the east, the 
+dining room to the west and a bathroom to the north and there are stairs 
+leading to the upstairs floor.
+^
+house10 w:house9;
+lflags {}
+Kitchen^
+  You start to feel a little hungry as you take in the smells of freshly 
+cooked food. The kitchen is very nice with all of the appliances that are 
+needed for someone to prepare a wonderful meal.
+^
+house11 e:house9;
+lflags {}
+Dining Room^
+  There is a very large table in the middle of the room that has all of 
+the dishes and silverware layed out. A large hutch with fine china covers 
+the north wall, but you decide not to touch anything. You can leave the 
+dining room to the east.
+^
+house12 s:house9;
+lflags {}
+Bathroom^
+  This is not a very fancy bathroom, it just has a sink, a toilet and a 
+small washtub. You can leave to the south.
+^
+house13 d:house9 s:house14;
+lflags {}
+Upstairs Landing^
+  A hallway leads to the south or you can go back downstairs to the main 
+floor. You can see that the hallway to the south has bedrooms lining it 
+with a room at the end of the hall.
+^
+house14 n:house13 s:house15;
+lflags {}
+Main Hallway^
+  This hallway is just as drab as the ones you saw downstairs and you 
+wonder how these people could live in such a drab place. The hallway 
+continues to the south.
+^
+house15 n:house14 e:house17 s:house18 w:house16;
+lflags {}
+Main Hallway^
+  There are bedrooms to the east and west of here and the hallway 
+continues to the south.
+^
+house16 e:house15;
+lflags {}
+Jeremy's Room^
+  This is Jeremy's room, nothing real special, just a bed, a dresser, and 
+some model cars sitting around.
+^
+house17 w:house15;
+lflags {}
+Tom's Room^
+  This is Tom's room, very plain, a bed, a dresser, and some books on a 
+shelf.
+^
+house18 n:house15 e:house20 s:house21 w:house19;
+lflags {}
+Main Hallway^
+  There are bedrooms to the east and west of here, a bathroom is to the 
+south.
+^
+house19 e:house18;
+lflags {}
+Grandparents Room^
+  This looks to be grandma and grandpa Hickdale's room, it is just as 
+boring as the other rooms.
+^
+house20 w:house18;
+lflags {}
+Parents Room^
+  This looks to be the rooms for Ma and Pa Hickdale, it is just as drab 
+and plain as the other rooms. Just a bed, a dresser, and a few books on 
+the dresser.
+^
+house21 n:house18;
+lflags {}
+Bathroom^
+  This is your normal bathroom with a sink, toilet, and bathtub. The 
+walls are a disgusting dull white and you are starting to get sick of 
+this color.
+^
+

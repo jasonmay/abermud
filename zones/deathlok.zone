@@ -1,0 +1,191 @@
+%locations
+
+deathlok1 n:deathlok2 s:bridge@blizzard;
+lflags {}
+Stoned Pathway^
+	Leaving the main road, you come to a stoned pathway, leading up to
+the mountains.  Examining the path, you notice that the road is paved with
+skulls.  Slowly, you realize that this pathway is an entryway into a dark
+land.  You see two exits from this path, one to the north and one to the
+south.  To the north, the path continues up into the mountains.  To the south
+the path leads back to Humpbacked Bridge. 
+^
+
+deathlok2 n:deathlok3 s:deathlok1;
+lflags {}
+Stoned Pathway^
+	Following the path, you notice that the road leads further north.
+Looking down the road, you see a large ominous mountain.  In the background,
+you notice dark clouds that encircle the mountain.  Suddenly, you realize
+that this must be the legendary mountain where the infinity is told to
+exist.  To the north, the path continues up to the mountain.  To the south,
+the path leads back down.
+^
+
+deathlok3 n:deathlok4 s:deathlok2;
+lflags {}
+Stoned Pathway^
+	Before you is the end of the pathway.  Gazing around you notice that
+the road ends at this point.  From where the road leads now, is a mystery.
+Looking up into the moutains, you see a lightning storm that has hit the 
+peak of the mountain.  To the north you can see the moutain base.  To the
+south you see the pathway lead back to the bridge.
+^
+
+deathlok4 u:deathlok5 s:deathlok3;
+lflags {}
+Up Into the Mountains^
+	After leaving the stoned pathway, you reach the mountain base.  
+Before you lies a large dark mountain filled with unknown danger.  Looking
+up into the mountain you realize that the voyage up will be a dangerous one.
+Journeying up into the mountain will be a quest by itself.  From this point
+you can see treacherous ledges, ravines, cliffs and all sorts of trouble.
+Slowly, you begin to wonder if going up into the mountain would be worth
+the time and trouble.
+^
+
+deathlok5 u:deathlok6 d:deathlok4;
+lflags {}
+Mountain Pathway^
+	Once into the mountain you reach a mountain pathway that leads up to
+the mountain peak.  Before lies a narrow path leading to a ledge.  Looking
+around you notice that the path has not been used for years or even decades.
+You notice that underbrush has grown around the path making the path difficult
+to see.  To the north of you lies a treacherous ledge.  To the south, leads
+back down to the mountain base.
+^
+
+deathlok6 u:deathlok7 d:deathlok5;
+lflags {}
+Dark Ledge^
+	After following the path, you reach a dark and treacherous ledge.
+Looking around, you realize that the only passage up to the mountain peak
+is by clinging to the ledge.  Suddenly, you realize that the ledge leads
+up to a momument of some kind.  The only exits leading from here are up
+and down.  Looking up, you notice a temple of some kind.  Leading down,
+you notice that it leads back to the mountain pathway.
+^
+
+deathlok7 n:deathlok8 d:deathlok6;
+lflags {dark}
+Temple of Death^
+	Before you lies the Temple of Death.  Entry into the temple, lies to
+the north.  Looking about you, you see a huge sacrifical pit that allows
+you to pit items in ofference to Death.  Gazing around, you notice that
+the temple is well constructed in reverence of Death.  Looking to your left,
+you see huge pillars that symbolize a millenia of destruction due to Death's
+rule over the land.  Looking to your right, you see unknown runes that lie
+on the wall.  Looking closer, you realize that the runes are written in
+Latin and Greek.  Suddenly, you feel an evil presence forcing you to go north.
+Entry into the Temple means ultimate annhilation, but leaving the temple
+means Death has prevailed over you.
+^
+
+deathlok8 e:deathlok9 w:deathlok13;
+lflags {dark}
+Chamber of Death^
+	You have just reached entered the Chamber of Death.  Entry into
+Death's chamber means ultimate destruction by her deadly touch.  Looking
+around you see nothing, but everything that you have witnessed in your 
+sad and pityful life.  The walls here are jet black as well as the floor
+and ceiling.  Exits from this point are to the east and west.  
+^
+
+deathlok9 n:deathlok10 w:deathlok8;
+lflags {dark}
+Chamber of Death^
+	You have just reached the Chamber of Death.  Entry into Death's
+chamber means ultimate destrucion by her deadly touch.  Looking around,
+you see nothing, but everything that you have witnessed in your sad and 
+pityful life.  The walls here are jet black as well as the floor and
+ceiling.  Exits from this point are to the north and west.
+^
+
+deathlok10 w:deathlok11 s:deathlok9;
+lflags {dark}
+Chamber of Death^
+	You have just reached the Chamber of Death.  Entry into Death's 
+chamber means ultimate destruction by her deadly touch.  Looking around
+you see nothing, but everything that you have witnessed in your sad and
+pityful life.  The walls here are jet black as well as the floor and
+ceiling.  Exits from this point are to the west and south.
+^
+
+deathlok11 w:deathlok12 e:deathlok10;
+lflags {dark}
+Chamber of Death^
+	You have just reached the Chamber of Death.  Entry into Death's
+chamber means ultimate destruction by her deadly touch.  Looking around
+you see nothing, but everything that you have witnessed in your sad and
+pityful life.  The walls here are jet black as well as the floor and
+ceiling.  Exits from this point are to the west and the east.
+^
+
+deathlok12 e:deathlok11 s:deathlok13;
+lflags {dark}
+Chamber of Death^
+	You have just reached the Chamber of Death.  Entry into Death's
+chamber means ultimate destruction by her deadly touch.  Looking around
+you see nothing, but everything that you have witnessed in your sad and
+pityful life.  The walls here are jet black as well as the floor and
+ceiling.  Exits from this point are to the east and to the south.
+^
+
+deathlok13 n:deathlok12 e:deathlok8;
+lflags {dark}
+Chamber of Death^
+	You have just reached the Chamber of Death.  Entry into Death's
+chamber means ultimate destruction by her deadly touch.  Looking around
+you see nothing, but everything that you have witnessed in your sad and
+pityful life.  The walls here are just black as well as the floor and
+ceiling.  Exits from this point are to the north and to the east.
+^
+
+%mobiles
+
+Name       = Reaper
+PName      = "Reaper"
+PFlags       {NoExorcise NoZap NoSummon}
+EFlags       {NegFireball NegShock NegMissile NegFrost Shock Fireball Missile Frost}
+MFlags       {Thief StealWeapon StealWorn PickStuff}
+Location   = deathlok11
+Strength   = 5000
+Damage     = 10
+Armor      = 0
+Aggression = 0
+Speed      = 50
+Description = "Death, the Grim Reaper, is here awaiting your soul."
+End        = Reaper
+
+%objects
+
+Name       = soul
+AltName    = gem
+Location   = IN_ROOM:deathlok3
+Oflags       {Wearable lit}
+Damage     = 0
+BValue     = 600
+Size       = 2
+Weight     = 2
+Desc[0]    = "A small red gem has been dropped here."
+Examine    = "In the center of the gem you see the word 'Infinity'."
+End        = soul
+
+Name       = Sickle
+AltName    = Sickle
+Location   = WIELDED_BY:Reaper
+Oflags       {weapon}
+Damage     = 35
+BValue     = 3000
+Size       = 15
+Weight     = 15
+Desc[0]    = "A large viscious looking sickle has been left here."
+Examine    = "
+Examining the sickle you notice the engravings on the staff.                   Slowly, you notice that the blade is stained with blood.  Examining             the sickle more closely, you realize that this weapon belongs to Death."
+End        = Sickle
+
+
+
+
+
+

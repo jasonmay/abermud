@@ -1,0 +1,364 @@
+%rainfall:500
+
+%latitude:45
+
+%mobiles
+ 
+Name        = Ymold
+Pname       = "Yellow mold"
+Eflags      {NegMissile NegFrost NegShock}
+Sflags      {Female}
+Location    = Arena5
+Strength    = 25
+Armor       = 0
+Damage      = 2
+Aggression  = 0
+Speed       = 0
+Description = "
+  Near a small crack in the wall, you notice one rather large, yellow
+brownish colored mold growing happily in the dark"
+End         = Ymold
+ 
+Name        = Crawler
+Pname       = "Carrion Crawler"
+Location    = limbo@limbo
+Strength    = 65
+Armor       = 10
+Damage      = 4
+Aggression  = 100
+Speed       = 0
+Description = "
+  A large worm like creature half way moves toward you, just coming far 
+enough from the hole to attack"
+End         = Crawler
+ 
+%objects
+ 
+Name        = Spear
+Pname       = "Spear"
+Oflags      {Weapon GetFlips}
+Location    = IN_ROOM:Arena10
+BValue      = 20
+Damage      = 10
+Size        = 6
+Weight      = 6
+State       = 1
+MaxState    = 1
+Desc[0]     = "An old blunt spear has been left here."
+Desc[1]     = "
+An spear is wedged through a shield, and it's former owners ribs, into the 
+rock wall behind."
+Examine     = "The spear looks old, but better than nothing"
+End         = Spear
+
+Name      = key
+Location  = IN_ROOM:Entrance 
+Oflags    {Key}
+BValue    = 10
+Size      = 1
+Weight    = 1
+Desc[0]   = "A long key lies here."
+Examine   = "There is a key here, seeping with deaths essence."
+End       = key
+
+Name        = Crack
+Pname       = "crack"
+Oflags      {NoGet}
+Location    = IN_ROOM:Arena11
+MaxState    = 1
+Desc[0]     = ""
+End         = Crack
+ 
+Name        = Curse_scroll
+Pname       = "Scroll"
+Location    = IN_ROOM:niche
+BValue      = 10
+Size        = 1
+Weight      = 1
+Desc[0]     = "A scroll lies on the ground here."
+Examine     = "
+  A scroll with blue writing and runes written onto it. The writing says
+`&+BRead me while wielding your favourite weapon, and you will get a magical
+&+Bweapon&N' The runes you can not understand."
+End         = Curse_scroll
+ 
+Name        = Dgate_in
+Pname       = "gate"
+Altname     = "gates"
+Oflags      {Openable Lockable NoGet}
+Location    = IN_ROOM:Entrance
+Linked      = Dgate_out
+State       = 2
+MaxState    = 2
+Desc[0]     = "Huge wooden gates stand open, allowing access to the arena"
+Desc[1]     = "A Pair of reinforced wooden gates block access to the arena"
+Desc[2]     = "The huge gates to the arena are barred and locked from this side"
+Examine     = "
+  The gates stand 20 feet tall, blocking the entire entrance to the arena,
+and there is a locking mechanism, to bar and lock the gates from this side.
+They have been heavily reinforced with steel bindings. Wonder what they keep
+in there that needs a 20 foot doorway"
+End         = Dgate_in
+ 
+Name        = Dgate_out
+Pname       = "gate"
+Altname     = "gates"
+Oflags      {Openable NoGet}
+Location    = IN_ROOM:Arena1
+Linked      = Dgate_in
+State       = 2
+MaxState    = 2
+Desc[0]     = "Huge wooden gates stand open, leading out of the arena"
+Desc[1]     = "The huge reinforced gates are closed, blocking the arena exit"
+Desc[2]     = "The huge reinforced gates are closed, blocking the arena exit"
+Examine     = "
+  The gates stand 20 feet tall, blocking the entire exit to the arena,
+and sitting flush with the stone walls of the arena. No way you could open
+these from the inside."
+End         = Dgate_out
+ 
+Name        = Void_sign
+Pname       = "sign"
+Oflags      {NoGet}
+Location    = IN_ROOM:Arena0
+Desc[0]     = "
+A strange looking sign, made of nothing floats round this room that just is"
+Examine     = "
+  If this is not a tournament, and you are in here, and can't get out. Well
+this might help, it might not.
+  Tournament: If this is a tournament, then you had better have read info
+tournament before you leave here and go into the arena. The exit to the 
+arena can be opened by who ever is running the tournament. By setting the
+state of object `Arena' to 0. EG: set arena 0 (close by setting to 1)
+  They may however choice to summon competitors into the arena. You should
+ask who ever is running the tournament before entering. They may raise your
+level or something.
+ 
+  You may sit here and watch if you like, but entering the arena means
+that you have read, and accept the rules. As well as any additional rules
+the person running it has imposed. If your unsure ask before you go in"
+End         = Void_sign
+ 
+Name        = Arena2
+Pname       = "arena"
+Oflags      {NoGet}
+Location    = IN_ROOM:Arena0
+Linked      = Arena1
+State       = 1
+MaxState    = 1
+Desc[0]     = ""
+Desc[1]     = ""
+End         = Arena2
+ 
+Name        = Arena1
+Pname       = "arenaobject"
+Oflags      {NoGet}
+Location    = IN_ROOM:Arena1
+Linked      = Arena2
+State       = 1
+MaxState    = 1
+Desc[0]     = ""
+Desc[1]     = ""
+End         = Arena1
+ 
+Name        = Porcullis1
+Pname       = "porcullis"
+AltName     = "Archway"
+Oflags      {NoGet}
+Location    = IN_ROOM:Arena3
+Linked      = Porcullis2
+State       = 1
+MaxState    = 1
+Desc[0]     = "An Archway leads to a darkened tunnel."
+Desc[1]     = "A huge steel porcullis, blocks the archway to the south."
+Examine     = "
+  The porcullis is very big and very heavy. Hope your not have wild dreams
+about lifting it are you. Lets just say, if your not as strong as a storm
+giant, then forget it"
+End         = Porcullis1
+ 
+Name        = Porcullis2
+Pname       = "porcullis"
+Oflags      {NoGet}
+Location    = IN_ROOM:tunnel
+Linked      = Porcullis1
+State       = 1
+MaxState    = 1
+Desc[0]     = "A raised porcullis allows access to the arena."
+Desc[1]     = "A huge steel porcullis, blocks the archway to the north."
+End         = Porcullis2
+ 
+Name        = Porcullis3
+Pname       = "Porcullis"
+Oflags      {NoGet}
+Location    = IN_ROOM:Arena6
+Linked      = Porcullis4
+State       = 1
+MaxState    = 1
+Desc[0]     = "A large porcullis has been raised allowing you to go west"
+Desc[1]     = "The spikes of the porcullis are buried in the dirt"
+End         = Porcullis3
+ 
+Name        = Porcullis4
+Pname       = "Porcullis"
+Oflags      {NoGet}
+Location    = IN_ROOM:Cave
+Linked      = Porcullis3
+State       = 1
+MaxState    = 1
+Desc[0]     = "A large porcullis has been raised allowing you to go east."
+Desc[1]     = "The spikes of the porcullis are buried in the dirt"
+End         = Porcullis4
+%locations
+ 
+Entrance w:^Dgate_in e:nibelung1@nibelung;
+lflags {NoSummon CantSummon Peaceful NoMagic NoMobile}
+The entrance to the Arena^
+  You stand inside the secret entrance to THE arena. Either side of you,
+to the north and south are the inner walls of this hole that has been cut
+into the side of the cliff. This place has been magically protected and 
+no violence may take place here. A few burn marks scar the walls, around 
+small archways leading to the stairway up into the viewing area. 
+^
+ 
+Arena0 n:^Arena2 ;
+lflags {NoSummon Peaceful NoMagic CantSummon Soundproof NoMobile}
+The Arena Void^
+  You stand in a strange looking room, most definately magical, for it does
+not seem to have any walls, or floor or roof, or anything much for that 
+matter.  It just is. Or is it? Maybe your imagining this. There are no exits, 
+as you know them, but then again, there is nothing apparently stopping you 
+from going any way in which you please, except, you can't quite tell which 
+ways is which.
+^
+ 
+Arena1 n:Arena10 e:^Dgate_out s:Arena2 w:Arena12 ;
+lflags {NoSummon CantSummon}
+The Arena^
+  An artificial light fills your eyes as you look round this place. It has 
+been cut into the cliff and is completely inside it. The stone walls round
+the lower part of the arena stand some 30 feet up, to the lowest viewing
+area. The roof, also made of stone, is extremely high, and you dare not guess
+at it's exact height. The air in here is dry, and a little stale, the ground
+hard. A little dust floats into the air as you move.
+^
+ 
+Arena2 n:Arena1 w:Arena3 ;
+lflags{NoSummon CantSummon}
+The Arena^
+  Dust floats up into the stale air as you move acorss the dry hard ground
+underfoot. The Southern wall here has a large rock chip missing from it,
+and the wire mesh above to protect the people watching has been torn open
+leaving a small hole. Well out of your reach. The eastern wall looks very
+solid and extends all the way to the roof.
+^
+ 
+Arena3 n:Arena12 w:Arena4 e:Arena2 s:^Porcullis1 ;
+lflags {NoSummon CantSummon NoMagic}
+The Arena^
+  The arena extends north, east and west from here. A small draft comes from
+the south, carrying an evil chill from behind a set of large steal bars.
+The air is thick, and shimmers something like it does on extremely hot days
+but this is clearly from the presense of a strong anti-magic field. 
+Possibly to keep whats behind those bars in. The seats above here have 
+been placed behind a strange, clear type of rock, that allows light, but 
+air to pass.
+^
+ 
+Arena4 n:Arena11 e:Arena3 w:Arena5 ;
+lflags {NoSummon CantSummon Dark}
+The Arena^
+  The magical light in this area seems to have been dispelled by some
+powerful mage or wizard. The ground is starting to crack, and one of larger
+ones continues north. The arena extend to the north, east and west.
+^
+ 
+Arena5 n:Arena6 e:Arena4 ;
+lflags {NoSummon CantSummon Dark}
+The Arena^
+  The corner of the arena have had the magical light drained from them 
+somehow. Growing on the blood stained walls are a few kinda of lichen.
+The ground is cold, but for once no dust puffs up as you move across it.
+^
+ 
+Arena6 n:Arena7 e:Arena11 s:Arena5 w:^Porcullis3 ;
+lflags {NoSummon CantSummon NoMagic Hot}
+The Arena^
+  The far end of the arena looks much like the rest of it. A wave of heat
+wafts over you from beyond the archway to the west. It feels very warm, here 
+indeed. Looking upward, you notice that the veiwing area here is protected
+no by the usual wire mesh, but by a clear rock like substance. 
+^
+ 
+Arena7 e:Arena8 s:Arena6 ;
+lflags {NoSummon CantSummon}
+The Arena^
+  The northwest corner of the arena looks badly damaged. The walls are 
+blackened, and in parts seem to have melted a little. The wire mesh above
+has been destroyed. You can see the charred remains of a less than fortunate
+spectator caught in the mesh.
+^
+ 
+Arena8 e:Arena9 s:Arena11 w:Arena7 ;
+lflags {NoSummon CantSummon}
+The Arena^
+  The arena extends to the south east and west from here. The dry ground
+is covered with small rocks.
+^
+ 
+Arena9 e:Arena2 w:Arena11 ;
+lflags {NoSummon CantSummon NoMagic}
+The Arena^
+  There are a few large boulders blocking the way south of here, far to 
+large for any mortal to consider moving. They appear to have fallen from
+the roof above. You sure hope one don't fall on you. There is a small
+bush growing against the northern wall, and a pleasant smell in the air.
+You feel a little strange.
+^
+ 
+Arena10 s:Arena1 w:Arena9 ;
+lflags {NoSummon CantSummon}
+The Arena^
+  The north east corner of the arena has several bones scattered about,
+some human others not so. To the south west you see some fallen rocks.
+^
+ 
+Arena11 n:Arena8 s:Arena4 w:Arena6 ;
+lflags {NoSummon CantSummon}
+The Arena^
+  The arena extends in all directions from here, except for a large pile
+of rocks blocking the way south. The ground here is dry and the air stale.
+One large crack, big enough for you to look into, stretches across your path.
+^
+ 
+Arena12 e:Arena1 s:Arena3 ;
+lflags {NoSummon CantSummon}
+The Arena^
+  It looks dangerous here. There are numerous piles of rubble laying about,
+some containing large boulders. A few pieces of the crumbling roof fall 
+beside you.
+^
+ 
+Niche s:Arena12 ;
+lflags {NoSummon CantSummon NegRegen}
+Small niche^
+  You look around this place and get a pleasant peaceful feeling. There
+is a nice smell in the air, and you begin to think this is a nice quiet
+place to rest. There is certainly no other way in here, and any creature 
+larger than human size would not fit. 
+^
+ 
+Cave e:^Porcullis4 ;
+lflags {Dark}
+Cave^
+  This is a large dark cave cut into the stone of the cliff. The walls 
+are burnt, and few rocks lay round on the ground. Perhaps this is some
+sort of cage for beasts to be used in sporting battle.
+^
+ 
+Tunnel n:^Porcullis2 ;
+lflags {NoMagic}
+Tunnel^
+  A damp tunnel extends southward, but suddenly blocked by a pile of stones,
+with bright red spray paint on them reading '&+rUnder construction&N'
+^

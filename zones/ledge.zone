@@ -1,0 +1,123 @@
+%rainfall:760
+
+%latitude:55
+
+%objects
+
+Name      = RopeBotPit
+Pname     = rope
+AltName   = ladder
+Location  = IN_ROOM:pit
+Oflags    {Destroyed NoGet}
+Linked    = RopeTopPit@moor
+MaxState  = 2
+Desc[0]   = "A rope ladder leads up out of the pit."
+Desc[1]   = "A rope leads up out of the pit."
+Desc[2]   = "A knotted rope leads up out of the pit."
+End       = RopeBotPit
+
+Name      = RopeWest
+Pname     = rope
+AltName   = ladder
+Location  = IN_ROOM:On
+Oflags    {Destroyed NoGet}
+Linked    = RopeEast@Valley
+MaxState  = 2
+Desc[0]   = "A rope ladder leads west across to the steps."
+Desc[1]   = "A rope hangs west across to the steps."
+Desc[2]   = "A knotted rope hangs west across to the steps."
+End       = RopeWest
+
+Name      = tunnWest
+Pname     = tunnel
+AltName   = rockfall
+Location  = IN_ROOM:tunnel
+Oflags    {NoGet}
+Linked    = tunnEast
+State     = 1
+MaxState  = 1
+Desc[1]   = "A large rockfall blocks the passage to the east."
+End       = tunnWest
+
+Name      = tunnEast
+Pname     = tunnel
+AltName   = rockfall
+Location  = IN_ROOM:forgotten
+Oflags    {NoGet}
+Linked    = tunnWest
+State     = 1
+MaxState  = 1
+Desc[1]   = "
+A huge rockfall to the west has sealed off the only exit to this chamber."
+End       = tunnEast
+
+Name      = orb
+AltName   = platinum
+Location  = IN_ROOM:forgotten
+BValue    = 400
+Desc[0]   = "
+A huge glittering platinum orb sparkles in the light, sending rainbows of
+glittering fire twinkling around you."
+End       = orb
+
+%locations
+
+On e:Cavemouth w:^RopeWest;
+Altitude = 850
+lflags{Outdoors}
+On The Ledge^
+   You are standing on a narrow ledge high up the side of some steep cliffs.
+The ledge continues west beside a narrow cavemouth.  To the east the ledge ends
+some twenty feet short of a set of steps, which climb up the cliff side from
+the valley below.
+^
+Cavemouth n:Cave e:Ledge w:On;
+Altitude = 850
+lflags{Outdoors}
+Cavemouth^
+   You are standing on a narrow precipitous ledge.  The ledge runs east-west,
+and to the north a narrow cavemouth leads into semi-darkness.  Braving vertigo,
+you gaze over the lip of the ledge across the vast expanse of trees far below.
+^
+Ledge e:Death w:Cavemouth;
+Altitude = 850
+lflags{Outdoors}
+Ledge^
+   The ledge narrows here, become only a couple of inches wide as it leads
+further eastwards.  To the west the ledge widens out.
+^
+Death ;
+Altitude = 850
+lflags{Outdoors Death}
+Ledge^
+   Your feet slip on the dangerously thin ledge, and you plunge rapidly
+downwards to your death...
+^
+Cave n:Pit e:Tunnel s:Cavemouth;
+lflags{}
+Narrow Cave^
+   You are standing in a long narrow cave.  Dim and pallid light shines in from
+the cavemouth to the south, illuminating passageways north and east.
+^
+Tunnel e:^TunnWest w:Cave;
+lflags{}
+Narrow Tunnel^
+   You are clambering along a narrow slanted passage.  Rubble and loose stones
+rain down around you as you move, suggesting the roof is not very strong. Light
+shines along the passage from a junction to the west.
+^
+Forgotten w:^TunnEast;
+lflags{}
+Forgotten Place^
+   You are standing in a dim forgotten place, deep underground.  The rocks
+around you seem placid and silent, as if in silent contemplation of some deeper
+more ancient power of the earth.
+^
+Pit s:Cave u:^RopeBotPit;
+Altitude = 850
+lflags{Outdoors}
+Bottom Of Pit^
+   You are standing at the bottom of a huge open pit.  The pit walls are almost
+sheer, and well beyond climbing.  A narrow tunnel leads south into shadow.
+^
+

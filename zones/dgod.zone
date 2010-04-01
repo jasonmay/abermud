@@ -1,0 +1,95 @@
+%rainfall:500
+
+%latitude:40
+
+%mobiles
+
+Name            = Acanthostega
+Location        = arctica1
+Strength        = 60
+Damage          = 4
+Armor           = 0
+Aggression      = 0
+Speed           = 1
+Description     = "The early tetrapod Acanthostega is crawling about on the floor."
+Examine         = "
+Acanthostega would really prefer to be in the water."
+End             = Acanthostega
+
+%objects
+
+Name            = bed
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 100
+Weight          = 0
+Location        = IN_ROOM:arctica1
+Desc[0]         = "
+A king-sized double bed looks somewhat out of place here." 
+Oflags          { NoGet }
+Examine         = " 
+It is sumptuous and looks well-used."
+End             = bed
+
+Name            = rope
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 4
+Weight          = 0
+Location        = IN_CONTAINER:fishtank
+Desc[0]         = "
+A length of rope is lying here." 
+Oflags          { Wearable }
+Aflags		{ Back }
+Examine         = " 
+It is thin but strong, yet soft and supple.  It would not hurt your wrists."
+End             = rope
+
+Name            = fishtank
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 40
+Weight          = 0
+Location        = IN_ROOM:arctica1
+Desc[0]         = "
+A large fishtank rests on a table, filled with seawater.  Small primitive fish
+are swimming about inside it, peering at you through the glass." 
+Oflags          { NoGet Container }
+Examine         = " 
+The fish swim about among a selection of plants from the Silurian period."
+End             = fishtank
+
+%locations
+
+Vaccum ;
+lflags {}
+Vacuum^
+   You are inside a void. There is no way out, other than the way in.
+Bones of those before who could not find that way out are neatly piled
+in one discreet corner.
+^
+
+arctica1 s:devo9@evolution;
+lflags { Party Private Peaceful NoMobiles}
+Arctica's Greenhouse^
+    You are in a vast greenhouse whose roof is two hundred feet above you.  You
+stare in awe as you gaze upon a whole host of plantlife taken from every period
+of Earth's history.  To the left are tree ferns, towering thirty feet high,
+spreading their feathery fronds for many yards in all directions.  To the right
+are horsetails as big as trees with great woody trunks that bear no resemblance
+to the little grass-like weeds that are so common around wet ground in the
+countryside.  And in front of you, towering towards the roof, are several huge
+lycopods, like trees in size and shape but related to mosses and their kin.
+A number of less massive exhibits are lined up against the glass walls of the
+greenhouse, and some shrubs and monkey puzzle saplings grow here and there
+in the shade of the lycopods.  
+^

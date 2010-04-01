@@ -1,0 +1,227 @@
+%rainfall:920
+
+%latitude:35
+
+%mobiles
+Name            = troll
+PName           = "The Troll"
+Location        = cave
+Strength        = 100
+Damage          = 20
+Aggression      = 30
+Armor            = 0
+Description     = "
+A large hulking troll snarls at you as he prepares to do you in."
+End             = troll
+
+%objects
+
+Name      = club
+Location  = IN_ROOM:cave
+Oflags    {Weapon}
+Damage    = 4
+BValue    = 10
+Size      = 30
+Weight    = 30
+Desc[0]   = "A heavy wooden club has been dropped here."
+End       = club
+
+Name      = earring
+Location  = IN_ROOM:cave
+Oflags    {Wearable}
+Aflags	  {Head}
+BValue    = 100
+Size      = 1
+Weight    = 1
+Desc[0]   = "
+A dented and tarnished platinum earring lies discarded at your feet."
+End       = earring
+
+Name      = venison
+Location  = IN_ROOM:cave
+Oflags    {Food}
+BValue    = 10
+Size      = 40
+Weight    = 40
+Desc[0]   = "A haunch of probably edible venison rests here."
+End       = venison
+
+Name      = pot
+Location  = IN_ROOM:cave
+Oflags    {Container}
+BValue    = 10
+Size      = 30
+Weight    = 30
+Desc[0]   = "An old metal pot has been dumped here."
+End       = pot
+
+Name      = key
+Location  = IN_ROOM:cave
+Oflags    {Key}
+Size      = 2
+Weight    = 1
+Desc[0]   = "A bent metal key has been thrown here, although it seems useable."
+End       = key
+
+Name      = brass
+AltName   = piece
+Location  = IN_ROOM:cave
+BValue    = 10
+Size      = 1
+Weight    = 1
+Desc[0]   = "A glittering piece of old brass has been tossed away here."
+End       = brass
+
+Name      = torch
+Location  = IN_ROOM:cave
+Oflags    {Lightable Extinguish}
+State     = 1
+MaxState  = 1
+BValue    = 10
+Size      = 10
+Weight    = 5
+Desc[0]   = "
+A lit torch sizzles and sparkles on the ground, making a horrible smell."
+Desc[1]   = "A greasy animal fat torch has been dumped here."
+End       = torch
+
+Name      = TreeEating
+Pname     = tree
+Location  = IN_ROOM:F4
+Oflags    {NoGet}
+End       = TreeEating
+
+Name      = InsideTree
+Pname     = tree
+Location  = IN_ROOM:InTree
+Oflags    {NoGet}
+End       = InsideTree
+
+Name      = pipes
+Location  = IN_ROOM:F8
+BValue    = 100
+Desc[0]   = "A set of small pipes have been left here."
+End       = pipes
+
+%locations
+
+InTree;
+lflags {OnePerson}  
+In The Tree^
+   You are trapped inside a tree, being crushed out of existence very slowly!
+^
+Path e:F1 s:F3 w:F2;
+Altitude = 400
+lflags {Outdoors}
+The Path^
+   You are standing on a narrow path which winds roughly southwards through the
+tangled trees around you.  The forest here is mostly pines and thick layers of
+pine needles cover the forest floor.
+^
+F1 n:F3 e:F2 s:Path w:Path;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   The forest here is thick and dark, with little light seeping through at any
+point. Fortunately the darkness is only sufficient to dim your sight making you
+jump at the shadows amongst the swaying trees.
+^
+F2 n:Path e:Path s:F1 w:F1;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   The forest thins a little here, entering a green and fresh glade.  Shafts of
+bright sunlight strike through the forest canopy from above illuminating the
+maze of trails which lead in all directions from the forest glade.
+^
+F3 n:Path e:F4 s:F1 w:F2;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   The forest here is tangled and very thick.  Branches whip out against you
+from all directions, scratching at your arms and legs.  Trails lead off through
+the dense brush, although they are evidently little used.
+^
+F4 n:F2 e:F2 s:F5 w:F3;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   You would guess you are now somewhere near the center of the forest.
+Certainly you can see nothing but trees around here.  Narrow tracks lead off in
+all directions.
+^
+F5 n:F6 e:F4 s:F5 w:F4;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   You are lost amid the tangled trees and bushes of the forest.  Dark gloomy
+trunks seem to leer down at you, as you duck between the low twisted and warped
+branches.
+^
+F6 n:F5 e:Stream@Blizzard s:F1 w:F7;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   The forest here is green and lively, its thick young growth tangled and
+glowing with life.  A narrow stream trickles away to the east, and a path runs
+down towards it.
+^
+F7 n:F4 e:F6 s:F6 w:F8;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   You are standing in a small clearing deep in the forest.  The thick trees
+press inwards from all sides, searching to cover this tiny gap in their mighty
+ranks.  A huge tree lies across the clearing, apparently uprooted by the wind.
+Quite possibly this is what left the clearing in the first place.
+^
+F8 n:F7 e:F9 s:F2 w:F1;
+Altitude = 400
+lflags {outdoors}
+Forest^
+   You are following a path through the trees.  The path diverges here and
+paths run off in all directions, turning and twisting into the forest.
+^
+F9 n:F10 e:F2 s:F5 w:F8;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   The forest seems friendlier here than in most places.  The tall straight
+trees give plenty of room to move around and lack the annoying tangles of low
+branches which scratch at you throughout the surrounding forest.  A narrow worn
+path leads northwards.
+^
+F10 n:F1 e:F11 s:F2 w:F9;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   You are following a damp muddy path which runs south and east from here.
+A large notice, half covered by thick tangled bushes points east and reads
+"T rq /th'  |<ey".  Years of rain and wind have pounded the other letters
+beyond reading.
+^
+F11 n:F6 e:F9 s:clearing w:F10;
+Altitude = 400
+lflags {Outdoors}
+Forest^
+   You are following a path through the forest, which turns abruptly from the
+west back southwards into a paticularly dense thicket.  The trees all around
+you, though dense, are not enough to deter a truely intrepid explorer.
+^
+Clearing n:F10 e:F4 s:Cave w:F4;
+Altitude = 400
+lflags {Outdoors} 
+The Clearing^
+   You stand in a large partly shaded clearing deep in the woods.  From the
+edges of the trees faint rustlings disturb the eerie quietness.  All around you
+are thick trees save to the south where the trees end abruptly at a low rocky
+outcrop.
+^
+Cave n:Clearing;
+lflags {}
+The Troll's Cave^
+   You stand in a large very smelly cave.  The walls and floor are littered
+with the remains of many an unsavoury meal.  A single passage leads north out
+into the sunlight.
+^
+

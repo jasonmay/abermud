@@ -1,0 +1,907 @@
+%rainfall:580
+
+%latitude:35
+
+%mobiles
+
+Name            = Fisherman
+Location        = bandilbar6
+Strength        = 70
+Damage          = 8
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "A fisherman sits on the edge of the pier, casting out into the river."
+Examine         = "
+He says, 'I just caught this fish - it was literally THAT big... but it broke
+the line and got away.'  He sighs."
+End             = Fisherman
+
+Name            = Mayor
+Location        = bandilbar10
+Strength        = 50
+Damage          = 5
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "The town's mayor is here, pacing up and down, his face creased with worry."
+Examine         = "
+He says, 'If only someone would deliver us from the torment that besets us!"
+End             = Mayor
+
+Name            = Dwarf
+Location        = bandilbar12
+PFlags          = {NoHassle}
+Strength        = 50
+Damage          = 5
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "The shopkeeper is a dwarf."
+Examine         = "
+He says he has something special, for the right person."
+End             = Dwarf
+
+Name            = Clancy
+Location        = bandilbar13
+Strength        = 60
+Damage          = 8
+Armor           = 0
+Aggression      = 30
+Speed           = 3
+Description     = "Clancy, once a respected citizen of Yorrin, stares at you with undead eyes."
+End             = Clancy
+
+Name            = Wildcat
+Location        = bandilbar20
+Strength        = 55
+Damage          = 7
+Armor           = 0
+Aggression      = 10
+Speed           = 1
+Description     = "A wildcat spits at you, back arched and hair bristling."
+End             = Wildcat
+
+Name            = Mongrel
+Location        = bandilbar21
+Strength        = 65
+Damage          = 8
+Armor           = 0
+Aggression      = 30
+Speed           = 1
+Description     = "A half-starved stray mongrel snarls at you."
+End             = Mongrel
+
+Name            = Kanek
+Location        = bandilbar28
+MFlags          = {BarWest}
+Strength        = 60
+Damage          = 9
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Kanek, a huge ant, standing on its hind legs, guards the entranceway."
+End             = Kanek
+
+Name            = Drekta
+Location        = bandilbar28
+MFlags          = {BarWest}
+Strength        = 55
+Damage          = 8
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Drekta, Kanek's sidekick, glares fiercely at you with bulging eyes."
+End             = Drekta
+
+Name            = Gorrak
+Location        = bandilbar31
+Strength        = 50
+Damage          = 8
+Armor           = 0
+Aggression      = 0
+Speed           = 2
+Description     = "Gorrak, a young ant warrior, stomps around looking for a fight."
+End             = Gorrak
+
+Name            = Tagra
+Location        = bandilbar34
+Strength        = 90
+Damage          = 10
+Armor           = 0
+Aggression      = 10
+Speed           = 1
+Description     = "Tagra the ant guard is on patrol duty today."
+End             = Tagra
+
+Name            = Merlak
+Location        = bandilbar35
+Strength        = 85
+Damage          = 10
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Merlak the worker ant waves his antennae at you in warning."
+End             = Merlak
+
+Name            = Kuglat
+Location        = bandilbar37
+MFlags          = {BarNorth}
+Strength        = 85
+Damage          = 10
+Armor           = 0
+Aggression      = 10
+Speed           = 0
+Description     = "Kuglat the royal ant guard blocks the northern exit."
+End             = Kuglat
+
+Name            = Nokral
+Location        = bandilbar40
+Strength        = 75
+Damage          = 10
+Armor           = 0
+Aggression      = 100
+Speed           = 0
+Description     = "Nokral is the queen's personal bodyguard and he resents your presence here."
+End             = Nokral
+
+Name            = Kygar
+Location        = bandilbar40
+Strength        = 80
+Damage          = 8
+Armor           = 0
+Aggression      = 20
+Speed           = 0
+Description     = "Kygar, the queen's ant-in-waiting, orders you to leave."
+End             = Kygar
+
+Name            = Queen
+Location        = bandilbar40
+MFlags          = {BarNorth}
+SFlags          = {Female}
+Strength        = 750
+Damage          = 20
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "The Queen Ant, bloated with eggs, lies across the northern exit."
+End             = Queen
+
+Name            = Jabberwock
+Location        = bandilbar43
+MFlags          = {BarNorth}
+Strength        = 160
+Damage          = 12
+Armor           = 0
+Aggression      = 10
+Speed           = 0
+Description     = "The Queen Ant's pet jabberwock cavorts here, oblivious to the danger."
+Examine         = "
+It is a horrendous sight, all spikes and teeth."
+End             = Jabberwock
+
+%objects
+
+Name            = bandilbar40swall
+PName           = wall
+State           = 1
+MaxState        = 1
+Linked          = bandilbar39nwall
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 0
+Weight          = 0
+Location        = IN_ROOM:bandilbar40
+Desc[0]         = "Part of the southern wall has been blown to bits, revealing an exit to the south."
+Desc[1]         = ""
+Oflags          { NoGet }
+End             = bandilbar40swall
+
+Name            = bandilbar39nwall
+PName           = wall
+State           = 1
+MaxState        = 1
+Linked          = bandilbar40swall
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 0
+Weight          = 0
+Location        = IN_ROOM:bandilbar39
+Desc[0]         = "Part of the northern wall has been blown to bits, revealing an exit to the north."
+Desc[1]         = ""
+Oflags          { NoGet }
+End             = bandilbar39nwall
+
+Name            = notice
+State           = 1
+MaxState        = 1
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 1
+Weight          = 0
+Location        = IN_ROOM:bandilbar9
+Desc[1]         = "
+A notice has been pinned to one wall, flapping gently in the breeze coming from
+the open door."
+Desc[0]         = "
+A piece of paper is lying on the ground here."
+Oflags          { GetFlips }
+Examine         = " 
+Greetings Traveller!
+Pray hear our cry of distress, and aid us in this our darkest hour!  Know that
+for the past three months, ever since the ants invaded the volcano known as
+Bandilbar, our lives have been a misery.  Our town is raided nightly by hordes
+of hideous worker ants, and our people have been carried off to work as slaves
+inside the dread mountain.  Some have been turned into undead fiends that
+return to haunt us.  Our population is dwindling and we have nobody to turn to.
+Please return this notice to the mayor if you will help us!"
+End             = notice
+
+Name            = goldpiece
+Altname         = coin
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 100
+Size            = 1
+Weight          = 0
+Location        = CARRIED_BY:mayor
+Desc[0]         = "
+A golden coin has been dropped here."
+Oflags          { Destroyed  }
+End             = goldpiece
+
+Name            = crysknife
+Altname         = knife
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 17
+BValue          = 10
+Size            = 8
+Weight          = 0
+Location        = CARRIED_BY:dwarf
+Desc[0]         = "
+A jewelled crysknife has been dropped here, glowing faintly."
+Oflags          { Weapon Lit }
+End             = crysknife
+
+Name            = stick
+State           = 1
+MaxState        = 1
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 5
+Weight          = 0
+Location        = IN_ROOM:bandilbar17
+Desc[0]         = "
+A burning stick is lying here."
+Desc[1]         = "
+A dry stick has fallen to the ground here."
+Oflags          { Lightable Extinguish }
+End             = stick
+
+Name            = tree
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 500
+Weight          = 0
+Location        = IN_ROOM:bandilbar21
+Desc[0]         = "
+A grapefruit tree stands here, heavy with ripe fruit."
+Oflags          { NoGet Container }
+End             = tree
+
+Name            = grapefruit1
+PName           = grapefruit
+Altname         = fruit
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 1
+Weight          = 0
+Location        = IN_CONTAINER:tree
+Desc[0]         = "
+A ripe grapefruit is lying here."
+Oflags          { Food }
+End             = grapefruit1
+
+Name            = grapefruit2
+PName           = grapefruit
+Altname         = fruit
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 1
+Weight          = 0
+Location        = IN_CONTAINER:tree
+Desc[0]         = "
+A ripe grapefruit is lying here."
+Oflags          { Food }
+End             = grapefruit2
+
+Name            = grapefruit3
+PName           = grapefruit
+Altname         = fruit
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 1
+Weight          = 0
+Location        = IN_CONTAINER:tree
+Desc[0]         = "
+A ripe grapefruit is lying here."
+Oflags          { Food }
+End             = grapefruit3
+
+Name            = amber
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 1200
+Size            = 1
+Weight          = 0
+Location        = IN_ROOM:bandilbar32
+Desc[0]         = "
+A polished piece of amber is lying here."
+Examine         = "Deep within its heart a mosquito is suspended, perfectly preserved."
+End             = amber
+
+Name            = honeydew
+Altname         = pot
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 1
+Weight          = 0
+Location        = IN_ROOM:bandilbar35
+Desc[0]         = "
+A pot filled with a honey-like substance is here."
+Oflags          { Food }
+End             = honeydew
+
+Name            = dirk
+Altname         = dagger
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 6
+BValue          = 0
+Size            = 8
+Weight          = 0
+Location        = WIELDED_BY:Kuglat
+Desc[0]         = "
+A small, rusty dagger is lying on the ground."
+Oflags          { Weapon }
+Examine         = "It is a poor weapon, but better than nothing."
+End             = dirk
+
+Name            = jar
+State           = 1
+MaxState        = 1
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 1
+Weight          = 0
+Location        = IN_ROOM:bandilbar39
+Desc[1]         = "
+A vacuum jar containing a lump of phosphorus is lying here."
+Desc[0]         = "
+An alaskan moose yells at you for being purple."
+Oflags          { Container Openable }
+End             = jar
+
+Name            = phosphorus
+State           = 0
+MaxState        = 0
+Armor           = 0
+Damage          = 0
+BValue          = 0
+Size            = 0
+Weight          = 0
+Location        = IN_CONTAINER:jar
+Desc[0]         = "
+A lump of phosphorus is lying here, fizzling in the air."
+End             = phosphorus
+
+Name            = thorax
+Altname         = armor
+State           = 0
+MaxState        = 0
+Armor           = 68
+Damage          = 0
+BValue          = 240
+Size            = 50
+Weight          = 0
+Location        = WORN_BY:queen
+Desc[0]         = "
+The thorax of a very large ant has outlasted its owner."
+Oflags          { Wearable Armor }
+Aflags		{ Chest Back }
+Examine         = "It would be very useful as armor."
+End             = thorax
+
+%locations
+
+bandilbar1 s:bandilbar2 d:bandilbar2 e:Path1@orchold;
+Altitude = 1200
+lflags {Outdoors NoMobiles}
+Rocky Buttress^
+    You are making your way around a shoulder of the mountain, perched somewhat
+precariously on a narrow ledge which ends to the west.  Unless you head back on
+to the path just east of you, the only other way seems to be a scramble down
+a gully to the south.  The going will be tricky, but not impossible, and your
+return ascent would appear to be manageable.
+^
+
+bandilbar2 s:bandilbar3 u:bandilbar1;
+Altitude = 900
+lflags {Outdoors}
+Gully^
+    The mountain looms above you as you struggle to keep your footing in this
+small gully, which above you climbs steeply up to the path by which you came
+here, and levels off just below you.  At this point the gradient is still quite
+steep, and gorse bushes clinging to the slope grow out at an angle.  There is
+little else in the way of vegetation though, and your way is relatively
+unencumbered.  To the south, still some way below you, a little-used path
+begins, winding westwards.
+^
+
+bandilbar3 n:bandilbar2 w:bandilbar4 u:bandilbar2;
+Altitude = 600
+lflags {Outdoors}
+End Of The Road^
+    Once upon a time this was obviously a popular road between neighbouring
+villages, yet now it has been allowed to become overgrown with weeds.  To the
+east a tall hedge has sprung up, completely blocking the way.  You cannot help
+wondering if it was planted on purpose.  The road continues to the west.
+^
+
+bandilbar4 e:bandilbar3 w:bandilbar5;
+Altitude = 600
+lflags {Outdoors}
+Disused Road^
+    You are progressing along an old road, once busy with traffic, now grass-
+covered and forgotten.  It continues east and west from here, but to the west
+it crosses a swiftly-moving river which hurries by as if anxious to leave the
+area as soon as possible.  There is a bridge over the river, and a decaying
+pier to the north of the bridge suggests that there was once some traffic along
+the river, although you cannot imagine how any boat could possibly travel
+upstream from here.
+^
+
+bandilbar5 n:bandilbar6 e:bandilbar4 w:bandilbar7;
+Altitude = 600
+lflags {Outdoors}
+Wooden Bridge^
+    You are on the bridge, looking down into the fast-flowing waters.  The
+bridge crosses the river at a point where the river is curving round in a wide
+arc which begins north-west of here.  From the bridge onwards it straightens
+out and for a long while heads more or less due south.  To the east the old
+road heads along the foot of the mountain, and to the west is the ever-open
+gate of the small village of Yorrin.
+^
+
+bandilbar6 s:bandilbar5;
+Altitude = 600
+lflags {Outdoors}
+Rotting Pier^
+    Whether once river barges made the long haul up the river from here, or
+merely traded with downstream ports, you have no idea, but you are certain of
+one thing: this pier has not been in use for a good century or more.  Dank
+mosses cling to the rotting planks, and most of the wooden supports are missing
+or broken beyond repair.  Sheltered under the shoulder of the mountain as this
+is, with the river on the one hand, there is nowhere you can go from here
+except back to the south.
+^
+
+bandilbar7 e:bandilbar5 w:bandilbar8;
+Altitude = 600
+lflags {Outdoors NoMobiles}
+Village Gate^
+    You are at the north-eastern gate of the village of Yorrin.  As you look
+around, you are somewhat surprised to note a distinct lack of activity.  The
+place is as silent as the grave, and a shiver runs up and down your spine as
+you pause to consider what could possibly be the explanation for this.  To the
+west is the village's main street.
+^
+
+bandilbar8 e:bandilbar7 s:bandilbar11 w:bandilbar9;
+Altitude = 600
+lflags {Outdoors}
+Main Street^
+    You are at the north end of Yorrin's main street, which runs south from
+here into the centre of the village.  Yorrin is large for a village, yet the
+presence of a town hall to the west amuses you by its pretentiousness.
+^
+
+bandilbar9 e:bandilbar8 u:bandilbar10;
+lflags {NoMobiles}
+Town Hall^
+    The town hall is cold and dusty.  It shows signs of having been ransacked.
+Broken bits of furniture lie scattered over the floor.  Nothing of value has
+been left here.  A staircase in one corner leads up to the quarters of Yorrin's
+mayor.
+^
+
+bandilbar10 d:bandilbar9;
+lflags {Peaceful}
+Mayor's Home^
+    You are in the front hall of the mayor's home.  All the doors leading off
+from here are locked and barred.  You wonder what has happened here, and what
+might make the mayor so scared as to take such extravagant precautions.
+^
+
+bandilbar11 n:bandilbar8 e:bandilbar12 s:bandilbar13;
+Altitude = 600
+lflags {Outdoors}
+Centre Of Yorrin^
+    You are in the village centre.  Here you are most struck by the silence and
+the emptiness.  The houses and shops all around you have their doors locked and
+bolted, and their windows shuttered.  Except, however, for a small weapons shop
+to the east which appears still to be in business.
+^
+
+bandilbar12 w:bandilbar11;
+lflags {NoMobiles}
+Weapons Shop^
+    You are disappointed when you enter here, for nothing remains on the walls
+of what may once have been a proud selection of weaponry.  Hooks and shelves
+are bare and whatever treasures they once bore is now a matter for guesswork
+only.
+^
+
+bandilbar13 n:bandilbar11 w:bandilbar14;
+Altitude = 600
+lflags {Outdoors}
+South Gate Of Yorrin^
+    You are at the southern end of the village of Yorrin.  A gate once stood
+here between two tall stone pillars.  Now it is lying on the ground, smashed,
+its bars bent and broken.  To the west, through the gate, you espy a small
+patch of woodland, nestling under the looming bulk of a volcano.  A dark column
+of smoke rises from the summit of the volcano, and you grow uneasy at the
+thought of approaching it any closer.
+^
+
+bandilbar14 e:bandilbar13 s:bandilbar15 w:bandilbar16;
+Altitude = 600
+lflags {Outdoors NoMobiles}
+Edge Of Yorrin Wood^
+    You are at the northern edge of a wood which continues south and west from
+here.  The trees are widely-spaced and dainty of stature, and therefore more
+friendly and less intimidating than most of the woods you have recently had
+occasion to pass through.  The broken gates of the village of Yorrin lie to the
+west.
+^
+
+bandilbar15 n:bandilbar14 e:bandilbar17 s:bandilbar18 w:bandilbar19;
+Altitude = 600
+lflags {Outdoors NoMobiles}
+Yorrin Wood^
+    You are in the heart of the wood.  In every direction you see trees after
+trees, their lowest branches so near to the ground that you have to keep
+stooping in order to avoid them.
+^
+
+bandilbar16 s:bandilbar19 e:bandilbar14;
+Altitude = 600
+lflags {Outdoors}
+Yorrin Wood^
+    You are at the western edge of the wood.  The wood runs right up to the
+edge of the volcano, and you find your westward path blocked by a rising wall
+of rock which is too steep and smooth to be climbable.
+^
+
+bandilbar17 s:bandilbar20 w:bandilbar15;
+Altitude = 600
+lflags {Outdoors}
+Yorrin Wood^
+    This is the eastern edge of the wood.  The river flows by here to the east,
+and is moving far too rapidly for you to attempt a crossing.  The woodland
+continues to the west.
+^
+
+bandilbar18 n:bandilbar15 e:bandilbar20 w:bandilbar23;
+Altitude = 600
+lflags {Outdoors}
+Yorrin Wood^
+    You are at the southern edge of the wood.  To the south the river, curling
+around from the east, runs approximately due west, passing under the shadow of
+the great volcano.  A narrow rope bridge spans the river, and on the other side
+you see a broad road leading south between an imposing pair of iron gates into
+the ever-changing town of the wizards of Crossroads MUD.
+^
+
+bandilbar19 n:bandilbar16 e:bandilbar15 s:bandilbar21;
+Altitude = 600
+lflags {Outdoors}
+Yorrin Wood^
+    You are wandering through the wood.  To the east lie trees beyond counting,
+stretching on towards the river which you think you can faintly hear in the
+distance.  Immediately to the west the lower slopes of the volcano prevent your
+progress in that direction.
+^
+
+bandilbar20 n:bandilbar17 w:bandilbar18;
+Altitude = 600
+lflags {Outdoors}
+Riverbank^
+    You are standing by the edge of the river, watching as it tumbles over
+boulders and pours over jutting lips of bedrock, making its way rapidly towards
+the southern sea.  To the north and west lie trees upon trees, low-growing and
+densely foliated.  The scenery is delightful, and would be perfect if it were
+not for the distinct tinge of sulphur in the air.
+^
+
+bandilbar21 n:bandilbar19 s:bandilbar23 e:bandilbar22;
+Altitude = 600
+lflags {Outdoors}
+Yorrin Wood^
+    You are in the depths of Yorrin wood.  In every direction but west, trees
+abound as far as the eye can see.  To the west the slopes of the fiery mountain
+are encrusted with lava, old and black.
+^
+
+bandilbar22 w:bandilbar21;
+Altitude = 600
+lflags {Outdoors}
+Yorrin Wood^
+    You are in a small open glade, where no trees are growing due to the poor
+quality of the soil here, which is suffused with a yellow tint that indicates
+the presence of sulphur.  Whether it has boiled up from beneath at some point
+or fallen from above you cannot tell, but it effectively prevents any plants
+from growing within an area of twenty square yards or more.
+^
+
+bandilbar23 n:bandilbar21 e:bandilbar18 s:bandilbar24;
+Altitude = 600
+lflags {Outdoors NoMobiles}
+Southern Edge Of The Wood^
+    The trees come to an end here, stopping short a little way from the river
+which flows by just south of you.  In between you and the river a smooth paved
+path leads straight as an arrow towards the volcano, leading up to a carved
+entranceway to the west.
+^
+
+bandilbar24 n:bandilbar23 w:bandilbar26;
+Altitude = 600
+lflags {Outdoors}
+Paved Path^
+    The paving stones leading towards Mount Bandilbar are covered with a fine
+yellow layer of sulphur, the product of the volcano's foul and increasingly
+frequent belching.  To the west the path descends into a channel which runs
+alongside the mountain for some way to the north and south.  To the north of
+here is a small wood.
+^
+
+bandilbar25 n:bandilbar23;
+Altitude = 600
+lflags {Outdoors}
+Paved Path^
+    The paving stones leading towards Mount Bandilbar are covered with a fine
+yellow layer of sulphur, the product of the volcano's foul and increasingly
+frequent belching.  To the west the path descends into a channel which is now
+filled with a wide stream of lava, flowing north and south.  Obviously you
+cannot proceed in that direction.  To the north of here is a small wood.
+^
+
+bandilbar26 e:bandilbar24 w:bandilbar28;
+Altitude = 600
+lflags {Outdoors}
+Paved Path^
+    You are on the path to the west of the channel.  The paving stones descend
+into the channel and rise up again on the other side, leading towards a small
+and pleasant-looking wood.  Just west from here is the entrance to a deep cave
+cut into the volcano.
+^
+
+bandilbar27 w:bandilbar28;
+Altitude = 600
+lflags {Outdoors}
+Paved Path^
+    You are on the path to the west of the channel.  Paving stones descending
+into the channel disappear into a wide river of lava, flowing southwards and
+cutting off your western route.  They reappear on the far side of the channel,
+heading towards a small and pleasant-looking wood.  Just west from here is the
+entrance to a deep cave cut into the volcano.
+^
+
+bandilbar28 e:bandilbar26 w:bandilbar29;
+lflags {}
+Entrance To Bandilbar^
+    You are standing beneath a low arch marking the entrance to the network of
+caves inside the volcano.  The air is warm and a sharp smell of sulphur wafts
+towards you from within.  To the east the cave continues, while west of here a
+paved path leads down towards a deep channel running along the foot of the
+mountain.
+^
+
+bandilbar29 n:bandilbar30 e:bandilbar28 s:bandilbar33 w:bandilbar37;
+lflags {NoMobiles}
+Crossroads Of Tunnels^
+    You have come to a place where two tunnels meet.  The main tunnel leading
+from the entrance descends in a steep decline to the west, while the tunnel
+running across from north to south is somewhat smaller and the walls less
+well-hewn.  Torches line the walls down every tunnel, and you have no problem
+seeing where you are going.
+^
+
+bandilbar30 n:bandilbar31 s:bandilbar29;
+lflags {}
+Narrowing Tunnel^
+    You are travelling along a tunnel which grows narrower as it heads east.
+Ahead in that direction you can see that it bends around to the left, heading
+west.  To the west is a four-way junction, and you can see cast on to the floor
+there a faint patch of natural light.
+^
+
+bandilbar31 s:bandilbar30 w:bandilbar32;
+lflags {}
+Narrow Bend^
+    You are at a very tight corner of the tunnel.  To the north, a little way
+off, the passage ends in a rough, unfinished wall of rock.  You surmise that
+whoever dug these tunnels ceased their work before this section was finished.
+The only other exit is west back to the crossroads.
+^
+
+bandilbar32 e:bandilbar31;
+lflags {}
+Dead End^
+    You have come to the end of the tunnel.  A small pile of rubble lies at the
+base of the rock wall, as if work had stopped here so suddenly that there was
+not even time to clear away the debris.
+^
+
+bandilbar33 n:bandilbar29 w:bandilbar34;
+lflags {}
+Corner^
+    You are at a corner of the tunnel.  This area is obviously frequently used,
+and many curious footprints are imprinted on the ground here.  To the west the
+tunnel widens out into a large cavern, while to the north is a crossroads of
+tunnels.
+^
+
+bandilbar34 e:bandilbar33 w:bandilbar35;
+lflags {}
+Cavern Of The Worker Ants^
+    This is a curious place indeed.  The cavern is vast, and in crossing it you
+merely skirt around the northern wall.  Elsewhere in the cavern many strange
+things are happening.  Giant ants tend even larger grubs, feeding them with
+piles of green leaves and being rewarded in turn by sticky secretions produced
+by the grubs.  Most of the ants fortunately seem far too busy to notice you.
+^
+
+bandilbar35 n:bandilbar36 e:bandilbar34;
+lflags {}
+Honey Pool^
+    You are at the west end of the cavern.  A deep trough has been dug into the
+ground here, and it is half full of sticky fluid.  You sniff it and are
+somewhat surprised to discover that it seems to be honey, or something very
+similar.  A flight of steps leads down to the north.
+^
+
+bandilbar36 e:bandilbar37 s:bandilbar35;
+lflags {}
+Foot Of The Steps^
+    You are at a bend in the tunnel.  A short flight of steps leads up into
+some kind of cavern, but you cannot see much of it from here.  To the east you
+can see a small side tunnel leading off to the north, then beyond it the ground
+rises steeply towards the entrance to the caves.
+^
+
+bandilbar37 n:bandilbar38 e:bandilbar29 w:bandilbar36;
+lflags {}
+Junction^
+    You are at the bottom of the slope.  A low tunnel leads north, well-hewn
+and well-travelled.  Here and there on the floor are splashes of something
+sticky which you are careful not to tread in.  To the west at the end of the
+tunnel a flight of steps leads upwards to the south.
+^
+
+bandilbar38 s:bandilbar37 w:bandilbar39;
+lflags {}
+Royal Tunnel^
+    You are in a tunnel with perfectly smooth walls, leading west from here.
+You guess it must lead somewhere important, because it is spotlessly clean and
+a lot of care has gone into its fashioning.  Just south of here the main tunnel
+runs past, heading towards the entrance.
+^
+
+bandilbar39 e:bandilbar38 n:^bandilbar39nwall;
+lflags {NoMobiles}
+Pivotal Chamber^
+    You are in a wide chamber, carved into an almost perfect sphere.  It is
+very warm here, and you can hear a faint roaring sound and a rumbling coming
+from below.  Rows of shelves on the northern wall are stacked with empty
+storage jars, each smelling vaguely of honey.  You can hear faint voices
+coming from beyond the north wall.
+^
+
+bandilbar40 n:bandilbar41 e:bandilbar39 s:^bandilbar40swall;
+lflags {}
+Royal Chamber^
+    You are in the chamber of the Queen ant.  It smells somewhat musty to your
+way of thinking, and the acrid odour of sulphur is stronger here too.  A low
+archway leads north into further caverns and chambers, but you cannot see very
+well.  For one thing, the fumes in the air are making your eyes water.  The
+shaking of the volcano as it erupts threatens to cast you from your feet.
+^
+
+bandilbar41 e:bandilbar42 s:bandilbar40;
+lflags {}
+Egg Cavern^
+    You are in a vast cavern filled with thousands of ant eggs.  As you watch,
+lava seeps into the cavern at the far end and begins to overwhelm the eggs.
+You smile, satisfied of a job well done.  To the east is another chamber.  The
+air is stiflingly hot in here and you begin to sweat.
+^
+
+bandilbar42 n:bandilbar43 w:bandilbar41;
+lflags {}
+Ant Nursery^
+    This cavern is where the larval ants are fed.  However, the place is in a
+state of some disarray as the cavern is slowly filling up with lava, engulfing
+workers and larvae alike.  To the north a small tunnel leads up a shallow
+slope.  The roar of the eruption fills your ears.
+^
+
+bandilbar43 n:bandilbar44 s:bandilbar42;
+lflags {}
+Playroom^
+    This is a smaller cavern, and it is cooler than the previous ones.  Its
+function is not immediately apparent, for it is practically bare save for a
+layer of straw strewn across the floor.  The tunnel continues northwards,
+climbing steadily.  The volcano's rumbling shakes your bones.
+^
+
+bandilbar44 n:bandilbar45 s:bandilbar43;
+lflags {}
+Northern Exit Tunnel^
+    You are in a small tunnel leading out of the mountain.  The volcano
+continues to rumble and shake around you, and pieces of rock fall from the
+roof around you.  Looking out to the north, you can see the river flowing past
+close by in an easterly direction.
+^
+
+bandilbar45 n:bandilbar46 s:bandilbar44;
+Altitude = 600
+lflags {Outdoors}
+By The River^
+    You are standing at the edge of the river, which flows westwards from here
+with a great sense of urgency.  It completely blocks your path, and you cannot
+see where you can go from here unless it is back into the erupting mountain.
+^
+
+bandilbar46 e:bandilbar6;
+Altitude = 600
+lflags {Outdoors}
+Swept Downstream^
+    You are in the river, being carried downstream at an alarming rate!  As you
+struggle to keep your head above water, you see the scenery flashing past and
+wonder if you will be swept all the way down to the sea.  Suddenly, however,
+you are winded by a hard thud as you collide with a wooden post sticking out
+of the water.  You cling to it like a drowned rat, and when you have recovered
+somewhat you realise that it is the remnants of an old wooden pier that you
+have washed up against.
+^
+
+
+

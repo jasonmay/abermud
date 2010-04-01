@@ -1,0 +1,240 @@
+%rainfall:940
+
+%latitude:35
+
+%objects
+
+Name      = hammer
+Location  = IN_ROOM:north
+Oflags    {Weapon}
+Damage    = 5
+BValue    = 10
+Size      = 8
+Weight    = 6
+Desc[0]   = "A large hammer has been left around here for some reason."
+Examine   = "
+The hammer is worn from years of use, and you wonder how many people have hit
+themselves on the fingers with this over the years, and also of course ponder
+how many peoples fingers you could hit with it too!"
+End       = hammer
+
+Name      = rock
+Location  = IN_ROOM:south
+BValue    = 1
+Size      = 1
+Weight    = 1
+Desc[0]   = "A small rock has been dropped here."
+Examine   = "
+The rock appears to have some kind of gemstone imprisoned within it.  If only
+you could find a suitable tool to smash the rock with."
+End       = rock
+
+Name      = gem
+AltName   = uncut
+Location  = IN_ROOM:south
+Oflags    {Destroyed}
+BValue    = 100
+Size      = 1
+Weight    = 1
+Desc[0]   = "A small, uncut gem lies before you."
+Examine   = "
+You could easily mistake this uncut gem for a small stone, but it does have
+some special sheen."
+End       = gem
+
+Name      = pick
+Location  = IN_ROOM:store
+Oflags    {Weapon}
+Damage    = 10
+BValue    = 10
+Size      = 6
+Weight    = 4
+Desc[0]   = "An old pick has been dumped here."
+Examine   = "
+This pick is of the heavy mining variety used for splitting rocks, its quite
+good on heads too..."
+End       = pick
+
+Name      = ale
+AltName   = skin
+Location  = IN_ROOM:store
+Oflags    {Food}
+BValue    = 10
+Size      = 10
+Weight    = 5
+Desc[0]   = "A skin of ale has been dropped here."
+Examine   = "How about getting loaded?  The ale looks good enough."
+End       = ale
+
+Name      = sandwich
+AltName   = food
+Location  = IN_ROOM:store
+Oflags    {Food}
+BValue    = 10
+Size      = 5
+Weight    = 5
+Desc[0]   = "A delicious-looking sandwich has been put here."
+Examine   = "It's a two-inch thick roast beast sandwich!"
+End       = sandwich
+
+Name      = nugget
+AltName   = gold
+Location  = IN_ROOM:r_face
+BValue    = 50
+Size      = 1
+Weight    = 5
+Desc[0]   = "A gold nugget twinkles before you."
+Examine   = "It's just a small gold nugget, shaped like a small rock."
+End       = nugget
+
+Name      = Nugget1
+Pname     = nugget
+AltName   = gold
+Location  = IN_ROOM:n_face
+BValue    = 200
+Size      = 1
+Weight    = 8
+Desc[0]   = "A large gold nugget twinkles before you."
+Examine   = "It's just a large gold nugget, shaped like a rock."
+End       = Nugget1
+
+Name      = golddust
+AltName   = dust
+Location  = IN_ROOM:end
+BValue    = 150
+Size      = 10
+Weight    = 5
+Desc[0]   = "A small bag of gold dust lies in a crumpled heap at your feet."
+Examine   = "I wouldn't open the bag if I were you.  You might spill it!"
+End       = golddust
+
+%locations
+
+Drop e:South w:r_land@Blizzard d:South;
+lflags {}
+Steep Drop^
+   You are following a path which plunges steeply downwards into a narrow
+quarry, which stretches out to the east.
+^
+North e:Store s:South;
+lflags {}
+Quarry North^
+   You are at the north end of the quarry.  The quarry extends away to the
+south.  To the east a small battered stone hut appears to have once served the
+workmen's needs.
+^
+South n:North e:Tunnel w:Drop u:Drop;
+lflags {}
+Quarry South^
+   You stand at the southern end of the quarry.  To the north the sides of the
+quarry are marked by years of excavations. A path to the west climbs steeply up
+amongst the stones.  It appears some mining was in progress here as there is a
+low tunnel to the east.
+^
+Tunnel w:South d:Ladder_UU;
+lflags {NoMobiles}
+Tunnel^
+   You are crouched in a low damp tunnel.  A single exit leads west out of the
+tunnel.  A treacherous wooden ladder leads down into the darkness below
+^
+Ladder_UU e:End u:Tunnel d:Ladder_UD;
+lflags {Dark}
+Ladder^
+   You are standing at the bottom of a treacherous wooden ladder.  Another
+ladder descends yet further through the floor of the rough-hewn tunnel you find
+yourself in.  The tunnel leads east.
+^
+End w:Ladder_UU;
+lflags {Dark}
+Tunnel's End^
+   You are at the end of a small tunnel, at what appears to be an abandoned
+face.  The only way back is westwards.
+^
+Store w:North;
+lflags {}
+Stone Store^
+   You are in a cold, damp stone store, which was evidently warm and cosy at
+one time.  The store appears to still be used by someone, as there are marks on
+the floor.
+^
+Mine;
+lflags {Death}
+Mineshaft^
+   The rungs break beneath your feet and without a chance to recover you plunge
+helplessly into the black cold water below...
+^
+Ladder_UD e:Mine_T u:Ladder_UU;
+lflags {Dark}
+Bottom Of Ladder^
+   You are standing at the bottom of a long wooden ladder which travels upwards
+through a square shaft in the roof.  The tunnel you are standing in leads
+eastwards.
+^
+Mine_T w:Ladder_UD d:Ladder_D1;
+lflags {Dark}
+Mine Tunnel^
+   You stand at the eastern end of a narrow mine tunnel.  Apart from scrambling
+back westwards along the tunnel, a narrow wooden ladder exits downwards through
+a shaft at your feet.
+^
+Ladder_D1 u:Mine_T d:Ledge;
+lflags {Dark}
+Ladder^
+   You are scrambling down a ladder which descends through a narrow vertical
+shaft in the rock.  Water streams down the sides of the ladder making it
+slippery and dangerous.
+^
+Ledge e:R_Face u:Ladder_D1 d:Ladder_D2;
+lflags {Dark}
+Ladder Ledge^
+   You are standing on a narrow wooden ladder which plunges deep into the
+ground.  A single narrow and very roughly hewn passage leads east off the
+side of the ladder.
+^
+R_Face w:Ledge;
+lflags {Dark}
+Rough Face^
+   You are crouched in a narrow passage, at what appears to have been a face
+of some sort.  To the west is a huge wooden ladder which plunges down deeper
+underground, as well as climbing upwards towards the surface.
+^
+Ladder_D2 u:Ledge d:Ladder_D3;
+lflags {Dark}
+Ladder^
+   You are standing on a wet slippery ladder that plunges down a narrow mossy
+shaft deep underground.  The air is already noticeably colder and you feel
+closed in and claustrophobic.
+^
+Ladder_D3 u:Ladder_D2 d:Ladder_D4;
+lflags {Dark}
+Ladder^
+   You are hanging onto a vertical wooden ladder, slippery with damp and hard
+to grasp with your wet cold fingers.  All around you the narrow tight walls of
+the shaft seem to press crushingly inwards.
+^
+Ladder_D4 u:Ladder_D3 d:Bottom;
+lflags {Dark}
+Ladder^
+   You are in a narrow constricting vertical shaft, hanging onto a cold and
+rotting ladder.  The walls are damp and wet, and you too are also soaking and
+cold.  Your numb fingers are finding it hard to keep a grip on the ladder, and
+your feet slide off rungs with frightening regularity.
+^
+Bottom w:N_Face u:Ladder_D4 d:N_Face ;
+lflags {Dark}
+Bottom Of The Mine^
+   You are standing at the bottom of a treacherous ladder which climbs up a
+narrow vertical shaft.  To the west you can crawl along a low, heavily shored
+up tunnel towards a face.  Another ladder leads further down, but it is rotted
+and descends only about ten feet before it dissappears into the flooded depths
+of the mine.
+   To judge from the moss and slime on the wall, this part of the mine is often
+flooded too.
+^
+N_Face e:Bottom;
+lflags {Dark}
+Narrow Face^
+   You are crouched at a narrow face deep in the mine.  The low roof and tight
+rough walls seem to be closing in on you, and you shake as you think of the
+huge weight of rock above your head.  A single crawl leads east to a ladder.
+^

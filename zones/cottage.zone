@@ -1,0 +1,595 @@
+%mobiles
+
+Name             = brother
+PName            = "Brother"
+Location         = cottage2
+Strength         = 150
+Damage           = 10
+Armor            = 0
+Aggression       = 99
+Speed            = 0
+Description      = "Brother John is here with his cousin plotting to kill the dog."
+End              = brother
+
+Name             = cousin
+PName            = "Cousin"
+Location         = cottage2
+Strength         = 150
+Damage           = 10
+Armor            = 0
+Aggression       = 99
+Speed            = 0
+Description      = "Cousin Joe has a very shifty look in his eye as he listens to John."
+End              = cousin
+
+Name             = father
+PName            = "Father"
+Location         = cottage4
+Strength         = 150
+Damage           = 10
+Armor            = 0
+Aggression       = 90
+Speed            = 5
+Description      = "Father is walking around looking for his newspaper and he's mad."
+End              = father
+
+Name             = mother
+PName            = "Mother"
+Sflags             { Female }
+Location         = cottage5
+Strength         = 150
+Damage           = 10
+Armor            = 0
+Aggression       = 80
+Speed            = 5
+Description      = "Mother is preparing dinner and she doesn't look too happy about it."
+End              = mother
+
+Name             = sister
+PName            = "Sister"
+Sflags             { Female }
+Location         = cottage5
+Strength         = 150
+Damage           = 10
+Armor            = 0
+Aggression       = 90
+Speed            = 5
+Description      = "Sister Kate is sneaking pieces of cake as she eyes her mom's movements."
+End              = sister
+
+Name             = doggy
+PName            = "Doggy"
+Location         = cottage6
+Strength         = 300
+Damage           = 10
+Armor            = 0
+Aggression       = 87
+Speed            = 0
+Description      = "Doggy, the pet doberman wants to play with you."
+End              = doggy
+
+Name             = kitty
+PName            = "Kitty"
+Sflags             { Female }
+Location         = cottage7
+Strength         = 150
+Damage           = 10
+Armor            = 0
+Aggression       = 90
+Speed            = 5
+Description      = "Kitty da kitty-cat is amusing herself with a ball of yarn."
+End              = kitty
+
+Name             = prowler
+PName            = "Prowler"
+Location         = cottage8
+Strength         = 300
+Damage           = 10
+Armor            = 0
+Aggression       = 87
+Speed            = 0
+Description      = "Yikes!!!  A prowler is here trying to steal the car."
+End              = prowler
+
+Name             = vet
+PName            = "Vet"
+Location         = cottage16
+Strength         = 500
+Damage           = 10
+Armor            = 0
+Aggression       = 4
+Speed            = 5
+Description      = "Vet, the veteran, is here mumbling "Kill! Kill! Kill!"."
+End              = vet
+
+Name             = ramses
+PName            = "Ramses"
+Location         = cottage24
+Strength         = 750
+Damage           = 10
+Armor            = 0
+Aggression       = 87
+Speed            = 0
+Description      = "Ramses has been waiting a LONG time for you."
+End              = ramses
+
+%objects
+
+Name             = gate_door
+PName            = door
+AltName          = gate
+Location         = IN_ROOM:cottage2
+Oflags             { Openable NoGet }
+Linked           = gate_door_1
+MaxState         = 1
+State            = 1
+Desc[0]          = "An open fence gate offers passage north."
+Desc[1]          = "The gate to the fence is closed."
+End              = gate_door
+
+Name             = gate_door_1
+PName            = door
+AltName          = gate
+Location         = IN_ROOM:cottage3
+Oflags             { Openable NoGet }
+Linked           = gate_door
+MaxState         = 1
+State            = 1
+End              = gate_door_1
+
+Name             = door
+Location         = IN_ROOM:cottage8
+Oflags             { Openable NoGet }
+Linked           = door_1
+MaxState         = 1
+State            = 1
+Desc[0]          = "An open door provides passage west into a kitchen."
+End              = door
+
+Name             = door_1
+PName            = door
+Location         = IN_ROOM:cottage5
+Oflags             { Openable NoGet }
+Linked           = door
+MaxState         = 1
+State            = 1
+Desc[0]          = "The door is open."
+Desc[1]          = "The door is closed."
+End              = door_1
+
+Name             = garage_door
+PName            = door
+AltName          = garage
+Location         = IN_ROOM:cottage7
+Oflags             { Openable NoGet }
+Linked           = garage_door_1
+MaxState         = 1
+State            = 1
+Desc[0]          = "The garage door is open."
+Desc[1]          = "The garage door is closed."
+End              = garage_door
+
+Name             = garage_door_1
+PName            = door
+AltName          = garage
+Location         = IN_ROOM:cottage8
+Oflags             { Openable NoGet }
+Linked           = garage_door
+MaxState         = 1
+State            = 1
+Desc[0]          = "The garage door is open."
+Desc[1]          = "The garage door is closed."
+End              = garage_door_1
+
+Name             = basalt_door
+PName            = door
+AltName          = basalt
+Location         = IN_ROOM:cottage15
+Oflags             { Openable NoGet }
+Linked           = basalt_door_1
+MaxState         = 1
+State            = 1
+Desc[0]          = "The basalt door is open."
+Desc[1]          = "The basalt door is closed."
+Examine          = "It's extremely heavy, and will probably require assistance to open.
+"
+End              = basalt_door
+
+Name             = basalt_door_1
+PName            = door
+AltName          = basalt
+Location         = IN_ROOM:cottage16
+Oflags             { Openable NoGet }
+Linked           = basalt_door
+MaxState         = 1
+State            = 1
+Desc[0]          = "A large basalt door opens south into an entryway."
+Desc[1]          = "A large basalt door bars any southern progression."
+Examine          = "It's extremely heavy, and will probably require assistance to open.
+"
+End              = basalt_door_1
+
+Name             = door_wheel
+PName            = wheel
+AltName          = door
+Location         = IN_ROOM:cottage21
+Oflags             { Container Pushable NoGet }
+Linked           = door_wheel_1
+MaxState         = 1
+State            = 1
+Examine          = "The spoked wheel is old and rusted; above it are printed the words
+	'Emergency Gate Control'
+"
+End              = door_wheel
+
+Name             = door_wheel_1
+PName            = wheel
+AltName          = door
+Location         = IN_ROOM:cottage22
+Oflags             { Container Pushable NoGet }
+Linked           = door_wheel
+MaxState         = 1
+State            = 1
+End              = door_wheel_1
+
+Name             = knife_cleaver
+PName            = cleaver
+AltName          = knife
+Location         = IN_ROOM:cottage5
+Oflags             { Weapon }
+BValue           = 100
+Damage           = 15
+Size             = 30
+Weight           = 10
+Desc[0]          = "A heavy duty meat cleaver is sitting on the counter."
+Examine          = "Nothing like having a good weapon, eh?
+"
+End              = knife_cleaver
+
+Name             = angelfood_cake
+PName            = cake
+AltName          = angelfood
+Location         = IN_ROOM:cottage5
+Oflags             { Food }
+BValue           = 10
+Size             = 3
+Weight           = 3
+Desc[0]          = "There is a cake here."
+Examine          = "It is an angelfood cake of course!
+"
+End              = angelfood_cake
+
+Name             = crowbar
+Location         = IN_ROOM:cottage8
+Oflags             { Weapon GetFlips }
+BValue           = 20
+Damage           = 10
+Size             = 7
+Weight           = 7
+State            = 1
+Desc[0]          = "A very heavy steel crowbar is here."
+Desc[1]          = "A heavy crowbar lies here bracing the kitchen door."
+Examine          = "You could probably do some good damage with it!
+"
+End              = crowbar
+
+Name             = runes
+Location         = IN_ROOM:cottage22
+Oflags             { NoGet }
+Examine          = "Caution: Something ancient and very powerful is here.
+"
+End              = runes
+
+Name             = runes_1
+PName            = runes
+Location         = IN_ROOM:cottage15
+Oflags             { NoGet }
+Examine          = ^		"You see me now a veteran,
+	       of a thousand giantish wars.
+	  I've been living on the edge too long,
+	      where the winds of limbo roar.
+	     And, I'm young enough to look at,
+		  and far too old to see,
+	    all the scars are on the inside...
+			 KEEP OUT!"
+^
+End              = runes_1
+
+Name             = crumbs
+Location         = IN_ROOM:cottage16
+Oflags             { Food }
+BValue           = 20
+Size             = 3
+Weight           = 3
+Desc[0]          = "There are giant crumbs here."
+Examine          = "A bit stale but palatable.
+"
+End              = crumbs
+
+Name             = memoirs_tome
+PName            = tome
+AltName          = memoirs
+Location         = IN_ROOM:cottage16
+Oflags             { GetFlips }
+BValue           = 150
+Size             = 12
+Weight           = 10
+State            = 1
+Desc[0]          = "A giant tome of memoirs has been placed here."
+Desc[1]          = "There is a huge tome of memoirs on the desk."
+Examine          = "These memoirs are scrawled out in the giantish scrip and are unreadable.
+"
+End              = memoirs_tome
+
+Name             = skiff
+Location         = IN_ROOM:cottage18
+BValue           = 10
+Size             = 100
+Weight           = 10
+Desc[0]          = "A small battered skiff lies here."
+Examine          = "This skiff is not seaworthy.
+"
+End              = skiff
+
+Name             = sarcophagus
+Location         = IN_ROOM:cottage24
+Oflags             { Container NoGet }
+Examine          = "You are strnangely drawn to this ancient coffin, but despite your
+curiosity, the fear of some unknown curse lingers in the back of your mind.
+"
+End              = sarcophagus
+
+Name             = scarab
+Location         = IN_CONTAINER:sarcophagus
+Oflags             { GetFlips }
+BValue           = 400
+Size             = 4
+Weight           = 4
+State            = 1
+Desc[0]          = "A beautiful scarab has been placed here."
+Desc[1]          = "A beautiful scarab lies in the sarcophagus."
+Examine          = "This emerald treasure has the form of a desert insect.
+"
+End              = scarab
+
+Name             = sphere
+Location         = IN_CONTAINER:sarcophagus
+Oflags             { Lit GetFlips }
+BValue           = 600
+Size             = 8
+Weight           = 8
+State            = 1
+Desc[0]          = "A small golden sphere shimmers off to one side."
+Desc[1]          = "A small golden sphere winks up at you."
+Examine          = "This golden sphere emits a bright light.
+"
+End              = sphere
+
+Name             = gilded_cowl
+PName            = cowl
+AltName          = gilded
+Location         = IN_CONTAINER:sarcophagus
+Oflags             { Wearable }
+Aflags		   { Face }
+BValue           = 250
+Size             = 8
+Weight           = 8
+State            = 1
+Desc[0]          = "A gilded cowl has been carelessly discarded here."
+Desc[1]          = "A gilded cowl becons you to wear it."
+Examine          = "A jeweled headpiece.
+"
+End              = gilded_cowl
+
+Name             = flail
+Location         = IN_CONTAINER:sarcophagus
+Oflags             { Weapon }
+BValue           = 200
+Damage           = 14
+Size             = 13
+Weight           = 10
+State            = 1
+Desc[0]          = "The Flail of Isis lies here."
+Desc[1]          = "A gorgeous flail rests in the corner of the sarcophagus."
+Examine          = "A marvelous ruby studded weapon.
+"
+End              = flail
+
+
+%locations
+
+cottage1 n:cottage2 e:cottage11 w:chlyon2@chlyon d:cottage11;
+lflags { Outdoors NoMobiles }
+Serene Valley^
+   This valley, nestled amidst the surrounding peaks, is a place of serene
+tranquility.  Long swaths of green mountain grass beckon you to kick off
+your boots and frolic about.  A branch of the valley extends to the north, and
+you can return to the more mountainous regions lying to the east.  Going west
+will take you back to the crossroads.
+^
+cottage2 n:^gate_door e:cottage9 s:cottage1 d:cottage9;
+lflags { }
+Peaceful Valley^
+   You have entered a small valley snuggled amidst the towering peaks.  It
+is so peaceful you can not help but smile just from being here.  Animals of all
+kinds play about you, some even cautiously approach, their eyes aglow with
+curiosity.
+   To the north stands a cozy cottage surrounded by a white picket fence, and
+adorned with several neatly trimmed hedges.  The main branch of the valley lies
+to the south, and you may be able to slide down into a ledge to the east.
+^
+cottage3 n:cottage4 e:cottage6 s:^gate_door_1;
+lflags { }
+Front Porch^
+   You are standing on the front porch of the picturesque cottage.  The
+woman of the house stands here obviously in a cleaning frenzy.  A narrow
+flower-lined walk heads east to a short driveway, while a peaceful valley
+becons southward.
+^
+cottage4 e:cottage5 s:cottage3;
+lflags { }
+Living Room^
+   You have entered the living room of the quaint cottage, the housewife
+is here busily sweeping.  A family sized color television sits here opposite
+a comfy, blue sofa with enormous cushions.  the smell of baking wafts from
+a tiny kitchen to the east, and you may also return south to the porch.
+^
+cottage5 e:^door_1 w:cottage4;
+lflags { }
+Petite Kitchen^
+   You are surrounded by the smells of baking and the cheery warmth of a
+small electric stove.  there has obviously been some cooking done here
+recently.  You can hear the sounds of cleaning coming from the west and
+a small door leads east.
+^
+cottage6 e:cottage7 w:cottage3;
+lflags { }
+Front Walk^
+   This narrow path runs from east to west connecting the front porch
+with the driveway.  You treak carefully so as to avoid trampling the flowers.
+^
+cottage7 n:^garage_door w:cottage6;
+lflags { }
+Driveway^
+   You are currently standing on a short, asphalt driveway.  A short path
+connects it with the porch to the west.  In front of you stands a large
+garage door.
+^
+cottage8 s:^garage_door_1 w:^door;
+lflags { }
+Garage^
+   This is a clean, well kept garage.  A large, cherry-red, Plymouth Fury
+sits here; it seems to be leering at you.  On its license plate you can
+make out a set of runes spelling "Christine".  There are a few dozen
+different tools hanging here, but their purposes are beyond your
+experience.
+^
+cottage9 e:cottage10 s:cottage11;
+lflags { Outdoors }
+Cliff Turn^
+   You stand on a narrow ledge, your back to the cliff face.  Above
+you can see the top of the cliff, but there is no way to climb up.  Silver
+mists obsucre the bottom of the chasm far below.  It is here that the wide
+ledge to the south meets up with a very narrow ledge to the east.
+^
+cottage10;
+lflags { Death }
+Collapsing Ledge^
+   The ledge narrows here to an untraversable width.  As you attempt to
+turn and make your way back up to the west, the ledge collapses.  You are
+wondeirng how deep the chasm truly is when the sudden stop enlightens you.
+^
+cottage11 n:cottage9 s:cottage12;
+lflags { Outdoors }
+Cliff Face^
+   Standing on a ledge running north and south a few feet below the
+top of a cliff, you stare down into the swirling mists below.  You may,
+if careful, be able to scramble up to the valley above.  The outlines of
+a bridge spanning the chasm are barely visible to the south.
+^
+cottage12 n:cottage11 s:cottage13;
+lflags { Outdoors }
+Narrow Ledge^
+   You stand upon a narrow ledge running north and south along the cliff
+face.  the outlines of a natural, stone bridge spanning the chasm are
+clearly visible to the south.
+^
+cottage13 n:cottage12 e:cottage14;
+lflags { Outdoors }
+Bridge Landing^
+   Before you a monstrous, natural bridge stretches across the chasm to
+the east.  A pair of stalagmites stand like silent guardians forming
+an entryway onto the bridge.
+^
+cottage14 e:cottage15 w:cottage13;
+lflags { Outdoors }
+Natural Bridge^
+   You stand upon a magnificent, granite bridge spannin the wide chasm;
+far below the silver mists seem to swirl in increased agitation.  To the
+east there stands and enormous, dark entryway.
+^
+cottage15 n:^basalt_door w:cottage14;
+lflags { Outdoors NoMobiles }
+Huge Entryway^
+   Sad breezes sigh forlornly through the fallen rocks which lie strewn
+about.  In front of you to the north, stands an immense basalt door, its
+black surface glimmering in the ambient light.  Above the door are
+written another set of weatherbeaten runes.
+^
+cottage16 e:cottage17 s:^basalt_door_1;
+lflags { }
+Giant's Chamber^
+   Everything here seems to be expanded to a grand scale;  easily twice
+as large as usual.  A huge stone table, covered by a plain, white cloth,
+dominates the center of the room.  A large cot is set along the western
+wall, and a simple, writing desk stands opposite it.
+^
+cottage17 s:cottage18 w:cottage16 d:cottage18;
+lflags { NoMobiles }
+Damp Passage^
+   The first thing that you notice upon entering this room is the heavy
+layer of condensation which has collected on the walls.  The passage slopes
+steeply downward to the south, but you can not see what lies that way, for it
+is too dark.  A rectangle of light pours in from the western passage.
+^
+cottage18 n:cottage17 e:town11@town s:cottage19 u:cottage17;
+lflags { Dark }
+Shoreline^
+   The damp passage ends here, leading down into an underground resevoir.
+The sound of running water echoes out of the darkness.  The large shape
+of a forgotten dam looms out of the darkness to the south.
+^
+cottage19 n:cottage18 s:cottage20;
+lflags { Dark }
+Still Water^
+   You're knee-deep in the still waters of the underground resevoir.
+These waters extend west around a bend lying to the south.
+^
+cottage20 e:cottage19 u:cottage21;
+lflags { Dark }
+Still Water^
+   You're waist-deep in the dark still waters of an underground resevoir.
+The artificial lake extends to the north, around a bend lying to the east.
+You can also climb up to the top of the dam, but climbin back down looks
+almost impossible.
+^
+cottage21 d:^door_wheel;
+lflags { Dark }
+Top of Dam^
+   Standing atop the underground dam you can peer over the rusted
+guardrail to the south, but the dam's bottom is hidden in blackness.
+The resevoir lies to the north; from here you can see a narrow staircase
+down, which continues below the waterline.  A large rusted release
+wheel protrudes from a mass of pipes nearby.
+^
+cottage22 e:cottage18 w:cottage23 u:^door_wheel_1;
+lflags { Dark NoMobiles }
+Resevoir Bottom^
+   As you stand on the muddy bottom of the resevoir you are able to
+see where an underground stream fed the resevoir from the west.  Picking
+your way eastward across a large jumble of stones you could probably
+make your way out of this muddy area, or you could return to the heights
+of the dam by ascending the narrow stair.
+There are some ancient runes here that catch your eye.
+^
+cottage23 e:cottage22 w:cottage24;
+lflags { Dark NoMagic NoSummon }
+Lost Cavern^
+   Water runs in rivulets down the walls of this cave, feeding the
+stream which meanders eastward toward the damn.  the western wall of
+this forgotten cave has been cut smooth and adorned with magnificent
+carvings.  In the midst of these carvings stands an ornately wrought
+golden door, covered in runes.  You seem to feel strange emanations of
+magic brush your consciousness from somewhere behind the golden portal.
+^
+cottage24 e:cottage23;
+lflags { Dark NoMagic NoSummon }
+Tomb of Ramses IV^
+   Rising all about you, you see jeweled panel and statues adorned
+with heiroglyphics and carvings of all kinds.  Dominating this room
+however, is the immense sarcophagus of The Pharoh Ramses IV.  It
+emanates tendrils of magical energy which seem to reach into your soul
+intently searching for you know not what.  After a moment you realize that
+this room is incredibly dry, especially in comparison to the one that
+you just left.
+^

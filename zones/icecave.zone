@@ -1,0 +1,349 @@
+%rainfall:500
+
+%latitude:45
+
+%mobiles
+Name		= unicorn
+PName		= "The Unicorn"
+Location	= pool
+Strength	= 2000
+Damage		= 10
+Aggression      = 0
+Armor		= 0
+Speed           = 0
+Pflags {NoSummon}
+Description	= "
+A unicorn is standing here, gazing quietly at its reflection."
+End             = unicorn
+
+Name		= gambler
+PName		= "The Gambler"
+Location	= gambling
+Strength	= 75
+Damage		= 10
+Aggression      = 0
+Armor		= 0
+Speed           = 0
+Description	= "
+A gambler dressed in rags and tatters is dropping coins into the slot."
+End             = gambler
+
+Name		= guardian
+Pname		= "The Guardian"
+Location	= store
+Strength	= 50
+Damage		= 10
+Aggression      = 30
+Armor		= 0
+Speed           = 0
+Eflags		{NegFrost}
+Description	= "
+A guardian of pure ice stands, silent and still, observing you."
+End             = guardian
+
+%objects
+
+Name      = pendant
+Location  = IN_ROOM:magician
+Oflags    {Wearable}
+Aflags    {Neck}
+BValue    = 50
+Size      = 1
+Weight    = 1
+Desc[0]   = "A crystal pendant has been dropped here."
+End       = pendant
+
+Name      = fountain
+Location  = IN_ROOM:palace
+Oflags    {NoGet}
+Desc[0]   = "A small icy fountain burbles gently in the centre of the room."
+End       = fountain
+
+Name      = Hole_G_Hall
+Pname     = hole
+Location  = IN_ROOM:G_hall
+Oflags    {NoGet}
+Linked    = Hole_Snow_Cave
+State     = 1
+MaxState  = 1
+Desc[0]   = "A hole has been dug north through the snow."
+End       = Hole_G_Hall
+
+Name      = Hole_Snow_Cave
+Pname     = hole
+Location  = IN_ROOM:S_Cave
+Oflags    {NoGet}
+Linked    = Hole_G_Hall
+Desc[0]   = "A hole has been dug south through the snow."
+End       = Hole_Snow_Cave
+
+Name      = Cupboard_Bedroom
+Pname     = cupboard
+AltName   = door
+Location  = IN_ROOM:bedroom
+Oflags    {Openable Lockable NoGet}
+Linked    = Cupboard_Store
+State     = 2
+MaxState  = 2
+Desc[0]   = "The cupboard is open."
+Desc[1]   = "The cupboard is closed."
+Desc[2]   = "The cupboard is locked."
+End       = Cupboard_Bedroom
+
+Name      = Cupboard_Store
+Pname     = cupboard
+AltName   = door
+Location  = IN_ROOM:store
+Oflags    {Openable Lockable NoGet}
+Linked    = cupboard_bedroom
+State     = 2
+MaxState  = 2
+Desc[0]   = "The cupboard is open."
+Desc[1]   = "The cupboard is closed."
+Desc[2]   = "The cupboard is locked."
+End       = Cupboard_Store
+
+Name      = chest
+Location  = IN_ROOM:store
+Oflags    {Openable Container Lockable NoGet}
+State     = 1
+MaxState  = 2
+Desc[0]   = "A huge iron bound chest lies open before you."
+Desc[1]   = "A huge iron bound chest lies before you."
+Desc[2]   = "A huge iron bound chest lies before you. The chest is locked."
+End       = chest
+
+Name      = coronet
+Location  = IN_CONTAINER:chest
+Oflags    {Wearable}
+Aflags	  {Head}
+BValue    = 300
+Size      = 3
+Weight    = 3
+Desc[0]   = "A jewelled coronet glitters before you."
+End       = coronet
+
+Name      = key
+AltName   = iron
+Location  = IN_CONTAINER:pillowcase
+Oflags    {Key}
+Size      = 1
+Weight    = 1
+Desc[0]   = "An old rusty iron key lies here."
+End       = key
+
+Name      = pillowcase
+AltName   = case
+Location  = IN_ROOM:bedroom
+Oflags    {Container Openable Lockable}
+BValue    = 10
+Size      = 50
+MaxState  = 2
+State     = 0
+Weight    = 1
+Desc[0]   = "A soggy pillowcase has been dumped here."
+Desc[1]   = "A soggy pillowcase has been dumped here.It is closed."
+Desc[2]   = "A soggy pillowcase has been dumped here. It is locked."
+End       = pillowcase
+
+Name      = dagger
+AltName   = icy
+Location  = IN_ROOM:palace
+Oflags    {Weapon}
+Damage    = 18
+BValue    = 100
+Size      = 2
+Weight    = 2
+Desc[0]   = "A strange, thin icy dagger lies at your feet."
+End       = dagger
+
+Name      = WestIceThrone
+Pname     = throne
+Location  = IN_ROOM:throne
+Oflags    {NoGet}
+Linked    = EastIceThrone
+State     = 1
+MaxState  = 1
+Desc[0]   = "
+Icy shards lie scattered here, around an opening leading eastwards."
+Desc[1]   = "A huge crystal throne of pure ice dominates the east wall."
+Examine   = "
+This throne is fit for a king, but it looks very inviting to a weary traveler
+such as yourself."
+End       = WestIceThrone
+
+Name      = EastIceThrone
+Pname     = throne
+Location  = IN_ROOM:cave
+Oflags    {NoGet}
+Linked    = WestIceThrone
+State     = 1
+MaxState  = 1
+Desc[0]   = "Slivers of ice twinkle in the light from the western exit."
+Desc[1]   = "
+The western exit is blocked by what appears to be the back of a throne."
+End       = EastIceThrone
+
+Name      = Door1StChamber
+Pname     = door
+Location  = IN_ROOM:hall
+Oflags    {Openable Lockable NoGet}
+Linked    = Door2StChamber
+State     = 2
+MaxState  = 2
+Desc[0]   = "The door is open."
+Desc[1]   = "The door is closed."
+Desc[2]   = "The door is locked."
+End       = Door1StChamber
+
+Name      = Door2StChamber
+Pname     = door
+Location  = IN_ROOM:storage
+Linked    = Door1StChamber
+Oflags    {Openable Lockable NoGet}
+State     = 2
+MaxState  = 2
+Desc[0]   = "The door is open."
+Desc[1]   = "The door is closed."
+Desc[2]   = "The door is locked."
+End       = Door2StChamber
+
+%locations
+
+S_Cave e:pass2@blizzard s:^hole_snow_cave;
+lflags {}
+Snow Cave^
+   You are in a glittering ice cave, its floor and walls covered with loose,
+deep snow.  The cavemouth is east.
+^
+G_Hall n:^hole_g_hall s:Palace;
+lflags {}
+Glittering Hall^
+   You are in a glittering hall made entirely of ice.  Multi-hued icicles hang
+from the ceiling and the hall seems to be gradually melting!  A slippery path
+leads south.
+^
+Magician e:Palace;
+lflags {} 
+Magician's Research Room^
+   You are in a magician's research room, surrounded by a clutter of useless
+equipment. This room is also entirely ice, and to judge from the damp equipment
+the roof has melted quite considerably.
+   There is a doorway to the east.
+^
+Palace n:G_Hall e:Throne s:Bedroom w:Magician ;
+lflags {}
+Ice Palace^
+   You are in a huge ice hall forming the center of the ice palace.  Huge
+pillars hold up the roof, although small amounts of water now trickle down
+them.  Archways lead in all directions.
+^
+Throne e:^WestIceThrone w:Palace ;
+lflags {}
+The Ice Throne^
+   You are in an icy throne hall covered with many ornate carvings of icy
+wastes.  The hall is deserted, and it appears whoever is king of this icy
+domain is absent.  To the west is the main hall.
+^
+Bedroom n:Palace s:^cupboard_bedroom;
+lflags {}
+Royal Bedroom^
+   You are in the royal bedroom.  The bed appears to have melted.  There is a
+large cupboard on the south wall and a doorway to the north.
+^
+Store n:^cupboard_store;
+lflags {}
+The Secret Store Room^
+   You are in a secret room.  The thick stone walls are damp and the room
+smells musty and unpleasant.  There is a cupboard on the north wall.
+^
+Cave n:Home e:Passage s:Tunnel w:^EastIceThrone;
+lflags {}
+The Cave of the Ice People^
+   You are standing in a vast icy cave.  Ice covers the floor, making your
+balance precarious at best.  Judging from the footprints, however, it seems
+others have been here before you and safely traversed this slippery surface.
+A message carved into one wall reads "We Always Bit Chips."
+   Passages lead in all directions, but the exit leading east is blocked by
+a standard AberMUD construction sign.
+^
+Home s:Cave;
+lflags {Private Party}
+Home of the Iceman^
+   Welcome to Iceman's private cubicle.  Despite the icy surroundings, you feel
+warm and safe here.  Some of the Iceman's robes are hanging in a closet, along
+with some impressive weapons you dare not touch.  On his desk you see some
+scrolls covered with Nordic runes, and an unfinished supper, indicating the
+Iceman has only stepped out for a moment.  You notice several copies of "Teach
+Yourself Swedish" in the bookcase, but one seems to be missing.  A portrait of
+his beautiful wife, Lady Galadriel, adorns the otherwise bare walls.
+   A single exit leads south.
+^
+Tunnel n:Cave s:N_Tunnel;
+lflags {}
+Ice Tunnel^
+   You find yourself walking in a well lit tunnel with ice covered walls,
+ceiling, and floor.  In addition to the frozen footprints of the Ice People you
+also make out some hoofprints.  The tunnel continues to the south.  An exit to
+the north leads to the relative safety of a great hall.
+^
+N_Tunnel n:Tunnel s:Pool;
+lflags {}
+Narrow Ice Tunnel^
+   The tunnel tapers down considerably here, and you must crawl on all fours
+to squeeze by.  To the north the tunnel widens out.  You can hear the faint
+chirping and buzzing of magical critters emanating from a small hole to the
+south.
+^
+Pool n:N_Tunnel e:Hall w:Gambling;
+lflags {}
+Crystal Pool^
+   You stand in awe in a vast cave dominated by a crystal pool.  The surface of
+the water is a perfect mirror, casting silvery reflections on the walls.  Magic
+fills the air, and in the water there are manatees and manatoos.  Dewdrops
+glisten on the rocks and edelweiss grow in the most unlikely places, among
+stones and unfinished ice sculptures.
+^
+Gambling e:Pool;
+lflags {}
+Gambling Hall^
+   This room is all but magical and wondrous: Cheap decor covers the grimy
+walls, smoke fills the air, and the smell isn't exactly winter fresh.  Broken
+glass is scattered on the floor, along with some playing cards and dice.  If
+your mother knew you were here, she'd be shocked.
+^
+Hall n:^Door1StChamber w:Pool ;
+lflags {}
+Hall Of The Ice People^
+   This is the great Hall Of The Ice People.  This is where they come to eat,
+to drink, and to be merry.  Carvings on the walls tell fascinating sagas of the
+giant Thrym and Mjolnir, of the ship Skidbladnir and Ragnarok, and of the One
+Tree, Yggdrasil.  The hall is deserted now, and you wonder where everyone is
+hiding.  There is some sort of door in the northern wall.
+^
+Storage s:^Door2StChamber;
+lflags {}
+Storage Chamber^
+   This is just a small store room, filled with empty crates and boxes, some
+marked 'Fragile' and others 'Feel Free to Shake and Break'.  There is a single
+doorway in the south wall.
+^
+Passage e:Shrine w:Cave ;
+lflags { }
+Icy Passage^
+   The ice on the walls is clear enough for you to see the stone beneath it.
+The floor is a sheet of smooth ice, so you find it easier to move by
+sliding your feet that by actually lifting each foot up.
+^
+Shrine w:Passage ;
+lflags { }
+The Lost Shrine of the Ice People^
+   A cobweb brushes across your face.  From the abundace of them here, it
+would seem that this room does not see much use.  Though the dimness of the
+light does not allow you to be sure, the groaning of the ceiling causes you
+to move quietly, as you would rather not have the tons of mountain above
+you fall in.
+   Closer inspection of the walls reveals ancient, intricate images of huge
+glaciers and a figure you can only guess to be the god of the Ice People,
+who they venerate here.
+^

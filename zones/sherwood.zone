@@ -1,0 +1,651 @@
+%rainfall:820
+
+%latitude:35
+
+%mobiles
+Name        = emmy
+PName       = "Emmy"
+Pflags      { NoZap NoExorcise NoPunt }
+Sflags      { Female }
+Location    = sherwood20
+Strength    = 30
+Damage      = 2
+Armor       = 0
+Aggression  = 0
+Speed       = 5
+Description = "Emmy is here eating a peach and giggling."
+Examine     = "
+Emmy is a little girl with big brown eyes, and dark brown hair. You 
+wouldn't want to attack her, now would you?"
+End         = emmy
+
+Name        = little
+PName       = "Little John"
+Location    = sherwood20
+Strength    = 150
+Damage      = 10
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "Little John stands here practicing his dodge, parry, thrust, and spin."
+End         = little
+
+Name        = friar
+PName       = "Friar Tuck"
+Location    = sherwood8
+Strength    = 150
+Damage      = 8
+Armor       = 0
+Aggression  = 20
+Speed       = 0
+Description = "Friar Tuck sits here protecting his precious brew."
+End         = friar
+
+Name        = jim
+PName       = "Merryman Jim"
+Location    = sherwood11
+Strength    = 170
+Damage      = 10
+Armor       = 0
+Aggression  = 40
+Speed       = 0
+Description = "Jim is here on his watch."
+End         = jim
+
+Name        = marian
+PName       = "Maid Marian"
+SFlags        { Female }
+Location    = sherwood13
+Strength    = 150
+Damage      = 10
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "Maid Marian is here trying to catch of glimpse of your butt." 
+End         = marian
+
+Name        = sheriff
+PName       = "Sheriff"
+Location    = sherwood14
+Strength    = 170
+Damage      = 10
+Armor       = 0
+Aggression  = 100
+Speed       = 0
+Description = "The Sheriff is here picking out the spot at which to bury you." 
+End         = sheriff
+
+Name        = stacy
+PName       = "Merryman Stacy"
+Location    = sherwood22
+Strength    = 80
+Damage      = 4
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "Merryman Stacy is following Merryman Greg around as always."
+End         = stacy
+
+Name        = greg
+PName       = "Merryman Greg"
+Location    = sherwood22
+Strength    = 100
+Damage      = 10
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "Merryman Greg is telling Merryman Stacy about his new obsession."
+End         = greg
+
+Name        = chad
+PName       = "Merryman Chad"
+Location    = sherwood25
+Strength    = 120
+Damage      = 10
+Armor       = 0
+Aggression  = 100
+Speed       = 0
+Description = "Merryman Chad is sitting here playing with his lucky boiling sticks." 
+End         = chad
+
+Name        = tim
+PName       = "Merryman Tim"
+Location    = sherwood26
+Strength    = 140
+Damage      = 10
+Armor       = 0
+Aggression  = 100
+Speed       = 0
+Description = "Merryman Tim is here anxiously awaiting his weekly drive home." 
+End         = tim
+
+Name        = jason
+PName       = "Merryman Jason"
+Location    = sherwood27
+Strength    = 160
+Damage      = 10
+Armor       = 0
+Aggression  = 100
+Speed       = 0
+Description = "Merryman Jason is here complaining about his newest ailment." 
+End         = jason
+
+Name        = mike
+PName       = "Merryman Mike"
+Location    = sherwood28
+Strength    = 180
+Damage      = 10
+Armor       = 0
+Aggression  = 100
+Speed       = 0
+Description = "Merryman Mike is here mumbling about not being a farmer." 
+End         = mike
+
+Name        = butch
+PName       = "Merryman Butch"
+Location    = sherwood29
+Strength    = 100
+Damage      = 10
+Armor       = 0
+Aggression  = 100
+Speed       = 0
+Description = "Merryman Butch is here kickboxing and antogonized Merryman Chris."
+End         = butch
+
+Name        = sil
+PName       = "Merryman Sil"
+Location    = sherwood30
+Strength    = 160
+Damage      = 10
+Armor       = 0
+Aggression  = 100
+Speed       = 0
+Description = "Merryman Sil is here awaiting Amy's next command."
+End         = sil
+
+Name        = lars
+PName       = "Merryman Lars"
+Location    = sherwood31
+Strength    = 140
+Damage      = 10
+Armor       = 0
+Aggression  = 100
+Speed       = 0
+Description = "Merryman Lars is here, puking after completing the Century Club."
+End         = lars
+
+Name        = dan
+PName       = "Merryman Dan"
+Location    = sherwood32
+Strength    = 160
+Damage      = 10
+Armor       = 0 
+Aggression  = 100
+Speed       = 0
+Description = ^Merryman Dan is saying, "You just better give it back!"^
+End         = dan
+
+Name        = scott
+PName       = "Merryman Scott"
+Location    = sherwood33
+Strength    = 100
+Damage      = 10
+Armor       = 0
+Aggression  = 100
+Speed       = 0
+Description = "Merryman Scott is here, spitting in his little sisters mouth." 
+End         = scott
+
+Name        = robin
+PName       = "Robin Hood"
+Location    = sherwood34
+Strength    = 250
+Damage      = 10
+Armor       = 0
+Aggression  = 40
+Speed       = 0
+Description = "The famed Robin of Hood stands here, leading his merrymen." 
+End         = robin
+
+%objects
+
+Name        = quiver
+Oflags      { Armor Container Wearable }
+Aflags	    { Back }
+Location    = WORN_BY:robin
+Armor       = 35
+Size        = 10
+Weight      = 5
+BValue      = 100
+Desc[0]     = "A very well fashioned quiver lies here waiting for someone to pick it up."
+End         = quiver
+
+Name        = stick
+Oflags       { Lightable Extinguish Weapon }
+Location    = IN_ROOM:sherwood4
+BValue      = 5
+Size        = 5
+Weight      = 2
+Armor       = 0
+Damage      = 5
+Desc[0]     = "There is a stick here on the ground."
+End         = stick
+
+Name        = parry
+AltName     = staff
+Oflags       { Weapon }
+Location    = CARRIED_BY:little
+BValue      = 200
+Size        = 10
+Weight      = 8
+Armor       = 0
+Damage      = 10
+Desc[0]     = "Little John's parry staff sits here."
+Examine     = "It is a sturdy staff that could do some damage if used right.
+"
+End         = parry
+
+Name        = beer
+AltName     = keg
+Oflags        { Food }
+Location    = IN_ROOM:sherwood8
+BValue      = 20
+Size        = 2
+Weight      = 2
+Desc[0]     = "A keg of beer sits here waiting to be killed."
+Examine     = "To bad you don't have a tap!"
+End         = beer
+
+Name        = point
+Oflags       { Weapon }
+Location    = IN_ROOM:sherwood10
+BValue      = 40
+Size        = 2
+Weight      = 1
+Armor       = 0
+Damage      = 10
+Desc[0]     = "A sharp point has been left here."
+Examine     = "It's a knife.  What did you expect a exclamation point?"
+End         = point
+
+Name        = necklace
+Oflags       { Wearable }
+Aflags 	     { Neck }
+Location    = WORN_BY:marian
+BValue      = 300
+Size        = 1
+Weight      = 1
+Desc[0]     = "A beautiful necklace lies at your feet."
+End         = necklace
+
+Name        = badge
+Oflags       { Wearable Armor }
+Aflags	     { Chest }
+Location    = WORN_BY:sheriff
+BValue      = 50
+Size        = 5
+Weight      = 5
+Armor       = 5
+Damage      = 0
+Desc[0]     = "The sheriff's badge is here stained with his blood."
+Examine     = "To serve and protect"
+End         = badge
+
+Name        = sticker
+AltName     = pig
+Oflags       { Weapon }
+Location    = IN_ROOM:sherwood17
+BValue      = 30
+Size        = 25
+Weight      = 15
+Armor       = 0
+Damage      = 10
+Desc[0]     = "A Pig-Sticker is here, tempting you to pick it up."
+Examine     = "Pig-sticker huh?  Hmm...any 5-0 around?"
+End         = sticker
+
+Name        = clip
+AltName     = paper
+Oflags       { Weapon }
+Location    = IN_ROOM:sherwood30
+BValue      = 2  
+Size        = 1
+Weight      = 1
+Armor       = 0
+Damage      = 5
+Desc[0]     = "A paper clip can barely be seen in the grass."
+Examine     = "A paper clip in the middle of Sherwood forest?"
+End         = clip
+
+Name        = ironwood
+AltName     = sword
+Oflags       { Weapon }
+Location    = IN_CONTAINER:brush
+BValue      = 400
+Size        = 50
+Weight      = 25
+Armor       = 0
+Damage      = 26
+Desc[0]     = "The infamous Ironwood Sword lies here, quivering ready to kill."
+Examine     = "It's wood, yet it's iron??"
+End         = ironwood
+
+Name        = brush
+Oflags       { NoGet Container }
+Location    = IN_ROOM:sherwood34
+BValue      = 0
+Size        = 50
+Examine     = "It's brush, what did you expect to find a sword or something?"
+End         = brush
+
+%locations
+
+sherwood1 n:sherwood3 e:sherwood2 w:sherwood4 s:eforest@eforest;
+Altitude = 800
+lflags { Peaceful NoMobiles Outdoors }
+Gateway^
+        You are standing at the Gateway to adventure.  There are three paths.
+Each path has a different adventure and each a different destiny.  Those
+who choose to enter must be willing to face the consequences of the choices
+they make.
+^
+
+sherwood2 w:sherwood1;
+lflags { }
+East Fork^
+        This is the road to a great adventure full of surpises, monsters, 
+and lots of adventure.  This is not for the 'weak of heart' or strength.  
+On each side of the road are trees that seem to reach out for you trying to
+pull you into their twisted webs of branches.
+^
+
+sherwood3 s:sherwood2;
+lflags { }
+North Fork^
+        The road stretches wide and long.  The trees on the side of the road
+are ominous, but friendly enough.  The path is well worn, probably indicating
+that it is not a rough one, but don't let that give you peace of mind.
+^
+
+sherwood4 e:sherwood1 w:sherwood5;
+Altitude = 800
+lflags { Outdoors }
+West Fork^
+        You are traveling on a paved road, making the journey quite easy.
+The road continues west into a dense forest.  You sense danger, and prepare 
+yourself for what lies ahead.  What ever that may be.
+^
+
+sherwood5 e:sherwood4 n:sherwood6;
+Altitude = 800
+lflags { Outdoors }
+South Fork^
+  The path continues north.
+^
+
+sherwood6 n:sherwood7 w:sherwood21 s:sherwood5;
+Altitude = 800
+lflags { Outdoors }
+Road to Sherwood Forest^
+        You have entered a very dense forest.  The trees tower over you,
+blocking but only a little sunlight by which you can make out a path to
+the north and to the west.
+^
+
+sherwood7 s:sherwood6 n:sherwood8;
+Altitude = 800
+lflags { Outdoors }
+Trampled Path^
+        You are on a heavily worn path.  It looks as if many a wagon has 
+traveled through here.  The trees thin here allowing the bright sunlight to
+shine down.  A tiny rabbit scurries through the bushes but he is too fast for
+you.  The path continues to the north.
+^
+
+sherwood8 s:sherwood7 e:sherwood9;
+Altitude = 800
+lflags { Outdoors }
+Worn Path^
+        You have entered a small clearing of the sorts.  There is a wagon 
+sitting off the path to the north.  There is some kind of contraption there.
+It looks like it's brewing up some kind of magical potion or something.  Maybe 
+you can talk the owner, into parting with some of his brew.
+^
+
+sherwood9 w:sherwood8 n:sherwood10;
+Altitude = 800
+lflags { Outdoors }
+Bend in the Road^
+        The path turns north here.  There is a rapidly running river to the
+east but it doesn't look safe to navigate.  Maybe there is a bridge or slow
+shallow point up north at which you can cross it.  Maybe not.
+^
+
+sherwood10 s:sherwood9 n:sherwood11;
+Altitude = 800
+lflags { Outdoors }
+Path Straightens^
+        The path straightens.  You look across the river and see something far
+off in the distance.  It looks very interesting.  You shiver with anticipation
+of the time when you will be able to explore the region across the river.
+^
+
+sherwood11 n:sherwood12 s:sherwood10;
+Altitude = 800
+lflags { Outdoors }
+Under the Oaks^
+        You are standing under oak trees.  You look up to admire their beauty.
+When a passing European Swallow flys by and defacates on your face, you
+frantically look around for a sink to wash your face, when you suddenly realize
+that you are in sherwood forest.  I guess you will have to walk around with
+bird feces on your face.
+^
+
+sherwood12 w:sherwood13 s:sherwood11;
+Altitude = 800
+lflags { Outdoors }
+Turn in Path^
+        The path turns west.  You definitely feel like you are getting
+somewhere now.  You know it won't be long before a great adventure falls
+upon you.  You shiver with anticipation.
+^
+
+sherwood13 e:sherwood12 w:sherwood14 n:sherwood16;
+Altitude = 800
+lflags { Outdoors }
+Intersection^
+        You have come to an intersection.  You must now, once again, choose
+your fate.  Will you take the route to the north?  Or take the route to the
+west?  Or will you chicken out and take the route to the east, back from where
+your cowardly heart came from?  You must now choose.
+^
+
+sherwood14 s:sherwood15 e:sherwood13;
+Altitude = 800
+lflags { Outdoors Dark }
+Dismal Forest^
+        Oh no!  You have reached a very dark dismal part of the forest.
+You do not feel safe here, and wish to get out of here as soon as possible.
+There is the intersection back to the east, but there is also a very nice path
+leading to the south
+^
+
+sherwood15 ;
+lflags { Death }
+Dead End^
+        Ooops......  You seem to have come across a Dead End.
+And the DEAD END seems to be correct in more than one sense.  You suddenly
+find yourself zapped from the realms of Infinity.  You Have DIED!
+^
+
+sherwood16 s:sherwood13 n:sherwood17;
+Altitude = 800
+lflags { Outdoors }
+Road to Wealth^
+        You have chosen the right path.  This is the road to fame and fortune.
+The trees are happy and friendly and the sun is shining bright down through 
+the bright greens leaves of the various trees.  The road continues happily
+to the north.
+^
+
+sherwood17 n:sherwood18 s:sherwood16;
+Altitude = 800
+lflags { Outdoors }
+On the Road^
+        You can't help but to break out into song.  The one that comes to mind 
+goes something like, "On the road again, just can't wait to get on the road
+again..."  You can't remember who sang it, but you still gotta love it.
+^
+
+sherwood18 n:sherwood19 s:sherwood17;
+Altitude = 800
+lflags { Outdoors }
+Near the End^
+        You are nearing the end of the road.  Your life long dreams lie just 
+ahead.  Money, power, love, fame, and happiness are waiting for you.  Your 
+ticket to all of this is just north of here.
+^
+
+sherwood19 ;
+lflags { Death }
+The End^
+        The moral of the story here is that everything that glitters isn't
+always gold.  In case you haven't figured it out yet....You're DEAD!!!!
+^
+
+sherwood20 e:sherwood21;
+Altitude = 800
+lflags { Outdoors Private Party }
+Rainbow Waterfall^
+        You are standing in a small stream just below a breath-taking 
+waterfall.  The spray off the falls causes a beautiful rainbow to stretch 
+across the river.  You can not imagine a more beautiful place.  Jagged rocks 
+cover the bed of the stream just below the falls.  The stones become smoother 
+and polished further down stream from the continuous wearing of the water.  
+The grass is short, soft, and green, perfect for a picnic with your 
+sweatheart.
+^
+
+sherwood21 w:sherwood20 e:sherwood6 n:sherwood22;
+Altitude = 800
+lflags { Outdoors }
+Near Waterfall^
+        You continue along the path.  You hear the rush of falling water to
+the west.  To the north runs a beaten path.  It is probably beaten down for
+some reason.
+^
+
+sherwood22 s:sherwood21 n:sherwood23;
+Altitude = 800
+lflags { Outdoors }
+Beaten Path^
+        You continue to travel along the beaten path.  The brush grows thick
+along each side of the road.  The trees are thin allowing for plenty of light.
+This lightens your mood as you grow concerned about traveling so deep into the
+forest.
+^
+
+sherwood23 s:sherwood22 n:sherwood24;
+Altitude = 800
+lflags { Outdoors }
+Rutted Path^
+        The path here is very rough.  You fall several times trying to
+make your way north.  There appear to be eyes peaking from the brush.  You
+frantically search but turn up nothing.  The path continues to the north.
+^
+
+sherwood24 s:sherwood23 w:sherwood25;
+Altitude = 800
+lflags { Outdoors }
+Corner^
+        You have reached yet another turn in the road.  The trees grow dense
+to the west.  They are ominous and block all sunlight from reaching the ground.
+You stand here trying to muster up the courage to venture on.  You look toward
+the trees and a shiver runs up your spine.  You know that if you continue.
+There is no coming back.  It is all or nothing.  What are you a man or mouse?
+^
+
+sherwood25 e:sherwood24 n:sherwood26;
+Altitude = 800
+lflags { Outdoors Dark }
+Under the Elms^
+        You stand under very thick Elm trees.  The path you are traveling on
+is more like a trail now.  It doesn't appear that too many people have ventured
+down this road.  And maybe they had a good reason.
+^
+
+sherwood26 s:sherwood25 n:sherwood27;
+Altitude = 800
+lflags { Outdoors Dark }
+Under the Popular Trees^
+        You stand under many populuar trees that block out the sun.  The path
+continues to the north.
+^
+
+sherwood27 s:sherwood26 n:sherwood28;
+Altitude = 800
+lflags { Outdoors Dark }
+Under the Cottonwood Trees^
+        You stand under many cottonwood trees that block out the sun.  The path
+continues to the north.
+^
+
+sherwood28 s:sherwood27 n:sherwood29;
+Altitude = 800
+lflags { Outdoors Dark }
+Under the Maple Trees^
+        You stand under many Maple trees that block out the sun.  The path
+continues to the north.
+^
+
+sherwood29 s:sherwood28 n:sherwood30;
+Altitude = 800
+lflags { Outdoors Dark }
+Under the Birch Trees^
+        You stand under many birch trees that block out the sun.  The path
+continues to the north.
+^
+
+sherwood30 s:sherwood29 n:sherwood31;
+Altitude = 800
+lflags { Outdoors Dark }
+Under the Thorn Apple Trees^
+        You stand under many thorn apple trees that block out the sun.  The
+path continues to the north.
+^
+
+sherwood31 s:sherwood30 n:sherwood32;
+Altitude = 800
+lflags { Outdoors Dark }
+Under the Oak Trees^
+        You stand under many oaks trees that block out the sun.  The path
+continues to the north.
+^
+
+sherwood32 s:sherwood31 n:sherwood33;
+Altitude = 800
+lflags { Outdoors Dark }
+Under the Fig Trees^
+        You stand under many fig trees that block out the sun.  The path
+continues to the north.
+^
+
+sherwood33 s:sherwood32 n:sherwood34;
+Altitude = 800
+lflags { Outdoors Dark }
+Under the Pine Trees^
+        You stand under many pine trees that block out the sun.  The path
+continues to the north.
+^
+
+sherwood34 s:sherwood33;
+Altitude = 800
+lflags { Outdoors Dark }
+Clearing^
+        You have reached a clearing at the edge of the woods.  You are quite
+greatful that you have exited the forest and can rest from your many battles.
+Thick brush cirles around the clearing keeping out any stray animals that 
+wander into this area.
+^
+
+

@@ -1,0 +1,436 @@
+%rainfall:690
+
+%latitude:40
+
+%mobiles
+
+Name        = beavis
+Pname       = "Beavis"
+Location    = Green
+Pflags      { NoZap NoPunt NoSteal NoExorcise NoAlias }
+Strength    = 100
+Damage      = 8
+Armor       = 0
+Aggression  = 0
+Speed       = 0
+Description = "Medieval Beavis is standing here with a grin on his face."
+Examine     = "
+You are looking at the almighty Beavis. He is wearing his favorite (and only)
+shirt, a Metallica t-shirt. Then he starts to laugh as you turn away."
+End         = beavis
+
+Name        = butthead
+Pname       = "Butthead"
+Location    = Green
+Pflags      { NoZap NoPunt NoSteal NoExorcise NoAlias }
+Strength    = 100
+Damage      = 8
+Armor       = 0
+Aggression  = 0
+Speed       = 5
+Description = "Sir Butthead is here looking very lost."
+Examine     = "
+Butthead looks to you and says, 'What are you looking at bunghole?!?'"
+End         = butthead
+
+%objects
+
+
+
+
+Name = leggings
+PName = leggings
+AltName = leggings
+Oflags = {Wearable Armor}
+Aflags = {Legs Feet}
+Armor = 18
+Location = IN_ROOM:Cave
+BValue = 100
+Size = 30
+Weight = 0
+Desc[0] = "A pirate's old pair of leggings has been dropped here."
+Examine = "Dirty and worn, these tattered scraps of fabric just might keep your
+legs warm."
+End = Leggings
+
+Name      = sack
+Location  = IN_ROOM:alley
+Oflags    {Container Openable}
+BValue    = 30
+Size      = 50
+Weight    = 2
+MaxState  = 1
+Desc[0]   = "A very large sack has been left here."
+Desc[1]   = "A very large sack has been left here. The sack is closed."
+End       = sack
+
+Name      = fire
+AltName   = flames
+Location  = IN_ROOM:seadog
+Oflags    {Extinguish Lit NoGet}
+Desc[0]   = "A huge fire burns in the center of the room."
+End       = fire
+
+Name      = poker
+Location  = IN_ROOM:seadog
+Oflags    {Weapon}
+Damage    = 5
+BValue    = 10
+Size      = 5
+Weight    = 2
+Desc[0]   = "A heavy iron poker has been left here."
+Examine   = "
+This poker looks a bit more dangerous than a card game, and it appears to be
+slightly bent from meeting various adventurers' heads with force!"
+End       = poker
+
+Name      = knife
+Location  = IN_ROOM:yard
+Oflags    {Weapon}
+Damage    = 4
+BValue    = 10
+Size      = 2
+Weight    = 2
+Desc[0]   = "A small filleting knife has been left here carelessly."
+End       = knife
+
+Name      = jug
+Location  = IN_ROOM:barman
+BValue    = 40
+Size      = 4
+Weight    = 2
+Desc[0]   = "A large toby jug has been left here, its face a hideous grin."
+Examine   = "
+This jug is shaped somewhat like a stout man with a cocked hat for the brim."
+End       = jug
+
+Name      = raft
+Location  = IN_ROOM:cove
+BValue    = 20
+Size      = 100
+Weight    = 100
+Oflags    { Boat }
+Desc[0]   = "A small wooden raft has been dumped here."
+End       = raft
+
+Name      = boat
+Location  = IN_ROOM:jetty
+BValue    = 20
+Size      = 100
+Weight    = 100
+Oflags    { Boat }
+Desc[0]   = "A small rowing boat has been left here."
+End       = boat
+
+Name      = bed
+Location  = IN_ROOM:barman
+Oflags    {NoGet}
+Size      = 100
+Weight    = 200
+Desc[0]   = "
+The barman's bed lies here, it doesn't appear to have been slept in."
+End       = bed
+
+Name      = sheets
+Location  = IN_ROOM:barman
+BValue    = 10
+Size      = 20
+Weight    = 30
+Desc[0]   = "Some sheets lie strewn on the floor."
+End       = sheets
+
+Name      = map
+Location  = IN_ROOM:slanted
+BValue    = 100
+Size      = 1
+Weight    = 1
+Desc[0]   = "
+A worn and battered old treasure map lies torn and tattered before you."
+Examine   = "Nothing doing here... yet..."
+End       = map
+
+Name      = pebble
+AltName   = stone
+Location  = IN_ROOM:cove
+Size      = 1
+Weight    = 1
+Desc[0]   = "A bored pebble sits at your feet, philosophising."
+End       = pebble
+
+Name      = rat
+Location  = IN_CONTAINER:barrel
+BValue    = 1
+Size      = 1
+Weight    = 1
+Desc[0]   = "A dead rat lies rotting on the floor before you."
+End       = rat
+
+Name      = bell
+Location  = IN_ROOM:barman
+BValue    = 120
+Size      = 30
+Weight    = 40
+Desc[0]   = "
+A huge brass ships bell has been placed here, its gleaming surface evidently
+well polished."
+End       = bell
+
+Name      = barrel
+AltName   = cask
+Location  = IN_ROOM:cellar
+Oflags    {Openable Container NoGet}
+State     = 1
+MaxState  = 1
+Size      = 100
+Weight    = 100
+Desc[0]   = "An open wooden barrel stands before you."
+Desc[1]   = "A large wooden barrel squats in a corner."
+End       = barrel
+
+Name      = Top_Boards
+Pname     = floorboards
+AltName   = floorboard
+Location  = IN_ROOM:cellar
+Oflags    {NoGet}
+Linked    = Bot_Boards
+State     = 1
+MaxState  = 1
+Size      = 50
+Weight    = 50
+Desc[0]   = "
+One of the floorboards has been lifted, allowing access down under the cellar,
+to some kind of passage."
+End       = Top_Boards
+
+Name      = Bot_Boards
+Pname     = floorboards
+AltName   = floorboard
+Location  = IN_ROOM:passage
+Oflags    {NoGet}
+Linked    = Top_Boards
+State     = 1
+MaxState  = 1
+Size      = 50
+Weight    = 50
+Desc[0]   = "
+The floorboards above you have been lifted, to allow access to some kind of
+room above."
+End       = Bot_Boards
+
+Name      = flag
+AltName   = jolly
+Location  = IN_ROOM:chamber
+BValue    = 50
+Size      = 10
+Weight    = 5
+Desc[0]   = "An old Jolly Roger flag has been left here, carefully folded."
+End       = flag
+
+Name      = silk
+AltName   = bale
+Location  = IN_ROOM:chamber
+BValue    = 150
+Size      = 40
+Weight    = 40
+Desc[0]   = "A bale of valuable silk has been dropped here."
+End       = silk
+
+%locations
+Green n:Church@start e:Track s:r_land@blizzard w:bridge@blizzard;
+Altitude = 350
+lflags {Outdoors}
+The Village Green^
+   You are standing on a square of grass in the center of the village.  A road
+leads east into the rest of the village.
+   To the north is a small church, and a path leads west into the trees.
+^
+Track e:Road1 w:Green n:hick1@hick s:Hospital;
+Altitude = 300
+lflags {Outdoors}
+Village Track^
+   You are following a path which leads east through the village towards the
+sea.  To the west a few buildings are clustered around the village green, while
+to the east the village becomes a collection of small houses and narrow
+streets.  A small path leads to the north.
+^
+Road1 n:Yard e:Road2 s:Alley w:Track;
+Altitude = 200
+lflags {Outdoors}
+Village Road^
+   You are following a narrow dirt road which leads east into the village.  To
+the north a track leads into a small yard of some sort, to the south it leads
+down a narrow walled alley to the village well.
+^
+Yard s:Road1;
+Altitude = 200
+lflags {Outdoors}
+Yard^
+   You are in a small walled dirt yard in the village.  Various large pieces of
+rotten fishing netting lie all around you, and the yard stinks with the smell
+of rotting fish, a scent which seems to draw thousands of sea birds flapping
+around you.
+^
+Alley n:Road1 d:Well2 ;
+Altitude = 150
+lflags {Outdoors}
+Narrow Alley^
+   You are standing in a narrow alleyway which deadends to the south.  The
+alley is dark and dismal and is simply a walled passage down to a small well
+which appears to serve the village itself.
+^
+Road2 e:Shore s:Inn_Yard w:Road1 ;
+Altitude = 100
+lflags {Outdoors}
+Village Road^
+   You are following the narrow main street of the village which leads east and
+west.  To the south, the worn sign of the Old Seadog Inn flaps quietly in the
+wind.
+^
+Inn_Yard n:Road2 e:Seadog s:flag@noxypickle;
+Altitude = 50
+lflags {Outdoors}
+Inn Yard^
+   You are standing in the yard of the Old Seadog Inn.  The inn itself stands
+to the east, a battered structure half timbered and sagging, with that pleasant
+atmosphere of ages.  To the north a narrow gateway leads back onto the road.
+^
+Seadog e:Behind w:Inn_Yard;
+lflags {}
+The Old Seadog^
+   You are standing in the 'Old Seadog' inn.  The inn radiates age and charm,
+with its oak beam roof, and many seafaring momentos secured firmly around the
+walls.  Even the bar is a single thick oak slab, worn and chipped with years of
+service to rowdy sailors.
+   The door out is west.
+^
+Behind e:Barman w:Seadog d:Steps ;
+lflags {}
+Behind The Bar^
+   You are standing behind the bar of the 'Old Seadog'.  The bar surface is
+worn and pitted from years and years of heavy use.  Names are carved into its
+surface, 'Black Sea Pete', 'Grey Hook', 'Moog The Kipper', no doubt some of the
+pirates who long ago made this their haunt.
+   A narrow stairway leads down, and a small room can be seen through a low
+doorway to the east.
+^
+Barman w:Behind;
+lflags {}
+Barman's Room^
+   You are crouched in the barman's small, and very personalized room.  The
+walls have a large collection of battered naval memorabilia fastened securely
+to them.  Indeed, even the lone window is a porthole, giving the room that
+distinctive sea-cabin look.  A single low doorway leads west into the inn
+proper.
+^
+Steps u:Behind d:Cellar ;
+lflags {}
+Cellar Steps^
+   You are standing on the narrow, precarious steps which lead down into the
+cellars of the inn.  A pale shaft of light shines down from the top of the
+steps, revealing the cellars below.
+^
+Shore e:Jetty w:Road2 n:beach1@beach ;
+Altitude = 50
+lflags {Outdoors}
+Village Shore^
+   You stand on the sea shore, to the east of the village. A narrow jetty leads
+east out into the waves.  The road also leads westwards back into the center of
+the village.
+^
+Jetty e:2@sea w:Shore d:camb1@evolution ;
+Altitude = 0
+lflags {Outdoors}
+The Jetty^
+   You stand on the jetty, looking east across the waves.  A path leads west
+along the jetty back to the village.
+^
+Well1 ;
+lflags {Death}
+Down The Well^
+   You slip and lose your grip, then plunge helplessly into the waters below...
+^
+Well2 e:Tunnel u:Alley d:Well1;
+lflags {}
+Down The Well^
+   You are hanging part of the way down the village well, looking upwards
+towards the light above.  The well descends further but it gets very slippery.
+A narrow passage leads east into absolute darkness.
+^
+Tunnel e:Dirt w:Well2 ;
+lflags {Dark}
+Narrow Tunnel^
+   You are squeezing down a narrow dirt tunnel, quite crudely dug, and
+supported with old ships timbers.  The tunnel leads westwards towards a faint
+light, or descends steeply to the east.
+^
+Dirt n:Slanted e:Chamber w:Tunnel;
+lflags {Dark}
+Dirt Tunnel^
+   You are clambering along a low dirt tunnel which leads east and west.
+A wider tunnel joins from the north.
+^
+Chamber s:Passage w:Dirt;
+lflags {Dark}
+Dim Chamber^
+   You are standing in a dim, and secret chamber deep underground.  Narrow
+rough passages lead west and south.
+^
+Passage n:Chamber u:^bot_boards;
+lflags {Dark}
+Passage End^
+   The passage here ends with a blank stone wall, possibly foundations to a
+building.  Above you is a set of floorboards.
+^
+Cellar u:Steps d:^top_boards;
+lflags {Dark}
+Cellars^
+   You are stooped down low, in the cellars of the 'Old Seadog'.  The room is
+dark and shadowy lit only by a pale light from high above at the top of the
+steps.  The room stinks of cheap ale and rotting wood.
+^
+Slanted n:Narrow s:Dirt;
+lflags {Dark}
+Slanted Tunnel^
+   You are clambering down a fairly wide earthen passage which descends from a
+junction of passages towards a turning of some sort.  The dirt floor is hard,
+as if heavy objects have passed this way many times.
+^
+Narrow e:Cave s:Slanted;
+lflags {Dark}
+Narrow Tunnel^
+   You are clambering down a narrow tunnel which slopes downwards and east
+turning from the south.  From the east you can smell the sea and hear the sound
+of waves against the shore...
+^
+Cave e:Cove w:Narrow;
+lflags {}
+Sea Cave^
+   You are standing in a low, reasonably dry sea cave.  The cave echoes the
+gentle pounding of the waves on the sandy beach to the east.  A single narrow
+passage leads west into darkness.
+^
+Cove e:7@sea w:Cave u:^ladder2pirate@pirate;
+lflags {}
+Secret Cove^
+   You are standing in a secret cove surrounded by high black crags.  A narrow
+ cavemouth leads west into darkness. The rocks and pounding surf along the shore
+here makes launching boats well nigh impossible.
+^
+Hospital n:Track;
+lflags { Peace }
+The Village Hospital^
+   You are in the waiting room of the hospital.  On the south wall is a
+door with a sign reading "Emergency" above it.  From the sounds coming from
+within, it seems as if the doctors are frantically trying to save someone.
+There is a small green button on the counter.
+^
+
+Emergency;
+lflags { SoundProof Peace }
+The Emergency Room^
+   This is a busy area with many doctors frantically running around to save
+patients.  There are about 32 beds here, all with seperate sets of machines;
+some of these go BLIP-BLIP, others have red and green flashing lights, and
+the remaining ones are some sort of measurement of your vitality.
+^
+

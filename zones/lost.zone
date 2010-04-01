@@ -1,0 +1,123 @@
+%mobiles
+
+%objects
+
+Name             = shimmering_pit
+PName            = pit
+AltName          = shimmering
+Location         = IN_ROOM:lost1
+Oflags             { NoGet }
+End              = shimmering_pit
+
+Name             = white_flame
+PName            = flame
+AltName          = white
+Location         = IN_ROOM:lost1
+Oflags             { Lit NoGet }
+Examine          = "The pure white flame hovers over the shimmering pit suspended in mid-air.
+It burns nothing, and never goes out.
+"
+End              = white_flame
+
+
+%locations
+
+lost1 e:lost2;
+lflags { Outdoors Party Peaceful NoMobiles }
+Sacred Grove^
+   A sense of peace marks this place.  A carven wooden structure which might
+have at one time been an altar remains, untouched by time.  A pure white flame,
+flickering at your presense floats above the side of the altar.  Beneath the
+flame is a hole filled with shimmering energy.  Sunlight filters down through
+tree limbs, reflected by the enegry and shattered into a myriad of tiny
+rainbows.
+^
+lost2 s:lost3 w:lost1;
+lflags { Outdoors Peaceful NoMobiles }
+Garden^
+  When time was young and people still worshiped at the wooden altar this
+garden was planned and created for the enjoyment of their goddess. Painstaking
+care was taken to create a garden of surpassing beauty. The people who created
+and tended the garden have long since passed from the world, but the garden
+and it's peaceful beauty remain.  The garden acts as an enterway into the
+holy grove, and many roads converge here.
+^
+lost3 n:lost2 w:lost4;
+lflags { Outdoors }
+Crossway^
+   Grassy trails which were once roads lead off to the east and west.  Rolling
+hills and giant trees show no mark of human inhabitants.  To the north lies
+a lovely garden.
+^
+lost4 n:lost7 e:lost3 s:lost10 w:lost5;
+lflags { Outdoors }
+Long Path^
+   The path continues for a long way both east and west.  To the west lies
+the land bridge which the peoples of this continent used in ancient times
+to escape the great evil which had invaded their homeland.  The great evil
+even their goddess could not defend them from.  It was the goddess who
+created the land bridge, and sealed the Evil deep within their holes, under
+the village.
+^
+lost5 e:lost4 w:lost6;
+lflags { Outdoors }
+Land Bridge^
+   Ocean waters lap at either side of this narrow trail, yet somehow never
+over-run it.  The earth is still mucky though, for the ocean only recently
+reliquished it as dry land.  The people of the forgotten continent had fled
+across this narrow strip of earth centuries of years before, and their
+goddess had closed it behind them.  The time has come to vanquish the evil
+which waits, trapped within the great tree.
+^
+lost6 e:lost5 u:RBend@eastcoast;
+lflags { Outdoors }
+Rocky Climb^
+   The path turns into a muddy but rocky ground here as the ocean meets the
+cliff.  The abandoned path climbs upward to the top of the cliff, or goes
+eastward across the sound to a faintly seen land.
+^
+lost7 n:lost8 s:lost4;
+lflags { Outdoors }
+Ancient Road^
+   A long time ago there used to be a prosperous trade route between the
+northern kingdoms and the people who dwelt in the forest.  Now all  that
+remains is a barely distinguishably trail leading to the north.
+^
+lost8 n:lost9 s:lost7;
+lflags { Outdoors Cold }
+Mountain Pass^
+   This passageway over  the northern mountains was kept by the dwarves
+a long time ago, but the dwarves  have long since vanished.  Their skill
+at working with the rock remains as a  testimony to their prowess, as the
+pass remains clear after  centuries of neglect.  To the north you can see
+a building, small with the distance.
+^
+lost9 s:lost8;
+lflags { Outdoors Cold }
+Northern Road^
+   This road which leads up to the Hold appears to be well used.  The Hold
+before you must still be inhabited.  The land around you looks blighted
+and destroyed, as if the ancient evil had swept through here too, leaving
+the land in it's path barren.
+^
+lost10 n:lost4 s:lost11;
+lflags { Outdoors }
+Dusty Trail^
+   As you travel further down this road, the climate gets hotter and dustier.
+You notice a mountain chain in the distance ahead.
+^
+lost11 n:lost10 s:lost12;
+lflags { Outdoors }
+Foothills^
+   These are the foothills for the great mountains beyond.  It is still humid
+enough that trees and grass grow thickly on the hills. The mountains rise
+stark from the hills, barren of life almost entirely.
+^
+lost12 s:lost11 w:Mou1@mountain d:lost11;
+lflags { Outdoors }
+Mountain Crest^
+   It is a difficult climb down in any direction, but some are actually
+navigatable.  The trail continues down to the forest to the north, and
+east there is a rockfall covering a once cut pass, and west through some
+bush there is also a small path.
+^

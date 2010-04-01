@@ -1,0 +1,1586 @@
+%rainfall:640
+
+%latitude:55
+
+%mobiles
+
+Name            = bear
+PName           = "The Bear"
+Location        = Glen
+Armor            = 0
+Strength        = 80
+Damage          = 10
+Aggression      = 100
+Description     = "A grossly deformed black bear menaces you."
+End             = bear
+
+Name            = Loonitherin
+Location        = Inside
+Strength        = 90
+Armor            = 0
+Damage          = 10
+Aggression      = 36
+Description     = "Loonitherin the Mad Elf gazes at you arrogantly."
+End             = Loonitherin
+
+Name            = rotty
+Location        = Tainted
+Strength        = 40
+Armor            = 0
+Damage          = 8
+Aggression      = 35
+Description     = "
+Rotty the flying squirrel soars towards you, foaming at the mouth."
+End             = rotty
+
+Name            = Cerberus
+Location        = Cave
+Mflags          { BarW }
+Strength        = 120
+Damage          = 13
+Aggression      = 0
+Armor           = 0
+Speed           = 0
+Description     = "Cerberus growls at you, looking very hungry."
+End             = Cerberus
+
+Name            = Asmadeus
+Location        = Museum
+Strength        = 100
+Damage          = 10
+Aggression      = 0
+Armor           = 0
+Speed           = 0
+Description     = "Asmadeus the Demon Artist growls at you."
+End             = Asmadeus
+
+Name            = Asmodeus
+Location        = Den
+Strength        = 200
+Damage          = 15
+Aggression      = 88
+Armor           = 0
+Speed           = 0
+Description     = "Asmodeus prepares to kill you for daring to confront him!"
+End             = Asmodeus
+
+Name            = Succubus
+PName           = "The Succubus"
+Location        = Bedroom
+Sflags          { Female }
+Strength        = 90
+Damage          = 8
+Aggression      = 100
+Armor           = 0
+Speed           = 0
+Description     = "The Succubus looks at you greedily."
+End             = Succubus
+
+Name            = Captain
+PName           = "The Captain"
+Location        = Captain
+Strength        = 100
+Damage          = 10
+Aggression      = 94
+Armor           = 0
+Speed           = 0
+Description     = "The Captain of the Guard looks at you suspiciously."
+End             = Captain
+
+Name            = Jailor
+PName           = "The Jailor"
+Location        = Lich
+Strength        = 100
+Damage          = 10
+Aggression      = 100
+Armor           = 0
+Speed           = 0
+Description     = "The Jailor advances menacingly towards you."
+End             = Jailor
+
+Name            = Prisoner
+PName           = "The Prisoner"
+Location        = Prison
+Strength        = 30
+Damage          = 6
+Aggression      = 5
+Armor           = 0
+Description     = "A prisoner cowers in one corner."
+End             = Prisoner
+
+Name            = Gargoyle
+PName           = "The Gargoyle"
+Location        = Bottom
+Strength        = 120
+Damage          = 13
+Aggression      = 100
+Armor           = 0
+Speed           = 0
+Description     = "A large stone gargoyle leers at you."
+End             = Gargoyle
+
+Name            = Guido
+Location        = Guarded
+Strength        = 80
+Damage          = 10
+Aggression      = 50
+Armor           = 0
+Speed           = 0
+Description     = "Guido the Guardsman flexes his muscles."
+End             = Guido
+
+Name            = Nunzio
+Location        = Guarded
+Strength        = 80
+Damage          = 10
+Aggression      = 50
+Armor           = 0
+Speed           = 0
+Description     = "Nunzio the Guardsman stares menacingly at you."
+End             = Nunzio
+
+Name            = Lich
+PName           = "The Lich"
+Location        = Room
+Strength        = 200
+Damage          = 15
+Aggression      = 66
+Armor            = 0
+Description     = "The Lich is here, an evil grin on his boney face."
+End             = Lich
+
+Name            = priest
+PName           = "The Priest"
+Location        = priest
+EFlags          { Missile }
+Strength        = 100
+Damage          = 8
+Aggression      = 92
+Armor           = 0
+Speed           = 0
+Description     = "The Dark Elven Priest prepares to do you in."
+End             = priest
+
+Name            = keldar
+Location        = Elf
+Strength        = 75
+Damage          = 10
+Aggression      = 81
+Armor           = 0
+Speed           = 0
+Description     = "Keldar the Dark Elf laughs at you."
+End             = keldar
+
+Name            = Gorden
+Location        = Elf
+Strength        = 75
+Damage          = 10
+Aggression      = 81
+Armor           = 0
+Speed           = 0
+Description     = "
+Gorden the Dark Elf stands here, guarding the Dark Elven realms."
+End             = Gorden
+
+Name            = Commander
+Location        = Commander
+Strength        = 150
+Damage          = 12
+Aggression      = 92
+Armor           = 0
+Speed           = 0
+Description     = "The Dark Elven Commander looks at you menacingly."
+End             = Commander
+
+Name            = Truffle
+Location        = Fungoid
+Strength        = 250
+Damage          = 25
+Aggression      = 3
+Armor           = 0
+Speed           = 0
+Description     = "Truffle the Fungus Monster shuffles across the room."
+End             = Truffle
+
+%objects
+
+Name            = tree
+Location        = IN_ROOM:Shattered
+Linked          = door
+Oflags          { NoGet }
+MaxState        = 1
+State           = 1
+Desc[0]         = "An open panel is slightly recessed into the tree here."
+End             = tree
+
+Name            = door
+Location        = IN_ROOM:Inside
+Oflags          { NoGet Openable }
+Linked          = tree
+MaxState        = 1
+State           = 1
+Desc[0]         = "An open door is set in the west side of the tree."
+Desc[1]         = "You see a closed door here."
+End             = door
+
+Name            = Wdoor
+PName           = door
+Location        = IN_ROOM:Stairs
+Linked          = Edoor
+Oflags          { NoGet Openable Lockable }
+MaxState        = 2
+State           = 2
+Desc[0]         = "To the West is an open door."
+Desc[1]         = "To the West is a closed door."
+Desc[2]         = "To the West is a locked door."
+End             = Wdoor
+
+Name            = Edoor
+PName           = door
+Location        = IN_ROOM:Guard
+Linked          = Wdoor
+Oflags          { NoGet Openable Lockable }
+MaxState        = 2
+State           = 2
+Desc[0]         = "To the East is an open door."
+Desc[1]         = "To the East is a closed door."
+Desc[2]         = "To the East is a locked door."
+End             = Edoor
+
+Name            = hole
+AltName         = diamond
+Location        = IN_ROOM:Hot
+Linked          = StoneDoor
+Oflags          { NoGet }
+MaxState        = 1
+State           = 1
+Desc[0]         = "The stone door rests open."
+Desc[1]         = "The stone door is tightly shut."
+Examine         = "
+It looks like a gem of some sort could fit in that hole.
+"
+End             = hole
+
+Name            = StoneDoor
+PName           = door
+Location        = IN_ROOM:Boiling
+Linked          = hole
+Oflags          { NoGet Openable }
+MaxState        = 1
+State           = 1
+Desc[0]         = "There is an open door to the East."
+Desc[1]         = "There is a closed door to the East."
+End             = StoneDoor
+
+
+Name            = thorns
+AltName         = wall
+Location        = IN_ROOM:Thorny
+Oflags          { NoGet }
+Linked          = ThornsEast
+MaxState        = 1
+State           = 1
+Desc[0]         = "The wall of thorns to the east has been burned away."
+Examine         = "
+The thorns look very brittle.  Be careful with fire around here!
+"
+End             = thorns
+
+Name            = ThornsEast
+PName           = thorns
+Location        = IN_ROOM:Entrance
+Linked          = thorns
+AltName         = wall
+Oflags          { NoGet }
+MaxState        = 1
+State           = 1
+Desc[1]         = "The passage to the West is blocked by thorns."
+End             = ThornsEast
+
+Name            = Storage_Door
+PName           = door
+Location        = IN_ROOM:Storage
+Linked          = Captain_Door
+Oflags          { NoGet Openable Lockable }
+MaxState        = 2
+State           = 2
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = Storage_Door
+
+Name            = Captain_Door
+PName           = door
+Location        = IN_ROOM:Captain
+Linked          = Storage_Door
+Oflags          { NoGet Openable Lockable }
+MaxState        = 2
+State           = 2
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = Captain_Door
+
+Name            = Lich_Door
+PName           = door
+Location        = IN_ROOM:Lich
+Linked          = Prison_Door
+Oflags          { NoGet Openable Lockable }
+MaxState        = 2
+State           = 2
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = Lich_Door
+
+Name            = Prison_Door
+PName           = door
+Location        = IN_ROOM:Prison
+Linked          = Lich_Door
+Oflags          { NoGet Openable Lockable }
+MaxState        = 2
+State           = 2
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = Prison_Door
+
+Name            = lake
+AltName         = water
+Location        = IN_ROOM:Lake
+Linked          = lake2
+Oflags          { NoGet }
+MaxState        = 1
+State           = 1
+Desc[0]         = "The lake seems to have dried up!"
+Examine         = "
+Below the surface of the water, you seem to see dark shapes...
+"
+End             = lake
+
+Name            = lake2
+PName           = lake
+AltName         = water
+Location        = IN_ROOM:Ladder
+Linked          = lake
+Oflags          { NoGet }
+MaxState        = 1
+State           = 1
+Desc[1]         = "
+Above your head, you see water, apparently suspended in thin air.  You
+have no idea why it does not rush down the tunnel towards you.  You must
+be under a lake.  How strange!"
+End             = lake2
+
+Name            = Throne_Cathedral
+PName           = throne
+AltName         = granite
+Location        = IN_ROOM:EastEnd
+Linked          = throne
+Oflags          { NoGet }
+MaxState        = 1
+State           = 1
+Desc[0]         = "
+The throne has been moved to the side, revealing a hole below."
+Examine         = "
+You notice faint scratch marks on one side of the throne.
+"
+End             = Throne_Cathedral
+
+Name            = throne
+AltName         = granite
+Location        = IN_ROOM:Bottom
+Linked          = Throne_Cathedral
+Oflags          { NoGet PushToggle }
+MaxState        = 1
+State           = 1
+BValue          = 0
+Size            = 0
+Weight          = 0
+Desc[0]         = "
+Just to the side of the passage heading up is a throne."
+Desc[1]         = "A throne blocks your way up!"
+End             = throne
+
+Name            = desk
+AltName         = oak
+Location        = IN_ROOM:Captain
+Oflags          { NoGet }
+End             = desk
+
+Name            = button
+Location        = IN_ROOM:Captain
+Oflags          { NoGet Destroyed }
+MaxState        = 1
+State           = 0
+End             = button
+
+Name            = sponge
+Location        = IN_CONTAINER:fountain
+BValue          = 30
+Size            = 1
+MaxState        = 1
+State           = 0
+Desc[0]         = "A large sponge is lying here."
+Desc[1]         = "A large sponge is lying here, bloated with water."
+Examine         = "
+This sponge looks like it could hold quite a bit of water.
+"
+End             = sponge
+
+Name            = hope
+AltName         = diamond
+Location        = IN_ROOM:Treasury
+Oflags          { Wearable }
+Aflags 		{ Neck }
+Bvalue          = 100
+Size            = 3
+Desc[0]         = "
+The fabled Hope diamond lies here, sparkling amidst the light."
+Examine         = "
+This diamond is, without a doubt, of great value! Hold onto it carefully.
+"
+End             = hope
+
+Name            = fountain
+AltName         = dry
+Location        = IN_ROOM:Home
+Oflags          { NoGet Container }
+Desc[0]         = "A dried-up fountain sits in the middle of this glen."
+Examine         = "
+The fountain is quite large.  In fact, it is large enough to be able
+to hold stuff in it.
+"
+End             = fountain
+
+Name            = journal
+AltName         = book
+Location        = IN_ROOM:Cottage
+Oflags          { GetFlips }
+MaxState        = 0 
+State           = 1
+BValue          = 100
+Size            = 6
+Desc[0]         = "The journal of Dinthiar lies here."
+Desc[1]         = "On the table lies the journal of Dinthiar, the Elven King."
+Examine         = "
+The journal seems to belong to Dinthiar, the elven king.  It speaks of what
+has happened to this once beautiful land.  It seems that there were two
+great evils, who had been engaged in an eternal war with each other.  They
+had shifted from world to world, leaving each one a desolate ruin behind
+them.  Sadly, one day the two evils came down upon this beautiful realm.
+Here, their last battle was fought.  One of the two, a demon of great power,
+still resides in the caves to the west, lording over the land he helped
+destroy.  The other, a deathless lich, was forced to flee.  It is rumored
+though, that he still hides somewhere in these lands.  Dinthiar believes
+that the elven lands can still be restored.  What is needed is a great hero
+to vanquish the two ancient evils...
+"
+End             = journal
+
+Name            = toadstool
+AltName         = food
+Location        = IN_ROOM:Glade
+Oflags          { Food GetFlips }
+MaxState        = 0 
+State           = 1
+BValue          = 10
+Size            = 2
+Desc[0]         = "A tasty-looking toadstool has been tossed here."
+Desc[1]         = "One toadstool sitting here looks quite edible."
+End             = toadstool
+
+Name            = sulphur
+AltName         = pile
+Location        = IN_ROOM:Glen
+Oflags          { GetFlips }
+MaxState        = 0 
+State           = 1
+BValue          = 20
+Size            = 1
+Desc[0]         = "A pile of sulphur lies here."
+Desc[1]         = "A pile of sulphur lies amidst the ashes of a warped tree."
+End             = sulphur
+
+Name            = Throne_Wood
+PName           = throne
+AltName         = wood
+Location        = IN_ROOM:Inside
+Oflags          { NoGet }
+End             = Throne_Wood
+
+Name            = crown
+AltName         = gold
+Location        = IN_ROOM:Inside
+Oflags          { Wearable Destroyed }
+Aflags		{ Head }
+BValue          = 100
+Size            = 10
+Desc[0]         = "You see a golden crown gleaming here!"
+Examine         = "
+Engraved into the inside of the crown is the name Dinthiar.  This must be
+the crown of an Elven King.
+"
+End             = crown
+
+Name            = torch
+Location        = IN_ROOM:Cave
+Oflags          { Lightable Extinguish Lit }
+MaxState        = 1
+BValue          = 10
+Size            = 2
+Desc[0]         = "A torch burns merrily here."
+Desc[1]         = "A burnt out torch lies here."
+End             = torch
+
+Name            = coat
+Location        = IN_ROOM:Coat
+Oflags          { Wearable GetFlips }
+Aflags		{ Chest Back Arms }
+BValue          = 10
+Size            = 10
+MaxState        = 0 
+State           = 1
+Desc[0]         = "A large coat has been left here."
+End             = coat
+
+Name            = coin
+AltName         = elven
+Location        = IN_ROOM:Coat
+Oflags          { Destroyed }
+Desc[0]         = "A beautiful elven coin has been carefully placed here."
+End             = coin
+
+Name            = table
+AltName         = broken
+Location        = IN_ROOM:Guard
+Oflags          { NoGet }
+End             = table
+
+Name            = gauntlets
+Location        = IN_ROOM:Guard
+Oflags          { Wearable Armor Destroyed }
+Aflags		{ Hands }
+BValue          = 30
+Armor           = 48
+Size            = 3
+Desc[0]         = "A pair of shiny gauntlets lies here."
+End             = gauntlets
+
+Name            = bust
+AltName         = demon
+Location        = IN_ROOM:Museum
+Oflags          { GetFlips }
+MaxState        = 0
+State           = 1
+BValue          = 300
+Size            = 30
+Desc[0]         = "A bust of Asmodeus has been left here."
+Desc[1]         = "A bust of Asmodeus, the demon lord, sits on a table here."
+End             = bust
+
+Name            = painting
+Location        = IN_ROOM:Art
+Oflags          { NoGet }
+End             = painting
+
+Name            = note
+Location        = IN_ROOM:Art
+Oflags          { Destroyed }
+BValue          = 10
+Size            = 1
+Desc[0]         = "A note has been tossed here."
+Examine         = ^
+The note reads : "What did you expect to find here, a safe ?"^
+End             = note
+
+Name            = mushroom
+AltName         = food
+Location        = IN_ROOM:Fungus
+Oflags          { GetFlips }
+MaxState        = 0 
+State           = 1
+BValue          = 20
+Size            = 1
+Desc[0]         = "An edible looking mushroom has been left here."
+Desc[1]         = "One large mushroom looks quite edible."
+Examine         = "
+This mushroom does not look poisonous at all.
+"
+End             = mushroom
+
+Name            = sign
+Location        = IN_ROOM:Stone
+Oflags          { NoGet }
+Desc[0]         = "A sign sits above the door here."
+Examine         = "
+The sign reads, abandon Hope all ye who enter here.
+"
+End             = sign
+
+Name            = contracts
+AltName         = pile
+Location        = IN_ROOM:Den
+Oflags          { GetFlips }
+MaxState        = 0 
+State           = 1
+BValue          = 100
+Size            = 4
+Desc[0]         = "A pile of contracts has been carelessly left here."
+Desc[1]         = "A pile of contracts lies on the desk."
+Examine         = "
+These contracts seem to be signed in blood.  How bizarre!
+"
+End             = contracts
+
+Name            = bracelet
+AltName         = platinum
+Location        = IN_ROOM:Asmodeus
+Oflags          { Wearable }
+Aflags		{ Arms }
+BValue          = 200
+Size            = 1
+Desc[0]         = "A platinum bracelet has been discarded here."
+End             = bracelet
+
+Name            = coins
+AltName         = gold
+Location        = IN_ROOM:Asmodeus
+BValue          = 200
+Size            = 10
+Desc[0]         = "A large pile of gold coins sparkles brightly."
+End             = coins
+
+Name            = scarf
+AltName         = mink
+Location        = IN_ROOM:Asmodeus
+Oflags          { Wearable }
+Aflags		{ Neck }
+BValue          = 100
+Size            = 3
+Desc[0]         = "A mink scarf has been carefully placed in a pile here."
+Examine         = "
+Do you know how many minks were killed to make this scarf for you?
+"
+End             = scarf
+
+Name            = chair
+AltName         = easy
+Location        = IN_ROOM:Asmodeus
+Oflags          { NoGet }
+End             = chair
+
+Name            = ring
+AltName         = diamond
+Location        = IN_ROOM:Asmodeus
+Oflags          { Wearable Destroyed }
+Aflags 		{ Hand }
+BValue          = 200
+Size            = 1
+Desc[0]         = "A diamond ring has been set here."
+Examine         = ^
+Someone has inscribed the following message on this ring:
+     "One Ring to rule them all, One Ring to find them,
+      One Ring to bring them all, and in the darkness bind them."
+However, the ring does not seem to turn you invisible.
+^
+End             = ring
+
+Name            = gargoyles
+Location        = IN_ROOM:Cathedral
+Oflags          { NoGet }
+Examine         = "
+You notice that one gargoyle seems to be missing.
+"
+End             = gargoyles
+
+Name            = flask
+AltName         = food
+Location        = IN_ROOM:Storage
+Oflags          { Food }
+BValue          = 20
+Size            = 2
+Desc[0]         = "A small flask of Dragon's Milk lies here."
+End             = flask
+
+Name            = sandwich
+AltName         = food
+Location        = IN_ROOM:Storage
+Oflags          { Food }
+BValue          = 10
+Size            = 2
+Desc[0]         = "Laying on the ground is a large sandwich."
+End             = sandwich
+
+Name            = bracelet2
+PName           = bracelet
+AltName         = golden
+Location        = IN_ROOM:Storage
+Oflags          { Wearable }
+Aflags 		{ Arm }
+BValue          = 100
+Size            = 2
+Desc[0]         = "A small golden bracelet has been lost here."
+End             = bracelet2
+
+Name            = rack
+AltName         = torture
+Location        = IN_ROOM:Interrogation
+Oflags          { NoGet }
+End             = rack
+
+Name            = scarab
+AltName         = golden
+Location        = IN_ROOM:Interrogation
+Oflags          { Wearable Destroyed }
+Aflags		{ Face }
+BValue          = 100
+Size            = 2
+Desc[0]         = "A golden scarab lies on the ground at your feet."
+End             = scarab
+
+Name            = key
+AltName         = small
+Location        = CARRIED_BY:Jailor
+Oflags          { Key }
+Size            = 1
+Desc[0]         = "A small key has been discarded here."
+End             = key
+
+Name            = papers
+Location        = IN_ROOM:Office
+Oflags          { NoGet }
+End             = papers
+
+Name            = treaty
+Location        = IN_ROOM:Office
+Oflags          { Destroyed }
+BValue          = 100
+Size            = 10
+Desc[0]         = "Some type of treaty has been left here."
+Examine         = "
+This treaty seems to describe a temporary peace between the Lich and Asmodeus.
+Without doubt, it is no longer in effect.
+"
+End             = treaty
+
+Name            = desk_Lich
+PName           = desk
+AltName         = oak
+Location        = IN_ROOM:Office
+Oflags          { NoGet }
+End             = desk_Lich
+
+Name            = emerald
+AltName         = gem
+Location        = IN_ROOM:Office
+Oflags          { Destroyed }
+BValue          = 300
+Size            = 4
+Desc[0]         = "A large emerald has been left here!"
+Examine         = "
+This emerald bears no relationship to any wizard who may exist by that name.
+"
+End             = emerald
+
+Name            = chest
+AltName         = large
+Location        = IN_ROOM:Room
+Oflags          { NoGet Container Openable Lockable }
+MaxState        = 2
+State           = 2
+Desc[0]         = "A large chest is on the floor. It is open."
+Desc[1]         = "A large chest is on the floor."
+Desc[2]         = "A large chest is on the floor. It is locked."
+Examine         = "
+Maybe you should try look in chest?
+"
+End             = chest
+
+Name            = Crown_Lich
+PName           = crown
+AltName         = platinum
+Location        = IN_CONTAINER:chest
+Oflags          { Wearable }
+Aflags		{ Head }
+BValue          = 250
+Size            = 4
+Desc[0]         = "A platinum crown lies here."
+Examine         = "
+This finally crafted headdress was some artist's crowning achievement.
+"
+End             = Crown_Lich
+
+Name            = sceptre
+AltName         = gold
+Location        = IN_CONTAINER:chest
+BValue          = 250
+Size            = 1
+Desc[0]         = "A gold sceptre has been place here."
+End             = sceptre
+
+Name            = robe
+AltName         = regal
+Location        = IN_CONTAINER:chest
+Oflags          { Wearable }
+Aflags		{ Back Chest Arms Legs }
+BValue          = 250
+Size            = 6
+Desc[0]         = "A regal robe lies neatly folded on the ground."
+Examine         = "
+The robe has a faint stench of death, as if it had been worn by a corpse...
+"
+End             = robe
+
+Name            = bowl
+AltName         = golden
+Location        = IN_ROOM:Priest
+Oflags          { GetFlips }
+BValue          = 100
+Size            = 6
+Desc[0]         = "A golden bowl has been placed here."
+Desc[1]         = "A golden place sits on the dark altar."
+Examine         = "
+The bowl has been stained with a dark liquid.
+"
+End             = bowl
+
+Name            = Black_Journal
+PName           = journal
+AltName         = black
+Location        = IN_ROOM:Priest
+BValue          = 50
+Size            = 10
+Desc[0]         = "A black journal sits on the ground here."
+Examine         = "
+This journal describes the dark elves' hatred of the good elves who had
+lived in the forest above.  In an attempt to destroy them, the dark elves
+found two evil forces who had warred for eternity.  By convincing them to
+come here, the dark elves made the destruction of the Elven Forest certain.
+In other words, you realize, the dark elves are as much to blame for the
+destruction that you have seen, as anyone!
+"
+End             = Black_Journal
+
+Name            = altar
+Location        = IN_ROOM:Priest
+Oflags          { NoGet }
+End             = altar
+
+Name            = statue
+AltName         = golden
+Location        = IN_ROOM:Priest
+Oflags          { Destroyed }
+BValue          = 300
+Size            = 5
+Desc[0]         = "A golden statue of a disfigured elf sits here."
+End             = statue
+
+Name            = mattress
+Location        = IN_ROOM:Temple_Guard
+Oflags          { NoGet }
+End             = mattress
+
+Name            = purse
+AltName         = small
+Location        = IN_ROOM:Temple_Guard
+Oflags          { Container Destroyed }
+BValue          = 20
+Size            = 10
+Desc[0]         = "A small purse has been left here."
+End             = purse
+
+Name            = Purse_Coin
+PName           = coin
+AltName         = golden
+Location        = IN_CONTAINER:purse
+BValue          = 50
+Size            = 1
+Desc[0]         = "A golden coin is here."
+Examine         = "
+This coin has the picture of some famous dark elf stamped on it.
+"
+End             = Purse_Coin
+
+Name            = shield
+AltName         = black
+Location        = WORN_BY:Commander
+Oflags          { Wearable Armor Shield }
+Armor           = 45
+BValue          = 50
+Size            = 10
+Desc[0]         = "A black shield has been carelessly left here."
+End             = shield
+
+Name            = trash
+Location        = IN_ROOM:Barracks2
+Oflags          { NoGet }
+End             = trash
+
+Name            = Trash_Coin
+PName           = coin
+AltName         = silver
+Location        = IN_ROOM:Barracks2
+Oflags          { Destroyed }
+BValue          = 50
+Size            = 1
+Desc[0]         = "A gleaming silver coin lies here."
+End             = Trash_Coin
+
+Name            = Fungoid_Altar
+PName           = altar
+AltName         = stone
+Location        = IN_ROOM:Fungoid
+Oflags          { Destroyed }
+Examine         = "
+This seems to be a sacrificial altar to some great fungoid god.
+"
+End             = Fungoid_Altar
+
+Name            = Captain_Key
+PName           = key
+Location        = IN_ROOM:Quarters
+Oflags          { GetFlips Key }
+Size            = 1
+Desc[0]         = "A key has been left here."
+Desc[0]         = "A key sits to the side of the desk."
+End             = Captain_Key
+
+Name            = elvensword
+Location        = IN_ROOM:Cottage
+Oflags          { Weapon NoGet }
+Damage          = 30
+Desc[0]         = "Dinthiar's elvensword sits here, but it is not for mortals!"
+End             = elvensword
+
+%locations
+
+EForest e:Passage s:Thorny w:Glade n:sherwood1@sherwood;
+Altitude = 800
+lflags { OutDoors }
+The Elven Forest^
+   You stand at the entrance of what was once a grand elven forest.  Now, it
+lies in ruins about you.  Blackened stumps abound and the trees which still
+stand reek of decay.  This secluded vale has obviously been destroyed by some
+great disaster.  You are overcome by a sense of foreboding! The evil which
+ruined this forest may still be around!
+   Although deeply disturbed by the destruction around you, you manage to look
+about to determine your position.  To the North and East are the mountains
+which shield this valley.  The area to the South of you also heads into
+mountains, but a path makes passage possible.  An archway marks a tunnel
+through the eastern mountains.
+^
+Home e:Cottage s:Path;
+Altitude = 800
+lflags { OutDoors }
+Forest Home^
+   You have entered a small forested area of great beauty, in sharp contrast
+to the destruction to the south.  About you, the sounds of nature abound.  If
+not for the memory of the tainted forest to the south, you could become easily
+lost in the beauty here.  Just to the East of you, partially hidden by healthy
+trees, is a small cottage.  To the North and West are the mountains which
+seclude this valley.
+^
+Cottage w:Home;
+lflags { Party }
+Dinthiar's Cottage^
+   You have entered the home of Dinthiar, the Elven King.  It is a rather
+simple dwelling.  A bed, table and chair are the only furnishings.  However,
+the whole room is given a 'foresty' feel by the ivy which grows up the insides
+of the walls, and by the potted plants which hang from the ceiling.  It is
+exactly the type of dwelling that you would expect an elf to have.
+^
+Path n:Home s:Glade;
+Altitude = 800
+lflags { OutDoors }
+Forest Path^
+   You are walking down a forest path which seems less corrupted than the
+surrounding areas.  Some wildlife still lives, and the trees are not rotting or
+dead.  You see some of the beauty which once existed in this realm.  To the
+north of you lies more vibrant forest, while to the south you see only
+destruction.
+^
+Glade n:Path e:EForest s:Shattered w:Glen;
+Altitude = 800
+lflags { OutDoors }
+Ruined Glade^
+   You are in a small clearing in the ruins of the elven forest.  The ground in
+this clearing is blackened and infertile.  The only sign of life here is a
+circle of toadstools which lie near the center of the glade.  All around you
+is ruined forest.  Just to the North, however, you think you see some greenery.
+^
+Glen e:Glade s:Oaks;
+Altitude = 800
+lflags { OutDoors }
+Warped Glen^
+   You have wandered into a small glen which is grotesquely warped.  Trees
+form weird, diabolical shapes, and the area seems pervaded by the stench of
+brimstone.  You gag to avoid breathing the fouled air.  To the North and West
+are the mountains which shield this valley.  It is quite unfortunate that they
+did no protect the forest from whatever destroyed it...
+^
+Oaks n:Glen e:Shattered  s:Tainted w:Freshly;
+Altitude = 800
+lflags { OutDoors }
+Blackened Oaks^
+   Your heart skips a beat as you enter this grove of trees.  Without a doubt,
+this grove used to contain some of the strongest and most beautiful trees in
+the entire elven forest.  Now, it looks as though a giant hand came down from
+the heavens, and simply pushed the trees down, in a line from West to East.
+The few Oaks which still stand have been warped into unhealthy shapes, which
+nature itself could never produce.  Following the line of downed trees, you
+realize that it leads to a freshly hewn pathway in the mountains to the West.
+^
+Shattered n:Glade e:^tree s:Corrupted w:Oaks;
+Altitude = 800
+lflags { OutDoors }
+Shattered Forest^
+   You cry out in horror as you witness what has been done to this forest.  All
+about, trees lie downed, as if hewn by some giant axe.  However, even the
+twisted corpses of the trees seem unnatural.  Somehow, a single oak tree in
+the center of the swath of destruction seems to have survived.  It lies just
+to the east of you.  To the west, the line of destruction seems to continue.
+Mercifully, mountains to the east protected any further realms from this
+corruption.
+^
+Inside w:^door;
+lflags {}
+Inside the Grand Oak^
+   You gasp out in awe at the quiet beauty of this hidden hollow.  Looking
+around, 'majesty' is the word which immediately comes to mind.  The entire
+room draws your eyes upwards, like some ancient gothic cathedral. There, among
+the arched, wooden roof, are numerous tiny flowers, hanging from the vines
+which grow around you. Even in the dim light, the brilliant hues of the
+flowers - red, violet, blue, green, and white - stand out. Indeed, they glow
+with their own light, providing the majority of the illumination in this room
+and sending incredible, multi-colored shadows around the room. As you stare at
+them, something tugs at your memory. You have seen that pattern somewhere
+before... It is the pattern of the stars in the night sky, but of a color and
+brightness that the night sky can only hint at.
+   As your eyes slowly refocus on the mundane plane, you notice a wooden
+throne set near the middle of this room.  With a start, you realize that is
+has been grown from the tree itself.  Once, the whole elven forest must have
+been like this...
+^
+Tainted n:Oaks e:Corrupted;
+Altitude = 800
+lflags { OutDoors }
+Tainted Trees^
+   You are in a grove of tall trees which seem tainted.  They glow with a
+sickly green glow which speaks of evil, pestilence and disease.  You suppress
+a shudder and view your surroundings.  To the south and west lie this forest's
+protective mountains, while woods lie to the east.  To the North, a wide swath
+of destructions cuts into the heart of this realm.
+^
+Corrupted n:Shattered e:Scenic w:Tainted;
+Altitude = 800
+lflags { OutDoors }
+Corrupted Woods^
+   You stand in what must have once been a very beautiful grove of trees.  Now,
+it has been mutated beyond recognition.  The grotesque shapes of the trees are
+all but indescribable.  You get the impression that this forest has been
+destroyed by some great, evil force which may still lurk about...
+^
+Scenic n:Thorny s:Climb w:Corrupted;
+Altitude = 850
+lflags { OutDoors }
+Scenic View^
+   Once, this mountain trail surely was the best place to view the elven
+forest.  Now, you can only see the destruction.  To the North and West,
+you gaze out at the corrupted, desolate land which was once so beautiful.
+Amid the destruction, you see a few points of life.  Just to the Northeast
+of you stands a tall, healthy oak tree, while further to the North, you
+actually think you see green.  The mountain trail you are on continues North
+and South, while a small path leads up from the forest to the West.
+^
+Climb n:Scenic s:hills14@caledonia e:Crest;
+Altitude = 950
+lflags { OutDoors }
+Rocky Climb^
+   You are walking on a steep mountain path which leads over the top of the
+mountain to the east and downwards towards a ravaged forest to the North.
+You suspect that the view here would be quite beautiful if not for the noxious
+fumes wafting up from the forest below, which cause your eyes to constantly
+water.  Looking at the forest, you believe that it must have once been quite
+beautiful.
+^
+Thorny n:EForest e:^thorns s:Scenic;
+Altitude = 800
+lflags { OutDoors }
+Thorny Path^
+   You are ascending a path into the mountains, which continues to the North
+and South.  The region seems just as desolate as the forest below you.  The
+ground is cracked and dying, and the only vegetation is a thorny brush, which
+practically cover the path, ripping at your clothes.  The entire Eastern cliff
+is covered by a wall of thorns.  On the other side, just to the West is a
+sharp dropoff.  Past it, you can see the entire elven forest.  The corrupted
+view turns your stomach.
+^
+Passage e:NWcorner@valley w:EForest;
+lflags { NoMobiles }
+Mountain Passage^
+   You are walking down a long passage which has been carved out of the heart
+of this mountain.  It is obvious that great time has been spent carving this
+passage.  You have heard rumors of the dwarves of the North cutting a passage
+through to a beautiful forest for the elves of this realm.  Perhaps, that
+beautiful, fabled realm lies to the West!
+^
+Freshly e:Oaks w:Cave;
+Altitude = 800
+lflags { OutDoors }
+Freshly Hewn Pathway^
+   You stand in a pathway which is quite freshly-hewn.  From the marks made
+during the construction of this pathway, it seems that something moved out
+into the forest from the west.  To the west, the stench of brimstone is
+stronger than ever.
+^
+Crest e:RClearing@valley w:Climb;
+Altitude = 850
+lflags { OutDoors NoMobiles }
+Mountain Crest^
+   You stand at the top of one of the mountains overlooking the valley.  Just
+to the east, the path you are on becomes rather precarious, sloping sharply
+down into a rocky clearing.  To the west, the descent is more gradual, ending
+in a rocky slope.  You should be very careful.  It looks like the area could
+all tumble down in a landslide in a second!
+^
+Cave e:Freshly w:Entry;
+lflags {}
+Guarded Cave^
+   You stand at the entrance to a dark cave.  The destroyed forest is behind
+you, to the east, while to the west lies the unknown.  Within the cave,
+you see dark shadows flittering about.  The scent of brimstone is stronger
+than ever here, and the sense of foreboding that you felt when you first
+entered the forest clutches anew at you heart.  You have little doubt that
+one of the great evils lies within this cave...
+^
+Entry n:Coat e:Cave d:Guard;
+lflags {}
+Entry Room^
+   Standing at the entrance to this system of caves, the only description
+which comes to mind is 'hellish.'  The caverns glow with a strange red
+glow which speaks of nothing more than hellfire.  It almost seems to you that
+you can hear the screams of the damned.  A set of stairs leads downwards,
+and the heat coming from below almost knocks you out.  Just to the North is
+a roughly carved doorway.  Next to the door is a sign which says : Please
+check in your souls before entering.
+^
+Coat s:Entry;
+lflags {}
+Coat Room^
+   With a morbid sense of curiosity, you enter the cave where you have been
+directed in order to check your soul.  Quite surprisingly, you are not
+instantly zapped by some evil being.  Instead, the room seems to a quite
+simple coat room.  Lining the walls are coats of every shape and size, checked
+in, no doubt, due to the heat below. You would laugh at how ridiculous this
+whole seen looked if not for the evil that you feel below you.
+^
+Guard e:^Edoor s:Treasury u:Entry;
+lflags {}
+Guard Room^
+   The heat in this room is stifling.  As you struggle to breath the scalding
+air, you manage to take in the surroundings.  All about, you can see squalor.
+A broken tables lies off to one corner, with the remnants of a meal, ages old
+on it, and several broken chairs litter the floor.  The room itself actually
+reeks of garbage, and covering the walls are a dried up substance that looks
+suspicious like blood.  A crudely letter sign on the wall reads GARD ROME.
+To the South is an archway that seems to lead into a somewhat cleaner room.
+^
+Treasury n:Guard;
+lflags {}
+Demon Treasury^
+   This room seems to be somewhat cleaner than the guard room to the North, but
+not much.  The same reek of garbage pervades the air, and piles of litter have
+been shoved to the sides of the room.  However, in the center of the room is
+a wooden pedestal which has been polished to perfection, and which is
+exceedingly clean.  You have come through the only entrance to this room.
+^
+Stairs w:^Wdoor d:Hot;
+lflags {}
+Stairs to Hades^
+   You have no doubt in your mind that the stairs in the middle of this room
+must go down to hell itself.  If you thought the earlier rooms were hot, you
+were obviously sadly mistaken.  Here, every breath you take burns your lungs.
+Your skin is already beginning to blister from the intense heat, and you are
+worried that your clothing may spontaneously combust!  As well, flames appear
+in the corners of this room and the smell of brimstone is so strong that it
+makes you want to vomit immediately.  Surely, nothing but Hades itself could
+lie in the Inferno below...
+^
+Hot e:Museum s:Fungus w:^hole u:Stairs;
+lflags {}
+Hot Cavern^
+   You stand in a huge, natural cavern.  It is not just hot, but rather
+almost unbearable.  There certainly better be something valuable down here
+to make all of your suffering okay!  To the south of you is another natural
+cavern, while to the east lies a passage which is obviously manmade.  Just
+to the west is a stone door, set in the wall of the cavern.  A diamond shaped
+hole lies in the center of the stone.
+^
+Museum n:Hate e:Mosaic s:Art w:Hot;
+lflags {}
+Demonic Museum^
+   You have entered what could only be a demonic museum.  All about you are
+statues and paintings, most of which are quite grotesque.  You see sculptures
+of demons torturing humans in many gruesome ways, as well as paintings of what
+must be Hades.  The whole site is quite sickening.  Doors lead North, East and
+South into additional museum rooms, while to the west lies the exit to this
+perverted place.
+^
+Mosaic w:Museum;
+lflags {}
+Mosaic Room^
+   The entirity of this room is covered by a huge mosaic.  It covers all of
+the walls, as well as the ceiling and the floor.  You realize immediately that
+the area shown in the mosaic is that which mortals call the wasteland.  You see
+images of fire, a sword of awesome power, crystal flame and a great djinni.
+For a moment, you almost become lost in the awesome vision.
+   Flaming red letters in the center of the room spell out the words, HOME,
+SWEET, HOME.
+^
+Art n:Museum;
+lflags {}
+Art Gallery^
+   This part of the Demonic museum seems to be entirely devoted to demonic art.
+The pieces are all quite horrific, and there is definitely nothing that would
+be valuable to sacrifice to the gods.  You are almost drawn by a morbid
+curiosity to look at all of the terrifying pictures.  The only exit out of
+this awful place lies to the North.
+^
+Fungus n:Hot s:Lake;
+lflags { Dark }
+Fungus Cavern^
+   You are quite delighted to find that this cavern is much cooler than the
+surrounding ones.  In fact, the change in temperature is so dramatic that
+you begin to shiver uncontrollably.  All about this room are various types of
+fungus.  You can make out familiar Toadstools and Mushrooms.  In addition, you
+see more much exotic fungus that you have never encountered before.  Perhaps,
+you think, you are the only mortal to ever have ventured this far into the
+earth. Other natural caverns lie to the North and South.
+^
+Lake n:Fungus d:^lake;
+lflags { Dark }
+Large Lake^
+   Although not as cool as the marvelous fungus cavern, this room is much more
+comfortable than the surrounding caves.  In the center of this cavern is a
+large lake.  Looking over the walls, you notice strange writing.  To you, it
+almost looks like elven writing, somehow corrupted.  Overall, the entire
+cavern seems quite gloomy.  You better leave this place before you get real
+depressed!
+^
+Hate s:Museum;
+lflags {}
+Hate Gallery^
+   All throughout this room are paintings of a gruesome undead beast.  Without
+a doubt, it must be the Lich who, when fighting Asmodeus, was rumored to have
+helped cause the destruction of the elven forest.  The fact that the Lich is
+an enemy of the demon lord here is made quite clear by the voice you hear
+chanting in your head.  Over and over, you hear 'hate. hate. hate. hate...'
+^
+Boiling n:Stone e:^StoneDoor;
+lflags {}
+Boiling Lake^
+   You have entered another natural cavern.  In the middle of the cavern is a
+huge lake.  Indeed, the scene would appear to be quite normal if not for the
+fact that lake was actually boiling.  It has become so hot in this room that
+water itself is unable to remain in its liquid form!  Surely, you must escape
+this demonic realm soon!  Avenues of retreat from here lie to the North and
+East.
+^
+Stone n:Throne s:Boiling;
+lflags {}
+Stone Room^
+   You stand in a perfectly cubical room, obviously not natural.  What makes
+the room eerie is the fact that no signs of construction are visible.  It is
+almost as if the entire room sprung from the earth in its present shape.  To
+the South you hear the sounds of liquid boiling, while to the north, beyond
+a perfect archway, you see what looks like a throne room.
+^
+Den n:Asmodeus e:Throne s:Bedroom;
+lflags {}
+The Den^
+   You have entered Asmodeus' study.  In the center of the room is a desk,
+which you realize is covered with human skin.  Putting that thought out of
+your mind you look around the rest of the room.  The walls are made of the
+red rock that is common throughout the caves and the smell of sulphur, like
+always, all but overwhelms you.  Still, your eyes keep returning to that
+gruesome desk.  Looking for exits to this room, you find three.  They lie to
+the North, East and South.
+^
+Throne s:Stone w:Den;
+lflags {}
+Throne Room^
+   You have entered the throne room of Asmodeus, the Demon Lord who, in his
+battle with the evil lich, destroyed the beautiful elven forest.  If that foul
+creature is still around, he must be destroyed!  You rapidly glance around the
+room and see, in the middle of the room, a throne made out of human bones.
+You gag at the sight, and rapidly look for exits from this room.  They lie
+to the South and West.
+^
+Bedroom n:Den;
+lflags {}
+Asmodeus' Bedroom^
+   You realize that this must be what the demonlord calls a bedroom.  It is
+little more than a space of level rock in the center of the room.  Asmodeus
+obviously worries little about the ordinary comforts of life.  At the least,
+this room is not as grotesque as the study that you just passed through.
+^
+Asmodeus s:Den;
+lflags {}
+Asmodeus' Treasury^
+   You have entered the treasury of the vile demon-lord, Asmodeus.  In the
+corner of this room sits an easy chair.  Without a doubt, Asmodeus would spend
+long hours in here, simply counting his treasures.  You grin evilly at the
+thought of stealing from a demon lord.
+^
+Entrance e:Cathedral w:^ThornsEast d:Cathedral;
+lflags {}
+The Cave Entrance^
+   You stand at the entrance to what appears to be a vast system of caves.  A
+cool breeze strikes you in the face as you peer ahead into the blackness, and
+you sense strong evil emanating from the cavern.  To the west, you see the
+blackened mouth of the cave, to the east, a downward sloping passage leads to
+darkness.
+^
+Cathedral n:Narrow e:EastEnd u:Entrance;
+lflags { Dark }
+Cathedral Room^
+   You are in a vast cavern.  The ceiling is lost in shadows, but you can make
+out a ledge encircling the room.  Evenly spaced along the ledge are stone
+gargoyles, which seem to be jeering at you.  In the wall far to the north, you
+see the black mouth of a passage out, and the room seems to continue to the
+east, where dim light can be made out.  To the south, an upward sloping passage
+seems to ascend to the surface.
+^
+EastEnd n:Planning w:Cathedral d:^Throne_Cathedral;
+lflags {}
+East End of the Cathedral^
+   You are now in the eastern section of the cathedral.  A subdued glow
+emanates from a phosphorescent moss lining the walls and ceiling.  Against
+the far eastern wall is a large throne hewn from granite.  A thick layer
+of dust covers everything.  To the north, a passage leads to a small, brightly
+lit room.
+^
+Storage e:^Storage_Door;
+lflags {}
+Storage Room^
+   You have walked into a small stone cubical acting as a storage room.  The
+walls are lined with wooden shelves.  A large door is located on the east
+wall.
+^
+Captain e:Narrow w:^Captain_Door;
+lflags {}
+Captain's Office^
+   You are standing in a sparsely furnished office.  Sputtering torches
+provide light, but many shadows still abound.  The main piece of furniture
+is a large oak desk in the center of the room.  A large door is in the
+west wall, and a passageway leads to the east.
+^
+Narrow n:Worn s:Cathedral w:Captain;
+lflags { Dark }
+Narrow Hall^
+   You are in a very narrow hallway.  To the south is the great cathedral, to
+the west is a small lit room, and the passage continues to the north.
+^
+Planning s:EastEnd;
+lflags { Dark }
+Planning Room^
+   You enter a large room which is almost entirely filled by a huge table.
+Upon the table sit little miniature figures, arrayed as if for combat.  You
+can vaguely make out a label on one particularly ugly demon which says
+Asmodeus.  Obviously, the Lich plans his grand wars here.
+^
+Interrogation e:Lich;
+lflags { Dark }
+Interrogation Room^
+   You have entered a room obviously designed to force people to talk and
+give great pain.  A lingering smell of death and decay fills the room.
+Various instruments of torture fill the room, the most notable being a
+large rack in the center.  The only exit from the room leads to the east.
+^
+Lich n:^Lich_Door e:Worn w:Interrogation;
+lflags { Dark }
+Lich's Prison^
+   You are in a dank, moldy prison.  Something that looks suspiciously like
+dried blood covers the floor.  A large door can be seen to the north, a small
+passage leads east, and another one leads to the west.
+^
+Worn n:Zombie s:Narrow w:Lich;
+lflags { Dark }
+Worn Passage^
+   You are in a passage worn through the years by the passing of many feet.
+To the west, you see a small room, and the passage continues to the south.
+To the north, the passage opens into what appears to be a guardroom, and the
+slow movements of zombies can be heard coming from it.
+^
+Prison s:^Prison_Door;
+lflags { Dark }
+Prison Cell^
+   You have entered a small prison cell.  The floor is covered with hay, and
+a small bed sits against one wall, covered with dried blood.  A skeleton hangs
+from chains and shackles on another wall.
+^
+Zombie s:Worn;
+lflags { Death }
+Zombie Guardroom^
+   You have entered the huge guardroom where all the Lich's troops live.
+Several zombie guards look up at you when you enter, and a slow spreads across
+their faces.  Anticipating a good meal, they quickly run to you and rip you to
+shreds.
+^
+Bottom s:Guarded u:^throne;
+lflags { Dark }
+Bottom of the Stairs^
+   You are standing at the bottom of a small set of stairs leading up into the
+darkness.  A small passage leads to the south, and strange sound can be heard
+coming from it.
+^
+Guarded n:Bottom s:Undead;
+lflags { Dark }
+Guarded Hallway^
+   You are in a small room used to guard the Lich's private rooms.  A passage
+leads to the north, and to the south you hear a loud, hollow roar.
+^
+Undead n:Guarded e:Office;
+lflags {}
+Hall of the Undead^
+   You are standing in a room light by an unearthly glowing light.  Howling
+shapes flow around a blackened altar in the center of the room, and you are
+surrounded by ghosts.  Fortunately, none of the fearsome spirits seem to
+notice you.  Exits from the room lead to the east and north.
+^
+Office s:Room w:Undead;
+lflags {}
+Lich's Office^
+   You are in the Lich's office.  A large oak desk is against the north
+wall, covered in papers.  A worn oak chair sits right in front of the
+desk.  The Lich's bedroom lies to the south, and a hall of the undead is
+just to the west.
+^
+Room n:Office;
+lflags {}
+Lich's Room^
+   You stand in the Lich's bedroom.  The walls are covered with tapestries,
+and the floor is richly carpeted.  A huge feather bed is in the middle of
+the room.  A small glowing ball provides a soft light.  The Lich's office
+is just to the north.
+^
+Priest s:InTemple;
+lflags { Dark }
+Dark Priest's Lair^
+   You stand in a room which is consumed by darkness.  Shadows flicker every-
+where, seeming almost alive.  For a moment, you worry that your light source
+may be extinguished.  Glancing around, through the inky darkness, you realize
+that you are in some type of bed room.  Evil religious icons and grotesque
+paintings line the walls.  In the corner sits an altar which is covered by
+a dark red liquid.  Without a doubt, this is the home of the Priest of the
+dark elves.
+^
+Temple e:InTemple;
+lflags { Dark }
+Temple Treasury^
+   You stand in the treasury of this grand dark elven temple.  This side
+room is just as beautiful, in its dark, alluring way, as the main worship
+room to the east.  Looking around, you are surprised to see that the treasury
+is empty!  A note to the side explains that the dark elven Priest has taken
+the treasures of the temple for its own 'protection.'
+^
+InTemple n:Priest s:Elf w:Temple;
+lflags { Dark }
+Inside the Temple^
+   You stand just inside the temple of the dark elves.  Looking around, you
+realize that it is quite beautiful, even though the beauty seems somehow evil.
+You are chilled by a sense of foreboding as you think of what dark acts may
+have been committed inside this place of worship, for some nameless evil god.
+You see small archways out of this room to the North and West.
+^
+Elf n:InTemple e:Temple_Guard s:Cavern;
+lflags { Dark }
+Dark Elf Temple^
+   You have emerged into the largest subterranean cavern that you have ever
+seen.  Above you, the roof lies somewhere beyond the radius of your light
+source, while to the sides of this cavern, you can just barely make out the
+walls.  Most astounding is a temple lying in the center of this cavern, which
+has apparently been constructed entirely underground!  The temple is made out
+of some type of dark stone which glows with an unholy black light.  Without
+a doubt, this temple is dedicated to some dark deity.  You may enter it to the
+North.  Off to the east and south lie other exits from this cavern.
+^
+Temple_Guard w:Elf;
+lflags { Dark }
+Temple Guard Room^
+   You stand in the room which housed the two dark elves who guarded the
+temple.  It is a rather dark and dreary.  On the ground lie two worn mattresses
+while a wobbly table stands to the side.
+^
+Commander e:Barracks;
+lflags { Dark }
+Commander's Quarters^
+   You stand in a large, well-kept room.  It has none of the squalor of the
+barracks to the East.  There is a neat bed here, with a tidy table next to.
+If it weren't for the fact everything in this room was black, the place might
+actually look cheery.
+^
+Barracks e:Cavern w:Commander;
+lflags { Dark }
+Elven Barracks^
+   You are in a large barracks for the dark elf troops.  The whole place seems
+run down.  Trash litters the floor and most of the beds in this room are
+destroyed.  It looks as if, for the most part, the dark elves do not bother
+to maintain an army now that their enemies, the good elves above, are gone.
+Exits leave these barracks to the West and East.
+^
+Cavern n:Elf e:Glowing s:Barracks2 w:Barracks u:Ladder;
+lflags { Dark }
+Cavern of the Dark Elves^
+   You have entered an enormous cavern.  You are awed by the vastness of this
+room.  As you acclimate to this dark, damp environment, you remember of the
+ancient legends you have heard of a dark race of elves living below the
+surface.  Surely, this is their realm!  Looking around you, this assumption
+is upheld by the many dark shapes you see moving in the shadows.  You should
+move through these realms quickly.  Surely the dark shapes would overwhelm
+you by numbers if you stayed here too long.  Exits leave this cavern to the
+North, West, South and East, while a ladder leads up.
+^
+Glowing s:Fungoid w:Cavern;
+lflags {}
+Glowing Passage^
+   You walk down a passage which curves to the West and South.  The passage
+is lit by an eerie green glow which seems to come from fungus growth on the
+walls.  Ever once in a while, you think you see a dark shape at the edge of
+your vision, but then it could just be your imagination.
+^
+Barracks2 n:Cavern s:Quarters;
+lflags { Dark }
+Elven Barracks^
+   You are in a large barracks for the dark elf troops.  The whole place seems
+run down.  Trash litters the floor and most of the beds in this room are
+destroyed.  It looks as if, for the most part, the dark elves do not bother
+to maintain an army now that their enemies, the good elves above, are gone.
+Exits leave these barracks to the North and South.
+^
+Fungoid n:Glowing;
+lflags {}
+Fungoid Cavern^
+   You stand in an enormous cavern which seems to be wall-to-wall fungus.
+Besides mushrooms and other common fungus, you also see many unusual ones,
+much as in the fungus cavern above.  As well, the green fungus from the
+the passageway to the North may be seen.
+^
+Quarters n:Barracks2;
+lflags { Dark }
+Captain's Quarters^
+   You stand in a large room which seems to have been well kept.  It has none
+of the squalor of the barracks to the North.  There is a neat bed here, as
+well as an organized desk.  However, the entire room is covered by a layer of
+dust. Obviously, these quarters have not been used for quite some time.  The
+only exit is to the North.
+^
+Ladder u:^lake2 d:Cavern;
+lflags { Dark }
+Long Ladder^
+   You are midway up a very long ladder.  It seems rather damp as if water
+constantly dripped on it.  You think you can manage to keep a grip on the
+ladder which extends far above and below you.
+^
+

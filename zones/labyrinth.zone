@@ -1,0 +1,260 @@
+%rainfall:500
+
+%latitude:35
+
+%mobiles
+Name		= minotaur
+PName		= "The Minotaur"
+Location	= k
+PFlags		{NoSteal}
+MFlags		{PickStuff}
+Strength	= 70
+Damage		= 10
+Aggression      = 40
+Armor		= 0
+Speed           = 8
+Description	= "
+A minotaur snarls viciously at you, his huge bulk shaking with rage."
+End             = minotaur
+
+%objects
+
+Name      = casket
+Location  = IN_ROOM:lair
+Oflags    {Container Openable Lockable}
+BValue    = 300
+Size      = 40
+Weight    = 40
+MaxState  = 2
+State     = 0
+Desc[0]   = "
+A large open golden casket shines before you, glittering and sparkling."
+Desc[1]   = "
+A large golden casket shines before you, glittering and sparkling."
+Desc[2]   = "
+A large locked golden casket shines before you, glittering and sparkling."
+End       = casket
+
+Name      = amethyst
+AltName   = gem
+Location  = IN_CONTAINER:casket
+BValue    = 100
+Size      = 1
+Weight    = 1
+Desc[0]   = "A large, beautifully polished amethyst has been put here."
+End       = amethyst
+
+Name      = mask
+AltName   = gold
+Location  = IN_ROOM:end2
+Oflags    {Armor Wearable GetFlips}
+Aflags	  {Face Head}
+State     = 1
+MaxState  = 1
+Armor	  = 75
+BValue    = 400
+Size      = 30
+Weight    = 30
+Desc[0]   = "A stunning, horned, gold mask has been placed here."
+Desc[1]   = "
+On the center of the wall is a huge golden mask carved in the shape of a
+horned demon."
+Examine   = "The mask is pure gold, and probably very valuble."
+End       = mask
+
+Name      = horn
+AltName   = silver
+Location  = IN_CONTAINER:casket
+MaxState  = 1
+BValue    = 200
+Size      = 12
+Weight    = 5
+Desc[0]   = "An engraved silver horn has been carefully placed here."
+End       = horn
+
+%locations
+
+top u:Brink@island d:spiral;
+lflags {}
+Top of Spiral Staircase^
+   You are standing at what is a carved spiral staircase descending down into
+the gloom of below.  From down there come strange sounds, which you cannot
+place.
+^
+spiral u:top d:spiral2;
+lflags {}
+Spiral Staircase^
+   You are on a spiral staircase, and you are not far from the top of it.
+Below you it is cold and gloomy, although not yet dark enough to need a light.
+^
+spiral2 u:spiral d:humm;
+lflags {}
+Spiral Staircase^
+   You are on a spiral staircase which decends into a blanket of mist.  It
+also (for the uninitiated in spiral staircase design) carries on upwards.
+^
+humm u:spiral d:spiral3;
+lflags {}
+Humm...^
+   As you stand here a blanket of mist envelopes you.  The only ways out are to
+grope upwards or downwards.
+^
+spiral3 u:humm d:start;
+lflags {dark}
+Spiral Staircase^
+   The staircase you are on ascends upwards into a blanket of mist or downwards
+into a large labyrinth of columns, which, from your view point, appears to be
+endless.
+^
+start e:a u:spiral3;
+lflags {dark NoMobiles}
+The Start of the Labyrinth^
+   ...is a boring sort of place, the only exits being up a spiral staircase and
+east into the Labyrinth.  The Labyrinth itself is composed of tall pillars in
+the gloom.  There is a message scratched in the dirt here.  It says:
+
+			B WA E O  HE M NO AUR
+
+					M rt s
+^
+a n:b e:r s:p w:start;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+b n:c e:s s:a;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+c e:d s:b;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+d e:e s:s w:c;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+e e:f s:t w:d;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+f e:g s:u w:e;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+g s:h w:f;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+h n:g s:i w:u;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+i n:h s:j w:u;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+j n:i s:k w:i;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+k n:j w:l;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+l n:j e:k w:m;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+m n:v e:l w:n;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+n n:q e:m w:o;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+o n:p e:n;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+p n:a e:q s:o;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+q n:r e:r s:n w:p;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+r n:t e:q s:q w:a;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+s n:d e:t s:r w:c;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+t n:e e:u s:u w:s;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+u n:f e:h s:f w:t;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+v n:t e:u s:w w:w;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+w n:v e:x s:m w:v;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+x n:end s:j w:w;
+lflags {dark}
+Labyrinth^
+   You are lost in the labyrinth.
+^
+end s:x d:end2;
+lflags {dark}
+The End of the Labyrinth^
+   ...is something of an anti-climax after you have made it this far.  All it
+apparently consists of is a hole in the ground which becomes a spiral staircase
+after a while.
+^
+end2 u:end d:lair;
+lflags {dark}
+Spiral Stairs^
+   You stand almost at the bottom of the stairs.  At the foot of the stairs is
+a large room, half obscured by mist.  The walls are decorated with faces and
+spectacular carvings of dying people.
+^
+lair u:end2;
+lflags {dark}
+Minotaur's Lair^
+   You stand in a huge chamber deep beneath the labyrinth.  The walls and
+ceiling of the chamber are lined with the heads of those who failed to find
+their way back from this legendary place and starved to death amid the maze.
+^

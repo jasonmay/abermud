@@ -1,0 +1,143 @@
+%rainfall:760
+
+%latitude:55
+
+%objects
+
+Name      = RopeTopPit
+Pname     = rope
+AltName   = ladder
+Location  = IN_ROOM:pit
+Oflags    {Destroyed NoGet}
+Linked    = RopeBotPit@ledge
+MaxState  = 2
+Desc[0]   = "A rope ladder leads down into the pit."
+Desc[1]   = "A rope leads down into the pit."
+Desc[2]   = "A knotted rope leads down into the pit."
+End       = RopeTopPit
+
+Name      = heather
+Location  = IN_ROOM:rocky
+Oflags    {GetFlips}
+State     = 1
+MaxState  = 1
+BValue    = 30
+Size      = 1
+Weight    = 1
+Desc[0]   = "Some rare white heather has been left here."
+Desc[1]   = "Some white heather is growing here."
+End       = heather
+
+Name      = chalice
+Location  = IN_ROOM:circle
+BValue    = 40
+Size      = 10
+Weight    = 5
+Desc[0]   = "A bloodstained chalice lies before you."
+End       = chalice
+
+Name      = altar
+AltName   = stone
+Location  = IN_ROOM:circle
+Oflags    {NoGet}
+MaxState  = 1
+Desc[1]   = "A chalice rests upon the altar."
+Examine   = ^
+The altar is blackened and pitted from the fires and blood of many sacrifices.
+The center of the altar simply bears the words, "Acsthad Of The Fiery Planes"^
+End       = altar
+
+%locations
+
+Misty1 n:Edge e:Misty2 s:Moorpath@valley ;
+Altitude = 900
+lflags {Outdoors}
+Misty Moorland^
+   You are standing on the south-eastern edge of a vast tract of misty, tangled
+moorland.  Thick gorse and bracken make travel almost impossible save for
+narrow, animal-worn tracks to the north and east.
+^
+Misty2 n:Circle w:Misty1 ;
+Altitude = 900
+lflags {Outdoors}
+Misty Moorland^
+   You are wandering amidst the thickets and stones far out upon the moor. Grey
+and barren they extend all around you.  Thick gorse and bushes prevent even the
+most determined adventurer from doing anything but following the paths to the
+north and west.
+^
+pit n:Lost1 d:^RopeTopPit;
+Altitude = 900
+lflags {Outdoors}
+By The Pit^
+   You are standing on the rim of a huge open pit looking down some twenty feet
+to the floor below.  The walls of the pit are too sheer to climb down, which is
+unfortunate as there seem to be caves leading off from it.  A path winds its
+dusty way north out onto the moor.
+^
+Edge n:Rocky e:Circle s:Misty1;
+Altitude = 900
+lflags {Outdoors}
+Western Edge Of Moor^
+   You are standing somewhere near the western edge of the moors.  Narrow,
+gorse-walled paths wind their narrow ways north east and south from here.
+^
+Circle n:Lost2 e:Lost1 s:Misty2 w:Edge;
+Altitude = 900
+lflags {Outdoors}
+The Stone Circle On The Moor^
+   You are standing in the center of an ancient circle of jagged stones hidden
+in a deep bowl in the center of the moors.  Narrow scarcely used tracks wind up
+from the deathly quiet bowl.  The center of the circle is a black gloomy altar
+to some ancient god.
+^
+Lost1 n:Lost2 e:pit s:Misty2 w:Edge;
+Altitude = 900
+lflags {Outdoors}
+Lost On The Moor^
+   You are lost on the moor.  Thick gorse and tangled bushes prevent you from
+seeing far in any direction.  A multitude of little twisted paths wind in all
+directions from here.
+^
+Cottage n:Waste e:Inside w:Lost1;
+Altitude = 900
+lflags {Outdoors}
+By The Ruined Cottage^
+   You are standing somewhere on the eastern side of the moor.  A narrow worn
+path leads east between two crumbling dry-stone walls towards the remains of an
+old cottage.
+^
+Inside w:Cottage ;
+Altitude = 900
+lflags {Outdoors}
+Inside The Ruined Cottage^
+   You are standing in the sad, desolate ruins of an old farmhouse.  The roof
+has long since caved in, leaving a crumbling shell to gradually fall.  A single
+doorway leads west back outside onto the moor.
+^
+Waste s:Cottage w:Lost2 e:RBend@eastcoast;
+Altitude = 900
+lflags {Outdoors}
+Rocky Waste^
+   You are standing on the northeastern corner of the moor, looking out across
+a mass of jumbled rock.  Paths lead south and west across the moor, while the
+rock steepens into preciptious cliffs to the east and north, preventing further
+travels.
+^
+Lost2 e:Waste s:Lost1 w:Rocky ;
+Altitude = 900
+lflags {Outdoors}
+Lost On The Moor^
+   You are lost somewhere on a vast expanse of ancient moorlands.  Thick
+bushes and tangled piles of gorse and rock prevent you from seeing far in any
+direction, though narrow paths wind east, west and south across the moor.
+^
+Rocky s:Edge n:camelot@camelot e:Lost2;
+Altitude = 900
+lflags {Outdoors}
+Rocky End^
+   The path you are following across the moor ends here, in a narrow rocky
+hollow.  Another narrow path leads northwards, and you espy a great castle in
+the distance.
+^
+

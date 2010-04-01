@@ -1,0 +1,553 @@
+%mobiles
+Name            = crow
+PName           = "Crow"
+Location        = windy1
+Strength        = 25
+Damage          = 5
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "A large crow eyes you from atop the signpost."
+End             = crow
+
+Name            = ethereal_shape
+PName           = "Ethereal Shape"
+Mflags          {BarSouth}
+Location        = windy6
+Strength        = 100
+Damage          = 10
+Armor           = 0
+Aggression      = 15
+Speed           = 0
+Description     = "An ethereal shape guards the southern trail."
+End             = ethereal_shape
+
+Name            = wind_elemental
+Pname           = "Wind Elemental"
+Eflags          {NegFireball NegMissile NegFrost NegShock}
+Location        = windy9
+Strength        = 200
+Damage          = 15
+Armor           = 0
+Aggression      = 75
+Speed           = 0
+Description     = "A wind elemental is blowing around the rubble, and it looks mad!"
+End             = wind_elemental
+
+Name            = quirk
+PName           = "Quirk"
+Location        = windy12
+Strength        = 100
+Damage          = 10
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Captain Quirk wanders about, smiling charmingly."
+End             = quirk
+
+Name            = spork
+PName           = "Spork"
+Location        = windy12
+Strength        = 150
+Damage          = 15
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Science Officer Spork raises an eyebrow at you."
+End             = spork
+
+Name            = bonz
+PName           = "Bonz"
+Eflags          {NegFrost NegShock}
+MFlags          {DrainScr Cross}
+Location        = windy12
+Strength        = 75
+Damage          = 5
+Armor           = 0
+Aggression      = 45
+Speed           = 0
+Description     = "Bonz the skeleton glares at you, angry that you're not dead yet, Jim."
+End             = bonz
+
+Name            = auster
+PName           = "Auster"
+Eflags          {Frost NegFrost}
+Mflags          {Thief PickStuff NoSteal} 
+Location        = windy15
+Strength        = 200
+Damage          = 10
+Armor           = 0
+Aggression      = 95
+Speed           = 0
+Description     = "Auster, the South Wind, blows furiously at you!"
+End             = auster
+
+Name            = eurus
+PName           = "Eurus"
+Eflags          {Shock NegShock}
+MFlags          {Thief PickStuff NoSteal}
+Location        = windy18
+Strength        = 250
+Damage          = 10
+Armor           = 0
+Aggression      = 95
+Speed           = 0
+Description     = "Eurus, the East Wind, fumes darkly at you."
+End             = eurus
+
+Name            = zephyrus
+PName           = "Zephyrus"
+Eflags          {Fireball NegFireball}
+MFlags          {Thief PickStuff NoSteal}
+Location        = windy20
+Strength        = 300
+Damage          = 15
+Armor           = 0
+Aggression      = 95
+Speed           = 0
+Description     = "Zephyrus, the West Wind, glares hotly at you."
+End             = zephyrus
+
+Name            = highpriest
+PName           = "HighPriest"
+Eflags          {Shock}
+Location        = windy22
+Strength        = 75
+Damage          = 10
+Armor           = 0
+Aggression      = 50
+Speed           = 0
+Description     = "The priest is in."
+End             = highpriest
+
+Name            = aquilo
+PName           = "Aquilo"
+Eflags          {Fireball NegFireball NegFrost NegMissile NegShock}
+MFlags          {Thief BarNorth PickStuff NoSteal} 
+Location        = windy27
+Strength        = 350
+Damage          = 20
+Armor           = 0
+Aggression      = 98
+Speed           = 0
+Description     = "Aquilo, the North Wind, prepares to do you in."
+End             = aquilo
+
+Name            = cumulonimbus
+PName           = "Cumulonimbus"
+Eflags          {Fireball NegFireball NegFrost NegMissile NegShock}
+Mflags          {Thief PickStuff NoSteal}
+Location        = windy28
+Strength        = 500
+Damage          = 25
+Armor           = 10
+Aggression      = 98
+Speed           = 0
+Description     = "Cumulonimbus, the Cloud God, thunders at you angrily."
+End             = cumulonimbus
+
+%objects
+
+Name            = signpost1
+Pname           = sign
+Oflags          {NoGet}
+Location        = IN_ROOM:windy1
+Desc[0]         = "A signpost has been staked here."
+Examine         = "
+The signpost reads 'Go back, lest ye be strong of body and mind!'"
+End             = signpost1
+
+Name            = rubble
+PName           = rubble
+Oflags          {NoGet}
+Location        = IN_ROOM:windy9
+MaxState        = 1
+Desc[0]         = "Some of the rubble has blocked the trail to the south."
+Desc[1]         = "The rubble has been cleared, allowing passage to the south."
+Examine         = "The rubble has avalanched from the mountain above."
+End             = rubble
+
+Name            = ruin
+PName           = ruin
+AltName         = ruins
+Oflags          {NoGet Container}
+Location        = IN_ROOM:windy12
+Desc[0]         = ""
+Examine         = "You notice strange markings which read 'NCC 1701.'"
+End             = ruin
+
+Name            = uniform
+PName           = uniform
+Oflags          {Armor Wearable}
+Aflags		{Chest Back Arms Legs}
+Location        = IN_CONTAINER:ruin
+BValue          = 110
+Size            = 5
+Weight          = 5
+Armor           = 40
+Desc[0]         = "A StarFleet uniform has been left here."
+Examine         = "Some careless security goon's old uniform."
+End             = uniform
+
+Name            = pickaxe
+PName           = pickaxe
+Oflags          {Weapon}
+Location        = WIELDED_BY:bonz
+BValue          = 35
+Size            = 7
+Weight          = 15
+Damage          = 7
+Desc[0]         = "A hefty-looking pickaxe has been left here."
+End             = pickaxe
+
+Name            = twig
+PName           = twig
+Oflags          {Lightable}
+Location        = IN_ROOM:windy16
+BValue          = 5
+Size            = 1
+Weight          = 1
+Desc[0]         = "A twig has been blown here by the wind."
+End             = twig
+
+Name            = austergem
+PName           = austergem
+Location        = CARRIED_BY:auster
+BValue          = 200
+Size            = 5
+Weight          = 5
+Desc[0]         = "The AusterGem lies here, sparkling brilliantly."
+End             = austergem
+
+Name            = eurusgem
+PName           = eurusgem
+Location        = CARRIED_BY:eurus
+BValue          = 200
+Size            = 5
+Weight          = 5
+Desc[0]         = "The EurusGem lies here, absorbing light."
+End             = eurusgem
+
+Name            = skyblade
+PName           = skyblade
+Oflags          {Weapon}
+Location        = IN_ROOM:windy19
+BValue          = 400
+Size            = 10
+Weight          = 10
+Damage          = 22
+Desc[0]         = "Someone has absent-mindedly left the SkyBlade here."
+Examine         = "There are four faceted holes in the hilt."
+End             = skyblade
+
+Name            = zephyrusgem
+PName           = zephyrusgem
+Location        = CARRIED_BY:zephyrus
+BValue          = 200
+Size            = 5
+Weight          = 5
+Desc[0]         = "The ZephyrusGem lies here, glowing hotly."
+End             = zephyrusgem
+
+Name            = key
+PName           = key
+Oflags          {Key}
+Location        = CARRIED_BY:highpriest
+BValue          = 50
+Size            = 1
+Weight          = 1
+Desc[0]         = "A tiny silver key has been dropped here."
+End             = key
+
+Name            = door
+PName           = door
+Oflags          {NoGet Openable Lockable}
+Location        = IN_ROOM:windy23
+Linked          = door_1
+Maxstate        = 2
+State           = 2
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door
+
+Name            = door_1
+PName           = door
+Oflags          {NoGet Openable Lockable}
+Location        = IN_ROOM:windy24
+Linked          = door
+Maxstate        = 2
+State           = 2
+Desc[0]         = "The door is open."
+Desc[1]         = "The door is closed."
+Desc[2]         = "The door is locked."
+End             = door_1
+
+Name            = aquilogem
+PName           = aquilogem
+Location        = CARRIED_BY:aquilo
+BValue          = 200
+Size            = 5
+Weight          = 5
+Desc[0]         = "The AquiloGem lies here, glowing intensely."
+End             = aquilogem
+
+Name            = cumulogem
+PName           = cumulogem
+Location        = CARRIED_BY:cumulonimbus
+BValue          = 800
+Size            = 5
+Weight          = 5
+Desc[0]         = "The CumuloGem lies here, a prize not to be missed."
+End             = cumulogem
+
+Name            = skycleaver
+PName           = skycleaver
+Oflags          {Weapon Lit}
+Location        = IN_ROOM:limbo@limbo
+BValue          = 1500
+Size            = 10
+Weight          = 10
+Damage          = 30
+Desc[0]         = "The SkyCleaver lies here, glowing with power."
+Examine         = "The four WindGems are set in the hilt."
+End             = skycleaver
+
+%locations
+windy1 s:windy2;
+lflags {Outdoors}
+Misty Plain^
+        You stand at the wooded edge of a vast plain, looking out over miles
+of grass and scrub.  A soft lavender mist blankets the ground here, growing
+thicker towards the foothills in the distant south.  Faint trails lead
+farther into the plain.
+^
+
+windy2 n:windy1 s:windy3 e:windy4 w:windy4;
+lflags {Outdoors}
+Misty Trail^
+        You are stumbling along a misty trail, trying not to get lost.  Banks
+of fog roll across the plain, blown by a light wind.  An unpleasant gurgling  
+sound is coming from somewhere beyond the haze.
+^
+
+windy3 n:windy2 e:windy5 w:windy4 s:windy4;
+lflags {Outdoors}
+Misty Trail^
+        You are stumbling along a misty trail, trying not to get lost.  Banks
+of fog roll across the plain, blown by a light wind.  An unpleasant gurgling  
+sound is coming from somewhere beyond the haze.
+^
+
+windy4 ;
+lflags {Death}
+Blorp!^
+        You seem to have fallen into a tarpit.  Who knows?  Perhaps one day
+your bones will be excavated and placed in a museum.  Better luck next time.
+^
+
+windy5 w:windy3 s:windy6 n:windy4 e:windy4;
+lflags {Outdoors}
+Misty Trail^
+        You are stumbling along a misty trail, trying not to get lost.  Banks
+of fog roll across the plain, blown by a light wind.  An unpleasant gurgling  
+sound is coming from somewhere beyond the haze.
+^
+
+windy6 n:windy5 s:windy7 e:windy8;
+lflags {Outdoors}
+Foothills^
+        You stand on a small hillock overlooking the mist-shrouded plain.  In
+the distant north you spy treetops poking out of the fog.  Rolling hills
+become towering mountains farther to the south.  The trail widens here,
+splitting to the south and east, where it heads into a small ravine.
+^
+
+windy7 n:windy6 s:windy9;
+lflags {Outdoors}
+Rocky Trail^
+        You are walking along a rocky trail which winds its way through the
+foothills.  Craggy snow-covered mountains rise to the south, casting dark
+shadows across the land.  A quick breeze has picked up, creating a high-
+pitched wail as it rushes through the hills.
+^
+
+windy8 w:windy6 e:windy10;
+lflags {Outdoors}
+West End of Ravine^
+        You are in a shallow ravine which cuts through the hills like a
+savage wound.  Feldspar-rich sediments in the soil give off a ruddy
+reflection to the dim light here.  The ravine continues to the east, and
+rises into the hills to the west.
+^
+
+windy9 n:windy7 s:windy11;
+lflags {Outdoors}
+Rising Trail^
+        You stand in front of a massive pile of rubble which has avalanched
+from the mountains above, doubtlessly caused by wind erosion.  The trail runs
+south into the mountains and north towards the hills.
+^
+
+windy10 w:windy8 e:windy12;
+lflags {Outdoors}
+Ravine^
+        You are standing in the middle of a ravine which runs east to west.
+There are many small footprints in the soft earth, leading every which way.
+A sharp wind has picked up, moaning loudly through the rocks.
+^
+
+windy11 n:windy9 w:windy13;
+lflags {Outdoors}
+Mountain Trail^
+        You are walking along a thin trail which runs along the base of the
+mountain range to the south.  High above, the rocky crags loom menacingly   
+against the dark sky.  A terrible wind blows through here, howling at you as
+it whips at your clothes and hair.  The trail leads west and north, towards
+some low hills.
+^
+
+windy12 w:windy10;
+lflags {Outdoors}
+East End of Ravine^
+        You have come to the eastern end of this ravine.  The crumbling red
+walls rise around you, forming a dead end.  Filling nearly the entire area is
+a smoking ruin of some kind, filled with metallic struts and surfaces.  The
+debris lies at the end of a long gouge in the ground.
+^
+
+windy13 e:windy11 w:windy14;
+lflags {Outdoors}
+Mountain Ledge^
+        You are standing on a thin ledge which runs along the mountain side.
+Thick cloud banks have formed at this altitude, restricting your vision to
+only a few feet.  The ledge becomes a wider trail to the east, while to the
+west it inclines upward sharply.
+^
+
+windy14 e:windy13 u:windy15;
+lflags {Outdoors}
+Steep Ledge^
+        You are climbing a dangerously narrow ledge which runs up the side of
+the mountain.  The air is significantly colder and cloudier up here.  The
+rocks rise up vertically to the south, forming an unclimbable surface.
+Through the haze above, you make out a building of some kind.
+^
+
+windy15 d:windy14 n:windy16;
+lflags {Outdoors OnePerson}
+Mountain Plateau^
+        The view from here is spectacular: To the south spreads out the misty
+expanse of a plain, and beyond it a thick forest.  The top of this mountain
+is flat and rubble-strewn, eroded by decades of wind and storm.  The only
+noticeable feature is a fairly large building which squats in the center of
+the plateau to the north.  A rocky trail winds its way down into the mist.
+^
+
+windy16 s:windy15 n:windy17;
+lflags {Light}
+Temple Entrance^
+        You stand in the columned entrance of this building.  The ceiling
+disappears into darkness above.  Examining the runes which are scrawled on
+the walls, you deduce that this is the Temple of the Winds.  A large fire-pit
+in the floor is intended for offerings, although you would rather light your
+torch from it.  The temple continues to the south.
+^
+
+windy17 s:windy16 e:windy18 w:windy20 n:windy23;
+lflags {Dark}
+Great Hall^
+        This is the main place of worship in the temple, although you don't
+see very many followers present.  A large statue, formed to resemble a
+massive cloud, stands atop a dias in the center of the room.  The statue
+seems to have eyes... evil eyes.  Corridors lead north, south, east and west.
+^
+windy18 w:windy17 e:windy19;
+lflags {OnePerson}
+East Altar^
+        You stand in a large circular room which has a skylight in its domed
+ceiling.  Directly underneath the light is an altar, carved with leering        
+faces and tortured forms.  Dark passages extend to the east and west.
+^
+
+windy19 w:windy18;
+lflags {Dark}
+Storage Room^
+        This is a small room, used for storage by the temple caretakers.  A
+dark passage leads west.        
+^
+
+windy20 e:windy17 w:windy21;
+lflags {Light OnePerson}
+West Altar^
+        You stand in a large rectangular room which is lit by large torches
+that ring the walls.  In the center of the room is a bronze altar, carved       
+with fiery motifs.  Dark passages extend to the west and east.
+^
+
+windy21 e:windy20 u:windy22;
+lflags {}
+Stairway^
+        A stairway leads up here, into a lit room.  A passage extends to the
+east.
+^
+
+windy22 d:windy21;
+lflags {Light}
+High Priest's Chambers^
+        This room is sparse and cold, furnished only with a straw mat and a
+table.  A small lamp on the table provides light.  The only exit is a dark        
+stairway leading down.
+^
+       
+windy23 s:windy17 n:^door_1;
+lflags {Dark}
+Dark Passage^
+        You are walking down a long, dark passage.  The flagstones click
+coldly under your feet, echoing into the distance.  Tall, plain columns rise        
+to the ceiling.  The passage extends north and south.
+^
+
+windy24 s:^door;
+lflags {Dark}
+End of Passage^
+        You are standing at the end of a dark passage which extends north and
+south.  A solid oak door is fitted into the southern wall.
+^
+
+windy25 u:windy26;
+lflags {}
+Stone Stairway^
+        A massive stone stairway rises to the roof of the temple here.  The
+only other exit is a doorway to the north.        
+^
+
+windy26 d:windy25 n:windy27;
+lflags {Outdoors}
+Temple Roof^
+        This is the highest point in the southern mountain range.  From here,
+you see the lands of Mirage laid out like a map.  The mountains continue to        
+the west, where they turn north and bisect the forest.  A dwarven citadel is
+visible in the far northwestern corner of the range.  To the direct north are
+the plains, followed by woodlands.  A small village is visible beyond that,
+resting on the edge of an eternal snowstorm.  To the east is the shoreline of
+a vast sea, speckled with tiny islands.  A set of stairs lead down here,
+while an altar is visible to the north.
+^
+
+windy27 s:windy26 n:windy28;
+lflags {Outdoors OnePerson}
+North End of Roof^
+        A low wall rings this area, protecting a small altar which sits in
+the center.  The altar is covered with grotesque designs, some of them 
+reminding you of the imagery inside the temple.  To the north is a large
+dome.  The roof continues to the south.
+^
+
+windy28 s:windy27;
+lflags {OnePerson}
+Shrine of Cumulonimbus^
+        You have stumbled into the temple's most sacred place... the Shrine
+of Cumulonimbus.  It is nothing but an empty, dome-shaped room with a large 
+hole in the ceiling.  The only exit is south.  You should use it.
+^

@@ -1,0 +1,546 @@
+%rainfall:650
+
+%latitude:50
+
+%Mobiles
+
+Name            = Peter
+Pname           = "Peter"
+Location        = Heaven1
+Pflags	        { NoSummon }
+Strength        = 500
+Damage          = 8
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Saint Peter observes you peacefully."
+End             = Peter
+
+Name            = Thorr
+Pname           = "Thor"
+Location        = Heaven25
+Pflags		{ NoSummon }
+Mflags		{ PickStuff }
+Strength	= 350
+Damage          = 20
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Thor stands here glaring at Agnes."
+End             = Thorr
+
+Name            = Agnes
+Pname           = "Agnes"
+Location        = Heaven25
+Mflags	 	{ PickStuff }
+Sflags          { Female }
+Strength 	= 150
+Damage          = 15
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Agnes laughs, prepared to meet all of Thor's needs."
+End             = Agnes
+
+Name            = Odin
+Pname           = "Odin"
+Location        = Heaven25
+Mflags		{ PickStuff }
+Strength	= 380
+Damage          = 22
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Odin glares at you with his one eye."
+End             = Odin
+ 
+Name            = Valkyrie
+Pname           = "Valkyrie"
+Sflags          { Female }
+Location        = Heaven20
+Strength	= 175
+Damage          = 18
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "Valkyrie glances around for a rabbit."
+End             = Valkyrie
+
+Name            = Terrance
+Pname           = "Terrance"
+Location        = Heaven23
+Strength	= 140
+Damage          = 14
+Armor           = 0
+Aggression      = 1
+Speed           = 0
+Description     = "
+Terrance the ugly troll sits here preparing his dinner.  He looks hungry."
+End             = Terrance
+
+Name            = Giant
+Pname           = "The Giant"
+Location        = Heaven22
+Strength	= 150
+Damage          = 14
+Armor           = 0
+Aggression      = 2
+Speed           = 0
+Description     = "A giant was relaxing here until you walked in."
+End             = Giant
+
+Name            = Great
+Pname           = "The Great"
+Location        = Heaven32
+Strength 	= 170
+Damage          = 12
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "The Great Bear is here eating honey."
+End             = Great
+
+Name            = Bison
+Pname           = "The Bison"
+Location        = Heaven29
+Strength 	= 130
+Damage          = 12
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "A bison grazes upon the land here."
+End             = Bison
+
+Name            = Coyote
+Pname           = "The Coyote"
+Location        = Heaven34
+Strength 	= 80
+Damage          = 10
+Armor           = 0
+Aggression      = 0
+Speed           = 0
+Description     = "A small coyote threatens to nip your ankles."
+End             = Coyote
+
+Name            = Snake
+Pname           = "Snake"
+Location        = limbo@limbo
+Strength	= 60
+Damage          = 10
+Armor           = 0
+Aggression      = 3
+Speed           = 5
+Description     = "
+An snake with very narrow slits for eyes swishes around on the ground."
+End             = Snake
+
+
+%objects
+
+Name           = mjolnir
+Pname          = "mjolnir"
+AltName        = "hammer"
+Location       = WIELDED_BY:Thorr
+Oflags         { Weapon }
+BValue         = 1600
+Size           = 100
+Damage         = 30
+Desc[0]        = "Mjolnir, the sacred hammer of Thor, has been left here."
+End            = mjolnir
+
+Name           = vase
+Pname          = "vase"
+AltName        = "vase"
+Location       = IN_ROOM:Shrine@icecave
+Oflags         { GetFlips }
+State		= 1
+MaxState	= 1
+BValue         = 100
+Size           = 3
+Desc[0]        = "A vase made of ice has been set on a pedestal."
+Desc[1]        = "A vase made of ice has been set on a pedestal."
+Examine        = "
+The vase is made of a cloudy ice and is inscripted with images of great
+glaciers.  Turning the vase over, you  see the incription:
+		Jiffy Script, Incorporated
+	    'Converse with us, We talk better.'"
+End            = vase
+
+Name           = ark
+Pname          = "ark"
+AltName        = "ark"
+Location       = IN_ROOM:Heaven3
+Oflags         {  Openable Container }
+BValue         = 1000
+Size           = 40
+State          = 1
+MaxState       = 1
+Desc[0]        = "The Ark of the Covenant	is open."
+Desc[1]        = "The Ark of the Covenant is here."
+Examine        = "
+The ark is two and a half cubits long, one and a half cubits wide, one and
+a half cubits high, and is made made of shittim wood covered with pure
+gold, with a crown of gold around it.  A ring of gold is set on each
+corner, with two rings of shittim wood (overlayed with gold, of course) 
+passing through them."
+End            = ark
+
+Name           = tablet
+Pname          = "tablet"
+AltName        = "tablets"
+Location       = IN_CONTAINER:ark
+Oflags         { }
+BValue         = 80
+Size           = 1
+Desc[0]        = "Two stone tablets are here."
+Examine        = "
+Carved into the stones are ten commandments.  At the very bottom of each is
+written:
+		Jiffy Script, Incorporated
+	    'Converse with us, We talk better.'"
+End            = tablet
+
+Name           = staff1
+Pname          = "staff"
+AltName        = "staff"
+Location       = IN_ROOM:Heaven4
+Oflags         { }
+BValue         = 100
+Size           = 1
+Desc[0]        = "The Staff of Moses rests againt the wall."
+Desc[1]        = "The Staff of Moses rests againt the wall."
+Examine        = "You notice that the staff feels faintly like a snake."
+End            = staff1
+
+Name           = headdress
+Pname          = "headdress"
+AltName        = "headdress"
+Location       = IN_ROOM:Heaven29
+Oflags         { Wearable }
+Aflags	       { Head }
+BValue         = 50
+Size           = 1
+Desc[0]        = "A headdress has been left here."
+Desc[1]        = "A headdress has been left here."
+Examine        = "It appears to belong to a chieftain."
+End            = headdress
+
+Name           = eagle
+Pname          = "eagle"
+AltName        = "feather"
+Location       = IN_ROOM:Heaven30
+Oflags         { Wearable GetFlips }
+Aflags	       { Neck }
+BValue         = 80
+Size           = 1
+State          = 1
+MaxState       = 1
+Desc[0]        = "An eagle feather has been left here."
+Desc[1]        = "An eagle feather is drifting down from the sky."
+End            = eagle
+
+Name           = medicine
+Pname          = "medicine"
+AltName        = "bag"
+Location       = IN_ROOM:Heaven34
+Oflags         { GetFlips }
+BValue         = 50
+Size           = 1
+State          = 1
+MaxState       = 1
+Desc[0]        = "A medicine bag has been dropped here."
+Desc[1]        = "A medicine bag hangs suspended from a tree."
+End            = medicine
+
+Name           = bow
+Pname          = "bow"
+AltName        = "bow"
+Location       = IN_ROOM:Heaven32
+Oflags         { }
+BValue         = 100
+Size           = 1
+Desc[0]        = "A silver bow rests here"
+Desc[1]        = "A silver bow rests here"
+End            = bow
+
+Name           = arrow
+Pname          = "arrow"
+AltName        = "arrow"
+Location       = IN_ROOM:Heaven31
+Oflags         { }
+BValue         = 100
+Size           = 1
+Desc[0]        = "A silver arrow sticks up out of the ground."
+Desc[1]        = "A silver arrow sticks up out of the ground."
+End            = arrow
+
+Name           = rainbow
+Pname          = "rainbow"
+Location       = IN_ROOM:Heaven7
+Oflags         { NoGet }
+BValue         = 0
+Size           = 0
+Desc[0]        = "A rainbow wraps around the room."
+End            = rainbow
+
+Name           = watermelon
+Pname          = "watermelon"
+AltName        = "watermelon"
+Location       = IN_ROOM:Heaven6
+Oflags         { Food GetFlips }
+BValue         = 50
+Size           = 1
+Desc[0]        = "A watermelon lies before you."
+Desc[1]        = "A watermelon hangs temptingly from the Tree of Knowledge."
+End            = watermelon
+
+Name           = staff2
+Pname          = "staff"
+AltName        = "staff"
+Location       = IN_ROOM:Heaven11
+Oflags         { Armor }
+BValue         = 90
+Size           = 1
+Armor          = 15
+Desc[0]        = "A shepherd's staff leans against the wall."
+End            = staff2
+
+%locations
+
+Heaven1 e:Heaven2 ;
+lflags { Private }
+The Pearly Gates^
+   You seem to be  standing on a cloud.  Before you stand a pair of huge
+gates, which seem to be made of pearl.  The air about you is peaceful,
+yet a tinge of expectancy can also be felt.
+^
+Heaven2 n:Heaven19 e:Heaven3 s:Heaven28 w:Heaven1 u:Heaven3 ;
+lflags { Private }
+Paradise Crossroads^
+   You are standing at the place where the heavens meet.  Other than the
+fact that you are standing on a cloud, this place seems rather ordinary.
+To the north, you see a land of mountains and fjords, with a sign at the
+beginning of the road which reads "Valhalla."  To the south you see a great
+and varied land with a sign reading "The Happy Hunting Grounds."  To the
+east you see you see a large tent with a firey cloud above it.
+^
+Heaven3 e:Heaven4 u:Heaven4 ;
+lflags { Private }
+The Tabernacle^
+   You are standing within a large tent.  To the east is a plain, while to
+the west you can see the gates of pearl.
+^
+Heaven4 n:Heaven9 e:Heaven5 s:Heaven15 w:Heaven3 u:Heaven5 d:Heaven3 ;
+lflags { Private }
+Plains^
+   You are on the plains.  To the west is a tent, to the east an untouched
+wilderness, to north is a cloud bank, and to the south you can see the
+ruins of a walled city.
+^
+Heaven5 e:Heaven6 w:Heaven4 u:Heaven3 d:Heaven4 ;
+lflags { Private }
+Wilderness^
+   You are wandering in the wilderness.  You have been here for so long
+that you have lost track of the years.
+^
+Heaven6 e:Heaven7 s:Heaven16 w:Heaven5 u:Heaven7 d:Heaven5 ;
+lflags { Private Peaceful }
+The Garden^
+   You are in a lush garden.  All forms of trees, flowers, and shrubbery
+surround you.  All the creatures of the land and air approach you
+innocently, and the creatures of the water leap out of a near-by lake to
+give you their greetings.  You feel peaceful.
+   To the south you see the glimmer of gold.
+^
+Heaven7 e:Heaven8 u:Heaven8 d:Heaven6 ;
+lflags { Private }
+Cloud 6^
+   The soft, fluffy surface of the cloud is slightly strange to walk on,
+and you notice for the first time that you do not have wings.
+^
+Heaven8 n:Heaven12 w:Heaven7 u:Heaven12 d:Heaven7 ;
+lflags { Private }
+Seventh Heaven^
+   Streams of milk and honey roll down the sides of the purple and white
+mountains to water the green plains.  The blue sky plays host to a blue
+moon and a golden sun, which is setting in magnificent splendor.
+   To the west you spy a rainbow.  To the north you see a palace.
+^
+Heaven9 e:Heaven10 u:Heaven10 ;
+lflags { Private }
+Cloud 8^
+   The entire landscape is made of white, fluffy clouds.  You feel slightly
+uneasy about the situation, as the thought of falling to the earth below
+does not want to leave your mind.
+^
+Heaven10 n:Heaven17 w:Heaven9 u:Heaven11 d:Heaven9 ;
+lflags { Private Peaceful }
+Cloud 9^
+   All is peaceful.  All around you flit angels with harps, singing
+beautiful melodies full of joy and love.  Folds of the cloud form chairs
+and couches to rest on.
+^
+Heaven11 u:Heaven12 d:Heaven10 ;
+lflags { Private }
+Entrance to Heaven's Forest^
+   You stand just within a vast forest.  The trees grow so close together 
+that you have no choice but to walk the path, either to go down to Cloud 9
+or to go deeper into the forest to the east.
+^
+Heaven12 e:Heaven18 u:Heaven13 d:Heaven8 ;
+lflags { Private }
+Heaven's Forest^
+   You on a path in a vast forest.  Above you is a palace seeingly made
+of diamond.  To the east is a silver sea.  Below you you spy a land of
+milk and honey.
+^
+Heaven13 u:Heaven14 d:Heaven12 ;
+lflags { Private }
+Diamond Palace^
+   The entire palace is made of diamond.  The light from above is broken
+into rainbows, and their glitterings seem to enchant you.
+^
+Heaven14 ;
+lflags { Private }
+Cloud 13^
+   You are in a simply furnished room which stands in stark contrast to the
+diamond palace which contains it.
+^
+Heaven15 ;
+lflags { Private }
+Ruins of a walled city^
+   You are standing in the ruins of a walled city.  One building stands,
+with a rope hanging from an upper-story window.  It seems as if a battle
+has taken place here.
+^
+Heaven16 ;
+lflags { Private }
+The Land of Gold^
+   The entire landscape is coated with gold.
+^
+Heaven17 ;
+lflags { Private }
+The Place of Martyrs^
+   Strewn about this room are discarded crosses, gibbets, and stakes.
+^
+Heaven18 ;
+lflags { Private }
+The Silver Sea^
+   You are floating on a silver sea.
+^
+Heaven19 n:Heaven20 ;
+lflags { Private }
+Ydalir^
+   You  are standing in series of dales.  Yews are growing here, and you
+can see signs of Ull roaming about nearby.
+^
+Heaven20 n:Heaven21 s:Heaven19 ;
+lflags { Private }
+Alfheim^
+   You stand in the god's gift to Freyr when he cut his first tooth.  The
+light elves dance around you.
+^
+Heaven21 e:Heaven23 s:Heaven20 w:Heaven22 ;
+lflags { Private }
+Valaskjalf^
+   You stand in the Hall of the Slain.  The roof is thatched with silver.
+Below you, you see the spirits of all the slain creatures of the land.
+^
+Heaven22 n:Heaven26 e:Heaven21 ;
+lflags { Private }
+Sokkvabekk^
+   The floor seems to be sinking.  All around you, cool murmuring water
+laps the sides.  Two great chairs are here, seemingly for Odin and Saga to
+sit in while they drink joyfully from gold goblets.
+^
+Heaven23 n:Heaven24 w:Heaven21 ;
+lflags { Private }
+Thrymheim^
+   Mountains surround you.  A loud roar fills the air, though you can not
+locate the source.  This hall once belonged to the great giant Thiazi, but
+is now owned by his daughter, fair Skadi-- who was Njord's bride.
+^
+Heaven24 s:Heaven23 w:Heaven25 ;
+lflags { Private }
+Gladsheim^
+   You heart suddenly feels lighter, filled with gladness.  Nearby, you can
+see Valhalla, vast and gold-bright.
+^
+Heaven25 n:Heaven27 e:Heaven24 w:Heaven26 ;
+lflags { Private }
+Valhalla^
+   Looking up, you notice that the roof is made of shields, and the rafters
+are spears.  Breast-plates litter the benches.  A wolf lurks at the western
+door, and an eagle hovers over it.  A deep and wild looking river, Thund,
+roars beside Valgrind, the outer gate.  Five hundred and forty doors lead
+off in different directions, but you suspect that eight hundred warriors
+stand behind each one, so you opt not to open any of them.
+^
+Heaven26 e:Heaven25 s:Heaven22 ;
+lflags { Private }
+Breidablik^
+   You stand in Broad Splendour, Balder's hall.  The country around you is
+beautiful, blessed and untainted by any evil.
+^
+Heaven27 ;
+lflags { Private }
+Vidi^
+   This is a land of long grass and saplings.
+^
+Heaven28 s:Heaven29 ;
+lflags { Private }
+Northern Tundra^
+   You are travelling in a land of ice and snow.  The sun and the
+reflections from the brilliant white snow conspire to blind you, but
+through squinted eyes you can catch sight of the stark, raw beauty.  Though
+the wind howls about you, the cold does not seem to have any affect.  
+^
+Heaven29 n:Heaven28 s:Heaven30 ;
+lflags { Private }
+Hardwood Forest^
+   You stand under a canopy of leaves and intertwined branches.  Through
+the trees, you can glimpse deep blue lakes, which you imagine to have been
+created by the northern glaciers thousands of years ago.
+^
+Heaven30 n:Heaven29 e:Heaven32 w:Heaven31 ;
+lflags { Private }
+Northern Plains^
+   Golden grass stretches as far as you can see in all directions.
+^
+Heaven31 e:Heaven30 s:Heaven35 ;
+lflags { Private }
+Northwestern Rainforest^
+   Far to the west you can spy the blue of the ocean.  The abundant
+vegetation causes you to believe that you are standing in a rainforest.
+Dark clouds gather to the west.
+^
+Heaven32 s:Heaven33 w:Heaven30 ;
+lflags { Private }
+Northeastern Forest^
+   You are standing in a grove of maple trees.  To the east you spy the
+ocean, upon which waves are breaking.
+^
+Heaven33 n:Heaven32 w:Heaven34 ;
+lflags { Private }
+Swamp^
+   The earth sucks at your feet as you walk.  Off in the trees you can
+hear the sounds of alligators in search of food.  It is getting dark.  The
+alligators are hungry.
+^
+Heaven34 e:Heaven33 s:Heaven36 w:Heaven35 ;
+lflags { Private }
+The Southern Plains^
+   You stand in an arid land.  Tumbleweeds blow in the wind about you.
+^
+Heaven35 n:Heaven31 e:Heaven34 ;
+lflags { Private }
+Land of Giants^
+   All around you are huge redwoods and sequoias.
+^
+Heaven36 ;
+lflags { Private }
+Home of the Great Spirit^
+   The Great Spirit is not in right now, and there does not seem to be any
+place to leave a message.
+^
+

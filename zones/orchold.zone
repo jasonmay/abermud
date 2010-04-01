@@ -1,0 +1,454 @@
+%rainfall:780
+
+%latitude:45
+
+%mobiles
+
+Name            = watchman
+PName           = "The Watchman"
+Location        = observation
+Strength        = 100
+Damage          = 13
+Aggression      = 97
+Speed           = 0
+Armor           = 0
+Description     = "The Watchman Orc growls at you."
+End             = watchman
+
+Name            = andy
+PName           = "The Orc"
+Location        = trap
+Strength        = 42
+Damage          = 10
+Aggression      = 97
+Speed           = 0
+Armor           = 0
+Description     = "An Orc looks at you viciously."
+End             = andy
+
+Name            = mandy
+PName           = "The Orc"
+Location        = trap
+Strength        = 42
+Damage          = 10
+Aggression      = 97
+Speed           = 0
+Armor           = 0
+Description     = "An Orc looks at you viciously."
+End             = mandy
+
+Name            = randy
+PName           = "The Orc"
+Location        = trap
+Strength        = 42
+Damage          = 10
+Aggression      = 97
+Speed           = 0
+Armor           = 4
+Description     = "An Orc looks at you viciously."
+End             = randy
+
+Name            = Sandy
+PName           = "The Orc"
+Location        = trap
+Strength        = 42
+Damage          = 10
+Aggression      = 97
+Speed           = 0
+Armor           = 0
+Sflags          { Female }
+Description     = "An Orc looks at you viciously."
+End             = Sandy
+
+Name            = brandy
+PName           = "The Orc"
+Location        = trap
+Strength        = 42
+Damage          = 10
+Aggression      = 97
+Speed           = 0
+Armor           = 0
+Sflags          { Female }
+Description     = "An Orc looks at you viciously."
+End             = brandy
+
+Name            = maggot
+PName           = "The Maggot"
+Location        = limbo@limbo
+Pflags          { NoSummon }
+Speed           = 0
+Strength        = 135
+Damage          = 10
+Aggression      = 98
+Armor            = 0
+Description     = "
+A giant maggot slithers around, leaving a slimy trail behind him."
+End             = maggot
+
+Name            = usher
+PName           = "The Usher"
+Location        = audience
+Strength        = 150
+Damage          = 13
+Aggression      = 97
+Speed           = 0
+Armor           = 0
+Description     = "
+The Usher Orc, dressed in black livery, sneers down his nose at you."
+End             = usher
+
+Name            = king
+PName           = "The King"
+Location        = throne
+Strength        = 225
+Damage          = 20
+Aggression      = 97
+Speed           = 0
+Armor           = 0
+Description     = "
+The King Orc glares at you with a look of royal intolerance."
+End             = king
+
+%objects
+Name      = stalactite
+Location  = IN_ROOM:damp
+Oflags    {PushToggle NoGet}
+Linked    = StoneDoor
+State     = 1
+MaxState  = 1
+Desc[0]   = "A portion of the east wall is swung back, making a doorway."
+Examine   = "It clings to the ceiling, unlike a stalagmite."
+End       = stalactite
+
+Name      = StoneDoor
+Pname     = door
+AltName   = stone
+Location  = IN_ROOM:observation
+Oflags    {NoGet}
+Linked    = stalactite
+State     = 1
+MaxState  = 1
+Desc[0]   = "A portion of the west wall is swung back, making a doorway."
+End       = StoneDoor
+
+Name      = TopCover
+Pname     = cover
+AltName   = plate
+Location  = IN_ROOM:observation
+Oflags    {PushToggle NoGet}
+Linked    = BotCover
+State     = 1
+MaxState  = 1
+Desc[0]   = "A metal cover lies alongside a passage leading down."
+Desc[1]   = "A large metal plate lies on the floor."
+Examine   = "It's about one meter in diameter, and appears very heavy."
+End       = TopCover
+
+Name      = BotCover
+Pname     = cover
+AltName   = metal
+Location  = IN_ROOM:guardroom
+Oflags    {PushToggle NoGet}
+Linked    = TopCover
+State     = 1
+MaxState  = 1
+Desc[1]   = "A metal cover blocks the top of the ladder."
+Examine   = "
+It completely covers the hole in the ceiling, and appears very heavy."
+End       = BotCover
+
+Name      = chainmail
+AltName   = shirt
+Location  = IN_ROOM:guardroom
+Oflags    {Wearable Armor}
+Aflags	  {Chest Back}
+Armor     = 40
+BValue    = 70
+Size      = 5
+Weight    = 20
+Desc[0]   = "A black shirt of chainmail is spread on the floor."
+Examine   = "
+It appears well made.  The orcs must have have contracted someone else to
+make it."
+End       = chainmail
+
+Name      = garbage
+AltName   = piles
+Location  = IN_ROOM:central
+Oflags    {NoGet}
+MaxState  = 1
+Desc[0]   = "Piles of garbage lie in the middle of the room."
+Desc[1]   = "Garbage has been strewn all about the room."
+End       = garbage
+
+Name      = OrcGold
+Pname     = plate
+AltName   = gold
+Location  = IN_ROOM:central
+Oflags    {Destroyed}
+BValue    = 600
+Size      = 20
+Weight    = 20
+Desc[0]   = "A gold plate lies on the floor here."
+Examine   = ^
+It has an inscription on it which says, "To Owin, with love."  Scratched over
+those words is the scrawl, "Orks robb dwarvs! Ha!"^
+End       = OrcGold
+
+Name      = throne
+Location  = IN_ROOM:throne
+Oflags    {NoGet}
+Desc[0]   = "The throne of the King Orc looms before you."
+Examine   = "
+It's quite an impressive affair: gold leaf, patterns in bas-relief, cushions
+filled with down.  Upon close inspection you notice a switch hidden on the
+arm of the chair."
+End       = throne
+
+Name      = switch
+AltName   = arm
+Location  = IN_ROOM:throne
+Oflags    {Pushable NoGet}
+Linked    = HoleOrcs
+State     = 1
+MaxState  = 1
+Desc[0]   = "There is a hole in the north wall."
+Examine   = "
+It's a small, carefully concealed switch, more proof that the orcs had help
+building this place."
+End       = switch
+
+Name      = HoleOrcs
+Pname     = hole
+Location  = IN_ROOM:tunnel
+Oflags    {NoGet}
+Linked    = switch
+State     = 1
+MaxState  = 1
+Desc[0]   = "There is a hole in the south wall leading to another room."
+End       = HoleOrcs
+
+Name      = block
+AltName   = gold
+Location  = IN_ROOM:treasury
+BValue    = 700
+Size      = 50
+Weight    = 50
+Desc[0]   = "A huge block of gold has been left lying here."
+Examine   = "It's a hefty chunk of what appears to be solid gold."
+End       = block
+
+%locations
+
+Path1 e:E_Pass@Blizzard w:bandilbar1@volcano u:Path2 d:E_Pass@Blizzard;
+Altitude = 1250
+lflags{Outdoors}
+Trampled Path^
+   You stand on a steep upwards path.  The path has obviously been made by the
+trampling of many feet rather than by any plan.  Below you lies the end of the
+mountain pass.
+^
+Path2 u:Entryway d:Path1;
+Altitude = 1300
+lflags{Outdoors}
+Trampled Path^
+   A large opening in the mountainside lies above you.  The path continues
+below you.
+^
+Entryway n:Damp u:Nibelung1@nibelung d:Path2;
+Altitude = 1350
+lflags{Outdoors}
+Rough-hewn Entryway^
+   You stand at the entrance to a lair apparently carved out of the side of
+the mountain.  The work on the rock is very poorly done, and blackness beyond
+feels oppressive.  A path winds steeply downwards beneath you and the opening
+leads to the north.
+^
+Damp n:Trap e:^stalactite s:Entryway ;
+lflags{Dark}
+Damp Hallway^
+   This hallway shows the same poor craftsmanship as the rest of the compound.
+Water drips from a large stalactite near the eastern wall, making the whole
+room damp and uncomfortable.  The hallway continues north and south.
+^
+Observation w:^StoneDoor d:^TopCover ;
+lflags{Dark}
+Observation Room^
+   This room was obviously designed for spying on people entering the hallway.
+You notice a hole in the western wall through which the hallway can be seen.
+^
+Trap e:Guardroom;
+lflags{Dark}
+Trap Room^
+   This is the room where people foolish enough to fall through the trap door
+above wind up.  Another room lies to the east.
+^
+Guardroom n:Hallway1 w:Trap u:^BotCover ;
+lflags{Dark}
+Orc Guardroom^
+   This is apparently where the guards go to change when they go on or off
+duty.  The smell in the room is almost intolerable.  A ladder leads up to the
+ceiling, and passages lead west and north.
+^
+Hallway1 n:Hallway2 s:Guardroom ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads north and south.
+^
+Hallway2 e:Hallway11 s:Hallway1 w:Hallway3 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway branches east, west, and south.
+^
+Hallway3 n:Hallway4 e:Hallway2 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads north and east.
+^
+Hallway4 n:Hallway6 s:Hallway3 w:Hallway5 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway branches north, south, and west.
+^
+Hallway5 e:Hallway4 s:Hallway7 w:Hallway8 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway branches east, west, and south.
+^
+Hallway6 e:central s:Hallway4 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads south and opens into a large chamber to the east.
+^
+Hallway7 n:Hallway5 w:Hallway9 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads north and west.
+^
+Hallway8 e:Hallway5 s:Hallway9 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads east and south.
+^
+Hallway9 n:Hallway8 e:Hallway7 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads north and east.
+^
+central n:Hallway17 e:Hallway16 w:Hallway6 ;
+lflags{Dark}
+Central Chamber^
+   This is apparently the main place for the orcs to congregate.  The room
+reeks of filth and decay.  Hallways lead north, east, and west.
+^
+Hallway11 n:Hallway12 e:Hallway13 w:Hallway2 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway branches east, west, and north.
+^
+Hallway12 e:Hallway14 s:Hallway11 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads east and south.
+^
+Hallway13 n:Hallway14 w:Hallway11 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads west and north.
+^
+Hallway14 n:Hallway15 s:Hallway13 w:Hallway12 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway branches north, west, and south.
+^
+Hallway15 s:Hallway14 w:Hallway16 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads west and south.
+^
+Hallway16 e:Hallway15 w:central ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads east, and to the west enters a large chamber.
+^
+Hallway17 n:Hallway18 s:central ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads north, and to the south enters a large chamber.
+^
+Hallway18 e:Smooth s:Hallway17 ;
+lflags{Dark}
+Rough-hewn Hallway^
+   Like most orc-built hallways, this one is crooked, rough, and damp.
+The hallway leads east and south.
+^
+Smooth n:Audience w:Hallway18 ;
+lflags{Dark}
+Smooth Hallway^
+   This hallway shows definite signs of outside contracting.  It is smooth
+and well worked.  Unfortunately, it's still damp and filthy and smells like
+garbage.  The hallway continues north, and becomes rough again to the west.
+^
+Audience n:Throne s:Smooth ;
+lflags{Dark}
+Audience Waiting Room^
+   This appears to be where people wait to see the Orc King.  Benches line
+the walls for subjects to sit on.  A set of curtains cover an opening in the
+north wall, and would be quite impressive were it not for the mold growing on
+them.  A hallway leads south.
+^
+Throne n:^switch s:Audience ;
+lflags{Dark}
+Orc Throne Room^
+   In stark contrast to the rest of the orcs' lair, this room is grandeur and
+tack epitomized.  The walls are paved in gold, and at the north end of the
+room sits an incredibly ornate throne.  Heavy curtains cover an opening to
+the south.
+^
+Tunnel n:Mountainside s:^HoleOrcs w:Treasury ;
+lflags{Dark}
+Secret Tunnel^
+   This appears to be an escape route for the king in times of trouble.
+A passage leads west, and you can see light to the north.
+^
+Mountainside s:Tunnel d:Overgrown ;
+Altitude = 1000
+lflags{Outdoors}
+Steep Mountainside^
+   You are outside on the mountain.  A hole in the side of the moutain lies to
+the south, barely distinguishable from the plants covering it.  The grade is
+extremely steep, but it looks like you can skitter your way down.
+^
+Overgrown d:WEdge@Valley ;
+Altitude = 750
+lflags{Outdoors}
+Overgrown Path^
+   You are on what could almost be called a path, treading your way through
+vines, rocks, and the like.  The path becomes clearer and flatter farther
+down.  It is far too steep to go up the mountainside.
+^
+Treasury e:Tunnel ;
+lflags{Dark}
+King Orc's Treasury^
+   This is apparently where the King Orc likes to store his valuables.  The
+room itself is quite plain, and the layer of dust over everything indicates
+that the king probably hasn't had very many additions to his collection
+recently.
+^
+

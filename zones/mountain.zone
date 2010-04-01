@@ -1,0 +1,116 @@
+%rainfall:80
+
+%latitude:25
+
+%mobiles
+
+Name            = vulture
+PName           = "The Vulture"
+Location        = Mou6
+Strength        = 100
+Armor            = 0
+Damage          = 10
+Aggression      = 20
+MFlags {}
+Description     = "A vulture is hovering above you searching for prey."
+End             = vulture
+
+
+%objects
+
+Name            = rose
+AltName         = flower
+Location        = IN_ROOM:Mou6
+OFlags {GetFlips}
+BValue          = 80
+Size            = 1
+Weight          = 1             
+State           = 1
+MaxState        = 1
+Desc[0]         = "
+An extremely beautiful white desert rose has been left here by someone."
+Desc[1]         = "
+An extremely beautiful white desert rose peeks out of the flower mat."
+Examine         = "Your beloved would like this flower ..."
+End             = rose
+
+Name            = skull
+Location        = IN_ROOM:Mou3
+OFlags {GetFlips}
+BValue          = 10
+Size            = 2
+Weight          = 1             
+State           = 1
+MaxState        = 1
+Desc[0]         = "An old bleached skull of ox is lying in the sand."
+Desc[1]         = "
+A bleached skull of ox reminds you about your fate, if you stay here for long."
+Examine         = "Be glad it's not yours."
+End             = skull
+
+
+%locations
+
+Mou1 n:shady@blizzard s:Mou2;
+Altitude = 500
+lflags {OutDoors NoMobiles}
+Thick Bushes^
+You are strolling through thick bushes trying to find your way out.
+The sun is climbing high up in the sky casting its' warm rays on you.
+There's no sign of rain or storm in the sky. A narrow path is winding 
+from north to south through the bushes.
+^
+
+Mou2 n:Mou1 s:Mou3;
+Altitude = 550
+lflags {OutDoors}
+Northern Edge of Desert^
+The sun has reached the zenith as you arrive at the edge of a desert. Your 
+feet start feeling heavy and you think this is your last chance to check your 
+water bottle. To the south you can see the rocky lands continuing far out of 
+your sight. To the north the desert turns into thick thorny bushes.
+^
+
+Mou3 n:Mou2 e:Mou4 w:Mou6;
+Altitude = 550
+lflags {Outdoors}
+Wild Ox Crossing^
+Through the burning heat an dry rocky desert you stomp and stop for a moment 
+to have a look around. The sand reflects the heat making you hope it was 
+night. You are desperately trying to distinguish reality from mirage. You 
+think you see paths leading in each direction. To the south you can narrowly 
+recognize a red hill breaking the horizon.
+^
+
+Mou4 w:Mou3 e:Mou5;
+Altitude = 600
+lflags {Outdoors}
+Shadow of the Cactus^
+You take a deep reliefing breath as you find a nice seat in the shadow of a 
+tall thorny cactus. You kick your shoes off and let the heat dry your sweating 
+toes. Weak winds from the east blow gently through your hair and the sweat on 
+your wet shirt slowly evaporates cooling down your back. You glance at the 
+eastern skyline broken by odd structures in the distance. 
+Paths lead east and west.
+^
+
+Mou5 w:Mou4 e:Anc24@Ancient;
+Altitude = 650
+lflags {Outdoors NoMobiles}
+Rocky Path^
+You can hardly make out a stony path winding between big rocks eastwards. The 
+path widens as you wander further east and you can recognize an old town far 
+on the edge of your sight. Back to the west a vast desert lies in the burning 
+heat of the sun. 
+^
+
+Mou6 e:Mou3;
+Altitude = 550
+lflags {OutDoors Peaceful NoMobiles}
+Desert Rose^
+A shower of rain has suddenly turned the earlier so dry and barren desert into 
+a sea of small but colorful flowers. The raincloud is slowly moving west and 
+the sun casts its' first rays upon this scented little paradise. You sit down 
+on the ground enjoying the peace and silence surrounding you.
+^
+

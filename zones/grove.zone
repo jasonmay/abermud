@@ -1,0 +1,349 @@
+%rainfall:640
+
+%latitude:55
+
+%mobiles
+
+Name            = dinthiar
+Pname           = "King Dinthiar" 
+Eflags          {Fireball Missile Shock Frost ImmCripple ImmBlind ImmMute ImmDeaf} 
+Location        = cottage
+Strength        = 1000 
+Damage          = 20 
+Armor           = 0 
+Aggression      = 0 
+Speed           = 0 
+Description     = "Dinthiar, King of the Elves, sits here waiting for you."
+End             = dinthiar 
+ 
+Name            = atropos 
+Pname           = Atropos
+Sflags          {Female} 
+Location        = fates_cavern 
+Strength        = 100
+Damage          = 10
+Armor           = 0
+Aggression      = 50
+Speed           = 0
+Description     = "Old wise Atropos sits here, cutting the thread of life." 
+End             = atropos 
+
+Name            = lachesis 
+Pname           = "Lachesis"
+Sflags          {Female}
+Location        = fates_cavern 
+Strength        = 100
+Damage          = 10
+Armor           = 0
+Aggression      = 50
+Speed           = 0
+Description     = "Middle-aged Lachesis is here, weaving the tapestry of life."
+End             = lachesis 
+
+Name            = clotho
+Pname           = "Clotho"
+Sflags          {Female}
+Location        = fates_cavern 
+Strength        = 100
+Damage          = 10
+Armor           = 0
+Speed           = 0
+Aggression      = 50
+Description     = "Young Clotho sits here, spinning the thread of life."
+End             = clotho 
+ 
+Name            = platydonk
+Pname           = "The PlatyDonk"
+Eflags          {ImmCripple ImmBlind ImmMute ImmDeaf}
+Location        = lab 
+Strength        = 250
+Damage          = 25
+Armor           = 0
+Speed           = 0
+Aggression      = 50
+Description     = "
+The PlatyDonk, Nature's horrific mutation, shuffles here, drooling on 
+the floor."
+End             = platydonk 
+
+%objects
+
+Name            = glove
+Oflags          {Wearable Lit}
+Aflags		{Hand}
+Location        = IN_ROOM:dark_hole 
+BValue          = 500
+Size            = 10
+Weight          = 10
+Desc[0]         = "
+Sauron's Glove glows here, ..You have an irresistible urge to wear it."
+Examine         = "
+The glove is very powerful, able to do things you can't see. Bummer, huh?"
+End             = glove
+
+Name            = pipetman
+Location        = IN_ROOM:out_back 
+Linked          = beaker
+BValue          = 20
+Size            = 2
+Weight          = 2
+Desc[0]         = "A pipetman, used in genetic research, lies here discarded." 
+Examine         = "The end is full of an odd fluid, and you wonder what from."
+End             = pipetman
+
+Name            = beaker
+Location        = CARRIED_BY:platydonk 
+Linked          = pipetman 
+BValue          = 20
+Size            = 2
+Weight          = 2
+Armor           = -1
+State           = 0
+MaxState        = 1
+Desc[0]         = "An empty beaker lies here."
+Desc[1]         = "The beaker is filled with a sickeningly pink fluid."
+End             = beaker
+
+Name            = figleaf
+Oflags          {Armor Wearable}
+Aflags		{Legs}
+Location        = IN_ROOM:fig_garden 
+BValue          = 50
+Size            = 5
+Weight          = 2
+Armor           = 25
+Desc[0]         = "A fig leaf, fallen from a tree, blows around in the breeze."
+Examine         = "You think it might have actually been worn by Adam or Eve."
+End             = figleaf
+
+Name            = donut
+Oflags          {Food}
+Location        = IN_ROOM:study 
+BValue          = 10
+Size            = 4
+Weight          = 1
+Desc[0]         = "A half-eaten donut sits on the desk."
+Examine         = "Yum, the thing has a bite out of it. Oh well, food is food." 
+End             = donut
+
+Name            = thread
+Oflags          {RegenHealth}
+Location        = CARRIED_BY:clotho
+BValue          = 5
+Size            = 1
+Weight          = 1
+Desc[0]         = "
+Some of Clotho's spun thread is here, pulsing with an inner life."
+Examine         = "
+You can barely see the strong thin thread, except for the glimmer. Wow."
+End             = thread 
+
+Name            = elvencloak
+Oflags          {Armor Wearable}
+Aflags		{Chest Back Arms}
+Location        = IN_ROOM:limbo@limbo
+BValue          = 500
+Size            = 2
+Weight          = 2
+Armor           = 70
+Desc[0]         = "
+A light elvencloak, made of the thread of Fates, lies here, nicely folded."
+Examine         = "
+This cloak seems to blend in rather well into the surroundings."
+End             = elvencloak
+
+Name            = sculpture
+Location        = IN_ROOM:flower_garden
+BValue          = 800
+Size            = 10
+Weight          = 8
+Desc[0]         = "A gorgeous wooden elven sculpture sits here in the flowers."
+Examine         = "
+This seems to be very priceless, and you've decided to steal it."
+End             = sculpture
+
+%locations
+
+grand w:entrance;
+lflags {soundproof cantsummon nosummon}
+Inside the Grand Oak^
+   You appear to be in the Old Oak, except that something's different. 
+Everything seems to be fresher, newer, and more full of life. The Oak itself 
+seems to be smaller, possibly because you've come to a time when it
+was several centuries younger. There is passage west to the outside.
+^
+entrance e:grand n:over_view s:dwelling;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Entrance to the Elven Forest^
+   A magnificent expanse of forest spreads before you. The morning mist has not
+quite lifted totally from the ground, making the Elven Forest a mystical place
+to gaze upon. You feel awed. The ancient forest lies in grand splendor, as yet  
+untouched by the two evils warring in your present time. Instead of corruptness,
+you are moved by the beauty the forest and wish that the trees would be this
+lush in your own time. You have no desire to leave this beautiful land. To the 
+north you see an high overview of the forest, to the south you see the entrance
+of a dwelling of some sort, hidden well behind thick bushes. 
+^
+
+dwelling n:entrance e:study s:lab;
+lflags {soundproof}
+Nature's Dwelling^
+   You have entered the dwelling of Mother Nature. Of course she lives in these
+beautiful lands after creating them. Plants and animals abound within this 
+place, and you feel comfortable and warm. The whirr of insects relaxes you and
+you wonder what sort of person the Green Mother really is. Couches and chairs
+are made out of the natural things, grown out of either wood, moss, or some
+such living material.
+   A miniature sun warms the place, keeping it light. The walls allow fresh air
+through to circulate, and little trickles of water flow from the ceiling keeping
+everything alive. The floor is springy with plantlife, and you slightly bounce
+along as you walk. Two rooms are formed off of this one.
+^
+
+lab n:dwelling;
+lflags {soundproof cantsummon nosummon}
+Gaea's Laboratory^
+   Here is where Mother Nature does her nature work. A class 'A' geneticist, 
+she finds ways to alter the paths of DNA. Several large lab desks with large
+countertops fill the middle of the room, and shelves with beakers and flasks
+filled with chemicals line the walls. Many odd things are in this room that you 
+don't dare touch, not knowing what next shall happen to you. Among these hum a
+few HOOD machines, automatically sorting base-pairs from DNA strands.
+^
+
+study w:dwelling;
+lflags {soundproof cantsummon nosummon}
+Study^
+   Books upon hundreds fill this study. An immense library is secluded in this
+small dwelling, vast stores of knowledge lie here. Any book on any subject or
+author is here somewhere, waiting for the reader to pick them up lovingly.
+A desk with a highly advanced computer is cluttered by numerous tomes. Bright
+light filters in through the window, making this a nice place to be.
+^
+
+over_view n:grove_path e:recluse s:entrance w:fig_garden;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon} 
+Over View^
+   You reach a high point in the forest, overlooking the entire forest. The mist
+slightly curls upwards to the sun, dew sparkling on the ground and leaves. To
+the north you see a well-worn path. East is a thick crop of shrubs. South you
+see the meadow of the beginning of the Elven Forest, while westwards lies a
+dense garden. The beauty might make your eyes tear a bit.
+^
+
+recluse w:over_view n:fates_cavern;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Recluse^
+   Forging your way through the thick shrubs, you stumble upon a hidden pond.
+Clear and pure, this water allows you to see to the deepest bottom. Multi-
+colored fishes swim here, cattails rustle slightly in the breeze. Water fowl
+float around on it's surface. As you look about, you hear myriads of little
+voices calling and taunting you. Something seems to be flitting around the 
+northern end of the pond.
+^
+
+fates_cavern s:recluse;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Fates Cavern^
+   This is the Cavern of the Three Fates. In one area you see a place for
+sleep, another a place to cook. In the center, a large fire burns brightly.
+In one corner, there is a spinning wheel. In another, a large tapestry is
+being woven on a loom. The place is quite cozy, and you get a sense of great
+power from being here.
+^
+
+grove_path n:glen s:over_view;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Grove Path^
+   You are on a well-made path through the elven forest's beautiful canopy.
+Twisting around the trees, the path takes you deep into the forest, making you
+wonder where you are.
+^
+
+glen s:grove_path e:cottage;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Glen^
+   A small glen opens up before you, several marble benches circle a large 
+fountain in the center of the area. The fountain bubbles water and glistens
+brightly in the warming sun. Carved into the fountain is a sculpture of an
+elven woman playing the lute, perhaps a memorial to some great lady. You see
+a hidden cottage through some bushes, amongst some trees.
+^
+
+cottage w:glen;
+lflags {soundproof cantsummon nosummon}
+Dinthiar's Cottage^
+   You have entered the home of Dinthiar, the Elven King. It is a rather simple
+dwelling. A bed, table and chair are the only furnishings. However, the whole
+room is given a 'foresty' feel by the way the ivy which grows up the insides
+of the walls, and by the potted plants which hang from the ceiling. It is 
+exactly the type of dwelling that you would expect an elf to have. A large
+elvensword lies on the table, layed there by loving hands.
+^
+
+fig_garden e:over_view s:flower_garden;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Fig Tree Garden^
+   You arrive at a garden full of fig trees. Some fruit ripens on the branches,
+swaying gently in the sun. Trees are everywhere, creating a nice grove that 
+makes you feel comfortable walking around in.
+   You have this weird feeling you read about this place in some sort of book
+involving two people and a snake of some sort.
+^
+
+flower_garden s:gate n:fig_garden w:ferns;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Flower Garden^
+   The flowers that abound here in color lie all about you. In the trees, 
+on the ground, in many forms and colors. The breeze blows some of the scent
+toward you, and you become heady at the fragrance.
+^
+
+gate n:flower_garden s:dark_hole;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Gateway^
+   A large dingy gate lies before you, half-way open, partially hidden in the
+dense foliage. Even in this beautiful land, you get an odd sense of forboding
+when you look at the gate. There is a sign:
+
+                       +-----------------------------+
+                       |  NO MORTALS ALLOWED ACCESS  | 
+                       +-----------------------------+ 
+^
+
+dark_hole n:flower_garden;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Dark Hole Behind the Gate^
+   You've entered a somewhat dark, dank hole behind the dingy gate. The gate
+creaks a bit, making squeals that set your hair on end. For some reason, you
+don't know why, this place is off limits to normal people. There must be 
+something very special here. 
+^
+
+ferns e:flower_garden s:out_back;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Ferns^
+   This place is overloaded with ferns. You wade through the fronds, feeling
+lost in the overgrowth. Nice place to get lost.
+^
+
+out_back n:ferns;
+Altitude = 800
+lflags {soundproof outdoors cantsummon nosummon}
+Out Back in the Bushes^
+   You get a nice view of bushes. To the west you see a wall of rocks. Nothing
+too special about this area, except that seeing all these nice bushes gives you
+the urge Mother Nature usually provides.
+^
+

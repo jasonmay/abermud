@@ -1,0 +1,293 @@
+%rainfall:500
+
+%latitude:40
+
+%mobiles
+Name		= duck
+Pname		= "Duck"
+Location	= IllBalcony
+Pflags		{ NoSummon NoZap NoPunt NoExorcise }
+Sflags		{ Female }
+Strength	= 20
+Damage		= 10
+Armor		= 0
+Aggression	= 0
+Speed		= 0
+Description	= "A small duck is swimming lazily around the pond."
+End		= duck
+
+Name		= hamster
+Pname		= "Hamster"
+Location	= ReedaHome
+Pflags		{ NoSummon NoZap NoPunt NoExorcise }
+Sflags		{ Female }
+Strength	= 20
+Damage		= 10
+Armor		= 0
+Aggression	= 0
+Speed		= 0
+Description	= "Reeda's hamster is here, sniffing around."
+Examine		= "It is a cute little fuzzy hamster."
+End		= hamster
+
+%objects
+Name		= cap
+Location	= IN_ROOM:IllPrivate
+Oflags		{ Wearable }
+Aflags		{ Head }
+BValue		= 100
+Size		= 2
+Desc[0]		= "Shail's dunce cap is here, waiting for her."
+Examine		= "
+This is the Shailies' dunce cap. It proves that she truly is a person
+that only puts on a dumb act, for it is only when she wears this cap
+that she is dumb."
+End		= cap
+
+Name		= picture
+Location	= IN_ROOM:IllBedroom
+BValue		= 100
+Size		= 2
+Desc[0]		= "A wedding picture of Illusion and Reeda rests on the nightstand."
+End		= picture
+
+Name		= toiletseat
+Altname		= seat
+Location	= IN_ROOM:IllBathroom
+Oflags		{ NoGet Openable }
+State		= 1
+MaxState	= 1
+Desc[0]		= "The toilet seat is up, don't let Reeda catch you!"
+Desc[1]		= "The toilet seat is down."
+End		= toiletseat
+
+Name		= reedabear
+Altname		= Teddy
+Location	= IN_ROOM:ReedaHome
+Oflags		{ Wearable }
+Aflags		{ Back }
+BValue		= 100
+Size		= 2
+Desc[0]		= "Reeda's life size teddy bear lays on the floor."
+Examine		= "
+This is a very large teddy bear, it stands five feet tall and is made from
+the softest materials. The more you look at the bear, the more you realize
+how perfect it is for snuggling with."
+End		= reedabear
+
+Name            = joadring
+Altname         = ring
+Location        = IN_ROOM:JoadBaby
+Oflags          { Wearable }
+Aflags 		{ Hand }
+BValue          = 200
+Size            = 1
+Desc[0]         = "Joad's wedding ring sets here waiting for him to return to it."
+Examine         = "
+The simple gold band gives off a strange glow.  It has some engraving inside.
+It reads:
+
+  To my darling Joad,
+     I love you now and forever.  Don't forget how much you mean to me.
+
+It would be wise to leave this ring here for Joad to wear."
+End             = joadring
+
+Name            = babyring
+Altname         = ring
+Location        = IN_ROOM:JoadBaby
+Oflags          { Wearable }
+Aflags		{ Hand }
+BValue          = 200
+Size            = 1
+Desc[0]         = "Baby's Wedding Ring is setting here, waiting to be put on her finger."
+End             = babyring
+
+%locations
+
+Chat ;
+lflags { Private Party }
+The Chat Room^
+   You are lounging in a quiet cosy parlour, warmed by a gentle magical fire
+which twinkles happily in a warm fireplace.  There are no doors out.  Clearly
+the owner of this room needs none.
+^
+Fogey ;
+lflags {}
+Old Fogeys' Room^
+   This room is for Old Fogeys to sit in and lament all the mistakes of their
+lives.  Forlornly scattered about this depressing room are old dentures, broken
+eyeglasses, and rotting toupees.  Next to a boarded-up window is what was
+obviously once an elegant indoor flower garden, its contents long wilted and
+desiccated.  An old wind-up phonograph is producing a very scratchy sounding
+rendition of sad songs from decades past.  In the center of the room are
+several uncomfortable-looking chairs made of rotting wood, arranged in a
+circle.
+^
+Clearing ;
+lflags { Outdoors Party }
+Sacred Clearing^
+   You find yourself in a clearing deep in the Misty Mountains.  Some mighty
+being has carved this niche out of the living rock, making a place suitable for
+the gods themselves to wed.  A simple podium in the center of this clearing
+lends to the overall impression that this is a holy place.
+   Stands have been hewn out of the mountain and intricately carved with an
+animal motif.  Each of the 50 seats depicts a different creature, and all
+appear calm and serene.
+   A feeling of peace and goodwill washes over you as you gaze in awe at the
+majestic peaks that surround this place.
+^
+Plane ;
+lflags{ Private Party }
+The Higher Plane^
+   You are standing on an infinite plane, perfectly flat as far as the eye
+can see in all directions.  The sky is a strange glowing pattern of lines
+that seem to twist and writhe.  The flat surface under your feet seems to be
+covered with some sort of fractal pattern.
+   As you stare at the patterns, you begin to sense a higher order of reality,
+feeling that if you stared long enough, you would understand the nature of
+the universe...
+^
+Jacuzzi ;
+lflags { Private Party }
+In The Jacuzzi^
+   Tiny bubbles tickles your body as you emerge in warm water.  The pool is
+lit by lights in the sides which make the water look even more steaming and
+swirly.  Soft music and the heady smell of fresh-cut flowers complete this
+divine pleasure!
+^
+Stargazer;
+lflags { Private Party }
+Stargazer's Quarters^
+     You are in a clearing under a green, airy  canopy  somewhere
+in  a  luxuriant  forest.  Gigantic trees of majestic proportions
+surround you in all directions.  However, as far as your eyes can
+see, there is nowhere dark under the trees.  Even where the trees
+are largest the sunshine penetrates, subdued by  the  foliage  to
+exquisite  greenish-golden  tints,  fills  the wide lower spaces.
+Above you, golden shafts of light filtered through some break  in
+the  foliage,  give a strange glory to everything they touch.  At
+the center of the clearing is a great green  mound  covered  with
+sward  of fragrant grass.  The mound is dotted with small golden,
+white, and pale-green flowers shaped like stars, glimmering  like
+a  mist amid the rich hue of the grass.  On the top of the mound,
+upon a low pedstal stands a basin of silver,  wide  and  shallow,
+filled with crystal clear water.  In the distance, like a tempest
+of wind mixed with the shrilling music of  some  unknown  musical
+instrument,  the  songs  of birds fill the air.  This place gives
+you a strange sense of vibrant energy and contentment.
+^
+JoadBaby ;
+lflag { Private NoAt }
+&+yThe Loft^
+You quickly realize upon first sight that this is not a hay loft but an
+apartment. This is Joad and Baby's room. All of the comforts of home are here.
+There is a soft feather bed at the far end of the large room. It is placed
+next to the window. There is a spectacular view from there. To your
+right there is a dining and kitchen area at your left a sitting area.
+The whole place is done in earth tones and you feel very welcome here.
+^
+Stars ;
+lflags { SoundProof }
+Among the Stars^
+
+  .             .                               *   .
+
+.
+        Your soul takes flight, and, detached from all worldly care,
+
+.
+      *                                                     |          *
+        .          you float among the shining stars.      -*-    .
+                             .          *                   |
+^
+ReedaHome ;
+lflags { Private NoAt }
+Crystal Pool^
+You stand in awe in a vast cave dominated by a crystal pool. The surface
+of the water is a perfect mirror, casting silvery reflections on the walls.
+Magic fills the air, and in the water there are manatees and manatoos.
+Dewdrops glisten on the rocks and edelweiss grows in the most unlikely
+places: among stones and unfinished ice sculptures. The bed on the north
+wall shimmers a magical blue. The other walls are filled with the
+colors of some unseen rainbow. Surprisingly, the room is quite warm, upon
+closer inspection, you notice a heating duct in one corner. Ah, the wonders
+of central heating.
+^
+IllBedroom e:IllBathroom w:IllBalcony;
+lflags { Private NoAt }
+Illusion and Reeda's Bedroom^
+  You are in a large bedroom that is dimly lit by candlelight.
+The sound of the soft romantic music coming from the stereo
+puts your mind to ease and you sigh happily as you look around
+the room some more. There is a large fireplace that takes up most
+of the southern wall that casts out shadows around the room and
+as you come closer to the fire the heat soothes your nerves and
+you smile. In front of the fireplace there is a soft bearskin rug
+that looks quite inviting to curl up on and stare at the fire, or
+to curl up with someone else and spend time together. Against the
+north wall there is a luxurious bed that looks very inviting to
+relax on. There is a dark blue comforter spread over the bed with
+soft blue pillows on top of it next to the headboard. 
+  The master bathroom is to the east and the garden balcony is to
+the west.
+^
+IllBathroom w:IllBedroom;
+lflags { Private NoAt }
+The Bathroom^
+  There is a large blue whirlpool type bathtub in the middle of 
+the bathroom and it looks quite inviting to sit in for a while.
+There is a blue toilet with a blue flowers on top of it and a 
+blue sink next to it with a bar of blue soap. Two blue towels
+hang from a blue towel rack that is next to the bathtub. The floor
+is also a deep blue color.
+^
+IllBalcony e:IllBedroom;
+lflags { Outdoors Private NoAt }
+The Garden Balcony^
+    You seem to have stepped into a large clearing in a forest with 
+a small pond in the middle of it. The pond is a beautiful shade of 
+blue and you can see little fish swimming around in it. The sunshine
+hits the water and makes it sparkle like Reeda's eyes.
+^
+IllPrivate ;
+lflags { Private NoAt Owner }
+Illusion's Private Chambers^
+This is a cozy little place that Illusion goes to so that he can relax and
+collect his thoughts. There is a large plush couch set against the wall
+with several pillows on it and it looks very comfortable. In the middle
+of the room there is a small table with a deck of cards on it. Next to
+the couch is a small stereo system with quite a few CD's next to it.
+^
+IllImagine ;
+lflags { }
+The Illusion of Your Imagination^
+  You are inside of your imagination..you can see all of your dreams
+blend into one reality right before your eyes -- your hopes, wishes,
+desires, fantasies, and fears combine into the reality that you have
+created here.
+^
+IllExist ;
+lflags { }
+The Illusion of Existance^
+  You are floating aimlessly into nowhere, but heading in all directions.
+You look around yourself seeing all colors but at the same time looking
+at nothing. You feel small but also you feel as you are taking up all
+space. You feel weightless yet you also feel that you weigh an infinite
+amount. One second you are human and the next second you are not. You are
+not alive but you are not dead. Then in an instant that takes forever you
+hear a voice that is not old, young, male, or female. The voice speaks
+softly, "Existence is an illusion that you make it to be.."
+^
+IllHole ;
+lflags { NoSummon SoundProof God NoAt Private OnePerson }
+Illusion's Little Hole^
+You are inside of Illusion's little hole. He goes here when he really
+needs to be left alone. It is a small little place, but looks quite
+comfortable, it has a lazy boy chair and a TV and VCR. There is also
+a small refridgerator in the corner that is most likely full with
+Illusion's favorite drinks.
+^
+
+
+

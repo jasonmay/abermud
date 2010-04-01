@@ -1,0 +1,160 @@
+%rainfall:820
+
+%latitude:35
+
+%mobiles
+Name            = native
+PName           = "The Native"
+Location        = ruins2
+Strength        = 40
+Damage          = 10
+Aggression      = 30
+Armor            = 0
+Description     = "A native watches you warily from a safe distance."
+End             = native
+
+%objects
+
+Name      = bone
+Location  = IN_ROOM:beach
+Oflags    {Wearable Weapon}
+Aflags    {Back}
+Damage    = 3
+BValue    = 40
+Size      = 5
+Weight    = 5
+Desc[0]   = "A bleached bone lies at your feet."
+Examine   = "
+It's got some markings along it.  Maybe you should try reading the bone, and
+see what it says."
+End       = bone
+
+Name      = sulphur
+AltName   = pile
+Location  = IN_ROOM:waste1
+BValue    = 20
+Size      = 1
+Weight    = 1
+Desc[0]   = "Some sulphur lies here in a small pile."
+End       = sulphur
+
+Name      = spear
+Location  = IN_ROOM:path
+Oflags    {Weapon}
+Damage    = 6
+BValue    = 10
+Size      = 1
+Weight    = 1
+Desc[0]   = "A fire-hardened spear has been left here."
+End       = spear
+
+Name      = feather
+Location  = IN_ROOM:path
+BValue    = 100
+Size      = 1
+Weight    = 1
+Desc[0]   = "A multi-colored feather has been left here."
+End       = feather
+
+%locations
+
+Beach e:Bushes w:1@sea;
+Altitude = 0
+lflags {Outdoors}
+Sandy Beach^
+   You are standing on a lonely sandy beach shielded from the howling winds by
+two huge old lava flows to the north and south. Thick bushes cover a huge array
+of old decaying ruins to the east.
+^
+Bushes e:Ruins2 s:Ruins2 w:Beach;
+Altitude = 0
+lflags {Outdoors}
+Tangled Bushes^
+   You are clambering through a mess of thick tangled bushes and stumbling
+over huge blocks of stone, evidently once part of a much mightier construction.
+The bushes and ruins continue east and south while to the west is a beach.
+^
+Ruins1 e:Slope1 s:Flow w:Bushes u:Flow;
+Altitude = 0
+lflags {Outdoors}
+Ruins^
+   You stand in the center of what must once have been a huge ampitheatre,
+with high columned arches surrounding it. Thick heavily tangled bushes grow all
+around the stumps of the many fallen pillars, frequently hiding them from view.
+The ruins extend back westwards, but to the south and east have been covered
+by huge lava flows.
+^
+Slope1 s:Slope2 w:Ruins1 u:Slope2 d:Ruins1;
+Altitude = 100
+lflags {Outdoors}
+Lava Slope^
+   You are scrambling across a black barren lava slope, a vast black desolate
+expanse which extends away to the south and east. To the west the lava ends and
+gives way to the ruins of an ancient building.
+^
+Ruins2  n:Bushes e:Flow s:Path w:1@sea u:Flow;
+Altitude = 0
+lflags {Outdoors}
+Desolate Ruins^
+   You are standing in the desolate ruins of what was perhaps once a harbour.
+The sea now breaks over the low crumbling stone wall which must once have been
+a jetty of some sort.  Thick tangled bushes extend north and east following the
+ruins to the edge of a huge lava flow.  To the south a narrow trail leads into
+thick vegetation.
+^
+Flow n:Ruins1 e:Slope2 w:Ruins2 u:Slope2 d:Ruins1;
+Altitude = 50
+lflags {Outdoors}
+Edge Of Lava Flow^
+   You are standing on the edge of a huge lava flow which extends east upwards
+towards the crater of a huge volcano.  To the east and north the lava gives way
+to ancient ruins.
+^
+Slope2 n:Slope1 e:Waste2 s:Brink w:Flow u:Brink d:Slope1;
+Altitude = 150
+lflags {Outdoors}
+Lava Slope^
+   You are clambering across a steep lava slope.  The slope is barren and bare
+save for a few bushes which break from cracks in the rock.  Up above you to the
+north a narrow path zig zags to the rim of the volcano itself.
+^
+Path n:Ruins2 s:Cragg;
+Altitude = 150
+lflags {Outdoors}
+Narrow Path^
+   You are following a narrow, and suprisingly, if not alarmingly, well used
+path.  The path leads northwards towards some ruins, and south through the
+bushes and trees, towards a low crag.
+^
+Brink n:Slope2 e:Waste2 w:Flow d:Top@Labyrinth;
+Altitude = 400
+lflags {Outdoors}
+Crater's Brink^
+   You stand on the brink of an ancient volcanic crater.  The ground around you
+trembles and shakes to the accompaniment of a steady rumbling from beneath your
+feet.  A huge black slab stands on the very edge of the crater marked with many
+hideous symbols and shapes. A narrow staircase leads downwards beside the slab.
+^
+Cragg n:Path;
+Altitude = 200
+lflags {Outdoors}
+Cragg^
+   You are standing on the top of a high rocky cragg, which looks down upon
+heavy seas crashing against the rocky shoreline far far below.  A single path
+leads north into the bushes.
+^
+Waste1 n:Waste2 e:surface1@loligo s:Waste2 w:Slope1 u:Waste2 d:Slope1;
+Altitude = 100
+lflags {Outdoors}
+Lava Wasteland^
+   You are trudging across a black lava wasteland, broken only by a few very
+hardy bushes and low trees.  The lava extends all around you.
+^
+Waste2 n:Waste1 e:Waste1 s:Waste2 w:Slope2 u:Brink d:Flow ;
+Altitude = 150
+lflags {Outdoors}
+Lava Wasteland^
+   You are trudging across a black lava wasteland, broken only by a few very
+hardy bushes and low trees.  The lava extends all around you.
+^
+

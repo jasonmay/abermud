@@ -1,0 +1,1089 @@
+
+%Mobiles
+
+
+Name = Red_Dragon
+pname = "Dragon"
+location = Mithdan40
+sflags {}
+mflags {}
+pflags {}
+strength = 9999
+damage = 100
+armor = 100
+Aggression = 0
+speed = 0
+Description = "
+A huge red dragon settles down and wraps itself around the fountain. Although
+it looks very calm, you remember the old addage 'Let Sleeping Dragons Lie'
+and decide that it is a good idea not to irratate it."
+examine = "
+The dragon's scales glitter in the magical light, and it keeps one eye
+half open to gaze back at you."
+end = Red_Dragon
+
+Name = Earth_Elemental
+pname = "Elemental"
+location = Mithdan3
+sflags {}
+mflags {}
+pflags {}
+strength = 400
+damage = 30
+armor = 8
+Aggression = 0
+speed = 5
+Description = "
+On the edge of your vision a graceful but immensely huge earth elemental
+slips among the trees."
+examine = "
+The elemental is formed of rocks, earth, and living greenery. Although it is
+thin and graceful, beneath its features ripples immense strength."
+end = Earth_Elemental
+
+Name = Druid
+pname = "Druid"
+location = Mithdan69
+sflags {}
+mflags {}
+pflags {}
+strength = 100
+damage = 5
+armor = 0
+Aggression = 0
+speed = 5
+Description = "
+A druid wanders the town, his face concealed by a deep cowl."
+examine = "
+The druids robes appear to be made of soft cotton or a similar cloth.
+His face is hidden in the shadow of his cowl."
+end = Druid
+
+Name = Druid2
+pname = "Druid"
+location = Mithdan69
+sflags {}
+mflags {}
+pflags {}
+strength = 100
+damage = 5
+armor = 0
+Aggression = 0
+speed = 5
+Description = "
+A druid wanders the town, his face concealed by a deep cowl."
+examine = "
+The druids robes appear to be made of soft cotton or a similar cloth.
+His face is hidden in the shadow of his cowl."
+end = Druid2
+
+Name = Beauty
+pname = "woman"
+location = Mithdan74
+sflags { female }
+mflags {}
+pflags {}
+strength = 100
+damage = 10
+armor = 0
+Aggression = 0
+speed = 0
+Description = "
+A beautiful woman sits on the edge of the fountain, sunning herself."
+examine = "
+The woman is exquisitely beautiful, and your heart yearns for her. However,
+she seems very cold and aloof."
+end = Beauty
+
+Name = SnowCritter
+pname = "Critter"
+location = Mithdan24
+sflags {}
+mflags {}
+pflags {}
+strength = 180
+damage = 25
+armor = 0
+Aggression = 100
+speed = 0
+Description = "
+A creature with glowing red eyes and snow-white fur snarls and leaps at you!"
+end = SnowCritter
+
+Name = Beast
+pname = "Beast"
+location = Mithdan47
+sflags {}
+mflags {}
+pflags { nosteal }
+strength = 210
+damage = 25
+armor = 0
+Aggression = 0
+speed = 0
+Description = "
+An immense beast, a living combination of fire and ice, stands before you."
+examine = "
+Huge and incredibly powerful in appearance, the beast rears up on its hind legs
+and roars at you."
+end = Beast
+
+%Objects
+
+name = Inscription_Stone
+Altname = Stone
+pName = "Inscription"
+state = 0
+Maxstate = 0
+armor = 0
+damage = 0
+bvalue = 0
+size = 1
+weight = 1
+location = IN_ROOM:Mithdan35
+desc[0] = "
+An inscription has been carved into the stone at your feet."
+oflags {noget}
+examine = "The inscription reads:
+    The Guardian Dragons will allow only those who pay proper homage
+    to the Gods pass through the portal. Those who try to force their
+    passage will be punished."
+end = Inscription_Stone
+
+name = Fountain
+Altname = Fountain
+pName = "Fountain"
+state = 0
+Maxstate = 0
+armor = 0
+damage = 0
+bvalue = 0
+size = 1
+weight = 1
+location = IN_ROOM:Mithdan40
+desc[0] = "
+A large fountain bubbles in front of you, a clean scent rising from the clear
+water."
+oflags {noget food }
+examine = "
+        The fountain seems immesurable deep, and you think you can see trees
+far away at the bottom of it."
+end = Fountain
+
+name = Berries
+Altname = Berry
+pName = "Berries"
+state = 1
+Maxstate = 1
+armor = 0
+damage = 0
+bvalue = 50
+size = 20
+weight = 8
+location = IN_ROOM:Mithdan9
+desc[0] = "
+A small group of berries has been dropped on the floor."
+oflags {food getflips}
+desc[1] = "
+A small cluster of berries growns on a nearby bush."
+examine = "
+The berries look very sweet and juicy."
+end = berries
+
+name = StoutStick
+Altname = Branch	
+pName = "Stick"
+state = 0
+Maxstate = 0
+armor = 0
+damage = 6
+bvalue = 50
+size = 20
+weight = 8
+location = IN_ROOM:Mithdan11
+desc[0] = "
+A stout branch has been dropped here."
+oflags { weapon lightable }
+examine = "
+The stick it "
+end = StoutStick
+
+name = Torch
+Altname = Light
+pName = "Torch"
+state = 1
+Maxstate = 1
+armor = 0
+damage = 0
+bvalue = 50
+size = 20
+weight = 8
+location = IN_ROOM:Mithdan39
+desc[0] = "
+A torch made of dried reeds has been dropped here."
+oflags {lightable extinguish lit}
+desc[1] = "
+A torch made of dried reeds rests in a wrought-iron sconce."
+examine = "
+The torch looks as if it will burn for a good long time."
+end = torch
+
+name = Shard
+Altname = Crystal
+pName = "Shard"
+state = 1
+Maxstate = 1
+armor = 0
+damage = 15
+bvalue = 300
+size = 50
+weight = 29
+location = IN_ROOM:Mithdan54
+desc[0] = "
+A sharp shard of crystal has been dropped here."
+oflags {weapon getflips}
+desc[1] = "
+A shard of crystal from the shattered branches lies near your feet."
+examine = "
+The shard refracts the light in a beautiful rainbow of color, and it looks
+as if it would make a sturdy sword."
+end = Shard
+
+name = IvyArmor
+Altname = Armor
+pName = "Ivy"
+state = 1
+Maxstate = 1
+armor = 10
+damage =
+bvalue = 250
+size = 50
+weight = 29
+location = IN_ROOM:Mithdan65
+desc[0] = "
+A vest that appears to be made of living ivy has been dropped here."
+oflags {wearable armor getflips}
+aflags {arms chest back legs}
+desc[1] = "
+A vest made of ivy hangs on a hook, strands of ivy slightly clinging to
+the walls of the hut."
+examine = "
+A fine example of Elven work, the armor is crafted out of living ivy that
+conforms itself to the wearers body, ensuring a perfect fit."
+end = IvyArmor
+
+name = FireArmor
+Altname = armor
+pName = "Fire"
+state = 1
+Maxstate = 1
+armor = 12
+bvalue = 250
+size = 50
+weight = 29
+location = IN_ROOM:Mithdan47
+desc[0] = "
+A suit of flame has been dropped here, withering the small weeds around it."
+oflags {wearable armor getflips}
+aflags {arms legs chest back head}
+desc[1] = "
+An armor suit of fire is against one wall, ice strands growing over it."
+examine = "
+The fire seems to burn hot, but as you reach for it, it is cool to the touch."
+end = FireArmor
+
+name = iceblade
+Altname = sword
+pName = "Ice"
+state = 1
+armor = 9
+damage = 13
+bvalue = 250
+size = 50
+weight = 29
+location = IN_ROOM:Mithdan47
+desc[0] = "
+A short and broad sword of ice has been dropped here."
+oflags {weapon getflips}
+desc[1] = "
+A blade of ice is here, seeming to bust into flames in patches."
+examine = "
+The ice is neither warm nor cold, and the hilt of the sword seems to conform to
+your hand."
+end = iceblade
+
+name = crystal
+Altname = Sculpture
+pName = "crystal"
+state = 1
+Maxstate = 1
+armor = 0
+damage = 0
+bvalue = 600
+size = 10
+weight = 10
+location = IN_ROOM:Mithdan51
+desc[0] = "
+A delicate crystal sculpture lies here."
+oflags {getflips}
+desc[1] = "
+A crystal sculpure rests in the middle of the clearing, glowing internally with
+light."
+examine = "
+The crystal has been sculpted into a dragon, and its eyes glow faintly red. As
+you turn the crystal it refracts the light into a thousand rainbows around you.
+This sculpture must be highly revered by the druids."
+end = crystal
+
+name = prettystone
+Altname = Stone
+pName = "Shiny"
+state = 1
+Maxstate = 1
+armor = 0
+damage =
+bvalue = 400
+size = 10
+weight = 10
+location = IN_ROOM:Mithdan75
+desc[0] = "
+A sparkling shiny stone has been dropped here."
+oflags {getflips}
+desc[1] = "
+A shiny stone sits on the edge of the pool, the waves gently rocking it."
+examine = "
+The stone is very pretty, and sparkles in the sun."
+end = prettystone
+
+%Locations
+
+
+
+Mithdan1 e:Mithdan2 s:Mithdan6 w:pass@blizzard;
+lflags {outdoors nomobiles}
+Thin Trail^
+    Origionally created by animals, this trail has been widened by human
+passage, although it looks as if it has not been traveled lately. The forest
+has grown close to the edge of the trail, and thick branches reach overhead
+that catch the snow. The thin trail continues to the east and to the south, the
+snow much thinner there, and to the west there is an icy trail.
+^
+
+Mithdan2 w:Mithdan1;
+lflags {outdoors nomobiles}
+Dead End^
+    The trail here is overrun with heavy brambles and thorns that compleatly
+block your passage through. Beyond the brambles the forest continues, but
+there does not seem to be any trails. The only way out is to follow the
+thin trail back to the west.
+^
+
+Mithdan3 s:Mithdan8 e:Mithdan4;
+lflags {Outdoors}
+Heavy Woods^
+    The smell of pine is overwhelming. The floor of the forest is thick with
+pine needles that rustle with each step you take. The sun shines through the
+trees creates shifting shadows. The forest continues to the east and south,
+but is much too thick in other directions to travel.
+^
+Mithdan4 w:Mithdan3 e:Mithdan5 s:Mithdan9;
+lflags {}
+Thick Woods^
+    The woods are thick and confusing. The smell of pine clogs your senses,
+adding to the effect. The woods continue to the west and south. To the east
+is a sandy clearing. Heavy brambles make passage to the north impossible,
+which is unfortunate because there appears to be something in the distance
+between the trees.
+^
+Mithdan5 w:Mithdan4 e:Mithdan6;
+lflags {outdoors}
+Sandy Clearing^
+    The floor of the clearing is covered with pure white sand. The edges are
+well defined, the sand not mixing with the dirt of the forest. The clearing
+is filled with a sense of magic, but there is nothing noticable. In the
+center of the clearing is a firepit, but the edges of the pit have no soot.
+Thick brambles line the north and south of the pit, but the forest on the
+east and west the forest looks thinner.
+^
+
+Mithdan6 w:Mithdan5 e:Mithdan7 n:Mithdan1 s:Mithdan10;
+lflags {outdoors}
+Thin Trail^
+    The trail is thin and unkempt, the forest struggling to reclaim it. To
+the east and west the trail thins out into forest, but to the north and south
+the trail continues. The east trail is hreavily overgrown with brambles and
+thorns. You can only see the sky in patches, the forest canopy has grown
+thick over the trail.
+^
+
+Mithdan7 w:Mithdan6;
+lflags {outdoors DEATH}
+Brambles^
+    The thick brambles catch at you clothes as you walk. The trail ahead is
+
+    covered with them, but you perservere.
+
+    Hidden by the growth, the trail unexpectedly drops away under you. You
+
+    trip and fall into the brambles, unable to stop your rolling. The trail
+
+    becomes steeper, and the last sight you see is an endless sea of brambles
+
+    and thorns.
+^
+
+Mithdan8 n:Mithdan3 s:Mithdan13 e:Mithdan9;
+lflags {outdoors}
+Thick Forest^
+    The thick forest surrounds you, overwhelming your senses. The forest
+streches to the north, south, and east. The forest to the west is thick
+and overgrown with brambles as far as you can see. There appears to be
+trails, but after following them for a short time they fade away, leaving
+you more lost then when you began.
+^
+
+Mithdan9 w:Mithdan8 n:Mithdan4 s:Mithdan14;
+lflags {outdoors}
+Thick Forest^
+    The forest turns you around, leading you along on false trails. You wish
+you had a compassm but with these woods it might not do much good. The forest
+leads to the north, south, and east. As is much of the forest, the western
+way is blocked by thick and heavy forests.
+^
+
+Mithdan10 n:Mithdan6 e:Mithdan11;
+lflags {outdoors}
+Dirt Trail^
+    Although the trail still has a lingering abandoned feel, it appears to
+be used occaisionally. The trail winds through the deep woods to the east
+and north. The canopy of the forest reaches overhead, blocking out much of
+the sunlight, but the forest still has a warm feel.
+^
+
+Mithdan11 w:Mithdan10 e:Mithdan12 s:Mithdan16;
+lflags {outdoors}
+Dirt Trail^
+    In the distance to the east you catch the glimpse of small huts and
+other buildings between the trees. A thin wisp of smoke rises overhead.
+The dirt trail continues to the east and west, and to the south there is
+a small clearing filled with ferns.
+^
+
+Mithdan12 w:Mithdan11 e:Mithdan67;
+lflags {outdoors nomobiles}
+Town Entrance^
+    The town entrance is on a slight rise, giving you a good view of the
+town before you. It is dotted by several temples, and has only a few
+merchants. Thick woods lead away to the west, and what appears to be the
+main street of the town continues to the east.
+^
+
+Mithdan13 n:Mithdan8 e:Mithdan14;
+lflags {outdoors}
+Thick Forest^
+    All around you the forest is filled with brambles, although they look
+much thinner to the north, and the eastern route has few. The forest turns
+you around, confusing your senses. The musty smell of aged leaves clogs your
+mind.
+^
+
+Mithdan14 w:Mithdan13 e:Mithdan15 n:Mithdan9;
+lflags {outdoors}
+Thick Woods^
+    The woods streches off into the distance, filling the area from horizon
+to horizon. You struggle not to lose your direction, but it is impossible
+to tell if you are still facing the way you began. The forest is full of
+sharp thorns to the south, but to the north, and west it continues
+uninteruptes. To the east there is a thin path covered in snow.
+^
+
+Mithdan15 w:Mithdan14 s:Mithdan18;
+lflags {outdoors cold}
+Snowy Path^
+    The path is drifted with snow and there is a sharp chill in the air. A
+gust of wind brings more snow down on you from the mountain peak that
+covers the south-eastern horizon. The path continues to the south, and
+fades away into the forest to the west.
+^
+
+Mithdan16 n:Mithdan11;
+lflags {outdoors nomobiles}
+Sacred Clearing^
+    This clearing throbs with magic, the very trees almost glow with the
+force of it.  A heavy wind whips through the trees as you enter, as if the
+force that guards this clearing is displeased with your presence. It would
+probably be a good idea to leave and not anger it further.
+^
+
+Mithdan17 e:Mithdan18 s:Mithdan19 u:Mithdan19 d:Mithdan18;
+lflags {outdoors cold}
+Snowy Trail^
+    The trail is covered with snow that buried the rocks, making travel very
+difficult. The trail slopes upwards steeply, obviously leading up the side
+of the snow covered mountain that covers the south-eastern horizon. Far above
+you there appears to be some sort of structure, but from here it is
+impossible to tell. The trail slopes down to the east and up to the south.
+^
+
+Mithdan18 w:Mithdan17 u:Mithdan17 n:Mithdan15;
+lflags {outdoors cold}
+Mountain Trail^
+    The trail here slopes upwards, leading towards the top of the mountain,
+although the end of the trail is obscured by the drifting snow. Forest covers
+the horizon to the north, the green leaves a sharp contrast to the snowy
+peaks above you. The trail continues flat towards the forest, or you can
+follow it up the side of the mountain.
+^
+
+Mithdan19 d:Mithdan17 n:Mithdan17 e:Mithdan20;
+lflags {outdoors cold}
+Huge Rock^
+    You stand atop a huge snow-covered rock. The rock itself is over thirty
+paces long, and it slants upwards to the east. The snow makes it difficult
+to keep from slipping on the slick surface of the stone. The path drops away
+to the north, and thick green forest streches below you.
+^
+
+Mithdan20 w:Mithdan19 e:Mithdan21;
+lflags {outdoors cold}
+Winding Ledge^
+    The ledge is covered with snow, and with each step you risk plunging into
+the deep gorge below you. The stone at your back is rough and cold, and the
+ledge is only a few paces wide. To the west a huge flat stone slants down
+towards a path, and the ledge continues to the east.
+^
+
+Mithdan21 w:Mithdan20 e:Mithdan22;
+lflags {outdoors cold}
+Winding Ledge^
+    The ledge here is beginning to crumble, but it is still strong enough
+to cross. The wind whips in dangerous whirlwinds, funneled up towards you
+by the deep gorge at your feet. The ledge continues to the east and west.
+^
+
+Mithdan22 w:Mithdan21 e:Mithdan23 s:Mithdan24;
+lflags {outdoors cold}
+Thin Ledge^
+    The ledge here narrows out further, but thankfully the cliff at your back
+is lower and you can clamber into a small snowy field to the south. The snow
+is blinding, and you cannot see the bottom of the gorge or the end of the
+field. The ledge continues to the west, but to the east it becomes even
+narrower.
+^
+
+Mithdan23 w:Mithdan22;
+lflags {Outdoors Cold DEATH}
+Thin Ledge^
+    The ledge narrows until you are balancing only on your heels.
+
+    The ice is slick, and on your next step you slip.
+
+    As you fall, you manage a desperate grab at the ledge, and by some
+
+    miracle manage to grasp it.
+
+    You dangle from the ledge, unable to scramble back up, for hours, shouting
+
+    for help. No one is here to hear you.
+
+    Finially your strength gives out, and you plunge hundreds of paces into
+
+    the deep gorge below you.
+^
+Mithdan24 n:Mithdan22 s:Mithdan30;
+lflags {outdoors cold}
+Snowy Field^
+    The whipping snow makes it impossible to see how big the field is, but
+it seems to be larger then you first thought. Steep, unclimbable cliffs
+strech above you to the east and west. To the north you can dimly make
+out a thin ledge before a deep gorge, and the whipping snows continue to
+the south.
+^
+Mithdan25 s:Mithdan31;
+lflags {outdoors cold DEATH}
+Fall^
+    Blinded by the swirling snows, you stumble into an ice-covered hole.
+
+    Before you have the chance to grab anything, you plunge to your death.
+^
+
+Mithdan26 s:Mithdan33 e:Mithdan27;
+lflags {outdoors cold}
+Bare Trail^
+    Rising above the clouds, the trail is bare and rocky. Below you the storm
+swirls snow and ice onto the mountain peak, but the air is calm here. The
+bare path leads down the mountain to the south, and further up towards the
+east.
+^
+
+Mithdan27 w:Mithdan26 e:Mithdan28;
+lflags {outdoors cold}
+Cold Trail^
+    The wind is bitter cold here, the force of it almost enough to send you
+staggering back down the mountain. The air is perfectly clear, and far
+below you the storm clouds roil. To the east the trail widens out into a
+clearing, and the trail leads back down the mountain to the west.
+^
+
+Mithdan28 w:Mithdan27 s:Mithdan34;
+lflags {outdoors cold}
+Stone Clearing^
+    The clearing looks as if it was formed hundreds of years ago by a searing
+heat. The ground beneath you is perfectly smooth stone, and its almost
+polished surface reflects the suns rays into your face. The clearing becomes
+a thin trail leading down the side of the mountain to the west, and to the
+south the trail passes beneath a huge stone arch.
+^
+
+Mithdan29;
+lflags {death outdoors cold}
+Icy Slide^
+     You slip on the ice and plummet to your death.
+^
+
+Mithdan30 w:Mithdan29 n:Mithdan24 e:Mithdan31;
+lflags {outdoors cold}
+Blinding Snow^
+    The snow whips in circular patterns, blinding you. You can faintly make
+out the shapes of trails leading to the east and west, and to the north there
+appears to be a large clearing. The clouds appear to be less then ten paces
+above your head.
+^
+
+Mithdan31 w:Mithdan30 e:Mithdan32;
+lflags {outdoors cold}
+In the clouds^
+    The clouds swirl around you, and the snow whips with stinging force into
+your face. The dampness of the clouds soaks into your clothes, only to be
+frozen by the cold wind. The trail dissapears into the clouds to the
+east, and slops back down the mountain to the west.
+^
+
+Mithdan32 w:Mithdan31 e:Mithdan33;
+lflags {outdoors cold}
+Above the Clouds^
+    The trail streches beneath you, lost in the sworling mass of the clouds.
+A light dusting of snow is swept up by the wind, but the bulk of it remains
+beneath you, exposing a bare rock path. The path continues up the side of
+the mountain to the east.
+^
+
+Mithdan33 w:Mithdan32 n:Mithdan26;
+lflags {outdoors cold}
+Bare Path^
+    The sun shines down brilliantly here, practically blinding you. Beneath
+you the storm clouds roil and turn in hypnotic patterns. The stone path
+winds up to the north, and slopes down into the clouds to the west.
+^
+
+Mithdan34 n:Mithdan28 s:Mithdan35;
+lflags {outdoors cold}
+Stone Arch^
+    The stone arch streched above you, its massive columns over four paces
+wide. The columns themselves are carved with incredibly intricate runes
+that seem to gently throb with power. The stone path leads to a large
+clearing to the north, and to the south a stone temple is carved into the
+mountainside.
+^
+
+Mithdan35 n:Mithdan34 s:Mithdan50;
+lflags {}
+Temple Entrance^
+    Huge stone dragons stand guard at the entrance of the temple. At first
+glance they apepar to be stone, but as you try to enter the temple one
+swivels its head towards you and growls menacingly. The one on your other
+side stands and streches its stone wings.
+^
+
+Mithdan36 e:Mithdan37 s:Mithdan39;
+lflags {}
+Stone Corner^
+    The smooth stone hall turns to the south in a perfect right angle.
+Whoever built the temple had incredible precision. Through the walls to
+the south-west there is a heavy thrumming sound, but you cannot reach its
+source yet.
+^
+
+Mithdan37 w:Mithdan36 e:Mithdan38 n:Mithdan35;
+lflags {}
+Temple Chamber^
+    You stand just inside the temple. To the north the huge stone dragons
+return to their positions guarding the entrance. To the east and west
+smooth stone corridors turn corners to the south with mathematical
+precision.
+^
+
+Mithdan38 w:Mithdan37 s:Mithdan41;
+lflags {}
+Stone Corner^
+    The stone tiles join each other is complex patters that strech the entire
+hallway. The hall turns the corner to the south with a perfect right angle,
+and with further inspection you see that the hall itself is perfectly
+straight.
+^
+
+Mithdan39 n:Mithdan36 s:Mithdan42;
+lflags {}
+Stone Hall^
+    The patterns of the tiles draw you into them, and it takes a great
+concious effort to pull your gaze away. The deep thrumming of magical
+forces is even stronger now, but you still cannot find its source.
+The hall turns corners to the north and south.
+^
+
+Mithdan40 s:Mithdan43;
+lflags {}
+Elemental Chamber^
+    The center of the chamber is dominated by a crystalline fountain that
+is carved with intricate runes. The air is sweet, and it is ahrd to remember
+that you are in a closed chamber. The fountain itself hums with immense
+magical power.
+^
+
+Mithdan41 n:Mithdan38 s:Mithdan44;
+lflags {}
+Tiled Hallway^
+    The tiles beneath your feet appear to shift as you walk, but when you
+look closer they seem perfectly normal. The walls are windowless and made
+of perfectly smooth polished stone. The hallway turns a corner to both the
+north and south.
+^
+
+Mithdan42 n:Mithdan39 e:Mithdan43 s:Mithdan45;
+lflags {}
+Hallway^
+    The hall streches to the north where it turns a sharp corner, and to the
+south it widens and huge icicles hang from the cieling. To the east the
+magical humming noise gets stronger.
+^
+
+Mithdan43 w:Mithdan42 e:Mithdan44 n:Mithdan40;
+lflags {}
+Stone Hallway^
+    The stone in the hall flows and drips as you walk, but is not hot. The
+floor beneath you rises and falls as if it were an ocean, and the walls shift
+in liquid, flowing patterns. The noise is much stronger here, and an
+ethereal light spills out of the northern chamber. The hall turns a corner
+to the east.
+^
+
+Mithdan44 w:Mithdan43 n:Mithdan41 s:Mithdan46;
+lflags {}
+Hallway^
+    The floor tiles shift in hypnotic patterns, possibly following the
+forms of nature. The hall becomes much hotter and itermitent bursts of flame
+jet from the floor and walls to the south. The hall continues normally to
+the east and north.
+^
+
+Mithdan45 n:Mithdan42 s:Mithdan47;
+lflags {}
+Ice Hall^
+    The hallway here is dripping with slowly flowing icicles and the floor is
+slick with ice. No matter how much you try, you cannot focus on the walls, as
+if they are actually further away then they appear. To the north the hall
+becomes more normal, and to the south it appears that fire and ice meet
+each other in a flowing artwork.
+^
+
+Mithdan46 n:Mithdan44 s:Mithdan47;
+lflags {}
+Fire Hall^
+    The floor and cieling are scorching hot, and the walls jet flame
+occaisionally that you have to jump over. The walls waver and shimmer in
+the heat, and you cannot survive much longer. To the north the hall becomes
+smooth stone, and to the south fire and ice meet in a flowing, moving
+artwork.
+^
+
+Mithdan47 n:Mithdan43 s:Mithdan49;
+lflags {}
+Fire and Ice^
+    Amazingly, in this room fire and ice flow together, covering the walls
+and creating a living, moving sculpture in the center of the chamber. You
+gaze at it breifly, but when you look away it is several hours later. Time
+means nothing in this room. To the north there is a smooth stone hallway,
+and to the south there is a terrific wind, and you see what appears to be
+a contained tornado.
+^
+
+Mithdan48;
+lflags {}
+Shadowrealms^
+    Dark, living shadows swirl around you, and the sky overhead is pure
+black without a hint of sunlight. Every step you take drains your strength
+as your hope bleeds away into the darkness.
+^
+
+Mithdan49 n:church@Start w:temple@Start e:lounge@mrealms s:mrealms@mrealms;
+lflags {}
+Tornado^
+    The forceful wind of the tornade whips around you, picking up pieces of
+dust and debris and swirling them around you. The wind is so fierce that you
+cannot see which way you are traveling, and when you stagger out you could
+end up anywhere.
+^
+
+
+
+Mithdan50;
+lflags {death}
+Entrance Hall^
+    As you step into the entrance hall, the stone dragons bellow in anger
+
+    and chase after you. You run ahead of them, terror in your heart. One
+
+    spreads its stone wings and flies ahead of you. You are trapped between
+
+    the two of them. The last sight you see is them approaching you.
+^
+
+Mithdan51 w:Mithdan59 e:Mithdan60 n:Mithdan57 s:Mithdan62;
+lflags {outdoors nomagic}
+Sacred Clearing^
+    The floor of the clearing is lined with pure white sand, and the
+air throbs with immense stored magical energy. Time seems to pass in a
+blur: Flowers sprout beneath your feet and die off again in seconds.
+You feel a strange sensation on your legs and when you look down there
+is a large ivy twining itself around your calfs. Paths lead off in all
+directions. To the south, east, and west thin trails lead through lush
+green forest, and to the north lies a huge forest of living crystal.
+^
+
+Mithdan52 e:Mithdan53 s:Mithdan55;
+lflags {outdoors}
+Crystal Trail^
+    Huge crystaline trees overhang the trail and delicate crystal flowers
+grow on the edge. You are afraid to touch any of them for fear that they
+will shatter. Heavy wind blows through the tops of the trees, and to the
+east there is an ominous groaning and cracking noise.
+^
+
+Mithdan53 w:Mithdan52;
+lflags {outdoors DEATH}
+Crystal Trees^
+    As you pass beneath the magestic crystal trees, a gust of wind blows
+
+    through the top branches. There is a tremendous crack, and as you gaze
+
+    up in horror a huge crystal branch crashes through the thinner boughs.
+
+    You run as fast as possible, and throw yourself to the ground. The
+
+    huge branch misses you, but when it strikes the ground it shatters
+
+    into thousands of needle sharp shards. Almost is slow motion, several
+
+    pieces fly at you, and the last thing you see is the sunlight glinting
+
+    through them in beautiful rainbow patterns.
+^
+
+mithdan54 e:mithdan55;
+lflags {outdoors}
+Dead End^
+    Huge boughs from the crystalline trees have broken off and fallen to
+the ground here, creating an impassable blockage of needle sharp crystal
+shards. The only way out is to return to the narrow path to the east.
+^
+
+mithdan55 w:Mithdan54 n:Mithdan52 s:Mithdan56;
+lflags {outdoors}
+Crystal Path^
+    A small path leads through the heart of this forest of living crystal.
+A light breeze whistles through the boughs overhead, and as the branches
+rub together a beautiful melody floats through the air. The path continues
+to the north and south, but it appears to dead end to the west.
+^
+
+Mithdan56 e:Mithdan57 n:Mithdan55;
+lflags {outdoors}
+Crystal Border^
+    Here the magical crystaline forest merges with normal forest, the green
+crystal merging in a shifting kaleidascope. The crystal forest streches
+away to the north, and a thin path winds through it. The path continues to
+the east.
+^
+
+Mithdan57 w:Mithdan56 s:Mithdan51;
+lflags {outdoors}
+Forest Edge^
+    The magical crystaline forest here merges with normal forest, the green
+refracted through the crystal boughs into a shimmering rainbow of color.
+The crystal forest coninues to the west and north, but the northern forest
+if much too thick to try to forge through. To the south the natural green
+forest continues.
+^
+
+MIthdan58 s:Mithdan61 e:Mithdan59;
+lflags {outdoors}
+Green Forest^
+    Healthy green forest streches as far as the eye can see. Far to the north
+you hear a faint musical song. The forest to the west is filled with brambles
+and there is no way to get through. A thin trail that must have been made by
+animals leads to the south, and the forest continues unabated to the north.
+^
+
+Mithdan59 w:Mithdan58 e:Mithdan51;
+lflags {outdoors}
+Forest Path^
+    A thin path made by animals as they traveled daily to a water hole or
+food source leads away to the west. Thick, green forest spreads away around
+you. To the east a large clearing throbs with stored magical energy.
+^
+
+Mithdan60 w:Mithdan51;
+lflags {outdoors}
+Forest^
+    Heavy brambles line every direction but west, where a large clearing
+throbs with immense magical energy. Far to the northwest you hear a
+beautiful, but oddly random melody.
+^
+
+Mithdan61 n:Mithdan58 s:Mithdan64;
+lflags {outdoors}
+Forest Trail^
+    The thin trail leads to the north and south through the thick green
+oak forest. The magestic trees strech hundreds of feet above your head,
+their leaves swaying gently in the wind. To the south the trees thin out
+and you hear the muted crackle of pent-up magical energy.
+^
+
+Mithdan62 n:Mithdan51 e:Mithdan63;
+lflags {outdoors}
+Thick Forest^
+    It is hard to tell which direction is which in this thick forest. The
+only way you can tell directions is that there is a huge clearing filled
+with immense magical energy to the north. The forest continues to the east,
+but all other directions are blocked by brambles and thorns.
+^
+
+Mithdan63 w:Mithdan62 s:Mithdan65;
+lflags {outdoors}
+Forest^
+    Thick forest continues on to the west, north, and east, but only the west
+is passable. Magestic elms and oaks tower above you. To the south is a very
+small clearing with some kind of hut in it.
+^
+
+Mithdan64 n:Mithdan61 s:Mithdan1;
+lflags {outdoors}
+Small Clearing^
+    The grass here is trimmed short, and to the north the deep forest
+streches towards the horizon. To the south is an immense wooden gate that
+stand open, showing what appears to be a perfectly normal rocky path. The
+gate itself crackles with heavy stored magical energy that occaisionally
+discharges into the sky in huge reverse lightning bolts.
+^
+
+Mithdan65 n:Mithdan63;
+lflags {outdoors}
+Tiny Hut^
+    You stand within a tiny hut that appears to be woven of living branches
+and vines, probably by an elf for temporary shelter. The roof of the hut
+stands open to the weather, the magic that allowed air to pass through but
+not rain having since worn off. The only exit from the hut is back to the
+north.
+^
+
+Mithdan66 s:Mithdan68;
+lflags {peaceful}
+Temple^
+    This temple is dedicated to the elemental gods. Each wall is painted with
+intricate and beautiful murals, each of a different elemental deity. The
+north wall is painted with a figure surrounded with lightning bolts, the
+west wall is painted with a figure made completly of water stands up from
+the sea, and on the east wall there is a figure that is made of living
+vines, rocks, and other matter standing high above a forest. The south wall
+is open to the air, and leads to the main street of the town.
+^
+
+Mithdan67 w:Mithdan12 e:Mithdan68;
+lflags {outdoors}
+Street^
+    The street is well maintained, and the main gates to the west are
+freshly painted. To the west the gates open out onto a great forest of
+oak and pine, and to the east the street continues. The wind carries a
+faint scent of flowers.
+^
+
+Mithdan68 w:Mithdan67 e:Mithdan69 n:Mithdan66 s:Mithdan70;
+lflags {outdoors}
+Street^
+    The street is slightly dusty but well maintained. The cobblestones are
+neatly laid in geometric patterns. To the north is a small temple, to the
+west are the main village gates and beyond them the forest. To the east is
+a small garden filled with delicately carved stone statues. To the south
+there is nothing but beautifully manicured gardens.
+^
+
+Mithdan69 w:Mithdan68;
+lflags {outdoors peaceful}
+Statue Yard^
+    The small garden is filled by beautifully carved statues of the elemental
+gods: Naidrk the water god, Thandrain the earth god, and Klendoth the thunder
+god. In between the statues are immense guardian dragon statues, their
+immense size almost rivaling that of the statues. Clearly among these people
+dragons are held almost at the level of the elemental gods.
+^
+
+Mithdan70 n:Mithdan68 e:Mithdan71;
+lflags {outdoors peaceful}
+Gardens^
+    The gardens is well cared for, and smooth brick pathways wind among the
+plants. The air is thick with the scent of flowers, and the grass is deep
+and green. The path winds through the garden to the east, and to the north it
+joins the main street of the town.
+^
+
+Mithdan71 w:Mithdan70 e:Mithdan72 s:Mithdan73;
+lflags {outdoors peaceful}
+Garden Path^
+    Large, beautiful flowers overhang the pathway, and hundreds of honey
+bees buzz around them. Stately ash trees line the edges of the brick
+path. The path winds to the west and south. To the east a large fishpond
+glitters in the sunlight.
+^
+
+Mithdan72 w:Mithdan71;
+lflags {Outdoors peaceful}
+Fish Pond^
+    You stand on the bank of a large crystal clear fish pond. Large tropical
+fish glitter iridescently in the sunlight, occaisionally leaping out of the
+water to snatch a bug that has strayed too close to the surface. The
+atmosphere is one of calm and serenity, and you could sit and watch the fish
+for hours.
+^
+
+Mithdan73 n:Mithdan71 s:Mithdan74;
+lflags {outdoors peaceful}
+Path^
+    The path here is slightly more overgrown, and creeping ivy occasionally
+snakes a tendril across the bricks. The ground on either side of you is
+a beautiful sea of ivy that rolls and sways with each gust of wind. The path
+leads to the north, and to the south you hear the gentle burble of a
+fountain.
+^
+
+Mithdan74 e:Mithdan75 n:mithdan73;
+lflags {outdoors peaceful}
+Fountain Pool^
+    The fountain draws water from an immense pool in which several large
+fish swim. The fountain itself is covered with runes and is made of the
+finest polished marble. The water jets over twenty paces into the sky before
+cascading down several marble terraces back to the fountain pool. A path
+winds through the garden to the north, and to the east is a quiet rock
+garden.
+^
+
+Mithdan75 w:Mithdan74;
+lflags {outdoors peaceful}
+Rock Garden^
+    Large rocks have been placed in the center of a large strech of pure
+white sand, which has been carefully raked into curving lines that swirl
+around the stones like eddies in water. A wooden bench has been provided
+to sit upon and contemplate the garden. The soft burble of the fountain
+to the west adds a pleasant undertone.
+^
+
+
