@@ -111,6 +111,11 @@ sub BUILD {
     $self->_load_objects;
 }
 
+sub tick {
+    my $self = shift;
+    $_->move for $self->universe->mobiles;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;

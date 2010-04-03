@@ -3,6 +3,8 @@ package AberMUD::Mobile;
 use Moose;
 use namespace::autoclean;
 
+use AberMUD::Location::Util qw(directions);
+
 with qw(
     AberMUD::Role::Killable
     AberMUD::Role::InGame
@@ -50,7 +52,7 @@ sub move {
     return unless $self->location;
 
     my $loc  = $self->location;
-    my @dirs = grep { $self->${\"can_go_$_"} } @{$self->location->directions};
+    my @dirs = grep { $self->${\"can_go_$_"} } directions();
 
     return $self unless @dirs;
 

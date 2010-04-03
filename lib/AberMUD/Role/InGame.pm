@@ -19,7 +19,7 @@ has location => (
     isa => 'AberMUD::Location',
     handles => {
         map {
-            ("can_go_$_" => sub { $_ })
+            ("can_go_$_" => sub { shift->location->$_ })
         } directions()
     },
 );

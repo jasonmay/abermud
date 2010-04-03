@@ -50,6 +50,7 @@ has nowhere_location => (
 has mobiles => (
     is  => 'rw',
     isa => 'ArrayRef[AberMUD::Mobile]',
+    auto_deref => 1,
     default => sub { [] },
 );
 
