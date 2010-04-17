@@ -72,15 +72,16 @@ sub broadcast {
             ? @{$args{except}}
             : (defined($args{except}) ? $args{except} : ());
 
+            my %outputs;
     foreach my $player (values %{ $self->players_in_game }) {
         next if @except && any { $_ == $player } @except;
         my $player_output = $output;
-        $player_output .= sprintf("\n%s", $player->prompt)
-            if $args{prompt};
-        $self->_controller->send(
-            $player->id => AberMUD::Util::colorify("\n$player_output")
-        );
+
+        $player_output .= sprintf("\n%s", $player->prompt) if $args{prompt};
+        $outputs{$player->id} = AberMUD::Util::colorify("\n$player_output");
     }
+
+    $self->_controller->multisend(%outputs);
 }
 
 sub abermud_message {
