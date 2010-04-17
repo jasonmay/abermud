@@ -8,6 +8,11 @@ has armor => (
     isa => 'Int',
 );
 
+has coverage => (
+    is => 'rw',
+    isa => 'HashRef',
+    default => sub { +{} },
+);
 
 1;
 

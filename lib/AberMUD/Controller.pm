@@ -71,7 +71,6 @@ around connect_hook => sub {
 before input_hook => sub {
     my $self = shift;
     my ($data) = @_;
-
 };
 
 around disconnect_hook => sub {
