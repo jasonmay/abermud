@@ -4,16 +4,48 @@ use warnings;
 use Test::More 'no_plan';
 use AberMUD::Directory;
 use KiokuDB;
+use AberMUD::Zone;
 use AberMUD::Container;
 use AberMUD::Input::State::Login::Name;
 use AberMUD::Input::State::Game;
 
+my $kdb = KiokuDB->connect('dbi:SQLite:dbname=:memory:', create => 1);
+{
+    my $zone = AberMUD::Zone->new(name => 'test');
+
+    my %locations = (
+        test1 => AberMUD::Location->new(
+            world_id    => 'test1',
+            id          => 'road',
+            title       => 'A road',
+            description => "There is a road here heading north. "
+                        . "You hear noises in the distance. ",
+            zone        => $zone,
+            active      => 1,
+        ),
+        test2 => AberMUD::Location->new(
+            world_id    => 'test2',
+            id          => 'path',
+            title       => 'Path',
+            description => "This path goes north and south.",
+            zone        => $zone,
+            active      => 1,
+        ),
+    );
+
+    my $scope = $kdb->new_scope;
+    $kdb->store("location-$_" => $locations{$_}) foreach keys %locations;
+
+    $locations{test1}->north($locations{test2});
+    $locations{test2}->south($locations{test1});
+
+    $kdb->update($_) foreach values %locations;
+}
+
 my $c = AberMUD::Container->new_with_traits(
     traits         => ['AberMUD::Container::Role::Test'],
     test_directory => AberMUD::Directory->new(
-        kdb => KiokuDB->connect(
-            'dbi:SQLite:dbname=t/etc/kdb/001',
-        )
+        kdb => $kdb,
     )
 )->container;
 
