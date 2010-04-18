@@ -135,7 +135,6 @@ my $txn_block = sub {
 
     like($p4->output_queue->[0], qr{hey}, 'foo saw bar chat "hey"');
 
-    die "rollback";
 };
 
-eval { $c->fetch('directory')->get->kdb->txn_do($txn_block) }
+$c->fetch('directory')->get->kdb->txn_do($txn_block)
