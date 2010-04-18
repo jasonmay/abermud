@@ -3,9 +3,12 @@ package AberMUD::Controller::Role::Test;
 use Moose::Role;
 use namespace::autoclean;
 
-__PACKAGE->can('_mud_start') && override _mud_start => sub { };
-
-override run => sub { };
+my @methods_to_stub = qw(
+    _build_socket
+    _build_read_set
+    run
+);
+__PACKAGE__->can($_) && override($_ => sub { }) for @methods_to_stub;
 
 override send => sub {
     my $self = shift;
@@ -20,6 +23,15 @@ override send => sub {
     }
 
     $p->add_output($message);
+};
+
+override multisend => sub {
+    my $self = shift;
+    my %messages = @_;
+
+    while (my ($id, $message) = each %messages) {
+        $self->send($id => $message);
+    }
 };
 
 override force_disconnect => sub {
