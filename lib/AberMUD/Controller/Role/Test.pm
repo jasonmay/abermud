@@ -3,7 +3,7 @@ package AberMUD::Controller::Role::Test;
 use Moose::Role;
 use namespace::autoclean;
 
-override _mud_start => sub { };
+__PACKAGE->can('_mud_start') && override _mud_start => sub { };
 
 override run => sub { };
 

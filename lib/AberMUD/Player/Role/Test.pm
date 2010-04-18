@@ -35,7 +35,7 @@ sub types_in {
 
     return unless $self->id;
 
-    return $self->universe->_controller->_response(
+    return $self->universe->_controller->build_response(
         $self->id => $command
     );
 }
