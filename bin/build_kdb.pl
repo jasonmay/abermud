@@ -12,6 +12,7 @@ use KiokuDB;
 use KiokuDB::Backend::DBI;
 use AberMUD::Directory;
 use AberMUD::Zone;
+use AberMUD::Config;
 #use namespace::autoclean;
 
 my @locations = (AberMUD::Location->new);
@@ -121,3 +122,10 @@ while (my ($loc_id, $loc) = each %locations) {
 }
 
 $kdb->update($_) foreach values %dir_locations;
+
+my $config = AberMUD::Config->new(
+    location => $locations{'church@start'},
+    input_states => [qw(Login::Name Game)],
+);
+
+$kdb->store(config => $config);

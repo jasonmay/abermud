@@ -34,6 +34,9 @@ sub new_universe {
     my $b = shift;
     weaken(my $w = $b);
 
+    my $config = $w->param('directory')->lookup('config')
+        or die "No config found in kdb!";
+
     my $u = AberMUD::Universe->new(
         directory   => $w->param('directory'),
         _controller => $w->param('controller'),
@@ -46,15 +49,12 @@ sub new_universe {
                 prompt      => "&+Y\$&* ",
                 input_state => [
                 map {
-                    Class::MOP::load_class($_);
-                    $_->new(
+                    my $class = "AberMUD::Input::State::$_";
+                    Class::MOP::load_class($class);
+                    $class->new(
                         universe => $self,
                     )
-                }
-                qw(
-                AberMUD::Input::State::Login::Name
-                AberMUD::Input::State::Game
-                )
+                } $config->input_states
                 ],
             );
 
@@ -64,20 +64,7 @@ sub new_universe {
 
 
     my $start_loc
-    = $w->param('directory')->lookup('location-start2')
-    || $u->nowhere_location;
-
-    my $m;
-
-    $m = AberMUD::Mobile->new(
-        name        => 'programmer',
-        description => 'A programmer is looking at you.',
-        location    => $start_loc,
-        speed       => 20,
-        universe    => $u,
-    );
-
-    $u->mobiles([ $m ]);
+    = $config->location;
 
     return $u;
 }

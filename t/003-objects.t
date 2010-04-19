@@ -23,7 +23,6 @@ my $kdb = KiokuDB->connect('dbi:SQLite:dbname=:memory:', create => 1);
             description        => "There is a road here heading north. "
             . "You hear noises in the distance. ",
             zone               => $zone,
-            #_objects_on_ground => $set1,
             active             => 1,
         ),
         test2 => AberMUD::Location->new(
@@ -32,7 +31,6 @@ my $kdb = KiokuDB->connect('dbi:SQLite:dbname=:memory:', create => 1);
             title              => 'Path',
             description        => "This path goes north and south.",
             zone               => $zone,
-            #_objects_on_ground => $set2,
             active             => 1,
         ),
     );
