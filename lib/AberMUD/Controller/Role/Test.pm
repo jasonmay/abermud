@@ -6,6 +6,7 @@ use namespace::autoclean;
 my @methods_to_stub = qw(
     _build_socket
     _build_read_set
+    tick
     run
 );
 __PACKAGE__->can($_) && override($_ => sub { }) for @methods_to_stub;
