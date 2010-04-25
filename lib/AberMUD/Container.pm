@@ -46,7 +46,7 @@ sub new_universe {
             #weaken(my $c = $container);
             my $player   = $container->fetch('player')->get(
                 id          => $id,
-                prompt      => "&+Y\$&* ",
+                prompt      => '&*[ &+C%h/%H&* ] &+Y$&* ',
                 input_state => [
                 map {
                     my $class = "AberMUD::Input::State::$_";

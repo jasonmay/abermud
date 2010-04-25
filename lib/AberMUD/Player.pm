@@ -370,6 +370,19 @@ sub sendf {
     $self->send(sprintf($message, @_));
 }
 
+sub final_prompt {
+    my $self = shift;
+    my $prompt = $self->prompt;
+
+    $prompt =~ s/%h/$self->current_strength/e if $self->can('current_strength');
+    $prompt =~ s/%H/$self->max_strength/e     if $self->can('max_strength');
+
+    #$prompt =~ s/%m/$self->current_mana/e;
+    #$prompt =~ s/%M/$self->max_mana/e;
+
+    return $prompt;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;

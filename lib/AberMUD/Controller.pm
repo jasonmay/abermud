@@ -37,7 +37,7 @@ around build_response => sub {
 
     if ($player && ref $player->input_state->[0] eq 'AberMUD::Input::State::Game') {
         $player->materialize;
-        my $prompt = $player->prompt;
+        my $prompt = $player->final_prompt;
         $output = "$response\n$prompt";
     }
     else {
