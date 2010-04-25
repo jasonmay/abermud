@@ -362,9 +362,9 @@ sub send {
 
     return unless $self->id;
 
-    $message .= AberMUD::Util::colorify($self->prompt) unless $args{no_prompt};
+    $message .= AberMUD::Util::colorify($self->final_prompt) unless $args{no_prompt};
 
-    $self->universe->_controller->send($self->id => $message);
+    $self->universe->_controller->send($self->id => AberMUD::Util::colorify($message));
 }
 
 sub sendf {
