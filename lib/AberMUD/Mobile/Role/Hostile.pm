@@ -23,13 +23,7 @@ sub start_fight {
 
     return unless @killables_in_room;
     my $killable = $killables_in_room[rand @killables_in_room];
-    try {
-        $self->fighing($killable);
-    }
-    catch {
-        require Data::Dumper;
-        warn Data::Dumper::Dumper(map { $_->name } @killables_in_room);
-    }
+    $self->fighting($killable);
 }
 
 1;
