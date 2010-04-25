@@ -94,7 +94,6 @@ sub abermud_message {
 # Advance the universe through time
 sub advance {
     my $self = shift;
-    warn $self->can('foobar');
 }
 
 __PACKAGE__->meta->make_immutable;
