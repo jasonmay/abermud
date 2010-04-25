@@ -306,6 +306,7 @@ sub look {
     $output .= $loc->description;
 
     foreach my $mobile (@{$self->universe->mobiles || []}) {
+        next unless $mobile->location;
         $output .= $mobile->description . "\n"
             if $mobile->location == $self->location;
     }
