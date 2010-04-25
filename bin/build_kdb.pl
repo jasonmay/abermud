@@ -262,7 +262,16 @@ while (my ($loc_id, $loc) = each %locations) {
 
 $kdb->update($_) foreach values %dir_locations;
 
-$kdb->store(values %mobmap);
+my @mob_keys = keys %mobmap;
+my $usets = AberMUD::Universe::Sets->new;
+$kdb->store('universe-sets' => $usets);
+
+my @mob_ids = $kdb->store(@mobmap{@mob_keys});
+my %mobile_objects;
+@mobile_objects{@mob_ids} = @mobmap{@mob_keys};
+$usets->all_mobiles(\%mobile_objects);
+$kdb->update($usets);
+
 for (keys %mobiles) {
     my $mob_loc_id = "$mobiles{$_}{location}\@$mobiles{$_}{zone}";
     #warn keys(%locations);
