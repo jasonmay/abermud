@@ -13,7 +13,7 @@ around advance => sub {
     for my $mobile ($self->mobiles) {
         next unless $mobile->can('start_fight');
         if ($self->roll_to_start_fight) {
-            warn sprintf( "fight %s fight!", $mobile->name);
+            #warn sprintf( "fight %s fight!", $mobile->name);
             $mobile->start_fight;
         }
     }

@@ -3,7 +3,6 @@ package AberMUD::Universe::Role::Mobile;
 use Moose::Role;
 use namespace::autoclean;
 
-warn "hey";
 has mobiles => (
     is  => 'rw',
     isa => 'ArrayRef[AberMUD::Mobile]',
@@ -11,15 +10,12 @@ has mobiles => (
     default => sub { [] },
 );
 
-sub foobar {}
-
 around advance => sub {
     my $orig = shift;
     my $self = shift;
 
     for my $mobile ($self->mobiles) {
         if ($self->roll_to_move($mobile)) {
-            warn sprintf( "go %s go!", $mobile->name);
             $mobile->move;
         }
     }
