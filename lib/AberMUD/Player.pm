@@ -307,7 +307,11 @@ sub look {
 
     foreach my $mobile (@{$self->universe->mobiles || []}) {
         next unless $mobile->location;
-        $output .= $mobile->description . "\n"
+        my $desc = $mobile->description;
+        $desc .= sprintf q( [%s/%s]), $mobile->current_strength, $mobile->max_strength;
+        $desc .= sprintf q( [agg: %s]), $mobile->aggression;
+
+        $output .= "$desc\n"
             if $mobile->location == $self->location;
     }
 
