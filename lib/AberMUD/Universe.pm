@@ -59,6 +59,11 @@ has objects => (
     default => sub { [] },
 );
 
+sub killables {
+    my $self = shift;
+    return ($self->players, $self->mobiles);
+}
+
 sub broadcast {
     my $self   = shift;
     my $output = shift;
