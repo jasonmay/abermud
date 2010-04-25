@@ -10,6 +10,7 @@ use AberMUD::Universe;
 use AberMUD::Player;
 use AberMUD::Location;
 use AberMUD::Object;
+use AberMUD::Mobile;
 use AberMUD::Object::Role::Getable;
 use AberMUD::Object::Role::Weapon;
 
@@ -28,7 +29,6 @@ has container => (
 );
 
 sub new_universe {
-    my(@objs, @mobs);
     my $self = shift;
     my $container = shift;
     my $b = shift;

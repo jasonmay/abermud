@@ -17,13 +17,13 @@ has death_time => (
 # invisibility up to N level
 has visibility_level => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 0,
 );
 
 has level => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 1,
 );
 
@@ -36,14 +36,14 @@ has helping => (
 
 has score => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 0,
 );
 
 # highest level attained
 has max_level => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 1,
 );
 

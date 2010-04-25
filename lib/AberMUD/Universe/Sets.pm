@@ -10,6 +10,12 @@ has all_objects => (
     default => sub { +{} },
 );
 
+has all_mobiles => (
+    is  => 'rw',
+    isa => 'HashRef[AberMUD::Mobile]',
+    default => sub { +{} },
+);
+
 __PACKAGE__->meta->make_immutable;
 
 1;

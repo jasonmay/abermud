@@ -5,6 +5,7 @@ use Moose;
 use namespace::autoclean;
 extends 'MUD::Controller';
 use AberMUD::Player;
+use AberMUD::Mobile;
 use AberMUD::Universe;
 use AberMUD::Util;
 use POE::Session;
@@ -105,14 +106,37 @@ sub _load_objects {
     $self->universe->objects([values %{ $universe_sets->all_objects }]);
 }
 
-sub BUILD {
+sub _load_mobiles {
     my $self = shift;
-    $self->_load_objects;
+    my $k = $self->universe->directory->kdb;
+
+    my $universe_sets = $k->lookup('universe-sets');
+    return unless $universe_sets;
+
+    $self->universe->mobiles([values %{ $universe_sets->all_mobiles }]);
+
+    $_->universe($self->universe) for $self->universe->mobiles;
 }
 
-sub tick {
+sub BUILD {
     my $self = shift;
-    $_->move for $self->universe->mobiles;
+    #$self->_load_objects;
+    $self->_load_mobiles;
+}
+
+{
+    # AberMUDs have a tick every two seconds
+    my $two_second_toggle = 0;
+    around tick => sub {
+        my $orig = shift;
+        my $self = shift;
+
+        if ($two_second_toggle) {
+            $self->universe->can('advance')
+                && $self->universe->advance;
+            }
+            $two_second_toggle = !$two_second_toggle;
+    };
 }
 
 __PACKAGE__->meta->make_immutable;

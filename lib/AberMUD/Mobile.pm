@@ -6,8 +6,9 @@ use namespace::autoclean;
 use AberMUD::Location::Util qw(directions);
 
 with qw(
-    AberMUD::Role::Killable
     AberMUD::Role::InGame
+    AberMUD::Role::Killable
+    AberMUD::Mobile::Role::Hostile
 );
 
 has id => (
@@ -27,7 +28,7 @@ has display_name => (
 
 has speed => (
     is  => 'rw',
-    isa => 'Str',
+    isa => 'Num',
 );
 
 has intrinsics => (

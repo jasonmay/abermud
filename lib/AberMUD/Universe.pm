@@ -9,6 +9,11 @@ use KiokuDB::Backend::DBI;
 use List::MoreUtils qw(any);
 use AberMUD::Util;
 
+with qw(
+    AberMUD::Universe::Role::Mobile
+    AberMUD::Universe::Role::Violent
+);
+
 has '+players' => (
     traits  => ['Hash'],
     handles => {player_list => 'values'}
@@ -45,13 +50,6 @@ has nowhere_location => (
             description => 'You are nowhere...',
         )
     }
-);
-
-has mobiles => (
-    is  => 'rw',
-    isa => 'ArrayRef[AberMUD::Mobile]',
-    auto_deref => 1,
-    default => sub { [] },
 );
 
 has objects => (
@@ -91,6 +89,12 @@ sub abermud_message {
     my $msg = shift;
 
     print STDERR sprintf("\e[0;36m[ABERMUD]\e[m ${msg}\n", @_);
+}
+
+# Advance the universe through time
+sub advance {
+    my $self = shift;
+    warn $self->can('foobar');
 }
 
 __PACKAGE__->meta->make_immutable;

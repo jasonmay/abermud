@@ -2,11 +2,12 @@
 package AberMUD::Role::Killable;
 use Moose::Role;
 use Moose::Util::TypeConstraints;
+use AberMUD::Player;
+#use AberMUD::Mobile;
 
 has fighting => (
-    is => 'rw',
-    isa => 'Bool',
-    default => 0,
+    is     => 'rw',
+    does   => __PACKAGE__,
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
@@ -20,42 +21,48 @@ has sitting => (
 # the aber-convention for hitting power
 has damage => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 8,
+);
+
+has armor => (
+    is => 'rw',
+    isa => 'Num',
+    default => 0,
 );
 
 # aber-convention for threshold of auto-flee
 has wimpy => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 25,
 );
 
 # aber-convention for the the base of your hit points
 has basestrength => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 40,
 );
 
 # aber-convention for the the level-based part of your hit points
 has levelstrength => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 0,
 );
 
 # aber-convention for the the base of your mana
 has basemana => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 40,
 );
 
 # aber-convention for the the level-based part of your mana
 has levelmana => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
     default => 0,
 );
 

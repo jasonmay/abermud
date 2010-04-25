@@ -10,12 +10,12 @@ has name => (
 
 has altitude => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
 );
 
 has rainfall => (
     is => 'rw',
-    isa => 'Int',
+    isa => 'Num',
 );
 
 __PACKAGE__->meta->make_immutable;
