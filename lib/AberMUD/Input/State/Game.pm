@@ -10,16 +10,27 @@ use AberMUD::Input::Commands;
 #    require     => 1;
 
 sub welcome_message { "\e[2J" . << '_STOP_';
-    _    _               __  __ _   _ ____
-   / \  | |__   ___ _ __|  \/  | | | |  _ \
-  / _ \ | '_ \ / _ \ '__| |\/| | | | | | | |
- / ___ \| |_) |  __/ |  | |  | | |_| | |_| |
-/_/   \_\_.__/ \___|_|  |_|  |_|\___/|____/
+&+G    _    _               __  __ _   _ ____&*
+&+G   / \  | |__   ___ _ __|  \/  | | | |  _ \&*
+&+G  / _ \ | '_ \ / _ \ '__| |\/| | | | | | | |&*
+&+G / ___ \| |_) |  __/ |  | |  | | |_| | |_| |&*
+&+G/_/   \_\_.__/ \___|_|  |_|  |_|\___/|____/&*
 
+&+B========================================================&*
+&+CWelcome to AberMUD!&* This is just a base framework
+for other MUDs. So far it has the following features:
+  &+R*&* Locations (n/s/e/w/u/d)
+  &+R*&* Communication (chat, say)
+  &+R*&* Over 4000 rooms
+  &+R*&* Over 900 mobiles
 
-
-
-The game starts now!
+&+YTHINGS TO DO&*
+  &+Y*&* Fighting
+  &+Y*&* Currency
+  &+Y*&* Weapons, Armor
+  &+Y*&* Quests
+  &+Y*&* Command help pages
+  &+Y*&* Info
 _STOP_
 }
 
