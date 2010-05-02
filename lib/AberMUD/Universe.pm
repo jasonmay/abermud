@@ -80,7 +80,7 @@ sub broadcast {
         next if @except && any { $_ == $player } @except;
         my $player_output = $output;
 
-        $player_output .= sprintf("\n%s", $player->prompt) if $args{prompt};
+        $player_output .= sprintf("\n%s", $player->final_prompt) if $args{prompt};
         $outputs{$player->id} = AberMUD::Util::colorify("\n$player_output");
     }
 
