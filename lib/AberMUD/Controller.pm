@@ -8,19 +8,12 @@ use AberMUD::Player;
 use AberMUD::Mobile;
 use AberMUD::Universe;
 use AberMUD::Util;
-use POE::Session;
-use POE::Kernel;
 use JSON;
+use Data::UUID::LibUUID;
 use DDS;
 
 with qw(
     MooseX::Traits
-);
-
-has player_data_path => (
-    is  => 'rw',
-    isa => 'Str',
-    default => "$ENV{PWD}/data"
 );
 
 around build_response => sub {
@@ -57,16 +50,14 @@ around connect_hook => sub {
     return $result if $data->{param} ne 'connect';
 
     my $id = $data->{data}->{id};
-    return to_json(
-        {
-            param => 'output',
-            data => {
-                id    => $id,
-                value => $self->universe->players->{$id}->input_state->[0]->entry_message,
-            }
-        }
-    );
-
+    return +{
+        param => 'output',
+        data => {
+            id    => $id,
+            value => $self->universe->players->{$id}->input_state->[0]->entry_message,
+        },
+        txn_id => new_uuid_string(),
+    }
 };
 
 before input_hook => sub {
@@ -91,6 +82,7 @@ around disconnect_hook => sub {
         $player->shift_state;
     }
 
+    delete $u->players_in_game->{$player->name};
     my $result = $self->$orig(@_);
 
     return $result;

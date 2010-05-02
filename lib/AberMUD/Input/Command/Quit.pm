@@ -5,9 +5,12 @@ use namespace::autoclean;
 extends 'AberMUD::Input::Command';
 
 sub run {
-    my $you  = shift;
-    $you->disconnect;
-    return "";
+    my $you       = shift;
+    my $args      = shift;
+    my $txn_id    = shift;
+
+    $you->disconnect(undef, $txn_id);
+    return "BYE!";
 }
 
 __PACKAGE__->meta->make_immutable;
