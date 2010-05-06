@@ -10,21 +10,14 @@ sub run {
     my @args = split ' ', $args;
 
     if (!@args) {
-        return "Take what?";
+        return "Examine what?";
     }
     else {
-        my @matching_objects = grep {
-            $_->location == $you->location
-            and lc($_->name) eq lc($args[0])
-        } $you->universe->objects;
+        my $in_game = $you->universe->identify($you->location, $args[0])
+            or return "Nothing of that name is here.";
 
-        if (@matching_objects) {
-            my $o = $matching_objects[0];
-            return $o->examine_description
-                || "You don't notice anything special."
-        }
-
-        return "No object of that name is here.";
+        return $in_game->examine_description
+            || "You notice nothing special.";
     }
 }
 

@@ -101,6 +101,31 @@ sub advance {
     my $self = shift;
 }
 
+# identify everything
+sub identify {
+    my $self     = shift;
+    my $location = shift;
+    my $word     = lc shift;
+
+    my ($offset) = ($word =~ s/(\d+)$//) || 1;
+    my @list;
+
+
+    @list =
+    grep {
+    ($_->can('name') && lc($_->name) eq $word)
+    ||
+    ($_->can('display_name') && lc($_->display_name) eq $word)
+    }
+        grep { $_->can('location') && $_->location && $_->location == $location }
+            ($self->game_list, $self->mobiles, $self->objects);
+
+    warn "@list";
+    my $index = $offset - 1;
+    return $list[$index] if $index <= @list;
+    return undef;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
