@@ -18,9 +18,12 @@ use AberMUD::Mobile;
 use Data::Dumper;
 #use namespace::autoclean;
 
+
+my %mobiles;
+my %objects;
+
 my @locations = (AberMUD::Location->new);
 my %locations;
-my %mobiles;
 my %dir_locations;
 my %loc_map;
 my %loc_world_map;
@@ -66,10 +69,77 @@ sub get_ml {
     return $return;
 }
 
+sub parse_objects {
+    my $file = shift;
+    my $zone_file = lc(basename $file);
+    my $zone = $zone_file;
+    local $_;
+    $zone =~ s/\.zone$//;
+    my $zone_obj = AberMUD::Zone->new(name => $zone);
+    return unless -f $file;
+    open my $fh, '<', $file;
+    my $title;
+    my $prev_line;
+    my $n = 0;
+    my %current_data;
+    #$_ = <$fh>;
+    do {$_ = <$fh>;warn $_ if $zone =~ /awiz/} until (!$_ || /^%objects/si);
+
+    if ($_) {
+        while (<$fh>) {
+            #    next if /^%objects/i;
+            if (/^%zone:(\S+)/i) {
+                $zone = $1;
+                $zone_obj = AberMUD::Zone->new(name => $zone);
+                $_ = <$fh> while $_ && !/^%objects/;
+                $_ = <$fh>; # skip
+                $n = 1;
+            }
+            next if /^\s*$/;
+            last if /^%(?:locations|mobiles)/i;
+            next if /^%(?!objects)/i;
+            $n++;
+            #warn $_;
+#        my @simple_keys = qw(
+#        name pname location
+#        strength damage armor
+#        aggression speed end
+#        );
+            my %flag      = map {; $_ => 1 } qw(oflags);
+            my %multiline = map {; $_ => 1 } qw(description examine);
+
+            my ($datum) = map { lc } /^\s*(.+?)\b/;
+            my $value;
+            if ($flag{$datum}) {
+                $value = get_flags;
+                my @a = @$value;
+                $value = +{ map {; $_ => 1 } @a };
+            }
+            elsif ($multiline{$datum}) {
+                $value = get_ml($fh);
+            }
+            else {
+                $value = get_simple;
+            }
+            if ($datum eq 'end') {
+                $current_data{zone} = $zone;
+                $objects{"$current_data{name}\@$zone"} = +{%current_data};
+                %current_data = ();
+            }
+
+            $value =~ s/"(.+)"/$1/ if $datum eq 'pname';
+            $current_data{$datum} = $value unless $datum eq 'end';
+        }
+    }
+    close $fh;
+    print "parsed $file\n";
+}
+
 sub parse_mobiles {
     my $file = shift;
     my $zone_file = lc(basename $file);
     my $zone = $zone_file;
+    local $_;
     $zone =~ s/\.zone$//;
     my $zone_obj = AberMUD::Zone->new(name => $zone);
     return unless -f $file;
@@ -92,7 +162,7 @@ sub parse_mobiles {
         last if /^%(?:locations|objects)/i;
         next if /^%(?!mobiles)/i;
         $n++;
-        warn $_;
+        #warn $_;
 #        my @simple_keys = qw(
 #        name pname location
 #        strength damage armor
@@ -131,6 +201,7 @@ sub parse_locations {
     my $file = shift;
     my $zone_file = lc(basename $file);
     my $zone = $zone_file;
+    local $_;
     $zone =~ s/\.zone$//;
     my $zone_obj = AberMUD::Zone->new(name => $zone);
     return unless -f $file;
@@ -202,6 +273,7 @@ foreach my $zone_file (readdir($dh)) {
     next unless lc($zone_file) =~ /\.zone$/;
     parse_locations "$zones_dir/$zone_file";
     parse_mobiles "$zones_dir/$zone_file";
+    parse_objects "$zones_dir/$zone_file";
 }
 closedir $dh;
 
@@ -257,7 +329,6 @@ while (my ($loc_id, $loc) = each %locations) {
         my $loc_dir = $locations{$loc_map{$loc_id}{$dir_letter}};
         $loc->$exit($loc_dir);
     }
-#    die "$loc_id";
 }
 
 $kdb->update($_) foreach values %dir_locations;
