@@ -122,7 +122,7 @@ sub identify {
     && $_->location == $location
     } ($self->game_list, $self->mobiles, $self->objects);
 
-    warn "@list";
+    #warn "@list";
     my $index = $offset - 1;
     return $list[$index] if $index <= @list;
     return undef;
