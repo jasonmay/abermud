@@ -72,7 +72,7 @@ sub run {
     return "I don't know any commands by that name."
         unless $dispatch->has_matches;
 
-     my $match = ($dispatch->matches)[0];
+     my $match = (sort { $a->rule->command->sort <=> $b->rule->command->sort } $dispatch->matches)[0];
      return $match->run($you, $match->leftover, $txn_id);
 }
 

@@ -50,17 +50,6 @@ has [ directions() ] => (
     traits    => [ qw(KiokuDB::Lazy) ],
 );
 
-sub show_exits {
-    my $self = shift;
-    my $output;
-    $output = "&+CObvious exits are:&*\n";
-    for ( directions() ) {
-        next unless $self->$_;
-        $output .= sprintf("%-5s &+Y: &+G%s&*\n", ucfirst($_), $self->$_->title);
-    }
-    return $output;
-}
-
 __PACKAGE__->meta->make_immutable;
 
 1;

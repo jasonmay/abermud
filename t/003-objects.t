@@ -65,6 +65,16 @@ my $kdb = KiokuDB->connect('dbi:SQLite:dbname=:memory:', create => 1);
             location            => $locations{test1},
             traits              => ['AberMUD::Object::Role::Container'],
         ),
+
+        AberMUD::Object->new_with_traits(
+            name                => 'sack',
+            description         => 'There is a sack here.',
+            location            => $locations{test1},
+            traits              => [
+                'AberMUD::Object::Role::Openable',
+                'AberMUD::Object::Role::Closeable',
+            ],
+        ),
     );
 
     my $sets = AberMUD::Universe::Sets->new;

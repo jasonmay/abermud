@@ -5,7 +5,7 @@ use namespace::autoclean;
 extends 'MUD::Player';
 
 use AberMUD::Location;
-use AberMUD::Location::Util qw(directions);
+use AberMUD::Location::Util qw(directions show_exits);
 
 use Carp qw(cluck);
 use List::MoreUtils qw(first_value);
@@ -243,9 +243,6 @@ sub _join_server {
 # game stuff
 sub setup {
     my $self = shift;
-    my $location = $self->universe->directory->lookup('location-start2');
-    warn "No location found in directory" unless defined $location;
-    $self->location($location || $self->universe->nowhere_location);
 }
 
 sub _ghost {
@@ -323,6 +320,8 @@ sub look {
 
     $output .= sprintf("%s\n", $_->description)
         for grep {
+            $_->description and
+            $_->location and
             $_->location == $loc
             and not (
                 $_->can('held_by')
@@ -330,7 +329,7 @@ sub look {
             )
         } $self->universe->objects;
 
-    $output .= "\n" . $loc->show_exits;
+    $output .= "\n" . show_exits(location => $loc, universe => $self->universe);
 
     return $output;
 }

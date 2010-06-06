@@ -15,6 +15,11 @@ has name => (
     isa => 'Str',
 );
 
+has alt_name => (
+    is => 'rw',
+    isa => 'Str',
+);
+
 has buy_value => (
     is => 'rw',
     isa => 'Int',
@@ -23,6 +28,12 @@ has buy_value => (
 has description => (
     is => 'rw',
     isa => 'Str',
+);
+
+has flags => (
+    is => 'ro',
+    isa => 'HashRef',
+    default => sub { +{} },
 );
 
 has examine_description => (

@@ -4,6 +4,7 @@ use Moose;
 use namespace::autoclean;
 extends 'AberMUD::Input::Command';
 
+sub sort { -10 }
 sub run {
     my $you  = shift;
     my $direction = 'up';

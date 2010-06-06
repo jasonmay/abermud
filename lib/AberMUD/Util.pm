@@ -58,6 +58,9 @@ sub strip_color {
     my $text = shift;
 }
 
+#sub dsn { 'bdb:dir=abermud.bdb' }
+sub dsn { 'dbi:SQLite:dbname=abermud' }
+
 __PACKAGE__->meta->make_immutable;
 
 1;

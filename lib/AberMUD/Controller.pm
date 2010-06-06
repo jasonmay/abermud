@@ -71,7 +71,7 @@ around disconnect_hook => sub {
     my ($data) = @_;
 
     my $u = $self->universe;
-    my $player = $self->universe->players->{ $data->{data}->{id} };
+    my $player = $self->universe->players->{ $data->{data}{id} };
     if ($player && exists $u->players_in_game->{$player->name}) {
         $player->disconnect;
         $player->dematerialize;
@@ -112,7 +112,7 @@ sub _load_mobiles {
 
 sub BUILD {
     my $self = shift;
-    #$self->_load_objects;
+    $self->_load_objects;
     $self->_load_mobiles;
 }
 

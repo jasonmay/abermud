@@ -3,6 +3,7 @@ package AberMUD::Directory;
 use Moose;
 use KiokuDB;
 use Moose::Util qw(apply_all_roles);
+use AberMUD::Util;
 use KiokuDB::LiveObjects::Scope;
 use Carp;
 use namespace::autoclean;
@@ -15,7 +16,7 @@ has kdb => (
 );
 
 sub _build_kdb {
-    KiokuDB->connect('dbi:SQLite:dbname=abermud')
+    KiokuDB->connect(AberMUD::Util::dsn)
 }
 
 has scope => (

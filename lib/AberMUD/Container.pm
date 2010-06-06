@@ -47,6 +47,7 @@ sub new_universe {
             my $player   = $container->fetch('player')->get(
                 id          => $id,
                 prompt      => '&*[ &+C%h/%H&* ] &+Y$&* ',
+                location    => $config->location,
                 input_state => [
                 map {
                     my $class = "AberMUD::Input::State::$_";
@@ -61,10 +62,6 @@ sub new_universe {
             return $player;
         }
     );
-
-
-    my $start_loc
-    = $config->location;
 
     return $u;
 }
@@ -100,6 +97,7 @@ sub _build_container {
             parameters => {
                 id          => { isa => 'Str' },
                 prompt      => { isa => 'Str' },
+                location    => { isa => 'AberMUD::Location' },
                 input_state => { isa => 'ArrayRef' },
             },
         );

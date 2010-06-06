@@ -5,7 +5,7 @@ use Set::Object;
 use namespace::autoclean;
 
 has all_objects => (
-    is  => 'ro',
+    is  => 'rw',
     isa => 'HashRef[AberMUD::Object]',
     default => sub { +{} },
 );

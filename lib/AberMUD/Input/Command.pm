@@ -24,6 +24,8 @@ has alias => (
     isa => 'Str',
 );
 
+sub sort { 0 }
+
 sub run {
     croak "Please override the 'run' method.";
 }

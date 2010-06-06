@@ -4,8 +4,9 @@ use warnings;
 use lib 'lib';
 use AberMUD::Util;
 use AberMUD::Location;
-use AberMUD::Location::Util qw(directions);
+use AberMUD::Location::Util qw(directions direction_letters);
 use File::Basename;
+use File::Path qw(rmtree mkpath);
 use Carp;
 use String::Util ':all';
 use KiokuDB;
@@ -15,6 +16,7 @@ use AberMUD::Zone;
 use AberMUD::Config;
 use AberMUD::Universe::Sets;
 use AberMUD::Mobile;
+use AberMUD::Object;
 use Data::Dumper;
 #use namespace::autoclean;
 
@@ -22,12 +24,16 @@ use Data::Dumper;
 my %mobiles;
 my %objects;
 
+my $parsing_objects = 0;
+
 my @locations = (AberMUD::Location->new);
 my %locations;
 my %dir_locations;
 my %loc_map;
 my %loc_world_map;
 my $total_locs = 0;
+
+my %door_links;
 
 sub get_simple {
     my $input = shift || $_;
@@ -42,28 +48,46 @@ sub get_flags {
     return [] if $input !~ /\s/;
     my ($set_string) = $input =~ /^.+?\s+(?:=\s*)?(.+)/;
     $set_string =~ s/\{(.*)\}/$1/;
-    return [split ' ', $set_string];
+    return [split ' ', lc $set_string];
 }
 
 sub get_ml {
     my $fh    = shift;
     my $input = shift || $_;
 
+    my $delim;
+    if (index($input, '"') >= 0 and index($input, '^') >= 0) {
+        $delim = (index($input, '"') < index($input, '^')) ? '"' : '^';
+    }
+    elsif (index($input, '"') >= 0) {
+        $delim = '"';
+    }
+    elsif (index($input, '^') >= 0) {
+        $delim = '^';
+    }
+    else {
+        die "Appropriate delimiter could not be found (input: $input)";
+    }
+
+    #warn $input if $parsing_objects;
+    $delim = quotemeta $delim;
+
     my $return;
-    my $quotes = () = $input =~ /"/g;
+    my $quotes = () = $input =~ /$delim/g;
 
     if ($quotes >= 2) {
         # there are no escaped quotes :)
-        ($return) = $input =~ /"(.+)"/;
+        ($return) = $input =~ /$delim(.*)$delim/;
         return $return;
     }
 
-    ($return) = $input =~ /"(.+)/s;
+    ($return) = $input =~ /$delim(.*)/s;
     do {
         $_ = <$fh>;
+        #warn $_ if $parsing_objects;
         ($return) .= $_;
-    } until /"/;
-    chop $return while $return && $return =~ /"$/s;
+    } until /$delim/;
+    chop $return while $return && $return =~ /$delim$/s;
     chomp $return; #once more to rid the "
 
     return $return;
@@ -82,8 +106,8 @@ sub parse_objects {
     my $prev_line;
     my $n = 0;
     my %current_data;
-    #$_ = <$fh>;
-    do {$_ = <$fh>;warn $_ if $zone =~ /awiz/} until (!$_ || /^%objects/si);
+    do { $_ = <$fh> } until (!$_ || /^%objects/si);
+    $parsing_objects = 1;
 
     if ($_) {
         while (<$fh>) {
@@ -106,9 +130,14 @@ sub parse_objects {
 #        aggression speed end
 #        );
             my %flag      = map {; $_ => 1 } qw(oflags);
-            my %multiline = map {; $_ => 1 } qw(description examine);
+            my %multiline = map {; $_ => 1 } qw(desc[0] desc[1] desc[2] desc[3] examine);
 
-            my ($datum) = map { lc } /^\s*(.+?)\b/;
+            my ($datum) = map { lc } /^\s*(\S+)/ or do {
+                chomp;
+                die "($file) DATUM MISSING FROM STRING: $_";
+                next;
+            };
+            #warn $datum if $parsing_objects;
             my $value;
             if ($flag{$datum}) {
                 $value = get_flags;
@@ -121,9 +150,11 @@ sub parse_objects {
             else {
                 $value = get_simple;
             }
+
             if ($datum eq 'end') {
                 $current_data{zone} = $zone;
-                $objects{"$current_data{name}\@$zone"} = +{%current_data};
+                my $obj_name = "$current_data{name}\@$zone";
+                $objects{$obj_name} = +{%current_data};
                 %current_data = ();
             }
 
@@ -132,7 +163,26 @@ sub parse_objects {
         }
     }
     close $fh;
-    print "parsed $file\n";
+    $parsing_objects = 0;
+    #print "parsed $file\n";
+}
+
+sub calculate_object_traits {
+    my $f = shift;
+
+    #warn keys(%$f);
+    my @traits;
+    push @traits, 'Gateway'               if $f->{linked};
+    push @traits, 'Openable', 'Closeable' if $f->{openable};
+    push @traits, 'Pushable'              if $f->{pushable};
+    push @traits, 'Food'                  if $f->{food};
+    push @traits, 'Wearable'              if $f->{wearable} or $f->{armor};
+    push @traits, 'Key'                   if $f->{key};
+    push @traits, 'Lightable'             if $f->{lightable};
+    push @traits, 'Weapon'                if $f->{weapon};
+    push @traits, 'Container'             if $f->{container};
+
+    return map { "AberMUD::Object::Role::$_" } @traits;
 }
 
 sub parse_mobiles {
@@ -158,6 +208,7 @@ sub parse_mobiles {
             $_ = <$fh>; # skip
             $n = 1;
         }
+        next unless $_;
         next if /^\s*$/;
         last if /^%(?:locations|objects)/i;
         next if /^%(?!mobiles)/i;
@@ -194,7 +245,7 @@ sub parse_mobiles {
         $current_data{$datum} = $value unless $datum eq 'end';
     }
     close $fh;
-    print "parsed $file\n";
+    #print "parsed $file\n";
 }
 
 sub parse_locations {
@@ -226,7 +277,7 @@ sub parse_locations {
         my ($id, $exit_info) = /(\S+)\s*(.*);/;
         $id = trim $id;
         my $loc = AberMUD::Location->new(zone => $zone_obj);
-        croak "$file -> $_" unless $id;
+        die "$file -> $_" unless $id;
         $loc->id($id);
         $locations{"$id\@$zone"}  = $loc;
         $dir_locations{"$zone$n"} = $loc;
@@ -236,14 +287,22 @@ sub parse_locations {
 
         foreach my $exit_node (@exit_nodes) {
             # TODO check for doors
-            my ($dir_letter, $exit_loc) = $exit_node =~/\^?(.+):(.+)/;
+            my ($dir_letter, $exit_loc) = $exit_node =~ /(.+):(.+)/;
             $exit_loc .= "\@$zone" if $exit_loc !~ /@/;
-            $exit_loc =~ s/\@(.+)/'@' . lc $1/e;
-            $loc_map{"$id\@$zone"}->{$dir_letter} = $exit_loc;
-            $loc_world_map{"$zone$n"}->{$dir_letter} = $exit_loc;
+
+            if ($exit_loc =~ s/^\^(.+)/obj:$1/) {
+                #warn $exit_loc;
+                my $obj = $1;
+                $door_links{$obj} = $dir_letter;
+            }
+            else {
+                $exit_loc =~ s/\@(.+)/'@' . lc $1/e;
+                $loc_map{"$id\@$zone"}->{$dir_letter} = $exit_loc;
+                $loc_world_map{"$zone$n"}->{$dir_letter} = $exit_loc;
+            }
         }
 
-        $_ = <$fh> while $_ && lc($_) !~ /^lflags/;
+        $_ = <$fh> while $_ && lc($_) !~ /^lflag/;
         last unless $_;
 
         my ($flags) = /\{(.+)\}/;
@@ -264,27 +323,29 @@ sub parse_locations {
         }
     }
     close $fh;
-    print "parsed $file for locations\n";
+    #print "parsed $file for locations\n";
 }
 
 my $zones_dir = 'zones';
 opendir(my $dh, $zones_dir);
-foreach my $zone_file (readdir($dh)) {
-    next unless lc($zone_file) =~ /\.zone$/;
+foreach my $zone_file (sort readdir($dh)) {
+    next unless lc($zone_file) =~ /pirate\.zone$/;
+    #next unless lc($zone_file) =~ /\.zone$/;
     parse_locations "$zones_dir/$zone_file";
     parse_mobiles "$zones_dir/$zone_file";
     parse_objects "$zones_dir/$zone_file";
 }
 closedir $dh;
 
-unlink qw(abermud abermud-journal);
-my $ad = AberMUD::Directory->new;
-my $kdb = KiokuDB->connect('dbi:SQLite:dbname=abermud', create => 1);
+unlink 'abermud';
+my $kdb = KiokuDB->connect(AberMUD::Util::dsn, create => 1);
 my $scope = $kdb->new_scope;
 my %dir = map { substr($_, 0, 1) => $_ } directions();
 
 my %mobmap;
+my $m = 0;
 while (my ($mob_at_zone, $data) = each %mobiles) {
+    $m++;
     my ($name, $zone) = split /@/, $mob_at_zone;
     my $mobile = AberMUD::Mobile->new;
     $data->{$_} ||= 0 for qw(damage armor speed aggression);
@@ -311,13 +372,14 @@ while (my ($mob_at_zone, $data) = each %mobiles) {
 
     $mobile->spells($data->{sflags}||{});
 
+    warn "$m mobiles loaded..." if $m % 100 == 0;
     $mobmap{$mob_at_zone} = $mobile;
 }
 
 $kdb->store(values %mobmap);
 
 while (my ($dir_key, $dir_value) = each %dir_locations) {
-    $kdb->store("location-$dir_key" => $dir_value);
+    eval { $kdb->store("location-$dir_key" => $dir_value); } or warn $@
 }
 
 while (my ($loc_id, $loc) = each %locations) {
@@ -345,14 +407,93 @@ $kdb->update($usets);
 
 for (keys %mobiles) {
     my $mob_loc_id = "$mobiles{$_}{location}\@$mobiles{$_}{zone}";
-    #warn keys(%locations);
     next unless $locations{$mob_loc_id};
     $mobmap{$_}->location($locations{$mob_loc_id});
 }
 $kdb->update(values %mobmap);
 
+my %objmap;
+while (my ($obj_at_zone, $data) = each %objects) {
+    my ($name, $zone) = split /@/, $obj_at_zone;
+    my $oflags = $data->{oflags};
+    $oflags->{$_} = lc $oflags->{$_} for keys %$oflags;
+    my @traits = calculate_object_traits($oflags);
+
+    my %traits = map {; $_ => 1 } calculate_object_traits;
+    $traits{'AberMUD::Object::Role::Gateway'} = 1 if $data->{linked};
+
+    #warn "@{[keys %traits]} <-- $data->{name}" if $data->{linked};
+    my %constructor_params;
+
+    $constructor_params{ungetable} = 1 if $oflags->{noget};
+    my $object = %traits
+               ? AberMUD::Object->new_with_traits(traits => [keys %traits], %constructor_params)
+               : AberMUD::Object->new(%constructor_params);
+
+    $data->{$_} ||= 0  for qw(damage armor);
+    $data->{$_} ||= '' for qw(description examine);
+
+    $data->{linked} .= "\@$zone" if $data->{linked} && $data->{linked} !~ /@/;
+
+    $object->name($data->{name});
+    $object->examine_description($data->{examine}) if $data->{examine};
+    #$object->display_name($data->{pname} || ucfirst $data->{name});
+    $object->alt_name($data->{altname}) if $data->{altname};
+
+    if ($data->{location} =~ /IN_ROOM:(.+)/) {
+        my $location = $1;
+        $location .= "\@$zone" unless $location =~ /@/;
+        #warn "GOGOGOO " . $location if $object->name eq 'mess_door';
+        if ($locations{$location}) {
+            #    warn 'sdklj';
+            $object->location($locations{$location});
+        }
+    }
+
+    $object->flags->{$_} = $oflags->{$_} for keys %$oflags;
+
+    # TODO door logic
+
+    #warn join ' ', map { $_->name } $object->meta->calculate_all_roles
+    #    if $obj_at_zone eq 'ladder2Cove@pirate';
+    $objmap{$obj_at_zone} = $object;
+}
+my @objects = values %objmap;
+my @obj_ids = $kdb->store(@objects);
+
+my %kdbid_to_obj;
+@kdbid_to_obj{@obj_ids} = @objects;
+# update other entries(?) linking to objects
+$usets->all_objects( +{%kdbid_to_obj} );
+$kdb->update($usets);
+
+my $gateway_role = 'AberMUD::Object::Role::Gateway';
+my %lettermap;
+@lettermap{direction_letters()} = directions();
+
+#require YAML; die YAML::Dump(\%objmap);
+foreach my $object (keys %door_links) {
+    if (!$objmap{$object} or !$objmap{$object}->does($gateway_role)) {
+        warn "$object not found";
+        next;
+    }
+
+    if (!$objects{$object} || !$objmap{$objects{$object}{linked}}) {
+        warn "$objects{$object}{linked} ...also not found";
+        next;
+    }
+
+    my $link_attr = $lettermap{ $door_links{$object} } . '_link';
+    warn "$link_attr => $object";
+    $objmap{$object}->$link_attr($objmap{$objects{$object}{linked}});
+}
+
+$kdb->update(values %objmap);
+
+print( "\n" x 20 );
+
 my $config = AberMUD::Config->new(
-    location => $locations{'church@start'},
+    location => $locations{'church@start'} || $locations{(keys %locations)[0]},
     input_states => [qw(Login::Name Game)],
 );
 

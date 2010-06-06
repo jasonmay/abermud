@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 package AberMUD::Object::Role::Closeable;
-use Moose::Role excludes => qw(AberMUD::Object::Role::Openable);
+use Moose::Role;
 use namespace::autoclean;
 
 has close_description => (

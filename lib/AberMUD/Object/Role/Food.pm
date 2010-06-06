@@ -3,8 +3,10 @@ package AberMUD::Object::Role::Food;
 use Moose::Role;
 use namespace::autoclean;
 
-
-
+has eaten => (
+    is  => 'rw',
+    isa => 'Bool',
+);
 
 1;
 
