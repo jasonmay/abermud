@@ -329,8 +329,8 @@ sub parse_locations {
 my $zones_dir = 'zones';
 opendir(my $dh, $zones_dir);
 foreach my $zone_file (sort readdir($dh)) {
-    next unless lc($zone_file) =~ /pirate\.zone$/;
-    #next unless lc($zone_file) =~ /\.zone$/;
+    #next unless lc($zone_file) =~ /pirate\.zone$/;
+    next unless lc($zone_file) =~ /\.zone$/;
     parse_locations "$zones_dir/$zone_file";
     parse_mobiles "$zones_dir/$zone_file";
     parse_objects "$zones_dir/$zone_file";
