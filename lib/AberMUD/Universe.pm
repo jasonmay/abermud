@@ -113,14 +113,14 @@ sub identify {
 
     @list =
     grep {
-    ($_->can('name') && lc($_->name) eq $word)
-    ||
-    ($_->can('display_name') && lc($_->display_name) eq $word)
-    ||
-    ($_->can('alt_name') && lc($_->alt_name) eq $word)
-    }
-        grep { $_->can('location') && $_->location && $_->location == $location }
-            ($self->game_list, $self->mobiles, $self->objects);
+    (
+        ($_->can('name')         && lc($_->name)         eq $word) ||
+        ($_->can('display_name') && lc($_->display_name) eq $word) ||
+        ($_->can('alt_name')     && lc($_->alt_name)     eq $word)
+    )
+    && $_->can('location') && $_->location
+    && $_->location == $location
+    } ($self->game_list, $self->mobiles, $self->objects);
 
     warn "@list";
     my $index = $offset - 1;
