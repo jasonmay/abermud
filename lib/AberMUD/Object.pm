@@ -58,6 +58,12 @@ sub BUILD {
     }
 }
 
+sub o_does {
+    my $self = shift;
+    my $base = shift;
+    $self->does("AberMUD::Object::Role::$base");
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
