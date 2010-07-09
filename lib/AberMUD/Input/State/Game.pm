@@ -48,7 +48,7 @@ sub BUILD {
     my $self = shift;
 
     my $commands = AberMUD::Input::Commands->new;
-    foreach my $command_class (sort $commands->commands) {
+    foreach my $command_class ($commands->commands) {
         (my $command = lc $command_class) =~ s/.+:://;
 
         Class::MOP::load_class($command_class);
