@@ -10,7 +10,7 @@ sub run {
     my $you  = shift;
     my $output = "$blue_line\n";
 
-    my @names       = keys %{$you->universe->players_in_game};
+    my @names       = $you->universe->game_name_list;
     my $num_players = @names;
 
     $output .= join(

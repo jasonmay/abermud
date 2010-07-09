@@ -23,7 +23,10 @@ has players_in_game => (
     is         => 'rw',
     isa        => 'HashRef[AberMUD::Player]',
     traits     => ['Hash'],
-    handles    => {game_list => 'values'},
+    handles    => {
+        game_name_list => 'keys',
+        game_list      => 'values',
+    },
     default    => sub { +{} },
 );
 
