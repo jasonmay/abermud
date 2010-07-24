@@ -75,7 +75,7 @@ my $parser = qr{
         \{<.ws>?<[FlagItem]>*<.ws>?\}
 
     <token: FlagItem>
-        <.Word> <.ws>?
+        <Word> <.ws>?
 
     <token: Word>
         [\w\[\]]+
@@ -203,8 +203,8 @@ foreach my $file (@zone_files) {
         my $json = JSON->new->pretty;
 
         write_pretty_json('results.out' => \%results);
-    #write_pretty_json("json/$zone_name.json" => $info);
-        expand_znoe_data(\%results);
+        write_pretty_json("json/$zone_name.json" => $info);
+        #expand_znoe_data(\%results);
     }
 }
 
@@ -232,14 +232,14 @@ sub construct_info_from_parsed {
     my $results = shift;
 
     my @locs = map {
-        delete $_->{LocFlags}{lflags}
+        $_->{LocFlags}{lflags} = +{ FlagItem => [] }
         if $_->{LocFlags}{lflags}
             and not ref $_->{LocFlags}{lflags};
 
         +{
             id          => $_->{Map}{LocID},
             altitude    => ($_->{AltitudeLine} || {})->{'alt'},
-            flags       => $_->{LocFlags}{lflags}{FlagItem} || [],
+            flags       => handle_flag_statement($_->{LocFlags}{lflags}),
             title       => $_->{LocTitle},
             description => $_->{LocDescription}{CaretString}{Inside},
             exits       => {
@@ -267,8 +267,15 @@ sub create_map_from_statements {
         my $value;
 
         if (ref($_->{value}) eq 'HASH') {
-            $value = $_->{value}{FlagItem}
-                || handle_quoted_statement($_);
+            if ($_->{value}{FlagItem}) {
+                $value = $_->{value}{FlagItem}
+                    ? handle_flag_statement($_->{value})
+                    : handle_quoted_statement($_->{value});
+
+            }
+            else {
+                handle_quoted_statement($_->{value});
+            }
         }
         else { $value = $_->{value} }
 
@@ -276,11 +283,37 @@ sub create_map_from_statements {
     } @_
 }
 
+sub handle_flag_statement {
+    my $flag_data = shift;
+
+    ref($flag_data) eq 'HASH'
+        or return [];
+
+    ref($flag_data->{FlagItem}) eq 'ARRAY'
+        or return [];
+
+    my @flags;
+
+    foreach my $flag_node (@{$flag_data->{FlagItem}}) {
+        ref($flag_node) eq 'HASH'
+            or return [];
+
+        push @flags, $flag_node->{Word};
+    }
+
+    if (ref $flag_data eq 'HASH') {
+        return [] unless $flag_data
+    }
+    else { return [] };
+
+    return \@flags;
+}
+
 sub handle_quoted_statement {
     my $stmt = shift;
 
     my $sub_result;
-    if (my $quoted = $stmt->{value}{Quoted}) {
+    if (my $quoted = $stmt->{Quoted}) {
 
         $quoted->{"${_}String"} and
             $sub_result = $quoted->{"${_}String"}{Inside}
