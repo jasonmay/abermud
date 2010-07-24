@@ -268,15 +268,9 @@ sub create_map_from_statements {
         my $value;
 
         if (ref($_->{value}) eq 'HASH') {
-            if ($_->{value}{FlagItem}) {
-                $value = $_->{value}{FlagItem}
-                    ? handle_flag_statement($_->{value})
-                    : handle_quoted_statement($_->{value});
-
-            }
-            else {
-                handle_quoted_statement($_->{value});
-            }
+            $value = $_->{value}{FlagItem}
+                ? handle_flag_statement($_->{value})
+                : handle_quoted_statement($_->{value});
         }
         else { $value = $_->{value} }
 
