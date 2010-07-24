@@ -1,0 +1,89 @@
+%latitude:40
+
+%mobiles
+
+Name		= puff
+Location	= church
+Strength	= 1500
+Damage		= 32
+Aggression      = 0
+Armor		= 0
+Eflags		{ NegFireball }
+Sflags		{ Female }
+Description	= "
+Puff The Fractal Dragon is here with a faraway look in her eyes."
+End             = puff
+
+Name            = Bob
+Location        = church
+Strength        = 1000
+Damage          = 32
+Aggression      = 0
+Armor           = 0
+Speed           = 0
+Pflags          {NoSummon}
+Description     = "Bob is here, looking eager to answer your questions."
+End             = Bob
+
+%objects
+Name      = Umbrella
+Location  = IN_ROOM:temple
+Oflags    {Weapon}
+State     = 1
+MaxState  = 1
+Damage    = 5
+BValue    = 30
+Size      = 20
+Weight    = 15
+Desc[0]   = "An unfurled umbrella lies here."
+Desc[1]   = "A furled umbrella lies here."
+Examine   = "
+It is a large, black umbrella, somewhat battered.  The initials 'M.Poppins'
+are engraved on the handle.
+"
+End       = umbrella
+
+Name      = fire
+Location  = IN_ROOM:temple
+Oflags    {Extinguish Lit NoGet}
+Desc[0]   = "
+A roaring fire burns here.  Its flames make the temple sparkle and glitter."
+Examine   = "
+In the fire you see faint images of the ghosts of dead players.  The sparkles
+fly up and away, disappearing amongst the pillars of the temple."
+End       = fire
+
+Name      = pit
+Location  = IN_ROOM:temple
+Oflags	  {NoGet}
+Desc[0]   = "
+   At your feet a huge sacrificial pit allows you to give valuables to the gods
+in the hope of being rewarded."
+End       = pit
+
+Name      = Church_Pit
+Pname	  = pit
+Location  = IN_ROOM:church
+Oflags	  {NoGet}
+Desc[0]   = "
+   At your feet a huge sacrificial pit allows you to give valuables to the gods
+in the hope of being rewarded."
+End       = Church_Pit
+
+%locations
+temple d:Ftrack@Valley s:Ftrack@Valley u:mrealms@mrealms;
+lflags {Peace FastMana FastHeal}
+The Temple Of Paradise^
+   You stand in the Temple of Paradise, a huge stone structure whose walls are
+decorated with ancient carvings and runes, some so old that even the priests no
+longer know their meanings.
+   A single set of steps lead south, descending the huge mound upon which the
+temple is built and ending in the forests below.
+^
+church s:Green@Village u:mrealms@mrealms;
+lflags {Peace FastMana FastHeal}
+The Village Church^
+   You are in the village's small wooden church.  A gentle breeze blows into
+the church disturbing the dust which dances in the sunbeams that shine faintly
+through the windows.  A doorway leads south.
+^
