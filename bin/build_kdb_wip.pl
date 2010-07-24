@@ -219,13 +219,16 @@ sub get_all_zone_files {
     return @dirs;
 }
 
-sub write_pretty_json {
-    my $file = shift;
-    my $data = shift;
+{
+    my $json = JSON->new->pretty;
+    sub write_pretty_json {
+        my $file = shift;
+        my $data = shift;
 
-    open my $fh, '>', $file;
-    print $fh JSON->new->pretty->encode($data);
-    close $fh;
+        open my $fh, '>', $file;
+        print $fh $json->encode($data);
+        close $fh;
+    }
 }
 
 sub construct_info_from_parsed {
