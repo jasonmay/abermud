@@ -203,9 +203,10 @@ foreach my $file (@zone_files) {
 
         my $json = JSON->new->pretty;
 
-        write_pretty_json('results.out' => \%results);
-        write_pretty_json("json/$zone_name.json" => $info);
-        #expand_znoe_data(\%results);
+        #write_pretty_json('results.out' => \%results);
+        #write_pretty_json("json/$zone_name.json" => $info);
+        my %expanded = %{ expand_zone_data($info, $zone_name) };
+        use Carp::REPL; die;
     }
 }
 
@@ -325,27 +326,61 @@ sub expand_zone_data {
     my $zone_name = shift;
 
     return +{
-        mob => expand_mobiles($info{mob}, $zone_name),
-        obj => expand_objects($info{obj}, $zone_name),
-        loc => expand_objects($info{loc}, $zone_name),
+        mob => expand_mobiles($info->{mob}, $zone_name),
+        obj => expand_objects($info->{obj}, $zone_name),
+        loc => expand_objects($info->{loc}, $zone_name),
     };
 }
 
 sub expand_mobiles {
     my $mobs = shift;
+    my $zone_name = shift;
 
     my %mob_objects;
     foreach my $mob_data (@$mobs) {
+        warn $mob_data->{name};
+        my $mob_object = AberMUD::Mobile->new;
 
+        $mob_object->$_($mob_data->{$_}) for grep { $mob_data->{$_} } qw[
+           name
+           damage
+           armor
+           aggression
+           speed
+           description
+        ];
+
+        $mob_object->examine_description($mob_data->{examine}) if $mob_data->{examine};
+        $mob_object->display_name($mob_data->{pname} || ucfirst $mob_data->{name});
+        $mob_object->basestrength($mob_data->{strength}) if $mob_data->{strength};
+        $mob_object->intrinsics( format_flags(@{$mob_data}{'pflags', 'eflags'}) );
+        $mob_object->spells( format_flags($mob_data->{sflags}) );
+
+        $mob_objects{sprintf q[%s@%s], $mob_data->{name}, $zone_name} = $mob_object;
     }
+
+    return \%mob_objects;
+}
+
+sub format_flags {
+    my %result;
+
+    foreach my $flags (@_) {
+        next unless ref $flags eq 'ARRAY';
+        $result{$_} = 1 for @$flags;
+    }
+
+    return \%result;
 }
 
 sub expand_objects {
     my $objs = shift;
+    return +{};
 }
 
 sub expand_locations {
     my $locs = shift;
+    return +{};
 }
 
 sub store_zone_data {
