@@ -188,6 +188,7 @@ my @zone_files;
 @zone_files = @ARGV
     or @zone_files = get_all_zone_files();
 
+my $json = JSON->new->pretty or die $!;
 foreach my $file (@zone_files) {
     my $contents = read_file($file);
     print STDERR "$file...";
@@ -219,16 +220,13 @@ sub get_all_zone_files {
     return @dirs;
 }
 
-{
-    my $json = JSON->new->pretty;
-    sub write_pretty_json {
-        my $file = shift;
-        my $data = shift;
+sub write_pretty_json {
+    my $file = shift;
+    my $data = shift;
 
-        open my $fh, '>', $file;
-        print $fh $json->encode($data);
-        close $fh;
-    }
+    open my $fh, '>', $file;
+    print $fh $json->encode($data);
+    close $fh;
 }
 
 sub construct_info_from_parsed {
