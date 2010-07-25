@@ -9,6 +9,7 @@ use autodie;
 
 use KiokuDB;
 
+use AberMUD::Zone;
 use AberMUD::Mobile;
 use AberMUD::Location;
 use AberMUD::Object;
@@ -197,7 +198,7 @@ foreach my $file (@zone_files) {
         warn " parsed!";
         my %results = %/;
 
-        (my $zone_name = $file) =~ s{zones/(.+?)\.zone}{$1}s or die "invalid zone";
+        (my $zone_name = lc $file) =~ s{zones/(.+?)\.zone}{$1}s or die "invalid zone";
 
         my $info = construct_info_from_parsed(\%results);
 
@@ -321,47 +322,6 @@ sub handle_quoted_statement {
     return $sub_result;
 }
 
-sub expand_zone_data {
-    my $info      = shift;
-    my $zone_name = shift;
-
-    return +{
-        mob => expand_mobiles($info->{mob}, $zone_name),
-        obj => expand_objects($info->{obj}, $zone_name),
-        loc => expand_objects($info->{loc}, $zone_name),
-    };
-}
-
-sub expand_mobiles {
-    my $mobs = shift;
-    my $zone_name = shift;
-
-    my %mob_objects;
-    foreach my $mob_data (@$mobs) {
-        warn $mob_data->{name};
-        my $mob_object = AberMUD::Mobile->new;
-
-        $mob_object->$_($mob_data->{$_}) for grep { $mob_data->{$_} } qw[
-           name
-           damage
-           armor
-           aggression
-           speed
-           description
-        ];
-
-        $mob_object->examine_description($mob_data->{examine}) if $mob_data->{examine};
-        $mob_object->display_name($mob_data->{pname} || ucfirst $mob_data->{name});
-        $mob_object->basestrength($mob_data->{strength}) if $mob_data->{strength};
-        $mob_object->intrinsics( format_flags(@{$mob_data}{'pflags', 'eflags'}) );
-        $mob_object->spells( format_flags($mob_data->{sflags}) );
-
-        $mob_objects{sprintf q[%s@%s], $mob_data->{name}, $zone_name} = $mob_object;
-    }
-
-    return \%mob_objects;
-}
-
 sub format_flags {
     my %result;
 
@@ -373,14 +333,99 @@ sub format_flags {
     return \%result;
 }
 
+sub expand_zone_data {
+    my $info      = shift;
+    my $zone_name = shift;
+
+    return +{
+        mob => expand_mobiles($info->{mob}, $zone_name),
+        obj => expand_objects($info->{obj}, $zone_name),
+        loc => expand_locations($info->{loc}, $zone_name),
+    };
+}
+
+sub expand_mobiles {
+    my $mobs = shift;
+    my $zone_name = shift;
+
+    my %mob_objects;
+    foreach my $mob_data (@$mobs) {
+        warn $mob_data->{name};
+        my $m = AberMUD::Mobile->new;
+
+        $m->$_($mob_data->{$_}) for grep { $mob_data->{$_} } qw[
+           name
+           damage
+           armor
+           aggression
+           speed
+           description
+        ];
+
+        $m->examine_description($mob_data->{examine}) if $mob_data->{examine};
+        $m->display_name($mob_data->{pname} || ucfirst $mob_data->{name});
+        $m->basestrength($mob_data->{strength}) if $mob_data->{strength};
+        $m->intrinsics( format_flags(@{$mob_data}{'pflags', 'eflags'}) );
+        $m->spells( format_flags($mob_data->{sflags}) );
+
+        $mob_objects{sprintf q[%s@%s], $mob_data->{name}, $zone_name} = $m;
+    }
+
+    return \%mob_objects;
+}
+
 sub expand_objects {
     my $objs = shift;
+    my $zone_name = shift;
+    my %obj_objects; # ugh :)
+
+
     return +{};
 }
 
+sub calculate_object_traits {
+    my $f = shift;
+
+    #warn keys(%$f);
+    my @traits;
+    push @traits, 'Gateway'               if $f->{linked};
+    push @traits, 'Openable', 'Closeable' if $f->{openable};
+    push @traits, 'Pushable'              if $f->{pushable};
+    push @traits, 'Food'                  if $f->{food};
+    push @traits, 'Wearable'              if $f->{wearable} or $f->{armor};
+    push @traits, 'Key'                   if $f->{key};
+    push @traits, 'Lightable'             if $f->{lightable};
+    push @traits, 'Weapon'                if $f->{weapon};
+    push @traits, 'Container'             if $f->{container};
+
+    return map { "AberMUD::Object::Role::$_" } @traits;
+}
+
 sub expand_locations {
-    my $locs = shift;
-    return +{};
+    my $locs      = shift;
+    my $zone_name = shift;
+
+    my $zone = AberMUD::Zone->new(name => $zone_name);
+
+    my %loc_objects;
+    my $n = 1; # for constructing location's world id
+    foreach my $loc_data (@$locs) {
+        warn "$loc_data->{id}";
+        my $l = AberMUD::Location->new( zone => $zone );
+
+        $loc_data->{title} && $l->title($loc_data->{title});
+        $loc_data->{description} && $l->description($loc_data->{description});
+        $loc_data->{flags} && $l->flags( format_flags($loc_data->{flags}) );
+
+        my $world_id = $zone_name . $n;
+        $l->world_id($world_id);
+
+        my $key = sprintf q[%s@%s], $loc_data->{id}, $zone_name;
+
+        $loc_objects{$key} = $l;
+        ++$n;
+    }
+    return \%loc_objects;
 }
 
 sub store_zone_data {
