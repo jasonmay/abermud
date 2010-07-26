@@ -200,13 +200,12 @@ foreach my $file (@zone_files) {
 
         (my $zone_name = lc $file) =~ s{zones/(.+?)\.zone}{$1}s or die "invalid zone";
 
-        my $info = construct_info_from_parsed(\%results);
-
-        my $json = JSON->new->pretty;
+        my $info = construct_info_from_parsed(\%results, $zone_name);
 
         #write_pretty_json('results.out' => \%results);
         #write_pretty_json("json/$zone_name.json" => $info);
-        my %expanded = %{ expand_zone_data($info, $zone_name) };
+        my $expanded = expand_zone_data($info, $zone_name);
+        link_zone_data($expanded, $info);
         use Carp::REPL; die;
     }
 }
@@ -232,7 +231,7 @@ sub write_pretty_json {
 }
 
 sub construct_info_from_parsed {
-    my $results = shift;
+    my ($results, $zone_name) = @_;
 
     my @locs = map {
         $_->{LocFlags}{lflags} = +{ FlagItem => [] }
@@ -241,6 +240,7 @@ sub construct_info_from_parsed {
 
         +{
             id          => $_->{Map}{LocID},
+            zone        => $zone_name,
             altitude    => ($_->{AltitudeLine} || {})->{'alt'},
             flags       => handle_flag_statement($_->{LocFlags}{lflags}),
             title       => $_->{LocTitle},
@@ -252,16 +252,19 @@ sub construct_info_from_parsed {
             },
         },
     } @{ $results->{Zone}{Locations}{Location} };
+    my %locs = map {; "$_->{id}\@$zone_name" => $_ } @locs;
 
     my @mobs = map {
         +{ create_map_from_statements( @{ $_->{Statement} } ) },
     } @{ $results->{Zone}{Mobiles}{Mobile} };
+    my %mobs = map {; "$_->{name}\@$zone_name" => $_  } @mobs;
 
     my @objs = map {
         +{ create_map_from_statements( @{ $_->{ObjectStatement} } ) },
     } @{ $results->{Zone}{Objects}{Object} };
+    my %objs = map {; "$_->{name}\@$zone_name" => $_  } @objs;
 
-    return +{mob => \@mobs, obj => \@objs, loc => \@locs};
+    return +{mob => \%mobs, obj => \%objs, loc => \%locs};
 }
 
 sub create_map_from_statements {
@@ -349,24 +352,31 @@ sub expand_mobiles {
     my $zone_name = shift;
 
     my %mob_objects;
-    foreach my $mob_data (@$mobs) {
-        warn $mob_data->{name};
-        my $m = AberMUD::Mobile->new;
+    foreach my $mob_data (values %$mobs) {
 
-        $m->$_($mob_data->{$_}) for grep { $mob_data->{$_} } qw[
-           name
-           damage
-           armor
-           aggression
-           speed
-           description
-        ];
+        my %params = (
+            name                => $mob_data->{name},
+            damage              => $mob_data->{damage},
+            armor               => $mob_data->{armor},
+            aggression          => $mob_data->{aggression},
+            speed               => $mob_data->{speed},
+            description         => $mob_data->{description},
+            examine_description => $mob_data->{examine},
+            display_name        => $mob_data->{pname}
+                                || ucfirst($mob_data->{name}),
+            basestrength        => $mob_data->{strength},
+            intrinsics          => format_flags(
+                                        $mob_data->{pflags},
+                                        $mob_data->{eflags},
+                                    ),
+            spells              => format_flags($mob_data->{sflags}),
 
-        $m->examine_description($mob_data->{examine}) if $mob_data->{examine};
-        $m->display_name($mob_data->{pname} || ucfirst $mob_data->{name});
-        $m->basestrength($mob_data->{strength}) if $mob_data->{strength};
-        $m->intrinsics( format_flags(@{$mob_data}{'pflags', 'eflags'}) );
-        $m->spells( format_flags($mob_data->{sflags}) );
+        );
+
+        # try to fall back on attr defaults
+        delete $params{$_} for grep { not defined $params{$_} } keys %params;
+
+        my $m = AberMUD::Mobile->new(%params);
 
         $mob_objects{sprintf q[%s@%s], $mob_data->{name}, $zone_name} = $m;
     }
@@ -375,28 +385,52 @@ sub expand_mobiles {
 }
 
 sub expand_objects {
-    my $objs = shift;
+    my $objs      = shift;
     my $zone_name = shift;
+
     my %obj_objects; # ugh :)
+    foreach my $obj_data (values %$objs) {
+        my @traits = calculate_object_traits($obj_data);
 
+        my $oclass = @traits ? AberMUD::Object->with_traits(@traits)
+                             : 'AberMUD::Object';
 
-    return +{};
+        my $oflags = format_flags($obj_data->{oflags});
+        my %params = (
+            ungetable           => $oflags->{noget},
+            flags               => $oflags,
+            name                => $obj_data->{name},
+            examine_description => $obj_data->{examine},
+            alt_name            => $obj_data->{altname},
+        );
+
+        delete $params{$_} for grep { not defined $params{$_} } keys %params;
+
+        my $key = $obj_data->{name} . '@' . $zone_name;
+
+        $obj_objects{$key} = $oclass->new(%params);
+    }
+
+    return \%obj_objects;
 }
 
 sub calculate_object_traits {
-    my $f = shift;
+    my $data = shift;
+    my $flags = format_flags($data->{oflags});
 
-    #warn keys(%$f);
     my @traits;
-    push @traits, 'Gateway'               if $f->{linked};
-    push @traits, 'Openable', 'Closeable' if $f->{openable};
-    push @traits, 'Pushable'              if $f->{pushable};
-    push @traits, 'Food'                  if $f->{food};
-    push @traits, 'Wearable'              if $f->{wearable} or $f->{armor};
-    push @traits, 'Key'                   if $f->{key};
-    push @traits, 'Lightable'             if $f->{lightable};
-    push @traits, 'Weapon'                if $f->{weapon};
-    push @traits, 'Container'             if $f->{container};
+    push @traits, 'Gateway'               if $flags->{linked};
+    push @traits, 'Openable', 'Closeable' if $flags->{openable};
+    push @traits, 'Pushable'              if $flags->{pushable};
+    push @traits, 'Food'                  if $flags->{food};
+    push @traits, 'Wearable'              if $flags->{wearable}
+                                          or $flags->{armor};
+    push @traits, 'Key'                   if $flags->{key};
+    push @traits, 'Lightable'             if $flags->{lightable};
+    push @traits, 'Weapon'                if $flags->{weapon};
+    push @traits, 'Container'             if $flags->{container};
+
+    push @traits, 'Gateway'               if $data->{linked};
 
     return map { "AberMUD::Object::Role::$_" } @traits;
 }
@@ -408,24 +442,59 @@ sub expand_locations {
     my $zone = AberMUD::Zone->new(name => $zone_name);
 
     my %loc_objects;
-    my $n = 1; # for constructing location's world id
-    foreach my $loc_data (@$locs) {
-        warn "$loc_data->{id}";
-        my $l = AberMUD::Location->new( zone => $zone );
+    foreach my $loc_data (values %$locs) {
 
-        $loc_data->{title} && $l->title($loc_data->{title});
-        $loc_data->{description} && $l->description($loc_data->{description});
-        $loc_data->{flags} && $l->flags( format_flags($loc_data->{flags}) );
-
-        my $world_id = $zone_name . $n;
-        $l->world_id($world_id);
+        my $l = AberMUD::Location->new(
+            zone        => $zone,
+            title       => $loc_data->{title},
+            description => $loc_data->{description},
+            flags       => format_flags($loc_data->{flags}),
+        );
 
         my $key = sprintf q[%s@%s], $loc_data->{id}, $zone_name;
 
         $loc_objects{$key} = $l;
-        ++$n;
     }
     return \%loc_objects;
+}
+
+sub link_zone_data {
+    my ($expanded, $info) = @_;
+
+    # locations
+    link_location_exits($expanded, $info);
+}
+
+sub link_location_exits {
+    my ($expanded, $info) = @_;
+
+    my %letter_map = map {; substr($_, 0, 1) => $_} qw(
+                                                    north
+                                                    south
+                                                    east
+                                                    west
+                                                    up
+                                                    down
+                                                );
+
+    while (my ($loc_id, $loc_data) = each %{ $expanded->{loc} }) {
+        #warn $json->encode($info);exit();
+        while (my ($letter, $direction) = each %letter_map) {
+            #warn $json->encode([$info->{loc}{$loc_id}]);exit;
+            my $linked_loc_id = $info->{loc}{$loc_id}{exits}{$letter};
+            next unless $linked_loc_id;
+
+            $linked_loc_id =~ /@/
+                or $linked_loc_id .= '@' . $loc_data->zone->name;
+
+            if ($expanded->{loc}{$linked_loc_id}) {
+                $expanded->{loc}{$loc_id}->$direction(
+                    $expanded->{loc}{$linked_loc_id}
+                );
+            }
+            else { warn "$linked_loc_id doesn't exist" }
+        }
+    }
 }
 
 sub store_zone_data {
