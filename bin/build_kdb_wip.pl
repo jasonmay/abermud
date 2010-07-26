@@ -202,11 +202,10 @@ foreach my $file (@zone_files) {
 
         my $info = construct_info_from_parsed(\%results, $zone_name);
 
-        #write_pretty_json('results.out' => \%results);
-        #write_pretty_json("json/$zone_name.json" => $info);
+        #FIXME oops this is supposed ot be run AFTER all zones are processed
         my $expanded = expand_zone_data($info, $zone_name);
         link_zone_data($expanded, $info);
-        use Carp::REPL; die;
+        #use Carp::REPL; die;
     }
 }
 
@@ -462,7 +461,8 @@ sub link_zone_data {
     my ($expanded, $info) = @_;
 
     # locations
-    link_location_exits($expanded, $info);
+    link_location_exits($expanded, $info);  # L->dir = L
+#    link_object_locations($expande, $info); # O->location = L
 }
 
 sub link_location_exits {
