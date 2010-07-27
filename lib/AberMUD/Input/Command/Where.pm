@@ -14,7 +14,7 @@ sub run {
         "\n"
         => map {
             sprintf("%20s : %s", $_->name, $_->location->id)
-        } @{ $you->universe->mobiles }  );
+        } grep { $_->location } @{ $you->universe->mobiles }  );
 
     $output .= "\n$blue_line\n";
 
