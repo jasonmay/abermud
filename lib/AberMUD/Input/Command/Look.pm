@@ -1,11 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Look;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+use AberMUD::OO::Commands;
 
-sub sort { -10 }
-sub run {
+command 'look', alias => -10, sub {
     my $you  = shift;
     return "You are somehow nowhere." unless defined $you->location;
     return $you->look;

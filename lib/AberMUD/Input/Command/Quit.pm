@@ -1,10 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Quit;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+use AberMUD::OO::Commands;
 
-sub run {
+command quite => sub {
     my $you       = shift;
     my $args      = shift;
     my $txn_id    = shift;

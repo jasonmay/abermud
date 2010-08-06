@@ -1,10 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Examine;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+use AberMUD::OO::Commands;
 
-sub run {
+command examine => sub {
     my $you  = shift;
     my $args = shift;
     my @args = split ' ', $args;

@@ -1,12 +1,10 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Where;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+use AberMUD::OO::Package;
 
 my $blue_line = sprintf( '&+b%s&*', ('='x60) );
 
-sub run {
+command where => sub {
     my $you  = shift;
     my $output = "$blue_line\n";
 

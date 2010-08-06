@@ -1,10 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Jump;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+use AberMUD::OO::Commands;
 
-sub run {
+command jump => sub {
     my $you  = shift;
 
     return "Wheee...";

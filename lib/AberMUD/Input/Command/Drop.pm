@@ -1,10 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Drop;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+use AberMUD::OO::Commands;
 
-sub run {
+command drop => sub {
     my $you  = shift;
     my $args = shift;
     my @args = split ' ', $args;

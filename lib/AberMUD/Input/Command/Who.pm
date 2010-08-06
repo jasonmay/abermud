@@ -1,12 +1,10 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Who;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+package AberMUD::OO::Commands;
 
 my $blue_line = sprintf( '&+b%s&*', ('='x60) );
 
-sub run {
+command who => sub {
     my $you  = shift;
     my $output = "$blue_line\n";
 

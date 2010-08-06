@@ -1,10 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Inventory;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+use AberMUD::OO::Commands;
 
-sub run {
+command inventory => sub {
     my $you  = shift;
     my $output = q{};
 

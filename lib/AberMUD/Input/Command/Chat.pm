@@ -1,14 +1,10 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Chat;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+use AberMUD::OO::Commands;
 
-has '+alias' => ( default => '0' );
-
-sub run {
-    my $you  = shift;
-    my $args  = shift;
+command 'chat', alias  => '0', sub {
+    my $you     = shift;
+    my $args    = shift;
     my $message = sprintf("&+M[Chat] %s:&* %s", $you->name, $args);
     $you->universe->broadcast($message, except => $you);
 

@@ -1,10 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Goto;
-use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::Command';
+use AberMUD::OO::Commands;
 
-sub run {
+command goto => sub {
     my $you  = shift;
     my $args = shift;
 
@@ -19,8 +17,6 @@ sub run {
     $you->location($loc);
     return $you->look;
 }
-
-
 
 __PACKAGE__->meta->make_immutable;
 

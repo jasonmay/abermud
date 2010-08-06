@@ -13,31 +13,18 @@ sub init_meta {
 
 sub command {
     my $self = shift;
-    my ($name, $code) = @_;
+    my $name = shift;
+    my $code = pop;
+    my %options = @_;
 
-    if ($self->meta->get_command_entry($name)) {
-	$self->meta->get_command_entry($name)->code($code);
-    }
-    else {
-	my $command = AberMUD::Input::Command->new(
-	    code => $code,
-	);
-	$self->meta->add_command_entry($name => $command);
-    }
+    my %command_args = (code => $code);
+
+    $comamnd_args{priority} = $options{priority} if $options{priority};
+
+    my $command = AberMUD::Input::Command->new(%command_args);
+    $self->meta->add_command_entry($name => $command);
+
 }
 
-sub command {
-    my $self = shift;
-    my ($name, $code) = @_;
 
-    if ($self->meta->get_command_entry($name)) {
-	$self->meta->get_command_entry($name)->code($code);
-    }
-    else {
-	my $command = AberMUD::Input::Command->new(
-	    code => $code,
-	);
-	$self->meta->add_command_entry($name => $command);
-    }
-}
-
+1;

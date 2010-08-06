@@ -6,7 +6,7 @@ extends 'AberMUD::Input::Command';
 
 has '+alias' => ( default => q['] );
 
-sub run {
+command 'say', alias => q['], sub {
     my $you  = shift;
     my $args  = shift;
     my $output = q{};
