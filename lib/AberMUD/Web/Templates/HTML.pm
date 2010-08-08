@@ -57,7 +57,11 @@ BEGIN {
                 }
                 div {
                     attr { id => 'footer' }
-                    'No rights reserved.'
+                    outs 'Powered by ';
+                    a {
+                        attr { href => 'http://www.catalystframework.org/' }
+                        'Catalyst'
+                    }
                 }
             }
         };
