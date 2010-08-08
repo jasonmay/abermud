@@ -55,6 +55,9 @@ sub BUILD {
                 block        => sub {
                     $command_method->body->(@_);
                 },
+
+                priority => $command_method->priority,
+                aliases  => $command_method->aliases,
             )
         );
     }

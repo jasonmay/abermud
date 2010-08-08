@@ -23,9 +23,8 @@ foreach my $command_class (__PACKAGE__->commands) {
         next unless $method->meta->can('does_role');
         next unless $method->meta->does_role('AberMUD::Role::Command');
 
-        __PACKAGE__->meta->add_method(
-            $method->name => $method,
-        );
+        __PACKAGE__->meta->add_method($method->name => $method);
+
     }
 };
 
