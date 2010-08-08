@@ -33,7 +33,7 @@ sub index :Path :Args(0) {
     $c->response->body('Matched AberMUD::Web::Controller::Locations in Locations.');
 }
 
-sub look :Path(/locations/look) {
+sub look :Local {
     my $self    = shift;
     my $c       = shift;
     my $loc_str = shift;
@@ -64,7 +64,7 @@ sub look :Path(/locations/look) {
     }
 }
 
-sub new_location :Path(/locations/new) {
+sub new_location :Path('new') {
     my $self    = shift;
     my $c       = shift;
 
@@ -147,13 +147,13 @@ sub new_location :Path(/locations/new) {
     $c->forward($c->view('HTML'));
 }
 
-sub create :Path(/locations/create) {
+sub create :Local {
     my $self = shift;
     my $c    = shift;
     $c->response->body("I have no idea what I'm doing :D");
 }
 
-sub default :Path(/locations) {
+sub default :Local {
     my ( $self, $c ) = @_;
     $c->response->body( 'Page not found' );
     $c->response->status(404);
