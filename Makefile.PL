@@ -18,6 +18,16 @@ requires       'Bread::Board';
 requires       'Try::Tiny';
 requires       'DateTime';
 
+requires 'Catalyst::Runtime' => '5.8002';
+requires 'Catalyst::Plugin::ConfigLoader';
+requires 'Catalyst::Plugin::Static::Simple';
+requires 'Catalyst::Action::RenderView';
+requires 'Config::General';
+
+requires 'List::Util';
+requires 'List::MoreUtils';
+
+install_script glob('script/*.pl');
+
 auto_install;
 WriteAll;
-
