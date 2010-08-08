@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More tests => 14;
+use Test::More tests => 13;
 
 BEGIN {
     # main stuff
@@ -21,7 +21,6 @@ BEGIN {
     use_ok 'AberMUD::Input::Dispatcher::Rule';
 
     # commands
-    use_ok 'AberMUD::Input::Command';
     use_ok 'AberMUD::Input::Command::Who';
     use_ok 'AberMUD::Input::Command::Chat';
     use_ok 'AberMUD::Input::Command::Look';

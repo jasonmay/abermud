@@ -8,6 +8,7 @@ use AberMUD::Zone;
 use AberMUD::Container;
 use AberMUD::Input::State::Login::Name;
 use AberMUD::Input::State::Game;
+use AberMUD::Config;
 
 my $kdb = KiokuDB->connect('dbi:SQLite:dbname=:memory:', create => 1);
 {
@@ -40,6 +41,14 @@ my $kdb = KiokuDB->connect('dbi:SQLite:dbname=:memory:', create => 1);
     $locations{test2}->south($locations{test1});
 
     $kdb->update($_) foreach values %locations;
+
+    my $config = AberMUD::Config->new(
+        input_states => [qw(Login::Name Game)],
+    );
+
+    $kdb->store(config => $config);
+
+    $config->location($locations{test1}); $kdb->update($config);
 }
 
 my $c = AberMUD::Container->new_with_traits(

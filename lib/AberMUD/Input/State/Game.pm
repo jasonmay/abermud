@@ -38,21 +38,22 @@ has dispatcher => (
     is => 'rw',
     isa => 'AberMUD::Input::Dispatcher',
     default => sub { AberMUD::Input::Dispatcher->new },
+    handles => ['dispatch'],
 );
 
 sub BUILD {
     my $self = shift;
 
-    my $composite = AberMUD::Input::Command::Composite->new;
-    foreach my $command_class ($composite->commands) {
-        (my $command = lc $command_class) =~ s/.+:://;
+    foreach my $command_method (AberMUD::Input::Command::Composite->meta->get_all_methods) {
+        next unless $command_method->meta->can('does_role');
+        next unless $command_method->meta->does_role('AberMUD::Role::Command');
 
-        Class::MOP::load_class($command_class);
+
         $self->dispatcher->add_rule(
             AberMUD::Input::Dispatcher::Rule->new(
-                command_name => $command_class->new,
+                command_name => $command_method->name,
                 block        => sub {
-                    $composite->$command(@_)
+                    $command_method->body->(@_);
                 },
             )
         );
@@ -63,14 +64,14 @@ sub run {
     my $self = shift;
     my ($you, $input, $txn_id) = @_;
 
-    my $dispatch = $self->dispatcher->dispatch($input);
+    my $dispatch = $self->dispatch($input);
 
     return "" unless $input =~ /\S/;
 
     return "I don't know any commands by that name."
         unless $dispatch->has_matches;
 
-     my $match = (sort { $a->rule->command->sort <=> $b->rule->command->sort } $dispatch->matches)[0];
+     my $match = (sort { $a->rule->priority <=> $b->rule->priority } $dispatch->matches)[0];
      return $match->run($you, $match->leftover, $txn_id);
 }
 

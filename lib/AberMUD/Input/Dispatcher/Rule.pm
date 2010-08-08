@@ -25,14 +25,14 @@ sub _match {
         my $len = length($truncated_input);
 
         if ($truncated_input eq $self->alias) {
-            $input = $self->name . ' '
-                . substr($self->command_name, 0, $len);
+            $input = $self->command_name . ' '
+                . substr($input, 0, $len);
         }
     }
 
     my @words = split ' ', $input;
     my $entered_command = shift(@words);
-    my $truncated = substr($self->name, 0, length($entered_command));
+    my $truncated = substr($self->command_name, 0, length($entered_command));
 
     my $leftover = join ' ' => @words;
 

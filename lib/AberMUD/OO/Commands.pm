@@ -18,7 +18,6 @@ sub command {
     my $meta = $caller->meta;
 
     # extend method-metaclass with a new trait
-    # no need to make a new anon class every single time
     my $method_metaclass = Moose::Meta::Class->create_anon_class(
         superclasses => [ $meta->method_metaclass ],
         roles        => ['AberMUD::Role::Command'],
