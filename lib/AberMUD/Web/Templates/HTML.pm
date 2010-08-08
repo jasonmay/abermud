@@ -36,7 +36,20 @@ BEGIN {
                 }
                 div {
                     attr { id => 'sidenav'}
-                    'foo bar'
+                    ul {
+                        li {
+                            'Locations'
+                        }
+                        li {
+                            'Objects'
+                        }
+                        li {
+                            'Mobiles'
+                        }
+                        li {
+                            'Player Data'
+                        }
+                    }
                 }
                 div {
                     attr { id => 'contentmain' };
