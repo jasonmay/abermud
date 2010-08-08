@@ -5,6 +5,8 @@ BEGIN {
 }
 
 use Catalyst::ScriptRunner;
+use lib 'dep/iomi/lib';
+use lib 'dep/mud/lib';
 Catalyst::ScriptRunner->run('AberMUD::Web', 'Server');
 
 1;
