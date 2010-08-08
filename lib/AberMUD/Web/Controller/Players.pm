@@ -21,7 +21,7 @@ Catalyst Controller.
 
 =cut
 
-sub id : PathPart('players/id') Chained('/') CaptureArgs(1) {
+sub id : PathPart('players/id') Chained CaptureArgs(1) {
     my ( $self, $c, $id ) = @_;
 
 
