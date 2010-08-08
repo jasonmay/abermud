@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Where;
-use AberMUD::OO::Package;
+use AberMUD::OO::Commands;
 
 my $blue_line = sprintf( '&+b%s&*', ('='x60) );
 
@@ -17,7 +17,7 @@ command where => sub {
     $output .= "\n$blue_line\n";
 
     return $output;
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 

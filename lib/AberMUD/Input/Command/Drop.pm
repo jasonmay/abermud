@@ -47,7 +47,7 @@ command drop => sub {
 
         return "No object of that name is here.";
     }
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 

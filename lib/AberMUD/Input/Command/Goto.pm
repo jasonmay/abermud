@@ -16,7 +16,7 @@ command goto => sub {
 
     $you->location($loc);
     return $you->look;
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 

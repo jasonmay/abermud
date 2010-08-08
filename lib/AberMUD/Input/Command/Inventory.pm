@@ -26,7 +26,7 @@ command inventory => sub {
 
 
     return $output;
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Who;
-package AberMUD::OO::Commands;
+use AberMUD::OO::Commands;
 
 my $blue_line = sprintf( '&+b%s&*', ('='x60) );
 
@@ -27,7 +27,7 @@ command who => sub {
     $output .= "There $linking_verb currently &+C$num_players&* $noun in the game.\n";
 
     return $output;
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 

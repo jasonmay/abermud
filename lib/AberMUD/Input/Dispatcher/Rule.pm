@@ -5,9 +5,12 @@ use namespace::autoclean;
 
 extends 'Path::Dispatcher::Rule';
 
-has command => (
-    is      => 'rw',
-    isa     => 'AberMUD::Input::Command',
+with 'AberMUD::Role::Command';
+
+has command_name => (
+    is       => 'ro',
+    isa      => 'Str',
+    required => 1,
 );
 
 sub _match {
@@ -16,16 +19,20 @@ sub _match {
 
     my $input = $path->path;
     return 0 unless length($input);
-    if (defined $self->command->alias) {
-        my $truncated_input = substr($input, 0, length($self->command->alias));
-        if ($truncated_input eq $self->command->alias) {
-            $input =~ s/^$truncated_input/$self->command->name.' '/e;
+    foreach my $alias (@{$self->aliases}) {
+        my $truncated_input = substr($input, 0, length($alias));
+
+        my $len = length($truncated_input);
+
+        if ($truncated_input eq $self->alias) {
+            $input = $self->name . ' '
+                . substr($self->command_name, 0, $len);
         }
     }
 
     my @words = split ' ', $input;
     my $entered_command = shift(@words);
-    my $truncated = substr($self->command->name, 0, length($entered_command));
+    my $truncated = substr($self->name, 0, length($entered_command));
 
     my $leftover = join ' ' => @words;
 
@@ -33,7 +40,7 @@ sub _match {
     return (1, $leftover);
 }
 
-sub readable_attributes { q{"} . shift->command->name . q{"} }
+sub readable_attributes { q{"} . shift->command_name . q{"} }
 
 __PACKAGE__->meta->make_immutable;
 

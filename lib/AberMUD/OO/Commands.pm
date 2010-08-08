@@ -1,30 +1,57 @@
 package AberMUD::OO::Commands;
+
 use Moose ();
 use Moose::Exporter;
 
-sub init_meta {
-    my $self    = shift;
-    my %options = @_;
+use Scalar::Util qw(reftype);
 
-    $options{metaclass} = 'AberMUD::Meta::Class::Command::Composite';
+Moose::Exporter->setup_import_methods(
+    with_caller => ['command'],
+);
 
-    return Moose->init_meta(%options);
-}
+sub init_meta { shift; Moose->init_meta(@_) }
 
 sub command {
-    my $self = shift;
-    my $name = shift;
-    my $code = pop;
+    my ($caller, $name, $code) = (shift, shift, pop);
     my %options = @_;
 
-    my %command_args = (code => $code);
+    my $meta = $caller->meta;
 
-    $comamnd_args{priority} = $options{priority} if $options{priority};
+    # extend method-metaclass with a new trait
+    # no need to make a new anon class every single time
+    my $method_metaclass = Moose::Meta::Class->create_anon_class(
+        superclasses => [ $meta->method_metaclass ],
+        roles        => ['AberMUD::Role::Command'],
+    );
 
-    my $command = AberMUD::Input::Command->new(%command_args);
-    $self->meta->add_command_entry($name => $command);
+    # create a bare metamethod
+    my $metamethod = $method_metaclass->name->wrap(
+        $code,
+        name         => $name,
+        package_name => $caller,
+    );
+
+    # begin handling metamethod attributes
+    my %command_args;
+
+    for (qw/priority aliases/) {
+        $command_args{$_} = $options{$_} if $options{$_};
+    }
+
+    # consolidate all (heh) alias aliases
+    $command_args{aliases} ||= [];
+    if ($command_args{alias}) {
+        my @aliases = (reftype($command_args{alias}) eq 'ARRAY')
+            ? @{$command_args{alias}} : ($command_args{alias});
+
+        push @{$command_args{aliases}}, @aliases;
+    }
+
+    $metamethod->$_($command_args{$_}) for keys %command_args;
+
+    # finally add to the caller
+    $caller->meta->add_method($name => $metamethod);
 
 }
-
 
 1;

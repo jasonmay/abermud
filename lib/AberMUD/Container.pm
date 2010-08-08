@@ -88,6 +88,22 @@ sub _build_container {
             ],
         );
 
+        #service input_states => {
+        #    block => sub {
+        #        my $s = shift;
+        #        +{
+        #            map {
+        #                my $class = "AberMUD::Input::State::$_";
+        #                Class::MOP::load_class($class);
+        #                $class->new(
+        #                    universe => $self,
+        #                )
+        #            } $config->input_states
+        #        };
+        #    },
+        #    dependencies => 
+        #};
+
         service player => (
             class => 'AberMUD::Player',
             dependencies => [

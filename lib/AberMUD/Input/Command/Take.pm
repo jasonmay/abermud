@@ -67,7 +67,7 @@ command take => sub {
     else {
         return "That command syntax is not recognized.";
     }
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 

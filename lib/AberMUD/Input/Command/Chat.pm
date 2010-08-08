@@ -9,7 +9,7 @@ command 'chat', alias  => '0', sub {
     $you->universe->broadcast($message, except => $you);
 
     return $message;
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 

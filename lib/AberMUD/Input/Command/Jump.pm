@@ -6,7 +6,7 @@ command jump => sub {
     my $you  = shift;
 
     return "Wheee...";
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 

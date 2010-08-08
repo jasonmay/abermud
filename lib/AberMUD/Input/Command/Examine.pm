@@ -17,7 +17,7 @@ command examine => sub {
         return $in_game->examine_description
             || "You notice nothing special.";
     }
-}
+};
 
 __PACKAGE__->meta->make_immutable;
 
