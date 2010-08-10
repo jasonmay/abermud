@@ -29,7 +29,7 @@ The root page (/)
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    $c->response->body("asdfkljjasdfkljasdfkljasdfkljdfkl");
+    $c->response->body("This is the AberMUD administrative panel. There are links on the left.");
 }
 
 =head2 default
