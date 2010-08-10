@@ -22,6 +22,8 @@ requires 'Catalyst::Runtime' => '5.8002';
 requires 'Catalyst::Plugin::ConfigLoader';
 requires 'Catalyst::Plugin::Static::Simple';
 requires 'Catalyst::Action::RenderView';
+requires 'Catalyst::View::TD';
+
 requires 'Config::General';
 
 requires 'List::Util';
