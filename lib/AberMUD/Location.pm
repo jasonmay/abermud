@@ -4,8 +4,6 @@ use KiokuDB::Class;
 use namespace::autoclean;
 use AberMUD::Location::Util qw(directions);
 
-use MooseX::ClassAttribute;
-
 has id => (
     is  => 'rw',
     isa => 'Str',

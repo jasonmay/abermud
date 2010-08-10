@@ -6,7 +6,6 @@ all_from       'lib/AberMUD.pm';
 build_requires 'Test::More';
 requires       'Moose';
 requires       'MooseX::POE';
-requires       'MooseX::ClassAttribute';
 requires       'MooseX::Traits';
 #requires       'MUD'; XXX
 requires       'KiokuDB::Backend::DBI';
