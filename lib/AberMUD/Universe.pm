@@ -37,9 +37,12 @@ has directory => (
 );
 
 has _controller => (
-    is => 'ro',
-    isa => 'MUD::Controller',
+    is       => 'ro',
+    isa      => 'MUD::Controller',
     required => 1,
+    handles  => {
+        _get_input_state => 'get_input_state',
+    },
 );
 
 has nowhere_location => (

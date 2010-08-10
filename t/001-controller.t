@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More 'no_plan';
+use Test::More;
 use AberMUD::Directory;
 use KiokuDB;
 use AberMUD::Zone;
@@ -75,9 +75,18 @@ sub player_joins_game {
 }
 
 my $txn_block = sub {
+
     ok(!%{$u->players});
     my $p1 = player_joins_game();
     ok(%{$u->players});
+
+    ok($p1->get_global_input_state($_), "$_ loaded ok") for qw/
+        AberMUD::Input::State::Login::Name
+        AberMUD::Input::State::Login::Password
+        AberMUD::Input::State::Login::Password::New
+        AberMUD::Input::State::Login::Password::Confirm
+        AberMUD::Input::State::Game
+    /;
 
     my $p2 = player_joins_game();
     my $p3 = player_joins_game();
@@ -146,4 +155,6 @@ my $txn_block = sub {
 
 };
 
-$c->fetch('directory')->get->kdb->txn_do($txn_block)
+$c->fetch('directory')->get->kdb->txn_do($txn_block);
+
+done_testing();

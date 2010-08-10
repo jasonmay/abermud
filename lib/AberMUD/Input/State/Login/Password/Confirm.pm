@@ -19,7 +19,7 @@ sub run {
     }
     else {
         my $enter_new_password
-            = AberMUD::Input::State::Login::Password::New->new;
+            = $you->get_global_input_state('AberMUD::Input::State::Login::Password::New');
 
         $you->unshift_state($enter_new_password);
         $output = "That did not match what you originally typed. Please try again.\n";

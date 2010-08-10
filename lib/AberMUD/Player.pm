@@ -53,6 +53,10 @@ has password => (
     isa => 'Str',
 );
 
+has '+universe' => (
+    handles => {get_global_input_state => '_get_input_state'},
+);
+
 sub id {
     my $self = shift;
 
