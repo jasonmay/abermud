@@ -21,7 +21,14 @@ Catalyst Controller.
 
 =cut
 
-sub id : PathPart('players/id') Chained CaptureArgs(1) {
+sub base : PathPart('players') Chained { }
+
+sub players : PathPart('') :Chained('base') :Args(0) {
+    my ( $self, $c, $id ) = @_;
+    $c->response->body(qq|players|);
+}
+
+sub id : PathPart('id') Chained('base') CaptureArgs(1) {
     my ( $self, $c, $id ) = @_;
 
 
@@ -38,7 +45,7 @@ sub id : PathPart('players/id') Chained CaptureArgs(1) {
     );
 }
 
-sub require_id : PathPart('players/id') Chained('/') Args(0) {
+sub require_id : PathPart('id') Chained('base') Args(0) {
     my ( $self, $c) = @_;
 
     $c->response->body('Sorry, what?');
