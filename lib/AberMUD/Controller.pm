@@ -2,7 +2,6 @@
 package AberMUD::Controller;
 use Moose;
 #use MooseX::POE;
-use namespace::autoclean;
 extends 'MUD::Controller';
 use AberMUD::Player;
 use AberMUD::Mobile;
@@ -11,6 +10,13 @@ use AberMUD::Util;
 use JSON;
 use Data::UUID::LibUUID;
 use DDS;
+
+use Module::Pluggable
+    search_path => ['AberMUD::Input::State'],
+    sub_name    => '_input_states',
+;
+
+#use namespace::autoclean;
 
 with qw(
     MooseX::Traits
@@ -88,6 +94,17 @@ around disconnect_hook => sub {
     return $result;
 };
 
+sub _load_input_states {
+    my $self = shift;
+
+    foreach my $input_state_class ($self->_input_states) {
+        next unless $input_state_class;
+        Class::MOP::load_class($input_state_class);
+        my $input_state_object = $input_state_class->new;
+        $self->set_input_state($input_state_class => $input_state_object);
+    }
+}
+
 sub _load_objects {
     my $self = shift;
     my $k = $self->universe->directory->kdb;
@@ -112,6 +129,8 @@ sub _load_mobiles {
 
 sub BUILD {
     my $self = shift;
+
+    $self->_load_input_states;
     $self->_load_objects;
     $self->_load_mobiles;
 }
