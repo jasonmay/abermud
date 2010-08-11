@@ -55,6 +55,10 @@ __PACKAGE__->config({
 
         }
     },
+    'View::TT' => {
+        INCLUDE_PATH => [ AberMUD::Web->path_to('root', 'tt') ],
+        WRAPPER => 'wrapper.tt2',
+    },
 });
 
 

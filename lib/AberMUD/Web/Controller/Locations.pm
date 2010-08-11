@@ -27,13 +27,18 @@ Catalyst Controller.
 
 =cut
 
-sub index :Path :Args(0) {
+sub base : Chained PathPart('locations') CaptureArgs(0) {
+    my ( $self, $c ) = @_;
+    $c->stash(heading     => 'AberMUD - Locations');
+}
+
+sub index : Path Chained('base') Args(0) {
     my ( $self, $c ) = @_;
 
     $c->response->body('Matched AberMUD::Web::Controller::Locations in Locations.');
 }
 
-sub look :Local {
+sub look : Chained('base') PathPart('look') Args(1) {
     my $self    = shift;
     my $c       = shift;
     my $loc_str = shift;
@@ -52,11 +57,10 @@ sub look :Local {
         }
 
         $c->stash(
-            template    => 'locations.look',
+            template    => 'locations/look.tt2',
             loc         => $loc,
             scope       => $c->model('kiokudb')->new_scope,
         );
-        $c->forward($c->view('HTML'));
     }
     else {
         $c->response->body( 'Page not found' );
@@ -64,93 +68,89 @@ sub look :Local {
     }
 }
 
-sub new_location :Path('new') {
+sub new_location : Chained('base') PathPart('new') Args(0) {
     my $self    = shift;
     my $c       = shift;
 
-    if ($c->req->param('loc_link')) {
-        my $link = $c->req->param('loc_link');
-        my $current  = $c->req->param('world_id');
-        my $exit     = $c->req->param('exit');
+    $c->stash(template => 'locations/new.tt2');
 
-        my $loc = $c->model('kiokudb')->get_loc($current)
-        or die sprintf(
-            "Could not lookup %s in kiokudb",
-            $current
-        );
-
-        my $loc_link = $c->model('kiokudb')->get_loc($link)
-        or die sprintf(
-            "Could not lookup %s (for linking) in kiokudb",
-            $link
-        );
-
-        $loc->$exit($loc_link);
-        my $scope = $c->model('kiokudb')->new_scope;
-        $c->model('kiokudb')->update($loc);
-        $c->forward('look', [$loc->world_id]);
-        return;
-    }
-
-    if ($c->req->param('new_location')) {
-        my $loc = $c->model('kiokudb')->get_loc(
-            $c->req->param('world_id')
-        );
-        my $new_loc = AberMUD::Location->new(
-            title       => $c->req->param('title'),
-            description => $c->req->param('description'),
-        );
-        my $exit = $c->req->param('exit');
-
-        my $scope = $c->model('kiokudb')->new_scope;
-        $c->model('kiokudb')->txn_do(sub {
-
-            my $new_world_id = $c->model('kiokudb')->gen_world_id($loc->zone);
-            $new_loc->zone($loc->zone);
-            $new_loc->world_id($new_world_id);
-
-            $c->model('kiokudb')->store("location-$new_world_id" => $new_loc);
-            $loc->$exit($new_loc);
-            $c->model('kiokudb')->update($loc);
-        });
-        $c->forward('look', [$loc->world_id]);
-        return;
-    }
-
-    my $action = first { /^edit_/ } keys %{$c->req->params}
-        or die "Could not find an appropriate parameter";
-    my ($world_id, $exit) = $action =~ /^edit_(\w+)_(\w+)/;
-    my $loc = $c->model('kiokudb')->get_loc($world_id);
-    warn $world_id;
-
-    if (!$loc) {
-        $c->forward('create');
-        return;
-    }
-
-    if (not any { $exit eq $_ } directions()) {
-        $c->response->body("What! That's not even a valid exit. >:(");
-        return;
-    }
-
-    if ($loc->$exit) {
-        $c->response->body('There is already a location there! Hmm ' . $loc->$exit->title);
-        return;
-    }
-
-    $c->stash(
-        template  => 'locations.new',
-        loc       => $loc,
-        scope     => $c->model('kiokudb')->new_scope,
-        exit      => $exit,
-    );
-    $c->forward($c->view('HTML'));
-}
-
-sub create :Local {
-    my $self = shift;
-    my $c    = shift;
-    $c->response->body("I have no idea what I'm doing :D");
+#    if ($c->req->param('loc_link')) {
+#        my $link = $c->req->param('loc_link');
+#        my $current  = $c->req->param('world_id');
+#        my $exit     = $c->req->param('exit');
+#
+#        my $loc = $c->model('kiokudb')->get_loc($current)
+#        or die sprintf(
+#            "Could not lookup %s in kiokudb",
+#            $current
+#        );
+#
+#        my $loc_link = $c->model('kiokudb')->get_loc($link)
+#        or die sprintf(
+#            "Could not lookup %s (for linking) in kiokudb",
+#            $link
+#        );
+#
+#        $loc->$exit($loc_link);
+#        my $scope = $c->model('kiokudb')->new_scope;
+#        $c->model('kiokudb')->update($loc);
+#        $c->forward('look', [$loc->world_id]);
+#        return;
+#    }
+#
+#    if ($c->req->param('new_location')) {
+#        my $loc = $c->model('kiokudb')->get_loc(
+#            $c->req->param('world_id')
+#        );
+#        my $new_loc = AberMUD::Location->new(
+#            title       => $c->req->param('title'),
+#            description => $c->req->param('description'),
+#        );
+#        my $exit = $c->req->param('exit');
+#
+#        my $scope = $c->model('kiokudb')->new_scope;
+#        $c->model('kiokudb')->txn_do(sub {
+#
+#            my $new_world_id = $c->model('kiokudb')->gen_world_id($loc->zone);
+#            $new_loc->zone($loc->zone);
+#            $new_loc->world_id($new_world_id);
+#
+#            $c->model('kiokudb')->store("location-$new_world_id" => $new_loc);
+#            $loc->$exit($new_loc);
+#            $c->model('kiokudb')->update($loc);
+#        });
+#        $c->forward('look', [$loc->world_id]);
+#        return;
+#    }
+#
+#    my $action = first { /^edit_/ } keys %{$c->req->params}
+#        or die "Could not find an appropriate parameter";
+#    my ($world_id, $exit) = $action =~ /^edit_(\w+)_(\w+)/;
+#    my $loc = $c->model('kiokudb')->get_loc($world_id);
+#    warn $world_id;
+#
+#    if (!$loc) {
+#        $c->forward('create');
+#        return;
+#    }
+#
+#    if (not any { $exit eq $_ } directions()) {
+#        $c->response->body("What! That's not even a valid exit. >:(");
+#        return;
+#    }
+#
+#    if ($loc->$exit) {
+#        $c->response->body('There is already a location there! Hmm ' . $loc->$exit->title);
+#        return;
+#    }
+#
+#    $c->stash(
+#        template  => 'locations/new.tt2',
+#        loc       => $loc,
+#        scope     => $c->model('kiokudb')->new_scope,
+#        exit      => $exit,
+#    );
+#    $c->forward($c->view('HTML'));
 }
 
 sub default :Local {

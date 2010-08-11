@@ -2,9 +2,8 @@ package AberMUD::Web::Model::KiokuDB;
 use Moose;
 use namespace::autoclean;
 
-use AberMUD::Location;
 use AberMUD::Storage;
-use List::Util qw(max);
+
 BEGIN { extends 'Catalyst::Model::KiokuDB' };
 
 has '+model_class' => ( default => "AberMUD::Storage" );

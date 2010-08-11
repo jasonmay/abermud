@@ -1,0 +1,70 @@
+   <script type="text/javascript" src="/static/js/locations/look.js"></script>
+   <div id="show_title">
+    <p id="loc_title">[% loc.title %]</p>
+   </div>
+   <div id="edit_title">
+    <form method="post">
+     <input type="text" name="new_title" value="[% loc.title %]" />
+     <input type="submit" name="submit" value="Edit" />
+     <a id="cancel_edit_title" href="#">Cancel</a>
+    </form>
+   </div>
+   <div id="show_description">
+    <p class="description"> [% loc.description %] </p>
+   </div>
+   <div id="edit_description">
+    <form method="post">
+     <textarea type="text" name="new_description">[% loc.description %]</textarea>
+     <input type="submit" name="submit" value="Edit" />
+     <a id="cancel_edit_description" href="#">Cancel</a>
+    </form>
+   </div>
+   <form method="post" action="/locations/new">
+    <ul class="exits">
+     <li>
+      <label class="exit">
+       <b>North:</b>
+      </label>
+      [% IF loc.north %]
+      <a href="/locations/look/[% loc.north.world_id %]">[% loc.north.title %]</a>
+      [% ELSE %]
+      <input type="submit" name="edit_[% loc.world_id %]_north" value="Make an exit" />
+      [% END %]
+     </li>
+     <li>
+      <label class="exit">
+       <b>South:</b>
+      </label>
+      [% IF loc.south %]
+      <a href="/locations/look/[% loc.south.world_id %]">[% loc.south.title %]</a>
+      [% ELSE %]
+      <input type="submit" name="edit_[% loc.world_id %]_south" value="Make an exit" />
+      [% END %]
+     </li>
+     <li>
+      <label class="exit">
+       <b>East:</b>
+      </label>
+      <input type="submit" name="edit_start2_east" value="Make an exit" />
+     </li>
+     <li>
+      <label class="exit">
+       <b>West:</b>
+      </label>
+      <input type="submit" name="edit_start2_west" value="Make an exit" />
+     </li>
+     <li>
+      <label class="exit">
+       <b>Up:</b>
+      </label>
+      <a href="/locations/look/mrealms1">The Mortal Realms</a>
+     </li>
+     <li>
+      <label class="exit">
+       <b>Down:</b>
+      </label>
+      <a href="/locations/look/valley24">Forest Track</a>
+     </li>
+    </ul>
+   </form>
+  </div>
