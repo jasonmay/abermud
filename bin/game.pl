@@ -7,7 +7,7 @@ use KiokuDB;
 
 my $c = AberMUD::Container->new->container;
 if (@ARGV) {
-    $c->fetch('directory')->get->kdb(
+    $c->fetch('storage')->get->directory(
         KiokuDB->connect(
             "dbi:SQLite:dbname=$ARGV[0]"
         )

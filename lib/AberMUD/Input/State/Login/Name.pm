@@ -14,7 +14,7 @@ sub run {
     $name = lc $name;
 
     $you->name($name);
-    $you->dir_player($you->universe->directory->player_lookup($name));
+    $you->dir_player($you->universe->storage->player_lookup($name));
     if ($you->dir_player) {
         $you->input_state->[0]
             = $you->get_global_input_state('AberMUD::Input::State::Login::Password');

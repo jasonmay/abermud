@@ -8,7 +8,7 @@ command goto => sub {
 
     (my $loc_id = lc $args) =~ s/\W//g;
 
-    my $loc = $you->universe->directory->lookup("location-$loc_id");
+    my $loc = $you->universe->storage->lookup("location-$loc_id");
 
     if (!$loc) {
         return "Could not find that location.";

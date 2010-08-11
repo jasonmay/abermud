@@ -30,9 +30,9 @@ has players_in_game => (
     default    => sub { +{} },
 );
 
-has directory => (
+has storage => (
     is => 'ro',
-    isa => 'AberMUD::Directory',
+    isa => 'AberMUD::Storage',
     required => 1,
 );
 

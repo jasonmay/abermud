@@ -4,7 +4,7 @@ use Moose;
 use Bread::Board;
 use Scalar::Util qw(weaken isweak);
 
-use AberMUD::Directory;
+use AberMUD::Storage;
 use AberMUD::Controller;
 use AberMUD::Universe;
 use AberMUD::Player;
@@ -34,11 +34,11 @@ sub new_universe {
     my $b = shift;
     weaken(my $w = $b);
 
-    my $config = $w->param('directory')->lookup('config')
+    my $config = $w->param('storage')->lookup('config')
         or die "No config found in kdb!";
 
     my $u = AberMUD::Universe->new(
-        directory   => $w->param('directory'),
+        storage   => $w->param('storage'),
         _controller => $w->param('controller'),
         spawn_player_code => sub {
             my $self     = shift;
@@ -70,8 +70,8 @@ sub _build_container {
     my $container = shift;
 
     my $c = container 'AberMUD' => as {
-        service directory => (
-            class     => 'AberMUD::Directory',
+        service storage => (
+            class     => 'AberMUD::Storage',
             lifecycle => 'Singleton',
         );
 
@@ -83,7 +83,7 @@ sub _build_container {
                 $container->new_universe($w, @_)
             },
             dependencies => [
-                depends_on('directory'),
+                depends_on('storage'),
                 depends_on('controller'),
             ],
         );
@@ -107,7 +107,7 @@ sub _build_container {
         service player => (
             class => 'AberMUD::Player',
             dependencies => [
-                depends_on('directory'),
+                depends_on('storage'),
                 depends_on('universe'),
             ],
             parameters => {
@@ -122,7 +122,7 @@ sub _build_container {
             class     => 'AberMUD::Controller',
             lifecycle => 'Singleton',
             dependencies => [
-                depends_on('directory'),
+                depends_on('storage'),
                 depends_on('universe'),
             ]
         );
@@ -131,7 +131,7 @@ sub _build_container {
             class => 'AberMUD',
             lifecycle => 'Singleton',
             dependencies => [
-                depends_on('directory'),
+                depends_on('storage'),
                 depends_on('controller'),
                 depends_on('universe'),
             ]

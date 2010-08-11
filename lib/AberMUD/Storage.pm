@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-package AberMUD::Directory;
+package AberMUD::Storage;
 use Moose;
 use KiokuDB;
 use Moose::Util qw(apply_all_roles);
@@ -8,16 +8,7 @@ use KiokuDB::LiveObjects::Scope;
 use Carp;
 use namespace::autoclean;
 
-has kdb => (
-    is         => 'ro',
-    isa        => 'KiokuDB',
-    lazy_build => 1,
-    handles    => [ qw/store lookup search update/ ],
-);
-
-sub _build_kdb {
-    KiokuDB->connect(AberMUD::Util::dsn)
-}
+extends 'KiokuX::Model';
 
 has scope => (
     is      => 'rw',
@@ -33,7 +24,7 @@ sub player_lookup {
 
 sub _build_scope {
     my $self = shift;
-    $self->kdb->new_scope;
+    $self->new_scope;
 }
 
 __PACKAGE__->meta->make_immutable;

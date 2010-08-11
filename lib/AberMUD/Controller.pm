@@ -107,7 +107,7 @@ sub _load_input_states {
 
 sub _load_objects {
     my $self = shift;
-    my $k = $self->universe->directory->kdb;
+    my $k = $self->universe->storage->directory;
 
     my $universe_sets = $k->lookup('universe-sets');
     return unless $universe_sets;
@@ -117,7 +117,7 @@ sub _load_objects {
 
 sub _load_mobiles {
     my $self = shift;
-    my $k = $self->universe->directory->kdb;
+    my $k = $self->universe->storage->directory;
 
     my $universe_sets = $k->lookup('universe-sets');
     return unless $universe_sets;

@@ -40,9 +40,9 @@ has prompt => (
     default => '>',
 );
 
-has directory => (
+has storage => (
     is        => 'rw',
-    isa       => 'AberMUD::Directory',
+    isa       => 'AberMUD::Storage',
     required  => 1,
     weak_ref  => 1,
     traits => ['KiokuDB::DoNotSerialize'],
@@ -135,7 +135,7 @@ sub in_game {
 
 sub is_saved {
     my $self = shift;
-    return $self->universe->directory->lookup('player-' . lc $self->name);
+    return $self->universe->storage->lookup('player-' . lc $self->name);
 }
 
 sub save_data {
@@ -149,11 +149,11 @@ sub save_data {
         return;
     }
 
-    if ($self->directory->player_lookup($self->name)) {
-        $u->directory->update($self);
+    if ($self->storage->player_lookup($self->name)) {
+        $u->storage->update($self);
     }
     else {
-        $u->directory->store('player-' . lc $self->name => $self);
+        $u->storage->store('player-' . lc $self->name => $self);
     }
 }
 
@@ -163,7 +163,7 @@ sub load_data {
 
     if ($self->is_saved) {
         my $player
-            = $u->directory->lookup('player-' . lc $self->name);
+            = $u->storage->lookup('player-' . lc $self->name);
         for ($player->meta->get_all_attributes) {
             if ($_->does('KiokuDB::DoNotSerialize')) {
                 my $attr = $_->accessor;

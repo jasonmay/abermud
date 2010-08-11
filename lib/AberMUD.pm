@@ -16,9 +16,9 @@ has universe => (
     isa => 'AberMUD::Universe',
 );
 
-has directory => (
+has storage => (
     is  => 'rw',
-    isa => 'AberMUD::Directory',
+    isa => 'AberMUD::Storage',
 );
 
 1;

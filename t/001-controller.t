@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 use Test::More;
-use AberMUD::Directory;
+use AberMUD::Storage;
 use KiokuDB;
 use AberMUD::Zone;
 use AberMUD::Container;
@@ -53,8 +53,8 @@ my $kdb = KiokuDB->connect('dbi:SQLite:dbname=:memory:', create => 1);
 
 my $c = AberMUD::Container->new_with_traits(
     traits         => ['AberMUD::Container::Role::Test'],
-    test_directory => AberMUD::Directory->new(
-        kdb => $kdb,
+    test_storage => AberMUD::Storage->new(
+        directory => $kdb,
     )
 )->container;
 
@@ -109,13 +109,13 @@ my $txn_block = sub {
 
     $p1->types_in('123456'); #re-enter password
     is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
-    ok($c->fetch('directory')->get->lookup('player-foo'), 'player stored in kioku');
+    ok($c->fetch('storage')->get->lookup('player-foo'), 'player stored in kioku');
 
     ok(%{ $u->players_in_game });
 
 
     SKIP: {
-        my $loc = $c->fetch('directory')->get->lookup('location-test1');
+        my $loc = $c->fetch('storage')->get->lookup('location-test1');
         skip 'missing locations in test kdb', 1 unless $loc;
 
         $p1->location($loc);
@@ -155,6 +155,6 @@ my $txn_block = sub {
 
 };
 
-$c->fetch('directory')->get->kdb->txn_do($txn_block);
+$c->fetch('storage')->get->txn_do($txn_block);
 
 done_testing();

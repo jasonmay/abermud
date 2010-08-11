@@ -4,7 +4,7 @@ use Moose::Role;
 use Scalar::Util qw(weaken);
 
 use Bread::Board;
-use AberMUD::Directory;
+use AberMUD::Storage;
 use AberMUD::Controller;
 use AberMUD::Universe;
 use AberMUD::Player;
@@ -16,21 +16,21 @@ use namespace::autoclean;
 
 requires qw(container new_universe);
 
-has test_directory => (
+has test_storage => (
     is  => 'ro',
-    isa => 'AberMUD::Directory',
+    isa => 'AberMUD::Storage',
 );
 
 override _build_container => sub {
     my $self = shift;
 
     my $c = container 'AberMUD' => as {
-        service directory => (
-            class     => 'AberMUD::Directory',
+        service storage => (
+            class     => 'AberMUD::Storage',
             lifecycle => 'Singleton',
             block     => sub {
                 weaken(my $weak_self = $self);
-                $weak_self->test_directory || AberMUD::Directory->new
+                $weak_self->test_storage || AberMUD::Storage->new
             },
         );
 
@@ -42,7 +42,7 @@ override _build_container => sub {
                 $self->new_universe($w, @_)
             },
             dependencies => [
-                depends_on('directory'),
+                depends_on('storage'),
                 depends_on('controller'),
             ],
         );
@@ -56,7 +56,7 @@ override _build_container => sub {
                 my $player = AberMUD::Player->new_with_traits(
                     traits    => ['AberMUD::Player::Role::Test'],
                     universe  => $u,
-                    directory => $s->param('directory'),
+                    storage => $s->param('storage'),
                 );
 
                 $player->_join_server($max_id + 1);
@@ -64,7 +64,7 @@ override _build_container => sub {
                 return $player;
             },
             dependencies => [
-                depends_on('directory'),
+                depends_on('storage'),
                 depends_on('universe'),
             ],
         );
@@ -76,12 +76,12 @@ override _build_container => sub {
                 my $s = shift;
                 AberMUD::Controller->new_with_traits(
                     traits    => ['AberMUD::Controller::Role::Test'],
-                    directory => $s->param('directory'),
+                    storage => $s->param('storage'),
                     universe  => $s->param('universe'),
                 );
             },
             dependencies => [
-                depends_on('directory'),
+                depends_on('storage'),
                 depends_on('universe'),
             ]
         );
@@ -90,7 +90,7 @@ override _build_container => sub {
             class => 'AberMUD',
             lifecycle => 'Singleton',
             dependencies => [
-                depends_on('directory'),
+                depends_on('storage'),
                 depends_on('controller'),
                 depends_on('universe'),
             ]

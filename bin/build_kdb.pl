@@ -11,7 +11,7 @@ use Carp;
 use String::Util ':all';
 use KiokuDB;
 use KiokuDB::Backend::DBI;
-use AberMUD::Directory;
+use AberMUD::Storage;
 use AberMUD::Zone;
 use AberMUD::Config;
 use AberMUD::Universe::Sets;

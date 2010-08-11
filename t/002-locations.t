@@ -54,8 +54,8 @@ my $kdb = KiokuDB->connect(
 
 my $c = AberMUD::Container->new_with_traits(
     traits         => ['AberMUD::Container::Role::Test'],
-    test_directory => AberMUD::Directory->new(
-        kdb => $kdb,
+    test_storage => AberMUD::Storage->new(
+        directory => $kdb,
     )
 )->container;
 
@@ -66,7 +66,7 @@ sub player_logs_in {
     $p->input_state([AberMUD::Input::State::Game->new]);
 
     $p->name(shift);
-    $p->location($c->fetch('directory')->get->lookup('location-test1'));
+    $p->location($c->fetch('storage')->get->lookup('location-test1'));
     $p->_join_game;
 }
 
