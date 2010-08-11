@@ -16,6 +16,11 @@ use Catalyst qw/
     -Debug
     ConfigLoader
     Static::Simple
+
+    Authentication
+    Session
+    Session::Store::FastMmap
+    Session::State::Cookie
 /;
 
 extends 'Catalyst';
@@ -32,11 +37,26 @@ $VERSION = eval $VERSION;
 # with an external configuration file acting as an override for
 # local deployment.
 
-__PACKAGE__->config(
+__PACKAGE__->config({
     name => 'AberMUD::Web',
-    # Disable deprecated behavior needed by old applications
-    disable_component_resolution_regex_fallback => 1,
-);
+
+    'Plugin::Authentication' => {
+        realms => {
+            default => {
+                credential => {
+                    class         => 'Password',
+                    password_type => 'self_check'
+                },
+                store => {
+                    class      => 'Model::KiokuDB',
+                    model_name => "dir",
+                }
+            },
+
+        }
+    },
+});
+
 
 # Start the application
 __PACKAGE__->setup();

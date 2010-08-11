@@ -23,6 +23,13 @@ requires 'Catalyst::Plugin::Static::Simple';
 requires 'Catalyst::Action::RenderView';
 requires 'Catalyst::View::TD';
 
+
+requires 'Catalyst::Plugin::Authentication';
+requires 'Catalyst::Authentication::Store::KiokuDB';
+requires 'Catalyst::Plugin::Session';
+requires 'Catalyst::Plugin::Session::Store::KiokuDB';
+requires 'Catalyst::Plugin::Session::State::Cookie';
+
 requires 'Config::General';
 
 requires 'List::Util';

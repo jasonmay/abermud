@@ -21,11 +21,13 @@ Catalyst Controller.
 
 =cut
 
-sub base : PathPart('players') Chained { }
-
-sub players : PathPart('') :Chained('base') :Args(0) {
-    my ( $self, $c, $id ) = @_;
-    $c->response->body(qq|players|);
+sub base : PathPart('players') Chained {
+    my ($self, $c) = @_;
+    if (!$c->user_exists) {
+        #      $c->response->body('Not allowed :(');
+        #      $c->detach; return;
+    }
+    $c->response->body('players');
 }
 
 sub id : PathPart('id') Chained('base') CaptureArgs(1) {
