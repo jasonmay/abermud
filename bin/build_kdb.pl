@@ -454,7 +454,6 @@ sub expand_locations {
     foreach my $loc_data (values %$locs) {
 
         my $l = AberMUD::Location->new(
-            zone        => $expanded->{zone}{$zone_name},
             title       => $loc_data->{title},
             description => $loc_data->{description},
             flags       => format_flags($loc_data->{flags}),
@@ -470,12 +469,32 @@ sub link_zone_data {
     my ($expanded, $info) = @_;
 
     # locations
-    link_locations_to_zones($expanded, $info);
+    link_to_zones($expanded, $info);
     link_location_exits($expanded, $info);  # L->dir = L
 #    link_object_locations($expande, $info); # O->location = L
 }
 
-sub link_locations_to_zones {
+sub link_to_zones {
+    my ($expanded, $info) = @_;
+
+    for (qw/mob obj loc/) {
+        while (my ($id, $data) = each %{ $expanded->{$_} }) {
+            (my $zone_name = $id) =~ s{.+@}{};
+            $data->zone($expanded->{zone}{$zone_name});
+        }
+    }
+}
+
+sub link_mobiles_to_zones {
+    my ($expanded, $info) = @_;
+
+    while (my ($loc_id, $loc_data) = each %{ $expanded->{mob} }) {
+        (my $zone_name = $loc_id) =~ s{.+@}{};
+        $loc_data->zone($expanded->{zone}{$zone_name});
+    }
+}
+
+sub link_objects_to_zones {
     my ($expanded, $info) = @_;
 
     while (my ($loc_id, $loc_data) = each %{ $expanded->{loc} }) {

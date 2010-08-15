@@ -30,6 +30,11 @@ has location => (
     },
 );
 
+has zone => (
+    is  => 'rw',
+    isa => 'AberMUD::Zone',
+);
+
 has description => (
     is  => 'rw',
     isa => 'Str',
