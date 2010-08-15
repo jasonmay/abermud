@@ -12,6 +12,9 @@ use KiokuDB;
 use lib 'dep/mud/dep/iomi/lib';
 use lib 'dep/mud/lib';
 use lib 'lib';
+use AberMUD::Util;
+use AberMUD::Universe::Sets;
+use AberMUD::Config;
 use AberMUD::Zone;
 use AberMUD::Mobile;
 use AberMUD::Location;
@@ -205,15 +208,26 @@ foreach my $file (@zone_files) {
     print STDERR "parsing... ";
 
     if ( -e "data/json/$zone_name.json") {
-        print STDERR "!... ";
         my $json_string = read_file "data/json/$zone_name.json";
         $zone_info = $json->decode($json_string);
+
+        # since we don't accumulate info this way, we must do it manually
+        for (qw/mob obj loc/) {
+            if ($info{$_}) {
+                %{$info{$_}} = (%{$info{$_}}, %{$zone_info->{$_}});
+            }
+            else {
+                $info{$_} = $zone_info->{$_};
+            }
+        }
+
     }
     elsif ($contents =~ $parser) {
         my %results = %/;
 
         $zone_info = construct_info_from_parsed(\%info, \%results, $zone_name);
 
+        print STDERR "caching... ";
         write_file("data/json/$zone_name.json", $json->encode($zone_info));
     }
 
