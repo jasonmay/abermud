@@ -1,0 +1,1090 @@
+{
+   "obj" : {
+      "meats@eastcoast" : {
+         "location" : "IN_ROOM:Storeroom",
+         "weight" : "2",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "meats",
+         "examine" : "\nA little dry and salty for your taste, but wouldn't anything look good when \nyou're hungry?\n",
+         "bvalue" : "40",
+         "desc[0]" : "\nA small assortment of dried meats, enough for one meal, lies in a pile \nhere.",
+         "size" : "10"
+      },
+      "dollar@eastcoast" : {
+         "desc[1]" : "\nA small and perfectly round sand dollar winks at you through the water.",
+         "location" : "IN_ROOM:Shoal",
+         "oflags" : [
+            "Getflips"
+         ],
+         "altname" : "sand",
+         "name" : "dollar",
+         "examine" : "\nGold flecks are scattered in the face of the dollar.  Definitely this is no \nordinary sand dollar!\n",
+         "size" : "2",
+         "maxstate" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "\nA small, glittering sand dollar lies here on the ground."
+      },
+      "conch@eastcoast" : {
+         "desc[1]" : "\nA good-sized conch shell lies partially buried in the sand.",
+         "location" : "IN_ROOM:Gentle",
+         "oflags" : [
+            "Getflips"
+         ],
+         "altname" : "shell",
+         "name" : "conch",
+         "examine" : "\nPutting it to your ear, you hear the rolling waves of the sea...\n",
+         "size" : "6",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "150",
+         "desc[0]" : "\nA conch shell lies forgotten here."
+      },
+      "robe@eastcoast" : {
+         "location" : "WORN_BY:shepherd",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "robe",
+         "examine" : "\nLooks like it could keep you warm most anywhere.\n",
+         "size" : "13",
+         "weight" : "5",
+         "bvalue" : "30",
+         "aflags" : [
+            "Arms",
+            "Legs",
+            "Chest",
+            "Back"
+         ],
+         "desc[0]" : "\nA woolen robe lies uselessly on the ground."
+      },
+      "lantern@eastcoast" : {
+         "desc[1]" : "\nYou see a lantern tossed carelessly aside.",
+         "location" : "CARRIED_BY:trapper",
+         "oflags" : [
+            "Extinguish",
+            "Lightable"
+         ],
+         "name" : "lantern",
+         "examine" : "\nThis small red lantern has a round latch-lock door on one side, a wick \nadjustment handle, ornately shaped vents, and a wooden handle.  Indeed, \nthis is the sort of lantern that real adventurers use!\n",
+         "size" : "12",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "\nA lantern rests here, emitting a bright, unflickering flame."
+      },
+      "trap@eastcoast" : {
+         "desc[1]" : "\nA large, and nasty claw trap lies uncovered here, set to go.",
+         "location" : "IN_ROOM:CliffPath",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "claw",
+         "name" : "trap",
+         "examine" : "\nThe only thing you can think is how bad your day would have become if \nthose teeth were clamped snugly around your ankle!\n",
+         "maxstate" : "1",
+         "desc[0]" : "\nA large and nasty claw trap lies uncovered here, set off, and covered in \nblood."
+      },
+      "braes@eastcoast" : {
+         "location" : "IN_ROOM:Hillock",
+         "armor" : "30",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "braes",
+         "name" : "Braes",
+         "examine" : "Strong and sturdy, these will help to keep you intact.",
+         "size" : "30",
+         "weight" : "0",
+         "pname" : "braes",
+         "bvalue" : "125",
+         "desc[0]" : "A set of leather braes lays discarded here.",
+         "aflags" : [
+            "Chest"
+         ]
+      },
+      "visor@eastcoast" : {
+         "desc[1]" : "\nA lightweight but sturdy steel-slatted visor is hanging from one of the rocks.",
+         "damage" : "0",
+         "location" : "IN_ROOM:Coastal",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "GetFlips"
+         ],
+         "armor" : "35",
+         "name" : "visor",
+         "examine" : " \nIt could fasten about your head to afford your face some protection.",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "aflags" : [
+            "Face"
+         ],
+         "desc[0]" : "\nOn the ground lies a lightweight but sturdy steel-slatted visor."
+      },
+      "neckplate@eastcoast" : {
+         "location" : "IN_ROOM:Escarpment",
+         "armor" : "45",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "choker",
+         "name" : "neckplate",
+         "examine" : "Made of lightweight steel, this neckplate might keep your head attached to your shoulders.",
+         "size" : "30",
+         "weight" : "0",
+         "pname" : "choker",
+         "bvalue" : "125",
+         "desc[0]" : "A choker has been dropped here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "chain@eastcoast" : {
+         "damage" : "6",
+         "location" : "WIELDED_BY:trapper",
+         "armor" : "20",
+         "oflags" : [
+            "Weapon",
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "iron",
+         "name" : "chain",
+         "examine" : "\nIt appears to be extra chain for use of securing animal traps in place.\n",
+         "size" : "20",
+         "weight" : "15",
+         "bvalue" : "50",
+         "desc[0]" : "\nA hefty length of chain lies in a rusty pile here.",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ]
+      },
+      "furs@eastcoast" : {
+         "location" : "IN_ROOM:Niche",
+         "weight" : "8",
+         "name" : "furs",
+         "examine" : "\nAn assortment of beaver, squirrel, bear, tiger, grue, and shark skins make \nup the majority of the fur in this pile.  You can only guess to the rest of \nthe exotic, colorful furs.\n\nOne fur, though, looks a faded pink, and has a long pink tail trailing from \nit.\n",
+         "bvalue" : "120",
+         "desc[0]" : "\nA pile of old and musty furs lie here.",
+         "size" : "30"
+      },
+      "buttercup@eastcoast" : {
+         "desc[1]" : "\nYou see a pretty buttercup flower laying limp nearby, awaiting some \nattention.",
+         "location" : "IN_ROOM:Gold",
+         "oflags" : [
+            "Getflips",
+            "Wearable"
+         ],
+         "name" : "buttercup",
+         "examine" : "\nThis is a splendid specimen of a buttercup plant, and its rich golden-yellow \ncolor compels you to take it with you.\n",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "aflags" : [
+            "Chest"
+         ],
+         "desc[0]" : "\nA large yellow buttercup grows here."
+      },
+      "pile@eastcoast" : {
+         "desc[1]" : "\nPiles of leaves and plant matter are strewn about.",
+         "location" : "IN_ROOM:CliffPath",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "piles",
+         "name" : "pile",
+         "examine" : "\nThese piles seem to be arranged in a more orderly way than nature would \nhave placed them, making it hard to avoid from stepping on at least one of \nthem.\n",
+         "maxstate" : "1",
+         "desc[0]" : "\nPiles of leaves are spread about, save for a swept path through the center \nof the trail."
+      },
+      "cloak@eastcoast" : {
+         "location" : "IN_ROOM:Peril",
+         "armor" : "25",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "cloak",
+         "examine" : "\nIt is fancifully woven from sheep's wool, with interesting runes making \nartistic designs around the hood and edges, an ornate metal clasp for the \nneck, and dyed in a rich red color.  You almost expect a see a picnic basket \nnearby.\n",
+         "size" : "12",
+         "weight" : "5",
+         "bvalue" : "110",
+         "desc[0]" : "\nA cloak lies in a crumpled pile here.",
+         "aflags" : [
+            "Back",
+            "Chest",
+            "Arms",
+            "Legs"
+         ]
+      },
+      "berries@eastcoast" : {
+         "desc[1]" : "\nSome juicy-looking brambleberries grow here in the bushes.",
+         "location" : "IN_ROOM:Brambles",
+         "oflags" : [
+            "Getflips",
+            "Food"
+         ],
+         "altname" : "bramble",
+         "name" : "berries",
+         "examine" : "\nYour mouth waters at the thought of biting into one of those juicy and \nsucculent berries!\n",
+         "maxstate" : "1",
+         "desc[0]" : "\nA small pile of ripe brambleberries are carefully set to one side."
+      },
+      "artifact@eastcoast" : {
+         "desc[1]" : "\nA jade artifact rests next to the book.",
+         "location" : "IN_ROOM:Storeroom",
+         "oflags" : [
+            "Getflips"
+         ],
+         "altname" : "jade",
+         "name" : "artifact",
+         "examine" : "\nIt seems to be painstakingly hand-crafted into the shape of a fabled Aztec\nserpent, called a Quetzalcoatl.  Strangely, the small figure seems to squirm \nunder your hand, but doesn't seem to move at all.\n",
+         "size" : "3",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "250",
+         "desc[0]" : "\nA small, cleverly carved jade artifact rests here."
+      },
+      "backpack@eastcoast" : {
+         "desc[1]" : "\nAn equipment backpack, old and dusty, lies useless here in a corner.",
+         "location" : "IN_ROOM:Storeroom",
+         "oflags" : [
+            "Container",
+            "Getflips",
+            "Wearable"
+         ],
+         "altname" : "pack",
+         "name" : "backpack",
+         "examine" : "\nIt looks a little old, with holes worn in the corners, but the straps are \nstill intact, and the clasps are still serviceable.  It looks like it couldn't\ncontain an elephant, but hey, you might be surprised.\n",
+         "size" : "45",
+         "weight" : "8",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "\nAn old and worn equipment backpack lies here.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "diary@eastcoast" : {
+         "desc[1]" : "\nA small book labeled 'My Diary' rests here on a small shelf.",
+         "location" : "IN_ROOM:Niche",
+         "name" : "diary",
+         "examine" : "\nThis appears to be a poorly written diary of a trapper that practices his \ntrade in the swamplands.   Most of the entries recount mundane catches and \nplaces that the trapper has been to, but one entry catches your attention:\n\nReset 509, 2 hours and 45 minutes:\n        I hav wanderd far into the swamplans in the hopes of settin some new \ntrapps, wheir I stumbeld into a small, peeramid-like buildin.  This plase\ndidn't evn show up on my map, which I uuz to saafly travle the swamps.  I\nlooked insyde this thingy-ma-bob, onlee to fynd a small jayde figgurine.  It\nseem to have a tenglin feeling whin I tuch it.  I plan on keepin it unteal I\nfiggur out what it myte meen.\n",
+         "size" : "8",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "\nYou see a small diary labeled 'My Diary' lying at your feet."
+      },
+      "branch@eastcoast" : {
+         "desc[1]" : "\nA large branch of brambleweed appears useable, though still covered in \nthorns.",
+         "damage" : "5",
+         "location" : "IN_ROOM:MStream",
+         "oflags" : [
+            "Weapon",
+            "Extinguish",
+            "Lightable"
+         ],
+         "altname" : "thorny",
+         "name" : "branch",
+         "examine" : "\nThis branch looks hefty enough for a light source, but looking at the thorns, \nyou surmise that it could serve as a pretty wicked weapon as well.  Stop \nplaying with the thorns, you might prick yourself!\n",
+         "size" : "4",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "40",
+         "desc[0]" : "\nA burning branch of brambleweed lies here."
+      }
+   },
+   "loc" : {
+      "cave@eastcoast" : {
+         "exits" : {
+            "e" : "StoreRoom",
+            "n" : "Niche",
+            "s" : "Entrance"
+         },
+         "flags" : [
+            "Dark",
+            "SoundProof"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Round Cave",
+         "id" : "Cave",
+         "description" : "\n        You walk into a somewhat dank and musty smelling cave.  Looking at \nthe furs and the animal heads lined up on the walls, you must surmise that \nthis is the humble residence of the Trapper, with all the piles of useless \ntraps lying nearby in a corner.  From here, you spy a darker niche in the \nnorthern end of the cave, while to the east is a dark hole that your light \nsource cannot penetrate.\n",
+         "altitude" : null
+      },
+      "rbend@eastcoast" : {
+         "exits" : {
+            "w" : "Waste@Moor",
+            "s" : "LLPath"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Rocky Bend",
+         "id" : "RBend",
+         "description" : "\n        The path here cuts like a wound into a hill, curving off to the west \nand south.  Rocks are strewn about, some look recently fallen there, hints \nof recent rockfalls.  You don't think it would be a good idea to stick \naround to confirm your suspicions.\n",
+         "altitude" : "750"
+      },
+      "gentle@eastcoast" : {
+         "exits" : {
+            "w" : "Glade",
+            "e" : "Lagoon",
+            "u" : "Glade",
+            "n" : "FootCliff",
+            "s" : "MStream"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Gentle Beach",
+         "id" : "Gentle",
+         "description" : "\n        Soft sand underfoot, the moth-like licking of the waves upon the \nsurf, and the cool sea breeze are the meanest things that assault you as \nyou tread this lonely beach.  The water at this end of the coast is ringed \nin by a perimeter of sharp rocks, supposedly brought in some time in the \npast to break the tortuous waves beyond, and it in effect creates a calm \nlagoon.  You see a tall cliff loom up from the north, the beach leading up \nto a sharp west-north bend.  A bleak-looking stream lets out a little ways \nto the south, just north of a line of more tide-breaking stones.\n\nThe cool, refreshing waters seem to beckon to you, to join in the knee- \ndeep waters to the east.\n",
+         "altitude" : "0"
+      },
+      "coastal@eastcoast" : {
+         "exits" : {
+            "u" : "CliffTop",
+            "d" : "EndBeach"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Up the Coastal Cliff",
+         "id" : "Coastal",
+         "description" : "\n        Scrabbling for a foothold, you stop for a moment, and look through \nthe misty air to see treacherous rocks far enough below you to make a jump \na futile effort of survival.  The only sound you hear is the dull and  \nthunderous sounds of the waves crashing into the rocks below.  A thick mist \nenvelops the air around you, obscuring the surroundings and making the \nrocks here slippery to the touch, but you can discern footholds safe enough \nto climb up the face of the cliff, and a slightly (but not by much) safer \npath, only a crack in the rock, leading down near the rocks below.\n",
+         "altitude" : "50"
+      },
+      "shepherd@eastcoast" : {
+         "exits" : {
+            "w" : "Field"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Inside the Shepherd's Home",
+         "id" : "Shepherd",
+         "description" : "\n        This is the sparse and simple home of the shepherd, a little too \nsimplistic for an adventurer of your tastes, but obviously adequate to the \nshepherd.  A table with two chairs rests against the eastern wall, a window \nover the table showing more rolling hills outside.  A simple straw bed lies \nto the south, a stone hearth to the north, and an exit back outside lies to \nthe west.\n",
+         "altitude" : null
+      },
+      "sharprocks@eastcoast" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Sharp Rocks",
+         "id" : "SharpRocks",
+         "description" : "\n        You are in a deep crag of sharp rocks.  Unfortunately for you, little \nmore is seen, for the waves bash you to pieces among the rocks...\n",
+         "altitude" : null
+      },
+      "lagoon@eastcoast" : {
+         "exits" : {
+            "w" : "Gentle"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "eastcoast",
+         "title" : "In the Shallow Lagoon",
+         "id" : "Lagoon",
+         "description" : "\n        Standing to your knees in cool and refreshing water, you feel relaxed\nfrom the toils and rigors of the land, and you inhale the invigorating sea-\nscented air blowing in from the sea.  At your feet underwater, you see \nthrough the ripples many colorful corals, starfish, mollusks, and other \nmarine life.  Large rocks ring the waters here, breaking the waves of the \nsea beyond.  A small space in the rocks would let a boat through.  The beach\nlies to the west.\n",
+         "altitude" : "0"
+      },
+      "scedge@eastcoast" : {
+         "exits" : {
+            "w" : "SECliff",
+            "n" : "Field"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "South Cliff Edge",
+         "id" : "SCEdge",
+         "description" : "\n        You are standing next to the edge of a cliff overlooking the \nswamplands lying to the south.  Fortunately (?) for you, a fence of \nquestionable quality stands between you and the slim chance of survival in \nthe chances of falling.  Safer travels lie to the north, towards a flat \nfield where sounds of bleating sheep originate, and to the west you can \nfollow the cliff's edge.\n",
+         "altitude" : "450"
+      },
+      "cliffpath@eastcoast" : {
+         "exits" : {
+            "w" : "Swamplands",
+            "e" : "Entrance",
+            "u" : "Entrance"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Along the Cliff Path",
+         "id" : "CliffPath",
+         "description" : "\n        You feel little comfort here as the path lies mere feet from the \nfirst of the swampland trees, unearthly twisted representations of plants, \ngiving you a feeling of hopeless despair.  The path looks even more dreary \nto the west as it slopes gradually down to the level of the swamps itself, \nbut a more promising path lies upwards to the east, where there appears to \nbe a cavemouth in the tall cliff face.\n",
+         "altitude" : "0"
+      },
+      "brambles@eastcoast" : {
+         "exits" : {
+            "w" : "BStream",
+            "e" : "Rocks",
+            "n" : "BStream",
+            "s" : "Dunes"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "In the Brambles",
+         "id" : "Brambles",
+         "description" : "\n        You are beating your way through a dense clump of thorny foliage, and \nthink that this was not really the best idea, since the plants seem to have \na mind of their own and appear to tear into your exposed flesh whenever you \nthink you've moved it out of the way, or prick you in the most sensitive \nareas.  Safer ways of travel lie to the east and south, but to the north \nand east, you might just be able to escape the thorny overgrowth by \nplunging on through headlong.\n",
+         "altitude" : "0"
+      },
+      "entrance@eastcoast" : {
+         "exits" : {
+            "w" : "CliffPath",
+            "e" : "FootCliff",
+            "n" : "Cave",
+            "d" : "FootCliff",
+            "s" : "Glade"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "At the Cave Entrance",
+         "id" : "Entrance",
+         "description" : "\n        The path here rises up and you find yourself looking down into the \nmurky swamp, wishing that you didn't.  A vast expanse of dark and demented \nplant growth, you feel some dreadfully evil influence has been the cause of \nthis.  In the face of the cliff here is recessed a cave, where within, you \ncan only discern blackness, though you spy some boot prints leading in and \nout of the cave, evidence that someone resides here.  A smell emanates from \nthe cave, reminding you of some old stale bread and musty animal skins.  To \nthe east and west, the path continues to thread its way along the base of \nthe cliff.  Looking again into the swamp, as if your eyes are drawn there, \nyou spy a glimmer of gold in the dark murk, but before you can blink to \nclear your vision, the bright spot is gone.  The path leads off at a \ndescending slope to the east and west, and a smaller trail leads south, \ntoward a small grassy glade.\n",
+         "altitude" : "0"
+      },
+      "field@eastcoast" : {
+         "exits" : {
+            "w" : "Meadow",
+            "e" : "Shepherd",
+            "n" : "Gold",
+            "s" : "SCEdge"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Flat Field",
+         "id" : "Field",
+         "description" : "\n        The loamy smell and plaintive sound of bleating sheep is the first \nthing you notice as you walk down into this large flat field.  Hills frame \nthe north and the west, the ground appears to drop off beyond a fence to \nthe south, and to the east, a modest but welcoming cottage making this \nplace look like the idyllic scene of pastoral harmony.\n",
+         "altitude" : "450"
+      },
+      "llpath@eastcoast" : {
+         "exits" : {
+            "n" : "RBend",
+            "s" : "Grass"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Long and Lonely Path",
+         "id" : "LLPath",
+         "description" : "\n        You follow a winding path in the low bends around rolling hills, and \nquickly lose track of progress.  The plants here, living on more rocky \nsoil, are not as varied and rich as the ones that you see to the south.  \nThe hills are tall here, giving you little view of the land around you.  \nThe only promising routes lie between two hills to the north, where the \npath starts to cut into a large and rocky third hill, and to the south up \nan even larger hill.\n",
+         "altitude" : "650"
+      },
+      "secliff@eastcoast" : {
+         "exits" : {
+            "w" : "Meadow",
+            "e" : "SCEdge"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Southern Edge of Cliff",
+         "id" : "SECliff",
+         "description" : "\n        South of the rolling hills, you overlook from a cliff edge the \nlowlands of the swamps looming some two hundred feet below you to the \nsouth.  Lucky for you, a sturdy looking fence is between you and the ground \nfar below the cliff.  Even with the fence, doing anything gymnastic would \nbe foolhardy.  You can follow the cliff edge to the east, or follow a \nwestward path wending its way to some hills.\n",
+         "altitude" : "450"
+      },
+      "shore@eastcoast" : {
+         "exits" : {
+            "n" : "EndBeach",
+            "s" : "RockyBeach"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Narrow Shore",
+         "id" : "Shore",
+         "description" : "\n        This part of the shore narrows to the point where the distance \nbetween the surf to the west and the sheer face of the cliff looming \noverhead to the east is only a scant few feet, and occasionally you need to \nwalk in ankle-deep water just to continue.  To the north and the south are \nwalkable stretches of beach while the waters to the east offer little more \nthan a watery grave.\n",
+         "altitude" : "0"
+      },
+      "rocks@eastcoast" : {
+         "exits" : {
+            "w" : "Brambles",
+            "e" : "Bank",
+            "u" : "Dunes",
+            "n" : "MStream",
+            "s" : "Surf"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "On the Rocks",
+         "id" : "Rocks",
+         "description" : "\n        You carefully pick your way among large boulders lined in an east- \nwest line, going out about forty feet from the shore, obviously built by \npast inhabitants to break the dangerous waves that come into the beach. \n>From here, you can see paths following the beach to the north and south, \nand you can go inland by walking west toward a patch of thorny brambles, or \nby following a steep path up a sandy dune.  If you are careful, you can \nmake your way east out to the end of the rocks.\n",
+         "altitude" : "0"
+      },
+      "niche@eastcoast" : {
+         "exits" : {
+            "s" : "Cave"
+         },
+         "flags" : [
+            "Dark",
+            "SoundProof"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Small Niche",
+         "id" : "Niche",
+         "description" : "\n        This is apparently the Trapper's sleeping quarters, simply an \nindented crevice in the main cave room itself.  Somewhat inclined from the \nfloor, you see many animal furs scattered about the small space, and on a \nsmall ledge, you see various personal articles of the Trapper, most of \nwhich look useless or not to your liking at all.  The only obvious exit \nfrom here is south back into the main cave.\n",
+         "altitude" : null
+      },
+      "escarpment@eastcoast" : {
+         "exits" : {
+            "e" : "Swamplands",
+            "u" : "EscPath"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Base of the Escarpment",
+         "id" : "Escarpment",
+         "description" : "\n        You are standing at a drier spot in the swamplands, seemingly \nimpervious to the thick plant growth.  Looking around, you see that most of \nthe ground here consists of hard rocks and pebbles that have fallen down \nfrom a nearby gully up the cliff, making it hard for plants to root in.  A \npath hugs the cliff, but still uncomfortably close to the swamps to the \neast, which for some strange reason makes your skin crawl.  A break in the \ntwisted trees lie to the south, and it looks as if you could scrabble \nthrough the pebbles up the side of the escarpment.\n",
+         "altitude" : "50"
+      },
+      "seshoal@eastcoast" : {
+         "exits" : {
+            "n" : "SShoal"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Southern End of the Shoal",
+         "id" : "SEShoal",
+         "description" : "\n        You are more than a hundred feet from shore as you reach this end of \nthe sand shoal.  Luckily, the water is still no more than ankle deep, but \nin all directions but north, the water is too deep to safely traverse \nwithout aid, and even then, the waters to the west look impossibly \ntraversable.  You feel something slimy and smooth brush your leg, and it \nmakes you start thinking that staying longer might not be the best of \nsurvival instincts.\n",
+         "altitude" : "0"
+      },
+      "gold@eastcoast" : {
+         "exits" : {
+            "w" : "Hillock",
+            "e" : "CliffTop",
+            "s" : "Field"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Field of Gold",
+         "id" : "Gold",
+         "description" : "\n        You stand amid a sea of yellow-flowered buttercups, giving this place \nan aura of golden beauty, making you squint from the brightness.  Colorful \nbutterflies and birds flit by, giving this place a sense of vibrant life \nand beauty.  The golden sea appears to end to the east, where a sharp cliff \ndrops off to the dull sound of crashing water, and to the west leads a \nbeaten trail into an area of grassy hills.  To the south, you see the hills \nflatten out to a large field, with what looks like sheep in the distance.\n",
+         "altitude" : "400"
+      },
+      "dunes@eastcoast" : {
+         "exits" : {
+            "w" : "Brambles",
+            "d" : "Rocks"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Sandy Dunes",
+         "id" : "Dunes",
+         "description" : "\n        You stand along a ridge of sandy dunes that run parallel to the beach \nthat lies to the east, the waves of the sea crashing in where the beach \nbreakers fail to cover, and apparently on a sand shoal resting some hundred \nfeet from shore as well.  From this vantage, you spy to the north a long \nwall of cliffs, and in front of that to the west, a dark green-black mass \nthat is only known as the Swamps of Peril.  To the south, you observe a \nlong beach leading back to a small set of docks.  The sides of the dunes \nappear too steep to climb back down except for the west side and a quick \ntumble down toward a line of wave breaking rocks.\n",
+         "altitude" : "50"
+      },
+      "waistdeep@eastcoast" : {
+         "exits" : {
+            "w" : "SandyBeach",
+            "n" : "KneeDeep"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "In Waist-Deep",
+         "id" : "WaistDeep",
+         "description" : "\n        With water up to your waist here, you feel tingles run up your spine \nfrom the contact with the cool and refreshing sea water.  A brisk breeze \nblows in from the sea, tinged with salt.  Gulls and other sea-faring birds \nfly overhead, circling and turning in some strange dance of the sea.  Not \ntoo far away to the south, you spy a jetty poking its way into the wavy \nwaters.  Noticing the shallow waves, you see the cause in the form of a \nsand shoal to the east.  Unfortunately, the water gets too deep before you \ncould get to it without special means.  Looking for exits, you see a way \nback to the beach to the west, and it also seems possible to walk north, \nfollowing the shallow waters.\n",
+         "altitude" : "0"
+      },
+      "kneedeep@eastcoast" : {
+         "exits" : {
+            "w" : "Surf",
+            "e" : "SShoal",
+            "s" : "WaistDeep"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "In Knee-Deep",
+         "id" : "KneeDeep",
+         "description" : "\n        Foamy water laps hungrily at your calves and knees as you stand here \nin shallow water some thirty feet east from the shoreline.  Not much can be \nseen from here except a line of rocks extending out into the sea to the \nnorth and a small boating dock to the south.  It seems that the water waves \nare breaking too far from the shore than normal, hinting at a sand shoal to \nthe east, but you are not sure if you could reach it.  More accessible \nroutes appear to lie back toward the shore and farther south along the \nshallows.\n",
+         "altitude" : "0"
+      },
+      "rockybeach@eastcoast" : {
+         "exits" : {
+            "n" : "Shore",
+            "s" : "FootCliff"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Rocky Beach",
+         "id" : "RockyBeach",
+         "description" : "\n        Small rocks and pebbles intermingle with the sands of the beach here, \nmaking you check your steps, lest you slip.  The cliff appears to drop off \nto the south from here, and you can investigate further by following the \nbeach to the south, or to follow the increasingly narrowing coast to the \nnorth.\n",
+         "altitude" : "0"
+      },
+      "endbeach@eastcoast" : {
+         "exits" : {
+            "u" : "Coastal",
+            "n" : "SharpRocks",
+            "s" : "Shore"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "End of the Beach",
+         "id" : "EndBeach",
+         "description" : "\n        Mist condenses on your face as you gaze upon the frothy waters around \nyou.  Not much can be seen of the sea, with all the mist and the tall \njagged rocks, some towering fifteen feet in the air.  Turning around you \nsee a virtually unclimbable cliff, save for a crack that runs up diagonally \nalong the face.  The beach continues to the south.\n",
+         "altitude" : "0"
+      },
+      "swamplands@eastcoast" : {
+         "exits" : {
+            "w" : "Escarpment",
+            "e" : "CliffPath"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "North Swamplands",
+         "id" : "Swamplands",
+         "description" : "\n        This part of the swamp seems too close for comfort, and you think the \nplants and brambles are creeping in on the thinning path against the cliff \nside.  The path looks more comforting to the west, where a clearing appears \nto be, and also to the east where the path rises above the stunted \ntreetops.\n",
+         "altitude" : "0"
+      },
+      "bstream@eastcoast" : {
+         "exits" : {
+            "w" : "Peril",
+            "e" : "MStream",
+            "n" : "Glade"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Beside the Stream",
+         "id" : "BStream",
+         "description" : "\n        Walking on a grassy bank, you peer into an east-west running stream \nas it drains out of a dreary looking swamp to the west.  The water, instead \nof containing the vibrant life of plants and water life, bears the smelly \nslimes, fetid algae, and uncleanliness of whatever dwells from within the \ndark swamp, causing your nose to wrinkle.  The stream looks no more than \nwaist-deep, but any travel to the south bank appears futile, with a \nformidable wall of thorny bramble bushes to meet you there.  More hopeful \npaths lie to the east, where the stream thins out into the sea, and to the \nnorth across a grassy field.  To the west, you see another, less traveled \npath following the stream toward the edge of the swamp itself.  Such \nfeelings leave you to think that travelling into the swamp would not be a \ngood idea.\n",
+         "altitude" : "0"
+      },
+      "clifftop@eastcoast" : {
+         "exits" : {
+            "w" : "Gold",
+            "d" : "Coastal",
+            "s" : "Point"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Eastern Cliff Top",
+         "id" : "CliffTop",
+         "description" : "\n        At least three hundred feet below you stand jagged rocks, deadly spires\nof teeth that could kill any who are foolhardy enough to jump from here.  Even \nif a lucky soul were to miss the rocks, then surely the waves will be the end\nof them, crashing and whipping into the rocks with uncontrolled fury.  Safer \ngrounds lie to the west, where a haze of yellow brilliance arises, and to \nthe south toward a high point at the cliff's end, but a thrill-seeking \ntrail cuts a rut into the cliff face to the rocks below for those that are \nnot too encumbered.\n",
+         "altitude" : "350"
+      },
+      "bank@eastcoast" : {
+         "exits" : {
+            "w" : "Rocks"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "End of the Rock Bank",
+         "id" : "Bank",
+         "description" : "\n        You precariously stand on a slanted rock here, overlooking the beach \nnearby.  Waves crash around the rocks here, spraying them and you with cold \nwater, and making the rocks increasingly slippery, making even walking a \ntelling task, let alone anything more theatrical.  To the north you spy \nanother row of rocks, and to the south, you see a small dock jut into the \nwater.  The only survivable way out of here appears to be back along the \nwet rocks to the west.\n",
+         "altitude" : "0"
+      },
+      "trap@eastcoast" : {
+         "exits" : {},
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "In the Pit Trap",
+         "id" : "Trap",
+         "description" : "\n        You find yourself brushing the dirt off your clothes as you take \nstock of the situation.  This pit appears to have been carefully dug out, \nand carefully laid over with sticks and covered in stones, save for the \nhole that you fell through.  You try to leap for a handhold at the top, but \nhopelessly cannot find anything in reach,  showing you that this pit was \nbuilt to hold much larger creatures.  Small rodents and other land-dwelling \nanimals are here, but all starved to death.  Obviously the last time that \nthe trapper checked this trap was quite some time.  You just hope that he \nremembers it today...\n",
+         "altitude" : "0"
+      },
+      "shoal@eastcoast" : {
+         "exits" : {
+            "s" : "SShoal"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "North End of the Sand Shoal",
+         "id" : "Shoal",
+         "description" : "\n        You walk to the north end of the shoal, the salty water mere inches \ndeep here.  The shoal breaks the waves up here, making them less fierce \nagainst the beach that lies some eighty feet to the west.  You see various \nfish and marine life being washed along by the waves, and some larger \naquatic denizens making waves of their own.  The water appears too \ntreacherous and deep in all directions save to the south.\n",
+         "altitude" : "0"
+      },
+      "meadow@eastcoast" : {
+         "exits" : {
+            "e" : "Field",
+            "n" : "Hillock",
+            "s" : "SECliff"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Rolling Meadow",
+         "id" : "Meadow",
+         "description" : "\n        Grassy hills roll off into the distance here as you walk by, and you \nsmell the fragrances of the wild grasses and flowers growing all around. \nThe hills flatten out to a large field to the west, where you hear the \nbleating of sheep.  Another path to the south makes a easterly turn along a \ncliff edge.\n",
+         "altitude" : "400"
+      },
+      "escpath@eastcoast" : {
+         "exits" : {
+            "u" : "Path@Castle",
+            "d" : "Escarpment"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Escarpment Path",
+         "id" : "EscPath",
+         "description" : "\n        You are half climbing, half slipping on the stones and dirt of a \nsteep path climbing the side of an escarpment.  From here, you can see a \nexpanse of swampland to the south, and to the east you can see a blue sea \nstretching out.  Looking back to the dreariness of your surroundings, the \npath appears to continue above you, heading near some old castle walls, and \ndown into the murky swamplands below.\n",
+         "altitude" : "400"
+      },
+      "mstream@eastcoast" : {
+         "exits" : {
+            "w" : "BStream",
+            "n" : "Glade",
+            "s" : "Rocks"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Mouth of the Stream",
+         "id" : "MStream",
+         "description" : "\n        At this part of the beach, you see a stream come in from the west and \nempty its dark and rancid waters into the sea, and you get a strange \nfeeling that the waters of the sea feel repulsed at what is emptying into \nit from the stream.  Few if any plants seem to conglomerate at the stream's \nedge, and how sickly and twisted the ones are that live there.  You can \nfollow the shoreline to the north, to a more welcoming beach, or follow the \nstream to the west, or you can try crossing the stream here and approach a \nline of wave-breaking rocks that lie nearby to the south.\n",
+         "altitude" : "0"
+      },
+      "point@eastcoast" : {
+         "exits" : {
+            "n" : "CliffTop"
+         },
+         "flags" : [
+            "Outdoors",
+            "Peaceful",
+            "NoSummon"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Dreamer's Point",
+         "id" : "Point",
+         "description" : "\n        This is the famous point of that man, the Dreamer, who made this high \ncorner of the cliff the popular place that it is.  From here, you can see \nfor miles around.  To the east and running along toward the south as far as \nthe eye can see, the great sea stretches out to the horizon, its blue \nwaters drawing your eyes hypnotically.  You see islands out in the distant \nwater, but can only imagine what they are like.  To the south you see a \nflat lowlands, dominated by a dark mass of trees, the Swamps of Peril.  \nOutlining the swamp is a long beach, running up to the cliff foot directly \nunder you, and then splitting off, one trail continuing north up the beach, \nand the other disappearing out of view to the west.  A range of mountains \nline the valley far to the west and southwest, and nestled in front of the \nrange directly to the west is an old and eroding castle, with one black \ntower still defiantly standing.  A path leading north is the only way out \nof this narrow cliff corner.\n",
+         "altitude" : "400"
+      },
+      "glade@eastcoast" : {
+         "exits" : {
+            "e" : "Gentle",
+            "n" : "Entrance",
+            "d" : "Gentle",
+            "s" : "BStream"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Grassy Glade",
+         "id" : "Glade",
+         "description" : "\n        This is a small meadow that appears to not have been affected by the \nstunting effects of the swamp.  Though you feel comforted in seeing such a \npeaceful looking place, you also feel the eerie feeling of the swamp just \nbeyond a shock of tall, impenetrable looking brambles.  To the north leads \na small path that appears to head up sharply toward a small black hole in \nface of the cliffs.  A grassy path turns into a sandy trail as it descends \ntoward a small lagoon to the east, and to the south, you see a stream \nacross the soft grass.\n",
+         "altitude" : "0"
+      },
+      "peril@eastcoast" : {
+         "exits" : {
+            "e" : "BStream"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Outside the Swamps of Peril",
+         "id" : "Peril",
+         "description" : "\n        This area appears to be the only break in the brambles and dense and \ntwisted vegetation to allow entrance eastward into the swamp, at least for \nthose that are brave and staunch enough to venture further.  You hear \nstrange sounds coming from inside the swamp, making your blood cold.  The \nstream here smells fetid and vile, as if foul substances were dumped into \nit.  You would feel much more comfortable if you headed back east along the \nstream.\n",
+         "altitude" : "0"
+      },
+      "footcliff@eastcoast" : {
+         "exits" : {
+            "w" : "Entrance",
+            "e" : "RockyBeach",
+            "u" : "Entrance",
+            "s" : "Gentle"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "At the Foot of the Cliff",
+         "id" : "FootCliff",
+         "description" : "\n        You are standing in front of a looming cliff, towering some eighty or \nninety feet above you, but from the perspective, it might be higher.  \nSeagulls fly about nearby, occasionally giving a shrill call to their \nbrethren.The cliff here bends off toward the north, cradling a narrow \nbeach, and also falls off to the west, where a path rises over a sandy hill \nand out of sight.\n",
+         "altitude" : "0"
+      },
+      "storeroom@eastcoast" : {
+         "exits" : {
+            "w" : "Cave"
+         },
+         "flags" : [
+            "Dark",
+            "SoundProof"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Carved Store Room",
+         "id" : "StoreRoom",
+         "description" : "\n        This small room seems to you a recent addition of the Trapper's, with  \nrough edges still in the rock walls, and even bits of freshly chipped stone \nstill  littering the floor.  This room was apparently made to store all the \nTrapper's rapidly growing piles of semi-useless equipment and other \nnecessities.  The only exit from here is through a small carved hole to the \nwest.\n",
+         "altitude" : null
+      },
+      "grass@eastcoast" : {
+         "exits" : {
+            "n" : "LLPath",
+            "s" : "Hillock"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Hills of Grass",
+         "id" : "Grass",
+         "description" : "\n        Walking on the cushiony grasses, you find yourself on one of the many \nhills that roll off into the distance.  Travelling here could become easily \ndisorienting because of rolling effect the hills create.  You feel relieved \nto see marked trails leading off to the north and south.\n",
+         "altitude" : "550"
+      },
+      "sandybeach@eastcoast" : {
+         "exits" : {
+            "e" : "WaistDeep",
+            "n" : "Surf",
+            "s" : "beach4@beach"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Sandy Beach",
+         "id" : "SandyBeach",
+         "description" : "\n        You walk onto the white sands of a beach, the waters of the sea \ncreating frothy waves that crash into the surf.  The beach continues to the \nnorth, where you see a rock outcropping that goes a short distance into the \nsea.  To the east you notice that a little dip in the water is not \nimpossible since the water appears somewhat shallow.  A small gap in the \nrocks to the south is just large enough for you to fit through.\n",
+         "altitude" : "0"
+      },
+      "surf@eastcoast" : {
+         "exits" : {
+            "e" : "KneeDeep",
+            "n" : "Rocks",
+            "s" : "SandyBeach"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Foamy Surf",
+         "id" : "Surf",
+         "description" : "\n        The sand here feels soft at your feet and the water splashing up from \nthe sea feels exhilaratingly cool.  A brisk breeze from the east blows in \nfrom the great sea, blowing at your hair.  You can follow the sandy shore \nto the north and south, and to the west you see a steep bank of a long sand \ndune.\n",
+         "altitude" : "0"
+      },
+      "sshoal@eastcoast" : {
+         "exits" : {
+            "w" : "KneeDeep",
+            "n" : "Shoal",
+            "s" : "SEShoal"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eastcoast",
+         "title" : "On a Sandy Shoal",
+         "id" : "SShoal",
+         "description" : "\n        You step up onto a shallow sand shoal, some eighty to ninety feet \neast of the shoreline.  Looking at the ankle-deep water here, you discover \nthat the waves are broken somewhat by the shoal, since you are only swaying \nin your steps at each wave instead of floundering head over heels.  The \nwater is noticeably colder here, giving hint that any travelling farther \neast would not only be dangerous due to the waves and sea creatures, but \nalso to the exposure of the cold water.  You can follow the shoal to the \nnorth and south, or back to toward the west, since the water looks much \nshallower here.\n",
+         "altitude" : "0"
+      },
+      "hillock@eastcoast" : {
+         "exits" : {
+            "w" : "Rbank@Valley",
+            "e" : "Gold",
+            "n" : "Grass",
+            "s" : "Meadow"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "eastcoast",
+         "title" : "Grassy Hillock",
+         "id" : "Hillock",
+         "description" : "\n        Sights and scents of the meadowlands assault you as you stand on top \nof a low-rolling hill covered in grasses and field plants.  Looking around, \nyou see the rolling hills flatten out as it descends to the east, where a \nblue-white haze of the horizon hints at a coastline.  The trail you stand \non appears more beaten to the east, a small climb up a rocky slope to the \nwest looks possible, and an inviting meadow is to your south.  You nearly \noverlook an almost abandoned trail to the north.\n",
+         "altitude" : "450"
+      }
+   },
+   "mob" : {
+      "trapper@eastcoast" : {
+         "damage" : "10",
+         "location" : "Cave",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Trapper",
+         "name" : "trapper",
+         "description" : "\nA ragged and dirty trapper is here, sputtering something incomprehensible.",
+         "strength" : "80"
+      },
+      "maya@eastcoast" : {
+         "damage" : "10",
+         "location" : "Gold",
+         "armor" : "0",
+         "name" : "maya",
+         "description" : "\nMaya the Bee flits from flower to flower here, looking terminally happy.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "20",
+         "speed" : "0",
+         "pname" : "Maya",
+         "aggression" : "0"
+      },
+      "blackie@eastcoast" : {
+         "damage" : "10",
+         "location" : "Grass",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Lost Blackie",
+         "name" : "blackie",
+         "description" : "\nBlackie, the black sheep of the flock, roams alone here, looking dejected.",
+         "strength" : "40"
+      },
+      "sheepdog@eastcoast" : {
+         "damage" : "10",
+         "location" : "Meadow",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "SheepDog",
+         "name" : "sheepdog",
+         "description" : "\nA lean and swift sheepdog is here, looking for sheep to round up.",
+         "strength" : "60"
+      },
+      "clammy@eastcoast" : {
+         "damage" : "10",
+         "location" : "Lagoon",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Clammy",
+         "name" : "clammy",
+         "description" : "\nA large oyster, as big as a small man, sits under the water, making bubbles.",
+         "strength" : "80"
+      },
+      "herman@eastcoast" : {
+         "damage" : "10",
+         "location" : "Rocks",
+         "speed" : "2",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Herman",
+         "name" : "herman",
+         "description" : "\nHerman the Pelican waddles nearby, looking for a fish.",
+         "strength" : "35"
+      },
+      "shepherd@eastcoast" : {
+         "damage" : "10",
+         "location" : "Field",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Shepherd",
+         "name" : "shepherd",
+         "description" : "\nA wizened shepherd is here, herding his sheep.",
+         "strength" : "80"
+      },
+      "dreamer@eastcoast" : {
+         "damage" : "10",
+         "location" : "Point",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Dreamer",
+         "name" : "dreamer",
+         "description" : "\nA man in a flowing robe stands here, gazing across the sea, daydreaming.",
+         "strength" : "99"
+      },
+      "swallowtail@eastcoast" : {
+         "damage" : "10",
+         "location" : "Gold",
+         "speed" : "2",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Swallowtail",
+         "name" : "swallowtail",
+         "description" : "\nA Zebra Swallowtail flys nearby, fluttering gracefully in the breeze.",
+         "strength" : "10"
+      },
+      "manta@eastcoast" : {
+         "damage" : "10",
+         "location" : "Bank",
+         "speed" : "2",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Manta",
+         "name" : "manta",
+         "description" : "\nFlat against the sandy bottom of the shallow sea floor, a manta ray rests\nhere.",
+         "strength" : "70"
+      },
+      "flock@eastcoast" : {
+         "damage" : "10",
+         "location" : "Field",
+         "armor" : "0",
+         "name" : "flock",
+         "description" : "\nA flock of sheep bleat contentedly here, nibbling at anything plant-like.",
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "The Flock",
+         "aggression" : "0"
+      },
+      "jaws@eastcoast" : {
+         "damage" : "10",
+         "location" : "WaistDeep",
+         "speed" : "0",
+         "aggression" : "15",
+         "armor" : "0",
+         "pname" : "Jaws",
+         "name" : "jaws",
+         "description" : "\nA big shark fin sticks out from the water, approaching you, and it's no fake!",
+         "strength" : "110"
+      }
+   }
+}

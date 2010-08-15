@@ -1,0 +1,430 @@
+{
+   "obj" : {
+      "throne@waste" : {
+         "desc[1]" : "A huge throne is set against the western wall.",
+         "location" : "IN_ROOM:king",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "throne",
+         "size" : "200",
+         "state" : "1",
+         "weight" : "200",
+         "maxstate" : "1",
+         "bvalue" : "500",
+         "desc[0]" : "A huge golden throne sits here, a masterpiece of regal style."
+      },
+      "door_king@waste" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:king",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_King",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_fire",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_fire@waste" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:fire",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_fire",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_king",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "ball@waste" : {
+         "location" : "IN_ROOM:gardens",
+         "weight" : "5",
+         "altname" : "gold",
+         "name" : "ball",
+         "bvalue" : "200",
+         "desc[0]" : "A golden ball has been placed here, glittering gently.",
+         "size" : "5"
+      },
+      "greatsword@waste" : {
+         "damage" : "25",
+         "location" : "WIELDED_BY:djinni",
+         "oflags" : [
+            "Weapon",
+            "Lightable",
+            "Lit"
+         ],
+         "altname" : "sword",
+         "name" : "greatsword",
+         "size" : "100",
+         "weight" : "100",
+         "bvalue" : "1200",
+         "desc[0]" : "\nA huge flaming greatsword has been placed here, where it lies burning fiercely"
+      },
+      "staff@waste" : {
+         "location" : "CARRIED_BY:beast",
+         "oflags" : [
+            "Lit"
+         ],
+         "altname" : "gold",
+         "name" : "staff",
+         "size" : "10",
+         "weight" : "20",
+         "bvalue" : "200",
+         "desc[0]" : "A golden staff shines before you with a hellish red light."
+      }
+   },
+   "loc" : {
+      "foot@waste" : {
+         "exits" : {
+            "w" : "Tunnel",
+            "e" : "Guard",
+            "u" : "Golden"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "The Foot Of The Golden Stairs",
+         "id" : "Foot",
+         "description" : "\n   You are standing at the foot of a huge golden staircase, which rises upwards\nout of sight, reflecting the fiery red light, like a river of molten flame.\nPassages lead east and west to other halls.\n",
+         "altitude" : null
+      },
+      "3@waste" : {
+         "exits" : {
+            "w" : "Crack",
+            "e" : "2",
+            "n" : "2",
+            "s" : "2"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Wasteland",
+         "id" : "3",
+         "description" : "\n   You are traversing a black and dusty wasteland, a dull, black, flat, mind\nnumbing extent which receeds on and on and on...\n",
+         "altitude" : null
+      },
+      "passage@waste" : {
+         "exits" : {
+            "w" : "Gardens",
+            "e" : "Ledge",
+            "n" : "Salamander"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Fiery Passage",
+         "id" : "Passage",
+         "description" : "\n   You are walking down a narrow fiery passage, the walls glow and pulsate with\na dull red light.  You have to tread carefully to avoid burning yourself on\nsome of the hotter parts of the floor.  The passage leads east and west, and a\nturning leads north towards a fiery pit.\n",
+         "altitude" : null
+      },
+      "gardens@waste" : {
+         "exits" : {
+            "e" : "Passage"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Burning Gardens",
+         "id" : "Gardens",
+         "description" : "\n   You are standing in a wide open room.  The ceiling ends in a fancy wave of\nrolled gold, which artfully reflects the fiery red skies down across the pools\nof molten metal which form the centerpiece of the room.  The light from the\nskies and the molten pits flickers around the room, flashing off the polished\nand carved golden walls.\n",
+         "altitude" : null
+      },
+      "fire@waste" : {
+         "exits" : {
+            "w" : "^door_fire",
+            "e" : "Top"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "The Fire Hall",
+         "id" : "Fire",
+         "description" : "\n   You are standing in the center of a vast hall, lit by huge fountains of\nmolten rock.  The walls are carved, and inlaid with polished gold so that they\nreflect huge fiery figures, in a stunning almost life-like fashion.  A huge\narched doorway leads east, while to the west there is a small bronze door.\n",
+         "altitude" : null
+      },
+      "hall@waste" : {
+         "exits" : {
+            "w" : "Flaming",
+            "n" : "Crystal",
+            "s" : "Salamander"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Fiery Hall",
+         "id" : "Hall",
+         "description" : "\n   You are standing in a fiery red hall whose walls are caked with sulphur.\nIt's very hot in here, but strangely the heat doesn't seem to be affecting you\ntoo badly.  Twisting, flame-lined passages lead north and south.\n",
+         "altitude" : null
+      },
+      "top@waste" : {
+         "exits" : {
+            "w" : "Fire",
+            "d" : "Golden"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Top Of Stairs",
+         "id" : "Top",
+         "description" : "\n   You are standing at the top of a set of glowing golden stairs.  A wide, gold\nlined doorway leads west into a huge hall.\n",
+         "altitude" : null
+      },
+      "tunnel@waste" : {
+         "exits" : {
+            "w" : "Ledge",
+            "e" : "Foot"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Fiery Tunnel",
+         "id" : "Tunnel",
+         "description" : "\n   You are walking along a trembling, and shaking volcanic tunnel of some sort.\nThe glowing walls are thick with sulphur, and the stench makes you want to\nthrow up.  The passage enters an open air amphitheatre to the west, but to the\neast it continues towards some steps.\n",
+         "altitude" : null
+      },
+      "salamander@waste" : {
+         "exits" : {
+            "n" : "Hall",
+            "s" : "Passage"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Salamander's Fire Pit",
+         "id" : "Salamander",
+         "description" : "\n   You are standing on a precarious catwalk high above a pit of molten fire.\nHuge walls of fire and molten rock leap up around you, in stunning crescendos\nof sound and light.  By some strange chance, maybe magical, the fires never\ntouch the path itself.\n",
+         "altitude" : null
+      },
+      "1@waste" : {
+         "exits" : {
+            "w" : "3",
+            "e" : "1",
+            "n" : "1",
+            "s" : "2"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Wasteland",
+         "id" : "1",
+         "description" : "\n   You are traversing a black and dusty wasteland, a dull, black, flat, mind\nnumbing extent which receeds on and on and on...\n",
+         "altitude" : null
+      },
+      "flaming@waste" : {
+         "exits" : {
+            "w" : "Before",
+            "e" : "Hall"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "The Flaming Gates",
+         "id" : "Flaming",
+         "description" : "\n   You are standing before a set of gigantic flaming gates, wrought entirely of\na strange, blood tinged gold.  The gates reflect the hellish, fiery red glow\nfrom two huge lava channels which flank the path you walk.  To the east through\nthe gates everything becomes a confusing mass of reflected flames against gold.\n",
+         "altitude" : null
+      },
+      "2@waste" : {
+         "exits" : {
+            "w" : "2",
+            "e" : "1",
+            "n" : "1",
+            "s" : "1"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Wasteland",
+         "id" : "2",
+         "description" : "\n   You are traversing a black and dusty wasteland, a dull, black, flat, mind\nnumbing extent which receeds on and on and on...\n",
+         "altitude" : null
+      },
+      "crack@waste" : {
+         "exits" : {
+            "w" : "2",
+            "e" : "3",
+            "n" : "2",
+            "s" : "2"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Fiery Crack",
+         "id" : "Crack",
+         "description" : "\n   You stand at the top of a huge fiery crack gazing down into the boiling\nflame beyond.  The ground shakes and trembles under the continued pounding\nfrom deep beneath the world.\n",
+         "altitude" : null
+      },
+      "king@waste" : {
+         "exits" : {
+            "e" : "^door_king"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "The Fiery King's Hall",
+         "id" : "King",
+         "description" : "\n   You stand in a small fantastically carved hall, decorated with millions of\nreflecting crystals which collect the fiery red which glows through a huge\nglass dome high above you, and scattering it around the hall, so that the ruddy\nglow of its walls burns like some incandescent hell.\n   There is a small bronze door to the east.\n",
+         "altitude" : null
+      },
+      "ledge@waste" : {
+         "exits" : {
+            "w" : "Passage",
+            "e" : "Tunnel"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Fiery Ledge",
+         "id" : "Ledge",
+         "description" : "\n   You stand on a wide golden path, set on a high ledge overlooking a huge\ncrater.  The tremendous flames and explosions shake the whole mountain around\nyou, making the fiery red skies seem to vibrate and dance with each flash and\nrumble.  The ledge goes back underground to the east and west.\n",
+         "altitude" : null
+      },
+      "golden@waste" : {
+         "exits" : {
+            "u" : "Top",
+            "d" : "Foot"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "The Golden Stairs",
+         "id" : "Golden",
+         "description" : "\n   You are ascending a set of golden stairs, which reflect a fiery red light\nfrom the hot rocks all around it. The stairs lead upwards to some kind of guard\nroom, and downwards to a passage.\n",
+         "altitude" : null
+      },
+      "crystal@waste" : {
+         "exits" : {
+            "s" : "Hall"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Crystal Fire",
+         "id" : "Crystal",
+         "description" : "\n   You are standing in a huge, crystal-carved hall, designed so that the\nglittering crystal walls pick up the fiery light from around you and scatter it\nback in rainbows of red and yellow light. A single arched crystal doorway leads\nsouthwards.\n",
+         "altitude" : null
+      },
+      "before@waste" : {
+         "exits" : {
+            "w" : "2",
+            "e" : "Flaming",
+            "n" : "1",
+            "s" : "2"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Before The Gates",
+         "id" : "Before",
+         "description" : "\n   You are standing on a vast windswept plain, formed entirely of black\nvolcanic dust.  The dark gloomy wastes extend as far as your eye can follow,\nreflecting strangely against a fiery red sky...\n   The only landmark in sight is a huge golden citadel whose walls reflect the\nflames and blood-red glow of the hellish skies above.\n",
+         "altitude" : null
+      },
+      "guard@waste" : {
+         "exits" : {
+            "w" : "Foot"
+         },
+         "flags" : [],
+         "zone" : "waste",
+         "title" : "Guard Room",
+         "id" : "Guard",
+         "description" : "\n   You are standing in a red burning guardroom which glitters redly with the\nheat of the surrounding rock.  A single doorway leads west.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "beast@waste" : {
+         "damage" : "15",
+         "location" : "flaming",
+         "armor" : "0",
+         "name" : "beast",
+         "description" : "\nA huge, fiery beast stands before you, 12 feet tall and rippling with muscle.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The Beast",
+         "aggression" : "100",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "djinni@waste" : {
+         "damage" : "10",
+         "location" : "king",
+         "armor" : "0",
+         "name" : "djinni",
+         "description" : "A huge djinni glares at you and flexes his muscles.",
+         "strength" : "130",
+         "pname" : "The Djinni",
+         "aggression" : "60",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "lavaman@waste" : {
+         "eflags" : [
+            "NegFireball"
+         ],
+         "damage" : "12",
+         "location" : "crack",
+         "armor" : "0",
+         "name" : "lavaman",
+         "description" : "A lavaman snarls harshly as he sees you.",
+         "strength" : "40",
+         "pname" : "The Lavaman",
+         "aggression" : "30",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "efreet@waste" : {
+         "eflags" : [
+            "NegFireball"
+         ],
+         "damage" : "12",
+         "location" : "guard",
+         "armor" : "0",
+         "name" : "efreet",
+         "description" : "A huge, flaming efreet glares ferociously at you.",
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "The Efreet",
+         "aggression" : "30",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "wolf@waste" : {
+         "damage" : "12",
+         "location" : "2",
+         "armor" : "0",
+         "name" : "wolf",
+         "description" : "\nA huge slavering dust wolf stalks you, ready to pounce at any moment.",
+         "strength" : "100",
+         "pname" : "The Wolf",
+         "aggression" : "100",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "flame@waste" : {
+         "eflags" : [
+            "NegFireball"
+         ],
+         "damage" : "10",
+         "location" : "Hall",
+         "armor" : "0",
+         "name" : "flame",
+         "description" : "\nA giant, flickering and glowing flame dances before you in an incandescent\nhaze of heat.  It seems almost alive.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Flame",
+         "aggression" : "30",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "guard@waste" : {
+         "damage" : "10",
+         "location" : "top",
+         "armor" : "0",
+         "name" : "guard",
+         "description" : "\nA strange looking guard of some sort watches you cautiously.",
+         "strength" : "50",
+         "pname" : "The Guard",
+         "aggression" : "30",
+         "pflags" : [
+            "NoSummon"
+         ]
+      }
+   }
+}

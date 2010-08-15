@@ -1,0 +1,316 @@
+{
+   "obj" : {
+      "helmet@noxypickle" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:nest",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "70",
+         "name" : "helmet",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "The famous helmet of Noxypickle is gathering dust here."
+      },
+      "nest@noxypickle" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:bough",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "armor" : "0",
+         "name" : "nest",
+         "size" : "25",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A brick-built bird's nest is affixed to one of the branches."
+      },
+      "echidna@noxypickle" : {
+         "desc[1]" : "A very spiky echidna is foraging for food on the forest floor.",
+         "damage" : "21",
+         "location" : "IN_ROOM:forest",
+         "oflags" : [
+            "GetFlips",
+            "Weapon"
+         ],
+         "armor" : "0",
+         "name" : "echidna",
+         "size" : "15",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A very spiky echidna is snuffling about on the floor here."
+      },
+      "skeleton@noxypickle" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:chamber",
+         "oflags" : [
+            "NoGet"
+         ],
+         "armor" : "0",
+         "name" : "skeleton",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "The skeleton of a long-dead adventurer is here, propped up against the wall."
+      },
+      "eye@noxypickle" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:cloak",
+         "armor" : "0",
+         "altname" : "stone",
+         "name" : "eye",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A perfectly spherical stone is lying here, with a blue eye painted on one side."
+      },
+      "statue@noxypickle" : {
+         "desc[1]" : "The statue of Polyphemus stands here, impressive, but missing its one eye.",
+         "damage" : "0",
+         "location" : "IN_ROOM:temple",
+         "oflags" : [
+            "NoGet"
+         ],
+         "armor" : "0",
+         "altname" : "polyphemus",
+         "name" : "statue",
+         "size" : "100",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The statue of Polyphemus stands here glaring at you with its one eye."
+      },
+      "puddle@noxypickle" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:trap",
+         "oflags" : [
+            "NoGet"
+         ],
+         "armor" : "0",
+         "altname" : "water",
+         "name" : "puddle",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A puddle of rather dirty-looking water has collected in a hollow in the ground."
+      },
+      "cloak@noxypickle" : {
+         "desc[1]" : "A tattered cloak is draped about the shoulders of the skeleton.",
+         "damage" : "0",
+         "location" : "IN_ROOM:chamber",
+         "oflags" : [
+            "Getflips",
+            "Wearable",
+            "Container"
+         ],
+         "armor" : "0",
+         "altname" : "pocket",
+         "name" : "cloak",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "aflags" : [
+            "Arms",
+            "Back",
+            "Chest"
+         ],
+         "desc[0]" : "A tattered cloak is lying on the ground."
+      }
+   },
+   "loc" : {
+      "chamber@noxypickle" : {
+         "exits" : {
+            "e" : "door",
+            "d" : "ladder"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "noxypickle",
+         "title" : "Looted Chamber",
+         "id" : "chamber",
+         "description" : "\n    The chamber you are in was once a place of some import, for it is well-\nhewn and a lot of care was put into its construction.  Now, however, it is\nbare, stripped of its contents by looters.  Next to the west wall is a hole in\nthe floor, and a series of steps, carved into the solid rock, lead downwards\ninto the darkness.\n",
+         "altitude" : null
+      },
+      "trap@noxypickle" : {
+         "exits" : {
+            "s" : "pit"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "noxypickle",
+         "title" : "Defunct Deathtrap",
+         "id" : "trap",
+         "description" : "\n    This place was once a rather brutal trap.  A long wooden beam with a\nspring-loaded spike is stuck into the wall, having impaled some hapless\nadventurer whose partially-collapsed skeleton is draped across the end of the\nspike.  You scan the walls a little nervously, seeking signs of further traps,\nbut you can see none.\n",
+         "altitude" : null
+      },
+      "slide@noxypickle" : {
+         "exits" : {
+            "w" : "bank"
+         },
+         "flags" : [],
+         "zone" : "noxypickle",
+         "title" : "Waterslide",
+         "id" : "slide",
+         "description" : "\n    You fall down, down, down through the rarified air, plunging into the\ncloud layer which you saw from above.  As you continue to fall, the cloud\nbecomes thicker and thicker, and you start to get rather wet from the droplets\nof water floating around up here.  Still you fall, and the raindrops fall with\nyou, growing heavier and heavier as they descend, until you find yourself in\nthe midst of a torrent which plunges like a waterfall, nearly drowning you in\nthe process.  You fight a rising panic, then feel yourself nudging into a soft\nincline, which gradually becomes less and less steep as you drop.  You slither\ndown it on your back, carried along by the volume of water, but slowing down\nall the while, until you find yourself able to sit up and take stock of your\nsurroundings.  You are in a river, being gently carried towards the bank.  You\ndrift past an imposing-looking pagan temple and end up in a little pool beside\nthe river bank.\n",
+         "altitude" : null
+      },
+      "cesspit@noxypickle" : {
+         "exits" : {
+            "s" : "temple"
+         },
+         "flags" : [],
+         "zone" : "noxypickle",
+         "title" : "Brink Of The Cesspit",
+         "id" : "cesspit",
+         "description" : "\n    At last you have discovered the source of the terrible smell.  Before you\nis a pit dug into the ground, filled to the brim with raw sewage.  You reel in\ndisgust at the reek emanating from the thick brown sludge before you.  You\ncover your nose, your eyes watering, and then notice something else - several\nlong, fat, worm-like creatures are swimming about in the excrement, and appear\nto be feeding on it!  You feel a powerful urge to leave this place and get out\namong the sweet-smelling plants outside, the scent of which you can still\nfaintly detect even through the sewer-stench of the cesspit.  Yet another part\nof you recognises the hold the plants have over your mind, and suggests you\ntake a much-needed bath with the sewer worms...\n",
+         "altitude" : null
+      },
+      "pit@noxypickle" : {
+         "exits" : {
+            "u" : "ladder",
+            "n" : "trap"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "noxypickle",
+         "title" : "Whispering Pit",
+         "id" : "pit",
+         "description" : "\n    You are at the bottom of the ladder, in a small pit which is strewn with\ndry bones.  You wonder how these people met their deaths, and how long ago.\nThere is certainly no discernable smell of decay here.  The walls are covered\nwith the same strange markings that you saw on the archway at the top of the\nladder, and still you have no idea what they might mean.\n",
+         "altitude" : null
+      },
+      "ladder@noxypickle" : {
+         "exits" : {
+            "u" : "chamber",
+            "d" : "pit"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "noxypickle",
+         "title" : "Stone-Carved Ladder",
+         "id" : "ladder",
+         "description" : "\n    You are clinging to a ladder carved into the rock, about midway between\nthe top and the bottom.  A dim light comes from above you, but below you all\nis pitch black.  The vertical tunnel you are in is barely wide enough to allow\nyou passage, and the cramped conditions are making you feel somewhat\nclaustrophobic.\n",
+         "altitude" : null
+      },
+      "bough@noxypickle" : {
+         "exits" : {
+            "d" : "tree"
+         },
+         "flags" : [],
+         "zone" : "noxypickle",
+         "title" : "In The Boughs",
+         "id" : "bough",
+         "description" : "\n    You are scrambling among the branches of your airborne tree.  You have\nnever seen branches like these before: they are spongy and soft to the touch,\nyet they do not bend or break when you put your weight on them.  You shake\nyour head, trying to clear your thoughts, but the delicious smell pervades\nyour senses and you eventually give in.  A smile, unbidden, comes to your\nlips and then, to your surprise, you laugh out loud.  You feel so happy...\n",
+         "altitude" : null
+      },
+      "door@noxypickle" : {
+         "exits" : {
+            "w" : "chamber",
+            "e" : "flag"
+         },
+         "flags" : [],
+         "zone" : "noxypickle",
+         "title" : "Stone Doorway",
+         "id" : "door",
+         "description" : "\n    You are standing beneath a low arch of stone. Light pours through the\ndoorway from the east, but to the west all is black.  Strange archaic letters\nadorn the heavy stones of the archway, but they are not like any runes you\nhave ever come across before.\n",
+         "altitude" : null
+      },
+      "tree@noxypickle" : {
+         "exits" : {
+            "u" : "bough"
+         },
+         "flags" : [],
+         "zone" : "noxypickle",
+         "title" : "Floating Tree",
+         "id" : "tree",
+         "description" : "\n    This is truly bizarre!  You seem to be floating high in the air, your arms\nclasped around the trunk of a small tree.  You cannot see the ground as there\nis a thin layer of clouds below you, blocking your view.  A strong wind blows\nthrough the branches and roots of the tree, but you do not appear to be moving\nat all - the tree is somehow anchored in its place by an unseen force.\nA heady, very pleasant odour is making it hard for you to think straight.\n",
+         "altitude" : null
+      },
+      "temple@noxypickle" : {
+         "exits" : {
+            "e" : "step",
+            "n" : "cesspit"
+         },
+         "flags" : [],
+         "zone" : "noxypickle",
+         "title" : "Temple Of Nasty Smells",
+         "id" : "temple",
+         "description" : "\n    Inside the temple a greenish light filters through cracks in the roof.  A\ngreat pendulum hangs from a gantry overhead, but it has long since stopped\nswinging.  The thing that strikes you most is a powerful, nauseating smell\nwhich seems to be coming from the north.  However, the scent of the plants\noutside is still strong enough to overcome the mind-clearing effects of this\nnew odour.\n",
+         "altitude" : null
+      },
+      "step@noxypickle" : {
+         "exits" : {
+            "w" : "temple",
+            "s" : "bank"
+         },
+         "flags" : [],
+         "zone" : "noxypickle",
+         "title" : "Steps Of Ultimate Catastrophe",
+         "id" : "step",
+         "description" : "\n    You are standing on the temple steps.  Enormous and made out of single\nslabs of stone, they represent the work of the proud civilization of a bygone\nera.  Before you looms the mouth of the temple, and from it a curious smell is\nissuing.  It mingles with the heady odour of the rotting plants to the south,\narousing conflicting thoughts within you.  You are much too confused to puzzle\nthem out though.\n",
+         "altitude" : null
+      },
+      "forest@noxypickle" : {
+         "exits" : {
+            "e" : "bank"
+         },
+         "flags" : [],
+         "zone" : "noxypickle",
+         "title" : "Decaying Forest",
+         "id" : "forest",
+         "description" : "\n    The trees are rotting, the shrubs are rotting, the undergrowth is rotting.\nAll about you the greenery decays, and the fumes it gives off as it does so\nalmost overwhelm you.  You feel dizzy but very, very happy.  You feel sleepy.\nYou feel very, very sleepy...\n",
+         "altitude" : null
+      },
+      "bank@noxypickle" : {
+         "exits" : {
+            "w" : "forest",
+            "n" : "step"
+         },
+         "flags" : [],
+         "zone" : "noxypickle",
+         "title" : "Rotting Bank",
+         "id" : "bank",
+         "description" : "\n    The vegetation by the side of the river is slimy and dank, and turning\nrather brown.  As it rots it gives off an intense but pleasant smell which\nfills your nostrils and head until you can think of nothing else.  To the north\nis a flight of steps leading up to the temple you saw earlier.  In a tree above\nthe steps are roosting some curious-looking birds.  Their guano covers the\nsteps and appears to be very rapidly eating away the stonework...\n",
+         "altitude" : null
+      },
+      "flag@noxypickle" : {
+         "exits" : {
+            "w" : "door",
+            "n" : "Inn_Yard@village"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "noxypickle",
+         "title" : "Mossy Flagstones",
+         "id" : "flag",
+         "description" : "\n    The ground here is set with scores of stone slabs, looking cracked and\nancient.  Moss flourishes in the cracks and some of the flagstones are almost\ncompletely covered with the spongy greenery.  To the west is a low doorway,\nwith impenetrable darkness beyond.\n",
+         "altitude" : "50"
+      }
+   },
+   "mob" : {}
+}

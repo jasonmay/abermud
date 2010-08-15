@@ -1,0 +1,456 @@
+{
+   "obj" : {
+      "glasses@wiz" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Raymond1",
+         "armor" : "33",
+         "oflags" : [
+            "Lit",
+            "Armor"
+         ],
+         "name" : "glasses",
+         "examine" : "\nOh my GOD!! They're bifocals and nightvision, cool!",
+         "size" : "3",
+         "pname" : "glasses",
+         "weight" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "Raymond's nightvision glasses lie here, waiting for him to put them on."
+      },
+      "lightsword@wiz" : {
+         "desc[1]" : "A small round holster lies here with a beam of light protruding from it.",
+         "damage" : "13",
+         "location" : "IN_ROOM:Raymond1",
+         "armor" : "0",
+         "oflags" : [
+            "Lit",
+            "Weapon",
+            "PushToggle"
+         ],
+         "altname" : "sword",
+         "name" : "Lightsword",
+         "examine" : "",
+         "size" : "3",
+         "state" : "0",
+         "weight" : "0",
+         "pname" : "Lightsword",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A small round holster lies here."
+      },
+      "amethyst_shield@wiz" : {
+         "location" : "IN_ROOM:shi1",
+         "armor" : "25",
+         "oflags" : [
+            "NoGet",
+            "Armor",
+            "Wearable",
+            "Container",
+            "Shield"
+         ],
+         "altname" : "shield",
+         "name" : "amethyst_shield",
+         "examine" : "\nMade from amethyst, this small, delicate looking shield will protect you well.",
+         "size" : "30",
+         "pname" : "amethystshield",
+         "weight" : "0",
+         "bvalue" : "250",
+         "desc[0]" : "Shi's amethystshield lies here."
+      },
+      "lightsabre@wiz" : {
+         "damage" : "15",
+         "location" : "IN_ROOM:spokes1",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "altname" : "Sabre",
+         "name" : "lightsabre",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "7",
+         "pname" : "LightSabre",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "\nLuke Skywalker, a good friend of Spokes, has left his Light Sabre here."
+      },
+      "amethyst_sword@wiz" : {
+         "damage" : "25",
+         "location" : "IN_ROOM:shi1",
+         "oflags" : [
+            "Noget",
+            "Weapon",
+            "Lit"
+         ],
+         "altname" : "sword",
+         "name" : "amethyst_sword",
+         "examine" : "\nGlowing and made of pure amethyst, this sword will serve you well.",
+         "size" : "30",
+         "pname" : "amethystsword",
+         "weight" : "0",
+         "bvalue" : "250",
+         "desc[0]" : "Shi's amethystsword lies here."
+      },
+      "icicle@wiz" : {
+         "damage" : "15",
+         "location" : "CARRIED_BY:Anook",
+         "oflags" : [
+            "Weapon",
+            "Unlocatable"
+         ],
+         "name" : "icicle",
+         "size" : "3",
+         "weight" : "4",
+         "bvalue" : "55",
+         "desc[0]" : "The &+Cicicle&n seems like it would make a decent weapon."
+      },
+      "hit@wiz" : {
+         "location" : "IN_ROOM:gophgrell1",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "hit",
+         "bvalue" : "10",
+         "desc[0]" : "It seems that someone has misplaced a hit of LSD here.",
+         "size" : "1"
+      },
+      "lightcloak@wiz" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Raymond1",
+         "armor" : "80",
+         "oflags" : [
+            "Lit",
+            "Armor"
+         ],
+         "altname" : "cloak",
+         "name" : "LightCloak",
+         "examine" : "\nHmmm a cloak of light, looks very protective.",
+         "size" : "3",
+         "pname" : "Lightcloak",
+         "weight" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A piece of Light is here, maybe you could wear it, like a cloak."
+      },
+      "leather@wiz" : {
+         "location" : "IN_ROOM:spokes1",
+         "armor" : "45",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Container",
+            "Lit"
+         ],
+         "altname" : "Jacket",
+         "name" : "Leather",
+         "examine" : "The jacket is magically engulfed in flames.",
+         "size" : "70",
+         "state" : "0",
+         "weight" : "5",
+         "pname" : "LeatherJacket",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "Spokes' black leather jacket hangs here on an invisible coat rack.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms"
+         ]
+      },
+      "shades@wiz" : {
+         "location" : "IN_ROOM:spokes1",
+         "armor" : "20",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Key"
+         ],
+         "altname" : "glasses",
+         "name" : "shades",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "pname" : "shades",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A pair of Spokes' magically blue shades lies here.",
+         "aflags" : [
+            "Face"
+         ]
+      }
+   },
+   "loc" : {
+      "raymond1@wiz" : {
+         "exits" : {
+            "w" : "Chat@home",
+            "e" : "haven@haven",
+            "n" : "temple@start",
+            "s" : "church@start"
+         },
+         "flags" : [
+            "Party",
+            "Peaceful"
+         ],
+         "zone" : "wiz",
+         "title" : "Room Of The Future",
+         "id" : "Raymond1",
+         "description" : "\nYou stand in the room of the future.You see a CD player, a full\nT.V. entertainment system. You see cases full of Hi-Tech items, the first\nLightsabre, phaser and other undeciperable items. You see items from the past,\nlike the rosetta stone and the Sarcophagus of King Tut. On the desk you see a\ncomputer unlike any you have ever seen before, it has no moniter just a little\nheadgear thingie, IT MUST BE VIRTUAL REALITY!!! When you look in the closet\n(after being hit by a ton of crap) you see the Legendary armor or Raymond!!!!\n",
+         "altitude" : null
+      },
+      "phoelox1@wiz" : {
+         "exits" : {
+            "w" : "temple@start"
+         },
+         "flags" : [
+            "Light",
+            "NoMobiles",
+            "Private",
+            "Party"
+         ],
+         "zone" : "wiz",
+         "title" : "Phoelox's Room",
+         "id" : "phoelox1",
+         "description" : "\n     This is Phoelox's room.  It is awaiting her decoration of it.  Inside\nfor now are: a bed, a desk, and an entertainment center.  There is also a\ncertificate for one free obile, to be used at her convenience.\n",
+         "altitude" : null
+      },
+      "spokes2@wiz" : {
+         "exits" : {
+            "w" : "spokes1"
+         },
+         "flags" : [
+            "Light",
+            "NoMobiles",
+            "Private"
+         ],
+         "zone" : "wiz",
+         "title" : "Spokes' Office",
+         "id" : "spokes2",
+         "description" : "\n     This is Spokes' Office.  You see tons of coding demos and coding docs\nspewed all over the room.  School book are piled neatly on one of the shelves\nand you get the impression they are not used very much.\n     There is a large oak desk with a very comfortable looking black leather\nchair.\n",
+         "altitude" : null
+      },
+      "unused1@wiz" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "wiz",
+         "title" : "Unused Room",
+         "id" : "unused1",
+         "description" : "\n     This is a room that is sitting here just waiting for someone to wiz and \ntake over the room.  :)  \n",
+         "altitude" : null
+      },
+      "tinkerbell1@wiz" : {
+         "exits" : {
+            "d" : "temple@start"
+         },
+         "flags" : [
+            "Party",
+            "Peaceful"
+         ],
+         "zone" : "wiz",
+         "title" : "Tinky's Room",
+         "id" : "Tinkerbell1",
+         "description" : "\n  As you approach this small abode, you can't help but wonder how someone could\nlive in a home so small.  As you walk through the yellowwood entry, though, \nyou gasp in amazement.  This place is HUGE!  Plush red carpeting stretches\naway to the far wall stopping only to scuttle under the large comforting easy\nchairs and sofas.  Red and yellow roses sit before a magnificent picture window\nrevealing a splendid view of the cool blue ocean below.  All in all, it looks\nlike a very nice place to kick back, relax, and talk to your favourite person \nfor hours on end! \n",
+         "altitude" : null
+      },
+      "gophgrell1@wiz" : {
+         "exits" : {},
+         "flags" : [
+            "Light",
+            "NoMobiles",
+            "Private",
+            "Party"
+         ],
+         "zone" : "wiz",
+         "title" : "The Private Suite of Gopher and Grell",
+         "id" : "gophgrell1",
+         "description" : "\n     This room belongs to Gopher and Grell, and it is where they meet here\non &+CElven&+GMUD&n to talk to one another about all kinds of things.  This\nroom is still awaiting their decoration, and is somewhat bare right now.\nIt contains a table, a television, and a bed.  On the table is a picture of\nGopher and Grell together.  They look truly happy.\n",
+         "altitude" : null
+      },
+      "wiz1@wiz" : {
+         "exits" : {
+            "u" : "Church@start"
+         },
+         "flags" : [
+            "Party",
+            "Private"
+         ],
+         "zone" : "wiz",
+         "title" : "cLoCkWoRk Of OrAnGe",
+         "id" : "wiz1",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "chump1@wiz" : {
+         "exits" : {
+            "u" : "elemental@blizzard",
+            "n" : "Chump2"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof"
+         ],
+         "zone" : "wiz",
+         "title" : "Chump's Home",
+         "id" : "Chump1",
+         "description" : "\n     The grassy field that you have entered makes you feel lonely. You\nwonder what kind of Chump makes this place their home. The southern path\nleads back to civilization whille to the north you see a lake. You begin to\nfeel lost and confused when you peer at the lake in the distance for too\nlong. Maybe you should return the way you came and seek adventure\nelsewhere.\n",
+         "altitude" : null
+      },
+      "jano1@wiz" : {
+         "exits" : {},
+         "flags" : [
+            "Private",
+            "Party"
+         ],
+         "zone" : "wiz",
+         "title" : "The Emerald Cloud",
+         "id" : "jano1",
+         "description" : "\n    You have now somehow reached the Emerald Cloud, a brilliant crystaline forma\ntion floating here in the Heavens.  You are standing on pure emerald, which is s\npraying a ten foot radius of soft, green light.  You gaze in wonder at how this\nbeauty could possibly be.\n    In the center of this flying wonder, a small hot springs is dug in, letting\noff traces of hot wavering steam.  Two small emerald pillars stand next to it, e\nach supporting one side of a comfortable looking hammock.\n    You get a peaceful feeling being suspended in free space.  Looking up, the s\ntars seem even more brilliant than on the clearest night.  Peering down, a chill\n runs down your spine as you realize just how far above the lands of Crossroads\nyou really are.\n",
+         "altitude" : null
+      },
+      "spokes1@wiz" : {
+         "exits" : {
+            "e" : "spokes2"
+         },
+         "flags" : [
+            "Light",
+            "Party"
+         ],
+         "zone" : "wiz",
+         "title" : "Spokes' Room",
+         "id" : "spokes1",
+         "description" : "\n     You have entered Spokes' room.  There is not much too this room at all.\nThere is a circular bed in the center of the room, seven feet in diameter.\nThe bed is covered in blue silk sheets, which appear purple because of the\nrooms red lighting.  The lights comes from the five red lamps in each corner\nof this pentagonal dwelling.\n",
+         "altitude" : null
+      },
+      "shi1@wiz" : {
+         "exits" : {
+            "w" : "camelot281@camelot",
+            "s" : "temple@start"
+         },
+         "flags" : [
+            "Light",
+            "Private",
+            "Party",
+            "Peaceful"
+         ],
+         "zone" : "wiz",
+         "title" : "Sky Solar",
+         "id" : "shi1",
+         "description" : "\n     Stepping inside, you find yourself surrounded by lush, exotic\ngreenery.  Overhead, you can see a great expanse of sky and traces of\nclouds through the glass dome.  The scent of tropical flowers fill your\nsenses as you are soothed by the soft songs of birds flitting amid the\nfoliage.  In the center of the room, you see long, low, comfortable\nlooking divans that invite you to rest your travel-weary body.  On a\nmarble table near one of the divans, sits a crystal bowl filled with\nplump, glistening strawberries.  Next to the bowl is a chafing dish\nholding some warm, smooth, liquid chocolate.\n     The whisper of water draws your gaze to a natural rock waterfall\nthat spills into a deep, crystal-clear pool.  A hint of steam rising from\nthe surface tells you the water will be warm, soothing and most inviting.\n  There are exits to the west and south.\n",
+         "altitude" : null
+      },
+      "chump2@wiz" : {
+         "exits" : {
+            "s" : "Chump1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Death",
+            "Onwater"
+         ],
+         "zone" : "wiz",
+         "title" : "The Hazy lake",
+         "id" : "Chump2",
+         "description" : "\n     U enter the lake and begin to feel really lost and extremely confused.\nYour last thoughts are...'Man, what a Chump.'\n",
+         "altitude" : null
+      },
+      "sadie1@wiz" : {
+         "exits" : {
+            "d" : "beach2@beach",
+            "s" : "Green@village"
+         },
+         "flags" : [],
+         "zone" : "wiz",
+         "title" : "Sadie's Room",
+         "id" : "sadie1",
+         "description" : "\nAs you wander across a beautiful stretch of beach, you spy a lonely beach\nhouse. Your curiousity draws you inside.  Once there you are amazed with\nthe beauty and peacfulness you find.  On the West wall you see nothing but\nwindows looking out over the most beautiful ocean you have ever seen.  The\nwaters are so blue, it seems like the sky has come down to touch the edge\nof the earth. There is a lit fireplace, with burning logs crackling. \nThere are candles burning on the mantle produce a peaceful dim atmosphere\nabout the room.  In the shadows of light you see a soft white bear skin\nrug in front of the fireplace. Soft music is playing.  You feel so at ease\nhere.  It would be easy to fall fast asleep if not careful. This place must\nbelong to someone who loves the ocean very much.  \nAs you lie by the fire you hear the faint roar of the ocean waves outside. \n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "peter@wiz" : {
+         "damage" : "15",
+         "location" : "tinkerbell1",
+         "armor" : "0",
+         "name" : "Peter",
+         "examine" : "\n&+WPeter Pan &Nsays '&+YHey, do you know my best friend, Tinkerbell?'",
+         "description" : "\n&+CPeter Pan &Nis flitting around the room.",
+         "strength" : "150",
+         "speed" : "5",
+         "pname" : "PeterPan",
+         "aggression" : "0"
+      },
+      "anook@wiz" : {
+         "eflags" : [
+            "Negfrost"
+         ],
+         "damage" : "15",
+         "location" : "Chump1",
+         "armor" : "5",
+         "name" : "Anook",
+         "description" : "\nThe eskimo you see before you looks lost and forlorn, for she is without her\nigloo and dogteam.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "275",
+         "speed" : "5",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "defender@wiz" : {
+         "eflags" : [
+            "Fireball",
+            "Frost",
+            "Shock",
+            "Missile",
+            "NegFireball",
+            "NegFrost",
+            "NegShock",
+            "NegMissile"
+         ],
+         "damage" : "30",
+         "location" : "Raymond1",
+         "armor" : "60",
+         "name" : "Defender",
+         "examine" : "",
+         "description" : "\nYou see the Defender of Raymond's armor, released from the closet.",
+         "sflags" : "{ }",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Defender"
+      },
+      "fabio@wiz" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegFrost",
+            "NegShock"
+         ],
+         "damage" : "20",
+         "location" : "shi1",
+         "armor" : "10",
+         "name" : "Fabio",
+         "examine" : "\nLonghaired, tall with vacant blue eyes, this barbarian smiles at you, showing\na perfect set of teeth.",
+         "description" : "Fabio the Barbarian, proud and vain, stands before you.",
+         "strength" : "400",
+         "speed" : "5",
+         "aggression" : "0",
+         "pname" : "Fabio",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap"
+         ]
+      },
+      "stallion@wiz" : {
+         "damage" : "15",
+         "location" : "spokes1",
+         "armor" : "10",
+         "name" : "stallion",
+         "examine" : "\nAs you look at Diana, she rears back onto her hind legs, showing off.",
+         "description" : "\nSpokes' beautiful black stallion roams here looking for Spokes.",
+         "strength" : "250",
+         "speed" : "5",
+         "pname" : "Diana",
+         "aggression" : "0"
+      }
+   }
+}

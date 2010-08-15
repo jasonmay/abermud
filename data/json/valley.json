@@ -1,0 +1,887 @@
+{
+   "obj" : {
+      "gates@valley" : {
+         "desc[1]" : "The dwarven gates are closed.",
+         "location" : "IN_ROOM:citadel",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "gates",
+         "examine" : "A sign on the gates reads \"Pete's Pearly Hire Co.\"",
+         "linked" : "gates@cave",
+         "maxstate" : "1",
+         "desc[0]" : "The dwarven gates are open."
+      },
+      "spring@valley" : {
+         "location" : "IN_ROOM:spring",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "spring",
+         "examine" : "\nIts waters are clear and inviting.  A pity you never learned to swim."
+      },
+      "ladder2elf@valley" : {
+         "desc[1]" : "A rope leads up the tree.",
+         "location" : "IN_ROOM:ESide",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "rope",
+         "name" : "ladder2elf",
+         "desc[2]" : "A knotted rope leads up the tree.",
+         "linked" : "ladder@treehouse",
+         "pname" : "ladder",
+         "maxstate" : "2",
+         "desc[0]" : "A rope ladder leads up the tree."
+      },
+      "branch@valley" : {
+         "desc[1]" : "An old branch lies here.",
+         "damage" : "3",
+         "location" : "IN_ROOM:bridge",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "altname" : "stick",
+         "name" : "branch",
+         "examine" : "\nYou see a large section of dead tree, what were you expecting to find?",
+         "size" : "8",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "1",
+         "desc[0]" : "A burning branch lies here."
+      },
+      "loaf@valley" : {
+         "location" : "IN_ROOM:hut",
+         "oflags" : [
+            "Destroyed",
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "loaf",
+         "examine" : "The bread is somewhat stale, but still quite edible.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A fairly stale, but edible loaf has been left here."
+      },
+      "pitcher@valley" : {
+         "location" : "IN_ROOM:spring",
+         "weight" : "2",
+         "name" : "pitcher",
+         "examine" : "\nThe pitcher has been carved out of a single piece of rock, probably granite.",
+         "bvalue" : "10",
+         "desc[0]" : "A small stone pitcher has been placed here.",
+         "size" : "2"
+      },
+      "apple@valley" : {
+         "desc[1]" : "A large apple hangs from a tree branch.",
+         "location" : "IN_ROOM:tforest",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "food",
+         "name" : "apple",
+         "examine" : "\nThis is a big juicy red apple, not the type that would be poisoned at all...",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "bvalue" : "40",
+         "desc[0]" : "A large juicy apple lies temptingly before you."
+      },
+      "bed@valley" : {
+         "location" : "IN_ROOM:hut",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bed"
+      },
+      "ropeeast@valley" : {
+         "desc[1]" : "A rope hangs east across to the ledge.",
+         "location" : "IN_ROOM:Steps",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "altname" : "ladder",
+         "name" : "RopeEast",
+         "desc[2]" : "A knotted rope hangs east across to the ledge.",
+         "linked" : "RopeWest@Ledge",
+         "pname" : "rope",
+         "maxstate" : "2",
+         "desc[0]" : "A rope ladder leads east across to the ledge."
+      },
+      "knife@valley" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:citadel",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "knife",
+         "examine" : "This knife does not look as if it was meant for peeling fruit!",
+         "size" : "8",
+         "weight" : "8",
+         "bvalue" : "20",
+         "desc[0]" : "\nA short sharp knife has been left here, probably lobbed by some dwarf."
+      },
+      "pie@valley" : {
+         "location" : "IN_ROOM:hut",
+         "oflags" : [
+            "Destroyed",
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "pie",
+         "examine" : "\nThe pie is fairly fresh, but it looks like it was somewhat hastily made.\nThe rabbit filling leaks a bit.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A cold, but fairly fresh rabbit pie has been put here."
+      },
+      "lodestone@valley" : {
+         "location" : "IN_ROOM:RBank",
+         "weight" : "5",
+         "altname" : "rock",
+         "name" : "lodestone",
+         "examine" : "On closer examination you identify this rock as a lodestone.",
+         "bvalue" : "100",
+         "desc[0]" : "A dull red rock has been tossed aside.",
+         "size" : "5"
+      },
+      "rose@valley" : {
+         "desc[1]" : "A beautiful rose grows amongst the trees.",
+         "location" : "IN_ROOM:eside",
+         "oflags" : [
+            "GetFlips",
+            "Wearable"
+         ],
+         "altname" : "flower",
+         "name" : "rose",
+         "examine" : "It has the words \"For Her\" written on the stalk.",
+         "desc[2]" : "A flaccid rose has been left here by someone.",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "2",
+         "maxstate" : "2",
+         "bvalue" : "40",
+         "desc[0]" : "\nA small but beautiful rose has been left here, slowly wilting away.",
+         "aflags" : [
+            "Chest"
+         ]
+      }
+   },
+   "loc" : {
+      "rbank@valley" : {
+         "exits" : {
+            "w" : "Fedge3",
+            "e" : "Hillock@eastcoast",
+            "n" : "Eside",
+            "d" : "Fedge3",
+            "s" : "Fedge5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Rocky Bank",
+         "id" : "Rbank",
+         "description" : "\n   You are standing on a steep rocky bank which leads down to the south, north\nand west.  Beyond a lip to the east the bank descends sharply into green and\nfertile hill country.  From here you can look west across the forest, and north\ntowards the grey marshes.\n",
+         "altitude" : "650"
+      },
+      "falls@valley" : {
+         "exits" : {
+            "e" : "Mpath",
+            "d" : "pool@frobozz"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "The Hidden Falls",
+         "id" : "Falls",
+         "description" : "\n   You stand in an alcove carved by wind and water into the side of a mountain.\nHigh above the ground, water rushes over a ledge.  In a spectacular array of\ncolors and sounds, the airborn water falls to the rocks below.  A path leads\neast along the ridge rocks.  There is a small pool of water among the rocks\nbelow you.  It appears you can climb down to the pool if you're unencumbered.\nThere is a blinking construction sign here.\n",
+         "altitude" : "550"
+      },
+      "beside@valley" : {
+         "exits" : {
+            "w" : "Stream3",
+            "e" : "Send",
+            "s" : "Tforest2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Beside The Stream",
+         "id" : "Beside",
+         "description" : "\n   You are on the south bank of the stream. Thick forest lies in all directions\nsave north where the stream gurgles its way eastwards, following a deep\nchannel, too wide to cross.\n   Through the trees to the east you can make out a small bridge.\n",
+         "altitude" : "750"
+      },
+      "evalley@valley" : {
+         "exits" : {
+            "w" : "Wedge",
+            "e" : "Tforest4",
+            "n" : "Ftrack",
+            "s" : "Gap"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "End Of Valley",
+         "id" : "Evalley",
+         "description" : "\n   You are at the southern end of the valley.  The trees continue north, east\nand west from here, but to the south everything ends in a huge black cliff,\nwhich soars high up above you at close to vertical for several hundred feet.\nOn its top your eyes seem to catch the flicker of something glittering.\n   A narrow rocky crack leads south down the narrowing gap between the cliffs.\n",
+         "altitude" : "750"
+      },
+      "bridge@valley" : {
+         "exits" : {
+            "w" : "Stream2",
+            "e" : "Sedge",
+            "n" : "Oak",
+            "s" : "Send"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Humpbacked Bridge",
+         "id" : "Bridge",
+         "description" : "\n   You are standing at the northern end of a small humpbacked bridge, a\npicturesque stone structure coated in moss and creepers, which crosses the\nstream to the south of you.  Paths seem to converge here from the north, west\nand east.\n",
+         "altitude" : "750"
+      },
+      "npath@valley" : {
+         "exits" : {
+            "u" : "Leap@Castle",
+            "n" : "Fedge5",
+            "d" : "Fedge5",
+            "s" : "Piper@Cave"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Narrow Path",
+         "id" : "Npath",
+         "description" : "\n   You are following a narrow difficult path, which twists its way along a\ncrack in the cliff rising up to the south.  A set of steps lead up towards the\ncliff top climb past a narrow, slanted cave-mouth which leads south into\ndarkness.\n",
+         "altitude" : "850"
+      },
+      "rclearing@valley" : {
+         "exits" : {
+            "w" : "Crest@EForest",
+            "e" : "Tforest2",
+            "n" : "Stream3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Rocky Clearing",
+         "id" : "Rclearing",
+         "description" : "\n   You are standing in a rocky clearing, strewn with the debris of the many\nlandslides, which have cascaded down the cliffs to the south and west.  To the\neast and north paths plunge back in amongst the trees that fill most of the\nvalley.  A precarious path leads over the mountain to the West\n",
+         "altitude" : "750"
+      },
+      "nwcorner@valley" : {
+         "exits" : {
+            "w" : "Passage@EForest",
+            "e" : "Northernend",
+            "s" : "Stream1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "North-Western Corner Of Valley",
+         "id" : "NWcorner",
+         "description" : "\n   You are standing in amongst some trees in the North-Western corner of the\nvalley.  Soaring cliffs bar any route either north or west, but the valley\nextends to the south and east.  A passage leads through the mountain to the\nWest.\n",
+         "altitude" : "800"
+      },
+      "tops@valley" : {
+         "exits" : {
+            "u" : "Steps2",
+            "n" : "talon1@talon",
+            "d" : "Oak",
+            "s" : "Oak"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Tree Tops",
+         "id" : "Tops",
+         "description" : "\n   You are almost at the bottom of the cliff path, which leads south into thick\nforest.  The steps wind up and up the cliff dwindling to a mere speck.  The\nTalon quest would normally be north, but thanks to the kindness of Iguana,\nwe nolonger have this zone.\n",
+         "altitude" : "750"
+      },
+      "hut@valley" : {
+         "exits" : {
+            "e" : "Ledge"
+         },
+         "flags" : [],
+         "zone" : "valley",
+         "title" : "Hidden Hut",
+         "id" : "Hut",
+         "description" : "\n   You are inside a low wooden hut, carefully concealed by greenery and rocks\nto provide a quiet, restful shelter.  The only exit is a door to the east.  To\njudge from the bed in the corner, the occupant of the hut was here recently.\n",
+         "altitude" : "750"
+      },
+      "gap@valley" : {
+         "exits" : {
+            "u" : "hills1@caledonia",
+            "n" : "Evalley",
+            "s" : "Deep"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "End Of Gap",
+         "id" : "Gap",
+         "description" : "\n   You are in a narrow rocky gap, which closes up to the south, ending in a\nwide arched tunnel, with a carved entrance.  The tunnel plunges south into the\nmountain depths.  To the north the gap widens up leading back out into the\nforest.  The mountainside to the west looks as if it could be climbed.\n",
+         "altitude" : "800"
+      },
+      "tforest2@valley" : {
+         "exits" : {
+            "w" : "Rclearing",
+            "e" : "Ftrack",
+            "n" : "Beside",
+            "s" : "Wedge"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Thick Forest",
+         "id" : "Tforest2",
+         "description" : "\n   You are lost in thick forest, tangles of bushes and the shadowy tree trunks\nprevent you from seeing far in any direction.  Even the surrounding mountains\ndon't help, as they are in all directions.\n",
+         "altitude" : "750"
+      },
+      "sedge@valley" : {
+         "exits" : {
+            "w" : "Bridge",
+            "e" : "Tforest",
+            "n" : "FSedge"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Stream Edge",
+         "id" : "Sedge",
+         "description" : "\n   You are on the edge of the stream, hemmed close to the water by thick\nbushes, and clumps of reeds. One or two gaps in the hedges allow you to squeeze\nnorthwards back into the main part of the forest.  Other paths allow you to\nwalk east or west along the stream bank.\n",
+         "altitude" : "750"
+      },
+      "fedge3@valley" : {
+         "exits" : {
+            "w" : "Pool",
+            "e" : "Rbank",
+            "n" : "Eside",
+            "s" : "Fedge5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Forests Edge",
+         "id" : "Fedge3",
+         "description" : "\n   You are standing on the eastern edge of the forest, which gives way to a\nsteep rocky bank.  The trees continue north, south, and west.\n",
+         "altitude" : "750"
+      },
+      "stream2@valley" : {
+         "exits" : {
+            "w" : "Stream1",
+            "e" : "Bridge",
+            "n" : "Northernend"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Stream",
+         "id" : "Stream2",
+         "description" : "\n   You are standing beside a narrow stream, which tinkles eastwards through the\ntrees.  You can travel through the trees in any direction save south where the\nstream has cut a deep channel too wide to ford.\n",
+         "altitude" : "750"
+      },
+      "mpath@valley" : {
+         "exits" : {
+            "w" : "Falls",
+            "e" : "Woods@Blizzard"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "The Mountain Path",
+         "id" : "Mpath",
+         "description" : "\n   You are walking along a narrow mountain path that winds west and upwards\ninto the nearby mountains.  Rocks and trees obscure your view of the valley\nbelow.  The path runs east and west along a small ridge.  To the west you hear\na sustained sound that reminds you of thunder.\n",
+         "altitude" : "500"
+      },
+      "gully2@valley" : {
+         "exits" : {
+            "w" : "Gully1",
+            "e" : "Northend",
+            "u" : "Gully1",
+            "d" : "Northend"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Narrow Gully",
+         "id" : "Gully2",
+         "description" : "\n   You are clambering through a narrow rocky gully, the floor of which is\nsloping at an angle of almost 45 degrees.  Shale and loose stone make the gully\ntreacherous, as your feet send bits of rock tumbling down into the valley\nbelow.\n   You can clamber up the gully towards a turning or down towards the valley\nfloor.\n",
+         "altitude" : "900"
+      },
+      "eside@valley" : {
+         "exits" : {
+            "e" : "Rbank",
+            "u" : "^ladder2elf",
+            "n" : "Tforest",
+            "s" : "Fedge3"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Eastern Side Of Valley",
+         "id" : "Eside",
+         "description" : "\n   You are standing amidst some trees on the eastern edge of the valley.  The\nforest continues to the north south and west, although a deep stream bars any\nexit west.  To the east the trees thin out rapidly, giving way to a steep bare\nrocky rise.\n",
+         "altitude" : "700"
+      },
+      "steps2@valley" : {
+         "exits" : {
+            "u" : "Steps",
+            "d" : "Tops"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "The Cliff Steps",
+         "id" : "Steps2",
+         "description" : "\n   You are standing on a set of narrow winding steps carved into the side of a\ncliff face. The steps climb up and up above you, but below you can now make out\nthe ground, and the treetops.\n",
+         "altitude" : "800"
+      },
+      "oak@valley" : {
+         "exits" : {
+            "w" : "Northernend",
+            "e" : "FSedge",
+            "n" : "Tops",
+            "s" : "Bridge"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Oak Forest",
+         "id" : "Oak",
+         "description" : "\n   You are walking through well spaced oak trees, whose low tangled branches\nreach out around you, confusing the light and rustling quietly in the wind.\n   The forest extends in all direction save from the north, where it stops\nabruptly, cut short by a massive towering cliff.  To the west there seems to be\na clearing.\n   A path climbs up the cliff side to the north.\n",
+         "altitude" : "700"
+      },
+      "stream1@valley" : {
+         "exits" : {
+            "w" : "Spring",
+            "e" : "Stream2",
+            "n" : "NWcorner",
+            "s" : "Stream3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Stream",
+         "id" : "Stream1",
+         "description" : "\n   You are standing beside a small silvery stream which gurgles gently from a\nrocky hollow to the west, to run gently eastwards between the trees which\nsurround you.\n   Tracks lead through the trees in all directions.\n",
+         "altitude" : "750"
+      },
+      "steps@valley" : {
+         "exits" : {
+            "u" : "Moorpath",
+            "d" : "Steps2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "The Cliff Steps",
+         "id" : "Steps",
+         "description" : "\n   You are standing on a set of narrow winding steps carved into the side of a\nsteep cliff face.  The steps descend down as far as you can see, and\ncontemplating them for a long time leaves you feeling giddy.  The steps lead\nupwards to the lip of the cliff.  To the east, but well beyond your jumping\nability you can see a wide ledge and what appears to be a cave mouth.\n",
+         "altitude" : "850"
+      },
+      "ftrack@valley" : {
+         "exits" : {
+            "w" : "Tforest2",
+            "e" : "Pool",
+            "u" : "Temple@Start",
+            "n" : "Send",
+            "s" : "Evalley"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Forest Track",
+         "id" : "Ftrack",
+         "description" : "\n   You are following a track which leads north through the forest towards a\nhumpbacked bridge.  The track seems to form here from a myriad of tiny trails\nwhich lead in all directions through the trees.\n   A wide paved path winds up a huge mound set amongst the trees.  On the top\nof the mound you can make out a temple of some sort.\n",
+         "altitude" : "750"
+      },
+      "fsedge@valley" : {
+         "exits" : {
+            "w" : "Oak",
+            "e" : "Tforest",
+            "n" : "Path",
+            "s" : "Sedge"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Forests Edge",
+         "id" : "FSedge",
+         "description" : "\n   You stand on the edge of the forest, which extends south east and west as\nfar as you can see. To the north the trees give way to a grassy hill.  A narrow\nworn path leads north up the hill.\n   To the south the path through the forest is almost blocked by thick hedges,\nbut a few gaps enable you to squeeze through.\n",
+         "altitude" : "700"
+      },
+      "paths@valley" : {
+         "exits" : {
+            "w" : "Citadel",
+            "u" : "Nibelung18@nibelung",
+            "d" : "Gully1",
+            "s" : "Gully1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Rocky Paths Winding Down",
+         "id" : "Paths",
+         "description" : "\n   You are following a rocky path winding down southward into a narrow, steep-\nsided valley.  To the west, not far away, a huge citadel is set on the mountain\ntop.  The path you are on runs past it, heading up into the higher ground among\nthe lower peaks of this range.\n",
+         "altitude" : "1150"
+      },
+      "tforest@valley" : {
+         "exits" : {
+            "w" : "Sedge",
+            "e" : "Tforest",
+            "n" : "FSedge",
+            "s" : "Eside"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Thick Forest",
+         "id" : "Tforest",
+         "description" : "\n   You are lost amidst a thick mass of trees and bushes which block direct\npaths forcing you to take long and probably circular routes in your attempts to\nget past them.\n",
+         "altitude" : "700"
+      },
+      "citadel@valley" : {
+         "exits" : {
+            "e" : "Paths",
+            "s" : "^gates"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Citadel Entrance",
+         "id" : "Citadel",
+         "description" : "\n   You are standing at the entrance to a huge citadel, carved from the very\nrock of the mountains.  A pair of gates are set into the southern edge of the\ndeep rocky bowl you stand in.  A single exit leads east down a narrow path into\nthe valley below.\n",
+         "altitude" : "1150"
+      },
+      "northend@valley" : {
+         "exits" : {
+            "w" : "Gully2",
+            "u" : "Gully2",
+            "s" : "Northernend"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "North End Of Valley",
+         "id" : "Northend",
+         "description" : "\n   You are at the northern end of a steep mountainous valley.  The valley\nextends away southward as far as you can see, flanked on each side by the\nmighty mountain peaks towering into the clouds.\n   A narrow gully leads west up the side of a cliff, climbing at a dangerous\nlooking angle towards the top.\n",
+         "altitude" : "800"
+      },
+      "stream3@valley" : {
+         "exits" : {
+            "w" : "Edge",
+            "e" : "Beside",
+            "n" : "Stream1",
+            "s" : "Rclearing"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Stream",
+         "id" : "Stream3",
+         "description" : "\n   You are standing on the south bank of a small gently flowing stream,\nsurrounded by dense forest.  Gaps through the trees allow you to travel in any\ndirection with a small amount of effort and squeezing through bushes.\n   The water is so shallow here you can easily wade across.\n",
+         "altitude" : "800"
+      },
+      "pool@valley" : {
+         "exits" : {
+            "w" : "Ftrack",
+            "e" : "Fedge3",
+            "n" : "Bank",
+            "s" : "Tforest4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Pool",
+         "id" : "Pool",
+         "description" : "\n   You are standing beside a small, smooth pool, fed from a stream which runs\nin from the north.  The cool shallow waters of the pool flicker and dance with\nthe breeze, reflecting the swaying trees, and the tiny dark specks of the\nthousands of insects which dart back and forth around you.\n   Paths lead through the forest in all directions from here.\n",
+         "altitude" : "750"
+      },
+      "gully1@valley" : {
+         "exits" : {
+            "e" : "Gully2",
+            "u" : "Paths",
+            "n" : "Paths",
+            "d" : "Gully2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Narrow Gully",
+         "id" : "Gully1",
+         "description" : "\n   The path turns sharply from the north here, plunging steeply down into a\nnarrow gully, a mere six feet wide.\n",
+         "altitude" : "1000"
+      },
+      "wedge@valley" : {
+         "exits" : {
+            "e" : "Evalley",
+            "n" : "Tforest2",
+            "s" : "Evalley"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Western Edge Of Valley",
+         "id" : "WEdge",
+         "description" : "\n   The forest stops here, against the sheer rocky walls that form the western\nedge of the valley.  Elsewhere the forest continues, although it doesn't appear\nto go much further south before the reaching the southern end of the valley.\n",
+         "altitude" : "700"
+      },
+      "send@valley" : {
+         "exits" : {
+            "w" : "Beside",
+            "e" : "Bank",
+            "n" : "Bridge",
+            "s" : "Ftrack"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "South End Of Bridge",
+         "id" : "Send",
+         "description" : "\n   You are standing at the south end of a small picturesque humpbacked bridge.\nThe bridge crosses a stream to the north, while paths run south into the\nforest, and east and west along the banks of the stream.\n",
+         "altitude" : "750"
+      },
+      "path@valley" : {
+         "exits" : {
+            "n" : "C_Yard@Church",
+            "d" : "FSedge",
+            "s" : "FSedge"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Path",
+         "id" : "Path",
+         "description" : "\n   You stand on a path which leads down into the valley and northwards into a\nchurchyard of some sort, with a ruined church standing beside it. The path also\nleads back down into the valley.\n",
+         "altitude" : "750"
+      },
+      "spring@valley" : {
+         "exits" : {
+            "w" : "Ledge",
+            "e" : "Stream1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Spring",
+         "id" : "Spring",
+         "description" : "\n   You are standing in a small rocky hollow on the edge of the western\nmountains.  A single spring trickles from the rock here, running eastwards out\ninto the valley proper.  Apart from east back into the valley, steep rocky\ncliffs bar all exits, save west along a narrow ledge.\n",
+         "altitude" : "750"
+      },
+      "fedge5@valley" : {
+         "exits" : {
+            "w" : "Tforest4",
+            "e" : "Rbank",
+            "u" : "Npath",
+            "n" : "Fedge3",
+            "s" : "Npath"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Forests Edge",
+         "id" : "Fedge5",
+         "description" : "\n   You are standing amidst a few trees on the edge of the forest, hedged in by\na sheer rock wall to the south, and a steep, but climbable, bank to the east.\nElsewhere the forest thickens up and continues.\n   A narrow path climbs along a twisty ledge along the cliff to the south.\n",
+         "altitude" : "750"
+      },
+      "moorpath@valley" : {
+         "exits" : {
+            "n" : "Misty1@Moor",
+            "d" : "Steps",
+            "s" : "Steps"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Path",
+         "id" : "Moorpath",
+         "description" : "\n   You are following a narrow winding path off the moors, leading south towards\nsome steps.  The view southward from here is breathtaking, as the steps are at\nthe edge of a steep drop, giving you a superb vantage upon the wild misty\nmountains.  The peaks soar high around you, walling in a wide valley.  The lush\ngreen of the valley deep below, and the glittering of water contrast superbly\nwith the snowy cloud veiled mountain tops, a stunning picture that you could\ncontemplate for hours...\n",
+         "altitude" : "900"
+      },
+      "ledge@valley" : {
+         "exits" : {
+            "w" : "Hut",
+            "e" : "Spring"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Ledge",
+         "id" : "Ledge",
+         "description" : "\n   You are standing on a narrow ledge overlooking the crystal pool where the\nspring issues from the mountain.  The ledge leads east back to the spring or\nwest towards a small hut, carefully concealed from view.\n",
+         "altitude" : "750"
+      },
+      "northernend@valley" : {
+         "exits" : {
+            "w" : "NWcorner",
+            "e" : "Oak",
+            "n" : "Northend",
+            "s" : "Stream2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Northern End Of Valley",
+         "id" : "Northernend",
+         "description" : "\n   You are near the northern end of the valley.  The dark mountains close up\naround you to the north, although a narrow track for some reason leads north\nright towards the very end of the valley.  Elsewhere around you the view is\nobscured by trees, although from the south you can hear the musical tinkle of\nwater.\n",
+         "altitude" : "750"
+      },
+      "edge@valley" : {
+         "exits" : {
+            "e" : "Stream3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Forest Edge",
+         "id" : "Edge",
+         "description" : "\n   You are standing in amongst some trees.  The forest continues only to the\neast, as all other routes are blocked by tall sheer cliffs.\n",
+         "altitude" : "800"
+      },
+      "bank@valley" : {
+         "exits" : {
+            "w" : "Send",
+            "s" : "Pool"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Stream Bank",
+         "id" : "Bank",
+         "description" : "\n   You are standing on the bank of the stream, which swings round from north\nto east.  Tracks lead south and west through the trees.\n",
+         "altitude" : "750"
+      },
+      "deep@valley" : {
+         "exits" : {
+            "n" : "Gap",
+            "s" : "Dark"
+         },
+         "flags" : [],
+         "zone" : "valley",
+         "title" : "Deep Tunnel",
+         "id" : "Deep",
+         "description" : "\n   You are following a deep, seemingly magically lit tunnel, which plunges\nbeneath the mountain.  The tunnel continues north and south.\n",
+         "altitude" : null
+      },
+      "dark@valley" : {
+         "exits" : {
+            "n" : "Deep",
+            "s" : "Gate@Blizzard"
+         },
+         "flags" : [],
+         "zone" : "valley",
+         "title" : "Dark Tunnel",
+         "id" : "Dark",
+         "description" : "\n   You are following a dim magically lit tunnel which burrows deep underground.\nThe walls glow gently showing off the myriad sparkling colors of the tunnel\nwalls, which were quite evidently dug, and are certainly not natural.\n",
+         "altitude" : null
+      },
+      "tforest4@valley" : {
+         "exits" : {
+            "w" : "Evalley",
+            "e" : "Fedge5",
+            "n" : "Pool",
+            "s" : "Evalley"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "valley",
+         "title" : "Thick Forest",
+         "id" : "Tforest4",
+         "description" : "\n   You are lost in thick forest, tangles of bushes and the shadowy tree trunks\nprevent you from seeing far in any direction.  Even the surrounding mountains\ndon't help, as they are in all directions.\n",
+         "altitude" : "750"
+      }
+   },
+   "mob" : {
+      "chicken@valley" : {
+         "damage" : "10",
+         "location" : "send",
+         "armor" : "0",
+         "aggression" : "0",
+         "name" : "chicken",
+         "description" : "Chicken Licken is here, with a worried look on his face.",
+         "strength" : "50"
+      },
+      "piper@valley" : {
+         "damage" : "10",
+         "location" : "fedge5",
+         "armor" : "0",
+         "name" : "piper",
+         "description" : "The Piper stands here.",
+         "strength" : "50",
+         "speed" : "1",
+         "pname" : "The Piper",
+         "aggression" : "0"
+      },
+      "mindy@valley" : {
+         "damage" : "5",
+         "location" : "send",
+         "name" : "mindy",
+         "examine" : "\nBaby's wittle shmoo dog Mindy. She is a cute little dog with some spaniel,\nsome terrier, and a bit of beagle in her. Her cute floppy ears cover part\nof her beagle-like face. She has a small black and white spotted body and\njumps at you playfully as you look at her closer.",
+         "description" : "Mindy, the cute little dog is here wagging her tail happily.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "20",
+         "speed" : "8",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoZap",
+            "NoExorcise",
+            "NoAlias",
+            "NoPunt"
+         ]
+      }
+   }
+}

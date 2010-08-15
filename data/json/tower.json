@@ -1,0 +1,569 @@
+{
+   "obj" : {
+      "coins@tower" : {
+         "location" : "IN_ROOM:Treasure",
+         "weight" : "10",
+         "altname" : "silver",
+         "name" : "coins",
+         "examine" : "\nThe coins are very tarnished, but seem to be silver.  They could be valuable.\n",
+         "bvalue" : "200",
+         "desc[0]" : "Some silver coins lie piled up in a heap on the floor.",
+         "size" : "10"
+      },
+      "potion@tower" : {
+         "location" : "IN_ROOM:Treasure",
+         "weight" : "2",
+         "name" : "potion",
+         "examine" : "The potion has a small label saying \"Restore Strength\" on it.",
+         "bvalue" : "250",
+         "desc[0]" : "A potion of restore strength lies here.",
+         "size" : "2"
+      },
+      "fountain@tower" : {
+         "location" : "IN_ROOM:Sorceror",
+         "oflags" : [
+            "Extinguish",
+            "Lit",
+            "NoGet"
+         ],
+         "name" : "fountain",
+         "examine" : "\nYou see a fountain of fire, not the sort to jump into on New Year's Day,\nthough it would seem very cosy to have in the living room."
+      },
+      "orb@tower" : {
+         "location" : "IN_ROOM:Treasure",
+         "weight" : "6",
+         "altname" : "gold",
+         "name" : "orb",
+         "examine" : "\nThe orb is golden, and probably dates from the times of the good king Pippin.\n",
+         "bvalue" : "50",
+         "desc[0]" : "A small gold orb has been left here.",
+         "size" : "2"
+      },
+      "shelf@tower" : {
+         "desc[1]" : "\nA wooden shelf on the north wall looks as if it once held many ancient tomes.",
+         "location" : "IN_ROOM:Black",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "wall",
+         "name" : "shelf",
+         "examine" : "\nThe shelf seems to be on some kind of wooden sliders, maybe you could push it?",
+         "linked" : "Panel",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "\nA wooden shelf on the north wall looks as if it once held many ancient tomes.\nThere is a passageway beneath the shelf."
+      },
+      "candlestick@tower" : {
+         "desc[1]" : "A hefty gold candlestick lies here, with a candle in it.",
+         "damage" : "4",
+         "location" : "IN_ROOM:Spell",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "stick",
+         "name" : "candlestick",
+         "examine" : "\nThe candlestick is very ornate, with fancy scrollwork and small figurines of\ndragons and knights locked in mortal combat.\n",
+         "desc[2]" : "A hefty gold candlestick lies here.",
+         "size" : "20",
+         "state" : "2",
+         "weight" : "40",
+         "maxstate" : "2",
+         "bvalue" : "100",
+         "desc[0]" : "\nA hefty gold candlestick lies here, a candle flickering brightly within it."
+      },
+      "blue_candle@tower" : {
+         "desc[1]" : "There is a blue candle here.",
+         "location" : "IN_ROOM:Candle",
+         "oflags" : [
+            "Extinguish",
+            "Lightable"
+         ],
+         "altname" : "blue",
+         "name" : "blue_candle",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "pname" : "candle",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A blue candle burns here, emitting a soft flickering flame."
+      },
+      "panel@tower" : {
+         "location" : "IN_ROOM:Candle",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "door",
+         "name" : "panel",
+         "linked" : "Shelf",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A small wooden panel is open in the southern wall."
+      },
+      "scroll@tower" : {
+         "location" : "IN_ROOM:Scroll",
+         "weight" : "1",
+         "name" : "scroll",
+         "examine" : "\nThe scroll reads:\n\"Read the words in the true light\n and be amazed as you take flight\"\n",
+         "bvalue" : "20",
+         "desc[0]" : "A tattered scroll lies at your feet.",
+         "size" : "20"
+      },
+      "door_tower@tower" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:base",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "Door_Tower",
+         "examine" : "\nYou see a jet black marble door, etched with runes and strange symbols which\nyou do not recognise.  You see no locks of mortal means.\n",
+         "linked" : "Door_Golem@Castle",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "fire@tower" : {
+         "desc[1]" : "The ashes of a fire smoulder in a corner.",
+         "location" : "IN_ROOM:Potion",
+         "oflags" : [
+            "NoGet",
+            "Lit",
+            "Lightable",
+            "Extinguish"
+         ],
+         "altname" : "ashes",
+         "name" : "fire",
+         "maxstate" : "1",
+         "desc[0]" : "A large fire blazes away in one corner."
+      },
+      "book@tower" : {
+         "desc[1]" : "A large book rests on the shelf.",
+         "location" : "IN_ROOM:Black",
+         "oflags" : [
+            "Getflips"
+         ],
+         "name" : "book",
+         "examine" : "\nThe book details the preparation of a potion of magical strength recovery.\n\nIngredients:\n     Bat's Wing\n     Toad's Foot\n     Lizard's Claw\n     Four Pints of Blood\n     Eagle's Egg\n\nStir well and leave to simmer for at least 10 minutes.\n",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "There is a large mystical looking book here."
+      },
+      "runes@tower" : {
+         "location" : "IN_ROOM:Scroll",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "writing",
+         "name" : "runes",
+         "examine" : "\nThe runes are worn and hard to read, but seem to allude to some kind of\nmystical ball which radiated a 'true color' of some sort.\n",
+         "maxstate" : "1",
+         "desc[0]" : "Some mysterious runes are etched on the wall."
+      },
+      "crown@tower" : {
+         "location" : "IN_ROOM:Treasure",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "gold",
+         "name" : "crown",
+         "examine" : "\nThe crown seems suitable for a king, since it is lavishly decorated with\nsparkling gems and has a silken lining.  Wouldn't you want to be one ?",
+         "size" : "12",
+         "weight" : "10",
+         "bvalue" : "400",
+         "desc[0]" : "A beautiful gold crown lies here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "red_candle@tower" : {
+         "desc[1]" : "There is a red candle here.",
+         "location" : "IN_ROOM:Candle",
+         "oflags" : [
+            "Extinguish",
+            "Lightable"
+         ],
+         "altname" : "red",
+         "name" : "red_candle",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "pname" : "candle",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A red candle burns here, emitting a soft flickering flame."
+      },
+      "wand@tower" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:Magical",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "wand",
+         "examine" : "It seems to be discharged.",
+         "size" : "2",
+         "state" : "0",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A short, slender wand lies here."
+      },
+      "green_candle@tower" : {
+         "desc[1]" : "There is a green candle here.",
+         "location" : "IN_ROOM:Candle",
+         "oflags" : [
+            "Extinguish",
+            "Lightable"
+         ],
+         "altname" : "green",
+         "name" : "green_candle",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "pname" : "candle",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A green candle burns here, emitting a soft flickering flame."
+      },
+      "door_shazareth@tower" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Sorceror",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Door_Shazareth",
+         "examine" : "\nThe door is made of solid marble and perfectly fits the doorway.  It is very\nsmooth and appears to be unmarked in any way, except for a single, large red\neye at its center, which appears to follow you around the room.\n",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_Treasure",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "ball@tower" : {
+         "desc[1]" : "The centre of the room is filled with an expanding ball of light.",
+         "location" : "IN_ROOM:Treasure",
+         "oflags" : [
+            "NoGet",
+            "Lit",
+            "Lightable",
+            "Extinguish"
+         ],
+         "altname" : "light",
+         "name" : "ball",
+         "examine" : "\nYou attempt to examine the ball closer, but it's much too bright.  Your eyes\nstart watering and you get a headache.\n",
+         "desc[2]" : "The room is filled with an expanding ball of light.",
+         "maxstate" : "3",
+         "desc[0]" : "A ball of light floats in the centre of the room."
+      },
+      "door_treasure@tower" : {
+         "desc[1]" : "The door to the north is closed.",
+         "location" : "IN_ROOM:Treasure",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Door_Treasure",
+         "examine" : "\nThe door is made of solid marble and perfectly fits the doorway.  It is very\nsmooth and appears to be unmarked in any way, except for a single, large red\neye at its center, which appears to follow you around the room.\n",
+         "desc[2]" : "The door to the north is locked.",
+         "linked" : "Door_Shazareth",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door to the north is open."
+      },
+      "ring@tower" : {
+         "location" : "WORN_BY:Shazareth",
+         "oflags" : [
+            "Wearable",
+            "RegenHealth"
+         ],
+         "altname" : "gold",
+         "name" : "ring",
+         "examine" : "It looks as if it will fit tightly on any sized finger.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A small gold ring has been dropped here.",
+         "aflags" : [
+            "Hand"
+         ]
+      },
+      "chute_bot@tower" : {
+         "location" : "IN_ROOM:Magical",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "chute",
+         "name" : "chute_Bot",
+         "desc[0]" : "There is a chute in the wall, too small to climb up."
+      },
+      "hole@tower" : {
+         "location" : "IN_ROOM:Sorceror",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hole",
+         "examine" : "It's about 2 inches in diameter.",
+         "maxstate" : "1",
+         "desc[0]" : "There is a small hole carved into the south wall."
+      },
+      "chute_top@tower" : {
+         "location" : "IN_ROOM:Ante",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "chute",
+         "name" : "chute_Top",
+         "desc[0]" : "There is a chute in the wall, too small to climb down."
+      },
+      "cauldron@tower" : {
+         "location" : "IN_ROOM:Potion",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "cauldron",
+         "examine" : "\nIt is the latest luxury model, with contoured edges,inlaid panneling, a timer,\nand even a simmer control!  It is also dark black and big enough to cook a man\nin!\n",
+         "maxstate" : "1",
+         "desc[0]" : "A large cauldron bubbles away before you."
+      },
+      "staff@tower" : {
+         "location" : "IN_ROOM:Treasure",
+         "weight" : "3",
+         "altname" : "runed",
+         "name" : "staff",
+         "examine" : "\nYou attempt to decipher the runes.  They seem to be some kind of a protective\nspell, maybe against other magical items.\n",
+         "bvalue" : "400",
+         "desc[0]" : "A long runed staff lies here, etched with strange markings.",
+         "size" : "10"
+      },
+      "sceptre@tower" : {
+         "damage" : "7",
+         "location" : "IN_ROOM:Ante",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "scepter",
+         "name" : "sceptre",
+         "examine" : "\nThe sceptre tapers to a narrow end, scarcely two inches in diameter, which\nseems scratched and worn away.  Otherwise, the silver finish is perfect.\n",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A large silver sceptre has been placed here."
+      }
+   },
+   "loc" : {
+      "treasure@tower" : {
+         "exits" : {
+            "n" : "^Door_Treasure"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Treasure Chamber",
+         "id" : "Treasure",
+         "description" : "\n   This is large treasure store and naturally everything in it belongs to the\nSorceror and might take a rather nasty attitude to being removed.\n",
+         "altitude" : null
+      },
+      "levitation@tower" : {
+         "exits" : {
+            "u" : "Ante",
+            "s" : "Wraith"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Levitation Room",
+         "id" : "Levitation",
+         "description" : "\n   You find yourself in a completely black room, even light seems afraid to go\nhere.  It is completely bare of adornment, and even the walls wouldn't stay if\nthey had somewhere else to lean!\n   There is a single exit in the ceiling high above, and another to the south.\nYou seem to be floating!\n",
+         "altitude" : null
+      },
+      "spell@tower" : {
+         "exits" : {
+            "n" : "Potion"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Spell Room",
+         "id" : "Spell",
+         "description" : "\n   This room would appear to be one of the Sorceror's many spell rooms as its\nscorched walls show the signs of many a fireball spell or a more dangerous\nvariant of it.  A single scorched doorway leads north.\n",
+         "altitude" : null
+      },
+      "potion@tower" : {
+         "exits" : {
+            "s" : "Spell"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Potion Store Room",
+         "id" : "Potion",
+         "description" : "\n   This would appear to be the potion preparation and store room for the\nSorceror, as around you lie shelves once lined with glass vials and bottles\nready to be filled.  A single doorway leads south.\n",
+         "altitude" : null
+      },
+      "sorceror@tower" : {
+         "exits" : {
+            "w" : "Ante",
+            "e" : "Ledge",
+            "s" : "^Door_Shazareth"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Sorceror's Room",
+         "id" : "Sorceror",
+         "description" : "\n   You are in a very large and exceedingly magical room, devoted to the pursuit\nof magic in all its form.  Flames dance over the walls to light the scene,\nalthough they are merely for effect as a permanent fire fountain erupts from\nthe center of the room.  Gargoyles wink at you from the walls and objects move\nquietly in complex patterns, getting on with the jobs they have been given.\n   There is a door to the south, and a doorway leads west.  A splendid arched\nwindow looks east across the world.\n",
+         "altitude" : null
+      },
+      "black@tower" : {
+         "exits" : {
+            "w" : "Base",
+            "n" : "^Shelf"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Black Tower",
+         "id" : "Black",
+         "description" : "\n   You are in a small dark room in one of the lower levels of the black tower.\nIt appears to be a store room for spell ingredients which line the shelves on\nthe northern wall.  An archway leads west to the tower entrance.\n",
+         "altitude" : null
+      },
+      "candle@tower" : {
+         "exits" : {
+            "w" : "Scroll",
+            "s" : "^Panel"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Candle Room",
+         "id" : "Candle",
+         "description" : "\n   This room looks like a cross between a Queen video and Madam Toussaud's\nafter an arson attack, as candles of all shapes, sizes and colors fill the\nroom.  A passageway leads west.\n",
+         "altitude" : null
+      },
+      "ante@tower" : {
+         "exits" : {
+            "e" : "Sorceror",
+            "d" : "Levitation"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Sorceror's Ante-room",
+         "id" : "Ante",
+         "description" : "\n   You are standing in the Sorceror's ante-room, which sizzles with magical\nenergy.  Apart from the hole in the floor the only exit available is to the\neast.\n",
+         "altitude" : null
+      },
+      "scroll@tower" : {
+         "exits" : {
+            "e" : "Candle"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Scroll Room",
+         "id" : "Scroll",
+         "description" : "\n   You are in a large, dry and well lit store room for scrolls, which would\nappear to be the Sorceror's supply.\n",
+         "altitude" : null
+      },
+      "wraith@tower" : {
+         "exits" : {
+            "w" : "Magical",
+            "n" : "Levitation"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Wraith Room",
+         "id" : "Wraith",
+         "description" : "\n   You find yourself in the room where the Sorceror keeps his undead creatures,\nin particular his pet Wraith, until he needs them.  Exits lead north and west.\n",
+         "altitude" : null
+      },
+      "base@tower" : {
+         "exits" : {
+            "e" : "Black",
+            "n" : "^Door_Tower"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Base of the Tower",
+         "id" : "Base",
+         "description" : "\n   You are now inside the black tower which stretches up out of the castle.\nThe walls glisten with sorcery and from high above come the noises of high\nlevel spells and experimentation.\n   A doorway leads east into another room, and a door lies north.\n",
+         "altitude" : null
+      },
+      "magical@tower" : {
+         "exits" : {
+            "e" : "Wraith"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "Magical Item Storeroom",
+         "id" : "Magical",
+         "description" : "\n   You are standing in a large storeroom which would be packed with magical\nartifacts in normal times but it seems that the Sorceror is using their power\nfor a large spell project that crackles from the top-most level of the tower.\n   A doorway leads through to the east to the wraith room, and you tremble at\nthe thought of the creature which may lie through it, a creature which has been\nknown to slay even Enchanters in but a single blow...\n",
+         "altitude" : null
+      },
+      "ledge@tower" : {
+         "exits" : {
+            "w" : "Sorceror"
+         },
+         "flags" : [],
+         "zone" : "tower",
+         "title" : "The Window Ledge",
+         "id" : "Ledge",
+         "description" : "\n   You are perched on a precarious window ledge looking down the black tower\ninto the courtyard below.  The safety (?) of the Sorceror's Room is back west.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "wraith@tower" : {
+         "damage" : "10",
+         "location" : "Wraith",
+         "armor" : "0",
+         "name" : "wraith",
+         "description" : "The chill shadowy form of a wraith swirls and dances around you.",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The Wraith",
+         "aggression" : "50",
+         "pflags" : [
+            "NoSummon"
+         ],
+         "mflags" : [
+            "Cross",
+            "DrainScr"
+         ]
+      },
+      "cat@tower" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "10",
+         "location" : "Sorceror",
+         "armor" : "0",
+         "name" : "cat",
+         "description" : "A black cat stares at you from the shadows, purring gently.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "20",
+         "pname" : "The Cat",
+         "aggression" : "0"
+      },
+      "shazareth@tower" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "10",
+         "location" : "Sorceror",
+         "armor" : "0",
+         "name" : "shazareth",
+         "description" : "Shazareth The Sorceror stands here.",
+         "strength" : "99",
+         "speed" : "0",
+         "pname" : "Shazareth",
+         "aggression" : "100",
+         "pflags" : [
+            "NoSummon"
+         ]
+      }
+   }
+}

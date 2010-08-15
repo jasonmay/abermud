@@ -1,0 +1,471 @@
+{
+   "obj" : {
+      "sign@batcave" : {
+         "location" : "IN_ROOM:batcave1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sign",
+         "examine" : "The sign reads :\n\tBeware, this area is not for the weak or lone adventurer.  Certain\n\tdeath awaits those who venture without friend or care.\n",
+         "desc[0]" : "A battered old sign sits on the floor here."
+      },
+      "seppuku_dagger_knife@batcave" : {
+         "damage" : "7",
+         "location" : "IN_ROOM:batcave4",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "seppuku_dagger",
+         "name" : "seppuku_dagger_knife",
+         "examine" : "Be careful with this knife!  You may cut yourself.\n",
+         "size" : "30",
+         "pname" : "knife",
+         "weight" : "10",
+         "bvalue" : "200",
+         "desc[0]" : "A blood stained seppuku dagger rests here."
+      },
+      "sword_katana@batcave" : {
+         "damage" : "17",
+         "location" : "IN_ROOM:batcave4",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "altname" : "sword",
+         "name" : "sword_katana",
+         "examine" : "The blade is engraved with the scenes of great battles of samuri swordsmen.\n",
+         "size" : "90",
+         "pname" : "katana",
+         "weight" : "10",
+         "bvalue" : "750",
+         "desc[0]" : "A magnificent katana rests here."
+      },
+      "hand@batcave" : {
+         "location" : "IN_ROOM:batcave1",
+         "weight" : "7",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "hand",
+         "examine" : "Probably left by some unfortunate adventurer.  Now known as \"lefty\".\n",
+         "bvalue" : "20",
+         "desc[0]" : "A bloody dismembered hand is laying here.",
+         "size" : "7"
+      },
+      "samuri_body@batcave" : {
+         "location" : "IN_ROOM:batcave4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "samuri",
+         "pname" : "body",
+         "name" : "samuri_body",
+         "examine" : "The body has been stripped of all its armor, adornments and dignity.\nYou notice a knife wound in the belly of the samuri.\n",
+         "desc[0]" : "The body of a dead samuri lays here."
+      }
+   },
+   "loc" : {
+      "batcave4@batcave" : {
+         "exits" : {
+            "n" : "batcave3"
+         },
+         "flags" : [
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Tomb of the Unknown Samurai",
+         "id" : "batcave4",
+         "description" : "\nThis room stands as a shrine to the mightiest samurai warrior of them all,\nToshiro Mafune.  The walls are covered with Japanese water color paintings\nof fantastic battles and proud Shogun rulers.\n",
+         "altitude" : null
+      },
+      "batcave19@batcave" : {
+         "exits" : {
+            "n" : "batcave20",
+            "s" : "batcave18"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "empty room",
+         "id" : "batcave19",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave16@batcave" : {
+         "exits" : {
+            "w" : "batcave15",
+            "n" : "batcave18"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Hall of Riddles",
+         "id" : "batcave16",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave21@batcave" : {
+         "exits" : {
+            "s" : "batcave20"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Temple of Akasha",
+         "id" : "batcave21",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave2@batcave" : {
+         "exits" : {
+            "w" : "batcave1",
+            "e" : "batcave3"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Bat Cave",
+         "id" : "batcave2",
+         "description" : "\nYou have entered a large cave.  High above you, through the dim light you\nmake out what appears to be hundreds of small stalactites hanging from the\nceiling.  There is a strong musty smell in the air which is almost\noverpowering.  Belatedly you realize the smell comes from the animal droppings\nwhich cover the floor, and that what you thought were stalactites are actually\nhundreds of vampire bats.\n",
+         "altitude" : null
+      },
+      "batcave15@batcave" : {
+         "exits" : {
+            "w" : "batcave14",
+            "e" : "batcave16",
+            "n" : "batcave17"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "empty room",
+         "id" : "batcave15",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave17@batcave" : {
+         "exits" : {
+            "e" : "batcave18",
+            "s" : "batcave15"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "batcave",
+         "title" : "Guillotine Room",
+         "id" : "batcave17",
+         "description" : "\nYou notice the room spinning about you.  Ultimately you realize it is not the\nroom, but your head which is rolling across the blood stained floor as your\nbody collapses to the ground.\n",
+         "altitude" : null
+      },
+      "batcave13@batcave" : {
+         "exits" : {
+            "e" : "batcave14",
+            "s" : "batcave12"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "empty room",
+         "id" : "batcave13",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave1@batcave" : {
+         "exits" : {
+            "e" : "batcave2",
+            "n" : "falls@valley"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Bottom of the stairs.",
+         "id" : "batcave1",
+         "description" : "\nFlashing lights come from the room to the west, and a strange flapping sound\ncomes from the east.\n",
+         "altitude" : null
+      },
+      "batcave22@batcave" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "batcave",
+         "title" : "Punjee Trap",
+         "id" : "batcave22",
+         "description" : "\nIts only after you notice the many poison punjee sticks pertruding from\nyour chest, that you realize you have surely taken a wrong turn.  You\nwon't make this mistake again.\n",
+         "altitude" : null
+      },
+      "batcave20@batcave" : {
+         "exits" : {
+            "n" : "batcave21",
+            "s" : "batcave19"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Enkil's Tomb",
+         "id" : "batcave20",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave7@batcave" : {
+         "exits" : {
+            "n" : "batcave8",
+            "s" : "batcave6"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Drafty Room",
+         "id" : "batcave7",
+         "description" : "\nGee, it's dark and windy in here!\n",
+         "altitude" : null
+      },
+      "batcave18@batcave" : {
+         "exits" : {
+            "w" : "batcave17",
+            "n" : "batcave19",
+            "s" : "batcave16"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "empty room",
+         "id" : "batcave18",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave8@batcave" : {
+         "exits" : {
+            "w" : "batcave9",
+            "e" : "batcave10",
+            "s" : "batcave7"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Drafty Room",
+         "id" : "batcave8",
+         "description" : "\nGee, it's dark and windy in here!\n",
+         "altitude" : null
+      },
+      "batcave3@batcave" : {
+         "exits" : {
+            "w" : "batcave2",
+            "s" : "batcave4"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Dark Hall",
+         "id" : "batcave3",
+         "description" : "\nThis hall is dark and musty.  The walls are made of solid soil and the floor\nis muddy and silppery.  A small light appears in the room south of you and\ncurious flapping sounds can be heard from the west.\n",
+         "altitude" : null
+      },
+      "batcave14@batcave" : {
+         "exits" : {
+            "w" : "batcave13",
+            "e" : "batcave15"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "empty room",
+         "id" : "batcave14",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave10@batcave" : {
+         "exits" : {
+            "w" : "batcave8",
+            "e" : "batcave11",
+            "n" : "batcave12"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Werewolf's Parlor",
+         "id" : "batcave10",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave6@batcave" : {
+         "exits" : {
+            "w" : "batcave22",
+            "e" : "batcave5",
+            "n" : "batcave7"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Drafty Room",
+         "id" : "batcave6",
+         "description" : "\nGee, it's dark and windy in here!\n",
+         "altitude" : null
+      },
+      "batcave5@batcave" : {
+         "exits" : {
+            "w" : "batcave6",
+            "e" : "batcave1"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Laboratory",
+         "id" : "batcave5",
+         "description" : "\nYou are standing in an old laboratory that seems to have been abandoned long\nago.  Discarded glassware on high shelves is filled with dust, the long\nsince rotted-out remains of spell components and magical substances.  Off to\nthe west you hear a low moaning sound, but all you hear is quiet to the\neast.\n",
+         "altitude" : null
+      },
+      "batcave11@batcave" : {
+         "exits" : {
+            "w" : "batcave10"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Werewolf's Den",
+         "id" : "batcave11",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave12@batcave" : {
+         "exits" : {
+            "n" : "batcave13",
+            "s" : "batcave10"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "empty room",
+         "id" : "batcave12",
+         "description" : "\n<desc pending>\n",
+         "altitude" : null
+      },
+      "batcave9@batcave" : {
+         "exits" : {
+            "e" : "batcave8"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Drafty Room",
+         "id" : "batcave9",
+         "description" : "\nGee, it's dark and windy in here!\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "bat3@batcave" : {
+         "damage" : "10",
+         "location" : "batcave2",
+         "speed" : "0",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "bat",
+         "name" : "bat3",
+         "description" : "A bat is hanging out here, sensing fresh warm blood.",
+         "strength" : "60"
+      },
+      "bat5@batcave" : {
+         "damage" : "10",
+         "location" : "batcave2",
+         "armor" : "0",
+         "name" : "bat5",
+         "description" : "A Bat is hanging out here, sensing fresh warm blood.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "bat",
+         "aggression" : "98"
+      },
+      "spirit@batcave" : {
+         "damage" : "10",
+         "location" : "batcave4",
+         "speed" : "0",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "spirit",
+         "name" : "spirit",
+         "description" : "The spirit of the dead samuri is here, angered by your presence.",
+         "strength" : "340"
+      },
+      "bat1@batcave" : {
+         "damage" : "10",
+         "location" : "batcave2",
+         "armor" : "0",
+         "name" : "bat1",
+         "description" : "A bat is hanging out here, sensing fresh warm blood.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "bat",
+         "aggression" : "98"
+      },
+      "bat4@batcave" : {
+         "damage" : "10",
+         "location" : "batcave2",
+         "speed" : "0",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "bat",
+         "name" : "bat4",
+         "description" : "A bat is hanging out here, sensing fresh warm blood.",
+         "strength" : "60"
+      },
+      "bat2@batcave" : {
+         "damage" : "10",
+         "location" : "batcave2",
+         "armor" : "0",
+         "name" : "bat2",
+         "description" : "A bat is hanging out here, sensing fresh warm blood.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "bat",
+         "aggression" : "98"
+      }
+   }
+}

@@ -1,0 +1,355 @@
+{
+   "obj" : {
+      "pick@quarry" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:store",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "pick",
+         "examine" : "\nThis pick is of the heavy mining variety used for splitting rocks, its quite\ngood on heads too...",
+         "size" : "6",
+         "weight" : "4",
+         "bvalue" : "10",
+         "desc[0]" : "An old pick has been dumped here."
+      },
+      "gem@quarry" : {
+         "location" : "IN_ROOM:south",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "uncut",
+         "name" : "gem",
+         "examine" : "\nYou could easily mistake this uncut gem for a small stone, but it does have\nsome special sheen.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A small, uncut gem lies before you."
+      },
+      "nugget1@quarry" : {
+         "location" : "IN_ROOM:n_face",
+         "altname" : "gold",
+         "name" : "Nugget1",
+         "examine" : "It's just a large gold nugget, shaped like a rock.",
+         "size" : "1",
+         "pname" : "nugget",
+         "weight" : "8",
+         "bvalue" : "200",
+         "desc[0]" : "A large gold nugget twinkles before you."
+      },
+      "nugget@quarry" : {
+         "location" : "IN_ROOM:r_face",
+         "weight" : "5",
+         "altname" : "gold",
+         "name" : "nugget",
+         "examine" : "It's just a small gold nugget, shaped like a small rock.",
+         "bvalue" : "50",
+         "desc[0]" : "A gold nugget twinkles before you.",
+         "size" : "1"
+      },
+      "rock@quarry" : {
+         "location" : "IN_ROOM:south",
+         "weight" : "1",
+         "name" : "rock",
+         "examine" : "\nThe rock appears to have some kind of gemstone imprisoned within it.  If only\nyou could find a suitable tool to smash the rock with.",
+         "bvalue" : "1",
+         "desc[0]" : "A small rock has been dropped here.",
+         "size" : "1"
+      },
+      "ale@quarry" : {
+         "location" : "IN_ROOM:store",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "skin",
+         "name" : "ale",
+         "examine" : "How about getting loaded?  The ale looks good enough.",
+         "size" : "10",
+         "weight" : "5",
+         "bvalue" : "10",
+         "desc[0]" : "A skin of ale has been dropped here."
+      },
+      "golddust@quarry" : {
+         "location" : "IN_ROOM:end",
+         "weight" : "5",
+         "altname" : "dust",
+         "name" : "golddust",
+         "examine" : "I wouldn't open the bag if I were you.  You might spill it!",
+         "bvalue" : "150",
+         "desc[0]" : "A small bag of gold dust lies in a crumpled heap at your feet.",
+         "size" : "10"
+      },
+      "hammer@quarry" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:north",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "hammer",
+         "examine" : "\nThe hammer is worn from years of use, and you wonder how many people have hit\nthemselves on the fingers with this over the years, and also of course ponder\nhow many peoples fingers you could hit with it too!",
+         "size" : "8",
+         "weight" : "6",
+         "bvalue" : "10",
+         "desc[0]" : "A large hammer has been left around here for some reason."
+      },
+      "sandwich@quarry" : {
+         "location" : "IN_ROOM:store",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "sandwich",
+         "examine" : "It's a two-inch thick roast beast sandwich!",
+         "size" : "5",
+         "weight" : "5",
+         "bvalue" : "10",
+         "desc[0]" : "A delicious-looking sandwich has been put here."
+      }
+   },
+   "loc" : {
+      "drop@quarry" : {
+         "exits" : {
+            "w" : "r_land@Blizzard",
+            "e" : "South",
+            "d" : "South"
+         },
+         "flags" : [],
+         "zone" : "quarry",
+         "title" : "Steep Drop",
+         "id" : "Drop",
+         "description" : "\n   You are following a path which plunges steeply downwards into a narrow\nquarry, which stretches out to the east.\n",
+         "altitude" : null
+      },
+      "tunnel@quarry" : {
+         "exits" : {
+            "w" : "South",
+            "d" : "Ladder_UU"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "quarry",
+         "title" : "Tunnel",
+         "id" : "Tunnel",
+         "description" : "\n   You are crouched in a low damp tunnel.  A single exit leads west out of the\ntunnel.  A treacherous wooden ladder leads down into the darkness below\n",
+         "altitude" : null
+      },
+      "ladder_uu@quarry" : {
+         "exits" : {
+            "e" : "End",
+            "u" : "Tunnel",
+            "d" : "Ladder_UD"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Ladder",
+         "id" : "Ladder_UU",
+         "description" : "\n   You are standing at the bottom of a treacherous wooden ladder.  Another\nladder descends yet further through the floor of the rough-hewn tunnel you find\nyourself in.  The tunnel leads east.\n",
+         "altitude" : null
+      },
+      "mine@quarry" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "quarry",
+         "title" : "Mineshaft",
+         "id" : "Mine",
+         "description" : "\n   The rungs break beneath your feet and without a chance to recover you plunge\nhelplessly into the black cold water below...\n",
+         "altitude" : null
+      },
+      "north@quarry" : {
+         "exits" : {
+            "e" : "Store",
+            "s" : "South"
+         },
+         "flags" : [],
+         "zone" : "quarry",
+         "title" : "Quarry North",
+         "id" : "North",
+         "description" : "\n   You are at the north end of the quarry.  The quarry extends away to the\nsouth.  To the east a small battered stone hut appears to have once served the\nworkmen's needs.\n",
+         "altitude" : null
+      },
+      "ladder_ud@quarry" : {
+         "exits" : {
+            "e" : "Mine_T",
+            "u" : "Ladder_UU"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Bottom Of Ladder",
+         "id" : "Ladder_UD",
+         "description" : "\n   You are standing at the bottom of a long wooden ladder which travels upwards\nthrough a square shaft in the roof.  The tunnel you are standing in leads\neastwards.\n",
+         "altitude" : null
+      },
+      "r_face@quarry" : {
+         "exits" : {
+            "w" : "Ledge"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Rough Face",
+         "id" : "R_Face",
+         "description" : "\n   You are crouched in a narrow passage, at what appears to have been a face\nof some sort.  To the west is a huge wooden ladder which plunges down deeper\nunderground, as well as climbing upwards towards the surface.\n",
+         "altitude" : null
+      },
+      "store@quarry" : {
+         "exits" : {
+            "w" : "North"
+         },
+         "flags" : [],
+         "zone" : "quarry",
+         "title" : "Stone Store",
+         "id" : "Store",
+         "description" : "\n   You are in a cold, damp stone store, which was evidently warm and cosy at\none time.  The store appears to still be used by someone, as there are marks on\nthe floor.\n",
+         "altitude" : null
+      },
+      "end@quarry" : {
+         "exits" : {
+            "w" : "Ladder_UU"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Tunnel's End",
+         "id" : "End",
+         "description" : "\n   You are at the end of a small tunnel, at what appears to be an abandoned\nface.  The only way back is westwards.\n",
+         "altitude" : null
+      },
+      "ledge@quarry" : {
+         "exits" : {
+            "e" : "R_Face",
+            "u" : "Ladder_D1",
+            "d" : "Ladder_D2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Ladder Ledge",
+         "id" : "Ledge",
+         "description" : "\n   You are standing on a narrow wooden ladder which plunges deep into the\nground.  A single narrow and very roughly hewn passage leads east off the\nside of the ladder.\n",
+         "altitude" : null
+      },
+      "ladder_d3@quarry" : {
+         "exits" : {
+            "u" : "Ladder_D2",
+            "d" : "Ladder_D4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Ladder",
+         "id" : "Ladder_D3",
+         "description" : "\n   You are hanging onto a vertical wooden ladder, slippery with damp and hard\nto grasp with your wet cold fingers.  All around you the narrow tight walls of\nthe shaft seem to press crushingly inwards.\n",
+         "altitude" : null
+      },
+      "ladder_d2@quarry" : {
+         "exits" : {
+            "u" : "Ledge",
+            "d" : "Ladder_D3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Ladder",
+         "id" : "Ladder_D2",
+         "description" : "\n   You are standing on a wet slippery ladder that plunges down a narrow mossy\nshaft deep underground.  The air is already noticeably colder and you feel\nclosed in and claustrophobic.\n",
+         "altitude" : null
+      },
+      "south@quarry" : {
+         "exits" : {
+            "w" : "Drop",
+            "e" : "Tunnel",
+            "u" : "Drop",
+            "n" : "North"
+         },
+         "flags" : [],
+         "zone" : "quarry",
+         "title" : "Quarry South",
+         "id" : "South",
+         "description" : "\n   You stand at the southern end of the quarry.  To the north the sides of the\nquarry are marked by years of excavations. A path to the west climbs steeply up\namongst the stones.  It appears some mining was in progress here as there is a\nlow tunnel to the east.\n",
+         "altitude" : null
+      },
+      "ladder_d4@quarry" : {
+         "exits" : {
+            "u" : "Ladder_D3",
+            "d" : "Bottom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Ladder",
+         "id" : "Ladder_D4",
+         "description" : "\n   You are in a narrow constricting vertical shaft, hanging onto a cold and\nrotting ladder.  The walls are damp and wet, and you too are also soaking and\ncold.  Your numb fingers are finding it hard to keep a grip on the ladder, and\nyour feet slide off rungs with frightening regularity.\n",
+         "altitude" : null
+      },
+      "ladder_d1@quarry" : {
+         "exits" : {
+            "u" : "Mine_T",
+            "d" : "Ledge"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Ladder",
+         "id" : "Ladder_D1",
+         "description" : "\n   You are scrambling down a ladder which descends through a narrow vertical\nshaft in the rock.  Water streams down the sides of the ladder making it\nslippery and dangerous.\n",
+         "altitude" : null
+      },
+      "mine_t@quarry" : {
+         "exits" : {
+            "w" : "Ladder_UD",
+            "d" : "Ladder_D1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Mine Tunnel",
+         "id" : "Mine_T",
+         "description" : "\n   You stand at the eastern end of a narrow mine tunnel.  Apart from scrambling\nback westwards along the tunnel, a narrow wooden ladder exits downwards through\na shaft at your feet.\n",
+         "altitude" : null
+      },
+      "n_face@quarry" : {
+         "exits" : {
+            "e" : "Bottom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Narrow Face",
+         "id" : "N_Face",
+         "description" : "\n   You are crouched at a narrow face deep in the mine.  The low roof and tight\nrough walls seem to be closing in on you, and you shake as you think of the\nhuge weight of rock above your head.  A single crawl leads east to a ladder.\n",
+         "altitude" : null
+      },
+      "bottom@quarry" : {
+         "exits" : {
+            "w" : "N_Face",
+            "u" : "Ladder_D4",
+            "d" : "N_Face"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "quarry",
+         "title" : "Bottom Of The Mine",
+         "id" : "Bottom",
+         "description" : "\n   You are standing at the bottom of a treacherous ladder which climbs up a\nnarrow vertical shaft.  To the west you can crawl along a low, heavily shored\nup tunnel towards a face.  Another ladder leads further down, but it is rotted\nand descends only about ten feet before it dissappears into the flooded depths\nof the mine.\n   To judge from the moss and slime on the wall, this part of the mine is often\nflooded too.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {}
+}

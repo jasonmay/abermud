@@ -1,0 +1,461 @@
+{
+   "obj" : {
+      "door1stchamber@icecave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:hall",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door1StChamber",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door2StChamber",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "pillowcase@icecave" : {
+         "desc[1]" : "A soggy pillowcase has been dumped here.It is closed.",
+         "location" : "IN_ROOM:bedroom",
+         "oflags" : [
+            "Container",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "case",
+         "name" : "pillowcase",
+         "desc[2]" : "A soggy pillowcase has been dumped here. It is locked.",
+         "state" : "0",
+         "size" : "50",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "A soggy pillowcase has been dumped here."
+      },
+      "hole_g_hall@icecave" : {
+         "location" : "IN_ROOM:G_hall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Hole_G_Hall",
+         "linked" : "Hole_Snow_Cave",
+         "state" : "1",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "A hole has been dug north through the snow."
+      },
+      "pendant@icecave" : {
+         "location" : "IN_ROOM:magician",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "pendant",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "50",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "A crystal pendant has been dropped here."
+      },
+      "door2stchamber@icecave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:storage",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door2StChamber",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door1StChamber",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "key@icecave" : {
+         "location" : "IN_CONTAINER:pillowcase",
+         "weight" : "1",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "iron",
+         "name" : "key",
+         "desc[0]" : "An old rusty iron key lies here.",
+         "size" : "1"
+      },
+      "coronet@icecave" : {
+         "location" : "IN_CONTAINER:chest",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "coronet",
+         "size" : "3",
+         "weight" : "3",
+         "bvalue" : "300",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A jewelled coronet glitters before you."
+      },
+      "hole_snow_cave@icecave" : {
+         "location" : "IN_ROOM:S_Cave",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "hole",
+         "name" : "Hole_Snow_Cave",
+         "linked" : "Hole_G_Hall",
+         "desc[0]" : "A hole has been dug south through the snow."
+      },
+      "fountain@icecave" : {
+         "location" : "IN_ROOM:palace",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "fountain",
+         "desc[0]" : "A small icy fountain burbles gently in the centre of the room."
+      },
+      "chest@icecave" : {
+         "desc[1]" : "A huge iron bound chest lies before you.",
+         "location" : "IN_ROOM:store",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "chest",
+         "desc[2]" : "A huge iron bound chest lies before you. The chest is locked.",
+         "state" : "1",
+         "maxstate" : "2",
+         "desc[0]" : "A huge iron bound chest lies open before you."
+      },
+      "westicethrone@icecave" : {
+         "desc[1]" : "A huge crystal throne of pure ice dominates the east wall.",
+         "location" : "IN_ROOM:throne",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "WestIceThrone",
+         "examine" : "\nThis throne is fit for a king, but it looks very inviting to a weary traveler\nsuch as yourself.",
+         "linked" : "EastIceThrone",
+         "state" : "1",
+         "pname" : "throne",
+         "maxstate" : "1",
+         "desc[0]" : "\nIcy shards lie scattered here, around an opening leading eastwards."
+      },
+      "dagger@icecave" : {
+         "damage" : "18",
+         "location" : "IN_ROOM:palace",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "icy",
+         "name" : "dagger",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "100",
+         "desc[0]" : "A strange, thin icy dagger lies at your feet."
+      },
+      "easticethrone@icecave" : {
+         "desc[1]" : "\nThe western exit is blocked by what appears to be the back of a throne.",
+         "location" : "IN_ROOM:cave",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "EastIceThrone",
+         "linked" : "WestIceThrone",
+         "state" : "1",
+         "pname" : "throne",
+         "maxstate" : "1",
+         "desc[0]" : "Slivers of ice twinkle in the light from the western exit."
+      },
+      "cupboard_bedroom@icecave" : {
+         "desc[1]" : "The cupboard is closed.",
+         "location" : "IN_ROOM:bedroom",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "Cupboard_Bedroom",
+         "desc[2]" : "The cupboard is locked.",
+         "linked" : "Cupboard_Store",
+         "state" : "2",
+         "pname" : "cupboard",
+         "maxstate" : "2",
+         "desc[0]" : "The cupboard is open."
+      },
+      "cupboard_store@icecave" : {
+         "desc[1]" : "The cupboard is closed.",
+         "location" : "IN_ROOM:store",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "Cupboard_Store",
+         "desc[2]" : "The cupboard is locked.",
+         "linked" : "cupboard_bedroom",
+         "state" : "2",
+         "pname" : "cupboard",
+         "maxstate" : "2",
+         "desc[0]" : "The cupboard is open."
+      }
+   },
+   "loc" : {
+      "bedroom@icecave" : {
+         "exits" : {
+            "n" : "Palace",
+            "s" : "^cupboard_bedroom"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Royal Bedroom",
+         "id" : "Bedroom",
+         "description" : "\n   You are in the royal bedroom.  The bed appears to have melted.  There is a\nlarge cupboard on the south wall and a doorway to the north.\n",
+         "altitude" : null
+      },
+      "s_cave@icecave" : {
+         "exits" : {
+            "e" : "pass2@blizzard",
+            "s" : "^hole_snow_cave"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Snow Cave",
+         "id" : "S_Cave",
+         "description" : "\n   You are in a glittering ice cave, its floor and walls covered with loose,\ndeep snow.  The cavemouth is east.\n",
+         "altitude" : null
+      },
+      "storage@icecave" : {
+         "exits" : {
+            "s" : "^Door2StChamber"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Storage Chamber",
+         "id" : "Storage",
+         "description" : "\n   This is just a small store room, filled with empty crates and boxes, some\nmarked 'Fragile' and others 'Feel Free to Shake and Break'.  There is a single\ndoorway in the south wall.\n",
+         "altitude" : null
+      },
+      "passage@icecave" : {
+         "exits" : {
+            "w" : "Cave",
+            "e" : "Shrine"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Icy Passage",
+         "id" : "Passage",
+         "description" : "\n   The ice on the walls is clear enough for you to see the stone beneath it.\nThe floor is a sheet of smooth ice, so you find it easier to move by\nsliding your feet that by actually lifting each foot up.\n",
+         "altitude" : null
+      },
+      "store@icecave" : {
+         "exits" : {
+            "n" : "^cupboard_store"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "The Secret Store Room",
+         "id" : "Store",
+         "description" : "\n   You are in a secret room.  The thick stone walls are damp and the room\nsmells musty and unpleasant.  There is a cupboard on the north wall.\n",
+         "altitude" : null
+      },
+      "tunnel@icecave" : {
+         "exits" : {
+            "n" : "Cave",
+            "s" : "N_Tunnel"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Ice Tunnel",
+         "id" : "Tunnel",
+         "description" : "\n   You find yourself walking in a well lit tunnel with ice covered walls,\nceiling, and floor.  In addition to the frozen footprints of the Ice People you\nalso make out some hoofprints.  The tunnel continues to the south.  An exit to\nthe north leads to the relative safety of a great hall.\n",
+         "altitude" : null
+      },
+      "hall@icecave" : {
+         "exits" : {
+            "w" : "Pool",
+            "n" : "^Door1StChamber"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Hall Of The Ice People",
+         "id" : "Hall",
+         "description" : "\n   This is the great Hall Of The Ice People.  This is where they come to eat,\nto drink, and to be merry.  Carvings on the walls tell fascinating sagas of the\ngiant Thrym and Mjolnir, of the ship Skidbladnir and Ragnarok, and of the One\nTree, Yggdrasil.  The hall is deserted now, and you wonder where everyone is\nhiding.  There is some sort of door in the northern wall.\n",
+         "altitude" : null
+      },
+      "pool@icecave" : {
+         "exits" : {
+            "w" : "Gambling",
+            "e" : "Hall",
+            "n" : "N_Tunnel"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Crystal Pool",
+         "id" : "Pool",
+         "description" : "\n   You stand in awe in a vast cave dominated by a crystal pool.  The surface of\nthe water is a perfect mirror, casting silvery reflections on the walls.  Magic\nfills the air, and in the water there are manatees and manatoos.  Dewdrops\nglisten on the rocks and edelweiss grow in the most unlikely places, among\nstones and unfinished ice sculptures.\n",
+         "altitude" : null
+      },
+      "magician@icecave" : {
+         "exits" : {
+            "e" : "Palace"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Magician's Research Room",
+         "id" : "Magician",
+         "description" : "\n   You are in a magician's research room, surrounded by a clutter of useless\nequipment. This room is also entirely ice, and to judge from the damp equipment\nthe roof has melted quite considerably.\n   There is a doorway to the east.\n",
+         "altitude" : null
+      },
+      "n_tunnel@icecave" : {
+         "exits" : {
+            "n" : "Tunnel",
+            "s" : "Pool"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Narrow Ice Tunnel",
+         "id" : "N_Tunnel",
+         "description" : "\n   The tunnel tapers down considerably here, and you must crawl on all fours\nto squeeze by.  To the north the tunnel widens out.  You can hear the faint\nchirping and buzzing of magical critters emanating from a small hole to the\nsouth.\n",
+         "altitude" : null
+      },
+      "shrine@icecave" : {
+         "exits" : {
+            "w" : "Passage"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "The Lost Shrine of the Ice People",
+         "id" : "Shrine",
+         "description" : "\n   A cobweb brushes across your face.  From the abundace of them here, it\nwould seem that this room does not see much use.  Though the dimness of the\nlight does not allow you to be sure, the groaning of the ceiling causes you\nto move quietly, as you would rather not have the tons of mountain above\nyou fall in.\n   Closer inspection of the walls reveals ancient, intricate images of huge\nglaciers and a figure you can only guess to be the god of the Ice People,\nwho they venerate here.\n",
+         "altitude" : null
+      },
+      "home@icecave" : {
+         "exits" : {
+            "s" : "Cave"
+         },
+         "flags" : [
+            "Private",
+            "Party"
+         ],
+         "zone" : "icecave",
+         "title" : "Home of the Iceman",
+         "id" : "Home",
+         "description" : "\n   Welcome to Iceman's private cubicle.  Despite the icy surroundings, you feel\nwarm and safe here.  Some of the Iceman's robes are hanging in a closet, along\nwith some impressive weapons you dare not touch.  On his desk you see some\nscrolls covered with Nordic runes, and an unfinished supper, indicating the\nIceman has only stepped out for a moment.  You notice several copies of \"Teach\nYourself Swedish\" in the bookcase, but one seems to be missing.  A portrait of\nhis beautiful wife, Lady Galadriel, adorns the otherwise bare walls.\n   A single exit leads south.\n",
+         "altitude" : null
+      },
+      "gambling@icecave" : {
+         "exits" : {
+            "e" : "Pool"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Gambling Hall",
+         "id" : "Gambling",
+         "description" : "\n   This room is all but magical and wondrous: Cheap decor covers the grimy\nwalls, smoke fills the air, and the smell isn't exactly winter fresh.  Broken\nglass is scattered on the floor, along with some playing cards and dice.  If\nyour mother knew you were here, she'd be shocked.\n",
+         "altitude" : null
+      },
+      "palace@icecave" : {
+         "exits" : {
+            "w" : "Magician",
+            "e" : "Throne",
+            "n" : "G_Hall",
+            "s" : "Bedroom"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Ice Palace",
+         "id" : "Palace",
+         "description" : "\n   You are in a huge ice hall forming the center of the ice palace.  Huge\npillars hold up the roof, although small amounts of water now trickle down\nthem.  Archways lead in all directions.\n",
+         "altitude" : null
+      },
+      "throne@icecave" : {
+         "exits" : {
+            "w" : "Palace",
+            "e" : "^WestIceThrone"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "The Ice Throne",
+         "id" : "Throne",
+         "description" : "\n   You are in an icy throne hall covered with many ornate carvings of icy\nwastes.  The hall is deserted, and it appears whoever is king of this icy\ndomain is absent.  To the west is the main hall.\n",
+         "altitude" : null
+      },
+      "cave@icecave" : {
+         "exits" : {
+            "w" : "^EastIceThrone",
+            "e" : "Passage",
+            "n" : "Home",
+            "s" : "Tunnel"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "The Cave of the Ice People",
+         "id" : "Cave",
+         "description" : "\n   You are standing in a vast icy cave.  Ice covers the floor, making your\nbalance precarious at best.  Judging from the footprints, however, it seems\nothers have been here before you and safely traversed this slippery surface.\nA message carved into one wall reads \"We Always Bit Chips.\"\n   Passages lead in all directions, but the exit leading east is blocked by\na standard AberMUD construction sign.\n",
+         "altitude" : null
+      },
+      "g_hall@icecave" : {
+         "exits" : {
+            "n" : "^hole_g_hall",
+            "s" : "Palace"
+         },
+         "flags" : [],
+         "zone" : "icecave",
+         "title" : "Glittering Hall",
+         "id" : "G_Hall",
+         "description" : "\n   You are in a glittering hall made entirely of ice.  Multi-hued icicles hang\nfrom the ceiling and the hall seems to be gradually melting!  A slippery path\nleads south.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "guardian@icecave" : {
+         "eflags" : [
+            "NegFrost"
+         ],
+         "damage" : "10",
+         "location" : "store",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "30",
+         "pname" : "The Guardian",
+         "name" : "guardian",
+         "description" : "\nA guardian of pure ice stands, silent and still, observing you.",
+         "strength" : "50"
+      },
+      "gambler@icecave" : {
+         "damage" : "10",
+         "location" : "gambling",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "pname" : "The Gambler",
+         "name" : "gambler",
+         "description" : "\nA gambler dressed in rags and tatters is dropping coins into the slot.",
+         "strength" : "75"
+      },
+      "unicorn@icecave" : {
+         "damage" : "10",
+         "location" : "pool",
+         "armor" : "0",
+         "name" : "unicorn",
+         "description" : "\nA unicorn is standing here, gazing quietly at its reflection.",
+         "strength" : "2000",
+         "speed" : "0",
+         "pname" : "The Unicorn",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon"
+         ]
+      }
+   }
+}

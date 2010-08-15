@@ -1,0 +1,1952 @@
+{
+   "obj" : {
+      "sceptre@eforest" : {
+         "location" : "IN_CONTAINER:chest",
+         "altname" : "gold",
+         "name" : "sceptre",
+         "bvalue" : "250",
+         "desc[0]" : "A gold sceptre has been place here.",
+         "size" : "1"
+      },
+      "coat@eforest" : {
+         "location" : "IN_ROOM:Coat",
+         "oflags" : [
+            "Wearable",
+            "GetFlips"
+         ],
+         "name" : "coat",
+         "state" : "1",
+         "size" : "10",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A large coat has been left here.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms"
+         ]
+      },
+      "wdoor@eforest" : {
+         "desc[1]" : "To the West is a closed door.",
+         "location" : "IN_ROOM:Stairs",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Wdoor",
+         "desc[2]" : "To the West is a locked door.",
+         "linked" : "Edoor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "To the West is an open door."
+      },
+      "purse@eforest" : {
+         "location" : "IN_ROOM:Temple_Guard",
+         "oflags" : [
+            "Container",
+            "Destroyed"
+         ],
+         "altname" : "small",
+         "name" : "purse",
+         "bvalue" : "20",
+         "desc[0]" : "A small purse has been left here.",
+         "size" : "10"
+      },
+      "lich_door@eforest" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Lich",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Lich_Door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Prison_Door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "bracelet@eforest" : {
+         "location" : "IN_ROOM:Asmodeus",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "platinum",
+         "name" : "bracelet",
+         "size" : "1",
+         "bvalue" : "200",
+         "aflags" : [
+            "Arms"
+         ],
+         "desc[0]" : "A platinum bracelet has been discarded here."
+      },
+      "captain_key@eforest" : {
+         "location" : "IN_ROOM:Quarters",
+         "oflags" : [
+            "GetFlips",
+            "Key"
+         ],
+         "pname" : "key",
+         "name" : "Captain_Key",
+         "desc[0]" : "A key sits to the side of the desk.",
+         "size" : "1"
+      },
+      "coins@eforest" : {
+         "location" : "IN_ROOM:Asmodeus",
+         "altname" : "gold",
+         "name" : "coins",
+         "bvalue" : "200",
+         "desc[0]" : "A large pile of gold coins sparkles brightly.",
+         "size" : "10"
+      },
+      "chair@eforest" : {
+         "location" : "IN_ROOM:Asmodeus",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "easy",
+         "name" : "chair"
+      },
+      "ring@eforest" : {
+         "location" : "IN_ROOM:Asmodeus",
+         "oflags" : [
+            "Wearable",
+            "Destroyed"
+         ],
+         "altname" : "diamond",
+         "name" : "ring",
+         "examine" : "\nSomeone has inscribed the following message on this ring:\n     \"One Ring to rule them all, One Ring to find them,\n      One Ring to bring them all, and in the darkness bind them.\"\nHowever, the ring does not seem to turn you invisible.\n",
+         "size" : "1",
+         "bvalue" : "200",
+         "aflags" : [
+            "Hand"
+         ],
+         "desc[0]" : "A diamond ring has been set here."
+      },
+      "note@eforest" : {
+         "location" : "IN_ROOM:Art",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "note",
+         "examine" : "\nThe note reads : \"What did you expect to find here, a safe ?\"",
+         "bvalue" : "10",
+         "desc[0]" : "A note has been tossed here.",
+         "size" : "1"
+      },
+      "table@eforest" : {
+         "location" : "IN_ROOM:Guard",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "broken",
+         "name" : "table"
+      },
+      "painting@eforest" : {
+         "location" : "IN_ROOM:Art",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "painting"
+      },
+      "robe@eforest" : {
+         "location" : "IN_CONTAINER:chest",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "regal",
+         "name" : "robe",
+         "examine" : "\nThe robe has a faint stench of death, as if it had been worn by a corpse...\n",
+         "size" : "6",
+         "bvalue" : "250",
+         "aflags" : [
+            "Back",
+            "Chest",
+            "Arms",
+            "Legs"
+         ],
+         "desc[0]" : "A regal robe lies neatly folded on the ground."
+      },
+      "desk_lich@eforest" : {
+         "location" : "IN_ROOM:Office",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "oak",
+         "pname" : "desk",
+         "name" : "desk_Lich"
+      },
+      "mushroom@eforest" : {
+         "desc[1]" : "One large mushroom looks quite edible.",
+         "location" : "IN_ROOM:Fungus",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "food",
+         "name" : "mushroom",
+         "examine" : "\nThis mushroom does not look poisonous at all.\n",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "0",
+         "bvalue" : "20",
+         "desc[0]" : "An edible looking mushroom has been left here."
+      },
+      "thorns@eforest" : {
+         "location" : "IN_ROOM:Thorny",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wall",
+         "name" : "thorns",
+         "examine" : "\nThe thorns look very brittle.  Be careful with fire around here!\n",
+         "linked" : "ThornsEast",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The wall of thorns to the east has been burned away."
+      },
+      "edoor@eforest" : {
+         "desc[1]" : "To the East is a closed door.",
+         "location" : "IN_ROOM:Guard",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Edoor",
+         "desc[2]" : "To the East is a locked door.",
+         "linked" : "Wdoor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "To the East is an open door."
+      },
+      "bowl@eforest" : {
+         "desc[1]" : "A golden place sits on the dark altar.",
+         "location" : "IN_ROOM:Priest",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "golden",
+         "name" : "bowl",
+         "examine" : "\nThe bowl has been stained with a dark liquid.\n",
+         "bvalue" : "100",
+         "desc[0]" : "A golden bowl has been placed here.",
+         "size" : "6"
+      },
+      "sandwich@eforest" : {
+         "location" : "IN_ROOM:Storage",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "sandwich",
+         "bvalue" : "10",
+         "desc[0]" : "Laying on the ground is a large sandwich.",
+         "size" : "2"
+      },
+      "lake@eforest" : {
+         "location" : "IN_ROOM:Lake",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "water",
+         "name" : "lake",
+         "examine" : "\nBelow the surface of the water, you seem to see dark shapes...\n",
+         "linked" : "lake2",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The lake seems to have dried up!"
+      },
+      "sponge@eforest" : {
+         "desc[1]" : "A large sponge is lying here, bloated with water.",
+         "location" : "IN_CONTAINER:fountain",
+         "name" : "sponge",
+         "examine" : "\nThis sponge looks like it could hold quite a bit of water.\n",
+         "state" : "0",
+         "size" : "1",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "A large sponge is lying here."
+      },
+      "trash@eforest" : {
+         "location" : "IN_ROOM:Barracks2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "trash"
+      },
+      "hole@eforest" : {
+         "desc[1]" : "The stone door is tightly shut.",
+         "location" : "IN_ROOM:Hot",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "diamond",
+         "name" : "hole",
+         "examine" : "\nIt looks like a gem of some sort could fit in that hole.\n",
+         "linked" : "StoneDoor",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The stone door rests open."
+      },
+      "papers@eforest" : {
+         "location" : "IN_ROOM:Office",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "papers"
+      },
+      "sign@eforest" : {
+         "location" : "IN_ROOM:Stone",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sign",
+         "examine" : "\nThe sign reads, abandon Hope all ye who enter here.\n",
+         "desc[0]" : "A sign sits above the door here."
+      },
+      "purse_coin@eforest" : {
+         "location" : "IN_CONTAINER:purse",
+         "altname" : "golden",
+         "pname" : "coin",
+         "name" : "Purse_Coin",
+         "examine" : "\nThis coin has the picture of some famous dark elf stamped on it.\n",
+         "bvalue" : "50",
+         "desc[0]" : "A golden coin is here.",
+         "size" : "1"
+      },
+      "bust@eforest" : {
+         "desc[1]" : "A bust of Asmodeus, the demon lord, sits on a table here.",
+         "location" : "IN_ROOM:Museum",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "demon",
+         "name" : "bust",
+         "size" : "30",
+         "state" : "1",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "A bust of Asmodeus has been left here."
+      },
+      "coin@eforest" : {
+         "location" : "IN_ROOM:Coat",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "elven",
+         "name" : "coin",
+         "desc[0]" : "A beautiful elven coin has been carefully placed here."
+      },
+      "flask@eforest" : {
+         "location" : "IN_ROOM:Storage",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "flask",
+         "bvalue" : "20",
+         "desc[0]" : "A small flask of Dragon's Milk lies here.",
+         "size" : "2"
+      },
+      "journal@eforest" : {
+         "desc[1]" : "On the table lies the journal of Dinthiar, the Elven King.",
+         "location" : "IN_ROOM:Cottage",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "book",
+         "name" : "journal",
+         "examine" : "\nThe journal seems to belong to Dinthiar, the elven king.  It speaks of what\nhas happened to this once beautiful land.  It seems that there were two\ngreat evils, who had been engaged in an eternal war with each other.  They\nhad shifted from world to world, leaving each one a desolate ruin behind\nthem.  Sadly, one day the two evils came down upon this beautiful realm.\nHere, their last battle was fought.  One of the two, a demon of great power,\nstill resides in the caves to the west, lording over the land he helped\ndestroy.  The other, a deathless lich, was forced to flee.  It is rumored\nthough, that he still hides somewhere in these lands.  Dinthiar believes\nthat the elven lands can still be restored.  What is needed is a great hero\nto vanquish the two ancient evils...\n",
+         "size" : "6",
+         "state" : "1",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "The journal of Dinthiar lies here."
+      },
+      "emerald@eforest" : {
+         "location" : "IN_ROOM:Office",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "gem",
+         "name" : "emerald",
+         "examine" : "\nThis emerald bears no relationship to any wizard who may exist by that name.\n",
+         "bvalue" : "300",
+         "desc[0]" : "A large emerald has been left here!",
+         "size" : "4"
+      },
+      "desk@eforest" : {
+         "location" : "IN_ROOM:Captain",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "oak",
+         "name" : "desk"
+      },
+      "rack@eforest" : {
+         "location" : "IN_ROOM:Interrogation",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "torture",
+         "name" : "rack"
+      },
+      "lake2@eforest" : {
+         "desc[1]" : "\nAbove your head, you see water, apparently suspended in thin air.  You\nhave no idea why it does not rush down the tunnel towards you.  You must\nbe under a lake.  How strange!",
+         "location" : "IN_ROOM:Ladder",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "water",
+         "pname" : "lake",
+         "name" : "lake2",
+         "maxstate" : "1",
+         "linked" : "lake",
+         "state" : "1"
+      },
+      "button@eforest" : {
+         "location" : "IN_ROOM:Captain",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "button",
+         "maxstate" : "1",
+         "state" : "0"
+      },
+      "crown_lich@eforest" : {
+         "location" : "IN_CONTAINER:chest",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "platinum",
+         "name" : "Crown_Lich",
+         "examine" : "\nThis finally crafted headdress was some artist's crowning achievement.\n",
+         "size" : "4",
+         "pname" : "crown",
+         "bvalue" : "250",
+         "desc[0]" : "A platinum crown lies here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "chest@eforest" : {
+         "desc[1]" : "A large chest is on the floor.",
+         "location" : "IN_ROOM:Room",
+         "oflags" : [
+            "NoGet",
+            "Container",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "large",
+         "name" : "chest",
+         "examine" : "\nMaybe you should try look in chest?\n",
+         "desc[2]" : "A large chest is on the floor. It is locked.",
+         "state" : "2",
+         "maxstate" : "2",
+         "desc[0]" : "A large chest is on the floor. It is open."
+      },
+      "statue@eforest" : {
+         "location" : "IN_ROOM:Priest",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "golden",
+         "name" : "statue",
+         "bvalue" : "300",
+         "desc[0]" : "A golden statue of a disfigured elf sits here.",
+         "size" : "5"
+      },
+      "torch@eforest" : {
+         "desc[1]" : "A burnt out torch lies here.",
+         "location" : "IN_ROOM:Cave",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Lit"
+         ],
+         "name" : "torch",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A torch burns merrily here.",
+         "size" : "2"
+      },
+      "gauntlets@eforest" : {
+         "location" : "IN_ROOM:Guard",
+         "armor" : "48",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Destroyed"
+         ],
+         "name" : "gauntlets",
+         "size" : "3",
+         "bvalue" : "30",
+         "aflags" : [
+            "Hands"
+         ],
+         "desc[0]" : "A pair of shiny gauntlets lies here."
+      },
+      "elvensword@eforest" : {
+         "damage" : "30",
+         "location" : "IN_ROOM:Cottage",
+         "oflags" : [
+            "Weapon",
+            "NoGet"
+         ],
+         "name" : "elvensword",
+         "desc[0]" : "Dinthiar's elvensword sits here, but it is not for mortals!"
+      },
+      "prison_door@eforest" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Prison",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Prison_Door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Lich_Door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "crown@eforest" : {
+         "location" : "IN_ROOM:Inside",
+         "oflags" : [
+            "Wearable",
+            "Destroyed"
+         ],
+         "altname" : "gold",
+         "name" : "crown",
+         "examine" : "\nEngraved into the inside of the crown is the name Dinthiar.  This must be\nthe crown of an Elven King.\n",
+         "size" : "10",
+         "bvalue" : "100",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "You see a golden crown gleaming here!"
+      },
+      "bracelet2@eforest" : {
+         "location" : "IN_ROOM:Storage",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "golden",
+         "name" : "bracelet2",
+         "size" : "2",
+         "pname" : "bracelet",
+         "bvalue" : "100",
+         "desc[0]" : "A small golden bracelet has been lost here.",
+         "aflags" : [
+            "Arm"
+         ]
+      },
+      "mattress@eforest" : {
+         "location" : "IN_ROOM:Temple_Guard",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "mattress"
+      },
+      "black_journal@eforest" : {
+         "location" : "IN_ROOM:Priest",
+         "altname" : "black",
+         "pname" : "journal",
+         "name" : "Black_Journal",
+         "examine" : "\nThis journal describes the dark elves' hatred of the good elves who had\nlived in the forest above.  In an attempt to destroy them, the dark elves\nfound two evil forces who had warred for eternity.  By convincing them to\ncome here, the dark elves made the destruction of the Elven Forest certain.\nIn other words, you realize, the dark elves are as much to blame for the\ndestruction that you have seen, as anyone!\n",
+         "bvalue" : "50",
+         "desc[0]" : "A black journal sits on the ground here.",
+         "size" : "10"
+      },
+      "throne_wood@eforest" : {
+         "location" : "IN_ROOM:Inside",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wood",
+         "pname" : "throne",
+         "name" : "Throne_Wood"
+      },
+      "door@eforest" : {
+         "desc[1]" : "You see a closed door here.",
+         "location" : "IN_ROOM:Inside",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door",
+         "maxstate" : "1",
+         "linked" : "tree",
+         "desc[0]" : "An open door is set in the west side of the tree.",
+         "state" : "1"
+      },
+      "shield@eforest" : {
+         "location" : "WORN_BY:Commander",
+         "armor" : "45",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "altname" : "black",
+         "name" : "shield",
+         "size" : "10",
+         "bvalue" : "50",
+         "desc[0]" : "A black shield has been carelessly left here."
+      },
+      "thornseast@eforest" : {
+         "desc[1]" : "The passage to the West is blocked by thorns.",
+         "location" : "IN_ROOM:Entrance",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wall",
+         "pname" : "thorns",
+         "name" : "ThornsEast",
+         "maxstate" : "1",
+         "linked" : "thorns",
+         "state" : "1"
+      },
+      "stonedoor@eforest" : {
+         "desc[1]" : "There is a closed door to the East.",
+         "location" : "IN_ROOM:Boiling",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "StoneDoor",
+         "linked" : "hole",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "There is an open door to the East."
+      },
+      "tree@eforest" : {
+         "location" : "IN_ROOM:Shattered",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "tree",
+         "maxstate" : "1",
+         "linked" : "door",
+         "desc[0]" : "An open panel is slightly recessed into the tree here.",
+         "state" : "1"
+      },
+      "trash_coin@eforest" : {
+         "location" : "IN_ROOM:Barracks2",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "silver",
+         "name" : "Trash_Coin",
+         "size" : "1",
+         "pname" : "coin",
+         "bvalue" : "50",
+         "desc[0]" : "A gleaming silver coin lies here."
+      },
+      "throne@eforest" : {
+         "desc[1]" : "A throne blocks your way up!",
+         "location" : "IN_ROOM:Bottom",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "granite",
+         "name" : "throne",
+         "linked" : "Throne_Cathedral",
+         "size" : "0",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "\nJust to the side of the passage heading up is a throne."
+      },
+      "scarf@eforest" : {
+         "location" : "IN_ROOM:Asmodeus",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "mink",
+         "name" : "scarf",
+         "examine" : "\nDo you know how many minks were killed to make this scarf for you?\n",
+         "size" : "3",
+         "bvalue" : "100",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "A mink scarf has been carefully placed in a pile here."
+      },
+      "key@eforest" : {
+         "location" : "CARRIED_BY:Jailor",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "small",
+         "name" : "key",
+         "desc[0]" : "A small key has been discarded here.",
+         "size" : "1"
+      },
+      "altar@eforest" : {
+         "location" : "IN_ROOM:Priest",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "altar"
+      },
+      "fountain@eforest" : {
+         "location" : "IN_ROOM:Home",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "dry",
+         "name" : "fountain",
+         "examine" : "\nThe fountain is quite large.  In fact, it is large enough to be able\nto hold stuff in it.\n",
+         "desc[0]" : "A dried-up fountain sits in the middle of this glen."
+      },
+      "treaty@eforest" : {
+         "location" : "IN_ROOM:Office",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "treaty",
+         "examine" : "\nThis treaty seems to describe a temporary peace between the Lich and Asmodeus.\nWithout doubt, it is no longer in effect.\n",
+         "bvalue" : "100",
+         "desc[0]" : "Some type of treaty has been left here.",
+         "size" : "10"
+      },
+      "sulphur@eforest" : {
+         "desc[1]" : "A pile of sulphur lies amidst the ashes of a warped tree.",
+         "location" : "IN_ROOM:Glen",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "pile",
+         "name" : "sulphur",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "0",
+         "bvalue" : "20",
+         "desc[0]" : "A pile of sulphur lies here."
+      },
+      "hope@eforest" : {
+         "location" : "IN_ROOM:Treasury",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "diamond",
+         "name" : "hope",
+         "examine" : "\nThis diamond is, without a doubt, of great value! Hold onto it carefully.\n",
+         "size" : "3",
+         "bvalue" : "100",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "\nThe fabled Hope diamond lies here, sparkling amidst the light."
+      },
+      "storage_door@eforest" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Storage",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Storage_Door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Captain_Door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "gargoyles@eforest" : {
+         "location" : "IN_ROOM:Cathedral",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "gargoyles",
+         "examine" : "\nYou notice that one gargoyle seems to be missing.\n"
+      },
+      "scarab@eforest" : {
+         "location" : "IN_ROOM:Interrogation",
+         "oflags" : [
+            "Wearable",
+            "Destroyed"
+         ],
+         "altname" : "golden",
+         "name" : "scarab",
+         "size" : "2",
+         "bvalue" : "100",
+         "aflags" : [
+            "Face"
+         ],
+         "desc[0]" : "A golden scarab lies on the ground at your feet."
+      },
+      "throne_cathedral@eforest" : {
+         "location" : "IN_ROOM:EastEnd",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "granite",
+         "name" : "Throne_Cathedral",
+         "examine" : "\nYou notice faint scratch marks on one side of the throne.\n",
+         "linked" : "throne",
+         "state" : "1",
+         "pname" : "throne",
+         "maxstate" : "1",
+         "desc[0]" : "\nThe throne has been moved to the side, revealing a hole below."
+      },
+      "captain_door@eforest" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Captain",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Captain_Door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Storage_Door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "contracts@eforest" : {
+         "desc[1]" : "A pile of contracts lies on the desk.",
+         "location" : "IN_ROOM:Den",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "pile",
+         "name" : "contracts",
+         "examine" : "\nThese contracts seem to be signed in blood.  How bizarre!\n",
+         "size" : "4",
+         "state" : "1",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A pile of contracts has been carelessly left here."
+      },
+      "toadstool@eforest" : {
+         "desc[1]" : "One toadstool sitting here looks quite edible.",
+         "location" : "IN_ROOM:Glade",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "food",
+         "name" : "toadstool",
+         "size" : "2",
+         "state" : "1",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A tasty-looking toadstool has been tossed here."
+      },
+      "fungoid_altar@eforest" : {
+         "location" : "IN_ROOM:Fungoid",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "stone",
+         "pname" : "altar",
+         "name" : "Fungoid_Altar",
+         "examine" : "\nThis seems to be a sacrificial altar to some great fungoid god.\n"
+      }
+   },
+   "loc" : {
+      "treasury@eforest" : {
+         "exits" : {
+            "n" : "Guard"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Demon Treasury",
+         "id" : "Treasury",
+         "description" : "\n   This room seems to be somewhat cleaner than the guard room to the North, but\nnot much.  The same reek of garbage pervades the air, and piles of litter have\nbeen shoved to the sides of the room.  However, in the center of the room is\na wooden pedestal which has been polished to perfection, and which is\nexceedingly clean.  You have come through the only entrance to this room.\n",
+         "altitude" : null
+      },
+      "coat@eforest" : {
+         "exits" : {
+            "s" : "Entry"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Coat Room",
+         "id" : "Coat",
+         "description" : "\n   With a morbid sense of curiosity, you enter the cave where you have been\ndirected in order to check your soul.  Quite surprisingly, you are not\ninstantly zapped by some evil being.  Instead, the room seems to a quite\nsimple coat room.  Lining the walls are coats of every shape and size, checked\nin, no doubt, due to the heat below. You would laugh at how ridiculous this\nwhole seen looked if not for the evil that you feel below you.\n",
+         "altitude" : null
+      },
+      "entry@eforest" : {
+         "exits" : {
+            "e" : "Cave",
+            "n" : "Coat",
+            "d" : "Guard"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Entry Room",
+         "id" : "Entry",
+         "description" : "\n   Standing at the entrance to this system of caves, the only description\nwhich comes to mind is 'hellish.'  The caverns glow with a strange red\nglow which speaks of nothing more than hellfire.  It almost seems to you that\nyou can hear the screams of the damned.  A set of stairs leads downwards,\nand the heat coming from below almost knocks you out.  Just to the North is\na roughly carved doorway.  Next to the door is a sign which says : Please\ncheck in your souls before entering.\n",
+         "altitude" : null
+      },
+      "temple@eforest" : {
+         "exits" : {
+            "e" : "InTemple"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Temple Treasury",
+         "id" : "Temple",
+         "description" : "\n   You stand in the treasury of this grand dark elven temple.  This side\nroom is just as beautiful, in its dark, alluring way, as the main worship\nroom to the east.  Looking around, you are surprised to see that the treasury\nis empty!  A note to the side explains that the dark elven Priest has taken\nthe treasures of the temple for its own 'protection.'\n",
+         "altitude" : null
+      },
+      "art@eforest" : {
+         "exits" : {
+            "n" : "Museum"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Art Gallery",
+         "id" : "Art",
+         "description" : "\n   This part of the Demonic museum seems to be entirely devoted to demonic art.\nThe pieces are all quite horrific, and there is definitely nothing that would\nbe valuable to sacrifice to the gods.  You are almost drawn by a morbid\ncuriosity to look at all of the terrifying pictures.  The only exit out of\nthis awful place lies to the North.\n",
+         "altitude" : null
+      },
+      "worn@eforest" : {
+         "exits" : {
+            "w" : "Lich",
+            "n" : "Zombie",
+            "s" : "Narrow"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Worn Passage",
+         "id" : "Worn",
+         "description" : "\n   You are in a passage worn through the years by the passing of many feet.\nTo the west, you see a small room, and the passage continues to the south.\nTo the north, the passage opens into what appears to be a guardroom, and the\nslow movements of zombies can be heard coming from it.\n",
+         "altitude" : null
+      },
+      "entrance@eforest" : {
+         "exits" : {
+            "w" : "^ThornsEast",
+            "e" : "Cathedral",
+            "d" : "Cathedral"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "The Cave Entrance",
+         "id" : "Entrance",
+         "description" : "\n   You stand at the entrance to what appears to be a vast system of caves.  A\ncool breeze strikes you in the face as you peer ahead into the blackness, and\nyou sense strong evil emanating from the cavern.  To the west, you see the\nblackened mouth of the cave, to the east, a downward sloping passage leads to\ndarkness.\n",
+         "altitude" : null
+      },
+      "fungus@eforest" : {
+         "exits" : {
+            "n" : "Hot",
+            "s" : "Lake"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Fungus Cavern",
+         "id" : "Fungus",
+         "description" : "\n   You are quite delighted to find that this cavern is much cooler than the\nsurrounding ones.  In fact, the change in temperature is so dramatic that\nyou begin to shiver uncontrollably.  All about this room are various types of\nfungus.  You can make out familiar Toadstools and Mushrooms.  In addition, you\nsee more much exotic fungus that you have never encountered before.  Perhaps,\nyou think, you are the only mortal to ever have ventured this far into the\nearth. Other natural caverns lie to the North and South.\n",
+         "altitude" : null
+      },
+      "tainted@eforest" : {
+         "exits" : {
+            "e" : "Corrupted",
+            "n" : "Oaks"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Tainted Trees",
+         "id" : "Tainted",
+         "description" : "\n   You are in a grove of tall trees which seem tainted.  They glow with a\nsickly green glow which speaks of evil, pestilence and disease.  You suppress\na shudder and view your surroundings.  To the south and west lie this forest's\nprotective mountains, while woods lie to the east.  To the North, a wide swath\nof destructions cuts into the heart of this realm.\n",
+         "altitude" : "800"
+      },
+      "corrupted@eforest" : {
+         "exits" : {
+            "w" : "Tainted",
+            "e" : "Scenic",
+            "n" : "Shattered"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Corrupted Woods",
+         "id" : "Corrupted",
+         "description" : "\n   You stand in what must have once been a very beautiful grove of trees.  Now,\nit has been mutated beyond recognition.  The grotesque shapes of the trees are\nall but indescribable.  You get the impression that this forest has been\ndestroyed by some great, evil force which may still lurk about...\n",
+         "altitude" : "800"
+      },
+      "lake@eforest" : {
+         "exits" : {
+            "n" : "Fungus",
+            "d" : "^lake"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Large Lake",
+         "id" : "Lake",
+         "description" : "\n   Although not as cool as the marvelous fungus cavern, this room is much more\ncomfortable than the surrounding caves.  In the center of this cavern is a\nlarge lake.  Looking over the walls, you notice strange writing.  To you, it\nalmost looks like elven writing, somehow corrupted.  Overall, the entire\ncavern seems quite gloomy.  You better leave this place before you get real\ndepressed!\n",
+         "altitude" : null
+      },
+      "hate@eforest" : {
+         "exits" : {
+            "s" : "Museum"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Hate Gallery",
+         "id" : "Hate",
+         "description" : "\n   All throughout this room are paintings of a gruesome undead beast.  Without\na doubt, it must be the Lich who, when fighting Asmodeus, was rumored to have\nhelped cause the destruction of the elven forest.  The fact that the Lich is\nan enemy of the demon lord here is made quite clear by the voice you hear\nchanting in your head.  Over and over, you hear 'hate. hate. hate. hate...'\n",
+         "altitude" : null
+      },
+      "bottom@eforest" : {
+         "exits" : {
+            "u" : "^throne",
+            "s" : "Guarded"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Bottom of the Stairs",
+         "id" : "Bottom",
+         "description" : "\n   You are standing at the bottom of a small set of stairs leading up into the\ndarkness.  A small passage leads to the south, and strange sound can be heard\ncoming from it.\n",
+         "altitude" : null
+      },
+      "mosaic@eforest" : {
+         "exits" : {
+            "w" : "Museum"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Mosaic Room",
+         "id" : "Mosaic",
+         "description" : "\n   The entirity of this room is covered by a huge mosaic.  It covers all of\nthe walls, as well as the ceiling and the floor.  You realize immediately that\nthe area shown in the mosaic is that which mortals call the wasteland.  You see\nimages of fire, a sword of awesome power, crystal flame and a great djinni.\nFor a moment, you almost become lost in the awesome vision.\n   Flaming red letters in the center of the room spell out the words, HOME,\nSWEET, HOME.\n",
+         "altitude" : null
+      },
+      "quarters@eforest" : {
+         "exits" : {
+            "n" : "Barracks2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Captain's Quarters",
+         "id" : "Quarters",
+         "description" : "\n   You stand in a large room which seems to have been well kept.  It has none\nof the squalor of the barracks to the North.  There is a neat bed here, as\nwell as an organized desk.  However, the entire room is covered by a layer of\ndust. Obviously, these quarters have not been used for quite some time.  The\nonly exit is to the North.\n",
+         "altitude" : null
+      },
+      "narrow@eforest" : {
+         "exits" : {
+            "w" : "Captain",
+            "n" : "Worn",
+            "s" : "Cathedral"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Narrow Hall",
+         "id" : "Narrow",
+         "description" : "\n   You are in a very narrow hallway.  To the south is the great cathedral, to\nthe west is a small lit room, and the passage continues to the north.\n",
+         "altitude" : null
+      },
+      "scenic@eforest" : {
+         "exits" : {
+            "w" : "Corrupted",
+            "n" : "Thorny",
+            "s" : "Climb"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Scenic View",
+         "id" : "Scenic",
+         "description" : "\n   Once, this mountain trail surely was the best place to view the elven\nforest.  Now, you can only see the destruction.  To the North and West,\nyou gaze out at the corrupted, desolate land which was once so beautiful.\nAmid the destruction, you see a few points of life.  Just to the Northeast\nof you stands a tall, healthy oak tree, while further to the North, you\nactually think you see green.  The mountain trail you are on continues North\nand South, while a small path leads up from the forest to the West.\n",
+         "altitude" : "850"
+      },
+      "bedroom@eforest" : {
+         "exits" : {
+            "n" : "Den"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Asmodeus' Bedroom",
+         "id" : "Bedroom",
+         "description" : "\n   You realize that this must be what the demonlord calls a bedroom.  It is\nlittle more than a space of level rock in the center of the room.  Asmodeus\nobviously worries little about the ordinary comforts of life.  At the least,\nthis room is not as grotesque as the study that you just passed through.\n",
+         "altitude" : null
+      },
+      "barracks2@eforest" : {
+         "exits" : {
+            "n" : "Cavern",
+            "s" : "Quarters"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Elven Barracks",
+         "id" : "Barracks2",
+         "description" : "\n   You are in a large barracks for the dark elf troops.  The whole place seems\nrun down.  Trash litters the floor and most of the beds in this room are\ndestroyed.  It looks as if, for the most part, the dark elves do not bother\nto maintain an army now that their enemies, the good elves above, are gone.\nExits leave these barracks to the North and South.\n",
+         "altitude" : null
+      },
+      "cottage@eforest" : {
+         "exits" : {
+            "w" : "Home"
+         },
+         "flags" : [
+            "Party"
+         ],
+         "zone" : "eforest",
+         "title" : "Dinthiar's Cottage",
+         "id" : "Cottage",
+         "description" : "\n   You have entered the home of Dinthiar, the Elven King.  It is a rather\nsimple dwelling.  A bed, table and chair are the only furnishings.  However,\nthe whole room is given a 'foresty' feel by the ivy which grows up the insides\nof the walls, and by the potted plants which hang from the ceiling.  It is\nexactly the type of dwelling that you would expect an elf to have.\n",
+         "altitude" : null
+      },
+      "inside@eforest" : {
+         "exits" : {
+            "w" : "^door"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Inside the Grand Oak",
+         "id" : "Inside",
+         "description" : "\n   You gasp out in awe at the quiet beauty of this hidden hollow.  Looking\naround, 'majesty' is the word which immediately comes to mind.  The entire\nroom draws your eyes upwards, like some ancient gothic cathedral. There, among\nthe arched, wooden roof, are numerous tiny flowers, hanging from the vines\nwhich grow around you. Even in the dim light, the brilliant hues of the\nflowers - red, violet, blue, green, and white - stand out. Indeed, they glow\nwith their own light, providing the majority of the illumination in this room\nand sending incredible, multi-colored shadows around the room. As you stare at\nthem, something tugs at your memory. You have seen that pattern somewhere\nbefore... It is the pattern of the stars in the night sky, but of a color and\nbrightness that the night sky can only hint at.\n   As your eyes slowly refocus on the mundane plane, you notice a wooden\nthrone set near the middle of this room.  With a start, you realize that is\nhas been grown from the tree itself.  Once, the whole elven forest must have\nbeen like this...\n",
+         "altitude" : null
+      },
+      "room@eforest" : {
+         "exits" : {
+            "n" : "Office"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Lich's Room",
+         "id" : "Room",
+         "description" : "\n   You stand in the Lich's bedroom.  The walls are covered with tapestries,\nand the floor is richly carpeted.  A huge feather bed is in the middle of\nthe room.  A small glowing ball provides a soft light.  The Lich's office\nis just to the north.\n",
+         "altitude" : null
+      },
+      "fungoid@eforest" : {
+         "exits" : {
+            "n" : "Glowing"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Fungoid Cavern",
+         "id" : "Fungoid",
+         "description" : "\n   You stand in an enormous cavern which seems to be wall-to-wall fungus.\nBesides mushrooms and other common fungus, you also see many unusual ones,\nmuch as in the fungus cavern above.  As well, the green fungus from the\nthe passageway to the North may be seen.\n",
+         "altitude" : null
+      },
+      "ladder@eforest" : {
+         "exits" : {
+            "u" : "^lake2",
+            "d" : "Cavern"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Long Ladder",
+         "id" : "Ladder",
+         "description" : "\n   You are midway up a very long ladder.  It seems rather damp as if water\nconstantly dripped on it.  You think you can manage to keep a grip on the\nladder which extends far above and below you.\n",
+         "altitude" : null
+      },
+      "thorny@eforest" : {
+         "exits" : {
+            "e" : "^thorns",
+            "n" : "EForest",
+            "s" : "Scenic"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Thorny Path",
+         "id" : "Thorny",
+         "description" : "\n   You are ascending a path into the mountains, which continues to the North\nand South.  The region seems just as desolate as the forest below you.  The\nground is cracked and dying, and the only vegetation is a thorny brush, which\npractically cover the path, ripping at your clothes.  The entire Eastern cliff\nis covered by a wall of thorns.  On the other side, just to the West is a\nsharp dropoff.  Past it, you can see the entire elven forest.  The corrupted\nview turns your stomach.\n",
+         "altitude" : "800"
+      },
+      "stairs@eforest" : {
+         "exits" : {
+            "w" : "^Wdoor",
+            "d" : "Hot"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Stairs to Hades",
+         "id" : "Stairs",
+         "description" : "\n   You have no doubt in your mind that the stairs in the middle of this room\nmust go down to hell itself.  If you thought the earlier rooms were hot, you\nwere obviously sadly mistaken.  Here, every breath you take burns your lungs.\nYour skin is already beginning to blister from the intense heat, and you are\nworried that your clothing may spontaneously combust!  As well, flames appear\nin the corners of this room and the smell of brimstone is so strong that it\nmakes you want to vomit immediately.  Surely, nothing but Hades itself could\nlie in the Inferno below...\n",
+         "altitude" : null
+      },
+      "undead@eforest" : {
+         "exits" : {
+            "e" : "Office",
+            "n" : "Guarded"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Hall of the Undead",
+         "id" : "Undead",
+         "description" : "\n   You are standing in a room light by an unearthly glowing light.  Howling\nshapes flow around a blackened altar in the center of the room, and you are\nsurrounded by ghosts.  Fortunately, none of the fearsome spirits seem to\nnotice you.  Exits from the room lead to the east and north.\n",
+         "altitude" : null
+      },
+      "planning@eforest" : {
+         "exits" : {
+            "s" : "EastEnd"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Planning Room",
+         "id" : "Planning",
+         "description" : "\n   You enter a large room which is almost entirely filled by a huge table.\nUpon the table sit little miniature figures, arrayed as if for combat.  You\ncan vaguely make out a label on one particularly ugly demon which says\nAsmodeus.  Obviously, the Lich plans his grand wars here.\n",
+         "altitude" : null
+      },
+      "stone@eforest" : {
+         "exits" : {
+            "n" : "Throne",
+            "s" : "Boiling"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Stone Room",
+         "id" : "Stone",
+         "description" : "\n   You stand in a perfectly cubical room, obviously not natural.  What makes\nthe room eerie is the fact that no signs of construction are visible.  It is\nalmost as if the entire room sprung from the earth in its present shape.  To\nthe South you hear the sounds of liquid boiling, while to the north, beyond\na perfect archway, you see what looks like a throne room.\n",
+         "altitude" : null
+      },
+      "lich@eforest" : {
+         "exits" : {
+            "w" : "Interrogation",
+            "e" : "Worn",
+            "n" : "^Lich_Door"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Lich's Prison",
+         "id" : "Lich",
+         "description" : "\n   You are in a dank, moldy prison.  Something that looks suspiciously like\ndried blood covers the floor.  A large door can be seen to the north, a small\npassage leads east, and another one leads to the west.\n",
+         "altitude" : null
+      },
+      "den@eforest" : {
+         "exits" : {
+            "e" : "Throne",
+            "n" : "Asmodeus",
+            "s" : "Bedroom"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "The Den",
+         "id" : "Den",
+         "description" : "\n   You have entered Asmodeus' study.  In the center of the room is a desk,\nwhich you realize is covered with human skin.  Putting that thought out of\nyour mind you look around the rest of the room.  The walls are made of the\nred rock that is common throughout the caves and the smell of sulphur, like\nalways, all but overwhelms you.  Still, your eyes keep returning to that\ngruesome desk.  Looking for exits to this room, you find three.  They lie to\nthe North, East and South.\n",
+         "altitude" : null
+      },
+      "intemple@eforest" : {
+         "exits" : {
+            "w" : "Temple",
+            "n" : "Priest",
+            "s" : "Elf"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Inside the Temple",
+         "id" : "InTemple",
+         "description" : "\n   You stand just inside the temple of the dark elves.  Looking around, you\nrealize that it is quite beautiful, even though the beauty seems somehow evil.\nYou are chilled by a sense of foreboding as you think of what dark acts may\nhave been committed inside this place of worship, for some nameless evil god.\nYou see small archways out of this room to the North and West.\n",
+         "altitude" : null
+      },
+      "glowing@eforest" : {
+         "exits" : {
+            "w" : "Cavern",
+            "s" : "Fungoid"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Glowing Passage",
+         "id" : "Glowing",
+         "description" : "\n   You walk down a passage which curves to the West and South.  The passage\nis lit by an eerie green glow which seems to come from fungus growth on the\nwalls.  Ever once in a while, you think you see a dark shape at the edge of\nyour vision, but then it could just be your imagination.\n",
+         "altitude" : null
+      },
+      "zombie@eforest" : {
+         "exits" : {
+            "s" : "Worn"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "eforest",
+         "title" : "Zombie Guardroom",
+         "id" : "Zombie",
+         "description" : "\n   You have entered the huge guardroom where all the Lich's troops live.\nSeveral zombie guards look up at you when you enter, and a slow spreads across\ntheir faces.  Anticipating a good meal, they quickly run to you and rip you to\nshreds.\n",
+         "altitude" : null
+      },
+      "office@eforest" : {
+         "exits" : {
+            "w" : "Undead",
+            "s" : "Room"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Lich's Office",
+         "id" : "Office",
+         "description" : "\n   You are in the Lich's office.  A large oak desk is against the north\nwall, covered in papers.  A worn oak chair sits right in front of the\ndesk.  The Lich's bedroom lies to the south, and a hall of the undead is\njust to the west.\n",
+         "altitude" : null
+      },
+      "path@eforest" : {
+         "exits" : {
+            "n" : "Home",
+            "s" : "Glade"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Forest Path",
+         "id" : "Path",
+         "description" : "\n   You are walking down a forest path which seems less corrupted than the\nsurrounding areas.  Some wildlife still lives, and the trees are not rotting or\ndead.  You see some of the beauty which once existed in this realm.  To the\nnorth of you lies more vibrant forest, while to the south you see only\ndestruction.\n",
+         "altitude" : "800"
+      },
+      "asmodeus@eforest" : {
+         "exits" : {
+            "s" : "Den"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Asmodeus' Treasury",
+         "id" : "Asmodeus",
+         "description" : "\n   You have entered the treasury of the vile demon-lord, Asmodeus.  In the\ncorner of this room sits an easy chair.  Without a doubt, Asmodeus would spend\nlong hours in here, simply counting his treasures.  You grin evilly at the\nthought of stealing from a demon lord.\n",
+         "altitude" : null
+      },
+      "museum@eforest" : {
+         "exits" : {
+            "w" : "Hot",
+            "e" : "Mosaic",
+            "n" : "Hate",
+            "s" : "Art"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Demonic Museum",
+         "id" : "Museum",
+         "description" : "\n   You have entered what could only be a demonic museum.  All about you are\nstatues and paintings, most of which are quite grotesque.  You see sculptures\nof demons torturing humans in many gruesome ways, as well as paintings of what\nmust be Hades.  The whole site is quite sickening.  Doors lead North, East and\nSouth into additional museum rooms, while to the west lies the exit to this\nperverted place.\n",
+         "altitude" : null
+      },
+      "cavern@eforest" : {
+         "exits" : {
+            "w" : "Barracks",
+            "e" : "Glowing",
+            "u" : "Ladder",
+            "n" : "Elf",
+            "s" : "Barracks2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Cavern of the Dark Elves",
+         "id" : "Cavern",
+         "description" : "\n   You have entered an enormous cavern.  You are awed by the vastness of this\nroom.  As you acclimate to this dark, damp environment, you remember of the\nancient legends you have heard of a dark race of elves living below the\nsurface.  Surely, this is their realm!  Looking around you, this assumption\nis upheld by the many dark shapes you see moving in the shadows.  You should\nmove through these realms quickly.  Surely the dark shapes would overwhelm\nyou by numbers if you stayed here too long.  Exits leave this cavern to the\nNorth, West, South and East, while a ladder leads up.\n",
+         "altitude" : null
+      },
+      "glen@eforest" : {
+         "exits" : {
+            "e" : "Glade",
+            "s" : "Oaks"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Warped Glen",
+         "id" : "Glen",
+         "description" : "\n   You have wandered into a small glen which is grotesquely warped.  Trees\nform weird, diabolical shapes, and the area seems pervaded by the stench of\nbrimstone.  You gag to avoid breathing the fouled air.  To the North and West\nare the mountains which shield this valley.  It is quite unfortunate that they\ndid no protect the forest from whatever destroyed it...\n",
+         "altitude" : "800"
+      },
+      "climb@eforest" : {
+         "exits" : {
+            "e" : "Crest",
+            "n" : "Scenic",
+            "s" : "hills14@caledonia"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Rocky Climb",
+         "id" : "Climb",
+         "description" : "\n   You are walking on a steep mountain path which leads over the top of the\nmountain to the east and downwards towards a ravaged forest to the North.\nYou suspect that the view here would be quite beautiful if not for the noxious\nfumes wafting up from the forest below, which cause your eyes to constantly\nwater.  Looking at the forest, you believe that it must have once been quite\nbeautiful.\n",
+         "altitude" : "950"
+      },
+      "guarded@eforest" : {
+         "exits" : {
+            "n" : "Bottom",
+            "s" : "Undead"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Guarded Hallway",
+         "id" : "Guarded",
+         "description" : "\n   You are in a small room used to guard the Lich's private rooms.  A passage\nleads to the north, and to the south you hear a loud, hollow roar.\n",
+         "altitude" : null
+      },
+      "priest@eforest" : {
+         "exits" : {
+            "s" : "InTemple"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Dark Priest's Lair",
+         "id" : "Priest",
+         "description" : "\n   You stand in a room which is consumed by darkness.  Shadows flicker every-\nwhere, seeming almost alive.  For a moment, you worry that your light source\nmay be extinguished.  Glancing around, through the inky darkness, you realize\nthat you are in some type of bed room.  Evil religious icons and grotesque\npaintings line the walls.  In the corner sits an altar which is covered by\na dark red liquid.  Without a doubt, this is the home of the Priest of the\ndark elves.\n",
+         "altitude" : null
+      },
+      "home@eforest" : {
+         "exits" : {
+            "e" : "Cottage",
+            "s" : "Path"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Forest Home",
+         "id" : "Home",
+         "description" : "\n   You have entered a small forested area of great beauty, in sharp contrast\nto the destruction to the south.  About you, the sounds of nature abound.  If\nnot for the memory of the tainted forest to the south, you could become easily\nlost in the beauty here.  Just to the East of you, partially hidden by healthy\ntrees, is a small cottage.  To the North and West are the mountains which\nseclude this valley.\n",
+         "altitude" : "800"
+      },
+      "interrogation@eforest" : {
+         "exits" : {
+            "e" : "Lich"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Interrogation Room",
+         "id" : "Interrogation",
+         "description" : "\n   You have entered a room obviously designed to force people to talk and\ngive great pain.  A lingering smell of death and decay fills the room.\nVarious instruments of torture fill the room, the most notable being a\nlarge rack in the center.  The only exit from the room leads to the east.\n",
+         "altitude" : null
+      },
+      "guard@eforest" : {
+         "exits" : {
+            "e" : "^Edoor",
+            "u" : "Entry",
+            "s" : "Treasury"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Guard Room",
+         "id" : "Guard",
+         "description" : "\n   The heat in this room is stifling.  As you struggle to breath the scalding\nair, you manage to take in the surroundings.  All about, you can see squalor.\nA broken tables lies off to one corner, with the remnants of a meal, ages old\non it, and several broken chairs litter the floor.  The room itself actually\nreeks of garbage, and covering the walls are a dried up substance that looks\nsuspicious like blood.  A crudely letter sign on the wall reads GARD ROME.\nTo the South is an archway that seems to lead into a somewhat cleaner room.\n",
+         "altitude" : null
+      },
+      "hot@eforest" : {
+         "exits" : {
+            "w" : "^hole",
+            "e" : "Museum",
+            "u" : "Stairs",
+            "s" : "Fungus"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Hot Cavern",
+         "id" : "Hot",
+         "description" : "\n   You stand in a huge, natural cavern.  It is not just hot, but rather\nalmost unbearable.  There certainly better be something valuable down here\nto make all of your suffering okay!  To the south of you is another natural\ncavern, while to the east lies a passage which is obviously manmade.  Just\nto the west is a stone door, set in the wall of the cavern.  A diamond shaped\nhole lies in the center of the stone.\n",
+         "altitude" : null
+      },
+      "freshly@eforest" : {
+         "exits" : {
+            "w" : "Cave",
+            "e" : "Oaks"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Freshly Hewn Pathway",
+         "id" : "Freshly",
+         "description" : "\n   You stand in a pathway which is quite freshly-hewn.  From the marks made\nduring the construction of this pathway, it seems that something moved out\ninto the forest from the west.  To the west, the stench of brimstone is\nstronger than ever.\n",
+         "altitude" : "800"
+      },
+      "passage@eforest" : {
+         "exits" : {
+            "w" : "EForest",
+            "e" : "NWcorner@valley"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "eforest",
+         "title" : "Mountain Passage",
+         "id" : "Passage",
+         "description" : "\n   You are walking down a long passage which has been carved out of the heart\nof this mountain.  It is obvious that great time has been spent carving this\npassage.  You have heard rumors of the dwarves of the North cutting a passage\nthrough to a beautiful forest for the elves of this realm.  Perhaps, that\nbeautiful, fabled realm lies to the West!\n",
+         "altitude" : null
+      },
+      "cathedral@eforest" : {
+         "exits" : {
+            "e" : "EastEnd",
+            "u" : "Entrance",
+            "n" : "Narrow"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Cathedral Room",
+         "id" : "Cathedral",
+         "description" : "\n   You are in a vast cavern.  The ceiling is lost in shadows, but you can make\nout a ledge encircling the room.  Evenly spaced along the ledge are stone\ngargoyles, which seem to be jeering at you.  In the wall far to the north, you\nsee the black mouth of a passage out, and the room seems to continue to the\neast, where dim light can be made out.  To the south, an upward sloping passage\nseems to ascend to the surface.\n",
+         "altitude" : null
+      },
+      "temple_guard@eforest" : {
+         "exits" : {
+            "w" : "Elf"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Temple Guard Room",
+         "id" : "Temple_Guard",
+         "description" : "\n   You stand in the room which housed the two dark elves who guarded the\ntemple.  It is a rather dark and dreary.  On the ground lie two worn mattresses\nwhile a wobbly table stands to the side.\n",
+         "altitude" : null
+      },
+      "boiling@eforest" : {
+         "exits" : {
+            "e" : "^StoneDoor",
+            "n" : "Stone"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Boiling Lake",
+         "id" : "Boiling",
+         "description" : "\n   You have entered another natural cavern.  In the middle of the cavern is a\nhuge lake.  Indeed, the scene would appear to be quite normal if not for the\nfact that lake was actually boiling.  It has become so hot in this room that\nwater itself is unable to remain in its liquid form!  Surely, you must escape\nthis demonic realm soon!  Avenues of retreat from here lie to the North and\nEast.\n",
+         "altitude" : null
+      },
+      "throne@eforest" : {
+         "exits" : {
+            "w" : "Den",
+            "s" : "Stone"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Throne Room",
+         "id" : "Throne",
+         "description" : "\n   You have entered the throne room of Asmodeus, the Demon Lord who, in his\nbattle with the evil lich, destroyed the beautiful elven forest.  If that foul\ncreature is still around, he must be destroyed!  You rapidly glance around the\nroom and see, in the middle of the room, a throne made out of human bones.\nYou gag at the sight, and rapidly look for exits from this room.  They lie\nto the South and West.\n",
+         "altitude" : null
+      },
+      "prison@eforest" : {
+         "exits" : {
+            "s" : "^Prison_Door"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Prison Cell",
+         "id" : "Prison",
+         "description" : "\n   You have entered a small prison cell.  The floor is covered with hay, and\na small bed sits against one wall, covered with dried blood.  A skeleton hangs\nfrom chains and shackles on another wall.\n",
+         "altitude" : null
+      },
+      "barracks@eforest" : {
+         "exits" : {
+            "w" : "Commander",
+            "e" : "Cavern"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Elven Barracks",
+         "id" : "Barracks",
+         "description" : "\n   You are in a large barracks for the dark elf troops.  The whole place seems\nrun down.  Trash litters the floor and most of the beds in this room are\ndestroyed.  It looks as if, for the most part, the dark elves do not bother\nto maintain an army now that their enemies, the good elves above, are gone.\nExits leave these barracks to the West and East.\n",
+         "altitude" : null
+      },
+      "elf@eforest" : {
+         "exits" : {
+            "e" : "Temple_Guard",
+            "n" : "InTemple",
+            "s" : "Cavern"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Dark Elf Temple",
+         "id" : "Elf",
+         "description" : "\n   You have emerged into the largest subterranean cavern that you have ever\nseen.  Above you, the roof lies somewhere beyond the radius of your light\nsource, while to the sides of this cavern, you can just barely make out the\nwalls.  Most astounding is a temple lying in the center of this cavern, which\nhas apparently been constructed entirely underground!  The temple is made out\nof some type of dark stone which glows with an unholy black light.  Without\na doubt, this temple is dedicated to some dark deity.  You may enter it to the\nNorth.  Off to the east and south lie other exits from this cavern.\n",
+         "altitude" : null
+      },
+      "shattered@eforest" : {
+         "exits" : {
+            "w" : "Oaks",
+            "e" : "^tree",
+            "n" : "Glade",
+            "s" : "Corrupted"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Shattered Forest",
+         "id" : "Shattered",
+         "description" : "\n   You cry out in horror as you witness what has been done to this forest.  All\nabout, trees lie downed, as if hewn by some giant axe.  However, even the\ntwisted corpses of the trees seem unnatural.  Somehow, a single oak tree in\nthe center of the swath of destruction seems to have survived.  It lies just\nto the east of you.  To the west, the line of destruction seems to continue.\nMercifully, mountains to the east protected any further realms from this\ncorruption.\n",
+         "altitude" : "800"
+      },
+      "cave@eforest" : {
+         "exits" : {
+            "w" : "Entry",
+            "e" : "Freshly"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Guarded Cave",
+         "id" : "Cave",
+         "description" : "\n   You stand at the entrance to a dark cave.  The destroyed forest is behind\nyou, to the east, while to the west lies the unknown.  Within the cave,\nyou see dark shadows flittering about.  The scent of brimstone is stronger\nthan ever here, and the sense of foreboding that you felt when you first\nentered the forest clutches anew at you heart.  You have little doubt that\none of the great evils lies within this cave...\n",
+         "altitude" : null
+      },
+      "crest@eforest" : {
+         "exits" : {
+            "w" : "Climb",
+            "e" : "RClearing@valley"
+         },
+         "flags" : [
+            "OutDoors",
+            "NoMobiles"
+         ],
+         "zone" : "eforest",
+         "title" : "Mountain Crest",
+         "id" : "Crest",
+         "description" : "\n   You stand at the top of one of the mountains overlooking the valley.  Just\nto the east, the path you are on becomes rather precarious, sloping sharply\ndown into a rocky clearing.  To the west, the descent is more gradual, ending\nin a rocky slope.  You should be very careful.  It looks like the area could\nall tumble down in a landslide in a second!\n",
+         "altitude" : "850"
+      },
+      "storage@eforest" : {
+         "exits" : {
+            "e" : "^Storage_Door"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Storage Room",
+         "id" : "Storage",
+         "description" : "\n   You have walked into a small stone cubical acting as a storage room.  The\nwalls are lined with wooden shelves.  A large door is located on the east\nwall.\n",
+         "altitude" : null
+      },
+      "captain@eforest" : {
+         "exits" : {
+            "w" : "^Captain_Door",
+            "e" : "Narrow"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "Captain's Office",
+         "id" : "Captain",
+         "description" : "\n   You are standing in a sparsely furnished office.  Sputtering torches\nprovide light, but many shadows still abound.  The main piece of furniture\nis a large oak desk in the center of the room.  A large door is in the\nwest wall, and a passageway leads to the east.\n",
+         "altitude" : null
+      },
+      "oaks@eforest" : {
+         "exits" : {
+            "w" : "Freshly",
+            "e" : "Shattered",
+            "n" : "Glen",
+            "s" : "Tainted"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Blackened Oaks",
+         "id" : "Oaks",
+         "description" : "\n   Your heart skips a beat as you enter this grove of trees.  Without a doubt,\nthis grove used to contain some of the strongest and most beautiful trees in\nthe entire elven forest.  Now, it looks as though a giant hand came down from\nthe heavens, and simply pushed the trees down, in a line from West to East.\nThe few Oaks which still stand have been warped into unhealthy shapes, which\nnature itself could never produce.  Following the line of downed trees, you\nrealize that it leads to a freshly hewn pathway in the mountains to the West.\n",
+         "altitude" : "800"
+      },
+      "eforest@eforest" : {
+         "exits" : {
+            "w" : "Glade",
+            "e" : "Passage",
+            "n" : "sherwood1@sherwood",
+            "s" : "Thorny"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "The Elven Forest",
+         "id" : "EForest",
+         "description" : "\n   You stand at the entrance of what was once a grand elven forest.  Now, it\nlies in ruins about you.  Blackened stumps abound and the trees which still\nstand reek of decay.  This secluded vale has obviously been destroyed by some\ngreat disaster.  You are overcome by a sense of foreboding! The evil which\nruined this forest may still be around!\n   Although deeply disturbed by the destruction around you, you manage to look\nabout to determine your position.  To the North and East are the mountains\nwhich shield this valley.  The area to the South of you also heads into\nmountains, but a path makes passage possible.  An archway marks a tunnel\nthrough the eastern mountains.\n",
+         "altitude" : "800"
+      },
+      "glade@eforest" : {
+         "exits" : {
+            "w" : "Glen",
+            "e" : "EForest",
+            "n" : "Path",
+            "s" : "Shattered"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "eforest",
+         "title" : "Ruined Glade",
+         "id" : "Glade",
+         "description" : "\n   You are in a small clearing in the ruins of the elven forest.  The ground in\nthis clearing is blackened and infertile.  The only sign of life here is a\ncircle of toadstools which lie near the center of the glade.  All around you\nis ruined forest.  Just to the North, however, you think you see some greenery.\n",
+         "altitude" : "800"
+      },
+      "eastend@eforest" : {
+         "exits" : {
+            "w" : "Cathedral",
+            "n" : "Planning",
+            "d" : "^Throne_Cathedral"
+         },
+         "flags" : [],
+         "zone" : "eforest",
+         "title" : "East End of the Cathedral",
+         "id" : "EastEnd",
+         "description" : "\n   You are now in the eastern section of the cathedral.  A subdued glow\nemanates from a phosphorescent moss lining the walls and ceiling.  Against\nthe far eastern wall is a large throne hewn from granite.  A thick layer\nof dust covers everything.  To the north, a passage leads to a small, brightly\nlit room.\n",
+         "altitude" : null
+      },
+      "commander@eforest" : {
+         "exits" : {
+            "e" : "Barracks"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eforest",
+         "title" : "Commander's Quarters",
+         "id" : "Commander",
+         "description" : "\n   You stand in a large, well-kept room.  It has none of the squalor of the\nbarracks to the East.  There is a neat bed here, with a tidy table next to.\nIf it weren't for the fact everything in this room was black, the place might\nactually look cheery.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "gorden@eforest" : {
+         "damage" : "10",
+         "location" : "Elf",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "81",
+         "name" : "Gorden",
+         "description" : "\nGorden the Dark Elf stands here, guarding the Dark Elven realms.",
+         "strength" : "75"
+      },
+      "keldar@eforest" : {
+         "damage" : "10",
+         "location" : "Elf",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "81",
+         "name" : "keldar",
+         "description" : "Keldar the Dark Elf laughs at you.",
+         "strength" : "75"
+      },
+      "cerberus@eforest" : {
+         "damage" : "13",
+         "location" : "Cave",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "name" : "Cerberus",
+         "description" : "Cerberus growls at you, looking very hungry.",
+         "strength" : "120",
+         "mflags" : [
+            "BarW"
+         ]
+      },
+      "bear@eforest" : {
+         "damage" : "10",
+         "location" : "Glen",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "The Bear",
+         "name" : "bear",
+         "description" : "A grossly deformed black bear menaces you.",
+         "strength" : "80"
+      },
+      "jailor@eforest" : {
+         "damage" : "10",
+         "location" : "Lich",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "100",
+         "pname" : "The Jailor",
+         "name" : "Jailor",
+         "description" : "The Jailor advances menacingly towards you.",
+         "strength" : "100"
+      },
+      "lich@eforest" : {
+         "damage" : "15",
+         "location" : "Room",
+         "armor" : "0",
+         "aggression" : "66",
+         "pname" : "The Lich",
+         "name" : "Lich",
+         "description" : "The Lich is here, an evil grin on his boney face.",
+         "strength" : "200"
+      },
+      "succubus@eforest" : {
+         "damage" : "8",
+         "location" : "Bedroom",
+         "armor" : "0",
+         "name" : "Succubus",
+         "description" : "The Succubus looks at you greedily.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "90",
+         "speed" : "0",
+         "pname" : "The Succubus",
+         "aggression" : "100"
+      },
+      "asmodeus@eforest" : {
+         "damage" : "15",
+         "location" : "Den",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "88",
+         "name" : "Asmodeus",
+         "description" : "Asmodeus prepares to kill you for daring to confront him!",
+         "strength" : "200"
+      },
+      "guido@eforest" : {
+         "damage" : "10",
+         "location" : "Guarded",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "50",
+         "name" : "Guido",
+         "description" : "Guido the Guardsman flexes his muscles.",
+         "strength" : "80"
+      },
+      "loonitherin@eforest" : {
+         "damage" : "10",
+         "location" : "Inside",
+         "aggression" : "36",
+         "armor" : "0",
+         "name" : "Loonitherin",
+         "description" : "Loonitherin the Mad Elf gazes at you arrogantly.",
+         "strength" : "90"
+      },
+      "rotty@eforest" : {
+         "damage" : "8",
+         "location" : "Tainted",
+         "aggression" : "35",
+         "armor" : "0",
+         "name" : "rotty",
+         "description" : "\nRotty the flying squirrel soars towards you, foaming at the mouth.",
+         "strength" : "40"
+      },
+      "gargoyle@eforest" : {
+         "damage" : "13",
+         "location" : "Bottom",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "100",
+         "pname" : "The Gargoyle",
+         "name" : "Gargoyle",
+         "description" : "A large stone gargoyle leers at you.",
+         "strength" : "120"
+      },
+      "nunzio@eforest" : {
+         "damage" : "10",
+         "location" : "Guarded",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "50",
+         "name" : "Nunzio",
+         "description" : "Nunzio the Guardsman stares menacingly at you.",
+         "strength" : "80"
+      },
+      "truffle@eforest" : {
+         "damage" : "25",
+         "location" : "Fungoid",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "3",
+         "name" : "Truffle",
+         "description" : "Truffle the Fungus Monster shuffles across the room.",
+         "strength" : "250"
+      },
+      "captain@eforest" : {
+         "damage" : "10",
+         "location" : "Captain",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "94",
+         "pname" : "The Captain",
+         "name" : "Captain",
+         "description" : "The Captain of the Guard looks at you suspiciously.",
+         "strength" : "100"
+      },
+      "asmadeus@eforest" : {
+         "damage" : "10",
+         "location" : "Museum",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "name" : "Asmadeus",
+         "description" : "Asmadeus the Demon Artist growls at you.",
+         "strength" : "100"
+      },
+      "priest@eforest" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "8",
+         "location" : "priest",
+         "armor" : "0",
+         "name" : "priest",
+         "description" : "The Dark Elven Priest prepares to do you in.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The Priest",
+         "aggression" : "92"
+      },
+      "commander@eforest" : {
+         "damage" : "12",
+         "location" : "Commander",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "92",
+         "name" : "Commander",
+         "description" : "The Dark Elven Commander looks at you menacingly.",
+         "strength" : "150"
+      },
+      "prisoner@eforest" : {
+         "damage" : "6",
+         "location" : "Prison",
+         "armor" : "0",
+         "aggression" : "5",
+         "pname" : "The Prisoner",
+         "name" : "Prisoner",
+         "description" : "A prisoner cowers in one corner.",
+         "strength" : "30"
+      }
+   }
+}

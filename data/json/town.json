@@ -1,0 +1,1309 @@
+{
+   "obj" : {
+      "boat@town" : {
+         "location" : "IN_ROOM:town11",
+         "oflags" : [
+            "Boat"
+         ],
+         "weight" : "10",
+         "name" : "boat",
+         "examine" : "It's a boat...what did you expect to see?\n",
+         "bvalue" : "5",
+         "desc[0]" : "There is a small sail boat here.",
+         "size" : "100"
+      },
+      "bag_waterskin@town" : {
+         "location" : "CARRIED_BY:traveler",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "bag",
+         "name" : "bag_waterskin",
+         "examine" : "You see a simple leather waterskin used to carry liquids.\n",
+         "size" : "10",
+         "pname" : "waterskin",
+         "weight" : "10",
+         "bvalue" : "15",
+         "desc[0]" : "A small bag of water lies carelessly discarded on the ground."
+      },
+      "tuna@town" : {
+         "location" : "IN_ROOM:town21",
+         "weight" : "2",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "tuna",
+         "examine" : "It's 3 years old and smells bad, but you should be able to still eat it.\n",
+         "bvalue" : "5",
+         "desc[0]" : "Somthing smells here....I think it's tuna.",
+         "size" : "2"
+      },
+      "paper_paperwork@town" : {
+         "location" : "IN_ROOM:town13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "paper",
+         "pname" : "paperwork",
+         "name" : "paper_paperwork",
+         "examine" : "This paperwork resembles something you might see at Penn State's registrar's\noffice.\n",
+         "desc[0]" : "There is a huge mound of paperwork here!"
+      },
+      "boulder_door_1@town" : {
+         "desc[1]" : "A large boulder blocks the exit.",
+         "location" : "IN_ROOM:town62",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "boulder",
+         "name" : "boulder_door_1",
+         "examine" : "You see a large piece of rock, which is smooth and rounded on all sides.\n",
+         "linked" : "boulder_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "A large boulder is rolled to the side, letting some light trickle in."
+      },
+      "ring@town" : {
+         "location" : "WORN_BY:wench",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "ring",
+         "examine" : "An intrically carved golden ring has a small diamond chip emplaced in it.\nAs you look at it, it resembles rings given as payment to lustful wenches\nfor a night's service.\n",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "100",
+         "aflags" : [
+            "Hand"
+         ],
+         "desc[0]" : "A golden ring with a small diamond is here."
+      },
+      "guppy@town" : {
+         "location" : "IN_ROOM:town30",
+         "weight" : "10",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "guppy",
+         "examine" : "This Guppy looks familiar.\n",
+         "bvalue" : "150",
+         "desc[0]" : "A cute little Guppy sits here waiting for Cyric.",
+         "size" : "140"
+      },
+      "knife@town" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:town15",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "knife",
+         "examine" : "It's a knife silly.\n",
+         "size" : "8",
+         "weight" : "8",
+         "bvalue" : "10",
+         "desc[0]" : "There is a knife here."
+      },
+      "staff_wizardstaff@town" : {
+         "damage" : "12",
+         "location" : "WIELDED_BY:wizard",
+         "oflags" : [
+            "Weapon",
+            "Lit",
+            "Lightable"
+         ],
+         "altname" : "staff",
+         "name" : "staff_wizardstaff",
+         "examine" : "It is a solid piece of oak with powerful runes carved into it that burn\nyour hands when you touch it.\n",
+         "size" : "35",
+         "pname" : "wizardstaff",
+         "weight" : "10",
+         "bvalue" : "400",
+         "desc[0]" : "An intricately carved piece of oak eminating power lies on the ground."
+      },
+      "knife_stiletto@town" : {
+         "damage" : "6",
+         "location" : "IN_ROOM:town47",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "knife",
+         "name" : "knife_stiletto",
+         "examine" : "You see a intricately carved stiletto made out of an unknown metal.\n",
+         "size" : "10",
+         "pname" : "stiletto",
+         "weight" : "10",
+         "bvalue" : "20",
+         "desc[0]" : "A small, sharp stiletto lies on the ground."
+      },
+      "horseshoe@town" : {
+         "location" : "IN_ROOM:town40",
+         "weight" : "3",
+         "name" : "horseshoe",
+         "examine" : "Take it...It's good luck.\n",
+         "bvalue" : "50",
+         "desc[0]" : "There is a horseshoe here.",
+         "size" : "3"
+      },
+      "dried_meat@town" : {
+         "location" : "IN_ROOM:town51",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "dried",
+         "name" : "dried_meat",
+         "examine" : "It is a tasty piece of dried travelers meat.\n",
+         "size" : "40",
+         "pname" : "meat",
+         "weight" : "10",
+         "bvalue" : "10",
+         "desc[0]" : "A dried piece of meat lies here."
+      },
+      "coins@town" : {
+         "location" : "IN_ROOM:town36",
+         "weight" : "10",
+         "name" : "coins",
+         "examine" : "They appear to be gold.\n",
+         "bvalue" : "75",
+         "desc[0]" : "There's some coins here.",
+         "size" : "10"
+      },
+      "leather_whip@town" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:wench",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "leather",
+         "name" : "leather_whip",
+         "examine" : "It looks like it's been used to beat someone!\n",
+         "size" : "1",
+         "pname" : "whip",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A very large leather whip lies here."
+      },
+      "dart@town" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:assasin",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "dart",
+         "examine" : "It's a dart used by professional assassins, like Greystreak the ShadowMaster.\n",
+         "size" : "8",
+         "weight" : "8",
+         "bvalue" : "20",
+         "desc[0]" : "A rather sharp dart sits here."
+      },
+      "pack_backpack@town" : {
+         "location" : "IN_ROOM:town9",
+         "oflags" : [
+            "Container",
+            "Wearable"
+         ],
+         "altname" : "pack",
+         "name" : "pack_backpack",
+         "examine" : "It's a large backpack, used for adventuring.\n",
+         "size" : "50",
+         "weight" : "10",
+         "pname" : "backpack",
+         "bvalue" : "20",
+         "desc[0]" : "There is a backpack here.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "whiskey@town" : {
+         "location" : "CARRIED_BY:mercenary",
+         "weight" : "10",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "whiskey",
+         "examine" : "Don't drink it all...save me some!\n",
+         "bvalue" : "5",
+         "desc[0]" : "There is some whiskey here!",
+         "size" : "15"
+      },
+      "sword_bastardsword@town" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:veteran",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "sword_bastardsword",
+         "examine" : "A long black steel sword with long vicious looking teeth\nmade specifically for the use of slashing and then tearing\nyour victim to pieces.\n",
+         "size" : "35",
+         "pname" : "bastardsword",
+         "weight" : "10",
+         "bvalue" : "300",
+         "desc[0]" : "A long black steel sword with wicked teeth sits here."
+      },
+      "boulder_door@town" : {
+         "desc[1]" : "A large boulder seems to be covering a hole in the mountainside.",
+         "location" : "IN_ROOM:town61",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "altname" : "boulder",
+         "name" : "boulder_door",
+         "examine" : "You see a large piece of rock, which is smooth and rounded on all sides.\n",
+         "linked" : "boulder_door_1",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "A large boulder is rolled to the side of a dark cave enterence."
+      }
+   },
+   "loc" : {
+      "town23@town" : {
+         "exits" : {
+            "n" : "town22",
+            "s" : "town24"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Weapons Shop",
+         "id" : "town23",
+         "description" : "\n   There are many weapons on display here, with bows and very fancy swords on\ndisplay at the back of the room.  Malicious weapons are locked to the walls to\nkeep prying hands away from the wares.  To the north you see that you may enter\na small room of the weapons shop, or you may go south to the Town square.\n",
+         "altitude" : null
+      },
+      "town54@town" : {
+         "exits" : {
+            "n" : "town55",
+            "s" : "town50"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "The King's Road",
+         "id" : "town54",
+         "description" : "\n    You stand on the King's Road.  It leads north, directly to the Castle of\nPensalon.  The road continues south into the woods that you can just make out\noff in the distance.\n",
+         "altitude" : null
+      },
+      "town18@town" : {
+         "exits" : {
+            "e" : "town15",
+            "n" : "town19"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Dead End",
+         "id" : "town18",
+         "description" : "\n   This is a dead end to the alley.  It is very dark and garbage is strewn\nall over the alley here.  To the north is a darkended alley and to the east is\na small building that is open cause the door has been ripped off its hinges.\n",
+         "altitude" : null
+      },
+      "town25@town" : {
+         "exits" : {
+            "w" : "town38",
+            "e" : "town20",
+            "n" : "town24",
+            "s" : "town26"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Town Square",
+         "id" : "town25",
+         "description" : "\n   This is the main town sqare.  It is a large area where many merchants are\nsetting up carts and tables for a day of selling wares to travelers who freqent\nthis town.  To the north is a square near the weapons shop, to the south you\nsee another part of the square where a Tavern is located, to the east is the\nmain road heading for the docks, and lastly to the west the Square continues.\n",
+         "altitude" : null
+      },
+      "town14@town" : {
+         "exits" : {
+            "e" : "town9"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Smuggler's Storeroom",
+         "id" : "town14",
+         "description" : "\n   This small room is stacked with many items from all over the known world.\n",
+         "altitude" : null
+      },
+      "town2@town" : {
+         "exits" : {
+            "w" : "town3",
+            "e" : "town1"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Wide River",
+         "id" : "town2",
+         "description" : "\n   The river narrows a little here, still allowing large sea-faring vessels to\nenter the bay to the west.  The water flows gently toward the entrance of the\ninlet, mixing the salt water with the fresh water from the bay.  To the east\nthe endless void of the sea can still be seen and the memory of the long sea\nvoyage is still fresh in your mind.\n",
+         "altitude" : null
+      },
+      "town37@town" : {
+         "exits" : {
+            "e" : "town26",
+            "n" : "town38",
+            "s" : "town35"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Square Near Brothel",
+         "id" : "town37",
+         "description" : "\n   This large, open area has many games of chance sitting in it for people who\ndo not feel like going into the Brothel to use the regular Casino. To the north\nis yet another part of the town square, to the south you may enter the Town\nBrothel, and to the east you may enter the square near the Tavern, where much\nfood is being sold.\n",
+         "altitude" : null
+      },
+      "town29@town" : {
+         "exits" : {
+            "w" : "town30",
+            "d" : "town17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Precarious Ledge",
+         "id" : "town29",
+         "description" : "\n   You are standing on a very small ledge that is very tough for you to balance\non, but you manage as you cling to a drainage pipe from the roof.  The only\nways out are to risk climbing down the pipe, or to go west into one of the\nbrothel's rooms.\n",
+         "altitude" : null
+      },
+      "town58@town" : {
+         "exits" : {
+            "w" : "town59",
+            "e" : "town57",
+            "n" : "town58",
+            "s" : "town56"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Lost in The Woods",
+         "id" : "town58",
+         "description" : "\n     Woods surround you on all sides you seem to have lost all sense of\ndirections.  You wander in all directions but none of them seem to lead you\nout of the woods.\n",
+         "altitude" : null
+      },
+      "town42@town" : {
+         "exits" : {
+            "w" : "town43",
+            "e" : "town41",
+            "s" : "chlyon2@chlyon"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Town Gates",
+         "id" : "town42",
+         "description" : "\n   You are standing before the town gates, which appear to have never been\nclosed before.  Behind you is the town, and in front of you is the Commerce\nroad, which continues into the newly discovered lands of Pensalon where many\nadventures await you.\n",
+         "altitude" : null
+      },
+      "town35@town" : {
+         "exits" : {
+            "w" : "town36",
+            "e" : "town27",
+            "u" : "town33",
+            "n" : "town37"
+         },
+         "flags" : [
+            "Party",
+            "Peaceful",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "The Town Brothel",
+         "id" : "town35",
+         "description" : "\n   This is the town's brothel.  There are many activities here for the weary\ntraveler to fulfill their wildest dreams.  To the north there is an entrance to\nthe town square, to the east the brothel is connected to the town's Tavern,  to\nthe west you may enter one of the brothel's entertainment areas:  the Casino,\nand you may climb a grand staircase to the upper entertainment rooms, where\nanything is possible if you have the money.\n",
+         "altitude" : null
+      },
+      "town52@town" : {
+         "exits" : {
+            "w" : "town51",
+            "e" : "town53"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Crowded path",
+         "id" : "town52",
+         "description" : "\n   The path through the woods becomes very close here and you feel very\ncrampted as you walk down the path.  It feels like you are being watched by the\nwoods themselves.  To the west is a nice orderly campsite and just ahead of you\nto the east you can see a lot of heavy work being done.\n",
+         "altitude" : null
+      },
+      "town39@town" : {
+         "exits" : {
+            "e" : "town24",
+            "n" : "town40",
+            "s" : "town38"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Square Near Blacksmith's",
+         "id" : "town39",
+         "description" : "\n   This is a crowded square covered with dirt and bits and pieces of metal.  To\nthe north is the Blacksmith's Forge, to the south is the main Town Square, to\nthe east is the square in front of the Weapons shop.\n",
+         "altitude" : null
+      },
+      "town27@town" : {
+         "exits" : {
+            "w" : "town35",
+            "n" : "town26",
+            "s" : "town28"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Cheery Tavern",
+         "id" : "town27",
+         "description" : "\n    This is a large, cheery tavern where many people come to drink and even\nseek some entertainment from time to time after a long day of adventuring.\nThe bar is made out of beautiful handcarved oak, and you also notice that the\nbar is fully  stocked.  Basically, you name it, you can get it here. To the\nnorth you may enter one of the town's small squares, to the south you could\nclamber behind the bar, and to the west you may enter the town's brothel.\n",
+         "altitude" : null
+      },
+      "town60@town" : {
+         "exits" : {
+            "u" : "town61",
+            "d" : "town59"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Barely Hanging On!",
+         "id" : "town60",
+         "description" : "\n     The cliff is very steep here, you are barely hanging onto the rock as it\nbegins to crumble around your hands. Just up above you can see a small ledge\nthat may give you a break from all of this climbing, or you my climb back down\nto the woods below.\n",
+         "altitude" : null
+      },
+      "town38@town" : {
+         "exits" : {
+            "w" : "town41",
+            "e" : "town25",
+            "n" : "town39",
+            "s" : "town37"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Town Square",
+         "id" : "town38",
+         "description" : "\n   This is just a large open area in the middle of the town.  This square is\nconnected to the west by the main road and goes east to another part of the\ntown's square, to the north is the Blacksmith's square, and to the south is\nthe square in front of the Brothel.\n",
+         "altitude" : null
+      },
+      "town3@town" : {
+         "exits" : {
+            "w" : "town4",
+            "e" : "town2"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Wide River",
+         "id" : "town3",
+         "description" : "\n  The river continues to meander slowly towards the bay, where now you can just\nbarely see a small port town rising off in the distance.  The salt smell is\nslowly diminishing as the fresh water is taking control of the river.  The\nriver continues west to the port, and east to sea.\n",
+         "altitude" : null
+      },
+      "town24@town" : {
+         "exits" : {
+            "w" : "town39",
+            "e" : "town21",
+            "n" : "town23",
+            "s" : "town25"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Square Near Weapons Shop",
+         "id" : "town24",
+         "description" : "\n   This is just a small part of the large town square.  This part of the square\nis located near the Main Weapons shop, so there seems to be many weapon dealers\nin the area, trying to sell their wares to unwary adventurers.  There are exits\nin all directions, to the north is the Main Weapons shop, to the east is the\nGrocer's store, to the south is the Main Square in town, and to the west is the\nsmall square near the Blacksmith's shop.\n",
+         "altitude" : null
+      },
+      "town6@town" : {
+         "exits" : {
+            "s" : "town5"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "North End of Bay",
+         "id" : "town6",
+         "description" : "\n   You are now at the northen end of the bay, surrounded on all sides by\nwater.  It seems the only safe way to land is to go back the way you came.\n",
+         "altitude" : null
+      },
+      "town21@town" : {
+         "exits" : {
+            "w" : "town24",
+            "s" : "town20"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Grocer's Store",
+         "id" : "town21",
+         "description" : "\n   This is a very large store where food is sold in huge amounts.  You can see\nmany items stocked here, like fish and vegetables.  Many people mill about the\nroom trying to buy items for their next meal.  To the south is the main road\nand to the west is an entrance into a small square.\n",
+         "altitude" : null
+      },
+      "town40@town" : {
+         "exits" : {
+            "s" : "town39"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Blacksmith's Forge",
+         "id" : "town40",
+         "description" : "\n   This is a large room containing many pieces of metal and a extremely large\nforge for making many metal items like weapons and even an occasional\nhorseshoe.  The only exit is to the south back into the square.\n",
+         "altitude" : null
+      },
+      "town4@town" : {
+         "exits" : {
+            "w" : "town5",
+            "e" : "town3"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Opening of Bay",
+         "id" : "town4",
+         "description" : "\n   A gentle salt breeze can be felt coming from the east.  To the west, the\nimage of the small port town grows as you enter a large bay with many large\ntrading vessels.  A lot of these vessels are laden with supplies, heading back\nto the old world of the east.\n",
+         "altitude" : null
+      },
+      "town50@town" : {
+         "exits" : {
+            "e" : "town51",
+            "n" : "town54",
+            "s" : "town48"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Clearing",
+         "id" : "town50",
+         "description" : "\n     The road opens into a large clearing in the woods and off in the north\njust visible in the blinding sun is the Castle of Pensalon.  To your east you\ncan smell fresh food cooking and you can even see a little smoke rising up from\nwhat seems to be a small campsite.  The woods to the south begin to thicken\naround the road.\n",
+         "altitude" : null
+      },
+      "town49@town" : {
+         "exits" : {
+            "w" : "town56",
+            "e" : "town48",
+            "n" : "town56",
+            "s" : "town57"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Lost in The Woods",
+         "id" : "town49",
+         "description" : "\n     Woods surround you on all sides you seem to have lost all sense of\ndirection.  You wander in all directions, but none of them seem to lead you\nout of the woods.\n",
+         "altitude" : null
+      },
+      "town43@town" : {
+         "exits" : {
+            "e" : "town42",
+            "n" : "town44"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Commerce Road",
+         "id" : "town43",
+         "description" : "\n   This dirt road starts at the town gates and heads off into the distance.  On\nthe side of the road there is a sign that says 300 miles to the King's castle.\nThe road is very crowded, and you see large commerce caravans moving along the\nlength of the road as far as you can see.\n",
+         "altitude" : null
+      },
+      "town33@town" : {
+         "exits" : {
+            "d" : "town35",
+            "s" : "town32"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Balcony",
+         "id" : "town33",
+         "description" : "\n   This is a small balcony overlooking the brothels main entrance room.  To the\nsouth is the Brothel's hallway leading to the entertainment rooms and you may\ngo down a grand staircase to the main floor of the brothel.\n",
+         "altitude" : null
+      },
+      "town30@town" : {
+         "exits" : {
+            "w" : "town32",
+            "e" : "town29"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Main Play Area",
+         "id" : "town30",
+         "description" : "\n   This is the largest room of the brothel complex; many people come up here\nto have a night of pure enjoyment and to let go of all inhibitions.  The room\nsmells of nice perfume and there are some customers lounging around waiting to\nbe served.  To the east is a window that exits out onto a ledge of the\nbuilding, and to the west is the main hallway of the brothel.\n",
+         "altitude" : null
+      },
+      "town44@town" : {
+         "exits" : {
+            "n" : "town45",
+            "s" : "town43"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Commerce Road",
+         "id" : "town44",
+         "description" : "\n   The Commerce Road continues on to the north here.  Many travellers have\npassed this way before going between the Castle of Pensalon and the small town\nto the southeast of your current position.\n",
+         "altitude" : null
+      },
+      "town32@town" : {
+         "exits" : {
+            "w" : "town34",
+            "e" : "town30",
+            "n" : "town33",
+            "s" : "town31"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Long Hallway",
+         "id" : "town32",
+         "description" : "\n   This long hallway has rooms off in all directions where the sounds of many\npeople can be heard.\n",
+         "altitude" : null
+      },
+      "town12@town" : {
+         "exits" : {
+            "w" : "town20",
+            "e" : "town10",
+            "n" : "town13",
+            "s" : "town11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Market Street",
+         "id" : "town12",
+         "description" : "\n   This the main road into town where all the trade traffic flows through to\nget into the continent of Pensalon.  To the north is a trade building and to\nthe south is a small shipyard office.  The road continues west into town and\nback east to the docks.\n",
+         "altitude" : null
+      },
+      "town55@town" : {
+         "exits" : {
+            "s" : "town54"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "At The Drawbridge",
+         "id" : "town55",
+         "description" : "\n    The drawbridge is raised here barring you access to the castle for\ncommerce on the kings property.  The King's Road stretches into the\nwoods to the south towards a small commerce village.\n",
+         "altitude" : null
+      },
+      "town16@town" : {
+         "exits" : {
+            "w" : "town17",
+            "n" : "town15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Darkened Square",
+         "id" : "town16",
+         "description" : "\n  This is a small, darkened square covered with garbage and human waste.  It\nlooks like no one has been through here in a long time.  To the north is the\nentrance to a small building and to the west is a back alleyway.\n",
+         "altitude" : null
+      },
+      "town61@town" : {
+         "exits" : {
+            "n" : "^boulder_door",
+            "d" : "town60"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Lookout Point",
+         "id" : "town61",
+         "description" : "\n     From this point you can see all around the lands of Pensalon.  Off in the\ndistance you can see a small commerce town, and you can even see the mighty\nCastle of the King of Pensalon where the Elemental Wizard resides and works his\nmighty magic.  Towards the East you can see a small man wearing a hard hat and\nwielding mighty magics and shaping the land itself.  As you come back to your\nsenses you notice that you are standing in a small campsite with a little\nsignal fire burning merrily.  You can climb back down the cliff or go explore\nthe cave to the north.\n",
+         "altitude" : null
+      },
+      "town56@town" : {
+         "exits" : {
+            "w" : "town58",
+            "e" : "town58",
+            "n" : "town57",
+            "s" : "town49"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Lost in The Woods",
+         "id" : "town56",
+         "description" : "\n     Woods surround you on all sides, you seem to have lost all sense of\ndirection.  You wander in all directions but none of them seem to lead you out\nof the woods.\n",
+         "altitude" : null
+      },
+      "town17@town" : {
+         "exits" : {
+            "e" : "town16",
+            "u" : "town29"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Back Alley",
+         "id" : "town17",
+         "description" : "\n   This dark alleyway leads to the back of a nondescript building.  It is also\ncovered with garbage, and there is a small drainage pipe running up the side of\nthe building that looks like it just might be able to support your weight.  To\nthe east is a small, darkened squared covered with dirt.\n",
+         "altitude" : null
+      },
+      "town63@town" : {
+         "exits" : {
+            "s" : "town62"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "town",
+         "title" : "End of the Cave",
+         "id" : "town63",
+         "description" : "\n   The cave slopes down and meets itself here.  It seems the back of this cave\nis currently being used as a refuse dump and a storage area at the same time.\nThe only way out is the way that you have just entered.\n",
+         "altitude" : null
+      },
+      "town7@town" : {
+         "exits" : {
+            "n" : "town5",
+            "s" : "town8"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Southern End of Bay",
+         "id" : "town7",
+         "description" : "\n   Further to the south you can see a little white sand beach that seems\nto be in use at the moment my a small sloop.  Back to the north is the open bay.\n",
+         "altitude" : null
+      },
+      "town41@town" : {
+         "exits" : {
+            "w" : "town42",
+            "e" : "town38"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Main Street",
+         "id" : "town41",
+         "description" : "\n   Once again the main road stretches here along the length of the town.  This\npart of the road is closer to the Town gates, and the sea and its fresh salty\nsmell is far behind you to the east.\n",
+         "altitude" : null
+      },
+      "town20@town" : {
+         "exits" : {
+            "w" : "town25",
+            "e" : "town12",
+            "n" : "town21",
+            "s" : "town19"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Main Road",
+         "id" : "town20",
+         "description" : "\n   You are on the main thoroughfare of town which leads from the docks to the\nmain gates.  There are many shops along the way, which contain many interesting\nitems of food and weaponry.  With a bit of looking, you could probably find a\nbar or brothel around if you were interested.\n",
+         "altitude" : null
+      },
+      "town15@town" : {
+         "exits" : {
+            "w" : "town18",
+            "s" : "town16"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Thieves' Guild",
+         "id" : "town15",
+         "description" : "\n   This is a large room with many items that can easily be associated with\nthe thieveing profession.  It is a fairly nondescript room otherwise. There\nare exits to the south leading into a small dark square and to the west is a\nsmall exit leading into a dead end of an alleyway.\n",
+         "altitude" : null
+      },
+      "town59@town" : {
+         "exits" : {
+            "u" : "town60",
+            "d" : "town58"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Cliff Face",
+         "id" : "town59",
+         "description" : "\n     You are hanging onto the cliff face with your life.  You think you may be\nable to climb up the face of the cliff, or you could always chicken out and go\nback down.\n",
+         "altitude" : null
+      },
+      "town22@town" : {
+         "exits" : {
+            "s" : "town23"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Weapons Store Room",
+         "id" : "town22",
+         "description" : "\n   This is the store room where many weapons are kept to restock the shelves\nout front. There are many tools of a metalsmith here, such as grinders for\nsharpening blades, and hammers for shaping iron.  The only exit that you see is\nthe one that you came in, back to the south.\n",
+         "altitude" : null
+      },
+      "town53@town" : {
+         "exits" : {
+            "w" : "town52"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Construction Zone",
+         "id" : "town53",
+         "description" : "\n    Off in the distance you see Greystreak on a small hillock making mighty\nmagical gestures.  Power is rippling from his hands to shape and mold the lands\nabout you.  You have the feeling that mighty magics are being worked here as\nthe lands are ripped asunder by Greystreak.  You have the feeling that a new\nsection may be here some day.  Feeling that you shouldn't disturb the work\ngoing on, you note the only possible exit is back to the west.\n",
+         "altitude" : null
+      },
+      "town5@town" : {
+         "exits" : {
+            "w" : "town10",
+            "e" : "town4",
+            "n" : "town6",
+            "s" : "town7"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Middle of Bay",
+         "id" : "town5",
+         "description" : "\n   You are in the middle of the very large bay water surrounds you in all\ndirections and to the west the docks can be seen, and to the east the smell\nof salt water is very weak but it still can be smelled.\n",
+         "altitude" : null
+      },
+      "town45@town" : {
+         "exits" : {
+            "n" : "town46",
+            "s" : "town44"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Wide Open Road",
+         "id" : "town45",
+         "description" : "\n   You are now travelling down the commerce road which at this point widens\ngreatly.  In all directions you see wide open grasslands but they look very\ndangerous and unsafe so you figures its only safe to travel to the north or\nto the small town you see just to the south of your current position.\n",
+         "altitude" : null
+      },
+      "town13@town" : {
+         "exits" : {
+            "s" : "town12"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Trade Building",
+         "id" : "town13",
+         "description" : "\n   This is a very large building containing stacks and stacks of paperwork\nwhich some bureaucrat is having a field day with.  The interior of this\nbuilding resembles a PSU registrar's office.  The only way out is to the south.\n",
+         "altitude" : null
+      },
+      "town48@town" : {
+         "exits" : {
+            "w" : "town49",
+            "n" : "town50",
+            "s" : "town46"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Woodland Road",
+         "id" : "town48",
+         "description" : "\n    The road just keeps meandering slowly through the woods with no definite\ndestination in sight.  To the west is a small whole in the brush that you may\nbe able to climb through.  The road continues to lead to the north and to the\nsouth.\n",
+         "altitude" : null
+      },
+      "town11@town" : {
+         "exits" : {
+            "w" : "cottage18@cottage",
+            "n" : "town12"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Shipyard Office",
+         "id" : "town11",
+         "description" : "\n   This is a small office where records are kept for all shipping that goes on\nin the area.  It is very messy and there seems to be no rhyme or reason to this\noffice.  The only way out is to the north.\n",
+         "altitude" : null
+      },
+      "town31@town" : {
+         "exits" : {
+            "n" : "town32"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Private Entertainment Room",
+         "id" : "town31",
+         "description" : "\n   This is a small room used to entertain special guests.  It is very nice with\na small fireplace and a single bed against the wall.  To the north is the only\nexit to the brothel's main hallway.\n",
+         "altitude" : null
+      },
+      "town47@town" : {
+         "exits" : {
+            "w" : "town46"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Burning Campsite",
+         "id" : "town47",
+         "description" : "\n   Wildfires leap about you as a wind whips up the flames.  Everything in the\narea seems to have been set on fire by a torch.  Carts, eqipment and\noccasionaly a grossly deformed body can be seen burning among the ruins of the\ncamp.  It seems that a furious battle has just been fought here.  The only way\nof escape is back to the west.\n",
+         "altitude" : null
+      },
+      "town36@town" : {
+         "exits" : {
+            "e" : "town35"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Casino",
+         "id" : "town36",
+         "description" : "\n   This is a large open area where there are many games of chance running.\nThere is a much activity in this room as people's spirits soar and drop to all\ntime lows as they win and lose their hard-earned, or in some cases stolen,\nmoney.  The only exit is to the east, back to the main brothel reception area.\n",
+         "altitude" : null
+      },
+      "town28@town" : {
+         "exits" : {
+            "n" : "town27"
+         },
+         "flags" : [],
+         "zone" : "town",
+         "title" : "Behind the Bar",
+         "id" : "town28",
+         "description" : "\n    Behind the bar there are many bottles of different drinks, some that you\nhave never seen before and some that you can remember spending lonely nights\nwith.  The only exit is back to the tavern area to the north.\n",
+         "altitude" : null
+      },
+      "town46@town" : {
+         "exits" : {
+            "e" : "town47",
+            "n" : "town48",
+            "s" : "town45"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Wilderness Road",
+         "id" : "town46",
+         "description" : "\n   Gently the grass plains roll into a heavily wooded area.  To the east you\ncan just make out a small camp that seems to be burning.  The northen path\ncontinues to go deeper into the woods and behind you, you can feel the southern\nbreeze blowing gently in from the planes.\n",
+         "altitude" : null
+      },
+      "town57@town" : {
+         "exits" : {
+            "e" : "town58",
+            "n" : "town57",
+            "s" : "town56"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Lost in The Woods",
+         "id" : "town57",
+         "description" : "\n     Woods surround you on all sides, you seem to have lost all sense of\ndirection.  You wander in all directions but none of them seem to lead you out\nof the woods.\n",
+         "altitude" : null
+      },
+      "town34@town" : {
+         "exits" : {
+            "e" : "town32"
+         },
+         "flags" : [
+            "Party",
+            "Peaceful",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "The Playhouse",
+         "id" : "town34",
+         "description" : "\n   This is the Playhouse where anyone's wildest dreams may be fulfilled by any\nmeans.  There are many devices here that look very familiar to you, from past\nexperiences and many whose functions you cannot even begin to fathom.  The only\nexit is back to the east, where the main hallway is.\n",
+         "altitude" : null
+      },
+      "town8@town" : {
+         "exits" : {
+            "n" : "town7",
+            "s" : "town9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Sun-Drenched Beach",
+         "id" : "town8",
+         "description" : "\n   Beautiful white sands intermix with the water here.  There are many skid\nmarks and footsteps all over the beach.  The beach looks like it has been used\nvery recently for moving heavy objects to and from the forest.  There is a very\nused path that leads south into the forest.\n",
+         "altitude" : null
+      },
+      "town62@town" : {
+         "exits" : {
+            "n" : "town63",
+            "s" : "^boulder_door_1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "town",
+         "title" : "Cave",
+         "id" : "town62",
+         "description" : "\n   You enter a large cave that looks like it is currently being used by\nsomebody as a home.  There are different things scattered all over the cave.\nThe cave continues onward into the darkness and back out to the south in the\nlight.\n",
+         "altitude" : null
+      },
+      "town26@town" : {
+         "exits" : {
+            "w" : "town37",
+            "n" : "town25",
+            "s" : "town27"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Square Near The Town Tavern",
+         "id" : "town26",
+         "description" : "\n   This is a small square near the Tavern.  Many dealers are around here trying\nto sell food and a lot are selling wines and ales from far off lands.  To the\nnorth is the main square of town, to the south you may enter the town's Tavern,\nand to the west is a small square near the town's only brothel.\n",
+         "altitude" : null
+      },
+      "town10@town" : {
+         "exits" : {
+            "w" : "town12",
+            "e" : "town5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "On the Docks",
+         "id" : "town10",
+         "description" : "\n   You have entered the docks of a small port town.  The docks are crowded with\nmuch activity as many sea faring vessels are being loaded or unloaded.  A road\nheads west to the main square of the town and to the east is the bay.\n",
+         "altitude" : null
+      },
+      "town1@town" : {
+         "exits" : {
+            "w" : "town2",
+            "e" : "1@sea"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "town",
+         "title" : "Broad Inlet",
+         "id" : "town1",
+         "description" : "\n   Warm waves lap gently against the sun-bleached sand.  Exits lead east out\nto sea, or westward onto the river.\n",
+         "altitude" : null
+      },
+      "town9@town" : {
+         "exits" : {
+            "w" : "town14",
+            "n" : "town8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Smuggler's Camp",
+         "id" : "town9",
+         "description" : "\n  This is a very small camp that has many broken crates lying around.  It seems\nthere has been much activity lately, like a shipment of stolen goods has just\nbeen through here.  To the west is a locked door to some big, featureless\nbuilding and to the east is the beach.\n",
+         "altitude" : null
+      },
+      "town51@town" : {
+         "exits" : {
+            "w" : "town50",
+            "e" : "town52"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "town",
+         "title" : "Empty Campsite",
+         "id" : "town51",
+         "description" : "\n   This is a well set up camp, it is very well organized except for one thing\nyou can't seem to find any people in the area.  There is food being cooked but\nthere are no signs of a scuffle or anything.  The clearing is to the west and\nyou can continue on into the woods to the east.\n",
+         "altitude" : null
+      },
+      "town19@town" : {
+         "exits" : {
+            "n" : "town20",
+            "s" : "town18"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "town",
+         "title" : "Dim Alley",
+         "id" : "town19",
+         "description" : "\n   This is a small alleyway leading from the main road to a dim dead end,\nwhere you can see the outline of a few doors.  The main road is to the north\nand the alleyway continues on to the south.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "raider@town" : {
+         "damage" : "10",
+         "location" : "town47",
+         "speed" : "0",
+         "aggression" : "5",
+         "armor" : "0",
+         "pname" : "Raider",
+         "name" : "raider",
+         "description" : "A dying raider lies in the campsite trying to hide.",
+         "strength" : "150"
+      },
+      "mage@town" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "town52",
+         "armor" : "0",
+         "name" : "mage",
+         "description" : "A hired mage prepares to help the Ambusher kill you.",
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "6",
+         "pname" : "Mage",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "ambusher@town" : {
+         "damage" : "10",
+         "location" : "town52",
+         "speed" : "0",
+         "aggression" : "7",
+         "armor" : "0",
+         "pname" : "Ambusher",
+         "name" : "ambusher",
+         "description" : "A mean looking man is hiding behind the bushes waiting to kill you.",
+         "strength" : "57"
+      },
+      "thief@town" : {
+         "damage" : "10",
+         "location" : "town9",
+         "armor" : "0",
+         "name" : "thief",
+         "description" : "A sly thief lurks in the corners waiting to steal everything you have.",
+         "strength" : "150",
+         "speed" : "5",
+         "pname" : "The Thief",
+         "aggression" : "17",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "clerk@town" : {
+         "damage" : "10",
+         "location" : "town21",
+         "speed" : "5",
+         "aggression" : "20",
+         "armor" : "0",
+         "pname" : "Clerk",
+         "name" : "clerk",
+         "description" : "A local food clerk runs around the shop readying it for opening.",
+         "strength" : "100"
+      },
+      "wench@town" : {
+         "damage" : "10",
+         "location" : "town34",
+         "armor" : "0",
+         "name" : "wench",
+         "description" : "The Lustfull Wench lies here waiting for fulfillment.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "5",
+         "pname" : "The Wench",
+         "aggression" : "11"
+      },
+      "krakken@town" : {
+         "damage" : "10",
+         "location" : "town1",
+         "speed" : "5",
+         "aggression" : "4",
+         "armor" : "0",
+         "pname" : "Krakken",
+         "name" : "krakken",
+         "description" : "A giant Krakken sits here ready to bash all boats that pass to a pulp!",
+         "strength" : "250"
+      },
+      "traveler@town" : {
+         "damage" : "10",
+         "location" : "town54",
+         "speed" : "5",
+         "aggression" : "26",
+         "armor" : "0",
+         "pname" : "Traveler",
+         "name" : "traveler",
+         "description" : "A cheerful traveller wanders the roads of this land looking for an adventure.",
+         "strength" : "70"
+      },
+      "veteran@town" : {
+         "damage" : "10",
+         "location" : "town22",
+         "speed" : "5",
+         "aggression" : "2",
+         "armor" : "0",
+         "pname" : "Veteran",
+         "name" : "veteran",
+         "description" : "A seasoned Veteran sits here sharpening his bastardsword.",
+         "strength" : "250"
+      },
+      "mercenary@town" : {
+         "damage" : "10",
+         "location" : "town27",
+         "speed" : "5",
+         "aggression" : "3",
+         "armor" : "0",
+         "pname" : "Mercenary",
+         "name" : "mercenary",
+         "description" : "A drunk mecenary sits here readying himself for a night at the Brothel.",
+         "strength" : "150"
+      },
+      "wizard@town" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "town63",
+         "armor" : "0",
+         "name" : "wizard",
+         "description" : "An old and very wise wizard sits here in the cave, studying an old tome.",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "12",
+         "pname" : "Wizard",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "assasin@town" : {
+         "damage" : "10",
+         "location" : "town38",
+         "speed" : "5",
+         "aggression" : "6",
+         "armor" : "0",
+         "pname" : "The Assasin",
+         "name" : "assasin",
+         "description" : "A professional killer is here waiting for his next job.",
+         "strength" : "250"
+      }
+   }
+}

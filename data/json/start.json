@@ -1,0 +1,113 @@
+{
+   "obj" : {
+      "fire@start" : {
+         "location" : "IN_ROOM:temple",
+         "oflags" : [
+            "Extinguish",
+            "Lit",
+            "NoGet"
+         ],
+         "name" : "fire",
+         "examine" : "\nIn the fire you see faint images of the ghosts of dead players.  The sparkles\nfly up and away, disappearing amongst the pillars of the temple.",
+         "desc[0]" : "\nA roaring fire burns here.  Its flames make the temple sparkle and glitter."
+      },
+      "pit@start" : {
+         "location" : "IN_ROOM:temple",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "pit",
+         "desc[0]" : "\n   At your feet a huge sacrificial pit allows you to give valuables to the gods\nin the hope of being rewarded."
+      },
+      "church_pit@start" : {
+         "location" : "IN_ROOM:church",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pit",
+         "name" : "Church_Pit",
+         "desc[0]" : "\n   At your feet a huge sacrificial pit allows you to give valuables to the gods\nin the hope of being rewarded."
+      },
+      "umbrella@start" : {
+         "desc[1]" : "A furled umbrella lies here.",
+         "damage" : "5",
+         "location" : "IN_ROOM:temple",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "Umbrella",
+         "examine" : "\nIt is a large, black umbrella, somewhat battered.  The initials 'M.Poppins'\nare engraved on the handle.\n",
+         "size" : "20",
+         "state" : "1",
+         "weight" : "15",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "An unfurled umbrella lies here."
+      }
+   },
+   "loc" : {
+      "church@start" : {
+         "exits" : {
+            "u" : "mrealms@mrealms",
+            "s" : "Green@Village"
+         },
+         "flags" : [
+            "Peace",
+            "FastMana",
+            "FastHeal"
+         ],
+         "zone" : "start",
+         "title" : "The Village Church",
+         "id" : "church",
+         "description" : "\n   You are in the village's small wooden church.  A gentle breeze blows into\nthe church disturbing the dust which dances in the sunbeams that shine faintly\nthrough the windows.  A doorway leads south.\n",
+         "altitude" : null
+      },
+      "temple@start" : {
+         "exits" : {
+            "u" : "mrealms@mrealms",
+            "d" : "Ftrack@Valley",
+            "s" : "Ftrack@Valley"
+         },
+         "flags" : [
+            "Peace",
+            "FastMana",
+            "FastHeal"
+         ],
+         "zone" : "start",
+         "title" : "The Temple Of Paradise",
+         "id" : "temple",
+         "description" : "\n   You stand in the Temple of Paradise, a huge stone structure whose walls are\ndecorated with ancient carvings and runes, some so old that even the priests no\nlonger know their meanings.\n   A single set of steps lead south, descending the huge mound upon which the\ntemple is built and ending in the forests below.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "bob@start" : {
+         "damage" : "32",
+         "location" : "church",
+         "armor" : "0",
+         "name" : "Bob",
+         "description" : "Bob is here, looking eager to answer your questions.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "puff@start" : {
+         "eflags" : [
+            "NegFireball"
+         ],
+         "damage" : "32",
+         "location" : "church",
+         "armor" : "0",
+         "name" : "puff",
+         "description" : "\nPuff The Fractal Dragon is here with a faraway look in her eyes.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "1500",
+         "aggression" : "0"
+      }
+   }
+}

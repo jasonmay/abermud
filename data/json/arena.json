@@ -1,0 +1,485 @@
+{
+   "obj" : {
+      "porcullis3@arena" : {
+         "desc[1]" : "The spikes of the porcullis are buried in the dirt",
+         "location" : "IN_ROOM:Arena6",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Porcullis3",
+         "linked" : "Porcullis4",
+         "state" : "1",
+         "pname" : "Porcullis",
+         "maxstate" : "1",
+         "desc[0]" : "A large porcullis has been raised allowing you to go west"
+      },
+      "porcullis2@arena" : {
+         "desc[1]" : "A huge steel porcullis, blocks the archway to the north.",
+         "location" : "IN_ROOM:tunnel",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Porcullis2",
+         "linked" : "Porcullis1",
+         "state" : "1",
+         "pname" : "porcullis",
+         "maxstate" : "1",
+         "desc[0]" : "A raised porcullis allows access to the arena."
+      },
+      "arena1@arena" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Arena1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Arena1",
+         "linked" : "Arena2",
+         "state" : "1",
+         "pname" : "arenaobject",
+         "maxstate" : "1",
+         "desc[0]" : ""
+      },
+      "porcullis4@arena" : {
+         "desc[1]" : "The spikes of the porcullis are buried in the dirt",
+         "location" : "IN_ROOM:Cave",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Porcullis4",
+         "linked" : "Porcullis3",
+         "state" : "1",
+         "pname" : "Porcullis",
+         "maxstate" : "1",
+         "desc[0]" : "A large porcullis has been raised allowing you to go east."
+      },
+      "porcullis1@arena" : {
+         "desc[1]" : "A huge steel porcullis, blocks the archway to the south.",
+         "location" : "IN_ROOM:Arena3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Archway",
+         "name" : "Porcullis1",
+         "examine" : "\n  The porcullis is very big and very heavy. Hope your not have wild dreams\nabout lifting it are you. Lets just say, if your not as strong as a storm\ngiant, then forget it",
+         "linked" : "Porcullis2",
+         "state" : "1",
+         "pname" : "porcullis",
+         "maxstate" : "1",
+         "desc[0]" : "An Archway leads to a darkened tunnel."
+      },
+      "dgate_out@arena" : {
+         "desc[1]" : "The huge reinforced gates are closed, blocking the arena exit",
+         "location" : "IN_ROOM:Arena1",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "gates",
+         "name" : "Dgate_out",
+         "examine" : "\n  The gates stand 20 feet tall, blocking the entire exit to the arena,\nand sitting flush with the stone walls of the arena. No way you could open\nthese from the inside.",
+         "desc[2]" : "The huge reinforced gates are closed, blocking the arena exit",
+         "linked" : "Dgate_in",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "Huge wooden gates stand open, leading out of the arena"
+      },
+      "curse_scroll@arena" : {
+         "location" : "IN_ROOM:niche",
+         "weight" : "1",
+         "pname" : "Scroll",
+         "name" : "Curse_scroll",
+         "examine" : "\n  A scroll with blue writing and runes written onto it. The writing says\n`&+BRead me while wielding your favourite weapon, and you will get a magical\n&+Bweapon&N' The runes you can not understand.",
+         "bvalue" : "10",
+         "desc[0]" : "A scroll lies on the ground here.",
+         "size" : "1"
+      },
+      "spear@arena" : {
+         "desc[1]" : "\nAn spear is wedged through a shield, and it's former owners ribs, into the \nrock wall behind.",
+         "damage" : "10",
+         "location" : "IN_ROOM:Arena10",
+         "oflags" : [
+            "Weapon",
+            "GetFlips"
+         ],
+         "name" : "Spear",
+         "examine" : "The spear looks old, but better than nothing",
+         "state" : "1",
+         "size" : "6",
+         "pname" : "Spear",
+         "weight" : "6",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "An old blunt spear has been left here."
+      },
+      "key@arena" : {
+         "location" : "IN_ROOM:Entrance",
+         "weight" : "1",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "key",
+         "examine" : "There is a key here, seeping with deaths essence.",
+         "bvalue" : "10",
+         "desc[0]" : "A long key lies here.",
+         "size" : "1"
+      },
+      "crack@arena" : {
+         "location" : "IN_ROOM:Arena11",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "crack",
+         "name" : "Crack",
+         "maxstate" : "1",
+         "desc[0]" : ""
+      },
+      "void_sign@arena" : {
+         "location" : "IN_ROOM:Arena0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "Void_sign",
+         "examine" : "\n  If this is not a tournament, and you are in here, and can't get out. Well\nthis might help, it might not.\n  Tournament: If this is a tournament, then you had better have read info\ntournament before you leave here and go into the arena. The exit to the \narena can be opened by who ever is running the tournament. By setting the\nstate of object `Arena' to 0. EG: set arena 0 (close by setting to 1)\n  They may however choice to summon competitors into the arena. You should\nask who ever is running the tournament before entering. They may raise your\nlevel or something.\n \n  You may sit here and watch if you like, but entering the arena means\nthat you have read, and accept the rules. As well as any additional rules\nthe person running it has imposed. If your unsure ask before you go in",
+         "desc[0]" : "\nA strange looking sign, made of nothing floats round this room that just is"
+      },
+      "dgate_in@arena" : {
+         "desc[1]" : "A Pair of reinforced wooden gates block access to the arena",
+         "location" : "IN_ROOM:Entrance",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "gates",
+         "name" : "Dgate_in",
+         "examine" : "\n  The gates stand 20 feet tall, blocking the entire entrance to the arena,\nand there is a locking mechanism, to bar and lock the gates from this side.\nThey have been heavily reinforced with steel bindings. Wonder what they keep\nin there that needs a 20 foot doorway",
+         "desc[2]" : "The huge gates to the arena are barred and locked from this side",
+         "linked" : "Dgate_out",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "Huge wooden gates stand open, allowing access to the arena"
+      },
+      "arena2@arena" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Arena0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Arena2",
+         "linked" : "Arena1",
+         "state" : "1",
+         "pname" : "arena",
+         "maxstate" : "1",
+         "desc[0]" : ""
+      }
+   },
+   "loc" : {
+      "arena7@arena" : {
+         "exits" : {
+            "e" : "Arena8",
+            "s" : "Arena6"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena7",
+         "description" : "\n  The northwest corner of the arena looks badly damaged. The walls are \nblackened, and in parts seem to have melted a little. The wire mesh above\nhas been destroyed. You can see the charred remains of a less than fortunate\nspectator caught in the mesh.\n",
+         "altitude" : null
+      },
+      "arena1@arena" : {
+         "exits" : {
+            "w" : "Arena12",
+            "e" : "^Dgate_out",
+            "n" : "Arena10",
+            "s" : "Arena2"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena1",
+         "description" : "\n  An artificial light fills your eyes as you look round this place. It has \nbeen cut into the cliff and is completely inside it. The stone walls round\nthe lower part of the arena stand some 30 feet up, to the lowest viewing\narea. The roof, also made of stone, is extremely high, and you dare not guess\nat it's exact height. The air in here is dry, and a little stale, the ground\nhard. A little dust floats into the air as you move.\n",
+         "altitude" : null
+      },
+      "tunnel@arena" : {
+         "exits" : {
+            "n" : "^Porcullis2"
+         },
+         "flags" : [
+            "NoMagic"
+         ],
+         "zone" : "arena",
+         "title" : "Tunnel",
+         "id" : "Tunnel",
+         "description" : "\n  A damp tunnel extends southward, but suddenly blocked by a pile of stones,\nwith bright red spray paint on them reading '&+rUnder construction&N'\n",
+         "altitude" : null
+      },
+      "arena3@arena" : {
+         "exits" : {
+            "e" : "Arena2",
+            "w" : "Arena4",
+            "n" : "Arena12",
+            "s" : "^Porcullis1"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon",
+            "NoMagic"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena3",
+         "description" : "\n  The arena extends north, east and west from here. A small draft comes from\nthe south, carrying an evil chill from behind a set of large steal bars.\nThe air is thick, and shimmers something like it does on extremely hot days\nbut this is clearly from the presense of a strong anti-magic field. \nPossibly to keep whats behind those bars in. The seats above here have \nbeen placed behind a strange, clear type of rock, that allows light, but \nair to pass.\n",
+         "altitude" : null
+      },
+      "arena5@arena" : {
+         "exits" : {
+            "e" : "Arena4",
+            "n" : "Arena6"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena5",
+         "description" : "\n  The corner of the arena have had the magical light drained from them \nsomehow. Growing on the blood stained walls are a few kinda of lichen.\nThe ground is cold, but for once no dust puffs up as you move across it.\n",
+         "altitude" : null
+      },
+      "arena12@arena" : {
+         "exits" : {
+            "e" : "Arena1",
+            "s" : "Arena3"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena12",
+         "description" : "\n  It looks dangerous here. There are numerous piles of rubble laying about,\nsome containing large boulders. A few pieces of the crumbling roof fall \nbeside you.\n",
+         "altitude" : null
+      },
+      "arena10@arena" : {
+         "exits" : {
+            "w" : "Arena9",
+            "s" : "Arena1"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena10",
+         "description" : "\n  The north east corner of the arena has several bones scattered about,\nsome human others not so. To the south west you see some fallen rocks.\n",
+         "altitude" : null
+      },
+      "arena0@arena" : {
+         "exits" : {
+            "n" : "^Arena2"
+         },
+         "flags" : [
+            "NoSummon",
+            "Peaceful",
+            "NoMagic",
+            "CantSummon",
+            "Soundproof",
+            "NoMobile"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena Void",
+         "id" : "Arena0",
+         "description" : "\n  You stand in a strange looking room, most definately magical, for it does\nnot seem to have any walls, or floor or roof, or anything much for that \nmatter.  It just is. Or is it? Maybe your imagining this. There are no exits, \nas you know them, but then again, there is nothing apparently stopping you \nfrom going any way in which you please, except, you can't quite tell which \nways is which.\n",
+         "altitude" : null
+      },
+      "arena11@arena" : {
+         "exits" : {
+            "w" : "Arena6",
+            "n" : "Arena8",
+            "s" : "Arena4"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena11",
+         "description" : "\n  The arena extends in all directions from here, except for a large pile\nof rocks blocking the way south. The ground here is dry and the air stale.\nOne large crack, big enough for you to look into, stretches across your path.\n",
+         "altitude" : null
+      },
+      "arena2@arena" : {
+         "exits" : {
+            "w" : "Arena3",
+            "n" : "Arena1"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena2",
+         "description" : "\n  Dust floats up into the stale air as you move acorss the dry hard ground\nunderfoot. The Southern wall here has a large rock chip missing from it,\nand the wire mesh above to protect the people watching has been torn open\nleaving a small hole. Well out of your reach. The eastern wall looks very\nsolid and extends all the way to the roof.\n",
+         "altitude" : null
+      },
+      "cave@arena" : {
+         "exits" : {
+            "e" : "^Porcullis4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "arena",
+         "title" : "Cave",
+         "id" : "Cave",
+         "description" : "\n  This is a large dark cave cut into the stone of the cliff. The walls \nare burnt, and few rocks lay round on the ground. Perhaps this is some\nsort of cage for beasts to be used in sporting battle.\n",
+         "altitude" : null
+      },
+      "arena4@arena" : {
+         "exits" : {
+            "w" : "Arena5",
+            "e" : "Arena3",
+            "n" : "Arena11"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena4",
+         "description" : "\n  The magical light in this area seems to have been dispelled by some\npowerful mage or wizard. The ground is starting to crack, and one of larger\nones continues north. The arena extend to the north, east and west.\n",
+         "altitude" : null
+      },
+      "arena6@arena" : {
+         "exits" : {
+            "w" : "^Porcullis3",
+            "e" : "Arena11",
+            "n" : "Arena7",
+            "s" : "Arena5"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon",
+            "NoMagic",
+            "Hot"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena6",
+         "description" : "\n  The far end of the arena looks much like the rest of it. A wave of heat\nwafts over you from beyond the archway to the west. It feels very warm, here \nindeed. Looking upward, you notice that the veiwing area here is protected\nno by the usual wire mesh, but by a clear rock like substance. \n",
+         "altitude" : null
+      },
+      "arena8@arena" : {
+         "exits" : {
+            "w" : "Arena7",
+            "e" : "Arena9",
+            "s" : "Arena11"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena8",
+         "description" : "\n  The arena extends to the south east and west from here. The dry ground\nis covered with small rocks.\n",
+         "altitude" : null
+      },
+      "arena9@arena" : {
+         "exits" : {
+            "w" : "Arena11",
+            "e" : "Arena2"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon",
+            "NoMagic"
+         ],
+         "zone" : "arena",
+         "title" : "The Arena",
+         "id" : "Arena9",
+         "description" : "\n  There are a few large boulders blocking the way south of here, far to \nlarge for any mortal to consider moving. They appear to have fallen from\nthe roof above. You sure hope one don't fall on you. There is a small\nbush growing against the northern wall, and a pleasant smell in the air.\nYou feel a little strange.\n",
+         "altitude" : null
+      },
+      "niche@arena" : {
+         "exits" : {
+            "s" : "Arena12"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon",
+            "NegRegen"
+         ],
+         "zone" : "arena",
+         "title" : "Small niche",
+         "id" : "Niche",
+         "description" : "\n  You look around this place and get a pleasant peaceful feeling. There\nis a nice smell in the air, and you begin to think this is a nice quiet\nplace to rest. There is certainly no other way in here, and any creature \nlarger than human size would not fit. \n",
+         "altitude" : null
+      },
+      "entrance@arena" : {
+         "exits" : {
+            "e" : "nibelung1@nibelung",
+            "w" : "^Dgate_in"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon",
+            "Peaceful",
+            "NoMagic",
+            "NoMobile"
+         ],
+         "zone" : "arena",
+         "title" : "The entrance to the Arena",
+         "id" : "Entrance",
+         "description" : "\n  You stand inside the secret entrance to THE arena. Either side of you,\nto the north and south are the inner walls of this hole that has been cut\ninto the side of the cliff. This place has been magically protected and \nno violence may take place here. A few burn marks scar the walls, around \nsmall archways leading to the stairway up into the viewing area. \n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "ymold@arena" : {
+         "eflags" : [
+            "NegMissile",
+            "NegFrost",
+            "NegShock"
+         ],
+         "damage" : "2",
+         "location" : "Arena5",
+         "armor" : "0",
+         "name" : "Ymold",
+         "description" : "\n  Near a small crack in the wall, you notice one rather large, yellow\nbrownish colored mold growing happily in the dark",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "25",
+         "speed" : "0",
+         "pname" : "Yellow mold",
+         "aggression" : "0"
+      },
+      "crawler@arena" : {
+         "damage" : "4",
+         "location" : "limbo@limbo",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "10",
+         "pname" : "Carrion Crawler",
+         "name" : "Crawler",
+         "description" : "\n  A large worm like creature half way moves toward you, just coming far \nenough from the hole to attack",
+         "strength" : "65"
+      }
+   }
+}

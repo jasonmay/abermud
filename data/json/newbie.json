@@ -1,0 +1,202 @@
+{
+   "obj" : {
+      "towel@newbie" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:newbie5",
+         "oflags" : [
+            "Newbie"
+         ],
+         "armor" : "0",
+         "name" : "towel",
+         "examine" : "It is rather frayed at the edges.",
+         "size" : "8",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A damp and rather smelly towel has been dropped in a heap here."
+      },
+      "newsword1@newbie" : {
+         "damage" : "20",
+         "location" : "IN_ROOM:newbie7",
+         "oflags" : [
+            "Newbie",
+            "Weapon"
+         ],
+         "armor" : "0",
+         "altname" : "sword",
+         "name" : "newsword1",
+         "size" : "25",
+         "state" : "0",
+         "weight" : "0",
+         "pname" : "newbiesword",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A long sharp sword is propped up against one wall."
+      },
+      "newarmor1@newbie" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:newbie7",
+         "oflags" : [
+            "Newbie",
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "30",
+         "altname" : "armor",
+         "name" : "newarmor1",
+         "size" : "40",
+         "state" : "0",
+         "weight" : "0",
+         "pname" : "newbiearmor",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "aflags" : [
+            "Arms",
+            "Legs",
+            "Back",
+            "Head",
+            "Face",
+            "Chest"
+         ],
+         "desc[0]" : "A shiny new suit of armor is lying here."
+      }
+   },
+   "loc" : {
+      "newbie6@newbie" : {
+         "exits" : {
+            "w" : "newbie7",
+            "e" : "newbie5",
+            "s" : "newbie8"
+         },
+         "flags" : [
+            "Soundproof",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "Mobiles And Combat",
+         "id" : "newbie6",
+         "description" : "\n    Mobiles, or non-playing characters, are your adversaries in this game.\nSome are there to help you, but most are ripe for the killing.  Beware though -\nsome may be tougher or better-armed than you, so it is advisable to find out\nhow strong a mobile is before attacking it.  To do this, use the 'examine'\ncommand, or 'ex' for short, followed by the name of the mobile.  This will tell\nyou how tough it is.  To attack a mobile called 'elf' type 'kill elf'.\n    It is important to keep track of your own status, especially when fighting.\nType 'score' to see how you are doing.  If your strength ever falls below zero\nyou will die and lose half your points.  Your 'wimpy' value will help to\nprevent this by making you flee from a battle automatically if your strength\nfalls below that value.\n    To continue the tour go south.  To get some equipment, go west.\n",
+         "altitude" : null
+      },
+      "newbie2@newbie" : {
+         "exits" : {
+            "e" : "newbie3",
+            "n" : "newbie1"
+         },
+         "flags" : [
+            "Soundproof",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "Communication (1)",
+         "id" : "newbie2",
+         "description" : "\n    There are many ways to communicate with the people on this mud.  If you\nwish to talk to somebody directly without anyone else hearing, use the 'tell'\ncommand.  For example if you wish to say hello to a player called Dave, type:\ntell Dave hello\nUsually the word 'tell' is not necessary - you could also type:\nDave hello\nIf you are in the same room as other people and you wish to say something which\nthey can all hear, use the 'say' command.  For example, type:\nsay Hi guys!  What's new?\nTo continue with the tour, type 'e' for east.  Alternatively you can return to\nthe welcome centre by typing 'n' for north.\n",
+         "altitude" : null
+      },
+      "newbie7@newbie" : {
+         "exits" : {
+            "e" : "newbie6"
+         },
+         "flags" : [
+            "Soundproof",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "Weapons And Armor",
+         "id" : "newbie7",
+         "description" : "\n    Your fighting abilities will be greatly enhanced by wielding a weapon and\nwearing armor.  Armor can take many forms, and the more pieces you are wearing,\nthe better you will be protected.  You can only wield one weapon at a time, but\nsome weapons are better than others.  The equipment provided here is fairly\ngood, but it is for new players only - use it to try to find where to find good\nequipment elsewhere on the mud.  Make sure that when you get a weapon, you\nwield it, and when you get some armor, wear it!  If you type 'wearall' you will\nautomatically wear anything you are carrying that is wearable.\n",
+         "altitude" : null
+      },
+      "newbie4@newbie" : {
+         "exits" : {
+            "w" : "newbie3",
+            "s" : "newbie5"
+         },
+         "flags" : [
+            "Soundproof",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "Rooms",
+         "id" : "newbie4",
+         "description" : "\n    This is now the fourth room that you have visited.  There are thousands of\nrooms on the mud, all linked together so that you can get from here to any\nother part of the mud.  The rooms are not arranged in a haphazard manner but\nare grouped together into zones, each zone very often having a specific theme.\nSome zones contain quests which you will have to solve eventually, but for a\nbeginner it is best to get a feel for the mud first before attempting these.\n    If you type 'exits' you will see which rooms lie adjacent to yours, and\nquite often this will provide you with important information.  If the exit to\nthe south is called 'Crumbling Cliff-Edge', you would be wise to think twice\nbefore going south!  Often the description of the room you are in will tell you\nsomething about your exits, so it is always a good idea to read the description\nof any room you have not been in before.\n    To continue with the tour, go south.  To retrace your steps, go west.\n",
+         "altitude" : null
+      },
+      "newbie1@newbie" : {
+         "exits" : {
+            "d" : "Temple@start",
+            "s" : "newbie2"
+         },
+         "flags" : [
+            "Soundproof",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "New Players' Welcome Centre",
+         "id" : "newbie1",
+         "description" : "\n    Welcome to a C-Dirt MUD!  For those of you unfamiliar with this kind of\nadventure game, the object is to acquire points and complete quests, eventually\nreaching the level of wizard, at which point you become immortal and gain all\nkinds of special powers.  A tour for new players begins to the south of here.\nIf you do not wish to take the tour, go down to the temple.  If you would like\nto learn how to play the game, go south by typing 's' for south.\n",
+         "altitude" : null
+      },
+      "newbie8@newbie" : {
+         "exits" : {
+            "e" : "palace@icecave",
+            "n" : "newbie6",
+            "d" : "Temple@start",
+            "s" : "church@start"
+         },
+         "flags" : [
+            "Soundproof",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "The Fountain",
+         "id" : "newbie8",
+         "description" : "\n    To help you start, there is a fountain from which you can drink to gain\n2000 points.  Type 'levels'.  This will show you how many points you need for\neach level.  Drinking the fountain will take you to level 3.  To drink, simply\ntype 'drink fountain'.  You must drink about fifty times to reach level 3.  But\nrelax!  You don't need to type 'drink fountain' fifty times.  The command '!'\nwill repeat whatever your last command was.  So type 'drink fountain' once,\nthen '!' fifty times or so until you get a message telling you that you are now\na hero/heroine.\n    To get to the fountain, go east.  If you want to go to the Temple of\nParadise, go down.  If you wish to go to the Village Church, go south.\n",
+         "altitude" : null
+      },
+      "newbie5@newbie" : {
+         "exits" : {
+            "w" : "newbie6",
+            "n" : "newbie4"
+         },
+         "flags" : [
+            "Soundproof",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "Objects",
+         "id" : "newbie5",
+         "description" : "\n    You will find many items as you progress through the mud.  Some will be\nuseful to you; others will not.  You can only carry a certain number of items,\nbut you will soon get a feel for what you need and what you do not.  Pick up\nitems using the command 'get' or 'take'.  Drop them again using the command\n'drop'.  To see what you are carrying at any time, type 'i' or 'inv' (short for\ninventory).  You can practise these commands on the towel in this room.\n    When you are ready to leave the game, you can get points for the things you\nare carrying.  Simply return to the Temple Of Paradise or the Village Church\nand type 'drop all'.  Your stuff will disappear into the pit and you will gain\npoints.\n    To continue the tour, go west.\n",
+         "altitude" : null
+      },
+      "newbie3@newbie" : {
+         "exits" : {
+            "w" : "newbie2",
+            "e" : "newbie4"
+         },
+         "flags" : [
+            "Soundproof",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "Communication (2)",
+         "id" : "newbie3",
+         "description" : "\n    If you wish everyone on the mud to hear what you say, you can use the\ncommand 'shout'.  However if used a lot this will irritate many people, so\nplease keep your shouting to a minimum.\n    A better way to talk to everyone is the 'chat' command.  Chatting a lot\nwill not offend people, because everyone has the ability to switch off the chat\nline.  To do this type 'nochat'.  To switch the chat line back on again, simply\ntype 'nochat' again.\n    To continue with the tour, type 'e' for east.  To return to the first\ncommunication room, type 'w' for west.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "troll@newbie" : {
+         "damage" : "0",
+         "location" : "newbie6",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Troll",
+         "examine" : "He would be very easy to kill, even without a weapon.",
+         "description" : "A wimpy-looking troll is here, scratching at his armpits.",
+         "strength" : "10"
+      }
+   }
+}

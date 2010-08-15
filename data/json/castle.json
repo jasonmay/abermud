@@ -1,0 +1,475 @@
+{
+   "obj" : {
+      "shortsword@castle" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:Guard",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "shortsword",
+         "examine" : "\nThe sword, though not up to dwarven standards, still seems pretty sharp.\n",
+         "size" : "15",
+         "weight" : "10",
+         "bvalue" : "50",
+         "desc[0]" : "A sharp shortsword has been dropped here."
+      },
+      "lever@castle" : {
+         "location" : "IN_ROOM:Port",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "lever",
+         "examine" : "\nThis is a very solid looking lever, jutting out from the wall, which would\nseem to work the portcullis system, but you never know till you try!\n",
+         "desc[0]" : "There is a large iron lever on the east wall."
+      },
+      "port_inside@castle" : {
+         "desc[1]" : "The heavy iron portcullis bars the way north.",
+         "location" : "IN_ROOM:Port",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Port_Inside",
+         "examine" : "\nYou find yourself examining a hard iron portcullis, which you have absolutely\nno chance of lifting or breaking through!\n",
+         "linked" : "Port_Outside",
+         "state" : "0",
+         "pname" : "portcullis",
+         "maxstate" : "1",
+         "desc[0]" : "The portcullis is raised."
+      },
+      "horseshoe@castle" : {
+         "location" : "IN_ROOM:Stables",
+         "armor" : "3",
+         "altname" : "shoe",
+         "name" : "horseshoe",
+         "examine" : "\nThis looks really lucky, though not for the horse whose lower leg is still\nattached to it!\n",
+         "size" : "3",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "An old horseshoe lies nearby."
+      },
+      "maiden@castle" : {
+         "desc[1]" : "The iron maiden is closed.",
+         "location" : "IN_ROOM:Torture",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "maiden",
+         "examine" : "\nIt has some names written on it...\n   Bruce, Steve, Nicko, Dave, Adrian\n      and underneath...\n      '12 Wasted Years, So Run To The Hills!'\n",
+         "linked" : "In_Maiden",
+         "maxstate" : "1",
+         "desc[0]" : "The iron maiden is open."
+      },
+      "port_outside@castle" : {
+         "desc[1]" : "A heavy iron portcullis bars the way south.",
+         "location" : "IN_ROOM:Walls",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Port_Outside",
+         "examine" : "\nYou find yourself examining a hard iron portcullis, which you have no\nchance in Hell of lifting or breaking through!\n",
+         "linked" : "Port_Inside",
+         "state" : "0",
+         "pname" : "portcullis",
+         "maxstate" : "1",
+         "desc[0]" : "A raised portcullis allows access south."
+      },
+      "runesword@castle" : {
+         "desc[1]" : "\nA huge sword stands upright before you, imbedded in the solid stone floor.",
+         "damage" : "20",
+         "location" : "IN_ROOM:S_Hall",
+         "oflags" : [
+            "GetFlips",
+            "Lit",
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "runesword",
+         "examine" : "\nThe sword is covered with runes which form a curse.  The black,faintly glowing\nblade also seems to hum quietly.\n",
+         "size" : "20",
+         "state" : "1",
+         "weight" : "30",
+         "maxstate" : "1",
+         "bvalue" : "500",
+         "desc[0]" : "\nA huge sword has been left here, its black blade strangely pulsing with light."
+      },
+      "peppers@castle" : {
+         "location" : "IN_ROOM:Store",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "peppers",
+         "examine" : "\nThe peppers are about an inch long, red, and wicked looking.  They might give\nyou a heartburn if you ate them.  Or, remember what happened in \"Alien\"?",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "Some peppers have been left here."
+      },
+      "castle_throne@castle" : {
+         "desc[1]" : "A huge gleaming throne is set against the south wall.",
+         "location" : "IN_ROOM:Chamber",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "tunnel",
+         "name" : "Castle_Throne",
+         "examine" : "\nAs you gaze at the throne, you think how great it would look behind a nice\nseven piece Sonor Performer drum kit, but unfortunately its stuck in this\ndismal castle.\n",
+         "linked" : "Escape_Throne",
+         "state" : "1",
+         "pname" : "throne",
+         "maxstate" : "1",
+         "desc[0]" : "\nA huge gleaming throne is set against the south wall, beside a narrow escape\ntunnel.\n"
+      },
+      "torch@castle" : {
+         "location" : "IN_ROOM:S_Hall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "torch",
+         "examine" : "It seems unusual, perhaps it has some hidden purpose?",
+         "maxstate" : "1",
+         "desc[0]" : "A battered torch hangs on the south wall."
+      },
+      "plank@castle" : {
+         "desc[1]" : "An old plank lies here.",
+         "damage" : "6",
+         "location" : "IN_ROOM:Watch",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "name" : "plank",
+         "examine" : "It has the word VERYODD, and a picture of a sherman tank on it.",
+         "size" : "20",
+         "state" : "1",
+         "weight" : "12",
+         "maxstate" : "1",
+         "desc[0]" : "A burning plank has been left here."
+      },
+      "door_golem@castle" : {
+         "location" : "IN_ROOM:S_Hall",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "Door_Golem",
+         "examine" : "\nThe door is perfectly smooth and rounded to fit against the wall perfectly.\nThere appear to be no markings on it, save a single, large blue eye, which\nappears to follow you around the chamber.  There is no lock that you can see to\noperate the door, at least by mortal means.\n",
+         "linked" : "Door_Tower@tower",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "There is a small door open in the south wall."
+      },
+      "key@castle" : {
+         "location" : "IN_ROOM:Guard",
+         "weight" : "1",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "brass",
+         "name" : "key",
+         "desc[0]" : "A small brass key has been left here.",
+         "size" : "1"
+      },
+      "dagger@castle" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:Guard",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "dagger",
+         "examine" : "\nThis is no fake stage knife... as the blade is fixed quite firmly.  It would\ncertainly hurt anyone who was silly enough to get in the way of it, and it\nwould be advisable to stop playing with it before you cut yourself!\n",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "20",
+         "desc[0]" : "A small dagger has been dropped here."
+      },
+      "in_maiden@castle" : {
+         "desc[1]" : "The iron maiden's door is closed.",
+         "location" : "IN_ROOM:Maiden",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "maiden",
+         "name" : "In_Maiden",
+         "examine" : "\nThe door has several sharp spikes on it, designed to penetrate certain\ndelicate parts of anyone inside the maiden when the door is closed.\n",
+         "linked" : "maiden",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The iron maiden's door is open."
+      },
+      "escape_throne@castle" : {
+         "desc[1]" : "The exit north is blocked by the back of a throne.",
+         "location" : "IN_ROOM:Escape",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "altname" : "tunnel",
+         "name" : "Escape_Throne",
+         "examine" : "\nThe back of the throne is no less impressive than the front,though it's wooden\nsurface is now covered with rough grafitti reading:\n\n        \"Argh!  Who closed the bloody throne?!?\"",
+         "linked" : "Castle_Throne",
+         "state" : "1",
+         "pname" : "throne",
+         "maxstate" : "1",
+         "desc[0]" : "A small hole leads north into the hall."
+      }
+   },
+   "loc" : {
+      "escape@castle" : {
+         "exits" : {
+            "n" : "^Escape_Throne"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Escape Passage",
+         "id" : "Escape",
+         "description" : "\n   This is a passageway which would be used by the King and his court if the\ncastle defense was ever penetrated, to escape from the attackers, and looking\nat the lack of dust and cobwebs it would seem to have been used recently.  The\npassage is small and dark, but probably more inviting than the wrong end of a\nsword.\n   At the end of the passage is a sparkling portal which would lead to Xanadu,\nbut is currently closed for contruction.\n",
+         "altitude" : null
+      },
+      "stables@castle" : {
+         "exits" : {
+            "w" : "Court"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Stables",
+         "id" : "Stables",
+         "description" : "\n   You are standing in the stables for the castle, and from the floor you can\ntell that they have been in use recently.\n   A strong wind gusts through the open doorway to the west.\n",
+         "altitude" : null
+      },
+      "port@castle" : {
+         "exits" : {
+            "n" : "^Port_Inside",
+            "s" : "Court"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Portcullis",
+         "id" : "Port",
+         "description" : "\n   You stand in a large archway which leads out onto a path to the north, and\nsouth back into the courtyard of the castle.  Above you lies the complicated\npulley system used to operate the portcullis.\n",
+         "altitude" : null
+      },
+      "walls@castle" : {
+         "exits" : {
+            "n" : "Path",
+            "s" : "^Port_Outside"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "castle",
+         "title" : "Castle Walls",
+         "id" : "Walls",
+         "description" : "\n   You stand at the walls of a large castle, out of which looms up a large\ntower, crackling with magical energy.  From here the castle looks deserted,\nbut you can't be sure.\n   The path leads back north, and the main archway into the castle is south.\n",
+         "altitude" : "950"
+      },
+      "tax@castle" : {
+         "exits" : {
+            "e" : "O_Hall"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Tax Room",
+         "id" : "Tax",
+         "description" : "\n   This would appear to be the room where the taxes for the surrounding area\nwere collected and counted, although not stored here, as you yourself found it\nso easy to get in.\n",
+         "altitude" : null
+      },
+      "guard@castle" : {
+         "exits" : {
+            "e" : "Court"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Guard Room",
+         "id" : "Guard",
+         "description" : "\n   You find yourself in the guard room for the castle.  Bunks line the walls,\nand weapon racks stand in the center of the room, though they are all empty\nnow.  Judging by the upturned tables and chairs and the dried blood on the\nfloor you think that the guards may not have left on a Sunday afternoon stroll.\n   A single narrow doorway leads east.\n",
+         "altitude" : null
+      },
+      "watch@castle" : {
+         "exits" : {
+            "e" : "Leap",
+            "d" : "Leap"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "The Ruined Watchtower",
+         "id" : "Watch",
+         "description" : "\n   You stand in the burnt out ruins of an old stone watchtower.  Soot and moss\ncover the blackened crumbling stones.  A single narrow set of steps wind down\nand east back to the path.\n",
+         "altitude" : null
+      },
+      "torture@castle" : {
+         "exits" : {
+            "w" : "Chamber",
+            "e" : "^Maiden"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Torture Chamber",
+         "id" : "Torture",
+         "description" : "\n   You are standing in a pleasant torture chamber which would appear to have\nbeen in regular use as not a single implement lies rusted.  Many implements of\ntorture lie about the room with various pieces of anatomy still attached to\nsome of them.\n   A single doorway leads west.\n",
+         "altitude" : null
+      },
+      "path@castle" : {
+         "exits" : {
+            "n" : "Leap",
+            "s" : "Walls"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "castle",
+         "title" : "Long and Winding Path",
+         "id" : "Path",
+         "description" : "\n   You are following a north-south path, which links the cliff edge with a\nlarge stone castle, out of which rises a black tower which glitters with the\nlight, and from stored magical energy, some of which illuminates the very top\nof the tower with a bright, golden light.\n",
+         "altitude" : "950"
+      },
+      "maiden@castle" : {
+         "exits" : {
+            "w" : "^In_Maiden"
+         },
+         "flags" : [
+            "NoSummon",
+            "OnePerson"
+         ],
+         "zone" : "castle",
+         "title" : "Inside the Iron Maiden",
+         "id" : "Maiden",
+         "description" : "\n   You appear to be inside the Iron Maiden, an ancient form of torture, and you\nnotice how good the fit is...\n",
+         "altitude" : null
+      },
+      "store@castle" : {
+         "exits" : {
+            "u" : "Kitchens"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Kitchens' Store Room",
+         "id" : "Store",
+         "description" : "\n   You are in a large and dry store room for the food and drink needed to keep\nthe King happy.  It seems to have escaped the attention of the attackers, as\nthe stores are intact, but out of reach.   A set of narrow steps lead up.\n",
+         "altitude" : null
+      },
+      "court@castle" : {
+         "exits" : {
+            "w" : "Guard",
+            "e" : "Stables",
+            "n" : "Port",
+            "s" : "O_Hall"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "The Central Courtyard",
+         "id" : "Court",
+         "description" : "\n   You stand in the central courtyard of a huge and ancient castle.  Flickering\ntorches, set high around the walls, illuminate even the darkest corners with a\nreddish flickering glow.  A huge archway leads north, its sides carved with\nfantastic images of dragons and fables.  Arched entryways lead south, east and\nwest.\n",
+         "altitude" : null
+      },
+      "chamber@castle" : {
+         "exits" : {
+            "w" : "Kitchens",
+            "e" : "Torture",
+            "n" : "Sanctum",
+            "s" : "^Castle_Throne"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "King's Chamber",
+         "id" : "Chamber",
+         "description" : "\n   You find yourself in a large chamber used for the King and his court to be\nentertained in all day and feast in at night, although it looks like the last\nfeast had a main course with more bite than usual!  Splendid archways lead\nnorth, east and west.\n",
+         "altitude" : null
+      },
+      "leap@castle" : {
+         "exits" : {
+            "w" : "Watch",
+            "n" : "Npath@Valley",
+            "s" : "Path"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "castle",
+         "title" : "Bugiit's Leap",
+         "id" : "Leap",
+         "description" : "\n   You stand at the top of a tall cliff looking north, down into a deep valley.\nHuge rocks at the bottom offer the delights of total oblivion, to become just\nanother smashed wreck at its base.\n   If you are in no hurry, a narrow cliff path also leads down to the north\ndescending down a fissure in the cliff itself.\n   To the south a path runs towards a large castle with a threatening black\ntower, while to the west is an old watchtower.\n",
+         "altitude" : "950"
+      },
+      "kitchens@castle" : {
+         "exits" : {
+            "e" : "Chamber",
+            "d" : "Store"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Kitchens",
+         "id" : "Kitchens",
+         "description" : "\n   You are standing in the large kitchens for the castle where the daily feasts\nwere prepared for court.  The place is now in disarray, with tables and cooking\nutensils scattered all over the floor.  Exits lead east, or down some stairs\ninto the cellar.\n",
+         "altitude" : null
+      },
+      "o_hall@castle" : {
+         "exits" : {
+            "w" : "Tax",
+            "e" : "S_Hall",
+            "n" : "Court",
+            "s" : "Sanctum"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "The Outer Hall",
+         "id" : "O_Hall",
+         "description" : "\n   You stand in the shadowy outer hall, lit only by flaming torches high out of\nreach on the walls.  The dim flickering light illuminates the many doorways\nwhich lead north, south, east and west.\n   A cold draught blows through the hall, from the grand, heavily carved\narchway, which looks out northwards across the courtyard, its high thick walls\nsilhouetted in the torch light.\n",
+         "altitude" : null
+      },
+      "s_hall@castle" : {
+         "exits" : {
+            "w" : "O_Hall",
+            "s" : "^Door_Golem"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Side Hall",
+         "id" : "S_Hall",
+         "description" : "\n   You stand in a small gloomy hall, just east of the outer hall.  All around\nyou the walls seem to glow with magical power.  You sense that maybe all is not\nas meets the eye.\n   A single exit leads back west.\n",
+         "altitude" : null
+      },
+      "sanctum@castle" : {
+         "exits" : {
+            "n" : "O_Hall",
+            "s" : "Chamber"
+         },
+         "flags" : [],
+         "zone" : "castle",
+         "title" : "Inner Sanctum",
+         "id" : "Sanctum",
+         "description" : "\n   This is the stately room where the Lords and Ladies of court would wait to\nbe entertained by the King of the Castle, although now the tapestries hang in\nshreds on the walls and all the treasures that once stood on pedestals have\nbeen smashed or stolen... it would appear that the castle has been raided and\nthe King overthrown.\n   Archways lead north and south.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "mouse@castle" : {
+         "damage" : "6",
+         "location" : "Store",
+         "aggression" : "5",
+         "armor" : "0",
+         "pname" : "The Mouse",
+         "name" : "mouse",
+         "description" : "A giant black mouse runs around on the floor.",
+         "strength" : "20"
+      },
+      "golem@castle" : {
+         "damage" : "10",
+         "location" : "S_Hall",
+         "speed" : "0",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "The Golem",
+         "name" : "golem",
+         "description" : "A huge stone golem stands watchfully on guard.",
+         "strength" : "90"
+      }
+   }
+}

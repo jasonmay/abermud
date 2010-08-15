@@ -1,0 +1,51 @@
+{
+   "obj" : {
+      "fire@haven" : {
+         "location" : "IN_ROOM:haven",
+         "oflags" : [
+            "NoGet",
+            "Extinguish"
+         ],
+         "name" : "fire"
+      },
+      "mistletoe@haven" : {
+         "location" : "IN_ROOM:haven",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "sprig",
+         "name" : "mistletoe",
+         "examine" : "\nYou notice with some amusement that the Bard has positioned himself directly\nunderneath.  Well don't just stand there, kiss him!",
+         "desc[0]" : "A sprig of mistletoe hangs by the fireplace."
+      }
+   },
+   "loc" : {
+      "haven@haven" : {
+         "exits" : {
+            "w" : "gate@blizzard",
+            "s" : "blizzard@blizzard"
+         },
+         "flags" : [
+            "party"
+         ],
+         "zone" : "haven",
+         "title" : "Warm Haven",
+         "id" : "haven",
+         "description" : "\n   After hours of trudging through the snow you come upon a tiny inn.  A sign\nabove the door says \"Warm Haven -- Abandon Cold, All Ye Who Enter.\"  The room\nis crowded with burly adventureres, shy novices, and the bustling of serving\nwenches and bar-maids trying to take everyone's orders.\n   The main door is to the south, and a side-door heads west into the frozen\nwastes.  A number of urchins are gathered around the crackling fire to hear\ntales and songs from the Bard.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "bard@haven" : {
+         "damage" : "10",
+         "location" : "haven",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Bard",
+         "name" : "bard",
+         "description" : "\nAn ageless bard sits on a stool by the fire, strumming a mandolin and telling\ncryptic tales of times long-past.",
+         "strength" : "50"
+      }
+   }
+}

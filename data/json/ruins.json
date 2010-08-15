@@ -1,0 +1,1811 @@
+{
+   "obj" : {
+      "outsitroom@ruins" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:northhall5",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "outsitroom",
+         "desc[2]" : "The door is locked.",
+         "linked" : "insitroom",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door leading into the sitting room is open."
+      },
+      "sack@ruins" : {
+         "location" : "IN_ROOM:gardenrm",
+         "weight" : "1",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "sack",
+         "bvalue" : "5",
+         "desc[0]" : "An old food sack has been thrown to the side.",
+         "size" : "10"
+      },
+      "talisman@ruins" : {
+         "location" : "CARRIED_BY:cube",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "talisman",
+         "examine" : "\nIt is an intriguing talisman with a hand with a flame in the palm on one \nside and a picture of a wall on the other side with faint markings on it.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "120",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "An ancient talisman has been dropped here."
+      },
+      "swordskeltwo@ruins" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:skeltwo",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "longsword",
+         "name" : "swordskeltwo",
+         "size" : "8",
+         "weight" : "8",
+         "bvalue" : "140",
+         "desc[0]" : "A fine looking longsword has been discarded here."
+      },
+      "insitroom@ruins" : {
+         "desc[1]" : "The door leading to the corridor is closed.",
+         "location" : "IN_ROOM:sittingroom",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "insitroom",
+         "desc[2]" : "The door leading to the corridor is locked.",
+         "linked" : "outsitroom",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door leading to the corridor is open."
+      },
+      "celery@ruins" : {
+         "desc[1]" : "A few stalks of celery looks right for the picking.",
+         "location" : "IN_ROOM:gardenrm",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "celery",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A crisp piece of celery has been left here."
+      },
+      "beet@ruins" : {
+         "desc[1]" : "There is a beet that looks good for the picking.",
+         "location" : "IN_ROOM:gardenrm",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "beet",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A bright red beet has been left here."
+      },
+      "boneskel@ruins" : {
+         "damage" : "12",
+         "location" : "WIELDED_BY:skelfour",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "bone",
+         "name" : "boneskel",
+         "examine" : "You find this bone kind of humorous for a weapon.",
+         "size" : "3",
+         "weight" : "10",
+         "bvalue" : "90",
+         "desc[0]" : "A large bone that resembles a club has been left here."
+      },
+      "key@ruins" : {
+         "location" : "IN_ROOM:storeroom",
+         "weight" : "1",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "key",
+         "bvalue" : "30",
+         "desc[0]" : "An old weather worn key has been discarded here.",
+         "size" : "1"
+      },
+      "onion@ruins" : {
+         "desc[1]" : "An onion plant looks good for picking.",
+         "location" : "IN_ROOM:gardenrm",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "onion",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A nice, wafting onion has been left here."
+      },
+      "turnip@ruins" : {
+         "desc[1]" : "A turnip plant looks right for the picking.",
+         "location" : "IN_ROOM:gardenrm",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "turnip",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A healthy looking turnip has been left here."
+      },
+      "insidetorch@ruins" : {
+         "location" : "IN_ROOM:magelib",
+         "oflags" : [
+            "NoGet",
+            "Pushable"
+         ],
+         "pname" : "torch",
+         "name" : "insidetorch",
+         "maxstate" : "1",
+         "linked" : "outsidetorch",
+         "state" : "1"
+      },
+      "maceskel@ruins" : {
+         "damage" : "16",
+         "location" : "WIELDED_BY:skelfive",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "mace",
+         "name" : "maceskel",
+         "size" : "6",
+         "weight" : "6",
+         "bvalue" : "140",
+         "desc[0]" : "A finely crafted mace has been left behind."
+      },
+      "endoutdoor@ruins" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:geast16",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "endoutdoor",
+         "desc[2]" : "The door is locked.",
+         "linked" : "endindoor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "jerkin@ruins" : {
+         "location" : "IN_ROOM:closet2",
+         "armor" : "25",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "jerkin",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "80",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms"
+         ],
+         "desc[0]" : "An old weather worn leather jerkin has been discarded here."
+      },
+      "mantle@ruins" : {
+         "location" : "IN_ROOM:closet1",
+         "armor" : "48",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Lightable"
+         ],
+         "altname" : "cloak",
+         "name" : "mantle",
+         "examine" : "\nThis is a very nice mantle that you wear over your shoulders like a cloak.\nYou notice that the edges look a little brown, as if it was lit at one time.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "80",
+         "desc[0]" : "A fine magical feather mantle has been left here.",
+         "aflags" : [
+            "Back",
+            "Arms",
+            "Chest"
+         ]
+      },
+      "gauntlets@ruins" : {
+         "desc[1]" : "A pair of gauntlets are partially hidden in a pile of rubble.",
+         "location" : "IN_ROOM:northempty1",
+         "armor" : "30",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "GetFlips"
+         ],
+         "name" : "gauntlets",
+         "examine" : "\nEven though the gauntlets are a little rusty, they still look quite \nprotective.",
+         "size" : "4",
+         "state" : "1",
+         "weight" : "4",
+         "pname" : "gauntlets",
+         "maxstate" : "1",
+         "bvalue" : "40",
+         "desc[0]" : "A pair of old, slightly rusted gauntlets has been left here.",
+         "aflags" : [
+            "Hands"
+         ]
+      },
+      "rmthreeindoor@ruins" : {
+         "desc[1]" : "The door leading to the corridor is closed.",
+         "location" : "IN_ROOM:storeroom2",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "rmthreeindoor",
+         "desc[2]" : "The door leading to the corridor is locked.",
+         "linked" : "rmthreeoutdoor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door leading to the corridor is open."
+      },
+      "corn@ruins" : {
+         "desc[1]" : "An ear of corn looks just right for the picking.",
+         "location" : "IN_ROOM:gardenrm",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "corn",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "An ear of corn has been left here."
+      },
+      "rustysword@ruins" : {
+         "damage" : "12",
+         "location" : "IN_ROOM:storeroom",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "rustysword",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "150",
+         "desc[0]" : "An old, rusty, weather worn sword has been discarded here."
+      },
+      "rmtwoindoor@ruins" : {
+         "desc[1]" : "The door leading to the corridor is closed.",
+         "location" : "IN_ROOM:spellroom",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "rmtwoindoor",
+         "desc[2]" : "The door leading to the corridor is locked.",
+         "linked" : "rmtwooutdoor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door leading to the corridor is open."
+      },
+      "axeskel@ruins" : {
+         "damage" : "16",
+         "location" : "WIELDED_BY:skelthree",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "axe",
+         "name" : "axeskel",
+         "size" : "9",
+         "weight" : "9",
+         "bvalue" : "150",
+         "desc[0]" : "A well made battleaxe has been left here."
+      },
+      "horn@ruins" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "weight" : "1",
+         "pname" : "horn",
+         "name" : "horn",
+         "bvalue" : "50",
+         "desc[0]" : "The horn from a dead Margoyle lies on the ground.",
+         "size" : "1"
+      },
+      "leggings@ruins" : {
+         "location" : "IN_ROOM:storeroom2",
+         "armor" : "30",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "leggings",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "70",
+         "aflags" : [
+            "Legs"
+         ],
+         "desc[0]" : "A pair of leather leggings lays crumpled in a heap."
+      },
+      "swordskelone@ruins" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:skelone",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "swordskelone",
+         "size" : "8",
+         "weight" : "8",
+         "bvalue" : "140",
+         "desc[0]" : "A finely crafted sword has been discarded here."
+      },
+      "tomato@ruins" : {
+         "desc[1]" : "A ripe tomato looks perfect for the picking.",
+         "location" : "IN_ROOM:gardenrm",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "tomato",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A ripe tomato has been left here."
+      },
+      "endindoor@ruins" : {
+         "desc[1]" : "The door leading to the corridor is closed.",
+         "location" : "IN_ROOM:thirdlvlend",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "endindoor",
+         "desc[2]" : "The door leading to the corridor is locked.",
+         "linked" : "endoutdoor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door leading to the corridor is open."
+      },
+      "rmthreeoutdoor@ruins" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:geast13",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "rmthreeoutdoor",
+         "desc[2]" : "The door is locked.",
+         "linked" : "rmthreeindoor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "crown@ruins" : {
+         "desc[1]" : "A very luxurious crown rests on the oak table covering a scroll.",
+         "location" : "IN_ROOM:sittingroom",
+         "oflags" : [
+            "Wearable",
+            "RegenHealth"
+         ],
+         "name" : "crown",
+         "examine" : "\nThis is a very fine crown made from the finest gold of all the land. It \nis adorned in several precious gems that gleam in the light. As you hold \nthe crown you feel your lifeforce coming back to you...",
+         "state" : "1",
+         "maxstate" : "1",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A very luxurious crown has been left here."
+      },
+      "scroll@ruins" : {
+         "desc[1]" : "A scroll rests on the oak table.",
+         "location" : "IN_ROOM:sittingroom",
+         "name" : "scroll",
+         "desc[2]" : "A scroll rests on the oak table under the crown.",
+         "maxstate" : "2",
+         "desc[0]" : "A scroll has been discarded here.",
+         "state" : "2"
+      },
+      "amulet@ruins" : {
+         "location" : "IN_ROOM:storeroom",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "amulet",
+         "examine" : "\nIt is a very interesting amulet with a fist on one side. You wonder what\npurpose it serves.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "100",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "A long lost amulet has been left here."
+      },
+      "damagerunes@ruins" : {
+         "location" : "IN_ROOM:spellroom",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "runes",
+         "name" : "damagerunes"
+      },
+      "outsidetorch@ruins" : {
+         "location" : "IN_ROOM:gnorth2",
+         "oflags" : [
+            "NoGet",
+            "Pushable"
+         ],
+         "name" : "outsidetorch",
+         "examine" : "\nAs you examine the torch, you notice that it is a little loose, and seems to\nalmost pull away from the wall.",
+         "linked" : "insidetorch",
+         "state" : "1",
+         "pname" : "torch",
+         "maxstate" : "1",
+         "desc[0]" : "The torch has been pulled down and the west hall has disappeared."
+      },
+      "helm@ruins" : {
+         "location" : "IN_ROOM:storeroom",
+         "armor" : "25",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "RegenMana"
+         ],
+         "altname" : "helmet",
+         "name" : "helm",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "70",
+         "desc[0]" : "An old copper helmet has been discarded here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "runes@ruins" : {
+         "location" : "IN_ROOM:csouth",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "runes"
+      },
+      "scalemail@ruins" : {
+         "location" : "IN_ROOM:storeroom2",
+         "armor" : "40",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "mail",
+         "name" : "scalemail",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "110",
+         "desc[0]" : "A tarnished suit of scaled mail armor has been discarded here.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms",
+            "Legs"
+         ]
+      },
+      "boots@ruins" : {
+         "location" : "IN_ROOM:storeroom",
+         "armor" : "40",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "boots",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "40",
+         "aflags" : [
+            "Feet"
+         ],
+         "desc[0]" : "A pair of protective looking leather boots has been discarded here."
+      },
+      "bracers@ruins" : {
+         "location" : "IN_ROOM:storeroom2",
+         "armor" : "20",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "braclet",
+         "name" : "bracers",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "80",
+         "desc[0]" : "An old weather worn leather jerkin has been discarded here.",
+         "aflags" : [
+            "Arms"
+         ]
+      },
+      "rmtwooutdoor@ruins" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:geast10",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "rmtwooutdoor",
+         "desc[2]" : "The door is locked.",
+         "linked" : "rmtwoindoor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      }
+   },
+   "loc" : {
+      "geast18@ruins" : {
+         "exits" : {
+            "e" : "geast17",
+            "w" : "geast7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Northeastern Corridor",
+         "id" : "geast18",
+         "description" : "\n  You are in the northeastern corridor of a large catacomb. You hear loud \nrustlings from the rooms around you and wonder what can be causing all of \nthe noise which makes you a little nervous. As your foot sinks into a pool\nof blood your nerves start to snap and you hold back a shriek. After you\nregain your senses you look around for exits and see them to the east and\nto the west.\n",
+         "altitude" : null
+      },
+      "geast15@ruins" : {
+         "exits" : {
+            "w" : "geast14",
+            "n" : "geast16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Southeastern Corner",
+         "id" : "geast15",
+         "description" : "\n  You are in the southeastern corner of a large catacomb. Looking around \nthe dimly lit room you feel a shiver of fear go up and down your spine as\nyou see a complete skeleton hanging on the northern wall. You pray that you\nare almost out of this evil place. The corridor leads to the north and to \nthe west.\n",
+         "altitude" : null
+      },
+      "easthall3@ruins" : {
+         "exits" : {
+            "e" : "easthall4",
+            "w" : "easthall2",
+            "n" : "gardenrm"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Furthur Along in the Eastern Hall",
+         "id" : "easthall3",
+         "description" : "\n  You have travelled quite a long way down this hall and start to wonder\nwhere the end is or if it leads to anywhere. As you wonder more you look\naround and find that some sort of garden is to the north while the hall\ncontinues to the east.\n",
+         "altitude" : null
+      },
+      "gardenrm@ruins" : {
+         "exits" : {
+            "s" : "easthall3"
+         },
+         "flags" : [],
+         "zone" : "ruins",
+         "title" : "An Underground Garden",
+         "id" : "gardenrm",
+         "description" : "\n  You look around and marvel at this underground garden. Looking around \nthis dimly lit room you look up to find that a partially covered grate \nallows a bit of light to enter from above providing enough sunlight and \nrainwater for the plants to survive.\n",
+         "altitude" : null
+      },
+      "deathroom@ruins" : {
+         "exits" : {},
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "ruins",
+         "title" : "A Bottomless Pit...",
+         "id" : "deathroom",
+         "description" : "\n  You start to fall down into an endless void...\n\n    You land inside of a mouth of some sort.. or so you think it is as the\n    teeth of this monster eat you alive..\n\n  As your body is torn to shreds, your bones being shattered, you think \n  back to the room before this.. \n",
+         "altitude" : null
+      },
+      "geast7@ruins" : {
+         "exits" : {
+            "w" : "geast8",
+            "e" : "geast18",
+            "n" : "geast6",
+            "s" : "deathroom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Large Catacomb",
+         "id" : "geast7",
+         "description" : "\n  You have entered into a very large catacomb. It looks to be made up of \nseveral large rooms that actually look quite luxurious. You figure that \nat one time, or another, someone of great importance had lived in this area.\nThe catacomb continues to the east and west. To the south you hear whispers \nof the past speaking of great pain and suffering. It is a very dark room, \nand you can't see anything inside of it. A sudden gust of wind brings the \nsmell of decaying flesh to your nose. You don't think it would be a good \nidea to go that way.\n",
+         "altitude" : null
+      },
+      "northempty1@ruins" : {
+         "exits" : {
+            "w" : "northhall2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "An Empty Room",
+         "id" : "northempty1",
+         "description" : "\n  This looks to be a fairly empty room. Old, rotting torn banners line the \ntop of the eastern wall and what looks to be a window has been covered from\nthe outside by a wall of bricks. Piles of rubble from fallen rock litter \nthe floor. The northern hall is to the west.\n",
+         "altitude" : null
+      },
+      "mossyeast@ruins" : {
+         "exits" : {
+            "e" : "sinkhole",
+            "w" : "easthall4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Mossy Room",
+         "id" : "mossyeast",
+         "description" : "\n  You are disgusted as your feet sink deep into the moss with a thick \nlayer of goo underneath it. You feet slip and slide around in the goo\nand you find yourself having troubles standing up. Everytime you almost \nfall over the stench of the goo forces you to regain your balance and \nsteady yourself again. You can see yet another mossy room to the east of \nhere.\n",
+         "altitude" : null
+      },
+      "teleportend@ruins" : {
+         "exits" : {
+            "n" : "southhall"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "End of the Southern Hall",
+         "id" : "teleportend",
+         "description" : "\n  This looks to be the end of the southern hall. The floor is very slippery \nfrom water leaking in from the upper level. A thick blanket of moss grows \nfrom the ceiling down the walls to the floor. You look around this room \none more time before deciding to turn back to the north.\n",
+         "altitude" : null
+      },
+      "cwest@ruins" : {
+         "exits" : {
+            "e" : "levelthree",
+            "s" : "csouth"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Western Catacomb",
+         "id" : "cwest",
+         "description" : "\n  You have entered the western catacombs. A great deal of moss grows on \nthe walls and it is very murky and cold. As you step forward you walk \ninto a pool of blood and find yourself speechless with fear. You look \nnervously around this room some more and see exits to the east and south.\n",
+         "altitude" : null
+      },
+      "bathroom@ruins" : {
+         "exits" : {
+            "w" : "westhall6"
+         },
+         "flags" : [
+            "Dark",
+            "OnePerson"
+         ],
+         "zone" : "ruins",
+         "title" : "A Small Room",
+         "id" : "bathroom",
+         "description" : "\n  It takes you little time to figure out what this room once was. There \nis a washbasin, a mirror, and a toilet in here. Just remember that if you \nwant to do your duty, make sure that nobody is watching.\n",
+         "altitude" : null
+      },
+      "geast10@ruins" : {
+         "exits" : {
+            "w" : "^rmtwooutdoor",
+            "n" : "geast9",
+            "s" : "geast11"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Western Corridor",
+         "id" : "geast10",
+         "description" : "\n  You are in the western corridor of a large catacomb. Old torn banners \nhang from the eastern wall and they seem to almost dance and sway in the \nchilling breeze that keeps whistling through the rooms. You shiver from \nthe cold breeze and warm your hands by rubbing them together. You notice \na door to a room to the west and the corridor seems to continue to the \nsouth and to the north.\n",
+         "altitude" : null
+      },
+      "storeroom2@ruins" : {
+         "exits" : {
+            "n" : "^rmthreeindoor"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Room",
+         "id" : "storeroom2",
+         "description" : "\n  You are in what looks to be a storeroom. There are shelves built into \nthe stone walls that are covered with thick layers of dust. Looking around \nat the various hooks and imprints on the wall you suspect that this once was \nan armory of some sort.\n",
+         "altitude" : null
+      },
+      "mageroom@ruins" : {
+         "exits" : {
+            "e" : "magelib"
+         },
+         "flags" : [
+            "FastMana",
+            "Peaceful"
+         ],
+         "zone" : "ruins",
+         "title" : "The Mage's Study Room",
+         "id" : "mageroom",
+         "description" : "\n  You have entered the Mage's private study room. You hope that he will \nnot be upset that you have entered his dwelling or disturb his peace. You \napproach him quietly and humbly. His desk is cluttered with several ancient \nand modern scrolls and tablets of wisdom and he is thoughtfully examining \nthem. You notice that his shelves are full of several spellbooks and \nmagical items of all sorts. You would attempt to take something, but feel \nthat it would not be right. As you move closer, the mage turns around and \nsmiles at you.\n",
+         "altitude" : null
+      },
+      "geast5@ruins" : {
+         "exits" : {
+            "w" : "geast4",
+            "s" : "geast6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "The End of the Eastern Passage",
+         "id" : "geast5",
+         "description" : "\n  You have reached the end of the eastern passage only to find that now \nthe catacomb turns to the south. You start to hear voice of the past \nechoing through the passage and makes the hair on the back of your neck \nstand up.\n",
+         "altitude" : null
+      },
+      "easthall2@ruins" : {
+         "exits" : {
+            "e" : "easthall3",
+            "w" : "easthall"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Eastern Hall",
+         "id" : "easthall2",
+         "description" : "\n  You are further along in the eastern hall which seems to go on a bit \nfurther. The damp musky odor seems to make you a little light-headed\nand you pause for a minute to gain your senses before proceeding.\n",
+         "altitude" : null
+      },
+      "northhall3@ruins" : {
+         "exits" : {
+            "w" : "northempty2",
+            "n" : "northhall4",
+            "s" : "northhall2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Further into the Northern Hall",
+         "id" : "northhall3",
+         "description" : "\n  You are travelling along in the northern hall. It is quite drafty and\nthe dust in the air tickles your nose. There is a small empty room to the \nwest of here. The hall leads to the north and south.\n",
+         "altitude" : null
+      },
+      "southhall@ruins" : {
+         "exits" : {
+            "n" : "start",
+            "s" : "teleportend"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Hall South of the Ruins",
+         "id" : "southhall",
+         "description" : "\n  This is the south hall that branches off of the main ruins. The walls \nare covered with a very thick moss and there is a thin layer of slime \ncovering the floor. The hallway leads to the south and the main ruins are \nback to the north.\n",
+         "altitude" : null
+      },
+      "closet1@ruins" : {
+         "exits" : {
+            "n" : "westhall4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Small Room",
+         "id" : "closet1",
+         "description" : "\n  This room resembles a closet of some sort. There are a few shelves lining \nthe walls and the remains of a broom is decaying in the corner. You look \naround this area one more time and then decide to leave.\n",
+         "altitude" : null
+      },
+      "easthall@ruins" : {
+         "exits" : {
+            "e" : "easthall2",
+            "w" : "start"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Hall East of the Ruins",
+         "id" : "easthall",
+         "description" : "\n  This is the east hall that branches off of the main ruins. The walls \nare covered with thick moss and the floor is quite slippery from water\nthat leaks down from the upper levels. The hall leads off to the east \nand the main ruins are back to the west.\n",
+         "altitude" : null
+      },
+      "start@ruins" : {
+         "exits" : {
+            "w" : "westhall",
+            "e" : "easthall",
+            "n" : "northhall",
+            "u" : "underruined@blizzard",
+            "s" : "southhall"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Further into the Ruins",
+         "id" : "start",
+         "description" : "\n  You have entered into the underlevels of the ruined temple. A very \nstrong musky odor that makes you gasp for air for a few seconds. Looking \naround this ancient stone-walled chamber you wonder just how old it is. \nA thick layer of green, slimy moss covers most of the walls. This chamber \nhas exits leading in all directions.\n",
+         "altitude" : null
+      },
+      "bedroom2@ruins" : {
+         "exits" : {
+            "e" : "westhall6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Small Room",
+         "id" : "bedroom2",
+         "description" : "\n  This room looks like it was a bedroom at one time. A large dresser with \nall of the drawers broken out lines the northern wall and the remains of \na bed litter the southern wall. A bricked up window is on the west wall \nmaking this room look very unfriendly.\n",
+         "altitude" : null
+      },
+      "westhall10@ruins" : {
+         "exits" : {
+            "e" : "northhall7",
+            "s" : "westhall9"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Yet Another Turn in the Northern Hallway",
+         "id" : "westhall10",
+         "description" : "\n You are now briefly travelling north in the hallway. All of this turning \nis really starting to get you confused and rather annoyed at the same time.\nThe hallway turns to the east here and leads back to the south.\n",
+         "altitude" : null
+      },
+      "easthall4@ruins" : {
+         "exits" : {
+            "e" : "mossyeast",
+            "w" : "easthall3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Further in the Eastern Hall",
+         "id" : "easthall4",
+         "description" : "\n  You are now even further in the eastern hall. The floor is very mushy \ndue to the overgrowth of moss and your feet sink into the moss with every \nstep that you take.\n",
+         "altitude" : null
+      },
+      "bedroom1@ruins" : {
+         "exits" : {
+            "s" : "westhall2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Small Room",
+         "id" : "bedroom1",
+         "description" : "\n  This is a small room that looks like it was once a bedroom. There is a \nbed in the room. Actually, the bed is nothing more then the wooden frame \nthat once held the luxurious bedding that was once on it. You look around \nthis drab area and wonder when it was last occupied before leaving it \nunoccupied yet again.\n",
+         "altitude" : null
+      },
+      "geast8@ruins" : {
+         "exits" : {
+            "w" : "geast9",
+            "e" : "geast7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Northwestern Corridor",
+         "id" : "geast8",
+         "description" : "\n  You are in the northwestern corridor of a large catacomb. The walls are \na total crimson color as are the ceiling and the floor. This room is not \nputting your already nervous mind at rest. The sounds of crunching bone \nfill this whole catacomb and you swallow hard as you shiver from the cold.\nThe corridor leads to the east and to the west.\n",
+         "altitude" : null
+      },
+      "geast2@ruins" : {
+         "exits" : {
+            "e" : "geast3",
+            "w" : "geast"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Further into the Eastern Catacomb",
+         "id" : "geast2",
+         "description" : "\n  You are travelling in the eastern catacombs. The air is rank with the \nsmell of rotting meat and you step into a puddle of blood. You start to \nlook around nervously only to see a complete skeleton hanging on one of \nthe walls. The catacombs continue to the east.\n",
+         "altitude" : null
+      },
+      "geast@ruins" : {
+         "exits" : {
+            "e" : "geast2",
+            "w" : "gooey"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "ruins",
+         "title" : "Eastern Catacomb",
+         "id" : "geast",
+         "description" : "\n  You are travelling into the eastern catacombs. You are walking in a \nthin trail of slime from the room to the west of here. There are a few \nbones laying along the walls and dried pools of blood. You can see that \nthis catacomb continues for a great way to the east.\n",
+         "altitude" : null
+      },
+      "geast16@ruins" : {
+         "exits" : {
+            "e" : "^endoutdoor",
+            "n" : "geast17",
+            "s" : "geast15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Eastern Corridor",
+         "id" : "geast16",
+         "description" : "\n  You are in the eastern corridor of a large catacomb. Old torn banners \nhang from the western wall and they seem to almost dance and sway in the \nchilling breeze that keeps whistling through the rooms. You shiver from \nthe cold breeze and warm your hands by rubbing them together. You notice \na door to a room to the east and the corridor seems to continue to the \nsouth and to the north.\n",
+         "altitude" : null
+      },
+      "geast12@ruins" : {
+         "exits" : {
+            "e" : "geast13",
+            "w" : "geast11"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Southwestern Corridor",
+         "id" : "geast12",
+         "description" : "\n  You are in the southwestern corridor of a large catacomb. You hear a \ngreat deal of rustling coming from the east and wonder what can be causing \nall of the noise. You then hear a crunch as you step forward and look down\nto see that you have crushed a bone of another explorer, much like yourself.\nThe corridor leads to the east and to the west.\n",
+         "altitude" : null
+      },
+      "northhall@ruins" : {
+         "exits" : {
+            "n" : "northhall2",
+            "s" : "start"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Hall North of the Ruins",
+         "id" : "northhall",
+         "description" : "\n  This is the north hall that branches off from the main ruins. The floor \nis quite damp and you move carefully along so that you don't slip. The \nhall continues to the north and the main ruins are to the south.\n",
+         "altitude" : null
+      },
+      "gnorth2@ruins" : {
+         "exits" : {
+            "w" : "^outsidetorch",
+            "s" : "gnorth"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "End of Northern Catacombs",
+         "id" : "gnorth2",
+         "description" : "\n  This looks to be the end of the northern catacombs. Looking around you \nwonder why this area is so small, it should be larger. You notice an old \nburned out torch hanging on the west wall with moss growing from it. \nThere is also a great deal of moss growing on the ceiling and the other \nwalls and there is yet more slime on the floor.\n",
+         "altitude" : null
+      },
+      "geast13@ruins" : {
+         "exits" : {
+            "e" : "geast14",
+            "w" : "geast12",
+            "n" : "deathroom",
+            "s" : "^rmthreeoutdoor"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Southern Corridor",
+         "id" : "geast13",
+         "description" : "\n  You are in the southern corridor of a large catacomb. A chilling breeze\nrips through you and you shiver uncontrollably as you look around this area.\nThe catacomb continues to the east and west and there is a door to a room \nto the south. To the south you hear whispers of the past speaking of great \npain and suffering. It is a very dark room, and you can't see anything inside \nof it. A sudden gust of wind brings the smell of decaying flesh to your nose. \nYou don't think it would be a good idea to go that way.\n",
+         "altitude" : null
+      },
+      "geast11@ruins" : {
+         "exits" : {
+            "e" : "geast12",
+            "n" : "geast10"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Southwestern Corner",
+         "id" : "geast11",
+         "description" : "\n  You are in the southern corner of a large catacomb. There are small \npools of blood on the floor and deep scratches in the walls. By the looks \nof the scratches you suspect that they were caused by a sword being swung \nat someone, or something, and missing. Looking at the deep scratches again \nyou also suspect that whoever, or whatever, was swinging a sword around is\nquite powerful. The corridor leads up to the north, and seems to lead to \nthe east.\n",
+         "altitude" : null
+      },
+      "westhall5@ruins" : {
+         "exits" : {
+            "n" : "westhall6",
+            "s" : "westhall4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Northern Turn in the Western Hallway",
+         "id" : "westhall5",
+         "description" : "\n  You are now travelling north in this seemingly neverending hallway. \nStrange shrieks fill the air making the hair on the back of your neck\nstandup. You peer into the infinite darkness in front of you and swear\nthat you see dancing lights. The hallway leads to the north and to the\nsouth.\n",
+         "altitude" : null
+      },
+      "geast4@ruins" : {
+         "exits" : {
+            "e" : "geast5",
+            "w" : "geast3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Yet Further into the Eastern Catacomb",
+         "id" : "geast4",
+         "description" : "\n  You are still travelling in the eastern catacombs. You start to wonder \nif this passageway will ever end, or turn another direction. The stench \nof rotting meat is starting to make you a little dizzy. You find yourself \nhaving to stop and take a short breather before continuing to the east.\n",
+         "altitude" : null
+      },
+      "thirdlvlend@ruins" : {
+         "exits" : {
+            "e" : "teleport",
+            "w" : "^endindoor"
+         },
+         "flags" : [
+            "Dark",
+            "FastHeal",
+            "FastMana",
+            "NoMobiles"
+         ],
+         "zone" : "ruins",
+         "title" : "A Room",
+         "id" : "thirdlvlend",
+         "description" : "\n  This room is quite unusual. It is warm and welcoming unlike the rest of \nthe catacombs. You also seem to feel your strength replenishing faster as \nif some God is watching over you. You decide that it would be a good idea \nto rest here for a few minutes. You then look to the east and notice that \nthe wall seems to shimmer and blur in and out with pink sparkles. You look\ncloser at the wall and you see what appears to be a room much like one that\nyou were in on the first level of these ruins.\n",
+         "altitude" : null
+      },
+      "teleport@ruins" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Strange Wall",
+         "id" : "teleport",
+         "description" : "\n  You walk into the strange wall and feel yourself falling and then flying\nall at once. You close your eyes hoping that this experience will end soon.\n",
+         "altitude" : null
+      },
+      "geast17@ruins" : {
+         "exits" : {
+            "w" : "geast18",
+            "s" : "geast16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Northeastern Corner",
+         "id" : "geast17",
+         "description" : "\n  You are in the northeastern corner of a large catacomb. You look around \nthis area and see bones lined up along the walls which makes you a little \nnervous. What makes you even more nervous is the blood that covers the bones\nthat are laying around. Looking around nervously you see that the corridor \nturns to the west and to the south.\n",
+         "altitude" : null
+      },
+      "geast3@ruins" : {
+         "exits" : {
+            "w" : "geast2",
+            "e" : "geast4",
+            "n" : "storeroom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Even Further into the Eastern Catacomb",
+         "id" : "geast3",
+         "description" : "\n  You are travelling in the eastern catacombs. The smell of rotting flesh \nis getting stronger and makes your nostrils burn a little. You hear rustling \nfurther ahead in the caverns and see a small room to the north of here.\n",
+         "altitude" : null
+      },
+      "csouth@ruins" : {
+         "exits" : {
+            "e" : "ceast",
+            "n" : "cwest"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Southern Catacomb",
+         "id" : "csouth",
+         "description" : "\n  You have entered the southern catacombs. There are thick pools of blood \ncovering the floors. You nervously look around the room and find that one \nof the walls has strange runes written on it. You also see that there are \nexits to the north and to the east.\n",
+         "altitude" : null
+      },
+      "westhall2@ruins" : {
+         "exits" : {
+            "w" : "westhall3",
+            "e" : "westhall",
+            "n" : "bedroom1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Western Hallway",
+         "id" : "westhall2",
+         "description" : "\n  You are in the western hallway that branches off of the main ruins.\nThick layers of dust cover the moss on the walls. Little tracks of water \nspread out on the floor making it a little slippery. To the north you see \na very old tattered curtain that shadows the room behind it. The hallway \nleads to the west and to the east as well.\n",
+         "altitude" : null
+      },
+      "sinkhole@ruins" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Very Mossy, Gooey Room",
+         "id" : "sinkhole",
+         "description" : "\n  This room has even more moss on the floor, and even more goo. Your feet \nstart to sink into the goo, and then they sink a little more, before you \nknow it you're up to your hips and still sinking...into a lower level!\n",
+         "altitude" : null
+      },
+      "gnorth@ruins" : {
+         "exits" : {
+            "n" : "gnorth2",
+            "s" : "gooey"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Northern Catacombs",
+         "id" : "gnorth",
+         "description" : "\n  You are travelling into the northern catacombs. A fine layer of slime \ncovers the floor that has seeped in from the room to the south. Your feet \nslip around a little in the slimy mess and you watch your step very \ncarefully so that you do not fall.\n",
+         "altitude" : null
+      },
+      "westhall3@ruins" : {
+         "exits" : {
+            "w" : "westhall4",
+            "e" : "westhall2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Further in the Western Hallway",
+         "id" : "westhall3",
+         "description" : "\n  You are in the western hallway that branches off of the main ruins. The\nmoss that lines the walls looks like it has been growing for ages. Huge \ncobwebs adorn the corners of this hallway and a few small spiders run \nbusily back and forth across the webs.\n",
+         "altitude" : null
+      },
+      "gsouth@ruins" : {
+         "exits" : {
+            "n" : "gooey",
+            "d" : "levelthree"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "ruins",
+         "title" : "Southern Catacomb",
+         "id" : "gsouth",
+         "description" : "\n  You are inside the southern catacombs. The floor is covered with a fine \nlayer of slime that is seeping in from the room to the north. There are a \nflight of steps that lead down into another level of the ruins.\n",
+         "altitude" : null
+      },
+      "closet2@ruins" : {
+         "exits" : {
+            "s" : "northhall6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Small Room",
+         "id" : "closet2",
+         "description" : "\n  This is a small room that resembles a coat closet. It is quite spacious \nand has several brass hooks that still hang from the walls. A couple of \nsmall shelves line the back of the closet. You look around this closet one \nmore time before deciding to leave.\n",
+         "altitude" : null
+      },
+      "westhall8@ruins" : {
+         "exits" : {
+            "e" : "westhall9",
+            "s" : "westhall7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Turn in the Northern Hallway",
+         "id" : "westhall8",
+         "description" : "\n  You are now travelling north in the hallway. The dust is so thick\nhere that it causes you to choke and your eyes water. A cyclonic breeze \nconstantly blows the dust around and you look around quickly for an exit.\nThe hallway turns to the east here.\n",
+         "altitude" : null
+      },
+      "northhall7@ruins" : {
+         "exits" : {
+            "e" : "northhall6",
+            "w" : "westhall10"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Western Hallway meets Northern Hall",
+         "id" : "northhall7",
+         "description" : "\n  You are travelling in a western hallway. It looks like the hallways \nfrom the north and west of the ruins meet here making a complete circle. \nThe dust in the area is getting much thicker and it makes you cough and \nwheeze a little. You then start to see spots before your eyes and decide \nto rest for a few minutes. After your head clears you decide to press on. \nThe hallway leads to the east and to the west.\n",
+         "altitude" : null
+      },
+      "geast14@ruins" : {
+         "exits" : {
+            "e" : "geast15",
+            "w" : "geast13"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Southeastern Corridor",
+         "id" : "geast14",
+         "description" : "\n  You are in the southeastern corridor of a large catacomb. You hear \nsomething moving around near your feet and look down quickly to find\nthat it is only a rat and sigh a breath of relief. You then look around\nthe corridor for exits and see that it leads to the east and to the west.\n",
+         "altitude" : null
+      },
+      "northhall2@ruins" : {
+         "exits" : {
+            "e" : "northempty1",
+            "n" : "northhall3",
+            "s" : "northhall"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Northern Hall",
+         "id" : "northhall2",
+         "description" : "\n  You are travelling further along in the north hall. The musky air makes \nyou pause for a brief second to rest and you decide to look around. The \nhall seems to continue even further to the north and there is a room to \nthe east, or you can turn around and go back south. \n",
+         "altitude" : null
+      },
+      "sittingroom@ruins" : {
+         "exits" : {
+            "w" : "^insitroom"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "ruins",
+         "title" : "A Small Room",
+         "id" : "sittingroom",
+         "description" : "\n  This is a small room that resembles a sitting room. A few decaying \nchairs are scattered around the room and a small oak table rests in the \nmiddle of the room. There is even a fireplace set into the eastern wall \nwith a finely crafted marble hearth. Perhaps you should take a few \nminutes to sit and relax in here.\n",
+         "altitude" : null
+      },
+      "westhall6@ruins" : {
+         "exits" : {
+            "w" : "bedroom2",
+            "e" : "bathroom",
+            "n" : "westhall7",
+            "s" : "westhall5"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Northern Hallway",
+         "id" : "westhall6",
+         "description" : "\n  You are now travelling north in the hallway. The shrieks are getting \nlouder and more nervewracking as you continue forward. You look to the \neast and west and find that there are what appear to be small rooms with\nragged curtains partially covering the entryways. You start to wonder if \nthis area could have been a guest area of some sort. The hallway leads to \nthe north and the south.\n",
+         "altitude" : null
+      },
+      "westhall4@ruins" : {
+         "exits" : {
+            "e" : "westhall3",
+            "n" : "westhall5",
+            "s" : "closet1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Turn in the Western Hallway",
+         "id" : "westhall4",
+         "description" : "\n  You are in the western hallway that branches off of the main ruins. The \nhallway looks to take a turn to the north here and there seems to be a \nsmall room to the south of here.\n",
+         "altitude" : null
+      },
+      "northhall5@ruins" : {
+         "exits" : {
+            "e" : "^outsitroom",
+            "w" : "northhall6",
+            "s" : "northhall4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Turn in the Northern Hall",
+         "id" : "northhall5",
+         "description" : "\n  You find yourself at a turn in the northern hall. You hear shrieks \ncoming from the hall to the west of here and wonder what could be making \nthe annoying sound. The hallway leads to the west and there is a small \nroom to the east.\n",
+         "altitude" : null
+      },
+      "northhall4@ruins" : {
+         "exits" : {
+            "n" : "northhall5",
+            "s" : "northhall3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Even Further into the Northern Hall",
+         "id" : "northhall4",
+         "description" : "\n  You are travelling along in the northern hall. Great deals of dust are \nstirred up as you walk along and you find yourself in a sneezing fit. \nAfter the sneezing fit ends you regain your senses and see the hallway \ncontinues to the north.\n",
+         "altitude" : null
+      },
+      "spellroom@ruins" : {
+         "exits" : {
+            "e" : "^rmtwoindoor"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "A Room",
+         "id" : "spellroom",
+         "description" : "\n  As you enter the room, you stir up some dust that has been still for\ncountless ages. When it clears, you notice runes, of a long forgotten\nlanguage. You dust your fingers over them, feeling the rise and fall of\nthe letters.\n",
+         "altitude" : null
+      },
+      "magelib@ruins" : {
+         "exits" : {
+            "e" : "^insidetorch",
+            "w" : "mageroom"
+         },
+         "flags" : [
+            "FastMana"
+         ],
+         "zone" : "ruins",
+         "title" : "Libary of the Mage",
+         "id" : "magelib",
+         "description" : "\n  This is an ancient library full of shelves and shelves of many books. \nThe room is lit by a magical sphere of light that is hovering in the \nmiddle of the ceiling, it's dancing white light grabbing your attention. \nJust being in this room seems to make you feel more magically refreshed. \nLooking to the west, you notice another lit room.\n",
+         "altitude" : null
+      },
+      "ceast@ruins" : {
+         "exits" : {
+            "w" : "csouth",
+            "n" : "levelthree"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Eastern Catacomb",
+         "id" : "ceast",
+         "description" : "\n  You have entered the eastern catacombs. Your foot sinks into a large \npool of goo, or so you think is goo until you look down and see it's dark \nred tinge and a large shiver of fear runs up your spine. There is also a \nfoul odor of rotting meat and you feel your stomach begin to turn. Looking \naround quickly you find that there are exits to the north and to the west.\n",
+         "altitude" : null
+      },
+      "geast6@ruins" : {
+         "exits" : {
+            "n" : "geast5",
+            "s" : "geast7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Southern Passage",
+         "id" : "geast6",
+         "description" : "\n  You are in the southern passage in the eastern catacombs. As you walk \ninto this new passageway an overwhelming stench hits you causing you to \nalmost fall over. After you regain your senses you look around to find \npools of blood all over the ground, and blood stains on the walls and on \nthe ceiling. You wonder what could possibly have caused such a massacre. \nThis passage leads towards the south into another large catacomb.\n",
+         "altitude" : null
+      },
+      "levelthree@ruins" : {
+         "exits" : {
+            "w" : "cwest",
+            "u" : "gooey",
+            "s" : "ceast"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Third Level Catacomb",
+         "id" : "levelthree",
+         "description" : "\n  This is a rather dark and murky area and you feel a slight chill of \nfear run up and down your spine. Looking around the dimly lit area you \nsee a few bones laying around on the floor which doesn't help your already \nnervous condition any. The catacomb has two passageways, one to the west \nand one to the south.\n",
+         "altitude" : null
+      },
+      "geast9@ruins" : {
+         "exits" : {
+            "e" : "geast8",
+            "s" : "geast10"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Northwestern Corner",
+         "id" : "geast9",
+         "description" : "\n  You are in the northern corridor of a large catacomb. There are several \nblood stained bones littered across the floor. A very foul odor then fills \nyour nostrils and you feel your stomach churn. You shake your head a little\nto regain your senses before contuining onward. The corridor turns to the \nsouth and leads to the east.\n",
+         "altitude" : null
+      },
+      "westhall9@ruins" : {
+         "exits" : {
+            "w" : "westhall8",
+            "n" : "westhall10"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Another Turn in the Northern Hallway",
+         "id" : "westhall9",
+         "description" : "\n  You are briefly travelling west in the hallway. The constant turning of \nthis hallway is starting to confuse you. The shrieking is still a constant\nbother and you wish that you could somehow stop it. The room turns to the \nnorth and goes back to the west.\n",
+         "altitude" : null
+      },
+      "westhall7@ruins" : {
+         "exits" : {
+            "n" : "westhall8",
+            "s" : "westhall6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Further into the Northern Hallway",
+         "id" : "westhall7",
+         "description" : "\n  You are now travelling north in the hallway. The shrieks are starting \nto really get on your nerves and you find yourself starting to clench \nyour fists. You look ahead into the darkness and once again swear that \nyou see a light of some sort dancing before you. You blink your eyes. The \nlight that was there seems to have disappeared. The hallway leads to the \nnorth and to the south.\n",
+         "altitude" : null
+      },
+      "northhall6@ruins" : {
+         "exits" : {
+            "e" : "northhall5",
+            "w" : "northhall7",
+            "n" : "closet2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Western Hallway",
+         "id" : "northhall6",
+         "description" : "\n  You are travelling in a western hallway. There are loud shrieks that \nare driving you mad coming from all directions. You put your hands over \nyour ears to stop the sound and it does. You look around the area to see\nthat there is a small room to the north with an old curtain in front of \nit. The hallway leads to the east and west.\n",
+         "altitude" : null
+      },
+      "storeroom@ruins" : {
+         "exits" : {
+            "s" : "geast3"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "ruins",
+         "title" : "A Small Storeroom",
+         "id" : "storeroom",
+         "description" : "\n  What luck! You have come upon a small storeroom, perhaps some items \nhave been left behind by some other traveler that has come this way. \nThere is also a cross over the door going out, you decide not to take it \nbecause it looks quite fragile.\n",
+         "altitude" : null
+      },
+      "gooey@ruins" : {
+         "exits" : {
+            "e" : "geast",
+            "n" : "gnorth",
+            "s" : "gsouth"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "An Extremely Gooey Room",
+         "id" : "gooey",
+         "description" : "\n  This room is extremely gooey from the goo dripping from the ceiling. \nThe thick, slimy goo covering the floor comes up to your ankles and makes \nyou shudder from disgust. Your surroundings resemble that of a catacomb \nand you figure that this level was built several hundreds of centuries ago.\n",
+         "altitude" : null
+      },
+      "westhall@ruins" : {
+         "exits" : {
+            "w" : "westhall2",
+            "e" : "start"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "Hall West of the Ruins",
+         "id" : "westhall",
+         "description" : "\n  This is the west hall that branches off of the main ruins. Thick moss \ngrows on the walls and ceilings. A sudden cold draft hits your body and \nyou swear that you hear shrieks coming from the chambers to the west of\nhere.\n",
+         "altitude" : null
+      },
+      "northempty2@ruins" : {
+         "exits" : {
+            "e" : "northhall3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ruins",
+         "title" : "An Empty Room",
+         "id" : "northempty2",
+         "description" : "\n  This looks to be a fairly empty room except for the piles of human \nremains that clutter the floor and the blood stains on the walls. Several\nshackles line the walls and a skeleton still hangs from one. This must of \nbeen somesort of prison cell or torture room.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "mummy@ruins" : {
+         "damage" : "10",
+         "location" : "northempty2",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "10",
+         "name" : "Mummy",
+         "description" : "An ancient mummy is here, and he isn't happy that you disturbed his rest.",
+         "strength" : "150"
+      },
+      "jeeves@ruins" : {
+         "damage" : "8",
+         "location" : "closet1",
+         "speed" : "3",
+         "armor" : "0",
+         "name" : "Jeeves",
+         "description" : "The ghost of Jeeves is here, cleaning away.",
+         "strength" : "110"
+      },
+      "skelfive@ruins" : {
+         "damage" : "16",
+         "location" : "geast18",
+         "speed" : "5",
+         "aggression" : "90",
+         "armor" : "10",
+         "pname" : "Skeleton Warrior",
+         "name" : "skelfive",
+         "description" : "A very strong looking skeleton warrior in a black cloak is here.",
+         "strength" : "170"
+      },
+      "ant@ruins" : {
+         "damage" : "10",
+         "location" : "gardenrm",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "10",
+         "name" : "Ant",
+         "description" : "A giant ant is here, and he doesn't look happy.",
+         "strength" : "120"
+      },
+      "rat@ruins" : {
+         "damage" : "10",
+         "location" : "northhall7",
+         "speed" : "10",
+         "armor" : "0",
+         "name" : "Rat",
+         "description" : "A little rat is here scurrying around very quickly.",
+         "strength" : "20"
+      },
+      "skelfour@ruins" : {
+         "damage" : "8",
+         "location" : "geast15",
+         "speed" : "4",
+         "aggression" : "90",
+         "armor" : "5",
+         "pname" : "Skeleton Warrior",
+         "name" : "skelfour",
+         "description" : "A very weak, bony skeleton warrior is here.",
+         "strength" : "100"
+      },
+      "richard@ruins" : {
+         "damage" : "10",
+         "location" : "bedroom2",
+         "speed" : "4",
+         "armor" : "0",
+         "pname" : "Prince Richard",
+         "name" : "Richard",
+         "description" : "The ghost of Prince Richard is here looking for Princess Diaphere.",
+         "strength" : "150"
+      },
+      "cube@ruins" : {
+         "eflags" : [
+            "FearFireball",
+            "FearShock",
+            "FearBHands",
+            "FearMissile"
+         ],
+         "damage" : "5",
+         "location" : "gooey",
+         "armor" : "0",
+         "name" : "cube",
+         "description" : "A gelatinous cube is here, leaving a slimy trail in it's path.",
+         "strength" : "80",
+         "speed" : "5",
+         "aggression" : "90",
+         "pname" : "Gelatinous Cube",
+         "pflags" : [
+            "NoSteal"
+         ],
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "john@ruins" : {
+         "damage" : "5",
+         "location" : "bathroom",
+         "speed" : "0",
+         "armor" : "0",
+         "pname" : "Sir John",
+         "name" : "John",
+         "description" : "Sir John is here.",
+         "strength" : "80"
+      },
+      "zephere@ruins" : {
+         "eflags" : [
+            "Fireball",
+            "ImmFireball",
+            "Missile",
+            "ImmMissile",
+            "Frost",
+            "ImmFrost",
+            "VTouch",
+            "ImmVTouch",
+            "Light",
+            "Damage",
+            "Blur",
+            "BHands",
+            "ImmBHands",
+            "IceStorm",
+            "ImmIceStorm"
+         ],
+         "damage" : "8",
+         "location" : "mageroom",
+         "armor" : "20",
+         "name" : "Zephere",
+         "examine" : "\nZephere is sitting in his chair looking at you quite thoughtfully as \nthough he has something to teach you. He seems to be slightly out of \nfocus as if the light is bending around him which makes him a little\nblurry. As you look over him more, he starts to say something to you:\n\n  'By any chance, do you happen to have a horn or something to crush\n   small items with? I need something of that nature to use for crushing \n   various herbs and plants and I have seemed to misplace my tool for \n   doing so.'\n\nHe then smiles at you quizically.",
+         "description" : "Zephere, the wise mage is here.",
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "skelone@ruins" : {
+         "damage" : "12",
+         "location" : "geast7",
+         "speed" : "4",
+         "aggression" : "90",
+         "armor" : "6",
+         "pname" : "Skeleton Warrior",
+         "name" : "skelone",
+         "description" : "A grave looking skeleton warrior is here.",
+         "strength" : "150"
+      },
+      "skelthree@ruins" : {
+         "damage" : "14",
+         "location" : "geast12",
+         "speed" : "6",
+         "aggression" : "85",
+         "armor" : "8",
+         "pname" : "Skeleton Warrior",
+         "name" : "skelthree",
+         "description" : "A powerful blue cloaked skeleton warrior is here.",
+         "strength" : "160"
+      },
+      "skeltwo@ruins" : {
+         "damage" : "12",
+         "location" : "geast10",
+         "speed" : "4",
+         "aggression" : "95",
+         "armor" : "5",
+         "pname" : "Skeleton Warrior",
+         "name" : "skeltwo",
+         "description" : "A skeleton warrior adorned in a red cloak is here.",
+         "strength" : "140"
+      },
+      "mouse@ruins" : {
+         "damage" : "8",
+         "location" : "westhall",
+         "speed" : "8",
+         "armor" : "0",
+         "name" : "Mouse",
+         "description" : "A little white mouse is here, looking for it's friend the rat.",
+         "strength" : "15"
+      },
+      "margoyle@ruins" : {
+         "damage" : "12",
+         "location" : "magelib",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "10",
+         "name" : "Margoyle",
+         "description" : "A Margoyle hovers here, barring you from going west.",
+         "strength" : "180",
+         "mflags" : [
+            "BarWest"
+         ]
+      },
+      "beholder@ruins" : {
+         "eflags" : [
+            "Fireball",
+            "Missile",
+            "BHands",
+            "ImmFireball"
+         ],
+         "damage" : "18",
+         "location" : "csouth",
+         "speed" : "6",
+         "aggression" : "90",
+         "armor" : "15",
+         "name" : "Beholder",
+         "description" : "A large, mean looking Beholder is here, hovering in front of you.",
+         "strength" : "250"
+      },
+      "diafear@ruins" : {
+         "damage" : "8",
+         "location" : "bedroom1",
+         "armor" : "0",
+         "name" : "Diafear",
+         "description" : "The ghost of Princess Diafear is here moaning and groaning.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Princess Diafear"
+      },
+      "spider@ruins" : {
+         "damage" : "12",
+         "location" : "westhall9",
+         "speed" : "8",
+         "armor" : "10",
+         "name" : "Spider",
+         "description" : "A very large, mean looking spider is here waiting for lunch.",
+         "strength" : "150"
+      },
+      "mantis@ruins" : {
+         "damage" : "10",
+         "location" : "gardenrm",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "10",
+         "pname" : "Praying Mantis",
+         "name" : "Mantis",
+         "description" : "A giant praying mantis is here, gleaming at you.",
+         "strength" : "150"
+      },
+      "dilbert@ruins" : {
+         "damage" : "8",
+         "location" : "closet2",
+         "speed" : "2",
+         "armor" : "0",
+         "pname" : "Sir Dilbert",
+         "name" : "Dilbert",
+         "description" : "The ghost of Sir Dilbert is here walking around.",
+         "strength" : "120"
+      },
+      "tom@ruins" : {
+         "damage" : "10",
+         "location" : "westhall6",
+         "speed" : "2",
+         "armor" : "0",
+         "pname" : "Sir Tom",
+         "name" : "Tom",
+         "examine" : "In case you didn't know, that's Sir Tom of Peep..",
+         "description" : "The ghost of Sir Tom is here looking at you and grinning.",
+         "strength" : "120"
+      }
+   }
+}

@@ -1,0 +1,1171 @@
+{
+   "obj" : {
+      "ore@cave" : {
+         "location" : "IN_ROOM:342",
+         "oflags" : [
+            "Lightable",
+            "Lit"
+         ],
+         "name" : "ore",
+         "examine" : "Just your everyday piece of magical ore.",
+         "size" : "75",
+         "weight" : "10",
+         "maxstate" : "0",
+         "bvalue" : "400",
+         "desc[0]" : "A large clump of mithril ore lays at your feet."
+      },
+      "ruby@cave" : {
+         "location" : "IN_ROOM:treasury",
+         "weight" : "2",
+         "altname" : "gem",
+         "name" : "ruby",
+         "examine" : "\nThe ruby glows with a pleasant red light.  It looks quite valuable.",
+         "bvalue" : "250",
+         "desc[0]" : "A huge ruby sparkles at your feet.",
+         "size" : "2"
+      },
+      "door_armory@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:armory",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_Armory",
+         "examine" : "It's an armored door.  What else do you expect in an armory?",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_Hall",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "cutlery@cave" : {
+         "location" : "IN_ROOM:dining",
+         "weight" : "10",
+         "altname" : "gold",
+         "name" : "cutlery",
+         "examine" : "\nYou see a fork, a small fruit knife, and two medium spoons, all gold.",
+         "bvalue" : "75",
+         "desc[0]" : "Some gold cutlery has been left here.",
+         "size" : "2"
+      },
+      "bat@cave" : {
+         "location" : "IN_ROOM:long",
+         "weight" : "5",
+         "name" : "bat",
+         "examine" : "\nThis bat is dead, deceased, it has gone away, it is no longer a bat, it has\nflown away to the great perch in the sky.  Leave the poor thing alone...",
+         "bvalue" : "10",
+         "desc[0]" : "A dead bat decays slowly in a corner."
+      },
+      "door_long@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:long",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_Long",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_N_Stairs",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "dwarfcoin@cave" : {
+         "location" : "IN_ROOM:store",
+         "altname" : "silver",
+         "name" : "DwarfCoin",
+         "examine" : "\nThe coin bears a profile view of Jim Morrison on one side.  On the other side\nis engraved a fiery ring with people walking through it.",
+         "size" : "1",
+         "pname" : "coin",
+         "weight" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A silver coin has been dropped here."
+      },
+      "gates2@cave" : {
+         "desc[1]" : "Large gates block any further passage.",
+         "location" : "IN_ROOM:336",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "gates2",
+         "desc[2]" : "Solid stone gates stand locked before you.",
+         "linked" : "gates1",
+         "state" : "2",
+         "pname" : "gates",
+         "maxstate" : "2",
+         "desc[0]" : "Large stone gates are pushed open."
+      },
+      "gates@cave" : {
+         "desc[1]" : "The dwarven gates are closed.",
+         "location" : "IN_ROOM:gatehall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "gates",
+         "examine" : "A sign on the gates reads \"Pete's Pearly Hire Co.\"",
+         "linked" : "gates@valley",
+         "maxstate" : "1",
+         "desc[0]" : "The dwarven gates are open."
+      },
+      "wall@cave" : {
+         "location" : "IN_ROOM:333",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "wall",
+         "linked" : "hole",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The wall here is shifted, allowing an exit to the south."
+      },
+      "diamond@cave" : {
+         "location" : "IN_ROOM:treasury",
+         "weight" : "2",
+         "altname" : "gem",
+         "name" : "diamond",
+         "examine" : "\nThis diamond is really huge, almost the size of your fist.  It has a faint\nblue tint, making it even more valuable.",
+         "bvalue" : "500",
+         "desc[0]" : "There is a huge diamond on the floor in front of you.",
+         "size" : "4"
+      },
+      "forge@cave" : {
+         "desc[1]" : "A large forge sits in the middle of the room awaiting use.",
+         "location" : "IN_ROOM:336",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "forge",
+         "examine" : "A huge forge made of stone.",
+         "linked" : "ceiling",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "2",
+         "desc[0]" : "The forge has been shifted to the side, revealing a leading down."
+      },
+      "door_treasury@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:treasury",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_Treasury",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_Dw_Top_East",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_hall@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:hall",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_Hall",
+         "examine" : "It's an armored door.  What else do you expect in an armory?",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_Armory",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "armor@cave" : {
+         "location" : "IN_ROOM:small",
+         "armor" : "20",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "armor",
+         "size" : "30",
+         "weight" : "15",
+         "bvalue" : "80",
+         "desc[0]" : "A tarnished suit of armor has been left here.",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ]
+      },
+      "door_wide@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:wide",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_Wide",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_guard",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "drakeshield@cave" : {
+         "location" : "IN_ROOM:342",
+         "armor" : "15",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "shield",
+         "name" : "drakeshield",
+         "examine" : "It looks like it could be used as a shield, why don't you try.\n",
+         "size" : "10",
+         "weight" : "10",
+         "maxstate" : "0",
+         "bvalue" : "250",
+         "desc[0]" : "A large scale of a Firedrake lies on the ground."
+      },
+      "claymore@cave" : {
+         "damage" : "13",
+         "location" : "IN_ROOM:claymore",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "claymore",
+         "examine" : "\nThis claymore seems very well crafted.  Its balance is excellent, and its\nleather hilt soft and comfortable.  An inscription reads \"Connor McCleod\".",
+         "size" : "40",
+         "weight" : "32",
+         "bvalue" : "300",
+         "desc[0]" : "\nA wicked looking claymore, decorated with silver wire lies at your feet."
+      },
+      "sporran@cave" : {
+         "location" : "IN_ROOM:piper",
+         "oflags" : [
+            "Wearable",
+            "Container"
+         ],
+         "altname" : "purse",
+         "name" : "sporran",
+         "examine" : "Although empty, this purse should come in handy.",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "20",
+         "desc[0]" : "A Scottish sporran has been dumped here.",
+         "aflags" : [
+            "Chest"
+         ]
+      },
+      "ceiling@cave" : {
+         "location" : "IN_ROOM:337",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "ceiling",
+         "linked" : "forge",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "2",
+         "desc[0]" : "A hole is here in the ceiling, just large enough for you to fit through."
+      },
+      "door_dw_st_room@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:store2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_dw_st_room",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_dw_store",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_n_stairs@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:n_stairs2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_N_Stairs",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_Long",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "warhammer@cave" : {
+         "damage" : "11",
+         "location" : "IN_ROOM:armory",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "hammer",
+         "name" : "warhammer",
+         "examine" : "It seems a bit big for just banging in nails, I must say!",
+         "size" : "25",
+         "weight" : "20",
+         "bvalue" : "50",
+         "desc[0]" : "A large, heavy looking warhammer has been left here."
+      },
+      "door_dw_top_east@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:top_east",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_Dw_Top_East",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_Treasury",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "mithril@cave" : {
+         "desc[1]" : "The newly Great Death axe of Mithril lies on the forge, glowing with an inner\nlight.",
+         "damage" : "25",
+         "location" : "IN_ROOM:336",
+         "oflags" : [
+            "Destroyed",
+            "GetFlips",
+            "Lit",
+            "Weapon"
+         ],
+         "altname" : "axe",
+         "name" : "mithril",
+         "examine" : "You see the Mighty Death Axe of Mithril which has an inner power that seems\nto glow and guide your death blows on you foes.\n",
+         "state" : "1",
+         "size" : "75",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "1200",
+         "desc[0]" : "The Great Death axe of Mithril lies at your feet glowing with an inner light."
+      },
+      "door_dw_store@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:store",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_dw_store",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_dw_st_room",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "bagpipes@cave" : {
+         "location" : "IN_ROOM:piper",
+         "weight" : "10",
+         "name" : "bagpipes",
+         "examine" : "It looks like a dead animal, and sounds even worse.",
+         "bvalue" : "50",
+         "desc[0]" : "A set of bagpipes lie here, waiting to be played.",
+         "size" : "15"
+      },
+      "axe@cave" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:smithy",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "axe",
+         "examine" : "\nThe words \"If found, please return to thrower\" are written on the handle.\nThis, taken with the fact that the axe is the dwarves' favorite weapon, would\nindicate something of it's origins...",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "50",
+         "desc[0]" : "\nA small axe, marked with the words \"If found, please return to thrower\" lies\nbefore you."
+      },
+      "gates1@cave" : {
+         "desc[1]" : "Large gates block any further passage.",
+         "location" : "IN_ROOM:335",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "gates1",
+         "desc[2]" : "Solid stone gates stand locked before you.",
+         "linked" : "gates2",
+         "state" : "2",
+         "pname" : "gates",
+         "maxstate" : "2",
+         "desc[0]" : "Large stone gates are pushed open."
+      },
+      "sapphire@cave" : {
+         "location" : "IN_ROOM:treasury",
+         "weight" : "2",
+         "altname" : "gem",
+         "name" : "sapphire",
+         "examine" : "\nThe sapphire is about the size of a plover's egg, and is almost clear when\nyou look into it.",
+         "bvalue" : "250",
+         "desc[0]" : "A massive sapphire glitters stunningly before you.",
+         "size" : "2"
+      },
+      "biscuit@cave" : {
+         "location" : "IN_ROOM:cellars",
+         "weight" : "1",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "biscuit",
+         "examine" : "\nThe biscuit is truly very hard.  It was perhaps made out of dried sawdust.",
+         "bvalue" : "20",
+         "desc[0]" : "A hard biscuit has been dropped here.",
+         "size" : "1"
+      },
+      "whistle@cave" : {
+         "location" : "WORN_BY:diamar",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "gold",
+         "name" : "whistle",
+         "examine" : "Etched on the whistle there is a small inscription that says\n\"Thy rid my mines and thy shall have the almighty axe of Mithril.  This\n whistle will show the way!  Blow it so obstacles will not block the way.\n                              ----------- The Forgemaster of Thorbadin\"\n\n                           |The Depths of Thorbadin|\n                              ||\n                              -------------------> Great Death\n                              -------------------> Lies ahead\n                              ||\n                              ||\n                          |go down by|\n                          |the  forge|\n                              ||\n                              ||\n                              ||\n                              ||\n                          |Armoury| <------Prove yourself\n",
+         "size" : "5",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A small golden whistle lies here attached to a chain.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "dwarfcrystal@cave" : {
+         "location" : "IN_ROOM:side_hall",
+         "weight" : "2",
+         "pname" : "crystal",
+         "name" : "DwarfCrystal",
+         "examine" : "\nYou peer into the crystal...\nYou see an image of a panther about to strike!\nCuriously, the panther is pink.",
+         "bvalue" : "100",
+         "desc[0]" : "A beautiful, well cut crystal glints in front of you.",
+         "size" : "12"
+      },
+      "hole@cave" : {
+         "location" : "IN_ROOM:armory",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wall",
+         "name" : "hole",
+         "examine" : "A hole, about the diameter of a weapon hilt, is in the wall.",
+         "linked" : "wall",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The wall here is shifted, allowing an entrance to the north."
+      },
+      "dwarfale@cave" : {
+         "location" : "IN_ROOM:side",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "bottle",
+         "name" : "DwarfAle",
+         "examine" : "\nThis fine ale is one of the better spirits associated with the Moog, who has\nbeen known to indulge in vast quantities of the drink!",
+         "size" : "10",
+         "pname" : "ale",
+         "weight" : "10",
+         "bvalue" : "40",
+         "desc[0]" : "A large bottle of strong ale has been left here."
+      },
+      "platesilver@cave" : {
+         "location" : "IN_ROOM:pantry",
+         "altname" : "silver",
+         "name" : "PlateSilver",
+         "examine" : "\nAn engraving on the plate reads:\n\"This plate was made to commemorate the exploits of one Cannonfod The Killer.\n                          The Phantom\"",
+         "size" : "6",
+         "pname" : "plate",
+         "weight" : "12",
+         "bvalue" : "75",
+         "desc[0]" : "A silver plate has been left here."
+      },
+      "door_guard@cave" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:guardroom",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door_Guard",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door_wide",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      }
+   },
+   "loc" : {
+      "long@cave" : {
+         "exits" : {
+            "w" : "^door_long",
+            "n" : "hall"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Long Passage",
+         "id" : "long",
+         "description" : "\n   You are following a long narrow passage which runs west to a door, and turns\nnorth into a hall.\n",
+         "altitude" : null
+      },
+      "landing@cave" : {
+         "exits" : {
+            "w" : "passage",
+            "e" : "n_passage",
+            "n" : "throne",
+            "d" : "great",
+            "s" : "bedroom"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Upper Landing",
+         "id" : "landing",
+         "description" : "\n   You are standing on the upper landing looking over the lower levels of the\ngreat hall.  A set of stairs lead down into the hall itself, while at various\npoints around the landing doorways lead off.\n",
+         "altitude" : null
+      },
+      "n_stairs3@cave" : {
+         "exits" : {
+            "u" : "n_stairs2"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Narrow Stairs",
+         "id" : "n_stairs3",
+         "description" : "\n   The stairs end abruptly in a small room hewn from the living rock. The walls\nare rough, giving this room that \"about to be worked on\" feel.  At the moment,\nhowever, your only exit is back up the stairs.\nThere is a blinking construction sign here.\n",
+         "altitude" : null
+      },
+      "passage@cave" : {
+         "exits" : {
+            "w" : "w_tower",
+            "e" : "landing"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Passage",
+         "id" : "passage",
+         "description" : "\n   You are following a narrow passage that leads east-west, linking the west\ntower and the Great Hall.\n",
+         "altitude" : null
+      },
+      "tunnel@cave" : {
+         "exits" : {
+            "e" : "store2",
+            "n" : "wide",
+            "s" : "stairs"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Tunnel",
+         "id" : "tunnel",
+         "description" : "\n   You are standing at a junction between passages.  A passage leads north and\nsouth, while another branches off to the east.\n",
+         "altitude" : null
+      },
+      "w_tower@cave" : {
+         "exits" : {
+            "e" : "passage",
+            "u" : "top_west"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "West Tower",
+         "id" : "w_tower",
+         "description" : "\n   You are in a small room at the base of the west tower.  A narrow passage\nleads east, and a set of spiral stairs climb up towards the top of the tower.\n",
+         "altitude" : null
+      },
+      "top_east@cave" : {
+         "exits" : {
+            "w" : "^door_dw_top_east",
+            "d" : "e_tower"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Top Of East Tower",
+         "id" : "top_east",
+         "description" : "\n   You are standing at the top of the east tower.  A narrow staircase winds\ndown, and to the west is a door.\n",
+         "altitude" : null
+      },
+      "wide@cave" : {
+         "exits" : {
+            "w" : "hall",
+            "n" : "^door_wide",
+            "s" : "tunnel"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Wide Passage",
+         "id" : "wide",
+         "description" : "\n   You are standing in a wide but low dwarven passage way which leads south and\nwest.  There is a door to the north.\n",
+         "altitude" : null
+      },
+      "throne@cave" : {
+         "exits" : {
+            "s" : "landing"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "The Throne Room",
+         "id" : "throne",
+         "description" : "\n   You stand in the center of the Dwarven Throne room, a vast arched hall whose\nceiling appears to be a huge picture of a dwarf's head made purely from rare\nand precious metals.  A single door leads south.\n",
+         "altitude" : null
+      },
+      "guardroom@cave" : {
+         "exits" : {
+            "s" : "^door_guard"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Guardroom",
+         "id" : "guardroom",
+         "description" : "\n   You are in what appears to be a dwarven guardroom.   The roof is low and you\nhave to crouch down inside it.  A door leads south.\n",
+         "altitude" : null
+      },
+      "335@cave" : {
+         "exits" : {
+            "n" : "^gates1",
+            "s" : "334"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cave",
+         "title" : "The Gates of Thorbadin",
+         "id" : "335",
+         "description" : "\n   You stand in a large room where stone has been smoothed to perfection.\nThis is obviously the work of dwarven artisens.\n",
+         "altitude" : null
+      },
+      "small@cave" : {
+         "exits" : {
+            "w" : "library@blizzard",
+            "d" : "n_stairs"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "The Small Room",
+         "id" : "small",
+         "description" : "\n   You are in a small room at the top of a narrow flight of stairs.  The room\nlooks bare and empty and is one of those rooms which have no real reason to\nexist apart from linking two other rooms together.\n",
+         "altitude" : null
+      },
+      "kitchen@cave" : {
+         "exits" : {
+            "e" : "dining",
+            "n" : "pantry"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Kitchen",
+         "id" : "kitchen",
+         "description" : "\n   You are in a sooty, low roofed kitchen.  An exit leads north into a small\npantry, and another leads east into a large hall.\n",
+         "altitude" : null
+      },
+      "336@cave" : {
+         "exits" : {
+            "d" : "^forge",
+            "s" : "^gates2"
+         },
+         "flags" : [
+            "NoMagic"
+         ],
+         "zone" : "cave",
+         "title" : "The Forge",
+         "id" : "336",
+         "description" : "\n   This is a large circular room where dwarven craftsman have crafted the many\nmighty weapons of dwarven kings of past.  You sense great magics have been cast\nhere upon those weapons.\n",
+         "altitude" : null
+      },
+      "smithy@cave" : {
+         "exits" : {
+            "w" : "great"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Smithy",
+         "id" : "smithy",
+         "description" : "\n   You are standing in the smithy, a large room given over to one of the\ndwarves great skills.  A narrow doorway leads west.\n",
+         "altitude" : null
+      },
+      "side@cave" : {
+         "exits" : {
+            "w" : "cellars"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Side Cellar",
+         "id" : "side",
+         "description" : "\n   You are standing in a small damp side cellar.  The cellar is cold and musty\nand probably also serves as the dwarven cold store.\n",
+         "altitude" : null
+      },
+      "333@cave" : {
+         "exits" : {
+            "n" : "334",
+            "s" : "^wall"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dark Passage",
+         "id" : "333",
+         "description" : "\n   You stand in a long and extremely dark passage that leads northward into\na small room.\n",
+         "altitude" : null
+      },
+      "bedroom@cave" : {
+         "exits" : {
+            "n" : "landing"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Bedroom",
+         "id" : "bedroom",
+         "description" : "\n   You are in a dwarven bedroom.  A single doorway leads north.\n",
+         "altitude" : null
+      },
+      "pantry@cave" : {
+         "exits" : {
+            "s" : "kitchen"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Pantry",
+         "id" : "pantry",
+         "description" : "\n   You are in the dwarves' pantry.  The only exit is south into the kitchens.\n",
+         "altitude" : null
+      },
+      "side_hall@cave" : {
+         "exits" : {
+            "w" : "dining"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Side Hall",
+         "id" : "side_hall",
+         "description" : "\n   You are standing in a small pillared side hall.  Less splendid than the\nother halls, the room seems more sober and thoughtful.  A doorway leads west.\n",
+         "altitude" : null
+      },
+      "334@cave" : {
+         "exits" : {
+            "n" : "335",
+            "s" : "333"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cave",
+         "title" : "The Rubble",
+         "id" : "334",
+         "description" : "\n   Rubble is strewn all about the room.  Bones are scattered everywhere and\nsome rusted weapons are stuck in the wall.  A battle of long time past seems\nto have taken place in the very place you are standing in.  You sense great\npowers were used here in this battle.  The passage continues on northward.\n",
+         "altitude" : null
+      },
+      "337@cave" : {
+         "exits" : {
+            "e" : "340",
+            "u" : "^ceiling",
+            "n" : "338"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cave",
+         "title" : "Entrance to the Thorbadin Mines",
+         "id" : "337",
+         "description" : "\n   Tunnels are delved into the darkness to the east and to the north.\n",
+         "altitude" : null
+      },
+      "hall@cave" : {
+         "exits" : {
+            "e" : "wide",
+            "n" : "^door_hall",
+            "s" : "long"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Hall",
+         "id" : "hall",
+         "description" : "\n   You are in a pillared dwarven hall, with a high arched roof.  The carefully\nsculpted ceiling bears a picture of Snow White at work, rest and play. The last\nis by far the most interesting...\n   Passages lead east and south, and a door lies north.\n",
+         "altitude" : null
+      },
+      "cellars@cave" : {
+         "exits" : {
+            "e" : "side",
+            "u" : "great",
+            "d" : "stairs"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Cellars",
+         "id" : "cellars",
+         "description" : "\n   You are in the huge cellar of the dwarven fortress.   Massive stone pillars\nand arches bear the weight of the mighty stoneworks above.  A narrow staircase\nwinds down into darkness and up into the main castle hall.\n",
+         "altitude" : null
+      },
+      "armory@cave" : {
+         "exits" : {
+            "n" : "^hole",
+            "s" : "^door_armory"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Armoury",
+         "id" : "armory",
+         "description" : "\n   You are in a small dwarven armoury.  Strange, cobwebs adorn the walls...\nexcept for the northern wall.  A door leads to the south.\n",
+         "altitude" : null
+      },
+      "top_west@cave" : {
+         "exits" : {
+            "u" : "amgstars@zodiac",
+            "d" : "w_tower"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Top Of West Tower",
+         "id" : "top_west",
+         "description" : "\n   You are in a small room at the top of the west tower.  It looks out across a\nvast expanse of land.  As your eyes wander across the skyline you can pick out\nthe Desert of Fools, the valley and the black tower far in the distance.\nClearly this is the dwarven watch post in times of war.\n   Stone stairs lead down.\n",
+         "altitude" : null
+      },
+      "treasury@cave" : {
+         "exits" : {
+            "e" : "^door_treasury"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "The Treasury",
+         "id" : "treasury",
+         "description" : "\n   You are standing in the dwarven treasury.  A large and very well protected\nroom that few are privileged to see.  A single door leads east.\n   There is a charred shape on the wall, somewhat resembling an ex neccy Moog\nand scratched on the wall you see the words \"Die Frog...the ex knight to be!\".\nA second notice reads \"Who's he?\" and another asks \"What's a Moog?\"\n",
+         "altitude" : null
+      },
+      "stairs@cave" : {
+         "exits" : {
+            "u" : "cellars",
+            "n" : "tunnel"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Stairs",
+         "id" : "stairs",
+         "description" : "\n   You are standing at the bottom of some dwarven stairs that lead north\nalong a passage, and up into what appears to be the cellars of a huge dwarven\nfortress.\n",
+         "altitude" : null
+      },
+      "dining@cave" : {
+         "exits" : {
+            "w" : "kitchen",
+            "e" : "side_hall",
+            "n" : "great"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "The Dwarven Dining Hall",
+         "id" : "dining",
+         "description" : "\n   This huge hall is another tribute to the skilled stonework of the dwarves,\na circular hall with a spectacular painted domed roof that seems lost in the\nshadows high above you.  From the walls, spectacularly carved gargoyles leer\ndown, attempting to put you off your food.\n   Passages lead north, east and west.\n",
+         "altitude" : null
+      },
+      "n_passage@cave" : {
+         "exits" : {
+            "w" : "landing",
+            "e" : "e_tower"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Narrow Passage",
+         "id" : "n_passage",
+         "description" : "\n   You are standing in a narrow east west passage that links the east tower\nwith the Great Hall.\n",
+         "altitude" : null
+      },
+      "n_stairs2@cave" : {
+         "exits" : {
+            "e" : "^door_n_stairs",
+            "u" : "n_stairs",
+            "d" : "n_stairs3"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Narrow Stairs",
+         "id" : "n_stairs2",
+         "description" : "\n   You are on a small landing on the narrow staircase.  The roof here is a mere\nfour feet high so you are forced to stoop.  There is a low door in the east\nwall.  The stairs continue up and down from here.\n",
+         "altitude" : null
+      },
+      "great@cave" : {
+         "exits" : {
+            "e" : "smithy",
+            "u" : "landing",
+            "n" : "gatehall",
+            "d" : "cellars",
+            "s" : "dining"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Great Hall",
+         "id" : "great",
+         "description" : "\n   You stand in the dwarven Great Hall, a huge carved room of spectacular\ndesign, with a massive fan-vaulted ceiling.  The spectacular arches and pillars\nare all decorated with dwarvish battle scenes and, high up, dwarven momentos of\ngreat age are hung, golden banners, shining axes, helms, and many other items\nof war and craft.\n   High arched exits lead north, east and south, a set of narrow stairs leads\ndown into the cellars, and a wide sweeping staircase leads up to a high balcony\noverlooking the hall.\n",
+         "altitude" : null
+      },
+      "e_tower@cave" : {
+         "exits" : {
+            "w" : "n_passage",
+            "u" : "top_east"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "East Tower",
+         "id" : "e_tower",
+         "description" : "\n   You are standing in the lower room of the east tower.  The room is bare and\nthe thick stone walls seem to hem you in.  A narrow staircase winds up to the\ntop of the tower, and a passage leads west.\n",
+         "altitude" : null
+      },
+      "gatehall@cave" : {
+         "exits" : {
+            "n" : "^gates",
+            "s" : "great"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Gatehall",
+         "id" : "gatehall",
+         "description" : "\n   You are standing in the dwarven gatehall.  A wide passage leads south into\nthe great hall.  To the north the huge dwarven gates stand solid, their massive\niron bulk ready to bar all entry in the event of a war.\n",
+         "altitude" : null
+      },
+      "store2@cave" : {
+         "exits" : {
+            "w" : "tunnel",
+            "s" : "^door_dw_st_room"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Store Room",
+         "id" : "store2",
+         "description" : "\n   You are in a small dwarven store room.  To the south is another door, and\na passage leads west.\n",
+         "altitude" : null
+      },
+      "store@cave" : {
+         "exits" : {
+            "n" : "^door_dw_store"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dwarven Store",
+         "id" : "store",
+         "description" : "\n   You are in a dark shadowy store room.  A single door leads north.  There is\na small chute, too steep and slippery to climb, in the south wall.  Its purpose\nis a complete mystery.\n",
+         "altitude" : null
+      },
+      "n_stairs@cave" : {
+         "exits" : {
+            "u" : "small",
+            "d" : "n_stairs2"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Narrow Stairs",
+         "id" : "n_stairs",
+         "description" : "\n   You are descending a set of narrow stairs which twist and turn sharply as\nthey plunge steeply down into darkness.  Above you the stairs flatten out into\na small room.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "forgemaster@cave" : {
+         "damage" : "10",
+         "location" : "336",
+         "armor" : "0",
+         "name" : "forgemaster",
+         "description" : "The Forgemaster, Master Craftsman of Thorbadin, works here on some powerful\nmagical weapon.",
+         "strength" : "75",
+         "speed" : "0",
+         "pname" : "The Forgemaster",
+         "aggression" : "0",
+         "mflags" : "{ }"
+      },
+      "firedrake@cave" : {
+         "eflags" : [
+            "Fireball"
+         ],
+         "damage" : "10",
+         "location" : "342",
+         "armor" : "0",
+         "name" : "firedrake",
+         "description" : "The Firedrake of Thorbadin rests lazily on a pile of treasure.",
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "The Firedrake",
+         "aggression" : "99"
+      },
+      "keeper@cave" : {
+         "damage" : "10",
+         "location" : "limbo@limbo",
+         "armor" : "0",
+         "name" : "keeper",
+         "description" : "The Keeper, Guardian of the Gates, challenges you to a duel to the DEATH!",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "The Keeper",
+         "aggression" : "99",
+         "mflags" : "{ }"
+      },
+      "haggis@cave" : {
+         "damage" : "10",
+         "location" : "haggis",
+         "armor" : "0",
+         "name" : "haggis",
+         "description" : "A large, vicious looking haggis runs around squeaking.",
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "The Haggis",
+         "aggression" : "30",
+         "mflags" : "{}"
+      },
+      "smythe@cave" : {
+         "damage" : "8",
+         "location" : "smithy",
+         "armor" : "0",
+         "aggression" : "13",
+         "name" : "smythe",
+         "description" : "\nSmythe The Upper Class Dwarven Smith stands here, worn by years at the forge.",
+         "strength" : "50"
+      },
+      "diamar@cave" : {
+         "damage" : "10",
+         "location" : "w_tower",
+         "armor" : "0",
+         "name" : "diamar",
+         "description" : "Diamar rambles on incoherently for no reason at all.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Diamar",
+         "aggression" : "0",
+         "mflags" : "{ }"
+      },
+      "bomber@cave" : {
+         "damage" : "8",
+         "location" : "guardroom",
+         "armor" : "0",
+         "aggression" : "10",
+         "name" : "bomber",
+         "description" : "Bomber The Heavy-Fan Dwarf glares evilly at you.",
+         "strength" : "50"
+      },
+      "owin@cave" : {
+         "damage" : "8",
+         "location" : "store2",
+         "armor" : "0",
+         "aggression" : "11",
+         "name" : "owin",
+         "description" : "Owin The Broke Dwarf watches you suspiciously.",
+         "strength" : "50"
+      },
+      "dragon@cave" : {
+         "eflags" : [
+            "ImmFireball"
+         ],
+         "damage" : "32",
+         "location" : "treasury",
+         "armor" : "0",
+         "name" : "dragon",
+         "description" : "\nA huge fire-breathing dragon stares menacingly in your direction.",
+         "strength" : "500",
+         "pname" : "The Dragon",
+         "aggression" : "1",
+         "pflags" : [
+            "NoSummon"
+         ],
+         "mflags" : [
+            "NoGrab"
+         ]
+      },
+      "glowin@cave" : {
+         "damage" : "8",
+         "location" : "great",
+         "armor" : "0",
+         "aggression" : "12",
+         "name" : "glowin",
+         "description" : "Glowin The Radioactive Dwarf looks menacingly at you.",
+         "strength" : "50"
+      },
+      "dio@cave" : {
+         "damage" : "8",
+         "location" : "gatehall",
+         "armor" : "0",
+         "aggression" : "14",
+         "name" : "dio",
+         "description" : "Dio The Singing Dwarf wanders around, singing arias.",
+         "strength" : "50"
+      }
+   }
+}

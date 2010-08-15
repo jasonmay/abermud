@@ -1,0 +1,986 @@
+{
+   "obj" : {
+      "pit_west@catacomb" : {
+         "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
+         "location" : "IN_ROOM:west",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pit",
+         "name" : "Pit_West",
+         "maxstate" : "1",
+         "desc[0]" : "\nThere is a sacrificial pit in the floor.  Within it you see only darkness."
+      },
+      "pit_north@catacomb" : {
+         "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
+         "location" : "IN_ROOM:north",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pit",
+         "name" : "Pit_North",
+         "maxstate" : "1",
+         "desc[0]" : "\nThere is a sacrificial pit in the floor.  Within it you see only darkness."
+      },
+      "shield@catacomb" : {
+         "location" : "WORN_BY:defender",
+         "armor" : "70",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "silver",
+         "name" : "shield",
+         "examine" : "\nIt's rather heavy, and, being made of silver, looks quite valuable.  The coat\nof arms includes the sigil of Camelot, suggesting that the original owner was\namong those few honored with a seat at the Round Table.",
+         "size" : "10",
+         "weight" : "15",
+         "bvalue" : "300",
+         "desc[0]" : "\nA silver shield, bearing a striking coat of arms, lies at your feet."
+      },
+      "koan@catacomb" : {
+         "location" : "IN_ROOM:crypt",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "altname" : "message",
+         "name" : "koan",
+         "examine" : "\nThe koan reads:\n        One day, Cedric and Ged found themselves standing at the\n        entrance to the Catacombs.\n        Said Ced, \"How are we ever to traverse this maze of catacombs?\"\n        Said Ged, \"I do not know, for the interconnections of its\n                   chambers are most intricate.  Perhaps we should ask\n                   Tedd, the Zen Master of Aber.\"\n        So they did.\n        Said Ged, \"Oh wise and most learned Tedd, how can one find one's\n                   way through the treacherous maze of the catacombs?\"\n        Said Tedd, \"One can't.  Send Ned.\"\n        And suddenly Cedric and Ged were most pleased, for Tedd had\n        shown them the path to enlightenment.\n",
+         "desc[0]" : "A koan has been carved into the eastern wall."
+      },
+      "dust@catacomb" : {
+         "location" : "IN_ROOM:crypt",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "dust",
+         "desc[0]" : "\nA thick layer of dust covers everything, and swirls around as you move."
+      },
+      "door2skeleton@catacomb" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Closet",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door2Skeleton",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door1Skeleton",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door2seraph@catacomb" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:resting_place",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door2Seraph",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door1Seraph",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "pit_south@catacomb" : {
+         "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
+         "location" : "IN_ROOM:south",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pit",
+         "name" : "Pit_South",
+         "maxstate" : "1",
+         "desc[0]" : "\nThere is a sacrificial pit in the floor.  Within it you see only darkness."
+      },
+      "notebook@catacomb" : {
+         "location" : "CARRIED_BY:skeleton",
+         "weight" : "5",
+         "altname" : "diary",
+         "name" : "notebook",
+         "examine" : "\nMost of the writing is too faint to read.  It appears to have been a diary.\nThe only legible parts remaining are individual phrases scattered throughout\nits pages:\n\n        long quest ... nearly ended\n        who is Ned?\n        lost in Catacombs\n        torch exhausted\n        last of my rations\n        dark...  lonely...  hungry...\n        a locked door ... my quest is over!\n",
+         "bvalue" : "50",
+         "desc[0]" : "\nAn old notebook, its pages and binding in decay, has been left here.",
+         "size" : "3"
+      },
+      "cupseraph@catacomb" : {
+         "desc[1]" : "A stone cup rests upon the pedestal.",
+         "location" : "IN_ROOM:resting_place",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "stone",
+         "name" : "CupSeraph",
+         "examine" : "\nIt looks very old, and inspires a strange sense of awe and wonder.",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "5",
+         "pname" : "cup",
+         "maxstate" : "1",
+         "bvalue" : "1600",
+         "desc[0]" : "A simple stone cup lies before you."
+      },
+      "door1skeleton@catacomb" : {
+         "desc[1]" : "A massive iron door blocks your passage south.",
+         "location" : "IN_ROOM:17",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door1Skeleton",
+         "desc[2]" : "A massive iron door with a mighty lock bars the south passage.",
+         "linked" : "Door2Skeleton",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "A massive iron door lies open to the south."
+      },
+      "umbrellas@catacomb" : {
+         "location" : "IN_ROOM:cavern",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "umbrella",
+         "name" : "umbrellas",
+         "desc[0]" : "A pile of discarded umbrellas does nothing to lift your spirits."
+      },
+      "pit_east@catacomb" : {
+         "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
+         "location" : "IN_ROOM:east",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pit",
+         "name" : "Pit_East",
+         "maxstate" : "1",
+         "desc[0]" : "\nThere is a sacrificial pit in the floor.  Within it you see only darkness."
+      },
+      "mace@catacomb" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:defender",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "mace",
+         "examine" : "\nThe mace consists of an iron ball, covered with deadly spikes, chained to a\nwooden handle.  What else were you expecting?",
+         "size" : "10",
+         "weight" : "25",
+         "bvalue" : "150",
+         "desc[0]" : "A heavy iron mace has been dropped here."
+      },
+      "door1seraph@catacomb" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Hall",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door1Seraph",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door2Seraph",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      }
+   },
+   "loc" : {
+      "sledge2@catacomb" : {
+         "exits" : {
+            "w" : "Chasm1",
+            "n" : "NLedge2"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "Southern End of the Ledge",
+         "id" : "SLedge2",
+         "description" : "\n   You find yourself at the southern end of a narrow north-south ledge\noverlooking a deep, seemingly bottomless chasm.\nThe outline of an archway has been carved into the stone.\n",
+         "altitude" : null
+      },
+      "23@catacomb" : {
+         "exits" : {
+            "w" : "22",
+            "e" : "24",
+            "u" : "14",
+            "n" : "20",
+            "d" : "Beggar",
+            "s" : "26"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "23",
+         "description" : "\n   You are lost in the catacombs.  However, you notice a faint light by the\nspiral stairs, apparently emanating from the room below.\n",
+         "altitude" : null
+      },
+      "13@catacomb" : {
+         "exits" : {
+            "w" : "22",
+            "e" : "14",
+            "u" : "5",
+            "n" : "10",
+            "d" : "22",
+            "s" : "16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "13",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "sledge1@catacomb" : {
+         "exits" : {
+            "n" : "NLedge1",
+            "s" : "Foot"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "Southern End of the Ledge",
+         "id" : "SLedge1",
+         "description" : "\n   You find yourself at the southern end of a narrow ledge overlooking a deep,\nseemingly bottomless chasm.\nAn archway has been carved into the stone here.\n",
+         "altitude" : null
+      },
+      "south@catacomb" : {
+         "exits" : {
+            "n" : "Beggar"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The South Cave",
+         "id" : "South",
+         "description" : "\n   You are in a small, unadorned cave.\n",
+         "altitude" : null
+      },
+      "crypt@catacomb" : {
+         "exits" : {
+            "u" : "Stairs1@Church",
+            "s" : "2"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Crypt",
+         "id" : "Crypt",
+         "description" : "\n   You are in a small room, standing before the entrance to a vast and ancient\ncrypt.  Low moaning sounds echo from within the catacombs before you, sending\nchills up your spine.\n   An archway, its keystone carved in the shape of a human skull, leads south\ninto darkness, while cool air blows in from the relative safety of the church\nabove.\n",
+         "altitude" : null
+      },
+      "22@catacomb" : {
+         "exits" : {
+            "w" : "20",
+            "e" : "20",
+            "u" : "22",
+            "n" : "19",
+            "s" : "25"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "22",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "west@catacomb" : {
+         "exits" : {
+            "e" : "Beggar"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The West Cave",
+         "id" : "West",
+         "description" : "\n   You are in a small, unadorned cave.\n",
+         "altitude" : null
+      },
+      "2@catacomb" : {
+         "exits" : {
+            "w" : "1",
+            "e" : "3",
+            "n" : "Crypt",
+            "d" : "20",
+            "s" : "5"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "2",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "foot@catacomb" : {
+         "exits" : {
+            "u" : "Stairs",
+            "n" : "SLedge1",
+            "s" : "Stairs"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The Foot of the Stairs",
+         "id" : "Foot",
+         "description" : "\n   You are standing in an underground cave at the foot of a set of stone\nstairs which ascend to the south.  The front of the first step is decorated\nwith a carving of a human skull.\n   To the north, an archway has been carved out of the rock wall.\n",
+         "altitude" : null
+      },
+      "9@catacomb" : {
+         "exits" : {
+            "w" : "8",
+            "e" : "3",
+            "n" : "6",
+            "d" : "17",
+            "s" : "8"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "9",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "closet@catacomb" : {
+         "exits" : {
+            "n" : "^Door2Skeleton"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Closet",
+         "id" : "Closet",
+         "description" : "\n   You are in a small closet.  Discarded rags on the floor suggest that it may\nonce have been used as a storage area for burial cloths.  The only exit is\nthrough the door to the north.\n",
+         "altitude" : null
+      },
+      "6@catacomb" : {
+         "exits" : {
+            "w" : "5",
+            "e" : "3",
+            "n" : "3",
+            "d" : "21",
+            "s" : "8"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "6",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "4@catacomb" : {
+         "exits" : {
+            "w" : "7",
+            "e" : "5",
+            "n" : "1",
+            "d" : "22",
+            "s" : "7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "4",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "14@catacomb" : {
+         "exits" : {
+            "w" : "13",
+            "e" : "15",
+            "u" : "5",
+            "n" : "11",
+            "d" : "23",
+            "s" : "17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "14",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "chasm2@catacomb" : {
+         "exits" : {
+            "e" : "NLedge2"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "Suspended Above The Chasm",
+         "id" : "Chasm2",
+         "description" : "\n   You are borne up by a mysterious force. Below your feet, the chasm continues\ndown into darkness.  Above you, the heights of the chasm also disappear into\nblackness.  To the east is solid ground: a narrow ledge.\n",
+         "altitude" : null
+      },
+      "10@catacomb" : {
+         "exits" : {
+            "w" : "10",
+            "e" : "11",
+            "u" : "4",
+            "n" : "10",
+            "d" : "19",
+            "s" : "16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "10",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "chamber@catacomb" : {
+         "exits" : {
+            "n" : "SLedge2"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The Rough-Walled Chamber",
+         "id" : "Chamber",
+         "description" : "\n   You are in a small spherical chamber, which has somehow been carved out of\nthe living stone.  Although you can see no exits, the room is lit and there is\nan updraft...\n",
+         "altitude" : null
+      },
+      "25@catacomb" : {
+         "exits" : {
+            "w" : "25",
+            "e" : "26",
+            "u" : "7",
+            "n" : "22",
+            "s" : "25"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "25",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "cavern@catacomb" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The Cavern of the Faithless",
+         "id" : "Cavern",
+         "description" : "\n   You are standing at the bottom of a very deep chasm.  The rock walls which\nwhich surround you on all sides vanish up into the darkness overhead.  You feel\nquite daunted by the sheer weight of earth and stone which lies between you and\nthe surface above.\n",
+         "altitude" : null
+      },
+      "3@catacomb" : {
+         "exits" : {
+            "w" : "2",
+            "e" : "6",
+            "n" : "9",
+            "d" : "21",
+            "s" : "6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "3",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "8@catacomb" : {
+         "exits" : {
+            "w" : "7",
+            "e" : "6",
+            "n" : "5",
+            "d" : "26",
+            "s" : "7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "8",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "21@catacomb" : {
+         "exits" : {
+            "w" : "20",
+            "e" : "21",
+            "u" : "3",
+            "n" : "21",
+            "s" : "24"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "21",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "26@catacomb" : {
+         "exits" : {
+            "w" : "25",
+            "e" : "27",
+            "u" : "8",
+            "n" : "22",
+            "s" : "24"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "26",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "beggar@catacomb" : {
+         "exits" : {
+            "w" : "West",
+            "e" : "East",
+            "u" : "23",
+            "n" : "North",
+            "d" : "Stairs",
+            "s" : "South"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The Beggar's Room",
+         "id" : "Beggar",
+         "description" : "\n   You are in a large, rectangular room.  There is a feeling of anticipation to\nthis place.  Doorways lead in all directions, above each is an inscription. The\nnorthern inscription reads \"Charity\", the eastern says \"Faith\", to the south\nlies \"Wisdom\", and \"Courage\" can be found to the west.  It seems there is no\n\"Hope\" ...\n   A spiral staircase runs up and down in the north-east corner of the room.\n",
+         "altitude" : null
+      },
+      "hall@catacomb" : {
+         "exits" : {
+            "n" : "^Door1Seraph",
+            "s" : "NLedge2"
+         },
+         "flags" : [
+            "NoMagic"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Hall of Challenging",
+         "id" : "Hall",
+         "description" : "\n   You are in a large, oval-shaped chamber.  Tapestries, depicting scenes of\nsingle combat, hang from the roof of the chamber, which is high overhead.  A\nvast array of weapons and armor, from various ages, adorn the walls all about\nyou.  The arena is ringed with torches, burning silently.\nThere is an archway leading south.\nThere is a heavy wooden door, made of cedar and overlayed with gold, at the\nnorthern end of the Hall.\n",
+         "altitude" : null
+      },
+      "18@catacomb" : {
+         "exits" : {
+            "w" : "17",
+            "e" : "18",
+            "u" : "16",
+            "n" : "15",
+            "d" : "27",
+            "s" : "18"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "18",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "20@catacomb" : {
+         "exits" : {
+            "w" : "19",
+            "e" : "21",
+            "u" : "2",
+            "n" : "22",
+            "s" : "24"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "20",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "1@catacomb" : {
+         "exits" : {
+            "w" : "1",
+            "e" : "2",
+            "n" : "1",
+            "d" : "19",
+            "s" : "4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "1",
+         "description" : "\n   You are standing in a small, subterranean chamber.  Set into the walls at\nregular intervals are deep recesses, within which lie the stone tombs of a\ngeneration long since departed.  A gentle breeze blows in from the passage to\nthe north, while dark hallways lead south, east, and west.\n   A spiral staircase fills one corner of the room.\n",
+         "altitude" : null
+      },
+      "17@catacomb" : {
+         "exits" : {
+            "w" : "16",
+            "e" : "18",
+            "u" : "9",
+            "n" : "13",
+            "d" : "17",
+            "s" : "^Door1Skeleton"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "17",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "12@catacomb" : {
+         "exits" : {
+            "w" : "11",
+            "e" : "12",
+            "u" : "5",
+            "n" : "12",
+            "d" : "21",
+            "s" : "15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "12",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "stairs@catacomb" : {
+         "exits" : {
+            "u" : "Beggar",
+            "n" : "Foot",
+            "d" : "Foot"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The Stone-Carved Stairs",
+         "id" : "Stairs",
+         "description" : "\n   Here, the spiral staircase straightens out.  You may climb the stairs, or\ndescend to the north.\n",
+         "altitude" : null
+      },
+      "5@catacomb" : {
+         "exits" : {
+            "w" : "4",
+            "e" : "6",
+            "n" : "2",
+            "d" : "21",
+            "s" : "8"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "5",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "16@catacomb" : {
+         "exits" : {
+            "w" : "16",
+            "e" : "17",
+            "u" : "4",
+            "n" : "10",
+            "d" : "18",
+            "s" : "16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "16",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "27@catacomb" : {
+         "exits" : {
+            "w" : "26",
+            "e" : "27",
+            "u" : "18",
+            "n" : "24",
+            "s" : "27"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "27",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "nledge2@catacomb" : {
+         "exits" : {
+            "w" : "Chasm2",
+            "s" : "SLedge2"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "Northern End of the Ledge",
+         "id" : "NLedge2",
+         "description" : "\n   You find yourself at the northern end of a narrow north-south ledge\noverlooking a deep, seemingly bottomless chasm.\nThe outline of an archway has been carved into the stone.\n",
+         "altitude" : null
+      },
+      "chasm1@catacomb" : {
+         "exits" : {
+            "e" : "SLedge2"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "Suspended Above The Chasm",
+         "id" : "Chasm1",
+         "description" : "\n   You are borne up by a mysterious force. Below your feet, the chasm continues\ndown into darkness.  Above you, the heights of the chasm also disappear into\nblackness.  To the east is solid ground: a narrow ledge.\n",
+         "altitude" : null
+      },
+      "24@catacomb" : {
+         "exits" : {
+            "w" : "26",
+            "e" : "26",
+            "u" : "6",
+            "n" : "21",
+            "s" : "27"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "24",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "rips@catacomb" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "catacomb",
+         "title" : "Your umbrella rips and ...",
+         "id" : "Rips",
+         "description" : "\n   ... you plummet into a small spherical chamber which has somehow been carved\nout of the living stone.  Many objects litter the ground, including your\nunpleasant remains ...\n",
+         "altitude" : null
+      },
+      "resting_place@catacomb" : {
+         "exits" : {
+            "s" : "^Door2Seraph"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The Final Resting Place",
+         "id" : "Resting_place",
+         "description" : "\n   You are in a rectangular hall, with smooth stone walls, and a marble floor.\nAn overwhelming sense of satisfaction fills the air in this room.  Twelve\nmarble pillars line the eastern and western walls of the chamber.\n   At the northern end of the hall is a dais, made from a single round slab of\npure gold.  There is a crystal pedestal in the center of the dais.  To the\nsouth is a heavy wooden door, made of cedar and overlayed with gold.\n",
+         "altitude" : null
+      },
+      "east@catacomb" : {
+         "exits" : {
+            "w" : "Beggar"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The East Cave",
+         "id" : "East",
+         "description" : "\n   You are in a small, unadorned cave.\n",
+         "altitude" : null
+      },
+      "19@catacomb" : {
+         "exits" : {
+            "w" : "19",
+            "e" : "20",
+            "u" : "1",
+            "n" : "19",
+            "s" : "22"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "19",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "north@catacomb" : {
+         "exits" : {
+            "s" : "Beggar"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "The North Cave",
+         "id" : "North",
+         "description" : "\n   You are in a small, unadorned cave.\n",
+         "altitude" : null
+      },
+      "15@catacomb" : {
+         "exits" : {
+            "w" : "17",
+            "e" : "11",
+            "u" : "11",
+            "n" : "12",
+            "d" : "11",
+            "s" : "18"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "15",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "nledge1@catacomb" : {
+         "exits" : {
+            "s" : "SLedge1"
+         },
+         "flags" : [],
+         "zone" : "catacomb",
+         "title" : "Northern End of the Ledge",
+         "id" : "NLedge1",
+         "description" : "\n   You find yourself at the northern end of a narrow ledge overlooking a deep,\nseemingly bottomless chasm.\nAn archway has been carved into the stone here.\n",
+         "altitude" : null
+      },
+      "11@catacomb" : {
+         "exits" : {
+            "w" : "10",
+            "e" : "12",
+            "u" : "15",
+            "n" : "15",
+            "d" : "15",
+            "s" : "17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "11",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      },
+      "7@catacomb" : {
+         "exits" : {
+            "w" : "4",
+            "e" : "8",
+            "n" : "4",
+            "d" : "25",
+            "s" : "8"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "catacomb",
+         "title" : "The Catacombs",
+         "id" : "7",
+         "description" : "\n   You are lost in the catacombs.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "ghost@catacomb" : {
+         "damage" : "6",
+         "location" : "8",
+         "armor" : "0",
+         "name" : "ghost",
+         "description" : "A ghostly apparition hovers about you, preparing to strike.",
+         "strength" : "80",
+         "pname" : "The Ghost",
+         "aggression" : "10",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "beggar@catacomb" : {
+         "damage" : "10",
+         "location" : "beggar",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Beggar",
+         "name" : "beggar",
+         "description" : "\nAn aged and emaciated beggar sits cross-legged on a mat on the floor.",
+         "strength" : "1"
+      },
+      "skeleton@catacomb" : {
+         "damage" : "8",
+         "location" : "Closet",
+         "armor" : "0",
+         "name" : "skeleton",
+         "description" : "A human skeleton stands upright before you.",
+         "strength" : "50",
+         "pname" : "The Skeleton",
+         "aggression" : "70",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "defender@catacomb" : {
+         "damage" : "15",
+         "location" : "hall",
+         "armor" : "0",
+         "name" : "defender",
+         "description" : "An ancient knight stands here, readying himself for battle.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Defender",
+         "aggression" : "0",
+         "mflags" : [
+            "BarN",
+            "NoSteal"
+         ]
+      },
+      "shadow@catacomb" : {
+         "damage" : "12",
+         "location" : "19",
+         "armor" : "0",
+         "name" : "shadow",
+         "description" : "\nA spooky black shadow, human in shape, slides across the wall.",
+         "strength" : "100",
+         "pname" : "The Shadow",
+         "aggression" : "50",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "seraph@catacomb" : {
+         "damage" : "10",
+         "location" : "resting_place",
+         "armor" : "0",
+         "name" : "seraph",
+         "description" : "\nAn enormous six-winged seraph stands over you in solemn judgement.",
+         "strength" : "1500",
+         "speed" : "0",
+         "pname" : "The Seraph",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon"
+         ]
+      }
+   }
+}

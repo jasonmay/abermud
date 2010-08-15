@@ -1,0 +1,719 @@
+{
+   "obj" : {
+      "orcgold@orchold" : {
+         "location" : "IN_ROOM:central",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "gold",
+         "name" : "OrcGold",
+         "examine" : "\nIt has an inscription on it which says, \"To Owin, with love.\"  Scratched over\nthose words is the scrawl, \"Orks robb dwarvs! Ha!\"",
+         "size" : "20",
+         "pname" : "plate",
+         "weight" : "20",
+         "bvalue" : "600",
+         "desc[0]" : "A gold plate lies on the floor here."
+      },
+      "stonedoor@orchold" : {
+         "location" : "IN_ROOM:observation",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stone",
+         "name" : "StoneDoor",
+         "linked" : "stalactite",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "A portion of the west wall is swung back, making a doorway."
+      },
+      "chainmail@orchold" : {
+         "location" : "IN_ROOM:guardroom",
+         "armor" : "40",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "shirt",
+         "name" : "chainmail",
+         "examine" : "\nIt appears well made.  The orcs must have have contracted someone else to\nmake it.",
+         "size" : "5",
+         "weight" : "20",
+         "bvalue" : "70",
+         "desc[0]" : "A black shirt of chainmail is spread on the floor.",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ]
+      },
+      "garbage@orchold" : {
+         "desc[1]" : "Garbage has been strewn all about the room.",
+         "location" : "IN_ROOM:central",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "piles",
+         "name" : "garbage",
+         "maxstate" : "1",
+         "desc[0]" : "Piles of garbage lie in the middle of the room."
+      },
+      "block@orchold" : {
+         "location" : "IN_ROOM:treasury",
+         "weight" : "50",
+         "altname" : "gold",
+         "name" : "block",
+         "examine" : "It's a hefty chunk of what appears to be solid gold.",
+         "bvalue" : "700",
+         "desc[0]" : "A huge block of gold has been left lying here.",
+         "size" : "50"
+      },
+      "topcover@orchold" : {
+         "desc[1]" : "A large metal plate lies on the floor.",
+         "location" : "IN_ROOM:observation",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "altname" : "plate",
+         "name" : "TopCover",
+         "examine" : "It's about one meter in diameter, and appears very heavy.",
+         "linked" : "BotCover",
+         "state" : "1",
+         "pname" : "cover",
+         "maxstate" : "1",
+         "desc[0]" : "A metal cover lies alongside a passage leading down."
+      },
+      "botcover@orchold" : {
+         "desc[1]" : "A metal cover blocks the top of the ladder.",
+         "location" : "IN_ROOM:guardroom",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "altname" : "metal",
+         "name" : "BotCover",
+         "examine" : "\nIt completely covers the hole in the ceiling, and appears very heavy.",
+         "linked" : "TopCover",
+         "state" : "1",
+         "pname" : "cover",
+         "maxstate" : "1"
+      },
+      "switch@orchold" : {
+         "location" : "IN_ROOM:throne",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "altname" : "arm",
+         "name" : "switch",
+         "examine" : "\nIt's a small, carefully concealed switch, more proof that the orcs had help\nbuilding this place.",
+         "linked" : "HoleOrcs",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "There is a hole in the north wall."
+      },
+      "stalactite@orchold" : {
+         "location" : "IN_ROOM:damp",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "name" : "stalactite",
+         "examine" : "It clings to the ceiling, unlike a stalagmite.",
+         "linked" : "StoneDoor",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A portion of the east wall is swung back, making a doorway."
+      },
+      "holeorcs@orchold" : {
+         "location" : "IN_ROOM:tunnel",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "HoleOrcs",
+         "linked" : "switch",
+         "state" : "1",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "There is a hole in the south wall leading to another room."
+      },
+      "throne@orchold" : {
+         "location" : "IN_ROOM:throne",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "throne",
+         "examine" : "\nIt's quite an impressive affair: gold leaf, patterns in bas-relief, cushions\nfilled with down.  Upon close inspection you notice a switch hidden on the\narm of the chair.",
+         "desc[0]" : "The throne of the King Orc looms before you."
+      }
+   },
+   "loc" : {
+      "hallway2@orchold" : {
+         "exits" : {
+            "w" : "Hallway3",
+            "e" : "Hallway11",
+            "s" : "Hallway1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway2",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway branches east, west, and south.\n",
+         "altitude" : null
+      },
+      "trap@orchold" : {
+         "exits" : {
+            "e" : "Guardroom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Trap Room",
+         "id" : "Trap",
+         "description" : "\n   This is the room where people foolish enough to fall through the trap door\nabove wind up.  Another room lies to the east.\n",
+         "altitude" : null
+      },
+      "hallway18@orchold" : {
+         "exits" : {
+            "e" : "Smooth",
+            "s" : "Hallway17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway18",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads east and south.\n",
+         "altitude" : null
+      },
+      "guardroom@orchold" : {
+         "exits" : {
+            "w" : "Trap",
+            "u" : "^BotCover",
+            "n" : "Hallway1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Orc Guardroom",
+         "id" : "Guardroom",
+         "description" : "\n   This is apparently where the guards go to change when they go on or off\nduty.  The smell in the room is almost intolerable.  A ladder leads up to the\nceiling, and passages lead west and north.\n",
+         "altitude" : null
+      },
+      "observation@orchold" : {
+         "exits" : {
+            "w" : "^StoneDoor",
+            "d" : "^TopCover"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Observation Room",
+         "id" : "Observation",
+         "description" : "\n   This room was obviously designed for spying on people entering the hallway.\nYou notice a hole in the western wall through which the hallway can be seen.\n",
+         "altitude" : null
+      },
+      "hallway15@orchold" : {
+         "exits" : {
+            "w" : "Hallway16",
+            "s" : "Hallway14"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway15",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads west and south.\n",
+         "altitude" : null
+      },
+      "hallway13@orchold" : {
+         "exits" : {
+            "w" : "Hallway11",
+            "n" : "Hallway14"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway13",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads west and north.\n",
+         "altitude" : null
+      },
+      "throne@orchold" : {
+         "exits" : {
+            "n" : "^switch",
+            "s" : "Audience"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Orc Throne Room",
+         "id" : "Throne",
+         "description" : "\n   In stark contrast to the rest of the orcs' lair, this room is grandeur and\ntack epitomized.  The walls are paved in gold, and at the north end of the\nroom sits an incredibly ornate throne.  Heavy curtains cover an opening to\nthe south.\n",
+         "altitude" : null
+      },
+      "path1@orchold" : {
+         "exits" : {
+            "w" : "bandilbar1@volcano",
+            "e" : "E_Pass@Blizzard",
+            "u" : "Path2",
+            "d" : "E_Pass@Blizzard"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "orchold",
+         "title" : "Trampled Path",
+         "id" : "Path1",
+         "description" : "\n   You stand on a steep upwards path.  The path has obviously been made by the\ntrampling of many feet rather than by any plan.  Below you lies the end of the\nmountain pass.\n",
+         "altitude" : "1250"
+      },
+      "path2@orchold" : {
+         "exits" : {
+            "u" : "Entryway",
+            "d" : "Path1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "orchold",
+         "title" : "Trampled Path",
+         "id" : "Path2",
+         "description" : "\n   A large opening in the mountainside lies above you.  The path continues\nbelow you.\n",
+         "altitude" : "1300"
+      },
+      "tunnel@orchold" : {
+         "exits" : {
+            "w" : "Treasury",
+            "n" : "Mountainside",
+            "s" : "^HoleOrcs"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Secret Tunnel",
+         "id" : "Tunnel",
+         "description" : "\n   This appears to be an escape route for the king in times of trouble.\nA passage leads west, and you can see light to the north.\n",
+         "altitude" : null
+      },
+      "smooth@orchold" : {
+         "exits" : {
+            "w" : "Hallway18",
+            "n" : "Audience"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Smooth Hallway",
+         "id" : "Smooth",
+         "description" : "\n   This hallway shows definite signs of outside contracting.  It is smooth\nand well worked.  Unfortunately, it's still damp and filthy and smells like\ngarbage.  The hallway continues north, and becomes rough again to the west.\n",
+         "altitude" : null
+      },
+      "hallway1@orchold" : {
+         "exits" : {
+            "n" : "Hallway2",
+            "s" : "Guardroom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway1",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads north and south.\n",
+         "altitude" : null
+      },
+      "treasury@orchold" : {
+         "exits" : {
+            "e" : "Tunnel"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "King Orc's Treasury",
+         "id" : "Treasury",
+         "description" : "\n   This is apparently where the King Orc likes to store his valuables.  The\nroom itself is quite plain, and the layer of dust over everything indicates\nthat the king probably hasn't had very many additions to his collection\nrecently.\n",
+         "altitude" : null
+      },
+      "entryway@orchold" : {
+         "exits" : {
+            "u" : "Nibelung1@nibelung",
+            "n" : "Damp",
+            "d" : "Path2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Entryway",
+         "id" : "Entryway",
+         "description" : "\n   You stand at the entrance to a lair apparently carved out of the side of\nthe mountain.  The work on the rock is very poorly done, and blackness beyond\nfeels oppressive.  A path winds steeply downwards beneath you and the opening\nleads to the north.\n",
+         "altitude" : "1350"
+      },
+      "audience@orchold" : {
+         "exits" : {
+            "n" : "Throne",
+            "s" : "Smooth"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Audience Waiting Room",
+         "id" : "Audience",
+         "description" : "\n   This appears to be where people wait to see the Orc King.  Benches line\nthe walls for subjects to sit on.  A set of curtains cover an opening in the\nnorth wall, and would be quite impressive were it not for the mold growing on\nthem.  A hallway leads south.\n",
+         "altitude" : null
+      },
+      "hallway5@orchold" : {
+         "exits" : {
+            "w" : "Hallway8",
+            "e" : "Hallway4",
+            "s" : "Hallway7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway5",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway branches east, west, and south.\n",
+         "altitude" : null
+      },
+      "hallway9@orchold" : {
+         "exits" : {
+            "e" : "Hallway7",
+            "n" : "Hallway8"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway9",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads north and east.\n",
+         "altitude" : null
+      },
+      "central@orchold" : {
+         "exits" : {
+            "w" : "Hallway6",
+            "e" : "Hallway16",
+            "n" : "Hallway17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Central Chamber",
+         "id" : "central",
+         "description" : "\n   This is apparently the main place for the orcs to congregate.  The room\nreeks of filth and decay.  Hallways lead north, east, and west.\n",
+         "altitude" : null
+      },
+      "hallway6@orchold" : {
+         "exits" : {
+            "e" : "central",
+            "s" : "Hallway4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway6",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads south and opens into a large chamber to the east.\n",
+         "altitude" : null
+      },
+      "overgrown@orchold" : {
+         "exits" : {
+            "d" : "WEdge@Valley"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "orchold",
+         "title" : "Overgrown Path",
+         "id" : "Overgrown",
+         "description" : "\n   You are on what could almost be called a path, treading your way through\nvines, rocks, and the like.  The path becomes clearer and flatter farther\ndown.  It is far too steep to go up the mountainside.\n",
+         "altitude" : "750"
+      },
+      "hallway7@orchold" : {
+         "exits" : {
+            "w" : "Hallway9",
+            "n" : "Hallway5"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway7",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads north and west.\n",
+         "altitude" : null
+      },
+      "hallway3@orchold" : {
+         "exits" : {
+            "e" : "Hallway2",
+            "n" : "Hallway4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway3",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads north and east.\n",
+         "altitude" : null
+      },
+      "hallway16@orchold" : {
+         "exits" : {
+            "w" : "central",
+            "e" : "Hallway15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway16",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads east, and to the west enters a large chamber.\n",
+         "altitude" : null
+      },
+      "hallway11@orchold" : {
+         "exits" : {
+            "w" : "Hallway2",
+            "e" : "Hallway13",
+            "n" : "Hallway12"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway11",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway branches east, west, and north.\n",
+         "altitude" : null
+      },
+      "hallway12@orchold" : {
+         "exits" : {
+            "e" : "Hallway14",
+            "s" : "Hallway11"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway12",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads east and south.\n",
+         "altitude" : null
+      },
+      "hallway4@orchold" : {
+         "exits" : {
+            "w" : "Hallway5",
+            "n" : "Hallway6",
+            "s" : "Hallway3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway4",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway branches north, south, and west.\n",
+         "altitude" : null
+      },
+      "hallway17@orchold" : {
+         "exits" : {
+            "n" : "Hallway18",
+            "s" : "central"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway17",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads north, and to the south enters a large chamber.\n",
+         "altitude" : null
+      },
+      "mountainside@orchold" : {
+         "exits" : {
+            "d" : "Overgrown",
+            "s" : "Tunnel"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "orchold",
+         "title" : "Steep Mountainside",
+         "id" : "Mountainside",
+         "description" : "\n   You are outside on the mountain.  A hole in the side of the moutain lies to\nthe south, barely distinguishable from the plants covering it.  The grade is\nextremely steep, but it looks like you can skitter your way down.\n",
+         "altitude" : "1000"
+      },
+      "damp@orchold" : {
+         "exits" : {
+            "e" : "^stalactite",
+            "n" : "Trap",
+            "s" : "Entryway"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Damp Hallway",
+         "id" : "Damp",
+         "description" : "\n   This hallway shows the same poor craftsmanship as the rest of the compound.\nWater drips from a large stalactite near the eastern wall, making the whole\nroom damp and uncomfortable.  The hallway continues north and south.\n",
+         "altitude" : null
+      },
+      "hallway14@orchold" : {
+         "exits" : {
+            "w" : "Hallway12",
+            "n" : "Hallway15",
+            "s" : "Hallway13"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway14",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway branches north, west, and south.\n",
+         "altitude" : null
+      },
+      "hallway8@orchold" : {
+         "exits" : {
+            "e" : "Hallway5",
+            "s" : "Hallway9"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "orchold",
+         "title" : "Rough-hewn Hallway",
+         "id" : "Hallway8",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads east and south.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "usher@orchold" : {
+         "damage" : "13",
+         "location" : "audience",
+         "armor" : "0",
+         "name" : "usher",
+         "description" : "\nThe Usher Orc, dressed in black livery, sneers down his nose at you.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "The Usher",
+         "aggression" : "97"
+      },
+      "maggot@orchold" : {
+         "damage" : "10",
+         "location" : "limbo@limbo",
+         "armor" : "0",
+         "name" : "maggot",
+         "description" : "\nA giant maggot slithers around, leaving a slimy trail behind him.",
+         "strength" : "135",
+         "speed" : "0",
+         "pname" : "The Maggot",
+         "aggression" : "98",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "watchman@orchold" : {
+         "damage" : "13",
+         "location" : "observation",
+         "armor" : "0",
+         "name" : "watchman",
+         "description" : "The Watchman Orc growls at you.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The Watchman",
+         "aggression" : "97"
+      },
+      "randy@orchold" : {
+         "damage" : "10",
+         "location" : "trap",
+         "armor" : "4",
+         "name" : "randy",
+         "description" : "An Orc looks at you viciously.",
+         "strength" : "42",
+         "speed" : "0",
+         "pname" : "The Orc",
+         "aggression" : "97"
+      },
+      "brandy@orchold" : {
+         "damage" : "10",
+         "location" : "trap",
+         "armor" : "0",
+         "name" : "brandy",
+         "description" : "An Orc looks at you viciously.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "42",
+         "speed" : "0",
+         "pname" : "The Orc",
+         "aggression" : "97"
+      },
+      "andy@orchold" : {
+         "damage" : "10",
+         "location" : "trap",
+         "armor" : "0",
+         "name" : "andy",
+         "description" : "An Orc looks at you viciously.",
+         "strength" : "42",
+         "speed" : "0",
+         "pname" : "The Orc",
+         "aggression" : "97"
+      },
+      "sandy@orchold" : {
+         "damage" : "10",
+         "location" : "trap",
+         "armor" : "0",
+         "name" : "Sandy",
+         "description" : "An Orc looks at you viciously.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "42",
+         "speed" : "0",
+         "pname" : "The Orc",
+         "aggression" : "97"
+      },
+      "king@orchold" : {
+         "damage" : "20",
+         "location" : "throne",
+         "armor" : "0",
+         "name" : "king",
+         "description" : "\nThe King Orc glares at you with a look of royal intolerance.",
+         "strength" : "225",
+         "speed" : "0",
+         "pname" : "The King",
+         "aggression" : "97"
+      },
+      "mandy@orchold" : {
+         "damage" : "10",
+         "location" : "trap",
+         "armor" : "0",
+         "name" : "mandy",
+         "description" : "An Orc looks at you viciously.",
+         "strength" : "42",
+         "speed" : "0",
+         "pname" : "The Orc",
+         "aggression" : "97"
+      }
+   }
+}

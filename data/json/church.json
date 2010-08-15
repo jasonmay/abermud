@@ -1,0 +1,414 @@
+{
+   "obj" : {
+      "weathercock@church" : {
+         "location" : "IN_ROOM:bells",
+         "weight" : "20",
+         "altname" : "cock",
+         "name" : "weathercock",
+         "bvalue" : "50",
+         "desc[0]" : "A golden weathercock has been left here, somewhat out of order.",
+         "size" : "15"
+      },
+      "stick@church" : {
+         "desc[1]" : "An old stick lies here.",
+         "damage" : "3",
+         "location" : "IN_ROOM:decaying",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "altname" : "branch",
+         "name" : "stick",
+         "examine" : "\nStamped onto its surface is:\n        \"ACME Dog Bait\"",
+         "size" : "3",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A burning stick has been left here."
+      },
+      "cross@church" : {
+         "location" : "IN_ROOM:behind",
+         "weight" : "40",
+         "altname" : "gold",
+         "name" : "cross",
+         "examine" : "\nThis cross would look just right on the wall of St. Patt, but seems out of\nplace here.",
+         "bvalue" : "200",
+         "desc[0]" : "A hefty gold cross lies sparkling before you!",
+         "size" : "10"
+      },
+      "wreath@church" : {
+         "location" : "IN_ROOM:silent",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "wreath",
+         "size" : "2",
+         "weight" : "1",
+         "bvalue" : "50",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "An old wreath lies here."
+      },
+      "slab_top@church" : {
+         "desc[1]" : "A heavy stone slab appears to bar an exit downwards.",
+         "location" : "IN_ROOM:t_barrow",
+         "oflags" : [
+            "Destroyed",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "stone",
+         "name" : "Slab_Top",
+         "linked" : "Slab_Bot",
+         "state" : "1",
+         "pname" : "slab",
+         "maxstate" : "1",
+         "desc[0]" : "\nA heavy stone slab has been shifted to one side, allowing access down."
+      },
+      "lead@church" : {
+         "location" : "IN_ROOM:tower",
+         "weight" : "50",
+         "name" : "lead",
+         "examine" : "\nThe roofing is very heavy, being made out of lead.  Do you know any roofs that\nneed mending?",
+         "bvalue" : "100",
+         "desc[0]" : "A neat pile of roofing lead has been left stacked in a corner.",
+         "size" : "15"
+      },
+      "slab_bot@church" : {
+         "desc[1]" : "A heavy stone slab seals the barrow from above.",
+         "location" : "IN_ROOM:silent",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stone",
+         "name" : "Slab_Bot",
+         "linked" : "Slab_Top",
+         "state" : "1",
+         "pname" : "slab",
+         "maxstate" : "1",
+         "desc[0]" : "\nA heavy stone slab has been shifted to one side, allowing access upwards."
+      },
+      "shroud@church" : {
+         "location" : "IN_ROOM:silent",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "shroud",
+         "size" : "2",
+         "weight" : "1",
+         "bvalue" : "50",
+         "aflags" : [
+            "Head",
+            "Face"
+         ],
+         "desc[0]" : "A silk shroud has been placed here."
+      },
+      "key@church" : {
+         "location" : "IN_ROOM:pulpit",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "long",
+         "name" : "key",
+         "examine" : "\nThe key is long, complicated and slightly tapered.  It looks like it would be\nsuitable for opening a safe.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A long key lies here."
+      },
+      "rope@church" : {
+         "damage" : "12",
+         "location" : "IN_ROOM:bell",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "rope"
+      }
+   },
+   "loc" : {
+      "n_barrow@church" : {
+         "exits" : {
+            "s" : "Barrow"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "church",
+         "title" : "The North Barrow",
+         "id" : "N_Barrow",
+         "description" : "\n   You stand on the top of a large mound at the north end of the graveyard.\nA path leads back southward.\n   On a small gravestone is written \"Beware of the Moog\".\n",
+         "altitude" : "800"
+      },
+      "altar@church" : {
+         "exits" : {
+            "e" : "Stairs1",
+            "n" : "Church2",
+            "s" : "Behind"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "By The Altar",
+         "id" : "Altar",
+         "description" : "\n   You are standing beside the altar, now barely recognizable, a smashed and\naged pile of rotten wood and fabrics, hiding mossy stonework beneath.  A set of\nsteps lead up to the east, probably to the church tower.  The main church hall\nis north, and to the south you can go behind the altar.\n",
+         "altitude" : null
+      },
+      "behind@church" : {
+         "exits" : {
+            "n" : "Altar"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "Behind The Altar",
+         "id" : "Behind",
+         "description" : "\n   You stand behind the altar looking northwards along the length of the church\nwhich is a very sorry sight indeed, everything wooden is rotting, the stonework\nis moss covered, and gaping holes in the roof allow you to look skyward.\n",
+         "altitude" : null
+      },
+      "church2@church" : {
+         "exits" : {
+            "w" : "Entry",
+            "n" : "Church1",
+            "s" : "Altar"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "The Church",
+         "id" : "Church2",
+         "description" : "\n   You stand in the center of the now battered and dilapidated church.  Water\nruns down the walls, dripping in pools onto the rotting remains of the pews.\nThe church extends northwards, and southward towards the altar.  To the west is\nthe exit.\n",
+         "altitude" : null
+      },
+      "church1@church" : {
+         "exits" : {
+            "e" : "Decaying",
+            "s" : "Church2"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "North End Of Church",
+         "id" : "Church1",
+         "description" : "\n   You stand at the north end of the church, looking south down between the\nsilent rows of rotting pews.  Another doorway leads east into a small room.\n",
+         "altitude" : null
+      },
+      "g_yard2@church" : {
+         "exits" : {
+            "n" : "Barrow",
+            "s" : "G_Yard"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "church",
+         "title" : "Graveyard",
+         "id" : "G_Yard2",
+         "description" : "\n   You are standing at the southern end of the graveyard.  To the south a path\nleads out of the graveyard down towards the church.  To the north are several\nbarrows.\n   A large gravestone bearing the words \"The tomb of the unknown coder\" catches\nyour eye.\n",
+         "altitude" : "750"
+      },
+      "gloop@church" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "church",
+         "title" : "Gloop",
+         "id" : "Gloop",
+         "description" : "\n   You sink into the treacherous marsh with a gloop!\n",
+         "altitude" : null
+      },
+      "entry@church" : {
+         "exits" : {
+            "w" : "C_Yard",
+            "e" : "Church2"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "Arched Entry",
+         "id" : "Entry",
+         "description" : "\n   You stand in what must have once been a magnificent arched entrance, with\nhuge oak doors, and a carved doorway fit for a palace.  Now however the doors\nlie in rotting pieces on the floor, and rain drips down the moss covered\nstonework.\n",
+         "altitude" : null
+      },
+      "pulpit@church" : {
+         "exits" : {
+            "e" : "Stairs2"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "The Pulpit",
+         "id" : "Pulpit",
+         "description" : "\n   You stand in the rotting remains of what was the pulpit, looking north along\nthe length of the church hall, a sorry sight indeed, and also gazing up through\nthe holes in the roof, skyward.\n   A doorway leads east onto some stairs.\n",
+         "altitude" : null
+      },
+      "bells@church" : {
+         "exits" : {
+            "n" : "Tower",
+            "d" : "Bell"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "The Bells, The Bells!!!!",
+         "id" : "Bells",
+         "description" : "\n   You stand in a large chamber packed with bells.  There is a doorway to the\nnorth, or you could shin down a bell rope.\n",
+         "altitude" : null
+      },
+      "tower@church" : {
+         "exits" : {
+            "d" : "GiveWay",
+            "s" : "Bells"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "The Tower",
+         "id" : "Tower",
+         "description" : "\n   You stand in the room at the top of the tower.  A set of dangerous looking\nsteps lead down to the main part of the church.  To the south the room opens up\ninto a large chamber full of bells.\n",
+         "altitude" : null
+      },
+      "decaying@church" : {
+         "exits" : {
+            "w" : "Church1"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "A Decaying Room",
+         "id" : "Decaying",
+         "description" : "\n   You stand in a decaying room, the stone walls and floor are soaked with damp\nand whatever used to be stored in here has long since rotted away.  The timbers\nof the roof above you now sag dangerously and the whole room smells of rot.  A\nsingle doorway leads west.\n",
+         "altitude" : null
+      },
+      "silent@church" : {
+         "exits" : {
+            "e" : "Bones@abyss",
+            "u" : "^slab_bot"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "Silent Room",
+         "id" : "Silent",
+         "description" : "\n   You are standing in a small dark room, beneath the northern barrow.  All\naround you lie the relics of an ancient time, crumbling slowly into dust.\nEverything is dark and creepy, and the sense of malice and foreboding makes you\njump at the slightest movement in the shadows.  The center of the room is a\ntall gravestone bearing the words:\n   \"White The Wizard - A man pledged never to make his own coffee.\"\n",
+         "altitude" : null
+      },
+      "bell@church" : {
+         "exits" : {
+            "u" : "Bells",
+            "n" : "Stairs1"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "The Bell Room",
+         "id" : "Bell",
+         "description" : "\n   You are standing in a small stone room, which is both wet and cold.  The\nwooden roof above you has holes in it through which ropes hang, presumably for\nthe church bells.  A single doorway leads north.\n",
+         "altitude" : null
+      },
+      "barrow@church" : {
+         "exits" : {
+            "e" : "T_Barrow",
+            "n" : "N_Barrow",
+            "s" : "G_Yard2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "church",
+         "title" : "The Barrow",
+         "id" : "Barrow",
+         "description" : "\n   You stand near the top of a large mound. A path leads south back into the\nmain part of the graveyard, north to another mound and east towards a pillar\nset on the top of the mound.\n   A small grave bears the words \"Anarchy The Wizard (Out for lunch)\"\nA plaque on the grave reads 'Anarchy The Wizard - slain by the Aberystwyth\nrules --- \"If you can't pass your physics you can't have your degree.\n           How can you have your degree if you can't pass your physics...\"\n",
+         "altitude" : "800"
+      },
+      "giveway@church" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "church",
+         "title" : "The stairs give way and...",
+         "id" : "GiveWay",
+         "description" : "\n   ...you fall to your death (what else did you expect to happen?)\n",
+         "altitude" : null
+      },
+      "g_yard@church" : {
+         "exits" : {
+            "w" : "Gloop",
+            "n" : "G_Yard2",
+            "s" : "C_Yard"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "church",
+         "title" : "Graveyard",
+         "id" : "G_Yard",
+         "description" : "\n   You are standing at the southern end of the graveyard, following a path\nwhich leads north, beside a stone wall.  To the south is the churchyard, and\nthe old church itself.  To the west a worn rut in the grass leads out across\nsome marshy ground, past a sign which reads \"Danger Marshland\".\n   A small grave bears the enscription \"Orcus: He wasn't nice and paid the\nprice.\"\n",
+         "altitude" : "750"
+      },
+      "stairs2@church" : {
+         "exits" : {
+            "w" : "Pulpit",
+            "u" : "GiveWay",
+            "d" : "Stairs1"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "The Stairs",
+         "id" : "Stairs2",
+         "description" : "\n   You are climbing a set of steep, slippery stairs that lead up into the\nchurch tower.  Water runs down the steps, collecting in mossy pools, where the\ncracks and dips in the stonework allow it.  The steps turn from stone to wood\nup above, and look very rickety.\n   To the west a doorway leads out into the pulpit.\n",
+         "altitude" : null
+      },
+      "t_barrow@church" : {
+         "exits" : {
+            "w" : "Barrow",
+            "d" : "^slab_top"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "church",
+         "title" : "Top Of Barrow",
+         "id" : "T_Barrow",
+         "description" : "\n   You stand on the top of a huge barrow. A single path leads back to the west.\nA huge stone pillar stands on the center of the barrow marked with the words:\n                Born To Live\n                Bound To Die\n                Born To Love\n                Bound To Cry\n                Born To Win\n                Bound To Lose\n                Peace At Last\n                Death Not Gloom\n",
+         "altitude" : "800"
+      },
+      "stairs1@church" : {
+         "exits" : {
+            "w" : "Altar",
+            "u" : "Stairs2",
+            "d" : "Crypt@Catacomb",
+            "s" : "Bell"
+         },
+         "flags" : [],
+         "zone" : "church",
+         "title" : "Stairs",
+         "id" : "Stairs1",
+         "description" : "\n   You stand on a set of slippery stone steps which lead both downwards and\nupwards from here.  Doorways lead south into a small room and west into the\nmain church hall.\n",
+         "altitude" : null
+      },
+      "c_yard@church" : {
+         "exits" : {
+            "e" : "Entry",
+            "n" : "G_Yard",
+            "s" : "Path@valley"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "church",
+         "title" : "Churchyard",
+         "id" : "C_Yard",
+         "description" : "\n   You stand in what is apparently an old and disused churchyard.  Weeds and\nmoss cover the crumbling gravestones and paths.  To the east is a huge ancient\nchurch, now decaying and surrounded by bits of fallen stonework.  To the north\nthe graveyard continues.\n",
+         "altitude" : "750"
+      }
+   },
+   "mob" : {
+      "zombie@church" : {
+         "damage" : "10",
+         "location" : "church2",
+         "armor" : "0",
+         "name" : "zombie",
+         "description" : "A rotting zombie stomps past.",
+         "strength" : "20",
+         "speed" : "1",
+         "pname" : "The Zombie",
+         "aggression" : "2",
+         "mflags" : [
+            "Cross"
+         ]
+      }
+   }
+}

@@ -1,0 +1,1637 @@
+{
+   "obj" : {
+      "warmask@ancient" : {
+         "desc[1]" : "A heavy golden mask is hanging on the wall.",
+         "location" : "IN_ROOM:Anc27",
+         "armor" : "42",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "GetFlips"
+         ],
+         "name" : "WarMask",
+         "examine" : "\nThe mask has covered some upper class soldiers face protecting it and making\nthe bearer look more scaring.",
+         "state" : "1",
+         "size" : "2",
+         "weight" : "4",
+         "pname" : "mask",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A heavy golden mask is dumped here.",
+         "aflags" : [
+            "Face",
+            "Head"
+         ]
+      },
+      "abroom@ancient" : {
+         "damage" : "5",
+         "location" : "WIELDED_BY:anara",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "ABroom",
+         "examine" : "Feel like cleaning up the places, mate?",
+         "size" : "2",
+         "pname" : "broom",
+         "weight" : "1",
+         "bvalue" : "15",
+         "desc[0]" : "An old broom has been left here."
+      },
+      "canoe@ancient" : {
+         "location" : "IN_ROOM:Anc19",
+         "weight" : "5",
+         "oflags" : [
+            "Boat"
+         ],
+         "name" : "canoe",
+         "examine" : "\nIt is made of leather and could give you a safe passage through the waters.",
+         "bvalue" : "20",
+         "desc[0]" : "An old canoe has been forgotten here.",
+         "size" : "5"
+      },
+      "sunaltar@ancient" : {
+         "location" : "IN_ROOM:Anc35",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "altar",
+         "name" : "SunAltar",
+         "examine" : "\nThe altar is covered with blood all over it. The blood is dried a long time\nago, but it still makes you shivering.",
+         "desc[0]" : ""
+      },
+      "sunrod@ancient" : {
+         "location" : "IN_ROOM:Anc33",
+         "oflags" : "{}",
+         "name" : "SunRod",
+         "examine" : "The rod might be used by priests or lords in ceremonies.",
+         "size" : "1",
+         "pname" : "rod",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A silver rod twinkles before you."
+      },
+      "uranium@ancient" : {
+         "location" : "IN_ROOM:Anc42",
+         "oflags" : "{}",
+         "name" : "Uranium",
+         "examine" : "As you examine this stone you feel a sudden headache.",
+         "size" : "1",
+         "pname" : "stone",
+         "weight" : "1",
+         "bvalue" : "250",
+         "desc[0]" : "A small rock shimmers in the corner."
+      },
+      "sunpot@ancient" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Anc33",
+         "oflags" : [
+            "Container",
+            "GetFlips"
+         ],
+         "name" : "SunPot",
+         "examine" : "You've seen hundreds of these in museums.",
+         "state" : "1",
+         "size" : "2",
+         "pname" : "pot",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A big pot made of clay stands before you."
+      },
+      "white_jewel@ancient" : {
+         "location" : "IN_ROOM:Anc43",
+         "oflags" : "{}",
+         "altname" : "gem",
+         "name" : "White_Jewel",
+         "examine" : "\nYou wonder about the destiny of the former bearer of this mighty white gem.",
+         "size" : "1",
+         "pname" : "jewel",
+         "weight" : "1",
+         "bvalue" : "400",
+         "desc[0]" : "\nIn the hand of the poor fellow you discover a glistening white jewel."
+      },
+      "fountain_of_youth@ancient" : {
+         "location" : "IN_ROOM:Anc41",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "fountain",
+         "name" : "Fountain_Of_Youth",
+         "examine" : "\nThe water looks fresh and clean.  Through the water, written on the bottom\nof the fountain you see the words FOUNTAIN OF YOUTH.",
+         "desc[0]" : ""
+      },
+      "rplate@ancient" : {
+         "location" : "IN_ROOM:Anc55",
+         "oflags" : "{}",
+         "name" : "RPlate",
+         "examine" : "Pure gold!",
+         "size" : "2",
+         "pname" : "plate",
+         "weight" : "2",
+         "bvalue" : "200",
+         "desc[0]" : "A gold plate lies on the floor"
+      },
+      "pedestal@ancient" : {
+         "desc[1]" : "\nYour toe hits a cylindrical object standing on the ground, but the blinding\nlight makes it difficult to see what it is.",
+         "location" : "IN_ROOM:Anc36",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "altar",
+         "name" : "Pedestal",
+         "examine" : "\nShielding your eyes from the sun with your hands you see that something has\nbeen attached to the pedestal, but taken away afterwards.",
+         "state" : "1",
+         "pname" : "pedestal",
+         "maxstate" : "1"
+      },
+      "sunthrone@ancient" : {
+         "location" : "IN_ROOM:Anc50",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "throne",
+         "name" : "SunThrone",
+         "examine" : "The throne is not for mortals.",
+         "desc[0]" : "The throne is set on the north wall."
+      },
+      "rblock@ancient" : {
+         "location" : "IN_ROOM:Anc55",
+         "oflags" : "{}",
+         "name" : "RBlock",
+         "examine" : "Might be valuable.",
+         "size" : "2",
+         "pname" : "block",
+         "weight" : "4",
+         "bvalue" : "150",
+         "desc[0]" : "A huge silver block twinkles before you."
+      },
+      "meal@ancient" : {
+         "location" : "CARRIED_BY:cuezcon",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "lunch",
+         "name" : "Meal",
+         "examine" : "You've never eaten this before, but it sure smells good.",
+         "size" : "1",
+         "pname" : "meal",
+         "weight" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "A delicious lunch is waiting for you here."
+      },
+      "sundisc@ancient" : {
+         "desc[1]" : "\nThere's an extremely bright golden disc attached to the ceiling. It looks as\nyou will need more then just 'two hands and a Black & Decker' if you want to\nremove it....",
+         "location" : "IN_ROOM:Anc49",
+         "oflags" : [
+            "lit"
+         ],
+         "name" : "SunDisc",
+         "examine" : "It looks very valuble.",
+         "desc[2]" : "\nSecurely attached to a pedestal on the ground is a brightly shining sundisc.",
+         "state" : "1",
+         "size" : "4",
+         "pname" : "disc",
+         "weight" : "4",
+         "maxstate" : "2",
+         "bvalue" : "800",
+         "desc[0]" : "A giant Sun Disc is shining brightly here."
+      },
+      "rcoins@ancient" : {
+         "location" : "IN_ROOM:Anc55",
+         "oflags" : "{}",
+         "name" : "RCoins",
+         "examine" : "\nThe coins have a hole in the center and beautiful carvings around it.",
+         "size" : "3",
+         "pname" : "coins",
+         "weight" : "4",
+         "bvalue" : "400",
+         "desc[0]" : "There are small silver and gold coins all over the place."
+      },
+      "acloak@ancient" : {
+         "location" : "WORN_BY:arantxa",
+         "armor" : "30",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "ACloak",
+         "examine" : "It has a golden snakefigure on it.",
+         "size" : "3",
+         "weight" : "2",
+         "pname" : "cloak",
+         "bvalue" : "50",
+         "desc[0]" : "An astronomers cloak is here carefully folded.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "slamp@ancient" : {
+         "location" : "IN_ROOM:Anc48",
+         "oflags" : [
+            "Lit"
+         ],
+         "name" : "SLamp",
+         "examine" : "You just can't figure out how to extinguish it.",
+         "size" : "2",
+         "pname" : "lamp",
+         "weight" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A lit lamp is bringing light in the otherwise dim chamber."
+      },
+      "healbalsam@ancient" : {
+         "location" : "IN_CONTAINER:SunPot",
+         "oflags" : "{}",
+         "altname" : "cream",
+         "name" : "HealBalsam",
+         "examine" : "\nHmmm...the balsam has a very antiseptic smell.  Applying this balsam can\nperhaps heal some wounds in short time.",
+         "size" : "1",
+         "pname" : "balsam",
+         "weight" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "Some creamy balsam has been left here."
+      },
+      "tlalocstatue@ancient" : {
+         "location" : "IN_ROOM:Anc15",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "pname" : "statue",
+         "name" : "TlalocStatue",
+         "examine" : "\nThe statue is far too heavy to lift. The eyes of it seem to be two big gems.",
+         "desc[0]" : "",
+         "size" : "5"
+      },
+      "skymap@ancient" : {
+         "desc[1]" : "There's a map lying on the floor.",
+         "location" : "IN_ROOM:Anc26",
+         "oflags" : "{}",
+         "name" : "SkyMap",
+         "examine" : "",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "map",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "80",
+         "desc[0]" : "A rather torn map has been left here."
+      },
+      "stonyknife@ancient" : {
+         "damage" : "14",
+         "location" : "IN_ROOM:Anc8",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "stony",
+         "name" : "StonyKnife",
+         "examine" : "There's blood all over the blade.",
+         "size" : "2",
+         "pname" : "knife",
+         "weight" : "2",
+         "bvalue" : "15",
+         "desc[0]" : "A stone knife has been left here."
+      },
+      "lbook@ancient" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Anc58",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "LBook",
+         "examine" : "",
+         "state" : "1",
+         "size" : "3",
+         "pname" : "book",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "An old book is lying here."
+      },
+      "cheese1@ancient" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Anc37",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "slice",
+         "name" : "Cheese1",
+         "examine" : "It sure looks tasty.",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "cheese",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A slice of tasty Emmental cheese has been dropped here."
+      },
+      "atalisman@ancient" : {
+         "location" : "WORN_BY:aczuma",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "ATalisman",
+         "examine" : "It's a kind of an animal figure.",
+         "size" : "1",
+         "pname" : "talisman",
+         "weight" : "1",
+         "bvalue" : "80",
+         "desc[0]" : "A small gold talisman lies here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "embpot@ancient" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Anc22",
+         "oflags" : [
+            "GetFlips",
+            "Container"
+         ],
+         "name" : "EmbPot",
+         "state" : "1",
+         "size" : "3",
+         "pname" : "pot",
+         "weight" : "3",
+         "maxstate" : "1",
+         "bvalue" : "40",
+         "desc[0]" : "A small clay pot has been tossed here."
+      },
+      "qfeather@ancient" : {
+         "location" : "IN_ROOM:Anc17",
+         "oflags" : "{}",
+         "name" : "QFeather",
+         "examine" : "The feather glistens in all the colors of rainbow.",
+         "size" : "1",
+         "pname" : "feather",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "There's a big colorful feather on the ground."
+      },
+      "qaltar@ancient" : {
+         "location" : "IN_ROOM:Anc8",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "altar",
+         "name" : "QAltar",
+         "examine" : "The surface of this altar is smooth and tidy.",
+         "desc[0]" : ""
+      },
+      "bluegem@ancient" : {
+         "location" : "IN_CONTAINER:TlalocStatue",
+         "oflags" : "{}",
+         "altname" : "blue",
+         "name" : "BlueGem",
+         "examine" : "\nYou can't exactly remember what happened to those who found the grave of \nKing Tut, but you feel deep inside that you should get rid of this cursed\nthing.",
+         "size" : "1",
+         "pname" : "gem",
+         "weight" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A big blue gem twinkles before your eyes."
+      },
+      "hole_anc31@ancient" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Anc31",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Hole_Anc31",
+         "examine" : "",
+         "linked" : "Hole_Anc38",
+         "state" : "1",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "A large hole leads to a cave under the pyramid."
+      },
+      "whitegem@ancient" : {
+         "location" : "IN_CONTAINER:TlalocStatue",
+         "oflags" : "{}",
+         "altname" : "white",
+         "name" : "WhiteGem",
+         "examine" : "You feel the hatred of gods descending above you.",
+         "size" : "1",
+         "pname" : "gem",
+         "weight" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A massive white gem glistens before your eyes."
+      },
+      "bigcross@ancient" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Anc20",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "BigCross",
+         "examine" : "This is a big cross, believe me.",
+         "state" : "1",
+         "pname" : "cross",
+         "maxstate" : "1",
+         "desc[0]" : "Looks like someone had moved the cross a bit..."
+      },
+      "chain@ancient" : {
+         "location" : "IN_ROOM:Anc55",
+         "oflags" : "{}",
+         "name" : "Chain",
+         "examine" : "It looks like it has been torn apart from something.",
+         "size" : "1",
+         "pname" : "chain",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A gold chain has been tossed on the floor."
+      },
+      "mooncross@ancient" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Anc30",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "MoonCross",
+         "examine" : "You might have seen something like this before.",
+         "state" : "1",
+         "pname" : "cross",
+         "maxstate" : "1",
+         "desc[0]" : "The cross seems to be somewhat out of its' original place."
+      },
+      "cheese2@ancient" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Anc37",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "slice",
+         "name" : "Cheese2",
+         "examine" : "It even smells good.",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "cheese",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A slice of tasty Emmental cheese has been dropped here."
+      },
+      "bshield@ancient" : {
+         "location" : "IN_ROOM:Anc27",
+         "armor" : "50",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "bronze",
+         "name" : "BShield",
+         "examine" : "\nThe shield is small, but seems to be good for protecting you against the hits \nof your enemies.",
+         "size" : "2",
+         "pname" : "shield",
+         "weight" : "2",
+         "bvalue" : "50",
+         "desc[0]" : "A small bronze shield is lying on the ground."
+      },
+      "oldspear@ancient" : {
+         "damage" : "8",
+         "location" : "IN_ROOM:Anc2",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "OldSpear",
+         "examine" : "\nThis old spear has seen death and sorrow more than you could ever dream of.",
+         "size" : "5",
+         "pname" : "spear",
+         "weight" : "5",
+         "bvalue" : "25",
+         "desc[0]" : "An old spear lies here on the ground."
+      },
+      "estone@ancient" : {
+         "location" : "IN_ROOM:Anc60",
+         "oflags" : "{}",
+         "altname" : "block",
+         "name" : "EStone",
+         "examine" : "It's black as the night.",
+         "size" : "1",
+         "pname" : "stone",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A small stone block fills the emptiness."
+      },
+      "pwand@ancient" : {
+         "location" : "CARRIED_BY:mano",
+         "oflags" : "{}",
+         "name" : "PWand",
+         "examine" : "It's garnished with silver and small jewels.",
+         "size" : "1",
+         "pname" : "wand",
+         "weight" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "There's a long curved wand leaning against the wall."
+      },
+      "hole_anc38@ancient" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Anc38",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Hole_Anc38",
+         "examine" : "",
+         "linked" : "Hole_Anc31",
+         "state" : "1",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "A large hole leads out to the daylight."
+      },
+      "embbalsam@ancient" : {
+         "location" : "IN_CONTAINER:EmbPot",
+         "oflags" : "{}",
+         "altname" : "cream",
+         "name" : "EmbBalsam",
+         "examine" : "\nThe smell of this balsam fills your mind with strange thoughts of mummies\nand preservation.",
+         "size" : "1",
+         "pname" : "balsam",
+         "weight" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "Some white balsam has been dropped here."
+      }
+   },
+   "loc" : {
+      "anc10@ancient" : {
+         "exits" : {
+            "e" : "Anc11",
+            "n" : "Anc16",
+            "s" : "Anc9"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "The Bridge",
+         "id" : "Anc10",
+         "description" : "     \nYou have arrived at a wide stone bridge. The bridge consists of four huge \nmonoliths placed side by side over the river and pavement made of smaller \nflagstones quite like the others in the town. The San Juan river flows \ngently under the bridge to the east. You are considering a little refreshing\ndive into the river, but as you see all the alligators you think it might\nbe better to take a boat.\n",
+         "altitude" : "850"
+      },
+      "anc54@ancient" : {
+         "exits" : {
+            "n" : "Anc52"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Priest's Accommodation",
+         "id" : "Anc54",
+         "description" : "\nSaying your prayers every night before you go to bed seems to pay. The walls \nof the room you just entered are covered with silver reflecting the expensive\ntastes of the priest living here. The room has no natural light, but two \nburning torches on the south wall are bringing light over the place. The \nexit is to the north.\n",
+         "altitude" : null
+      },
+      "anc15@ancient" : {
+         "exits" : {
+            "s" : "Anc44"
+         },
+         "flags" : [
+            "NoMagic"
+         ],
+         "zone" : "ancient",
+         "title" : "The Sanctuary of Tlaloc",
+         "id" : "Anc15",
+         "description" : "\nYour heart beats fast and you stop for a while to breath deep and recover\nfrom the battle with the alligators. You have an odd feeling that Mr Dundee\ndidn't have so much trouble with the gators. You wipe the sweat from your \nforehead and look around. You find yourself in a small room sanctified to \nsome god of these unknown people. On the north wall there stands a small \nbronze statue decorated with colorful stones. The statue stands firmly on \nthe floor and it's almost impossible to move. The stone decorations, \nhowever, seem to be quite loose on the statue. Maybe you still can bring \nsomething home to your sweetheart from your adventures - if you survive, \nthat is.\n",
+         "altitude" : null
+      },
+      "anc44@ancient" : {
+         "exits" : {
+            "n" : "Anc15",
+            "s" : "Anc13"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "The Stone Jetty",
+         "id" : "Anc44",
+         "description" : "\nYou decided to choose the alligators. Quicky you clamber to the jetty and \nprepare yourself for the battle. The alligators, however, start preparing \nthemselves for dinner. They obviously liked your decision which makes you \nthink that maybe it would have been a better idea to go further east along \nthe river despite the rapid. To the north you see a little sanctuary.\n",
+         "altitude" : "750"
+      },
+      "anc31@ancient" : {
+         "exits" : {
+            "w" : "Anc21",
+            "e" : "^Hole_Anc31",
+            "u" : "Anc32"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Before the Sun Pyramid",
+         "id" : "Anc31",
+         "description" : "\nYou are standing in front of a large green opening. The sun casts it last\nfaint rays to the side of the sun pyramid. It gives an impression of a snake \nclimbing down from the top of the pyramid\n",
+         "altitude" : "800"
+      },
+      "anc17@ancient" : {
+         "exits" : {
+            "w" : "Anc18",
+            "e" : "Anc16"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Stony Path",
+         "id" : "Anc17",
+         "description" : "\nYou are walking along a narrow stony path which leads westwards to vast\nmarshlands. The mosquitos have found your blood very tasty and you start \nslapping them on your skin. If this is what it is here, what might it be \nwhen you go further to the west?  You wonder if you will catch malaria in\nthis place.  The path leads west and back to the east.\n",
+         "altitude" : "750"
+      },
+      "anc16@ancient" : {
+         "exits" : {
+            "w" : "Anc17",
+            "n" : "Anc20",
+            "s" : "Anc10"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Calle de los Muertos",
+         "id" : "Anc16",
+         "description" : "\nThe street disappears north to a great pyramid as far as you can see. To \nthe north you can see a big cross standing aside the street. To the west \nthere is a path leading somewhere in the marshlands. Back to the south \nthere is a bridge crossing the San Juan river.\n",
+         "altitude" : "800"
+      },
+      "anc38@ancient" : {
+         "exits" : {
+            "w" : "^Hole_Anc38",
+            "e" : "Anc39"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Damp Passage",
+         "id" : "Anc38",
+         "description" : "\nThe ground has given way in the rain uncovering a passage leading east\ninto the darkness. You slide down the wet sand to the beginning of the\ntunnel.\n",
+         "altitude" : "800"
+      },
+      "anc14@ancient" : {
+         "exits" : {},
+         "flags" : [
+            "OutDoors",
+            "OnWater",
+            "Death"
+         ],
+         "zone" : "ancient",
+         "title" : "Rio San Juan",
+         "id" : "Anc14",
+         "description" : "\nThe river has suddenly turned into a rapids and you find it impossible to \nturn back. You keep fighting against the stream, but its' power turns your\nsmall boat upside down making you wish you were a salmon. All this time \nthe river flows endlessly to the sea.\n",
+         "altitude" : "750"
+      },
+      "anc22@ancient" : {
+         "exits" : {
+            "e" : "Anc21"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "Embalming Chamber",
+         "id" : "Anc22",
+         "description" : "\nYou have stepped into a small chamber, though you can't figure out the \npurpose of its' being. You see piles of used bandages in the corner and a \ncouple of big pots made of clay placed near the northern wall. There's a \nstone platform in the middle of the room. This might have been some kind \nof a hospital or something. You hear a loud crack!\n",
+         "altitude" : null
+      },
+      "anc39@ancient" : {
+         "exits" : {
+            "w" : "Anc38",
+            "e" : "Anc40",
+            "s" : "Anc42"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ancient",
+         "title" : "Moist Tunnel",
+         "id" : "Anc39",
+         "description" : "\nYou have discovered a moist dark passageway that disappears under the \ngreat sun pyramid. The air inside this narrow tunnel is stuffy and you\nseriously consider whether you should go further or not. The tunnel \ncontinues to the east. To the south you see a narrow crack which makes \nyou once again think about losing weight to make it easier to move \nbetween those rugged stone walls.\n",
+         "altitude" : null
+      },
+      "anc41@ancient" : {
+         "exits" : {
+            "w" : "Anc40"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ancient",
+         "title" : "The Fountain Cave",
+         "id" : "Anc41",
+         "description" : "\nYou enter a round walled chamber which has a fountain gurgling in the center.\nThe water flows out to the direction where you came from. On the back wall \nthere are carvings on the stone. The walls block your way to any other \ndirection, but west.\n",
+         "altitude" : null
+      },
+      "anc26@ancient" : {
+         "exits" : {
+            "w" : "Anc25"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Observatory",
+         "id" : "Anc26",
+         "description" : "\nThis small round shaped building has several little windows in all \ndirections. The walls are covered with paintings and markings that leave \nyou in ignorance of the higher sciences of the people who used to reign \nthis ancient city. You understand, though, that this building has been \nused for observing the planets and stars. The planet Venus, seems to have \nhad some significance to these people - maybe as a god or something like\nthat.\n",
+         "altitude" : null
+      },
+      "anc1@ancient" : {
+         "exits" : {
+            "e" : "Anc2",
+            "s" : "mount1@rainforest"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Way Up to the Mountains",
+         "id" : "Anc1",
+         "description" : "\nYou find yourself on the edge of a vast mountain range. To the east you can\nsee a large square-shaped clearing. Further east you can see some kind of a\ntemple while on the north-east on the edge of you sight lies two pyramid-\nshaped buildings. Despite the strange looking buildings you find the eastward\npath more inviting than the high mountains to the west.\n",
+         "altitude" : "1200"
+      },
+      "anc5@ancient" : {
+         "exits" : {},
+         "flags" : [
+            "OutDoors",
+            "Death"
+         ],
+         "zone" : "ancient",
+         "title" : "The Swamp",
+         "id" : "Anc5",
+         "description" : "\nYou have entered a large swamp area. Suddenly you find out that you can't \nmove your feet any more.\n\nThe Swamp Thing rises up from the mud...\nYou are swallowed by the Swamp Thing...\nYou are not feeling very good now...\n\n*BURP*\n",
+         "altitude" : null
+      },
+      "anc40@ancient" : {
+         "exits" : {
+            "w" : "Anc39",
+            "e" : "Anc41",
+            "n" : "Anc45"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ancient",
+         "title" : "Moist Tunnel",
+         "id" : "Anc40",
+         "description" : "\nThe passageway leads further to the east and widens in the distance to \nsome kind of cavern. You notice that the floor has become wet and you \nregret putting on sandals instead of the boots you had on when comming into\nthis hot part of the world. The water on the floor seems to come from the\ncavern. To the north you see a low side tunnel.\n",
+         "altitude" : null
+      },
+      "anc47@ancient" : {
+         "exits" : {
+            "w" : "Anc48",
+            "e" : "Anc52",
+            "n" : "Anc49",
+            "d" : "Anc55",
+            "s" : "Anc46"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Square of the Souls Forgotten",
+         "id" : "Anc47",
+         "description" : "\nThe story of the pictures goes on as you enter a large hall that has exits \nto all directions. You find out that, not long before the town above you was\nabandoned, the astronomers found a new bright star in the sky. The star\nwas thought to be a sign of destruction coming to the town. You can see \nmore of these pictures leading to each direction.\n",
+         "altitude" : null
+      },
+      "anc20@ancient" : {
+         "exits" : {
+            "n" : "Anc21",
+            "s" : "Anc16"
+         },
+         "flags" : [
+            "OutDoors",
+            "Peaceful"
+         ],
+         "zone" : "ancient",
+         "title" : "Beneath the Cross",
+         "id" : "Anc20",
+         "description" : "\nYou stand beneath a huge cross wondering the reason of its' presence. It \nlooks like it has been here more than thousand years - long before anyone \nknew anything of the Christian faith. From some strange markings on its' base \nyou draw the conclusion that there might be one more cross like this \nsomewhere in the town (what a detective!).\n",
+         "altitude" : "800"
+      },
+      "anc35@ancient" : {
+         "exits" : {
+            "e" : "Anc36",
+            "d" : "Anc34"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Top of the Sun Pyramid",
+         "id" : "Anc35",
+         "description" : "\nYou are standing on the top of the pyramid the sun shining brightly into your\nface. Right before you there is a small altar probably made for sacrificing \nyoung virgins to the sun God.  You might feel a great relief that you are no \nlonger a virgin, but just simply another, run of the mill, filthy foul-\nmouthed wanderer.\n",
+         "altitude" : "1000"
+      },
+      "anc53@ancient" : {
+         "exits" : {
+            "w" : "Anc52"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Chief Astronomer's Residence",
+         "id" : "Anc53",
+         "description" : "\nThe emperors' chief astronomer walks these underground caverns. She was the\nfirst one to notice the signs of destruction on the sky years ago. \nSigns of her wisdom and skill can still be found in the deserted town. \nThere are calendars and large astronomical maps covering the walls. \nSurprisingly you find your birthday on the calendar - and the day of your \ndeath! The only way out is to the west.\n",
+         "altitude" : null
+      },
+      "anc45@ancient" : {
+         "exits" : {
+            "n" : "Anc46",
+            "s" : "Anc40"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "ancient",
+         "title" : "Northern Side Tunnel",
+         "id" : "Anc45",
+         "description" : "\nSuddenly you notice that you no longer need a torch, because the walls of \nthis cave are emitting dim light. The light turns brighter as you walk \nnorth along the cave.\n",
+         "altitude" : null
+      },
+      "anc28@ancient" : {
+         "exits" : {
+            "u" : "Anc29",
+            "n" : "Anc29",
+            "d" : "Anc25",
+            "s" : "Anc25"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Stairway to the Moon",
+         "id" : "Anc28",
+         "description" : "\nA wide stairway paved with stone leads steeply upwards to the top of the \nmoon pyramid. The moons shines brightly behind the top of the pyramid \nits' light climbing up the side of this huge building like a snake \npursuing its' prey. \n",
+         "altitude" : "850"
+      },
+      "anc30@ancient" : {
+         "exits" : {
+            "n" : "Anc37",
+            "d" : "Anc29",
+            "s" : "Anc29"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Top of the Moon Pyramid",
+         "id" : "Anc30",
+         "description" : "\nYou finally reach the top of the pyramid, understanding now the purpose of \nthe physical training your friends used to keep in good condition. \nBefore you, the moon shines brightly, appearing to be a gigantic wheel of\ncheese.  You can imagine yourself taking a few steps ahead and grabbing a \nslice of that great big cheese. Before you on the floor there is a big cross-\nshaped figure. The carvings on the stone floor are telling tales about secret\nhalls of ancient kings and holy men.  You wonder where these mighty halls\nmight be located, and you think that the cross has something to do with it.\n",
+         "altitude" : "950"
+      },
+      "anc3@ancient" : {
+         "exits" : {
+            "w" : "Anc2",
+            "e" : "Anc6",
+            "n" : "Anc9",
+            "s" : "Anc4"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Calle de los Muertos",
+         "id" : "Anc3",
+         "description" : " \nYou find yourself on an ancient passageway which seems to have been the \nmain street of an old town. The street is wide and paved with large grey \nflagstones. The street leads to the north while the southern way disappears \nunder flourishing grass mat. The path to the west leads to a clearing and to \nthe east there is a temple.\n",
+         "altitude" : "950"
+      },
+      "anc52@ancient" : {
+         "exits" : {
+            "w" : "Anc47",
+            "e" : "Anc53",
+            "n" : "Anc51",
+            "s" : "Anc54"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Hall of the Lords",
+         "id" : "Anc52",
+         "description" : "\nThis is a small entrance hall which leads to the rooms of the upper class. \nSome of the tales the son of the sun god let some of his most faithful \nsubjects follow him to this desperate escape from the destruction. There \nare doorways in every direction.\n",
+         "altitude" : null
+      },
+      "anc36@ancient" : {
+         "exits" : {
+            "w" : "Anc35"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Before the Sun",
+         "id" : "Anc36",
+         "description" : "\nThe brightness of the sun forces you to cover your eyes. Your skin \nfeels like burning, but you keep feeling your way through the heat. Suddenly \nyou feel something laying down on the floor and start wondering about what \nyou have found.\n",
+         "altitude" : "1000"
+      },
+      "anc34@ancient" : {
+         "exits" : {
+            "u" : "Anc35",
+            "d" : "Anc32"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Stairway to the Sun",
+         "id" : "Anc34",
+         "description" : "\nUp you go and you feel the endless strength of the sun making your climb \nto the top easier. You feel like a new-born child as you go up the last \nsteps. Suddenly you notice that the sun has risen high up to the sky. \nThe time seems to have lost its' significance to you.  \n",
+         "altitude" : "950"
+      },
+      "anc21@ancient" : {
+         "exits" : {
+            "w" : "Anc22",
+            "e" : "Anc31",
+            "n" : "Anc23",
+            "s" : "Anc20"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Calle de los Muertos",
+         "id" : "Anc21",
+         "description" : "\nThe street continues further north where the shape of the huge moon \npyramid breaks the horizon. To the east you see a massive building made \nof clay and stones rising up to the skies before you. At this very moment \nthe greatness of this ancient culture fills your mind and you can't help \nlooking at this breathtaking view  while holding your breath. You shake your\nhead and draw your mind back to reality. To the west you notice a small house.\n",
+         "altitude" : "800"
+      },
+      "anc6@ancient" : {
+         "exits" : {
+            "w" : "Anc3",
+            "e" : "Anc7",
+            "u" : "Anc7"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Before the Temple",
+         "id" : "Anc6",
+         "description" : "                    \nYou are standing on a large opening covered with grass right before a huge\ntemple to the east. The temple is made of large clay bricks and there is a\nstairway leading up to its' top. You see large stone animal figures beside\nthe stairs. You can still go back west to the street. \n",
+         "altitude" : "900"
+      },
+      "anc25@ancient" : {
+         "exits" : {
+            "w" : "Anc27",
+            "e" : "Anc26",
+            "u" : "Anc28",
+            "n" : "Anc28",
+            "s" : "Anc24"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Large Square",
+         "id" : "Anc25",
+         "description" : "\nYou have arrived at a large square. In the middle you see three twenty \nfeel long monoliths around a small stone table guarding it from intruders.\nTo the north a stony stairway leads up the side of the moon pyramid. \nTo the east and west there are several small buildings and the street leads\nsouthwards back to where you came from.\n",
+         "altitude" : "800"
+      },
+      "anc4@ancient" : {
+         "exits" : {
+            "n" : "Anc3",
+            "s" : "Anc5"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Overgrown street",
+         "id" : "Anc4",
+         "description" : "\nA long time ago this town might have been a major center in this area. However,\ntime has done its' job and you can hardly discern the pavement under your\nfeet. The street leads north into the town. To the south there is a swamp \nwhich does not look very inviting.\n",
+         "altitude" : "900"
+      },
+      "anc48@ancient" : {
+         "exits" : {
+            "e" : "Anc47"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Hall of the Servants",
+         "id" : "Anc48",
+         "description" : "\nYou step into a less decorated room that is obviously meant to be the \nservants' accomodation. There's a table before the back wall and a lamp \nbrings light into this otherwise dim chamber. By studying the pictures on \nthe floor, you find out that most of the slaves and servants were killed\nwhen the upper class moved down underground. The ghosts of these poor people\nstill wander these lands of blood. To prevent the ghosts from entering\nthe underground town many guardians have been placed at the entrance.\nThe only exit is to the east.\n",
+         "altitude" : null
+      },
+      "anc43@ancient" : {
+         "exits" : {
+            "w" : "Anc43",
+            "e" : "Anc43",
+            "n" : "Anc43",
+            "s" : "Anc43"
+         },
+         "flags" : [
+            "Dark",
+            "NoMagic",
+            "SoundProof"
+         ],
+         "zone" : "ancient",
+         "title" : "Room of the Lost Hope",
+         "id" : "Anc43",
+         "description" : "\nYou see pieces of old bleached bones covering the ground. Hundreds of \ncockroaches have occupied a skeleton of some poor adventurer in the corner.\nEven though this is a miserable sight you are still wondering, why is this \nplace called the room of the lost hope...\n",
+         "altitude" : null
+      },
+      "anc11@ancient" : {
+         "exits" : {
+            "w" : "Anc10",
+            "e" : "Anc12"
+         },
+         "flags" : [
+            "OutDoors",
+            "OnWater"
+         ],
+         "zone" : "ancient",
+         "title" : "Rio San Juan",
+         "id" : "Anc11",
+         "description" : "\nThe San Juan river gently flows to the east. The alligators keep their\ndistance. They seem to know that they can't break your well made boat to\nreach their supper.\n",
+         "altitude" : "750"
+      },
+      "anc23@ancient" : {
+         "exits" : {
+            "n" : "Anc24",
+            "s" : "Anc21"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Calle de los Muertos",
+         "id" : "Anc23",
+         "description" : "\nYou leave the huge sun pyramid behind your back and head to the at least \nas big moon pyramid to the north. The pyramids' mighty figure rises up to \nthe northers sky hiding the big emmental behind its' shape. You still \nhave a long walk to do to reach the pyramid. The street leads north and south.\n",
+         "altitude" : "800"
+      },
+      "anc56@ancient" : {
+         "exits" : {
+            "d" : "Anc57"
+         },
+         "flags" : [
+            "Cold"
+         ],
+         "zone" : "ancient",
+         "title" : "Pluto",
+         "id" : "Anc56",
+         "description" : "\nNow what?! You suddenly find yourself in a world totally different from where\nyou were. This desolate cold planet, however, makes you feel strange peace\nof mind and freedom you never had on earth.\nBelow your feel there's a cave.\n",
+         "altitude" : null
+      },
+      "anc19@ancient" : {
+         "exits" : {
+            "n" : "Anc18"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "River Bank",
+         "id" : "Anc19",
+         "description" : "\nYou stand on a slippery river bank watching carefully where to step to \navoid slipping down to the river. The water is calm and quite warm, but a \nstrange feeling inside makes you decide not to take a bath.  There is a\npath leeding north from here.\n",
+         "altitude" : "700"
+      },
+      "anc24@ancient" : {
+         "exits" : {
+            "w" : "Mou5@Mountain",
+            "n" : "Anc25",
+            "s" : "Anc23"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Calle de los Muertos",
+         "id" : "Anc24",
+         "description" : "\nThe closer you get, the bigger it becomes. Before the pyramid you see a \nlarge square surrounded by several little houses and other buildings. The \nsquare seems to be worth a closer look with its' carved monoliths and \nboulders, but the pyramid, dominating the view, steals that privilege to \nitself.\n",
+         "altitude" : "800"
+      },
+      "anc9@ancient" : {
+         "exits" : {
+            "n" : "Anc10",
+            "s" : "Anc3"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Calle de los Muertos",
+         "id" : "Anc9",
+         "description" : "\nYou are following a wide street paved with large flagstones. The street \ncontinues to the north. You can see a bridge further north bridging your \nway over a river. Two great pyramids are dominating the northern horizon\nwhile to the south-east there's a temple of some sort.\n",
+         "altitude" : "900"
+      },
+      "anc50@ancient" : {
+         "exits" : {
+            "s" : "Anc49"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Emperor's Audience Room",
+         "id" : "Anc50",
+         "description" : "\nThe power of the sun is burning your heart, but you bravely step ahead \nfinding yourself in a large hall made for the emperor of this forgotten \ntown. The emperor is believed to be the son of the sun god and you have\nobviously put your nose into the wrong place. Escape way is back south.\n",
+         "altitude" : null
+      },
+      "anc51@ancient" : {
+         "exits" : {
+            "s" : "Anc52"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Warlord's Living Quarters",
+         "id" : "Anc51",
+         "description" : "\nYou enter a chamber decorated with paintings of great wars on the walls. \nThe warlord earned his eternal home by guarding the city from the mountain \ntribes living south of the city. He also saved the emperor from assasins \nwho tried to take his life, after the priests had predicted the devastation.\nThe only exit is to the south.\n",
+         "altitude" : null
+      },
+      "anc46@ancient" : {
+         "exits" : {
+            "n" : "Anc47",
+            "s" : "Anc45"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Edge of Downtown",
+         "id" : "Anc46",
+         "description" : "\nAs you walk further the walls turn smooth and the floor is covered with\ncomplicated and extremely beautiful ornaments. The ornaments are surrounding \na long series of small pictures that seem to tell tales about this town's \nhistory. The story begins with a flourishing dynasty and an emperor who \nruled the surrounding plains. To find out more you have to walk further \nto a large underground hall to the north. You notice that you still can \nturn back to the south.\n",
+         "altitude" : null
+      },
+      "anc37@ancient" : {
+         "exits" : {
+            "s" : "Anc30"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "Before the Moon",
+         "id" : "Anc37",
+         "description" : "\nYou cautiously take some steps ahead and stand right before the moon. \nAs you examine it more closely you suddenly start feeling a strange\ndesire for dairy products. My, this great heavenly body really is one \nbig Emmental cheese. Maybe you could cut a piece or two of it. \n",
+         "altitude" : null
+      },
+      "anc60@ancient" : {
+         "exits" : {
+            "w" : "Anc57"
+         },
+         "flags" : [
+            "Cold"
+         ],
+         "zone" : "ancient",
+         "title" : "Empty room",
+         "id" : "Anc60",
+         "description" : "\nYou have entered an empty room. \n",
+         "altitude" : null
+      },
+      "anc57@ancient" : {
+         "exits" : {
+            "w" : "Anc58",
+            "e" : "Anc60",
+            "u" : "Anc56",
+            "s" : "Anc59"
+         },
+         "flags" : [
+            "Cold"
+         ],
+         "zone" : "ancient",
+         "title" : "The Hall",
+         "id" : "Anc57",
+         "description" : "\nYou climb down the stairs and come into a hall which has exits west, south,\nup and down. The hall itself has no furniture, but the floor is so soft that \nyou could actually sleep on it. The ceiling is emitting blue light and the \nwalls are covered with somewhat extraordinary pictures about the history\nof spacetravels. \n",
+         "altitude" : null
+      },
+      "anc42@ancient" : {
+         "exits" : {
+            "n" : "Anc39",
+            "s" : "Anc43"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ancient",
+         "title" : "Southern Side Tunnel",
+         "id" : "Anc42",
+         "description" : "\nThe tunnel is widening as you move further to the south and seems to end\nin a small chamber just a few yards before you. The walls are glistening\nin the dim light coming from your torch. It looks like the rock around you\nwould consist of various valuable minerals. Despite this splendid sight \nyou feel quite uncomfortable and start feeling dizzy for some reason.\n",
+         "altitude" : null
+      },
+      "anc29@ancient" : {
+         "exits" : {
+            "u" : "Anc30",
+            "n" : "Anc30",
+            "d" : "Anc28",
+            "s" : "Anc28"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Stairway to the Moon",
+         "id" : "Anc29",
+         "description" : "\nThe stairs seem endless and you are breathing heavily, wishing you were \nin better condition. You glance up and it almost looks like you were much \ncloser to the moon than just a moment ago. You wipe away the sweat on \nyour forehead and keep climbing up the stairs.\n",
+         "altitude" : "900"
+      },
+      "anc32@ancient" : {
+         "exits" : {
+            "e" : "Anc33",
+            "u" : "Anc34",
+            "d" : "Anc31"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Stairway to the Sun",
+         "id" : "Anc32",
+         "description" : "\nYou stand half-way to the top of the pyramid. The rising sun casts its' \nrays in your eyes making you half blind. It spreads its' mighty power over \nthe land and its' warmth gives you the strenght needed to do the rest of \nthe climb. In front of you, there's a wide doorway leading inside the \npyramid. The stairway leads up and down.\n",
+         "altitude" : "900"
+      },
+      "anc18@ancient" : {
+         "exits" : {
+            "e" : "Anc17",
+            "s" : "Anc19"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Stony Path",
+         "id" : "Anc18",
+         "description" : "\nWell well... Now you know what it is when you go further to the west. \nA number of magnum size mosquitos attack you buzzing madly of thirst for \nyour blood. You feel, however, strong devotion to your liquid of life and\ndecide not to give up without a fight. As you prepare yourself for the \nbattle you quickly look around and notice two escape ways - one back east \nwhere the less enormous mosquitos were and one south to the river bank.\n",
+         "altitude" : "700"
+      },
+      "anc49@ancient" : {
+         "exits" : {
+            "n" : "Anc50",
+            "s" : "Anc47"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "The Hall of the Sun God",
+         "id" : "Anc49",
+         "description" : "\nYou feel strong magical powers surrounding you as you enter this room. \nThe story tells that there was a disc of the mighty Sun God originally \nplaced on top of the huge sun pyramid by the sun god himself. After the \nmessages about the destruction were received, the priests had a holy \nstone and a feather of the sacred Quetzalbird, brought from a hermit \nliving at the Tropic of Cancer to move this holy item. \nPassages lead north and south.\n",
+         "altitude" : null
+      },
+      "anc13@ancient" : {
+         "exits" : {
+            "w" : "Anc12",
+            "e" : "Anc14",
+            "n" : "Anc44",
+            "s" : "thyrannen1@thyrannen"
+         },
+         "flags" : [
+            "OutDoors",
+            "OnWater"
+         ],
+         "zone" : "ancient",
+         "title" : "Rio San Juan",
+         "id" : "Anc13",
+         "description" : "\nThe river flows quite fast and you have to make a decision quickly \nbetween the river and the alligators. You are breathing heavily as you \ntry to keep your boat steady. The river continues east and west. To the \nnorthern shore you see some sort of building. Unfortunately you have to \npass by some hungry alligators before you can step ashore. You desperately\ntry to remember how Crocodile Dundee did the trick.\n",
+         "altitude" : "750"
+      },
+      "anc12@ancient" : {
+         "exits" : {
+            "w" : "Anc11",
+            "e" : "Anc13"
+         },
+         "flags" : [
+            "OutDoors",
+            "OnWater"
+         ],
+         "zone" : "ancient",
+         "title" : "Rio San Juan",
+         "id" : "Anc12",
+         "description" : "\nYour small boat floats slowly along the river. You notice a slight increase\nin the speed the river flows. You look at the river bank to find a nice calm\nplace to get ashore. The shore, however, is crowded by alligators and you\nfind it quite forbidding. You have to choose whether to keep going further\neast or back west to the bridge.\n",
+         "altitude" : "750"
+      },
+      "anc33@ancient" : {
+         "exits" : {
+            "w" : "Anc32"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "Inside the Sun Pyramid",
+         "id" : "Anc33",
+         "description" : "\nA big stone block separates the ceiling from the floor looking anything \nbut steady. Seems that the ancient architects never learned to construct\nvaults even though they had the skill to build these great monuments. \nThis wide, but rather low room has obviously served as some kind of a storage\nroom since there are several clay pots near the back wall.  \n",
+         "altitude" : null
+      },
+      "anc58@ancient" : {
+         "exits" : {
+            "e" : "Anc57"
+         },
+         "flags" : [
+            "Cold",
+            "Peaceful",
+            "NoMagic"
+         ],
+         "zone" : "ancient",
+         "title" : "Library",
+         "id" : "Anc58",
+         "description" : "\nThe wisdom of the universe has been collected on the shelves of this room \nin the form of old books, written centuries ago by wizards and mages who \nreigned these, now so desolated, lands. The books have been written in some \nunknown language so you can't share the wisdom with those wizards who died\na long time ago. The owner of the books, however, seems not to have this\nproblem for the books look as if they have been read through thousands of\ntimes during the preceding centuries.\n",
+         "altitude" : null
+      },
+      "anc8@ancient" : {
+         "exits" : {
+            "w" : "Anc7",
+            "d" : "Anc7"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Quetzalcoatl's Temple",
+         "id" : "Anc8",
+         "description" : "\nLooking back down where you came from makes you feel dizzy so you decide \nto pay more attention to a huge monolith laying before you. The monolith \nis four feet high and twelve feet wide. Its' face is smooth, but covered \nwith dark red and brown spots all over it. This is probably a place where\nthe priests of this ancient city used to worship their god of Earth and the \nUniverse later known as Quetzalcoatl by the Aztecs. The sight could easily \nturn a flesh-eating beast to a true vegetarian.\n",
+         "altitude" : "1000"
+      },
+      "anc59@ancient" : {
+         "exits" : {
+            "n" : "Anc57"
+         },
+         "flags" : [
+            "Cold",
+            "NoMagic",
+            "NoMobiles",
+            "NoSummon",
+            "Peaceful",
+            "Soundproof",
+            "OnePerson"
+         ],
+         "zone" : "ancient",
+         "title" : "Meditation Room",
+         "id" : "Anc59",
+         "description" : "\nFaint light coming from the ceiling allows you to see that there's absolutely \nnothing in this room. It is probably made for finding enlightment by \nmeditation. \n\nYou assume the lotus position.\nYou start chanting your mantra.\n",
+         "altitude" : null
+      },
+      "anc27@ancient" : {
+         "exits" : {
+            "e" : "Anc25"
+         },
+         "flags" : [],
+         "zone" : "ancient",
+         "title" : "Ancient Armoury",
+         "id" : "Anc27",
+         "description" : "\nThis little armoury is a good example of the extraordinary architecture \nof this town. Because of the excellent construction, the building is still in \nrather good condition. Several little things have been left on the table \nand the shelves. You examine the room carefully without finding any other \nexits except the one to the east.\n",
+         "altitude" : null
+      },
+      "anc55@ancient" : {
+         "exits" : {
+            "u" : "Anc47"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ancient",
+         "title" : "The Rattler's Treasury",
+         "id" : "Anc55",
+         "description" : "\nThe natives might like snakes and even worship them, but the snake living \nin this dim cellar doesn't much like you. Its' presence reminds you about\nyour mortality and makes you consider whether to leave at once or try to\nslay that rattling thing before you. You suddenly notice that the floor\nis covered with gold items and your natural greed makes you consider the\nthe matter even harder. The snake, however, is guarding these valuables so\nyou can't just take them and leave. It might already be too late to escape\nback up.\n",
+         "altitude" : null
+      },
+      "anc2@ancient" : {
+         "exits" : {
+            "w" : "Anc1",
+            "e" : "Anc3"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Large Clearing",
+         "id" : "Anc2",
+         "description" : "\nYou are standing on a large square-shaped clearing. Pieces of old weapons \nand arrowheads on the ground tell you that the grass over here has once been\nmanured with blood. Nearby to the north you see the San Juan river. Passages \nlead west towards a mountain range and east to a some kind of a street. \n",
+         "altitude" : "1000"
+      },
+      "anc7@ancient" : {
+         "exits" : {
+            "w" : "Anc6",
+            "e" : "Anc8",
+            "u" : "Anc8",
+            "d" : "Anc6"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "ancient",
+         "title" : "Stone Stairs",
+         "id" : "Anc7",
+         "description" : "\nYou are going your way up the temple stairs sweating and panting. Breathing\ndeeply you stop and lean against a statue besides the stairs. Examining the \nstatue more closely, you figure out that the statue is actually a big head of\na snake decorated with stony feathers. The snake has an evil grin on his face \nand you are glad it is not alive. The stairs lead upwards to the top of the\ntemple and down back to the clearing.\n",
+         "altitude" : "950"
+      }
+   },
+   "mob" : {
+      "pacamac@ancient" : {
+         "damage" : "10",
+         "location" : "Anc46",
+         "armor" : "0",
+         "name" : "pacamac",
+         "description" : "Pacamac the town guardsman is blocking your way.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Pacamac",
+         "aggression" : "15",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "rattlesnake@ancient" : {
+         "damage" : "15",
+         "location" : "Anc55",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "pname" : "The rattlesnake",
+         "name" : "rattlesnake",
+         "description" : "The rattlesnake is keeping horrifying noises before you.",
+         "strength" : "150"
+      },
+      "anara@ancient" : {
+         "damage" : "10",
+         "location" : "Anc48",
+         "armor" : "0",
+         "name" : "anara",
+         "description" : "A female servant is cleaning the floor with a broom.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "pname" : "Anara",
+         "aggression" : "0",
+         "pflags" : "{ }"
+      },
+      "cockroach@ancient" : {
+         "damage" : "12",
+         "location" : "Anc42",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "50",
+         "pname" : "The cockroach",
+         "name" : "cockroach",
+         "description" : "A giant cockroach runs around the floor.",
+         "strength" : "150"
+      },
+      "tiny@ancient" : {
+         "damage" : "10",
+         "location" : "Anc18",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "90",
+         "name" : "tiny",
+         "description" : "\nA tiny mosquito before you looks even more energetic than the others.",
+         "strength" : "80"
+      },
+      "old@ancient" : {
+         "damage" : "8",
+         "location" : "Anc18",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "50",
+         "name" : "old",
+         "description" : "An old mosquito is considering attacking you.",
+         "strength" : "60"
+      },
+      "hungry@ancient" : {
+         "damage" : "12",
+         "location" : "Anc18",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "80",
+         "name" : "hungry",
+         "description" : "\nA very hungry mosquito orders a bloody mary (a la you).",
+         "strength" : "50"
+      },
+      "quetzalcoatl@ancient" : {
+         "damage" : "20",
+         "location" : "Anc7",
+         "armor" : "0",
+         "name" : "quetzalcoatl",
+         "description" : "",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "The snake head",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "cuezcon@ancient" : {
+         "damage" : "10",
+         "location" : "Anc46",
+         "armor" : "0",
+         "aggression" : "25",
+         "pname" : "Cuezcon",
+         "name" : "cuezcon",
+         "description" : "A male servant is carrying food to someone.",
+         "strength" : "120"
+      },
+      "mosquito@ancient" : {
+         "damage" : "10",
+         "location" : "Anc18",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "80",
+         "pname" : "The Mosquito",
+         "name" : "mosquito",
+         "description" : "A giant mosquito is thinking no good about you.",
+         "strength" : "60"
+      },
+      "bloodthirsty@ancient" : {
+         "damage" : "8",
+         "location" : "Anc18",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "80",
+         "name" : "bloodthirsty",
+         "description" : "\nA bloodthirsty mosquito thinks your blood would taste good.",
+         "strength" : "60"
+      },
+      "aczuma@ancient" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "10",
+         "location" : "Anc51",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "60",
+         "pname" : "Aczuma",
+         "name" : "aczuma",
+         "description" : "Aczuma the Warlord is practising his spells.",
+         "strength" : "150"
+      },
+      "arantxa@ancient" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "10",
+         "location" : "Anc53",
+         "armor" : "0",
+         "name" : "arantxa",
+         "description" : "\nArantxa the Astronomer is radiating the light of ancient wisdom around her.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "Arantxa",
+         "aggression" : "33",
+         "pflags" : "{ }"
+      },
+      "emperor@ancient" : {
+         "damage" : "10",
+         "location" : "Anc50",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "30",
+         "pname" : "The Emperor",
+         "name" : "emperor",
+         "description" : "The Son of the Sun God is sitting here on his throne.",
+         "strength" : "400"
+      },
+      "bloodyjaws@ancient" : {
+         "damage" : "10",
+         "location" : "Anc44",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "75",
+         "name" : "bloodyjaws",
+         "description" : "\nAnother alligator stares hungrily at you blood in his jaws.",
+         "strength" : "100"
+      },
+      "monolith@ancient" : {
+         "damage" : "10",
+         "location" : "Anc25",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "pname" : "The monolith",
+         "name" : "monolith",
+         "description" : "A huge monolith stands before you black as the night.",
+         "strength" : "250"
+      },
+      "tenoc@ancient" : {
+         "damage" : "8",
+         "location" : "Anc46",
+         "armor" : "0",
+         "name" : "tenoc",
+         "description" : "Tenoc the younger guardsman looks at you curiously.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Tenoc",
+         "aggression" : "10",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "mummy@ancient" : {
+         "damage" : "12",
+         "location" : "Anc22",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "30",
+         "pname" : "The mummy",
+         "name" : "mummy",
+         "description" : "There's something rotten in the corner.",
+         "strength" : "150"
+      },
+      "alligator@ancient" : {
+         "damage" : "10",
+         "location" : "Anc44",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "75",
+         "name" : "alligator",
+         "description" : "A huge alligator thinks you could do as dinner for him.",
+         "strength" : "100"
+      },
+      "mano@ancient" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "Anc54",
+         "armor" : "0",
+         "name" : "mano",
+         "description" : "\nAn evil glance of Mano the Priest nails your boots to the floor.",
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "Mano",
+         "aggression" : "25",
+         "mflags" : [
+            "BarNorth"
+         ]
+      }
+   }
+}

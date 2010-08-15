@@ -1,0 +1,4613 @@
+{
+   "obj" : {
+      "statuette@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:city3",
+         "armor" : "0",
+         "name" : "statuette",
+         "examine" : "It is very beautiful - and very valuable.",
+         "size" : "20",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "1500",
+         "desc[0]" : "An exquisite golden statuette is lying here, untouched by the ravages of time."
+      },
+      "branches@rainforest" : {
+         "desc[1]" : "A tangled mass of branches in the archway blocks the western exit.",
+         "damage" : "0",
+         "location" : "IN_ROOM:city1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "armor" : "0",
+         "name" : "branches",
+         "linked" : "branches2",
+         "size" : "0",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The branches have been hacked away, allowing you to go west."
+      },
+      "machete@rainforest" : {
+         "damage" : "24",
+         "location" : "IN_ROOM:forest17",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "altname" : "knife",
+         "name" : "machete",
+         "examine" : "It would be extremely useful in battle, or for hacking through the jungle.",
+         "size" : "50",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A huge machete has been abandoned on the ground here."
+      },
+      "shield@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:forest117",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "armor" : "65",
+         "name" : "shield",
+         "size" : "80",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A beautifully made and very sturdy shield is lying on the ground."
+      },
+      "egg@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:nest",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "name" : "egg",
+         "examine" : "The egg is newly laid and, disgusting though it may sound, you could eat it.",
+         "size" : "2",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "The egg of a large bird of prey is lying here."
+      },
+      "pendant@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:city4",
+         "oflags" : [
+            "Wearable"
+         ],
+         "armor" : "0",
+         "name" : "pendant",
+         "examine" : "It is heavy and no doubt very valuable.",
+         "size" : "20",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "1500",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "A gorgeous pendant of gold has been left here."
+      },
+      "figs@rainforest" : {
+         "desc[1]" : "A bunch of ripe figs has dropped to the forest floor beneath the tree.",
+         "damage" : "0",
+         "location" : "IN_ROOM:forest90",
+         "oflags" : [
+            "GetFlips",
+            "Food"
+         ],
+         "armor" : "0",
+         "name" : "figs",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A bunch of ripe figs is lying here."
+      },
+      "crown@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:city4",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "15",
+         "name" : "crown",
+         "examine" : "It is made entirely of gold.",
+         "size" : "20",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "1500",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A shining golden crown is lying here."
+      },
+      "skull@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:city3",
+         "armor" : "0",
+         "name" : "skull",
+         "examine" : "It is rather macabre, but definitely a work of art.",
+         "size" : "20",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "1500",
+         "desc[0]" : "A perfect golden model of a human skull is lying here."
+      },
+      "bananas@rainforest" : {
+         "desc[1]" : "A bunch of bananas is hanging low enough for you to reach.",
+         "damage" : "0",
+         "location" : "IN_ROOM:forest96",
+         "oflags" : [
+            "GetFlips",
+            "Food"
+         ],
+         "armor" : "0",
+         "name" : "bananas",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A bunch of lovely ripe bananas is lying here."
+      },
+      "stick@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:nest",
+         "oflags" : [
+            "Lightable",
+            "Extinguish"
+         ],
+         "armor" : "0",
+         "altname" : "twig",
+         "name" : "stick",
+         "examine" : "It is small.  It is a stick.",
+         "size" : "2",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A small stick has been dropped here."
+      },
+      "dagger@rainforest" : {
+         "damage" : "6",
+         "location" : "IN_ROOM:city3",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "name" : "dagger",
+         "examine" : "It may have lain here for centuries.",
+         "size" : "20",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "1500",
+         "desc[0]" : "A sacrificial dagger, made of gold and set with sparkling jewels, lies here."
+      },
+      "gloves@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:rucksack",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "15",
+         "name" : "gloves",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "aflags" : [
+            "Hands"
+         ],
+         "desc[0]" : "A pair of warm gloves lies here."
+      },
+      "flask@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:rucksack",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "3",
+         "altname" : "soup",
+         "name" : "flask",
+         "size" : "4",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A flask containing some cold soup is lying here."
+      },
+      "nest@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:mount17",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "armor" : "0",
+         "name" : "nest",
+         "size" : "50",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A very large bird's nest has been built here."
+      },
+      "porkpie@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:rucksack",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "pie",
+         "name" : "porkpie",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A delicious-looking pork pie is here, and it has not yet gone mouldy."
+      },
+      "feather@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:nest",
+         "armor" : "0",
+         "name" : "feather",
+         "examine" : "It is a thing of great beauty.",
+         "size" : "2",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "1100",
+         "desc[0]" : "A condor's feather has been shed here."
+      },
+      "diary@rainforest" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:explorer",
+         "armor" : "0",
+         "name" : "diary",
+         "examine" : "\nThe diary is old and many of its pages are missing.  As you read it, an\nincredible tale unfolds.  The writer of the diary was part of an expedition\nwhich set out three months ago to find El Dorado, a mythical city which\nsupposedly lies in the great rainforest to the south-east.  The expedition\ncrossed this great mountain range, then descended into the rainforest and set\nout on their ambitious quest.  After some time they had a major disagreement\nand the group split up, one half continuing to battle through the forest while\nthe other built a raft and floated down the river.  The writer of the diary was\nin the party which took the slow route through the jungle.  During weeks of\nfruitless searching the party gradually dwindled, one by one falling victim to\none or other of the jungle's manifold hazards.  When there were only a handful\nleft, they abandoned their quest and attempted to return home.  The final\nentries in the diary are increasingly surreal, and it is plain that the writer\nwas steadily losing his grip on reality.",
+         "size" : "3",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "40",
+         "desc[0]" : "\nA tattered diary has been dropped here."
+      },
+      "rucksack@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:mount8",
+         "oflags" : [
+            "Wearable",
+            "Container",
+            "Armor"
+         ],
+         "armor" : "25",
+         "name" : "rucksack",
+         "size" : "65",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "aflags" : [
+            "Back"
+         ],
+         "desc[0]" : "A capacious mountaineer's rucksack has been left here."
+      },
+      "raft@rainforest" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:forest18",
+         "oflags" : [
+            "Boat"
+         ],
+         "armor" : "0",
+         "altname" : "boat",
+         "name" : "raft",
+         "examine" : "It would be well able to take your weight on the water.",
+         "size" : "250",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "40",
+         "desc[0]" : "A large and well-fashioned raft has been left here."
+      },
+      "branches2@rainforest" : {
+         "desc[1]" : "A tangled mass of branches in the archway blocks the eastern exit.",
+         "damage" : "0",
+         "location" : "IN_ROOM:city2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "armor" : "0",
+         "name" : "branches2",
+         "linked" : "branches",
+         "size" : "0",
+         "state" : "1",
+         "weight" : "0",
+         "pname" : "branches",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The branches have been hacked away, allowing you to go east."
+      }
+   },
+   "loc" : {
+      "forest105@rainforest" : {
+         "exits" : {
+            "e" : "forest107",
+            "s" : "forest103"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Fork",
+         "id" : "forest105",
+         "description" : "\n    The river Malazon joins the Kerapi here and the combined volume of water\ncrawls eastwards toward the sea, the pale waters of the Malazon running side by\nside with the muddy Kerapi for many miles before they completely merge.  You\ncan follow the river east or head south into the forest.\n",
+         "altitude" : null
+      },
+      "mount41@rainforest" : {
+         "exits" : {
+            "u" : "mount40",
+            "d" : "mount42"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount41",
+         "description" : "\n    You are on a long and winding path by which animals and explorers may climb\nfrom the rainforest up into the mountains, or descend from the mountains into\nthe trees.  Whichever way you choose to go, it is a long haul.\n",
+         "altitude" : "5000"
+      },
+      "mount20@rainforest" : {
+         "exits" : {
+            "n" : "mount19"
+         },
+         "flags" : [
+            "Death",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Crossing The Glacier",
+         "id" : "mount20",
+         "description" : "\n    As you make your way across the glacier, the snow collapses!\nYou plummet a hundred feet to the bottom of a deep crevasse, where your remains\nwill never be found...\n",
+         "altitude" : null
+      },
+      "forest2@rainforest" : {
+         "exits" : {
+            "w" : "forest1",
+            "e" : "forest7",
+            "n" : "forest3"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Upper Reaches Of The Rainforest",
+         "id" : "forest2",
+         "description" : "\n    You are entirely surrounded by tall trees with slender trunks which reach\nup high in search of light.  A hundred feet above you they branch out into a\nvast green canopy, blocking out nearly all of the sun's rays.  Long creepers\nand lianas climb the tree trunks, while others hang free to dangle on the\nforest floor.  To the north you hear the rushing of a youthful river.\n",
+         "altitude" : "400"
+      },
+      "forest136@rainforest" : {
+         "exits" : {
+            "w" : "forest132",
+            "n" : "forest131",
+            "s" : "forest137"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Entrance To Fig Forest",
+         "id" : "forest136",
+         "description" : "\n    The forest here is tightly packed, and to the south is a kind of portal\nleading into a dark region of tall strangler figs, living on after their hosts\nhave died.  It is a forbidding place.  To the north and west the forest looks\nconsiderably more friendly.\n",
+         "altitude" : null
+      },
+      "forest55@rainforest" : {
+         "exits" : {
+            "e" : "forest54"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Atop The Rock",
+         "id" : "forest55",
+         "description" : "\n    You are perched on the top of a high rock, a boulder perhaps, brought down\nfrom the mountains in an ancient time of ice when glaciers reached down even to\nthis level.  From this vantage point you can see quite a long way down the\nriver to the east, but unfortunately you are not high enough to see over the\ntops of the trees.  A vertical drop off the rock to the west means that you\nwill have to head back east.\n",
+         "altitude" : null
+      },
+      "forest21@rainforest" : {
+         "exits" : {
+            "e" : "forest19",
+            "n" : "forest20"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Swampy Ground",
+         "id" : "forest21",
+         "description" : "\n    Your feet sink up to the ankles in muddy water.  You are pretty much on a\nlevel with a small river flowing nearby to the south.  A patch of treacherous-\nlooking mud to the west makes you rule out that exit.\n",
+         "altitude" : null
+      },
+      "forest64@rainforest" : {
+         "exits" : {
+            "e" : "forest65",
+            "n" : "forest61"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Inlet",
+         "id" : "forest64",
+         "description" : "\n    You are wading through a small inlet that runs northwards from the edge of\nthe river.  The plantlife in this part of the rainforest is very much geared to\na soggy environment, since there is no dry land in which to find a foothold.\nInstead, slender trees send wide branching roots downwards for many feet,\nburying them deep in the mud for firm anchorage, while their manifold branches\nintermingle with those of their nearest neighbours for additional support.  The\nriver lies to the south and west.\n",
+         "altitude" : null
+      },
+      "forest78@rainforest" : {
+         "exits" : {
+            "w" : "forest77",
+            "e" : "forest81",
+            "s" : "forest82"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "South Bank",
+         "id" : "forest78",
+         "description" : "\n    You are heading along the riverbank, which at this point consists of knee-\ndeep mud into which you squelch with each step.  To the east the land is a\nlittle drier, but in other directions you can just see endless damp swamp.\n",
+         "altitude" : null
+      },
+      "forest60@rainforest" : {
+         "exits" : {
+            "w" : "forest58",
+            "e" : "forest63",
+            "n" : "forest62"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Open Glade",
+         "id" : "forest60",
+         "description" : "\n    You blink as you enter a glade in the forest, where the sudden brightness\ndazzles you for a moment.  You realise how little light penetrates the canopy\nin the heart of the forest around you.  You cannot see a reason for the absence\nof trees in this area, and all around you the trees are plentiful.  To the\nsouth they crowd together so much as to make heading in that direction rather\nimpractical.\n",
+         "altitude" : null
+      },
+      "forest135@rainforest" : {
+         "exits" : {
+            "w" : "city1",
+            "e" : "forest130"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Shadowy Glade",
+         "id" : "forest135",
+         "description" : "\n    You are in a strangely still and quiet glade.  There is no understorey and\nthe canopy is continuous overhead, yet you can hear no sounds of birdsong or\nof insect chatter or of howling monkeys.  The trees to the north and south\npress together so tightly that you can't help feeling you are in an avenue of\nartificial design.\n",
+         "altitude" : null
+      },
+      "forest20@rainforest" : {
+         "exits" : {
+            "e" : "forest17",
+            "s" : "forest21"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Termite Mound",
+         "id" : "forest20",
+         "description" : "\n    You are in a deep part of the forest.  Here termites have built a tall\nmound, partially excavated by a foraging anteater.  The undergrowth is thick to\nthe north and west, so you will have to change direction here.\n",
+         "altitude" : null
+      },
+      "river6@rainforest" : {
+         "exits" : {
+            "w" : "river5",
+            "e" : "river7",
+            "n" : "forest147"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Kerapi",
+         "id" : "river6",
+         "description" : "\n    You are gently cruising on an increasingly wide river.  You are fairly\nclose to the northern shore here, a bend in the river having caused you to\ndrift naturally closer to the shore.  You could beach here if you wish, or you\ncould continue to follow the river in a roughly easterly direction.\n",
+         "altitude" : null
+      },
+      "forest73@rainforest" : {
+         "exits" : {
+            "w" : "forest72"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Tangled Bank",
+         "id" : "forest73",
+         "description" : "\n    You have finally come to an impassable obstruction - a cluster of bushes\ntaking advantage of the increased light at the edge of the trees which\neffectively halts your eastward progress.  You will have to head back the way\nyou came.\n",
+         "altitude" : null
+      },
+      "forest111@rainforest" : {
+         "exits" : {
+            "e" : "forest112",
+            "n" : "forest109"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Entrance To The Indian Village",
+         "id" : "forest111",
+         "description" : "\n    You are in an open part of the forest.  To the east is a motley collection\nof huts made from mud and grass.  You feel the hairs prickle on the back of\nyour neck as thoughts of blowpipes and poison darts fill your imagination.\n",
+         "altitude" : null
+      },
+      "forest95@rainforest" : {
+         "exits" : {
+            "w" : "forest92",
+            "e" : "forest99",
+            "n" : "forest90"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Bank",
+         "id" : "forest95",
+         "description" : "\n    You are on the bank of a small river.  To the east it curves around to the\nsouth, so to go in that direction would mean heading into the jungle.  To the\nwest you can follow the river or you could journey north into the fastnesses\nof the rainforest.\n",
+         "altitude" : null
+      },
+      "mount42@rainforest" : {
+         "exits" : {
+            "u" : "mount41",
+            "n" : "mount43"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount42",
+         "description" : "\n    You are on a long and winding path by which animals and explorers may climb\nfrom the rainforest up into the mountains, or descend from the mountains into\nthe trees.  Whichever way you choose to go, it is a long haul.\n",
+         "altitude" : "4000"
+      },
+      "forest1@rainforest" : {
+         "exits" : {
+            "w" : "mount46",
+            "e" : "forest2",
+            "u" : "mount46"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Edge Of The Rainforest",
+         "id" : "forest1",
+         "description" : "\n    You are at the edge of a vast rainforest spanning thousands of square\nmiles.  Tall trees crowd together to the east, forming a wall of green and\nbrown, behind which lurk all manner of strange creatures.  To the west, leading\nup into the mountains, is a narrow path.\n",
+         "altitude" : "500"
+      },
+      "forest147@rainforest" : {
+         "exits" : {
+            "w" : "forest148",
+            "s" : "river6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Grassy Slope",
+         "id" : "forest147",
+         "description" : "\n    You are on the northern bank of the river, in a wide open area of grass,\ndevoid of trees, which is a refreshing change in this land.  To the west the\nground climbs a little way, and at the top of the slope are a number of huts,\nforming a small village.\n",
+         "altitude" : null
+      },
+      "city1@rainforest" : {
+         "exits" : {
+            "w" : "^branches",
+            "e" : "forest135"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Golden Archway",
+         "id" : "city1",
+         "description" : "\n    You have come upon a high archway made of stone but overlaid with gold leaf\nin some places.  Mostly it has all flaked off but your spirits are undaunted.\nCould this be the secret entrance to the legendary city of El Dorado?  You can\ngo through the archway to the west or head out into the forest to the east.\n",
+         "altitude" : null
+      },
+      "mount26@rainforest" : {
+         "exits" : {
+            "w" : "mount20",
+            "e" : "mount25",
+            "n" : "mount20",
+            "s" : "mount27"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Crossing The Glacier",
+         "id" : "mount26",
+         "description" : "\n    You are in the middle of the glacier.  The ice is solid under your feet and\nyou cast your eyes about for a suitable exit.  You become somewhat nervous when\nyou realise that most routes look equally dangerous.  Perhaps to the east the\nice might be fairly stable.\n",
+         "altitude" : "4300"
+      },
+      "forest27@rainforest" : {
+         "exits" : {
+            "w" : "forest26",
+            "e" : "forest25",
+            "u" : "forest36",
+            "n" : "forest28",
+            "s" : "forest26"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Rainforest",
+         "id" : "forest27",
+         "description" : "\n    You are wandering through the heart of the rainforest.  The density of the\ntrees makes it impossible to continue in a straight line and you wonder whether\nyou might be going round in circles.  There are exits in all directions.\n",
+         "altitude" : null
+      },
+      "forest140@rainforest" : {
+         "exits" : {
+            "w" : "forest140",
+            "e" : "forest138",
+            "n" : "forest139",
+            "s" : "forest141"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Wandering In The Fig Forest",
+         "id" : "forest140",
+         "description" : "\n    You are lost, deep in the fig forest.  The only trees you can see here are\nstrangler figs.  Through some quirk of nature, they have come to completely\ndominate this part of the rainforest and will allow no other trees to grow.\nThere are exits in all directions, though everywhere you look seems to be dark\nand gloomy.\n",
+         "altitude" : null
+      },
+      "forest130@rainforest" : {
+         "exits" : {
+            "w" : "forest135",
+            "e" : "forest134",
+            "n" : "forest126",
+            "s" : "forest131"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Open Forest",
+         "id" : "forest130",
+         "description" : "\n    Here the trees are widely spaced, yet there is very little ground cover.\nThe soil here is very low in nutrients and even the trees have a hard time\nfinding sufficient sustenance in the ground.  There are exits in every\ndirection.\n",
+         "altitude" : null
+      },
+      "forest77@rainforest" : {
+         "exits" : {
+            "w" : "forest80",
+            "e" : "forest78",
+            "n" : "river2",
+            "s" : "forest79"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Southern Bank Of The Malazon",
+         "id" : "forest77",
+         "description" : "\n    You are on the southern bank of the River Malazon, if bank is the right\nword.  There is no dry land to be seen, only a series of soft mudbanks and\npools which are stained brown by tannin from the leaves falling into the water.\nYou can head east or west along the edge of the river proper, or venture south\namong the pools.\n",
+         "altitude" : null
+      },
+      "forest143@rainforest" : {
+         "exits" : {
+            "w" : "forest145",
+            "n" : "forest144",
+            "s" : "river5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Sloping Bank",
+         "id" : "forest143",
+         "description" : "\n    You are on the north bank of the River Kerapi.  A bewildering variety of\ntrees crowd together around you and although you can head off in a couple of\ndirections into the forest, you are not sure if you will be able to get very\nfar before the density of the undergrowth defeats you.\n",
+         "altitude" : null
+      },
+      "forest16@rainforest" : {
+         "exits" : {
+            "w" : "forest14",
+            "e" : "forest18",
+            "n" : "river1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Slippery Bank",
+         "id" : "forest16",
+         "description" : "\n    You take care to keep away from the edge here, for the bank of the river\nis muddy and you fear piranhas.  The river is wide at this point, too wide to\nswim across, so unless you have a boat you will have to continue along the bank\neither east or west from here.\n",
+         "altitude" : null
+      },
+      "forest117@rainforest" : {
+         "exits" : {
+            "n" : "forest115"
+         },
+         "flags" : [],
+         "zone" : "rainforest",
+         "title" : "Craftsman's Hut",
+         "id" : "forest117",
+         "description" : "\n    This is obviously the hut of the village's craftsman.  Scattered about on\nthe floor are the tools of his trade, and along the walls are arrayed his work,\nincluding spear-heads, blowpipes, pots and other items useful to a thriving\nforest community.\n",
+         "altitude" : null
+      },
+      "forest116@rainforest" : {
+         "exits" : {
+            "s" : "forest115"
+         },
+         "flags" : [],
+         "zone" : "rainforest",
+         "title" : "Chief's Hut",
+         "id" : "forest116",
+         "description" : "\n    This is the largest and most impressive hut.  In rows on the floor next to\nthe walls are gifts which the villagers have made for him: pots and bowls\nfashioned from clay and baked hard in the hot sun.  Garlands hang from the\nwalls and the obligatory shrunken heads are also features.\n",
+         "altitude" : null
+      },
+      "river7@rainforest" : {
+         "exits" : {
+            "w" : "river9",
+            "e" : "river8",
+            "n" : "river6",
+            "s" : "river10"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Midstream",
+         "id" : "river7",
+         "description" : "\n    You are in the middle of the river.  Here it is very wide indeed, perhaps\nhalf a mile from bank to bank.  The river is flowing from north to south at\nthis point, having just swung around a long bend.  Further south it bends again\nand resumes its eastward course.\n",
+         "altitude" : null
+      },
+      "mount4@rainforest" : {
+         "exits" : {
+            "w" : "mount5",
+            "d" : "mount3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Above The Ledge",
+         "id" : "mount4",
+         "description" : "\n    The rocks here are sharp and small, yet they seem to be firmly attached and\nprovide useful steps for you to plot a safe course.  Below you is a narrow\nledge which you should be able to reach without too much trouble, although once\nthere you would not be able to return to this point.  To the west a steep slope\nleads down into a gully.\n",
+         "altitude" : "1400"
+      },
+      "forest107@rainforest" : {
+         "exits" : {
+            "w" : "forest105",
+            "e" : "forest108",
+            "n" : "river3",
+            "s" : "forest106"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Muddy Spit",
+         "id" : "forest107",
+         "description" : "\n    A more unattractive name for a location you could not imagine, yet that is\nwhat you are standing upon - a short spit of hard-packed mud into which you\nsink only a little.  It extends out into the river for a few yards before\ndipping beneath the surface.  Whether it has built up over a fallen tree, long\nsubmerged, you have no idea, but it is certainly a product of natural rather\nthan human effort.\n",
+         "altitude" : null
+      },
+      "forest11@rainforest" : {
+         "exits" : {
+            "w" : "forest9",
+            "e" : "forest12",
+            "s" : "forest10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Bank Of The Roaring River",
+         "id" : "forest11",
+         "description" : "\n    You are careful not to get too close to the river's edge at this point, for\nthe water is so violent that its limits are not constant, and every so often a\nsudden surge washes over the rocks on the river bank.  At this point the river\nis descending in fits and bursts, yet to the east it seems to disappear over\nthe edge of a cliff.\n",
+         "altitude" : "200"
+      },
+      "forest120@rainforest" : {
+         "exits" : {
+            "e" : "forest123",
+            "n" : "forest121",
+            "s" : "forest118"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Rainforest's Heart",
+         "id" : "forest120",
+         "description" : "\n    You are in a deep part of the rainforest.  Hardwoods of varying sizes climb\nup to the canopy here, some breaking through to better harvest the light.  One\nvariety appears to have strange knobbly spikes sticking out of its trunk,\ngiving it a peculiar prickly appearance.  The undergrowth is too thick to the\nwest for you to progress in that direction, but on all other sides the way is\nclear.\n",
+         "altitude" : null
+      },
+      "forest6@rainforest" : {
+         "exits" : {
+            "e" : "forest5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Churning Pool",
+         "id" : "forest6",
+         "description" : "\n    A small waterfall crashes down here into a pool, making the water froth and\nchurn.  A few rounded rocks, smoothed by continuous erosion, stick out of the\nwater to form resting spots for the torrent ducks.  You struggle to keep your\nfeet steady against the undertow.\n",
+         "altitude" : "400"
+      },
+      "mount16@rainforest" : {
+         "exits" : {
+            "e" : "mount18",
+            "u" : "mount17",
+            "d" : "mount15"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Cold Shoulder",
+         "id" : "mount16",
+         "description" : "\n    You are standing on the side of Mount Doragua, atop a shoulder of the\nmountain, from where you have a good view of most of the range.  The view to\nthe south and west is blocked by the massive bulk of the mountain you are on,\nbut you could no doubt see more if you climbed higher.  However, you realise\nthat higher up the air will be even colder and you are reluctant to risk\nhypothermia.\n",
+         "altitude" : "4000"
+      },
+      "mount18@rainforest" : {
+         "exits" : {
+            "w" : "mount16",
+            "d" : "mount19",
+            "s" : "mount19"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Windswept Ridge",
+         "id" : "mount18",
+         "description" : "\n    You are standing on top of a ridge which continues west from here.  At this\npoint it is not too sharp for you to negotiate, but to the east it becomes a\nknife edge which you do not even consider as a possible route.  Nor do you\ncontemplate climbing down the almost vertical drop to the north.  To the south\nthe slope is more manageable, although your heart still pounds when you look\nover the edge.  A much safer option would be to head back west.\n",
+         "altitude" : "4500"
+      },
+      "forest88@rainforest" : {
+         "exits" : {
+            "e" : "forest83"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Before The Quicksand",
+         "id" : "forest88",
+         "description" : "\n    You almost put your foot into a patch of quicksand but notice it just in\ntime.  Testing it carefully with a stick, you assess the size of the area and\nreluctantly conclude that it would be unwise to attempt further progress in\nthis direction.\n",
+         "altitude" : null
+      },
+      "forest15@rainforest" : {
+         "exits" : {
+            "n" : "forest13",
+            "s" : "forest17"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "The Rainforest",
+         "id" : "forest15",
+         "description" : "\n    You are deep in the rainforest.  The distant roar of a waterfall to the\nnorth still fills your ears, but you can hear other sounds too: the whooping of\nmonkeys, the raucous cries of parakeets, and the sibilant chatter of myriad\ninsects.\n",
+         "altitude" : null
+      },
+      "forest7@rainforest" : {
+         "exits" : {
+            "w" : "forest2",
+            "e" : "forest8"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Upper Reaches Of The Rainforest",
+         "id" : "forest7",
+         "description" : "\n    You are in the foothills of the great mountains to the west, making your\nway among hundreds of tall trees.  To the north, not far away through the\ntrees, you can hear the roaring of an energetic river.  However the undergrowth\nin that direction is too thick to penetrate.\n",
+         "altitude" : "400"
+      },
+      "forest104@rainforest" : {
+         "exits" : {
+            "w" : "forest101",
+            "n" : "forest100"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Ancient Structure",
+         "id" : "forest104",
+         "description" : "\n    You are standing before a high stone wall, overgrown with creeping plants.\nIt is a relic of an ancient civilisation, though judging from the rather poor\nquality of the workmanship the race that built it were not THAT civilised...\nHowever it is a comforting sign of a human presence in this vast and mainly\nunexplored forest.  It blocks your way south and east.\n",
+         "altitude" : null
+      },
+      "forest93@rainforest" : {
+         "exits" : {
+            "w" : "forest89",
+            "e" : "forest97",
+            "s" : "forest98"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Sheltered Cove",
+         "id" : "forest93",
+         "description" : "\n    The shore here curves inwards in a small arc, forming a bay in which the\nwater is of uniform depth.  If it weren't so muddy you might consider having\na paddle, but the thought of vicious piranhas dissuades you.  You can head east\nor west along the river bank or south into the forest.\n",
+         "altitude" : null
+      },
+      "river8@rainforest" : {
+         "exits" : {
+            "w" : "river7",
+            "n" : "river6",
+            "s" : "river11"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "By The Eastern Bank",
+         "id" : "river8",
+         "description" : "\n    You are near to the bank of the river.  The bushes on the shore are quite\nclose and you think you can see movement among them.  You can head up or down\nthe river, or west back into midstream.\n",
+         "altitude" : null
+      },
+      "forest23@rainforest" : {
+         "exits" : {
+            "w" : "forest22",
+            "e" : "forest24",
+            "u" : "forest32",
+            "n" : "forest22",
+            "s" : "forest23"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Rainforest",
+         "id" : "forest23",
+         "description" : "\n    You are wandering through the heart of the rainforest.  The density of the\ntrees makes it impossible to continue in a straight line and you wonder whether\nyou might be going round in circles.  There are exits in all directions.\n",
+         "altitude" : null
+      },
+      "mount32@rainforest" : {
+         "exits" : {
+            "e" : "mount31",
+            "n" : "mount30"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Snowfield",
+         "id" : "mount32",
+         "description" : "\n    The snow is less deep here at the edge of the snowfield.  West of here the\nsteep sides of one of the taller peaks, smooth and unclimbable, rise into the\nclouds.  Far above your head a condor circles, riding the updrafts as it scans\nthe ground in search of prey.\n",
+         "altitude" : "12200"
+      },
+      "mount38@rainforest" : {
+         "exits" : {
+            "d" : "mount39",
+            "s" : "mount37"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount38",
+         "description" : "\n    You are on a long and winding path by which animals and explorers may climb\nfrom the rainforest up into the mountains, or descend from the mountains into\nthe trees.  Whichever way you choose to go, it is a long haul.\n",
+         "altitude" : "8000"
+      },
+      "forest94@rainforest" : {
+         "exits" : {
+            "w" : "forest90",
+            "n" : "forest98"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Heart Of The Rainforest",
+         "id" : "forest94",
+         "description" : "\n    The forest floor here is clear, and the thin layer of leaf litter firm\nunder your feet.  In the subpolar forests a pine needle may take seven years to\ndecay; a fallen oak leaf in a temperate forest will disappear in a year or so,\nyet in these humid conditions any leaf that falls will have completely rotted\naway within six weeks.  As you study the leaf litter you see thousands of tiny\nfungi toiling at the process of decay.\n",
+         "altitude" : null
+      },
+      "forest47@rainforest" : {
+         "exits" : {
+            "w" : "forest44",
+            "e" : "forest49",
+            "n" : "forest48"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Entrance To The Burrow",
+         "id" : "forest47",
+         "description" : "\n    You are in a relatively open part of the forest.  The canopy overhead is\nparticularly thick and, perhaps because of this, the ground is fairly free of\nground plants.  There is a burrow here, about eighteen inches across, and you\nwonder what kind of animal might have made it.\n",
+         "altitude" : null
+      },
+      "forest5@rainforest" : {
+         "exits" : {
+            "w" : "forest4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Weed-Covered Rock",
+         "id" : "forest5",
+         "description" : "\n    You are perched on the top of a wet rock which is covered in green weed,\nwhich trails out beyond the edge of rock in the direction of flow.  Here and\nthere in the water and on the other rocks you see ducks swimming underwater or\nclimbing out or plunging into the river.\n",
+         "altitude" : "400"
+      },
+      "forest101@rainforest" : {
+         "exits" : {
+            "w" : "forest98",
+            "e" : "forest104"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Kapok Avenue",
+         "id" : "forest101",
+         "description" : "\n    You are in a curious arrangement of trees: an avenue running from east to\nwest.  On either side of the avenue are tall kapok trees which reach high above\nthe canopy, collecting a great deal of the sun's light.  Why they have grown in\nsuch a fashion though is a mystery.  It does not seem to be have occurred\nnaturally.  But if somebody planted them, then whom?  And why?\n",
+         "altitude" : null
+      },
+      "mount19@rainforest" : {
+         "exits" : {
+            "w" : "mount21",
+            "e" : "mount23",
+            "u" : "mount18",
+            "s" : "mount20"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Edge Of The Glacier",
+         "id" : "mount19",
+         "description" : "\n    A vast river of ice is flowing past you to the south.  You are on the\nmoraine at the edge of the glacier, a long trail of small rocks which forms a\nkind of path running east and west along the glacier.  Following it would seem\nto be a more sensible option than attempting a crossing here, for the surface\nof the glacier is pitted with treacherous crevasses overlaid with deceptive\ncoverings of snow.\n",
+         "altitude" : "4300"
+      },
+      "forest91@rainforest" : {
+         "exits" : {
+            "w" : "forest87",
+            "n" : "forest86"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Shallow Tributary",
+         "id" : "forest91",
+         "description" : "\n    You are up to your knees in the water.  From here you can go west past the\ntangled bush, or you could head north back on to the shore.  You are keen to\nget out fairly soon, for you spy dark shapes beneath the surface a little\nfurther out in the river.\n",
+         "altitude" : null
+      },
+      "current1@rainforest" : {
+         "exits" : {
+            "n" : "current2"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Cold Current",
+         "id" : "current1",
+         "description" : "\n    You find yourself caught up in a strong current which is sweeping up from\nthe southern polar regions.  You are powerless to prevent yourself being\ncarried northwards at considerable speed.  To the west the trees pass by in an\nendless procession, and you begin to appreciate the vast size of it.\n",
+         "altitude" : null
+      },
+      "forest13@rainforest" : {
+         "exits" : {
+            "e" : "forest14",
+            "u" : "forest12",
+            "s" : "forest15"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof"
+         ],
+         "zone" : "rainforest",
+         "title" : "Soaked By Spray",
+         "id" : "forest13",
+         "description" : "\n    At the bottom of the waterfall the noise is terrific and you cover your\nears to protect them.  You quickly become soaked with the spray from the river\nand resolve to hasten out of this area forthwith.  To the south you could head\ninto the forest, or you could follow the river as it wends its way east.\n",
+         "altitude" : null
+      },
+      "current2@rainforest" : {
+         "exits" : {
+            "n" : "2@sea"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Carried Northward",
+         "id" : "current2",
+         "description" : "\n    You inevitably come to the end of the trees and then pass by a succession\nof varied shorelines, the climate gradually becoming more and more temperate.\nAfter what seems like an age, you begin to spot familiar landmarks.  Over to\nthe northwest is the volcano Mount Bandilbar, presiding over a verdant\nlandscape.  As you slowly draw level with it you see the mountains surrounding\nthe blizzard pass and, closer to you, the long stretch of shoreline to the east\nof the village.  Ramshackle but comfortingly familiar, the Old Seadog looms\ncloser and you sigh as you finally feel you have come home at last.  The cold\nsouthern current is now so weak as to be unnoticeable, and only your momentum\ncarries you the last half mile to the waters just east of the jetty.\n",
+         "altitude" : null
+      },
+      "city5@rainforest" : {
+         "exits" : {
+            "e" : "city2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Golden Statue",
+         "id" : "city5",
+         "description" : "\n    This is obviously the image of one of the great kings of El Dorado.  Tall\nhe stands, with a cruel smile on his lips.  The elements have done little to\ntouch this piece, since it is made of solid gold.  Such a prize would make you\nwealthy beyond your wildest dreams, if you could carry it away.  Unfortunately\nyou realise it must weigh several tonnes and moving it would be impossible.\n",
+         "altitude" : null
+      },
+      "forest26@rainforest" : {
+         "exits" : {
+            "w" : "forest27",
+            "e" : "forest24",
+            "u" : "forest35",
+            "n" : "forest26",
+            "s" : "forest22"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Rainforest",
+         "id" : "forest26",
+         "description" : "\n    You are wandering through the heart of the rainforest.  The density of the\ntrees makes it impossible to continue in a straight line and you wonder whether\nyou might be going round in circles.  There are exits in all directions.\n",
+         "altitude" : null
+      },
+      "mount39@rainforest" : {
+         "exits" : {
+            "u" : "mount38",
+            "s" : "mount40"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount39",
+         "description" : "\n    You are on a long and winding path by which animals and explorers may climb\nfrom the rainforest up into the mountains, or descend from the mountains into\nthe trees.  Whichever way you choose to go, it is a long haul.\n",
+         "altitude" : "7000"
+      },
+      "forest132@rainforest" : {
+         "exits" : {
+            "e" : "forest136",
+            "n" : "forest127"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Bones",
+         "id" : "forest132",
+         "description" : "\n    You are making your way through a thick patch of undergrowth.  There is a\ncontinuous crunching sound beneath your feet and with distaste you realise that\nyou are walking on a layer of dry bones.  Whether or not they are human you\nscarcely dare to find out.\n",
+         "altitude" : null
+      },
+      "forest56@rainforest" : {
+         "exits" : {
+            "e" : "forest58",
+            "s" : "forest54"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Thick Forest",
+         "id" : "forest56",
+         "description" : "\n    This is a very thick part of the forest.  The trees are not noticeably\ncloser together, but their foliage is less dense and thus more light reaches\nthe ground here than did in the forest across the river.  The effect of this is\nthat the undergrowth flourishes, producing vast and rambling forms that\nobstruct you at every turn.  To the south the way back to the river is easy\nenough, while to the east you think you can manage to squeeze through the\nbushes.\n",
+         "altitude" : null
+      },
+      "forest39@rainforest" : {
+         "exits" : {
+            "w" : "forest38",
+            "n" : "forest33",
+            "d" : "forest30",
+            "s" : "forest36"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Canopy",
+         "id" : "forest39",
+         "description" : "\n    You are up in the canopy.  Here on the spreading branches many plants make\ntheir home which you would normally think of as belonging on the ground.\nOrchids and other epiphytes make use of their hosts in order to catch the sun's\nrays which are too rare on the dim forest floor below.  You can descend to the\nground or move across the branches into another tree.\n",
+         "altitude" : null
+      },
+      "forest118@rainforest" : {
+         "exits" : {
+            "w" : "forest115",
+            "e" : "forest119",
+            "n" : "forest120"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Tuneful Forest",
+         "id" : "forest118",
+         "description" : "\n    The song of the musician wren fills the air here, haunting you with its\nenchanting melody.  You cannot see the singer, but judge it must be somewhere\nup in the canopy, concealed by the copious greenery.  The ground here is dry\nand you can see no sign of any rivers.\n",
+         "altitude" : null
+      },
+      "river2@rainforest" : {
+         "exits" : {
+            "e" : "river4",
+            "n" : "forest19",
+            "s" : "forest77"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Malazon",
+         "id" : "river2",
+         "description" : "\n    The water here is stained the colour of tea by the tannin from the leaves\nfalling into it from the trees above.  The water is shallow and flowing fairly\nslowly so you do not immediately get washed downstream and can decide whether\nyou wish to clamber ashore to the north or south.\n",
+         "altitude" : null
+      },
+      "forest85@rainforest" : {
+         "exits" : {
+            "w" : "forest81",
+            "n" : "forest89",
+            "s" : "forest90"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Bell Bird's Territory",
+         "id" : "forest85",
+         "description" : "\n    You are deep within the rainforest.  As you pause here you become aware of\nan at first intriguing, then after a while intensely annoying, sound.  It\nsounds as if an anvil is repeatedly being struck by an hammer.  The noise is the\ncall of the bell bird, and it will happily spend all day sitting on its branch\nhigh above you doing nothing else but make this strange sound.  After a short\ntime it begins to irritate you and you become keen to move on.\n",
+         "altitude" : null
+      },
+      "mount46@rainforest" : {
+         "exits" : {
+            "w" : "mount45",
+            "e" : "forest1",
+            "u" : "mount45",
+            "d" : "forest1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Above The Rainforest",
+         "id" : "mount46",
+         "description" : "\n    You are on a narrow stony path which climbs out of the trees to the east\nand heads up into the dizzy heights of the mountains to the west of you.  Many\nshrubs and tall grasses line the sides of the path, but further up you can see\nthe vegetation becoming less plentiful.\n",
+         "altitude" : "700"
+      },
+      "forest59@rainforest" : {
+         "exits" : {
+            "w" : "forest57",
+            "e" : "forest61"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Swampy Ground",
+         "id" : "forest59",
+         "description" : "\n    Here the ground dips a little, and you find yourself splashing through\nwater which comes halfway up your shins.  The going is slow, and every time you\nlift up a foot, it breaks free of the water with a sucking noise - there is mud\nbeneath.  Looking east you can see more of the same kind of ground, but it is\ndrier to the west.\n",
+         "altitude" : null
+      },
+      "river1@rainforest" : {
+         "exits" : {
+            "e" : "river3"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Kerapi",
+         "id" : "river1",
+         "description" : "\n    You are floating on the river Kerapi.  On either side of you are tree-lined\nbanks, fairly close to each other at this point.  The water is pale brown with\nchurned-up mud and flows swiftly downstream, carrying you with it.  There is no\nway that you will be able to head upstream, so you will have to accept your\nfate.\n",
+         "altitude" : null
+      },
+      "mount35@rainforest" : {
+         "exits" : {
+            "u" : "mount34",
+            "s" : "mount36"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount35",
+         "description" : "\n    You are on a long and winding path by which animals and explorers may climb\nfrom the rainforest up into the mountains, or descend from the mountains into\nthe trees.  Whichever way you choose to go, it is a long haul.\n",
+         "altitude" : "11000"
+      },
+      "forest113@rainforest" : {
+         "exits" : {
+            "s" : "forest112"
+         },
+         "flags" : [],
+         "zone" : "rainforest",
+         "title" : "Medicine Man's Hut",
+         "id" : "forest113",
+         "description" : "\n    You are in a well-decorated hut, the walls of which are festooned with\nshrunken heads and various forest herbs.  This is no doubt the hut of the\ntribe's medicine man, and you can sense an evil aura about it.  The only exit\nis through the door to the south.\n",
+         "altitude" : null
+      },
+      "forest106@rainforest" : {
+         "exits" : {
+            "w" : "forest103",
+            "n" : "forest107"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Grass",
+         "id" : "forest106",
+         "description" : "\n    You are in a patch of tall grass by the side of a small knoll.  There are\ntrees to the east and south, so dense as to block your way, but none above you\nso you have a clear view of the sky, not a common sight in the forest.  To the\nnorth is the river.\n",
+         "altitude" : null
+      },
+      "forest12@rainforest" : {
+         "exits" : {
+            "w" : "forest11",
+            "d" : "forest13"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Waterfall",
+         "id" : "forest12",
+         "description" : "\n    You are at the top of a cliff, where the Kerapi river pours over the brink\nand drops in one unbroken waterfall down a full five hundred feet to crash in\nhuge clouds of spray at the bottom, whence it calms down and begins to crawl\neastward at a far more leisurely pace.\n",
+         "altitude" : "150"
+      },
+      "forest14@rainforest" : {
+         "exits" : {
+            "w" : "forest13",
+            "e" : "forest16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Southern River Bank",
+         "id" : "forest14",
+         "description" : "\n    In stark contrast to the fury and energy of the waterfall to the west, this\nspot is very peaceful.  The river here is flat and unbroken by rocks, although\ndebris from the foothills can be seen floating by here and there.  The flow is\nfairly swift, but calm and smooth, and you feel yourself relaxing under its\nsoothing influence.\n",
+         "altitude" : null
+      },
+      "forest48@rainforest" : {
+         "exits" : {
+            "w" : "forest46",
+            "e" : "forest50",
+            "s" : "forest47"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Insects' Deathtrap",
+         "id" : "forest48",
+         "description" : "\n    Between two bushes here a large spider's web is stretched.  When you tug\ngently on one of the strands, a pair of very large, very hairy legs appears\nfrom within one of the bushes.  You hastily withdraw your hand and, after a\nshort while, the legs retreat.  You then notice a number of packages, cocooned\nin silk, and you marvel at the size of them, then reflect on the size of their\nnemesis.  To the east you see a glint of water.\n",
+         "altitude" : null
+      },
+      "forest58@rainforest" : {
+         "exits" : {
+            "w" : "forest56",
+            "e" : "forest60",
+            "s" : "forest57"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Forgotten Meander",
+         "id" : "forest58",
+         "description" : "\n    You are standing beside a narrow arc of water which does not appear to be\nconnected to the river at all.  Here it stagnates, once the outer edge of a\nwide loop of the river, now left behind by the constant shifting of the banks.\nOne day, maybe, the river will reclaim it, but for now it serves little purpose\nother than to bar your way north.\n",
+         "altitude" : null
+      },
+      "river5@rainforest" : {
+         "exits" : {
+            "w" : "river3",
+            "e" : "river6",
+            "n" : "forest143",
+            "s" : "forest121"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Kerapi",
+         "id" : "river5",
+         "description" : "\n    You are floating down the middle of the river, following its meanders with\ngreat ease.  With a great deal of effort you may be able to paddle back\nupstream since the water is not flowing very swiftly at this point.  The river\nis very wide, but you could gain the shore to north or south if you wish.\n",
+         "altitude" : null
+      },
+      "mount44@rainforest" : {
+         "exits" : {
+            "e" : "mount45",
+            "u" : "mount43",
+            "d" : "mount45"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount44",
+         "description" : "\n    You are on the path, a few hundred feet above the tops of the trees.  Above\nyou the path seems to continue endlessly up and up into the clouds, winding\nback and forth as it ascends steeply.  Below you it levels off a bit and heads\neast in what is almost a straight line.\n",
+         "altitude" : "2000"
+      },
+      "city4@rainforest" : {
+         "exits" : {
+            "n" : "city2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Golden Palace",
+         "id" : "city4",
+         "description" : "\n    The roof of the palace, unfortunately, has caved in under centuries of\nbattling against the elements.  However, there is much here to please the eye\nand you spend some time looking around the wonderful statues and wall carvings,\nmany of which are either of solid gold or covered with gold leaf.  This was\nonce an unbelievably opulent race and you wonder what can have happened to\nbring it to such an end.\n",
+         "altitude" : null
+      },
+      "forest102@rainforest" : {
+         "exits" : {
+            "n" : "forest99"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "The Bank",
+         "id" : "forest102",
+         "description" : "\n    You are on the bank of the river once more.  This tributary moves past you\nsluggishly, despite being free of mud.  A disturbance in the water in the\nmiddle of the stream cautions you against wading out just here.\n",
+         "altitude" : null
+      },
+      "forest89@rainforest" : {
+         "exits" : {
+            "e" : "forest93",
+            "s" : "forest85"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Shore",
+         "id" : "forest89",
+         "description" : "\n    You are on the southern bank of the river Malazon.  Small water-loving\ntrees grow here, overhanging the river, and you linger beneath their balmy\nboughs.  You can follow the bank to the east or head south into the forest.\n",
+         "altitude" : null
+      },
+      "mount2@rainforest" : {
+         "exits" : {
+            "w" : "mount3",
+            "n" : "mount1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Crumbling Ledge",
+         "id" : "mount2",
+         "description" : "\n    Several times here the rock gives under your feet, and you cling to the\nrockface in alarm.  But somehow you manage to stay on the ledge long enough to\ntake stock of your surroundings and ponder which way to go.  The path bends\nhere, heading north in one direction and in the other curving round to the\nwest, following the mountainside and descending slightly.\n",
+         "altitude" : "1300"
+      },
+      "river10@rainforest" : {
+         "exits" : {
+            "w" : "river7",
+            "e" : "river13",
+            "n" : "river11",
+            "s" : "river12"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Midstream",
+         "id" : "river10",
+         "description" : "\n    You are in the middle of the river.  Since the influx of more tributaries,\nboth large and small, the expanse of water has grown staggeringly wide.  To the\nnorth and south the banks seem dim and distant.  You can go in any direction.\n",
+         "altitude" : null
+      },
+      "forest128@rainforest" : {
+         "exits" : {
+            "s" : "forest126"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Small Hut",
+         "id" : "forest128",
+         "description" : "\n    This small hut has been abandoned for some time.  So far from the nearest\nvillage, it seems to serve no purpose but, sheltered from the elements by the\noverhanging trees, it will probably remain here untouched for a long time,\nunless the forest birds use the straw roof as nesting material.\n",
+         "altitude" : null
+      },
+      "forest103@rainforest" : {
+         "exits" : {
+            "w" : "forest100",
+            "e" : "forest106",
+            "n" : "forest105"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Grass Knoll",
+         "id" : "forest103",
+         "description" : "\n    You are on a little knoll in a clearing, upon which is growing tall grass\nwith blades reaching higher than your head.  You take care not to brush against\nthem for their edges are razor-sharp.  To the north, down a short slope, is the\nriver.\n",
+         "altitude" : null
+      },
+      "forest35@rainforest" : {
+         "exits" : {
+            "w" : "forest34",
+            "e" : "forest36",
+            "n" : "forest38",
+            "d" : "forest26"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Canopy",
+         "id" : "forest35",
+         "description" : "\n    You are up in the canopy.  Here on the spreading branches many plants make\ntheir home which you would normally think of as belonging on the ground.\nOrchids and other epiphytes make use of their hosts in order to catch the sun's\nrays which are too rare on the dim forest floor below.  You can descend to the\nground or move across the branches into another tree.\n",
+         "altitude" : null
+      },
+      "city3@rainforest" : {
+         "exits" : {
+            "s" : "city2"
+         },
+         "flags" : [],
+         "zone" : "rainforest",
+         "title" : "Golden Temple",
+         "id" : "city3",
+         "description" : "\n    The temple is truly beautiful inside.  Much of the splendour has of course\nbeen looted in the past, but what remains still impresses you with its glory.\nCarven godly images stand along the walls and nestle within alcoves while at\nthe front a sacrificial altar, though arousing your distaste, still contrives\nto instil in you a grudging admiration at its design.  The only exit is to the\nsouth.\n",
+         "altitude" : null
+      },
+      "forest62@rainforest" : {
+         "exits" : {
+            "s" : "forest60"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Thicket",
+         "id" : "forest62",
+         "description" : "\n    You are in the middle of a dense thicket.  There is a faint smell of honey\nin the air and you notice bees swarming around a hole in one of the tree trunks\nhere.  The odour makes your mouth water but you are acutely aware that you are\nin killer bee country and you dare not risk upsetting these creatures.\n",
+         "altitude" : null
+      },
+      "forest28@rainforest" : {
+         "exits" : {
+            "w" : "forest26",
+            "e" : "forest29",
+            "u" : "forest37",
+            "n" : "forest25",
+            "s" : "forest24"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Rainforest",
+         "id" : "forest28",
+         "description" : "\n    You are wandering through the heart of the rainforest.  The density of the\ntrees makes it impossible to continue in a straight line and you wonder whether\nyou might be going round in circles.  There are exits in all directions.\n",
+         "altitude" : null
+      },
+      "mount1@rainforest" : {
+         "exits" : {
+            "n" : "Anc1@ancient",
+            "s" : "mount2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Skirting The Mountainside",
+         "id" : "mount1",
+         "description" : "\n    You are traversing a treacherous slope, following a narrow path which runs\nsouth from here.  Further south it looks dangerously crumbly, but to the north\nis surer ground.\n",
+         "altitude" : "1300"
+      },
+      "forest98@rainforest" : {
+         "exits" : {
+            "e" : "forest101",
+            "n" : "forest93",
+            "s" : "forest94"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep Forest",
+         "id" : "forest98",
+         "description" : "\n    You are in an open part of the forest.  Far above your head the canopy\nforms a roof through which only a small proportion of the sun's light\npenetrates.  Much closer to the ground is the understorey, comprising short\nsaplings and palms which are adapted to the dim light conditions.  You can go\nanywhere except west, where a tall buttress-rooted kapok blocks your way.\n",
+         "altitude" : null
+      },
+      "mount22@rainforest" : {
+         "exits" : {
+            "e" : "mount21"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "End Of The Moraine",
+         "id" : "mount22",
+         "description" : "\n    You cannot proceed further along this moraine, for here the glacier bends\naround to the south and you are on the outer edge of the bend where the glacier\nis stretched and cracked into countless crevasses.  A crossing at this point\nwould be well nigh suicidal.\n",
+         "altitude" : "4300"
+      },
+      "forest40@rainforest" : {
+         "exits" : {
+            "d" : "forest31"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Topmost Branches",
+         "id" : "forest40",
+         "description" : "\n    You are in the uppermost branches of one of the taller trees in the\nrainforest, looking out over the vast spread of the canopy which stretches out\nto the horizon in all directions but to the west, where tall mountains and\nsnow-capped volcanos rise up from the forests to touch the clouds.  The next\ntree is too far away for you to reach, so the only way from here is down.\n",
+         "altitude" : null
+      },
+      "forest124@rainforest" : {
+         "exits" : {
+            "w" : "forest123"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Among The Fruit Trees",
+         "id" : "forest124",
+         "description" : "\n    It is hard to tell where the roots end and the trunks begin, or indeed\nwhich of the twisting lengths of wood are trunks and which are branches.  A\ndisordered array of woody material clambers up, down and sideways, making your\nprogress very difficult.  Eventually you realise you will have to concede\ndefeat and head back west.\n",
+         "altitude" : null
+      },
+      "forest69@rainforest" : {
+         "exits" : {
+            "w" : "forest67",
+            "n" : "forest68",
+            "s" : "forest70"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "By The Pool",
+         "id" : "forest69",
+         "description" : "\n    You are standing by the side of yet another secluded pool.  You catch a\nglimpse of a turtle's smooth shell disappearing beneath the surface of the\nwater, and one or two silvery flashes betray the presence of small fish in the\nshallows.  The pool lies to the east but you can go in any other direction.\n",
+         "altitude" : null
+      },
+      "forest71@rainforest" : {
+         "exits" : {
+            "w" : "forest70",
+            "e" : "forest72",
+            "s" : "river3"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Overgrown Bank",
+         "id" : "forest71",
+         "description" : "\n    As you proceed along the bank of the river you find your way hampered by\ntangled shrubs which grow from the top of the bank and tumble straggling into\nthe water.  You can follow the river bank east and west from here.\n",
+         "altitude" : null
+      },
+      "forest138@rainforest" : {
+         "exits" : {
+            "w" : "forest139",
+            "e" : "forest137",
+            "n" : "forest138",
+            "s" : "forest139"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Lost In The Fig Forest",
+         "id" : "forest138",
+         "description" : "\n    You are lost, deep in the fig forest.  The only trees you can see here are\nstrangler figs.  Through some quirk of nature, they have come to completely\ndominate this part of the rainforest and will allow no other trees to grow.\nThere are exits in all directions, though everywhere you look seems to be dark\nand gloomy.\n",
+         "altitude" : null
+      },
+      "forest122@rainforest" : {
+         "exits" : {
+            "w" : "forest121",
+            "s" : "forest123"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Inlet",
+         "id" : "forest122",
+         "description" : "\n    The bank ends suddenly here, cut through by a long inlet that runs through\nthe trees to the south.  Crossing it would be almost impossible, since it is\nriddled with tree roots and trunks growing up from the mud at the bottom of the\ninlet.  You can turn south along the bank of the inlet or head west along the\nriver bank.\n",
+         "altitude" : null
+      },
+      "forest99@rainforest" : {
+         "exits" : {
+            "w" : "forest95",
+            "s" : "forest102"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Palm Trees",
+         "id" : "forest99",
+         "description" : "\n    You are standing under a small grove of palm trees.  Far above their\nuppermost fronds the deep green of the canopy spreads far and wide.  To the\nsouth, between the trunks of the trees, you see water glistening.  Yet another\ntributary is passing by there, slowly making its way east.\n",
+         "altitude" : null
+      },
+      "forest84@rainforest" : {
+         "exits" : {
+            "n" : "forest80"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Under The Kapok Tree",
+         "id" : "forest84",
+         "description" : "\n    A terrible smell assaults your nostrils as you pause at the base of an\nenormous kapok tree.  You discover, nestling between the tall thin roots of the\ntree, a huge flower, at least a foot across, which is giving off the most\nincredibly noxious odour.  It is a stinking corpse flower and well deserves its\nname.\n",
+         "altitude" : null
+      },
+      "forest72@rainforest" : {
+         "exits" : {
+            "w" : "forest71",
+            "e" : "forest73",
+            "n" : "forest74"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Bank",
+         "id" : "forest72",
+         "description" : "\n    You are on the bank of the river.  It is very wide at this point although\nthe river has a very long way to go until it reaches the sea.  You can continue\nalong the bank or head north into the forest.\n",
+         "altitude" : null
+      },
+      "forest83@rainforest" : {
+         "exits" : {
+            "w" : "forest88",
+            "n" : "forest79",
+            "s" : "forest87"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "By The Shallow River",
+         "id" : "forest83",
+         "description" : "\n    Water, water everywhere...  There seems to be no end of it.  This sluggish\ntributary is one of the least of those you have seen, but in more temperate\nclimes it would not be an insignificant feature.  A dense thicket prevents you\nfrom heading east, but you could go around it by heading south first - the\nwater near the shore is shallow enough to wade in.\n",
+         "altitude" : null
+      },
+      "river3@rainforest" : {
+         "exits" : {
+            "e" : "river5",
+            "n" : "forest71",
+            "s" : "forest107"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Junction Of Rivers",
+         "id" : "river3",
+         "description" : "\n    Technically speaking, this is the River Kerapi, which has just been joined\nby the Malazon flowing in from the south-west.  For some time henceforward, the\nwater from the two rivers flows side by side, the difference in colour rather\nstriking.  The river is too fast-moving for you to try to head back upstream,\nbut you may be able to reach the northern or southern shore with some strenuous\npaddling.\n",
+         "altitude" : null
+      },
+      "forest126@rainforest" : {
+         "exits" : {
+            "w" : "forest125",
+            "e" : "forest129",
+            "n" : "forest128",
+            "s" : "forest130"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Dark Forest",
+         "id" : "forest126",
+         "description" : "\n    You are in a part of the forest where the understorey is so thick that it\nharvests nearly all of the light that filters through from the canopy.  The\nresult is that there are almost no ground plants and you can quite easily head\nin any direction you choose.  There is a small hut to the north.\n",
+         "altitude" : null
+      },
+      "forest121@rainforest" : {
+         "exits" : {
+            "e" : "forest122",
+            "n" : "river5",
+            "s" : "forest120"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "On The Riverbank",
+         "id" : "forest121",
+         "description" : "\n    You are on the bank of the river Kerapi.  Here it is hundreds of yards wide\nand a uniform muddy brown.  To the east you could make your way along the bank,\nwhile to the south the trees are tall and dark, though well-spaced.\n",
+         "altitude" : null
+      },
+      "forest100@rainforest" : {
+         "exits" : {
+            "w" : "forest97",
+            "e" : "forest103",
+            "s" : "forest104"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Forest Trail",
+         "id" : "forest100",
+         "description" : "\n    There is a trail here which runs east.  Certainly the going is easier in\nthat direction, although you could also head south, where the jungle is not too\ndense.  To the west is the river bank.\n",
+         "altitude" : null
+      },
+      "river17@rainforest" : {
+         "exits" : {
+            "w" : "river13",
+            "e" : "river20",
+            "n" : "river18",
+            "s" : "river19"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Midstream",
+         "id" : "river17",
+         "description" : "\n    You are in the middle of the river, alone and surrounded by more water than\nyou would have thought could possibly be contained in one river.  The banks to\nnorth and south are now just out of sight below the horizon.  You can go in any\ndirection.\n",
+         "altitude" : null
+      },
+      "forest53@rainforest" : {
+         "exits" : {
+            "e" : "forest52"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Shady Waters",
+         "id" : "forest53",
+         "description" : "\n    Leafy branches droop over the water, bending so far down that their\noutermost tips actually dip beneath the surface of the river, forming a tunnel\nin which you now stand with your feet on the very edge of the water.  To the\nwest the tunnel closes, so you will have to head back east.\n",
+         "altitude" : null
+      },
+      "forest50@rainforest" : {
+         "exits" : {
+            "w" : "forest48"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "River's Edge",
+         "id" : "forest50",
+         "description" : "\n    You are standing on a narrow strip of sand by the edge of the river.  The\nwater is still moving fairly fast here, but it has a sedate quality, gliding\neastward with a serene assurance.  You find that you cannot proceed any further\neast here, for a tangled mass of woody plants to the south grows out into the\nriver to the east.\n",
+         "altitude" : null
+      },
+      "forest115@rainforest" : {
+         "exits" : {
+            "w" : "forest112",
+            "e" : "forest118",
+            "n" : "forest116",
+            "s" : "forest117"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Indian Village",
+         "id" : "forest115",
+         "description" : "\n    You are at the east end of the village.  To the north and south are mud\nhuts, the northern one being the most important-looking.  To the east a path\nheads deeper into the jungle.\n",
+         "altitude" : null
+      },
+      "forest37@rainforest" : {
+         "exits" : {
+            "e" : "forest38",
+            "n" : "forest31",
+            "d" : "forest28",
+            "s" : "forest34"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Canopy",
+         "id" : "forest37",
+         "description" : "\n    You are up in the canopy.  Here on the spreading branches many plants make\ntheir home which you would normally think of as belonging on the ground.\nOrchids and other epiphytes make use of their hosts in order to catch the sun's\nrays which are too rare on the dim forest floor below.  You can descend to the\nground or move across the branches into another tree.\n",
+         "altitude" : null
+      },
+      "river15@rainforest" : {
+         "exits" : {
+            "w" : "river12",
+            "e" : "river19",
+            "n" : "river13",
+            "s" : "river16"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Southern Midstream",
+         "id" : "river15",
+         "description" : "\n    The south bank of the river is out of sight below the horizon, although you\ncan still see the trees in that direction.  The north bank is closer, and you\neye it warily for signs of hostile Indians.\n",
+         "altitude" : null
+      },
+      "mount3@rainforest" : {
+         "exits" : {
+            "e" : "mount2",
+            "d" : "mount11"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "End Of The Ledge",
+         "id" : "mount3",
+         "description" : "\n    You are at the end of a narrow rocky ledge which runs east from here.  The\nonly other possible route would be to scramble up down the mountainside, since\n your westward route is blocked by a sheer rockface which you cannot hope to\npass without specialist equipment.  However, you realise that once you have\ngone down, there is no way that you could manage to get back up again.\n",
+         "altitude" : "1300"
+      },
+      "mount15@rainforest" : {
+         "exits" : {
+            "u" : "mount16",
+            "d" : "mount14"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "North Face Of Mount Doragua",
+         "id" : "mount15",
+         "description" : "\n    It sounds impressive, but really this is a climb for novices and you can\nmanage it without difficulty, despite your lack of climbing gear.  Below you\nthunders a green, frothing river, and you could climb down towards it or up\ntowards the summit, where the air is thin and the cold bites the skin.\n",
+         "altitude" : "2500"
+      },
+      "river19@rainforest" : {
+         "exits" : {
+            "w" : "river15",
+            "e" : "river22",
+            "n" : "river17",
+            "s" : "river16"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Southern Midstream",
+         "id" : "river19",
+         "description" : "\n    You are still a long way from the shore here, although you realise that if\nyou go much nearer you would bring yourself within range of Indian arrows.\n",
+         "altitude" : null
+      },
+      "forest68@rainforest" : {
+         "exits" : {
+            "w" : "forest66",
+            "s" : "forest69"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Ant Trail",
+         "id" : "forest68",
+         "description" : "\n    The forest floor is covered with leaves and twigs, and across this litter\nmarches a long line of large ants.  The trail consists of several lines of one-\nway traffic, flanked by defensive soldiers patrolling the borders.  You are\ncareful not to get too close, for they can give a very painful bite and tend to\nattack by the hundred.\n",
+         "altitude" : null
+      },
+      "mount27@rainforest" : {
+         "exits" : {
+            "u" : "mount28",
+            "n" : "mount26"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Southern Edge Of The Glacier",
+         "id" : "mount27",
+         "description" : "\n    You are at the glacier's southern edge.  A steep rock face rises up here,\nand you will have to climb it unless you choose to hazard the glacier again.\n",
+         "altitude" : "4350"
+      },
+      "mount21@rainforest" : {
+         "exits" : {
+            "w" : "mount22",
+            "e" : "mount19",
+            "s" : "mount20"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "On The Moraine",
+         "id" : "mount21",
+         "description" : "\n    You are making your way along the moraine at the northern edge of the\nglacier.  At the moment it still looks as if following the moraine would be\neasier than crossing the glacier, but you may attempt the latter if you feel\nbrave.\n",
+         "altitude" : "4300"
+      },
+      "forest110@rainforest" : {
+         "exits" : {
+            "w" : "forest109"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Totally Fatal Quicksand Deathtrap",
+         "id" : "forest110",
+         "description" : "\n    You plunge suddenly into quicksand!  Before you can react you have sunk up\nto your thighs in the treacherous mix of sand and water.  There, however, you\nstop.  The quicksand is not deep and you are able to extricate yourself quite\neasily, counting yourself very lucky as you do so.  You have no doubt that to a\nsmall animal this quicksand would indeed be totally fatal.\n",
+         "altitude" : null
+      },
+      "forest125@rainforest" : {
+         "exits" : {
+            "e" : "forest126",
+            "n" : "forest123",
+            "s" : "forest127"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Indian Village",
+         "id" : "forest125",
+         "description" : "\n    You are in a small cluster of huts which for the most part look deserted.\nWhether it has been abandoned permanently or whether the villagers are merely\nout for some other reason you cannot even guess, but they have not been gone\nfor long.  The place is fairly tidy.\n",
+         "altitude" : null
+      },
+      "mount24@rainforest" : {
+         "exits" : {
+            "w" : "mount23",
+            "s" : "mount20"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "On The Moraine",
+         "id" : "mount24",
+         "description" : "\n    You have come as far as possible along the moraine.  To the east the\nglacier is carrying a huge rock which is partially embedded in the ice.  You\ncould try to skirt around it by heading south, but that way leads out on to the\nglacier and the ever-present risk of falling into a crevasse.\n",
+         "altitude" : "4300"
+      },
+      "mount17@rainforest" : {
+         "exits" : {
+            "d" : "mount16"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Atop Mount Doragua",
+         "id" : "mount17",
+         "description" : "\n    You are not actually on the summit here, for the final haul up to the top\nis almost sheer.  The topmost fifty feet is scored by a series of vertical\ngrooves, and it is in one of these that you are now sheltering, for in the more\nexposed areas the temperature is just too bitter to endure.  The only way you\ncan go from here is back down to the shoulder.\n",
+         "altitude" : "7500"
+      },
+      "mount9@rainforest" : {
+         "exits" : {
+            "w" : "mount12",
+            "e" : "mount10",
+            "u" : "mount6",
+            "n" : "mount6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Gully Bottom",
+         "id" : "mount9",
+         "description" : "\n    You have come to the bottom end of a narrow gully which in rainy seasons\npours water from the upper slopes to the north into the river valley below you.\nA small river, ice cold and greenish from glacier meltwater, flows past along\nthe valley floor.  You can head back up the gully or follow the valley east or\nwest from here.\n",
+         "altitude" : "1100"
+      },
+      "forest49@rainforest" : {
+         "exits" : {
+            "w" : "forest47",
+            "e" : "forest51",
+            "s" : "forest52"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Lagoon",
+         "id" : "forest49",
+         "description" : "\n    You are up to your knees in water.  A number of narrow channels run off\nfrom the sides of the lagoon to join the river to the south.  Since you know\nthere is also a river close by to the north, you begin to feel somewhat hemmed\nin.  To the north a dense cluster of swamp-living trees bars your way.\n",
+         "altitude" : null
+      },
+      "mount36@rainforest" : {
+         "exits" : {
+            "n" : "mount35",
+            "d" : "mount37"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount36",
+         "description" : "\n    You are on a long and winding path by which animals and explorers may climb\nfrom the rainforest up into the mountains, or descend from the mountains into\nthe trees.  Whichever way you choose to go, it is a long haul.\n",
+         "altitude" : "10000"
+      },
+      "forest76@rainforest" : {
+         "exits" : {
+            "s" : "forest75"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Trail's End",
+         "id" : "forest76",
+         "description" : "\n    Just as suddenly as it began, the trail comes to an end.  If you were\nhoping to find a way through the forest here, you are disappointed.  The path\nmust not have been used for some time, as the way forward is now blocked by a\ntangled mass of creepers and bushes.  You will have to return south.\n",
+         "altitude" : null
+      },
+      "forest24@rainforest" : {
+         "exits" : {
+            "w" : "forest22",
+            "e" : "forest25",
+            "u" : "forest33",
+            "n" : "forest24",
+            "s" : "forest23"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Rainforest",
+         "id" : "forest24",
+         "description" : "\n    You are wandering through the heart of the rainforest.  The density of the\ntrees makes it impossible to continue in a straight line and you wonder whether\nyou might be going round in circles.  There are exits in all directions.\n",
+         "altitude" : null
+      },
+      "forest41@rainforest" : {
+         "exits" : {
+            "d" : "forest33"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Topmost Branches",
+         "id" : "forest41",
+         "description" : "\n    You are in the uppermost branches of one of the taller trees in the\nrainforest, looking out over the vast spread of the canopy which stretches out\nto the horizon in all directions but to the west, where tall mountains and\nsnow-capped volcanos rise up from the forests to touch the clouds.  The next\ntree is too far away for you to reach, so the only way from here is down.\n",
+         "altitude" : null
+      },
+      "river13@rainforest" : {
+         "exits" : {
+            "w" : "river10",
+            "e" : "river17",
+            "n" : "river14",
+            "s" : "river15"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Midstream",
+         "id" : "river13",
+         "description" : "\n    You are floating along the middle of the river.  The water is flowing very\nslowly and sluggishly here, and you wonder if you are perhaps approaching the\nsea.  Certainly the river is so wide that you can barely see both banks to the\nnorth and south.\n",
+         "altitude" : null
+      },
+      "forest86@rainforest" : {
+         "exits" : {
+            "e" : "forest92",
+            "n" : "forest82",
+            "s" : "forest91"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Shady Bank",
+         "id" : "forest86",
+         "description" : "\n    You are on the bank of a small tributary, just twenty yards or so in width\nat this stage.  To the west is a tangled bush which you can only circumvent by\nfirst heading north into the jungle or south into the river.  Above you tall\nferns and palms spread their fronds over the water.\n",
+         "altitude" : null
+      },
+      "forest44@rainforest" : {
+         "exits" : {
+            "w" : "forest30",
+            "e" : "forest47",
+            "n" : "forest46",
+            "s" : "forest45"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Under The Triplaris Tree",
+         "id" : "forest44",
+         "description" : "\n    Here stands a tall tree which is marked with several small holes.  Ants\npour out of the holes at the first sign of an intruder.  The ants appear to\nshare a curious symbiotic relationship with the tree, protecting it against\nmarauding insects and other small animals, while the tree in turn provides a\nhome for its guards.  There are exits in every direction.\n",
+         "altitude" : null
+      },
+      "forest82@rainforest" : {
+         "exits" : {
+            "w" : "forest79",
+            "n" : "forest78",
+            "s" : "forest86"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Tannin Channel",
+         "id" : "forest82",
+         "description" : "\n    A brown-stained rill lies before you, its sandy floor showing pale beneath\ntwo feet of water.  Through the trees to north and south you can see water\nflowing east.  You seem to be trapped between two tributaries.\n",
+         "altitude" : null
+      },
+      "forest4@rainforest" : {
+         "exits" : {
+            "w" : "forest6",
+            "e" : "forest5",
+            "s" : "forest3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Midstream",
+         "id" : "forest4",
+         "description" : "\n    You are in the middle of the stream.  The strength of the current is so\nintense that you are in danger of being swept away at any moment.  Fortunately\nit is not too deep here.  To the east you could clamber out on to a slippery-\nlooking rock.\n",
+         "altitude" : "400"
+      },
+      "forest133@rainforest" : {
+         "exits" : {
+            "w" : "forest129"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Difficult Terrain",
+         "id" : "forest133",
+         "description" : "\n    Actually it is not the terrain which is causing the problems; mainly the\nincredibly rich ground cover which you are painfully aware is very rich in\nthorns.  To avoid doing yourself a serious injury you decide that the best\ncourse is to head west out of the thorny patch.\n",
+         "altitude" : null
+      },
+      "forest129@rainforest" : {
+         "exits" : {
+            "w" : "forest126",
+            "e" : "forest133",
+            "s" : "forest134"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep Forest",
+         "id" : "forest129",
+         "description" : "\n    The rainforest seems endless.  You wander on and on through trees without\nnumber, crossing terrain which for the most part is dry in this region.  Fungi\ncover the floor and with every step you crush scores of fruiting bodies.  A\nnatural dike blocks the way north.\n",
+         "altitude" : null
+      },
+      "mount30@rainforest" : {
+         "exits" : {
+            "e" : "mount33",
+            "u" : "mount33",
+            "n" : "mount29",
+            "s" : "mount31"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Snowfield",
+         "id" : "mount30",
+         "description" : "\n    You are in the middle of a snowfield, sinking up to your knees in fresh\nsnow.  Your fingers and toes are numb.  Ice is forming on your eyebrows and you\nlong to get back down into the warm.  To the east the ground just rises and\nrises up to the top of a high pass, while to the north the ground just ends at\na cliff wall which descends to meet a wide glacier.\n",
+         "altitude" : "12200"
+      },
+      "river11@rainforest" : {
+         "exits" : {
+            "w" : "river8",
+            "e" : "river14",
+            "s" : "river10"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "By The Northern Bank",
+         "id" : "river11",
+         "description" : "\n    You are floating along close by to the north bank of the Kerapi river.  The\nbushes on the shore rustle ominously, and once or twice you catch a glimpse of\npeople moving about amongst them.  You fear to climb ashore here, but you can\ngo in any other direction.\n",
+         "altitude" : null
+      },
+      "forest119@rainforest" : {
+         "exits" : {
+            "w" : "forest118"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Mahogany Grove",
+         "id" : "forest119",
+         "description" : "\n    You are in a grove of tall hardwood trees, from which comes the reddish\nwood mahogany.  The shrubs gathered around the base of the trees form a thick\nimpenetrable wall.  You will have to return west.\n",
+         "altitude" : null
+      },
+      "mount33@rainforest" : {
+         "exits" : {
+            "w" : "mount30",
+            "e" : "mount34",
+            "d" : "mount30"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "High Pass",
+         "id" : "mount33",
+         "description" : "\n    You are standing atop a pass at the eastern edge of the mountain range.\nBefore you, thousands of feet below, a sea of trees extends to the horizon.\nA narrow path leads from here to a rocky lip, from where a path begins to\ndescend steeply, dropping quickly out of your view.  To the west is a large\nsnowfield.\n",
+         "altitude" : "12600"
+      },
+      "mount11@rainforest" : {
+         "exits" : {
+            "d" : "mount10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Steep Slope",
+         "id" : "mount11",
+         "description" : "\n    You are struggling to maintain your balance on a steep and scree-covered\nslope from which you can look down upon a young river rushing past below you.\nYou will be able to descend to its edge, but the gradient of the slope and the\npresence of the ever-slipping scree prohibits an ascent.\n",
+         "altitude" : "1200"
+      },
+      "forest90@rainforest" : {
+         "exits" : {
+            "w" : "forest96",
+            "e" : "forest94",
+            "n" : "forest85",
+            "s" : "forest95"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Fig Tree",
+         "id" : "forest90",
+         "description" : "\n    You are standing at the base of a strangling fig, which started life as a\nseedling growing on the trunk of another tree.  As the fig grew it came to\ndominate its host, wrapping its branches around it and choking it, until the\ntree within was dead and the fig strong enough to stand alone.  You can go in\nany direction.\n",
+         "altitude" : null
+      },
+      "forest17@rainforest" : {
+         "exits" : {
+            "w" : "forest20",
+            "e" : "forest22",
+            "n" : "forest15",
+            "s" : "forest19"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Hardwood Trees",
+         "id" : "forest17",
+         "description" : "\n    You are struck by how many different species of trees populate this forest.\nIn this spot you count several tall hardwood varieties, with tall unbranching\ntrunks that make them valuable for timber.  Lapachos, curapays and spanish\ncedars are notable amongst them, but there are many more that you do not\nrecognise.  There are exits in all directions.\n",
+         "altitude" : null
+      },
+      "forest75@rainforest" : {
+         "exits" : {
+            "w" : "forest74",
+            "n" : "forest76"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Trail's Bend",
+         "id" : "forest75",
+         "description" : "\n    You are at a bend in the trail, where the creatures making it obviously\ntook the easier rather than the straighter path.  Ferns abound here, their tall\nfronds reaching higher than your head, and you push them aside as you pass by.\nYou can follow the trail north or west.\n",
+         "altitude" : null
+      },
+      "forest46@rainforest" : {
+         "exits" : {
+            "e" : "forest48",
+            "s" : "forest44"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Thick Undergrowth",
+         "id" : "forest46",
+         "description" : "\n    You are pushing your way through a thick patch of undergrowth in which, you\nare acutely aware, many large insects are lurking.  You notice that what you\nthought was a couple of leaves is now swaying from side to side in a strange\ndance while six long spiky legs protrude from either side.  You feel yourself\nbecoming paranoid as you start to imagine that every piece of vegetation is a\nweird insect in disguise.\n",
+         "altitude" : null
+      },
+      "mount14@rainforest" : {
+         "exits" : {
+            "u" : "mount15",
+            "n" : "mount13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "South Bank Of The Peranon",
+         "id" : "mount14",
+         "description" : "\n    You are on the south bank of the river Peranon.  This point is the only\nsuitable crossing-place that you can see, and you could jump across to a large\nrock on the other side of the river, or you could attempt the long climb up the\nmountainside to the south.\n",
+         "altitude" : "1200"
+      },
+      "forest112@rainforest" : {
+         "exits" : {
+            "w" : "forest111",
+            "e" : "forest115",
+            "n" : "forest113",
+            "s" : "forest114"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Indian Village",
+         "id" : "forest112",
+         "description" : "\n    You are in the centre of the village.  To the north and south are primitive\nhuts which you could enter if you dare.  The village continues east of you,\nwhile the forest lies to the west.\n",
+         "altitude" : null
+      },
+      "mount45@rainforest" : {
+         "exits" : {
+            "w" : "mount44",
+            "e" : "mount46",
+            "u" : "mount44",
+            "d" : "mount46"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Stony Path",
+         "id" : "mount45",
+         "description" : "\n    You are on a moderately steep path which descends into the trees fairly\nnearby to the east, and to the west climbs the side of a range of tremendously\nhigh mountains.  Clouds cover many of the peaks, and the thought of climbing\nup there fills you with dread.\n",
+         "altitude" : "1000"
+      },
+      "forest32@rainforest" : {
+         "exits" : {
+            "w" : "forest31",
+            "e" : "forest33",
+            "d" : "forest23",
+            "s" : "forest38"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Canopy",
+         "id" : "forest32",
+         "description" : "\n    You are up in the canopy.  Here on the spreading branches many plants make\ntheir home which you would normally think of as belonging on the ground.\nOrchids and other epiphytes make use of their hosts in order to catch the sun's\nrays which are too rare on the dim forest floor below.  You can descend to the\nground or move across the branches into another tree.\n",
+         "altitude" : null
+      },
+      "forest146@rainforest" : {
+         "exits" : {
+            "w" : "forest144"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Even Thicker Forest",
+         "id" : "forest146",
+         "description" : "\n    As you suspected the forest has brought you to an abrupt halt.  The trees\nseem to be all branches, criss-crossing at ground level and making progress\nimpossible.  You will have to return west.\n",
+         "altitude" : null
+      },
+      "mount25@rainforest" : {
+         "exits" : {
+            "w" : "mount26",
+            "e" : "mount20",
+            "n" : "mount23",
+            "s" : "mount20"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Crossing The Glacier",
+         "id" : "mount25",
+         "description" : "\n    You are making your way across the glacier.  At times the ice creaks\nominously beneath your feet, but so far it seems to be holding.  To the south\nthe ice looks more broken and you feel a sense of unease when you contemplate\nthat route.  Further downstream to the east it looks even worse.  The ice to\nthe west looks more stable, but by far the safest exit is that to the north,\nwhere the moraine promises surer ground.\n",
+         "altitude" : "4300"
+      },
+      "forest34@rainforest" : {
+         "exits" : {
+            "e" : "forest35",
+            "u" : "forest42",
+            "n" : "forest37",
+            "d" : "forest25"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Canopy",
+         "id" : "forest34",
+         "description" : "\n    You are up in the canopy.  Looking up, you can see the sky, but in every\nother direction all you can see are leaves.  The tree you are in is one of\nthe particularly competitive species which tower up into the sky, its top high\nabove the canopy.  You could probably climb it if you had a mind to.  Otherwise\nyou can descend to the ground or move across the branches into another tree.\n",
+         "altitude" : null
+      },
+      "forest123@rainforest" : {
+         "exits" : {
+            "w" : "forest120",
+            "e" : "forest124",
+            "n" : "forest122",
+            "s" : "forest125"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "End Of The Inlet",
+         "id" : "forest123",
+         "description" : "\n    You are at the southern end of a narrow inlet which runs north from here\ntowards the river.  Several species of tree grow from under the water, and some\nmore of the same grow in the surrounding area.  These are not tall trees but\nthey bear small red fruit which fall into the water at intervals while you\nwatch.  You can go in any direction.\n",
+         "altitude" : null
+      },
+      "forest92@rainforest" : {
+         "exits" : {
+            "w" : "forest86",
+            "e" : "forest95",
+            "n" : "forest96"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Bank Of The Tributary",
+         "id" : "forest92",
+         "description" : "\n    You are wandering along the bank of a small river which flows lazily by to\nthe south.  A rich proliferation of trees grows here, despite the infertility\nof the soil.  You find it surprising that such a diversity could arise from\nwhat is virtually pure sand.\n",
+         "altitude" : null
+      },
+      "forest31@rainforest" : {
+         "exits" : {
+            "e" : "forest32",
+            "u" : "forest40",
+            "d" : "forest22",
+            "s" : "forest37"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Canopy",
+         "id" : "forest31",
+         "description" : "\n    You are up in the canopy.  Looking up, you can see the sky, but in every\nother direction all you can see are leaves.  The tree you are in is one of\nthe particularly competitive species which tower up into the sky, its top high\nabove the canopy.  You could probably climb it if you had a mind to.  Otherwise\nyou can descend to the ground or move across the branches into another tree.\n",
+         "altitude" : null
+      },
+      "mount37@rainforest" : {
+         "exits" : {
+            "u" : "mount36",
+            "n" : "mount38"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount37",
+         "description" : "\n    You are on a long and winding path by which animals and explorers may climb\nfrom the rainforest up into the mountains, or descend from the mountains into\nthe trees.  Whichever way you choose to go, it is a long haul.\n",
+         "altitude" : "9000"
+      },
+      "mount5@rainforest" : {
+         "exits" : {
+            "e" : "mount4",
+            "d" : "mount6",
+            "s" : "mount6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Dry Gully",
+         "id" : "mount5",
+         "description" : "\n    Once a stream flowed through here, and perhaps still does, at those times\nof year when the rain is most intense.  Yet for now this gully is as dry as a\nbone, and you can make good use of it as a path leading down to the south, into\na sheltered v-shaped valley.  Alternatively you can clamber up the eastward\nslope which is less steep than those to the north and west.\n",
+         "altitude" : "1350"
+      },
+      "river4@rainforest" : {
+         "exits" : {
+            "e" : "river3",
+            "s" : "forest97"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Malazon",
+         "id" : "river4",
+         "description" : "\n    You are on the River Malazon.  The water, though slow-moving, is still too\nswift for you to travel against its flow.  You could perhaps gain the shore to\nthe south, but to the north the trees are too thick to attempt a landing there.\n",
+         "altitude" : null
+      },
+      "forest108@rainforest" : {
+         "exits" : {
+            "w" : "forest107",
+            "e" : "forest109"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Following The River Bank",
+         "id" : "forest108",
+         "description" : "\n    The bank is muddy for a long way along the southern bank, and you keep to\nits edge as the depth of the mud at any particular point is difficult to gauge.\nThe trees to the south are too densely-packed to penetrate, but you may be able\nto find a way into the forest further along the bank.\n",
+         "altitude" : null
+      },
+      "forest52@rainforest" : {
+         "exits" : {
+            "w" : "forest53",
+            "n" : "forest49"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Shore",
+         "id" : "forest52",
+         "description" : "\n    You are on the bank of the River Malazon.  Small trees grow out from the\nriver's edge and overshadow the water.  Looking down you see large fish\ncruising about not far beneath the surface.  As fruit falls from the trees into\nthe water, the fish quickly rush towards it and gobble it up.  You scan the\nmurk for signs of piranhas but can see none.  You can go north or west along\nthe river bank.\n",
+         "altitude" : null
+      },
+      "river18@rainforest" : {
+         "exits" : {
+            "w" : "river14",
+            "e" : "river21",
+            "n" : "river16",
+            "s" : "river17"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Northern Midstream",
+         "id" : "river18",
+         "description" : "\n    You are still a long way from the shore here, although you realise that if\nyou go much nearer you would bring yourself within range of Indian arrows.  To\nyour astonishment you see a small ocean-going ship perched atop one of the\ntrees some way in from the shoreline.  You cannot imagine how it got there.\n",
+         "altitude" : null
+      },
+      "river12@rainforest" : {
+         "exits" : {
+            "w" : "river8",
+            "e" : "river15",
+            "n" : "river10"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "By The Southern Bank",
+         "id" : "river12",
+         "description" : "\n    You are floating along close by to the south bank of the Kerapi river.  The\nbushes on the shore rustle ominously, and once or twice you catch a glimpse of\npeople moving about amongst them.  You fear to climb ashore here, but you can\ngo in any other direction.\n",
+         "altitude" : null
+      },
+      "mount12@rainforest" : {
+         "exits" : {
+            "w" : "mount13",
+            "e" : "mount9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Peranon",
+         "id" : "mount12",
+         "description" : "\n    The wind-whipped spray from the river lashes your face as you wander along\nits bank, and you try to keep as far away from the water's edge as you can,\nalthough the rock wall to the north prevents you from keeping the distance you\nwould like.  You can follow the river east and west from here.\n",
+         "altitude" : "1150"
+      },
+      "forest61@rainforest" : {
+         "exits" : {
+            "w" : "forest59",
+            "n" : "forest63",
+            "s" : "forest64"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Swampy Ground",
+         "id" : "forest61",
+         "description" : "\n    You are up to your knees in muddy water.  Every step is an effort and the\nsweat pours from your face.  Thousands of tiny little biting flies swarm over\nyour skin, making your life a misery.  You slap your face and kill some fifty\nof them, but as soon as you remove your hand another fifty take their place.\nYou struggle on in the hope of finding a more hospitable area.\n",
+         "altitude" : null
+      },
+      "river9@rainforest" : {
+         "exits" : {
+            "e" : "river7",
+            "n" : "river6",
+            "s" : "river12"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "By The Western Bank",
+         "id" : "river9",
+         "description" : "\n    You are near to the bank of the river.  The bushes on the shore are quite\nclose and you think you can see movement among them.  You can head up or down\nthe river, or east back into midstream.\n",
+         "altitude" : null
+      },
+      "mount29@rainforest" : {
+         "exits" : {
+            "d" : "mount28",
+            "s" : "mount30"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Top Of The Cliff",
+         "id" : "mount29",
+         "description" : "\n    At the top of the rock face the air is freezing.  Snow-covered mountains\ntower around you, although you are so high up now that their peaks are now no\nmore than three or four thousand feet above you.  To the south is a broad\nsnowfield which looks fairly safe to walk on.  The only other exit is back down\nthe cliff.\n",
+         "altitude" : "12000"
+      },
+      "mount34@rainforest" : {
+         "exits" : {
+            "w" : "mount33",
+            "d" : "mount35"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Rocky Lip",
+         "id" : "mount34",
+         "description" : "\n    You are standing on a lip of rock which is nestling in the shelter of the\npass to the west.  A narrow path begins here, heading down the side of the\nmountains in a zig-zag, descending by degrees towards the rainforest below.\n",
+         "altitude" : "12000"
+      },
+      "river20@rainforest" : {
+         "exits" : {
+            "w" : "river17",
+            "e" : "current1",
+            "n" : "river21",
+            "s" : "river22"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Estuarine Waters",
+         "id" : "river20",
+         "description" : "\n    The river here is so wide it is almost a sea.  You can see trees in the\ndistance, but the shoreline on both sides is below the horizon.  To the east is\nthe sea, stretching for hundreds, perhaps thousands, of miles.  You can head in\nany direction.\n",
+         "altitude" : null
+      },
+      "forest8@rainforest" : {
+         "exits" : {
+            "w" : "forest7",
+            "e" : "forest10",
+            "n" : "forest9"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Top Of The Slope",
+         "id" : "forest8",
+         "description" : "\n    You are at the top of a steep slope leading down to the east.  The river\nroars by to the north, while to the south the jungle is impenetrable.  In the\nother directions the forest is more open and easier to negotiate.\n",
+         "altitude" : "350"
+      },
+      "forest57@rainforest" : {
+         "exits" : {
+            "w" : "forest54",
+            "e" : "forest59",
+            "n" : "forest58"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Sandy Bank",
+         "id" : "forest57",
+         "description" : "\n    You are at the edge of a wide strip of sand, constantly lapped by the water\nand no doubt frequently submerged.  For now though it appears to be a place\nwhere caimans rest, and as you arrive a few of them slide into the water,\nhopefully considering you too large to be easy prey.  At this point the river\nbends gently round to the south as it goes downstream, so if you continue east\nyou will be heading into the jungle.  North will also take you into thicker\ngrowth, while to the west you can follow the bank up the river again.\n",
+         "altitude" : null
+      },
+      "river21@rainforest" : {
+         "exits" : {
+            "w" : "river18",
+            "e" : "current1",
+            "s" : "river20"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Northern Estuarine Waters",
+         "id" : "river21",
+         "description" : "\n    You are in the northern part of the estuary.  The distant tree-lined shore\nseems so far away and the hours you spent trekking through the jungle are\nlittle more than a dim memory.  The open sea lies to the east.\n",
+         "altitude" : null
+      },
+      "forest134@rainforest" : {
+         "exits" : {
+            "w" : "forest130",
+            "e" : "forest133",
+            "n" : "forest129"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Ancient Ruins",
+         "id" : "forest134",
+         "description" : "\n    As you walk through the thick undergrowth you find yourself kicking against\na number of hard unyielding objects.  Closer inspection reveals a series of\nlow, broken-down walls which although old and ruinous were obviously\nconstructed with a great deal of skill at one time.\n",
+         "altitude" : null
+      },
+      "forest3@rainforest" : {
+         "exits" : {
+            "n" : "forest4",
+            "s" : "forest2"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "By The Torrent",
+         "id" : "forest3",
+         "description" : "\n    You are standing on the southern bank of an angry, and voluble, young river\nwhich is flowing very rapidly eastwards.  At this point it is some thirty feet\nwide.  Out in the middle of the river torrent ducks plunge into the water,\nstruggling to swim underwater against the current, making their way from rock\nto rock, plucking stonefly larvae from the weed clinging there.\n",
+         "altitude" : "400"
+      },
+      "forest43@rainforest" : {
+         "exits" : {
+            "d" : "forest36"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Topmost Branches",
+         "id" : "forest43",
+         "description" : "\n    You are in the uppermost branches of one of the taller trees in the\nrainforest, looking out over the vast spread of the canopy which stretches out\nto the horizon in all directions but to the west, where tall mountains and\nsnow-capped volcanos rise up from the forests to touch the clouds.  The next\ntree is too far away for you to reach, so the only way from here is down.\n",
+         "altitude" : null
+      },
+      "city2@rainforest" : {
+         "exits" : {
+            "w" : "city5",
+            "e" : "^branches2",
+            "n" : "city3",
+            "s" : "city4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "El Dorado",
+         "id" : "city2",
+         "description" : "\n    You gasp in awe as you stand in the centre of what must once have been an\nincredibly beautiful city.  While not actually made of gold, the city must\nnevertheless have been extremely rich in the precious metal.  Around you the\nbuildings and many statues and sculptures all show signs of having once been\nplated with gold leaf, and flashes of golden light from flakes on the ground\nconstantly catch your eye.  To the north is a massive temple, not a subtle\naffair perhaps, but nevertheless a construction of great majesty.  To the west\nis a proud and kingly statue standing tall in the middle of the square.  And to\nthe south, most magnificent of all, a palace of ancient kings towers into the\nsky.\n",
+         "altitude" : null
+      },
+      "mount8@rainforest" : {
+         "exits" : {
+            "e" : "mount7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rainforest",
+         "title" : "Back Of The Cave",
+         "id" : "mount8",
+         "description" : "\n    You are at the back of the cave, where a pile of charred sticks tell you\nthat you are not the only traveller who has attempted to cross this mountain\nrange.  The only exit is back east towards the outside.\n",
+         "altitude" : null
+      },
+      "forest109@rainforest" : {
+         "exits" : {
+            "e" : "forest110",
+            "s" : "forest111"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Under The Trees",
+         "id" : "forest109",
+         "description" : "\n    You are on the bank of the river, overshadowed by a clump of trees which\nreach out over the water, dropping into it red berries from time to time, where\nthey are quickly snapped up by fish darting up from the bottom.  Such fish will\ncarry the seeds for miles up or down the river where they will deposit them to\ngrow at the water's edge.  Thus do these fruit trees propagate.  You try a\nberry experimentally but find the taste highly unpleasant.\n",
+         "altitude" : null
+      },
+      "mount31@rainforest" : {
+         "exits" : {
+            "w" : "mount32",
+            "n" : "mount30"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "Snowfield",
+         "id" : "mount31",
+         "description" : "\n    You are in another part of the snowfield.  You are getting pretty bogged\ndown in the ever-deepening snow and you begin to look for a way out.  To the\nsouth and east it seems deeper than ever, so you would be best heading in a\nnew direction.\n",
+         "altitude" : "12200"
+      },
+      "forest51@rainforest" : {
+         "exits" : {
+            "w" : "forest49"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Where Rivers Join",
+         "id" : "forest51",
+         "description" : "\n    You realise that you can go no further.  Here the Kerapi river is joined\nby the Malazon, and you are on the piece of land in between the two.  The\nground here is soggy and your feet are wet through.  You will have to return\nwest.\n",
+         "altitude" : null
+      },
+      "forest70@rainforest" : {
+         "exits" : {
+            "e" : "forest71",
+            "n" : "forest69"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Looking Across The Fork",
+         "id" : "forest70",
+         "description" : "\n    You are on the bank of the river once more, looking out over the river.\nYou can see that a tributary joins the Kerapi, its clear mountain water joining\nthe Kerapi's muddy flow.  From here you can head north into the jungle or east\nalong the river bank.\n",
+         "altitude" : null
+      },
+      "forest80@rainforest" : {
+         "exits" : {
+            "e" : "forest77",
+            "s" : "forest84"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Raised Ground",
+         "id" : "forest80",
+         "description" : "\n    You are on a patch of ground which is slightly higher than the surrounding\narea, and is therefore somewhat drier.  In the trees above you toucans and\nparakeets utter raucous cries, and you wonder whether you are the reason for\ntheir unease.\n",
+         "altitude" : null
+      },
+      "forest137@rainforest" : {
+         "exits" : {
+            "w" : "forest139",
+            "e" : "forest138",
+            "n" : "forest136",
+            "s" : "forest137"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Fig Forest",
+         "id" : "forest137",
+         "description" : "\n    You are lost, deep in the fig forest.  The only trees you can see here are\nstrangler figs.  Through some quirk of nature, they have come to completely\ndominate this part of the rainforest and will allow no other trees to grow.\nThere are exits in all directions, though everywhere you look seems to be dark\nand gloomy.\n",
+         "altitude" : null
+      },
+      "forest63@rainforest" : {
+         "exits" : {
+            "w" : "forest60",
+            "s" : "forest61"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Damp Grove",
+         "id" : "forest63",
+         "description" : "\n    There is a smell of rotting vegetation here.  You try to take stock of your\nsurroundings but you are constantly plagued by clouds of mosquitos.  What is\nworse, you are thigh-deep in water and in your tortured imagination you come to\nbelieve that a host of leeches is now feeding on your legs.  To the north and\neast is deeper water, so you resolve to head in a drier direction.\n",
+         "altitude" : null
+      },
+      "forest139@rainforest" : {
+         "exits" : {
+            "w" : "forest137",
+            "e" : "forest140",
+            "n" : "forest138",
+            "s" : "forest139"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Confused In The Fig Forest",
+         "id" : "forest139",
+         "description" : "\n    You are lost, deep in the fig forest.  The only trees you can see here are\nstrangler figs.  Through some quirk of nature, they have come to completely\ndominate this part of the rainforest and will allow no other trees to grow.\nThere are exits in all directions, though everywhere you look seems to be dark\nand gloomy.\n",
+         "altitude" : null
+      },
+      "forest148@rainforest" : {
+         "exits" : {
+            "e" : "forest147"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Hilltop Village",
+         "id" : "forest148",
+         "description" : "\n    You are in the middle of a tiny Indian village, surrounded by a cluster of\nhuts arranged in a rough circle.  To the west and north a solid wall of trees\nmarks the edge of the forest, and it looks impenetrable at this point.  To the\nsouth you could climb back down the slope to the river.\n",
+         "altitude" : null
+      },
+      "forest22@rainforest" : {
+         "exits" : {
+            "w" : "forest17",
+            "e" : "forest23",
+            "u" : "forest31",
+            "n" : "forest23",
+            "s" : "forest24"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Rainforest",
+         "id" : "forest22",
+         "description" : "\n    You are wandering through the heart of the rainforest.  The density of the\ntrees makes it impossible to continue in a straight line and you wonder whether\nyou might be going round in circles.  There are exits in all directions.\n",
+         "altitude" : null
+      },
+      "forest30@rainforest" : {
+         "exits" : {
+            "w" : "forest27",
+            "e" : "forest44",
+            "u" : "forest39",
+            "n" : "forest24",
+            "s" : "forest25"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Rainforest",
+         "id" : "forest30",
+         "description" : "\n    You are wandering through the heart of the rainforest.  The density of the\ntrees makes it impossible to continue in a straight line and you wonder whether\nyou might be going round in circles.  Long lianas climbing up the nearby tree\ntrunks would help you to ascend into the canopy if you wished.  There are exits\nin all directions.\n",
+         "altitude" : null
+      },
+      "forest10@rainforest" : {
+         "exits" : {
+            "w" : "forest8",
+            "n" : "forest11"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Shaded Dell",
+         "id" : "forest10",
+         "description" : "\n    You are in a small dell surrounded by trees.  The air is damp and fungi\nthrive on the forest floor.  Trees crowd together to the south and east, making\nthose directions impassable.  To the north is the river.\n",
+         "altitude" : "200"
+      },
+      "forest45@rainforest" : {
+         "exits" : {
+            "n" : "forest44"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Mud Cliff",
+         "id" : "forest45",
+         "description" : "\n    You are facing a high wall made of hard dry mud.  Numerous holes have been\ndelved into the cliff and many brightly-coloured macaws are flying in and out\nof them.  The racket they are making with their inelegant cries sets your teeth\non edge.  You are unable to climb the wall as the parakeets mob you when you\ncome too close.  You will have to return north.\n",
+         "altitude" : null
+      },
+      "mount6@rainforest" : {
+         "exits" : {
+            "w" : "mount7",
+            "u" : "mount5",
+            "n" : "mount5",
+            "d" : "mount9",
+            "s" : "mount9"
+         },
+         "flags" : [],
+         "zone" : "rainforest",
+         "title" : "Beneath The Overhang",
+         "id" : "mount6",
+         "description" : "\n    You are to some extent protected here by a great outthrust mass of rock\nwhich looms threateningly over you.  Yet it is not about to fall and you pause\nhere to consider which route to take next.  You could continue along the gully,\nfollowing it up to the north or down to the south, or you could investigate a\nsmall cave to the west.\n",
+         "altitude" : null
+      },
+      "forest54@rainforest" : {
+         "exits" : {
+            "w" : "forest55",
+            "e" : "forest57",
+            "n" : "forest56",
+            "s" : "river1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Northern Bank",
+         "id" : "forest54",
+         "description" : "\n    You are standing on the northern bank of the Kerapi river, watching it flow\nquickly by in an easterly direction.  To the north stretches the rainforest,\ndark and dense, and the calls of its denizens fill the air.  To the east you\ncan follow the river bank, while to the west you can climb on to a high rock by\nthe water's edge.\n",
+         "altitude" : null
+      },
+      "mount10@rainforest" : {
+         "exits" : {
+            "w" : "mount9",
+            "u" : "mount11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Fast-Flowing River",
+         "id" : "mount10",
+         "description" : "\n    You are standing on a rather slippery rock by the side of a swiftly-moving\nbut youthful torrent which is flowing rapidly eastwards.  Unfortunately it\npasses under an archway of rock to the east and you cannot follow its course in\nthat direction.  However you may be able to climb a little way up the slope on\nthis side of the river.\n",
+         "altitude" : "1100"
+      },
+      "mount13@rainforest" : {
+         "exits" : {
+            "e" : "mount12",
+            "s" : "mount14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Jutting Rock",
+         "id" : "mount13",
+         "description" : "\n    You are on a high rock overhanging the southern bank of the River Peranon,\nand from here you could jump across quite easily to a rock on the other side of\nthe river.  Otherwise you could follow the river to the east.\n",
+         "altitude" : "1200"
+      },
+      "river14@rainforest" : {
+         "exits" : {
+            "w" : "river11",
+            "e" : "river18",
+            "n" : "river16",
+            "s" : "river13"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Northern Midstream",
+         "id" : "river14",
+         "description" : "\n    The south bank of the river is out of sight below the horizon, although you\ncan still see the trees in that direction.  The north bank is closer, and you\neye it warily for signs of hostile indians.\n",
+         "altitude" : null
+      },
+      "forest114@rainforest" : {
+         "exits" : {
+            "n" : "forest112"
+         },
+         "flags" : [],
+         "zone" : "rainforest",
+         "title" : "Warrior's Hut",
+         "id" : "forest114",
+         "description" : "\n    You are in a small hut, obviously built for someone of lesser stature than\nyourself.  Rows of heads adorn the walls, all that remains of the unfortunate\nerstwhile enemies of this hut's owner.\n",
+         "altitude" : null
+      },
+      "forest141@rainforest" : {
+         "exits" : {
+            "w" : "forest138",
+            "e" : "forest139",
+            "n" : "forest142",
+            "s" : "forest140"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Stuck In The Fig Forest",
+         "id" : "forest141",
+         "description" : "\n    You are lost, deep in the fig forest.  The only trees you can see here are\nstrangler figs.  Through some quirk of nature, they have come to completely\ndominate this part of the rainforest and will allow no other trees to grow.\nThere are exits in all directions, though everywhere you look seems to be dark\nand gloomy.\n",
+         "altitude" : null
+      },
+      "forest96@rainforest" : {
+         "exits" : {
+            "e" : "forest90",
+            "s" : "forest92"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Clearing",
+         "id" : "forest96",
+         "description" : "\n    You are in a small clearing in which cecropias and heliconias thrive, as\nwell as banana palms which have not yet been completely plundered by monkeys.\nThe only ways out of the clearing are to the east and south.\n",
+         "altitude" : null
+      },
+      "river16@rainforest" : {
+         "exits" : {
+            "n" : "river13"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles",
+            "Death"
+         ],
+         "zone" : "rainforest",
+         "title" : "Close In To The Shore",
+         "id" : "river16",
+         "description" : "\n    TWANG!  An arrow thuds into your chest!  As you topple into the water you\nhave time to reflect on your poor judgment in coming so close to the shore...\n",
+         "altitude" : null
+      },
+      "forest18@rainforest" : {
+         "exits" : {
+            "w" : "forest16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "River Bank",
+         "id" : "forest18",
+         "description" : "\n    You find your way blocked by a fallen tree which sticks out into the middle of the river.  You find yourself unable to climb it since its trunk is smooth\nand slippery from having recently been submerged in a flood.  Your only option\nis to go back west.\n",
+         "altitude" : null
+      },
+      "forest9@rainforest" : {
+         "exits" : {
+            "e" : "forest11",
+            "s" : "forest8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "By The Tumultuous Waters",
+         "id" : "forest9",
+         "description" : "\n    Spray from the raging river to the north saturates your clothes as you\nstand here on the bank of the Kerapi river.  Another river has just joined it\nfrom the north, and the resultant torrent thunders past you with an almost\ndeafening sound.  You marvel at this mighty force of nature and at the sheer\npower of the water as it bounces down the hillside, forging a channel for\nitself.  You could not hope to cross here, or even enter the water, for you\nwould be carried away and dashed to pieces in a minute.  To the east the river\ndrops suddenly downhill and you can follow its bank if you wish.\n",
+         "altitude" : "350"
+      },
+      "forest142@rainforest" : {
+         "exits" : {
+            "n" : "forest137"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Not In The Fig Forest",
+         "id" : "forest142",
+         "description" : "\n    You have come out on the other side of the fig forest!  You are so relieved\nthat you stop and rest awhile in thought.  It is only then that you realise\nyour progress is blocked by a tangled mass of tall thorny bushes so thick that\nit would take you a year to hack through them.  You almost burst into tears as\nthe knowledge sinks in that all your efforts have been in vain.\n",
+         "altitude" : null
+      },
+      "forest87@rainforest" : {
+         "exits" : {
+            "e" : "forest91",
+            "n" : "forest83"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Shallows",
+         "id" : "forest87",
+         "description" : "\n    You are wading through tea-coloured water, your feet fortunately on firm\nsand rather than thick yielding mud.  The water is cool and pleasant, and comes\nas a relief in the humid heat of the jungle.  A tall tree has fallen into the\nriver to the west, and you prefer to ignore that direction rather than wading\nin deeper to try to get around it.\n",
+         "altitude" : null
+      },
+      "mount7@rainforest" : {
+         "exits" : {
+            "w" : "mount8",
+            "e" : "mount6"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Natural Cave",
+         "id" : "mount7",
+         "description" : "\n    You are in a small cave, formed naturally by the same awesome forces which\nshaped this mountain range millions of years ago.  The cave continues to the\nwest, and a narrow rocky gully runs past to the east.\n",
+         "altitude" : null
+      },
+      "forest97@rainforest" : {
+         "exits" : {
+            "w" : "forest93",
+            "e" : "forest100",
+            "n" : "river4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "By The River",
+         "id" : "forest97",
+         "description" : "\n    You are on the south bank of the Malazon.  Here it swings around to the\nnorth, converging with the Kerapi a little way to the east.  You can go east\nfrom here into the jungle or west along the bank.\n",
+         "altitude" : null
+      },
+      "mount40@rainforest" : {
+         "exits" : {
+            "n" : "mount39",
+            "d" : "mount41"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount40",
+         "description" : "\n    You are on a long and winding path by which animals and explorers may climb\nfrom the rainforest up into the mountains, or descend from the mountains into\nthe trees.  Whichever way you choose to go, it is a long haul.\n",
+         "altitude" : "6000"
+      },
+      "forest65@rainforest" : {
+         "exits" : {
+            "w" : "forest64",
+            "n" : "forest66",
+            "s" : "forest67"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Soft Ground",
+         "id" : "forest65",
+         "description" : "\n    You are squelching through a muddy part of the forest.  The river is close\nby to the south and it is making its presence felt.  With every step your feet\nsink into the mud and water covers your shoes.  This land of trees and water\nis beginning to get you down.\n",
+         "altitude" : null
+      },
+      "forest79@rainforest" : {
+         "exits" : {
+            "e" : "forest82",
+            "n" : "forest77",
+            "s" : "forest83"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Tannin Pool",
+         "id" : "forest79",
+         "description" : "\n    You are standing by the side of a large pool of water, though it may be a\nchannel and therefore part of the river.  The water is still and clear, though\nyou can see nothing moving in it.  It is the colour of tea but does not look\ndrinkable.\n",
+         "altitude" : null
+      },
+      "forest19@rainforest" : {
+         "exits" : {
+            "w" : "forest21",
+            "n" : "forest17",
+            "s" : "river2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Bank Of The River Malazon",
+         "id" : "forest19",
+         "description" : "\n    You are on the bank of a smallish river.  It is quiet and flows slowly, and\nyou could cross here if you wished.  Above you spider monkeys chatter in the\ncanopy, feeding on figs and any other fruit that they can find.\n",
+         "altitude" : null
+      },
+      "forest74@rainforest" : {
+         "exits" : {
+            "e" : "forest75",
+            "s" : "forest72"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Ungulates' Trail",
+         "id" : "forest74",
+         "description" : "\n    You are in a dense part of the forest, where thick bushes bar your way in\nevery direction but to the east, where a trail of sorts leads deeper into the\njungle.  What kind of animals have made it, you can only guess.\n",
+         "altitude" : null
+      },
+      "mount28@rainforest" : {
+         "exits" : {
+            "u" : "mount29",
+            "d" : "mount27"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Icy Rock Face",
+         "id" : "mount28",
+         "description" : "\n    You are halfway up the rock face, clinging on for dear life, though your\nhands are getting exceedingly cold in the process.  Some of your footholds are\nworryingly slippery owing to a thin but lethal coating of black ice.  You can\ncontinue up or down from here.\n",
+         "altitude" : "7500"
+      },
+      "forest145@rainforest" : {
+         "exits" : {
+            "e" : "forest143"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Edge Of The Pool",
+         "id" : "forest145",
+         "description" : "\n    A large pool, separated from the main body of the river by a small bank\nabout three feet wide, blocks your path.  It is impossible to tell how deep it\nis, as the water in it is almost black with dark mud.\n",
+         "altitude" : null
+      },
+      "forest33@rainforest" : {
+         "exits" : {
+            "w" : "forest32",
+            "u" : "forest41",
+            "d" : "forest24",
+            "s" : "forest39"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Canopy",
+         "id" : "forest33",
+         "description" : "\n    You are up in the canopy.  Looking up, you can see the sky, but in every\nother direction all you can see are leaves.  The tree you are in is one of\nthe particularly competitive species which tower up into the sky, its top high\nabove the canopy.  You could probably climb it if you had a mind to.  Otherwise\nyou can descend to the ground or move across the branches into another tree.\n",
+         "altitude" : null
+      },
+      "forest36@rainforest" : {
+         "exits" : {
+            "w" : "forest35",
+            "u" : "forest43",
+            "n" : "forest39",
+            "d" : "forest27"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Canopy",
+         "id" : "forest36",
+         "description" : "\n    You are up in the canopy.  Looking up, you can see the sky, but in every\nother direction all you can see are leaves.  The tree you are in is one of\nthe particularly competitive species which tower up into the sky, its top high\nabove the canopy.  You could probably climb it if you had a mind to.  Otherwise\nyou can descend to the ground or move across the branches into another tree.\n",
+         "altitude" : null
+      },
+      "forest42@rainforest" : {
+         "exits" : {
+            "d" : "forest34"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Topmost Branches",
+         "id" : "forest42",
+         "description" : "\n    You are in the uppermost branches of one of the taller trees in the\nrainforest, looking out over the vast spread of the canopy which stretches out\nto the horizon in all directions but to the west, where tall mountains and\nsnow-capped volcanos rise up from the forests to touch the clouds.  The next\ntree is too far away for you to reach, so the only way from here is down.\n",
+         "altitude" : null
+      },
+      "forest67@rainforest" : {
+         "exits" : {
+            "e" : "forest69",
+            "n" : "forest65"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Leeches Galore",
+         "id" : "forest67",
+         "description" : "\n    You have come upon the kind of terrain leeches love best.  And in this\nhumid jungle the leeches are of staggering sizes.  However the large ones are\neasy to cope with; it is the small ones that get inside your clothes that you\nare most concerned about.  You continually have to stop and pluck them from\nyour body, and that is not always easy... their suction-cup mouths grip you\nwith surprising strength.\n",
+         "altitude" : null
+      },
+      "forest127@rainforest" : {
+         "exits" : {
+            "e" : "forest131",
+            "n" : "forest125",
+            "s" : "forest132"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Stone God",
+         "id" : "forest127",
+         "description" : "\n    You are in a deep part of the forest where only a little light reaches the\nground.  An enormous stone statue stands here, partially crumbled but still\nimposing.  It appears to be a god of some kind, and its terrible eyes are\nintact and manage to convey a sense of awesome power.  Whether the race who\ncarved it is still flourishing somewhere in the heart of the rainforest, you\nhave no idea.\n",
+         "altitude" : null
+      },
+      "river22@rainforest" : {
+         "exits" : {
+            "w" : "river19",
+            "e" : "current1",
+            "n" : "river20"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "rainforest",
+         "title" : "Southern Estuarine Waters",
+         "id" : "river22",
+         "description" : "\n    You are in the southern part of the estuary.  The distant tree-lined shore\nseems so far away and the hours you spent trekking through the jungle are\nlittle more than a dim memory.  The open sea lies to the east.\n",
+         "altitude" : null
+      },
+      "forest38@rainforest" : {
+         "exits" : {
+            "w" : "forest37",
+            "e" : "forest39",
+            "n" : "forest32",
+            "d" : "forest29",
+            "s" : "forest35"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "In The Canopy",
+         "id" : "forest38",
+         "description" : "\n    You are up in the canopy.  Here on the spreading branches many plants make\ntheir home which you would normally think of as belonging on the ground.\nOrchids and other epiphytes make use of their hosts in order to catch the sun's\nrays which are too rare on the dim forest floor below.  You can descend to the\nground or move across the branches into another tree.\n",
+         "altitude" : null
+      },
+      "forest131@rainforest" : {
+         "exits" : {
+            "w" : "forest127",
+            "n" : "forest130",
+            "s" : "forest136"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Beneath The Understorey",
+         "id" : "forest131",
+         "description" : "\n    The understorey here is particularly impressive, since the canopy is\ninexplicably almost bare.  Tall palms are making the most of the extra light\nand their fronds wave about gently in the slight breeze which reaches them from\nabove.\n",
+         "altitude" : null
+      },
+      "forest66@rainforest" : {
+         "exits" : {
+            "e" : "forest68",
+            "s" : "forest65"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Land Of The Butterflies",
+         "id" : "forest66",
+         "description" : "\n    In this drier part of the forest many species of butterfly are swarming.\nSome settle on your face and arms and lick off your sweat with their long\nprobosces, hungry for salt.  Some of the others are huge, almost a foot across,\nbut those tend to stay away from you.  Their wingbeats are distinctly audible.\n",
+         "altitude" : null
+      },
+      "mount23@rainforest" : {
+         "exits" : {
+            "w" : "mount19",
+            "e" : "mount24",
+            "s" : "mount25"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "rainforest",
+         "title" : "On The Moraine",
+         "id" : "mount23",
+         "description" : "\n    You are following the moraine along the side of the glacier.  At this point\nthe glacier runs fairly straight for a while and the chances of meeting a\ncrevasse are reduced, should you wish to cross here.  Otherwise you can head\neast or west along the moraine.\n",
+         "altitude" : "4300"
+      },
+      "forest81@rainforest" : {
+         "exits" : {
+            "w" : "forest78",
+            "e" : "forest85"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Where The Hummingbirds Hum",
+         "id" : "forest81",
+         "description" : "\n    This part of the forest has a quiet, ethereal quality.  You are on high\nground within sight of the river, where tall plants abound with deep flowers\nwhose nectar only hummingbirds can reach.  Several of those tiny birds are\nhovering around here, their humming increasing in pitch every time they move.\nYou can go east and west from here.\n",
+         "altitude" : null
+      },
+      "mount43@rainforest" : {
+         "exits" : {
+            "d" : "mount44",
+            "s" : "mount42"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rainforest",
+         "title" : "Winding Path",
+         "id" : "mount43",
+         "description" : "\n    You are on a long and winding path by which animals and explorers may climb\nfrom the rainforest up into the mountains, or descend from the mountains into\nthe trees.  Whichever way you choose to go, it is a long haul.\n",
+         "altitude" : "3000"
+      },
+      "forest144@rainforest" : {
+         "exits" : {
+            "e" : "forest146",
+            "s" : "forest143"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest"
+         ],
+         "zone" : "rainforest",
+         "title" : "Thick Rainforest",
+         "id" : "forest144",
+         "description" : "\n    You are in a very crowded part of the forest.  Your movements are very\nlimited but you think you can probably go east for a little way before you are\nforced to stop.  The only other exit is back to the south.\n",
+         "altitude" : null
+      },
+      "forest29@rainforest" : {
+         "exits" : {
+            "w" : "forest30",
+            "e" : "forest28",
+            "u" : "forest38",
+            "n" : "forest26",
+            "s" : "forest24"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Rainforest",
+         "id" : "forest29",
+         "description" : "\n    You are wandering through the heart of the rainforest.  The density of the\ntrees makes it impossible to continue in a straight line and you wonder whether\nyou might be going round in circles.  There are exits in all directions.\n",
+         "altitude" : null
+      },
+      "forest25@rainforest" : {
+         "exits" : {
+            "w" : "forest24",
+            "e" : "forest25",
+            "u" : "forest34",
+            "n" : "forest23",
+            "s" : "forest26"
+         },
+         "flags" : [
+            "Outdoors",
+            "RainForest",
+            "NoMobiles"
+         ],
+         "zone" : "rainforest",
+         "title" : "Deep In The Rainforest",
+         "id" : "forest25",
+         "description" : "\n    You are wandering through the heart of the rainforest.  The density of the\ntrees makes it impossible to continue in a straight line and you wonder whether\nyou might be going round in circles.  There are exits in all directions.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "pataniku@rainforest" : {
+         "damage" : "10",
+         "location" : "forest112",
+         "speed" : "0",
+         "aggression" : "60",
+         "armor" : "0",
+         "name" : "Pataniku",
+         "description" : "Pataniku the Indian grins at you with yellow teeth.",
+         "strength" : "170"
+      },
+      "llama@rainforest" : {
+         "damage" : "10",
+         "location" : "mount34",
+         "armor" : "0",
+         "name" : "Llama",
+         "description" : "A llama is here, protected from the cold by her thick fur.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "220",
+         "speed" : "0",
+         "aggression" : "0"
+      },
+      "kinkajou@rainforest" : {
+         "damage" : "10",
+         "location" : "forest75",
+         "speed" : "2",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Kinkajou",
+         "description" : "A kinkajou, a monkey-like carnivore, feeds from his perch in the trees.",
+         "strength" : "115"
+      },
+      "leech7@rainforest" : {
+         "damage" : "7",
+         "location" : "forest67",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Leech",
+         "name" : "Leech7",
+         "description" : "A big hungry leech eagerly begins to feast on your blood.",
+         "strength" : "30"
+      },
+      "swordbill@rainforest" : {
+         "damage" : "3",
+         "location" : "forest81",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Swordbill",
+         "description" : "A swordbill hummingbird flits from flower to flower.",
+         "strength" : "30"
+      },
+      "leech2@rainforest" : {
+         "damage" : "7",
+         "location" : "forest67",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Leech",
+         "name" : "Leech2",
+         "description" : "A big hungry leech eagerly begins to feast on your blood.",
+         "strength" : "30"
+      },
+      "jaguar@rainforest" : {
+         "damage" : "15",
+         "location" : "forest118",
+         "speed" : "3",
+         "aggression" : "100",
+         "armor" : "0",
+         "name" : "Jaguar",
+         "examine" : "He is the biggest cat in the forest and you are to be his next meal!",
+         "description" : "There is a terrifying roar and a yellow blur, and a jaguar is upon you!",
+         "strength" : "510"
+      },
+      "curassow@rainforest" : {
+         "damage" : "10",
+         "location" : "forest106",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Curassow",
+         "description" : "A chunky flightless bird called a curassow is pecking scraps from the ground.",
+         "strength" : "90"
+      },
+      "leech5@rainforest" : {
+         "damage" : "7",
+         "location" : "forest67",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Leech",
+         "name" : "Leech5",
+         "description" : "A big hungry leech eagerly begins to feast on your blood.",
+         "strength" : "30"
+      },
+      "tricops@rainforest" : {
+         "damage" : "8",
+         "location" : "forest126",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Tricops",
+         "description" : "Tricops, a frog-eating bat, hangs upside down from a branch.",
+         "strength" : "60"
+      },
+      "nakorehu@rainforest" : {
+         "damage" : "10",
+         "location" : "forest148",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Nakorehu",
+         "description" : "Nakorehu glares at you in annoyance.",
+         "strength" : "150"
+      },
+      "anaconda@rainforest" : {
+         "damage" : "9",
+         "location" : "forest79",
+         "speed" : "2",
+         "aggression" : "30",
+         "armor" : "0",
+         "name" : "Anaconda",
+         "description" : "A giant anaconda glides towards you over the wet ground.",
+         "strength" : "530"
+      },
+      "howler@rainforest" : {
+         "damage" : "8",
+         "location" : "forest38",
+         "speed" : "4",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Howler Monkey",
+         "name" : "Howler",
+         "description" : "A howler monkey emits deafening cries from its woody perch.",
+         "strength" : "90"
+      },
+      "mogani@rainforest" : {
+         "damage" : "10",
+         "location" : "forest124",
+         "speed" : "3",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Mogani",
+         "description" : "Mogani the Indian is here hunting monkeys.",
+         "strength" : "150"
+      },
+      "tamandua@rainforest" : {
+         "damage" : "12",
+         "location" : "forest20",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Tamandua",
+         "description" : "Tamandua the anteater rakes the nest with his huge claws.",
+         "strength" : "150"
+      },
+      "tapir@rainforest" : {
+         "damage" : "10",
+         "location" : "forest49",
+         "speed" : "2",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Tapir",
+         "description" : "A tapir trundles by, apparently unaware of your presence.",
+         "strength" : "150"
+      },
+      "piranha2@rainforest" : {
+         "damage" : "12",
+         "location" : "forest87",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Piranha",
+         "name" : "Piranha2",
+         "description" : "A vicious piranha attacks your legs.",
+         "strength" : "40"
+      },
+      "tanacu@rainforest" : {
+         "damage" : "10",
+         "location" : "forest114",
+         "speed" : "0",
+         "aggression" : "90",
+         "armor" : "0",
+         "name" : "Tanacu",
+         "description" : "Tanacu looks up in surprise as you enter his hut.",
+         "strength" : "180"
+      },
+      "alpaca@rainforest" : {
+         "damage" : "10",
+         "location" : "mount38",
+         "speed" : "2",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Alpaca",
+         "description" : "An alpaca is here, feeding on the hardy plants by the side of the path.",
+         "strength" : "190"
+      },
+      "agouti@rainforest" : {
+         "damage" : "7",
+         "location" : "forest144",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Agouti",
+         "examine" : "He is a large rodent.",
+         "description" : "An agouti is digging here for roots and tubers.",
+         "strength" : "50"
+      },
+      "caiman@rainforest" : {
+         "damage" : "15",
+         "location" : "forest57",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Caiman",
+         "examine" : "It is very large and could hurt you a lot!",
+         "description" : "A black caiman is annoyed that you have interrupted his bask.",
+         "strength" : "480"
+      },
+      "iguana@rainforest" : {
+         "damage" : "8",
+         "location" : "forest93",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Iguana",
+         "name" : "Iguana",
+         "description" : "A large green iguana is taking a nap on one of the nearby branches.",
+         "strength" : "60"
+      },
+      "horse@rainforest" : {
+         "damage" : "12",
+         "location" : "mount44",
+         "speed" : "2",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Wild Horse",
+         "name" : "Horse",
+         "description" : "A wild horse tosses his mane proudly and whinnies as you arrive.",
+         "strength" : "350"
+      },
+      "capuchin@rainforest" : {
+         "damage" : "8",
+         "location" : "forest37",
+         "armor" : "0",
+         "name" : "Capuchin",
+         "description" : "A black capuchin monkey leaps about here among the branches.",
+         "strength" : "80",
+         "speed" : "3",
+         "pname" : "Black Capuchin",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "piranha7@rainforest" : {
+         "damage" : "12",
+         "location" : "forest91",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Piranha",
+         "name" : "Piranha7",
+         "description" : "A vicious piranha attacks your legs.",
+         "strength" : "40"
+      },
+      "ants@rainforest" : {
+         "damage" : "5",
+         "location" : "forest68",
+         "speed" : "0",
+         "aggression" : "4",
+         "armor" : "0",
+         "pname" : "Army Ants",
+         "name" : "Ants",
+         "examine" : "One or two have noticed your presence and are coming to investigate.",
+         "description" : "",
+         "strength" : "250"
+      },
+      "manatee@rainforest" : {
+         "damage" : "8",
+         "location" : "river18",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Manatee",
+         "description" : "A mournful-looking manatee surfaces just next to you.",
+         "strength" : "320"
+      },
+      "duck@rainforest" : {
+         "damage" : "7",
+         "location" : "forest5",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Torrent Duck",
+         "name" : "Duck",
+         "description" : "A torrent duck is plucking stonefly larvae from one of the rocks here.",
+         "strength" : "50"
+      },
+      "hoatzin@rainforest" : {
+         "damage" : "10",
+         "location" : "forest131",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Hoatzin",
+         "description" : "A hoatzin, an evil-smelling and primitive bird, is clinging to the branches by  means of claws on its wings.",
+         "strength" : "90"
+      },
+      "peccary@rainforest" : {
+         "damage" : "8",
+         "location" : "forest128",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Collared Peccary",
+         "name" : "Peccary",
+         "description" : "A pig-like collared peccary eats fungi from the forest floor.",
+         "strength" : "60"
+      },
+      "leech@rainforest" : {
+         "damage" : "10",
+         "location" : "forest64",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "name" : "Leech",
+         "description" : "A truly elephantine leech fastens itself securely to your leg.",
+         "strength" : "50"
+      },
+      "egret@rainforest" : {
+         "damage" : "10",
+         "location" : "forest122",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Great Egret",
+         "name" : "Egret",
+         "description" : "A great egret, majestic and white, is standing by the water's edge.",
+         "strength" : "140"
+      },
+      "parakeet@rainforest" : {
+         "damage" : "8",
+         "location" : "forest17",
+         "speed" : "3",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Parakeet",
+         "description" : "A beautiful but noisy parakeet flaps about your head annoyingly.",
+         "strength" : "60"
+      },
+      "bear@rainforest" : {
+         "damage" : "15",
+         "location" : "mount45",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Spectacled Bear",
+         "name" : "Bear",
+         "description" : "A spectacled bear is taking a nap here.",
+         "strength" : "330"
+      },
+      "piranha5@rainforest" : {
+         "damage" : "12",
+         "location" : "forest91",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Piranha",
+         "name" : "Piranha5",
+         "description" : "A vicious piranha attacks your legs.",
+         "strength" : "40"
+      },
+      "condor@rainforest" : {
+         "damage" : "15",
+         "location" : "mount17",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Condor",
+         "examine" : "\nWith a wingspan of nearly ten feet and a host of sharp claws he fears nothing.",
+         "description" : "A condor has chosen this spot to make his nest.",
+         "strength" : "320"
+      },
+      "uacari@rainforest" : {
+         "damage" : "8",
+         "location" : "forest36",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Red Uacari",
+         "name" : "Uacari",
+         "examine" : "\nHis bright red face is a peculiar sight.",
+         "description" : "A red uacari monkey looks at you glumly.",
+         "strength" : "70"
+      },
+      "owl@rainforest" : {
+         "damage" : "8",
+         "location" : "forest10",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Horned Owl",
+         "name" : "Owl",
+         "description" : "A horned owl scans the ground for mouse oppossums.",
+         "strength" : "50"
+      },
+      "ocelot@rainforest" : {
+         "damage" : "11",
+         "location" : "forest59",
+         "speed" : "4",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Ocelot",
+         "examine" : "He is a medium-sized member of the cat family.",
+         "description" : "An ocelot watches you keenly from the branches.",
+         "strength" : "160"
+      },
+      "tortoise@rainforest" : {
+         "damage" : "8",
+         "location" : "forest109",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "25",
+         "name" : "Tortoise",
+         "description" : "A big tortoise leaps to the attack!  In an hour he will be upon you!",
+         "strength" : "180"
+      },
+      "harpy@rainforest" : {
+         "damage" : "15",
+         "location" : "forest41",
+         "speed" : "0",
+         "aggression" : "90",
+         "armor" : "0",
+         "pname" : "Harpy Eagle",
+         "name" : "Harpy",
+         "description" : "A harpy eagle reaches for you with massive talons.",
+         "strength" : "200"
+      },
+      "piranha3@rainforest" : {
+         "damage" : "12",
+         "location" : "forest87",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Piranha",
+         "name" : "Piranha3",
+         "description" : "A vicious piranha attacks your legs.",
+         "strength" : "40"
+      },
+      "spider@rainforest" : {
+         "damage" : "8",
+         "location" : "forest32",
+         "armor" : "0",
+         "name" : "Spider",
+         "description" : "A spider monkey chatters at you from an adjacent branch.",
+         "strength" : "50",
+         "speed" : "10",
+         "pname" : "Spider Monkey",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "turtle@rainforest" : {
+         "damage" : "5",
+         "location" : "forest82",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Turtle",
+         "description" : "A turtle swims about in the shallow water.",
+         "strength" : "80"
+      },
+      "green@rainforest" : {
+         "damage" : "8",
+         "location" : "forest45",
+         "speed" : "0",
+         "aggression" : "10",
+         "armor" : "0",
+         "pname" : "Green Macaw",
+         "name" : "Green",
+         "description" : "A green macaw mobs you, agitated by your presence.",
+         "strength" : "50"
+      },
+      "latuka@rainforest" : {
+         "damage" : "10",
+         "location" : "forest134",
+         "armor" : "0",
+         "name" : "Latuka",
+         "description" : "Latuka the Indian is gathering herbs here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "120",
+         "speed" : "4",
+         "aggression" : "40"
+      },
+      "bat@rainforest" : {
+         "damage" : "10",
+         "location" : "forest16",
+         "speed" : "8",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "vampirebat",
+         "name" : "Bat",
+         "description" : "An evil blackbat vampire wants to taste your blood!",
+         "strength" : "70"
+      },
+      "chinchilla@rainforest" : {
+         "damage" : "5",
+         "location" : "mount16",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Chinchilla",
+         "examine" : "\nHe is very small but his thick fur gives him ample protection against the cold.",
+         "description" : "A chinchilla scurries about on the rocks by your feet.",
+         "strength" : "30"
+      },
+      "axape@rainforest" : {
+         "damage" : "12",
+         "location" : "forest116",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "name" : "Axape",
+         "description" : "Axape the Indian chief leaps at you with murder on his mind.",
+         "strength" : "230"
+      },
+      "explorer@rainforest" : {
+         "damage" : "8",
+         "location" : "mount1",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "name" : "Explorer",
+         "examine" : "\nHis clothes are in tatters and his beard reaches his waist.",
+         "description" : "A wild-eyed and insane explorer suddenly leaps up, reaching for your throat.",
+         "strength" : "20"
+      },
+      "pirarucu@rainforest" : {
+         "damage" : "10",
+         "location" : "river7",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Pirarucu",
+         "description" : "A pirarucu, an enormous freshwater fish, is swimming by the side of the raft.",
+         "strength" : "160"
+      },
+      "caracara@rainforest" : {
+         "damage" : "10",
+         "location" : "mount23",
+         "speed" : "6",
+         "aggression" : "35",
+         "armor" : "0",
+         "name" : "Caracara",
+         "description" : "A caracara flies close by you, mobbing you.  Maybe you are near his nest.",
+         "strength" : "120"
+      },
+      "biguli@rainforest" : {
+         "damage" : "10",
+         "location" : "forest148",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Biguli",
+         "description" : "Biguli is a well-built Indian who doesn't like trespassers.",
+         "strength" : "190"
+      },
+      "stag@rainforest" : {
+         "damage" : "12",
+         "location" : "mount12",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Stag",
+         "description" : "A large stag is drinking from the river here.",
+         "strength" : "280"
+      },
+      "vulture@rainforest" : {
+         "damage" : "12",
+         "location" : "forest43",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "pname" : "Yellowheaded Vulture",
+         "name" : "Vulture",
+         "description" : "A yellow-headed vulture swoops down on you from above.",
+         "strength" : "220"
+      },
+      "potona@rainforest" : {
+         "damage" : "10",
+         "location" : "forest115",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Potona",
+         "description" : "Potona, the matriarch of the village, threatens you with a brandished pot.",
+         "strength" : "100"
+      },
+      "nineband@rainforest" : {
+         "damage" : "10",
+         "location" : "forest48",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "20",
+         "pname" : "Ninebanded Armadillo",
+         "name" : "Nineband",
+         "description" : "A nine-banded armadillo is scuffling about here looking for food.",
+         "strength" : "100"
+      },
+      "piranha6@rainforest" : {
+         "damage" : "12",
+         "location" : "forest91",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Piranha",
+         "name" : "Piranha6",
+         "description" : "A vicious piranha attacks your legs.",
+         "strength" : "40"
+      },
+      "guanaco@rainforest" : {
+         "damage" : "12",
+         "location" : "mount4",
+         "speed" : "3",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Guanaco",
+         "examine" : "\nHe is a member of the camel family and has a long graceful neck.",
+         "description" : "A sure-footed guanaco plucks at the sparse greenery.",
+         "strength" : "260"
+      },
+      "leech4@rainforest" : {
+         "damage" : "7",
+         "location" : "forest67",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Leech",
+         "name" : "Leech4",
+         "description" : "A big hungry leech eagerly begins to feast on your blood.",
+         "strength" : "30"
+      },
+      "puma@rainforest" : {
+         "damage" : "17",
+         "location" : "mount7",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "Puma",
+         "description" : "A puma snarls at you and prepares to spring, his hair bristling.",
+         "strength" : "210"
+      },
+      "leech3@rainforest" : {
+         "damage" : "7",
+         "location" : "forest67",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Leech",
+         "name" : "Leech3",
+         "description" : "A big hungry leech eagerly begins to feast on your blood.",
+         "strength" : "30"
+      },
+      "umbrellabird@rainforest" : {
+         "damage" : "8",
+         "location" : "forest7",
+         "speed" : "8",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Umbrella Bird",
+         "name" : "Umbrellabird",
+         "description" : "The umbrella bird is the ugliest bird you have ever seen.",
+         "strength" : "70"
+      },
+      "pudu@rainforest" : {
+         "damage" : "8",
+         "location" : "mount38",
+         "speed" : "2",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Pudu",
+         "description" : "Pudu the dwarf deer is feeding on succulent plants here.",
+         "strength" : "80"
+      },
+      "piranha1@rainforest" : {
+         "damage" : "12",
+         "location" : "forest87",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Piranha",
+         "name" : "Piranha1",
+         "description" : "A vicious piranha attacks your legs.",
+         "strength" : "40"
+      },
+      "toucan@rainforest" : {
+         "damage" : "5",
+         "location" : "forest133",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Toucan",
+         "description" : "A huge-beaked toucan squawks at you unattractively.",
+         "strength" : "40"
+      },
+      "leech1@rainforest" : {
+         "damage" : "7",
+         "location" : "forest67",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Leech",
+         "name" : "Leech1",
+         "description" : "A big hungry leech eagerly begins to feast on your blood.",
+         "strength" : "30"
+      },
+      "corixi@rainforest" : {
+         "damage" : "10",
+         "location" : "forest117",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "Corixi",
+         "description" : "Corixi puts down an unfinished pot and orders you out of his hut.",
+         "strength" : "140"
+      },
+      "capybara@rainforest" : {
+         "damage" : "9",
+         "location" : "forest56",
+         "speed" : "2",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Capybara",
+         "description" : "A capybara, the world's largest rodent, trots around on stumpy legs.",
+         "strength" : "90"
+      },
+      "beguriga@rainforest" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "forest113",
+         "speed" : "0",
+         "aggression" : "90",
+         "armor" : "0",
+         "name" : "Beguriga",
+         "description" : "Beguriga the medicine-man shouts at you with obvious wrath.",
+         "strength" : "150"
+      },
+      "tegu@rainforest" : {
+         "damage" : "9",
+         "location" : "forest72",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Tegu Lizard",
+         "name" : "Tegu",
+         "description" : "A three-foot tegu lizard snaps its powerful jaws at you in warning.",
+         "strength" : "80"
+      },
+      "king@rainforest" : {
+         "damage" : "15",
+         "location" : "river12",
+         "speed" : "7",
+         "aggression" : "90",
+         "armor" : "0",
+         "pname" : "King Vulture",
+         "name" : "King",
+         "description" : "A brightly-coloured king vulture swoops down on you from above!",
+         "strength" : "240"
+      },
+      "piranha4@rainforest" : {
+         "damage" : "12",
+         "location" : "forest87",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Piranha",
+         "name" : "Piranha4",
+         "description" : "A vicious piranha attacks your legs.",
+         "strength" : "40"
+      },
+      "dolphin@rainforest" : {
+         "damage" : "10",
+         "location" : "river15",
+         "speed" : "3",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Dolphin",
+         "description" : "A freshwater dolphin leaps playfully in the water beside your raft.",
+         "strength" : "260"
+      },
+      "squirrel@rainforest" : {
+         "damage" : "8",
+         "location" : "forest34",
+         "armor" : "0",
+         "name" : "Squirrel",
+         "description" : "A squirrel monkey dangles from the branches using its prehensile tail.",
+         "strength" : "50",
+         "speed" : "15",
+         "pname" : "Squirrel Monkey",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "karitu@rainforest" : {
+         "damage" : "10",
+         "location" : "forest119",
+         "speed" : "4",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Karitu",
+         "description" : "Karitu the Indian is wandering through the forest here.",
+         "strength" : "150"
+      },
+      "sloth@rainforest" : {
+         "damage" : "8",
+         "location" : "forest94",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Threetoed Sloth",
+         "name" : "Sloth",
+         "description" : "A three-toed sloth climbs ponderously up one of the trees.",
+         "strength" : "160"
+      },
+      "leech6@rainforest" : {
+         "damage" : "7",
+         "location" : "forest67",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Leech",
+         "name" : "Leech6",
+         "description" : "A big hungry leech eagerly begins to feast on your blood.",
+         "strength" : "30"
+      }
+   }
+}

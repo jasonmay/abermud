@@ -1,0 +1,2230 @@
+{
+   "obj" : {
+      "statue_up@blizzard" : {
+         "desc[1]" : "\nA huge stone statue of a sorceror stands proudly against the north wall.",
+         "location" : "IN_ROOM:stonewalled",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "name" : "statue_up",
+         "examine" : "\nYou see a large marble statue of a mighty sorcerer, though its features have\nbeen misfigured by passing adventurers.",
+         "linked" : "statue_down",
+         "state" : "1",
+         "pname" : "statue",
+         "maxstate" : "1",
+         "desc[0]" : "\nA huge stone statue of a sorceror stands here, beside a hole leading down."
+      },
+      "scarlet@blizzard" : {
+         "location" : "IN_ROOM:robing",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "scarlet",
+         "name" : "scarlet",
+         "size" : "6",
+         "weight" : "2",
+         "pname" : "robe",
+         "bvalue" : "10",
+         "desc[0]" : "A scarlet robe has been neatly folded and left here.",
+         "aflags" : [
+            "Chest",
+            "Arms",
+            "Legs",
+            "Back"
+         ]
+      },
+      "necklace@blizzard" : {
+         "location" : "IN_ROOM:treasure",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "necklace",
+         "size" : "5",
+         "weight" : "1",
+         "bvalue" : "200",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "A beautiful necklace has been left here."
+      },
+      "door_shadowy@blizzard" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:shadowy",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_shadowy",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_laboratory",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "bridge_fire@blizzard" : {
+         "location" : "IN_ROOM:fire_gate",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "drawbridge",
+         "name" : "Bridge_Fire",
+         "examine" : "It's just a bridge over VERY troubled waters!",
+         "linked" : "Bridge_Hall",
+         "state" : "1",
+         "pname" : "bridge",
+         "desc[0]" : "A huge iron drawbridge crosses the lava to the east."
+      },
+      "door_laboratory@blizzard" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:laboratory",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_laboratory",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_shadowy",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "pass_stone@blizzard" : {
+         "location" : "IN_ROOM:stone_cell",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Pass_Stone",
+         "linked" : "Pass_Fissure",
+         "state" : "1",
+         "pname" : "passage",
+         "maxstate" : "1",
+         "desc[0]" : "A secret passage leads eastwards."
+      },
+      "pass_fissure@blizzard" : {
+         "location" : "IN_ROOM:fissure",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Pass_Fissure",
+         "linked" : "Pass_Stone",
+         "state" : "1",
+         "pname" : "passage",
+         "maxstate" : "1",
+         "desc[0]" : "A secret passage leads westwards."
+      },
+      "pick@blizzard" : {
+         "damage" : "11",
+         "location" : "IN_ROOM:snow_temple",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "ice",
+         "name" : "pick",
+         "size" : "5",
+         "weight" : "2",
+         "bvalue" : "20",
+         "desc[0]" : "A small but well made ice pick has been dropped here."
+      },
+      "soap@blizzard" : {
+         "location" : "IN_ROOM:storage",
+         "weight" : "1",
+         "name" : "soap",
+         "examine" : "Stamped in the soap are the strange runes \"Neutrogena\"",
+         "bvalue" : "20",
+         "desc[0]" : "Some soap has been dropped here.",
+         "size" : "1"
+      },
+      "platform_under@blizzard" : {
+         "location" : "IN_ROOM:underruined",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "platform",
+         "name" : "platform_under",
+         "maxstate" : "2",
+         "linked" : "platform_altar",
+         "state" : "2"
+      },
+      "rod@blizzard" : {
+         "location" : "IN_ROOM:workroom",
+         "weight" : "2",
+         "name" : "rod",
+         "bvalue" : "150",
+         "desc[0]" : "A black rod marked with a red pentacle has been placed here.",
+         "size" : "20"
+      },
+      "moonstone@blizzard" : {
+         "location" : "IN_ROOM:workroom",
+         "weight" : "3",
+         "name" : "moonstone",
+         "bvalue" : "200",
+         "desc[0]" : "A huge moonstone lies in front of you.",
+         "size" : "10"
+      },
+      "bridge_hall@blizzard" : {
+         "location" : "IN_ROOM:hall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "drawbridge",
+         "name" : "Bridge_Hall",
+         "examine" : "It's just a bridge over troubled waters....",
+         "linked" : "Bridge_Fire",
+         "state" : "1",
+         "pname" : "bridge",
+         "desc[0]" : "A huge iron drawbridge crosses the lava to the west."
+      },
+      "coins@blizzard" : {
+         "location" : "IN_ROOM:treasure",
+         "weight" : "1",
+         "altname" : "copper",
+         "name" : "coins",
+         "bvalue" : "20",
+         "desc[0]" : "A few copper coins lie scattered on the ground.",
+         "size" : "2"
+      },
+      "powerstone2@blizzard" : {
+         "location" : "IN_ROOM:library",
+         "altname" : "stone",
+         "name" : "powerstone2",
+         "size" : "1",
+         "pname" : "powerstone",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A magical powerstone has been placed here."
+      },
+      "scimitar@blizzard" : {
+         "damage" : "7",
+         "location" : "IN_ROOM:shady",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "scimitar",
+         "examine" : "\nThis is a hefty and gruesome weapon, much favoured by orcs, who often use them\nfor cutting cakes, trimming toe nails, and ripping out the insides of hobbits!",
+         "size" : "12",
+         "weight" : "10",
+         "bvalue" : "30",
+         "desc[0]" : "A long, curved scimitar has been placed here."
+      },
+      "riatha_fire@blizzard" : {
+         "location" : "IN_ROOM:temple",
+         "oflags" : [
+            "Extinguish",
+            "Lit",
+            "NoGet"
+         ],
+         "altname" : "flames",
+         "pname" : "fire",
+         "name" : "Riatha_Fire",
+         "examine" : "It looks a trifle hot for any mortal to handle."
+      },
+      "runesmagic@blizzard" : {
+         "location" : "IN_ROOM:rune_cave",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "writing",
+         "pname" : "runes",
+         "name" : "RunesMagic",
+         "examine" : "\nThe runes are apparently part of an educational guide to spell casting and\nlist several basic pieces of magic.  These are:\n\n                DEAFEN, DUMB, CRIPPLE, BLIND and CURE\n\nThe runes also allude to a spell for summoning people, SUMMON, but\nnote that several amulets and talismans can protect the victim from\nits effects.\n        A spell for finding the exact locations of players, objects\nand mobiles, WHERE, is also mentioned."
+      },
+      "pumice@blizzard" : {
+         "location" : "IN_ROOM:lava_path2",
+         "weight" : "1",
+         "name" : "pumice",
+         "bvalue" : "100",
+         "desc[0]" : "A piece of pumice has been discarded here.",
+         "size" : "1"
+      },
+      "signbridge@blizzard" : {
+         "location" : "IN_ROOM:bridge",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "SignBridge",
+         "examine" : "\n\n                                ____\n        _______________________/____\\\n       /                       |    |\n      < WEST  Blizzard Pass 8m |    |\n       \\_______________________|    |__________________\n                               |    |                  \\\n              _________________|    | 5 m Village  EAST >\n             /                 |    |__________________/\n            < SOUTH  Forest 2m |    |\n             \\_________________|    |\n                               |    |\n                               |    |\n                               |    |\n                               |    |\n                               |    |\n                               |    |\n                        (*)    |    |   (*)\n________________________\\|/____|    |___\\|/__________________________________\n                               |____|\n",
+         "desc[0]" : "A sign has been posted by the bridge."
+      },
+      "scroll@blizzard" : {
+         "location" : "IN_ROOM:rocky_can",
+         "weight" : "1",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "scroll",
+         "bvalue" : "100",
+         "desc[0]" : "A battered papyrus scroll has been dropped here.",
+         "size" : "12"
+      },
+      "brick@blizzard" : {
+         "location" : "IN_ROOM:ruined",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "name" : "brick",
+         "examine" : "The brick looks like it can be pushed.",
+         "maxstate" : "1",
+         "state" : "1"
+      },
+      "shield2@blizzard" : {
+         "location" : "IN_ROOM:pillared",
+         "armor" : "40",
+         "oflags" : [
+            "Destroyed",
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "wooden",
+         "name" : "shield2",
+         "size" : "10",
+         "pname" : "shield",
+         "weight" : "4",
+         "bvalue" : "0",
+         "desc[0]" : "A small wooden shield has been left here."
+      },
+      "pillar_east@blizzard" : {
+         "location" : "IN_ROOM:narrow",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "name" : "pillar_east",
+         "linked" : "pillar_west",
+         "state" : "1",
+         "pname" : "pillar",
+         "maxstate" : "1",
+         "desc[0]" : "A huge stone pillar bridges the gap to the west."
+      },
+      "orange_gem@blizzard" : {
+         "location" : "IN_ROOM:secret",
+         "altname" : "orange",
+         "name" : "Orange_Gem",
+         "size" : "1",
+         "pname" : "gem",
+         "weight" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A small orange gem has been dropped here."
+      },
+      "well@blizzard" : {
+         "location" : "IN_ROOM:large_cav",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "well",
+         "examine" : "\"Yes thanks, and you...?\""
+      },
+      "broom@blizzard" : {
+         "damage" : "8",
+         "location" : "IN_ROOM:storage",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "broom",
+         "examine" : "\nIt has a Mark IV Super-Demon engine, unfortunately out of order, and looks as\nif its been kick started once too often..",
+         "size" : "25",
+         "weight" : "2",
+         "bvalue" : "20",
+         "desc[0]" : "An old broom has been left here."
+      },
+      "rough_curtains@blizzard" : {
+         "desc[1]" : "To the south the passage passes through some curtains.",
+         "location" : "IN_ROOM:rough",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "Rough_Curtains",
+         "examine" : "They aren't the sort you'd expect to find a peeping Tom behind.",
+         "linked" : "Throne_Curtains",
+         "state" : "1",
+         "pname" : "curtains",
+         "maxstate" : "1",
+         "desc[0]" : "To the south the passage leads into a curtained hall."
+      },
+      "coinplat@blizzard" : {
+         "location" : "IN_ROOM:well",
+         "altname" : "platinum",
+         "name" : "CoinPlat",
+         "size" : "1",
+         "pname" : "coins",
+         "weight" : "1",
+         "bvalue" : "150",
+         "desc[0]" : "A few small platinum coins has been dropped here."
+      },
+      "bookcase@blizzard" : {
+         "location" : "IN_ROOM:library",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "case",
+         "name" : "bookcase",
+         "examine" : "You see shelves of books.  What else did you expect, a secret\npassage?"
+      },
+      "pillar_west@blizzard" : {
+         "desc[1]" : "A huge stone pillar lies fallen on the floor.",
+         "location" : "IN_ROOM:shattered",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "name" : "pillar_west",
+         "linked" : "pillar_east",
+         "state" : "1",
+         "pname" : "pillar",
+         "maxstate" : "1",
+         "desc[0]" : "A huge stone pillar bridges the gap and allows you to go east."
+      },
+      "orb@blizzard" : {
+         "location" : "IN_ROOM:workroom",
+         "weight" : "1",
+         "altname" : "white",
+         "name" : "orb",
+         "bvalue" : "300",
+         "desc[0]" : "A glowing white orb pulsates before you.",
+         "size" : "1"
+      },
+      "bridge_lever@blizzard" : {
+         "location" : "IN_ROOM:hall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "lever",
+         "name" : "Bridge_Lever",
+         "examine" : "This lever would seem to operate the drawbridge."
+      },
+      "knife@blizzard" : {
+         "damage" : "3",
+         "location" : "IN_ROOM:dark_chmb",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "knife",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A small, curved surgeon's knife has been dropped here."
+      },
+      "shield1@blizzard" : {
+         "location" : "IN_ROOM:pillared",
+         "armor" : "60",
+         "oflags" : [
+            "Destroyed",
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "painted",
+         "name" : "shield1",
+         "size" : "10",
+         "pname" : "shield",
+         "weight" : "8",
+         "bvalue" : "0",
+         "desc[0]" : "A heavy painted shield has been dropped here."
+      },
+      "ball@blizzard" : {
+         "desc[1]" : "A crystal ball has been placed here, glowing a pale red.",
+         "location" : "IN_CONTAINER:bag",
+         "desc[3]" : "A crystal ball has been placed here, glowing a pale green.",
+         "altname" : "crystal",
+         "name" : "ball",
+         "desc[2]" : "A crystal ball has been placed here, glowing a pale blue.",
+         "size" : "15",
+         "weight" : "15",
+         "maxstate" : "3",
+         "bvalue" : "20",
+         "desc[0]" : "A crystal ball has been placed here."
+      },
+      "door_dungeon@blizzard" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:dungeon",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_dungeon",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_cell",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "harp@blizzard" : {
+         "location" : "IN_ROOM:glittering",
+         "weight" : "20",
+         "altname" : "gold",
+         "name" : "harp",
+         "bvalue" : "300",
+         "desc[0]" : "A beautiful golden harp has been placed here.",
+         "size" : "70"
+      },
+      "lever@blizzard" : {
+         "location" : "IN_ROOM:pillared2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "lever",
+         "desc[0]" : "A heavy iron lever is set into the south wall."
+      },
+      "rations1@blizzard" : {
+         "location" : "IN_ROOM:gloomy",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "rations1",
+         "size" : "2",
+         "pname" : "rations",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "Some old rations have been left here."
+      },
+      "reset_stone@blizzard" : {
+         "location" : "IN_ROOM:shady",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "stone",
+         "name" : "Reset_Stone",
+         "examine" : "\nThe ancient runes, battered as they are, indicate that the stone can be\nstruck to reset the game.",
+         "desc[0]" : "\nA huge stone stands in the center of the clearing, \nits sides strangely marked and scored."
+      },
+      "stick@blizzard" : {
+         "desc[1]" : "An old stick lies on the ground.",
+         "damage" : "2",
+         "location" : "IN_ROOM:valley",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "altname" : "branch",
+         "name" : "stick",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A burning stick lies on the ground."
+      },
+      "bag@blizzard" : {
+         "location" : "CARRIED_BY:hermit",
+         "weight" : "20",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "bag",
+         "bvalue" : "20",
+         "desc[0]" : "A small bag has been dumped in one corner.",
+         "size" : "25"
+      },
+      "altar@blizzard" : {
+         "location" : "IN_ROOM:ruined",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "name" : "altar",
+         "examine" : "The altar looks movable.",
+         "maxstate" : "1",
+         "desc[0]" : "The altar has been pushed to the side.",
+         "state" : "1"
+      },
+      "garland@blizzard" : {
+         "location" : "IN_ROOM:shady",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "flowers",
+         "name" : "garland",
+         "examine" : "\nYou see written on it, in small flowing letters, the words....\n                'Judy'",
+         "size" : "6",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "\nA beautiful garland of flowers sends a sweet smell wafting around you.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "powerstone@blizzard" : {
+         "location" : "IN_CONTAINER:coffin",
+         "weight" : "1",
+         "altname" : "stone",
+         "name" : "powerstone",
+         "bvalue" : "100",
+         "desc[0]" : "A magical powerstone has been put here by someone.",
+         "size" : "1"
+      },
+      "littablet@blizzard" : {
+         "location" : "IN_ROOM:underruined",
+         "altname" : "tablet",
+         "name" : "littablet",
+         "desc[0]" : "An ancient tablet has been discarded here."
+      },
+      "rations@blizzard" : {
+         "location" : "IN_ROOM:gloomy",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "rations",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "Some rations have been left here, old but edible."
+      },
+      "shield@blizzard" : {
+         "location" : "IN_ROOM:pillared",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "shield"
+      },
+      "hole_gallery@blizzard" : {
+         "location" : "IN_ROOM:gallery",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Hole_Gallery",
+         "examine" : "How can you examine a hole, there's nothing there to examine!",
+         "linked" : "Hole_Crack",
+         "state" : "1",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "A hole allows you to go west."
+      },
+      "talisman@blizzard" : {
+         "location" : "IN_ROOM:elemental",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "silver",
+         "name" : "talisman",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "100",
+         "desc[0]" : "A battered silver talisman has been dumped here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "obsidian@blizzard" : {
+         "location" : "IN_ROOM:lava_path2",
+         "weight" : "1",
+         "altname" : "rock",
+         "name" : "obsidian",
+         "bvalue" : "100",
+         "desc[0]" : "A large, gleaming piece of obsidian lies on the ground.",
+         "size" : "1"
+      },
+      "wintergreen@blizzard" : {
+         "desc[1]" : "Peeking out of the snow you spy some wintergreen.",
+         "location" : "IN_ROOM:ravine",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "food",
+         "name" : "wintergreen",
+         "examine" : "\nAs you examine the sprig of wintergreen, you break a leaf, releasing the\ndelicious aroma of fresh mint.",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "A sprig of wintergreen has been left here."
+      },
+      "ironbar@blizzard" : {
+         "location" : "IN_ROOM:stone_cell",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "bar",
+         "name" : "IronBar",
+         "desc[0]" : "An iron bar is set into the wall."
+      },
+      "worn@blizzard" : {
+         "location" : "IN_ROOM:robing",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "worn",
+         "name" : "worn",
+         "size" : "6",
+         "weight" : "2",
+         "pname" : "robe",
+         "bvalue" : "10",
+         "desc[0]" : "A rather worn robe lies here tatty and fraying.",
+         "aflags" : [
+            "Chest",
+            "Arms",
+            "Legs",
+            "Back"
+         ]
+      },
+      "key@blizzard" : {
+         "location" : "IN_ROOM:robing",
+         "]" : "A small silver key has been dropped here.",
+         "weight" : "Desc[0",
+         "oflags" : [
+            "Key",
+            "Destroyed"
+         ],
+         "altname" : "silver",
+         "name" : "key",
+         "bvalue" : "50",
+         "size" : "1"
+      },
+      "blackrobe@blizzard" : {
+         "location" : "IN_ROOM:robing",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "black",
+         "name" : "BlackRobe",
+         "examine" : "\nThe robe has two silver lightning bolts enscribed on the back... do you think\nit belonged to Captain Marvel?",
+         "size" : "6",
+         "weight" : "1",
+         "pname" : "robe",
+         "bvalue" : "10",
+         "desc[0]" : "\nA black robe with two silver lightning bolts down the back has been put here.",
+         "aflags" : [
+            "Chest",
+            "Legs",
+            "Arms",
+            "Back"
+         ]
+      },
+      "grille_treasure@blizzard" : {
+         "desc[1]" : "The grille is closed.",
+         "location" : "IN_ROOM:treasure",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Grille_Treasure",
+         "linked" : "grille",
+         "state" : "1",
+         "pname" : "grille",
+         "maxstate" : "1",
+         "desc[0]" : "The grille is open."
+      },
+      "door_cell@blizzard" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:stone_cell",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_cell",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_dungeon",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "tripwire@blizzard" : {
+         "location" : "IN_ROOM:moldy",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wire",
+         "name" : "tripwire",
+         "examine" : "\nYou see a highly coloured, multi dimensional trip wire, though it is obviously\nharmless to those that have seen it.",
+         "desc[0]" : "There is a tripwire stretched out across the passage."
+      },
+      "grille@blizzard" : {
+         "desc[1]" : "The grille is closed.",
+         "location" : "IN_ROOM:stonew_room",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "grille",
+         "maxstate" : "1",
+         "linked" : "Grille_Treasure",
+         "desc[0]" : "The grille is open.",
+         "state" : "1"
+      },
+      "branch_village@blizzard" : {
+         "desc[1]" : "An old branch has been dropped here.",
+         "damage" : "2",
+         "location" : "IN_ROOM:R_Land",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "altname" : "stick",
+         "name" : "branch_village",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "2",
+         "pname" : "branch",
+         "maxstate" : "1",
+         "desc[0]" : "A burning branch has been left here."
+      },
+      "throne_curtains@blizzard" : {
+         "desc[1]" : "The curtains are closed.",
+         "location" : "IN_ROOM:throne",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "Throne_Curtains",
+         "examine" : "\nThese are made of the best quality velvet, but are so large and heavy that\nonly immortals may carry them out of the chamber.",
+         "linked" : "Rough_Curtains",
+         "state" : "1",
+         "pname" : "curtains",
+         "maxstate" : "1",
+         "desc[0]" : "A narrow passage leads north, through a gap in the curtains."
+      },
+      "coffin@blizzard" : {
+         "desc[1]" : "An ornate coffin is set in the centre of the room.",
+         "location" : "IN_ROOM:crypt",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "NoGet"
+         ],
+         "name" : "coffin",
+         "examine" : "The coffin has 'MIST' scratched onto the lid.",
+         "size" : "120",
+         "state" : "1",
+         "weight" : "200",
+         "maxstate" : "1",
+         "desc[0]" : "\nAn ornate coffin is set in the centre of the room.  The coffin is open."
+      },
+      "garlic@blizzard" : {
+         "location" : "IN_ROOM:window",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "garlic",
+         "examine" : "\nThe garlic seems quite fresh, since it still smells strongly. Because of this,\nit might be very good for exorcising vampires.  What do you think the other\nplayers will think of you if you eat it?",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "Some garlic lies at your feet, its smell wafting upwards."
+      },
+      "boulder@blizzard" : {
+         "location" : "IN_ROOM:crack",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "rock",
+         "name" : "boulder",
+         "desc[0]" : "A huge boulder rests against one of the walls."
+      },
+      "statuette@blizzard" : {
+         "location" : "IN_ROOM:secret",
+         "weight" : "15",
+         "altname" : "gold",
+         "name" : "statuette",
+         "bvalue" : "75",
+         "desc[0]" : "A small gold statuette stands here, glittering in the light.",
+         "size" : "10"
+      },
+      "effigy@blizzard" : {
+         "location" : "IN_ROOM:secret",
+         "weight" : "30",
+         "name" : "effigy",
+         "bvalue" : "75",
+         "desc[0]" : "A small stone effigy has been left here.",
+         "size" : "20"
+      },
+      "bridge_wand@blizzard" : {
+         "location" : "IN_ROOM:laboratory",
+         "weight" : "4",
+         "pname" : "wand",
+         "name" : "Bridge_Wand",
+         "examine" : "\nIt has a fiery bridge etched upon one side, apparently a fiery drawbridge\nhalf opened.",
+         "bvalue" : "100",
+         "desc[0]" : "A long red wand has been placed here.",
+         "size" : "15"
+      },
+      "platform_altar@blizzard" : {
+         "desc[1]" : "The platform is uncovered now that the altar is out of the way.",
+         "location" : "IN_ROOM:ruined",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "platform_altar",
+         "examine" : "There is a strange brick on the platform.",
+         "linked" : "platform_under",
+         "state" : "2",
+         "pname" : "platform",
+         "maxstate" : "2",
+         "desc[0]" : "The platform has been moved to the side."
+      },
+      "slime_pit@blizzard" : {
+         "desc[1]" : "There is a pit of slime in the floor.",
+         "location" : "IN_ROOM:damp",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "slime",
+         "name" : "slime_pit",
+         "state" : "1",
+         "pname" : "pit",
+         "maxstate" : "1",
+         "desc[0]" : "There is a pit in the floor."
+      },
+      "hole_crack@blizzard" : {
+         "location" : "IN_ROOM:crack",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Hole_Crack",
+         "examine" : "How can you examine a hole, there's nothing there to examine!",
+         "linked" : "Hole_Gallery",
+         "state" : "1",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "A hole allows you to clamber eastwards."
+      },
+      "powerstone1@blizzard" : {
+         "location" : "IN_ROOM:slime",
+         "altname" : "stone",
+         "name" : "powerstone1",
+         "size" : "1",
+         "pname" : "powerstone",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A magical powerstone has been placed here."
+      },
+      "book@blizzard" : {
+         "location" : "IN_ROOM:library",
+         "weight" : "12",
+         "name" : "book",
+         "examine" : "\nThe book details many arcane and powerful magics, mostly to cause\n severe pain to other beings.  In a flowing hand is written:\n\nFireball\n        A potent piece of magic much dependant upon the power of the caster\n        as to the damage it does, although sulphur enhances this.\nMissile\n        A similar magic, much popular amongst mages.  It is said that magical\n        talismans may be created to aid this spell.\nShock\n        A spell of touch, which can pass through metal armors with great ease.\n        A decent caster never uses this as a party trick.\n        Lodestones help with its casting.\nFrost\n        A spell similar to a fireball in power. A direct hit will slow\n        your opponent down and make his aim less sure.  It is said that\n        wintergreen will enhance this spell.\n\nAny mage should beware that casting magic, though potent, will drain the\nstrength of the caster.",
+         "bvalue" : "200",
+         "desc[0]" : "A heavy iron bound book has been left here.",
+         "size" : "10"
+      },
+      "hat@blizzard" : {
+         "location" : "IN_ROOM:slime",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "hat",
+         "size" : "60",
+         "weight" : "3",
+         "bvalue" : "40",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A tall pointed hat of some form has been placed here."
+      },
+      "statue_down@blizzard" : {
+         "desc[1]" : "\nThere is a hole in the roof above you,but it is blocked by the statue's base.",
+         "location" : "IN_ROOM:secret",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "statue_down",
+         "linked" : "statue_up",
+         "state" : "1",
+         "pname" : "statue",
+         "maxstate" : "1",
+         "desc[0]" : "There is a hole in the roof above you."
+      },
+      "tube@blizzard" : {
+         "location" : "IN_ROOM:rocky_can",
+         "weight" : "1",
+         "altname" : "ivory",
+         "name" : "tube",
+         "bvalue" : "50",
+         "desc[0]" : "A long ivory scroll tube has been dropped here.",
+         "size" : "5"
+      }
+   },
+   "loc" : {
+      "glittering@blizzard" : {
+         "exits" : {
+            "s" : "rough"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Glittering Cave",
+         "id" : "glittering",
+         "description" : "\n   You are in a huge glittering cave.  Millions of tiny crystals on the wall\nscintilate with rainbows of colors baffling your eyes and mind with a stunning\nmass of changing color.  A set of huge steps lead upwards out of the cave, but\nonly a giant could hope to climb them.\n",
+         "altitude" : null
+      },
+      "lava_path2@blizzard" : {
+         "exits" : {
+            "w" : "lava_path"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Lava Path",
+         "id" : "lava_path2",
+         "description" : "\n   You are at the end of an east-west path. The lava is some distance away from\nyou here but even so the intense red glow still lights up the chamber and the\nheat is scarcely bearable.\n",
+         "altitude" : null
+      },
+      "passage@blizzard" : {
+         "exits" : {
+            "w" : "stonewalled",
+            "e" : "crypt",
+            "n" : "chamber"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Dark Passage",
+         "id" : "passage",
+         "description" : "\n   You are following a dark passage which leads north into a brightly lit room\nand east-west at a T junction.  The thick dust on the floor shows that you are\nthe only person to have come this way for a long time.\n",
+         "altitude" : null
+      },
+      "workroom@blizzard" : {
+         "exits" : {
+            "w" : "temple"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Sorceror's Workroom",
+         "id" : "workroom",
+         "description" : "\n   You are standing in a circular workroom. The only exit is a western doorway,\nthrough which the temple fire casts its flickering glow across the room.\n",
+         "altitude" : null
+      },
+      "entrance@blizzard" : {
+         "exits" : {
+            "n" : "crypt",
+            "s" : "library"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Library Entrance",
+         "id" : "entrance",
+         "description" : "\n   You are in a small chamber with two high-arched exits leading north and\nsouth.\n",
+         "altitude" : null
+      },
+      "waterfall@blizzard" : {
+         "exits" : {
+            "w" : "woods",
+            "e" : "r_land",
+            "s" : "grassy"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "The Waterfall",
+         "id" : "waterfall",
+         "description" : "\n   You are in a secluded clearing beside a waterfall which sprays cool water\ngently over you.  Several paths diverge here, leading south, east and west.\n",
+         "altitude" : "400"
+      },
+      "crypt@blizzard" : {
+         "exits" : {
+            "w" : "passage",
+            "e" : "large_cav",
+            "s" : "entrance"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "The Crypt",
+         "id" : "crypt",
+         "description" : "\n   You are in a charnel smelling crypt.  Dark drapes hang between the pillars\nthat make up the walls.  The whole room has an atmosphere of waiting malignant\nevil and an oppressive silence that makes you jump at the slightest draught in\nthe still, cold air.\n",
+         "altitude" : null
+      },
+      "elemental@blizzard" : {
+         "exits" : {
+            "w" : "bottom"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Elemental Temple",
+         "id" : "elemental",
+         "description" : "\n   You are in the Temple Of The Elements, surrounded by decorations depicting\nEarth, Air, Fire and Water.  This strange icy place gives off a feeling of\nunbalance and growing evil.\nThere is a blinking construction sign here.\n",
+         "altitude" : null
+      },
+      "slime@blizzard" : {
+         "exits" : {
+            "u" : "damp"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Slime Pit",
+         "id" : "slime",
+         "description" : "\n   You are in the smelly pit which once contained the slime.  The horrible\ncharnel rotting smell is so strong that you can scarcely keep your stomach\nunder control.\n",
+         "altitude" : null
+      },
+      "lava_ledge@blizzard" : {
+         "exits" : {
+            "w" : "hall",
+            "s" : "lava_led2"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Lava Ledge",
+         "id" : "lava_ledge",
+         "description" : "\n   You are on a wide ledge looking down on a pool of bubbling lava below. There\nis another ledge on the other side.  A crystal bridge spans the pool to the\nsouth.\n",
+         "altitude" : null
+      },
+      "pass3@blizzard" : {
+         "exits" : {
+            "e" : "ravine",
+            "n" : "n_pass",
+            "s" : "s_pass"
+         },
+         "flags" : [
+            "cold",
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Scree Slope",
+         "id" : "pass3",
+         "description" : "\n   You are scrabbling for a firm footing on the side of a steep scree slope.\nWith a lot of effort you could probably make it to the top, but a far easier\nroute would be south back down the path.  In your effort to stay upright you\nalmost fail to notice a narrow ravine leading eastwards.\n",
+         "altitude" : "4500"
+      },
+      "robing@blizzard" : {
+         "exits" : {
+            "s" : "stonewalled"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Robing Room",
+         "id" : "robing",
+         "description" : "\n   You are in a small robing room which appears to have been unused for quite\nsome time.  To the south a dark corridor leads east and west into darkness.\n",
+         "altitude" : null
+      },
+      "pass@blizzard" : {
+         "exits" : {
+            "e" : "Mithdan1@mithdan",
+            "u" : "window",
+            "n" : "blizzard",
+            "s" : "pass2"
+         },
+         "flags" : [
+            "outdoors",
+            "cold"
+         ],
+         "zone" : "blizzard",
+         "title" : "Blizzard Pass",
+         "id" : "pass",
+         "description" : "\n   You are trudging through deep snow as you follow a narrow track that winds\ndown the pass leading southward, its end hidden by a succession of rocky spurs\nthat jut out from either side.  On both sides of you the mountains tower high\nabove the pass, their peaks veiled in clouds.  At one point, however, the cliff\nis nowhere near as steep and a fair way up a single window has been cut,\nlooking out across the snows.\n",
+         "altitude" : "8500"
+      },
+      "fissure@blizzard" : {
+         "exits" : {
+            "w" : "^pass_fissure",
+            "d" : "fis_bottom"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Fissure",
+         "id" : "fissure",
+         "description" : "\n   You are on a ledge in a huge fissure.  The fissure is so wide that the far\nwall is hidden in darkness.  Looking down (a rather bad idea) you can see that\nit is just about possible to climb the horrendous distance down to the floor of\nthe fissure.\n",
+         "altitude" : null
+      },
+      "woods2@blizzard" : {
+         "exits" : {
+            "e" : "woods3",
+            "n" : "woods3",
+            "s" : "woods3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "The Woods",
+         "id" : "woods2",
+         "description" : "\n   You are in the woods listening to the trees as they rustle in the wind.\nThere are no visible tracks here, but you could travel through the woods in any\ndirection, save to the west where thick holly bushes block the route.\n",
+         "altitude" : "400"
+      },
+      "blizzard@blizzard" : {
+         "exits" : {
+            "w" : "gate",
+            "e" : "crevasse",
+            "n" : "haven@haven",
+            "s" : "pass"
+         },
+         "flags" : [
+            "outdoors",
+            "cold"
+         ],
+         "zone" : "blizzard",
+         "title" : "Bleak Mountainside",
+         "id" : "blizzard",
+         "description" : "\n   You are stumbling along the side of the mountain, exposed to the elements\nwhich at most times of the year sweep this area clear of debris.  To the south-\nwest the slope is almost sheer, while to the east a deep accumulation of snow\nis scarred by a deep crevasse.  The snows extend in all other directions save\nnorth, where a lighted inn offers warmth, food, and shelter from the elements.\n",
+         "altitude" : "8000"
+      },
+      "woods3@blizzard" : {
+         "exits" : {
+            "w" : "woods2",
+            "e" : "woods3",
+            "n" : "green@village",
+            "s" : "woods3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "The Woods",
+         "id" : "woods3",
+         "description" : "\n   You are in the woods, walking amongst the huge trunks watching the birds as\nthey flit from branch to branch, filling the air with their lively chirping\ncalls.\n",
+         "altitude" : "400"
+      },
+      "bridge@blizzard" : {
+         "exits" : {
+            "w" : "valley",
+            "e" : "green@village",
+            "n" : "store",
+            "s" : "stream"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "The Humpbacked Bridge",
+         "id" : "bridge",
+         "description" : "\n   You are standing on a crumbling humpbacked bridge looking over the side down\nonto a wide but shallow stream.  The sun sparkles gently off the ripples as the\nstream passes across pebbles and rocks and the fish swim between them. You hear\nthe faint roar of a waterfall somewhere downstream.\n   You can go east or west across the bridge or follow the stream southwards.\n",
+         "altitude" : "500"
+      },
+      "dungeon@blizzard" : {
+         "exits" : {
+            "w" : "dark_chmb",
+            "e" : "^door_dungeon",
+            "n" : "moldy",
+            "s" : "messy"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Dungeon Corridor",
+         "id" : "dungeon",
+         "description" : "\n   You are in a low arched dungeon corridor.  The air is dank and musty and an\nair of gloom and evil hangs around it.  Rooms to the south and west appear\nequally unpleasant and sinister.  A dark passageway leads northwards.\n   There is a door to the east.\n",
+         "altitude" : null
+      },
+      "ruined@blizzard" : {
+         "exits" : {
+            "n" : "secret",
+            "d" : "^platform_altar"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Ruined Temple Hall",
+         "id" : "ruined",
+         "description" : "\n   You are in a dark rather gloomy temple.  Huge pillars hold up the roof of\nthis vast chamber and cast strange shadows that seem to dance around you as you\nmove around.  The center of the temple is a flat platform with a now broken\naltar as its centerpiece.\n",
+         "altitude" : null
+      },
+      "dark_chmb@blizzard" : {
+         "exits" : {
+            "e" : "dungeon"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Dark Chamber",
+         "id" : "dark_chmb",
+         "description" : "\n   You are in a dark chamber, which smells of old blood and rotting flesh.\nMarks on the floor reveal where old torture equipment one stood.  A single\ndoorway leads east.\n",
+         "altitude" : null
+      },
+      "shattered@blizzard" : {
+         "exits" : {
+            "w" : "landing",
+            "e" : "^pillar_west"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Shattered Hall",
+         "id" : "shattered",
+         "description" : "\n   You are in a shattered hall, scorch marks and strange burns indicate a\ntremendous amount of powerful sorcery was used here.  Indeed, sufficient to\nblow huge chunks out of the wall.  The passage to the east is now unreachable,\nas a huge fissure has opened up in the floor.\n",
+         "altitude" : null
+      },
+      "snow_temple@blizzard" : {
+         "exits" : {
+            "w" : "ravine"
+         },
+         "flags" : [
+            "cold",
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Snow Temple",
+         "id" : "snow_temple",
+         "description" : "\n   You are in the snowy ruins of an ancient temple.  The view from here is\nstunning and very picturesque but the combination of slippery ground and some\nsteep drops close at hand is enough to dissuade you from sightseeing.\n",
+         "altitude" : "5000"
+      },
+      "treasure@blizzard" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Treasure Chamber",
+         "id" : "treasure",
+         "description" : "\n   You are in a treasure storage room.   The high ceiling ensures that no thief\nwill ever escape without help.  There is a grille in the ceiling, far beyond\nyour despairing reach.\n",
+         "altitude" : null
+      },
+      "rune_cave@blizzard" : {
+         "exits" : {
+            "w" : "pillared"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Rune Cave",
+         "id" : "rune_cave",
+         "description" : "\n   You are in a large cave.  The rough rocky walls are inscribed with deep\nangular runic writings, which appear totally incomprehensible to you.  A\npillared hall stretches off to the west.\n",
+         "altitude" : null
+      },
+      "lava_led2@blizzard" : {
+         "exits" : {
+            "n" : "lava_ledge",
+            "s" : "temple"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Lava Ledge",
+         "id" : "lava_led2",
+         "description" : "\n   You are on a ledge looking across a huge pit of flaming lava to another\nledge on the other side.  A passage leads south.  A crystal bridge spans the\npool to the north.\n",
+         "altitude" : null
+      },
+      "woods@blizzard" : {
+         "exits" : {
+            "w" : "Mpath@valley",
+            "e" : "waterfall",
+            "n" : "valley",
+            "s" : "shady"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "In The Woods",
+         "id" : "woods",
+         "description" : "\n   You are in the woods. The great trees cast green shadows across the flowers\nand undergrowth as they sway peacefully in the wind.  You can walk in any\ndirection.\n",
+         "altitude" : "450"
+      },
+      "guard2@blizzard" : {
+         "exits" : {
+            "w" : "pass",
+            "e" : "guard",
+            "u" : "landing"
+         },
+         "flags" : [
+            "death"
+         ],
+         "zone" : "blizzard",
+         "title" : "Guard Room",
+         "id" : "guard2",
+         "description" : "\n   You are in a large guardroom.  A set of stairs leads up and down.\nA number of zombie guardsmen swarm around you, tearing you mercilessly into\nshreds...  In your dying moments you notice another guardroom to the east.\n",
+         "altitude" : null
+      },
+      "chamber@blizzard" : {
+         "exits" : {
+            "e" : "window",
+            "n" : "gloomy",
+            "s" : "passage"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Stonewalled Chamber",
+         "id" : "chamber",
+         "description" : "\n   You are in a small stonewalled chamber.  Light streams in through a somewhat\nvandalized window east of you, to the north is a darker chamber only partially\nlit, while to the south through a doorway veiled in deep shadow you can see a\ndark passage.\n",
+         "altitude" : null
+      },
+      "dark_cave@blizzard" : {
+         "exits" : {
+            "w" : "narrow",
+            "e" : "shadowy"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Dark Cave",
+         "id" : "dark_cave",
+         "description" : "\n   You are in a dark cave with earth walls and a rather low ceiling.  The\nearth gives way to stone in the passages leading out of the cave to the east\nand west.\n",
+         "altitude" : null
+      },
+      "treravine@blizzard" : {
+         "exits" : {
+            "e" : "pasture",
+            "d" : "window"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Treacherous Ravine",
+         "id" : "treravine",
+         "description" : "\n   You are crawling along a narrow treacherous ravine which runs eastwards into\nsome kind of level area.  Below you could scramble back down to the cliff\nwindow.\n",
+         "altitude" : "8650"
+      },
+      "moldy@blizzard" : {
+         "exits" : {
+            "n" : "limestone",
+            "s" : "dungeon"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Moldy Passage",
+         "id" : "moldy",
+         "description" : "\n   You are in a low passageway.  Mold covers the walls and floor, making it\nslippery and quite treacherous.  To the north is a beautiful cave while to the\nsouth the mold gets even thicker.\n",
+         "altitude" : null
+      },
+      "underruined@blizzard" : {
+         "exits" : {
+            "u" : "^platform_under",
+            "d" : "start@ruins"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Under the Ruined Temple Hall",
+         "id" : "underruined",
+         "description" : "\n  You are now under the ruined temple hall. The air here is very musky \nfrom this chamber not being accessed for several centuries. A flight of\nstairs leads down into the ruins of the once great temple.\n",
+         "altitude" : null
+      },
+      "grassy@blizzard" : {
+         "exits" : {
+            "n" : "waterfall"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Grassy Clearing",
+         "id" : "grassy",
+         "description" : "\n   You are in a grassy clearing beside a crystal clear, spring-fed pool that\nreflects the swaying trees above.  A sandy path leads north alongside the\nburbling stream.\n",
+         "altitude" : "400"
+      },
+      "e_pass@blizzard" : {
+         "exits" : {
+            "w" : "Path1@Orchold",
+            "e" : "valley",
+            "u" : "Path1@Orchold",
+            "n" : "s_pass"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Foot Of The Mountain Path",
+         "id" : "e_pass",
+         "description" : "\n   You are at the southern end of a path which leads northward into an imposing\nrange of snow-capped mountains.  To the east the hillside drops rapidly into a\npleasant little valley, while to the west another path winds up the side of a\nsteep rocky slope.\n",
+         "altitude" : "1200"
+      },
+      "huge_cav@blizzard" : {
+         "exits" : {
+            "e" : "rocky",
+            "d" : "canyon",
+            "s" : "flickering"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Huge Cavern",
+         "id" : "huge_cav",
+         "description" : "\n   You are in a huge cavern, at the western end.  Some steep rough-hewn steps\nlead down into a canyon at one end of the cave and at the bottom faint light\nflickers off water.\n",
+         "altitude" : null
+      },
+      "well@blizzard" : {
+         "exits" : {
+            "u" : "large_cav"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Dried Up Well",
+         "id" : "well",
+         "description" : "\n   You are standing at the bottom of a small dried up well.  The walls are\n(fortunately) rough enough to make climbing out only slightly harder than\nfalling in.\n",
+         "altitude" : null
+      },
+      "canyon@blizzard" : {
+         "exits" : {
+            "e" : "rocky_can",
+            "u" : "huge_cav"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Canyon",
+         "id" : "canyon",
+         "description" : "\n   You are at the bottom of a narrow canyon looking across a stream to the far\nbank.  Narrow steps wind steeply upwards behind you.  You can easily wade east\nacross the stream.\n",
+         "altitude" : null
+      },
+      "crevasse@blizzard" : {
+         "exits" : {
+            "w" : "blizzard",
+            "n" : "blizzard",
+            "d" : "bottom",
+            "s" : "blizzard"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Crevasse",
+         "id" : "crevasse",
+         "description" : "\n   You are standing on the edge of a deep crevasse looking down into darkness.\nHeavy snow is piled all around you, partially hiding the distant mountains.\n   The snows extend in all direction save east, where the crevasse bars the\nroute.  You could clamber down into the crevasse but would have great problems\nin getting back out of it.\n",
+         "altitude" : null
+      },
+      "hall@blizzard" : {
+         "exits" : {
+            "w" : "^bridge_hall",
+            "e" : "lava_ledge"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "The Hall Of Fire",
+         "id" : "hall",
+         "description" : "\n   You are in the hall of fire.  The very walls are tinged with a fiery\nradiance, as if the rock itself is burning.  A red pentacle is near one wall\nbeside a picture carved in the wall.  A lever on one wall is beside a huge\nmetal drawbridge.  A passage leads east.\n",
+         "altitude" : null
+      },
+      "rocky@blizzard" : {
+         "exits" : {
+            "w" : "huge_cav"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Rocky Cavern",
+         "id" : "rocky",
+         "description" : "\n   You are in a large rocky cavern.  From this vantage point at the eastern end\nyou can gaze almost the full length of the cave, although the far wall fades\ninto shadows.\n",
+         "altitude" : null
+      },
+      "restch@blizzard" : {
+         "exits" : {
+            "n" : "narrow"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Rest Chamber",
+         "id" : "restch",
+         "description" : "\n   You are in what appears to have been a large rest chamber of some sort.\nThere is a great deal of dried blood on the floor here, and several more marks\nthat seem to indicate the use of sorcery.  A narrow corridor leads north.\n",
+         "altitude" : null
+      },
+      "hut@blizzard" : {
+         "exits" : {
+            "s" : "pasture"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "The Hermit's Hut",
+         "id" : "hut",
+         "description" : "\n   This small dank hut appears to have once been the home of a hermit or maybe\neven a sorceror of some form, as the rotting junk which litters the floor\ncontains bits of things you have never seen before.  A narrow doorway leads\nsouth into fresh air.\n",
+         "altitude" : null
+      },
+      "secret_chmb@blizzard" : {
+         "exits" : {
+            "w" : "well"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Secret Chamber",
+         "id" : "secret_chmb",
+         "description" : "\n   You are in low musty chamber concealed down the well.  The chamber is cold\nand damp, perhaps as a result of this.\n",
+         "altitude" : null
+      },
+      "pass2@blizzard" : {
+         "exits" : {
+            "w" : "S_Cave@icecave",
+            "n" : "pass",
+            "s" : "n_pass"
+         },
+         "flags" : [
+            "cold",
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "The Pass",
+         "id" : "pass2",
+         "description" : "\n   You are crossing a high pass which separates two of the highest peaks in\nthe range.  A treacherous-looking ridge leads south, while to the north you can\nclimb up to the top of the pass.  There is a small cavemouth to the west.\n",
+         "altitude" : "7000"
+      },
+      "gate@blizzard" : {
+         "exits" : {
+            "e" : "haven@haven",
+            "n" : "dark@valley",
+            "s" : "blizzard"
+         },
+         "flags" : [
+            "cold",
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Gate of Sorcerors",
+         "id" : "gate",
+         "description" : "\n   You are outside The Gate of Sorcerors.  Its mighty pillars tower up around\nyou, shielding you from the worst of the regular snowfalls and from some of\nthe icy winds.  The ancient arched gateway between the pillars leads north into\na wide magically lit passage which disappears into the roots of the earth.\n   You may enter the gate to the north, a lighted inn to the east, or trudge\nsouth into the snows.\n",
+         "altitude" : "7000"
+      },
+      "bottom@blizzard" : {
+         "exits" : {
+            "e" : "elemental"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Crevasse Bottom",
+         "id" : "bottom",
+         "description" : "\n   You are at the bottom of the crevasse.  Daylight, and a great deal of snow,\ncomes through the top of the crevasse.  A single man-made passage leads east\ninto a strange temple.\n",
+         "altitude" : null
+      },
+      "shady@blizzard" : {
+         "exits" : {
+            "n" : "woods",
+            "s" : "Mou1@Mountain"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Shady Clearing",
+         "id" : "shady",
+         "description" : "\n   You are in a shady clearing surrounded by proud and mighty oaks.  The oaks\nare surrounded by hollies and thick bushes, while creepers and weeds girdle\ntheir ancient trunks.  There is a route from the clearing to the north and there\nis a path that leads off to the east.\n",
+         "altitude" : "450"
+      },
+      "corridor@blizzard" : {
+         "exits" : {
+            "w" : "pentacle",
+            "e" : "dark",
+            "n" : "storage"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Corridor",
+         "id" : "corridor",
+         "description" : "\n   You are in a short section of east-west corridor.  To the west, the corridor\nleads to a huge hall, while to the north is a small, dimly lit room.\n",
+         "altitude" : null
+      },
+      "library@blizzard" : {
+         "exits" : {
+            "n" : "entrance"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "The Library",
+         "id" : "library",
+         "description" : "\n   You are in a dusty, bare library.  Hundreds of worm eaten bookcases stand\ndevoid of all books, their shelves laden only with dust.  An archway leads\nnorth.\n",
+         "altitude" : null
+      },
+      "ravine@blizzard" : {
+         "exits" : {
+            "w" : "pass3",
+            "e" : "snow_temple"
+         },
+         "flags" : [
+            "cold",
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Ravine",
+         "id" : "ravine",
+         "description" : "\n   You are on a path climbing up a narrow ravine towards the crumbling remains\nof a snow shrouded temple.\n",
+         "altitude" : "4700"
+      },
+      "laboratory@blizzard" : {
+         "exits" : {
+            "n" : "^door_laboratory"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Laboratory",
+         "id" : "laboratory",
+         "description" : "\n   You are in an old laboratory for sorcerous experiments.  Almost everything\nto indicate this has been removed, however, leaving only marks in the dust.\nThere is a door to the north.\n",
+         "altitude" : null
+      },
+      "gloomy@blizzard" : {
+         "exits" : {
+            "s" : "chamber"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Gloomy Room",
+         "id" : "gloomy",
+         "description" : "\n   You are in a dark gloomy room, light from the window to the south dimly\nilluminates one wall.  To the south is another much brighter chamber.\n",
+         "altitude" : null
+      },
+      "stonewalled@blizzard" : {
+         "exits" : {
+            "w" : "dark",
+            "e" : "passage",
+            "n" : "robing",
+            "d" : "^statue_up"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Stonewalled Passage",
+         "id" : "stonewalled",
+         "description" : "\n   You are walking along a long and fairly wide stonewalled passage leading\neast and west through the mountain.  To the north through a doorway there is\na small room.\n",
+         "altitude" : null
+      },
+      "lava_cav@blizzard" : {
+         "exits" : {
+            "n" : "pillared",
+            "d" : "lava_path"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Lava Cavern",
+         "id" : "lava_cav",
+         "description" : "\n   You are in a huge cavern.  The walls glow and pulse with an intense red\nlight, reflected up from a river of lava which flows sluggishly westwards at\nthe south end of the cavern.  Huge explosions of lava regularly light up the\ncavern to an extent that the light is almost blinding, accompanied by almost\ndeafening explosions.  A path leads down almost suicidally close to the lava\nriver.\n",
+         "altitude" : null
+      },
+      "narrow_ledge@blizzard" : {
+         "exits" : {
+            "w" : "stone_cell"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Narrow Ledge",
+         "id" : "narrow_ledge",
+         "description" : "\n   You are in a fissure standing on a terrifyingly narrow ledge.  Above you on\nthe opposite side is another ledge.  A passage leads back west.\n",
+         "altitude" : null
+      },
+      "n_pass@blizzard" : {
+         "exits" : {
+            "n" : "pass2",
+            "s" : "pass3"
+         },
+         "flags" : [
+            "cold",
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Windswept Ridge",
+         "id" : "n_pass",
+         "description" : "\n   You are treading cautiously along a narrow ridge which climbs to the north.\nThe terrain becomes higher increasingly dangerous to the north, while to the\nsouth beyond a scree slope a path descends rapidly into greener country.\n",
+         "altitude" : "6000"
+      },
+      "stonew_room@blizzard" : {
+         "exits" : {
+            "w" : "pillared2",
+            "d" : "^grille"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Stonewalled Room",
+         "id" : "stonew_room",
+         "description" : "\n   You are in a small stonewalled room with a grille in the floor.  A pillared\nhall stretches off to the west.\n",
+         "altitude" : null
+      },
+      "pentacle@blizzard" : {
+         "exits" : {
+            "e" : "corridor"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Pentacle Hall",
+         "id" : "pentacle",
+         "description" : "\n   You are in a huge pillared hall deep within the mountain.  Huge, ornately\ncarved pillars support the millions of tons of rock above you.  Sinister and\nrather ugly gargoyles protrude from the pillars gazing centrally towards a mass\nof mystical symbols engraved on the floor.\n",
+         "altitude" : null
+      },
+      "storage@blizzard" : {
+         "exits" : {
+            "s" : "corridor"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Store Room",
+         "id" : "storage",
+         "description" : "\n   You are in a small rather dirty room which appears to have been a store room\nof some kind.  Through a doorway to the south is a corridor.\n",
+         "altitude" : null
+      },
+      "rocky_can@blizzard" : {
+         "exits" : {
+            "w" : "canyon",
+            "e" : "damp"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Rocky Canyon",
+         "id" : "rocky_can",
+         "description" : "\n   You are in a rocky canyon beside a deep blue stream.  A narrow crack leads\neastwards into a gloomy, shadowed cave.  You can easily wade west across the\nstream.\n",
+         "altitude" : null
+      },
+      "stream@blizzard" : {
+         "exits" : {
+            "w" : "F6@Forest",
+            "n" : "bridge"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Stream Bank",
+         "id" : "stream",
+         "description" : "\n   You stand on a quiet grassy stream bank.  The water burbles gently past you,\nshaded by the thick trees and bushes which grow along the bank.  Towering oaks\ncast dark rippling shadows across the almost mirrorlike rippling water which\nflickers in the light.  The undergrowth blocks any way southwards along the\nstream, but thins out to the north and west where paths lead off.\n",
+         "altitude" : "400"
+      },
+      "lava_path@blizzard" : {
+         "exits" : {
+            "e" : "lava_path2",
+            "u" : "lava_cav"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Lava Path",
+         "id" : "lava_path",
+         "description" : "\n   You are on a narrow sloping path running uncomfortably close to the lava.\nHuge explosions of lava send blasts of intense scorching heat across the path.\nThe path leads eastwards but the intense red glow and heat haze prevents you\nfrom seeing where to.  A steep climb heads up.\n",
+         "altitude" : null
+      },
+      "fire_gate@blizzard" : {
+         "exits" : {
+            "e" : "^bridge_fire",
+            "w" : "flickering"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Fire Gate",
+         "id" : "fire_gate",
+         "description" : "\n   You are in a large rocky and very uneven cave.  A smooth path has been cut\nacross the floor permitting easy walking.  The whole cave is filled with a\nthundering roar which reaches deep into your mind.  A huge, deep and steep-\nwalled channel full of lava prevents you from going east through a huge\ngateway.\n",
+         "altitude" : null
+      },
+      "pasture@blizzard" : {
+         "exits" : {
+            "w" : "treravine",
+            "n" : "hut"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Hidden Pasture",
+         "id" : "pasture",
+         "description" : "\n   You are standing in a small hidden field, its lush grass coated with snow.\nThe pasture is enclosed on all sides by steep cliffs, save for a small gap to\nthe west which leads into a narrow ravine.  To the north is an old crumbling\nhut of some sort.\n",
+         "altitude" : "8650"
+      },
+      "window@blizzard" : {
+         "exits" : {
+            "w" : "chamber",
+            "u" : "treravine",
+            "d" : "pass"
+         },
+         "flags" : [
+            "outdoors",
+            "cold",
+            "NoMobiles"
+         ],
+         "zone" : "blizzard",
+         "title" : "Cliff Window",
+         "id" : "window",
+         "description" : "\n   You are hanging onto a fairly precipitous cliff, beside a rocky window.  Far\nbelow you can see the pass which seems to sway backwards and forwards as the\nicy wind tries to tear you away from the cliff and lashes you with huge clouds\nof blinding snow.\n   The window is west.\n",
+         "altitude" : "8600"
+      },
+      "pillared@blizzard" : {
+         "exits" : {
+            "e" : "rune_cave",
+            "n" : "large_cav",
+            "s" : "lava_cav"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Pillared Hall",
+         "id" : "pillared",
+         "description" : "\n   You are in a massive pillared hall decorated with the shields of ancient and\nlong forgotten heroes.  Exits between the pillars lead into several different\ncaves.\n",
+         "altitude" : null
+      },
+      "fis_bottom@blizzard" : {
+         "exits" : {
+            "s" : "crack"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Fissure Bottom",
+         "id" : "fis_bottom",
+         "description" : "\n   You are at the bottom of the fissure.  Precipitous rocky walls reach upwards\nhanging over you as if about to crush you.  To the south, the walls vanish\nbeyond your light without any sign of a break.\n",
+         "altitude" : null
+      },
+      "s_pass@blizzard" : {
+         "exits" : {
+            "n" : "pass3",
+            "s" : "e_pass"
+         },
+         "flags" : [
+            "cold",
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Steep Path",
+         "id" : "s_pass",
+         "description" : "\n   You are trudging along the path.  The towering mountains, their peaks\ncloaked in snow, seem to leer down at you as your feet tread the well-worn\ntrack leading steeply northward into the blizzard mountains.  The path\ncontinues north and south.\n",
+         "altitude" : "3000"
+      },
+      "temple@blizzard" : {
+         "exits" : {
+            "e" : "workroom",
+            "n" : "lava_led2"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "The Temple",
+         "id" : "temple",
+         "description" : "\n   You are in a sinister temple.  Hideous shapes seem to reach out of nothing-\nness towards you and vanish as immaterial shadows.  The whole room radiates a\ncrushing sense of power filling you with awe and dread.  A huge fire burns at\nan end of the temple, seemingly without a source.  Doorways lead lead north\nand east.\n",
+         "altitude" : null
+      },
+      "flickering@blizzard" : {
+         "exits" : {
+            "w" : "guard",
+            "e" : "fire_gate",
+            "n" : "huge_cav"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Flickering Passageway",
+         "id" : "flickering",
+         "description" : "\n   You are in a wide passageway.  To the east is a cave lit by a flickering red\nglow.  To the north is a large cave, to the west is a guardroom.\n",
+         "altitude" : null
+      },
+      "valley@blizzard" : {
+         "exits" : {
+            "w" : "e_pass",
+            "e" : "bridge",
+            "n" : "grove@oaktree",
+            "s" : "woods"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "The Valley",
+         "id" : "valley",
+         "description" : "\n   You are in a green and fair valley amidst the gently murmuring oaks.  The\nsun shines gently through the trees sending dancing, golden beams rippling\nacross the shadowy grass while midges dance between the branches.  One\nparticularly large oak tree rises up to the north.\n",
+         "altitude" : "600"
+      },
+      "gallery@blizzard" : {
+         "exits" : {
+            "w" : "^hole_gallery",
+            "d" : "guard"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Gallery",
+         "id" : "gallery",
+         "description" : "\n   You are in an ornate gallery which overlooks a wide stone guardroom.  A set\nof steps curve steeply down into the guardroom.\n",
+         "altitude" : null
+      },
+      "limestone@blizzard" : {
+         "exits" : {
+            "w" : "shadowy",
+            "s" : "moldy"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Limestone Grotto",
+         "id" : "limestone",
+         "description" : "\n   You are in a beautiful limestone cave.  Multi colored stalactites hang from\nthe roof forming amazing patterns of brilliant color.  The floor is similarly\ndecorated with a huge variety of stalagmites.  A man-made corridor leads west,\nand a dim and moldy passageway winds southward.\n",
+         "altitude" : null
+      },
+      "damp@blizzard" : {
+         "exits" : {
+            "w" : "rocky_can",
+            "e" : "pillared2"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Large Damp Cave",
+         "id" : "damp",
+         "description" : "\n   You are in a large cave.  The cave echoes to the dripping of water from its\ncold damp roof, thickly coated in algae and mosses.  A pillared hall stretches\noff the the east, and a rocky canyon goes west.\n",
+         "altitude" : null
+      },
+      "throne@blizzard" : {
+         "exits" : {
+            "n" : "^throne_curtains",
+            "s" : "pillared2"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Throne Hall",
+         "id" : "throne",
+         "description" : "\n   You are in a magnificent throne hall.  The walls and roof are carved and\npainted into stunning otherworldly scenes of mystical beasts and magical forms.\nDark curtains cover the walls.\n",
+         "altitude" : null
+      },
+      "pillared2@blizzard" : {
+         "exits" : {
+            "w" : "damp",
+            "e" : "stonew_room",
+            "n" : "throne"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Pillared Hall",
+         "id" : "pillared2",
+         "description" : "\n   You are in a ornate pillared hall.  The stunning fan vaulted roof would\ndecorate any cathedral as would the huge pillars that support it.  Exits lead\noff in many directions.\n",
+         "altitude" : null
+      },
+      "large_cav@blizzard" : {
+         "exits" : {
+            "w" : "crypt",
+            "d" : "well",
+            "s" : "pillared"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Large Cavern",
+         "id" : "large_cav",
+         "description" : "\n   You are in a large cavern.  Huge stalagmites have grown up almost to the\nceiling, in places actually merging with the multicolored stalactites above.\nTo the south you perceive a great hall, and a fetid odor comes from the west.\nA small, low-walled well occupies the center of the cave.\n",
+         "altitude" : null
+      },
+      "messy@blizzard" : {
+         "exits" : {
+            "n" : "dungeon"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Messy Chamber",
+         "id" : "messy",
+         "description" : "\n   You are in a large messy chamber.  Several wooden gallows are set across\nthe damp ceiling and beneath them pools of blood indicate they were not merely\ndecorations.  A low archway leads north into an unpleasant looking corridor.\n",
+         "altitude" : null
+      },
+      "guard@blizzard" : {
+         "exits" : {
+            "w" : "guard2",
+            "e" : "flickering",
+            "u" : "gallery"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Guard Room",
+         "id" : "guard",
+         "description" : "\n   You are in a large guardroom lit by a red glow to the east.  A set of stone\nsteps curve steeply up to a gallery above.  To the west is another guardroom,\nalthough the dim light reveals the presence of many zombie warriors.\n",
+         "altitude" : null
+      },
+      "stone_cell@blizzard" : {
+         "exits" : {
+            "w" : "^door_cell",
+            "e" : "^pass_stone"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Stone Cell",
+         "id" : "stone_cell",
+         "description" : "\n   You are in a cold and bare stone cell, scratches on the walls mark where\nprisoners have left their last futile marks on the walls.  There is a door to\nthe west.\n",
+         "altitude" : null
+      },
+      "dark@blizzard" : {
+         "exits" : {
+            "w" : "corridor",
+            "e" : "stonewalled",
+            "d" : "landing"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Dark Room",
+         "id" : "dark",
+         "description" : "\n   You are in a large dark room, passages lead east and west.  A set of\ncrumbling stone steps leads steeply downwards plunging into the shadows\n",
+         "altitude" : null
+      },
+      "secret@blizzard" : {
+         "exits" : {
+            "u" : "^statue_down",
+            "s" : "ruined"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Low Secret Passage",
+         "id" : "secret",
+         "description" : "\n   You are in a low secret passage that leads southward to some kind of dark\npillared room.  The north wall has niches cut into it to allow you to climb\nthrough a hole in the roof above.\n",
+         "altitude" : null
+      },
+      "crack@blizzard" : {
+         "exits" : {
+            "e" : "^hole_crack",
+            "n" : "fis_bottom"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Narrow Crack",
+         "id" : "crack",
+         "description" : "\n   You are in a narrow crack, off one side of the fissure.  The walls lean in\nat crazy angles making it hard to get through.  A passage leads back north.\n",
+         "altitude" : null
+      },
+      "r_land@blizzard" : {
+         "exits" : {
+            "w" : "waterfall",
+            "e" : "drop@quarry",
+            "n" : "green@village"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "blizzard",
+         "title" : "Rough Land",
+         "id" : "r_land",
+         "description" : "\n   You are on a patch of rough land to the south of the village.  To the east\nis an old, seemingly deserted quarry.  Other paths lead north and west.\n",
+         "altitude" : "400"
+      },
+      "shadowy@blizzard" : {
+         "exits" : {
+            "w" : "dark_cave",
+            "e" : "limestone",
+            "s" : "^door_shadowy"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Shadowy Corridor",
+         "id" : "shadowy",
+         "description" : "\n   You are in a shadowy east-west corridor that links two caves.  There is a\ndoor to the south.\n",
+         "altitude" : null
+      },
+      "narrow@blizzard" : {
+         "exits" : {
+            "w" : "^pillar_east",
+            "e" : "dark_cave",
+            "s" : "restch"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Narrow Corridor",
+         "id" : "narrow",
+         "description" : "\n   You are in a low narrow corridor.  To the south is a small chamber while to\nthe east the passage opens up into a large cave.\n",
+         "altitude" : null
+      },
+      "landing@blizzard" : {
+         "exits" : {
+            "e" : "shattered",
+            "u" : "dark",
+            "d" : "guard2"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Landing",
+         "id" : "landing",
+         "description" : "\n   You are on a landing with steep stairs leading both upwards and down.\nBelow, at the foot of the descending stairs you can see a dark hall and in the\nfaint light from the rock you can just make out several zombie guards.\nA doorway leads east.\n",
+         "altitude" : null
+      },
+      "rough@blizzard" : {
+         "exits" : {
+            "n" : "glittering",
+            "s" : "^rough_curtains"
+         },
+         "flags" : [],
+         "zone" : "blizzard",
+         "title" : "Low, Rough Passage",
+         "id" : "rough",
+         "description" : "\n   You are in a low rough passage which winds around and is clearly only an\nescape route of some form.  A sign hanging on the wall reads in a rather crude\nand untidy hand 'DANGER: STORM GIANTS CAN SERIOUSLY DAMAGE YOUR ELF'\n",
+         "altitude" : null
+      },
+      "store@blizzard" : {
+         "exits" : {
+            "s" : "bridge"
+         },
+         "flags" : [
+            "Peace"
+         ],
+         "zone" : "blizzard",
+         "title" : "The General Store",
+         "id" : "store",
+         "description" : "\n   A shopkeeper behind the desk is peddling his wares.  Along the walls\nof this small room are grains, herbs, fruits, and many assorted\napparatuses of unknown use.  The shopkeeper smiles at you, and says:\n\n\"To buy my wares, use BUY TORCHES, BUY KEYS, BUY FOOD, and BUY STORAGE.\n Items that are part of quests will lose their usefulness, however....\"\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "ogre@blizzard" : {
+         "damage" : "14",
+         "location" : "guard",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "The Ogre",
+         "name" : "ogre",
+         "description" : "A large ogre wanders past, looking for heads to break.",
+         "strength" : "40"
+      },
+      "ghoul@blizzard" : {
+         "damage" : "10",
+         "location" : "crypt",
+         "armor" : "0",
+         "name" : "ghoul",
+         "description" : "An evil looking ghoul skulks in the shadows.",
+         "strength" : "40",
+         "pname" : "The Ghoul",
+         "aggression" : "30",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "hermit@blizzard" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "10",
+         "location" : "hut",
+         "armor" : "0",
+         "name" : "hermit",
+         "description" : "A hungry, unwashed hermit sits here.",
+         "strength" : "60",
+         "pname" : "The Hermit",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon",
+            "NoSteal"
+         ],
+         "mflags" : [
+            "QFood"
+         ]
+      },
+      "giant@blizzard" : {
+         "damage" : "11",
+         "location" : "glittering",
+         "armor" : "0",
+         "name" : "giant",
+         "description" : "A giant snores loudly in one corner.",
+         "strength" : "140",
+         "speed" : "0",
+         "pname" : "The Giant",
+         "aggression" : "0"
+      },
+      "willy@blizzard" : {
+         "damage" : "5",
+         "location" : "blizzard",
+         "speed" : "8",
+         "aggression" : "0",
+         "pname" : "Farmer Willy",
+         "name" : "willy",
+         "examine" : "\nBefore you stands Farmer Willy, the CEO of MacroSloth. He grins at you as\nhe points at a box containing Windblowsme in 2095 explaining to you how\ngreat and wonderful it is. He then points at a box containing MS-DOS and\ngloats about bringing you the 640k limit for the past decade.",
+         "description" : "Farmer Willy is here grinning at you.",
+         "strength" : "200"
+      },
+      "yeti@blizzard" : {
+         "eflags" : [
+            "ImmFrost"
+         ],
+         "damage" : "10",
+         "location" : "pass2",
+         "armor" : "0",
+         "name" : "yeti",
+         "description" : "A huge, furry yeti rears up threateningly in front of you!",
+         "strength" : "80",
+         "speed" : "0",
+         "pname" : "The Yeti",
+         "aggression" : "30",
+         "mflags" : [
+            "NoHeat"
+         ]
+      },
+      "seamas@blizzard" : {
+         "damage" : "10",
+         "location" : "stream",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "seamas",
+         "description" : "\nSeamas The Leprechaun eyes you cautiously, an evil grin upon his face.",
+         "strength" : "70",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "riatha@blizzard" : {
+         "damage" : "15",
+         "location" : "temple",
+         "aggression" : "31",
+         "armor" : "0",
+         "name" : "riatha",
+         "description" : "Riatha The Acolyte stands arrogantly before you.",
+         "strength" : "50"
+      },
+      "figure@blizzard" : {
+         "damage" : "14",
+         "location" : "entrance",
+         "armor" : "0",
+         "name" : "figure",
+         "description" : "A huge magical figure stands on guard.",
+         "strength" : "90",
+         "speed" : "0",
+         "pname" : "The Figure",
+         "aggression" : "0",
+         "mflags" : [
+            "BarDown"
+         ]
+      }
+   }
+}

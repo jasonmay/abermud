@@ -1,0 +1,218 @@
+{
+   "obj" : {
+      "heather@moor" : {
+         "desc[1]" : "Some white heather is growing here.",
+         "location" : "IN_ROOM:rocky",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "heather",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "Some rare white heather has been left here."
+      },
+      "ropetoppit@moor" : {
+         "desc[1]" : "A rope leads down into the pit.",
+         "location" : "IN_ROOM:pit",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "altname" : "ladder",
+         "name" : "RopeTopPit",
+         "desc[2]" : "A knotted rope leads down into the pit.",
+         "linked" : "RopeBotPit@ledge",
+         "pname" : "rope",
+         "maxstate" : "2",
+         "desc[0]" : "A rope ladder leads down into the pit."
+      },
+      "altar@moor" : {
+         "desc[1]" : "A chalice rests upon the altar.",
+         "location" : "IN_ROOM:circle",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stone",
+         "name" : "altar",
+         "examine" : "\nThe altar is blackened and pitted from the fires and blood of many sacrifices.\nThe center of the altar simply bears the words, \"Acsthad Of The Fiery Planes\"",
+         "maxstate" : "1"
+      },
+      "chalice@moor" : {
+         "location" : "IN_ROOM:circle",
+         "weight" : "5",
+         "name" : "chalice",
+         "bvalue" : "40",
+         "desc[0]" : "A bloodstained chalice lies before you.",
+         "size" : "10"
+      }
+   },
+   "loc" : {
+      "circle@moor" : {
+         "exits" : {
+            "w" : "Edge",
+            "e" : "Lost1",
+            "n" : "Lost2",
+            "s" : "Misty2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "The Stone Circle On The Moor",
+         "id" : "Circle",
+         "description" : "\n   You are standing in the center of an ancient circle of jagged stones hidden\nin a deep bowl in the center of the moors.  Narrow scarcely used tracks wind up\nfrom the deathly quiet bowl.  The center of the circle is a black gloomy altar\nto some ancient god.\n",
+         "altitude" : "900"
+      },
+      "inside@moor" : {
+         "exits" : {
+            "w" : "Cottage"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "Inside The Ruined Cottage",
+         "id" : "Inside",
+         "description" : "\n   You are standing in the sad, desolate ruins of an old farmhouse.  The roof\nhas long since caved in, leaving a crumbling shell to gradually fall.  A single\ndoorway leads west back outside onto the moor.\n",
+         "altitude" : "900"
+      },
+      "cottage@moor" : {
+         "exits" : {
+            "w" : "Lost1",
+            "e" : "Inside",
+            "n" : "Waste"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "By The Ruined Cottage",
+         "id" : "Cottage",
+         "description" : "\n   You are standing somewhere on the eastern side of the moor.  A narrow worn\npath leads east between two crumbling dry-stone walls towards the remains of an\nold cottage.\n",
+         "altitude" : "900"
+      },
+      "pit@moor" : {
+         "exits" : {
+            "n" : "Lost1",
+            "d" : "^RopeTopPit"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "By The Pit",
+         "id" : "pit",
+         "description" : "\n   You are standing on the rim of a huge open pit looking down some twenty feet\nto the floor below.  The walls of the pit are too sheer to climb down, which is\nunfortunate as there seem to be caves leading off from it.  A path winds its\ndusty way north out onto the moor.\n",
+         "altitude" : "900"
+      },
+      "edge@moor" : {
+         "exits" : {
+            "e" : "Circle",
+            "n" : "Rocky",
+            "s" : "Misty1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "Western Edge Of Moor",
+         "id" : "Edge",
+         "description" : "\n   You are standing somewhere near the western edge of the moors.  Narrow,\ngorse-walled paths wind their narrow ways north east and south from here.\n",
+         "altitude" : "900"
+      },
+      "lost2@moor" : {
+         "exits" : {
+            "w" : "Rocky",
+            "e" : "Waste",
+            "s" : "Lost1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "Lost On The Moor",
+         "id" : "Lost2",
+         "description" : "\n   You are lost somewhere on a vast expanse of ancient moorlands.  Thick\nbushes and tangled piles of gorse and rock prevent you from seeing far in any\ndirection, though narrow paths wind east, west and south across the moor.\n",
+         "altitude" : "900"
+      },
+      "misty2@moor" : {
+         "exits" : {
+            "w" : "Misty1",
+            "n" : "Circle"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "Misty Moorland",
+         "id" : "Misty2",
+         "description" : "\n   You are wandering amidst the thickets and stones far out upon the moor. Grey\nand barren they extend all around you.  Thick gorse and bushes prevent even the\nmost determined adventurer from doing anything but following the paths to the\nnorth and west.\n",
+         "altitude" : "900"
+      },
+      "rocky@moor" : {
+         "exits" : {
+            "e" : "Lost2",
+            "n" : "camelot@camelot",
+            "s" : "Edge"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "Rocky End",
+         "id" : "Rocky",
+         "description" : "\n   The path you are following across the moor ends here, in a narrow rocky\nhollow.  Another narrow path leads northwards, and you espy a great castle in\nthe distance.\n",
+         "altitude" : "900"
+      },
+      "misty1@moor" : {
+         "exits" : {
+            "e" : "Misty2",
+            "n" : "Edge",
+            "s" : "Moorpath@valley"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "Misty Moorland",
+         "id" : "Misty1",
+         "description" : "\n   You are standing on the south-eastern edge of a vast tract of misty, tangled\nmoorland.  Thick gorse and bracken make travel almost impossible save for\nnarrow, animal-worn tracks to the north and east.\n",
+         "altitude" : "900"
+      },
+      "waste@moor" : {
+         "exits" : {
+            "e" : "RBend@eastcoast",
+            "w" : "Lost2",
+            "s" : "Cottage"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "Rocky Waste",
+         "id" : "Waste",
+         "description" : "\n   You are standing on the northeastern corner of the moor, looking out across\na mass of jumbled rock.  Paths lead south and west across the moor, while the\nrock steepens into preciptious cliffs to the east and north, preventing further\ntravels.\n",
+         "altitude" : "900"
+      },
+      "lost1@moor" : {
+         "exits" : {
+            "w" : "Edge",
+            "e" : "pit",
+            "n" : "Lost2",
+            "s" : "Misty2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "moor",
+         "title" : "Lost On The Moor",
+         "id" : "Lost1",
+         "description" : "\n   You are lost on the moor.  Thick gorse and tangled bushes prevent you from\nseeing far in any direction.  A multitude of little twisted paths wind in all\ndirections from here.\n",
+         "altitude" : "900"
+      }
+   },
+   "mob" : {}
+}

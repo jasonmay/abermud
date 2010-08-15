@@ -1,0 +1,256 @@
+{
+   "obj" : {
+      "sulphur@island" : {
+         "location" : "IN_ROOM:waste1",
+         "weight" : "1",
+         "altname" : "pile",
+         "name" : "sulphur",
+         "bvalue" : "20",
+         "desc[0]" : "Some sulphur lies here in a small pile.",
+         "size" : "1"
+      },
+      "spear@island" : {
+         "damage" : "6",
+         "location" : "IN_ROOM:path",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "spear",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A fire-hardened spear has been left here."
+      },
+      "feather@island" : {
+         "location" : "IN_ROOM:path",
+         "weight" : "1",
+         "name" : "feather",
+         "bvalue" : "100",
+         "desc[0]" : "A multi-colored feather has been left here.",
+         "size" : "1"
+      },
+      "bone@island" : {
+         "damage" : "3",
+         "location" : "IN_ROOM:beach",
+         "oflags" : [
+            "Wearable",
+            "Weapon"
+         ],
+         "name" : "bone",
+         "examine" : "\nIt's got some markings along it.  Maybe you should try reading the bone, and\nsee what it says.",
+         "size" : "5",
+         "weight" : "5",
+         "bvalue" : "40",
+         "desc[0]" : "A bleached bone lies at your feet.",
+         "aflags" : [
+            "Back"
+         ]
+      }
+   },
+   "loc" : {
+      "waste1@island" : {
+         "exits" : {
+            "w" : "Slope1",
+            "e" : "surface1@loligo",
+            "u" : "Waste2",
+            "n" : "Waste2",
+            "d" : "Slope1",
+            "s" : "Waste2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Lava Wasteland",
+         "id" : "Waste1",
+         "description" : "\n   You are trudging across a black lava wasteland, broken only by a few very\nhardy bushes and low trees.  The lava extends all around you.\n",
+         "altitude" : "100"
+      },
+      "ruins2@island" : {
+         "exits" : {
+            "w" : "1@sea",
+            "e" : "Flow",
+            "u" : "Flow",
+            "n" : "Bushes",
+            "s" : "Path"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Desolate Ruins",
+         "id" : "Ruins2",
+         "description" : "\n   You are standing in the desolate ruins of what was perhaps once a harbour.\nThe sea now breaks over the low crumbling stone wall which must once have been\na jetty of some sort.  Thick tangled bushes extend north and east following the\nruins to the edge of a huge lava flow.  To the south a narrow trail leads into\nthick vegetation.\n",
+         "altitude" : "0"
+      },
+      "waste2@island" : {
+         "exits" : {
+            "w" : "Slope2",
+            "e" : "Waste1",
+            "u" : "Brink",
+            "n" : "Waste1",
+            "d" : "Flow",
+            "s" : "Waste2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Lava Wasteland",
+         "id" : "Waste2",
+         "description" : "\n   You are trudging across a black lava wasteland, broken only by a few very\nhardy bushes and low trees.  The lava extends all around you.\n",
+         "altitude" : "150"
+      },
+      "flow@island" : {
+         "exits" : {
+            "w" : "Ruins2",
+            "e" : "Slope2",
+            "u" : "Slope2",
+            "n" : "Ruins1",
+            "d" : "Ruins1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Edge Of Lava Flow",
+         "id" : "Flow",
+         "description" : "\n   You are standing on the edge of a huge lava flow which extends east upwards\ntowards the crater of a huge volcano.  To the east and north the lava gives way\nto ancient ruins.\n",
+         "altitude" : "50"
+      },
+      "slope1@island" : {
+         "exits" : {
+            "w" : "Ruins1",
+            "u" : "Slope2",
+            "d" : "Ruins1",
+            "s" : "Slope2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Lava Slope",
+         "id" : "Slope1",
+         "description" : "\n   You are scrambling across a black barren lava slope, a vast black desolate\nexpanse which extends away to the south and east. To the west the lava ends and\ngives way to the ruins of an ancient building.\n",
+         "altitude" : "100"
+      },
+      "brink@island" : {
+         "exits" : {
+            "w" : "Flow",
+            "e" : "Waste2",
+            "n" : "Slope2",
+            "d" : "Top@Labyrinth"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Crater's Brink",
+         "id" : "Brink",
+         "description" : "\n   You stand on the brink of an ancient volcanic crater.  The ground around you\ntrembles and shakes to the accompaniment of a steady rumbling from beneath your\nfeet.  A huge black slab stands on the very edge of the crater marked with many\nhideous symbols and shapes. A narrow staircase leads downwards beside the slab.\n",
+         "altitude" : "400"
+      },
+      "path@island" : {
+         "exits" : {
+            "n" : "Ruins2",
+            "s" : "Cragg"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Narrow Path",
+         "id" : "Path",
+         "description" : "\n   You are following a narrow, and suprisingly, if not alarmingly, well used\npath.  The path leads northwards towards some ruins, and south through the\nbushes and trees, towards a low crag.\n",
+         "altitude" : "150"
+      },
+      "ruins1@island" : {
+         "exits" : {
+            "w" : "Bushes",
+            "e" : "Slope1",
+            "u" : "Flow",
+            "s" : "Flow"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Ruins",
+         "id" : "Ruins1",
+         "description" : "\n   You stand in the center of what must once have been a huge ampitheatre,\nwith high columned arches surrounding it. Thick heavily tangled bushes grow all\naround the stumps of the many fallen pillars, frequently hiding them from view.\nThe ruins extend back westwards, but to the south and east have been covered\nby huge lava flows.\n",
+         "altitude" : "0"
+      },
+      "beach@island" : {
+         "exits" : {
+            "w" : "1@sea",
+            "e" : "Bushes"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Sandy Beach",
+         "id" : "Beach",
+         "description" : "\n   You are standing on a lonely sandy beach shielded from the howling winds by\ntwo huge old lava flows to the north and south. Thick bushes cover a huge array\nof old decaying ruins to the east.\n",
+         "altitude" : "0"
+      },
+      "bushes@island" : {
+         "exits" : {
+            "w" : "Beach",
+            "e" : "Ruins2",
+            "s" : "Ruins2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Tangled Bushes",
+         "id" : "Bushes",
+         "description" : "\n   You are clambering through a mess of thick tangled bushes and stumbling\nover huge blocks of stone, evidently once part of a much mightier construction.\nThe bushes and ruins continue east and south while to the west is a beach.\n",
+         "altitude" : "0"
+      },
+      "slope2@island" : {
+         "exits" : {
+            "w" : "Flow",
+            "e" : "Waste2",
+            "u" : "Brink",
+            "n" : "Slope1",
+            "d" : "Slope1",
+            "s" : "Brink"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Lava Slope",
+         "id" : "Slope2",
+         "description" : "\n   You are clambering across a steep lava slope.  The slope is barren and bare\nsave for a few bushes which break from cracks in the rock.  Up above you to the\nnorth a narrow path zig zags to the rim of the volcano itself.\n",
+         "altitude" : "150"
+      },
+      "cragg@island" : {
+         "exits" : {
+            "n" : "Path"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Cragg",
+         "id" : "Cragg",
+         "description" : "\n   You are standing on the top of a high rocky cragg, which looks down upon\nheavy seas crashing against the rocky shoreline far far below.  A single path\nleads north into the bushes.\n",
+         "altitude" : "200"
+      }
+   },
+   "mob" : {
+      "native@island" : {
+         "damage" : "10",
+         "location" : "ruins2",
+         "armor" : "0",
+         "aggression" : "30",
+         "pname" : "The Native",
+         "name" : "native",
+         "description" : "A native watches you warily from a safe distance.",
+         "strength" : "40"
+      }
+   }
+}

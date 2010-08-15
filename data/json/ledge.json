@@ -1,0 +1,175 @@
+{
+   "obj" : {
+      "ropewest@ledge" : {
+         "desc[1]" : "A rope hangs west across to the steps.",
+         "location" : "IN_ROOM:On",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "altname" : "ladder",
+         "name" : "RopeWest",
+         "desc[2]" : "A knotted rope hangs west across to the steps.",
+         "linked" : "RopeEast@Valley",
+         "pname" : "rope",
+         "maxstate" : "2",
+         "desc[0]" : "A rope ladder leads west across to the steps."
+      },
+      "tunneast@ledge" : {
+         "desc[1]" : "\nA huge rockfall to the west has sealed off the only exit to this chamber.",
+         "location" : "IN_ROOM:forgotten",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "rockfall",
+         "name" : "tunnEast",
+         "linked" : "tunnWest",
+         "state" : "1",
+         "pname" : "tunnel",
+         "maxstate" : "1"
+      },
+      "orb@ledge" : {
+         "location" : "IN_ROOM:forgotten",
+         "altname" : "platinum",
+         "name" : "orb",
+         "bvalue" : "400",
+         "desc[0]" : "\nA huge glittering platinum orb sparkles in the light, sending rainbows of\nglittering fire twinkling around you."
+      },
+      "tunnwest@ledge" : {
+         "desc[1]" : "A large rockfall blocks the passage to the east.",
+         "location" : "IN_ROOM:tunnel",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "rockfall",
+         "name" : "tunnWest",
+         "linked" : "tunnEast",
+         "state" : "1",
+         "pname" : "tunnel",
+         "maxstate" : "1"
+      },
+      "ropebotpit@ledge" : {
+         "desc[1]" : "A rope leads up out of the pit.",
+         "location" : "IN_ROOM:pit",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "altname" : "ladder",
+         "name" : "RopeBotPit",
+         "desc[2]" : "A knotted rope leads up out of the pit.",
+         "linked" : "RopeTopPit@moor",
+         "pname" : "rope",
+         "maxstate" : "2",
+         "desc[0]" : "A rope ladder leads up out of the pit."
+      }
+   },
+   "loc" : {
+      "ledge@ledge" : {
+         "exits" : {
+            "w" : "Cavemouth",
+            "e" : "Death"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "Ledge",
+         "id" : "Ledge",
+         "description" : "\n   The ledge narrows here, become only a couple of inches wide as it leads\nfurther eastwards.  To the west the ledge widens out.\n",
+         "altitude" : "850"
+      },
+      "death@ledge" : {
+         "exits" : {},
+         "flags" : [
+            "Outdoors",
+            "Death"
+         ],
+         "zone" : "ledge",
+         "title" : "Ledge",
+         "id" : "Death",
+         "description" : "\n   Your feet slip on the dangerously thin ledge, and you plunge rapidly\ndownwards to your death...\n",
+         "altitude" : "850"
+      },
+      "cavemouth@ledge" : {
+         "exits" : {
+            "w" : "On",
+            "e" : "Ledge",
+            "n" : "Cave"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "Cavemouth",
+         "id" : "Cavemouth",
+         "description" : "\n   You are standing on a narrow precipitous ledge.  The ledge runs east-west,\nand to the north a narrow cavemouth leads into semi-darkness.  Braving vertigo,\nyou gaze over the lip of the ledge across the vast expanse of trees far below.\n",
+         "altitude" : "850"
+      },
+      "cave@ledge" : {
+         "exits" : {
+            "e" : "Tunnel",
+            "n" : "Pit",
+            "s" : "Cavemouth"
+         },
+         "flags" : [],
+         "zone" : "ledge",
+         "title" : "Narrow Cave",
+         "id" : "Cave",
+         "description" : "\n   You are standing in a long narrow cave.  Dim and pallid light shines in from\nthe cavemouth to the south, illuminating passageways north and east.\n",
+         "altitude" : null
+      },
+      "tunnel@ledge" : {
+         "exits" : {
+            "w" : "Cave",
+            "e" : "^TunnWest"
+         },
+         "flags" : [],
+         "zone" : "ledge",
+         "title" : "Narrow Tunnel",
+         "id" : "Tunnel",
+         "description" : "\n   You are clambering along a narrow slanted passage.  Rubble and loose stones\nrain down around you as you move, suggesting the roof is not very strong. Light\nshines along the passage from a junction to the west.\n",
+         "altitude" : null
+      },
+      "on@ledge" : {
+         "exits" : {
+            "w" : "^RopeWest",
+            "e" : "Cavemouth"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "On The Ledge",
+         "id" : "On",
+         "description" : "\n   You are standing on a narrow ledge high up the side of some steep cliffs.\nThe ledge continues west beside a narrow cavemouth.  To the east the ledge ends\nsome twenty feet short of a set of steps, which climb up the cliff side from\nthe valley below.\n",
+         "altitude" : "850"
+      },
+      "pit@ledge" : {
+         "exits" : {
+            "u" : "^RopeBotPit",
+            "s" : "Cave"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "Bottom Of Pit",
+         "id" : "Pit",
+         "description" : "\n   You are standing at the bottom of a huge open pit.  The pit walls are almost\nsheer, and well beyond climbing.  A narrow tunnel leads south into shadow.\n",
+         "altitude" : "850"
+      },
+      "forgotten@ledge" : {
+         "exits" : {
+            "w" : "^TunnEast"
+         },
+         "flags" : [],
+         "zone" : "ledge",
+         "title" : "Forgotten Place",
+         "id" : "Forgotten",
+         "description" : "\n   You are standing in a dim forgotten place, deep underground.  The rocks\naround you seem placid and silent, as if in silent contemplation of some deeper\nmore ancient power of the earth.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {}
+}

@@ -1,0 +1,147 @@
+{
+   "obj" : {
+      "bedding@treehouse" : {
+         "location" : "IN_ROOM:south",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "bed",
+         "name" : "bedding",
+         "examine" : "\nAlthough it's nice, thick, warm bedding, it's hardly the ideal thing in which\nto practice honeymoon tactics!"
+      },
+      "way1@treehouse" : {
+         "location" : "IN_ROOM:house",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "Way1",
+         "examine" : "\nThe waybread is the traditional feed of elves when travelling, they call it\nlembas.  It is said to refresh the weary traveler greatly.",
+         "size" : "1",
+         "pname" : "waybread",
+         "weight" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "Some waybread has been put here."
+      },
+      "waybread@treehouse" : {
+         "location" : "IN_ROOM:house",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "waybread",
+         "examine" : "\nThe waybread is the traditional feed of elves when travelling, they call it\nlembas.  It is said to refresh the weary traveler greatly.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "Some waybread has been put here."
+      },
+      "shield@treehouse" : {
+         "location" : "IN_ROOM:north",
+         "armor" : "20",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "small",
+         "name" : "shield",
+         "examine" : "\nIt looks too big to protect you from diseases, but might help in a fight!",
+         "size" : "10",
+         "weight" : "6",
+         "bvalue" : "50",
+         "desc[0]" : "A small shield has been left here."
+      },
+      "ladder@treehouse" : {
+         "desc[1]" : "A rope leads down the tree.",
+         "location" : "IN_ROOM:porch",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "rope",
+         "name" : "ladder",
+         "desc[2]" : "A knotted rope leads down the tree.",
+         "linked" : "ladder2Elf@valley",
+         "maxstate" : "2",
+         "desc[0]" : "A rope ladder leads down the tree."
+      },
+      "amulet@treehouse" : {
+         "location" : "IN_ROOM:south",
+         "oflags" : [
+            "Destroyed",
+            "Wearable"
+         ],
+         "altname" : "gold",
+         "name" : "amulet",
+         "examine" : "The amulet is polished gold on a leather necklace.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "70",
+         "desc[0]" : "An unadorned gold amulet has been put here.",
+         "aflags" : [
+            "Neck"
+         ]
+      }
+   },
+   "loc" : {
+      "house@treehouse" : {
+         "exits" : {
+            "e" : "Porch",
+            "n" : "North",
+            "s" : "South"
+         },
+         "flags" : [],
+         "zone" : "treehouse",
+         "title" : "Tree House",
+         "id" : "House",
+         "description" : "\n   You are standing in the center of an elven treehouse.  Arched doorways\nbetween the branches lead north, east and south.\n",
+         "altitude" : null
+      },
+      "porch@treehouse" : {
+         "exits" : {
+            "w" : "House",
+            "d" : "^ladder"
+         },
+         "flags" : [],
+         "zone" : "treehouse",
+         "title" : "Treehouse Porch",
+         "id" : "Porch",
+         "description" : "\n   You stand on the porch of the treehouse.  A way leads west through the\nbranches into the center of the treehouse.\n",
+         "altitude" : null
+      },
+      "south@treehouse" : {
+         "exits" : {
+            "n" : "House"
+         },
+         "flags" : [],
+         "zone" : "treehouse",
+         "title" : "Treehouse South",
+         "id" : "South",
+         "description" : "\n   You are at the southern end of the treehouse, which appears to be used by\nits occupant for a sleeping area.  Large amounts of thick bedding insure that\nits occupant will be comfortable even in bad weather.  A single way leads north\nbetween the branches.\n",
+         "altitude" : null
+      },
+      "north@treehouse" : {
+         "exits" : {
+            "s" : "House"
+         },
+         "flags" : [],
+         "zone" : "treehouse",
+         "title" : "Treehouse North",
+         "id" : "North",
+         "description" : "\n   You stand at the north end of the treehouse, looking out across the forest.\nA single doorway carved into the treetrunk allows access back south.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "elf@treehouse" : {
+         "damage" : "10",
+         "location" : "porch",
+         "armor" : "0",
+         "aggression" : "20",
+         "pname" : "The Elf",
+         "name" : "elf",
+         "description" : "A tall, lean elf steps quietly amid the shadows.",
+         "strength" : "60"
+      }
+   }
+}

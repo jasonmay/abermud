@@ -1,0 +1,236 @@
+{
+   "obj" : {
+      "excalibur@sea" : {
+         "desc[1]" : "A hand holds up the sword Excalibur from out of the waves.",
+         "damage" : "20",
+         "location" : "IN_ROOM:7",
+         "oflags" : [
+            "GetFlips",
+            "Weapon",
+            "Enchanted"
+         ],
+         "altname" : "sword",
+         "name" : "excalibur",
+         "size" : "20",
+         "state" : "2",
+         "weight" : "20",
+         "maxstate" : "2",
+         "bvalue" : "600",
+         "desc[0]" : "The sword Excalibur rests at your feet, its pure silvery blade gleaming in the\nlight."
+      },
+      "hole@sea" : {
+         "location" : "IN_ROOM:Holes",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "hole",
+         "examine" : "Peering into the darkness you see the glint of treasure!",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "-10",
+         "desc[0]" : "A portable hole glistens darkly at your feet."
+      }
+   },
+   "loc" : {
+      "holes@sea" : {
+         "exits" : {
+            "w" : "7",
+            "e" : "pit@pit",
+            "u" : "Jetty@village",
+            "n" : "eaten@dead",
+            "d" : "Beach@Island",
+            "s" : "Treasure"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "Sea of Holes",
+         "id" : "Holes",
+         "description" : "\n   You are drifting in a sea of psychedelic holes.  In the water (?) below, you\ncan just barely make out several blue gloves and clowns chasing each other and\nbickering.  On the top of an undersea mountain, sits a purple fractal dragon,\nobserving the ruckess while puffing on his purple hooka and sniffing flowers.\n   Exits are everywhere.\n",
+         "altitude" : null
+      },
+      "9@sea" : {
+         "exits" : {
+            "w" : "2",
+            "e" : "8",
+            "n" : "7",
+            "s" : "7"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "9",
+         "description" : "\n   You are lost, out all at sea amidst the waves.  The sea seems reasonably\nsmooth to the east and west.  To the west is the reassuring sight of land.\n",
+         "altitude" : null
+      },
+      "4@sea" : {
+         "exits" : {
+            "w" : "6",
+            "e" : "7",
+            "n" : "3",
+            "s" : "5"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "4",
+         "description" : "\n   You are all at sea, amidst the high heaving waves.  The waters look no safer\nin any direction, although to the east they pound against a huge rock, which\nrises straight and steeply upwards from the sea.\n",
+         "altitude" : null
+      },
+      "10@sea" : {
+         "exits" : {
+            "w" : "7",
+            "e" : "7",
+            "n" : "7",
+            "s" : "Holes"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "10",
+         "description" : "\n   You are all at sea seemingly without hope of seeing land.  The heavy waves\nmake your small craft sway and lurch horribly, sending you staggering as you\ntry to keep your balance.  The seas appears weird off to the south and your\ncraft might just about make it.\n",
+         "altitude" : null
+      },
+      "6@sea" : {
+         "exits" : {
+            "w" : "5",
+            "e" : "4",
+            "n" : "8",
+            "s" : "10"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "6",
+         "description" : "\n   You are all at sea seemingly without hope of seeing land.  The heavy waves\nmake your small craft sway and lurch horribly, sending you staggering as you\ntry to keep your balance.  The seas ease off to the north and east and your\ncraft might just about make it.\n",
+         "altitude" : null
+      },
+      "7@sea" : {
+         "exits" : {},
+         "flags" : [
+            "Death",
+            "OnWater"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "7",
+         "description" : "\n   The heavy seas and strong waves pound you out of existance.  If this\ncontinues much longer, you're going to lose your lunch.\n",
+         "altitude" : null
+      },
+      "8@sea" : {
+         "exits" : {
+            "w" : "9",
+            "e" : "5",
+            "n" : "7",
+            "s" : "6"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "8",
+         "description" : "\n   You are out all at sea, lost amidst the seething waves and grey skies, a\nspeck on an undulating dark mass.  The seas are heavy all around you, though\nnot too rough to the west.  To the south the waves smooth off quite a bit,\nproviding you can cross the rough waters before it.\n",
+         "altitude" : null
+      },
+      "treasure@sea" : {
+         "exits" : {},
+         "flags" : [
+            "Death",
+            "Underwater"
+         ],
+         "zone" : "sea",
+         "title" : "Treasure Room",
+         "id" : "Treasure",
+         "description" : "\n   Now you know why they call this the treasure room.  From the skeletons and\ndebris, it appears you're not the first foolhardy soul to lose his loot to this\nfiendish trap...\n",
+         "altitude" : null
+      },
+      "1@sea" : {
+         "exits" : {
+            "w" : "3",
+            "e" : "Beach@island",
+            "n" : "7",
+            "s" : "7"
+         },
+         "flags" : [
+            "NoMobiles",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "1",
+         "description" : "\n   You are just off the edge of a small island.  To the east the waves break\ngently on a sandy beach, while to the north and south they swirl around huge\nlava flows, evidently from the volcano visible to the east.  To the west is the\nopen sea.\n",
+         "altitude" : null
+      },
+      "2@sea" : {
+         "exits" : {
+            "w" : "Jetty@village",
+            "e" : "9",
+            "n" : "7",
+            "d" : "7",
+            "s" : "7"
+         },
+         "flags" : [
+            "NoMobiles",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "2",
+         "description" : "\n   You are all at sea, riding the seas.  To the north and south the waves are\nhigh and break heavily against the surrounding cliffs.  To the east it might be\nsafe to continue.  The safety of the jetty is west.\n",
+         "altitude" : null
+      },
+      "3@sea" : {
+         "exits" : {
+            "w" : "7",
+            "e" : "1",
+            "n" : "7",
+            "s" : "4"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "3",
+         "description" : "\n   You are lost out at sea.  The waves pound heavily all around you, although\nit looks slightly safer to the south and east.\n",
+         "altitude" : null
+      },
+      "5@sea" : {
+         "exits" : {
+            "w" : "7",
+            "e" : "7",
+            "n" : "4",
+            "s" : "7"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sea",
+         "title" : "All At Sea",
+         "id" : "5",
+         "description" : "\n   You are lost at sea amidst the pounding waves.  All around you the sea is\nhigh and heavy and almost sure to drown you.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {}
+}

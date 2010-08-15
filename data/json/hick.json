@@ -1,0 +1,1088 @@
+{
+   "obj" : {
+      "houseoutdoor@hick" : {
+         "desc[1]" : "The door leading outside is closed.",
+         "location" : "IN_ROOM:house1",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "houseoutdoor",
+         "linked" : "houseindoor",
+         "state" : "1",
+         "pname" : "Door",
+         "maxstate" : "1",
+         "desc[0]" : "The door leading outside is open."
+      },
+      "jeremy_knife@hick" : {
+         "location" : "IN_ROOM:house16",
+         "weight" : "3",
+         "oflags" : [
+            "Weapon"
+         ],
+         "pname" : "Knife",
+         "name" : "jeremy_knife",
+         "desc[0]" : "A small knife has been left here.",
+         "size" : "3"
+      },
+      "pitchfork@hick" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:cattle4",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "Pitchfork",
+         "size" : "5",
+         "pname" : "Pitchfork",
+         "weight" : "7",
+         "bvalue" : "50",
+         "desc[0]" : "A mean looking pitchfork has been placed here."
+      },
+      "boots@hick" : {
+         "location" : "IN_ROOM:cattle4",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "Boots",
+         "size" : "2",
+         "pname" : "Boots",
+         "weight" : "2",
+         "bvalue" : "40",
+         "aflags" : [
+            "Feet"
+         ],
+         "desc[0]" : "A pair of work boots rests on the ground."
+      },
+      "sink@hick" : {
+         "location" : "IN_ROOM:house10",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "pname" : "Sink",
+         "name" : "Sink",
+         "desc[0]" : "A kitchen sink is here with a few dishes on one side.",
+         "size" : "5"
+      },
+      "overalls@hick" : {
+         "location" : "IN_ROOM:cattle4",
+         "armor" : "30",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "Overalls",
+         "size" : "5",
+         "pname" : "Overalls",
+         "weight" : "7",
+         "bvalue" : "50",
+         "desc[0]" : "A protective looking pair of overalls is here.",
+         "aflags" : [
+            "Legs",
+            "Chest",
+            "Back"
+         ]
+      },
+      "oven@hick" : {
+         "desc[1]" : "The over door is closed.",
+         "location" : "IN_ROOM:house10",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "NoGet"
+         ],
+         "pname" : "Oven",
+         "name" : "Oven",
+         "desc[0]" : "The oven door is open.",
+         "size" : "5"
+      },
+      "turkey@hick" : {
+         "desc[1]" : "A delicious looking turkey is in the oven.",
+         "location" : "IN_CONTAINER:oven",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "Turkey",
+         "size" : "3",
+         "state" : "1",
+         "pname" : "Turkey",
+         "weight" : "3",
+         "maxstate" : "1",
+         "desc[0]" : "A delicious looking turkey has been left here."
+      },
+      "corn@hick" : {
+         "location" : "IN_ROOM:field13",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "Corn",
+         "size" : "1",
+         "pname" : "Corn",
+         "weight" : "2",
+         "bvalue" : "30",
+         "desc[0]" : "An ear of corn is laying on the ground."
+      },
+      "tomato@hick" : {
+         "location" : "IN_ROOM:field15",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "Tomato",
+         "size" : "1",
+         "pname" : "Tomato",
+         "weight" : "2",
+         "bvalue" : "30",
+         "desc[0]" : "A ripe tomato has been dropped here."
+      },
+      "apple@hick" : {
+         "desc[1]" : "A nice red apple is in the sink that looks very delicious.",
+         "location" : "IN_CONTAINER:sink",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "Apple",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "Apple",
+         "weight" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A nice red apple has been left here."
+      },
+      "houseindoor@hick" : {
+         "desc[1]" : "The door leading inside is closed.",
+         "location" : "IN_ROOM:house2",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "houseindoor",
+         "linked" : "houseoutdoor",
+         "state" : "1",
+         "pname" : "Door",
+         "maxstate" : "1",
+         "desc[0]" : "The door leading inside is open."
+      }
+   },
+   "loc" : {
+      "hick7@hick" : {
+         "exits" : {
+            "n" : "hick8",
+            "s" : "hick6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Road to Livestock Area",
+         "id" : "hick7",
+         "description" : "\n  The road here is very bare and doesn't have that much dust on it. You \ncan smell the livestock to the north of here. The road leads to the north \nand goes back to the south.\n",
+         "altitude" : "400"
+      },
+      "cattle2@hick" : {
+         "exits" : {
+            "w" : "cattle5",
+            "e" : "cattle4",
+            "n" : "cattle3",
+            "s" : "cattle1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Southern Livestock Area Road",
+         "id" : "cattle2",
+         "description" : "\n  The road is covered with all sorts of litter and you watch where you step \nvery carefully. There are stalls to the east and west of here. To the north \nand road continues and you can see an exit to the south.\n",
+         "altitude" : "400"
+      },
+      "field15@hick" : {
+         "exits" : {
+            "w" : "field16",
+            "e" : "field6",
+            "n" : "field8",
+            "s" : "field14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Tomato Patch",
+         "id" : "field15",
+         "description" : "\n  This is a large tomato patch. To the south is a wheat field, to the \nwest is a strawberry patch, and to the north and east there is an \nirrigation ditch.\n",
+         "altitude" : "400"
+      },
+      "house9@hick" : {
+         "exits" : {
+            "w" : "house11",
+            "e" : "house10",
+            "u" : "house13",
+            "n" : "house12",
+            "s" : "house8"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Main Hallway",
+         "id" : "house9",
+         "description" : "\n  The hallway seems to end here leading to a kitchen to the east, the \ndining room to the west and a bathroom to the north and there are stairs \nleading to the upstairs floor.\n",
+         "altitude" : null
+      },
+      "cattle3@hick" : {
+         "exits" : {
+            "w" : "cattle8",
+            "e" : "cattle7",
+            "n" : "cattle6",
+            "s" : "cattle2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Northern Livestock Area Road",
+         "id" : "cattle3",
+         "description" : "\n  This road is very muddy here and you can feel your feet sink deep into \nthe mud, a very disgusting feeling. You look around you and see pig \nstalls to the east and west. To the north the road continues and to the \ndistant south you can see the exit.\n",
+         "altitude" : "400"
+      },
+      "house4@hick" : {
+         "exits" : {
+            "w" : "house3",
+            "e" : "house5"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Hallway to the Study",
+         "id" : "house4",
+         "description" : "\n  This is a short hallway that leads to a study. There are a few pictures \nhanging on the wall that you assume to be the Hickdale family, some of \nthe pictures look very old and you wonder how long the Hickdales have \nowned this farm. To the east you can see a study and the hallway leads \nback to the west.\n",
+         "altitude" : null
+      },
+      "hick9@hick" : {
+         "exits" : {
+            "w" : "hick8",
+            "e" : "field1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "End of Road to Crop Fields",
+         "id" : "hick9",
+         "description" : "\n  You are at the end of the road to the crop fields. There are giant \nfields of corn, wheat, tomatoes, and other various vegetables. There is a \nsmall irrigation ditch that leads to the east into the fields. The road \ngoes back to the west.\n",
+         "altitude" : "400"
+      },
+      "house2@hick" : {
+         "exits" : {
+            "n" : "house3",
+            "s" : "^houseindoor"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Landing",
+         "id" : "house2",
+         "description" : "\n  This is a small area with a floormat for wiping your feet clean of mud \nand other dirt. There is a rack for coats and hats with a couple of small \njackets hanging on it. There in a hallway leading to the north and to the \nsouth you can see the porch.\n",
+         "altitude" : null
+      },
+      "field16@hick" : {
+         "exits" : {
+            "w" : "field11",
+            "e" : "field15",
+            "n" : "field9",
+            "s" : "field13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Strawberry Patch",
+         "id" : "field16",
+         "description" : "\n  This is a large strawberry patch. To the east is a tomato patch, to the \nsouth is a corn field, and to the north and west there is an irrigation \nditch.\n",
+         "altitude" : "400"
+      },
+      "house14@hick" : {
+         "exits" : {
+            "n" : "house13",
+            "s" : "house15"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Main Hallway",
+         "id" : "house14",
+         "description" : "\n  This hallway is just as drab as the ones you saw downstairs and you \nwonder how these people could live in such a drab place. The hallway \ncontinues to the south.\n",
+         "altitude" : null
+      },
+      "cattle8@hick" : {
+         "exits" : {
+            "e" : "cattle3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Pig Stall",
+         "id" : "cattle8",
+         "description" : "\n  This stall is disgusting, covered with mud and old decaying food. You \ncan leave to the east.\n",
+         "altitude" : "400"
+      },
+      "house8@hick" : {
+         "exits" : {
+            "n" : "house9",
+            "s" : "house3"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Main Hallway",
+         "id" : "house8",
+         "description" : "\n  The hallway continues to the north and leads back to the south.\n",
+         "altitude" : null
+      },
+      "house5@hick" : {
+         "exits" : {
+            "w" : "house4"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Study",
+         "id" : "house5",
+         "description" : "\n  This is a pleasent little study with decorative pictures hanging on the \nwall with a few small houseplants on shelves against the walls. There is \na very large desk set against the south wall. You can leave the study to \nthe west.\n",
+         "altitude" : null
+      },
+      "house20@hick" : {
+         "exits" : {
+            "w" : "house18"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Parents Room",
+         "id" : "house20",
+         "description" : "\n  This looks to be the rooms for Ma and Pa Hickdale, it is just as drab \nand plain as the other rooms. Just a bed, a dresser, and a few books on \nthe dresser.\n",
+         "altitude" : null
+      },
+      "house19@hick" : {
+         "exits" : {
+            "e" : "house18"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Grandparents Room",
+         "id" : "house19",
+         "description" : "\n  This looks to be grandma and grandpa Hickdale's room, it is just as \nboring as the other rooms.\n",
+         "altitude" : null
+      },
+      "house10@hick" : {
+         "exits" : {
+            "w" : "house9"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Kitchen",
+         "id" : "house10",
+         "description" : "\n  You start to feel a little hungry as you take in the smells of freshly \ncooked food. The kitchen is very nice with all of the appliances that are \nneeded for someone to prepare a wonderful meal.\n",
+         "altitude" : null
+      },
+      "hick2@hick" : {
+         "exits" : {
+            "e" : "hick5",
+            "n" : "hick3",
+            "s" : "hick1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Main Road",
+         "id" : "hick2",
+         "description" : "\n  The road is very dirty and you cough a little from the dust that is \nrising up from your feet. The road turns to the east here and leads to a \nlarge field. The road also continues north and goes back to the south.\n",
+         "altitude" : "400"
+      },
+      "house15@hick" : {
+         "exits" : {
+            "w" : "house16",
+            "e" : "house17",
+            "n" : "house14",
+            "s" : "house18"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Main Hallway",
+         "id" : "house15",
+         "description" : "\n  There are bedrooms to the east and west of here and the hallway \ncontinues to the south.\n",
+         "altitude" : null
+      },
+      "house21@hick" : {
+         "exits" : {
+            "n" : "house18"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Bathroom",
+         "id" : "house21",
+         "description" : "\n  This is your normal bathroom with a sink, toilet, and bathtub. The \nwalls are a disgusting dull white and you are starting to get sick of \nthis color.\n",
+         "altitude" : null
+      },
+      "house16@hick" : {
+         "exits" : {
+            "e" : "house15"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Jeremy's Room",
+         "id" : "house16",
+         "description" : "\n  This is Jeremy's room, nothing real special, just a bed, a dresser, and \nsome model cars sitting around.\n",
+         "altitude" : null
+      },
+      "hick4@hick" : {
+         "exits" : {
+            "e" : "hick8",
+            "n" : "house1",
+            "s" : "hick3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "In Front of the Hickdale House",
+         "id" : "hick4",
+         "description" : "\n  You are at the end of the main road that leads up to the Hickdale \nHouse. It is a nice looking house that seems to have been worn away by \nthe elements over the years. It is a dull white house made of wood that \nlooks to be a little rotted out. The porch of the house is to the north, \nand the roads leads back to the south. To the east is the road to the \nlivestock area.\n",
+         "altitude" : "400"
+      },
+      "field3@hick" : {
+         "exits" : {
+            "e" : "field4",
+            "w" : "field2",
+            "n" : "field14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Southern Irrigation Ditch",
+         "id" : "field3",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the east and the west. To the north is a field \nof wheat.\n",
+         "altitude" : "400"
+      },
+      "field13@hick" : {
+         "exits" : {
+            "w" : "field12",
+            "e" : "field14",
+            "n" : "field16",
+            "s" : "field2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Corn Field",
+         "id" : "field13",
+         "description" : "\n  This is a large corn field. To the north is a strawberry patch, to the \neast is a wheat field, and to the south and west there is an irrigation \nditch.\n",
+         "altitude" : "400"
+      },
+      "hick6@hick" : {
+         "exits" : {
+            "e" : "hick9",
+            "w" : "hick5",
+            "n" : "hick7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Road to Crop Fields",
+         "id" : "hick6",
+         "description" : "\n  The road has fresh footprints in it leading to the east towards the \nfields, maybe someone is working out there? There are large trees to the \nsouth of the road that are losing their leaves covering the grass with \norange and yellow colors. The road leads to the east and goes back to the \nwest. To the north is the road to the livestock area.\n",
+         "altitude" : "400"
+      },
+      "house11@hick" : {
+         "exits" : {
+            "e" : "house9"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Dining Room",
+         "id" : "house11",
+         "description" : "\n  There is a very large table in the middle of the room that has all of \nthe dishes and silverware layed out. A large hutch with fine china covers \nthe north wall, but you decide not to touch anything. You can leave the \ndining room to the east.\n",
+         "altitude" : null
+      },
+      "hick1@hick" : {
+         "exits" : {
+            "n" : "hick2",
+            "s" : "Track@village"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Hickdale Farm Road Entrance",
+         "id" : "hick1",
+         "description" : "\n  You are on the start of a dusty old road that looks to lead up north to \nthe Hickdale Farm. This is beautiful country with flowers growing around \nthe road and tall grasses surround the small fence that prevents \nlivestock from wandering into the road.\n",
+         "altitude" : "350"
+      },
+      "house1@hick" : {
+         "exits" : {
+            "n" : "^houseoutdoor",
+            "s" : "hick4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Hickdale House Porch",
+         "id" : "house1",
+         "description" : "\n  This is a small porch with a swing on it and a large chair to sit in \nduring the warm evenings and watch the sun set in the distance. The door \nleading to the inside of the house is to the north and a path is to the \nsouth.\n",
+         "altitude" : "400"
+      },
+      "field6@hick" : {
+         "exits" : {
+            "w" : "field15",
+            "n" : "field7",
+            "s" : "field5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Eastern Irrigation Ditch",
+         "id" : "field6",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the north and the south. To the west is a field \nof tomatoes.\n",
+         "altitude" : "400"
+      },
+      "cattle6@hick" : {
+         "exits" : {
+            "n" : "cattle9",
+            "s" : "cattle3"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "hick",
+         "title" : "In Front of the Bull Pin",
+         "id" : "cattle6",
+         "description" : "\n  To the north of here you can see a large bull pin and you wonder if it \nis currently occupied. The road leads south into the livestock area.\n",
+         "altitude" : "400"
+      },
+      "house17@hick" : {
+         "exits" : {
+            "w" : "house15"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Tom's Room",
+         "id" : "house17",
+         "description" : "\n  This is Tom's room, very plain, a bed, a dresser, and some books on a \nshelf.\n",
+         "altitude" : null
+      },
+      "field8@hick" : {
+         "exits" : {
+            "e" : "field7",
+            "w" : "field9",
+            "s" : "field15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Northern Irrigation Ditch",
+         "id" : "field8",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the west and the east. To the south is a field \nof tomatoes.\n",
+         "altitude" : "400"
+      },
+      "hick5@hick" : {
+         "exits" : {
+            "e" : "hick6",
+            "w" : "hick2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Road to Crop Fields",
+         "id" : "hick5",
+         "description" : "\n  The road has a few weeds growing in the middle of it here and you \nsneeze as a small piece of pollen wisks across your face. The road leads \nto the east and goes back to the west.\n",
+         "altitude" : "400"
+      },
+      "field5@hick" : {
+         "exits" : {
+            "w" : "field14",
+            "n" : "field6",
+            "s" : "field4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Eastern Irrigation Ditch",
+         "id" : "field5",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the north and the south. To the west is a field \nof wheat.\n",
+         "altitude" : "400"
+      },
+      "field7@hick" : {
+         "exits" : {
+            "w" : "field8",
+            "s" : "field6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Northeastern Irrigation Ditch",
+         "id" : "field7",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the west and the south.\n",
+         "altitude" : "400"
+      },
+      "hick8@hick" : {
+         "exits" : {
+            "w" : "hick4",
+            "n" : "cattle1",
+            "s" : "hick7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "End of Road to Livestock Area",
+         "id" : "hick8",
+         "description" : "\n  You are at the end of the road to the livestock area. To the north is \nthe gate that leads into the area where the livestock is kept. You can \nsmell the animals from here and tears come to your eyes as you take a \ndeep breath. The road goes back to the south, and the road goes to the west.\n",
+         "altitude" : "400"
+      },
+      "field1@hick" : {
+         "exits" : {
+            "e" : "field2",
+            "w" : "hick9",
+            "n" : "field12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Southwestern Irrigation Ditch",
+         "id" : "field1",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the north and to the east. The road is to the \nwest.\n",
+         "altitude" : "400"
+      },
+      "house12@hick" : {
+         "exits" : {
+            "s" : "house9"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Bathroom",
+         "id" : "house12",
+         "description" : "\n  This is not a very fancy bathroom, it just has a sink, a toilet and a \nsmall washtub. You can leave to the south.\n",
+         "altitude" : null
+      },
+      "house6@hick" : {
+         "exits" : {
+            "w" : "house7",
+            "e" : "house3"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Hallway to Living Room",
+         "id" : "house6",
+         "description" : "\n  There is a warm draft rising up from the heater ducts against the wall \nand it feels good as you walk across the cold hardwood floor. The walls \nare very drab, painted white. To the west you can see the living room and \nto the east you can see the main hallway.\n",
+         "altitude" : null
+      },
+      "field11@hick" : {
+         "exits" : {
+            "e" : "field16",
+            "n" : "field10",
+            "s" : "field12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Western Irrigation Ditch",
+         "id" : "field11",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the north and the south. To the east is a field \nfull of assorted fruits.\n",
+         "altitude" : "400"
+      },
+      "cattle1@hick" : {
+         "exits" : {
+            "n" : "cattle2",
+            "s" : "hick8"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "hick",
+         "title" : "Entrance to Livestock Area",
+         "id" : "cattle1",
+         "description" : "\n  The smell of livestock enters your nose and you turn your head away and \ncough loudly as water comes to your eyes. After a few moments your head \nclears and you get used to the smell. A small path leads through the \nlivestock area to the north and you can leave to the south.\n",
+         "altitude" : "400"
+      },
+      "cattle5@hick" : {
+         "exits" : {
+            "e" : "cattle2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Horse Stall",
+         "id" : "cattle5",
+         "description" : "\n  This is a very nice horse stall with a few bails of hay in the corner \nand on a nearby table rests a couple of large brushes with a little bit \nof hair on them. You can leave the stall to the east.\n",
+         "altitude" : "400"
+      },
+      "field14@hick" : {
+         "exits" : {
+            "w" : "field13",
+            "e" : "field5",
+            "n" : "field15",
+            "s" : "field3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Wheat Field",
+         "id" : "field14",
+         "description" : "\n  This is a large wheat field. To the north is a tomato patch, to the west \nis a corn field, and to the east and south there is an irrigation ditch.\n",
+         "altitude" : "400"
+      },
+      "hick3@hick" : {
+         "exits" : {
+            "n" : "hick4",
+            "s" : "hick2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Main Road",
+         "id" : "hick3",
+         "description" : "\n  You kick at the gravel in the road here as you continue on your way \ndown the road to Hickdale Farms. The road is surrounded by large trees \nand beautiful flowers. The road leads to the north and goes back to the \nsouth.\n",
+         "altitude" : "400"
+      },
+      "cattle7@hick" : {
+         "exits" : {
+            "w" : "cattle3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Pig Stall",
+         "id" : "cattle7",
+         "description" : "\n  This stall is disgusting, covered with mud and old decaying food. You \ncan leave to the west.\n",
+         "altitude" : "400"
+      },
+      "house18@hick" : {
+         "exits" : {
+            "w" : "house19",
+            "e" : "house20",
+            "n" : "house15",
+            "s" : "house21"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Main Hallway",
+         "id" : "house18",
+         "description" : "\n  There are bedrooms to the east and west of here, a bathroom is to the \nsouth.\n",
+         "altitude" : null
+      },
+      "house13@hick" : {
+         "exits" : {
+            "d" : "house9",
+            "s" : "house14"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Upstairs Landing",
+         "id" : "house13",
+         "description" : "\n  A hallway leads to the south or you can go back downstairs to the main \nfloor. You can see that the hallway to the south has bedrooms lining it \nwith a room at the end of the hall.\n",
+         "altitude" : null
+      },
+      "house3@hick" : {
+         "exits" : {
+            "w" : "house6",
+            "e" : "house4",
+            "n" : "house8",
+            "s" : "house2"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Main Hallway",
+         "id" : "house3",
+         "description" : "\n  This is a large hallway with wooden floors that creak slightly under \nyou. The house is painted a dull white that seems a little boring to \nyou. The hall branches off to the east and west leading to other rooms \nand continues north through the rest of the house. \n",
+         "altitude" : null
+      },
+      "house7@hick" : {
+         "exits" : {
+            "e" : "house6"
+         },
+         "flags" : [],
+         "zone" : "hick",
+         "title" : "Living Room",
+         "id" : "house7",
+         "description" : "\n  This is a very nice living room with a large rug covering the wooden \nfloor making it more comfortable to walk on. The furniture in this room \nis very nice and plush, in fact it almost looks brand new. There is a \nhallway leading to the east.\n",
+         "altitude" : null
+      },
+      "cattle9@hick" : {
+         "exits" : {
+            "s" : "cattle6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Bull Pin",
+         "id" : "cattle9",
+         "description" : "\n  There are a few barrels laying around the pin, they must have rodeos \nhere from time to time. The pin is very large with enough room for a bull \nto run around freely, a very large bull that is. You can exit to the south.\n",
+         "altitude" : "400"
+      },
+      "field10@hick" : {
+         "exits" : {
+            "e" : "field9",
+            "s" : "field11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Northwestern Irrigation Ditch",
+         "id" : "field10",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the south and the east. \n",
+         "altitude" : "400"
+      },
+      "field4@hick" : {
+         "exits" : {
+            "w" : "field3",
+            "n" : "field5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Southeastern Irrigation Ditch",
+         "id" : "field4",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the west and the north.\n",
+         "altitude" : "400"
+      },
+      "field2@hick" : {
+         "exits" : {
+            "e" : "field3",
+            "w" : "field1",
+            "n" : "field13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Southern Irrigation Ditch",
+         "id" : "field2",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the east and the west. To the north is a field \nof corn.\n",
+         "altitude" : "400"
+      },
+      "field9@hick" : {
+         "exits" : {
+            "e" : "field8",
+            "w" : "field10",
+            "s" : "field16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Northern Irrigation Ditch",
+         "id" : "field9",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the west and the east. To the south is a field \nfull of assorted fruits.\n",
+         "altitude" : "400"
+      },
+      "field12@hick" : {
+         "exits" : {
+            "e" : "field13",
+            "n" : "field11",
+            "s" : "field1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Western Irrigation Ditch",
+         "id" : "field12",
+         "description" : "\n  You are standing on a small path with an irrigation ditch running \nthrough it that leads to the north and the south. To the east is a field \nof corn.\n",
+         "altitude" : "400"
+      },
+      "cattle4@hick" : {
+         "exits" : {
+            "w" : "cattle2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "hick",
+         "title" : "Cattle Stall",
+         "id" : "cattle4",
+         "description" : "\n  Looking around this small pin you notice that this is where a cow is \ntaken to be milked. There are assorted pails and a few pairs of gloves \nhanging on a nearby rack that look a little used and weathered. You can \nleave this stall to the west.\n",
+         "altitude" : "400"
+      }
+   },
+   "mob" : {
+      "mother@hick" : {
+         "damage" : "9",
+         "location" : "house10",
+         "armor" : "0",
+         "name" : "Mother",
+         "description" : "Jane, the Hickdale mother is here cooking food.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Jane",
+         "mflags" : [
+            "NoGrab"
+         ]
+      },
+      "worker@hick" : {
+         "damage" : "9",
+         "location" : "field15",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Worker",
+         "name" : "Worker",
+         "description" : "A worker is here walking around looking at things.",
+         "strength" : "100"
+      },
+      "firstpig@hick" : {
+         "damage" : "9",
+         "location" : "cattle7",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Pig",
+         "name" : "FirstPig",
+         "description" : "A large, smelly pig is here oinking happily.",
+         "strength" : "100"
+      },
+      "horse@hick" : {
+         "damage" : "10",
+         "location" : "cattle5",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Horse",
+         "name" : "Horse",
+         "description" : "A horse is here looking at you curiously.",
+         "strength" : "110"
+      },
+      "grandma@hick" : {
+         "damage" : "7",
+         "location" : "house19",
+         "armor" : "0",
+         "name" : "Grandma",
+         "description" : "Grandma is here resting quietly.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "90",
+         "speed" : "0",
+         "pname" : "Grandma",
+         "aggression" : "0"
+      },
+      "grandpa@hick" : {
+         "damage" : "9",
+         "location" : "house1",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Grandpa",
+         "name" : "Grandpa",
+         "description" : "Grandpa Hickdale is sitting on the porch swing snoozing.",
+         "strength" : "100"
+      },
+      "bull@hick" : {
+         "damage" : "11",
+         "location" : "cattle9",
+         "speed" : "0",
+         "aggression" : "70",
+         "armor" : "0",
+         "pname" : "Bull",
+         "name" : "Bull",
+         "description" : "A very large bull is here snorting at you ready to charge.",
+         "strength" : "120"
+      },
+      "tom@hick" : {
+         "damage" : "8",
+         "location" : "hick8",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Tom",
+         "name" : "Tom",
+         "description" : "Tom, Jeremy's older brother, is here looking for Jeremy.",
+         "strength" : "100"
+      },
+      "father@hick" : {
+         "damage" : "9",
+         "location" : "house5",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Bill",
+         "name" : "Father",
+         "description" : "Bill, the Hickdale father is here going over bills.",
+         "strength" : "100"
+      },
+      "cornworker@hick" : {
+         "damage" : "9",
+         "location" : "field13",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Corn Worker",
+         "name" : "CornWorker",
+         "description" : "A cornworker is here examining the corn stalks.",
+         "strength" : "100"
+      },
+      "secondpig@hick" : {
+         "damage" : "9",
+         "location" : "cattle8",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Pig",
+         "name" : "SecondPig",
+         "description" : "A large, smelly pig is here oinking happily.",
+         "strength" : "100"
+      },
+      "wheatworker@hick" : {
+         "damage" : "9",
+         "location" : "field14",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Wheat Worker",
+         "name" : "WheatWorker",
+         "description" : "A wheatworker is here looking at the wheat.",
+         "strength" : "100"
+      },
+      "cow@hick" : {
+         "damage" : "10",
+         "location" : "cattle4",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Cow",
+         "name" : "Cow",
+         "description" : "A cow is here mooing softly.",
+         "strength" : "110"
+      },
+      "jeremy@hick" : {
+         "damage" : "6",
+         "location" : "hick3",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Jeremy",
+         "name" : "Jeremy",
+         "examine" : "\nJeremy is truly a hick by definition, with a piece of straw in his mouth \nand is wearing a pair of goofy looking dirty overalls.",
+         "description" : "Jeremy is here looking very dumb and confused.",
+         "strength" : "80"
+      }
+   }
+}

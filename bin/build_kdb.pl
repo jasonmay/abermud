@@ -198,21 +198,32 @@ foreach my $file (@zone_files) {
     my $contents = read_file($file);
     print STDERR "$file... ";
     $contents =~ s{/\* .*? \*/}{}gmsx;
-    if ($contents =~ $parser) {
+
+    (my $zone_name = lc $file) =~ s{zones/(.+?)\.zone}{$1}s or die "invalid zone";
+    my $zone_info;
+
+    print STDERR "parsing... ";
+
+    if ( -e "data/json/$zone_name.json") {
+        print STDERR "!... ";
+        my $json_string = read_file "data/json/$zone_name.json";
+        $zone_info = $json->decode($json_string);
+    }
+    elsif ($contents =~ $parser) {
         my %results = %/;
 
-        (my $zone_name = lc $file) =~ s{zones/(.+?)\.zone}{$1}s or die "invalid zone";
+        $zone_info = construct_info_from_parsed(\%info, \%results, $zone_name);
 
-
-        print STDERR "massaging... ";
-        my $zone_info = construct_info_from_parsed(\%info, \%results, $zone_name);
-
-        print STDERR "expanding... ";
-        #FIXME oops this is supposed ot be run AFTER all zones are processed
-        expand_zone_data(\%expanded, $zone_info, $zone_name);
-        #use Carp::REPL; die;
-        print STDERR "constructed!\n";
+        write_file("data/json/$zone_name.json", $json->encode($zone_info));
     }
+
+    print STDERR "expanding... ";
+
+    if ($zone_info) {
+        expand_zone_data(\%expanded, $zone_info, $zone_name);
+    }
+
+    print STDERR "\n";
 }
 
 link_zone_data(\%expanded, \%info);

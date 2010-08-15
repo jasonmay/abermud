@@ -1,0 +1,1378 @@
+{
+   "obj" : {
+      "door_luncheon@frobozz" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:luncheon",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Door_luncheon",
+         "desc[2]" : "The door is closed.",
+         "linked" : "Door_side",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "window_kitchen@frobozz" : {
+         "desc[1]" : "The window is closed.",
+         "location" : "IN_ROOM:kitchen",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "Window_kitchen",
+         "linked" : "Window_houseW",
+         "state" : "1",
+         "pname" : "window",
+         "maxstate" : "1",
+         "desc[0]" : "The window is open, letting in a mild breeze."
+      },
+      "shield_attic@frobozz" : {
+         "desc[1]" : "\nA shield made of steel has been dropped here for some reason.",
+         "location" : "IN_ROOM:attic",
+         "armor" : "40",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "GetFlips",
+            "Shield"
+         ],
+         "name" : "Shield_attic",
+         "state" : "0",
+         "size" : "10",
+         "pname" : "shield",
+         "weight" : "10",
+         "maxstate" : "1",
+         "desc[0]" : "A dustcovered shield is thrown into the corner."
+      },
+      "vaultdoor_outside@frobozz" : {
+         "location" : "IN_ROOM:outside",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "Vaultdoor_outside",
+         "linked" : "Vaultdoor_vault",
+         "state" : "2",
+         "pname" : "vault",
+         "maxstate" : "2",
+         "desc[0]" : "\nThe whole southern wall is moved 3 feet westwards and the vault is open."
+      },
+      "mithril_jacket@frobozz" : {
+         "location" : "IN_CONTAINER:Trophy_case",
+         "armor" : "60",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "armor",
+         "name" : "Mithril_jacket",
+         "examine" : "\nThis jacket will surely protect you against most enemies whether they are\nnasty beasts or (wo)men.  It is made of thousands of small mithrilrings \nwoven together with treads of hardened steel.",
+         "size" : "10",
+         "weight" : "10",
+         "pname" : "jacket",
+         "desc[0]" : "A jacket made of interwoven mithrilrings is lying here.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms"
+         ]
+      },
+      "cup_store@frobozz" : {
+         "desc[1]" : "\nA small cup made of platinum is partly hidden among the dust on the top shelf.",
+         "location" : "IN_ROOM:store",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "Cup_store",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "cup",
+         "weight" : "20",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A small cup made of platinum is left on the ground."
+      },
+      "door_bank@frobozz" : {
+         "location" : "IN_ROOM:bank",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "pname" : "oakdoor",
+         "name" : "Door_bank"
+      },
+      "rug_living@frobozz" : {
+         "location" : "IN_ROOM:living",
+         "oflags" : [
+            "NoGet",
+            "GetFlips"
+         ],
+         "name" : "Rug_living",
+         "examine" : "\nThe oriental rug is very heavy and must have been quite expensive, but being\nvery tattered and covered with muddy footsteps it isn't even worth offering\nto the Gods, they would probably lower your score if you do so.",
+         "state" : "1",
+         "pname" : "rug",
+         "maxstate" : "1",
+         "desc[0]" : "The heavy rug has been moved aside revealing a trapdoor."
+      },
+      "jewel_egg@frobozz" : {
+         "location" : "IN_CONTAINER:Nest_tree",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "egg",
+         "name" : "Jewel_egg",
+         "size" : "5",
+         "pname" : "jewelegg",
+         "weight" : "15",
+         "bvalue" : "500",
+         "desc[0]" : "\nThere is a large egg here encrusted with precious jewels and covered with\nfine gold inlay, and ornamented in lapis lazuli and mother-of-pearl.\nThe egg appears extremely fragile."
+      },
+      "hole_chairman@frobozz" : {
+         "location" : "IN_ROOM:chairman",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "hole",
+         "name" : "Hole_chairman",
+         "examine" : "The hole is big enough to provide a crawl to the north."
+      },
+      "notes_vault@frobozz" : {
+         "location" : "IN_ROOM:vault",
+         "altname" : "bills",
+         "name" : "Notes_vault",
+         "examine" : "\nCounting up the notes you come to about 10 000 zork-mids.  A small fortune !",
+         "size" : "5",
+         "pname" : "notes",
+         "weight" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "A heap of notes in zorkian currency is left here."
+      },
+      "door_bottom@frobozz" : {
+         "location" : "IN_ROOM:bottom",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "door",
+         "name" : "Door_bottom",
+         "examine" : "\nThe hinges are severly corroded due to the damp climate brought in by the\npresence of the dam.  Luckily the door is stuck in an open position."
+      },
+      "sword_living@frobozz" : {
+         "damage" : "17",
+         "location" : "IN_ROOM:living",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "Sword_living",
+         "size" : "45",
+         "pname" : "longsword",
+         "weight" : "20",
+         "bvalue" : "400",
+         "desc[0]" : "\nA long wellbalanced longsword used in many wars has been left here."
+      },
+      "leaflet_mailbox@frobozz" : {
+         "location" : "IN_CONTAINER:Mailbox_houseN",
+         "weight" : "1",
+         "pname" : "leaflet",
+         "name" : "Leaflet_mailbox",
+         "examine" : "\nThe leaflet is written with zorkian letters and thus in zorkian language.\nYou do recognise some letters but most of them are unknown. The leaflet is\nsigned with a fancy signature in which you recognise the following\nletters:  Pie po t Fl t e d.",
+         "bvalue" : "10",
+         "desc[0]" : "A leaflet has been left here for some reason.",
+         "size" : "1"
+      },
+      "vaultdoor_vault@frobozz" : {
+         "location" : "IN_ROOM:vault",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "Vaultdoor_vault",
+         "linked" : "Vaultdoor_outside",
+         "state" : "2",
+         "pname" : "vault",
+         "maxstate" : "2",
+         "desc[0]" : "\nThe whole northern wall is moved 3 feet westwards and the vault is open."
+      },
+      "blackboard_chairman@frobozz" : {
+         "desc[1]" : "\nA heavy blackboard showing figures of the last financial investments of the\nbank is leaning against the northern wall.",
+         "location" : "IN_ROOM:chairman",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "Blackboard_chairman",
+         "examine" : "\nThe blackboard is made of one single piece of black marble, measuring about\n6 times 8 feet, and 2 inches in thickness.  It's surface has a smoothness that\npermits chalk being used for writing and drawing.  You do have an eye for art,\nbut the numbers, financial formulas and curves showing income and expences\ntell you nothing, so you leave the blackboard as it is.",
+         "linked" : "Blackboard_behind",
+         "state" : "1",
+         "pname" : "blackboard",
+         "maxstate" : "1",
+         "desc[0]" : "\nThe blackboard, being pushed aside, reveals a hole in the northern wall."
+      },
+      "button_outside@frobozz" : {
+         "location" : "IN_ROOM:outside",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "name" : "Button_outside",
+         "examine" : "The button is small and insignificant.",
+         "linked" : "Painting_outside",
+         "state" : "1",
+         "pname" : "button",
+         "maxstate" : "1"
+      },
+      "stiletto_thief@frobozz" : {
+         "damage" : "18",
+         "location" : "WIELDED_BY:thief",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "knife",
+         "name" : "Stiletto_thief",
+         "examine" : "\nYou tremble and quiver as you think of what this stiletto has been used for.\nIt has a long razorsharp blade which will cut through clothing and what's\nbeneath with ease...",
+         "size" : "15",
+         "pname" : "stiletto",
+         "weight" : "20",
+         "bvalue" : "70",
+         "desc[0]" : "An assassins stiletto has been forgotten here."
+      },
+      "nest_tree@frobozz" : {
+         "location" : "IN_ROOM:tree",
+         "weight" : "1",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "pname" : "nest",
+         "name" : "Nest_tree",
+         "size" : "6"
+      },
+      "trapdoor_cellar@frobozz" : {
+         "desc[1]" : "The trapdoor is closed.",
+         "location" : "IN_ROOM:cellar",
+         "desc[3]" : "The trapdoor is closed and locked.",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "Trapdoor_cellar",
+         "desc[2]" : "The trapdoor is closed and locked.",
+         "linked" : "Trapdoor_living",
+         "state" : "3",
+         "pname" : "trapdoor",
+         "maxstate" : "3",
+         "desc[0]" : "The trapdoor is open."
+      },
+      "trophy_case@frobozz" : {
+         "location" : "IN_ROOM:living",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "case",
+         "pname" : "trophycase",
+         "name" : "Trophy_case",
+         "desc[0]" : "\nA trophycase which is nailed to the floor sits in the corner.",
+         "size" : "50"
+      },
+      "chest_chairman@frobozz" : {
+         "desc[1]" : "Fastened to the floor is a closed sturdy steelchest.",
+         "location" : "IN_ROOM:chairman",
+         "oflags" : [
+            "NoGet",
+            "Container",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "steelchest",
+         "name" : "Chest_chairman",
+         "desc[2]" : "Fastened to the floor is a locked sturdy steelchest.",
+         "size" : "20",
+         "state" : "2",
+         "pname" : "chest",
+         "maxstate" : "2",
+         "desc[0]" : "Fastened to the floor is an open sturdy steelchest."
+      },
+      "crystals_work@frobozz" : {
+         "desc[1]" : "Some beautiful crystals has been left here.",
+         "location" : "IN_ROOM:work",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "crystal",
+         "name" : "Crystals_work",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "20",
+         "pname" : "crystals",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "\nSome beautiful crystals reflecting light in different colors have been left\non the bench."
+      },
+      "chimney_cellar@frobozz" : {
+         "location" : "IN_ROOM:cellar_chimney",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "chimney",
+         "name" : "Chimney_cellar",
+         "examine" : "\nThe chimney is terribly dirty and black inside, but it provides an easy climb\nup into the kitchen above you if you open the grating that is sits halfway up\ninside the chimney"
+      },
+      "blackboard_behind@frobozz" : {
+         "desc[1]" : "The blackboard bars your way to the north.",
+         "location" : "IN_ROOM:behind",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Blackboard_behind",
+         "examine" : "\nThe blackboard, being made of black marble, is very heavy and is very \ndifficult to move from this crouched position you are in, but you may\nmanage it if you try hard enough.",
+         "linked" : "Blackboard_chairman",
+         "state" : "1",
+         "pname" : "blackboard",
+         "maxstate" : "1",
+         "desc[0]" : "\nThe blackboard is pushed aside, giving passage to the south."
+      },
+      "hole_behind@frobozz" : {
+         "location" : "IN_ROOM:behind",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "hole",
+         "name" : "Hole_behind"
+      },
+      "key_attic@frobozz" : {
+         "location" : "IN_ROOM:attic",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "key_attic",
+         "size" : "1",
+         "pname" : "key",
+         "weight" : "1",
+         "bvalue" : "3",
+         "desc[0]" : "A small key has been left here."
+      },
+      "grating_kitchen@frobozz" : {
+         "location" : "IN_ROOM:kitchen",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Grating_kitchen",
+         "examine" : "\nThe grating is set down in the middle of the chimney leading to the cellar,\nbeyond your reach.",
+         "linked" : "Grating_cellar",
+         "state" : "1",
+         "pname" : "grating",
+         "maxstate" : "1"
+      },
+      "torch_living@frobozz" : {
+         "desc[1]" : "A long unlit torch is here.",
+         "damage" : "9",
+         "location" : "IN_CONTAINER:Trophy_case",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "name" : "Torch_living",
+         "size" : "10",
+         "state" : "1",
+         "pname" : "torch",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "15",
+         "desc[0]" : "A long torch has been left burning on the ground."
+      },
+      "door_side@frobozz" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:side",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Door_side",
+         "desc[2]" : "The door is closed.",
+         "linked" : "Door_luncheon",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "sandwich1_kitchen@frobozz" : {
+         "location" : "IN_ROOM:kitchen",
+         "oflags" : [
+            "Food"
+         ],
+         "pname" : "sandwich",
+         "name" : "Sandwich1_kitchen",
+         "bvalue" : "30",
+         "desc[0]" : "A hot pepper&ham sandwich has been left here.",
+         "size" : "10"
+      },
+      "door_steep2@frobozz" : {
+         "location" : "IN_ROOM:steep2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "door",
+         "name" : "Door_steep2",
+         "examine" : "The door is corroded stuck in an open position."
+      },
+      "door_main@frobozz" : {
+         "location" : "IN_ROOM:main",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "pname" : "oakdoor",
+         "name" : "Door_main"
+      },
+      "trapdoor_living@frobozz" : {
+         "location" : "IN_ROOM:living",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "Trapdoor_living",
+         "linked" : "Trapdoor_cellar",
+         "state" : "3",
+         "pname" : "trapdoor",
+         "maxstate" : "3",
+         "desc[0]" : "The trapdoor leads down into darkness."
+      },
+      "hole_ending@frobozz" : {
+         "location" : "IN_ROOM:ending",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "hole",
+         "name" : "Hole_ending",
+         "examine" : "\nThe hole being about 2 feet in diameter appears to be very smooth inside\nand putting your ear closer to it you think you can hear a strange sound\ncomming up from far far away."
+      },
+      "window_outside@frobozz" : {
+         "location" : "IN_ROOM:outside",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "window",
+         "name" : "Window_outside",
+         "examine" : "\nThe window is made of thick quartz through which bright light shines. As you\nmove your hand in front of the window, the light increases in intensity and\nscans over your hand just as if it tries to identify something. This must be\nanother project of the once famous Frobozz Magic Equipment Company."
+      },
+      "window_housew@frobozz" : {
+         "desc[1]" : "The window is slightly ajar.",
+         "location" : "IN_ROOM:houseW",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "Window_houseW",
+         "linked" : "Window_kitchen",
+         "state" : "1",
+         "pname" : "window",
+         "maxstate" : "1",
+         "desc[0]" : "The window is open giving free exit into a kitchen."
+      },
+      "fire_chimney@frobozz" : {
+         "desc[1]" : "\nSome nonsmelling gas leaks through a crack in the floor inside the chimney.",
+         "location" : "IN_ROOM:cellar_chimney",
+         "oflags" : [
+            "NoGet",
+            "Lit",
+            "Lightable",
+            "Extinguish"
+         ],
+         "altname" : "fire",
+         "name" : "fire_chimney",
+         "state" : "0",
+         "pname" : "flames",
+         "maxstate" : "1",
+         "desc[0]" : "\nThrough a small crack in the floor inside the chimney some gas leaks out, \nand it burns with a small flame."
+      },
+      "sandwich2_kitchen@frobozz" : {
+         "location" : "IN_ROOM:kitchen",
+         "oflags" : [
+            "Food"
+         ],
+         "pname" : "sandwich",
+         "name" : "Sandwich2_kitchen",
+         "bvalue" : "25",
+         "desc[0]" : "A strongsmelling cheese-sandwich is here.",
+         "size" : "10"
+      },
+      "door_pway@frobozz" : {
+         "desc[1]" : "A sturdy steeldoor bars an exit to the south.",
+         "location" : "IN_ROOM:pway",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "Door_pway",
+         "desc[2]" : "A sturdy steeldoor bars an exit to the south.",
+         "linked" : "Door_top",
+         "state" : "2",
+         "pname" : "steeldoor",
+         "maxstate" : "2",
+         "desc[0]" : "An open steeldoor leads south into a dark passage."
+      },
+      "painting_outside@frobozz" : {
+         "desc[1]" : "An old and surely valuable painting hangs on the wall.",
+         "location" : "IN_ROOM:outside",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "picture",
+         "name" : "Painting_outside",
+         "examine" : "\nThis is a magnificent painting depicting the reverend Pierpoint Flathead,\nknown both for his economic skills and his great skill in baseball.\nUpon closer inspection you, due to your knowledge in art, discover that\nthis is just a copy of the original painting.  The painting is attached\nto the wall by two rails on top and bottom of the frame.",
+         "linked" : "Button_outside",
+         "state" : "1",
+         "pname" : "painting",
+         "maxstate" : "1",
+         "desc[0]" : "\nAn old painting is moved slightly to one side revealing a button."
+      },
+      "grating_cellar@frobozz" : {
+         "location" : "IN_ROOM:cellar_chimney",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "Grating_cellar",
+         "examine" : "\nThe grating is made of sturdy steelbars covered covered with sticky pitch \nand black ash.",
+         "linked" : "Grating_kitchen",
+         "state" : "1",
+         "pname" : "grating",
+         "maxstate" : "1"
+      },
+      "door_top@frobozz" : {
+         "desc[1]" : "A sturdy steeldoor bars an exit to the north.",
+         "location" : "IN_ROOM:top",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "Door_top",
+         "desc[2]" : "A sturdy steeldoor bars an exit to the north.",
+         "linked" : "Door_pway",
+         "state" : "2",
+         "pname" : "steeldoor",
+         "maxstate" : "2",
+         "desc[0]" : "An open steeldoor leads north into a large passage."
+      },
+      "coins_chairman@frobozz" : {
+         "location" : "IN_CONTAINER:Chest_chairman",
+         "weight" : "5",
+         "pname" : "coins",
+         "name" : "Coins_chairman",
+         "examine" : "\nYou estimate that there are 40 gold coins each worth 50 zorkmids.",
+         "bvalue" : "100",
+         "desc[0]" : "A stash of neatly stacked coins has been left here.",
+         "size" : "5"
+      },
+      "mailbox_housen@frobozz" : {
+         "desc[1]" : "A redpainted mailbox sits here.  It is closed.",
+         "location" : "IN_ROOM:houseN",
+         "oflags" : [
+            "Container",
+            "Openable"
+         ],
+         "altname" : "box",
+         "name" : "Mailbox_houseN",
+         "size" : "30",
+         "state" : "1",
+         "weight" : "1",
+         "pname" : "mailbox",
+         "maxstate" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "A redpainted mailbox sits here open."
+      },
+      "chimney_kitchen@frobozz" : {
+         "location" : "IN_ROOM:kitchen",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "chimney",
+         "name" : "Chimney_kitchen",
+         "desc[0]" : "\nLooking up inside the chimney you see blue sky, looking down you see nothing\nbecause it is dark down there in what must be a cellar.  Climbing down the\nchimney is only allowed if your name is Santa Claus."
+      },
+      "original_vault@frobozz" : {
+         "location" : "IN_ROOM:vault",
+         "altname" : "picture",
+         "name" : "Original_vault",
+         "examine" : "\nThis is a magnificent painting depicting the reverend Fierpoint Plathead,\nknown both for his economic skills and his great skill in baseball. Your\ntrained eye in recognising old and valuable art tells you immediatly that\nthis painting is an original.  It will certainly top you own privat art-\ncollection.",
+         "size" : "30",
+         "pname" : "painting",
+         "weight" : "15",
+         "bvalue" : "400",
+         "desc[0]" : "\nAn painting of Pierpont Flathead has been left carefully on the ground."
+      }
+   },
+   "loc" : {
+      "side@frobozz" : {
+         "exits" : {
+            "n" : "^Door_side",
+            "s" : "by"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Side Entrance",
+         "id" : "side",
+         "description" : "\nThis is the west side of the bank of Frobozz and it seems much more\npromising than the main entrance.  That is due to a door of normal\nsize and construction which is situated right in front of you in a\ncorner of the building.  The bank is certainly in lack of windows, but\nyou have already figured out that the bank trusts the Great Under-\nground Empire's inhabitants because this side entrance will certainly\nnot be impossible to break down even for you.\n",
+         "altitude" : null
+      },
+      "main@frobozz" : {
+         "exits" : {
+            "w" : "by",
+            "e" : "boulder"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "The Main Entrance",
+         "id" : "main",
+         "description" : "\nYou stand in front of the main entrance of the bank which is dominated by\na huge and arched oakdoor set between mighty pillars carved out of\nrock in one piece.  The door is barred with strong ironbars and it\nwill take you a lot of work to get through it.\nIt is possible to go east and west from the main entrance.\n",
+         "altitude" : null
+      },
+      "stairs@frobozz" : {
+         "exits" : {
+            "n" : "crossection",
+            "d" : "steep1",
+            "s" : "steep1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Stairs",
+         "id" : "stairs",
+         "description" : "\nYou stand on top of a long flight of stairs descending hundreds of feet\ndown into darkness.  The steps are nearly worn down of use by people and\nother beings walking, running and crawling up and down here for dozens\nof centuries.\n",
+         "altitude" : null
+      },
+      "outside@frobozz" : {
+         "exits" : {
+            "w" : "tellers",
+            "s" : "^Vaultdoor_outside"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "Outside the Vault",
+         "id" : "outside",
+         "description" : "\nYou are in what must be the entrance to the vault of the bank because written\non top of the southern wall are the letters \"V A U L T\".  But you can't seem\nto find the vaultdoor.  Is it simply a walk-through-wall or is the vaultdoor\nfitted so nicely into the wall that you can't find it ?\nThe room is lit by some kind of light which comes through a thickglassed \nwindow measuring 1 foot in square set into the northern wall.\nThe tellers' room lies to the west.\n",
+         "altitude" : null
+      },
+      "dam@frobozz" : {
+         "exits" : {
+            "w" : "damW",
+            "e" : "damE"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "The Dam",
+         "id" : "dam",
+         "description" : "\nStanding here on the middle of this huge damwall makes you feel small\ncompard to your surroundings.  Way down below you on the south side of\nthe damwall you hear the sound of fastflowing water and to the north\nthe huge cavern stretches out for houndreds of yards.  The damwall\ncontinues to the east and west.\n",
+         "altitude" : null
+      },
+      "lookout@frobozz" : {
+         "exits" : {
+            "e" : "crossection"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "Lookout-Point",
+         "id" : "lookout",
+         "description" : "\nYou are standing on a wide ledge overlooking a huge cavern.  The river\nin the canyon west of the house comes into the cavern through a large\nopening to the north, filling it with water.  Bright light shines\nthrough the opening of the cavern and, reflected by the water, it\nilluminates the cavern with dim light.\nThe water flows slowly southwards into a huge reservoir in the deeper\nparts of the cave.\nAn eastward path leads back to where you came from.\n",
+         "altitude" : null
+      },
+      "cellar_chimney@frobozz" : {
+         "exits" : {
+            "u" : "^Grating_cellar",
+            "s" : "cellar"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "Cellar",
+         "id" : "cellar_chimney",
+         "description" : "\nThis part of the cellar is not that damp due to a faint, but fresh\nand warm wind that blows out of a chimney.  The chimney leads up to the\nkitchen making this a chance for you to climb up safer parts of the world.\nThere is also an exit to the south.\n",
+         "altitude" : null
+      },
+      "kitchen@frobozz" : {
+         "exits" : {
+            "w" : "^Window_kitchen",
+            "u" : "attic",
+            "s" : "living"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "The Kitchen",
+         "id" : "kitchen",
+         "description" : "\nYou are in a tiny kitchen.  The strong smell of food indicates that something\nedible has been prepared here recently.  A few empty shelves line the eastern\nwall and under them is a bench.  The bench bears the marks of a very sharp\nknife being used for the preparation of food.  A bricked chimney is standing\nat the south wall.\nA narrow stair ascends into darkness, while a doorway leads south into\na livingroom.  A small window is set into the western wall.\n",
+         "altitude" : null
+      },
+      "ending@frobozz" : {
+         "exits" : {
+            "w" : "dark"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Ending Tunnel",
+         "id" : "ending",
+         "description" : "\nYou are in at a dead end of a small cave.  Right there in front of you on the\nfloor is a hole, somewhat 2 feet in diameter.  Peering down into the hole you\nsee nothing but darkness.  \nThere is an exit leading west into a pitch dark chamber.\n",
+         "altitude" : null
+      },
+      "boulder@frobozz" : {
+         "exits" : {
+            "w" : "main"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Blocked passage",
+         "id" : "boulder",
+         "description" : "\nThis tunnel east of the bank is stopped abruptly by a boulder which\nfills the tunnel with rock from grinded stone-dust size up to the\nsize of rocks whick will never be moved by humans alone.\nEven a mouse won't be able to crawl through this boulder.\nThus, the only exit for you is to the west.\n",
+         "altitude" : null
+      },
+      "stairs2@frobozz" : {
+         "exits" : {
+            "u" : "steep1",
+            "n" : "steep1",
+            "d" : "bottom",
+            "s" : "bottom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Stairs",
+         "id" : "stairs2",
+         "description" : "\nYou are about 20 steps from the bottom of the stairs.  You notice the small\ngrowth of slippery moss and lichen covering both steps and walls.  You can\nhear small splashing noises comming up from down below.\n",
+         "altitude" : null
+      },
+      "housew@frobozz" : {
+         "exits" : {
+            "e" : "^Window_houseW",
+            "n" : "houseN",
+            "s" : "houseS"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "Western End of the House",
+         "id" : "houseW",
+         "description" : "\nYou are standing west of the small white house, which has a small window set\ninto the wall.  The view westwards is magnificent, showing a deep canyon\ncutting through the landscape from the north and southwards.  On the other\nside of the canyon you can see vast fields stretching several miles into the\nland before ending where a big mountainrange cuts out through the surface of\nthe earth.  This view certainly makes the white house look small and insign-\nificant, which at its western wall offers nothing but a small window.\nThere is a tiny little path going around the house to the north and south here.\n",
+         "altitude" : "450"
+      },
+      "living@frobozz" : {
+         "exits" : {
+            "n" : "kitchen",
+            "d" : "^Trapdoor_living"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "The Living-Room",
+         "id" : "living",
+         "description" : "\nThis is the livingroom of the small white house, and in earlier days it must\nhave been at least a bit comfortable, but now it offers nothing.  The windows\nare boarded shut with nailed pieces of planks and the remaining parts of\nfurniture and a large oriental rug are badly ravaged.  \nThere is a single exit north into the kitchen.\n",
+         "altitude" : null
+      },
+      "office@frobozz" : {
+         "exits" : {
+            "w" : "damE"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "Dam Office",
+         "id" : "office",
+         "description" : "\nYou are in the damoffice, which according to piles of dust and dead\ninsects must have been unused for decades.  There is an old desk here,\nworn down both with age and with rough use from the maintainance-\npersonell which used this room as their base when doing work on the dam.\n",
+         "altitude" : null
+      },
+      "bank@frobozz" : {
+         "exits" : {
+            "n" : "tellers"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "The Bank of Frobozz",
+         "id" : "bank",
+         "description" : "\nYou are in the main hall of the bank of Frobozz.  The roof is held up\nby mighty stonepillars like those you saw outside the main door\nwhich leads into this room.  The ceiling is made of dark wood, and\ncombined with the light colours which the walls are decorated with and\nthe fine gold inlay in the massive pillars the whole room resembles\nsomething like a temple raised for a highheld god.\nRight to the north is the tellers' room and that's where you may\nwithdraw sparemoney or let the bank take care of them.\nIn the south wall of this stunning room there is the main entrance to\nthe bank.  The door is barred with strong ironbars which makes the\nbank look very safe.\n",
+         "altitude" : null
+      },
+      "forest2@frobozz" : {
+         "exits" : {
+            "w" : "forest1",
+            "e" : "forest3",
+            "n" : "forest3",
+            "s" : "forest1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "In the Forest",
+         "id" : "forest2",
+         "description" : "\nYou are in a dense forest with paths going off in all directions.\n",
+         "altitude" : "450"
+      },
+      "forest3@frobozz" : {
+         "exits" : {
+            "w" : "forest2",
+            "e" : "forest4",
+            "n" : "pool",
+            "s" : "forest4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "In the Forest",
+         "id" : "forest3",
+         "description" : "\nYou are in a dense forest with paths going off in all directions.\nA particular large tree stands high above the rest of the forest to the south.\n",
+         "altitude" : "450"
+      },
+      "dark@frobozz" : {
+         "exits" : {
+            "e" : "ending",
+            "s" : "drafty"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Dark and Drafty Chamber",
+         "id" : "dark",
+         "description" : "\nYou have entered a dark and drafty chamber.  The draft is not that\nstrong here, but that is because this chamber is much bigger than the\nnarrow tunnel you used to get here.\nThis chamber is nearly pitch dark, but a few sunbeams manage to get\nthrough a crystal grating in the ceiling.  The grating is just\nreachable but the size of it prevents you from climbing through it when opened.\nWorth noticing are the extremely dark walls of this chamber.  It is as\nif they are made of lightabsorbing material.\nThere is an exit to the south and another exit into a pitch dark\nchamber to the east.\n",
+         "altitude" : null
+      },
+      "drafty@frobozz" : {
+         "exits" : {
+            "n" : "dark",
+            "d" : "rough",
+            "s" : "rough"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Drafty Tunnel",
+         "id" : "drafty",
+         "description" : "\nThis is the top of the ascending tunnel which comes up from the east.\nThere is a passage to the north from which a strong draft comes out\nnearly making extingusihing your light.\n",
+         "altitude" : null
+      },
+      "attic@frobozz" : {
+         "exits" : {
+            "d" : "kitchen"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "The Attic",
+         "id" : "attic",
+         "description" : "\nYou are on top of the stairs which ends here in a small attic.\nThe attic is for the moment empty, but there are signs here showing that it\nhas recently been used as a resting- and sleepingplace.\n",
+         "altitude" : null
+      },
+      "luncheon@frobozz" : {
+         "exits" : {
+            "e" : "tellers",
+            "s" : "^Door_luncheon"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Luncheon Room",
+         "id" : "luncheon",
+         "description" : "\nYou have just entered the bank-personells luncheon room.  The room is\nabandoned just af if something terrible has happened.  They did not\neven have time to clear the place from the waste and rubbish from their\nmeals.  The mess surely indicates that they didn't wait guests to pop in.\nThere is a door in the south wall and an entrance into the more important\nparts of the bank.\n",
+         "altitude" : null
+      },
+      "forest4@frobozz" : {
+         "exits" : {
+            "w" : "forest1",
+            "e" : "forest3",
+            "u" : "tree",
+            "n" : "forest3",
+            "s" : "forest1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "In the Forest",
+         "id" : "forest4",
+         "description" : "\nThis is a path winding through a dimly lit forest.  The path heads\nnorth south here, but there is also a small and overgrown path comming\nin from the east and continuing west from here.\nOne particular large tree with some low branches stands at the edge\nof the path.\n",
+         "altitude" : "450"
+      },
+      "connecting@frobozz" : {
+         "exits" : {
+            "w" : "crossection",
+            "e" : "store",
+            "n" : "work"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Wide Tunnel",
+         "id" : "connecting",
+         "description" : "\nYou are in a wide and smooth tunnel with an entrance just north of you\nwhich leads into a room which looks like a workshop.\nThis tunnel also continues to the east another 10 or 15 feet where\nit is abruptly cut off by a brick wall.\nThere is an arched opening in the brick wall, through which you can see\nracks and shelves.\n",
+         "altitude" : null
+      },
+      "steep3@frobozz" : {
+         "exits" : {
+            "e" : "top",
+            "u" : "top",
+            "d" : "steep2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Steep Passage",
+         "id" : "steep3",
+         "description" : "\nYou are in a steep passage which around the next corner right east of\nyou seems to swing up to the north.  The passage also descends down\nto the west.\n",
+         "altitude" : null
+      },
+      "forest1@frobozz" : {
+         "exits" : {
+            "w" : "forest2",
+            "e" : "forest4",
+            "n" : "forest2",
+            "s" : "houseN"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "In the Forest",
+         "id" : "forest1",
+         "description" : "  8 Forest\nThis is where the dense forest starts.  Paths leads of in every direction.  \nThe one going southwards leads to a white house situated in an open field.\nFaint chirps from a songbird can be heard from somewhere east of here.\n",
+         "altitude" : "450"
+      },
+      "steep1@frobozz" : {
+         "exits" : {
+            "u" : "stairs",
+            "n" : "stairs",
+            "d" : "stairs2",
+            "s" : "stairs2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Steep Passage",
+         "id" : "steep1",
+         "description" : "\nYou are in a steep passage leading southwards.  The ceiling of the\npassage is high above you, making space for those bigger creatures like\ncyclops ands such.\n",
+         "altitude" : null
+      },
+      "dame@frobozz" : {
+         "exits" : {
+            "w" : "dam",
+            "e" : "office",
+            "n" : "bottom",
+            "d" : "foot"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "East End of Dam",
+         "id" : "damE",
+         "description" : "\nYou are standing on the eastern part of a damwall.\nThe damwall, being about 30 meters wide continues westwards to the other\nend of the cavern. Through a door to the east there's a little office\nobviously used by maintainance personell in the times when there where\nmore traffic here than at present.  There's also a flight of steps leading\ndown on the south side of the damwall.  It disappears into the deep and\ndark dry area of the cavern which is kept dry by the damwall.\nTo the north you can make out the beginning of a staircase leading up.\n",
+         "altitude" : null
+      },
+      "foot@frobozz" : {
+         "exits" : {
+            "u" : "damE",
+            "d" : "outlet"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "Halfway Down the Stairs",
+         "id" : "foot",
+         "description" : "\nYou are halfway down a flight of stairs which leads up into a highvaulted\ncavern which is dimly lit.  Down below you, in the darkness, is a outlet \nof some powerlines.\n",
+         "altitude" : null
+      },
+      "steep2@frobozz" : {
+         "exits" : {
+            "w" : "bottom",
+            "u" : "steep3",
+            "d" : "bottom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Steep Passage",
+         "id" : "steep2",
+         "description" : "\nYou are in a steep and narrow tunnel leading up.  This tunnel has\ncertainly not been used by to many guests, because the steeps are still\nrough hewn and not worn down like other stairs in the area.  It has\nprobably been used only by people who once upon a time took care of the dam.\nDown to the west is a large and sturdy steeldoor leading back into the cavern.\n",
+         "altitude" : null
+      },
+      "top@frobozz" : {
+         "exits" : {
+            "n" : "^Door_top",
+            "d" : "steep3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Top of the Steep Passage",
+         "id" : "top",
+         "description" : "\nYou are in the uppermost part of a long passage which goes down to the south\nas a steep and narrow passage leading into complete darkness.\n",
+         "altitude" : null
+      },
+      "store@frobozz" : {
+         "exits" : {
+            "w" : "connecting"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Storeroom",
+         "id" : "store",
+         "description" : "\nYou have entered a rather large storeroom which is filled with racks\nthat seem to have been robbed of their contents.  Along the walls,\nshelves have been suspended, most of them containing nothing but dust.\nYou may reenter the tunnel from where you came, to the west.\n",
+         "altitude" : null
+      },
+      "behind@frobozz" : {
+         "exits" : {
+            "w" : "rough",
+            "s" : "^Blackboard_behind"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Behind the Blackboard",
+         "id" : "behind",
+         "description" : "\nYou are behind the large cupboard in a dusty and roughly made passage-\nway which leads eastwards into darkness.  A strong wind blow from the west.\n",
+         "altitude" : null
+      },
+      "pool@frobozz" : {
+         "exits" : {
+            "u" : "Falls@valley",
+            "s" : "forest3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "By the Pool",
+         "id" : "pool",
+         "description" : "\nYou are standing on a ledge a couple of feet above a pool filled with water\nfrom the waterfall above you.  The noise of the waterfall hitting the pool is\nquite immense, but you still feel relaxed by being here.  A few salmon are\nswimming around in the clear water snapping a fly now and then. A rainbow\nspans the pool in the spray of the waterfall. \nThe water flows southwards forming a river which through thousands of years\nhas dug out a big canyon cutting through the land.  To the west, across the\ncanyon, you can see large fields and further beyond, a mountainrange.\nA though, but managable climb will take you up into the mountain above, while\na southgoing track leads into a vast forest.\n",
+         "altitude" : "450"
+      },
+      "tree@frobozz" : {
+         "exits" : {
+            "d" : "forest4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "Up in the Tree",
+         "id" : "tree",
+         "description" : "\nYou are about 10 feet above the ground nestled among some large\nbranches.  The nearest branch above you is above your reach.\nBeside you on the branch is a small bird's nest.\n",
+         "altitude" : "450"
+      },
+      "bottom@frobozz" : {
+         "exits" : {
+            "e" : "steep2",
+            "u" : "stairs2",
+            "n" : "stairs2",
+            "s" : "damE"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "Bottom of the Stairs",
+         "id" : "bottom",
+         "description" : "\nYou are standing by the east wall of an enormous cavern.  This cavern\nis in fact a huge reservoir of water, and stretching out before you to\nthe west is an artificial damwall.\nUp to the north is a steep stairway, and one step up from the ground\nright east of you is a large and heavy steeldoor, which is corroded stuck in\nan open position.  The east end of the damwall is south.\n",
+         "altitude" : null
+      },
+      "housee@frobozz" : {
+         "exits" : {
+            "e" : "forest4",
+            "n" : "houseN",
+            "s" : "houseS"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "Eastern End of the House",
+         "id" : "houseE",
+         "description" : "\nYou are on the eastern side of the white house on a path that seems\nto continue around the house.  All windows here are boarded.\nAn old and overgrown path leads east into a dense forest.\n",
+         "altitude" : "450"
+      },
+      "houses@frobozz" : {
+         "exits" : {
+            "w" : "houseW",
+            "e" : "houseE"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "Southern End of the House",
+         "id" : "houseS",
+         "description" : "\nYou are on the south side of the house.  All windows are nailed shut with \nplanks.  The path continues its way around the house leading east and west.\n",
+         "altitude" : "450"
+      },
+      "chairman@frobozz" : {
+         "exits" : {
+            "n" : "^Blackboard_chairman",
+            "s" : "tellers"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Chairmans Office",
+         "id" : "chairman",
+         "description" : "\nIt is clear from the size both the room and its contents that this must\nbe the chairman's office.  The room measuring about 10 times 8 yards\ncontains nothing of excess, but the stuff that has been placed here\nis of extraordinary quality and must surely have costed many a tellers\nwages.  Right in front of you completly dominating the room is a large\nmahogny desk which is one of the bigger you have seen.  Right behind it\nplaced up to the wall is a cupboard which in quality and splendor must\nhave been made by Chippendale himself.  More descretely in one corner\nan inviting sitting-group almost begs you to take a seat.\nTo the south an opening leads into the tellers' room.\n",
+         "altitude" : null
+      },
+      "tellers@frobozz" : {
+         "exits" : {
+            "w" : "luncheon",
+            "e" : "outside",
+            "n" : "chairman",
+            "s" : "bank"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "The Tellers Room",
+         "id" : "tellers",
+         "description" : "\nYou have entered the tellers' room.  This is where the transactions of\nmoney once in the past happened.  There are about a dozen of tidy and\nrather impressing desks here which were used by the tellers when\ndoing business with their clients.  The desks are now covered with\ndust.  To the south, through a high and arched opening you can look\ninto an impressive hall.  It is probably the main hall of the bank of\nFrobozz.  Through a similar, but smaller opening to the north you see\na large and representable office.  There is also a doorway to the east\nand to the west a doorway leads back into the luncheonroom.\n",
+         "altitude" : null
+      },
+      "vault@frobozz" : {
+         "exits" : {
+            "n" : "^Vaultdoor_vault"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "In the Vault",
+         "id" : "vault",
+         "description" : "\nYou are in the mainvault of the bank of Frobozz.  The walls are made of the\nstrongest concrete available and they are probably several feet thick.\n",
+         "altitude" : null
+      },
+      "blocked@frobozz" : {
+         "exits" : {
+            "w" : "pway"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Blocked-off Passage",
+         "id" : "blocked",
+         "description" : "\nYou are standing in the wide and highvaulted passage.  Unfortunatly the\npassage has been block off by what to normal standards looks like a\nmajor cave-in.  The cave-in consists of nothing but large and immovable\nrocks.  From marks and scratches on the rocks you realise that there\nhave been other people here before you who have tried to make a\npassage through the cave-in.  You might as weel give up the thought of\ngetting beyond this major rockfall.  A wiser decession is to reenter\nto the west and try the north or south passage.\n",
+         "altitude" : null
+      },
+      "cellar@frobozz" : {
+         "exits" : {
+            "u" : "^Trapdoor_cellar",
+            "n" : "cellar_chimney",
+            "s" : "crossection"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "Cellar",
+         "id" : "cellar",
+         "description" : "\nYou are in a cellar right under the livingroom.  The air here is a bit damp,\nand together with an odd human-like smell drifting in from the south this\nplace is not where you would like to stay for the night.\nA faint light shines in from the north while a passage leads south into\ndarkness and what you sense is danger.  You may of course also retreat\nback up into the livingroom.\n",
+         "altitude" : null
+      },
+      "by@frobozz" : {
+         "exits" : {
+            "e" : "main",
+            "n" : "side",
+            "s" : "pway"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "By the Bank",
+         "id" : "by",
+         "description" : "\nYou are standing at the corner of a building which looks like a bank.\nIt could as well be something else, but the word BANK was the first\nword that entered your mind when getting near this place.\nLet's say it is a bank.\nThe bank is actually not another cave, but it is built in a large cave,\nand may therefore be called a building.\nThe main entrance to the bank is to the east, and north of here there\nis a door which also leads into the bank.\nA wide and high vaulted tunnel starts here and leads south.\n",
+         "altitude" : null
+      },
+      "outlet@frobozz" : {
+         "exits" : {
+            "u" : "foot"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "The Outlet",
+         "id" : "outlet",
+         "description" : "\nYou are down at the base of the damwall which stretches up houndreds of feet \nabove you.  Right above you, out of the wall, three thick powerlines emerge\nand they are streched over a small, but very fastflowing river out of sight\nto the southwest.  A very fastflowing river emerges out of the damwall a \ncouple of yards west of you and disappears out of sight into southern parts of\nthe cavern.  There is no way of following the river southwards or crossing it.\nSparks jump now and then from lots of tiny cords which hang down from the \nthree powerlines, thus enlightning the place in a strange blue and green light.\nThis place is surely in lack of maintainance, so you would better get\nout of here.  It can be done by climbing a flight of stairs which is\ncut out in the side of the wall.\n",
+         "altitude" : null
+      },
+      "pway@frobozz" : {
+         "exits" : {
+            "e" : "blocked",
+            "n" : "by",
+            "s" : "^Door_pway"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Passageway",
+         "id" : "pway",
+         "description" : "\nYou are in a wide and highvaulted passageway which comes in from the\nnorth and branches off into an eastgoing tunnel that is no less in\nsize. \nCarved into the rock of the two main tunnels are two big arrows; one\npointing to the north and the other to the east.  Under the first\narrow the word BANK is written and under the second one the words\nMAIN GUE have been written.\n",
+         "altitude" : null
+      },
+      "work@frobozz" : {
+         "exits" : {
+            "s" : "connecting"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Wizards Workshop",
+         "id" : "work",
+         "description" : "\nThis is probably the place where the once mighty and powerfull Wizard\nof Frobozz developed his spells and potions.  There is a long, wide and\nvery sturdy workbench here.  Attached to it are handcuffs and\nchained clammers used for keeping strong beings immovable.  Deep marks\nin the bench bears signs of a hooved animal once held here against its\nwill.\n",
+         "altitude" : null
+      },
+      "crossection@frobozz" : {
+         "exits" : {
+            "w" : "lookout",
+            "e" : "connecting",
+            "n" : "cellar",
+            "s" : "stairs"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Cross-section",
+         "id" : "crossection",
+         "description" : "\nThis is a cross-section of two passages, one which comes from\nthe north and continuing south into a steep descending tunnel and another one\ncomming in from the west and going on eastwards.\n",
+         "altitude" : null
+      },
+      "housen@frobozz" : {
+         "exits" : {
+            "w" : "houseW",
+            "e" : "houseE",
+            "n" : "forest1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "frobozz",
+         "title" : "Northern End of the House",
+         "id" : "houseN",
+         "description" : "\nYou are standing in an open field north of a white house, with a boarded front \ndoor.  The house is surrounded with dense forest to the north and the east, \nand west of the house a deep canyon splits the country from north to south.\nThere's a path which runs north into the forest and two smaller paths which\nruns from the front door and around the house east and west.\n",
+         "altitude" : "450"
+      },
+      "damw@frobozz" : {
+         "exits" : {
+            "e" : "dam"
+         },
+         "flags" : [],
+         "zone" : "frobozz",
+         "title" : "Western End of the Dam",
+         "id" : "damW",
+         "description" : "\nYou have come to the west end of the damwall.  The damwall stops\nabruptly here where the western wall of the cavern begins.\nThe only exit is to the east.\n",
+         "altitude" : null
+      },
+      "rough@frobozz" : {
+         "exits" : {
+            "w" : "drafty",
+            "e" : "behind",
+            "u" : "drafty"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "frobozz",
+         "title" : "Rough and Narrow Tunnel",
+         "id" : "rough",
+         "description" : "\nYou are in an uneven, rough, narrow and ascending tunnel leading up\nto the west and down to the east.  There is a strong draft blowing\nthrough the tunnel which nearly treathens to blow out your light out.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "maintainer@frobozz" : {
+         "damage" : "7",
+         "location" : "office",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Maintainer",
+         "name" : "maintainer",
+         "description" : "A very old maintainer walks slowly around mumbling to\n himself  'Why has my shift down here lasted for 70 years ?'",
+         "strength" : "70"
+      },
+      "cyclops@frobozz" : {
+         "damage" : "11",
+         "location" : "crossection",
+         "armor" : "0",
+         "name" : "cyclops",
+         "description" : "A giant man-eating cyclops looks down at you wondering\n whether he should eat you or not.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "The Cyclops",
+         "aggression" : "0",
+         "pflags" : "{}",
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "teller@frobozz" : {
+         "damage" : "7",
+         "location" : "tellers",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Teller",
+         "name" : "teller",
+         "description" : "An old greyhaired teller walks around searching for money.",
+         "strength" : "70"
+      },
+      "adventurer@frobozz" : {
+         "damage" : "8",
+         "location" : "dark",
+         "aggression" : "5",
+         "armor" : "0",
+         "name" : "adventurer",
+         "description" : "An old adventurer is here, taking a rest.",
+         "strength" : "74"
+      },
+      "thief@frobozz" : {
+         "damage" : "7",
+         "location" : "connecting",
+         "armor" : "0",
+         "name" : "thief",
+         "description" : "Someone looking like a thief leans casually against the wall.",
+         "strength" : "100",
+         "pname" : "The Thief",
+         "aggression" : "25",
+         "mflags" : [
+            "Thief",
+            "PickStuff"
+         ]
+      }
+   }
+}

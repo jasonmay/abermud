@@ -1,0 +1,862 @@
+{
+   "obj" : {
+      "badge@sherwood" : {
+         "damage" : "0",
+         "location" : "WORN_BY:sheriff",
+         "armor" : "5",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "badge",
+         "examine" : "To serve and protect",
+         "size" : "5",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "The sheriff's badge is here stained with his blood.",
+         "aflags" : [
+            "Chest"
+         ]
+      },
+      "point@sherwood" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:sherwood10",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "point",
+         "examine" : "It's a knife.  What did you expect a exclamation point?",
+         "size" : "2",
+         "weight" : "1",
+         "bvalue" : "40",
+         "desc[0]" : "A sharp point has been left here."
+      },
+      "beer@sherwood" : {
+         "location" : "IN_ROOM:sherwood8",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "keg",
+         "name" : "beer",
+         "examine" : "To bad you don't have a tap!",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "20",
+         "desc[0]" : "A keg of beer sits here waiting to be killed."
+      },
+      "stick@sherwood" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:sherwood4",
+         "armor" : "0",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "name" : "stick",
+         "size" : "5",
+         "weight" : "2",
+         "bvalue" : "5",
+         "desc[0]" : "There is a stick here on the ground."
+      },
+      "sticker@sherwood" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:sherwood17",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "pig",
+         "name" : "sticker",
+         "examine" : "Pig-sticker huh?  Hmm...any 5-0 around?",
+         "size" : "25",
+         "weight" : "15",
+         "bvalue" : "30",
+         "desc[0]" : "A Pig-Sticker is here, tempting you to pick it up."
+      },
+      "clip@sherwood" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:sherwood30",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "paper",
+         "name" : "clip",
+         "examine" : "A paper clip in the middle of Sherwood forest?",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A paper clip can barely be seen in the grass."
+      },
+      "quiver@sherwood" : {
+         "location" : "WORN_BY:robin",
+         "armor" : "35",
+         "oflags" : [
+            "Armor",
+            "Container",
+            "Wearable"
+         ],
+         "name" : "quiver",
+         "size" : "10",
+         "weight" : "5",
+         "bvalue" : "100",
+         "aflags" : [
+            "Back"
+         ],
+         "desc[0]" : "A very well fashioned quiver lies here waiting for someone to pick it up."
+      },
+      "brush@sherwood" : {
+         "location" : "IN_ROOM:sherwood34",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "brush",
+         "examine" : "It's brush, what did you expect to find a sword or something?",
+         "bvalue" : "0",
+         "size" : "50"
+      },
+      "ironwood@sherwood" : {
+         "damage" : "26",
+         "location" : "IN_CONTAINER:brush",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "ironwood",
+         "examine" : "It's wood, yet it's iron??",
+         "size" : "50",
+         "weight" : "25",
+         "bvalue" : "400",
+         "desc[0]" : "The infamous Ironwood Sword lies here, quivering ready to kill."
+      },
+      "parry@sherwood" : {
+         "damage" : "10",
+         "location" : "CARRIED_BY:little",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "staff",
+         "name" : "parry",
+         "examine" : "It is a sturdy staff that could do some damage if used right.\n",
+         "size" : "10",
+         "weight" : "8",
+         "bvalue" : "200",
+         "desc[0]" : "Little John's parry staff sits here."
+      },
+      "necklace@sherwood" : {
+         "location" : "WORN_BY:marian",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "necklace",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "300",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "A beautiful necklace lies at your feet."
+      }
+   },
+   "loc" : {
+      "sherwood21@sherwood" : {
+         "exits" : {
+            "e" : "sherwood6",
+            "w" : "sherwood20",
+            "n" : "sherwood22"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Near Waterfall",
+         "id" : "sherwood21",
+         "description" : "\n        You continue along the path.  You hear the rush of falling water to\nthe west.  To the north runs a beaten path.  It is probably beaten down for\nsome reason.\n",
+         "altitude" : "800"
+      },
+      "sherwood29@sherwood" : {
+         "exits" : {
+            "n" : "sherwood30",
+            "s" : "sherwood28"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Birch Trees",
+         "id" : "sherwood29",
+         "description" : "\n        You stand under many birch trees that block out the sun.  The path\ncontinues to the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood20@sherwood" : {
+         "exits" : {
+            "e" : "sherwood21"
+         },
+         "flags" : [
+            "Outdoors",
+            "Private",
+            "Party"
+         ],
+         "zone" : "sherwood",
+         "title" : "Rainbow Waterfall",
+         "id" : "sherwood20",
+         "description" : "\n        You are standing in a small stream just below a breath-taking \nwaterfall.  The spray off the falls causes a beautiful rainbow to stretch \nacross the river.  You can not imagine a more beautiful place.  Jagged rocks \ncover the bed of the stream just below the falls.  The stones become smoother \nand polished further down stream from the continuous wearing of the water.  \nThe grass is short, soft, and green, perfect for a picnic with your \nsweatheart.\n",
+         "altitude" : "800"
+      },
+      "sherwood31@sherwood" : {
+         "exits" : {
+            "n" : "sherwood32",
+            "s" : "sherwood30"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Oak Trees",
+         "id" : "sherwood31",
+         "description" : "\n        You stand under many oaks trees that block out the sun.  The path\ncontinues to the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood10@sherwood" : {
+         "exits" : {
+            "n" : "sherwood11",
+            "s" : "sherwood9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Path Straightens",
+         "id" : "sherwood10",
+         "description" : "\n        The path straightens.  You look across the river and see something far\noff in the distance.  It looks very interesting.  You shiver with anticipation\nof the time when you will be able to explore the region across the river.\n",
+         "altitude" : "800"
+      },
+      "sherwood34@sherwood" : {
+         "exits" : {
+            "s" : "sherwood33"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Clearing",
+         "id" : "sherwood34",
+         "description" : "\n        You have reached a clearing at the edge of the woods.  You are quite\ngreatful that you have exited the forest and can rest from your many battles.\nThick brush cirles around the clearing keeping out any stray animals that \nwander into this area.\n",
+         "altitude" : "800"
+      },
+      "sherwood13@sherwood" : {
+         "exits" : {
+            "w" : "sherwood14",
+            "e" : "sherwood12",
+            "n" : "sherwood16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Intersection",
+         "id" : "sherwood13",
+         "description" : "\n        You have come to an intersection.  You must now, once again, choose\nyour fate.  Will you take the route to the north?  Or take the route to the\nwest?  Or will you chicken out and take the route to the east, back from where\nyour cowardly heart came from?  You must now choose.\n",
+         "altitude" : "800"
+      },
+      "sherwood18@sherwood" : {
+         "exits" : {
+            "n" : "sherwood19",
+            "s" : "sherwood17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Near the End",
+         "id" : "sherwood18",
+         "description" : "\n        You are nearing the end of the road.  Your life long dreams lie just \nahead.  Money, power, love, fame, and happiness are waiting for you.  Your \nticket to all of this is just north of here.\n",
+         "altitude" : "800"
+      },
+      "sherwood9@sherwood" : {
+         "exits" : {
+            "w" : "sherwood8",
+            "n" : "sherwood10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Bend in the Road",
+         "id" : "sherwood9",
+         "description" : "\n        The path turns north here.  There is a rapidly running river to the\neast but it doesn't look safe to navigate.  Maybe there is a bridge or slow\nshallow point up north at which you can cross it.  Maybe not.\n",
+         "altitude" : "800"
+      },
+      "sherwood19@sherwood" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "sherwood",
+         "title" : "The End",
+         "id" : "sherwood19",
+         "description" : "\n        The moral of the story here is that everything that glitters isn't\nalways gold.  In case you haven't figured it out yet....You're DEAD!!!!\n",
+         "altitude" : null
+      },
+      "sherwood6@sherwood" : {
+         "exits" : {
+            "w" : "sherwood21",
+            "n" : "sherwood7",
+            "s" : "sherwood5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Road to Sherwood Forest",
+         "id" : "sherwood6",
+         "description" : "\n        You have entered a very dense forest.  The trees tower over you,\nblocking but only a little sunlight by which you can make out a path to\nthe north and to the west.\n",
+         "altitude" : "800"
+      },
+      "sherwood5@sherwood" : {
+         "exits" : {
+            "e" : "sherwood4",
+            "n" : "sherwood6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "South Fork",
+         "id" : "sherwood5",
+         "description" : "\n  The path continues north.\n",
+         "altitude" : "800"
+      },
+      "sherwood33@sherwood" : {
+         "exits" : {
+            "n" : "sherwood34",
+            "s" : "sherwood32"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Pine Trees",
+         "id" : "sherwood33",
+         "description" : "\n        You stand under many pine trees that block out the sun.  The path\ncontinues to the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood23@sherwood" : {
+         "exits" : {
+            "n" : "sherwood24",
+            "s" : "sherwood22"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Rutted Path",
+         "id" : "sherwood23",
+         "description" : "\n        The path here is very rough.  You fall several times trying to\nmake your way north.  There appear to be eyes peaking from the brush.  You\nfrantically search but turn up nothing.  The path continues to the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood25@sherwood" : {
+         "exits" : {
+            "e" : "sherwood24",
+            "n" : "sherwood26"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Elms",
+         "id" : "sherwood25",
+         "description" : "\n        You stand under very thick Elm trees.  The path you are traveling on\nis more like a trail now.  It doesn't appear that too many people have ventured\ndown this road.  And maybe they had a good reason.\n",
+         "altitude" : "800"
+      },
+      "sherwood22@sherwood" : {
+         "exits" : {
+            "n" : "sherwood23",
+            "s" : "sherwood21"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Beaten Path",
+         "id" : "sherwood22",
+         "description" : "\n        You continue to travel along the beaten path.  The brush grows thick\nalong each side of the road.  The trees are thin allowing for plenty of light.\nThis lightens your mood as you grow concerned about traveling so deep into the\nforest.\n",
+         "altitude" : "800"
+      },
+      "sherwood15@sherwood" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "sherwood",
+         "title" : "Dead End",
+         "id" : "sherwood15",
+         "description" : "\n        Ooops......  You seem to have come across a Dead End.\nAnd the DEAD END seems to be correct in more than one sense.  You suddenly\nfind yourself zapped from the realms of Infinity.  You Have DIED!\n",
+         "altitude" : null
+      },
+      "sherwood16@sherwood" : {
+         "exits" : {
+            "n" : "sherwood17",
+            "s" : "sherwood13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Road to Wealth",
+         "id" : "sherwood16",
+         "description" : "\n        You have chosen the right path.  This is the road to fame and fortune.\nThe trees are happy and friendly and the sun is shining bright down through \nthe bright greens leaves of the various trees.  The road continues happily\nto the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood30@sherwood" : {
+         "exits" : {
+            "n" : "sherwood31",
+            "s" : "sherwood29"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Thorn Apple Trees",
+         "id" : "sherwood30",
+         "description" : "\n        You stand under many thorn apple trees that block out the sun.  The\npath continues to the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood7@sherwood" : {
+         "exits" : {
+            "n" : "sherwood8",
+            "s" : "sherwood6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Trampled Path",
+         "id" : "sherwood7",
+         "description" : "\n        You are on a heavily worn path.  It looks as if many a wagon has \ntraveled through here.  The trees thin here allowing the bright sunlight to\nshine down.  A tiny rabbit scurries through the bushes but he is too fast for\nyou.  The path continues to the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood32@sherwood" : {
+         "exits" : {
+            "n" : "sherwood33",
+            "s" : "sherwood31"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Fig Trees",
+         "id" : "sherwood32",
+         "description" : "\n        You stand under many fig trees that block out the sun.  The path\ncontinues to the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood4@sherwood" : {
+         "exits" : {
+            "w" : "sherwood5",
+            "e" : "sherwood1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "West Fork",
+         "id" : "sherwood4",
+         "description" : "\n        You are traveling on a paved road, making the journey quite easy.\nThe road continues west into a dense forest.  You sense danger, and prepare \nyourself for what lies ahead.  What ever that may be.\n",
+         "altitude" : "800"
+      },
+      "sherwood27@sherwood" : {
+         "exits" : {
+            "n" : "sherwood28",
+            "s" : "sherwood26"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Cottonwood Trees",
+         "id" : "sherwood27",
+         "description" : "\n        You stand under many cottonwood trees that block out the sun.  The path\ncontinues to the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood8@sherwood" : {
+         "exits" : {
+            "e" : "sherwood9",
+            "s" : "sherwood7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Worn Path",
+         "id" : "sherwood8",
+         "description" : "\n        You have entered a small clearing of the sorts.  There is a wagon \nsitting off the path to the north.  There is some kind of contraption there.\nIt looks like it's brewing up some kind of magical potion or something.  Maybe \nyou can talk the owner, into parting with some of his brew.\n",
+         "altitude" : "800"
+      },
+      "sherwood14@sherwood" : {
+         "exits" : {
+            "e" : "sherwood13",
+            "s" : "sherwood15"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Dismal Forest",
+         "id" : "sherwood14",
+         "description" : "\n        Oh no!  You have reached a very dark dismal part of the forest.\nYou do not feel safe here, and wish to get out of here as soon as possible.\nThere is the intersection back to the east, but there is also a very nice path\nleading to the south\n",
+         "altitude" : "800"
+      },
+      "sherwood26@sherwood" : {
+         "exits" : {
+            "n" : "sherwood27",
+            "s" : "sherwood25"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Popular Trees",
+         "id" : "sherwood26",
+         "description" : "\n        You stand under many populuar trees that block out the sun.  The path\ncontinues to the north.\n",
+         "altitude" : "800"
+      },
+      "sherwood17@sherwood" : {
+         "exits" : {
+            "n" : "sherwood18",
+            "s" : "sherwood16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "On the Road",
+         "id" : "sherwood17",
+         "description" : "\n        You can't help but to break out into song.  The one that comes to mind \ngoes something like, \"On the road again, just can't wait to get on the road\nagain...\"  You can't remember who sang it, but you still gotta love it.\n",
+         "altitude" : "800"
+      },
+      "sherwood24@sherwood" : {
+         "exits" : {
+            "w" : "sherwood25",
+            "s" : "sherwood23"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Corner",
+         "id" : "sherwood24",
+         "description" : "\n        You have reached yet another turn in the road.  The trees grow dense\nto the west.  They are ominous and block all sunlight from reaching the ground.\nYou stand here trying to muster up the courage to venture on.  You look toward\nthe trees and a shiver runs up your spine.  You know that if you continue.\nThere is no coming back.  It is all or nothing.  What are you a man or mouse?\n",
+         "altitude" : "800"
+      },
+      "sherwood3@sherwood" : {
+         "exits" : {
+            "s" : "sherwood2"
+         },
+         "flags" : [],
+         "zone" : "sherwood",
+         "title" : "North Fork",
+         "id" : "sherwood3",
+         "description" : "\n        The road stretches wide and long.  The trees on the side of the road\nare ominous, but friendly enough.  The path is well worn, probably indicating\nthat it is not a rough one, but don't let that give you peace of mind.\n",
+         "altitude" : null
+      },
+      "sherwood11@sherwood" : {
+         "exits" : {
+            "n" : "sherwood12",
+            "s" : "sherwood10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Oaks",
+         "id" : "sherwood11",
+         "description" : "\n        You are standing under oak trees.  You look up to admire their beauty.\nWhen a passing European Swallow flys by and defacates on your face, you\nfrantically look around for a sink to wash your face, when you suddenly realize\nthat you are in sherwood forest.  I guess you will have to walk around with\nbird feces on your face.\n",
+         "altitude" : "800"
+      },
+      "sherwood12@sherwood" : {
+         "exits" : {
+            "w" : "sherwood13",
+            "s" : "sherwood11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Turn in Path",
+         "id" : "sherwood12",
+         "description" : "\n        The path turns west.  You definitely feel like you are getting\nsomewhere now.  You know it won't be long before a great adventure falls\nupon you.  You shiver with anticipation.\n",
+         "altitude" : "800"
+      },
+      "sherwood2@sherwood" : {
+         "exits" : {
+            "w" : "sherwood1"
+         },
+         "flags" : [],
+         "zone" : "sherwood",
+         "title" : "East Fork",
+         "id" : "sherwood2",
+         "description" : "\n        This is the road to a great adventure full of surpises, monsters, \nand lots of adventure.  This is not for the 'weak of heart' or strength.  \nOn each side of the road are trees that seem to reach out for you trying to\npull you into their twisted webs of branches.\n",
+         "altitude" : null
+      },
+      "sherwood1@sherwood" : {
+         "exits" : {
+            "w" : "sherwood4",
+            "e" : "sherwood2",
+            "n" : "sherwood3",
+            "s" : "eforest@eforest"
+         },
+         "flags" : [
+            "Peaceful",
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "sherwood",
+         "title" : "Gateway",
+         "id" : "sherwood1",
+         "description" : "\n        You are standing at the Gateway to adventure.  There are three paths.\nEach path has a different adventure and each a different destiny.  Those\nwho choose to enter must be willing to face the consequences of the choices\nthey make.\n",
+         "altitude" : "800"
+      },
+      "sherwood28@sherwood" : {
+         "exits" : {
+            "n" : "sherwood29",
+            "s" : "sherwood27"
+         },
+         "flags" : [
+            "Outdoors",
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Under the Maple Trees",
+         "id" : "sherwood28",
+         "description" : "\n        You stand under many Maple trees that block out the sun.  The path\ncontinues to the north.\n",
+         "altitude" : "800"
+      }
+   },
+   "mob" : {
+      "stacy@sherwood" : {
+         "damage" : "4",
+         "location" : "sherwood22",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Merryman Stacy",
+         "name" : "stacy",
+         "description" : "Merryman Stacy is following Merryman Greg around as always.",
+         "strength" : "80"
+      },
+      "sheriff@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood14",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Sheriff",
+         "name" : "sheriff",
+         "description" : "The Sheriff is here picking out the spot at which to bury you.",
+         "strength" : "170"
+      },
+      "mike@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood28",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Merryman Mike",
+         "name" : "mike",
+         "description" : "Merryman Mike is here mumbling about not being a farmer.",
+         "strength" : "180"
+      },
+      "marian@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood13",
+         "armor" : "0",
+         "name" : "marian",
+         "description" : "Maid Marian is here trying to catch of glimpse of your butt.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Maid Marian",
+         "aggression" : "0"
+      },
+      "jason@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood27",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Merryman Jason",
+         "name" : "jason",
+         "description" : "Merryman Jason is here complaining about his newest ailment.",
+         "strength" : "160"
+      },
+      "emmy@sherwood" : {
+         "damage" : "2",
+         "location" : "sherwood20",
+         "armor" : "0",
+         "name" : "emmy",
+         "examine" : "\nEmmy is a little girl with big brown eyes, and dark brown hair. You \nwouldn't want to attack her, now would you?",
+         "description" : "Emmy is here eating a peach and giggling.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "30",
+         "speed" : "5",
+         "aggression" : "0",
+         "pname" : "Emmy",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise",
+            "NoPunt"
+         ]
+      },
+      "greg@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood22",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Merryman Greg",
+         "name" : "greg",
+         "description" : "Merryman Greg is telling Merryman Stacy about his new obsession.",
+         "strength" : "100"
+      },
+      "lars@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood31",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Merryman Lars",
+         "name" : "lars",
+         "description" : "Merryman Lars is here, puking after completing the Century Club.",
+         "strength" : "140"
+      },
+      "little@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood20",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Little John",
+         "name" : "little",
+         "description" : "Little John stands here practicing his dodge, parry, thrust, and spin.",
+         "strength" : "150"
+      },
+      "scott@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood33",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Merryman Scott",
+         "name" : "scott",
+         "description" : "Merryman Scott is here, spitting in his little sisters mouth.",
+         "strength" : "100"
+      },
+      "sil@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood30",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Merryman Sil",
+         "name" : "sil",
+         "description" : "Merryman Sil is here awaiting Amy's next command.",
+         "strength" : "160"
+      },
+      "friar@sherwood" : {
+         "damage" : "8",
+         "location" : "sherwood8",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "pname" : "Friar Tuck",
+         "name" : "friar",
+         "description" : "Friar Tuck sits here protecting his precious brew.",
+         "strength" : "150"
+      },
+      "robin@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood34",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Robin Hood",
+         "name" : "robin",
+         "description" : "The famed Robin of Hood stands here, leading his merrymen.",
+         "strength" : "250"
+      },
+      "tim@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood26",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Merryman Tim",
+         "name" : "tim",
+         "description" : "Merryman Tim is here anxiously awaiting his weekly drive home.",
+         "strength" : "140"
+      },
+      "dan@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood32",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Merryman Dan",
+         "name" : "dan",
+         "description" : "Merryman Dan is saying, \"You just better give it back!\"",
+         "strength" : "160"
+      },
+      "butch@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood29",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Merryman Butch",
+         "name" : "butch",
+         "description" : "Merryman Butch is here kickboxing and antogonized Merryman Chris.",
+         "strength" : "100"
+      },
+      "chad@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood25",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Merryman Chad",
+         "name" : "chad",
+         "description" : "Merryman Chad is sitting here playing with his lucky boiling sticks.",
+         "strength" : "120"
+      },
+      "jim@sherwood" : {
+         "damage" : "10",
+         "location" : "sherwood11",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Merryman Jim",
+         "name" : "jim",
+         "description" : "Jim is here on his watch.",
+         "strength" : "170"
+      }
+   }
+}

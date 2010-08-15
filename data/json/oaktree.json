@@ -1,0 +1,1173 @@
+{
+   "obj" : {
+      "marblebust@oaktree" : {
+         "desc[1]" : "\nPrecariously balanced on the banister is a bust of fine Italian marble.",
+         "location" : "IN_ROOM:mansion",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "marble",
+         "name" : "MarbleBust",
+         "examine" : "It appears to be the bust of Cacciaguerra Piovasco the Crusader.",
+         "size" : "30",
+         "state" : "1",
+         "weight" : "30",
+         "pname" : "bust",
+         "maxstate" : "1",
+         "bvalue" : "500",
+         "desc[0]" : "A bust of fine Italian marble has been placed here."
+      },
+      "portal1@oaktree" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Oaktree32",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "portal1",
+         "linked" : "portal2",
+         "state" : "1",
+         "pname" : "Portal",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A strange portal leads south."
+      },
+      "rotten_door2@oaktree" : {
+         "desc[1]" : "A wooden door bars any passage north.",
+         "location" : "IN_ROOM:Oaktree37",
+         "oflags" : [
+            "NoGet",
+            "Pushable"
+         ],
+         "name" : "rotten_door2",
+         "examine" : "The door appears to be stuck.",
+         "linked" : "rotten_door1",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The remains of a shattered wooden door lie here."
+      },
+      "cupchina@oaktree" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "china",
+         "name" : "CupChina",
+         "size" : "2",
+         "pname" : "cup",
+         "weight" : "2",
+         "bvalue" : "60",
+         "desc[0]" : "A china cup from a doll's tea set has been discarded here."
+      },
+      "rotten_door1@oaktree" : {
+         "desc[1]" : "A wooden door bars any passage south.",
+         "location" : "IN_ROOM:Oaktree36",
+         "oflags" : [
+            "NoGet",
+            "Pushable"
+         ],
+         "name" : "rotten_door1",
+         "examine" : "The door appears to be stuck.",
+         "linked" : "rotten_door2",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The remains of a shattered wooden door lie here."
+      },
+      "quartz@oaktree" : {
+         "location" : "IN_CONTAINER:depression",
+         "oflags" : "{}",
+         "name" : "quartz",
+         "examine" : "\nIt looks as though something with sharp teeth has been chewing on it.",
+         "size" : "1",
+         "pname" : "quartz",
+         "weight" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A small piece of quartz has been left here."
+      },
+      "window_landing@oaktree" : {
+         "desc[1]" : "\nThrough the closed window you can see the undulating leaves of an ilex.",
+         "location" : "IN_ROOM:landing",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "Window_landing",
+         "linked" : "Window_ilex",
+         "state" : "1",
+         "pname" : "window",
+         "maxstate" : "1",
+         "desc[0]" : "\nThrough the open window you can see the undulating leaves of an ilex."
+      },
+      "gold_pot@oaktree" : {
+         "location" : "IN_CONTAINER:depression",
+         "oflags" : "{}",
+         "altname" : "pot",
+         "name" : "gold_pot",
+         "size" : "5",
+         "pname" : "gold",
+         "weight" : "5",
+         "bvalue" : "80",
+         "desc[0]" : "There is a small pot of gold here."
+      },
+      "mouth2@oaktree" : {
+         "desc[1]" : "Under the lions gaze, try as you might you can't pass them.",
+         "location" : "IN_ROOM:Grove",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "lion",
+         "name" : "mouth2",
+         "linked" : "mouth1",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "mouth",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A portal has been opened in the immense oak tree."
+      },
+      "bustbroken@oaktree" : {
+         "location" : "IN_ROOM:mansion",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "altname" : "broken",
+         "pname" : "bust",
+         "name" : "BustBroken",
+         "examine" : "Some klutz has broken this once fine piece of sculpture.",
+         "desc[0]" : "\nOn the floor near the staircase is a valuable bust, in smithereens."
+      },
+      "safe@oaktree" : {
+         "desc[1]" : "There is a wall safe here.",
+         "location" : "IN_ROOM:Oaktree37",
+         "oflags" : [
+            "NoGet",
+            "Destroyed",
+            "Openable",
+            "Lockable",
+            "Container"
+         ],
+         "name" : "safe",
+         "desc[2]" : "There is a wall safe here.",
+         "state" : "2",
+         "size" : "0",
+         "pname" : "safe",
+         "weight" : "0",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "There is a wall safe here."
+      },
+      "b_roots@oaktree" : {
+         "desc[1]" : "Long, thick roots cover the entire eastern wall here.",
+         "location" : "IN_ROOM:Oaktree36",
+         "oflags" : [
+            "NoGet",
+            "Lightable"
+         ],
+         "altname" : "root",
+         "name" : "B_roots",
+         "examine" : "There appears to be a passage behind the roots.",
+         "linked" : "roots",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "roots",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "Some roots have been burned away allowing passage east."
+      },
+      "portal2@oaktree" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Oaktree26",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "portal2",
+         "linked" : "portal1",
+         "state" : "1",
+         "pname" : "Portal",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A strange portal has been opened in a tree here."
+      },
+      "stick@oaktree" : {
+         "damage" : "8",
+         "location" : "IN_ROOM:Oaktree30",
+         "oflags" : [
+            "Lightable",
+            "Weapon"
+         ],
+         "altname" : "hickory",
+         "name" : "stick",
+         "size" : "10",
+         "pname" : "stick",
+         "weight" : "5",
+         "bvalue" : "80",
+         "desc[0]" : "\nA smooth sturdy looking hickory stick wound with gold wire is here."
+      },
+      "water@oaktree" : {
+         "location" : "IN_ROOM:Holes@sea",
+         "pname" : "water",
+         "name" : "water",
+         "bvalue" : "0",
+         "desc[0]" : ""
+      },
+      "soup@oaktree" : {
+         "location" : "IN_ROOM:bedroom",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "soup",
+         "examine" : "\nIt is a delicious smelling caterpillar consomme.  Something is glittering at\nthe bottom of the cup.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "There is some pale green soup here, in a tiny china cup."
+      },
+      "picture@oaktree" : {
+         "desc[1]" : "A painting of Grandpa Grue covers one wall.",
+         "location" : "IN_ROOM:Oaktree37",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "painting",
+         "name" : "picture",
+         "state" : "1",
+         "size" : "20",
+         "pname" : "picture",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "\nA rather ugly looking painting of an old grue has been discarded here."
+      },
+      "depression@oaktree" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Oaktree26",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "depression",
+         "linked" : "rock",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "depression",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "There is a small depression here."
+      },
+      "cakes@oaktree" : {
+         "location" : "IN_ROOM:bedroom",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "cakes",
+         "examine" : "\nThese are pigs' tails baked in little cakes and dusted with sugar.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "There are several little cakes here."
+      },
+      "roots@oaktree" : {
+         "desc[1]" : "Long, thick roots cover the entire western wall here.",
+         "location" : "IN_ROOM:Oaktree24",
+         "oflags" : [
+            "NoGet",
+            "Lightable"
+         ],
+         "altname" : "root",
+         "name" : "roots",
+         "examine" : "There appears to be a passage behind the roots.",
+         "linked" : "B_roots",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "roots",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "There is a passage behind some burnt out roots."
+      },
+      "rapier@oaktree" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:cosimo",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "rapier",
+         "size" : "10",
+         "weight" : "8",
+         "bvalue" : "150",
+         "desc[0]" : "A small, fearfully sharp rapier lies here."
+      },
+      "berries@oaktree" : {
+         "location" : "IN_ROOM:Oaktree32",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "berries",
+         "size" : "1",
+         "pname" : "berries",
+         "weight" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "Some edible looking berries are here."
+      },
+      "glove@oaktree" : {
+         "location" : "IN_CONTAINER:safe",
+         "armor" : "30",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "iron",
+         "name" : "glove",
+         "examine" : "The glove is well insulated on the inside.",
+         "size" : "5",
+         "weight" : "2",
+         "pname" : "glove",
+         "bvalue" : "60",
+         "desc[0]" : "A heavy looking iron glove is lying here.",
+         "aflags" : [
+            "Hand"
+         ]
+      },
+      "fan@oaktree" : {
+         "location" : "IN_ROOM:Ilex",
+         "weight" : "1",
+         "name" : "fan",
+         "examine" : "\nIt has a faint scent of violets, and an inscription reading:\n\"To my beloved Viola -- From her Cosimo.\"",
+         "bvalue" : "50",
+         "desc[0]" : "A lady's fan has been forgotten here.",
+         "size" : "3"
+      },
+      "window_ilex@oaktree" : {
+         "desc[1]" : "There is a closed window to the north.",
+         "location" : "IN_ROOM:ilex",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "Window_ilex",
+         "linked" : "Window_landing",
+         "state" : "1",
+         "pname" : "window",
+         "maxstate" : "1",
+         "desc[0]" : "An open window to the north allows entrance to the mansion."
+      },
+      "spike@oaktree" : {
+         "desc[1]" : "There is a silvery object laying in the ashes of the sapling.",
+         "location" : "IN_ROOM:Oaktree35",
+         "oflags" : [
+            "Destroyed",
+            "GetFlips"
+         ],
+         "altname" : "Silver",
+         "name" : "spike",
+         "state" : "1",
+         "size" : "10",
+         "pname" : "Spike",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "360",
+         "desc[0]" : "A long silver spike lays here giving off blue sparks."
+      },
+      "whistle@oaktree" : {
+         "location" : "IN_ROOM:walnut",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "silver",
+         "name" : "whistle",
+         "examine" : "\nThe whistle is shaped like a dog's head and bears the engraving:\n\"Ottimo Massimo\"",
+         "size" : "2",
+         "weight" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A silver whistle has been dropped here."
+      },
+      "topfoxhole@oaktree" : {
+         "location" : "IN_ROOM:grove",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "hole",
+         "name" : "TopFoxhole",
+         "linked" : "HoleFox",
+         "state" : "1",
+         "pname" : "foxhole",
+         "maxstate" : "1",
+         "desc[0]" : "At the foot of the oak tree a foxhole leads down."
+      },
+      "rock@oaktree" : {
+         "desc[1]" : "A huge rock is here soaking up the sun.",
+         "location" : "IN_ROOM:Oaktree26",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "name" : "rock",
+         "linked" : "depression",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "rock",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A huge rock stands beside a small depression."
+      },
+      "toast@oaktree" : {
+         "location" : "IN_ROOM:bedroom",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "toast",
+         "examine" : "It is a really exquisite pate toast made of rats' livers.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "There is a slice of pate toast here."
+      },
+      "encyclopedia@oaktree" : {
+         "location" : "IN_ROOM:Olive3",
+         "weight" : "60",
+         "altname" : "book",
+         "name" : "encyclopedia",
+         "examine" : "\nThis is an extremely rare and valuable first edition of Diderot's Encyclopedia.\nThe covers are slightly stained and bear the streaks of snails, but you should\nstill get a hefty price for it.",
+         "bvalue" : "800",
+         "desc[0]" : "An encyclopedia in many volumes has been stacked here.",
+         "size" : "100"
+      },
+      "treatise@oaktree" : {
+         "location" : "IN_ROOM:olive3",
+         "weight" : "5",
+         "altname" : "book",
+         "name" : "treatise",
+         "examine" : "\nIt is a very fine work, which could have been a useful guide to any government,\ndescribing the imaginary Republic of Arborea.  It is entitled \"A Project for\nthe Constitution of an Ideal State in the Trees, with a Declaration of the\nRights of Men, Women, Children, Domestic and Wild Animals, including Birds,\nFishes, and Insects.\"",
+         "bvalue" : "60",
+         "desc[0]" : "A strange political treatise has been left here.",
+         "size" : "5"
+      },
+      "cupdiamond@oaktree" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "small",
+         "name" : "CupDiamond",
+         "size" : "4",
+         "pname" : "diamond",
+         "weight" : "2",
+         "bvalue" : "300",
+         "desc[0]" : "A small diamond glitters nearby."
+      },
+      "tart@oaktree" : {
+         "location" : "IN_ROOM:bedroom",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "tart",
+         "examine" : "\nGrasshoppers' claws, crisp and sectioned, are laid on an open tart in a mosaic\npattern.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "There is a dainty tart here."
+      },
+      "boarskin@oaktree" : {
+         "location" : "IN_ROOM:walnut",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "skin",
+         "name" : "boarskin"
+      },
+      "skeleton@oaktree" : {
+         "location" : "IN_CONTAINER:depression",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "skeleton",
+         "size" : "1",
+         "pname" : "skeleton",
+         "weight" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A large skeleton key is lying here."
+      },
+      "mouth1@oaktree" : {
+         "desc[1]" : "Under the lions gaze, try as you might you can't pass them.",
+         "location" : "IN_ROOM:Oaktree31",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "lion",
+         "name" : "mouth1",
+         "linked" : "mouth2",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "mouth",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A portal has been opened in the large oak tree."
+      },
+      "holefox@oaktree" : {
+         "desc[1]" : "\nSomeone has sealed the entrance with dirt and rocks.  You are trapped!",
+         "location" : "IN_ROOM:hole",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "fox",
+         "name" : "HoleFox",
+         "linked" : "TopFoxhole",
+         "state" : "1",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "Light shines down from a hole above you."
+      }
+   },
+   "loc" : {
+      "oaktree27@oaktree" : {
+         "exits" : {
+            "w" : "Oaktree26"
+         },
+         "flags" : [],
+         "zone" : "oaktree",
+         "title" : "Beneath the Olive Tree",
+         "id" : "Oaktree27",
+         "description" : "\n   The light is much dimmer here, as the branches almost completely block out\nthe sun.  The grass is neatly trimmed and it's obvious that someone takes\nproper care of these groves.  The only exit lies to the west.\n",
+         "altitude" : null
+      },
+      "oaktree32@oaktree" : {
+         "exits" : {
+            "n" : "Oaktree33",
+            "s" : "^portal1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Between Worlds",
+         "id" : "Oaktree32",
+         "description" : "\n   The air seems heavy, almost wooden, and gray mists prevent you from seeing\nmore than two feet in front of you.  You have to grope around before finding\na way out to the north.\n",
+         "altitude" : "600"
+      },
+      "tree1@oaktree" : {
+         "exits" : {
+            "u" : "Tree2",
+            "d" : "Grove"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Oak Tree",
+         "id" : "Tree1",
+         "description" : "\n   You are sitting comfortably in the fork of a big branch.  The branches are\nspread out high over your head.  The sun shines through the leaves, so that you\nmust shade your eyes with your hand to look up.\n",
+         "altitude" : "600"
+      },
+      "den@oaktree" : {
+         "exits" : {
+            "u" : "Burrow",
+            "n" : "Burrow"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "oaktree",
+         "title" : "Fox Den",
+         "id" : "Den",
+         "description" : "\n   You are wedged into a reeking fox den.  Strangely enough, the vixen has\nbuilt her den adjoining a huge natural cavern that extends deep into the earth,\nmuch farther than your feeble flame can penetrate.  It looks like it might go\nall the way to China!  You could jump in, but you would fall a long way....\nThere is a blinking construction sign here.\n",
+         "altitude" : null
+      },
+      "elm@oaktree" : {
+         "exits" : {
+            "w" : "Walnut",
+            "e" : "Mulberry",
+            "n" : "Fig",
+            "s" : "Tree2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Elm Tree",
+         "id" : "Elm",
+         "description" : "\n   You are in an elm tree, high above the ground.  This is not an easy tree to\nmove about on as the branches grow upwards, slender and thickly covered,\nleaving little foothold.  To the north you can see the twisted shape of a fig\ntree, to your west is a knobby walnut, and to your east is a mulberry.  In the\nsouth are the oaks, haughty and detached.\n",
+         "altitude" : "600"
+      },
+      "mulberry@oaktree" : {
+         "exits" : {
+            "w" : "Elm",
+            "e" : "Magnolia"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Mulberry Tree",
+         "id" : "Mulberry",
+         "description" : "\n   Some branches of the mulberry tree reach and overhang a high fortress-like\nwall to your east.  Over the wall you can see a magnolia, from whose black\nbranches spring pulpy white flowers and shiny dark leaves.\n",
+         "altitude" : "600"
+      },
+      "oaktree34@oaktree" : {
+         "exits" : {
+            "w" : "Oaktree33",
+            "e" : "Oaktree35",
+            "u" : "Oaktree33"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Entrance to the Sacred Grove",
+         "id" : "Oaktree34",
+         "description" : "\n   The trees thin somewhat here, and you can hear strange sounds from all \naround you.  It smells of cedar and the floor of the forest is littered with a\nthick bed of pine needles.  East of here you can make out what looks to be a\nsmall clearing.\n",
+         "altitude" : "600"
+      },
+      "oaktree35@oaktree" : {
+         "exits" : {
+            "w" : "Oaktree34"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "oaktree",
+         "title" : "Sacred Grove",
+         "id" : "Oaktree35",
+         "description" : "\n   A sense of power radiates from the centre of this clearing where bolts of \nlightning frequently flash from a lowering sky.  Strangely enough these bolts\nmake no sound.  In fact, you hear nothing at all, as everything has fallen\nsilent about you.\n",
+         "altitude" : null
+      },
+      "mansion@oaktree" : {
+         "exits" : {
+            "w" : "Entrance",
+            "u" : "Landing"
+         },
+         "flags" : [],
+         "zone" : "oaktree",
+         "title" : "Mansion",
+         "id" : "Mansion",
+         "description" : "\n   Here in the mansion, silver shines and lacquer glows, carved gilt chairs\nline the walls, sofas have legs like swans' necks and rest on lions' paws, and\na great deal of dust spirals slowly through the air, lit by innumerable softly\nglowing candles. A marble staircase curves upwards, and you can see the gardens\nthrough a doorway to the west.\n",
+         "altitude" : null
+      },
+      "oaktree30@oaktree" : {
+         "exits" : {
+            "w" : "Oaktree28",
+            "e" : "Oaktree26",
+            "n" : "Oaktree28",
+            "s" : "Oaktree28"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Amongst the Saplings",
+         "id" : "Oaktree30",
+         "description" : "\n   Tall saplings are spread out in every direction in neat rows.  If you're not\ncareful, you could get lost in here.\n",
+         "altitude" : "600"
+      },
+      "magnolia@oaktree" : {
+         "exits" : {
+            "w" : "Mulberry",
+            "e" : "Bedroom",
+            "d" : "Gardens"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Magnolia Tree",
+         "id" : "Magnolia",
+         "description" : "\n   The branches, although they are slender and of soft wood, bear your weight,\nand the points of your shoes tear white wounds on the black bark.  You are\nenveloped in the fresh scent of leaves, turned this way and that by the wind,\ndull one moment and glittering the next.  Quite far below the lowest branch is\na mysterious garden, and to the east, a half-hidden mansion.  One high window\nis quite near your tree.\n",
+         "altitude" : "600"
+      },
+      "oaktree28@oaktree" : {
+         "exits" : {
+            "w" : "Oaktree28",
+            "e" : "Oaktree30",
+            "n" : "Oaktree28",
+            "s" : "Oaktree28"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Amongst the Saplings",
+         "id" : "Oaktree28",
+         "description" : "\n   Tall saplings are spread out in every direction in neat rows.  If you're not\ncareful, you could get lost in here.\n",
+         "altitude" : "600"
+      },
+      "olive2@oaktree" : {
+         "exits" : {
+            "e" : "Olive",
+            "s" : "Olive3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Olive Tree",
+         "id" : "Olive2",
+         "description" : "\n   This tree is hung all over with scrawled pieces of paper and bits of\ncardboard with maxims from Seneca and Shaftesbury, and with various objects:\nclusters of feathers, church candles, crowns of leaves, women's corsets,\npistols, scales, tied to each other in a certain order, the significance of\nwhich has been lost.  The olive grove continues to the east.\n",
+         "altitude" : "600"
+      },
+      "bedroom@oaktree" : {
+         "exits" : {
+            "w" : "Magnolia",
+            "e" : "Landing"
+         },
+         "flags" : [],
+         "zone" : "oaktree",
+         "title" : "Mansion Bedroom",
+         "id" : "Bedroom",
+         "description" : "\n   This looks like a little girl's bedroom.  An arched doorway leads east.\nThe room is beautifully furnished with curtains of white taffeta, a Persian\ncarpet, and a tiny canopied bed with cushions of pale yellow damask.  Rosewood\nchairs surround a tiny silver table, with a doll's tea service set for two.\n",
+         "altitude" : null
+      },
+      "oaktree17@oaktree" : {
+         "exits" : {
+            "w" : "Olive",
+            "d" : "Oaktree23"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Olive Tree",
+         "id" : "Oaktree17",
+         "description" : "\n   This tree juts out from a cliff, and through the leaves and branches you\nfind the sea there facing you, calm and limpid and vast as the sky. The horizon\nopens wide and high and the sea-blue is stretched bare, without a sail. You can\nalmost count the far-off ripples of the waves.  Only a very light rustle, like\na sigh, runs over the pebbles on the beach.  There are some roots hanging over\nthe cliff face here.  They look fairly sturdy, and you might be able to climb\ndown if you weren't carrying much.\n",
+         "altitude" : "600"
+      },
+      "tree2@oaktree" : {
+         "exits" : {
+            "n" : "Elm",
+            "d" : "Tree1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Oak Tree",
+         "id" : "Tree2",
+         "description" : "\n   You are high up, near the crest of the oak tree.  You can see the branches\nof an elm tree to the north, almost touching the oak.  Farther away, the tops\nof the trees thin out into little terraced fields propped by stone walls, and\ngroves dark with olive trees and walnuts.  In the distance is the sea where a\nboat is idly sailing.\n",
+         "altitude" : "600"
+      },
+      "oaktree33@oaktree" : {
+         "exits" : {
+            "d" : "Oaktree34",
+            "s" : "Oaktree32"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "The Great Forest",
+         "id" : "Oaktree33",
+         "description" : "\n   You stand on a low hill overlooking a vast forest that looks truly primeval\nin nature.  Some of the trees look as tall as a giant.  Below you, you can hear\nthe wind softly moaning through the trees.  Or is that the wind?\n",
+         "altitude" : "600"
+      },
+      "walnut@oaktree" : {
+         "exits" : {
+            "e" : "Elm"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Walnut Tree",
+         "id" : "Walnut",
+         "description" : "\n   You are in an old and stately nut tree.  At the fork of the trunk is a\nhollow, formed from an old ax wound.  A soft boarskin is stretched across the\nhollow, making a cosy refuge in the shade of the dark green foliage.  In a deep\nincision in the bark, now so old and deformed that it no longer seems the work\nof human hands, is carved in big letters: Cosimo, Viola, and beneath: Ottimo\nMassimo.\n",
+         "altitude" : "600"
+      },
+      "grove@oaktree" : {
+         "exits" : {
+            "u" : "Tree1",
+            "n" : "^mouth2",
+            "d" : "^TopFoxHole",
+            "s" : "Valley@Blizzard"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Oak Grove",
+         "id" : "Grove",
+         "description" : "\n   Deep in the oak grove, you find yourself surrounded by silent trees in a\nfield of frost-covered grass.  Two stone lions crouch before you, flanking an\nimmense oak with heavy, low branches.  A lush valley extends to the south.\n",
+         "altitude" : "600"
+      },
+      "olive3@oaktree" : {
+         "exits" : {
+            "n" : "Olive2",
+            "d" : "Oaktree22"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Olive Tree",
+         "id" : "Olive3",
+         "description" : "\n   In this tree there is a kind of hanging bookcase, sheltered somewhat from\nthe rains.  The olive grove continues to the north.\n",
+         "altitude" : "600"
+      },
+      "hole@oaktree" : {
+         "exits" : {
+            "u" : "^HoleFox",
+            "d" : "Burrow",
+            "s" : "Burrow"
+         },
+         "flags" : [],
+         "zone" : "oaktree",
+         "title" : "Fox Hole",
+         "id" : "Hole",
+         "description" : "\n   You have crawled into a damp, narrow fox hole.  The roots of the giant oak\nare all around you.  The burrow continues to the south, but the fox smell is\nstronger there.\n",
+         "altitude" : null
+      },
+      "landing@oaktree" : {
+         "exits" : {
+            "w" : "Bedroom",
+            "d" : "mansion",
+            "s" : "^window_landing"
+         },
+         "flags" : [],
+         "zone" : "oaktree",
+         "title" : "Mansion Landing",
+         "id" : "Landing",
+         "description" : "\n   You are standing in a great pool of colored light, cast by the stained glass\nof a vast coat of arms in a south-facing window, depicting an heraldic leopard.\nTo your west is an arched doorwary.  A huge, curving marble staircase extends\ndownwards into the mansion, past paintings and stern-looking busts.  You have\nan uncontrollable desire to slide down a banister.\n",
+         "altitude" : null
+      },
+      "oaktree22@oaktree" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "oaktree",
+         "title" : "The branches give way and...",
+         "id" : "Oaktree22",
+         "description" : "\n  As you plummet to your demise, the cheery sounds of tiny woodland folk\nreverberate in your ears.\n",
+         "altitude" : null
+      },
+      "fig@oaktree" : {
+         "exits" : {
+            "n" : "Olive",
+            "s" : "Elm"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Fig Tree",
+         "id" : "Fig",
+         "description" : "\n   You are in a fig tree, under the pavilion of leaves, watching the sun move\nslowly through the network of twigs and branches, smelling the scent of flowers\nbudding in the stalks.  The fig tree seems to absorb you, permeate you with its\ngummy texture and the buzz of hornets, and you feel uneasy.  To the north is a\nsmall olive grove.\n",
+         "altitude" : "600"
+      },
+      "gardens@oaktree" : {
+         "exits" : {
+            "e" : "Entrance"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Mansion Gardens",
+         "id" : "Gardens",
+         "description" : "\n   In the gardens the branches spread out above you like the tentacles of\nextraordinary animals, and the plants on the ground open up stars of fretted\nleaves like the green skins of reptiles, and wave feathery yellow bamboos with\na rustle like paper.  A white flight of stairs leads east to the mansion. Above\nyou is a sweet-scented magnolia tree, but the lowest branch is too high for you\nto reach.\n",
+         "altitude" : "600"
+      },
+      "burrow@oaktree" : {
+         "exits" : {
+            "u" : "Burrow",
+            "n" : "Hole",
+            "d" : "Den",
+            "s" : "Den"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "oaktree",
+         "title" : "Fox Burrow",
+         "id" : "Burrow",
+         "description" : "\n   You are crawling around on your hands and knees in a cramped north-south fox\nburrow.  The stench of fox permeates the burrow and gets even stronger towards\nthe south.  The air to the north is somewhat fresher.\n",
+         "altitude" : null
+      },
+      "oaktree26@oaktree" : {
+         "exits" : {
+            "w" : "Oaktree28",
+            "e" : "Oaktree27",
+            "n" : "^portal2",
+            "d" : "Oaktree25",
+            "s" : "Oaktree29"
+         },
+         "flags" : [
+            "Peaceful",
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Sunny Clearing",
+         "id" : "Oaktree26",
+         "description" : "\n   You find yourself in a large clearing amongst the trees.  The sun shines\nbrightly throughout the trees here.  One particularly intense sunbeam shines \nupon a large rock near the northern end of the clearing.  At the southern end\nyou can make out neatly trimmed hedge rows, while a narrow path snakes through\nthe clearing from east to west.  A sloping hole has been dug out of the earth.\n",
+         "altitude" : "600"
+      },
+      "oaktree25@oaktree" : {
+         "exits" : {
+            "u" : "Oaktree26",
+            "d" : "Oaktree24",
+            "s" : "Oaktree24"
+         },
+         "flags" : [],
+         "zone" : "oaktree",
+         "title" : "The Incline",
+         "id" : "Oaktree25",
+         "description" : "\n   This is a low incline dug from the earth.  By the looks of the deep claw\nmarks in the walls, it was dug by some animal.  On one area of the wall the\nmarks resemble words.\n",
+         "altitude" : null
+      },
+      "oaktree31@oaktree" : {
+         "exits" : {
+            "n" : "Oaktree29",
+            "s" : "^mouth1"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "The Lions",
+         "id" : "Oaktree31",
+         "description" : "\n   The path ends here at a large oak tree.  The giant oak completely blocks the\npath, creating a dead end.  On either side of the oak tree are large statues of\nmagnificent lions.  One of the lions has its mouth open.\n",
+         "altitude" : "600"
+      },
+      "oaktree29@oaktree" : {
+         "exits" : {
+            "n" : "Oaktree26",
+            "s" : "Oaktree31"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "The Shrubbery",
+         "id" : "Oaktree29",
+         "description" : "\n   The hedges are neatly trimmed shrubberies.  One is a little higher than \nthe others and produces a nice tier effect with a path running down the middle.\nSomeone certainly must care for the plants in this area.\n",
+         "altitude" : "600"
+      },
+      "oaktree23@oaktree" : {
+         "exits" : {
+            "w" : "Oaktree24"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Side of the Cliff",
+         "id" : "Oaktree23",
+         "description" : "\n   The roots end here and you are hanging precariously to the side of the\ncliff.  You catch a glimpse of a hole behind the thick roots.  It's a tight\nsqueeze, but you could probably make it.  Getting back, however, is impossible.\n",
+         "altitude" : "600"
+      },
+      "oaktree37@oaktree" : {
+         "exits" : {
+            "n" : "^rotten_door2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "oaktree",
+         "title" : "The Grue's Den",
+         "id" : "Oaktree37",
+         "description" : "\n   This is a small dry cave that has been carved from the living rock.  Some\ndilapidated furniture has been spread about the room, and the floor is littered\nwith debris and old, gnawed bones - human bones.\n",
+         "altitude" : null
+      },
+      "oaktree36@oaktree" : {
+         "exits" : {
+            "e" : "^B_roots",
+            "s" : "^rotten_door1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "oaktree",
+         "title" : "The Crack",
+         "id" : "Oaktree36",
+         "description" : "\n   This is a tight squeeze, and you frequently have to scramble over large \nrocks that partially block the way.  The walls are sharply chisled and cut \ninto your skin now and then as you try to squeeze by.  To the south the crack\nappears to widen slightly.\n",
+         "altitude" : null
+      },
+      "entrance@oaktree" : {
+         "exits" : {
+            "w" : "Gardens",
+            "e" : "Mansion"
+         },
+         "flags" : [],
+         "zone" : "oaktree",
+         "title" : "Mansion Entrance",
+         "id" : "Entrance",
+         "description" : "\n   You are standing on a small white porch.  A white flight of stairs lead west\nto the gardens.  The mansion door is to your east.\n",
+         "altitude" : null
+      },
+      "oaktree24@oaktree" : {
+         "exits" : {
+            "w" : "^roots",
+            "u" : "Oaktree25",
+            "n" : "Oaktree25"
+         },
+         "flags" : [],
+         "zone" : "oaktree",
+         "title" : "Behind the Roots",
+         "id" : "Oaktree24",
+         "description" : "\n   You are in a cramped underground tunnel.  A myriad of roots dangling from\nthe ceiling keep you from standing up straight.  From the northern end of the\ntunnel, light streams down a low incline, dimly illuminating the tunnel.  It\nfeels as though someone is tapping you on your shoulder, but when you turn\naround no one is there.\n",
+         "altitude" : null
+      },
+      "olive@oaktree" : {
+         "exits" : {
+            "w" : "Olive2",
+            "e" : "Oaktree17",
+            "s" : "Fig"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "oaktree",
+         "title" : "Olive Tree",
+         "id" : "Olive",
+         "description" : "\n   You find that the olive trees make comfortable and easy passages for you, in\nspite of the scarcity of thick branches.  The grove extends to the east and\nwest.\n",
+         "altitude" : "600"
+      },
+      "ilex@oaktree" : {
+         "exits" : {
+            "n" : "^window_ilex"
+         },
+         "flags" : [],
+         "zone" : "oaktree",
+         "title" : "Ilex Tree",
+         "id" : "Ilex",
+         "description" : "\n   In the ilex, deep in the thickest press of leaves, you find a hanging\npavilion with curtains flapping in the wind, shaded by a large, fringed\nparasol.  Stuck on the branches here and there are fluttering ribbons and\nscraps of lace.  Butterflies dart in pairs among the curtains.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "beetle@oaktree" : {
+         "damage" : "10",
+         "location" : "Oaktree24",
+         "speed" : "5",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "Beetle",
+         "name" : "Beetle",
+         "description" : "A boring Beetle is crawling about here muttering to itself.",
+         "strength" : "50"
+      },
+      "sapling@oaktree" : {
+         "damage" : "10",
+         "location" : "Oaktree35",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Sapling",
+         "name" : "Sapling",
+         "description" : "\n  There is a small Sapling standing majestically here absorbing bolts of \nlightning and casting a few of its own back at the sky.",
+         "strength" : "100"
+      },
+      "dryad@oaktree" : {
+         "damage" : "10",
+         "location" : "Oaktree26",
+         "armor" : "0",
+         "name" : "Dryad",
+         "description" : "A very pretty Dryad is sitting on the rock sunning herself.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "70",
+         "speed" : "0",
+         "pname" : "Dryad",
+         "aggression" : "0"
+      },
+      "ent@oaktree" : {
+         "damage" : "15",
+         "location" : "Oaktree34",
+         "armor" : "0",
+         "name" : "Ent",
+         "description" : "There is a large Tree Ent blocking the entrance.",
+         "strength" : "180",
+         "speed" : "0",
+         "pname" : "Ent",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon"
+         ],
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "ottimo@oaktree" : {
+         "damage" : "10",
+         "location" : "limbo@limbo",
+         "armor" : "0",
+         "name" : "ottimo",
+         "description" : "\nA small dachshund is here, panting hard and sniffing about for a fox.",
+         "strength" : "40",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "viola@oaktree" : {
+         "damage" : "13",
+         "location" : "entrance",
+         "armor" : "0",
+         "name" : "viola",
+         "description" : "\nA beautiful, ghostly little girl stands here with a disdainful air.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon",
+            "NoSteal"
+         ]
+      },
+      "vixen@oaktree" : {
+         "damage" : "10",
+         "location" : "den",
+         "armor" : "0",
+         "name" : "vixen",
+         "description" : "\nA sly and curvaceous vixen snarls at you from the corner.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "80",
+         "speed" : "0",
+         "pname" : "The Vixen",
+         "aggression" : "50",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "cosimo@oaktree" : {
+         "damage" : "20",
+         "location" : "olive3",
+         "armor" : "0",
+         "name" : "cosimo",
+         "description" : "\nA small boy in gaiters and tricorn brandishes his rapier at you.",
+         "strength" : "80",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon"
+         ],
+         "mflags" : [
+            "NoGrab",
+            "NoSteal"
+         ]
+      }
+   }
+}

@@ -1,0 +1,351 @@
+{
+   "obj" : {
+      "venison@forest" : {
+         "location" : "IN_ROOM:cave",
+         "weight" : "40",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "venison",
+         "bvalue" : "10",
+         "desc[0]" : "A haunch of probably edible venison rests here.",
+         "size" : "40"
+      },
+      "earring@forest" : {
+         "location" : "IN_ROOM:cave",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "earring",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "100",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "\nA dented and tarnished platinum earring lies discarded at your feet."
+      },
+      "torch@forest" : {
+         "desc[1]" : "A greasy animal fat torch has been dumped here.",
+         "location" : "IN_ROOM:cave",
+         "oflags" : [
+            "Lightable",
+            "Extinguish"
+         ],
+         "name" : "torch",
+         "size" : "10",
+         "state" : "1",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "\nA lit torch sizzles and sparkles on the ground, making a horrible smell."
+      },
+      "pot@forest" : {
+         "location" : "IN_ROOM:cave",
+         "weight" : "30",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "pot",
+         "bvalue" : "10",
+         "desc[0]" : "An old metal pot has been dumped here.",
+         "size" : "30"
+      },
+      "treeeating@forest" : {
+         "location" : "IN_ROOM:F4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "tree",
+         "name" : "TreeEating"
+      },
+      "brass@forest" : {
+         "location" : "IN_ROOM:cave",
+         "weight" : "1",
+         "altname" : "piece",
+         "name" : "brass",
+         "bvalue" : "10",
+         "desc[0]" : "A glittering piece of old brass has been tossed away here.",
+         "size" : "1"
+      },
+      "club@forest" : {
+         "damage" : "4",
+         "location" : "IN_ROOM:cave",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "club",
+         "size" : "30",
+         "weight" : "30",
+         "bvalue" : "10",
+         "desc[0]" : "A heavy wooden club has been dropped here."
+      },
+      "insidetree@forest" : {
+         "location" : "IN_ROOM:InTree",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "tree",
+         "name" : "InsideTree"
+      },
+      "pipes@forest" : {
+         "location" : "IN_ROOM:F8",
+         "name" : "pipes",
+         "bvalue" : "100",
+         "desc[0]" : "A set of small pipes have been left here."
+      },
+      "key@forest" : {
+         "location" : "IN_ROOM:cave",
+         "weight" : "1",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "key",
+         "desc[0]" : "A bent metal key has been thrown here, although it seems useable.",
+         "size" : "2"
+      }
+   },
+   "loc" : {
+      "f10@forest" : {
+         "exits" : {
+            "w" : "F9",
+            "e" : "F11",
+            "n" : "F1",
+            "s" : "F2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F10",
+         "description" : "\n   You are following a damp muddy path which runs south and east from here.\nA large notice, half covered by thick tangled bushes points east and reads\n\"T rq /th'  |<ey\".  Years of rain and wind have pounded the other letters\nbeyond reading.\n",
+         "altitude" : "400"
+      },
+      "f8@forest" : {
+         "exits" : {
+            "w" : "F1",
+            "e" : "F9",
+            "n" : "F7",
+            "s" : "F2"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F8",
+         "description" : "\n   You are following a path through the trees.  The path diverges here and\npaths run off in all directions, turning and twisting into the forest.\n",
+         "altitude" : "400"
+      },
+      "f6@forest" : {
+         "exits" : {
+            "w" : "F7",
+            "e" : "Stream@Blizzard",
+            "n" : "F5",
+            "s" : "F1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F6",
+         "description" : "\n   The forest here is green and lively, its thick young growth tangled and\nglowing with life.  A narrow stream trickles away to the east, and a path runs\ndown towards it.\n",
+         "altitude" : "400"
+      },
+      "f11@forest" : {
+         "exits" : {
+            "w" : "F10",
+            "e" : "F9",
+            "n" : "F6",
+            "s" : "clearing"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F11",
+         "description" : "\n   You are following a path through the forest, which turns abruptly from the\nwest back southwards into a paticularly dense thicket.  The trees all around\nyou, though dense, are not enough to deter a truely intrepid explorer.\n",
+         "altitude" : "400"
+      },
+      "f5@forest" : {
+         "exits" : {
+            "w" : "F4",
+            "e" : "F4",
+            "n" : "F6",
+            "s" : "F5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F5",
+         "description" : "\n   You are lost amid the tangled trees and bushes of the forest.  Dark gloomy\ntrunks seem to leer down at you, as you duck between the low twisted and warped\nbranches.\n",
+         "altitude" : "400"
+      },
+      "intree@forest" : {
+         "exits" : {},
+         "flags" : [
+            "OnePerson"
+         ],
+         "zone" : "forest",
+         "title" : "In The Tree",
+         "id" : "InTree",
+         "description" : "\n   You are trapped inside a tree, being crushed out of existence very slowly!\n",
+         "altitude" : null
+      },
+      "f1@forest" : {
+         "exits" : {
+            "w" : "Path",
+            "e" : "F2",
+            "n" : "F3",
+            "s" : "Path"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F1",
+         "description" : "\n   The forest here is thick and dark, with little light seeping through at any\npoint. Fortunately the darkness is only sufficient to dim your sight making you\njump at the shadows amongst the swaying trees.\n",
+         "altitude" : "400"
+      },
+      "f2@forest" : {
+         "exits" : {
+            "w" : "F1",
+            "e" : "Path",
+            "n" : "Path",
+            "s" : "F1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F2",
+         "description" : "\n   The forest thins a little here, entering a green and fresh glade.  Shafts of\nbright sunlight strike through the forest canopy from above illuminating the\nmaze of trails which lead in all directions from the forest glade.\n",
+         "altitude" : "400"
+      },
+      "f7@forest" : {
+         "exits" : {
+            "w" : "F8",
+            "e" : "F6",
+            "n" : "F4",
+            "s" : "F6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F7",
+         "description" : "\n   You are standing in a small clearing deep in the forest.  The thick trees\npress inwards from all sides, searching to cover this tiny gap in their mighty\nranks.  A huge tree lies across the clearing, apparently uprooted by the wind.\nQuite possibly this is what left the clearing in the first place.\n",
+         "altitude" : "400"
+      },
+      "f4@forest" : {
+         "exits" : {
+            "w" : "F3",
+            "e" : "F2",
+            "n" : "F2",
+            "s" : "F5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F4",
+         "description" : "\n   You would guess you are now somewhere near the center of the forest.\nCertainly you can see nothing but trees around here.  Narrow tracks lead off in\nall directions.\n",
+         "altitude" : "400"
+      },
+      "cave@forest" : {
+         "exits" : {
+            "n" : "Clearing"
+         },
+         "flags" : [],
+         "zone" : "forest",
+         "title" : "The Troll's Cave",
+         "id" : "Cave",
+         "description" : "\n   You stand in a large very smelly cave.  The walls and floor are littered\nwith the remains of many an unsavoury meal.  A single passage leads north out\ninto the sunlight.\n",
+         "altitude" : null
+      },
+      "path@forest" : {
+         "exits" : {
+            "w" : "F2",
+            "e" : "F1",
+            "s" : "F3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "The Path",
+         "id" : "Path",
+         "description" : "\n   You are standing on a narrow path which winds roughly southwards through the\ntangled trees around you.  The forest here is mostly pines and thick layers of\npine needles cover the forest floor.\n",
+         "altitude" : "400"
+      },
+      "clearing@forest" : {
+         "exits" : {
+            "w" : "F4",
+            "e" : "F4",
+            "n" : "F10",
+            "s" : "Cave"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "The Clearing",
+         "id" : "Clearing",
+         "description" : "\n   You stand in a large partly shaded clearing deep in the woods.  From the\nedges of the trees faint rustlings disturb the eerie quietness.  All around you\nare thick trees save to the south where the trees end abruptly at a low rocky\noutcrop.\n",
+         "altitude" : "400"
+      },
+      "f9@forest" : {
+         "exits" : {
+            "w" : "F8",
+            "e" : "F2",
+            "n" : "F10",
+            "s" : "F5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F9",
+         "description" : "\n   The forest seems friendlier here than in most places.  The tall straight\ntrees give plenty of room to move around and lack the annoying tangles of low\nbranches which scratch at you throughout the surrounding forest.  A narrow worn\npath leads northwards.\n",
+         "altitude" : "400"
+      },
+      "f3@forest" : {
+         "exits" : {
+            "w" : "F2",
+            "e" : "F4",
+            "n" : "Path",
+            "s" : "F1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "forest",
+         "title" : "Forest",
+         "id" : "F3",
+         "description" : "\n   The forest here is tangled and very thick.  Branches whip out against you\nfrom all directions, scratching at your arms and legs.  Trails lead off through\nthe dense brush, although they are evidently little used.\n",
+         "altitude" : "400"
+      }
+   },
+   "mob" : {
+      "troll@forest" : {
+         "damage" : "20",
+         "location" : "cave",
+         "armor" : "0",
+         "aggression" : "30",
+         "pname" : "The Troll",
+         "name" : "troll",
+         "description" : "\nA large hulking troll snarls at you as he prepares to do you in.",
+         "strength" : "100"
+      }
+   }
+}

@@ -1,0 +1,109 @@
+{
+   "obj" : {
+      "strap@ist" : {
+         "location" : "IN_ROOM:bargandpand2",
+         "armor" : "5",
+         "oflags" : [
+            "armor",
+            "wearable"
+         ],
+         "name" : "strap",
+         "examine" : "\nThis is the strap that Bargalad wears on his Stratocaster in concert.  It\nis definitely a valuable collector's item, and might help in combat, too.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "250",
+         "desc[0]" : "Bargalad's famous mithril guitar strap is sitting here.",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ]
+      },
+      "cucumber@ist" : {
+         "location" : "IN_ROOM:bargandpand1",
+         "oflags" : [
+            "wearable",
+            "food"
+         ],
+         "altname" : "purple",
+         "name" : "cucumber",
+         "examine" : "\nThis cucumber would look yummy, if it weren't for the odd purplish tinge.\nYou wonder what on earth it is here for.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "250",
+         "desc[0]" : "A large purple cucumber sits on a table beside the bed.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "bass@ist" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:claypool",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "bass",
+         "examine" : "\nThis is the bass that Les Claypool plays with Primus.  He used it to get many\nof the unique sounds found in songs such as 'Tommy the Cat' and 'Jerry was a\nRacecar Driver.'  You could use it to go slaughter kobolds.",
+         "size" : "5",
+         "weight" : "2",
+         "bvalue" : "250",
+         "desc[0]" : "\nLes Claypool's six-string fretless bass is sitting here.  Better not touch it!"
+      },
+      "stratocaster@ist" : {
+         "damage" : "20",
+         "location" : "IN_ROOM:bargandpand2",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "altname" : "strat",
+         "name" : "stratocaster",
+         "examine" : "\nThis is Bargalad's famous purple Stratocaster, with lace sensor pickups,\nlocking tuning peg, roller nut, and individual string suspension.  It is\nquite a beauty to behold!  It looks like you could probably bash some orcs\npretty good with it, too.",
+         "size" : "5",
+         "weight" : "2",
+         "bvalue" : "500",
+         "desc[0]" : "\nBargalad's Stratocaster is gleaming, just waiting to be played!"
+      }
+   },
+   "loc" : {
+      "bargandpand1@ist" : {
+         "exits" : {
+            "e" : "bargandpand2"
+         },
+         "flags" : [
+            "party",
+            "private"
+         ],
+         "zone" : "ist",
+         "title" : "&+CBargalad&N and &+YPandora&N's Humble Abode",
+         "id" : "bargandpand1",
+         "description" : "\n   You have entered the bedroom of Bargalad and Pandora. Just looking around\nthis room it is easy to tell that they are newlyweds. The large, comfortable\nwaterbed is covered with a plaid comforter in bright yellows, blues, and reds.\nThe bed covers are folded down to reveal white satin sheets. A lovely yellow\nrose has been placed across the pillows. Above the bed there is a beautiful oil\npainting of a couple on their wedding day. (Bargalad and Pandora maybe?) You\ncan't help but stare at the handsome couple. A very large television is pushed\nagainst the wall facing the bed, and a copy of 'The Medicine Man' is still\nplaying. A large victorian mirror dominates a wooden chest of drawers, and\npictures of the couple and their family and friends cover the top. Next to you\nis an open door which seems to lead into another room. A huge window allows in\nenough light to illuminate the room. The window, which is framed in bright\nyellow curtains that are pinned up with matching bows, overlooks a breathtaking\nview of the lands below. As you walk around the room and your feet sink into\nthe plush wall to wall carpeting, you can't help but think how lucky Bargalad\nand Pandora must be.\n",
+         "altitude" : null
+      },
+      "bargandpand2@ist" : {
+         "exits" : {
+            "w" : "bargandpand1"
+         },
+         "flags" : [
+            "party"
+         ],
+         "zone" : "ist",
+         "title" : "&+CBargalad&N and &+YPandora&N's Entertainment Center",
+         "id" : "bargandpand2",
+         "description" : "\n   As you walk in, the first thing you notice is the opposite wall.  It\nis lined, floor to ceiling with guitars.  You notice various vintage\nmodels: the double-necked Gibson that Jimmy Page played \"Stairway to\nHeaven\" on live, the double-necked Rickenbacker bass/guitar that Geddy\nLee used with RUSH, the Fender Stratocaster that David Gilmour recorded\n\"Dark Side of the Moon\" on, the Stratocaster that Eric Clapton played on\n\"Layla,\" and the Ibanez played by Steve Vai.  In the corner, you notice a\nlittle upright piano -- an inscription tells you that Tori Amos learned\nto play on this very instrument.  Looking to the wall on your right,\nyou see an impressive stereo system with an equally impressive CD\ncollection: autographed copies of \"The Wall\", \"Slowhand\", \"Houses of the\nHoly\", \"Moving Pictures\", \"Under the Pink\", and \"Sailing the Seas of\nCheese\" (you stop and think to yourself: \"Sailing the Seas of Cheese\"?!)\nOn the wall above the CD player, there is a limited edition 10,000 Maniacs/\nREM poster in a black frame, autographed by various members of the bands.\nYou also notice a note on the Under the Pink CD which says \"Stay awake next\ntime!\"  In the center of the room is a large whirlpool.  Oddly enough, it\nappears to be in the shape of a large cucumber, and the lights under the\nwater give it a strange purple glow.  Too bad you didn't bring your speedos.\nThe room is well furnished in all black, with black marble floors and what\nlooks like obsidian trim.  You are tempted to have a seat on the plush\nblack sofa, pop in a CD, and listen to your favorite tunes.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "claypool@ist" : {
+         "damage" : "15",
+         "location" : "bargandpand2",
+         "armor" : "10",
+         "name" : "claypool",
+         "description" : "\nLes Claypool, bassist for Primus, is practicing his speed riffs here.",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "Les Claypool",
+         "aggression" : "0"
+      }
+   }
+}

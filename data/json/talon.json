@@ -1,0 +1,1397 @@
+{
+   "obj" : {
+      "door@talon" : {
+         "desc[1]" : "The floor here is constructed of grey stone.",
+         "location" : "IN_ROOM:talon4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "slab",
+         "name" : "door",
+         "examine" : "It seems like it could be moved...",
+         "linked" : "door1",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "There is a hole here leading down, beside which lies a large slab of stone."
+      },
+      "claw@talon" : {
+         "location" : "IN_ROOM:talon51",
+         "weight" : "4",
+         "name" : "claw",
+         "examine" : "Its sharp talons glint off the light.",
+         "bvalue" : "750",
+         "desc[0]" : "A small golden dragon's claw glows here in the orange light.",
+         "size" : "4"
+      },
+      "ruby@talon" : {
+         "location" : "IN_ROOM:talon4",
+         "weight" : "7",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "ruby",
+         "examine" : "It seems to glow with an aura of ancient power.",
+         "bvalue" : "150",
+         "desc[0]" : "A small red ruby lies here.",
+         "size" : "7"
+      },
+      "firestaff@talon" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Lit",
+            "Destroyed"
+         ],
+         "altname" : "staff",
+         "name" : "firestaff",
+         "examine" : "It gives you a very powerful feeling.",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "500",
+         "desc[0]" : "A golden staff lies here, a ruby fixed to it making it glow with a violent red\nfire."
+      },
+      "talonshield@talon" : {
+         "location" : "IN_ROOM:talon26",
+         "armor" : "78",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "altname" : "shield",
+         "name" : "talonshield",
+         "examine" : "It is like nothing you've seen before.",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "500",
+         "desc[0]" : "A blackened shield made of dragon scales lies here, gleaming with mystical\nenergy.",
+         "aflags" : [
+            "Hands",
+            "Arms"
+         ]
+      },
+      "desk@talon" : {
+         "location" : "IN_ROOM:talon4",
+         "weight" : "30",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "name" : "desk",
+         "examine" : "The desk appears to be in quite a state of disarray, and the drawers are all\npulled out as if someone was looking for something.",
+         "bvalue" : "0",
+         "desc[0]" : "A large oak desk sits here in the corner of the room.",
+         "size" : "30"
+      },
+      "potion@talon" : {
+         "location" : "IN_ROOM:talon26",
+         "weight" : "3",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "potion",
+         "examine" : "It will certainly revitalize you.",
+         "bvalue" : "50",
+         "desc[0]" : "A small revitalizing potion sits here.",
+         "size" : "3"
+      },
+      "diamond@talon" : {
+         "location" : "IN_ROOM:talon51",
+         "weight" : "2",
+         "name" : "diamond",
+         "examine" : "It seems priceless.",
+         "bvalue" : "750",
+         "desc[0]" : "A large sparkling diamond lies before you.",
+         "size" : "2"
+      },
+      "spring@talon" : {
+         "location" : "IN_ROOM:talon24",
+         "weight" : "20",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "spring",
+         "examine" : "It seems to eminate a light all of its own.",
+         "bvalue" : "0",
+         "desc[0]" : "The stream is fed by a spring which flows magically from the rocks.",
+         "size" : "20"
+      },
+      "door3@talon" : {
+         "desc[1]" : "There are no apparent exits to this room.",
+         "location" : "IN_ROOM:talon26",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door3",
+         "linked" : "door2",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "There is a doorway to the south."
+      },
+      "door1@talon" : {
+         "desc[1]" : "The ceiling here seems to end in a solid slab of stone.",
+         "location" : "IN_ROOM:talon5",
+         "oflags" : [
+            "Openable",
+            "Pushable",
+            "NoGet"
+         ],
+         "altname" : "slab",
+         "name" : "door1",
+         "examine" : "It's heavy, but might be able to be pushed aside above...",
+         "linked" : "door",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "Light streams in from above through a small opening."
+      },
+      "door5@talon" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:talon46",
+         "oflags" : [
+            "GetFlips",
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door5",
+         "examine" : "Of course it's a door!",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door4",
+         "state" : "2",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open."
+      },
+      "door4@talon" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:talon45",
+         "oflags" : [
+            "Getflips",
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door4",
+         "examine" : "It is a door. What did you think it was?",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door5",
+         "state" : "2",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open."
+      },
+      "staff@talon" : {
+         "location" : "IN_ROOM:talon64",
+         "weight" : "10",
+         "oflags" : [
+            "Lit"
+         ],
+         "name" : "staff",
+         "examine" : "It has a hole in the end, possibly meant for some sort of gem that was lost.",
+         "bvalue" : "200",
+         "desc[0]" : "A long golden staff lies here.",
+         "size" : "10"
+      },
+      "door2@talon" : {
+         "desc[1]" : "The side of the wall is completely smooth as if hand crafted, yet no purpose\nto its existence is evident.",
+         "location" : "IN_ROOM:talon25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "door2",
+         "linked" : "door3",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "An opening is evident in the cliffside to the north."
+      },
+      "jug@talon" : {
+         "location" : "IN_ROOM:talon3",
+         "weight" : "2",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "jug",
+         "examine" : "It seems good to drink from.",
+         "bvalue" : "20",
+         "desc[0]" : "A small grey jug lies here.",
+         "size" : "2"
+      },
+      "talonsword@talon" : {
+         "damage" : "30",
+         "location" : "IN_ROOM:talon51",
+         "oflags" : [
+            "Lit",
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "talonsword",
+         "examine" : "It must have been crafted by a mighty hand.",
+         "size" : "15",
+         "weight" : "15",
+         "bvalue" : "1000",
+         "desc[0]" : "A large silver sword lies here, gleaming with a blood red light."
+      },
+      "china_fig@talon" : {
+         "desc[1]" : "A small china figurine seems to catch your eye.",
+         "location" : "IN_ROOM:talon4",
+         "oflags" : [
+            "NoGet",
+            "Pushable",
+            "PushToggle"
+         ],
+         "altname" : "china",
+         "name" : "china_fig",
+         "examine" : "It is a rather beautiful white china piece.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "figurine",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "The figurine has been pushed slightly."
+      },
+      "bread@talon" : {
+         "location" : "IN_ROOM:talon3",
+         "weight" : "2",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "bread",
+         "examine" : "It crumbles into small piles of drying flour.",
+         "bvalue" : "20",
+         "desc[0]" : "A small loaf of bread lies here.",
+         "size" : "2"
+      }
+   },
+   "loc" : {
+      "talon56@talon" : {
+         "exits" : {
+            "w" : "talon54",
+            "e" : "talon57",
+            "n" : "talon55",
+            "s" : "talon55"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Standing on a Beach",
+         "id" : "talon56",
+         "description" : "\n   You stand at the edge of a deep, blue sea; waves beat endlessly on\nthe bone-white sand upon these shores.\n   To the west, a column of water rises from the ocean, and dissapears into a\nbright, white porthole.  The beach stretches out before you, along the edges\nof a towering mountain range lining its shores.  To the east, a small cave\nleads into the side of the cliff.\n",
+         "altitude" : null
+      },
+      "talon42@talon" : {
+         "exits" : {
+            "e" : "talon43",
+            "n" : "talon40"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Small Room",
+         "id" : "talon42",
+         "description" : "\n   This is a small room which seems to serve no particular purpose, save to\nto immortalize the creator of this realm and connect a guard room to the rest\nof the castle. The walls in this room are completely blank, and even devoid\nof any color, except for a painting of a small, green iguana in the corner\nof the room.\n   Exits lead north and east.\n",
+         "altitude" : null
+      },
+      "talon47@talon" : {
+         "exits" : {
+            "w" : "talon44",
+            "u" : "talon48"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Base of Dragon Tower",
+         "id" : "talon47",
+         "description" : "\n   You stand at the base of a tremendous tower which is even taller than the\nblack tower to the west.  A raw, dark energy seems to surge down upon you from\nthe top of the tower, and orange flashes flicker high above you.  A small\nladder ascends to the top of the tower, and an archway leads back to the west.\n",
+         "altitude" : null
+      },
+      "talon50@talon" : {
+         "exits" : {
+            "w" : "talon49",
+            "e" : "talon51"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Lair of the Dragon",
+         "id" : "talon50",
+         "description" : "\n   You enter a huge chamber which appears to house the beast, and destroyer\nof this realm.  The air here seems to glow red hot, and the walls of this place\nare scorched a shade of black darker than the darkest night.\n   To the east lies a small chamber, and the outside air lies to the west.\n",
+         "altitude" : null
+      },
+      "talon1@talon" : {
+         "exits" : {
+            "n" : "talon2",
+            "s" : "tops@valley"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "talon",
+         "title" : "Entrance",
+         "id" : "talon1",
+         "description" : "\n   A large, moss covered cliff face is straight ahead of you. High above,\nancient trees line the top of the cliff, and seem to ominously look down upon\nthe travellers of this land. On a windless day as today, the branches seem to\necho a whisper of warning and doom.\n   There seems to be an entranceway carved out of the cliff face to the north,\nand the nearby trampled path from whence you came lies to the south.\n",
+         "altitude" : null
+      },
+      "talon58@talon" : {
+         "exits" : {
+            "w" : "talon57",
+            "e" : "talon59",
+            "d" : "talon61"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Edge of Sinkhole",
+         "id" : "talon58",
+         "description" : "\n   You stand at the edge of a massive pit in the center of the cavern.  Closer\nobservation reveals it is a sinkhole from this cave to another.  You might just\nbe able to climb down the sides to the waves crashing below.\n   To the east a small cave dissapears into the shadows.\n",
+         "altitude" : null
+      },
+      "talon6@talon" : {
+         "exits" : {
+            "u" : "talon5",
+            "d" : "talon7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Narrow Shaft",
+         "id" : "talon6",
+         "description" : "\n   You are deep inside the earth, moving along a granite ladder covered with\nslippery moss at some times, and missing rungs at others.\n   Above, the shaft stretches before you, closing over into a dome of darkness.\nBelow, the blackness stretches on, too far to measure.\n",
+         "altitude" : null
+      },
+      "talon29@talon" : {
+         "exits" : {
+            "w" : "talon28",
+            "e" : "talon66"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "The Mist",
+         "id" : "talon29",
+         "description" : "\n   You step into a thick shroud of a choking, white fog. Your senses are\nconfused as you wander aimlessly through the swirling mist. All of reality\nbecomes a forgotten blur, as whispers seem to echo around ou from all sides,\nand shadows seem to lunge toward you, only to melt back into the depths of the\nunknown.\n   To the west you can barely discern a glimmer of light through the mist, and\nto the east, the fog continues to billow out before you.\n",
+         "altitude" : null
+      },
+      "talon18@talon" : {
+         "exits" : {
+            "w" : "talon19",
+            "s" : "talon17"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Northern End of Cavern",
+         "id" : "talon18",
+         "description" : "\n   You enter the northern end of a monstrous cavern. The walls here are as\nscorched as those in the southern end of the cavern, but they seem to glow with\na dark, ruby-red fire. Although the walls are searing to the touch, the air is\nas cool and fresh as an October morning.\n   To the west, light and a brisk wind pours through a large opening. Back\nto the south, the cave stretches out before you.\n",
+         "altitude" : null
+      },
+      "talon36@talon" : {
+         "exits" : {
+            "u" : "talon37",
+            "s" : "talon35"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "talon",
+         "title" : "Base of North Tower",
+         "id" : "talon36",
+         "description" : "\n   You stand at the base of what appears to be a fairly small lookout tower.\nStairs lead up to the top of the tower, and an exit to the south leads to a\nlarge hall.\n",
+         "altitude" : null
+      },
+      "talon44@talon" : {
+         "exits" : {
+            "w" : "talon40",
+            "e" : "talon47",
+            "u" : "talon45"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Base of Tower",
+         "id" : "talon44",
+         "description" : "\n   You stand at the base of a tall black tower. As you look up, a sense of\ngreat evil overwhelms you.  A sense of deep, dark magic seems to emanate from\nthe top of the tower. There is a spiral staircase leading up from here, and\narchways lead east and west.\n",
+         "altitude" : null
+      },
+      "talon55@talon" : {
+         "exits" : {
+            "n" : "talon56",
+            "s" : "talon55"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Standing on a Beach",
+         "id" : "talon55",
+         "description" : "\n   You stand on a beach, with the cliffside to the east, the thundering\nocean to the west, and the sand stretching out before you.  The warm sun\nshines down upon you, a light breeze blows in from the ocean.\n",
+         "altitude" : null
+      },
+      "talon5@talon" : {
+         "exits" : {
+            "u" : "^door1",
+            "d" : "talon6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Into the Depths",
+         "id" : "talon5",
+         "description" : "\n   This is a narrow dark hole carved out of solid granite. It looks as if\nit was hollowed out with crude tools. You traverse the depths by way of a\nladder-like structure etched into the rocks.  Below, small pebbles dislodge\nfrom the movement of your feet against the crumbling, granite ladder disapears\ndeep into an abyss-like blackness, with no sound of hitting bottom.\n",
+         "altitude" : null
+      },
+      "talon3@talon" : {
+         "exits" : {
+            "s" : "talon2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Small Storage Room",
+         "id" : "talon3",
+         "description" : "\n   This room appears to be an area used to keep belongings which the\ninhabitant of this cave may wish to store. The only exit from this room is to\nthe south.\n",
+         "altitude" : null
+      },
+      "talon57@talon" : {
+         "exits" : {
+            "w" : "talon56",
+            "e" : "talon58"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Sandy Cave",
+         "id" : "talon57",
+         "description" : "\n   This is a small, sandy cave which appears to fill at high tide from the\nsmooth sand, and watermarks on the walls.  The pungent smell of sea salt is\nstrong here, and a cool breeze flows from a cave to the east.\n",
+         "altitude" : null
+      },
+      "talon51@talon" : {
+         "exits" : {
+            "w" : "talon50"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Treasure Chamber",
+         "id" : "talon51",
+         "description" : "\n   This is a small room which appears to house many treasures of this palace.\n   The only exit lies to the scorched cave west of here.\n",
+         "altitude" : null
+      },
+      "talon52@talon" : {
+         "exits" : {
+            "w" : "talon54",
+            "e" : "talon53"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Stream of Light",
+         "id" : "talon52",
+         "description" : "\n   This is a small stream which flows from east to west through a low cavern.\nThe water in this cavern glows as if it were liquid energy.  The air here is\ncharged with the kind of excitement that one finds after a spring thunderstorm.\n   To the west lies a large cavern which is filled with a light so bright it\nseems to blot out its dark walls.\n",
+         "altitude" : null
+      },
+      "talon9@talon" : {
+         "exits" : {
+            "e" : "talon8",
+            "s" : "talon12"
+         },
+         "flags" : [
+            "Dark",
+            "Death"
+         ],
+         "zone" : "talon",
+         "title" : "Certain Death",
+         "id" : "talon9",
+         "description" : "\n   You enter a dim cave, and reach forward to crawl into the cavern, only to\nfind you are grasping thin air while plummeting to your death in a black pit\nat breakneck speed. You lose consciousness, and never even feel your bones\nshatter into thousands of pieces as your life finds its destiny at the hands\nof cold, twisted rocks.\n",
+         "altitude" : null
+      },
+      "talon14@talon" : {
+         "exits" : {
+            "e" : "talon16",
+            "n" : "talon13"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Underground Stream",
+         "id" : "talon14",
+         "description" : "\n   The stream flows here from the north and continues in a cavern to the east.\nThe rocks here are very slippery, and you feel as if at any moment you could\nlose your footing, slip, and be carried into the depths by the current rushing\naround you. There is a strange light shining through the water which appears\nto get brighter as the stream continutes to the east.\n",
+         "altitude" : null
+      },
+      "talon26@talon" : {
+         "exits" : {
+            "s" : "^door3"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Inside the Peak",
+         "id" : "talon26",
+         "description" : "\n   This is a small quiet cave which appears to have not been disturbed for\nquite some time. It has been sealed for so long, that not even dust or cobwebs\nare evident here. The air is still and calm, and it is as if you have been the\nfirst person to step foot in this cave for an eternity.\n",
+         "altitude" : null
+      },
+      "talon16@talon" : {
+         "exits" : {
+            "w" : "talon14",
+            "d" : "talon53"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Waterfall",
+         "id" : "talon16",
+         "description" : "\n   The stream here becomes extremely fast, and disappears over a waterfall\nwhich plummets down, at least one hundred feet to the bottom. There is a light\nwhich seems to have gotten even brighter here than to the west, and it\ncontinues to increase in intensity as you look down the waterfall to the pool\nbelow. You think you might just be able to scramble down the rocks to the\nside of the waterfall, but it looks very treacherous. The stream flows in from\na cavern to the west.\n",
+         "altitude" : null
+      },
+      "talon53@talon" : {
+         "exits" : {
+            "w" : "talon52",
+            "u" : "talon16"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Beneath the Thunder",
+         "id" : "talon53",
+         "description" : "\n   You stand at the base of a huge waterfall which cascades down from high\nabove into a small deep pool.  The water here is crystal clear, and seems to\nglow with a brilliant white light which covers the entire room and shines\nthrough the mist of the waterfall to form a rainbow which arcs across the\nentire cavern.  The water from the pool flows to the west through a small\ncavern.\n",
+         "altitude" : null
+      },
+      "talon22@talon" : {
+         "exits" : {
+            "w" : "talon23",
+            "u" : "talon20",
+            "d" : "talon62"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "At the Edge of Oblivion",
+         "id" : "talon22",
+         "description" : "\n   You are standing on a very steep trail, which appears to end here before\ndropping off into the beckoning clouds below.\n   A fissure has opened up at your feet, and has widened enough up the\ncliffside to the west to barely squeeze through.\n",
+         "altitude" : null
+      },
+      "talon12@talon" : {
+         "exits" : {
+            "w" : "talon13",
+            "e" : "talon10",
+            "n" : "talon9"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Underground Stream",
+         "id" : "talon12",
+         "description" : "\n   You are waist deep in ice cold water which rushes quietly past you to the\nwest into the blackness. The sharp rocks underneath the water cut and grab\nat your feet to make passage treacherous.\n   On a dry ledge to the north, a small hole, barely passable, leads into\nthe unknown.\n",
+         "altitude" : null
+      },
+      "talon13@talon" : {
+         "exits" : {
+            "w" : "talon15",
+            "e" : "talon12",
+            "s" : "talon14"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Underground Lake",
+         "id" : "talon13",
+         "description" : "\n   The cavern opens up into a tremendous underground lake, and although some\nsmall ripples are caused by the incoming stream, it is as calm, and as clear\nas finely polished glass. The entire cave glows from waves of light\nemanating from an exit to the far southern side of the lake, which are\nreflected from the water across to the walls and cave's ceiling.\n   To the west is a small cave preceeded by a shore of rocks and moist clay.\nTo the south, water from the lake continues its underground journey in a small\nstream, and to the east, water empties into the lake from a small cave.\n",
+         "altitude" : null
+      },
+      "talon17@talon" : {
+         "exits" : {
+            "e" : "talon15",
+            "n" : "talon18",
+            "s" : "talon21"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Southern End of Cavern",
+         "id" : "talon17",
+         "description" : "\n   You enter the southern end of a tremendous cavern which spans out before\nyou. The air here is turbulent, and filled with an excited energy which runs\nthrough your very soul like fire. The walls here are as black as the darkest\ncoal, and the sand on the floor has been melted into a sheet of solid glass.\nIt looks as if a great flame has passed through this room. A thunderous\nrumble which seems almost creaturelike, eminates from a cavern to the south.\nTo the north lies the other side of this huge cavern. To the east is a small,\never-fluctuating porthole promising passage back to the realm you had come to\nknow as reality, 'til now.\n",
+         "altitude" : null
+      },
+      "talon27@talon" : {
+         "exits" : {
+            "n" : "talon10"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Small Room",
+         "id" : "talon27",
+         "description" : "\n   This is a small cave which appears to be merely an opening formed by the\nyears of pushing and pulling by underground forces waging their ancient battles\nbeneath the surface of the earth.\n",
+         "altitude" : null
+      },
+      "talon59@talon" : {
+         "exits" : {
+            "w" : "talon58",
+            "e" : "talon60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "The Dark Cave",
+         "id" : "talon59",
+         "description" : "\n   This is a small, dark cave with walls of fossilized creatures of a time now\nlost.  A sense of history passes over you as you travel through the remains of\nthose who were kind enough to leave a world for us to destroy.\n",
+         "altitude" : null
+      },
+      "talon37@talon" : {
+         "exits" : {
+            "d" : "talon36"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "North Tower",
+         "id" : "talon37",
+         "description" : "\n   This is a small tower which seems to be used as a lookout post. There is a\nsmall window which overlooks the wretched valley. There is a small table and\nchairs here where guards wait out the hours. The only exit from here is down.\n",
+         "altitude" : null
+      },
+      "talon45@talon" : {
+         "exits" : {
+            "e" : "^door4",
+            "d" : "talon44"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "talon",
+         "title" : "Top of Staircase",
+         "id" : "talon45",
+         "description" : "\n   You stand at the top of a tall spiral staircase. A trememdous red door lies\non the east wall.  A chill runs down your spine as a sense of foreboding evil\ncompletely overpowers all of your senses.  There is an almost blindking\ndarkness which enshrouds the entire room.  You may retreat to the safety of\nthe known points of the castle below, or venture into the unknown through\ndoors to the east.\n",
+         "altitude" : null
+      },
+      "talon2@talon" : {
+         "exits" : {
+            "e" : "talon4",
+            "n" : "talon3",
+            "s" : "talon1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Shadowy Cave",
+         "id" : "talon2",
+         "description" : "\n   This is a small, damp, musty smelling cave. There are shadows lining two of\nthe walls and a broken structure resembling a table lying in one corner of\nthe room. To the east lies another room, too dark to discern its purpose. To\nthe north lies a room resembling a storage area, and to the south lies the\nsafety of a land bathed in fresh air and sunlight.\n",
+         "altitude" : null
+      },
+      "talon11@talon" : {
+         "exits" : {
+            "w" : "talon10",
+            "e" : "talon28"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Through the Teeth",
+         "id" : "talon11",
+         "description" : "\n   You enter a long cave, with a low ceiling and walls etched with strange\nmarkings. Water drips slowly to the floor from stalactites in the ceiling,\nand forms stalagmites, which makes passage through the cavern difficult.\n   A strange white light shines thorugh the stalactites and stalagmites to\ngive the ghostly appearance of passing through the mouth of a tremendous\ndragon.\n",
+         "altitude" : null
+      },
+      "talon40@talon" : {
+         "exits" : {
+            "w" : "talon35",
+            "e" : "talon44",
+            "n" : "talon41",
+            "s" : "talon42"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Central Hall",
+         "id" : "talon40",
+         "description" : "\n   You enter a smaller hall with a lower ceiling. The black marble floor here\nis inlaid with the finest gold, and a great crystal chandelier hangs glittering\nfrom the ceiling. In the center of the room lies a tremendous dark dragon\nsculpted out of pure black onyx, with red rubies for eyes which seem to\nglow with a beastly fire in the light of the chandelier.\n   Exits lead in all directions from here.\n",
+         "altitude" : null
+      },
+      "talon24@talon" : {
+         "exits" : {
+            "s" : "talon23"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Peaceful Cave",
+         "id" : "talon24",
+         "description" : "\n   You enter a small cave with an atmosphere of peace and warmth to it. There\nis a small stream here and there is an inscription in the rocks at the base of\nthe stream which seems to warn those not bearing a staff of fire from exploring\nthe realm further.\n",
+         "altitude" : null
+      },
+      "talon62@talon" : {
+         "exits" : {
+            "u" : "talon22"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "talon",
+         "title" : "You Went too Far",
+         "id" : "talon62",
+         "description" : "\n   Attempting to scale a 90 degree slope with no rope, and no clue, you\n\n       P\n               L\n                       U\n                               M\n                                       M\n                                               E\n                                                        T\n\ninto the immeasureable depths, plunging through the mist, before collecting\nyour reward of cold sharp granite for all you have done in life.\n",
+         "altitude" : null
+      },
+      "talon7@talon" : {
+         "exits" : {
+            "u" : "talon6",
+            "d" : "talon8"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Narrow Shaft",
+         "id" : "talon7",
+         "description" : "\n   You are now so far underground that sunlight has become nothing but a far-\nfetched dream. The hot moist air bears heavily down upon you from above, the\nstale air, and narrow walls seem to choke the very life out of you.\n   Above, the shaft continues almost endlessly.  Below, sounds of activity\nseem to be evident, but the dark may be playing tricks on your mind.\n",
+         "altitude" : null
+      },
+      "talon64@talon" : {
+         "exits" : {
+            "w" : "talon63"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Small Cavern",
+         "id" : "talon64",
+         "description" : "\n   This is a small cavern which appears to have been formed by the action of\nendless beating of the waves in the cavern to the west.  There is a small\npedestal carved out of the side of the rocks on the wall face here.\n",
+         "altitude" : null
+      },
+      "talon48@talon" : {
+         "exits" : {
+            "u" : "talon49",
+            "d" : "talon47"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "talon",
+         "title" : "Dragon Tower",
+         "id" : "talon48",
+         "description" : "\n   You are climbing a ladder traversing the length of a large dark tower.\nBelow you, the ladder leads to the bottom of the tower, which is barely\nvisible.  The ladder seems to lead up to the top of the tower, where bright\nyellow sunlight streams in from above.\n",
+         "altitude" : null
+      },
+      "talon43@talon" : {
+         "exits" : {
+            "w" : "talon42"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Guard Room",
+         "id" : "talon43",
+         "description" : "\n   This is a small dark room which appears to serve as housing for the guards\nof the castle. There is a bunkbed in the corner, and a table in the center\nof the room.\n   The only exit from this room is an archway to the west.\n",
+         "altitude" : null
+      },
+      "talon35@talon" : {
+         "exits" : {
+            "w" : "talon34",
+            "e" : "talon40",
+            "n" : "talon36",
+            "s" : "talon38"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Great Hall",
+         "id" : "talon35",
+         "description" : "\n   You stand in the center of a huge hall. A cathedral ceiling spans far above\nyou, and the walls are lined with stunning oil paintings of magnificent\ndragons. Every step you take upon the black marble floor echoes like thunder\naround the room, and you are startled by the sound of your own breathing as\nthe tension is so thick you can almost taste it. Archways lead in all\ndirections from here.\n",
+         "altitude" : null
+      },
+      "talon31@talon" : {
+         "exits" : {
+            "w" : "talon30",
+            "e" : "talon32"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Lifeless Valley",
+         "id" : "talon31",
+         "description" : "\n   You are now in a dark valley, on a small path traversing this barren\nlandscape. The skies are filled with a dark haze which seems to become even\nmore black and evil as you travel to the east. All around you, shadows seem to\ndance around the edges of the fading red light, as if anticipating the\novercoming darkness. To the west, a dark foothill looms before you, as if\nsuspended in the darkness. To the east, you can make out a large black castle\nbuilt on the side of a towering mountain peak.\n",
+         "altitude" : null
+      },
+      "talon67@talon" : {
+         "exits" : {
+            "w" : "talon29",
+            "e" : "talon29",
+            "n" : "talon29",
+            "s" : "talon68"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "The Mist",
+         "id" : "talon67",
+         "description" : "\n   You are lost in a blinding white mist which distorts and confuses you,\nmaking travel of this land nearly impossible.  The mist is so perfect, and so\nconfusing, it seems as if it must have secrets to hide.\n",
+         "altitude" : null
+      },
+      "talon61@talon" : {
+         "exits" : {
+            "u" : "talon58"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Bottom of Pit",
+         "id" : "talon61",
+         "description" : "\n   You reach the bottom of the sinkhole.  The ocean pours through an opening\nto the west, and crashes upon the rocks of this cavern.  Any attempt to\ncontinue in any direction but up will result in death.\n",
+         "altitude" : null
+      },
+      "talon32@talon" : {
+         "exits" : {
+            "w" : "talon31",
+            "u" : "talon33"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Base of the Mountain",
+         "id" : "talon32",
+         "description" : "\n   You stand at the base of a tremendous mountain peak which rises into the\nmidst of the black smog which blankets this land. A large black stronghold\nlies near the top of the peak, and every so often a stream of fire emanates\nfrom the tallest of the towers of the castle. The sky here is now almost\nutterly black as any ray of the sun has been choked out of existence\nby the dark haze. A small and precarious path leads up the side of the mountain\nand a path continues back to the west of a valley bathed in shadows.\n",
+         "altitude" : null
+      },
+      "talon41@talon" : {
+         "exits" : {
+            "s" : "talon40"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Kitchen",
+         "id" : "talon41",
+         "description" : "\n   You enter a large room which appears to serve as the kitchen for this\ndark palace. Long counters line the edges of the room, and seem to be used\nfor food preparation. On one end of the room lies a large iron furnace\nwhich could be used to prepare large feasts.\n   The only exit is to the south.\n",
+         "altitude" : null
+      },
+      "talon49@talon" : {
+         "exits" : {
+            "e" : "talon50",
+            "d" : "talon48"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Top of Dragon Tower",
+         "id" : "talon49",
+         "description" : "\n   You stand atop a tremendous tower, which has been built partially into the\nside of a mountain.  The tower lies above the black cloud which plagues this\nland, and the sun reflects its bright yellow rays from the blanket of smog\nstretched out before you.  Far to the west lies a huge range of white mountains\nwhich tower ominously above this large peak, and behind the mountains a hint\nof deep blue suggests the existence of an ocean.  To the east a deafening, dull\nroar echoes from a dark cave.\n",
+         "altitude" : null
+      },
+      "talon15@talon" : {
+         "exits" : {
+            "w" : "talon17",
+            "e" : "talon13"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Cavern into the Unknown",
+         "id" : "talon15",
+         "description" : "\n   You stand in a wide cavern with a soft sandy floor. To the western side of\nthe cavern, a strange dim white light pours from what appears to be some kind\nof shifting gateway into the unknown. The porthole is like a distorted mirror,\nfluctuating at every instant in size and shape, and it casts strange white\nwaves of light across the cavern as it changes in shape.\n   To the east lies the underground lake.\n",
+         "altitude" : null
+      },
+      "talon10@talon" : {
+         "exits" : {
+            "w" : "talon12",
+            "e" : "talon11",
+            "u" : "talon8",
+            "s" : "talon27"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Lit Cavern",
+         "id" : "talon10",
+         "description" : "\n   You stand in the center of a large cavern, which appears to have formed\nnaturally from the movement of an underwater stream, flowing from a waterfall\nhalfway up the side of the cavern. Torches line the walls, and cast an eerie\norange glow over the entire cave. The roof is smoked black from the numerous\ntorches scorching its surface.\n   The underground stream disapears into a small cave to the west. To the\nsouth, a small crack wide enough to squeeze through leads into the blackness.\nTo the east, cool air seems to pour through a large opening leading to another\ncave.\n",
+         "altitude" : null
+      },
+      "talon63@talon" : {
+         "exits" : {
+            "e" : "talon64",
+            "u" : "talon60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Bottom of Sinkhole",
+         "id" : "talon63",
+         "description" : "\n   You stand at the bottom of a tremendous sinkhole, which appears to have\nformed by the collapsing of this cavern over years of battering from the waves\nwhich crash around you.   The ocean flows on into a cave to the east.\n",
+         "altitude" : null
+      },
+      "talon65@talon" : {
+         "exits" : {
+            "e" : "talon20"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Dirt Cave",
+         "id" : "talon65",
+         "description" : "\n   This is a small cave with a dirt floor.  The walls are made of red clay,\nand the entire place looks as if it were dug by hand, like someone was\nsearching for something.\n",
+         "altitude" : null
+      },
+      "talon28@talon" : {
+         "exits" : {
+            "w" : "talon11",
+            "e" : "talon29"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Gateway into Darkness",
+         "id" : "talon28",
+         "description" : "\n   You enter a small room which appears to end to the east in a mirror-like\nporthole. White light travels across the porthole in the area, like lightning\non a dark, stormy summer's sky. Beyond the brilliant white light on the surface\nof the gateway, a strange evil darkness seems to emanate. It is hard to\ndistinguish if it is a physical, or spiritual darkness which you seem to sense.\nBack to the west lies the safety of the known world.\n",
+         "altitude" : null
+      },
+      "talon66@talon" : {
+         "exits" : {
+            "w" : "talon29",
+            "e" : "talon29",
+            "n" : "talon67"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "The Mist",
+         "id" : "talon66",
+         "description" : "\n   You are lost in a blinding white mist which blocks your every sense and\nmakes it impossible to tell where you are.\n   This mist stretches in all directions.\n",
+         "altitude" : null
+      },
+      "talon33@talon" : {
+         "exits" : {
+            "e" : "talon34",
+            "d" : "talon32"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Before Talon Castle",
+         "id" : "talon33",
+         "description" : "\n   You stand at the gates of a large, black castle. You are in the midst of\nthe suffocating, black haze which rains down upon this land. An air of impeding\nevil weighs down heavily upon your soul as you scan the length of this\nmonstrous castle. Down below, the landscape stretches out before you, and for a\nmoment, light seemed to reflect from a tall mountain in the distance, but then\na cloud of smog drifts before your eyes.\n   To the east lie the tremendous gates to a castle which is most certainly\nresponsible for the demise of this land.\n",
+         "altitude" : null
+      },
+      "talon8@talon" : {
+         "exits" : {
+            "w" : "talon9",
+            "d" : "talon10"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Bottom of the Ladder",
+         "id" : "talon8",
+         "description" : "\n   This appears to be the end of an incredible descent into the depths.  You\nare peering down into a large cavern below, which seems to be alive with\nmovement.  The entire cavern beneath is bathed in a dark orange glow, which\nmakes it difficult to distinguish living figures from shadows flitting in the\ntorchlight.\n   It seems as if you could make your way down the sides of the cave, to the\nbottom. To the west, a small crack, just wide enough to fit through, leads off\ninto the darkness. Above, the shaft leads back to a world that is but a quickly\nfading memory in the somber blackness of the new realm you have discovered.\n",
+         "altitude" : null
+      },
+      "talon54@talon" : {
+         "exits" : {
+            "e" : "talon52",
+            "d" : "talon56"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Vortex of Light",
+         "id" : "talon54",
+         "description" : "\n   You stand in a large cavern encompassed in light.  Water flows from the\neast into a small pool where it disappears into the depths through a whirlpool.\nThe core of all the light you have seen thus far seems to eminate from the\nswirling vortex which lies in the center of the room.\n",
+         "altitude" : null
+      },
+      "talon38@talon" : {
+         "exits" : {
+            "u" : "talon39",
+            "n" : "talon35"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "talon",
+         "title" : "Base of South Tower",
+         "id" : "talon38",
+         "description" : "\n   You stand at the base of the south tower. The light here is dim, and the\nair is thick. There is a set of stairs here leading to the top of the tower.\nThere is a set of stairs here leading to the top of the tower.\n",
+         "altitude" : null
+      },
+      "talon19@talon" : {
+         "exits" : {
+            "w" : "talon20",
+            "e" : "talon18"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "The Chasm",
+         "id" : "talon19",
+         "description" : "\n   You stand on a narrow natural bridge crossing a giant chasm. A bright yellow\nsun shines down upon you, and clears your darkness-ridden mind. A cool wind\nblows across your skin, reminding you of what it is to be alive, for now.\nBelow, the chasm continues downwards, and disappears into a mist of swirling\nclouds.\n   To the west, the bridge leads to a small ledge carved into the side of a\nmountain. To the east, a cave leads back into the large cavern.\n",
+         "altitude" : null
+      },
+      "talon21@talon" : {
+         "exits" : {
+            "n" : "talon17"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Small Cavern",
+         "id" : "talon21",
+         "description" : "\n   This is a smaller cavern which has no apparent exit, save the opening you\nentered from. The walls in this cave seem to be covered with strange markings.\nThe markings appear to show a sort of battle which takes place between a\nwarrior and a terrifying-looking black dragon.\n   In one drawing, the warrior is slaughtered by the dragon, and in another,\nthe warrior defeats the dragon while wearing an odd-looking shield. For some\nreason, the warrior seems strangely familiar.\n",
+         "altitude" : null
+      },
+      "talon68@talon" : {
+         "exits" : {
+            "w" : "talon29",
+            "e" : "talon30"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "The Mist",
+         "id" : "talon68",
+         "description" : "\n   You are lost in a dreamworld of pure white.  If death were to meet you in\nthis land, its only warning would be the ceasing of existence it would bring.\n   The mist seems to become darker to the east.\n",
+         "altitude" : null
+      },
+      "talon46@talon" : {
+         "exits" : {
+            "w" : "^door5"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Center of Evil",
+         "id" : "talon46",
+         "description" : "\n   You enter a small, dark room which appears to be where the ruler of this\ncastle practices his dark magic.  A sense of terrifying chaos resounds in this\nroom whose walls must have horrifying tales to tell.  There is a large throne\non the east wall, and strategic charts line the walls.  The charts seem to tell\nof a plan to use a deadly beast and portholes into another dimension to conquer\nthe world you call home.\n",
+         "altitude" : null
+      },
+      "talon30@talon" : {
+         "exits" : {
+            "w" : "talon68",
+            "e" : "talon31"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Dead Landscape",
+         "id" : "talon30",
+         "description" : "\n   You stand upon a small foothill looking upon a charred, black valley. The\nentire valley looks as if a tremendous fire decended from the sky and\nconsumed all life in its path. Blackened stumps lie here and there, where\nmighty trees once stood. A blood red haze encompasses the sky as the sun\nretreats behind the dark mantains, to no more shine its face upon the\nhorrifying sight, for yet another starless night.\n   To the east lies passage down into the valley. To the west lies a blanket of\nfog twisting and turning as if it were alive.\n",
+         "altitude" : null
+      },
+      "talon39@talon" : {
+         "exits" : {
+            "d" : "talon38"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "South Tower",
+         "id" : "talon39",
+         "description" : "\n   From this vantage point, you look across the valley, and notice the\ndestruction was caused in long black streaks across the land, as if a column\nof fire descended upon the earth, ascended, and then decended once more.\n   The only exit here is a stairway leading down.\n",
+         "altitude" : null
+      },
+      "talon20@talon" : {
+         "exits" : {
+            "w" : "talon65",
+            "e" : "talon19",
+            "d" : "talon22"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Small Ledge",
+         "id" : "talon20",
+         "description" : "\n   You stand on a small ledge overlooking a drop-off into the immeasurable\ndepths.\n   To the east, a natural bridge spands back across the chasm. To the west\nlies a small, dark cave. To the side of the ledge a very treacherous-looking\ntrail leads down the cliff.\n",
+         "altitude" : null
+      },
+      "talon23@talon" : {
+         "exits" : {
+            "e" : "talon22",
+            "n" : "talon24"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Inside the Fissure",
+         "id" : "talon23",
+         "description" : "\n   This is a small, dark crack in the earth, with walls barely large enough to\nsqueeze past, while holding your breath.\n   The fissure stretches up into the darkness, and becomes too narrow to pass\nthrough to the west. You come upon an entrance to a lit cave to the north.\n",
+         "altitude" : null
+      },
+      "talon25@talon" : {
+         "exits" : {
+            "n" : "^door2"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Atop the Mountain",
+         "id" : "talon25",
+         "description" : "\n   You stand at the peak of the tallest mountain in the land. To the east, a\nlarge canyon separates two tremendous mountain ranges. Even further to the\neast, the landscape seems to fade into a shade of black, darker than onyx.\nYou can barely make out the shape of a large dark castle atop a huge black\nmountain on the horizon. To the west, a deep blue ocean beats endlessly upon\nthe cliffs of a mountain range lining its shores. As you look, you feel as if\none small jump could take you to the ends of the earth from here. To the north,\na strangely blank cliffside juts up above you.\n",
+         "altitude" : null
+      },
+      "talon34@talon" : {
+         "exits" : {
+            "w" : "talon33",
+            "e" : "talon35"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "talon",
+         "title" : "Entranceway",
+         "id" : "talon34",
+         "description" : "\n   You pass under the black gothic arches, and stand in a large hall at the\nentrance of the stronghold. Black marble gargoyles crouch at the corners of\nthis room, and seem to jeer down in evil delight at your curiosity which may\njust cause your demise. Above an archway to the east, the deep black letters\nTALON are carved into stone.\n   To the east lies an entrance into a large chamber, and to the west lie the\ngates to this dark castle.\n",
+         "altitude" : null
+      },
+      "talon60@talon" : {
+         "exits" : {
+            "w" : "talon59",
+            "d" : "talon63"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "End of Cave",
+         "id" : "talon60",
+         "description" : "\n   You have come upon another sinkhole, and the end of this cavern which\ndisappears into a crack too small to pass through to the east.  Below you, the\nocean pours in through the blackness.\n",
+         "altitude" : null
+      },
+      "talon4@talon" : {
+         "exits" : {
+            "w" : "talon2",
+            "d" : "^door"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Study",
+         "id" : "talon4",
+         "description" : "\n   You enter a small dark study filled with various articles of clothes. A\nlarge antique bookcase lies on the northern wall.\n   The room seems to be in a state of disarray, as books and papers seem to be\nthrown out of place, as if someone was searching for something.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "rynor@talon" : {
+         "damage" : "10",
+         "location" : "talon43",
+         "speed" : "5",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "rynor",
+         "description" : "Rynor, the Talon elite guard, lunges at you!",
+         "strength" : "250"
+      },
+      "asengar@talon" : {
+         "damage" : "10",
+         "location" : "talon10",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "asengar",
+         "description" : "Asengar, the Talon elite soldier, glares at you.",
+         "strength" : "100"
+      },
+      "fog@talon" : {
+         "damage" : "20",
+         "location" : "talon29",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Fog",
+         "name" : "fog",
+         "description" : "All around, the fog enshrouds... as if it were choking the very life out of you.",
+         "strength" : "150"
+      },
+      "talgur@talon" : {
+         "damage" : "10",
+         "location" : "talon4",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "talgur",
+         "description" : "Talgur the ancient dragonrider sits here, lost in thought.",
+         "strength" : "150"
+      },
+      "morrum@talon" : {
+         "eflags" : [
+            "Fireball",
+            "Shock",
+            "Frost",
+            "ImmCripple",
+            "ImmBlind",
+            "ImmMute",
+            "ImmDeaf"
+         ],
+         "damage" : "15",
+         "location" : "talon46",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "name" : "morrum",
+         "description" : "Morrum, the evil dragonmaster, grins wickedly as he steps towards you.",
+         "strength" : "400"
+      },
+      "lirad@talon" : {
+         "damage" : "10",
+         "location" : "talon10",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "lirad",
+         "description" : "Lirad, the Talon elite soldier, glares at you.",
+         "strength" : "100"
+      },
+      "dyral@talon" : {
+         "damage" : "10",
+         "location" : "talon43",
+         "speed" : "5",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "dyral",
+         "description" : "Dyral, the Talon elite guard, lunges toward you!",
+         "strength" : "250"
+      },
+      "daelan@talon" : {
+         "damage" : "10",
+         "location" : "talon41",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "daelan",
+         "description" : "Daelan, the cook, is frantically preparing a meal here.",
+         "strength" : "150"
+      },
+      "gatemaster@talon" : {
+         "damage" : "15",
+         "location" : "talon33",
+         "armor" : "0",
+         "name" : "gatemaster",
+         "description" : "A gatemaster guards the entrance to the stronghold.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Gatemaster",
+         "aggression" : "0",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "cyrlan@talon" : {
+         "damage" : "15",
+         "location" : "talon18",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "cyrlan",
+         "description" : "Cyrlan, the silver dragon towers ominously above you.",
+         "strength" : "350"
+      },
+      "sarac@talon" : {
+         "damage" : "20",
+         "location" : "talon1",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "sarac",
+         "description" : "Sarac the solemn hawk guards this cave.",
+         "strength" : "250",
+         "mflags" : [
+            "BarNorth",
+            "NoGrab"
+         ]
+      },
+      "balak@talon" : {
+         "damage" : "15",
+         "location" : "talon21",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "balak",
+         "description" : "Balak, the bronze dragon, sits solemnly here.",
+         "strength" : "300"
+      },
+      "wiseman@talon" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "talon24",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "wiseman",
+         "description" : "An old wiseman sits here contemplating the complexities of the universe.",
+         "strength" : "150"
+      },
+      "alnor@talon" : {
+         "damage" : "10",
+         "location" : "talon37",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "alnor",
+         "description" : "Alnor, the watchman, stands on guard here.",
+         "strength" : "300"
+      },
+      "makir@talon" : {
+         "damage" : "15",
+         "location" : "talon19",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "makir",
+         "description" : "Makir, the golden dragon, decends from the sky, glittering in the sunlight.",
+         "strength" : "400"
+      },
+      "grum@talon" : {
+         "damage" : "10",
+         "location" : "talon10",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "grum",
+         "description" : "Grum, the Talon elite soldier, glares at you.",
+         "strength" : "100"
+      },
+      "sentul@talon" : {
+         "damage" : "10",
+         "location" : "talon10",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "sentul",
+         "description" : "Sentul, the Talon elite soldier, glares at you.",
+         "strength" : "100"
+      },
+      "talon@talon" : {
+         "eflags" : [
+            "Fireball",
+            "Shock",
+            "Frost",
+            "NegFireball",
+            "NegFrost",
+            "NegShock"
+         ],
+         "damage" : "50",
+         "location" : "talon50",
+         "armor" : "0",
+         "name" : "talon",
+         "description" : "The evil black dragon, Talon, glares darkly at you.",
+         "strength" : "2500",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "reptile@talon" : {
+         "damage" : "15",
+         "location" : "talon13",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "pname" : "Sea Reptile",
+         "name" : "reptile",
+         "description" : "A massive sea reptile emerges from the depths.",
+         "strength" : "300"
+      },
+      "almerus@talon" : {
+         "damage" : "10",
+         "location" : "talon39",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "almerus",
+         "description" : "Almerus, the watchman, stands on guard here.",
+         "strength" : "300"
+      }
+   }
+}

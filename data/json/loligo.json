@@ -1,0 +1,1513 @@
+{
+   "obj" : {
+      "suit@loligo" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:surface1",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "40",
+         "altname" : "label",
+         "name" : "suit",
+         "examine" : "ACME pressure suit - effective at depths up to 2000 fathoms.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "aflags" : [
+            "Head",
+            "Face",
+            "Back",
+            "Chest",
+            "Arms",
+            "Legs",
+            "Hands",
+            "Feet"
+         ],
+         "desc[0]" : "A pressure suit is lying here with a label attached."
+      }
+   },
+   "loc" : {
+      "deep28@loligo" : {
+         "exits" : {
+            "w" : "deep26",
+            "e" : "deep26",
+            "u" : "deep24",
+            "n" : "deep27",
+            "d" : "deep32",
+            "s" : "deep27"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Mesopelagic Zone",
+         "id" : "deep28",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "surface6@loligo" : {
+         "exits" : {
+            "w" : "surface4",
+            "e" : "surface6",
+            "n" : "surface7",
+            "s" : "surface7"
+         },
+         "flags" : [
+            "Outdoors",
+            "Onwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Upon The Ocean Waves",
+         "id" : "surface6",
+         "description" : "\n    You are lost in the middle of the ocean.  You are thoroughly sick of life\non the sea, and you wonder how anyone could bear to make a living out of it.\nYou can go in any direction from here - all exits look the same.\n",
+         "altitude" : null
+      },
+      "abyss18@loligo" : {
+         "exits" : {
+            "w" : "abyss17",
+            "e" : "abyss16",
+            "u" : "abyss15",
+            "d" : "abyss21"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss18",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep40@loligo" : {
+         "exits" : {
+            "w" : "deep38",
+            "e" : "deep38",
+            "u" : "deep36",
+            "n" : "deep39",
+            "s" : "deep39"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Ocean Floor",
+         "id" : "deep40",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep11@loligo" : {
+         "exits" : {
+            "w" : "deep9",
+            "e" : "deep9",
+            "u" : "deep7",
+            "n" : "deep12",
+            "d" : "deep15",
+            "s" : "deep12"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Lower Epipelagic Region",
+         "id" : "deep11",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "surface2@loligo" : {
+         "exits" : {
+            "w" : "surface1",
+            "e" : "surface3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Onwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Coastal Waters",
+         "id" : "surface2",
+         "description" : "\n    You are floating on the seas just offshore.  Looking down you can see the\ntopmost fronds of a forest of kelp which reaches up from the sea bed and sways\nin the current.  To the east is deeper water, while to the west you could\nclamber out on to the land.\n",
+         "altitude" : null
+      },
+      "deep26@loligo" : {
+         "exits" : {
+            "w" : "deep28",
+            "e" : "deep28",
+            "u" : "deep22",
+            "n" : "deep25",
+            "d" : "deep30",
+            "s" : "deep25"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Mesopelagic Zone",
+         "id" : "deep26",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep2@loligo" : {
+         "exits" : {
+            "w" : "deep4",
+            "e" : "deep4",
+            "u" : "surface5",
+            "n" : "deep1",
+            "d" : "deep6",
+            "s" : "deep1"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Below The Surface",
+         "id" : "deep2",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "surface7@loligo" : {
+         "exits" : {
+            "w" : "surface5",
+            "e" : "surface8",
+            "n" : "surface6",
+            "s" : "surface6"
+         },
+         "flags" : [
+            "Outdoors",
+            "Onwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Upon The Ocean Waves",
+         "id" : "surface7",
+         "description" : "\n    You are lost in the middle of the ocean.  You are thoroughly sick of life\non the sea, and you wonder how anyone could bear to make a living out of it.\nYou can go in any direction from here - all exits look the same.\n",
+         "altitude" : null
+      },
+      "deep19@loligo" : {
+         "exits" : {
+            "w" : "deep17",
+            "e" : "deep17",
+            "u" : "deep15",
+            "n" : "deep20",
+            "d" : "deep23",
+            "s" : "deep20"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Murky Depths",
+         "id" : "deep19",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss22@loligo" : {
+         "exits" : {
+            "w" : "abyss24",
+            "e" : "abyss23",
+            "u" : "abyss19",
+            "d" : "abyss25"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss22",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep8@loligo" : {
+         "exits" : {
+            "w" : "deep6",
+            "e" : "deep6",
+            "u" : "deep4",
+            "n" : "deep7",
+            "d" : "deep12",
+            "s" : "deep7"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof"
+         ],
+         "zone" : "loligo",
+         "title" : "Sunlit Waters",
+         "id" : "deep8",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep16@loligo" : {
+         "exits" : {
+            "w" : "deep14",
+            "e" : "deep14",
+            "u" : "deep12",
+            "n" : "deep15",
+            "d" : "deep20",
+            "s" : "deep15"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Twilight Zone",
+         "id" : "deep16",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss12@loligo" : {
+         "exits" : {
+            "w" : "abyss11",
+            "e" : "abyss10",
+            "u" : "abyss9",
+            "d" : "abyss15"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss12",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "surface1@loligo" : {
+         "exits" : {
+            "w" : "Waste1@island",
+            "e" : "surface2"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "loligo",
+         "title" : "Lava Shore",
+         "id" : "surface1",
+         "description" : "\n    You are standing on the shore of a vast ocean.  Beneath your feet the\nground is merely a vast expanse of congealed lava which extends right up to the\nwater's edge.  To the west the wasteland continues for some way before meeting\nthe foot of the volcano which created this bleak landscape.\n",
+         "altitude" : null
+      },
+      "deep38@loligo" : {
+         "exits" : {
+            "w" : "deep40",
+            "e" : "deep40",
+            "u" : "deep34",
+            "n" : "deep37",
+            "s" : "deep37"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Ocean Floor",
+         "id" : "deep38",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep32@loligo" : {
+         "exits" : {
+            "w" : "deep30",
+            "e" : "deep30",
+            "u" : "deep28",
+            "n" : "deep31",
+            "d" : "deep36",
+            "s" : "deep31"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Utter Darkness",
+         "id" : "deep32",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss16@loligo" : {
+         "exits" : {
+            "w" : "abyss18",
+            "e" : "abyss17",
+            "u" : "abyss13",
+            "d" : "abyss19"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss16",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep39@loligo" : {
+         "exits" : {
+            "w" : "abyss1",
+            "e" : "deep37",
+            "u" : "deep35",
+            "n" : "deep40",
+            "s" : "deep40"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Ocean Floor",
+         "id" : "deep39",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss24@loligo" : {
+         "exits" : {
+            "w" : "abyss23",
+            "e" : "abyss22",
+            "u" : "abyss21",
+            "d" : "abyss27"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss24",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss7@loligo" : {
+         "exits" : {
+            "w" : "abyss9",
+            "e" : "abyss8",
+            "u" : "abyss4",
+            "d" : "abyss10"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss7",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss21@loligo" : {
+         "exits" : {
+            "w" : "abyss20",
+            "e" : "abyss19",
+            "u" : "abyss18",
+            "d" : "abyss24"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss21",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep15@loligo" : {
+         "exits" : {
+            "w" : "deep13",
+            "e" : "deep13",
+            "u" : "deep11",
+            "n" : "deep16",
+            "d" : "deep19",
+            "s" : "deep16"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Twilight Zone",
+         "id" : "deep15",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep12@loligo" : {
+         "exits" : {
+            "w" : "deep10",
+            "e" : "deep10",
+            "u" : "deep8",
+            "n" : "deep11",
+            "d" : "deep16",
+            "s" : "deep11"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Lower Epipelagic Region",
+         "id" : "deep12",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep20@loligo" : {
+         "exits" : {
+            "w" : "deep18",
+            "e" : "deep18",
+            "u" : "deep16",
+            "n" : "deep19",
+            "d" : "deep24",
+            "s" : "deep19"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Murky Depths",
+         "id" : "deep20",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep35@loligo" : {
+         "exits" : {
+            "w" : "deep33",
+            "e" : "deep33",
+            "u" : "deep31",
+            "n" : "deep36",
+            "d" : "deep39",
+            "s" : "deep36"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Bathypelagic Zone",
+         "id" : "deep35",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss13@loligo" : {
+         "exits" : {
+            "w" : "abyss15",
+            "e" : "abyss14",
+            "u" : "abyss10",
+            "d" : "abyss16"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss13",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss8@loligo" : {
+         "exits" : {
+            "w" : "abyss7",
+            "e" : "abyss9",
+            "u" : "abyss5",
+            "d" : "abyss11"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss8",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss3@loligo" : {
+         "exits" : {
+            "w" : "abyss2",
+            "e" : "abyss1",
+            "u" : "deep34",
+            "n" : "deep37",
+            "d" : "abyss6",
+            "s" : "deep38"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Where Up And Down Have No Meaning",
+         "id" : "abyss3",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss10@loligo" : {
+         "exits" : {
+            "w" : "abyss12",
+            "e" : "abyss11",
+            "u" : "abyss7",
+            "d" : "abyss13"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss10",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep27@loligo" : {
+         "exits" : {
+            "w" : "deep25",
+            "e" : "deep25",
+            "u" : "deep23",
+            "n" : "deep28",
+            "d" : "deep31",
+            "s" : "deep28"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Mesopelagic Zone",
+         "id" : "deep27",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss17@loligo" : {
+         "exits" : {
+            "w" : "abyss16",
+            "e" : "abyss18",
+            "u" : "abyss14",
+            "d" : "abyss20"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss17",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep31@loligo" : {
+         "exits" : {
+            "w" : "deep29",
+            "e" : "deep29",
+            "u" : "deep27",
+            "n" : "deep32",
+            "d" : "deep35",
+            "s" : "deep32"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Utter Darkness",
+         "id" : "deep31",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep18@loligo" : {
+         "exits" : {
+            "w" : "deep20",
+            "e" : "deep20",
+            "u" : "deep14",
+            "n" : "deep17",
+            "d" : "deep22",
+            "s" : "deep17"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Murky Depths",
+         "id" : "deep18",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss26@loligo" : {
+         "exits" : {
+            "w" : "abyss25",
+            "e" : "abyss27",
+            "u" : "abyss23",
+            "d" : "abyss28"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss26",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "surface3@loligo" : {
+         "exits" : {
+            "w" : "surface2",
+            "e" : "surface4"
+         },
+         "flags" : [
+            "Outdoors",
+            "Onwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Over The Continental Shelf",
+         "id" : "surface3",
+         "description" : "\n    You are far out from the shore, drifting in the open ocean.  On the western\nhorizon the peak of a volcano looms above the waves, but the shore itself is\nhidden.  The water here is deep, but to the east it becomes even deeper as the\ncontinental shelf drops away to the vast ocean plain.\n",
+         "altitude" : null
+      },
+      "deep3@loligo" : {
+         "exits" : {
+            "w" : "deep1",
+            "e" : "deep1",
+            "u" : "surface6",
+            "n" : "deep4",
+            "d" : "deep7",
+            "s" : "deep4"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Below The Surface",
+         "id" : "deep3",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss15@loligo" : {
+         "exits" : {
+            "w" : "abyss14",
+            "e" : "abyss13",
+            "u" : "abyss12",
+            "d" : "abyss18"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss15",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss25@loligo" : {
+         "exits" : {
+            "w" : "abyss27",
+            "e" : "abyss26",
+            "u" : "abyss22",
+            "d" : "abyss28"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss25",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss19@loligo" : {
+         "exits" : {
+            "w" : "abyss21",
+            "e" : "abyss20",
+            "u" : "abyss16",
+            "d" : "abyss22"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss19",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep1@loligo" : {
+         "exits" : {
+            "w" : "deep3",
+            "e" : "deep3",
+            "u" : "surface4",
+            "n" : "deep2",
+            "d" : "deep5",
+            "s" : "deep2"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Below The Surface",
+         "id" : "deep1",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss11@loligo" : {
+         "exits" : {
+            "w" : "abyss10",
+            "e" : "abyss12",
+            "u" : "abyss8",
+            "d" : "abyss14"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss11",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss4@loligo" : {
+         "exits" : {
+            "w" : "abyss6",
+            "e" : "abyss5",
+            "u" : "abyss1",
+            "d" : "abyss7"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss4",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep22@loligo" : {
+         "exits" : {
+            "w" : "deep24",
+            "e" : "deep24",
+            "u" : "deep18",
+            "n" : "deep21",
+            "d" : "deep26",
+            "s" : "deep21"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Four Hundred Fathoms Down",
+         "id" : "deep22",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep29@loligo" : {
+         "exits" : {
+            "w" : "deep31",
+            "e" : "deep31",
+            "u" : "deep25",
+            "n" : "deep30",
+            "d" : "deep33",
+            "s" : "deep30"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Utter Darkness",
+         "id" : "deep29",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep4@loligo" : {
+         "exits" : {
+            "w" : "deep2",
+            "e" : "deep2",
+            "u" : "surface7",
+            "n" : "deep3",
+            "d" : "deep8",
+            "s" : "deep3"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Below The Surface",
+         "id" : "deep4",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep37@loligo" : {
+         "exits" : {
+            "w" : "deep39",
+            "e" : "deep39",
+            "u" : "deep33",
+            "n" : "deep38",
+            "s" : "deep38"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Ocean Floor",
+         "id" : "deep37",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep5@loligo" : {
+         "exits" : {
+            "w" : "deep7",
+            "e" : "deep7",
+            "u" : "deep1",
+            "n" : "deep6",
+            "d" : "deep9",
+            "s" : "deep6"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof"
+         ],
+         "zone" : "loligo",
+         "title" : "Sunlit Waters",
+         "id" : "deep5",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss20@loligo" : {
+         "exits" : {
+            "w" : "abyss19",
+            "e" : "abyss21",
+            "u" : "abyss17",
+            "d" : "abyss23"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss20",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep13@loligo" : {
+         "exits" : {
+            "w" : "deep15",
+            "e" : "deep15",
+            "u" : "deep9",
+            "n" : "deep14",
+            "d" : "deep17",
+            "s" : "deep14"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Twilight Zone",
+         "id" : "deep13",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep30@loligo" : {
+         "exits" : {
+            "w" : "deep32",
+            "e" : "deep32",
+            "u" : "deep26",
+            "n" : "deep29",
+            "d" : "deep34",
+            "s" : "deep29"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Utter Darkness",
+         "id" : "deep30",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep17@loligo" : {
+         "exits" : {
+            "w" : "deep19",
+            "e" : "deep19",
+            "u" : "deep13",
+            "n" : "deep18",
+            "d" : "deep21",
+            "s" : "deep18"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Murky Depths",
+         "id" : "deep17",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss2@loligo" : {
+         "exits" : {
+            "w" : "abyss1",
+            "e" : "abyss3",
+            "u" : "deep35",
+            "n" : "deep38",
+            "d" : "abyss5",
+            "s" : "deep39"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Silent Darkness",
+         "id" : "abyss2",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "surface4@loligo" : {
+         "exits" : {
+            "w" : "surface3",
+            "e" : "surface6",
+            "n" : "surface5",
+            "s" : "surface5"
+         },
+         "flags" : [
+            "Outdoors",
+            "Onwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Upon The Ocean Waves",
+         "id" : "surface4",
+         "description" : "\n    Water, water everywhere...  Not a hint of land can be seen in any\ndirection.  Even the gulls are rarely to be seen here.  Your craft rises and\nfalls on the mid-ocean swell, and you begin to feel somewhat queasy.  You can\nhead in any direction from here.\n",
+         "altitude" : null
+      },
+      "abyss6@loligo" : {
+         "exits" : {
+            "w" : "abyss5",
+            "e" : "abyss4",
+            "u" : "abyss3",
+            "d" : "abyss9"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss6",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep10@loligo" : {
+         "exits" : {
+            "w" : "deep12",
+            "e" : "deep12",
+            "u" : "deep6",
+            "n" : "deep9",
+            "d" : "deep14",
+            "s" : "deep9"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Lower Epipelagic Region",
+         "id" : "deep10",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "surface5@loligo" : {
+         "exits" : {
+            "w" : "surface3",
+            "e" : "surface7",
+            "n" : "surface4",
+            "s" : "surface4"
+         },
+         "flags" : [
+            "Outdoors",
+            "Onwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Upon The Ocean Waves",
+         "id" : "surface5",
+         "description" : "\n    You are drifting alone in the open ocean, far from the comforting firmness\nof land.  You feel rather uneasy since you are at the mercy of the elements\nhere - your craft is not an ocean-going vessel and the weather out here can be\nextremely violent at times.\n",
+         "altitude" : null
+      },
+      "deep25@loligo" : {
+         "exits" : {
+            "w" : "deep27",
+            "e" : "deep27",
+            "u" : "deep21",
+            "n" : "deep26",
+            "d" : "deep29",
+            "s" : "deep26"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Mesopelagic Zone",
+         "id" : "deep25",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep7@loligo" : {
+         "exits" : {
+            "w" : "deep5",
+            "e" : "deep5",
+            "u" : "deep3",
+            "n" : "deep8",
+            "d" : "deep11",
+            "s" : "deep8"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof"
+         ],
+         "zone" : "loligo",
+         "title" : "Sunlit Waters",
+         "id" : "deep7",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep33@loligo" : {
+         "exits" : {
+            "w" : "deep35",
+            "e" : "deep35",
+            "u" : "deep29",
+            "n" : "deep34",
+            "d" : "deep37",
+            "s" : "deep34"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Bathypelagic Zone",
+         "id" : "deep33",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "surface8@loligo" : {
+         "exits" : {
+            "w" : "surface7",
+            "e" : "fareast_bay@fareast",
+            "n" : "surface6",
+            "s" : "surface6"
+         },
+         "flags" : [
+            "Outdoors",
+            "Onwater"
+         ],
+         "zone" : "loligo",
+         "title" : "Upon The Ocean Waves",
+         "id" : "surface8",
+         "description" : "\n    You are drifting on the ocean waves, in sight of land which rises above\nthe hazy horizon to the east.  In all other directions the endless ocean waves\nrise and fall in a never-ceasing, ever-changing rhythm.\n",
+         "altitude" : null
+      },
+      "abyss9@loligo" : {
+         "exits" : {
+            "w" : "abyss8",
+            "e" : "abyss7",
+            "u" : "abyss6",
+            "d" : "abyss12"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss9",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss14@loligo" : {
+         "exits" : {
+            "w" : "abyss13",
+            "e" : "abyss15",
+            "u" : "abyss11",
+            "d" : "abyss17"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss14",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss27@loligo" : {
+         "exits" : {
+            "w" : "abyss26",
+            "e" : "abyss25",
+            "u" : "abyss24",
+            "d" : "abyss28"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss27",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep9@loligo" : {
+         "exits" : {
+            "w" : "deep11",
+            "e" : "deep11",
+            "u" : "deep5",
+            "n" : "deep10",
+            "d" : "deep13",
+            "s" : "deep10"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Lower Epipelagic Region",
+         "id" : "deep9",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep34@loligo" : {
+         "exits" : {
+            "w" : "deep36",
+            "e" : "deep36",
+            "u" : "deep30",
+            "n" : "deep33",
+            "d" : "deep38",
+            "s" : "deep33"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Bathypelagic Zone",
+         "id" : "deep34",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep23@loligo" : {
+         "exits" : {
+            "w" : "deep21",
+            "e" : "deep21",
+            "u" : "deep19",
+            "n" : "deep24",
+            "d" : "deep27",
+            "s" : "deep24"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Four Hundred Fathoms Down",
+         "id" : "deep23",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep6@loligo" : {
+         "exits" : {
+            "w" : "deep8",
+            "e" : "deep8",
+            "u" : "deep2",
+            "n" : "deep5",
+            "d" : "deep10",
+            "s" : "deep5"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof"
+         ],
+         "zone" : "loligo",
+         "title" : "Sunlit Waters",
+         "id" : "deep6",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss23@loligo" : {
+         "exits" : {
+            "w" : "abyss22",
+            "e" : "abyss24",
+            "u" : "abyss20",
+            "d" : "abyss26"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss23",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep36@loligo" : {
+         "exits" : {
+            "w" : "deep34",
+            "e" : "deep34",
+            "u" : "deep32",
+            "n" : "deep35",
+            "d" : "deep40",
+            "s" : "deep35"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Bathypelagic Zone",
+         "id" : "deep36",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep21@loligo" : {
+         "exits" : {
+            "w" : "deep23",
+            "e" : "deep23",
+            "u" : "deep17",
+            "n" : "deep22",
+            "d" : "deep25",
+            "s" : "deep22"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Four Hundred Fathoms Down",
+         "id" : "deep21",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss1@loligo" : {
+         "exits" : {
+            "w" : "abyss3",
+            "e" : "abyss2",
+            "u" : "deep36",
+            "n" : "deep39",
+            "d" : "abyss4",
+            "s" : "deep40"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "So Dark And Cold...",
+         "id" : "abyss1",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss28@loligo" : {
+         "exits" : {
+            "u" : "abyss25"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark",
+            "Death"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss28",
+         "description" : "\n    Your pressure suit cannot hold out the pressure any longer.  Your death is\ninstantaneous and very, very nasty...\n",
+         "altitude" : null
+      },
+      "deep14@loligo" : {
+         "exits" : {
+            "w" : "deep16",
+            "e" : "deep16",
+            "u" : "deep10",
+            "n" : "deep13",
+            "d" : "deep18",
+            "s" : "deep13"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater"
+         ],
+         "zone" : "loligo",
+         "title" : "Twilight Zone",
+         "id" : "deep14",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "deep24@loligo" : {
+         "exits" : {
+            "w" : "deep22",
+            "e" : "deep22",
+            "u" : "deep20",
+            "n" : "deep23",
+            "d" : "deep28",
+            "s" : "deep23"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Four Hundred Fathoms Down",
+         "id" : "deep24",
+         "description" : "\n",
+         "altitude" : null
+      },
+      "abyss5@loligo" : {
+         "exits" : {
+            "w" : "abyss4",
+            "e" : "abyss6",
+            "u" : "abyss2",
+            "d" : "abyss8"
+         },
+         "flags" : [
+            "Underwater",
+            "Soundproof",
+            "DeepWater",
+            "Dark"
+         ],
+         "zone" : "loligo",
+         "title" : "Abyssopelagic Zone",
+         "id" : "abyss5",
+         "description" : "\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "architeuthis@loligo" : {
+         "damage" : "30",
+         "location" : "abyss25",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Architeuthis",
+         "examine" : "",
+         "description" : "A pale glint of bioluminescent bacteria illuminates a vast shadowy shape.",
+         "strength" : "2300"
+      }
+   }
+}

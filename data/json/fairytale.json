@@ -1,0 +1,3230 @@
+{
+   "obj" : {
+      "golden_trumpet@fairytale" : {
+         "location" : "IN_ROOM:fairytale41",
+         "altname" : "golden",
+         "name" : "golden_trumpet",
+         "examine" : "The trumpet has the words 'Don't call me a mirafone' engraved into the bell.\n",
+         "size" : "8",
+         "pname" : "trumpet",
+         "weight" : "8",
+         "bvalue" : "200",
+         "desc[0]" : "A trumpet is here, shining invitingly."
+      },
+      "door_heavy@fairytale" : {
+         "desc[1]" : "The heavy double doors are closed.",
+         "location" : "IN_ROOM:fairytale82",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "door_heavy",
+         "desc[2]" : "The heavy double doors are locked.",
+         "linked" : "door_heavy_1",
+         "state" : "2",
+         "pname" : "heavy",
+         "maxstate" : "2",
+         "desc[0]" : "The heavy double doors are open."
+      },
+      "door_window_1@fairytale" : {
+         "desc[1]" : "The window is closed.",
+         "location" : "IN_ROOM:fairytale35",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "door_window_1",
+         "desc[2]" : "The window is locked.",
+         "linked" : "door_window",
+         "state" : "2",
+         "pname" : "window",
+         "maxstate" : "2",
+         "desc[0]" : "The window is open."
+      },
+      "top_lid@fairytale" : {
+         "location" : "IN_ROOM:fairytale63",
+         "altname" : "top",
+         "name" : "top_lid",
+         "examine" : "The lid is secured to the top of the coffin.\n",
+         "size" : "20",
+         "pname" : "lid",
+         "weight" : "10",
+         "bvalue" : "200",
+         "desc[0]" : "The lid of the coffin is transparent."
+      },
+      "snake_rug@fairytale" : {
+         "location" : "IN_ROOM:fairytale85",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "snake",
+         "name" : "snake_rug",
+         "examine" : "The rug looks like a snake.\n",
+         "state" : "1",
+         "size" : "20",
+         "pname" : "rug",
+         "weight" : "10",
+         "bvalue" : "50",
+         "desc[0]" : "A rug lies under your feet."
+      },
+      "magic_wand@fairytale" : {
+         "location" : "IN_ROOM:fairytale90",
+         "altname" : "magic",
+         "name" : "magic_wand",
+         "examine" : "It looks like a magic wand!\n",
+         "size" : "10",
+         "pname" : "wand",
+         "weight" : "10",
+         "bvalue" : "10",
+         "desc[0]" : "You think you can see a stick protruding from the mouse-hole."
+      },
+      "bird_nest@fairytale" : {
+         "location" : "IN_ROOM:fairytale36",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "bird",
+         "name" : "bird_nest",
+         "examine" : "It looks like a big nest.  I hope the mother bird isn't around...\n",
+         "size" : "20",
+         "pname" : "nest",
+         "weight" : "10",
+         "bvalue" : "50",
+         "desc[0]" : "An empty nest is nestled among the branches."
+      },
+      "hanging_shield@fairytale" : {
+         "location" : "IN_ROOM:fairytale84",
+         "armor" : "35",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "hanging",
+         "name" : "hanging_shield",
+         "examine" : "A large 'E' in a circle has been stamped onto the front of the shield.\n",
+         "size" : "10",
+         "pname" : "shield",
+         "weight" : "10",
+         "bvalue" : "250",
+         "desc[0]" : "A shield hangs here, waiting for its owner."
+      },
+      "hanging_sword@fairytale" : {
+         "damage" : "20",
+         "location" : "IN_ROOM:fairytale84",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "hanging",
+         "name" : "hanging_sword",
+         "examine" : "It is embossed with a large 'E' in a circle.\n",
+         "size" : "10",
+         "pname" : "sword",
+         "weight" : "10",
+         "bvalue" : "250",
+         "desc[0]" : "A sword hangs here, waiting for its owner."
+      },
+      "null_drawbridge@fairytale" : {
+         "location" : "IN_ROOM:fairytale25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "null",
+         "name" : "null_drawbridge",
+         "examine" : "The drawbridge looks well-used and very strong.\n",
+         "linked" : "null_bridge",
+         "state" : "1",
+         "size" : "40",
+         "pname" : "drawbridge",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A drawbridge extends across the chasm."
+      },
+      "stone_altar@fairytale" : {
+         "location" : "IN_ROOM:fairytale33",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Stone",
+         "name" : "Stone_Altar",
+         "examine" : "The altar has been carved from a single block of stone.\n",
+         "state" : "1",
+         "pname" : "Altar",
+         "bvalue" : "20",
+         "desc[0]" : "An altar stands before you, shining in the light."
+      },
+      "tiny_door@fairytale" : {
+         "desc[1]" : "The tiny door is closed.",
+         "location" : "IN_ROOM:fairytale31",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "tiny",
+         "name" : "tiny_door",
+         "desc[2]" : "The tiny door is locked.",
+         "linked" : "tiny_door_1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The tiny door is open."
+      },
+      "pink_egg@fairytale" : {
+         "location" : "IN_ROOM:fairytale36",
+         "altname" : "pink",
+         "name" : "pink_egg",
+         "examine" : "You wonder what kind of bird would lay a pink egg.\n",
+         "size" : "3",
+         "pname" : "egg",
+         "weight" : "3",
+         "bvalue" : "100",
+         "desc[0]" : "A pink egg lies in the nest"
+      },
+      "g_bod_bot@fairytale" : {
+         "location" : "IN_ROOM:fairytale39",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "g_bod_bot",
+         "linked" : "g_bod_top",
+         "state" : "1",
+         "size" : "100",
+         "pname" : "giant",
+         "weight" : "100",
+         "bvalue" : "0",
+         "desc[0]" : "The giant's body provides a way upto the table."
+      },
+      "beauty_coffin@fairytale" : {
+         "location" : "IN_ROOM:fairytale137",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "beauty",
+         "name" : "beauty_coffin",
+         "examine" : "The coffin looks just like Sleeping Beauty, only bigger.\n",
+         "state" : "1",
+         "size" : "40",
+         "pname" : "coffin",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "Sleeping Beauty lies inside her coffin, sleeping."
+      },
+      "display_case@fairytale" : {
+         "location" : "IN_ROOM:fairytale91",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "display",
+         "name" : "display_case",
+         "examine" : "The case is unlocked.\n",
+         "state" : "1",
+         "size" : "40",
+         "pname" : "case",
+         "weight" : "10",
+         "bvalue" : "10",
+         "desc[0]" : "A display case stands in the corner"
+      },
+      "black_pot@fairytale" : {
+         "location" : "IN_ROOM:fairytale91",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "black",
+         "name" : "black_pot",
+         "examine" : "The pot smells good...\n",
+         "state" : "1",
+         "size" : "30",
+         "pname" : "pot",
+         "weight" : "10",
+         "bvalue" : "10",
+         "desc[0]" : "A pot hangs over the fire."
+      },
+      "bastard_sword@fairytale" : {
+         "damage" : "20",
+         "location" : "IN_ROOM:fairytale24",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "bastard",
+         "name" : "bastard_sword",
+         "examine" : "The sword was made for a real bastard.\n",
+         "size" : "20",
+         "pname" : "sword",
+         "weight" : "10",
+         "bvalue" : "140",
+         "desc[0]" : "A huge bastard sword lies among the rocks."
+      },
+      "tarnished_chest@fairytale" : {
+         "location" : "IN_ROOM:fairytale77",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "tarnished",
+         "name" : "tarnished_chest",
+         "examine" : "It's a really old chest.\n",
+         "size" : "10",
+         "pname" : "chest",
+         "weight" : "10",
+         "bvalue" : "150",
+         "desc[0]" : "A chest lies here, its locks tarnished with age."
+      },
+      "green_balloon@fairytale" : {
+         "location" : "IN_ROOM:fairytale12",
+         "altname" : "green",
+         "pname" : "balloon",
+         "name" : "green_balloon",
+         "examine" : "How could you burst such a pretty balloon?\n",
+         "bvalue" : "10",
+         "desc[0]" : "An inflated green balloon dances merrily."
+      },
+      "jeweled_egg@fairytale" : {
+         "desc[1]" : "A large, jeweled egg is carefully balanced on the bars.",
+         "location" : "IN_ROOM:fairytale31",
+         "altname" : "jeweled",
+         "name" : "jeweled_egg",
+         "examine" : "The egg has been carefully carved by a master jeweller.\n",
+         "size" : "20",
+         "pname" : "egg",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "150",
+         "desc[0]" : "A large, jeweled egg lies here."
+      },
+      "porcelain_pig@fairytale" : {
+         "location" : "IN_ROOM:fairytale91",
+         "altname" : "porcelain",
+         "name" : "porcelain_pig",
+         "examine" : "The pig turns up his nose at you.\n",
+         "size" : "10",
+         "pname" : "pig",
+         "weight" : "10",
+         "bvalue" : "180",
+         "desc[0]" : "A tiny porcelain pig stands inside the case."
+      },
+      "wolf_stew@fairytale" : {
+         "location" : "IN_ROOM:fairytale91",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "wolf",
+         "name" : "wolf_stew",
+         "examine" : "Mmmmmm.....\n",
+         "size" : "20",
+         "pname" : "stew",
+         "weight" : "10",
+         "bvalue" : "10",
+         "desc[0]" : "A large portion of wolf stew is bubbling here."
+      },
+      "large_tapestry@fairytale" : {
+         "location" : "IN_ROOM:fairytale29",
+         "altname" : "large",
+         "name" : "large_tapestry",
+         "examine" : "The tapestry is embroidered with dragons and knights riding across a plain.\n",
+         "size" : "35",
+         "pname" : "tapestry",
+         "weight" : "10",
+         "bvalue" : "500",
+         "desc[0]" : "A large tapestry hangs here."
+      },
+      "silvery_scythe@fairytale" : {
+         "location" : "IN_ROOM:fairytale59",
+         "altname" : "silvery",
+         "name" : "silvery_scythe",
+         "examine" : "The scythe has some words carved into the handle: 'If found, please return to\nthe reaper.'\n",
+         "size" : "15",
+         "pname" : "scythe",
+         "weight" : "10",
+         "bvalue" : "20",
+         "desc[0]" : "A wicked-looking scythe lies here."
+      },
+      "eye_cats@fairytale" : {
+         "location" : "IN_ROOM:fairytale86",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "eye",
+         "name" : "eye_cats",
+         "examine" : "The cat's eye is probably very valuable to the owner.\n",
+         "size" : "10",
+         "pname" : "cats",
+         "weight" : "10",
+         "bvalue" : "300",
+         "desc[0]" : "A tiny cat's eye marble has been dropped here."
+      },
+      "sting_stinger@fairytale" : {
+         "location" : "CARRIED_BY:bumblebee",
+         "altname" : "Sting",
+         "name" : "Sting_Stinger",
+         "examine" : "A giant bee's stinger rests here, dripping with poison.\n",
+         "size" : "10",
+         "pname" : "Stinger",
+         "weight" : "10",
+         "bvalue" : "200",
+         "desc[0]" : "The bee's stinger drips poison."
+      },
+      "large_pearl@fairytale" : {
+         "location" : "IN_ROOM:fairytale4",
+         "altname" : "large",
+         "name" : "large_pearl",
+         "examine" : "You wonder how such a large pearl got so far from the seashore.\nCarrier pigeons come to mind.\n",
+         "size" : "20",
+         "pname" : "pearl",
+         "weight" : "10",
+         "bvalue" : "80",
+         "desc[0]" : "A pearl, nearly the size of your head, lies here."
+      },
+      "door_heavy_1@fairytale" : {
+         "desc[1]" : "The heavy double doors are closed.",
+         "location" : "IN_ROOM:fairytale83",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "door_heavy_1",
+         "desc[2]" : "The heavy double doors are locked.",
+         "linked" : "door_heavy",
+         "state" : "2",
+         "pname" : "heavy",
+         "maxstate" : "2",
+         "desc[0]" : "The heavy double doors are open."
+      },
+      "rock_stone@fairytale" : {
+         "location" : "IN_ROOM:fairytale76",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "rock",
+         "name" : "rock_stone",
+         "examine" : "It just looks...different.\n",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "stone",
+         "weight" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "One of the stones looks different from the rest."
+      },
+      "null_bridge@fairytale" : {
+         "location" : "IN_ROOM:fairytale27",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "null",
+         "name" : "null_bridge",
+         "examine" : "The drawbridge looks well-used and very strong.\n",
+         "linked" : "null_drawbridge",
+         "state" : "1",
+         "size" : "40",
+         "pname" : "drawbridge",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A drawbridge extends across the chasm."
+      },
+      "singing_harp@fairytale" : {
+         "location" : "IN_ROOM:fairytale41",
+         "altname" : "singing",
+         "name" : "singing_harp",
+         "examine" : "A beautiful woman seems to have grown into the harp somehow.  She smiles.\n",
+         "size" : "8",
+         "pname" : "harp",
+         "weight" : "8",
+         "bvalue" : "200",
+         "desc[0]" : "A harp lies here, singing softly to itself."
+      },
+      "diamond_ring@fairytale" : {
+         "location" : "IN_ROOM:fairytale11",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "diamond",
+         "name" : "diamond_ring",
+         "examine" : "It is engraved 'To Ditzhead: Don't lose this one! -Love, GC'\nYou begin to wonder...\n",
+         "size" : "6",
+         "weight" : "6",
+         "pname" : "ring",
+         "bvalue" : "100",
+         "desc[0]" : "A diamond ring gleams from among the cushions of the seat.",
+         "aflags" : [
+            "Hands"
+         ]
+      },
+      "tiny_door_1@fairytale" : {
+         "desc[1]" : "The tiny door is closed.",
+         "location" : "IN_ROOM:fairytale32",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "tiny",
+         "name" : "tiny_door_1",
+         "desc[2]" : "The tiny door is locked.",
+         "linked" : "tiny_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The tiny door is open."
+      },
+      "red_balloon@fairytale" : {
+         "location" : "IN_ROOM:fairytale12",
+         "altname" : "red",
+         "pname" : "balloon",
+         "name" : "red_balloon",
+         "examine" : "How could you burst such a pretty balloon?\n",
+         "bvalue" : "10",
+         "desc[0]" : "An inflated red balloon dances merrily."
+      },
+      "magic_bean@fairytale" : {
+         "location" : "IN_ROOM:fairytale4",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "magic",
+         "name" : "magic_bean",
+         "examine" : "The bean sparkles with magical energies and seems to leap about in your hand.\n",
+         "size" : "5",
+         "pname" : "bean",
+         "weight" : "5",
+         "bvalue" : "20",
+         "desc[0]" : "A bean lies here on the ground, dropped from someone's pocket."
+      },
+      "g_bod_top@fairytale" : {
+         "location" : "IN_ROOM:fairytale38",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "g_bod_top",
+         "linked" : "g_bod_bot",
+         "state" : "1",
+         "size" : "100",
+         "pname" : "giant",
+         "weight" : "100",
+         "bvalue" : "0",
+         "desc[0]" : "The giant's body provides a way off of the table."
+      },
+      "blue_balloon@fairytale" : {
+         "location" : "IN_ROOM:fairytale12",
+         "altname" : "blue",
+         "pname" : "balloon",
+         "name" : "blue_balloon",
+         "examine" : "How could you burst such a pretty balloon?\n",
+         "bvalue" : "10",
+         "desc[0]" : "An inflated blue balloon dances merrily."
+      },
+      "food_fish@fairytale" : {
+         "location" : "IN_ROOM:fairytale64",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "food_fish",
+         "examine" : "The fish look tasty.  I wonder if you could catch them?\n",
+         "size" : "20",
+         "pname" : "fish",
+         "weight" : "10",
+         "bvalue" : "30",
+         "desc[0]" : "A school of fish swims idly around the lake."
+      },
+      "birds_key@fairytale" : {
+         "location" : "IN_ROOM:fairytale36",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "birds",
+         "name" : "birds_key",
+         "examine" : "The key seems to have fallen from the leg of a passenger pigeon.\n",
+         "size" : "1",
+         "pname" : "key",
+         "weight" : "1",
+         "bvalue" : "1",
+         "desc[0]" : "A key is hidden among the branches of the nest."
+      },
+      "plaque_rock@fairytale" : {
+         "location" : "IN_ROOM:fairytale23",
+         "altname" : "plaque",
+         "name" : "plaque_rock",
+         "examine" : "The plaque is engraved 'Beware of sleeping giants!'\n",
+         "state" : "1",
+         "size" : "19",
+         "pname" : "rock",
+         "weight" : "10",
+         "bvalue" : "40",
+         "desc[0]" : "A large rock is balanced upon the limestone.  It seems to have writing on it."
+      },
+      "null_coffin@fairytale" : {
+         "location" : "IN_ROOM:fairytale63",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "null",
+         "name" : "null_coffin",
+         "examine" : "The coffin holds the remains of Jessimine, a beautiful Goddess.\n",
+         "state" : "1",
+         "size" : "40",
+         "pname" : "coffin",
+         "weight" : "10",
+         "bvalue" : "1000",
+         "desc[0]" : "A coffin lies here, carved from a block of crystal."
+      },
+      "gold_key@fairytale" : {
+         "location" : "IN_CONTAINER:null_coffin",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "gold",
+         "name" : "gold_key",
+         "examine" : "The key is lavishly decorated, but doesn't look very strong.\n",
+         "size" : "10",
+         "pname" : "key",
+         "weight" : "10",
+         "bvalue" : "30",
+         "desc[0]" : "A silver and gold key lies inside the coffin."
+      },
+      "rose_seed@fairytale" : {
+         "location" : "IN_ROOM:fairytale8",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "rose",
+         "name" : "rose_seed",
+         "examine" : "The seed is a rose seed, bringing to mind a really sappy country song.\n",
+         "size" : "5",
+         "pname" : "seed",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "There is a seed here, almost ready to sprout."
+      },
+      "hanging_banner@fairytale" : {
+         "location" : "IN_ROOM:fairytale84",
+         "altname" : "hanging",
+         "name" : "hanging_banner",
+         "examine" : "The banner presents a large 'E' in a circle, the mark of Ender.\n",
+         "size" : "40",
+         "pname" : "banner",
+         "weight" : "10",
+         "bvalue" : "200",
+         "desc[0]" : "A banner hangs here, waiting to be carried into battle."
+      },
+      "rotted_chest@fairytale" : {
+         "location" : "IN_ROOM:fairytale77",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "rotted",
+         "name" : "rotted_chest",
+         "examine" : "It's an old chest.\n",
+         "size" : "10",
+         "pname" : "chest",
+         "weight" : "10",
+         "bvalue" : "150",
+         "desc[0]" : "A chest lies here, its hinges rotted away."
+      },
+      "mossy_chest@fairytale" : {
+         "location" : "IN_ROOM:fairytale77",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "mossy",
+         "name" : "mossy_chest",
+         "examine" : "This chest is probably older than you are.\n",
+         "size" : "10",
+         "pname" : "chest",
+         "weight" : "10",
+         "bvalue" : "150",
+         "desc[0]" : "A chest lies here, covered with moss."
+      },
+      "feather_pillow@fairytale" : {
+         "location" : "IN_ROOM:fairytale90",
+         "altname" : "feather",
+         "name" : "feather_pillow",
+         "examine" : "It sure looks comfortable.  You find yourself growing tired...\n",
+         "size" : "45",
+         "pname" : "pillow",
+         "weight" : "10",
+         "bvalue" : "300",
+         "desc[0]" : "A large feather pillow lies atop the others."
+      },
+      "golden_egg@fairytale" : {
+         "location" : "IN_ROOM:fairytale36",
+         "altname" : "golden",
+         "name" : "golden_egg",
+         "examine" : "You wonder what kind of bird laid this golden egg.\n",
+         "size" : "3",
+         "pname" : "egg",
+         "weight" : "3",
+         "bvalue" : "100",
+         "desc[0]" : "A golden egg lies in the nest."
+      },
+      "curtain_tapestry@fairytale" : {
+         "location" : "IN_ROOM:fairytale29",
+         "altname" : "Curtain",
+         "pname" : "Tapestry",
+         "name" : "Curtain_Tapestry",
+         "examine" : "The tapestry has been woven by expert weavers.\n",
+         "bvalue" : "20",
+         "desc[0]" : "A tapestry hangs in front of you, depicting giants throughout history.",
+         "state" : "1"
+      },
+      "wine_flagon@fairytale" : {
+         "location" : "IN_ROOM:fairytale59",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "wine",
+         "name" : "wine_flagon",
+         "examine" : "The wine looks tasty.\n",
+         "size" : "15",
+         "pname" : "flagon",
+         "weight" : "10",
+         "bvalue" : "20",
+         "desc[0]" : "A flagon of wine lies here."
+      },
+      "large_shovel@fairytale" : {
+         "location" : "IN_ROOM:fairytale53",
+         "altname" : "large",
+         "name" : "large_shovel",
+         "examine" : "What kind of kid leaves his or her toys out in the playground?  Sheesh!\n",
+         "size" : "20",
+         "pname" : "shovel",
+         "weight" : "10",
+         "bvalue" : "30",
+         "desc[0]" : "A large, gold-plated shovel has been left here by a careless child."
+      },
+      "steam_pipe_1@fairytale" : {
+         "desc[1]" : "The pipe is closed.",
+         "location" : "IN_ROOM:fairytale136",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "steam",
+         "name" : "steam_pipe_1",
+         "desc[2]" : "There is a pipe here.  It looks hot!",
+         "linked" : "steam_pipe",
+         "state" : "2",
+         "pname" : "pipe",
+         "maxstate" : "2",
+         "desc[0]" : "The pipe is open."
+      },
+      "full_glass@fairytale" : {
+         "location" : "IN_ROOM:fairytale38",
+         "altname" : "full",
+         "name" : "full_glass",
+         "examine" : "The glass is full of something which smells awful!\n",
+         "size" : "10",
+         "pname" : "glass",
+         "weight" : "10",
+         "bvalue" : "30",
+         "desc[0]" : "A glass stands before you, full of a bubbling liquid."
+      },
+      "salty_cracker@fairytale" : {
+         "location" : "IN_ROOM:fairytale59",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "salty",
+         "name" : "salty_cracker",
+         "examine" : "It looks salty.\n",
+         "size" : "15",
+         "pname" : "cracker",
+         "weight" : "10",
+         "bvalue" : "20",
+         "desc[0]" : "A cracker lies here."
+      },
+      "stone_cup@fairytale" : {
+         "location" : "IN_ROOM:fairytale38",
+         "altname" : "stone",
+         "name" : "stone_cup",
+         "examine" : "The cup is full of a greenish liquid.  It smells awful!\n",
+         "size" : "10",
+         "pname" : "cup",
+         "weight" : "10",
+         "bvalue" : "30",
+         "desc[0]" : "A cup stands before you, its contents bubbling softly."
+      },
+      "stole_mink@fairytale" : {
+         "desc[1]" : "A mink stole is woven carefully into the nest.",
+         "location" : "IN_ROOM:fairytale88",
+         "oflags" : [
+            "GetFlips",
+            "Wearable"
+         ],
+         "altname" : "stole",
+         "name" : "stole_mink",
+         "examine" : "You wonder what mink the vixens stole this stole from.\n",
+         "size" : "10",
+         "weight" : "10",
+         "pname" : "mink",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "A mink stole has been discarded here.",
+         "aflags" : [
+            "Back",
+            "Neck"
+         ]
+      },
+      "door_window@fairytale" : {
+         "desc[1]" : "The window is closed.",
+         "location" : "IN_ROOM:fairytale33",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "door_window",
+         "desc[2]" : "The window is locked.",
+         "linked" : "door_window_1",
+         "state" : "2",
+         "pname" : "window",
+         "maxstate" : "2",
+         "desc[0]" : "The window is open."
+      },
+      "puce_egg@fairytale" : {
+         "location" : "IN_ROOM:fairytale36",
+         "altname" : "puce",
+         "name" : "puce_egg",
+         "examine" : "You wonder what kind of bird would lay a puce egg.\n",
+         "size" : "3",
+         "pname" : "egg",
+         "weight" : "3",
+         "bvalue" : "100",
+         "desc[0]" : "A puce egg lies in the nest."
+      },
+      "beauty_crown@fairytale" : {
+         "location" : "IN_CONTAINER:beauty_coffin",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "beauty",
+         "name" : "beauty_crown",
+         "examine" : "The crown is covered with gems.\n",
+         "pname" : "crown",
+         "weight" : "10",
+         "bvalue" : "300",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A crown lies in the coffin."
+      },
+      "prison_door@fairytale" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:fairytale37",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "prison",
+         "name" : "prison_door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "prison_door_1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "spray_raid@fairytale" : {
+         "damage" : "25",
+         "location" : "CARRIED_BY:exterminator",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "spray",
+         "pname" : "raid",
+         "name" : "spray_raid",
+         "examine" : "The sword looks like it was made to kill bugs.\n",
+         "bvalue" : "100",
+         "desc[0]" : "A sword stands before you, striped black and red.  It is marked 'Raid'."
+      },
+      "prison_door_1@fairytale" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:fairytale38",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "prison",
+         "name" : "prison_door_1",
+         "desc[2]" : "The door is locked.",
+         "linked" : "prison_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "beauty_robe@fairytale" : {
+         "location" : "IN_CONTAINER:beauty_coffin",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "beauty",
+         "name" : "beauty_robe",
+         "examine" : "The robe is made of woven silk and gold threads.\n",
+         "size" : "10",
+         "weight" : "10",
+         "pname" : "robe",
+         "bvalue" : "300",
+         "desc[0]" : "A robe lies in the coffin.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Legs",
+            "Arms"
+         ]
+      },
+      "steam_pipe@fairytale" : {
+         "desc[1]" : "The pipe is closed.",
+         "location" : "IN_ROOM:fairytale135",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "steam",
+         "name" : "steam_pipe",
+         "desc[2]" : "There is a pipe here.  It looks hot!",
+         "linked" : "steam_pipe_1",
+         "state" : "2",
+         "pname" : "pipe",
+         "maxstate" : "2",
+         "desc[0]" : "The pipe is open."
+      }
+   },
+   "loc" : {
+      "fairytale49@fairytale" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale49",
+         "description" : "\n  You step onto a bar, and it tears loose...\n",
+         "altitude" : null
+      },
+      "fairytale25@fairytale" : {
+         "exits" : {
+            "e" : "^null_drawbridge",
+            "w" : "fairytale22",
+            "d" : "fairytale26"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Moat",
+         "id" : "fairytale25",
+         "description" : "\n  You stand on one side of a cliff. On the other side you see a castle,\nand in front of the castle is a bridge mounted on wheels. Far below\nyou you see a smoking crater in the earth, as though something had\nsomehow burned through the original bridge on its way down.\n  A drawbridge is here, mounted on wheels.\n",
+         "altitude" : null
+      },
+      "fairytale136@fairytale" : {
+         "exits" : {
+            "u" : "fairytale137",
+            "s" : "^steam_pipe_1"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Secret Stairs",
+         "id" : "fairytale136",
+         "description" : "\nA staircase rises into the room above you.\n",
+         "altitude" : null
+      },
+      "fairytale71@fairytale" : {
+         "exits" : {
+            "s" : "fairytale70"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Grotto",
+         "id" : "fairytale71",
+         "description" : "\n  You have entered a large room, lit by an opening in the wall to the\nnorth. You suspect that you can squeeze through that hole if you\nreally try, and you realize that you hear rumbling behind it. The\nwalls are decorated with elaborate scenes of the Gods and\nGoddesses at play.\n",
+         "altitude" : null
+      },
+      "fairytale75@fairytale" : {
+         "exits" : {
+            "e" : "fairytale76",
+            "d" : "fairytale70"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lower Cavern",
+         "id" : "fairytale75",
+         "description" : "\n A light burns here, with no visible source. Perhaps the inhabitants of\nthese caverns were able to cast spells which lasted longer than they did.\n",
+         "altitude" : null
+      },
+      "fairytale37@fairytale" : {
+         "exits" : {
+            "w" : "fairytale33",
+            "e" : "^prison_door"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Entrance to the Great Hall",
+         "id" : "fairytale37",
+         "description" : "\n  Two arched doors stand before you on the eastern wall. They are\nelaborately carved, and seem to tell a story of a man named Jack\nwho stole many things from a giant. The story ends with a panel of a\nlarge man eating a sandwich, from which two feet protrude. To the\nwest, you see colored light streaming in through the open door. The\nwalls are decorated with portraits of important giants of history.\n",
+         "altitude" : null
+      },
+      "fairytale52@fairytale" : {
+         "exits" : {
+            "d" : "fairytale51"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale52",
+         "description" : "\n You climb on the monkey bars. Many bars are missing, and some are loose.\n",
+         "altitude" : null
+      },
+      "fairytale12@fairytale" : {
+         "exits" : {
+            "e" : "fairytale9"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "The Balloon Ride",
+         "id" : "fairytale12",
+         "description" : "\n  A large balloon is in the docking bay here. It looks like it would be\nstrong enough to lift you off the ground. Smaller versions of the\nballoon are tied to the railing around the ride for decoration.\n",
+         "altitude" : null
+      },
+      "fairytale80@fairytale" : {
+         "exits" : {
+            "e" : "fairytale82",
+            "u" : "fairytale78",
+            "d" : "fairytale79"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Down the Well",
+         "id" : "fairytale80",
+         "description" : "\n You are partway down the well, in a good position to try for the door.\nThe rungs are much more slippery than you had thought that they would be.\n",
+         "altitude" : null
+      },
+      "fairytale15@fairytale" : {
+         "exits" : {
+            "w" : "fairytale15",
+            "e" : "fairytale16",
+            "n" : "fairytale15",
+            "s" : "fairytale14"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lost in the Fun House",
+         "id" : "fairytale15",
+         "description" : "\n  You are lost in the Fun House. Mirrors surround you.\n",
+         "altitude" : null
+      },
+      "fairytale130@fairytale" : {
+         "exits" : {
+            "n" : "fairytale131",
+            "d" : "fairytale129"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Portal",
+         "id" : "fairytale130",
+         "description" : "\n You are inside a large, wooden portal. Along the north wall are a\nseries of levers marked 'up', 'down', and 'open'. The lighting in this\nbox is provided by tubes which glow softly above you.\n",
+         "altitude" : null
+      },
+      "fairytale58@fairytale" : {
+         "exits" : {
+            "w" : "fairytale98",
+            "e" : "fairytale97",
+            "n" : "fairytale57",
+            "s" : "fairytale59"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "End of the Road",
+         "id" : "fairytale58",
+         "description" : "\n  Happy Road ends here. To leave the village, one must go north. To\nthe south is a rather large department store, and to the east and\nwest are houses labeled 'Ariel' and 'Rumplestilskin', respectively.\n",
+         "altitude" : null
+      },
+      "fairytale84@fairytale" : {
+         "exits" : {
+            "u" : "fairytale85",
+            "d" : "fairytale83"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Middle of Stairs",
+         "id" : "fairytale84",
+         "description" : "\n  You stand on a landing, halfway up the tower. You are level with\none of the displays of equipment. The snake rug continues up and down,\nand the colorful patterns embroidered on it swirl before your eyes.\n",
+         "altitude" : null
+      },
+      "fairytale48@fairytale" : {
+         "exits" : {
+            "w" : "fairytale49",
+            "e" : "fairytale48",
+            "u" : "fairytale46",
+            "n" : "fairytale48",
+            "d" : "fairytale50",
+            "s" : "fairytale47"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale48",
+         "description" : "\n You climb on the monkey bars. Many bars are missing, and some are loose.\n",
+         "altitude" : null
+      },
+      "fairytale131@fairytale" : {
+         "exits" : {
+            "w" : "fairytale132",
+            "e" : "fairytale130"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Spinning Room",
+         "id" : "fairytale131",
+         "description" : "\n  You have entered a large spinning room. Four spinning wheels are\narranged in a square, at the center of which is a large pile of\nspindles, all fully threaded. To the east is \nwest is another room.\n",
+         "altitude" : null
+      },
+      "fairytale117@fairytale" : {
+         "exits" : {
+            "n" : "fairytale115"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Bedroom",
+         "id" : "fairytale117",
+         "description" : "\n  You have entered the smaller of two guest rooms. The only exit is\nto the north, into the hallway. A closet, a small bed, a tiny desk,\nand a padded chair decorate the room. A tapestry is spread across\nthe west wall, bulging slightly in the center as though it were\nwarped by water.\n",
+         "altitude" : null
+      },
+      "fairytale105@fairytale" : {
+         "exits" : {
+            "w" : "fairytale102",
+            "n" : "fairytale101",
+            "d" : "fairytale109"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Pantry",
+         "id" : "fairytale105",
+         "description" : "\n  You have entered a large food-storage room. It is empty now,\nperhaps cleaned out by the inhabitants of the three small mouse\nholes which are evenly placed on the south wall. One of the shelves\nhas been unfastened from the east wall.\n",
+         "altitude" : null
+      },
+      "fairytale36@fairytale" : {
+         "exits" : {
+            "d" : "fairytale35"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "In the Scar",
+         "id" : "fairytale36",
+         "description" : "\n  There is a huge scar across the trunk of the tree, the product of\nsome ancient storm. It prevents any further passage upwards. The\ntree here looks diseased and weakened, but it is healthy below.\n",
+         "altitude" : null
+      },
+      "fairytale4@fairytale" : {
+         "exits" : {
+            "w" : "fairytale3"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "In the Vine",
+         "id" : "fairytale4",
+         "description" : "\n  You stand inside a small room, decorated with pictures of great\nmusicians: The Beatles, Buddy Holly and the Crickets, the Roches,\nand others. A few copies of Playbug are scattered around the room;\none is open to the centerfold.\nThe room looks like a basic bachelor's pad.\n",
+         "altitude" : null
+      },
+      "fairytale59@fairytale" : {
+         "exits" : {
+            "n" : "fairytale58"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Store",
+         "id" : "fairytale59",
+         "description" : "\n  You have entered an all-purpose store, where you may purchase\nfood, drink, and weapons. The proprietor wanders in and out intermittently.\n",
+         "altitude" : null
+      },
+      "fairytale55@fairytale" : {
+         "exits" : {
+            "w" : "fairytale91",
+            "e" : "fairytale89",
+            "n" : "fairytale54",
+            "s" : "fairytale56"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Happy Road",
+         "id" : "fairytale55",
+         "description" : "\n  Happy Road stretches to the north and south. It has been named for\nthe line of smiley faces which lie in the center of the road, dividing\nit in half. A sign stands here, informing you that the Three Pigs live\nto the west and Cinderella to the east.\n",
+         "altitude" : null
+      },
+      "fairytale122@fairytale" : {
+         "exits" : {
+            "d" : "fairytale113",
+            "s" : "fairytale123"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fairytale",
+         "title" : "Stairs",
+         "id" : "fairytale122",
+         "description" : "\n  You stand at the top of the stairs which descend to the landing and\nporch below. The staircase is encased in glass, and you can see the\nforest far below you. Above you you notice that the mansion\ncontinues to rise. A door leads west into the sitting room.\n",
+         "altitude" : null
+      },
+      "fairytale23@fairytale" : {
+         "exits" : {
+            "n" : "fairytale24",
+            "s" : "fairytale22"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Landslide",
+         "id" : "fairytale23",
+         "description" : "\n  You stand amidst a pile of fallen limestone, as though a mountain\nhas collapsed in upon itself. Cleared through the rubble is a path to\nthe north.\n",
+         "altitude" : null
+      },
+      "fairytale118@fairytale" : {
+         "exits" : {
+            "e" : "fairytale116",
+            "s" : "fairytale119"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fairytale",
+         "title" : "Bathroom",
+         "id" : "fairytale118",
+         "description" : "\n  The bathroom is quite simple. A stool is in the northwest corner\nof the room, connected to the floor by a tube. A basin stands against\nthe west wall, filled with warm water. A larger basin is in the\nsouthwest corner, also filled with water.\n",
+         "altitude" : null
+      },
+      "fairytale93@fairytale" : {
+         "exits" : {
+            "d" : "fairytale92"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Loft",
+         "id" : "fairytale93",
+         "description" : "\n  You have entered a small loft, which contains three beds. One of\nthem is very large, one is medium-sized, and the third is rather\nsmall. A series of curtains can be pulled to divide the room, but\nthey stand open. On the medium-sized bed lies a pile of pillows.\n",
+         "altitude" : null
+      },
+      "fairytale104@fairytale" : {
+         "exits" : {
+            "w" : "fairytale103",
+            "s" : "fairytale101"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fairytale",
+         "title" : "Living Room East",
+         "id" : "fairytale104",
+         "description" : "\n  You are in a large living room, which extends the depth of the\nhouse. To the west it continues, and to the south is a kitchen. Out\nthe window to the east you see a staircase going up to the next\nlevel. A card table is set up here, with a deck of cards and four\npiles of colored discs. Four chairs have been carefully set around\nthe table. In the corner is a bar, fully stocked.\n",
+         "altitude" : null
+      },
+      "fairytale35@fairytale" : {
+         "exits" : {
+            "u" : "fairytale36",
+            "n" : "^door_window_1"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Branch",
+         "id" : "fairytale35",
+         "description" : "\n  You stand on the swaying branch of an ancient tree. The bark is\nthick and gnarled, and you suspect that you could climb here. To the\nnorth you see a room full of windows, and above you is a huge scar in\nthe trunk.\n",
+         "altitude" : null
+      },
+      "fairytale89@fairytale" : {
+         "exits" : {
+            "w" : "fairytale55",
+            "u" : "fairytale90"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Cinderella's House",
+         "id" : "fairytale89",
+         "description" : "\n  You stand in the doorway to the fabled house of Cinderella. Her\nfamous housecleaning abilities are reflected in this dust-free\nenvironment. A stairway leads up to a small landing, on which you\ncan see a table. A fireplace on the far wall, where she was rumored\nto have slept, has a pallet spread in it. Wandering over to a table,\nyou are startled to see your reflection in it. Amazingly, she has\neven done the windows.\n",
+         "altitude" : null
+      },
+      "fairytale1@fairytale" : {
+         "exits" : {
+            "u" : "fairytale2",
+            "s" : "Gardens@oaktree"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Garden",
+         "id" : "fairytale1",
+         "description" : "\n  You stand in an unexplored section of the garden. The way back\nto the rest of the mansion gardens is to the south. Before you stands\na huge vine, rising up into the clouds. It looks strong enough to hold you.\n",
+         "altitude" : null
+      },
+      "fairytale40@fairytale" : {
+         "exits" : {
+            "u" : "fairytale41"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Padded Room",
+         "id" : "fairytale40",
+         "description" : "\n  A long slide ends here, in a room which is entirely padded. Foam\nrubber lines the walls, the ceiling, and the floor. A hole in the\nceiling is marked 'Fairyland', and a hole in the floor is marked 'Heaven'.\n",
+         "altitude" : null
+      },
+      "fairytale9@fairytale" : {
+         "exits" : {
+            "w" : "fairytale12",
+            "e" : "fairytale13",
+            "n" : "fairytale10",
+            "s" : "fairytale6"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Carnival Entrance",
+         "id" : "fairytale9",
+         "description" : "\n  You have entered a carnival. All around you, you see families enjoying\nthemselves, riding rides and eating cotton candy. To the north is a ferris\nwheel, to the west a balloon ride, and the the east you see the entrance to\na fun house.\n",
+         "altitude" : null
+      },
+      "fairytale53@fairytale" : {
+         "exits" : {
+            "s" : "fairytale42"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Sandbox",
+         "id" : "fairytale53",
+         "description" : "\n  Here children dig in the sand, building castles and towns. Upon\nyour arrival, they throw sand at you and yell and shout, protesting\nthe presence of an adult on a children's world.\n",
+         "altitude" : null
+      },
+      "fairytale50@fairytale" : {
+         "exits" : {
+            "w" : "fairytale48",
+            "e" : "fairytale50",
+            "u" : "fairytale51",
+            "n" : "fairytale47",
+            "d" : "fairytale50",
+            "s" : "fairytale49"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale50",
+         "description" : "\n You climb on the monkey bars. Many bars are missing, and some are loose.\n",
+         "altitude" : null
+      },
+      "fairytale18@fairytale" : {
+         "exits" : {
+            "w" : "fairytale17",
+            "e" : "fairytale18",
+            "n" : "fairytale19",
+            "s" : "fairytale18"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lost in the Fun House",
+         "id" : "fairytale18",
+         "description" : "\n  You are lost in the Fun House. Mirrors surround you.\n",
+         "altitude" : null
+      },
+      "fairytale64@fairytale" : {
+         "exits" : {
+            "n" : "fairytale65",
+            "s" : "fairytale42"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "The River",
+         "id" : "fairytale64",
+         "description" : "\n  A river flows past you, tinkling peacefully. The plants which grow\nhere create a peaceful, gentle feeling. You are overcome by an urge\nto go to sleep on this manicured lawn. To the south is a lake, in\nwhich you see an island. To the north the river continues.\n",
+         "altitude" : null
+      },
+      "fairytale57@fairytale" : {
+         "exits" : {
+            "e" : "fairytale96",
+            "w" : "fairytale95",
+            "n" : "fairytale56",
+            "s" : "fairytale58"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Happy Road",
+         "id" : "fairytale57",
+         "description" : "\n  You have entered the well-off section of the village. The houses to\nthe east and west are modeled after Victorian mansions, and you\nsuspect that they might still be occupied. A plaque on the western\nhouse reads 'Snow White', and the eastern plaque is 'Sleeping Beauty.'\n",
+         "altitude" : null
+      },
+      "fairytale83@fairytale" : {
+         "exits" : {
+            "w" : "^door_heavy_1",
+            "u" : "fairytale84"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Bottom Floor",
+         "id" : "fairytale83",
+         "description" : "\n  A flight of stairs rises above you, and as you follow the spiral\nwith your eyes, you find your gaze straying to the decorations on the\nwalls. Swords, shields, and various multi-colored banners hang in\ncolorful displays, and are interspersed with arched windows and oil\nlamps. Your head begins to spin as your blood drains from it, and you\ntear your gaze away from the walls to focus on the floor. There you\nsee a rug which looks like a psychedelic snake. The rug continues up\nthe stairs.\n",
+         "altitude" : null
+      },
+      "fairytale137@fairytale" : {
+         "exits" : {
+            "d" : "fairytale136"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Sleeping Beauty's Room",
+         "id" : "fairytale137",
+         "description" : "\n  You have entered a large, lavishly-decorated room. This must be\nthe end of your quest, for among the gold brocade and silver\nfurniture is a coffin. A throne rests against the north wall, inlaid\nwith expensive gems. A crown rests on the throne, also inlaid with\nshining stones. A closet filled with valuable robes and gowns is\nagainst the east wall. The coffin is made of an alloy which you do\nnot recognize, which seems to reflect the light. The coffin has been\ncarved with Sleeping Beauty's name and face.\n",
+         "altitude" : null
+      },
+      "fairytale20@fairytale" : {
+         "exits" : {
+            "w" : "fairytale21",
+            "e" : "fairytale20",
+            "n" : "fairytale20",
+            "s" : "fairytale19"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lost in the Fun House",
+         "id" : "fairytale20",
+         "description" : "\n  You are lost in the Fun House. Mirrors surround you.\n",
+         "altitude" : null
+      },
+      "fairytale21@fairytale" : {
+         "exits" : {
+            "e" : "fairytale20"
+         },
+         "flags" : [
+            "NoSummon"
+         ],
+         "zone" : "fairytale",
+         "title" : "Lost in the Fun House",
+         "id" : "fairytale21",
+         "description" : "\n  You are lost in the Fun House. Mirrors surround you.\n  One mirror stands in front of you, clearer than any other mirror\nyou have ever seen. Reflected in the mirror, next to your own\nreflection, is the reflection of a huge block of silver.\n",
+         "altitude" : null
+      },
+      "fairytale77@fairytale" : {
+         "exits" : {
+            "d" : "fairytale76"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Treasure Chamber",
+         "id" : "fairytale77",
+         "description" : "\n  You have discovered the treasure chamber of the ancient priests of\nthe rainbow tribe! The cavern is damp and cold, and the sights are as\nchilling as the air. Skeletons lie randomly around the room, as\nthough thrown around by some giant hand. Scraps of fabrics and\njewelry are visible mixed with the bones.\n",
+         "altitude" : null
+      },
+      "fairytale26@fairytale" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "fairytale",
+         "title" : "Pit",
+         "id" : "fairytale26",
+         "description" : "\n  You have fallen into a pit which rises as far up as the eye can see.\nIn the center of the pit is a small disc. As you approach it for a\ncloser look, it opens and a tiny woman jumps out. She screams 'In\nthe name of glorious queen Rosmar, I claim this--' she breaks off as\nshe catches sight of you. 'Oh dear,' she exclaims, 'It's already\ninhabited!'\nWith that, she jumps back into the disc, which closes and rises from\nthe ground. A violet beam of light erupts from it and spears you\nbetween the eyes...\n",
+         "altitude" : null
+      },
+      "fairytale86@fairytale" : {
+         "exits" : {
+            "u" : "fairytale87",
+            "s" : "fairytale85"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Beyond the Mirror",
+         "id" : "fairytale86",
+         "description" : "\n  You stand at the foot of a staircase which winds up and into the\ndarkness. This room appears to have been hewn from solid rock, and\na few pebbles lie on the floor. From above you, you smell foxes.\n",
+         "altitude" : null
+      },
+      "fairytale94@fairytale" : {
+         "exits" : {
+            "e" : "fairytale56"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Mother Hubbard's",
+         "id" : "fairytale94",
+         "description" : "\n  You enter a sparsely furnished one-room house. A wooden chair\nsits before a rickety table, and a bed lies in the corner. A thin\nmattress rests upon the bed. The only thing of interest is a cupboard\non the wall, carved with elaborate patterns.\n",
+         "altitude" : null
+      },
+      "fairytale116@fairytale" : {
+         "exits" : {
+            "w" : "fairytale118",
+            "s" : "fairytale115"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Bedroom",
+         "id" : "fairytale116",
+         "description" : "\n  You have entered the largest of two bedrooms. To the west is the\nbathroom, and to the south is the hallway. A large bed rests here\nbeneath a canopy, which is supported by four elaborate oak posts. A\ncloset stands next to the window. A small desk dozes quietly near\nthe east wall, covered with papers.\n",
+         "altitude" : null
+      },
+      "fairytale39@fairytale" : {
+         "exits" : {
+            "u" : "^g_bod_bot",
+            "d" : "fairytale40"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Slide",
+         "id" : "fairytale39",
+         "description" : "\n  You stand at the top of a slide. Below you is the entrance to Fairyland.\n",
+         "altitude" : null
+      },
+      "fairytale45@fairytale" : {
+         "exits" : {
+            "w" : "fairytale45",
+            "e" : "fairytale49",
+            "u" : "fairytale45",
+            "d" : "fairytale44",
+            "s" : "fairytale46"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale45",
+         "description" : "\n You climb on the monkey bars. Many bars are missing, and some are loose.\n",
+         "altitude" : null
+      },
+      "fairytale107@fairytale" : {
+         "exits" : {
+            "u" : "fairytale113",
+            "s" : "fairytale106"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Stairs",
+         "id" : "fairytale107",
+         "description" : "\n  A set of stairs climb the wall of the house here, encased in glass\nto protect it from the wind and rain. A window to the west looks\ninto a large living room.\n",
+         "altitude" : null
+      },
+      "fairytale114@fairytale" : {
+         "exits" : {
+            "w" : "fairytale115",
+            "n" : "fairytale113",
+            "s" : "fairytale121"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Top Porch",
+         "id" : "fairytale114",
+         "description" : "\n  You stand on a railed porch. A glass roof is above you, and you can\nsee clouds drift slowly past. To the east you may look down on the\ntrees, which are just below your height. To your south is a large\nmetal cube, and to the west is a hallway. Lying around the porch are\nvarious pieces of lounge furniture, such as a patio chair, a\nhammock, and a porch swing. This room appears to be a lovely place\nfor a porch party.\n",
+         "altitude" : null
+      },
+      "fairytale56@fairytale" : {
+         "exits" : {
+            "w" : "fairytale94",
+            "e" : "fairytale92",
+            "n" : "fairytale55",
+            "s" : "fairytale57"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Happy Road",
+         "id" : "fairytale56",
+         "description" : "\n  Happy Road continues here to the north and south, and you realize\nthat the houses on the right and left sides of the road look as though\nthey have been abandoned for some time. A sign on the house to the east\nsays 'Three Bears', and the sign on the western house reads 'Mom Hubbard.'\n",
+         "altitude" : null
+      },
+      "fairytale113@fairytale" : {
+         "exits" : {
+            "u" : "fairytale122",
+            "d" : "fairytale107",
+            "s" : "fairytale118"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Stairs",
+         "id" : "fairytale113",
+         "description" : "\n  You stand on a small platform, which serves as a landing. To your\nwest is a mirror on the wall of the house, and to the south is a\nscreened door through which you can see a porch, complete with\nfurniture. The stairs continue up and down, encased in glass to\nprotect people from the elements.\n",
+         "altitude" : null
+      },
+      "fairytale3@fairytale" : {
+         "exits" : {
+            "e" : "fairytale4",
+            "u" : "fairytale5",
+            "d" : "fairytale2"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Vine",
+         "id" : "fairytale3",
+         "description" : "\n  The vine here is softer than that above and below it. You suspect\nthat parasites have been nibbling at it. It continues up and down.\n",
+         "altitude" : null
+      },
+      "fairytale41@fairytale" : {
+         "exits" : {
+            "e" : "fairytale42",
+            "d" : "fairytale40"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Music Room",
+         "id" : "fairytale41",
+         "description" : "\n  This room is dedicated to music. A beautiful stereo system lines\nthe north wall, and a rack of CDs lines the south wall. Pictures of\nfamous composers are on the western wall. A door to the east leads\noutside, and a hole in the floor leads to a padded room.\n",
+         "altitude" : null
+      },
+      "fairytale106@fairytale" : {
+         "exits" : {
+            "w" : "fairytale101",
+            "n" : "fairytale107",
+            "s" : "fairytale108"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Porch",
+         "id" : "fairytale106",
+         "description" : "\n  You stand on the back porch, gazing out into the forest which\nsurrounds the house. To the north, you see a staircase leading up the\nside of the house, enclosed in glass. To your south is a large steel\ncube, and to the west is a kitchen.\n",
+         "altitude" : null
+      },
+      "fairytale91@fairytale" : {
+         "exits" : {
+            "e" : "fairytale55"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "The Three Pigs",
+         "id" : "fairytale91",
+         "description" : "\n  This residence appears to be the brick home of the three little\npigs. The smell of a finely-cooked stew assails your nose,\napparently emanating from the pot over the cooking fire. The entire\nhouse is built of brick, and is done in the style known as 'early\nswine', Pictures of famous pigs line the walls, such as Porky,\nPenelope, and Miss Piggy. A newspaper on the end-table advertises\nthe opening of a new Piggly-Wiggly supermarket, and lies next to an\nillustrated version of 'Charlotte's Web'. Small porcelain pigs are\ndisplayed prominently in a case on the wall.\n",
+         "altitude" : null
+      },
+      "fairytale69@fairytale" : {
+         "exits" : {
+            "w" : "fairytale67",
+            "n" : "fairytale70",
+            "d" : "fairytale68"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Cave Entrance",
+         "id" : "fairytale69",
+         "description" : "\n  You stand before the dark mouth of a cave, which seems to extend\nfar into the distance. To the west is a cloud of mist, in which you\nsee a rainbow suspended in the air.\n",
+         "altitude" : null
+      },
+      "fairytale6@fairytale" : {
+         "exits" : {
+            "w" : "fairytale7",
+            "e" : "fairytale22",
+            "n" : "fairytale9",
+            "d" : "fairytale5"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Cloud Bank",
+         "id" : "fairytale6",
+         "description" : "\n You stand among a field of clouds. To the east, in the distance, you see\na castle rising out of some white mountains. To the west, a huge rose towers\nabove you. From the north you smell cotton candy and hear children laughing.\nBelow you the vine reaches through the clouds and eventually reaches the\nground.\n",
+         "altitude" : null
+      },
+      "fairytale47@fairytale" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale47",
+         "description" : "\n  You grab onto a bar, and it tears loose...\n",
+         "altitude" : null
+      },
+      "fairytale96@fairytale" : {
+         "exits" : {
+            "w" : "fairytale57",
+            "e" : "fairytale101",
+            "n" : "fairytale103",
+            "s" : "fairytale102"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Sleeping Beauty",
+         "id" : "fairytale96",
+         "description" : "\n  This is the fabled home of Sleeping Beauty. Somewhere in this\nhouse, it is rumored, a woman sleeps, having been cursed by an evil\nwitch to slumber forever. The house itself is rather large, and you\nsuspect it would take quite some time to investigate the whole\nplace. A kitchen is to the east, the living room is to the north, and\nto the south lies the dining room.\nHere, in the entrance hall, a series of coat hooks line the wall.\n",
+         "altitude" : null
+      },
+      "fairytale46@fairytale" : {
+         "exits" : {
+            "e" : "fairytale48",
+            "u" : "fairytale46",
+            "n" : "fairytale47",
+            "d" : "fairytale45",
+            "s" : "fairytale47"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale46",
+         "description" : "\n You climb on the monkey bars. Many bars are missing, and some are loose.\n",
+         "altitude" : null
+      },
+      "fairytale7@fairytale" : {
+         "exits" : {
+            "e" : "fairytale6",
+            "u" : "fairytale8"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Giant's Garden",
+         "id" : "fairytale7",
+         "description" : "\n Tall flowers and huge vegetables loom above you. Some of the plants look\nstrong enough to support your weight, including a beautiful rose which casts\nits delicate shadow over you.\n",
+         "altitude" : null
+      },
+      "fairytale27@fairytale" : {
+         "exits" : {
+            "w" : "^null_bridge",
+            "e" : "fairytale28"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Drawbridge",
+         "id" : "fairytale27",
+         "description" : "\n  A drawbridge is here, mounted on wheels. It can be pushed across\nthe moat to bridge the gap. The castle itself rises far above you to\nthe east.\n",
+         "altitude" : null
+      },
+      "fairytale51@fairytale" : {
+         "exits" : {
+            "w" : "fairytale49",
+            "e" : "fairytale50",
+            "u" : "fairytale52",
+            "n" : "fairytale47",
+            "d" : "fairytale51",
+            "s" : "fairytale51"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale51",
+         "description" : "\n You climb on the monkey bars. Many bars are missing, and some are loose.\n",
+         "altitude" : null
+      },
+      "fairytale8@fairytale" : {
+         "exits" : {
+            "d" : "fairytale7"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Inside the Rose",
+         "id" : "fairytale8",
+         "description" : "\n  You stand inside a beautiful rose, as big as a house. You are almost\nknocked out by its smell. From your vantage point, you can see a carnival\nwith a ferris wheel and balloon rides. Also, far in the distance, you can\nmake out a castle which seems to be floating on a cloud.\n",
+         "altitude" : null
+      },
+      "fairytale22@fairytale" : {
+         "exits" : {
+            "w" : "fairytale6",
+            "e" : "fairytale25",
+            "n" : "fairytale23"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Rolling Hills",
+         "id" : "fairytale22",
+         "description" : "\n  The clouds here slope gently up and down, and in some places grass\nhas sprouted. In the distance to the east you see a floating castle,\nand to the north lies a pile of fallen rubble. To the west you see a\nclearing.\n",
+         "altitude" : null
+      },
+      "fairytale119@fairytale" : {
+         "exits" : {
+            "e" : "fairytale115",
+            "n" : "fairytale118",
+            "s" : "fairytale120"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Hallway",
+         "id" : "fairytale119",
+         "description" : "\n  The hallway ends here. It extends to the east, and to the south and\nthe north are doors. The southern door is open.\n",
+         "altitude" : null
+      },
+      "fairytale102@fairytale" : {
+         "exits" : {
+            "e" : "fairytale105",
+            "n" : "fairytale96"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fairytale",
+         "title" : "Family Room",
+         "id" : "fairytale102",
+         "description" : "\n  You have entered a large room, in which the family commonly spent\ntime before the Time of the Great Sleep. Couches and chairs are\nspread artistically around the room, facing each other and the tables\nalternately. A small hole is in the floor, from which flows a stream\nof hot air. The furniture is covered with transparent material\nwhich is coated with a layer of dust. North of you is the entry room,\nand to the east is the pantry.\n",
+         "altitude" : null
+      },
+      "fairytale2@fairytale" : {
+         "exits" : {
+            "u" : "fairytale3",
+            "d" : "fairytale1"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Vine",
+         "id" : "fairytale2",
+         "description" : "\n  The vine seems to be solid, and you find it easy to climb both up\nand down.\n",
+         "altitude" : null
+      },
+      "fairytale61@fairytale" : {
+         "exits" : {
+            "w" : "fairytale60",
+            "e" : "fairytale62"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "fairytale",
+         "title" : "On the Lake",
+         "id" : "fairytale61",
+         "description" : "\n  To your east is an island. It appears to be man-made, as evidenced\nby the metallic sheen of the bank. A huge statue rises from the\ncenter of the island, representing a tall woman with benevolent\nfeatures and outstretched hands.\n",
+         "altitude" : null
+      },
+      "fairytale112@fairytale" : {
+         "exits" : {
+            "e" : "fairytale111"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Sewer Intake",
+         "id" : "fairytale112",
+         "description" : "\n  The first thing you notice about this room is the large pipe which\nsticks out of the ceiling. From it, a trickle of water runs down into\na large cavity in the floor. From below, you hear the sound of\nrushing water, as if from an underground river. It would appear that\nyou have discovered an early form of sewer system.\n",
+         "altitude" : null
+      },
+      "fairytale44@fairytale" : {
+         "exits" : {
+            "w" : "fairytale45",
+            "e" : "fairytale43",
+            "u" : "fairytale44",
+            "d" : "fairytale49"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale44",
+         "description" : "\n You climb on the monkey bars. Many bars are missing, and some are loose.\n",
+         "altitude" : null
+      },
+      "fairytale126@fairytale" : {
+         "exits" : {
+            "w" : "fairytale125"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Store-Room",
+         "id" : "fairytale126",
+         "description" : "\n  You stand in a store-room. Here artists keep their materials for\ntheir art, including canvasses, paints, and slabs of stone. Light\nenters the room from the west door.\n",
+         "altitude" : null
+      },
+      "fairytale70@fairytale" : {
+         "exits" : {
+            "w" : "fairytale74",
+            "e" : "fairytale72",
+            "u" : "fairytale75",
+            "n" : "fairytale71",
+            "d" : "fairytale69",
+            "s" : "fairytale73"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Cave Mouth",
+         "id" : "fairytale70",
+         "description" : "\n  Below you, you see a light glowing in the darkness. The cavern\nitself extends in all directions.\n",
+         "altitude" : null
+      },
+      "fairytale125@fairytale" : {
+         "exits" : {
+            "e" : "fairytale126",
+            "n" : "fairytale124",
+            "s" : "fairytale128"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Gallery",
+         "id" : "fairytale125",
+         "description" : "\n  This half of the gallery is devoted to sculpture. 'Three Women\nPraying', piece by Mac Gimse, is the most prominent, and other\npieces are demonstrated here as well. To the north is more of the\ngallery, to the east is a closed door, and to the south is a work-\nroom.\n",
+         "altitude" : null
+      },
+      "fairytale38@fairytale" : {
+         "exits" : {
+            "w" : "^prison_door_1",
+            "d" : "^g_bod_top"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "The Giant's Table",
+         "id" : "fairytale38",
+         "description" : "\n  You enter a room whose size overwhelms you. The floor is wood,\nbut the planks are bigger than you have ever seen. Facing you is a\nhuge loaf of bread, twice your height, and on your right is a block of\ncheese nearly as large as the loaf.\n",
+         "altitude" : null
+      },
+      "fairytale87@fairytale" : {
+         "exits" : {
+            "u" : "fairytale88",
+            "d" : "fairytale86"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Stairs",
+         "id" : "fairytale87",
+         "description" : "\n A strong breeze blows through here, threatening to extinguish your light.\nYou see cave paintings here, depicting giant foxes hunting tiny human beings.\n",
+         "altitude" : null
+      },
+      "fairytale31@fairytale" : {
+         "exits" : {
+            "w" : "^tiny_door",
+            "u" : "fairytale30"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Prison Stairs",
+         "id" : "fairytale31",
+         "description" : "\n  A set of stairs leads up to the surface, but the steps are too wide\nfor someone of your height to climb. Fortunately, someone has tied a\nrope to the railing at the top of the stairs, making the ascent\npossible.\n",
+         "altitude" : null
+      },
+      "fairytale66@fairytale" : {
+         "exits" : {
+            "e" : "fairytale67",
+            "n" : "fairytale68",
+            "s" : "fairytale65"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Cave Mouth",
+         "id" : "fairytale66",
+         "description" : "\n  The river flows through a hole in the ground here, which is easily\neight feet in diameter. Above the hole hangs a cloud of mist, and a\nrainbow arcs through the cloud. The river roars as it plunges\nthrough the hole, and feel yourself slowly growing deaf. Through the\ncloud you can vaguely make out the entrance to a cave.\n",
+         "altitude" : null
+      },
+      "fairytale30@fairytale" : {
+         "exits" : {
+            "d" : "fairytale31",
+            "s" : "fairytale29"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Prison Stairs",
+         "id" : "fairytale30",
+         "description" : "\n  You stand on a set of stairs which spirals down into the depths\nof the earth. The steps are spaced too widely for you to walk on\nthem, but some brave adventurer has tied a rope to the railing,\nmaking it possible to climb down rather than walk.\n",
+         "altitude" : null
+      },
+      "fairytale110@fairytale" : {
+         "exits" : {
+            "n" : "fairytale111",
+            "s" : "fairytale109"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Coal Room",
+         "id" : "fairytale110",
+         "description" : "\n  You have entered a large room, full of coal. The walls are thick\nwith dust, and the coal is stacked hip-deep along the walls, sloping\ndown to a narrow path which leads from the south door to the north\ndoorway.\n",
+         "altitude" : null
+      },
+      "fairytale92@fairytale" : {
+         "exits" : {
+            "w" : "fairytale56",
+            "u" : "fairytale93"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Three Bears",
+         "id" : "fairytale92",
+         "description" : "\n  The owners of this house seem to have left, perhaps to take a walk\nthrough the forest. The basic number of the house appears to be\nthree: Three bowls stand on the table, steaming softly, three chairs\nsit around the triangular table, three LA-Z-Y BEAR chairs rest\naround the fireplace, and three steps lead up to the sleeping loft.\n",
+         "altitude" : null
+      },
+      "fairytale82@fairytale" : {
+         "exits" : {
+            "e" : "^door_heavy"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Base of Tower",
+         "id" : "fairytale82",
+         "description" : "\n  You are standing at the base of a tall tower. Written on the wall,\nhigh above you, are the words 'ICBM'. The tower itself looks like an\nancient version of the missile which you just launched, or perhaps\njust a model of it. To the east is a small door, and all around you is\na tall wall.\n",
+         "altitude" : null
+      },
+      "fairytale99@fairytale" : {
+         "exits" : {
+            "w" : "fairybook81@fairybook",
+            "e" : "fairybook3@fairybook",
+            "n" : "Mansion@oaktree",
+            "s" : "fairybook106@fairybook"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Library",
+         "id" : "fairytale99",
+         "description" : "\nBooks line the walls of this large room, filling you with awe of\nanyone who could have read them all. Classics such as \"Moby Dick\",\n\"Pride and Prejudice\", \"Treasure Island\", and the \"C Programming\nLanguage Handbook\" are prevalent, mixed with lesser-known works such\nas \"The Dark is Rising\" and the \"Books of Blood\". Four doors lead\nfrom this room: one returning to the north, one to the east marked\n'Alice', one to the west marked 'Peter', and one to the south marked\n'Dorothy.' Through each is a different scene, all of which look\nsomehow familiar. . . .\n",
+         "altitude" : null
+      },
+      "fairytale76@fairytale" : {
+         "exits" : {
+            "w" : "fairytale75",
+            "u" : "fairytale77"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Underground Lake",
+         "id" : "fairytale76",
+         "description" : "\n  The waterfall ends here in a pool, and the river flows on through a\nmyriad of tiny holes. In the pool, you see the remains of many dead\nadventurers who tried to sail down the falls. A tube on the wall\nspews forth filthy water.\n",
+         "altitude" : null
+      },
+      "fairytale98@fairytale" : {
+         "exits" : {
+            "e" : "fairytale58"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Rumplestilskin's House",
+         "id" : "fairytale98",
+         "description" : "\n  You enter a large, cave-like room. Doors lead to the north, west,\nand south, but gossamer-like strands of webbing stretch across\nthem and bar them from your use. The only clear door is the one you\nentered from, to the east. In the center of the room is a crib, in\nwhich a sack full of gold rests, but the webbing covers it as well.\nFollowing the strands with your eye, you realize that they originate\nfrom a spinning wheel which lies in the corner.\n",
+         "altitude" : null
+      },
+      "fairytale120@fairytale" : {
+         "exits" : {
+            "n" : "fairytale119"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Linen Closet",
+         "id" : "fairytale120",
+         "description" : "\n  This closet is a storage room for linens. Sheets, pillowcases, and\ndressing gowns are stacked on the shelves which line the walls.\n",
+         "altitude" : null
+      },
+      "fairytale103@fairytale" : {
+         "exits" : {
+            "e" : "fairytale104",
+            "s" : "fairytale96"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Living Room West",
+         "id" : "fairytale103",
+         "description" : "\n  You are in a large living room, which extends the depth of the\nhouse. A piano stands in one corner, and a large display case is next\nto the southern door. The display case is filled with several pieces\nof fine china and valuable-looking artifacts. A white pipe extends\nfrom ceiling to floor, from which you can hear the sound of running\nwater. To the south is the entry room, and to the east the living\nroom extends.\n",
+         "altitude" : null
+      },
+      "fairytale128@fairytale" : {
+         "exits" : {
+            "w" : "fairytale126",
+            "e" : "fairytale127"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fairytale",
+         "title" : "Art Room",
+         "id" : "fairytale128",
+         "description" : "\n  You have entered a workshop for artists. Tools lie around the\nroom, including a large oven, a potter's wheel, and some easels.\nUnfinished works are in the proper places: paintings on the easels,\nsculptures on pedestals, and pots on the wheel.\n",
+         "altitude" : null
+      },
+      "fairytale109@fairytale" : {
+         "exits" : {
+            "u" : "fairytale105",
+            "n" : "fairytale110"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Cellar",
+         "id" : "fairytale109",
+         "description" : "\n  You have entered the cold storage cellar. Foods such as meat and\nwine were stored here in barrels of salt, such as those you see lying\naround. A heavy iron door is set into the north wall, which is warm\nto the touch. The cellars smell faintly musty, although the walls are\nclean. A staircase leads up to the pantry.\n",
+         "altitude" : null
+      },
+      "fairytale13@fairytale" : {
+         "exits" : {
+            "w" : "fairytale9",
+            "n" : "fairytale14"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Fun House Entrance",
+         "id" : "fairytale13",
+         "description" : "\n  'Step right up,' the vendor calls, and you feel compelled to enter\nthe maze of mirrors to the north.\n",
+         "altitude" : null
+      },
+      "fairytale88@fairytale" : {
+         "exits" : {
+            "u" : "Den@oaktree",
+            "d" : "fairytale87"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Vixen Nest",
+         "id" : "fairytale88",
+         "description" : "\n  You have entered the lower level of the Fox's Den. It would appear,\nfrom the droppings and tiny bones, that this area is still inhabited.\nThe nest itself is a pile of old furs, mud, and sticks, and three fox-\nshaped depressions are apparent in these furs.\n",
+         "altitude" : null
+      },
+      "fairytale101@fairytale" : {
+         "exits" : {
+            "w" : "fairytale96",
+            "e" : "fairytale106",
+            "n" : "fairytale104",
+            "s" : "fairytale105"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fairytale",
+         "title" : "Kitchen",
+         "id" : "fairytale101",
+         "description" : "\n  Sleeping Beaty's cooks did not leave in a hurry. They out away\ntheir many utensils in racks on the wall. The feast, left out on the\ntable for travellers, has long since rotted away. To the west of you\nis the entry room, to the south is the pantry, and to the north is the\nliving room. A table is here, bolted to the floor, scarred by knives\nand stained with dried blood.\n",
+         "altitude" : null
+      },
+      "fairytale134@fairytale" : {
+         "exits" : {
+            "e" : "fairytale135",
+            "s" : "fairytale133"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Weaving Room",
+         "id" : "fairytale134",
+         "description" : "\n  This room is devoted to the art of weaving. Tapestries decorate\nthe walls, and an intricate pattern decorates the rug on the floor. A\nlarge loom stands against the north wall, on which hangs a nearly\nfinished rug. A window looks out onto the street below to the west;\na door leads south to the sewing room, and to the east is a closed door.\n",
+         "altitude" : null
+      },
+      "fairytale19@fairytale" : {
+         "exits" : {
+            "w" : "fairytale19",
+            "e" : "fairytale19",
+            "n" : "fairytale18",
+            "s" : "fairytale20"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lost in the Fun House",
+         "id" : "fairytale19",
+         "description" : "\n  You are lost in the Fun House. Mirrors surround you.\n",
+         "altitude" : null
+      },
+      "fairytale54@fairytale" : {
+         "exits" : {
+            "w" : "fairytale34",
+            "e" : "fairytale60",
+            "n" : "fairytale42",
+            "s" : "fairytale55"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Fairyville",
+         "id" : "fairytale54",
+         "description" : "\n  You stand at the entrance to Fairyville. The village spreads out\nto your south, the playground is to the north, and the Fairyville\nChurch stands to the west. To the east is a lake, and you see a\nsailboat slowly moving across it.\n",
+         "altitude" : null
+      },
+      "fairytale108@fairytale" : {
+         "exits" : {
+            "u" : "fairytale121",
+            "n" : "fairytale106"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Portal",
+         "id" : "fairytale108",
+         "description" : "\n  You are inside a large, wooden portal. Along the north wall are a  \nseries of levers marked 'up', 'down', and 'open'. The lighting in this\nbox is provided by tubes which glow softly above you.\n",
+         "altitude" : null
+      },
+      "fairytale14@fairytale" : {
+         "exits" : {
+            "w" : "fairytale14",
+            "e" : "fairytale15",
+            "n" : "fairytale14",
+            "s" : "fairytale13"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lost in the Fun House",
+         "id" : "fairytale14",
+         "description" : "\n  You have entered a maze of mirrors. No matter where you turn,\nyou see yourself.\n",
+         "altitude" : null
+      },
+      "fairytale68@fairytale" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "fairytale",
+         "title" : "Underground Waterfall",
+         "id" : "fairytale68",
+         "description" : "\n  Your body is caught up in the rush of water and is smashed\nrepeatedly into the rocks. One by one, your items are pulled from\nyour hands and you die empty-handed.\n",
+         "altitude" : null
+      },
+      "fairytale97@fairytale" : {
+         "exits" : {
+            "w" : "fairytale58"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Mermaid's Home",
+         "id" : "fairytale97",
+         "description" : "\n  The little mermaid, Ariel, has decorated her home with pictures of\nher father and sisters, as well as a statue of her husband, Eric. A\nlarge swimming pool is set into the east wall, where you see a fish\nand a crab. When you enter, they eye you suspiciously. Many common\nhousehold items, such as Snarfblatts and Dinglehoppers, have been\nplaced around the room in positions of honor. One Snarfblatt hangs\non the wall with a plaque beneath it.\n",
+         "altitude" : null
+      },
+      "fairytale60@fairytale" : {
+         "exits" : {
+            "w" : "fairytale42",
+            "e" : "fairytale61",
+            "n" : "fairytale64"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lake",
+         "id" : "fairytale60",
+         "description" : "\n  The lake is a large body of water. It looks very deep, and you could\nprobably swim in it if you wanted to, but you doubt that the fish that\nlive there would appreciate that. To the west is a playground, and to\nthe north is a river, feeding into the lake. In the distance, to the\neast, you can see a statue standing alone on an island.\n",
+         "altitude" : null
+      },
+      "fairytale16@fairytale" : {
+         "exits" : {
+            "w" : "fairytale16",
+            "e" : "fairytale16",
+            "n" : "fairytale15",
+            "s" : "fairytale17"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lost in the Fun House",
+         "id" : "fairytale16",
+         "description" : "\n  You are lost in the Fun House. Mirrors surround you.\n",
+         "altitude" : null
+      },
+      "fairytale95@fairytale" : {
+         "exits" : {
+            "e" : "fairytale57"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Snow White",
+         "id" : "fairytale95",
+         "description" : "\n  A beautiful room is spread out around you. A crystal box shines in\nthe center of the room, illuminated by light pouring in through a\nlarge picture window. Around the box are seven small people,\nperhaps dwarves. As you enter they look up at you with pleading\neyes, as though begging something from you.\nLying in the box is a beautiful woman with pale skin and black hair.\nIn her dainty hand she holds an apple with one bite missing. You look\naround the room and see a sign which proclaims that 'Only a prince\nmay awaken the sleeping beauty.'\n",
+         "altitude" : null
+      },
+      "fairytale124@fairytale" : {
+         "exits" : {
+            "e" : "fairytale123",
+            "s" : "fairytale125"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fairytale",
+         "title" : "Gallery",
+         "id" : "fairytale124",
+         "description" : "\n  This gallery is lined with pictures and portraits in all mediums,\ndepicting various people, various scenes, and various images. Some\nthat you recognize are 'The Garden of Earthly Delights' by\nHieronomous Bosch, 'Icarus Descending' by Brughel, and 'Time' by\nSalvidor Dali. Seats are provided for people who wish to sit and\nobserve the art.\n",
+         "altitude" : null
+      },
+      "fairytale42@fairytale" : {
+         "exits" : {
+            "w" : "fairytale41",
+            "e" : "fairytale78",
+            "u" : "fairytale43",
+            "n" : "fairytale53",
+            "s" : "fairytale54"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Playground",
+         "id" : "fairytale42",
+         "description" : "\n  Children play here, giggling and laughing. They push each other\nand mock-fight on the swing-set. To the north is a sand-box, to the\nsouth is a country lane, to the west is the music room, and to the\neast is a river. A set of monkey bars climbs up into the sky.\n",
+         "altitude" : null
+      },
+      "fairytale17@fairytale" : {
+         "exits" : {
+            "w" : "fairytale16",
+            "e" : "fairytale18",
+            "n" : "fairytale17",
+            "s" : "fairytale17"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lost in the Fun House",
+         "id" : "fairytale17",
+         "description" : "\n  You are lost in the Fun House. Mirrors surround you.\n",
+         "altitude" : null
+      },
+      "fairytale129@fairytale" : {
+         "exits" : {
+            "u" : "fairytale130",
+            "n" : "fairytale127"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fairytale",
+         "title" : "Portal",
+         "id" : "fairytale129",
+         "description" : "\n You are inside a large, wooden portal. Along the north wall are a\nseries of levers marked 'up', 'down', and 'open'. The lighting in this\nbox is provided by tubes which glow softly above you.\n",
+         "altitude" : null
+      },
+      "fairytale65@fairytale" : {
+         "exits" : {
+            "n" : "fairytale66",
+            "s" : "fairytale64"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "The River",
+         "id" : "fairytale65",
+         "description" : "\n  The river continues to the north and south, and the pleasant hills\nhave changed to rocky cliffs which bar further passage to the east\nand west. You hear a loud roaring noise from the north.\n",
+         "altitude" : null
+      },
+      "fairytale33@fairytale" : {
+         "exits" : {
+            "w" : "fairytale29",
+            "e" : "fairytale37"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Window Room",
+         "id" : "fairytale33",
+         "description" : "\n  This room is filled with towering stained-glass windows. It seems\nthat it was once a church of some sort, but you do not recognize any\nof the figures depicted in the glass. An altar stone still stands here,\nits cold grey stone reflecting the colored light from the windows.\nOne of the windows is clear, and you see a tree outside. One branch\nseems to be close enough to the window to touch.\n",
+         "altitude" : null
+      },
+      "fairytale5@fairytale" : {
+         "exits" : {
+            "u" : "fairytale6",
+            "d" : "fairytale3"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Vine",
+         "id" : "fairytale5",
+         "description" : "\n  The vine continues both up and down. The sky above you is obscured by a\nlow-hanging cloud bank, into which the vine disappears. Looking down, you\nrealize that a fall from this height would surely kill you.\n",
+         "altitude" : null
+      },
+      "fairytale62@fairytale" : {
+         "exits" : {
+            "w" : "fairytale61",
+            "e" : "fairytale63"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Steel Island",
+         "id" : "fairytale62",
+         "description" : "\n  A metal beach stretches around the base of a huge statue. A door\nenters the base of the statue to the east, and a plaque sits next to it.\nThe plaque reads 'Jessimine the Goddess'. Scratched into the steel\nbeneath it, as though by a long fingernail, is the epitaph 'I'm sorry...'\n",
+         "altitude" : null
+      },
+      "fairytale79@fairytale" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "fairytale",
+         "title" : "Down the Well",
+         "id" : "fairytale79",
+         "description" : "\n  The rungs are much more slippery than you had thought. Finally,\nyou reach the bottom. With a joyful cry you step out onto the ground\nand sink up to your neck in mud. The rain begins to fall...\n",
+         "altitude" : null
+      },
+      "fairytale43@fairytale" : {
+         "exits" : {
+            "w" : "fairytale43",
+            "e" : "fairytale47",
+            "u" : "fairytale44",
+            "n" : "fairytale43",
+            "d" : "fairytale42",
+            "s" : "fairytale49"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Bars",
+         "id" : "fairytale43",
+         "description" : "\n You climb on the monkey bars. Many bars are missing, and some are loose.\n",
+         "altitude" : null
+      },
+      "fairytale111@fairytale" : {
+         "exits" : {
+            "w" : "fairytale112",
+            "s" : "fairytale110"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Furnace Room",
+         "id" : "fairytale111",
+         "description" : "\n  You are in a large room, dominated by a huge furnace. The furnace\nhas a large steel grate mounted on it, through which you can see\nflaming coals. A small pile of coal lies here, next to a shovel. A\ntube extends from the roof of the furnace to the ceiling of the room.\nTo the south is the coal room, and to the west you can hear a\ngurgling noise, as though water were running there.\n",
+         "altitude" : null
+      },
+      "fairytale132@fairytale" : {
+         "exits" : {
+            "e" : "fairytale131",
+            "n" : "fairytale133"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Corner Room",
+         "id" : "fairytale132",
+         "description" : "\n  This room overlooks the town of Fairyville. Below, you can see all\nof the houses spread across the countryside. Far in the distance you\ncan see Rapunzel's tower, the Shoe of the Old Woman In the Shoe, and\nJack's Cottage. To the east is a spinning room, and to the north is a\nroom set aside for sewing.\n",
+         "altitude" : null
+      },
+      "fairytale73@fairytale" : {
+         "exits" : {
+            "n" : "fairytale70"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Bone Room",
+         "id" : "fairytale73",
+         "description" : "\n  Upon entering this room, you are immediately struck by the\nblinding whiteness which fills this room. Bones are scattered\naround the room, stacked in piles by species. You recognize cats,\ndogs, people, and even a dragon or two.\n",
+         "altitude" : null
+      },
+      "fairytale32@fairytale" : {
+         "exits" : {
+            "e" : "^tiny_door_1"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Prison",
+         "id" : "fairytale32",
+         "description" : "\n  You stand in the prison. The air hangs heavy with the stench of\nrotted flesh and human waste. Chains and manacles hang from the\nwalls, above piles of bones which lie in grim repose to the rest of\nthe room. A small fire burns in one corner, made of rags and rat\ndroppings.\n",
+         "altitude" : null
+      },
+      "fairytale115@fairytale" : {
+         "exits" : {
+            "w" : "fairytale119",
+            "e" : "fairytale114",
+            "n" : "fairytale116",
+            "s" : "fairytale117"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Hallway",
+         "id" : "fairytale115",
+         "description" : "\n  You stand in the hallway outside the two guest rooms (one north,\nthe other south). To the east is a large, railed porch and to the west\nthe hallway continues. Pictures of Sleeping Beauty and her\nancestors line the walls.\n",
+         "altitude" : null
+      },
+      "fairytale72@fairytale" : {
+         "exits" : {
+            "w" : "fairytale70"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Boatwreck",
+         "id" : "fairytale72",
+         "description" : "\n  A large boat has been smashed here, as though it had been hurled\ninto the cave by a tremendous force, or some huge giant. Scattered\namong the wreckage are bones of unwary travellers.\n",
+         "altitude" : null
+      },
+      "fairytale28@fairytale" : {
+         "exits" : {
+            "w" : "fairytale27",
+            "e" : "fairytale29"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Castle Entrance",
+         "id" : "fairytale28",
+         "description" : "\n  An iron portcullis has been lowered here to prevent further\npassage into the castle. Fortunately, the spaces between the bars\nare wide enough for you to fit through. To the east, you can see a\nlarge room, and to the west the drawbridge stretches part-way\nacross the chasm.\n",
+         "altitude" : null
+      },
+      "fairytale10@fairytale" : {
+         "exits" : {
+            "n" : "fairytale11",
+            "s" : "fairytale9"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Ferris Wheel",
+         "id" : "fairytale10",
+         "description" : "\n  A giant wheel stands before you. As you step up to the platform,\nyou hear a voice call out 'Next!'. The wheel slowly turns, and a car\nlowers itself to the north, waiting for you to step in.\n",
+         "altitude" : null
+      },
+      "fairytale29@fairytale" : {
+         "exits" : {
+            "w" : "fairytale28",
+            "e" : "fairytale33",
+            "n" : "fairytale30"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Tapestry Room",
+         "id" : "fairytale29",
+         "description" : "\n  A large tapestry hangs on the northern wall, depicting many\nknights and sorcerors battling a race of giants. The giants appear to\nbe winning.\nThe passage continues to the east and the west.\n",
+         "altitude" : null
+      },
+      "fairytale85@fairytale" : {
+         "exits" : {
+            "n" : "fairytale86",
+            "d" : "fairytale84"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Mirror Room",
+         "id" : "fairytale85",
+         "description" : "\n A staircase descends here to the base of the tower which you now stand in.\nA tall, full-length mirror leans against the wall, and a window faces out to\nthe cliffs below. The mirror has been perfectly carved, and reflects your\nimage perfectly. You hear a rustling sound behind you.\n",
+         "altitude" : null
+      },
+      "fairytale121@fairytale" : {
+         "exits" : {
+            "u" : "fairytale129",
+            "n" : "fairytale114",
+            "d" : "fairytale108"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Portal",
+         "id" : "fairytale121",
+         "description" : "\n You are inside a large, wooden portal. Along the north wall are a\nseries of levers marked 'up', 'down', and 'open'. The lighting in this\nbox is provided by tubes which glow softly above you.\n",
+         "altitude" : null
+      },
+      "fairytale90@fairytale" : {
+         "exits" : {
+            "d" : "fairytale89"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Landing",
+         "id" : "fairytale90",
+         "description" : "\n  From here, you can see the entire room spread out below you. You\nare again amazed at the absence of dirt, and begin to feel rather\ngrimy yourself. On the landing before you is an oak table and two oak\nchairs, all highly polished. A mouse-hole is set into the wainscoting\nof the wall, also clean.\n",
+         "altitude" : null
+      },
+      "fairytale63@fairytale" : {
+         "exits" : {
+            "w" : "fairytale62"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Inside the Statue",
+         "id" : "fairytale63",
+         "description" : "\n  You have entered the crypt in which Jessimine has been buried.\nLight shines in from a hole at the top of the statue and illuminates\nthe room. You see a picture of a woman, who you recognize as the\nGoddess, as well as several tapestries hanging on the walls\ndepicting Jessimine's sister, her friends, and her true love.\n",
+         "altitude" : null
+      },
+      "fairytale74@fairytale" : {
+         "exits" : {
+            "e" : "fairytale70"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Rune Cave",
+         "id" : "fairytale74",
+         "description" : "\n  The walls of this cave have been decorated with red paint, in\nvarious patterns which seem to have some sort of meaning to them.\n",
+         "altitude" : null
+      },
+      "fairytale11@fairytale" : {
+         "exits" : {
+            "s" : "fairytale10"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "In the Car",
+         "id" : "fairytale11",
+         "description" : "\n  The seats of this ride are red vinyl, and the floors are sticky. You\nsit down and rest for a moment, as the car begins to move. Soon you\nare high above the carnival grounds, and you can see a huge fun house,\na balloon ride, and a gigantic castle on a cloud in the distance.\nAfter a few minutes, the car returns to the ground.\n",
+         "altitude" : null
+      },
+      "fairytale123@fairytale" : {
+         "exits" : {
+            "w" : "fairytale124",
+            "e" : "fairytale122"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fairytale",
+         "title" : "Sitting Room",
+         "id" : "fairytale123",
+         "description" : "\n  You have entered a large sitting room. The walls are lines with\nbooks, which can be reached from a wheeled ladder. Couches are\nstrategically located around the room to warrant easy conversation.\nA bar stands in the corner. You may exit this room to the east or the\nwest.\n",
+         "altitude" : null
+      },
+      "fairytale24@fairytale" : {
+         "exits" : {
+            "s" : "fairytale23"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Cloud Cave",
+         "id" : "fairytale24",
+         "description" : "\n  The clouds form a natural floor here in a hollow which has been\ndug from the pile of limestone. The walls and ceiling are tightly\npacked, but you cannot help but feel a tiny bit nervous about the\nstability of the structure. To the south is a path leading through the\nrubble.\n",
+         "altitude" : null
+      },
+      "fairytale127@fairytale" : {
+         "exits" : {
+            "w" : "fairytale128",
+            "e" : "fairytale129"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Gallery",
+         "id" : "fairytale127",
+         "description" : "\n  This gallery is devoted to the art of the royal family. Portraits of\ndragons and knights hang on the walls, partitioned off by thin red\ncords. A tiny box in the southwest corner hums softly, on which is\nmounted a switch.\n",
+         "altitude" : null
+      },
+      "fairytale34@fairytale" : {
+         "exits" : {
+            "e" : "fairytale54",
+            "s" : "^door_window"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "The Church",
+         "id" : "fairytale34",
+         "description" : "\n  You stand in the church of Fairyville.\n",
+         "altitude" : null
+      },
+      "fairytale67@fairytale" : {
+         "exits" : {
+            "w" : "fairytale66",
+            "e" : "fairytale69",
+            "d" : "fairytale68"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "On the Rainbow",
+         "id" : "fairytale67",
+         "description" : "\n  The rainbow crosses the hole in the ground. You risk a glance into\nthe darkness below and feel a sudden rush of vertigo.  The rainbow\ncontinues to the east and the west, where you see a river bank and\na cave, respectively.\n",
+         "altitude" : null
+      },
+      "fairytale135@fairytale" : {
+         "exits" : {
+            "w" : "fairytale134",
+            "n" : "^steam_pipe"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Warm Room",
+         "id" : "fairytale135",
+         "description" : "\n  A pipe extends up from the floor and opens here. Heat pours from\nit, making you sweat almost immediately.\n",
+         "altitude" : null
+      },
+      "fairytale133@fairytale" : {
+         "exits" : {
+            "n" : "fairytale134",
+            "s" : "fairytale132"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Sewing Room",
+         "id" : "fairytale133",
+         "description" : "\n  The east wall of this room is covered with spools of thread. Two\ncabinets are set up in the northeast and southeast corners of the\nroom; each is open and filled with fabric. Dressmaker dolls stand\naround the room, with half- finished clothing hanging from them.\nFour large tables have been pushed against the west wall for\ncutting and sewing. To the south is a large room, and to the north is\na room full of tapestries.\n",
+         "altitude" : null
+      },
+      "fairytale78@fairytale" : {
+         "exits" : {
+            "e" : "fairytale42",
+            "d" : "fairytale80"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fairytale",
+         "title" : "Well",
+         "id" : "fairytale78",
+         "description" : "\n  A series of rungs have been set into the wall of this well to allow\naccess to the bottom.  They are cold and slimy, and you pray that no\nrain falls to raise the level of the brackish water below. On the east\nwall, far below you, is a door which you suspect you could reach\nif you jumped from the rungs.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "operator@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale10",
+         "speed" : "0",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Operator",
+         "name" : "operator",
+         "description" : "The Ride Operator stands before you, motioning you into the empty car.",
+         "strength" : "150"
+      },
+      "burning@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale29",
+         "speed" : "0",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "Burning",
+         "name" : "burning",
+         "description" : "A burning giant stands here, his fiery gaze fixed on you.",
+         "strength" : "150"
+      },
+      "trog@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale71",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Trog",
+         "name" : "trog",
+         "description" : "A trogdylite stares at you from behind a rock.",
+         "strength" : "150"
+      },
+      "cockroach@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale6",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Cockroach",
+         "name" : "cockroach",
+         "description" : "A huge, green bug stares at you with many-faceted eyes.",
+         "strength" : "150"
+      },
+      "exterminator@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale2",
+         "speed" : "2",
+         "aggression" : "3",
+         "armor" : "0",
+         "pname" : "Exterminator",
+         "name" : "exterminator",
+         "description" : "The Exterminator stands before you, staring at a fly on your shoulder.",
+         "strength" : "175"
+      },
+      "proprietor@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale59",
+         "speed" : "0",
+         "aggression" : "34",
+         "armor" : "0",
+         "pname" : "Proprietor",
+         "name" : "proprietor",
+         "description" : "The Proprietor looks at you expectantly.",
+         "strength" : "150"
+      },
+      "porridge@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale4",
+         "speed" : "0",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Porridge",
+         "name" : "porridge",
+         "description" : "A bowl of porridge rests on the table.",
+         "strength" : "150"
+      },
+      "golden@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale36",
+         "armor" : "0",
+         "name" : "golden",
+         "description" : "The Golden Goose flies about angrily, protecting her eggs.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Golden",
+         "aggression" : "25"
+      },
+      "big@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale38",
+         "speed" : "0",
+         "aggression" : "18",
+         "armor" : "0",
+         "pname" : "Big",
+         "name" : "big",
+         "description" : "The biggest giant you have ever seen sits at the foot of the table and laughs.",
+         "strength" : "350"
+      },
+      "fatman@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale9",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Fatman",
+         "name" : "fatman",
+         "description" : "A fat man rolls past you, chuckling gently.",
+         "strength" : "150"
+      },
+      "hubbard@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale94",
+         "armor" : "0",
+         "name" : "hubbard",
+         "description" : "Mother Hubbard searches the cupboard for a bone.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Hubbard",
+         "aggression" : "24"
+      },
+      "mantis@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale7",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Mantis",
+         "name" : "mantis",
+         "description" : "The mantis is on his knees, praying to the gods for redemption.",
+         "strength" : "150"
+      },
+      "bearded@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale9",
+         "armor" : "0",
+         "name" : "bearded",
+         "description" : "A bearded woman laughs, pointing at you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Bearded",
+         "aggression" : "25"
+      },
+      "aphid@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale4",
+         "speed" : "0",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Aphid",
+         "name" : "aphid",
+         "description" : "The aphid reclines on his couch, blending into his surroundings.",
+         "strength" : "150"
+      },
+      "cloud@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale24",
+         "speed" : "0",
+         "aggression" : "18",
+         "armor" : "0",
+         "pname" : "Cloud",
+         "name" : "cloud",
+         "description" : "A cloud giant is sleeping here, snoring peacefully.",
+         "strength" : "150"
+      },
+      "momma@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale92",
+         "armor" : "0",
+         "name" : "momma",
+         "description" : "Momma Bear hides behind her husband.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Momma",
+         "aggression" : "25"
+      },
+      "girl@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale42",
+         "armor" : "0",
+         "name" : "girl",
+         "description" : "A girl sits on one end of the see-saw, playing with dolls.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Girl",
+         "aggression" : "25"
+      },
+      "reflection@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale21",
+         "speed" : "0",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Reflection",
+         "name" : "reflection",
+         "description" : "Your reflection looks at you from the mirror.",
+         "strength" : "150"
+      },
+      "monkey@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale45",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Monkey",
+         "name" : "monkey",
+         "description" : "A monkey climbs on the bars, playfully kicking at you.",
+         "strength" : "150"
+      },
+      "piggy@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale55",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Piggy",
+         "name" : "piggy",
+         "description" : "This little piggy sticks out his tongue at you.",
+         "strength" : "150"
+      },
+      "young@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale42",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Young",
+         "name" : "young",
+         "description" : "A young man observes the children at play.",
+         "strength" : "150"
+      },
+      "burrower@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale71",
+         "speed" : "2",
+         "aggression" : "1",
+         "armor" : "0",
+         "pname" : "Burrower",
+         "name" : "burrower",
+         "description" : "A Burrower hides in its hole.  All you can see are its eyes.",
+         "strength" : "150"
+      },
+      "godmother@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale89",
+         "armor" : "0",
+         "name" : "godmother",
+         "description" : "Your Fairy Godmother is here, awaiting your command.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Godmother",
+         "aggression" : "23"
+      },
+      "piglet@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale55",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Piglet",
+         "name" : "piglet",
+         "description" : "This little piggy flips you off.",
+         "strength" : "150"
+      },
+      "musician@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale41",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Musician",
+         "name" : "musician",
+         "description" : "A music major sits here atop a pile of Theory books.",
+         "strength" : "150"
+      },
+      "spider@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale7",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Spider",
+         "name" : "spider",
+         "description" : "A spider hangs from a thin strand of silk.",
+         "strength" : "150"
+      },
+      "hawker@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale9",
+         "speed" : "0",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Hawker",
+         "name" : "hawker",
+         "description" : "The hawker stands in his booth, calling \"Buy a ticket!\"",
+         "strength" : "150"
+      },
+      "fish@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale64",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Fish",
+         "name" : "fish",
+         "description" : "A fish rises out of the water and spits at you!",
+         "strength" : "150"
+      },
+      "ladybug@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale7",
+         "armor" : "0",
+         "name" : "ladybug",
+         "description" : "A huge ladybug walks peacefully past you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Ladybug",
+         "aggression" : "25"
+      },
+      "trogdylite@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale71",
+         "speed" : "2",
+         "aggression" : "1",
+         "armor" : "0",
+         "pname" : "Trogdylite",
+         "name" : "trogdylite",
+         "description" : "A Trogdylite stares at you from behind a rock.",
+         "strength" : "150"
+      },
+      "sleeping_beauty@fairytale" : {
+         "damage" : "10",
+         "location" : "limbo@limbo",
+         "armor" : "0",
+         "name" : "Sleeping_Beauty",
+         "description" : "Sleeping Beauty smiles softly, dreaming of happier days.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "Beauty",
+         "aggression" : "0"
+      },
+      "poppa@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale92",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Poppa",
+         "name" : "poppa",
+         "description" : "Poppa Bear stands before you, growling angrily.",
+         "strength" : "150"
+      },
+      "kidder@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale42",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Kidder",
+         "name" : "kidder",
+         "description" : "A kidder runs past you, shouting.",
+         "strength" : "150"
+      },
+      "horsefly@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale7",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Horsefly",
+         "name" : "horsefly",
+         "description" : "A horsefly buzzes around your head, looking for a place to land.",
+         "strength" : "150"
+      },
+      "baby@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale92",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Baby",
+         "name" : "baby",
+         "description" : "Baby Bear scampers playfully, oblivious to your presence.",
+         "strength" : "150"
+      },
+      "storm@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale28",
+         "speed" : "0",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "Storm",
+         "name" : "storm",
+         "description" : "A storm giant storms around the room.",
+         "strength" : "150"
+      },
+      "adolescent@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale42",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Adolescent",
+         "name" : "adolescent",
+         "description" : "An adolescent watches the kids play.",
+         "strength" : "150"
+      },
+      "roc@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale4",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Roc",
+         "name" : "roc",
+         "description" : "A Roc circles the nest, glaring at you.",
+         "strength" : "150"
+      },
+      "ice@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale28",
+         "speed" : "0",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "Ice",
+         "name" : "ice",
+         "description" : "An ice giant looks at you coldly.",
+         "strength" : "150"
+      },
+      "boyeee@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale42",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Boyeee",
+         "name" : "boyeee",
+         "description" : "A boyeee plays on the swing set.",
+         "strength" : "150"
+      },
+      "bumblebee@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale8",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Bumblebee",
+         "name" : "bumblebee",
+         "description" : "A bee buzzes gently here, poison dripping from its stinger.",
+         "strength" : "150"
+      },
+      "sprite@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale4",
+         "armor" : "0",
+         "name" : "sprite",
+         "description" : "The sprite dances in the moonlight, eyeing you warily.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Sprite",
+         "aggression" : "25"
+      },
+      "rug@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale85",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Rug",
+         "name" : "rug",
+         "description" : "Suddenly, the rug comes to life!",
+         "strength" : "300"
+      },
+      "clown@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale9",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Clown",
+         "name" : "clown",
+         "description" : "A clown stands on his head, his eyes upside-down.",
+         "strength" : "150"
+      },
+      "oldman@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale32",
+         "speed" : "0",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Oldman",
+         "name" : "oldman",
+         "description" : "An old man sits here, waiting for you to hit him.",
+         "strength" : "150"
+      },
+      "cinderella@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale55",
+         "armor" : "0",
+         "name" : "cinderella",
+         "description" : "Cinderella stands before you, dressed for the Hunt.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Cinderella",
+         "aggression" : "1"
+      },
+      "pig@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale55",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Pig",
+         "name" : "pig",
+         "description" : "This little piggy thumbs his nose at you.",
+         "strength" : "150"
+      },
+      "dog@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale94",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Dog",
+         "name" : "dog",
+         "description" : "A dog growls at you angrily.",
+         "strength" : "150"
+      },
+      "child@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale42",
+         "speed" : "2",
+         "aggression" : "25",
+         "armor" : "0",
+         "pname" : "Child",
+         "name" : "child",
+         "description" : "A child plays in the sand.",
+         "strength" : "150"
+      }
+   }
+}

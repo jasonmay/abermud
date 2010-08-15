@@ -1,0 +1,533 @@
+{
+   "obj" : {
+      "puffball@caledonia" : {
+         "desc[1]" : "A large puffball is growing here.",
+         "damage" : "0",
+         "location" : "IN_ROOM:hills12",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "armor" : "0",
+         "name" : "puffball",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A large puffball is lying here."
+      },
+      "dirk@caledonia" : {
+         "damage" : "8",
+         "location" : "IN_ROOM:hills7",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "altname" : "dagger",
+         "name" : "dirk",
+         "examine" : "It could still be of much use in battle.",
+         "size" : "8",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "An old and rusty dirk has been abandoned here."
+      },
+      "thistle@caledonia" : {
+         "desc[1]" : "A tall spiky thistle is growing here.",
+         "damage" : "15",
+         "location" : "IN_ROOM:hills15",
+         "oflags" : [
+            "Weapon",
+            "GetFlips"
+         ],
+         "armor" : "0",
+         "name" : "thistle",
+         "examine" : "Its spines are very nasty and you handle it with care.",
+         "size" : "8",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "An uprooted thistle is lying here."
+      },
+      "cowpat@caledonia" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:hills2",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "armor" : "0",
+         "altname" : "dung",
+         "name" : "cowpat",
+         "examine" : "It would be useful as fertiliser.",
+         "size" : "8",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A steaming pile of cow dung is here, smelling rather powerfully."
+      },
+      "cap@caledonia" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:hills19",
+         "oflags" : [
+            "Wearable"
+         ],
+         "armor" : "0",
+         "name" : "cap",
+         "examine" : "It is a fine-looking cap.",
+         "size" : "6",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A tam o'shanter has been discarded here by its previous wearer."
+      },
+      "branch@caledonia" : {
+         "desc[1]" : "The branch of a fir tree is lying here.",
+         "damage" : "2",
+         "location" : "IN_ROOM:hills13",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "armor" : "0",
+         "name" : "branch",
+         "size" : "12",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A burning fir branch is lying here."
+      },
+      "pinecone@caledonia" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:hills8",
+         "armor" : "0",
+         "name" : "pinecone",
+         "examine" : "It looks ripe for the planting.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A pinecone has fallen to the ground here."
+      },
+      "sapling@caledonia" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:hills2",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "armor" : "0",
+         "name" : "sapling",
+         "size" : "8",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A young pine sapling is growing here."
+      },
+      "blaeberries@caledonia" : {
+         "desc[1]" : "You spy a large number of dark blue berries in amongst the heather.",
+         "damage" : "0",
+         "location" : "IN_ROOM:hills5",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "armor" : "0",
+         "altname" : "berries",
+         "name" : "blaeberries",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "Some blaeberries are lying here."
+      }
+   },
+   "loc" : {
+      "hills20@caledonia" : {
+         "exits" : {
+            "w" : "Nibelung4@nibelung",
+            "e" : "hills17"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "caledonia",
+         "title" : "Off The Beaten Track",
+         "id" : "hills20",
+         "description" : "\n    You are on the back of Ben Mor, a modest-sized mountain with a heather-clad\nsummit which lies to the east.  The climb to the peak is not difficult and the\nexercise would no doubt do you a lot of good.  However an easier way lies to\nthe west, where a long path along the base of the mountains comes to a fork.\n",
+         "altitude" : "1800"
+      },
+      "hills13@caledonia" : {
+         "exits" : {
+            "w" : "hills17",
+            "e" : "hills9",
+            "s" : "hills16"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "caledonia",
+         "title" : "Lofty Firs",
+         "id" : "hills13",
+         "description" : "\n    You are on the lower slopes of Ben Mor, a smallish mountain which rises to\nthe west.  The ground here is uneven but rich enough to support a number of\nlarge douglas firs which tower up to two hundred feet into the sky.  A deep\ncleft in the mountainside to the north bars your route in that direction.\n",
+         "altitude" : "1000"
+      },
+      "hills18@caledonia" : {
+         "exits" : {
+            "w" : "hills16",
+            "e" : "hills15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Pine Fell",
+         "id" : "hills18",
+         "description" : "\n    You are wandering through a lush valley among pine trees of small stature\nbut considerable prickliness.  The branches from one tree extend all the way to\nthe next, and in forcing your way between them you find yourself constantly\npierced by their long pine needles.\n",
+         "altitude" : "1200"
+      },
+      "hills6@caledonia" : {
+         "exits" : {
+            "w" : "hills11",
+            "s" : "hills3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "In The Bracken",
+         "id" : "hills6",
+         "description" : "\n    You are battling to get through a dense patch of chest-high bracken.  Your\nview of the ground is completely obscured by the huge ferns and several times\none or other of your feet disappears down a rabbit hole, and you are lucky to\navoid spraining an ankle.  To the north and east the sea of bracken continues\nfor a disheartening distance, and you turn your attention to the less impeded\nroutes to the south and west.\n",
+         "altitude" : "1150"
+      },
+      "hills4@caledonia" : {
+         "exits" : {
+            "e" : "hills8",
+            "n" : "hills2",
+            "s" : "hills9"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "caledonia",
+         "title" : "Edge Of Pine Forest",
+         "id" : "hills4",
+         "description" : "\n    You are at the northern edge of a little pine forest which shelters beneath\nthe dark hulking massif to the south.  Some of the evergreen branches are bent\nunder the weight of days-old snow which has not yet melted by virtue of having\nseldom seen the sun, lying as they do for most of the day in the shadow of the\nmountains.\n",
+         "altitude" : "1150"
+      },
+      "hills3@caledonia" : {
+         "exits" : {
+            "e" : "hills7",
+            "n" : "hills6",
+            "s" : "hills2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "By The Tarn",
+         "id" : "hills3",
+         "description" : "\n    You are standing by the side of a chilly lochan, whose waters are dark\nbrown with peat washed into it from the surrounding slopes.  The surface is\nstill but every so often you see a splash far out in the middle of the lochan.\nSomething is alive in the murk.  To the east, on the top of a grassy hillock,\nis an ancient and very much ruined castle.\n",
+         "altitude" : "1150"
+      },
+      "hills9@caledonia" : {
+         "exits" : {
+            "w" : "hills13",
+            "e" : "hills12",
+            "n" : "hills4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Spruce Glen",
+         "id" : "hills9",
+         "description" : "\n    You find yourself in amongst a grove of perky little spruce trees which to\nthe south become too closely-packed to penetrate.  You can see some way in all\nother directions though, and mostly all you can see are evergreen trees of\nvarying types.\n",
+         "altitude" : "1100"
+      },
+      "hills2@caledonia" : {
+         "exits" : {
+            "w" : "hills5",
+            "e" : "hills1",
+            "n" : "hills3",
+            "s" : "hills4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Cattle Trail",
+         "id" : "hills2",
+         "description" : "\n    You are following a much-used cattle trail which leads through the tall\nmountains around you.  You tread carefully to avoid the hefty deposits left by\nthe cattle, which are still fairly fresh.  To the north-west is a small lake,\nnestling among the peaks which surround it.  You can go in any direction.\n",
+         "altitude" : "1200"
+      },
+      "hills10@caledonia" : {
+         "exits" : {
+            "n" : "hills5"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "caledonia",
+         "title" : "Blue Crag",
+         "id" : "hills10",
+         "description" : "\n    You are standing atop an upthrust rocky crag upon which you find yourself\nvery much at the mercy of the elements.  Here there is no protection from the\nwind, and at such a height the air is far from warm.  A patch of snow huddles\nin a hollow on the north side of the crag, but any precipitation falling on the\nother sides of the peak would inevitably be immediately whipped away by the\nbitter wind.\n",
+         "altitude" : "3100"
+      },
+      "hills15@caledonia" : {
+         "exits" : {
+            "w" : "hills18",
+            "n" : "hills12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Under The High Crags",
+         "id" : "hills15",
+         "description" : "\n    The pine forest ends here at the foot of the last great rise of the black\nmountains.  A high wind bears the clouds swiftly through the sky, the sharp\npeaks cleaving them as they pass overhead.  To the north and west you can make\nyour way among the trees.\n",
+         "altitude" : "1250"
+      },
+      "hills8@caledonia" : {
+         "exits" : {
+            "w" : "hills4",
+            "s" : "hills12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Pine Forest",
+         "id" : "hills8",
+         "description" : "\n    You are walking beneath the tall pine trees that make up this coniferous\nforest.  In the main the branches of the trees are well above your head and you\ncan walk about comfortably underneath their prickly foliage.  A thick layer of\npine needles covers the floor of the forest and the ground yields a little\nbeneath your weight.  To the north-west a granite cliff rises sheer out of the\nground and soars skyward, imposing and unscalable.\n",
+         "altitude" : "1100"
+      },
+      "hills5@caledonia" : {
+         "exits" : {
+            "e" : "hills2",
+            "s" : "hills10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Heather Slope",
+         "id" : "hills5",
+         "description" : "\n    You are on a gentle slope overlooking a murky lochan which fills a hollow\nin the mountains.  To the south one of the lesser peaks towers above you, its\ndark upper slopes looking bluish against the grey sky behind.  The slope all\naround you is covered with a thick growth of coarse heather.\n",
+         "altitude" : "1900"
+      },
+      "hills16@caledonia" : {
+         "exits" : {
+            "e" : "hills18",
+            "n" : "hills13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Suilven",
+         "id" : "hills16",
+         "description" : "\n    The bald mountain Suilven casts a great grey shadow over you as you wander\nabout on its lower slopes.  Above you the trees come to an abrupt end and a\nrising dome of bare rock dominates the southern skyline.  The cliffs leading up\nto the dome become almost vertical further up, so you will have to descend into\nthe high valley to the north or east.\n",
+         "altitude" : "1500"
+      },
+      "hills17@caledonia" : {
+         "exits" : {
+            "w" : "hills20",
+            "e" : "hills13",
+            "n" : "hills19"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Summit Of Ben Mor",
+         "id" : "hills17",
+         "description" : "\n    You are on the highest point of the peak known as Ben Mor.  Your view over\nthe flatlands to the west is unimpeded and you can see all the way to the\ninfamous Castle Hohenzollern, somewhat hazy and ill-defined in the distance.\nTo the north, halfway down the mountain, is a small cottage in which you could\nperhaps shelter from the cold wind that chills your bones as you stand here.\n",
+         "altitude" : "2800"
+      },
+      "hills14@caledonia" : {
+         "exits" : {
+            "n" : "Climb@eforest",
+            "s" : "hills11"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "caledonia",
+         "title" : "Babbling Burn",
+         "id" : "hills14",
+         "description" : "\n    You are on a gentle rocky slope just south of the elven forest.  A small\nbrook runs by here, dropping down among the boulders and shrubs that adorn the\nlandscape.  It flows east into the valley, and you can cross it if you wish.\nAlternatively you could head south over a small rocky lip and into a damp and\nrather depressing peat bog.\n",
+         "altitude" : "1100"
+      },
+      "hills12@caledonia" : {
+         "exits" : {
+            "w" : "hills9",
+            "n" : "hills8",
+            "s" : "hills15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Whiting Fell",
+         "id" : "hills12",
+         "description" : "\n    You are in a picturesque little fell, surrounded by trees and hidden from\nthe sun for much of the time by the mountains to the south and east.  A thin\nveil of mist curls about among the trees, clinging to the branches which are\nbeginning to drip from the accumulated condensation.\n",
+         "altitude" : "1150"
+      },
+      "hills7@caledonia" : {
+         "exits" : {
+            "w" : "hills3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Ardvreck Castle",
+         "id" : "hills7",
+         "description" : "\n    You are wandering about amongst the ruins of an old castle.  One solitary\ntower remains standing, as well as much of the outer wall, but you discount\nimmediately any thought of an ascent - the crumbling stone looks as if it may\ncollapse at any time.  Once, though, you can imagine, this was probably an\nimpressive place, though somewhat vulnerable to assault.  Perhaps that is why\nit now lies in ruins.\n",
+         "altitude" : "1200"
+      },
+      "hills1@caledonia" : {
+         "exits" : {
+            "w" : "hills2",
+            "d" : "Gap@valley"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "caledonia",
+         "title" : "Mountainside",
+         "id" : "hills1",
+         "description" : "\n    You are on the side of a tall mountain which rises to the south.  Without\nthe necessary equipment you could not possibly climb it, but a narrow and\nwell-worn path skirts around the side of the mountain, leading west.  You could\nfollow that or descend into the valley.\n",
+         "altitude" : "1100"
+      },
+      "hills11@caledonia" : {
+         "exits" : {
+            "e" : "hills6",
+            "n" : "hills14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "caledonia",
+         "title" : "Peat Bog",
+         "id" : "hills11",
+         "description" : "\n    You are sinking up to your knees in peaty water, cunningly disguised as\nfirm ground - a layer of mud over the surface of the water gives the illusion\nof solidity.  All around you are small moss-covered tussocks, surrounded by\npools of water or thick layers of sphagnum.  Sundews and butterworts thrive in\nthis damp environment, and little horsetails grow in clumps in the drier spots.\nTo the south is a small lochan, brown with peat, which gains its colour from\nthe water draining into it from this bog.\n",
+         "altitude" : "1100"
+      },
+      "hills19@caledonia" : {
+         "exits" : {
+            "s" : "hills17"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "caledonia",
+         "title" : "Ramshackle Croft",
+         "id" : "hills19",
+         "description" : "\n    This is, or was, an old cottage belonging to a crofter who has long since\nmoved on or died.  Daylight shows through holes in the roof and the stone walls\nutterly fail to keep out the cold.  The furniture in here is spartan to say the\nleast, and you marvel at the hardiness of those who could permanently live in\nsuch conditions.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "otter@caledonia" : {
+         "damage" : "8",
+         "location" : "hills3",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Otter",
+         "description" : "An otter gambols about playfully by the water's edge.",
+         "strength" : "40"
+      },
+      "buck@caledonia" : {
+         "damage" : "8",
+         "location" : "hills8",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Roe Buck",
+         "name" : "Buck",
+         "description" : "A young roe buck stares at you with dark brown eyes.",
+         "strength" : "50"
+      },
+      "eagle@caledonia" : {
+         "damage" : "10",
+         "location" : "hills10",
+         "speed" : "0",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "Golden Eagle",
+         "name" : "Eagle",
+         "description" : "A golden eagle is perched proudly on the rocky peak.",
+         "strength" : "60"
+      },
+      "badger@caledonia" : {
+         "damage" : "10",
+         "location" : "hills9",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Badger",
+         "description" : "A badger is peering at you from its sett with sleepy eyes.",
+         "strength" : "50"
+      },
+      "cow@caledonia" : {
+         "damage" : "8",
+         "location" : "hills2",
+         "armor" : "0",
+         "name" : "Cow",
+         "description" : "A highland cow is here, chewing the cud.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "90",
+         "speed" : "1",
+         "pname" : "Highland Cow",
+         "aggression" : "0"
+      },
+      "marten@caledonia" : {
+         "damage" : "8",
+         "location" : "hills12",
+         "speed" : "1",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "Pine Marten",
+         "name" : "Marten",
+         "description" : "A vicious little pine marten nips at your heels.",
+         "strength" : "25"
+      },
+      "adder@caledonia" : {
+         "damage" : "10",
+         "location" : "hills2",
+         "armor" : "0",
+         "name" : "Adder",
+         "description" : "An adder hisses at you when you almost step on her.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "aggression" : "0"
+      }
+   }
+}

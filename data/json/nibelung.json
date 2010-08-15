@@ -1,0 +1,2091 @@
+{
+   "obj" : {
+      "hole@nibelung" : {
+         "location" : "IN_ROOM:Nibelung67",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hole",
+         "examine" : "It's approximately big enough for an arrow to pass through.",
+         "linked" : "hole2",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "bvalue" : "0"
+      },
+      "torch@nibelung" : {
+         "desc[1]" : "A charred, oily, wooden torch is lying here.",
+         "location" : "IN_ROOM:Nibelung63",
+         "armor" : "95",
+         "oflags" : [
+            "Lightable",
+            "Extinguish"
+         ],
+         "altname" : "light",
+         "name" : "torch",
+         "examine" : "It's made of wood, but it doesn't weigh as much as a duck.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "torch",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A fancy, wooden torch burns cheerfully on the ground."
+      },
+      "egg@nibelung" : {
+         "desc[1]" : "A small, white eagle's egg is resting in the nest.",
+         "location" : "IN_ROOM:Nibelung59",
+         "oflags" : [
+            "Food",
+            "Key"
+         ],
+         "pname" : "egg",
+         "name" : "egg",
+         "examine" : "\nThe egg is cold to the touch and smells somewhat.  Perhaps it is rotten.",
+         "bvalue" : "100",
+         "desc[0]" : "An unhatched, white eagle's egg lies here.",
+         "size" : "9"
+      },
+      "carvings@nibelung" : {
+         "location" : "IN_ROOM:Nibelung21",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "carvings",
+         "name" : "carvings",
+         "examine" : "\nCarved into the bridge you read 'Cyric Loves Jenjer', and 'Greystreak is a'.\nThe last part of the latter message has been crossed out. There is also a large\ncarving which reads 'Bart Simpson is the one and only true God - Anubis'. You\nponder this for a moment, as you try to figure out who this Bart person is.",
+         "bvalue" : "0",
+         "size" : "0"
+      },
+      "fork@nibelung" : {
+         "damage" : "1",
+         "location" : "IN_ROOM:Nibelung4",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "fork",
+         "examine" : "On the back is stamped the strange runes 'Stainless Steel'",
+         "size" : "5",
+         "pname" : "fork",
+         "bvalue" : "2",
+         "desc[0]" : "You see a dull silver dinner fork lying here."
+      },
+      "grate@nibelung" : {
+         "desc[1]" : "\nA small, rusted iron grate is loosely imbedded in the wall to your left.",
+         "location" : "IN_ROOM:Nibelung53",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "grate",
+         "examine" : "\nAbout three feet square, and rusty, it may be loose enough to move.",
+         "linked" : "grate2",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "grate",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "\nA small, rusted iron grate lies to one side of a tunnel leading west."
+      },
+      "menu@nibelung" : {
+         "location" : "IN_ROOM:Nibelung98",
+         "oflags" : "{ }",
+         "altname" : "gilded",
+         "name" : "menu",
+         "examine" : "\nThis menu is a work of art by itself.  Contained within its gilded pages are\ndescriptions of many dishes, all guaranteed to be more delicious than the\none before or after.  Every dish imaginable is listed on this menu, wines\nfrom all over the realm as well as other beverages are found on the first\nfew pages.  In fact, everything seems to be included here except the prices...",
+         "size" : "60",
+         "pname" : "menu",
+         "bvalue" : "100",
+         "desc[0]" : "A gilded leather menu sits on the elegant table."
+      },
+      "body@nibelung" : {
+         "location" : "IN_ROOM:Nibelung42",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "body",
+         "examine" : "\nThe body has apparently been here for quite some time.  The eyes and a good\nportion of the flesh has rotted away, and maggots and flies in large numbers\nreside upon it.",
+         "linked" : "coffin",
+         "size" : "0",
+         "pname" : "body",
+         "bvalue" : "0",
+         "desc[0]" : "There is a decomposing body here."
+      },
+      "cross@nibelung" : {
+         "location" : "IN_ROOM:Nibelung44",
+         "oflags" : "{ }",
+         "pname" : "cross",
+         "name" : "cross",
+         "examine" : "    It looks like a cross. (What did you expect?)",
+         "bvalue" : "300",
+         "desc[0]" : "There is a tarnished silver cross lying here.",
+         "size" : "25"
+      },
+      "fire@nibelung" : {
+         "location" : "IN_ROOM:Nibelung79",
+         "oflags" : [
+            "NoGet",
+            "Lit"
+         ],
+         "pname" : "fire",
+         "name" : "fire",
+         "maxstate" : "3",
+         "bvalue" : "0",
+         "state" : "0",
+         "size" : "0"
+      },
+      "arrow2@nibelung" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:Nibelung64",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "purple",
+         "name" : "arrow2",
+         "size" : "4",
+         "pname" : "arrow",
+         "bvalue" : "20",
+         "desc[0]" : "\nA small purple arrow is lying here with two feathers missing."
+      },
+      "pendant@nibelung" : {
+         "location" : "IN_ROOM:Nibelung9",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "yellow",
+         "name" : "pendant",
+         "examine" : "\n    A thin leather strap would allow you to wear it.  There is a lightning bolt\netched into one of its many facets.",
+         "size" : "7",
+         "pname" : "pendant",
+         "bvalue" : "150",
+         "desc[0]" : "A yellow pendant is lying here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "claw@nibelung" : {
+         "location" : "IN_ROOM:Nibelung96",
+         "oflags" : "{ }",
+         "altname" : "lizard",
+         "name" : "claw",
+         "size" : "2",
+         "pname" : "claw",
+         "bvalue" : "40",
+         "desc[0]" : "A small lizard's claw is here."
+      },
+      "napkin@nibelung" : {
+         "location" : "IN_ROOM:Nibelung90",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "napkin",
+         "examine" : "\nIt appears to be made from a high-quality cloth, with a small 'H' embroidered\nin one corner.",
+         "size" : "5",
+         "pname" : "napkin",
+         "bvalue" : "15",
+         "aflags" : [
+            "Chest"
+         ],
+         "desc[0]" : "A small red napkin has been thrown here."
+      },
+      "shield@nibelung" : {
+         "location" : "IN_ROOM:Nibelung89",
+         "armor" : "50",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "metal",
+         "name" : "shield",
+         "size" : "12",
+         "pname" : "shield",
+         "bvalue" : "70",
+         "desc[0]" : "A large metal shield has been left here."
+      },
+      "bench@nibelung" : {
+         "desc[1]" : "A stone bench provides a seat along the far wall.",
+         "location" : "IN_ROOM:Nibelung84",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "seat",
+         "name" : "bench",
+         "examine" : "\nThe bench is cold to the touch and covered in a thin layer of green slime.",
+         "linked" : "bench2",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "bench",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A stone bench is off to one side of a passage leading down."
+      },
+      "bench2@nibelung" : {
+         "desc[1]" : "A large stone bench bars upward passage.",
+         "location" : "IN_ROOM:Nibelung85",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "bench2",
+         "linked" : "bench",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "bench",
+         "maxstate" : "1",
+         "bvalue" : "0"
+      },
+      "beans@nibelung" : {
+         "location" : "IN_ROOM:Nibelung91",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "beans",
+         "examine" : "\nThey appear to be baked beans, and, although cold, seem edible.",
+         "size" : "8",
+         "pname" : "beans",
+         "bvalue" : "12",
+         "desc[0]" : "A small plate of beans has been left here."
+      },
+      "coffin@nibelung" : {
+         "desc[1]" : "There is a coffin here.",
+         "location" : "IN_ROOM:Nibelung39",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "coffin",
+         "examine" : "\nA typical, run of the mill coffin.  A label on the top reads:\n  Transylvania Air Mail",
+         "linked" : "body",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "coffin",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A coffin rests here, its lid open."
+      },
+      "mace@nibelung" : {
+         "damage" : "12",
+         "location" : "IN_ROOM:Nibelung88",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "mace",
+         "examine" : "\nA wooden handle connected to a large ball would probably hurt if it hit\nsomeone.",
+         "size" : "15",
+         "pname" : "mace",
+         "bvalue" : "50",
+         "desc[0]" : "A large mace has been discarded here."
+      },
+      "cheese@nibelung" : {
+         "location" : "IN_ROOM:Nibelung36",
+         "oflags" : [
+            "Food"
+         ],
+         "pname" : "cheese",
+         "name" : "cheese",
+         "examine" : "\nWith some scraping, you can remove most of the mould and consume it.  Some\nmarks in one part indicate a mouse or rat has done so fairly recently.",
+         "bvalue" : "35",
+         "desc[0]" : "There is a mouldy wheel of swiss cheese here.",
+         "size" : "6"
+      },
+      "potion@nibelung" : {
+         "location" : "IN_ROOM:Nibelung69",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "jar",
+         "name" : "potion",
+         "examine" : "The jar appears half full. Do you think it wise to drink it?",
+         "size" : "4",
+         "pname" : "potion",
+         "bvalue" : "60",
+         "desc[0]" : "A small, green glass jar is here with a dark liquid in it."
+      },
+      "arrow3@nibelung" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:Nibelung64",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "mauve",
+         "name" : "arrow3",
+         "size" : "4",
+         "pname" : "arrow",
+         "bvalue" : "20",
+         "desc[0]" : "A finely crafted mauve arrow with a gold tip lies here."
+      },
+      "candle@nibelung" : {
+         "desc[1]" : "There is a white candle here.",
+         "location" : "IN_ROOM:Nibelung43",
+         "armor" : "210",
+         "oflags" : [
+            "Lightable",
+            "Extinguish"
+         ],
+         "altname" : "white",
+         "name" : "candle",
+         "examine" : "\nThe candle has been burned several times before.  Little rivulets of tallow\nhave solidified along the sides.",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "candle",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "There is a white candle here, burning with a cheery flame."
+      },
+      "hole2@nibelung" : {
+         "location" : "IN_ROOM:Nibelung68",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hole2",
+         "linked" : "hole",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "bvalue" : "0"
+      },
+      "batcape@nibelung" : {
+         "location" : "IN_ROOM:Nibelung8",
+         "armor" : "55",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "batcape",
+         "name" : "batcape",
+         "examine" : "Black with a circle in the back, it holds the unmistakable outline of a bat.",
+         "size" : "30",
+         "weight" : "0",
+         "pname" : "batcape",
+         "bvalue" : "150",
+         "desc[0]" : "A cape lies forgotten here.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "azurite@nibelung" : {
+         "location" : "IN_ROOM:Nibelung5",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "azurite",
+         "name" : "azurite",
+         "examine" : "    Your eyes are dazed by its multi-prismatic effect.",
+         "bvalue" : "70",
+         "desc[0]" : "An orange-red gem is here, sparkling in the sunlight.",
+         "size" : "5"
+      },
+      "backplate@nibelung" : {
+         "location" : "IN_ROOM:Nibelung6",
+         "armor" : "40",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "backplate",
+         "name" : "backplate",
+         "examine" : "Looks like this has been lying here since the crusades.",
+         "size" : "30",
+         "weight" : "0",
+         "pname" : "backplate",
+         "bvalue" : "150",
+         "desc[0]" : "A rusty old backplate has be left here.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "emerald@nibelung" : {
+         "location" : "IN_ROOM:Nibelung87",
+         "oflags" : "{ }",
+         "altname" : "gem",
+         "name" : "emerald",
+         "examine" : "\nIt's a small green emerald, which gives your hand a pale green glow.",
+         "size" : "3",
+         "pname" : "emerald",
+         "bvalue" : "600",
+         "desc[0]" : "An emerald lies here."
+      },
+      "grate2@nibelung" : {
+         "desc[1]" : "A small, rusted iron grate bars any access to the east.",
+         "location" : "IN_ROOM:Nibelung54",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "grate2",
+         "examine" : "\nAbout three feet square, and rusty, it may be loose enough to move.",
+         "linked" : "grate",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "grate",
+         "maxstate" : "1",
+         "bvalue" : "0"
+      },
+      "ring@nibelung" : {
+         "location" : "IN_ROOM:Nibelung81",
+         "oflags" : [
+            "Wearable",
+            "Lit"
+         ],
+         "altname" : "light",
+         "name" : "ring",
+         "examine" : "\nThe ring is a tarnished silver, with a red garnet imbedded in it.\nA small legend in the inside reads 'Duracell'.",
+         "size" : "1",
+         "pname" : "ring",
+         "bvalue" : "100",
+         "desc[0]" : "A small ring lies here, glowing with an inner magic.",
+         "aflags" : [
+            "Hand"
+         ]
+      },
+      "ruby@nibelung" : {
+         "location" : "IN_ROOM:Nibelung87",
+         "oflags" : "{ }",
+         "altname" : "gem",
+         "name" : "ruby",
+         "examine" : "\nThe ruby sparkles and dazzles your eyes with a cheery red light.",
+         "size" : "3",
+         "pname" : "ruby",
+         "bvalue" : "700",
+         "desc[0]" : "A ruby is lying here."
+      },
+      "arrow@nibelung" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:Nibelung64",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "brown",
+         "name" : "arrow",
+         "size" : "4",
+         "pname" : "arrow",
+         "bvalue" : "20",
+         "desc[0]" : "A brown arrow lies here with a splintered shaft."
+      },
+      "krystal@nibelung" : {
+         "damage" : "7",
+         "location" : "IN_ROOM:Nibelung14",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "krystal",
+         "examine" : "\nThe krystal is a deep, translucent blue.  A pure white cross has been branded \ninto the handle.",
+         "size" : "20",
+         "pname" : "krystal",
+         "bvalue" : "500",
+         "desc[0]" : "There is a dark blue krystal here."
+      },
+      "coins@nibelung" : {
+         "location" : "IN_ROOM:Nibelung87",
+         "oflags" : "{ }",
+         "altname" : "gold",
+         "name" : "coins",
+         "examine" : "\nThe coins gleem and shine brightly, with an archaic legend stamped in them.",
+         "size" : "6",
+         "pname" : "coins",
+         "bvalue" : "400",
+         "desc[0]" : "A small pile of gold coins lies here for the taking."
+      },
+      "firestone@nibelung" : {
+         "location" : "IN_ROOM:Nibelung92",
+         "oflags" : "{ }",
+         "altname" : "gem",
+         "name" : "firestone",
+         "examine" : "\nIt's a small gem, with a vague image of an arrow visible in it, which \nvanishes as you examine the stone.",
+         "size" : "4",
+         "pname" : "firestone",
+         "bvalue" : "60",
+         "desc[0]" : "An amber firestone lies here, twinkling in the light."
+      },
+      "dagger@nibelung" : {
+         "damage" : "7",
+         "location" : "IN_ROOM:Nibelung42",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "dagger",
+         "examine" : "\nThe dagger is made of a high quality metal, however it's composition is beyond\nyour limited knowledge.  On the handle is carved 'Hades', apparently the name\nof the Guild which made it.",
+         "size" : "10",
+         "pname" : "dagger",
+         "bvalue" : "600",
+         "desc[0]" : "There is a dagger lying here."
+      },
+      "diary@nibelung" : {
+         "location" : "IN_ROOM:Nibelung70",
+         "oflags" : "{ }",
+         "altname" : "book",
+         "name" : "diary",
+         "examine" : "\n   Dear diary,\n     I've discovered an interesting new potion today, with some\n   most delightful effects.  Faffner is getting rather obnoxious,\n   I must exercise caution.",
+         "size" : "6",
+         "pname" : "diary",
+         "bvalue" : "80",
+         "desc[0]" : "A leather bound book is here."
+      }
+   },
+   "loc" : {
+      "nibelung37@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung36",
+            "e" : "Nibelung38",
+            "n" : "Nibelung34",
+            "s" : "Nibelung40"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Rotten Gazebo",
+         "id" : "Nibelung37",
+         "description" : "\n   You are standing in a dilapidated gazebo.  The structure looks on the verge\nof collapse, and you realize that it wouldn't be all that bad if it did just \nthat.  A few wooden chairs remain here, but they don't appear strong enough to \nhold the band members anymore.  The wood has long since lost any appeal and is\nnow a dull grey color.  Off to the east is a rotting old house, which looks\nlike it is tired of standing there.  On the doorpost you see the rusted remains\nof the address, \"2B\".\n",
+         "altitude" : null
+      },
+      "nibelung10@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung11",
+            "d" : "Nibelung7"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "nibelung",
+         "title" : "Foothills",
+         "id" : "Nibelung10",
+         "description" : "\n   The mountains rise up sharply before you.  The air is much colder here, and\na cold breeze blows down from the pass above you.  Below you are the lowlands\nof this mountainous area, and grasses and scrub brush can be seen struggling\nto grow there.  The path is littered with chunks of granite from the eons of \ncreation that have passed.\n",
+         "altitude" : "2400"
+      },
+      "nibelung58@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung64",
+            "u" : "Nibelung59",
+            "n" : "Nibelung57",
+            "s" : "Nibelung60"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Along the Wall",
+         "id" : "Nibelung58",
+         "description" : "\n   The wall here seems in a little better shape.  Looking around, you notice\na turret above you in the wall.  Apparently such turrets were used to launch\narrows and dump boiling oil on attacking enemies below.\n",
+         "altitude" : "1200"
+      },
+      "nibelung16@nibelung" : {
+         "exits" : {
+            "d" : "Nibelung18",
+            "s" : "Nibelung14"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "nibelung",
+         "title" : "Wanderweg",
+         "id" : "Nibelung16",
+         "description" : "\n   You are on a grassy path which winds its way through some of the northern\nfoothills of the Teeth.  To the south, the pass grows progressively difficult,\nbut it is still possible to work your way through.  The path narrows greatly \nto the north, and with a survey of the area, you see a structure off to the \nfar north.\n",
+         "altitude" : "2500"
+      },
+      "nibelung96@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung95"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "In the Moat",
+         "id" : "Nibelung96",
+         "description" : "\n   You are in the castle's moat.  Steep walls rise up around you.  Water runs\nout of a hole in the wall above you, and continues down through the grass into\nthe valley below.\n",
+         "altitude" : null
+      },
+      "nibelung55@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung56"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Guardhouse",
+         "id" : "Nibelung55",
+         "description" : "\n   The guardhouse is very small.  A tiny table is off to one side with a \nledger on it.  Some hooks run along the far wall, and a small stool is in one\ncorner.  Murky sunlight struggles to shine through the streaked window.   \n   To the west is the northern gate of the castle.\n",
+         "altitude" : null
+      },
+      "nibelung32@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung31",
+            "s" : "Nibelung35"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Tavern",
+         "id" : "Nibelung32",
+         "description" : "\n   You are in a tavern of once-reputable reputation.  Now it is musty and damp,\nand in obvious disuse.  The room has been cleared of tables and chairs,        \napparently put in storage long ago.  Along the wall behind the bar is a large\nmirror, now cracked and dirty.  The shelves are also bare, and some glass\nshards twinkle on the floor.  Engraved on the top of the bar you read, \"To be\nor not 2B?\"\n",
+         "altitude" : null
+      },
+      "nibelung93@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung91",
+            "d" : "Nibelung94"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Basement",
+         "id" : "Nibelung93",
+         "description" : "\n   The basement is full of papers, now rotting, food, now rotting, and castle\nfurniture, now rotting.  The rock walls are slightly damp to the touch and the\npacked dirt of the floor is rather muddy now.  Some rusting braces in the\nwalls were once used for torches, which are now gone.  A tunnel slopes sharply\ndownwards into a room below, while stairs will take you back to the kitchen\nabove. \n",
+         "altitude" : null
+      },
+      "nibelung6@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung7",
+            "s" : "Nibelung4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Alpine Way",
+         "id" : "Nibelung6",
+         "description" : "\n   The path slopes gently up to the north.  To the northeast you see the foot-\nhills of a large mountain range.  It's snow-capped peaks can be seen rising up\nin the distance.  The forest around you starts to thicken, and you notice a \ndecrease in the amount of underbrush.  A glance to the south reveals that the\npath splits up further on.\n",
+         "altitude" : "1650"
+      },
+      "nibelung23@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung22",
+            "s" : "Nibelung24"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Muddy Road",
+         "id" : "Nibelung23",
+         "description" : "\n   You find yourself ankle deep in a grey-brownish mud, which sucks at your \nboots, almost pulling them off.  The going is a bit more difficult, but you \nnotice dryer road to the north and south.  With a bit of perseverance you\nshould be able to make it to either end. \n",
+         "altitude" : "1300"
+      },
+      "nibelung67@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung78",
+            "e" : "Nibelung62",
+            "n" : "Nibelung66",
+            "s" : "^hole"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Anteroom",
+         "id" : "Nibelung67",
+         "description" : "\n   You find yourself in a small anteroom of the castle.  The room is now bare,\nbut looks like it was once comfortably furnished.  Some cobwebs have been \nspun by spiders past, and now collect dust in the corners.  To the north you\nsee the main entrance to the castle, to the west is the library.  A small\nhole has been made on the south wall.\n",
+         "altitude" : null
+      },
+      "nibelung70@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung71",
+            "d" : "Nibelung68"
+         },
+         "flags" : [
+            "Dark",
+            "Soundproof"
+         ],
+         "zone" : "nibelung",
+         "title" : "Tower Stairs",
+         "id" : "Nibelung70",
+         "description" : "\n   The railing is the only thing between you and certain death below.  The\nsteps continue upward into a room, and spiral down below into the darkness.\nThe air seems a little cooler here, apparently the tower is well ventilated.\n",
+         "altitude" : null
+      },
+      "nibelung39@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung38"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Cellar",
+         "id" : "Nibelung39",
+         "description" : "\n   The cellar is very damp and musty.  Off in the blackness you hear the sound\nof dripping water.  A mouse runs away into a crevasse at the sound of your  \napproach.  The floor - had it been dry - would be dirt, but is currently\noccupied with the task of being mud instead.  It pulls at your boots slightly\nas you step off the final step.  In front of you is a pedestal with a box\nresting on it.  From its long, rectangular shape, and ornate finish, you guess\nit to be a coffin.\n",
+         "altitude" : null
+      },
+      "nibelung75@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung74",
+            "d" : "Nibelung76"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Damp Room",
+         "id" : "Nibelung75",
+         "description" : "\n   You are in a small room, which is very damp and chilly.  A breeze is coming\nin from a small hole off to one side.  You notice some light coming from that\ndirection, though not enough to see by.  The purpose of this room is unclear,\nbut you would venture to speculate that it was used as a means of escape in\ntimes of war.\n",
+         "altitude" : null
+      },
+      "nibelung38@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung37",
+            "n" : "Nibelung35",
+            "d" : "Nibelung39",
+            "s" : "Nibelung41"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Abandoned House",
+         "id" : "Nibelung38",
+         "description" : "\n   Inside the abandoned house you find lots of cobwebs, some dust and little  \nelse.  To the north, through some rotting doorposts, you see an old cellarhole.\nA bench is along one wall, one leg partially chewed out by parasites of some \nkind.  A rotting door is off to your left, one hinge still holding it in place,\nthe other has apparently decided to go on to better things.  To the west,\nthrough another doorway, you see a gazebo. \n",
+         "altitude" : null
+      },
+      "nibelung29@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung25",
+            "s" : "Nibelung31"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Village Gate",
+         "id" : "Nibelung29",
+         "description" : "\n   On the path before you, the arched gateway to a town is attempting to stand.\nOff to the left and right, the remains of an outer wall taper off into the\nbrush.  Weeds can be seen growing here and there from the cracks.  A rusted\ngate hangs off one hinge, but you realize it won't be much longer.\n",
+         "altitude" : "1300"
+      },
+      "nibelung42@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung43"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Cemetery",
+         "id" : "Nibelung42",
+         "description" : "\n   The cemetery is a small, private lot.  A few marble headstones mark the \nresting place of some of the town's former residents.  Tufts of grass are\ngrowing here and there, but otherwise the ground is barren.  A small breeze\nblows past, stirring the dust up a bit.  One tombstone reads, \"Here lies\nGeorge Pratt.  He missed the cliff, now he's flat.\"\n",
+         "altitude" : "1300"
+      },
+      "nibelung84@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung83",
+            "d" : "^bench"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Dungeon",
+         "id" : "Nibelung84",
+         "description" : "\n   The dungeon is cold and dank, as dungeons tend to be.  Some rusted shackles\nhang from one wall, and you spy a ball and chain in one corner.  The floor is\ncovered in a thin layer of green slime, making walking treacherous.  As you\nlook about, you notice claw marks in the floor leading towards a bench at the\nfar wall, where they suddenly end. \n",
+         "altitude" : null
+      },
+      "nibelung1@nibelung" : {
+         "exits" : {
+            "w" : "Entrance@arena",
+            "n" : "Nibelung2",
+            "d" : "entryway@orchold"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Path",
+         "id" : "Nibelung1",
+         "description" : "\n   You are standing on a sharply-inclined trail, which winds down to a roughly\ncarved opening below.  It continues on to the north, leveling off a bit in the\nprocess.\n",
+         "altitude" : "1400"
+      },
+      "nibelung43@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung42",
+            "e" : "Nibelung44",
+            "n" : "Nibelung40"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Rotting Church",
+         "id" : "Nibelung43",
+         "description" : "\n   You find yourself inside an old church.  Overturned pews, smashed windows,\nand graffiti on the walls show that it has been vandalized.  The altar remains\nintact, however, but the linens have been removed long ago.  Off to the west\nyou see a small picket fence, and some gravestones.  To the east is a\nparsonage.  With a bit of deduction, you realize that the parsonage must be for\nthis church.\n",
+         "altitude" : null
+      },
+      "nibelung81@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung89",
+            "n" : "Nibelung82",
+            "s" : "Nibelung80"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Inner Hall",
+         "id" : "Nibelung81",
+         "description" : "\n   This room appears to be one of the inner halls of the castle.  A doorway\nopens up to a guard's room to the north, while another doorway stands to the\nwest.  The hall is rather cramped compared to some of the other rooms of the \ncastle proper.  A few small tapestries attempt to enliven the otherwise dismal\nwalls of the hall.\n",
+         "altitude" : null
+      },
+      "nibelung50@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung51",
+            "s" : "Nibelung49"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "In the Moat",
+         "id" : "Nibelung50",
+         "description" : "\n   You are in the castle moat.  Stone walls rise up to the east and west,\nwhile the moat continues to the north and south.\n",
+         "altitude" : "1200"
+      },
+      "nibelung64@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung58",
+            "n" : "Nibelung63",
+            "s" : "Nibelung65"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Chapel",
+         "id" : "Nibelung64",
+         "description" : "\n   You are standing in the chapel for the castle.  A small altar indicating \nno specific denomination is in one corner.  Some murals adorn one wall, and\na cross hangs from the ceiling behind the altar.  Light shines in from a window\non one wall.\n   To the north is the tapestry room, east affords an exit to the exterior of \nthe castle, while to the south you spy a small side yard. \n",
+         "altitude" : null
+      },
+      "nibelung41@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung40",
+            "n" : "Nibelung38",
+            "s" : "Nibelung44"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Alley",
+         "id" : "Nibelung41",
+         "description" : "\n   You are in a small alley.  The street continues off to the west, towards the\ncenter of town, and ends in a wall to the east.  Off to the south you see a    \nparsonage to a church.  There are some containers of garbage here, but the    \ncontents have been partially consumed by something.  Your nose curls from the\nstench here.\n",
+         "altitude" : "1300"
+      },
+      "nibelung31@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung30",
+            "e" : "Nibelung32",
+            "n" : "Nibelung29",
+            "s" : "Nibelung34"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Town Road",
+         "id" : "Nibelung31",
+         "description" : "\n   You find yourself on a road which apparently leads into the center of town.\nTo the left, a dilapidated schoolhouse is attempting to convey a look of    \nimportance, but failing miserably.  A tavern is off to the right, if you are \ninterested in refreshment.   \n",
+         "altitude" : "1300"
+      },
+      "nibelung20@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung21",
+            "e" : "Nibelung19"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "By The River",
+         "id" : "Nibelung20",
+         "description" : "\n   You are standing by a burbling river, the clean water passing over the\nriverbed, and continuing off to the north.  The sunshine and warm breeze lend\nto a feeling of peacefulness in the area.  Some cute fish are swimming about\nhappily.  To your west, a wooden bridge spans the river, and to the east a path\nslopes upwards. \n",
+         "altitude" : "1300"
+      },
+      "nibelung94@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung93",
+            "d" : "Nibelung95",
+            "s" : "Nibelung95"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Odiferous Passage",
+         "id" : "Nibelung94",
+         "description" : "\n   The room smells.  Very bad.  It seems this passage leads to the castle's\nprimitive waste disposal system.  Upwards will return you to the slightly\nless aromatic basement.  The sound of running water can be heard below.\n",
+         "altitude" : null
+      },
+      "nibelung61@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung66",
+            "e" : "Nibelung48",
+            "n" : "Nibelung60",
+            "s" : "Nibelung62"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Cobbled Courtyard",
+         "id" : "Nibelung61",
+         "description" : "\n   Your boots click upon the cobblestones as you enter the castle's main \ncourtyard.  One of the castle's walls runs along the perimeter to the north,\nwhile a fountain burbles happily to the south.  A path runs east, through \nthe inner gates, to lands beyond.\n",
+         "altitude" : "1200"
+      },
+      "nibelung57@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung63",
+            "n" : "Nibelung56",
+            "s" : "Nibelung58"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Along the Wall",
+         "id" : "Nibelung57",
+         "description" : "\n   You are standing along the wall of the castle.  Notched turrets mark off\nsections of the wall periodically.  Parts of the mortar are now crumbling \naway, littering the walkway around you.\n   There is a doorway to the west.\n",
+         "altitude" : "1200"
+      },
+      "nibelung27@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung45",
+            "e" : "Nibelung26"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Barren Land",
+         "id" : "Nibelung27",
+         "description" : "\n   The air here burns your nostrils slightly, as if it had a high sulphur\ncontent.  To the east lies a sandy patch, and a path works its way off to the\neastern horizon.  To the west you see the ruins of a large castle. \n",
+         "altitude" : "1200"
+      },
+      "nibelung53@nibelung" : {
+         "exits" : {
+            "w" : "^grate",
+            "n" : "Nibelung52"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "In the Moat",
+         "id" : "Nibelung53",
+         "description" : "\n   You are in the castle moat.  Stone walls rise up around you.  As you stand\nhere, you notice your boots are getting wet.  You hear running water off to\nthe west.\n",
+         "altitude" : "1200"
+      },
+      "nibelung98@nibelung" : {
+         "exits" : {
+            "s" : "Nibelung97"
+         },
+         "flags" : [
+            "Party",
+            "Peaceful",
+            "NoMagic",
+            "NoMobiles",
+            "NoSummon"
+         ],
+         "zone" : "nibelung",
+         "title" : "The Overlook",
+         "id" : "Nibelung98",
+         "description" : "\n   Silk draperies and soft music mark this room.  The muted conversations \nof other patrons can be heard, discussing the days arduous adventures. A\ntuxedo-clad host leads you to your table. As you sit down, you notice a\nfew of the other patrons glancing at you respectfully.  It appears your\nname has spread further than even you had suspected. \n",
+         "altitude" : null
+      },
+      "nibelung92@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung91"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Servants' Quarters",
+         "id" : "Nibelung92",
+         "description" : "\n   This very cramped room makes you happy you took up adventuring instead of\nthe food service industry.  A great proportion of the floor's area is occupied\nby beds, now mouldy and decaying.  Seems the maid's gone off on vacation.\n   The kitchen is off to the east.\n",
+         "altitude" : null
+      },
+      "nibelung65@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung60",
+            "n" : "Nibelung64",
+            "s" : "Nibelung66"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Side Yard",
+         "id" : "Nibelung65",
+         "description" : "\n   The side yard is a small plot of grass wedged between the chapel to the\nnorth and the main castle entrance to the south.  To the east is the castle\nwall.  Along the side of the castle entrance are some marigolds and other \nflowers, providing a sweet fragrance to the air about you.\n",
+         "altitude" : "1200"
+      },
+      "nibelung5@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "River Bank",
+         "id" : "Nibelung5",
+         "description" : "\n   You are standing along the east bank of a river, which meanders off to the\nnorth.  The bank here is very sandy and your toes dig into the warm sand, \nrelaxing you a bit.  A gentle breeze sends ripples across the water, and stirs \nthe branches of some trees nearby.\n",
+         "altitude" : "1400"
+      },
+      "nibelung80@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung90",
+            "e" : "Nibelung66",
+            "n" : "Nibelung81",
+            "s" : "Nibelung79"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Knights' Hall",
+         "id" : "Nibelung80",
+         "description" : "\n   You are standing in a very long hall.  The wooden floorboards echo to the\ntread of your booted feet as you walk down the hall.  The many windows in\nthis hall allow a great amount of light into the room.  Stuffed animal heads,\nlike lions and tigers and bears (Oh my!), are hung periodically along the wall.\nThe ceiling is painted with murals depicting the hunts where the various\ntrophies were acquired.  To the east is the main entrance of the castle, and\nto the south is a trophy room.  A large table in the room to the west brings\nyou to the conclusion that it's a dining room.\n",
+         "altitude" : null
+      },
+      "nibelung62@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung67",
+            "n" : "Nibelung61",
+            "d" : "Nibelung54"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Fountain",
+         "id" : "Nibelung62",
+         "description" : "\n   A small, circular fountain is here, spraying water up into the air.  Sun-\nlight reflects off the surface, dazzling your eyes.  A light breeze tugs at\nthe spray, scattering it and causing a rainbow to appear.\n   To the north you spy a courtyard, and to the west a small doorway opens\ninto the castle proper.\n",
+         "altitude" : "1200"
+      },
+      "nibelung14@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung17",
+            "n" : "Nibelung16",
+            "d" : "Nibelung15",
+            "s" : "Nibelung12"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "nibelung",
+         "title" : "Alpine Pass",
+         "id" : "Nibelung14",
+         "description" : "\n   You are in the northern foothills of Zaryat's Teeth.  The tall mountain \ncraggs rise up to the south, their snow covered peaks reflecting the orange\nglow of the setting sun.  Above you there is a clearing, which would appear to\noffer a beautiful vantage point to look out over the lands below.  A trail\nwinds its way down to the northern areas.\n",
+         "altitude" : "2800"
+      },
+      "nibelung83@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung82",
+            "d" : "Nibelung84"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Damp Hall",
+         "id" : "Nibelung83",
+         "description" : "\n   This short hallway links the guard room to the dungeons below.  A chilled\nbreeze blows from the stairwell, sending shivers up your spine.  The walls\nare moist to the touch, and you notice mildew growing here and there, giving\nthe walls a polka-dot effect. \n",
+         "altitude" : null
+      },
+      "nibelung66@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung80",
+            "e" : "Nibelung61",
+            "n" : "Nibelung65",
+            "s" : "Nibelung67"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Castle Hohenzollern",
+         "id" : "Nibelung66",
+         "description" : "\n   As you enter this room, you can't help but notice the large coat of arms\nplaced in one corner of the room.  A few statues and a suit of armor are placed\naround the room as a form of decoration.  The ceiling is adorned with a paint-\ning of the heavens opening, and an outpouring of cherubim and seraphim adorn\nthe edges.  The trim of the room is a prime example of baroque architecture.\n   To the north you notice a small side yard through a doorway, while the\neastern exit opens out into a courtyard.  An antechamber is through a doorway\nto the south, and to the west you notice a large, empty hall.\n",
+         "altitude" : null
+      },
+      "nibelung15@nibelung" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "nibelung",
+         "title" : "Steep Trail",
+         "id" : "Nibelung15",
+         "description" : "\n   The trail gives way, tumbling you off into space.\n   You've fallen...and you can't get up!\n",
+         "altitude" : null
+      },
+      "nibelung71@nibelung" : {
+         "exits" : {
+            "d" : "Nibelung70"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Parsifal's Tower",
+         "id" : "Nibelung71",
+         "description" : "\n   This is apparently the tower of the wizard Parsifal.  As you think back, you\nrecall hearing of the greatness of Parsifal in a Bard's tale long ago.  Once\nthe Hohenzollern family was well-respected, but seemed to have run into\nproblems with a dragon that Parsifal had tried to tame.  Nothing had been heard\nfrom the family since, and no one ever successfully returned from their castle.\n   A small bed is in one corner of the room, and a table in the other.  The \ntable is covered with old books and sheets of parchment.  A chair has been\noverturned in the center of the room.  \n",
+         "altitude" : null
+      },
+      "nibelung17@nibelung" : {
+         "exits" : {
+            "d" : "Nibelung14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Overlook",
+         "id" : "Nibelung17",
+         "description" : "\n   You are in a small clearing in the north of Zaryat's Teeth.  A wooden bench\nis off to one side, where you could rest and enjoy the view.  The vista from\nhere is an awe-inspiring one.  You command a view of a valley, through which\nyou see a small stream cutting its way.  Beyond the stream, you see a very\nsmall temple on a hill. To the north, you see a large, fortress-like structure\nrising from the cliff-tops.  The valley is adorned with trees, many of which\nstill retain some autumn colors.  Way off in the eastern horizon your keen eye\nspies a tower on a ledge, and some buildings to the south of it.  There are \nsome moors off to the far north-east.\n",
+         "altitude" : "2900"
+      },
+      "nibelung86@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung85",
+            "d" : "Nibelung87",
+            "s" : "Nibelung87"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "nibelung",
+         "title" : "Carniverous Cave",
+         "id" : "Nibelung86",
+         "description" : "\n   You are in an enormous cave.  The ceiling is well out of the range of your\nlightsource, as are several of the walls.  You can hear the echo of dripping\nwater in the distance.  A great feeling of awe overcomes you as you contemplate\nthe great power that must have gone into the makings of such a large cavern.\nThe dampness chills you a bit as you weave across the room, trying to avoid\nsome puddles of greenish water that lie about.  A small opening in the south\nwall catches your attention. \n",
+         "altitude" : null
+      },
+      "nibelung18@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung16",
+            "d" : "Paths@valley",
+            "s" : "Nibelung16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Narrow Path",
+         "id" : "Nibelung18",
+         "description" : "\n   The path narrows here, and the going is a bit more difficult, but soon \nit becomes impossible to proceed further. From the looks of things there\nonce was a path through here, but the years have allowed the bush to grow\nback with vengeance. \n",
+         "altitude" : "1800"
+      },
+      "nibelung89@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung88",
+            "e" : "Nibelung81"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Cloakroom",
+         "id" : "Nibelung89",
+         "description" : "\n   A place for you to hang your coat.  Many hooks along one wall facilitate\nthis action.  To the east you notice an entry to the inner hall, and in a\nwesterly direction there's a small armory. \n",
+         "altitude" : null
+      },
+      "nibelung46@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung48",
+            "e" : "Nibelung45",
+            "d" : "Nibelung49"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Drawbridge",
+         "id" : "Nibelung46",
+         "description" : "\n   The drawbridge appears to have been open for many years.  The chains hold-\ning both sides are rusty and stiff.  To your west you notice the inner gate\nto a castle, now in ruins, while a large tower, probably for fortification,\nrises to the east.  The moat below appears to have dried out long ago.\n",
+         "altitude" : "1200"
+      },
+      "nibelung40@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung37",
+            "s" : "Nibelung43"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Monument",
+         "id" : "Nibelung40",
+         "description" : "\n   You are in a small square of some kind, with a large granite monument in\nfront of you.  Its grey surface has a dull luster to it, and you see some \nrunes etched into its side.  To the south you spy a small white church, and\nto the east is a small alleyway, leading into darkness. \n",
+         "altitude" : "1300"
+      },
+      "nibelung90@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung80",
+            "s" : "Nibelung91"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Dining Hall",
+         "id" : "Nibelung90",
+         "description" : "\n   The center of the room is occupied by a very large oak table, which seats\nabout 200 people.  An equal number of chairs runs along both sides, and an\narrangement of dried flowers has been placed as a centerpiece.  There are \nbuckets in two corners, the function of which you would rather not think about.\nA doorway to the east leads to a large hall, and you notice the kitchens to\nthe south.\n",
+         "altitude" : null
+      },
+      "nibelung9@nibelung" : {
+         "exits" : {
+            "s" : "Nibelung8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Canyon",
+         "id" : "Nibelung9",
+         "description" : "\n   It's not the Grand Canyon, but it'll do.  The light here is very dim, as the\nsun is well beyond the rim of the canyon.  It is much cooler here too, but the\nair is fresh and clean.  There are some wildflowers and brush growing here and\nthere.  The northern end appears to be blocked, but there is a path to the    \nsouth.  There are some birds chirping in the distance.\n",
+         "altitude" : "1950"
+      },
+      "nibelung59@nibelung" : {
+         "exits" : {
+            "d" : "Nibelung58"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof"
+         ],
+         "zone" : "nibelung",
+         "title" : "Turret",
+         "id" : "Nibelung59",
+         "description" : "\n   The turret appears to have been vacated long ago.  You recoil a bit from \nthe stench of bird droppings which coat the turret.  A very large birds nest\nhas been constructed in one corner.  From the various clues lying about, it\nis a very large bird, and it might be wise to leave, before it returns.   \n",
+         "altitude" : "1200"
+      },
+      "nibelung26@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung27",
+            "e" : "Nibelung22"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "nibelung",
+         "title" : "Sandy Patch",
+         "id" : "Nibelung26",
+         "description" : "\n   There is a sandy patch of ground here.  A few bits of scrub brush are here, \nbut otherwise there is no vegetation.  Come to think of it, there are no \nanimals here, either.  The air smells tainted, as if a great spell had been\ncast, or as if some evil being has been here recently.  \n",
+         "altitude" : "1250"
+      },
+      "nibelung4@nibelung" : {
+         "exits" : {
+            "e" : "hills20@caledonia",
+            "w" : "Nibelung19",
+            "n" : "Nibelung6",
+            "s" : "Nibelung3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Fork",
+         "id" : "Nibelung4",
+         "description" : "\n   The path branches of in several directions here.  To the west you hear   \nrunning water, and to the north the trail starts to rise steeply.  As you look\naround to try to decide where to go, you spy a path through a grassy field to\nthe south.  You could also climb east up the steep sides of a low mountain.\n",
+         "altitude" : "1500"
+      },
+      "nibelung95@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung94",
+            "n" : "Nibelung94",
+            "d" : "Nibelung96"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "In the Sewer",
+         "id" : "Nibelung95",
+         "description" : "\n   You are in the castle's sewer.  The smell erases any doubt of that fact\nfrom your mind.  Water, about ankle deep, runs past your feet into the moat\nbelow.  The walls are covered in a strange blue slime. \n",
+         "altitude" : null
+      },
+      "nibelung77@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung78"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Castle Treasury",
+         "id" : "Nibelung77",
+         "description" : "\n   The treasury seems to have been ransacked several times before.  If there\never was a treasure, you can be sure it is long gone.  Some shelves which lined\nthe back wall are now broken or empty.  A legend has been enscribed into one\nwall, apparently engraved with some spell.  It reads:\n   Whosoever partaketh of the wizard's delight\n   shall not quake nor quiver at any plight. \n",
+         "altitude" : null
+      },
+      "nibelung79@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung80",
+            "s" : "Nibelung78"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Trophy Room",
+         "id" : "Nibelung79",
+         "description" : "\n   You are in a room with murals adorning the walls, depicting the great con-\nflicts once fought by the knights of this castle.  Some chairs and a small\ntapestry are arranged about a fire, which burns happily in a large stone fire-\nplace.  Some logs are stacked off to one side of the fireplace, and a poker\nhangs just off to the right.\n",
+         "altitude" : null
+      },
+      "nibelung91@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung92",
+            "n" : "Nibelung90",
+            "d" : "Nibelung93"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Kitchens",
+         "id" : "Nibelung91",
+         "description" : "\n   Pots and pans are scattered everywhere.  Some foodstuffs lie rotting on \none table, and a mouse scurries off into a corner.  A large black, cast-iron\nstove is along the far wall, and shelves for food storage line another.  To\nthe north a swinging door leads to the dining room, and to the west is a \nsmall chamber, apparently used for the servants.\n",
+         "altitude" : null
+      },
+      "nibelung11@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung12",
+            "d" : "Nibelung10"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "nibelung",
+         "title" : "In The Teeth",
+         "id" : "Nibelung11",
+         "description" : "\n   The peaks of the mountains surround you, their sharp outlines cutting into \nthe horizon.  A cold wind bites into your exposed flesh, chilling you.  The\npath is now covered in snow, and glare from the sun causes you to squint a\nbit.  The powdery snow crunches under the tread of your boots as you proceed\nalong the trail.  \n",
+         "altitude" : "2750"
+      },
+      "nibelung82@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung83",
+            "s" : "Nibelung81"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Guards' Room",
+         "id" : "Nibelung82",
+         "description" : "\n   You are in a very small room, apparently a place for the guards to sit and\nmonitor prisoners.  A small table and chair are in one corner, while the rest\nof the room is empty.  Some papers, probably logbooks, lie scattered about the\ntable.  To the south you notice a hallway, and a few steps west would take you\ninto a smaller hallway, which apparently leads to the dungeons.\n",
+         "altitude" : null
+      },
+      "nibelung49@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung50",
+            "s" : "Nibelung52"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "In the Moat",
+         "id" : "Nibelung49",
+         "description" : "\n   You find yourself in the castle moat.  It continues around to the north and\nsouth, while huge stone walls tower up to the east and west.  Climbing appears\nimpossible.  The ground is covered in mossy vegetation.\n",
+         "altitude" : "1200"
+      },
+      "nibelung19@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung20",
+            "e" : "Nibelung4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Sloping path",
+         "id" : "Nibelung19",
+         "description" : "\n   There is a dirt path which slopes down to the west, and rises to the east.\n(Of course.)  You can hear the sound of running water off to the west, and a\nbridge off in the distance makes you realize there must be a river there. \nThere are fields of wildflowers stretching off to the north and south, their  \nvibrant colors waving about in the cool autumn breeze. \n",
+         "altitude" : "1400"
+      },
+      "nibelung63@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung57",
+            "s" : "Nibelung64"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Tapestry Room",
+         "id" : "Nibelung63",
+         "description" : "\n   This small room used to house the castle's many fine tapestries.  A few \nmouldy ones remain, hanging limply and unattractively from the walls.  Some\nstraw covers the floor, apparently an attempt to make the room more comfort-\nable.  There are several iron hooks in the wall that used to hold torches, but\nhave been emptied long ago.   \n",
+         "altitude" : null
+      },
+      "nibelung87@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung86",
+            "n" : "Nibelung86"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Faffner's Lair",
+         "id" : "Nibelung87",
+         "description" : "\n   You find yourself in a smaller cavern than the last one, but still rather\nimpressive.  Stalagmites poke up from the floor here and there about the room.\nSeveral shelves have been carved into one wall, apparently to store small\nitems.  As you walk further into the room, you notice some bones lying about\nthe floor.  A few seconds later, it dawns on you that these are human bones.\n",
+         "altitude" : null
+      },
+      "nibelung51@nibelung" : {
+         "exits" : {
+            "s" : "Nibelung50"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "In the Moat",
+         "id" : "Nibelung51",
+         "description" : "\n   You have reached the northern end of the moat.  Stone walls and a cliff\nface block all exits, except to the south.\n",
+         "altitude" : "1200"
+      },
+      "nibelung68@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung70",
+            "n" : "^hole2",
+            "d" : "Nibelung72",
+            "s" : "Nibelung69"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Tower Base",
+         "id" : "Nibelung68",
+         "description" : "\n   You are standing in the base of a large tower.  Steps lead upward into dark-\nness, and continue down below.  Things smell musty and old here, as if no one\nhad been about for some time.  A finger run along the railing would surely be\ndirty from dust. \n",
+         "altitude" : null
+      },
+      "nibelung45@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung46",
+            "e" : "Nibelung27",
+            "u" : "Nibelung47"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Turm",
+         "id" : "Nibelung45",
+         "description" : "\n   You are standing in an archway which runs through the center of a very\nlarge tower.  Some steps lead upwards to the upper levels of the tower and\na drawbridge is open to the west.  Your boots click upon the cobblestones, and\nyou notice a rusty porticullis dangling overhead.  A path wanders off to the\neast. \n",
+         "altitude" : null
+      },
+      "nibelung56@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung55",
+            "s" : "Nibelung57"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Northern Gate",
+         "id" : "Nibelung56",
+         "description" : "\n   You have found the northern gate of the castle.  A large iron porticullis\nbars exit to the north.  To the east you notice a small guardhouse, while the\ncastle wall runs off to the south.\n",
+         "altitude" : "1200"
+      },
+      "nibelung2@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung5",
+            "n" : "Nibelung3",
+            "s" : "Nibelung1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Gravel Way",
+         "id" : "Nibelung2",
+         "description" : "\n   The path turns to gravel under your feet.  You hear a burbling river off to\nthe west, and there is a grassy trail to the north.  It seems like a peaceful\nday to be out for a stroll.\n",
+         "altitude" : "1450"
+      },
+      "nibelung44@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung43",
+            "n" : "Nibelung41"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Parsonage",
+         "id" : "Nibelung44",
+         "description" : "\n   The parsonage, like most of the other buildings in the village, is damp and\nmusty.  The air hangs heavy here, as if it hadn't moved in several years.  The\ntapestries along the opposite wall are rotten and covered with mildew.  To the\nwest you spy a rotting church, and to the north an open doorway opens out to\nan alley of sorts.\n",
+         "altitude" : null
+      },
+      "nibelung76@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung75"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "nibelung",
+         "title" : "Moat",
+         "id" : "Nibelung76",
+         "description" : "\n   You slide down through the hole, only to discover that the moat is far \nbelow you....seconds later, your legs are driven up into the rest of your body\nas you hit the bottom.\n",
+         "altitude" : null
+      },
+      "nibelung21@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung22",
+            "e" : "Nibelung20"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Wooden Bridge",
+         "id" : "Nibelung21",
+         "description" : "\n   You are standing on a wooden bridge which spans a small river below you.\nThe sun reflects off the clear water, dazzling your eyes.  On the railing are\nsome carvings by various lovers and couples of years past.  To the west is a\nroad, which runs off into the horizon.\n",
+         "altitude" : "1250"
+      },
+      "nibelung33@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung34",
+            "n" : "Nibelung30"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Playground",
+         "id" : "Nibelung33",
+         "description" : "\n   The playground is overgrown with weeds now, although it probably was well \ncared for at one time.  Some toys lie here, discarded long ago and left to rot.\nA little red schoolhouse lies to the north, and off to the east you notice a\ntown square of some kind.\n",
+         "altitude" : "1300"
+      },
+      "nibelung34@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung33",
+            "e" : "Nibelung35",
+            "n" : "Nibelung31",
+            "s" : "Nibelung37"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Town Square",
+         "id" : "Nibelung34",
+         "description" : "\n   You are standing in the square of the town.  The road is in really bad\ncondition here and you realize that this town has been emptied of people for\nquite some time.  To the north is the village gate, and lands beyond.  Off to\nthe west you see a play area of some sort.  To the south you notice a bandstand or something.\n",
+         "altitude" : "1300"
+      },
+      "nibelung97@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung98",
+            "s" : "Nibelung17"
+         },
+         "flags" : [
+            "Party",
+            "Peaceful",
+            "NoMagic",
+            "NoMobiles",
+            "NoSummon"
+         ],
+         "zone" : "nibelung",
+         "title" : "The Overlook Lobby",
+         "id" : "Nibelung97",
+         "description" : "\n   From here the dining room can be seen, filling with only the most      \ndistinguished adventurers.  The Overlook Restaurant boasts of it's high\nstandards.  Only the wealthiest players can afford to eat here.  Waiters\nbusily scuttle around, filling the orders of the patrons within.  A\nwalnut podium stands discreetly before the entrance to the main dining\narea, blocking your view and your passage.\n",
+         "altitude" : null
+      },
+      "nibelung7@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung10",
+            "n" : "Nibelung8",
+            "s" : "Nibelung6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Base of Teeth",
+         "id" : "Nibelung7",
+         "description" : "\n   The trail's difficulty increases as you head north, but isn't as bad to the \nsouth.  The foothills of the mountain rise above you, and a sense of awe and \nperhaps fear fills you.  The path curves around a bend to the mouth of a canyon\nto the north.\n",
+         "altitude" : "1900"
+      },
+      "nibelung69@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung68"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Research Room",
+         "id" : "Nibelung69",
+         "description" : "\n   Many beakers, flasks and retorts make the purpose of this room clear.  Along\none wall a bookshelf leans, covered with old, leather-bound books of varying\nsize and color.  A table in the center of the room is covered in beakers full\nof different liquids, some purple, some green, and many other colors.  A wooden\nstool sits next to the table, apparently for the person who worked in the lab.\n   A draft blows in from the tower base to the north. \n",
+         "altitude" : null
+      },
+      "nibelung30@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung31",
+            "s" : "Nibelung33"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Schoolhouse",
+         "id" : "Nibelung30",
+         "description" : "\n   You are standing in a little red schoolhouse.  From your cursory glance, it \ndoesn't appear as if anyone has been learning here recently.  The chalkboard is\nsmashed, and papers and books lie scattered about the room.  The desks and\nchairs have been thrown about, lending to the look of chaos. A doorway leads\nout to the south.\n",
+         "altitude" : null
+      },
+      "nibelung48@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung61",
+            "e" : "Nibelung46"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Inner Gate",
+         "id" : "Nibelung48",
+         "description" : "\n   The inner gate was once relied upon heavily, as you spy many scored marks \nin the door, as if a battering ram had struck it many times.  The door is \nopen now, allowing you to continue west, into the castle courtyard, or you\ncan venture to the east, across a drawbrige.\n",
+         "altitude" : null
+      },
+      "nibelung78@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung67",
+            "n" : "Nibelung79",
+            "s" : "Nibelung77"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Library",
+         "id" : "Nibelung78",
+         "description" : "\n   Bookshelves run from floor to ceiling along every wall.  The room smells\nvery musty and dry, like autumn leaves on a warm day.  Books of varying color,\nsize, and topic adorn the shelves.  The room is dimly lit by some sort of\nmagical aura.     \n",
+         "altitude" : null
+      },
+      "nibelung60@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung65",
+            "n" : "Nibelung58",
+            "s" : "Nibelung61"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Along the Wall",
+         "id" : "Nibelung60",
+         "description" : "\n   You are standing along the wall of the castle.  Bits of mortar from the\nwall lie on the ground, as the wall begins its slow decay.\n   You notice a small side yard through a doorway to the left.\n",
+         "altitude" : "1200"
+      },
+      "nibelung28@nibelung" : {
+         "exits" : {
+            "s" : "Nibelung22"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Boathouse",
+         "id" : "Nibelung28",
+         "description" : "\n   You find yourself in a boathouse of sorts.  The ceiling has collapsed at one\nend, allowing sunlight to work its way into the room.  Water is lapping up\nagainst the pilons, but if there ever was a boat here, it is long gone.  The\nriver can be seen flowing by the eastern side of the building.  A bird's nest\ncan be seen in one of the rafters, but it too appears to have been abandoned.\n",
+         "altitude" : "1300"
+      },
+      "nibelung73@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung74",
+            "u" : "Nibelung72"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Damp Tunnel",
+         "id" : "Nibelung73",
+         "description" : "\n   The air is clammy and cool against your exposed skin.  The dampness pervades\nthe air and room about you, chilling you a bit.  Apparently this used to be\nunder the moat and leaked quite profusely.  The tunnel continues off to the\neast, and slopes upwards sharply.\n",
+         "altitude" : null
+      },
+      "nibelung22@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung26",
+            "e" : "Nibelung21",
+            "n" : "Nibelung28",
+            "s" : "Nibelung23"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Junction",
+         "id" : "Nibelung22",
+         "description" : "\n   The road splits off into several directions here.  It appears to have rained\nhere recently, and the road to the south looks muddy.  A sandy patch lies off\nto the west, and you see a dilapidated structure off to the north.  You hear a\nbabbling river off to the east, its pleasant tones putting you into a relaxed\nmood.\n",
+         "altitude" : "1300"
+      },
+      "nibelung72@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung68",
+            "d" : "Nibelung73"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Damp Tunnel",
+         "id" : "Nibelung72",
+         "description" : "\n   Water drips from the ceiling and runs along miniscule cracks in the walls.\nA thin layer of mud on the floor coats about an inch of your boots, and makes\nwalking difficult as you slide about.  The tunnel slopes down sharply, and it\ntakes great effort to keep from sliding to the bottom.  You can make out the\nbase of the tower above you.\n",
+         "altitude" : null
+      },
+      "nibelung54@nibelung" : {
+         "exits" : {
+            "e" : "^grate2",
+            "u" : "Nibelung62"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "nibelung",
+         "title" : "Water Way",
+         "id" : "Nibelung54",
+         "description" : "\n   Water cascades down around you, and runs back up again, as if by magic.\nIt appears to be recycling itself for a fountain.  You notice sunlight\nfiltering down from the surface.   \n",
+         "altitude" : null
+      },
+      "nibelung85@nibelung" : {
+         "exits" : {
+            "u" : "^bench2",
+            "s" : "Nibelung86"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Tunnel",
+         "id" : "Nibelung85",
+         "description" : "\n   As far as you can tell, the tunnel continues to the south, or you can crawl\nback up into the dungeon above.  Your flickering light illuminates the curved\nceiling above and you notice some small stalactites forming.\n",
+         "altitude" : null
+      },
+      "nibelung13@nibelung" : {
+         "exits" : {
+            "u" : "Nibelung12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Gorge",
+         "id" : "Nibelung13",
+         "description" : "\n   There is a faint smell of ozone in the air.  You are in a deep gorge below\nthe mountain peaks, where you find some relief from the constant wind.  There\nare some markings in the rocks, and some of them appear to have melted at some\npoint in the near past.  Apparently lightning storms are a common occurance\nhere.  There is a path that goes off into the peaks above you, which you    \ncould climb with only moderate difficulty.\n",
+         "altitude" : "3300"
+      },
+      "nibelung35@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung34",
+            "n" : "Nibelung32",
+            "s" : "Nibelung38"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Cellar Hole",
+         "id" : "Nibelung35",
+         "description" : "\n   The cellarhole is partially filled in with debris.  Some brush is growing\noff to one side, and weeds seem to abound here.  Off to the north stands a\ncrumbling tavern, and to the south is a house.\n",
+         "altitude" : "1300"
+      },
+      "nibelung8@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung9",
+            "s" : "Nibelung7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Mouth of Canyon",
+         "id" : "Nibelung8",
+         "description" : "\n   You are standing at the mouth of a very large canyon.  The light here is \ndimmer, as the sun dips behind the western rim of the valley.  To the south is\nthe rocky soil of the base of the mountains.  The peaks of the Teeth rise up\nto the east, their majestic beauty stealing your breath for a moment.\n",
+         "altitude" : "1950"
+      },
+      "nibelung3@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung4",
+            "s" : "Nibelung2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Grass Trail",
+         "id" : "Nibelung3",
+         "description" : "\n   There is an unkempt grassy trail here.  By the looks, it hasn't been mowed\nor used in some time.  The path is surrounded by wildflowers of many different\nvarieties, which undulate in the light breeze.\n",
+         "altitude" : "1450"
+      },
+      "nibelung52@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung49",
+            "s" : "Nibelung53"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "In the Moat",
+         "id" : "Nibelung52",
+         "description" : "\n   You are in the castle moat.  Stone walls rise up to the east and west,\nwhile the moat continues to the north and south.\n",
+         "altitude" : "1200"
+      },
+      "nibelung47@nibelung" : {
+         "exits" : {
+            "d" : "Nibelung45"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "nibelung",
+         "title" : "Top of the Turm",
+         "id" : "Nibelung47",
+         "description" : "\n   The top of the tower appears to have been empty for quite some time.  Your\nboots stir up dust as you walk around, causing your nose to itch.  Cobwebs \nadorn the corners, and you hear insects buzzing about busily outside.\n",
+         "altitude" : null
+      },
+      "nibelung25@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung24",
+            "s" : "Nibelung29"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Decaying Land",
+         "id" : "Nibelung25",
+         "description" : "\n   The land here is, well, decaying.  The trees are mere skeletons, and the\ngrass is brown and dry.  Nothing seems to be living here, and you notice the\nabsence of birds chirping, and the usual hum of mosquitos.  The air smells\nmusty and old, like the inside of a vacuum.\n",
+         "altitude" : "1300"
+      },
+      "nibelung24@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung23",
+            "s" : "Nibelung25"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nibelung",
+         "title" : "Rocky Road",
+         "id" : "Nibelung24",
+         "description" : "\n   You are standing in a tub of ice cream...no, wait, sorry.  \n   {We apologize for the inconvenience.  The programmer has been zapped.}\nRocky Road\n   [ take two ]\n   You are on a cobblestone road, although upkeep has been minimal in recent\ntimes.  Grass can be seen forcing its way through the cracks.  Some brush is\ngrowing off to the side, but from the looks of things, it's not happy to be\nthere.\n",
+         "altitude" : "1300"
+      },
+      "nibelung74@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung73",
+            "e" : "Nibelung75"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Musty Corridor",
+         "id" : "Nibelung74",
+         "description" : "\n  You are in a very dank, smelly, musty, {fill in adjective here}, hallway\nwhich leads to a room to the east, or into a damp tunnel to the west.  Moss\ngrows upon the walls, and calcite adorns the floor in various spots.  Water is\nbeginning to seep into your boots, wetting your toes a little.\n",
+         "altitude" : null
+      },
+      "nibelung12@nibelung" : {
+         "exits" : {
+            "n" : "Nibelung14",
+            "d" : "Nibelung13",
+            "s" : "Nibelung11"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold",
+            "Soundproof"
+         ],
+         "zone" : "nibelung",
+         "title" : "Mountain Peak",
+         "id" : "Nibelung12",
+         "description" : "\n   You are amongst the peaks of the mountains.  It is very cold here, and a\nstrong wind stirs up the snow around you, making it difficult to see.  The snow\nis much deeper here, and small amounts of it slip into your boots from time to\ntime, making them cold.  It seems very quiet and desolate up here, and no one\nhas apparently been along in quite some time.  But with the shifting, drifting\nsnow, it is difficult to tell. \n",
+         "altitude" : "4300"
+      },
+      "nibelung36@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung37"
+         },
+         "flags" : [],
+         "zone" : "nibelung",
+         "title" : "Mouldy Shop",
+         "id" : "Nibelung36",
+         "description" : "\n   There are rotting shelves along one wall, and a table is slumped in the \nback of the shop.  The damp floorboards sag a bit under your weight, and the\nplace smells dank and musty.  Some jars on one of the shelves have exploded,\ntheir rotten contents hardened onto the wall and floor.  Bits of glass lie   \nscattered about.\n",
+         "altitude" : null
+      },
+      "nibelung88@nibelung" : {
+         "exits" : {
+            "e" : "Nibelung89"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Armory",
+         "id" : "Nibelung88",
+         "description" : "\n   ar*mory, n. / pl. ar*mor*ies (14c)\n   a place where arms and military equipment are stored; esp: one used for\ntraining military reserve personnel.  - Webster's.\n   There is an exit to the east. \n   A legend has been rudely carved into one wall which reads:\n              The arrow of the proper hue\n              will always fly straight and true.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "bookwyrm@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung78",
+         "speed" : "0",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "Bookwyrm",
+         "name" : "Bookwyrm",
+         "description" : "A bookwyrm is here, looking for some books to eat.",
+         "strength" : "70"
+      },
+      "nimbus@nibelung" : {
+         "damage" : "20",
+         "location" : "Nibelung13",
+         "armor" : "0",
+         "name" : "Nimbus",
+         "description" : "A Nimbus hovers above you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "2000",
+         "speed" : "0",
+         "pname" : "Nimbus",
+         "aggression" : "0"
+      },
+      "gunther@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung60",
+         "speed" : "0",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "Gunther",
+         "name" : "Gunther",
+         "description" : "Gunther the Nibelung wanders about aimlessly.",
+         "strength" : "120"
+      },
+      "kenin@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung84",
+         "speed" : "0",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "Kenin",
+         "name" : "Kenin",
+         "description" : "Kenin the Nibelung searches for his jailors.",
+         "strength" : "125"
+      },
+      "stefan@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung80",
+         "speed" : "0",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "Stefan",
+         "name" : "Stefan",
+         "description" : "Stefan the Nibelung roams about, pondering life.",
+         "strength" : "115"
+      },
+      "racoon@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung41",
+         "speed" : "5",
+         "aggression" : "2",
+         "armor" : "0",
+         "pname" : "Racoon",
+         "name" : "Racoon",
+         "description" : "\nThere is a small brown racoon here, foaming about the mouth as it searches for\nsome garbage to dig through.",
+         "strength" : "70"
+      },
+      "bully@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung35",
+         "speed" : "5",
+         "aggression" : "50",
+         "armor" : "0",
+         "pname" : "Bully",
+         "name" : "Bully",
+         "description" : "\nA burly kid is here, who looks like he should be finished with school. You wish\nhe were finished with life in general.",
+         "strength" : "110"
+      },
+      "protector@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung45",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "pname" : "Protector",
+         "name" : "Protector",
+         "description" : "The Protector is here guarding his lands.",
+         "strength" : "100"
+      },
+      "boatman@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung28",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Boatman",
+         "name" : "Boatman",
+         "description" : "\nA haggard looking boatman is here with a wild look in his eyes.",
+         "strength" : "100"
+      },
+      "wolfgang@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung55",
+         "speed" : "5",
+         "aggression" : "5",
+         "armor" : "0",
+         "pname" : "Wolfgang",
+         "name" : "Wolfgang",
+         "description" : "\nWolfgang the Guard is marching about, keeping watch over the castle.",
+         "strength" : "115"
+      },
+      "vampire@nibelung" : {
+         "damage" : "8",
+         "location" : "Limbo@limbo",
+         "speed" : "0",
+         "aggression" : "70",
+         "armor" : "0",
+         "pname" : "Vampire",
+         "name" : "Vampire",
+         "description" : "\nA man stands before you with dark brown hair, wearing a cape. He has unusually\nlarge, sharp teeth and a fixating gaze.",
+         "strength" : "200"
+      },
+      "faffner@nibelung" : {
+         "eflags" : [
+            "Fireball",
+            "Frost",
+            "Missile",
+            "Shock"
+         ],
+         "damage" : "15",
+         "location" : "Nibelung87",
+         "armor" : "0",
+         "name" : "Faffner",
+         "description" : "Faffner the Dracolich contemplates how to kill you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "98",
+         "pname" : "Faffner"
+      },
+      "maitred@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung97",
+         "armor" : "0",
+         "name" : "MaitreD",
+         "description" : "The Maitre D' stares down his nose at you condesendingly.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "MaitreD",
+         "pflags" : "{}"
+      },
+      "gatekeeper@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung29",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Gatekeeper",
+         "name" : "Gatekeeper",
+         "description" : "\nA large man stands before you in some sort of uniform. A ring with many keys is\nhanging from his belt.",
+         "strength" : "110"
+      },
+      "bratty@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung32",
+         "armor" : "0",
+         "name" : "Bratty",
+         "description" : "\nA girl is here with bright red hair in pony tails. She has really thick glasses\non, and is polishing an apple.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "90",
+         "speed" : "5",
+         "pname" : "Bratty",
+         "aggression" : "1"
+      }
+   }
+}

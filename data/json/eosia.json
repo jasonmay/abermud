@@ -1,0 +1,1563 @@
+{
+   "obj" : {
+      "rocks_1w@eosia" : {
+         "desc[1]" : "A rockslide prevents you from proceeding west.",
+         "location" : "IN_ROOM:eosia49",
+         "oflags" : [
+            "noget"
+         ],
+         "name" : "rocks_1W",
+         "linked" : "rocks_1E",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "rocks",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A rockslide has been cleared, allowing you access west."
+      },
+      "pie_eosia@eosia" : {
+         "location" : "IN_ROOM:eosia6",
+         "oflags" : [
+            "food"
+         ],
+         "name" : "pie_eosia",
+         "state" : "0",
+         "size" : "3",
+         "pname" : "pie",
+         "weight" : "3",
+         "maxstate" : "0",
+         "bvalue" : "30",
+         "desc[0]" : "Yum!  There is a freshly baked pie here."
+      },
+      "robe_eosia@eosia" : {
+         "location" : "WORN_BY:sephrenia",
+         "armor" : "20",
+         "oflags" : [
+            "wearable"
+         ],
+         "altname" : "white",
+         "name" : "robe_eosia",
+         "state" : "0",
+         "size" : "4",
+         "weight" : "4",
+         "pname" : "robe",
+         "maxstate" : "0",
+         "bvalue" : "80",
+         "desc[0]" : "Sephrenia's white Styric robe has been dropped here.",
+         "aflags" : [
+            "Back",
+            "Chest",
+            "Arms",
+            "Legs"
+         ]
+      },
+      "ring1_eosia@eosia" : {
+         "location" : "WORN_BY:sparhawk",
+         "oflags" : [
+            "wearable",
+            "lit"
+         ],
+         "altname" : "ruby",
+         "name" : "ring1_eosia",
+         "examine" : "\nThis fine ring was crafted from rubies and is one half of the key to unlock\nBhelliom's powers.",
+         "state" : "0",
+         "size" : "3",
+         "weight" : "0",
+         "pname" : "ring",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "You've found one of the mystical rings of Bhelliom!",
+         "aflags" : [
+            "hand"
+         ]
+      },
+      "pit_eosia@eosia" : {
+         "location" : "IN_ROOM:eosia52",
+         "oflags" : [
+            "noget"
+         ],
+         "altname" : "eosian",
+         "name" : "pit_eosia",
+         "state" : "0",
+         "size" : "0",
+         "pname" : "pit",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A sacrificial pit allows you to give offerings to the gods."
+      },
+      "cross_eosia@eosia" : {
+         "desc[1]" : "On the altar stands a beautiful Elene cross.",
+         "location" : "IN_ROOM:eosia31",
+         "altname" : "elene",
+         "name" : "cross_eosia",
+         "state" : "1",
+         "size" : "3",
+         "pname" : "cross",
+         "weight" : "3",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "An Elene cross is lying on the ground here."
+      },
+      "door_1s_eosia@eosia" : {
+         "desc[1]" : "The door to the south is closed.",
+         "location" : "IN_ROOM:eosia16",
+         "oflags" : [
+            "noget",
+            "openable",
+            "lockable"
+         ],
+         "name" : "door_1S_eosia",
+         "desc[2]" : "The door to the south is securely locked.",
+         "linked" : "door_1N_eosia",
+         "state" : "2",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door to the south is open."
+      },
+      "sword_sparhawk@eosia" : {
+         "desc[1]" : "Sparhawk's sword has been dropped here.",
+         "damage" : "20",
+         "location" : "WIELDED_BY:sparhawk",
+         "oflags" : [
+            "lit",
+            "weapon"
+         ],
+         "name" : "sword_sparhawk",
+         "state" : "1",
+         "size" : "15",
+         "pname" : "championsword",
+         "weight" : "15",
+         "maxstate" : "1",
+         "bvalue" : "500",
+         "desc[0]" : "A magnificent sword lies here emitting a faint glow."
+      },
+      "bhelliom@eosia" : {
+         "desc[1]" : "Sitting on a pedestal lies the Bhelliom.",
+         "damage" : "30",
+         "location" : "IN_ROOM:eosia51",
+         "oflags" : [
+            "getflips",
+            "lit",
+            "weapon",
+            "key"
+         ],
+         "altname" : "sapphire",
+         "name" : "bhelliom",
+         "examine" : "\nPowerful beyond belief, the Bhelliom, a true sapphire rose, glows with power.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "bhelliom",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "Someone has dropped the Bhelliom here!  How careless!"
+      },
+      "boat_eosia@eosia" : {
+         "location" : "IN_ROOM:eosia20",
+         "oflags" : [
+            "Boat"
+         ],
+         "name" : "boat_eosia",
+         "state" : "0",
+         "size" : "20",
+         "pname" : "boat",
+         "weight" : "20",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "There is a small boat lying here."
+      },
+      "key_eosia@eosia" : {
+         "location" : "IN_ROOM:eosia8",
+         "oflags" : [
+            "key"
+         ],
+         "name" : "key_eosia",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "key",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "20",
+         "desc[0]" : "A small key is lying here on the floor."
+      },
+      "crystal_case@eosia" : {
+         "location" : "IN_ROOM:eosia15",
+         "oflags" : [
+            "noget"
+         ],
+         "altname" : "crystal",
+         "name" : "crystal_case",
+         "examine" : "\nWhen Annias poisoned Ehlana, the only thing that could be done to save her\nwas to seal her in a magic crystal.  This is the work of Sephrenia and a\nhandful of Pandion knights, who put their lives in danger to save their\nqueen.\n",
+         "state" : "0",
+         "size" : "0",
+         "pname" : "case",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "\nBefore you is the case in which Queen Ehlana has been magically sealed."
+      },
+      "ring2_eosia@eosia" : {
+         "location" : "IN_CONTAINER:coffin_eosia",
+         "oflags" : [
+            "lit",
+            "wearable"
+         ],
+         "altname" : "ruby",
+         "name" : "ring2_eosia",
+         "examine" : "\nThis fine ring is crafted from rubies and is one of the keys to unlock the \npower of the Bhelliom.",
+         "state" : "0",
+         "size" : "3",
+         "weight" : "0",
+         "pname" : "ring",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "You've found the other mystical ring of the Bhelliom!",
+         "aflags" : [
+            "Hand"
+         ]
+      },
+      "crown_rindor@eosia" : {
+         "location" : "WORN_BY:rindor",
+         "oflags" : [
+            "wearable"
+         ],
+         "altname" : "rindor",
+         "name" : "crown_rindor",
+         "state" : "0",
+         "size" : "4",
+         "weight" : "4",
+         "pname" : "crown",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "The Crown of Rindor shines brilliantly before you!",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "coffin_eosia@eosia" : {
+         "desc[1]" : "The coffin of King Eryn stands closest to you.",
+         "location" : "IN_ROOM:eosia17",
+         "oflags" : [
+            "noget",
+            "container",
+            "openable"
+         ],
+         "name" : "coffin_eosia",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "coffin",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "One of the coffin's has been opened."
+      },
+      "stick_eosia@eosia" : {
+         "desc[1]" : "A burnt stick has been dropped here.",
+         "location" : "IN_ROOM:eosia47",
+         "oflags" : [
+            "lightable",
+            "extinguish"
+         ],
+         "name" : "stick_eosia",
+         "desc[2]" : "Hidden in a nearby bush you can see a stick.",
+         "state" : "2",
+         "size" : "2",
+         "pname" : "stick",
+         "weight" : "2",
+         "maxstate" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "A stick lies here burning away."
+      },
+      "door_1w_eosia@eosia" : {
+         "desc[1]" : "The door to the west is shut.",
+         "location" : "IN_ROOM:eosia14",
+         "oflags" : [
+            "noget",
+            "lockable",
+            "openable"
+         ],
+         "altname" : "west",
+         "name" : "door_1W_eosia",
+         "desc[2]" : "The door to the west is magically locked.",
+         "linked" : "door_1E_eosia",
+         "state" : "2",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door to the west has been opened."
+      },
+      "fountain_eosia@eosia" : {
+         "desc[1]" : "A fountain stands here casting patterns on the builings.",
+         "location" : "IN_ROOM:eosia30",
+         "oflags" : [
+            "noget",
+            "pushable"
+         ],
+         "name" : "fountain_eosia",
+         "examine" : "Hmm...there seems to be something underneath the fountain.",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "fountain",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The fountain has been pushed aside, allowing passage down."
+      },
+      "armor_eosia@eosia" : {
+         "desc[1]" : "Sparhawk's suit of armor lies here.",
+         "location" : "WORN_BY:sparhawk",
+         "armor" : "45",
+         "oflags" : [
+            "wearable",
+            "armor"
+         ],
+         "altname" : "pandion",
+         "name" : "armor_eosia",
+         "state" : "1",
+         "size" : "10",
+         "weight" : "10",
+         "pname" : "pandionarmor",
+         "maxstate" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "Someone has left some Pandion armor here.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms",
+            "Legs"
+         ]
+      },
+      "sign1_eosia@eosia" : {
+         "location" : "IN_ROOM:eosia1",
+         "oflags" : [
+            "noget"
+         ],
+         "name" : "sign1_eosia",
+         "examine" : "\nWelcome to Eosia and Elenia.  Zone created by Jar, March 93.  Coded by Gaea.\nOrginally written for MirageII.  Based on the series 'The Elenium' by\nDavid Eddings.\n",
+         "state" : "0",
+         "size" : "0",
+         "pname" : "sign",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A sign has been posted here."
+      },
+      "fallensword@eosia" : {
+         "damage" : "15",
+         "location" : "CARRIED_BY:sephrenia",
+         "oflags" : [
+            "weapon"
+         ],
+         "name" : "fallensword",
+         "examine" : "\nOnce a month, a Pandion who was present when Ehlana was encased in crystal, \nwill fall.  This is one of their swords, which Sephrenia must bear.\n",
+         "state" : "0",
+         "size" : "40",
+         "pname" : "fallensword",
+         "weight" : "200",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "One of the Sword's of the Fallen is here.  It looks heavy..."
+      },
+      "door_1e_eosia@eosia" : {
+         "desc[1]" : "The door to the east is firmly shut.",
+         "location" : "IN_ROOM:eosia15",
+         "oflags" : [
+            "noget",
+            "openable",
+            "lockable"
+         ],
+         "name" : "door_1E_eosia",
+         "desc[2]" : "The door to the east has been magically sealed.",
+         "linked" : "door_1W_eosia",
+         "state" : "2",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door to the east is open."
+      },
+      "idol_azash@eosia" : {
+         "desc[1]" : "On the altar is an idol of the God Azash.",
+         "location" : "IN_ROOM:eosia46",
+         "oflags" : [
+            "getflips"
+         ],
+         "altname" : "azash",
+         "name" : "idol_azash",
+         "state" : "1",
+         "size" : "2",
+         "pname" : "idol",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "500",
+         "desc[0]" : "A hideous idol made of mud is lying on the ground."
+      },
+      "book_eosia@eosia" : {
+         "location" : "IN_ROOM:eosia9",
+         "name" : "book_eosia",
+         "examine" : "\nThe cover reads 'The History of the Bhelliom'.  It appears that the\ntroll Ghwerig once combined all the powers of the Troll Gods into the\nmagical stone, the Bhelliom.  In order to get or use the Bhelliom, one must\nbe in possession of the two keys to activate it.  These keys were made in\nthe form of two ruby rings.  Where those rings are today is a mystery.\nHowever, the Bhelliom was stolen by a human, and then lost in one of the great\nbattles during one of the many wars between the Elenes and the Zemochs.  It is\nbelieved Ghwerig recovered the Bhellim  at some point, but it is unknown.\nThere are references to the gods of the Styrics, in particular, the Goddess\nAphrael, and the God Azash...but as a faithful Elene, you tend not to believe\nsuch fables.\n",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "book",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "desc[0]" : "Someone has carelessly left an important looking book here."
+      },
+      "torch_eosia@eosia" : {
+         "desc[1]" : "A torch burns merrily on the wall.",
+         "location" : "IN_ROOM:eosia14",
+         "oflags" : [
+            "getflips",
+            "extinguish",
+            "lit",
+            "lightable"
+         ],
+         "name" : "torch_eosia",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "torch",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "An old torch is lying here, unlit."
+      },
+      "flute_eosia@eosia" : {
+         "location" : "CARRIED_BY:aphrael",
+         "name" : "flute_eosia",
+         "examine" : "This silvery flute belongs to the girl Flute.",
+         "state" : "0",
+         "size" : "3",
+         "pname" : "flute",
+         "weight" : "3",
+         "maxstate" : "0",
+         "bvalue" : "150",
+         "desc[0]" : "Flute's flute is lying here.  Where could she be?"
+      },
+      "door_1n_eosia@eosia" : {
+         "desc[1]" : "The door to the north is closed.",
+         "location" : "IN_ROOM:eosia14",
+         "oflags" : [
+            "noget",
+            "openable",
+            "lockable"
+         ],
+         "altname" : "north",
+         "name" : "door_1N_eosia",
+         "desc[2]" : "The door to the north is securely locked.",
+         "linked" : "door_1S_eosia",
+         "state" : "2",
+         "size" : "0",
+         "pname" : "door",
+         "weight" : "0",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door to the north is open."
+      },
+      "rocks_1e@eosia" : {
+         "desc[1]" : "A rockslide has sealed you in this cave!",
+         "location" : "IN_ROOM:eosia50",
+         "oflags" : [
+            "noget"
+         ],
+         "name" : "rocks_1E",
+         "linked" : "rocks_1W",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "rocks",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A rockslide has been cleared allowing you access east."
+      },
+      "staff_iron_eosia@eosia" : {
+         "location" : "WIELDED_BY:kalor",
+         "oflags" : [
+            "weapon"
+         ],
+         "altname" : "iron",
+         "name" : "staff_iron_eosia",
+         "state" : "0",
+         "size" : "8",
+         "pname" : "staff",
+         "weight" : "8",
+         "maxstate" : "0",
+         "bvalue" : "90",
+         "desc[0]" : "A large iron staff has been left here."
+      },
+      "sign2_eosia@eosia" : {
+         "location" : "IN_ROOM:eosia2",
+         "oflags" : [
+            "noget"
+         ],
+         "name" : "sign2_eosia",
+         "examine" : "\nThe sign reads 'North: Deira; East: Cammoria; South: Chyrellos and Shore.' ",
+         "state" : "0",
+         "size" : "0",
+         "pname" : "sign",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A sign has been placed at the corner of the crossroads."
+      }
+   },
+   "loc" : {
+      "eosia18@eosia" : {
+         "exits" : {
+            "e" : "eosia19",
+            "n" : "eosia2",
+            "s" : "eosia20"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "The Long Road",
+         "id" : "eosia18",
+         "description" : "\n        One of the busiest roads in all of Elenia, you stand on the\nfamous 'Long Road'.  To the south you can make out the sounds of water\nand the ocean, to the east, you can just barely make out the spires of\na city.\n",
+         "altitude" : null
+      },
+      "eosia45@eosia" : {
+         "exits" : {
+            "d" : "eosia46",
+            "s" : "eosia44"
+         },
+         "flags" : [
+            "dark",
+            "negregen"
+         ],
+         "zone" : "eosia",
+         "title" : "A Dark Room",
+         "id" : "eosia45",
+         "description" : "\n        This dark room is filled with nothing but the sense of evil.  A\nsmall stairway in front of you leads down into darkness.  You can hear\nthe sounds of people screaming coming from every direction.  The only exits\nyou can make out besides the stairs, is the archway behind you.\n",
+         "altitude" : null
+      },
+      "eosia1@eosia" : {
+         "exits" : {
+            "e" : "eosia2"
+         },
+         "flags" : [
+            "outdoors",
+            "cold"
+         ],
+         "zone" : "eosia",
+         "title" : "Dirt Road",
+         "id" : "eosia1",
+         "description" : "\n        You are walking along a a dirt road that runs east-west through\nthe countryside.  Behind you, to the west lies a pass into the mountains.\nJudging by the tracks, it would appear that this is a heavily used road by the\nlocals.\n",
+         "altitude" : null
+      },
+      "eosia33@eosia" : {
+         "exits" : {
+            "e" : "eosia34",
+            "u" : "eosia30"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "Secret Road",
+         "id" : "eosia33",
+         "description" : "\n        You have discovered a secret road leading out from Chyrellos.\nThis road was once used by the clergy as an escape from the city during\none of the many seiges during the Zemoch wars.  The road continues off\nto the east, where dark clouds are gathering on the horizon.\n",
+         "altitude" : null
+      },
+      "eosia6@eosia" : {
+         "exits" : {
+            "e" : "eosia5",
+            "u" : "eosia8",
+            "d" : "eosia7"
+         },
+         "flags" : [
+            "party",
+            "peaceful",
+            "soundproof"
+         ],
+         "zone" : "eosia",
+         "title" : "The Inn",
+         "id" : "eosia6",
+         "description" : "\n        This is one of the more unsavory places to visit in Cimmura.  Known\nfor its fights, and wild times, this establishment has been on the royal\ncondemnation list for years.  However, thanks to the local Thieves, it has\nmaintained its own existance.  The Inn is closed right now, but perhaps\nif you came back later?\n",
+         "altitude" : null
+      },
+      "eosia48@eosia" : {
+         "exits" : {
+            "w" : "eosia49",
+            "n" : "eosia49",
+            "s" : "eosia47"
+         },
+         "flags" : [
+            "outdoors",
+            "cold"
+         ],
+         "zone" : "eosia",
+         "title" : "Thalesia",
+         "id" : "eosia48",
+         "description" : "\n        After crossing a small channel, you have arrived on the shores\nof the kingdom of Thalesia.  It is here that the trolls have been rumored\nto live.  To the north and west mountains rise up out of the ground to\nmeet the sky.  To the south, just past the channel, you can makes out the\nshoreline of the kingdom of Deira.\n",
+         "altitude" : null
+      },
+      "eosia10@eosia" : {
+         "exits" : {
+            "e" : "eosia11",
+            "n" : "eosia13",
+            "s" : "eosia5"
+         },
+         "flags" : [],
+         "zone" : "eosia",
+         "title" : "Square North",
+         "id" : "eosia10",
+         "description" : "\n        You are standing in the northern part of the main square of Cimmura.\nBefore you stands the gates to the royal castle, to the east, lays the\nlocal chapterhouse of the Pandion knights, the Elenian branch of the\nChurch Knights.  Pennants fly all about preparing for the coronation\nof the Prince Reagant as King.\n",
+         "altitude" : null
+      },
+      "eosia36@eosia" : {
+         "exits" : {
+            "e" : "eosia39",
+            "w" : "eosia35"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon"
+         ],
+         "zone" : "eosia",
+         "title" : "The Temple Maze",
+         "id" : "eosia36",
+         "description" : "\n        You are at the start of a maze that leads into the Temple of Azash.\nIt is a rather boring place, only slightly more dull than the Start of\nthe Labyrinth.  The entrance is to the east.\n",
+         "altitude" : null
+      },
+      "eosia23@eosia" : {
+         "exits" : {
+            "w" : "eosia22",
+            "e" : "eosia22",
+            "n" : "eosia22",
+            "s" : "eosia24"
+         },
+         "flags" : [
+            "onwater",
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "The Inner Sea",
+         "id" : "eosia23",
+         "description" : "\n        You are floating peacefully on the waters of the Inner Sea.\n",
+         "altitude" : null
+      },
+      "eosia42@eosia" : {
+         "exits" : {
+            "w" : "eosia40",
+            "e" : "eosia43",
+            "n" : "eosia40",
+            "s" : "eosia41"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon"
+         ],
+         "zone" : "eosia",
+         "title" : "In the Temple Maze",
+         "id" : "eosia42",
+         "description" : "\n        You are lost within the temple maze.\n",
+         "altitude" : null
+      },
+      "eosia29@eosia" : {
+         "exits" : {
+            "w" : "eosia28",
+            "e" : "eosia30"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "More Road?",
+         "id" : "eosia29",
+         "description" : "\n        You have come upon the rest of the Long Road, stretching east\ntowards the Holy City of Chyrellos.  Behind you lies the Pandion Motherhouse\nand further beyond that you can make out the rest of the Long Road.  The air\nis calm, and you wonder if a storm might be coming.\n",
+         "altitude" : null
+      },
+      "eosia51@eosia" : {
+         "exits" : {
+            "s" : "eosia50"
+         },
+         "flags" : [
+            "cold",
+            "dark",
+            "nosummon",
+            "nomobiles"
+         ],
+         "zone" : "eosia",
+         "title" : "A Troll's Treasure",
+         "id" : "eosia51",
+         "description" : "\n        This is Ghwerig's treasure room.  The cavern sparkles from the light\ncast by your light source.  Jewels, gold, silks and more are piled as\nfar as you can see.  Ghwerig obviously has been a busy little gatherer.  A\npedestal stands before you, maybe its just the light, but there appears to\nbe something on it...\n",
+         "altitude" : null
+      },
+      "eosia38@eosia" : {
+         "exits" : {
+            "n" : "eosia35"
+         },
+         "flags" : [
+            "party",
+            "peaceful"
+         ],
+         "zone" : "eosia",
+         "title" : "The Temple of Paradise",
+         "id" : "eosia38",
+         "description" : "\n        Or so it seems.  Everything about this place would make you think\nthat you were actually in the Temple of Paradise, except for the fact that\nthe familiar pit is gone.   Why this room should exist is a mystery, and\ngiven the fact the Emperor Zemoch has gone insane, this room could serve\nany purpose.  In any case, it has provided you some shelter from the dreary\nair outside.  The only exit is back to the north.\n",
+         "altitude" : null
+      },
+      "eosia19@eosia" : {
+         "exits" : {
+            "w" : "eosia18",
+            "e" : "eosia26"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "Still Going...",
+         "id" : "eosia19",
+         "description" : "\n        You are still continuing down the Long Road.  Just to the east lay\nthe gates of the Pandion Motherhouse, their headquarters for all of Elenia.\nOff to the east you can see Chyrellos shining, but you can not seem to find a\nway to get there, as the road strangely ends here.\n",
+         "altitude" : null
+      },
+      "eosia14@eosia" : {
+         "exits" : {
+            "w" : "eosia15",
+            "n" : "eosia16",
+            "d" : "eosia17",
+            "s" : "eosia13"
+         },
+         "flags" : [
+            "dark",
+            "party"
+         ],
+         "zone" : "eosia",
+         "title" : "The Front Hall",
+         "id" : "eosia14",
+         "description" : "\n        Your footsteps echo on the marble flooring of the castle.  Massive\npillars stretch up into the darkness, supporting the massive ceiling.  Banners\nhang from the walls, and you think you might even recognize some of them.  The\ncastle has fallen into a state of decay ever since Queen Ehlana fell ill.  Dust\nnow gathers on the suits of armor and cobwebs can be seen in the corners.  Even\nthough you appear to be quite alone, you think you can see a shadow flickering\njust beyond the edge of your vision.\n",
+         "altitude" : null
+      },
+      "eosia49@eosia" : {
+         "exits" : {
+            "w" : "eosia50",
+            "s" : "eosia48"
+         },
+         "flags" : [
+            "outdoors",
+            "cold"
+         ],
+         "zone" : "eosia",
+         "title" : "By the Mountainside",
+         "id" : "eosia49",
+         "description" : "\n        You are at the base of one of the tallest mountains you have\never seen.  Just avove the clouds, you think you can make out the\nsnow covered peak.  The air about you is calm in the cold air.  Pine trees\nabound and you can smell their crisp aroma.  A path leads back to the south.\n",
+         "altitude" : null
+      },
+      "eosia24@eosia" : {
+         "exits" : {
+            "w" : "eosia25",
+            "n" : "eosia23"
+         },
+         "flags" : [
+            "outdoors",
+            "nomagic",
+            "hot"
+         ],
+         "zone" : "eosia",
+         "title" : "The Shores of Rindor",
+         "id" : "eosia24",
+         "description" : "\n        You have reached the northern shores of the Kingom of Rindor.\nCurrently, the Elene Church is trying to convert the heratics of the\nEshandist cult back to the 'true' faith.  As an Elene, perhaps it would\nbe best if you left Rindor as soon as possible.\n",
+         "altitude" : null
+      },
+      "eosia2@eosia" : {
+         "exits" : {
+            "w" : "eosia1",
+            "e" : "eosia3",
+            "n" : "eosia47",
+            "s" : "eosia18"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "Decisions",
+         "id" : "eosia2",
+         "description" : "\n        You have come to a 4 way intersection on the road.  The roads\nto the east and south appear to be heavily used, while those to the\nwest and north seem a little less used by the citizens of this country.\nRoads lead in all directions.\n",
+         "altitude" : null
+      },
+      "eosia35@eosia" : {
+         "exits" : {
+            "w" : "eosia34",
+            "e" : "eosia36",
+            "n" : "eosia37",
+            "s" : "eosia38"
+         },
+         "flags" : [
+            "cold",
+            "negregen"
+         ],
+         "zone" : "eosia",
+         "title" : "Zemoch",
+         "id" : "eosia35",
+         "description" : "\n        This is the city of Zemoch, in the Empire of Zemoch.  It is here\nthat the evil god Azash has made his home.  You can feel the evil in the\nair and you cringe at the feeling.  The builings are all gray and black,\nand the sky above you is muted in gray clouds.  To the north is the palace,\nto the east, a dark looking temple, and to the south, a strange, yet familiar\nlooking temple.\n",
+         "altitude" : null
+      },
+      "eosia41@eosia" : {
+         "exits" : {
+            "w" : "eosia39",
+            "e" : "eosia41",
+            "n" : "eosia42",
+            "s" : "eosia41"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon"
+         ],
+         "zone" : "eosia",
+         "title" : "In the Temple Maze",
+         "id" : "eosia41",
+         "description" : "\n        You are lost within the temple maze.\n",
+         "altitude" : null
+      },
+      "eosia26@eosia" : {
+         "exits" : {
+            "w" : "eosia19",
+            "s" : "eosia27"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "The Motherhouse Walls",
+         "id" : "eosia26",
+         "description" : "\n        You stand at the walls to the Pandion Motherhouse.  Other than\nthat there is not much to describe.  The gates are open and allow access\nto the south, and you can see the Long Road heading off into the west.\n",
+         "altitude" : null
+      },
+      "eosia20@eosia" : {
+         "exits" : {
+            "n" : "eosia18",
+            "s" : "eosia21"
+         },
+         "flags" : [
+            "outdoors",
+            "hot"
+         ],
+         "zone" : "eosia",
+         "title" : "The Shore",
+         "id" : "eosia20",
+         "description" : "\n        You stand on the shore of Elenia facing south looking out over\nthe waters of the Inner Sea.  Water laps the ground at your feet and\nthe smell of salt water fills the air.  You can make out the sounds of\nseagulls flying high overhead.  A gentle breeze is blowing in off the\nwater, carrying with it, the smells of the ocean.\n",
+         "altitude" : null
+      },
+      "eosia13@eosia" : {
+         "exits" : {
+            "n" : "eosia14",
+            "s" : "eosia10"
+         },
+         "flags" : [],
+         "zone" : "eosia",
+         "title" : "The Castle Gates",
+         "id" : "eosia13",
+         "description" : "\n        Large golden gates mark the entrance to the Royal Castle of\nCimmura.  The crest of Elenia is emblazed on each gate.  Currently\nthe castle is home to the Royal Council, ruling in Queen Ehlana's\nplace while she is ill.  The council has named the Prince Reagent heir\nand he is planning to assume the throne within the week.  Just beyond\nthe gates lies the main courtyard and then, the castle itself.\n",
+         "altitude" : null
+      },
+      "eosia46@eosia" : {
+         "exits" : {
+            "u" : "eosia45",
+            "n" : "haven@haven"
+         },
+         "flags" : [
+            "dark",
+            "nosummon",
+            "noquit",
+            "negregen"
+         ],
+         "zone" : "eosia",
+         "title" : "The End?",
+         "id" : "eosia46",
+         "description" : "\n        You stand in a vast room at the center of the maze.  Before you is\nthe altar to Azash, the most evil of the Elder Gods of Styricum.  The room\nis nothing but pure evil.  Sounds of horror echo inside your head as the\nspirit of Azash attempts to take your soul.  Even the most powerful\nof knights would have a hard time resisting the call to darkness that\nfills this room.  A green portal flickers to the north, just past the\naltar.\n",
+         "altitude" : null
+      },
+      "eosia30@eosia" : {
+         "exits" : {
+            "w" : "eosia29",
+            "e" : "eosia31",
+            "d" : "eosia33"
+         },
+         "flags" : [
+            "peaceful",
+            "party"
+         ],
+         "zone" : "eosia",
+         "title" : "The Holy City",
+         "id" : "eosia30",
+         "description" : "\n        This is Chyrellos, capital city of the Elene Church.  Your eyes are\nfilled with wonder at all the sights to see in this maginificent city.  People\nmove about you on their errands, each one on a mission.  To the east stands\nthe Basilica, the highest church in the Elene faith.  It is there that the\nArchprelate reigns.\n",
+         "altitude" : null
+      },
+      "eosia31@eosia" : {
+         "exits" : {
+            "w" : "eosia30",
+            "u" : "eosia32"
+         },
+         "flags" : [
+            "party"
+         ],
+         "zone" : "eosia",
+         "title" : "The Basilica",
+         "id" : "eosia31",
+         "description" : "\n        You are in the Basilica of Chyrellos, the head of the whole Elene\nChurch.  From here the Archprelate rules with a pious hand.  Gold inlay\ncauses the light to shine and sparkle throughout the room.  High above you\na gigantic dome sparkles from the light.  The mighty marble pillars that\nsupport the roof are decorated with colorful flowers and banners.  Before\nyou is the altar, and benchs are placed all over for the faithful to come\nand pray.  Despite the wonder of the room, you still sense an ominous presence\nwhich makes you feel quite solemn.\n",
+         "altitude" : null
+      },
+      "eosia7@eosia" : {
+         "exits" : {
+            "u" : "eosia6"
+         },
+         "flags" : [
+            "private",
+            "soundproof"
+         ],
+         "zone" : "eosia",
+         "title" : "Thieves' Guild",
+         "id" : "eosia7",
+         "description" : "\n        You stand in the local chapter of the Thieves' Guild.  Here is where\nall of the local thieves, from cut-throat thieves to small pick pockets,\nmeet and discuss business.  You can just barely make out sounds from the Inn\nupstairs coming through the ceiling.  Looking about you see many of the\nitems 'obtained' by the thieves during thier normal working hours.  A banner\nhangs on the far wall stating 'Congratulations Seamas and Traveller on your \n100+ thefts.'  The only exit is up.\n",
+         "altitude" : null
+      },
+      "eosia27@eosia" : {
+         "exits" : {
+            "u" : "eosia28",
+            "n" : "eosia26"
+         },
+         "flags" : [
+            "party"
+         ],
+         "zone" : "eosia",
+         "title" : "The Pandion Motherhouse",
+         "id" : "eosia27",
+         "description" : "\n        Is similar in design and function to the Pandion Chapterhouses.\nBasically you stand in a large keep which is the headquarters for the\nPandion knights.  Various knight training devices are situated thoughout\nthe room, and bloodstains on the ground remind you what it is that\nknights actually do.  The only exits you can see are the main gates\nto the north, and a small staircase leading up.\n",
+         "altitude" : null
+      },
+      "eosia25@eosia" : {
+         "exits" : {
+            "e" : "eosia24"
+         },
+         "flags" : [],
+         "zone" : "eosia",
+         "title" : "King Rindor's Palace",
+         "id" : "eosia25",
+         "description" : "\n        This is the throne room of King Rindor of Rindor.  There is not\nmuch to describe because his throne 'room' is nothing more than a tent.\nThe Elenes have taken most of everything and left the King with only what\nlies within this tent.\n",
+         "altitude" : null
+      },
+      "eosia3@eosia" : {
+         "exits" : {
+            "w" : "eosia2",
+            "n" : "eosia4"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "The Road to Cimmura",
+         "id" : "eosia3",
+         "description" : "\n        The road bends here, leading north to the capital of Elenia, the\ncity of Cimmura.  You can just make out the towers from the royal castle\nin the distance.  The road leading north is very well taken care of, after\nall, the Queen insists on neatness.\n",
+         "altitude" : null
+      },
+      "eosia17@eosia" : {
+         "exits" : {
+            "u" : "eosia14"
+         },
+         "flags" : [
+            "dark",
+            "party"
+         ],
+         "zone" : "eosia",
+         "title" : "The Royal Crypt",
+         "id" : "eosia17",
+         "description" : "\n        This is were the Kings and Queens of Elenia have been buried over\nthe centuries.  The crypt extends back into the darkness.  The room\nis cold and dank, and you would rather not be down here, given the choice.\nMany coffins stand along the walls, each with the name of its occupant on\nthe cover.  Perhaps if you stay long enough, maybe you will see the ghost\nof the last king to sit on the throne of Elenia.\n",
+         "altitude" : null
+      },
+      "eosia40@eosia" : {
+         "exits" : {
+            "w" : "eosia40",
+            "e" : "eosia41",
+            "n" : "eosia39",
+            "s" : "eosia40"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon"
+         ],
+         "zone" : "eosia",
+         "title" : "In the Temple Maze",
+         "id" : "eosia40",
+         "description" : "\n        You are lost within the temple maze.\n",
+         "altitude" : null
+      },
+      "eosia37@eosia" : {
+         "exits" : {
+            "s" : "eosia35"
+         },
+         "flags" : [],
+         "zone" : "eosia",
+         "title" : "The Imperial Throne Room",
+         "id" : "eosia37",
+         "description" : "\n        This is the throne room for the Empire of Zemoch.  For an Imperial\nThrone room, this room is quite dull.  The room is made out of gray stone,\nand some form of mold grows abundently upon them.  Before you, a huge stone\ndias marks the place where the Emperor used to sit, when he still cared\nenough to rule his empire.  You imagine that once this whole city used to\nbe filled with color and activity, but now, it is filled with only decay.\n",
+         "altitude" : null
+      },
+      "eosia15@eosia" : {
+         "exits" : {
+            "e" : "eosia14"
+         },
+         "flags" : [
+            "dark",
+            "cold"
+         ],
+         "zone" : "eosia",
+         "title" : "Elenia's Throne Room",
+         "id" : "eosia15",
+         "description" : "\n        From this room Queen Ehlana used to rule the whole Kingdom of Elenia.\nNow, it lies empty, sealed by order of Primate Annias.  The air is cold\nand stale, and you suspect no one has been in this room for months.  A sound\ncatches your attention, but when you look, there is nothing there.  A sadness\nfills the room, and in the silence, you can just make out a heartbeat.  A chill\nfills you to the bone when you realize that what you hear is the heartbeat\nof Queen Ehlana, encased in crystal in the front of the room.\n",
+         "altitude" : null
+      },
+      "eosia44@eosia" : {
+         "exits" : {
+            "n" : "eosia45",
+            "d" : "eosia43"
+         },
+         "flags" : [],
+         "zone" : "eosia",
+         "title" : "Above the Maze",
+         "id" : "eosia44",
+         "description" : "\n        You are somewhere above the temple maze.  An archway in front of you\nleads north.\n",
+         "altitude" : null
+      },
+      "eosia32@eosia" : {
+         "exits" : {
+            "d" : "eosia31"
+         },
+         "flags" : [
+            "noquit",
+            "nomagic",
+            "soundproof",
+            "private"
+         ],
+         "zone" : "eosia",
+         "title" : "The Secret Room",
+         "id" : "eosia32",
+         "description" : "\n        You are in a small secret room within one of the spires of the\nCitadel.  All that there is in this room is a table and a chair, and\nmaps on the wall that resemble Elenia.  You wonder what purpose this little\ncozy room serves.\n",
+         "altitude" : null
+      },
+      "eosia5@eosia" : {
+         "exits" : {
+            "w" : "eosia6",
+            "e" : "eosia9",
+            "n" : "eosia10",
+            "s" : "eosia4"
+         },
+         "flags" : [
+            "outdoors",
+            "party"
+         ],
+         "zone" : "eosia",
+         "title" : "Main Square",
+         "id" : "eosia5",
+         "description" : "\n        This is the main square of Cimmura.  From this point roads head\noff in every direction into different parts of the city.  To the north lies\nthe Royal Castle.  From here you can see the flags of Elenia fluttering in the\nbreeze.  People pass you all around hurrying to get to their destinations.\nIf you're not careful, you could get run over by one of the horses.\n",
+         "altitude" : null
+      },
+      "eosia50@eosia" : {
+         "exits" : {
+            "e" : "eosia49",
+            "n" : "eosia51"
+         },
+         "flags" : [
+            "cold",
+            "dark",
+            "oneperson",
+            "negregen"
+         ],
+         "zone" : "eosia",
+         "title" : "Ghwerig's Cave",
+         "id" : "eosia50",
+         "description" : "\n        You stand in one of the messiest room's you have ever seen.  This\nis the home of the insane troll, Ghwerig.  After having locked himself\naway with the Bhelliom, Ghwerig went utterly insane.  Rags, various pieces\nof metal and other nick-nacks lay strewn about on the floor.  You feel very\nclaustrophobic in here.  The ceiling appears as if it wants to collapse!\n",
+         "altitude" : null
+      },
+      "eosia47@eosia" : {
+         "exits" : {
+            "n" : "eosia48",
+            "s" : "eosia2"
+         },
+         "flags" : [
+            "outdoors",
+            "cold"
+         ],
+         "zone" : "eosia",
+         "title" : "Deira",
+         "id" : "eosia47",
+         "description" : "\n        You have entered the kingdom of Deira.  This is a fairly flat\nnorthern Elene kingdom.  Due to its flatness, you can see to the horizon.\nTo the north, you can make out a shoreline, while to the south, the road\nleads into the mountains and back towards Elenia.\n",
+         "altitude" : null
+      },
+      "eosia21@eosia" : {
+         "exits" : {
+            "w" : "eosia22",
+            "e" : "eosia22",
+            "n" : "eosia20",
+            "s" : "eosia22"
+         },
+         "flags" : [
+            "onwater",
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "The Inner Sea",
+         "id" : "eosia21",
+         "description" : "\n        You are floating peacefully on the waters of the Inner Sea.\n",
+         "altitude" : null
+      },
+      "eosia39@eosia" : {
+         "exits" : {
+            "w" : "eosia36",
+            "e" : "eosia39",
+            "n" : "eosia39",
+            "s" : "eosia40"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon"
+         ],
+         "zone" : "eosia",
+         "title" : "In the Temple Maze",
+         "id" : "eosia39",
+         "description" : "\n        You are lost within the temple maze.\n",
+         "altitude" : null
+      },
+      "eosia22@eosia" : {
+         "exits" : {
+            "w" : "eosia23",
+            "e" : "eosia21",
+            "n" : "eosia22",
+            "s" : "eosia22"
+         },
+         "flags" : [
+            "onwater",
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "The Inner Sea",
+         "id" : "eosia22",
+         "description" : "\n        You are floating peacefully on the waters of the Inner Sea.\n",
+         "altitude" : null
+      },
+      "eosia9@eosia" : {
+         "exits" : {
+            "w" : "eosia5"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "Alley",
+         "id" : "eosia9",
+         "description" : "\n        You are in a rather dark and sinister alleyway.  The shadows from the\nbuildings would be an excellent place for a thief to hide.  Perhaps it would\nbe wise to visit someplace with a little more light.\n",
+         "altitude" : null
+      },
+      "eosia28@eosia" : {
+         "exits" : {
+            "w" : "eosia52",
+            "e" : "eosia29",
+            "d" : "eosia27"
+         },
+         "flags" : [
+            "soundproof",
+            "nosummon"
+         ],
+         "zone" : "eosia",
+         "title" : "Styric Haven",
+         "id" : "eosia28",
+         "description" : "\n        This small quaint room is a haven for Styrics who come to visit\nthe Pandions.  In order to help them in battle, the Church allowed the Pandions\nto be educated with the knowledge of magic.  It was the Styrics who provided\nthat education.  The Lady Sephrenia was the teacher for most of the Pandions,\nand they hold her in the highest regard.  This room was built to help\nprotect the Styrics from the less tolerant Elenes who would rather have all\nStyrics killed.  This simple room has a bed and table and not much else.\n",
+         "altitude" : null
+      },
+      "eosia34@eosia" : {
+         "exits" : {
+            "w" : "eosia33",
+            "e" : "eosia35"
+         },
+         "flags" : [
+            "cold",
+            "outdoors",
+            "negregen",
+            "nomagic"
+         ],
+         "zone" : "eosia",
+         "title" : "The Dark Mountains",
+         "id" : "eosia34",
+         "description" : "\n        The road ends here at the base of the Dark Mountains, on the\nborder of Zemoch.  You feel drained of all your magic here and are weighed\ndown by the oppressive air.  The clouds above you are swirling in a patterns\nand off in the distance rumbling can be heard.  The sooner you leave here,\nprobably the better.\n",
+         "altitude" : null
+      },
+      "eosia8@eosia" : {
+         "exits" : {
+            "d" : "eosia6"
+         },
+         "flags" : [
+            "soundproof"
+         ],
+         "zone" : "eosia",
+         "title" : "The Brothel",
+         "id" : "eosia8",
+         "description" : "\n        This is the Inn's own brothel.  To fully describe what you see would\nprobably be illegal.  Therefore, let us just say that the Church would\ndestroy this place in a second if it could.\n",
+         "altitude" : null
+      },
+      "eosia43@eosia" : {
+         "exits" : {
+            "w" : "eosia40",
+            "e" : "eosia41",
+            "u" : "eosia44",
+            "n" : "eosia41",
+            "s" : "eosia42"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon"
+         ],
+         "zone" : "eosia",
+         "title" : "In the Temple Maze",
+         "id" : "eosia43",
+         "description" : "\n        You are lost within the temple maze.\n",
+         "altitude" : null
+      },
+      "eosia4@eosia" : {
+         "exits" : {
+            "n" : "eosia5",
+            "s" : "eosia3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "The Gates of the City",
+         "id" : "eosia4",
+         "description" : "\n        You stand before the gates to the city of Cimmura.  The gates are\nmade form pure gold and shine in the sun.  To either side of you the walls\nto Cimmura stretch off into the distance as far as you can see.  You can hear\nthe sounds of the citizens from beyond the gates.\n",
+         "altitude" : null
+      },
+      "eosia12@eosia" : {
+         "exits" : {
+            "w" : "eosia11"
+         },
+         "flags" : [
+            "party"
+         ],
+         "zone" : "eosia",
+         "title" : "The Pandion Chapterhouse",
+         "id" : "eosia12",
+         "description" : "\n        ...is almost the size of the royal castle itself.  More of a keep\nthan a castle, the chapterhouse is the home of the Pandion knights in\nCimmura.  You stand in the main hall of the building now.  All about you\nstand suits of armor, each one belonging to a famous Cimmurian Pandion.  The\nmost famous, of course, is Sir Sparhawk, Champion to Queen Ehlana.  Knights\nblock every exits except the one to the west.\n",
+         "altitude" : null
+      },
+      "eosia53@eosia" : {
+         "exits" : {},
+         "flags" : [
+            "death",
+            "underwater"
+         ],
+         "zone" : "eosia",
+         "title" : "In the Moat",
+         "id" : "eosia53",
+         "description" : "\n        Ever seen water going down a drain?  Ever seen a mortal going down\nthe drain?  Row row row your boat, life is but a dream...and you have\njust woken up.\n",
+         "altitude" : null
+      },
+      "eosia11@eosia" : {
+         "exits" : {
+            "w" : "eosia10",
+            "e" : "eosia12",
+            "d" : "eosia53"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "The Moat",
+         "id" : "eosia11",
+         "description" : "\n        \"Moat\": 1) a deep and wide trench around the rampart of a fortified\nplace (as a castle) the is usually filled with water.  Yup, that's what\nthis is.  The bridge you are on continues to the east into the Pandion\nchapterhouse, or goes back to the west to the city.\n",
+         "altitude" : null
+      },
+      "eosia52@eosia" : {
+         "exits" : {
+            "e" : "eosia28"
+         },
+         "flags" : [
+            "cantsummon",
+            "noquit",
+            "nomobiles",
+            "nomagic",
+            "peaceful",
+            "party",
+            "private",
+            "soundproof"
+         ],
+         "zone" : "eosia",
+         "title" : "The Council of 1,000",
+         "id" : "eosia52",
+         "description" : "\n        Here is where the Styric Council of 1,000 meets.  There are over\n1,000 gods in the Styric faith, and the high priest (or priestess) of each\nhas a seat on this council.  Benches line the walls and provide seats for\nthe members.  The only exit is to the west.\n",
+         "altitude" : null
+      },
+      "eosia16@eosia" : {
+         "exits" : {
+            "s" : "eosia14"
+         },
+         "flags" : [
+            "soundproof"
+         ],
+         "zone" : "eosia",
+         "title" : "The Royal Council's Chambers",
+         "id" : "eosia16",
+         "description" : "\n        This room looks like it has been used a lot recently.  This is where\nthe Royal governing council of Elenia has been meeting while Ehlana has been\nill.  Papers, maps, and books lay strewn about in a disarray, almost as if\nsomeone had been searching for something.  Glancing at one of documents you\nare startled to discover that Primate Annias, a churchman, was responsible\nfor the poisoning of Ehlana.  It seems Annias wants to become Archprelate\nof the Church, and poisoned Ehlana to gain access to the Elenian treasury.\nSephrenia and a handful of Pandion Knights sealed Ehlana in crystal in the\nhopes of keeping her alive until a cure could be found to save her.  There is\nno sign as to where any of them have gone.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "zemoch@eosia" : {
+         "damage" : "10",
+         "location" : "eosia37",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "3",
+         "pname" : "Zemoch",
+         "name" : "Zemoch",
+         "description" : "Emperor Zemoch of Zemoch knows you have the Bhelliom!",
+         "strength" : "200"
+      },
+      "ghwerig@eosia" : {
+         "eflags" : [
+            "Fireball",
+            "NegShock"
+         ],
+         "damage" : "10",
+         "location" : "eosia50",
+         "armor" : "0",
+         "name" : "Ghwerig",
+         "description" : "Ghwerig, the troll, thinks you want to steal Bhelliom!",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "95",
+         "pname" : "Ghwerig",
+         "pflags" : [
+            "nosummon"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "azash@eosia" : {
+         "eflags" : [
+            "Fireball",
+            "Shock",
+            "NegFireball",
+            "NegFrost"
+         ],
+         "damage" : "20",
+         "location" : "eosia46",
+         "armor" : "5",
+         "name" : "Azash",
+         "description" : "The Elder Dark God, Azash, wants the Bhelliom!",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "Azash",
+         "pflags" : [
+            "nosummon"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "annias@eosia" : {
+         "damage" : "10",
+         "location" : "eosia32",
+         "speed" : "0",
+         "aggression" : "95",
+         "armor" : "0",
+         "pname" : "Annias",
+         "name" : "Annias",
+         "description" : "\nPrimate Annias of Cimmura is plotting to take control of the Church!",
+         "strength" : "175"
+      },
+      "dolmant@eosia" : {
+         "damage" : "5",
+         "location" : "eosia31",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Dolmant",
+         "name" : "Dolmant",
+         "description" : "Primate Dolmant is busy preparing the Citadel for mass.",
+         "strength" : "100"
+      },
+      "sparhawk@eosia" : {
+         "eflags" : [
+            "Fireball",
+            "Shock"
+         ],
+         "damage" : "5",
+         "location" : "eosia12",
+         "armor" : "0",
+         "name" : "Sparhawk",
+         "description" : "\nSir Sparhawk, Ehlana's Champion, asks if you have found the Bhelliom.",
+         "sflags" : "{ }",
+         "strength" : "190",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Sparhawk",
+         "pflags" : [
+            "nosummon"
+         ]
+      },
+      "kalor@eosia" : {
+         "damage" : "5",
+         "location" : "eosia4",
+         "armor" : "0",
+         "name" : "Kalor",
+         "description" : "Kalor, the guard of the city gates, will not let you pass.",
+         "sflags" : "{ }",
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "5",
+         "pname" : "Kalor",
+         "pflags" : "{ }",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "sephrenia@eosia" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "9",
+         "location" : "eosia27",
+         "armor" : "0",
+         "name" : "Sephrenia",
+         "description" : "\nSephrenia, the Styric, is weighed down by the swords of the fallen.",
+         "sflags" : [
+            "female"
+         ],
+         "strength" : "160",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Sephrenia"
+      },
+      "rindor@eosia" : {
+         "damage" : "8",
+         "location" : "eosia25",
+         "speed" : "0",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "Rindor",
+         "name" : "Rindor",
+         "description" : "King Rindor, of Rindor, thinks you are Elene trash.",
+         "strength" : "120"
+      },
+      "rolak@eosia" : {
+         "damage" : "9",
+         "location" : "eosia13",
+         "armor" : "0",
+         "name" : "Rolak",
+         "description" : "Rolak, the guard of the castle, will not let you pass.",
+         "sflags" : "{ }",
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "5",
+         "pname" : "Rolak",
+         "pflags" : "{ }",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "kurik@eosia" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "eosia12",
+         "armor" : "0",
+         "name" : "Kurik",
+         "description" : "Sir Kurik, the Pandion, bows to you.",
+         "sflags" : "{ }",
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Kurik",
+         "pflags" : "{ }"
+      },
+      "platime@eosia" : {
+         "damage" : "5",
+         "location" : "eosia7",
+         "armor" : "0",
+         "name" : "Platime",
+         "description" : "Platime, the head of the Thief's Guild, wants your stuff!",
+         "sflags" : "{ }",
+         "strength" : "110",
+         "speed" : "10",
+         "aggression" : "5",
+         "pname" : "Platime",
+         "pflags" : [
+            "nosteal"
+         ],
+         "mflags" : [
+            "thief",
+            "stealweapon",
+            "stealworn",
+            "pickstuff"
+         ]
+      },
+      "madame@eosia" : {
+         "damage" : "5",
+         "location" : "eosia8",
+         "armor" : "0",
+         "name" : "Madame",
+         "description" : "\nThe Madame of the brothel wants to know if you are looking for a good time.",
+         "sflags" : [
+            "female"
+         ],
+         "strength" : "90",
+         "speed" : "0",
+         "pname" : "Madame",
+         "aggression" : "10"
+      },
+      "seeker@eosia" : {
+         "damage" : "7",
+         "location" : "eosia34",
+         "armor" : "0",
+         "name" : "Seeker",
+         "description" : "The hideous wraith known as the Seeker lurks in the shadows.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Seeker",
+         "aggression" : "50",
+         "mflags" : [
+            "drainlev",
+            "drainscr",
+            "cross"
+         ]
+      },
+      "aphrael@eosia" : {
+         "eflags" : [
+            "Shock",
+            "Frost",
+            "Fireball",
+            "NegFireball",
+            "NegFrost"
+         ],
+         "damage" : "10",
+         "location" : "eosia28",
+         "armor" : "5",
+         "name" : "Aphrael",
+         "description" : "\nShe floats like an angel.  It is the Child-Goddess Aphrael of Styricum.",
+         "sflags" : [
+            "Female",
+            "Lit"
+         ],
+         "strength" : "900",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Aphrael",
+         "pflags" : [
+            "NoHassle",
+            "NoSummon"
+         ]
+      }
+   }
+}

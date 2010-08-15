@@ -1,0 +1,1654 @@
+{
+   "obj" : {
+      "crumb_5@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's a bread crumb.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "IN_CONTAINER:baggie",
+         "desc[3]" : "",
+         "name" : "crumb_5",
+         "altname" : "crumb",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "desc[2]" : "",
+         "pname" : "crumb",
+         "desc[0]" : "Someone dropped a bread crumb here."
+      },
+      "welcome_mat@zodiac" : {
+         "desc[1]" : "\nThere is a big friendly looking welcome mat lying in front of the door.",
+         "damage" : "0",
+         "location" : "IN_ROOM:frontdoor",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "armor" : "0",
+         "altname" : "welcome",
+         "name" : "welcome_mat",
+         "examine" : "You can barely see some fine print under the big \n'WELCOME'.",
+         "size" : "0",
+         "state" : "1",
+         "weight" : "0",
+         "pname" : "mat",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The welcome mat has been moved to the side to reveal \nnothing."
+      },
+      "front_door_2@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's an old oak door.",
+         "size" : "0",
+         "state" : "2",
+         "weight" : "0",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:library",
+         "desc[3]" : "",
+         "name" : "front_door_2",
+         "altname" : "door",
+         "armor" : "0",
+         "oflags" : [
+            "Openable",
+            "Noget",
+            "Lockable"
+         ],
+         "linked" : "front_door",
+         "desc[2]" : "The front door is locked.",
+         "pname" : "frontdoor",
+         "desc[0]" : "The front door is open."
+      },
+      "book_case_carvings@zodiac" : {
+         "damage" : "0",
+         "examine" : "\nAlthough the carvings are mostly neat designs, you notice that the top shelf\nhas writing on it that says 'Hand Crafted by Eternity'",
+         "size" : "0",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "IN_ROOM:library",
+         "desc[3]" : "",
+         "name" : "book_case_carvings",
+         "altname" : "carvings",
+         "armor" : "0",
+         "oflags" : [
+            "Noget"
+         ],
+         "desc[2]" : "",
+         "pname" : "carvings",
+         "desc[0]" : ""
+      },
+      "human_head@zodiac" : {
+         "desc[1]" : "There is a head mounted on the wall.  It's a human head.",
+         "damage" : "0",
+         "location" : "IN_ROOM:leo",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "GetFlips",
+            "Container",
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "mouth",
+         "name" : "human_head",
+         "examine" : "\nIt's a human head with what appear to be large claw marks on the right side \nof the face.  His eyes tell you that he was probably caught by surprise.  His\nmouth appears to have somthing in it.",
+         "size" : "0",
+         "state" : "1",
+         "weight" : "0",
+         "pname" : "head",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "\nThere is a human head mounted on the wall.  It's mouth has been opened."
+      },
+      "dirtball@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's just a simple ball of dirt.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[1]" : "A smooth round ball of &+ydirt &Nhas been left here on the pentagram.",
+         "location" : "CARRIED_BY:Capricorn",
+         "desc[3]" : "",
+         "name" : "dirtball",
+         "altname" : "ball",
+         "armor" : "0",
+         "oflags" : "{  }",
+         "desc[2]" : "",
+         "pname" : "DirtBall",
+         "desc[0]" : "A smooth round ball of &+ydirt &Nhas been left here."
+      },
+      "crumb_2@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's a bread crumb.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "IN_CONTAINER:baggie",
+         "desc[3]" : "",
+         "name" : "crumb_2",
+         "altname" : "crumb",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "desc[2]" : "",
+         "pname" : "crumb",
+         "desc[0]" : "Someone dropped a bread crumb here."
+      },
+      "inside_gate@zodiac" : {
+         "damage" : "0",
+         "examine" : "There isn't much point of having this gate, is there?",
+         "size" : "0",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[1]" : "The gate has been closed.",
+         "location" : "IN_ROOM:capricorn",
+         "name" : "inside_gate",
+         "altname" : "gate",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "linked" : "outside_gate",
+         "pname" : "gate",
+         "desc[0]" : "The gate is open, leading west."
+      },
+      "crumb_1@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's a bread crumb.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "IN_CONTAINER:baggie",
+         "desc[3]" : "",
+         "name" : "crumb_1",
+         "altname" : "crumb",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "desc[2]" : "",
+         "pname" : "crumb",
+         "desc[0]" : "Someone dropped a bread crumb here."
+      },
+      "infinitysword@zodiac" : {
+         "damage" : "31",
+         "examine" : "\nThe sword has ancient markings along the blade and on the hilt.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "WIELDED_BY:Eternity",
+         "desc[3]" : "",
+         "name" : "infinitysword",
+         "altname" : "sword",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "desc[2]" : "",
+         "pname" : "InfinitySword",
+         "desc[0]" : "A sword of infinite powers hovers here."
+      },
+      "human_skin_rug@zodiac" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:leo",
+         "oflags" : [
+            "NoGet",
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "rug",
+         "name" : "human_skin_rug",
+         "examine" : "\nIt seems that you aren't the first traveller to come this way.  Let's \nhope you don't end up like him.",
+         "size" : "0",
+         "state" : "0",
+         "weight" : "0",
+         "pname" : "skin",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "There is a human skin rug spread neatly on the floor."
+      },
+      "book_case_1@zodiac" : {
+         "damage" : "0",
+         "examine" : "\nThe bookcase is constructed of oak and is adorned with carvings along \neach \nshelf.",
+         "size" : "10",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[1]" : "A large oak bookcase dominates the east wall.",
+         "location" : "IN_ROOM:library",
+         "name" : "book_case_1",
+         "altname" : "case",
+         "armor" : "0",
+         "oflags" : [
+            "PushToggle",
+            "Noget",
+            "Container"
+         ],
+         "linked" : "book_case_2",
+         "pname" : "bookcase",
+         "desc[0]" : "\nThe bookcase has been pushed to the side revealing a void to the north."
+      },
+      "outside_gate@zodiac" : {
+         "damage" : "0",
+         "examine" : "This gate leads into a goat's pen.",
+         "size" : "0",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[1]" : "The gate is closed.",
+         "location" : "IN_ROOM:eartha",
+         "name" : "outside_gate",
+         "altname" : "gate",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "linked" : "inside_gate",
+         "pname" : "gate",
+         "desc[0]" : "The gate is open."
+      },
+      "fireball@zodiac" : {
+         "damage" : "27",
+         "examine" : "It's a ball of fire, but it doesn't feel at all hot.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[1]" : "A ball of &+Rfire &Nhas been put on the pentagram.",
+         "location" : "CARRIED_BY:Aries",
+         "desc[3]" : "",
+         "name" : "fireball",
+         "altname" : "ball",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "desc[2]" : "",
+         "pname" : "FireBall",
+         "desc[0]" : "A ball of &+Rfire &Nhas been misplaced here."
+      },
+      "waterball@zodiac" : {
+         "damage" : "0",
+         "examine" : "This is the sacred water of Aquarius.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[1]" : "There is a ball of &+Bwater &Nsetting on the pentagram.",
+         "location" : "CARRIED_BY:Aquarius",
+         "desc[3]" : "",
+         "name" : "waterball",
+         "altname" : "ball",
+         "armor" : "0",
+         "oflags" : "{  }",
+         "desc[2]" : "",
+         "pname" : "WaterBall",
+         "desc[0]" : "There is a ball of &+Bwater &Nhere."
+      },
+      "pentagram@zodiac" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:pentagram",
+         "oflags" : [
+            "NoGet"
+         ],
+         "armor" : "0",
+         "altname" : "pentagram",
+         "name" : "pentagram",
+         "examine" : "\nIt's just an ordinary pentagram floating about 3 feet off the ground, \nwith trays at each point.  You recognise the meaning of each point as\nbeing &+RFire&N, &+BWater&N, &+yEarth&N, &+CAir&N, and &+WSpirit&N.",
+         "size" : "0",
+         "state" : "0",
+         "weight" : "0",
+         "pname" : "pentagram",
+         "maxstate" : "0",
+         "bvalue" : "0"
+      },
+      "front_door@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's an old oak door.",
+         "size" : "0",
+         "state" : "2",
+         "weight" : "0",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:frontdoor",
+         "desc[3]" : "",
+         "name" : "front_door",
+         "altname" : "door",
+         "armor" : "0",
+         "oflags" : [
+            "Openable",
+            "Noget",
+            "Lockable"
+         ],
+         "linked" : "front_door_2",
+         "desc[2]" : "The front door is locked.",
+         "pname" : "frontdoor",
+         "desc[0]" : "The front door is open."
+      },
+      "crumb_3@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's a bread crumb.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "IN_CONTAINER:baggie",
+         "desc[3]" : "",
+         "name" : "crumb_3",
+         "altname" : "crumb",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "desc[2]" : "",
+         "pname" : "crumb",
+         "desc[0]" : "Someone dropped a bread crumb here."
+      },
+      "eternalarmor@zodiac" : {
+         "damage" : "0",
+         "examine" : "\nIt has existed eternally and will continue to exist.  It looks as if it has\nnever been used.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "WORN_BY:Infinity",
+         "desc[3]" : "",
+         "name" : "eternalarmor",
+         "altname" : "suit",
+         "armor" : "58",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "desc[2]" : "",
+         "pname" : "EternalArmor",
+         "aflags" : [
+            "Legs",
+            "Arms",
+            "Chest",
+            "Back",
+            "Head"
+         ],
+         "desc[0]" : "A suit of Eternal Armor lies here."
+      },
+      "crumb_4@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's a bread crumb.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "IN_CONTAINER:baggie",
+         "desc[3]" : "",
+         "name" : "crumb_4",
+         "altname" : "crumb",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "desc[2]" : "",
+         "pname" : "crumb",
+         "desc[0]" : "Someone dropped a bread crumb here."
+      },
+      "chas_belt@zodiac" : {
+         "damage" : "0",
+         "examine" : "It appears to be a very sturdy contraceptive device.",
+         "size" : "4",
+         "state" : "0",
+         "weight" : "9",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[1]" : "",
+         "location" : "WORN_BY:virgo",
+         "desc[3]" : "",
+         "name" : "chas_belt",
+         "altname" : "belt",
+         "armor" : "55",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "desc[2]" : "",
+         "pname" : "belt",
+         "aflags" : [
+            "Chest"
+         ],
+         "desc[0]" : "\nThere is a chastity belt dropped here by somone who nolonger wants it."
+      },
+      "mile_asteroid@zodiac" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:westend",
+         "oflags" : [
+            "NoGet"
+         ],
+         "armor" : "0",
+         "altname" : "astroid",
+         "name" : "mile_asteroid",
+         "examine" : "\nHmmm...it doesn't look like the printing is any language you know.\n                       Arki gabblenir:20",
+         "size" : "0",
+         "state" : "0",
+         "weight" : "0",
+         "pname" : "mileasteroid",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "There is an asteroid here."
+      },
+      "body@zodiac" : {
+         "damage" : "0",
+         "examine" : "\nIt is a well and truly dead dwarf.",
+         "size" : "9",
+         "state" : "0",
+         "weight" : "200",
+         "maxstate" : "0",
+         "bvalue" : "1",
+         "desc[1]" : "",
+         "location" : "CARRIED_BY:Nightwing",
+         "desc[3]" : "",
+         "name" : "body",
+         "altname" : "corpse",
+         "armor" : "0",
+         "oflags" : [
+            "Container",
+            "Food"
+         ],
+         "desc[2]" : "",
+         "pname" : "body",
+         "desc[0]" : "The mangled body of a dwarf lies here."
+      },
+      "flag@zodiac" : {
+         "desc[1]" : "A large flag is hung neatly on the wall.",
+         "damage" : "0",
+         "location" : "IN_ROOM:libra",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "GetFlips"
+         ],
+         "armor" : "10",
+         "altname" : "flag",
+         "name" : "flag",
+         "examine" : "\n&=WRMMMMMMMMMMMMMMM                      ,                      MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM                     .M.                     MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM              .     .MMM.     .              MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM              Mm,  .MMMMM.  ,mM              MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM              qMMm,MMMMMMM,mMMq              MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM         .    \"MMMMMMMMMMMMMMM\"    .         MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM        .Mm.   MMMMMMMMMMMMMMM   .mM.        MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM \"MMMMMMMMMMM. \"MMMMMMMMMMMMM\" .MMMMMMMMMMM\" MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM  \"MMMMMMMMMMMM.MMMMMMMMMMMMM.MMMMMMMMMMMM\"  MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM   \"MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\"   MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM .mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm. MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM    \"\"MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\"\"    MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM        \"\"MMMMMMMMMMMMMMMMMMMMMMMMM\"\"        MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM           \"\"MMMMMMMMMMMMMMMMMMM\"\"           MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM           mMMMMMMMMMMMMMMMMMMMMMm           MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM                     MMM                     MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM                     MMM                     MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM                     MMM                     MMMMMMMMMMMMMMM\n&=WRMMMMMMMMMMMMMMM                                             MMMMMMMMMMMMMMM",
+         "size" : "3",
+         "state" : "1",
+         "weight" : "2",
+         "pname" : "flag",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ],
+         "desc[0]" : "A neatly folded flag has been carfully placed here."
+      },
+      "crumb_7@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's a bread crumb.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "IN_CONTAINER:baggie",
+         "desc[3]" : "",
+         "name" : "crumb_7",
+         "altname" : "crumb",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "desc[2]" : "",
+         "pname" : "crumb",
+         "desc[0]" : "Someone dropped a bread crumb here."
+      },
+      "baggie@zodiac" : {
+         "damage" : "0",
+         "examine" : "\nIt is a very small cloth bag.",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[1]" : "",
+         "location" : "IN_CONTAINER:body",
+         "desc[3]" : "",
+         "name" : "baggie",
+         "altname" : "bag",
+         "armor" : "0",
+         "oflags" : [
+            "Container"
+         ],
+         "desc[2]" : "",
+         "pname" : "bag",
+         "desc[0]" : "There is a small bag here"
+      },
+      "airball@zodiac" : {
+         "damage" : "0",
+         "examine" : "\nNow this is very difficult to describe...it is a solid ball of air!?",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[1]" : "There is a very odd ball floating above the pentagram.",
+         "location" : "CARRIED_BY:Libra",
+         "desc[3]" : "",
+         "name" : "airball",
+         "altname" : "ball",
+         "armor" : "0",
+         "oflags" : "{  }",
+         "desc[2]" : "",
+         "pname" : "AirBall",
+         "desc[0]" : "There is a very odd ball floating at eye level here."
+      },
+      "dictionary@zodiac" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:book_case_1",
+         "oflags" : "{ }",
+         "armor" : "0",
+         "altname" : "book",
+         "name" : "dictionary",
+         "examine" : "\nYou open the dictionary to an entry for 'co-author'.  Here's what it says:\nco-author: 1n.joint author. 2v.t.be joint author. 3v.t. To sit on one's ass\nlike a chump, contributing nothing, but to offer to spell-check the zone once\nit's completed in exchange for equil credit.",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "8",
+         "pname" : "dictionary",
+         "maxstate" : "0",
+         "bvalue" : "150"
+      },
+      "wine@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's a bottle of white wine.",
+         "size" : "3",
+         "state" : "0",
+         "weight" : "6",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[1]" : "A bottle of fine &+Wspirit&N has been placed on the pentagram.",
+         "location" : "IN_CONTAINER:body",
+         "desc[3]" : "",
+         "name" : "wine",
+         "altname" : "wine",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "desc[2]" : "",
+         "pname" : "wine",
+         "desc[0]" : "A bottle of fine &+Wspirit&N has been dropped here."
+      },
+      "fine_print@zodiac" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:frontdoor",
+         "oflags" : [
+            "NoGet",
+            "Unlocatable"
+         ],
+         "armor" : "0",
+         "altname" : "fine",
+         "name" : "fine_print",
+         "examine" : "This zone authored by Erdirck, co-authored by Chump.",
+         "size" : "0",
+         "state" : "0",
+         "weight" : "0",
+         "pname" : "print",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : ""
+      },
+      "book_case_2@zodiac" : {
+         "damage" : "0",
+         "examine" : "This is the back of the bookcase.",
+         "size" : "0",
+         "state" : "1",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[1]" : "The bookcase has been pushed back into place.",
+         "location" : "IN_ROOM:void",
+         "name" : "book_case_2",
+         "altname" : "case",
+         "armor" : "0",
+         "oflags" : [
+            "PushToggle",
+            "Noget"
+         ],
+         "linked" : "book_case_1",
+         "pname" : "bookcase",
+         "desc[0]" : "The bookcase has been pushed to the side."
+      },
+      "crumb_6@zodiac" : {
+         "damage" : "0",
+         "examine" : "It's a bread crumb.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[1]" : "",
+         "location" : "IN_CONTAINER:baggie",
+         "desc[3]" : "",
+         "name" : "crumb_6",
+         "altname" : "crumb",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "desc[2]" : "",
+         "pname" : "crumb",
+         "desc[0]" : "Someone dropped a bread crumb here."
+      }
+   },
+   "loc" : {
+      "lost7@zodiac" : {
+         "exits" : {
+            "w" : "lost4",
+            "e" : "lost5",
+            "u" : "lost8",
+            "n" : "lost3",
+            "d" : "lost4",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost7",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "taurus@zodiac" : {
+         "exits" : {
+            "e" : "eartha"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Arena",
+         "id" : "taurus",
+         "description" : "\n\n     This is a huge arena used for bull fighting.  From the looks of things\nthe bull fighters haven't been doing too well...there is a big scoreboard on\nthe north wall.  It reads:\n\n                     Bulls: 73108\n                  Matadors:   190\n\n     Well...at least it hasn't been a total annihilation.\n",
+         "altitude" : null
+      },
+      "aries@zodiac" : {
+         "exits" : {
+            "s" : "firea"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Cheerful Home of Aries",
+         "id" : "aries",
+         "description" : "\n\n     Well...perhaps not so cheerful....the floor is black with ash and the\nwindows are curtain less.  There is no bed, nor are there any closets,\ntables, or chairs.  Nothing about this place is in any way appealing to you,\nlest of all the sulphurous stench that shreds at your nostrils.\n",
+         "altitude" : null
+      },
+      "lost4@zodiac" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost3",
+            "u" : "lost4",
+            "n" : "lost4",
+            "d" : "lost4",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost4",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "seastsky@zodiac" : {
+         "exits" : {
+            "w" : "southsky",
+            "e" : "lost1",
+            "u" : "lost1",
+            "n" : "eastsky",
+            "s" : "lost1"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "More Stars",
+         "id" : "seastsky",
+         "description" : "\n\n     Peering to the south and to the east you can't seem to see anything\nthat you'd be able to get to in your lifetime...\n",
+         "altitude" : null
+      },
+      "capricorn@zodiac" : {
+         "exits" : {
+            "w" : "^inside_gate"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Goat's Pen",
+         "id" : "capricorn",
+         "description" : "\n\n     Half eaten beer cans litter the pen.  The fence has been chewed away to\nthe point of being totally useless, but the gate remains.\n",
+         "altitude" : null
+      },
+      "frontdoor@zodiac" : {
+         "exits" : {
+            "n" : "^front_door"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Front Door",
+         "id" : "frontdoor",
+         "description" : "\n\n     You're standing at the entrance of large mansion.  You find it odd that\nthere is no possible exit other than through the front door.\n",
+         "altitude" : null
+      },
+      "virgo@zodiac" : {
+         "exits" : {
+            "n" : "eartha"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Virgin's Bedroom",
+         "id" : "virgo",
+         "description" : "\n\n     Well, you've always wanted to get in here, but there's nothing going to\nhappen for you, sorry.  There is a large canopy bed here with white lace\nhanging from the top.  The bed looks very soft and the light glints off \nof the satin sheets.\n",
+         "altitude" : null
+      },
+      "leo@zodiac" : {
+         "exits" : {
+            "w" : "firea"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Lion's Den",
+         "id" : "leo",
+         "description" : "\n\n     Nothing seems out of place here, considering that it's owned by Leo the\nlion.  A few bones lie scattered about the place, but you would have to have\nexpected that...perhaps what you didn't expect to see would be either the \nhead on the wall, or the rug on the floor.\n",
+         "altitude" : null
+      },
+      "nwestsky@zodiac" : {
+         "exits" : {
+            "e" : "northsky",
+            "w" : "lost1",
+            "u" : "lost1",
+            "n" : "lost1",
+            "s" : "westsky"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "More Stars",
+         "id" : "nwestsky",
+         "description" : "\n\n     Peering to the north and to the west you can't seem to see anything that\nyou'd be able to get to in your lifetime...\n",
+         "altitude" : null
+      },
+      "library@zodiac" : {
+         "exits" : {
+            "n" : "^book_case_1",
+            "s" : "^front_door_2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Library",
+         "id" : "library",
+         "description" : "\n\n     You find it kind of strange that this handsome room is the only room in\nthe house.  You wonder who might live here, and what the purpose of having a \none room house in the middle of the space is.\n",
+         "altitude" : null
+      },
+      "southend@zodiac" : {
+         "exits" : {
+            "u" : "lost1",
+            "n" : "southsky",
+            "s" : "eartha"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "zodiac",
+         "title" : "The Far South",
+         "id" : "southend",
+         "description" : "\n\n     You can just barely make out the tower you entered from in the north,\nand although it is very far away, you're confident you can make it back\nwithout a problem.  Just to the south you can see some creatures moving\nabout and you can hear one of them shouting 'Toro, Toro!'.\n",
+         "altitude" : null
+      },
+      "libra@zodiac" : {
+         "exits" : {
+            "s" : "aira"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The House of Libra",
+         "id" : "libra",
+         "description" : "\n\n     Libra's home is oddly quite a mess.  The bed is laden with dirty clothing \nand dishes sit on every available square inch of counter space.\n",
+         "altitude" : null
+      },
+      "aquarius@zodiac" : {
+         "exits" : {
+            "e" : "aira"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "Aquarius's Home",
+         "id" : "aquarius",
+         "description" : "\n\n     This room is small and modest and is sparsely furnished.  About the only\ninteresting thing you see here is a small poster on the wall that reads:\n     A radical is a man with both feet planted firmly in the air.\n     The initials F.D.R. are printed at the bottom of the poster.\n",
+         "altitude" : null
+      },
+      "lost6@zodiac" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost5",
+            "u" : "lost4",
+            "n" : "lost4",
+            "d" : "lost4",
+            "s" : "lost7"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost6",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "lost9@zodiac" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost5",
+            "u" : "lost4",
+            "n" : "lost3",
+            "d" : "lost4",
+            "s" : "lost10"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost9",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "lost10@zodiac" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost11",
+            "u" : "lost4",
+            "n" : "lost4",
+            "d" : "lost4",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost10",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "lost12@zodiac" : {
+         "exits" : {
+            "w" : "pentagram",
+            "e" : "lost6",
+            "u" : "lost4",
+            "n" : "lost4",
+            "d" : "lost4",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost12",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.    NO! Wait!!  You think you see something over to the west!\n",
+         "altitude" : null
+      },
+      "pentagram@zodiac" : {
+         "exits" : {
+            "w" : "lost3",
+            "e" : "lost6",
+            "u" : "lost4",
+            "n" : "lost4",
+            "d" : "amgstars",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Pentagram",
+         "id" : "pentagram",
+         "description" : "\n\n     There is a large pentagram etched into the nothingness on which you \nstand.  It's floating about three feet off the ground!\n",
+         "altitude" : null
+      },
+      "lost1@zodiac" : {
+         "exits" : {
+            "w" : "lost4",
+            "e" : "lost3",
+            "u" : "lost3",
+            "n" : "lost2",
+            "d" : "lost2",
+            "s" : "lost3"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Realms",
+         "id" : "lost1",
+         "description" : "\n\n     You wander too far and realise that you don't know which way is back to\nwhere you came from.\n",
+         "altitude" : null
+      },
+      "westend@zodiac" : {
+         "exits" : {
+            "e" : "westsky",
+            "w" : "watera",
+            "u" : "lost1"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "zodiac",
+         "title" : "Near the Edge of the West Sky",
+         "id" : "westend",
+         "description" : "\n\n     'Not much farther now' you keep telling yourself...and you're right.\nThe constalations Cancer, Scorpio, and Pisces are right after the next\nmile-astroid, which you can see from here.\n",
+         "altitude" : null
+      },
+      "lost11@zodiac" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost12",
+            "u" : "lost4",
+            "n" : "lost4",
+            "d" : "lost4",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost11",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "neastsky@zodiac" : {
+         "exits" : {
+            "w" : "northsky",
+            "e" : "lost1",
+            "u" : "lost1",
+            "n" : "lost1",
+            "s" : "eastsky"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "More Stars",
+         "id" : "neastsky",
+         "description" : "\n\n     You realise that you had better not venture too far away from where\nyou came from, since you could very easily become lost in this area.\n",
+         "altitude" : null
+      },
+      "scorpio@zodiac" : {
+         "exits" : {
+            "e" : "watera"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Dry Spot",
+         "id" : "scorpio",
+         "description" : "\n\n     This is a nice dry sandy beach.  There is no ocean or anything, just like \na small oasis of sand in this world of water.\n",
+         "altitude" : null
+      },
+      "southsky@zodiac" : {
+         "exits" : {
+            "w" : "swestsky",
+            "e" : "seastsky",
+            "u" : "lost1",
+            "n" : "amgstars",
+            "s" : "southend"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Southern Skies",
+         "id" : "southsky",
+         "description" : "\n\n     As you scan the area you suddenly feel very lonely.  There is nothing for \nmiles if you were to head either east or west. Back to the north is where you\nbegan, and while you think that's probably the best way for you to go, you\nhave a gut feeling that wants you to go due south.\n",
+         "altitude" : null
+      },
+      "lost3@zodiac" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost5",
+            "u" : "lost4",
+            "n" : "lost4",
+            "d" : "lost4",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost3",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "watera@zodiac" : {
+         "exits" : {
+            "w" : "scorpio",
+            "e" : "westend",
+            "n" : "cancer",
+            "s" : "pisces"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Land of Water",
+         "id" : "watera",
+         "description" : "\n\n     This place is lovely, however you don't like the way the ice and snow\nhasn't been melted by the warm sun and air.  \"BREAKING THE LAWS OF PHYSICS\nISN'T RIGHT!\" you shout, but no one here seems to care.\n",
+         "altitude" : null
+      },
+      "lost2@zodiac" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost5",
+            "u" : "lost4",
+            "n" : "lost4",
+            "d" : "lost4",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost2",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "void@zodiac" : {
+         "exits" : {
+            "d" : "temple@start",
+            "s" : "^book_case_2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Void",
+         "id" : "void",
+         "description" : "\n\n     You stand in the void, which is an infinitely large room.  There is\nalmost nothing here.\n",
+         "altitude" : null
+      },
+      "lost5@zodiac" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost5",
+            "u" : "lost4",
+            "n" : "lost2",
+            "d" : "lost4",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost5",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "northend@zodiac" : {
+         "exits" : {
+            "u" : "lost1",
+            "n" : "aira",
+            "s" : "northsky"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "zodiac",
+         "title" : "The Far Northern Sky",
+         "id" : "northend",
+         "description" : "\n\n     Only a little further north you can see the land of clean air.  You\ncan also see shapes moving about there, but everything about the place seems\nfriendly enough.\n",
+         "altitude" : null
+      },
+      "cancer@zodiac" : {
+         "exits" : {
+            "s" : "watera"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Tide Pool",
+         "id" : "cancer",
+         "description" : "\n\n     It seems that the tide is permanently out here, since you can see no sign \nof an ocean, however this large tide pool does exist.  The water tastes of salt \nand there are hundreds of little minnows darting about through the colourful\nwater plants.\n",
+         "altitude" : null
+      },
+      "westsky@zodiac" : {
+         "exits" : {
+            "w" : "westend",
+            "e" : "amgstars",
+            "u" : "lost1",
+            "n" : "nwestsky",
+            "s" : "swestsky"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Western Skies",
+         "id" : "westsky",
+         "description" : "\n\n     Just to the east is the way back home, perhaps you should go back that\nway?  Looking up you can see forever, and while you realise that forever\nmeans that it's much too big, you still have a very small part of you that\nthinks you might find something up there.  It would probably be a better\nidea to just stay on the path you were on. \n",
+         "altitude" : null
+      },
+      "firea@zodiac" : {
+         "exits" : {
+            "e" : "leo",
+            "w" : "eastend",
+            "n" : "aries",
+            "s" : "sagittarius"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "Land of Fire",
+         "id" : "firea",
+         "description" : "\n\n     A rather desolate place...the grass slowly burns along with several\nchunks of fur that leave you to believe that the debate you were listing\nto turned rather violent...perhaps a visitor is just what they need?\n",
+         "altitude" : null
+      },
+      "lost8@zodiac" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost5",
+            "u" : "lost4",
+            "n" : "lost9",
+            "d" : "lost4",
+            "s" : "lost2"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Infinite Void",
+         "id" : "lost8",
+         "description" : "\n\n     It really doesn't seem to matter which way you go, you're still \ngoing to be lost.\n",
+         "altitude" : null
+      },
+      "sagittarius@zodiac" : {
+         "exits" : {
+            "n" : "firea"
+         },
+         "flags" : [
+            "NegRegen"
+         ],
+         "zone" : "zodiac",
+         "title" : "The Archer's Range",
+         "id" : "sagittarius",
+         "description" : "\n\n     This room is about 50 meters in length, with several targets and arrows\nlying about.  The grass is mostly burned away, but a few patches of green \ngive hope of some life to this place.\n",
+         "altitude" : null
+      },
+      "eastend@zodiac" : {
+         "exits" : {
+            "e" : "firea",
+            "w" : "eastsky",
+            "u" : "lost1"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "zodiac",
+         "title" : "The Far Eastern Sky",
+         "id" : "eastend",
+         "description" : "\n     \n     Just to the east you can see the constellations governed by the power\nof fire.  They seem to be having a rather heated debate.\n",
+         "altitude" : null
+      },
+      "pisces@zodiac" : {
+         "exits" : {
+            "n" : "watera"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "A Freshwater Pond",
+         "id" : "pisces",
+         "description" : "\n\n     The massive ice floor of this place has a large pond dug into it.  There\nare no plants or small fish in there at all, but the water tastes clean.\n",
+         "altitude" : null
+      },
+      "swestsky@zodiac" : {
+         "exits" : {
+            "e" : "southsky",
+            "w" : "lost1",
+            "u" : "lost1",
+            "n" : "westsky",
+            "s" : "lost1"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "More Stars",
+         "id" : "swestsky",
+         "description" : "\n\n     Peering to the south and to the west you can't seem to see anything that\nyou'd be able to get to in your lifetime...\n",
+         "altitude" : null
+      },
+      "aira@zodiac" : {
+         "exits" : {
+            "w" : "aquarius",
+            "e" : "gemini",
+            "n" : "libra",
+            "s" : "northend"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Fresh Air",
+         "id" : "aira",
+         "description" : "\n\n     This area is beautiful!  The grass is a bright green and well manicured.\nThere are several well kept flower beds, one of which is a square plot with\nflowers growing into a pyramid shape.\n",
+         "altitude" : null
+      },
+      "gemini@zodiac" : {
+         "exits" : {
+            "w" : "aira"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "Gemini's Cloud",
+         "id" : "gemini",
+         "description" : "\n\n     This cloud is so perfect, it needs no decoration, and it has none.  This\nplace is so beautiful you feel as though if you don't leave now, you may never \ngo.\n",
+         "altitude" : null
+      },
+      "eartha@zodiac" : {
+         "exits" : {
+            "w" : "taurus",
+            "e" : "^outside_gate",
+            "n" : "southend",
+            "s" : "virgo"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Earth",
+         "id" : "eartha",
+         "description" : "\n\n     This is a very small version of the Earth that you know, in fact, it\ndoesn't even resemble the Earth at all, it's just a small area of dirt and\ngrass with a big pine tree in the middle.\n",
+         "altitude" : null
+      },
+      "northsky@zodiac" : {
+         "exits" : {
+            "w" : "nwestsky",
+            "e" : "neastsky",
+            "u" : "lost1",
+            "n" : "northend",
+            "s" : "amgstars"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "The Northern Skies",
+         "id" : "northsky",
+         "description" : "\n\n     Although your common sense tells you to go back to the south before\nyou get yourself totally lost, you would much rather continue searching\nfor whatever is is that you are looking for.\n",
+         "altitude" : null
+      },
+      "amgstars@zodiac" : {
+         "exits" : {
+            "w" : "westsky",
+            "e" : "eastsky",
+            "u" : "lost1",
+            "n" : "northsky",
+            "d" : "top_west@cave",
+            "s" : "southsky"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "zodiac",
+         "title" : "Among the Stars",
+         "id" : "amgstars",
+         "description" : "\n\n     You find yourself wandering amongst the stars in the infinite night sky.\nYou're baffled by the incredible size of the area around you...seemingly\nendless.  You could easily find yourself lost forever in these timeless \nvoids.\n",
+         "altitude" : null
+      },
+      "eastsky@zodiac" : {
+         "exits" : {
+            "w" : "amgstars",
+            "e" : "eastend",
+            "u" : "lost1",
+            "n" : "neastsky",
+            "s" : "seastsky"
+         },
+         "flags" : [],
+         "zone" : "zodiac",
+         "title" : "East Sky",
+         "id" : "eastsky",
+         "description" : "\n\n     Looking down to the lands of your birth, you suddenly feel incredibly\nhomesick, likely due to the enormous distance between you and your family.\nTo the west you can barely see the tower from which you entered into the \nnight sky.  Far to the east you can see the constellations Aries, Leo and\nSagittarius.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "gemini2@zodiac" : {
+         "eflags" : [
+            "Missile",
+            "NegMissile",
+            "NegFrost",
+            "NegFireball"
+         ],
+         "damage" : "25",
+         "location" : "gemini",
+         "armor" : "10",
+         "name" : "Gemini2",
+         "examine" : "",
+         "description" : "One of the gemini twins stands before you waving happily.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "400",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Gemini",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "sagittarius@zodiac" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball",
+            "NegShock",
+            "NegMissile"
+         ],
+         "damage" : "25",
+         "location" : "sagittarius",
+         "armor" : "5",
+         "name" : "Sagittarius",
+         "examine" : "",
+         "description" : "\nSagittarius seems to be peeved at Leo and Aries...I wonder what they did?",
+         "strength" : "600",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "Sagittarius",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "scorpio@zodiac" : {
+         "eflags" : [
+            "ImmCripple",
+            "ImmBlind",
+            "ImmMute",
+            "ImmDeaf"
+         ],
+         "damage" : "30",
+         "location" : "scorpio",
+         "armor" : "0",
+         "name" : "Scorpio",
+         "examine" : "",
+         "description" : "A massive scorpion stares at you poised to strike.",
+         "strength" : "400",
+         "speed" : "7",
+         "aggression" : "40",
+         "pname" : "Scorpio",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "libra@zodiac" : {
+         "eflags" : [
+            "Missile",
+            "NegMissile",
+            "NegFrost",
+            "NegFireball"
+         ],
+         "damage" : "20",
+         "location" : "libra",
+         "armor" : "10",
+         "name" : "Libra",
+         "examine" : "",
+         "description" : "An almost perfectly balanced person stands before you.",
+         "strength" : "650",
+         "speed" : "10",
+         "aggression" : "0",
+         "pname" : "Libra",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "taurus@zodiac" : {
+         "eflags" : [
+            "Shock",
+            "NegFrost",
+            "NegFireball",
+            "NegShock"
+         ],
+         "damage" : "35",
+         "location" : "taurus",
+         "armor" : "5",
+         "name" : "Taurus",
+         "examine" : "",
+         "description" : "\nTaurus is tired of all the bull$#it that goes on in this place.",
+         "strength" : "550",
+         "speed" : "15",
+         "aggression" : "100",
+         "pname" : "Taurus",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "aquarius@zodiac" : {
+         "eflags" : [
+            "Missile",
+            "NegMissile",
+            "NegFrost",
+            "NegFireball"
+         ],
+         "damage" : "20",
+         "location" : "aquarius",
+         "armor" : "20",
+         "name" : "Aquarius",
+         "examine" : "",
+         "description" : "\nA young woman stands here holding water without a container.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "400",
+         "speed" : "3",
+         "aggression" : "0",
+         "pname" : "Aquarius",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "aries@zodiac" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball",
+            "NegShock",
+            "NegMissile"
+         ],
+         "damage" : "30",
+         "location" : "aries",
+         "armor" : "15",
+         "name" : "Aries",
+         "examine" : "",
+         "description" : "A large ram glares at you.",
+         "strength" : "600",
+         "speed" : "3",
+         "aggression" : "50",
+         "pname" : "Aries",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "gemini1@zodiac" : {
+         "eflags" : [
+            "Missile",
+            "NegMissile",
+            "NegFrost",
+            "NegFireball"
+         ],
+         "damage" : "25",
+         "location" : "gemini",
+         "armor" : "10",
+         "name" : "Gemini1",
+         "examine" : "",
+         "description" : "One of the gemini twins stands before you smiling \nhappily.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "400",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Gemini",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "eternity@zodiac" : {
+         "damage" : "5",
+         "location" : "void",
+         "armor" : "10",
+         "name" : "Eternity",
+         "examine" : "\nNothing could possibly confuse you more than seeing everything at once.",
+         "description" : "\nEternity, the god of time, towers above you in his eternal silence.",
+         "strength" : "600",
+         "speed" : "0",
+         "pname" : "Eternity",
+         "aggression" : "0",
+         "mflags" : [
+            "GrabHostile",
+            "NoSteal"
+         ]
+      },
+      "capricorn@zodiac" : {
+         "eflags" : [
+            "Shock",
+            "NegFrost",
+            "NegFireball",
+            "NegShock"
+         ],
+         "damage" : "20",
+         "location" : "capricorn",
+         "armor" : "20",
+         "name" : "Capricorn",
+         "examine" : "",
+         "description" : "\nCapricorn doesn't look like he's having a good day...boy does he look mad!",
+         "strength" : "400",
+         "speed" : "3",
+         "aggression" : "20",
+         "pname" : "Capricorn",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "nightwing@zodiac" : {
+         "eflags" : [
+            "ImmCripple",
+            "ImmBlind",
+            "ImmMute",
+            "ImmDeaf"
+         ],
+         "damage" : "20",
+         "location" : "lost1",
+         "armor" : "10",
+         "name" : "Nightwing",
+         "examine" : "She is the master of this place.",
+         "description" : "\nNo other hunter has the power or the grace of Nightwing.  She was about to\nfeast on her latest kill until you disturbed her.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "30",
+         "pname" : "Nightwing",
+         "pflags" : [
+            "NoSteal"
+         ],
+         "mflags" : [
+            "Thief",
+            "StealWorn",
+            "StealWeapon"
+         ]
+      },
+      "virgo@zodiac" : {
+         "eflags" : [
+            "Shock",
+            "NegFrost",
+            "NegFireball",
+            "NegShock"
+         ],
+         "damage" : "20",
+         "location" : "virgo",
+         "armor" : "15",
+         "name" : "Virgo",
+         "examine" : "",
+         "description" : "A young virgin sits here on the bed.\nVirgo winks suggestively at you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Virgo",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "hellhound@zodiac" : {
+         "damage" : "30",
+         "location" : "lost4",
+         "armor" : "15",
+         "name" : "Hellhound",
+         "examine" : "\nHe is pure white with the exception of pink staining around his jaw.",
+         "description" : "\nA Hellhound wanders the area in search of a soul to feed on.",
+         "strength" : "300",
+         "speed" : "4",
+         "pname" : "Hellhound",
+         "aggression" : "5",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "infinity@zodiac" : {
+         "damage" : "20",
+         "location" : "void",
+         "armor" : "0",
+         "name" : "Infinity",
+         "examine" : "\nLooking into him, you see everything that has existed and all that will,\nunfortunately, it is far too much for you to comprehend.",
+         "description" : "\nAll that exists radiates from Infinity, who stands several inches above the\nfloor.",
+         "strength" : "600",
+         "speed" : "0",
+         "pname" : "Infinity",
+         "aggression" : "0",
+         "mflags" : [
+            "GrabHostile",
+            "NoSteal"
+         ]
+      },
+      "leo@zodiac" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball",
+            "NegShock",
+            "NegMissile"
+         ],
+         "damage" : "25",
+         "location" : "leo",
+         "armor" : "10",
+         "name" : "Leo",
+         "examine" : "",
+         "description" : "Leo looks &=lrvery&n happy to see you!",
+         "strength" : "600",
+         "speed" : "15",
+         "aggression" : "80",
+         "pname" : "Leo",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "cancer@zodiac" : {
+         "eflags" : [
+            "Frost",
+            "NegFrost",
+            "NegShock",
+            "NegMissile"
+         ],
+         "damage" : "30",
+         "location" : "cancer",
+         "armor" : "13",
+         "name" : "Cancer",
+         "examine" : "",
+         "description" : "\nCancer looks really crabby today...better stay out of his way!",
+         "strength" : "550",
+         "speed" : "20",
+         "aggression" : "30",
+         "pname" : "Cancer",
+         "pflags" : [
+            "NoSteal"
+         ]
+      }
+   }
+}

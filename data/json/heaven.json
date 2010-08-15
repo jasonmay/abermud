@@ -1,0 +1,834 @@
+{
+   "obj" : {
+      "headdress@heaven" : {
+         "desc[1]" : "A headdress has been left here.",
+         "location" : "IN_ROOM:Heaven29",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "headdress",
+         "name" : "headdress",
+         "examine" : "It appears to belong to a chieftain.",
+         "size" : "1",
+         "pname" : "headdress",
+         "bvalue" : "50",
+         "desc[0]" : "A headdress has been left here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "ark@heaven" : {
+         "desc[1]" : "The Ark of the Covenant is here.",
+         "location" : "IN_ROOM:Heaven3",
+         "oflags" : [
+            "Openable",
+            "Container"
+         ],
+         "altname" : "ark",
+         "name" : "ark",
+         "examine" : "\nThe ark is two and a half cubits long, one and a half cubits wide, one and\na half cubits high, and is made made of shittim wood covered with pure\ngold, with a crown of gold around it.  A ring of gold is set on each\ncorner, with two rings of shittim wood (overlayed with gold, of course) \npassing through them.",
+         "state" : "1",
+         "size" : "40",
+         "pname" : "ark",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "The Ark of the Covenant\tis open."
+      },
+      "tablet@heaven" : {
+         "location" : "IN_CONTAINER:ark",
+         "oflags" : "{ }",
+         "altname" : "tablets",
+         "name" : "tablet",
+         "examine" : "\nCarved into the stones are ten commandments.  At the very bottom of each is\nwritten:\n\t\tJiffy Script, Incorporated\n\t    'Converse with us, We talk better.'",
+         "size" : "1",
+         "pname" : "tablet",
+         "bvalue" : "80",
+         "desc[0]" : "Two stone tablets are here."
+      },
+      "mjolnir@heaven" : {
+         "damage" : "30",
+         "location" : "WIELDED_BY:Thorr",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "hammer",
+         "name" : "mjolnir",
+         "size" : "100",
+         "pname" : "mjolnir",
+         "bvalue" : "1600",
+         "desc[0]" : "Mjolnir, the sacred hammer of Thor, has been left here."
+      },
+      "vase@heaven" : {
+         "desc[1]" : "A vase made of ice has been set on a pedestal.",
+         "location" : "IN_ROOM:Shrine@icecave",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "vase",
+         "name" : "vase",
+         "examine" : "\nThe vase is made of a cloudy ice and is inscripted with images of great\nglaciers.  Turning the vase over, you  see the incription:\n\t\tJiffy Script, Incorporated\n\t    'Converse with us, We talk better.'",
+         "size" : "3",
+         "state" : "1",
+         "pname" : "vase",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A vase made of ice has been set on a pedestal."
+      },
+      "watermelon@heaven" : {
+         "desc[1]" : "A watermelon hangs temptingly from the Tree of Knowledge.",
+         "location" : "IN_ROOM:Heaven6",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "watermelon",
+         "name" : "watermelon",
+         "size" : "1",
+         "pname" : "watermelon",
+         "bvalue" : "50",
+         "desc[0]" : "A watermelon lies before you."
+      },
+      "bow@heaven" : {
+         "desc[1]" : "A silver bow rests here",
+         "location" : "IN_ROOM:Heaven32",
+         "oflags" : "{ }",
+         "altname" : "bow",
+         "name" : "bow",
+         "size" : "1",
+         "pname" : "bow",
+         "bvalue" : "100",
+         "desc[0]" : "A silver bow rests here"
+      },
+      "medicine@heaven" : {
+         "desc[1]" : "A medicine bag hangs suspended from a tree.",
+         "location" : "IN_ROOM:Heaven34",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "bag",
+         "name" : "medicine",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "medicine",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "A medicine bag has been dropped here."
+      },
+      "staff2@heaven" : {
+         "location" : "IN_ROOM:Heaven11",
+         "armor" : "15",
+         "oflags" : [
+            "Armor"
+         ],
+         "altname" : "staff",
+         "name" : "staff2",
+         "size" : "1",
+         "pname" : "staff",
+         "bvalue" : "90",
+         "desc[0]" : "A shepherd's staff leans against the wall."
+      },
+      "arrow@heaven" : {
+         "desc[1]" : "A silver arrow sticks up out of the ground.",
+         "location" : "IN_ROOM:Heaven31",
+         "oflags" : "{ }",
+         "altname" : "arrow",
+         "name" : "arrow",
+         "size" : "1",
+         "pname" : "arrow",
+         "bvalue" : "100",
+         "desc[0]" : "A silver arrow sticks up out of the ground."
+      },
+      "rainbow@heaven" : {
+         "location" : "IN_ROOM:Heaven7",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "rainbow",
+         "name" : "rainbow",
+         "bvalue" : "0",
+         "desc[0]" : "A rainbow wraps around the room.",
+         "size" : "0"
+      },
+      "staff1@heaven" : {
+         "desc[1]" : "The Staff of Moses rests againt the wall.",
+         "location" : "IN_ROOM:Heaven4",
+         "oflags" : "{ }",
+         "altname" : "staff",
+         "name" : "staff1",
+         "examine" : "You notice that the staff feels faintly like a snake.",
+         "size" : "1",
+         "pname" : "staff",
+         "bvalue" : "100",
+         "desc[0]" : "The Staff of Moses rests againt the wall."
+      },
+      "eagle@heaven" : {
+         "desc[1]" : "An eagle feather is drifting down from the sky.",
+         "location" : "IN_ROOM:Heaven30",
+         "oflags" : [
+            "Wearable",
+            "GetFlips"
+         ],
+         "altname" : "feather",
+         "name" : "eagle",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "eagle",
+         "maxstate" : "1",
+         "bvalue" : "80",
+         "desc[0]" : "An eagle feather has been left here.",
+         "aflags" : [
+            "Neck"
+         ]
+      }
+   },
+   "loc" : {
+      "heaven10@heaven" : {
+         "exits" : {
+            "w" : "Heaven9",
+            "u" : "Heaven11",
+            "n" : "Heaven17",
+            "d" : "Heaven9"
+         },
+         "flags" : [
+            "Private",
+            "Peaceful"
+         ],
+         "zone" : "heaven",
+         "title" : "Cloud 9",
+         "id" : "Heaven10",
+         "description" : "\n   All is peaceful.  All around you flit angels with harps, singing\nbeautiful melodies full of joy and love.  Folds of the cloud form chairs\nand couches to rest on.\n",
+         "altitude" : null
+      },
+      "heaven22@heaven" : {
+         "exits" : {
+            "e" : "Heaven21",
+            "n" : "Heaven26"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Sokkvabekk",
+         "id" : "Heaven22",
+         "description" : "\n   The floor seems to be sinking.  All around you, cool murmuring water\nlaps the sides.  Two great chairs are here, seemingly for Odin and Saga to\nsit in while they drink joyfully from gold goblets.\n",
+         "altitude" : null
+      },
+      "heaven21@heaven" : {
+         "exits" : {
+            "w" : "Heaven22",
+            "e" : "Heaven23",
+            "s" : "Heaven20"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Valaskjalf",
+         "id" : "Heaven21",
+         "description" : "\n   You stand in the Hall of the Slain.  The roof is thatched with silver.\nBelow you, you see the spirits of all the slain creatures of the land.\n",
+         "altitude" : null
+      },
+      "heaven8@heaven" : {
+         "exits" : {
+            "w" : "Heaven7",
+            "u" : "Heaven12",
+            "n" : "Heaven12",
+            "d" : "Heaven7"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Seventh Heaven",
+         "id" : "Heaven8",
+         "description" : "\n   Streams of milk and honey roll down the sides of the purple and white\nmountains to water the green plains.  The blue sky plays host to a blue\nmoon and a golden sun, which is setting in magnificent splendor.\n   To the west you spy a rainbow.  To the north you see a palace.\n",
+         "altitude" : null
+      },
+      "heaven6@heaven" : {
+         "exits" : {
+            "w" : "Heaven5",
+            "e" : "Heaven7",
+            "u" : "Heaven7",
+            "d" : "Heaven5",
+            "s" : "Heaven16"
+         },
+         "flags" : [
+            "Private",
+            "Peaceful"
+         ],
+         "zone" : "heaven",
+         "title" : "The Garden",
+         "id" : "Heaven6",
+         "description" : "\n   You are in a lush garden.  All forms of trees, flowers, and shrubbery\nsurround you.  All the creatures of the land and air approach you\ninnocently, and the creatures of the water leap out of a near-by lake to\ngive you their greetings.  You feel peaceful.\n   To the south you see the glimmer of gold.\n",
+         "altitude" : null
+      },
+      "heaven34@heaven" : {
+         "exits" : {
+            "w" : "Heaven35",
+            "e" : "Heaven33",
+            "s" : "Heaven36"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "The Southern Plains",
+         "id" : "Heaven34",
+         "description" : "\n   You stand in an arid land.  Tumbleweeds blow in the wind about you.\n",
+         "altitude" : null
+      },
+      "heaven11@heaven" : {
+         "exits" : {
+            "u" : "Heaven12",
+            "d" : "Heaven10"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Entrance to Heaven's Forest",
+         "id" : "Heaven11",
+         "description" : "\n   You stand just within a vast forest.  The trees grow so close together \nthat you have no choice but to walk the path, either to go down to Cloud 9\nor to go deeper into the forest to the east.\n",
+         "altitude" : null
+      },
+      "heaven14@heaven" : {
+         "exits" : {},
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Cloud 13",
+         "id" : "Heaven14",
+         "description" : "\n   You are in a simply furnished room which stands in stark contrast to the\ndiamond palace which contains it.\n",
+         "altitude" : null
+      },
+      "heaven5@heaven" : {
+         "exits" : {
+            "w" : "Heaven4",
+            "e" : "Heaven6",
+            "u" : "Heaven3",
+            "d" : "Heaven4"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Wilderness",
+         "id" : "Heaven5",
+         "description" : "\n   You are wandering in the wilderness.  You have been here for so long\nthat you have lost track of the years.\n",
+         "altitude" : null
+      },
+      "heaven25@heaven" : {
+         "exits" : {
+            "w" : "Heaven26",
+            "e" : "Heaven24",
+            "n" : "Heaven27"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Valhalla",
+         "id" : "Heaven25",
+         "description" : "\n   Looking up, you notice that the roof is made of shields, and the rafters\nare spears.  Breast-plates litter the benches.  A wolf lurks at the western\ndoor, and an eagle hovers over it.  A deep and wild looking river, Thund,\nroars beside Valgrind, the outer gate.  Five hundred and forty doors lead\noff in different directions, but you suspect that eight hundred warriors\nstand behind each one, so you opt not to open any of them.\n",
+         "altitude" : null
+      },
+      "heaven33@heaven" : {
+         "exits" : {
+            "w" : "Heaven34",
+            "n" : "Heaven32"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Swamp",
+         "id" : "Heaven33",
+         "description" : "\n   The earth sucks at your feet as you walk.  Off in the trees you can\nhear the sounds of alligators in search of food.  It is getting dark.  The\nalligators are hungry.\n",
+         "altitude" : null
+      },
+      "heaven19@heaven" : {
+         "exits" : {
+            "n" : "Heaven20"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Ydalir",
+         "id" : "Heaven19",
+         "description" : "\n   You  are standing in series of dales.  Yews are growing here, and you\ncan see signs of Ull roaming about nearby.\n",
+         "altitude" : null
+      },
+      "heaven9@heaven" : {
+         "exits" : {
+            "e" : "Heaven10",
+            "u" : "Heaven10"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Cloud 8",
+         "id" : "Heaven9",
+         "description" : "\n   The entire landscape is made of white, fluffy clouds.  You feel slightly\nuneasy about the situation, as the thought of falling to the earth below\ndoes not want to leave your mind.\n",
+         "altitude" : null
+      },
+      "heaven28@heaven" : {
+         "exits" : {
+            "s" : "Heaven29"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Northern Tundra",
+         "id" : "Heaven28",
+         "description" : "\n   You are travelling in a land of ice and snow.  The sun and the\nreflections from the brilliant white snow conspire to blind you, but\nthrough squinted eyes you can catch sight of the stark, raw beauty.  Though\nthe wind howls about you, the cold does not seem to have any affect.  \n",
+         "altitude" : null
+      },
+      "heaven4@heaven" : {
+         "exits" : {
+            "w" : "Heaven3",
+            "e" : "Heaven5",
+            "u" : "Heaven5",
+            "n" : "Heaven9",
+            "d" : "Heaven3",
+            "s" : "Heaven15"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Plains",
+         "id" : "Heaven4",
+         "description" : "\n   You are on the plains.  To the west is a tent, to the east an untouched\nwilderness, to north is a cloud bank, and to the south you can see the\nruins of a walled city.\n",
+         "altitude" : null
+      },
+      "heaven36@heaven" : {
+         "exits" : {},
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Home of the Great Spirit",
+         "id" : "Heaven36",
+         "description" : "\n   The Great Spirit is not in right now, and there does not seem to be any\nplace to leave a message.\n",
+         "altitude" : null
+      },
+      "heaven7@heaven" : {
+         "exits" : {
+            "e" : "Heaven8",
+            "u" : "Heaven8",
+            "d" : "Heaven6"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Cloud 6",
+         "id" : "Heaven7",
+         "description" : "\n   The soft, fluffy surface of the cloud is slightly strange to walk on,\nand you notice for the first time that you do not have wings.\n",
+         "altitude" : null
+      },
+      "heaven32@heaven" : {
+         "exits" : {
+            "w" : "Heaven30",
+            "s" : "Heaven33"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Northeastern Forest",
+         "id" : "Heaven32",
+         "description" : "\n   You are standing in a grove of maple trees.  To the east you spy the\nocean, upon which waves are breaking.\n",
+         "altitude" : null
+      },
+      "heaven30@heaven" : {
+         "exits" : {
+            "w" : "Heaven31",
+            "e" : "Heaven32",
+            "n" : "Heaven29"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Northern Plains",
+         "id" : "Heaven30",
+         "description" : "\n   Golden grass stretches as far as you can see in all directions.\n",
+         "altitude" : null
+      },
+      "heaven27@heaven" : {
+         "exits" : {},
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Vidi",
+         "id" : "Heaven27",
+         "description" : "\n   This is a land of long grass and saplings.\n",
+         "altitude" : null
+      },
+      "heaven29@heaven" : {
+         "exits" : {
+            "n" : "Heaven28",
+            "s" : "Heaven30"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Hardwood Forest",
+         "id" : "Heaven29",
+         "description" : "\n   You stand under a canopy of leaves and intertwined branches.  Through\nthe trees, you can glimpse deep blue lakes, which you imagine to have been\ncreated by the northern glaciers thousands of years ago.\n",
+         "altitude" : null
+      },
+      "heaven13@heaven" : {
+         "exits" : {
+            "u" : "Heaven14",
+            "d" : "Heaven12"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Diamond Palace",
+         "id" : "Heaven13",
+         "description" : "\n   The entire palace is made of diamond.  The light from above is broken\ninto rainbows, and their glitterings seem to enchant you.\n",
+         "altitude" : null
+      },
+      "heaven23@heaven" : {
+         "exits" : {
+            "w" : "Heaven21",
+            "n" : "Heaven24"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Thrymheim",
+         "id" : "Heaven23",
+         "description" : "\n   Mountains surround you.  A loud roar fills the air, though you can not\nlocate the source.  This hall once belonged to the great giant Thiazi, but\nis now owned by his daughter, fair Skadi-- who was Njord's bride.\n",
+         "altitude" : null
+      },
+      "heaven18@heaven" : {
+         "exits" : {},
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "The Silver Sea",
+         "id" : "Heaven18",
+         "description" : "\n   You are floating on a silver sea.\n",
+         "altitude" : null
+      },
+      "heaven12@heaven" : {
+         "exits" : {
+            "e" : "Heaven18",
+            "u" : "Heaven13",
+            "d" : "Heaven8"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Heaven's Forest",
+         "id" : "Heaven12",
+         "description" : "\n   You on a path in a vast forest.  Above you is a palace seeingly made\nof diamond.  To the east is a silver sea.  Below you you spy a land of\nmilk and honey.\n",
+         "altitude" : null
+      },
+      "heaven3@heaven" : {
+         "exits" : {
+            "e" : "Heaven4",
+            "u" : "Heaven4"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "The Tabernacle",
+         "id" : "Heaven3",
+         "description" : "\n   You are standing within a large tent.  To the east is a plain, while to\nthe west you can see the gates of pearl.\n",
+         "altitude" : null
+      },
+      "heaven2@heaven" : {
+         "exits" : {
+            "w" : "Heaven1",
+            "e" : "Heaven3",
+            "u" : "Heaven3",
+            "n" : "Heaven19",
+            "s" : "Heaven28"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Paradise Crossroads",
+         "id" : "Heaven2",
+         "description" : "\n   You are standing at the place where the heavens meet.  Other than the\nfact that you are standing on a cloud, this place seems rather ordinary.\nTo the north, you see a land of mountains and fjords, with a sign at the\nbeginning of the road which reads \"Valhalla.\"  To the south you see a great\nand varied land with a sign reading \"The Happy Hunting Grounds.\"  To the\neast you see you see a large tent with a firey cloud above it.\n",
+         "altitude" : null
+      },
+      "heaven24@heaven" : {
+         "exits" : {
+            "w" : "Heaven25",
+            "s" : "Heaven23"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Gladsheim",
+         "id" : "Heaven24",
+         "description" : "\n   You heart suddenly feels lighter, filled with gladness.  Nearby, you can\nsee Valhalla, vast and gold-bright.\n",
+         "altitude" : null
+      },
+      "heaven17@heaven" : {
+         "exits" : {},
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "The Place of Martyrs",
+         "id" : "Heaven17",
+         "description" : "\n   Strewn about this room are discarded crosses, gibbets, and stakes.\n",
+         "altitude" : null
+      },
+      "heaven26@heaven" : {
+         "exits" : {
+            "e" : "Heaven25",
+            "s" : "Heaven22"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Breidablik",
+         "id" : "Heaven26",
+         "description" : "\n   You stand in Broad Splendour, Balder's hall.  The country around you is\nbeautiful, blessed and untainted by any evil.\n",
+         "altitude" : null
+      },
+      "heaven31@heaven" : {
+         "exits" : {
+            "e" : "Heaven30",
+            "s" : "Heaven35"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Northwestern Rainforest",
+         "id" : "Heaven31",
+         "description" : "\n   Far to the west you can spy the blue of the ocean.  The abundant\nvegetation causes you to believe that you are standing in a rainforest.\nDark clouds gather to the west.\n",
+         "altitude" : null
+      },
+      "heaven35@heaven" : {
+         "exits" : {
+            "e" : "Heaven34",
+            "n" : "Heaven31"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Land of Giants",
+         "id" : "Heaven35",
+         "description" : "\n   All around you are huge redwoods and sequoias.\n",
+         "altitude" : null
+      },
+      "heaven20@heaven" : {
+         "exits" : {
+            "n" : "Heaven21",
+            "s" : "Heaven19"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Alfheim",
+         "id" : "Heaven20",
+         "description" : "\n   You stand in the god's gift to Freyr when he cut his first tooth.  The\nlight elves dance around you.\n",
+         "altitude" : null
+      },
+      "heaven15@heaven" : {
+         "exits" : {},
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "Ruins of a walled city",
+         "id" : "Heaven15",
+         "description" : "\n   You are standing in the ruins of a walled city.  One building stands,\nwith a rope hanging from an upper-story window.  It seems as if a battle\nhas taken place here.\n",
+         "altitude" : null
+      },
+      "heaven16@heaven" : {
+         "exits" : {},
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "The Land of Gold",
+         "id" : "Heaven16",
+         "description" : "\n   The entire landscape is coated with gold.\n",
+         "altitude" : null
+      },
+      "heaven1@heaven" : {
+         "exits" : {
+            "e" : "Heaven2"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "heaven",
+         "title" : "The Pearly Gates",
+         "id" : "Heaven1",
+         "description" : "\n   You seem to be  standing on a cloud.  Before you stand a pair of huge\ngates, which seem to be made of pearl.  The air about you is peaceful,\nyet a tinge of expectancy can also be felt.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "peter@heaven" : {
+         "damage" : "8",
+         "location" : "Heaven1",
+         "armor" : "0",
+         "name" : "Peter",
+         "description" : "Saint Peter observes you peacefully.",
+         "strength" : "500",
+         "speed" : "0",
+         "pname" : "Peter",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "thorr@heaven" : {
+         "damage" : "20",
+         "location" : "Heaven25",
+         "armor" : "0",
+         "name" : "Thorr",
+         "description" : "Thor stands here glaring at Agnes.",
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Thor",
+         "pflags" : [
+            "NoSummon"
+         ],
+         "mflags" : [
+            "PickStuff"
+         ]
+      },
+      "bison@heaven" : {
+         "damage" : "12",
+         "location" : "Heaven29",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Bison",
+         "name" : "Bison",
+         "description" : "A bison grazes upon the land here.",
+         "strength" : "130"
+      },
+      "coyote@heaven" : {
+         "damage" : "10",
+         "location" : "Heaven34",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Coyote",
+         "name" : "Coyote",
+         "description" : "A small coyote threatens to nip your ankles.",
+         "strength" : "80"
+      },
+      "great@heaven" : {
+         "damage" : "12",
+         "location" : "Heaven32",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Great",
+         "name" : "Great",
+         "description" : "The Great Bear is here eating honey.",
+         "strength" : "170"
+      },
+      "terrance@heaven" : {
+         "damage" : "14",
+         "location" : "Heaven23",
+         "speed" : "0",
+         "aggression" : "1",
+         "armor" : "0",
+         "pname" : "Terrance",
+         "name" : "Terrance",
+         "description" : "\nTerrance the ugly troll sits here preparing his dinner.  He looks hungry.",
+         "strength" : "140"
+      },
+      "snake@heaven" : {
+         "damage" : "10",
+         "location" : "limbo@limbo",
+         "speed" : "5",
+         "aggression" : "3",
+         "armor" : "0",
+         "pname" : "Snake",
+         "name" : "Snake",
+         "description" : "\nAn snake with very narrow slits for eyes swishes around on the ground.",
+         "strength" : "60"
+      },
+      "giant@heaven" : {
+         "damage" : "14",
+         "location" : "Heaven22",
+         "speed" : "0",
+         "aggression" : "2",
+         "armor" : "0",
+         "pname" : "The Giant",
+         "name" : "Giant",
+         "description" : "A giant was relaxing here until you walked in.",
+         "strength" : "150"
+      },
+      "valkyrie@heaven" : {
+         "damage" : "18",
+         "location" : "Heaven20",
+         "armor" : "0",
+         "name" : "Valkyrie",
+         "description" : "Valkyrie glances around for a rabbit.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "175",
+         "speed" : "0",
+         "pname" : "Valkyrie",
+         "aggression" : "0"
+      },
+      "odin@heaven" : {
+         "damage" : "22",
+         "location" : "Heaven25",
+         "armor" : "0",
+         "name" : "Odin",
+         "description" : "Odin glares at you with his one eye.",
+         "strength" : "380",
+         "speed" : "0",
+         "pname" : "Odin",
+         "aggression" : "0",
+         "mflags" : [
+            "PickStuff"
+         ]
+      },
+      "agnes@heaven" : {
+         "damage" : "15",
+         "location" : "Heaven25",
+         "armor" : "0",
+         "name" : "Agnes",
+         "description" : "Agnes laughs, prepared to meet all of Thor's needs.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Agnes",
+         "mflags" : [
+            "PickStuff"
+         ]
+      }
+   }
+}

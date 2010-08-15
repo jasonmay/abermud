@@ -1,0 +1,2571 @@
+{
+   "obj" : {
+      "razor@fareast" : {
+         "desc[1]" : "\nA razor, probably used to shave the heads of initates, lies open on the table.",
+         "damage" : "3",
+         "location" : "IN_ROOM:temple3",
+         "oflags" : [
+            "Weapon",
+            "GetFlips"
+         ],
+         "name" : "razor",
+         "examine" : "The razor could be used as a weapon, but a weak one.",
+         "size" : "2",
+         "state" : "1",
+         "pname" : "razor",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A folded straight razor has been dropped here."
+      },
+      "kaginawa@fareast" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:dojou2",
+         "oflags" : [
+            "Key",
+            "Weapon"
+         ],
+         "altname" : "hook",
+         "name" : "kaginawa",
+         "examine" : "\nThe hook is three-tined and solid, useful for climbing walls that would \n        foil bare feet.",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "3",
+         "pname" : "kaginawa",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A grappling hook, or kagi-nawa, lies atop a coil of rope here."
+      },
+      "filet@fareast" : {
+         "location" : "IN_ROOM:fishhouse",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fish",
+         "name" : "filet",
+         "examine" : "The fish is still fresh, though raw.",
+         "size" : "2",
+         "state" : "0",
+         "pname" : "fish",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A filetted fish is here, wrapped in rice paper."
+      },
+      "splittoed@fareast" : {
+         "location" : "IN_ROOM:curseisland2",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "30",
+         "altname" : "boots",
+         "name" : "splittoed",
+         "examine" : "\nThe boots have a thick sole, y-shaped and studded with metal spikes.",
+         "size" : "3",
+         "state" : "0",
+         "weight" : "3",
+         "pname" : "boots",
+         "maxstate" : "0",
+         "bvalue" : "25",
+         "aflags" : [
+            "Feet"
+         ],
+         "desc[0]" : "A pair of black leather split-toed boots rest near you."
+      },
+      "piece@fareast" : {
+         "location" : "IN_CONTAINER:goboard",
+         "oflags" : [
+            "Lit",
+            "Key"
+         ],
+         "altname" : "token",
+         "name" : "piece",
+         "examine" : "\nThe game token is glowing white on one side, and metallic black on the other.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "token",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "5",
+         "desc[0]" : "One of the tokens from a game of Go lies here."
+      },
+      "soup@fareast" : {
+         "location" : "IN_ROOM:temple2",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "soup",
+         "examine" : "The soup is thin but smells strongly of onions.",
+         "size" : "2",
+         "state" : "0",
+         "pname" : "soup",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A steaming bowl of some sort of soup is set out."
+      },
+      "buddha@fareast" : {
+         "desc[1]" : "A large gold statue stands beside the altar.",
+         "location" : "IN_ROOM:templeu1",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "statue",
+         "name" : "buddha",
+         "examine" : "\nThe statue is a representation of some revered figure.  \nIt looks extremely heavy.",
+         "size" : "7",
+         "state" : "1",
+         "pname" : "statue",
+         "weight" : "25",
+         "maxstate" : "1",
+         "bvalue" : "199",
+         "desc[0]" : "\nA golden statue of a fat, smiling man in Asian dress has been dropped here."
+      },
+      "horagai@fareast" : {
+         "desc[1]" : "\nA horagai, a conch horn used to call samurai to battle, hangs from a peg.",
+         "location" : "IN_ROOM:fort2",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "shell",
+         "name" : "horagai",
+         "examine" : "This horn is gold-plated and wrapped in a silvery netting.",
+         "size" : "2",
+         "state" : "1",
+         "pname" : "horagai",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "199",
+         "desc[0]" : "A gilded conch shell horn, or horagai, lies at your feet."
+      },
+      "ricebowl@fareast" : {
+         "desc[1]" : "On a low table is a bowl filled with rice.",
+         "location" : "IN_ROOM:hermithut",
+         "oflags" : [
+            "Container",
+            "GetFlips"
+         ],
+         "altname" : "bowl",
+         "name" : "ricebowl",
+         "examine" : "This is a simple wooden bowl.",
+         "size" : "3",
+         "state" : "1",
+         "pname" : "bowl",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A bowl for serving rice lies on the ground."
+      },
+      "sotoba@fareast" : {
+         "desc[1]" : "\nA grave marker, or sotoba, stands in the clearing.  \nA samurai's ashes were buried here.",
+         "location" : "IN_ROOM:cherapple",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "altname" : "marker",
+         "name" : "sotoba",
+         "examine" : "The writing on the sotoba reads: Yorube Aikuchi- Guide to Death.",
+         "state" : "1",
+         "pname" : "sotoba",
+         "maxstate" : "1",
+         "desc[0]" : "\nA grave marker here has been pushed over, and lies on its side, \n        pointing northeast."
+      },
+      "greentea@fareast" : {
+         "desc[1]" : "\nA cup of steaming green tea has been placed carefully by the ricebowl.",
+         "location" : "IN_ROOM:hermithut",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "tea",
+         "name" : "greentea",
+         "examine" : "The green tea smells very good.",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "Greentea",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "Someone has placed a cup of cold green tea on the ground here."
+      },
+      "tanto@fareast" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:cliffs1",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "dagger",
+         "name" : "tanto",
+         "examine" : "The dagger, a 'tanto', is sharp but short.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "pname" : "tanto",
+         "maxstate" : "0",
+         "bvalue" : "25",
+         "desc[0]" : "A blood-covered dagger lies here."
+      },
+      "cherries@fareast" : {
+         "desc[1]" : "\nSeveral bunches of cherries hang from the branches above, ripe out of season.",
+         "location" : "IN_ROOM:cherorch6",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "cherries",
+         "examine" : "The cherries, although odd for this time of year, look fine.",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "cherries",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "Several bunches of cherries have been dropped here."
+      },
+      "ricesack@fareast" : {
+         "desc[1]" : "One of the peasants has dropped his sack.",
+         "location" : "IN_ROOM:ricepaddy",
+         "oflags" : [
+            "Container",
+            "GetFlips"
+         ],
+         "altname" : "sack",
+         "name" : "ricesack",
+         "examine" : "The sack is large, and a few rice grains cling to its rough fibers.",
+         "size" : "20",
+         "state" : "1",
+         "pname" : "sack",
+         "weight" : "3",
+         "maxstate" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "A sack is here, surrounded by grains of rice."
+      },
+      "cesti@fareast" : {
+         "damage" : "17",
+         "location" : "IN_ROOM:dojo4",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Weapon"
+         ],
+         "armor" : "55",
+         "altname" : "gauntlets",
+         "name" : "cesti",
+         "examine" : "These cesti can be used equally well as weapons or armor.",
+         "size" : "3",
+         "state" : "0",
+         "weight" : "3",
+         "pname" : "cesti",
+         "maxstate" : "0",
+         "bvalue" : "25",
+         "aflags" : [
+            "Hands",
+            "Arm"
+         ],
+         "desc[0]" : "A pair of spiked, elbow-length gauntlets have been dropped here."
+      },
+      "wakizashi@fareast" : {
+         "damage" : "15",
+         "location" : "CARRIED_BY:ronin",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "altname" : "sword",
+         "name" : "wakizashi",
+         "examine" : "This weapon would serve you well.",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "4",
+         "pname" : "wakizashi",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A samurai's ceremonial short sword has been dropped here."
+      },
+      "katana@fareast" : {
+         "damage" : "20",
+         "location" : "CARRIED_BY:Ninja",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "altname" : "sword",
+         "name" : "katana",
+         "examine" : "This is a fine weapon, and will see you through many battles.",
+         "size" : "8",
+         "state" : "0",
+         "weight" : "2",
+         "pname" : "katana",
+         "maxstate" : "0",
+         "bvalue" : "250",
+         "desc[0]" : "\nA shinobi-katana, the traditional ninja weapon, has been left here."
+      },
+      "jingasa@fareast" : {
+         "location" : "IN_ROOM:cliffs3",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "45",
+         "altname" : "hat",
+         "name" : "jingasa",
+         "examine" : "The jingasa is inexpensive but effective samurai armor.",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "2",
+         "pname" : "jingasa",
+         "maxstate" : "0",
+         "bvalue" : "40",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "\nA metal hat, shaped like a cymbal or conical bowl, is propped against a tree."
+      },
+      "kobuto@fareast" : {
+         "location" : "IN_ROOM:pitpass",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "75",
+         "altname" : "helmet",
+         "name" : "kobuto",
+         "examine" : "This helmet is large and solid, a valuable piece of armor.",
+         "size" : "3",
+         "state" : "0",
+         "weight" : "2",
+         "pname" : "kobuto",
+         "maxstate" : "0",
+         "bvalue" : "30",
+         "aflags" : [
+            "Head",
+            "Face"
+         ],
+         "desc[0]" : "A Samurai helmet lies, upended, on the ground."
+      },
+      "rune@fareast" : {
+         "location" : "IN_ROOM:village2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "letter",
+         "name" : "rune",
+         "examine" : "The rune is the letter 'Mu', the symbol for nothingness.",
+         "size" : "0",
+         "state" : "0",
+         "pname" : "rune",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "\nSome sort of letter or rune has been painted on the side of a house here."
+      },
+      "nunchaku@fareast" : {
+         "damage" : "7",
+         "location" : "IN_ROOM:curseburnt",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "nunchaku",
+         "examine" : "\nNunchaku can be dangerous in the hands of an expert... but you are no expert.",
+         "size" : "4",
+         "state" : "0",
+         "pname" : "nunchaku",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of nunchaku are wrapped around an overhanging branch."
+      },
+      "geta@fareast" : {
+         "location" : "IN_ROOM:dojo1",
+         "armor" : "30",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "sandals",
+         "name" : "geta",
+         "examine" : "\nGeta are solid and useful, but will protect nothing more than your feet.",
+         "size" : "2",
+         "state" : "0",
+         "pname" : "geta",
+         "weight" : "3",
+         "maxstate" : "0",
+         "bvalue" : "20",
+         "aflags" : [
+            "Feet"
+         ],
+         "desc[0]" : "A pair of solid wooden sandals have been carefully set down here."
+      },
+      "habit@fareast" : {
+         "location" : "WORN_BY:shaolin",
+         "oflags" : [
+            "Wearable",
+            "Container"
+         ],
+         "armor" : "28",
+         "altname" : "robe",
+         "name" : "habit",
+         "examine" : "The robe is beautiful and thick, but not protective.",
+         "size" : "10",
+         "state" : "0",
+         "pname" : "robe",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "35",
+         "aflags" : [
+            "Back",
+            "Chest",
+            "Arms"
+         ],
+         "desc[0]" : "A saffron priest's robe lies here."
+      },
+      "disclaimer@fareast" : {
+         "location" : "IN_ROOM:shoreline",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "sign",
+         "name" : "disclaimer",
+         "examine" : "\nThe sign is a disclaimer:  This zone is intended entirely for entertainment\npurposes.  No disrespect of the cultures and peoples it borrows from is \nintended, and in fact, where possible, the names and places are intended to \nhonor mythologies and cultures I admire but do not have the time or space to \naccurately and fully represent.  Thank you.  _Egral N._",
+         "size" : "0",
+         "state" : "0",
+         "pname" : "sign",
+         "weight" : "0",
+         "maxstate" : "0",
+         "desc[0]" : "A carved stone sign rises from the waves, atop a pillar."
+      },
+      "taper@fareast" : {
+         "desc[1]" : "\nA lit candle burns on the altar, casting shimmering light on your face.",
+         "location" : "IN_ROOM:templeu2",
+         "oflags" : [
+            "Lit",
+            "Lightable",
+            "Extinguish",
+            "GetFlips"
+         ],
+         "altname" : "candle",
+         "name" : "taper",
+         "examine" : "Nothing more than a simple wax candle.",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "candle",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "1",
+         "desc[0]" : "A candle lies near your feet."
+      },
+      "kusarii_katabira@fareast" : {
+         "desc[1]" : "A straw dummy in this room holds a short vest of chain mail.",
+         "location" : "IN_ROOM:dojo4",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "GetFlips"
+         ],
+         "armor" : "55",
+         "altname" : "vest",
+         "name" : "kusarii_katabira",
+         "examine" : "\nThe kusarii-katabira is small, but well-crafted armor and useful in its way.",
+         "size" : "7",
+         "state" : "1",
+         "weight" : "3",
+         "pname" : "kusarii",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ],
+         "desc[0]" : "\nA half-vest of chain mail, called kusarii-katabira, has been discarded here."
+      },
+      "stonetable@fareast" : {
+         "location" : "IN_ROOM:temple3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "stonetable",
+         "examine" : "The table seems to be part of the floor.",
+         "size" : "10",
+         "state" : "0",
+         "pname" : "table",
+         "weight" : "20",
+         "maxstate" : "0",
+         "desc[0]" : "\nA low stone table stands here."
+      },
+      "sandals@fareast" : {
+         "location" : "WORN_BY:peasant",
+         "armor" : "10",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "sandals",
+         "examine" : "The sandals are flimsy and old.",
+         "size" : "3",
+         "state" : "0",
+         "pname" : "sandals",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "15",
+         "aflags" : [
+            "Feet"
+         ],
+         "desc[0]" : "A pair of cheap, wooden peasant's sandals are here."
+      },
+      "dragons_tooth@fareast" : {
+         "desc[1]" : "A broken tooth from the dragon lies near his body.",
+         "damage" : "30",
+         "location" : "IN_ROOM:cherblos",
+         "oflags" : [
+            "Weapon",
+            "GetFlips"
+         ],
+         "armor" : "0",
+         "altname" : "tooth",
+         "name" : "dragons_tooth",
+         "examine" : "\nThis is a tooth from a dragon's maw, hard and sharp.\nIt would probably be a dangerous weapon.",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "4",
+         "pname" : "tooth",
+         "maxstate" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "The tooth of a dragon lies here."
+      },
+      "yinyang@fareast" : {
+         "desc[1]" : "\nThe Orb of Yin and Yang stands before you, swirling black and white.",
+         "damage" : "40",
+         "location" : "IN_ROOM:goalroom",
+         "oflags" : [
+            "Weapon",
+            "Lit",
+            "Container",
+            "GetFlips"
+         ],
+         "altname" : "orb",
+         "name" : "Yinyang",
+         "examine" : "\nThis is the source of Umurshyo's power.  Take it and become powerful yourself.",
+         "size" : "10",
+         "state" : "1",
+         "weight" : "10",
+         "pname" : "Yinyang",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "A swirling orb of black and white beckons you to pick it up."
+      },
+      "haramaki@fareast" : {
+         "desc[1]" : "A metal stand holds a samurai breastplate, the haramaki.",
+         "location" : "IN_ROOM:gardhaus",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "GetFlips"
+         ],
+         "armor" : "63",
+         "altname" : "breastplate",
+         "name" : "haramaki",
+         "examine" : "\nThe haramaki is tightly laced and composed of thick metal plates; fine armor.",
+         "size" : "10",
+         "state" : "1",
+         "weight" : "10",
+         "pname" : "haramaki",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "aflags" : [
+            "Chest"
+         ],
+         "desc[0]" : "A samurai's breastplate and body armor, the haramaki, lie here."
+      },
+      "goboard@fareast" : {
+         "location" : "IN_ROOM:fort1",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "board",
+         "name" : "goboard",
+         "examine" : "The board is mounted to the floor, but the pieces are loose.",
+         "size" : "10",
+         "state" : "0",
+         "pname" : "goboard",
+         "weight" : "20",
+         "maxstate" : "0",
+         "desc[0]" : "A Go board, the pieces scattered about it, sits upon the floor."
+      },
+      "rice@fareast" : {
+         "location" : "IN_CONTAINER:ricebowl",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "rice",
+         "examine" : "This rice looks edible.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "rice",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "5",
+         "desc[0]" : "A handful of cooked rice is piled here."
+      },
+      "bo@fareast" : {
+         "damage" : "8",
+         "location" : "CARRIED_BY:shaolin",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "altname" : "staff",
+         "name" : "bo",
+         "examine" : "\nThe staff is heavy and perhaps unwieldy, but it is better than bare hands.",
+         "size" : "15",
+         "state" : "0",
+         "weight" : "5",
+         "pname" : "bo",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "desc[0]" : "\nA large iron-shod staff, often called a bo-staff, rests upright here."
+      },
+      "facemask@fareast" : {
+         "damage" : "0",
+         "location" : "WORN_BY:Samurai",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "40",
+         "altname" : "mask",
+         "name" : "facemask",
+         "examine" : "The mask will provide some minor protection.",
+         "size" : "3",
+         "state" : "0",
+         "weight" : "2",
+         "pname" : "mask",
+         "maxstate" : "0",
+         "bvalue" : "40",
+         "aflags" : [
+            "Face",
+            "Head"
+         ],
+         "desc[0]" : "A samurai's ceremonial face mask has been dropped here."
+      }
+   },
+   "loc" : {
+      "cliffs6@fareast" : {
+         "exits" : {
+            "e" : "ropebridge",
+            "s" : "cliffs4"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Top of the Northern Cliffs",
+         "id" : "cliffs6",
+         "description" : "\n        \n        The northern path up these cliffs ends abruptly at this point, rising \nto a flat plateau with only two ways off: to the south, where a path leads \nback down the cliff to the valley below, or to the east, across a narrow \nbridge formed of ropes and wooden poles.  Across the bridge, a similar plateau\nleads to a higher cliffside.  \n",
+         "altitude" : "2000"
+      },
+      "cherorchcent@fareast" : {
+         "exits" : {
+            "w" : "cherorch8",
+            "e" : "cherorch2",
+            "n" : "cherorchcent",
+            "s" : "cherorch4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard",
+         "id" : "cherorchcent",
+         "description" : "\n\n        The waving branches and falling petals of the cherry trees disorient \nyou and make it difficult to find the way out...\n",
+         "altitude" : "300"
+      },
+      "fort1@fareast" : {
+         "exits" : {
+            "s" : "forthall"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "War Room",
+         "id" : "fort1",
+         "description" : "\n\n        No battle plans are drawn up in the War Room, no maps with clay or \nbronze figurines marking the placement of troops: there was no preparation for\nthe battle that lost this fortress.  No opposing army swept over the southern \nplains.  The only strategic element in this room, in fact, seems to be a large\nGo board, standing in a quiet corner.\n",
+         "altitude" : null
+      },
+      "countryb_6@fareast" : {
+         "exits" : {
+            "e" : "countryb_2",
+            "n" : "countryb_4"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Countryside- Cold Winds",
+         "id" : "countryb_6",
+         "description" : "\n\n        Two dirt paths, diverging from two main roads higher uphill, meet here\nin a clearing. It is swept free of the gravel and sediment that cover most of\nthe surrounding lands; a stiffly cold wind blasts across it toward the west,\nattempting to clear the sky of clinging haze and fog.\n",
+         "altitude" : null
+      },
+      "curseshore3@fareast" : {
+         "exits" : {
+            "w" : "curseacid2",
+            "e" : "curseacid1",
+            "s" : "curseisland1"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Far Shore of the Acid River",
+         "id" : "curseshore3",
+         "description" : "\n\n        This shore is lined with black, shining sand, stretching back to the \nsouth until it fuses into a glassy surface.  The river that flows by is a \nyellowish hue, and bubbles where it comes in contact with the shore... \nprobably acid.\n",
+         "altitude" : null
+      },
+      "fortu3@fareast" : {
+         "exits" : {
+            "w" : "fortuhall"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Daimyo's Quarters",
+         "id" : "fortu3",
+         "description" : "\n\n        Blood stains the sheets of the Daimyo's bed, and his quarters show the\nsigns of an attack.  The wardrobe is over on its side, and its sides show \nevenly spaced slashes, like claw marks.  Chairs and other small furniture lie \nsmashed in one corner, and every one of the ruler's personal effects has been \nbroken- his sword, his helmet, his seals, everything.  \n",
+         "altitude" : null
+      },
+      "countrya_5@fareast" : {
+         "exits" : {
+            "n" : "countryacave",
+            "s" : "countrya_3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Countryside- Gravel",
+         "id" : "countrya_5",
+         "description" : "\n\n        The road is strewn with gravel and small pebbles, which thicken toward\nthe north until the path is completely obscured.  Larger and larger piles of \nstone end at a high rockface, split by a narrow crack.  Toward the south, \nthe gravelly soil clears enough that it has been cultivated.  The road in that\ndirection is crossed by an east-west path, forming a crossroads.\n",
+         "altitude" : "300"
+      },
+      "cliffs2@fareast" : {
+         "exits" : {
+            "w" : "shore1",
+            "e" : "cliffs5",
+            "u" : "cliffs5",
+            "n" : "cliffs1",
+            "d" : "shore1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Atop the Northern Cliffs- Plateau",
+         "id" : "cliffs2",
+         "description" : "\n\n        The top of the cliffs is flat and broad, and offers a very good view \nof the shoreline to the west, as well as the drop-off to the south, where a \nstream has cut through the stone, forming a wide valley.  A narrowing rise \nleads towards the east, deeper into the cliffs and further up.  Travelling \nnorth, however, will only take you to a small overhang, and from there the \nonly way is down or back.  \n",
+         "altitude" : "700"
+      },
+      "shore2@fareast" : {
+         "exits" : {
+            "w" : "shoreline",
+            "e" : "cliffs3",
+            "n" : "outlet",
+            "s" : "beachcave"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Beach- Southern Edge",
+         "id" : "shore2",
+         "description" : "\n\n        The cliffs that divide this beach from the main expanse of the island \nwrap around to cut the shoreline short.  A nearly vertical wall, stretching \nout into the water and continuing south, blocks any travel in that direction.  \nSteps have been cut into the face to the east, however, and should make ascent\neasy.  Down the beach, to the west, stands the sea, and a ship rests in harbor\nto the northwest.  The beach continues to the north.\n",
+         "altitude" : "0"
+      },
+      "countrya_2@fareast" : {
+         "exits" : {
+            "e" : "pitpass",
+            "n" : "countrya_3",
+            "d" : "pitpass",
+            "s" : "countryacurse"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Countryside- Overgrown",
+         "id" : "countrya_2",
+         "description" : "\n\n        Scrub brush and tall grasses choke the land around this stretch of \nroad.  To the north, this verdure fades into carefully kept fields and \npastures.  The overgrowth gradually thickens toward the south, but a line of \nhaze and dead foliage marks where the green abruptly changes to black, and the\nhealthy overgrowth changes to sickly clots of blighted vegetation and \nintertwining brambles.  Just before that line, the roadside drops away toward\na sinkhole,  the bottom of which looks clean and bare.\n",
+         "altitude" : "300"
+      },
+      "cherorch2@fareast" : {
+         "exits" : {
+            "w" : "cherorch6",
+            "e" : "cherorch8",
+            "n" : "cherblos",
+            "s" : "cherorch3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard",
+         "id" : "cherorch2",
+         "description" : "\n\n        The waving branches and falling petals of the cherry trees disorient \nyou and make it difficult to find the way out...\n",
+         "altitude" : "300"
+      },
+      "cherent1@fareast" : {
+         "exits" : {
+            "w" : "countryacher",
+            "e" : "cherorch5",
+            "n" : "cherapple",
+            "s" : "cherorch8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard- Western Entrance",
+         "id" : "cherent1",
+         "description" : "\n\n        The road here passes from the open countryside to the west to a \ntangled \"orchard\" of cherry trees to the east.  The road passes directly under \nthe boughs, and is covered with falling petals.  A small path leads north from \nthis spot, toward another grove of blossoming trees, possibly apple or pear.\nThese orchards are the pride of Eno, and stretch on for many miles.\n",
+         "altitude" : "300"
+      },
+      "cliffs1@fareast" : {
+         "exits" : {
+            "e" : "cliffs2",
+            "u" : "cliffs2",
+            "d" : "shore1",
+            "s" : "shore1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "On the Northern Cliffs- Beneath an Overhang",
+         "id" : "cliffs1",
+         "description" : "\n\n        The cliff face is worn away here, leaving an overhung, pocketed ledge \nlarge enough for two humans to stand under.  The floor is strewn with small \nstones, but swept in places as if someone's feet had been placed there and \nmoved in small circles.  The ledge continues up and to the east, meeting up \nwith a path from the beach to the cliffs.  The only other way off this ledge \nis to descend to the beach, to the south.\n",
+         "altitude" : "500"
+      },
+      "curseacid2@fareast" : {
+         "exits" : {
+            "e" : "curseacid1",
+            "n" : "curseshore2",
+            "s" : "curseshore3"
+         },
+         "flags" : [
+            "NegRegen"
+         ],
+         "zone" : "fareast",
+         "title" : "Acid River",
+         "id" : "curseacid2",
+         "description" : "\n\n        The acidic waters of this festering river eat away at the soles of \nyour boots... It would be best to leave before it reaches the soles of your \nfeet.\n",
+         "altitude" : null
+      },
+      "countryb_1@fareast" : {
+         "exits" : {
+            "w" : "countrybcurse",
+            "e" : "countryb_3"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Countryside- Gnarled Scrub",
+         "id" : "countryb_1",
+         "description" : "\n\n        The scrub brush and vegetation that overgrows this area of countryside\nis twisted and stunted, as if the soil were poisoned.  Only small clumps of \ngrass remain, though the earth is dark and seemingly fertile.  Looking south,\nthis blight seems to get worse, and a pall hangs over the sky in that \ndirection.  Back to the north, the road meets another, and the land gives way \nto cultivated farmlands, albeit in rocky soil.\n",
+         "altitude" : null
+      },
+      "cherorch4@fareast" : {
+         "exits" : {
+            "w" : "cherorch1",
+            "e" : "cherorch6",
+            "n" : "cherorch7",
+            "s" : "cherorch3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard",
+         "id" : "cherorch4",
+         "description" : "\n\n        The waving branches and falling petals of the cherry trees disorient \nyou and make it difficult to find the way out...\n",
+         "altitude" : "300"
+      },
+      "countryb_2@fareast" : {
+         "exits" : {
+            "w" : "countryb_6",
+            "n" : "countryb_3",
+            "s" : "countrybend"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Countryside- the Far South",
+         "id" : "countryb_2",
+         "description" : "\n\n        The road is broken into chunks here, and partially scattered across\nthe dark and festering plains.  A greyish pall overhead blows from the west\nto the east, toward a darker cloud... and not a cloud of water vapor.  \nTo the south, the road drops away suddenly, to the north, it joins another at \na crossroads.\n",
+         "altitude" : null
+      },
+      "cliffs7@fareast" : {
+         "exits" : {
+            "w" : "ropebridge",
+            "e" : "templepass",
+            "u" : "templepass"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Eastern Plateau and Overlook",
+         "id" : "cliffs7",
+         "description" : "\n\n        This side of the steep river valley offers a spectacular view of the \neastern skyline... where a terraced shrine rises up before the forests that \nseparate this area from the spires of the capitol, Eno.  To the west, a rope \nbridge leads back across the valley, where a similar plateau offers a path \ndownward toward the local village.  A less steep path leads up from this side \ninto a craggy hillside in the east, through which it will hopefully lead \ntoward the temple.\n",
+         "altitude" : "3000"
+      },
+      "dojoent@fareast" : {
+         "exits" : {
+            "w" : "dojo1",
+            "e" : "curseisland1"
+         },
+         "flags" : [
+            "Dark",
+            "TempExtreme"
+         ],
+         "zone" : "fareast",
+         "title" : "Passage through Darkness",
+         "id" : "dojoent",
+         "description" : "\n\n        The mists themselves rise to block your path as you cross this way.  \nA squat grey building with torn paper walls is the only sign of life in this\ndesolation; it stands directly to your west.  To the east, the plain stretches\nunbroken to a shore lined with black sand.\n",
+         "altitude" : null
+      },
+      "curseburnt@fareast" : {
+         "exits" : {
+            "e" : "curse6",
+            "n" : "cursefire"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Cursed Forest- Charcoal and Ashes",
+         "id" : "curseburnt",
+         "description" : "\n\n        The fire that still burns to the north has passed through here, \nleaving a gap in the forest and a pocket of clean air.  You can actually take \na few breaths without retching.\n",
+         "altitude" : null
+      },
+      "countrybcher@fareast" : {
+         "exits" : {
+            "n" : "cherent2",
+            "s" : "countryb_5"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Dusty Road",
+         "id" : "countrybcher",
+         "description" : "\n\n        The north-south road leads off to the horizon in either direction, \nbut to either side is only overturned and blighted earth, dry and dead.  \nDust blows across the road, back toward greener lands... a glimmering of pink \nshows to the north, the only visible sign of life.\n",
+         "altitude" : null
+      },
+      "countryb_5@fareast" : {
+         "exits" : {
+            "w" : "pitpass",
+            "n" : "countrybcher",
+            "d" : "pitpass",
+            "s" : "countryb_3"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Countryside- A Glimpse of Life",
+         "id" : "countryb_5",
+         "description" : "\n\n        This unpleasant countryside makes you look longingly to the north, \nwhere pink cherry blossoms fall from a thick, living orchard.  The land here,\nin contrast, is dry and rocky, barely touched by greenery.  Further to the \nsouth, it even seems to be dotted with dark, smoking puddles and patches of \nyellow ooze, ending in haze-shrouded cliffs.  Another escape, however, is \noffered by a sinkhole to the west, where the roadbed drops away toward a bare,\ndry floor.\n",
+         "altitude" : null
+      },
+      "village3@fareast" : {
+         "exits" : {
+            "w" : "village2",
+            "e" : "countrya_1"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Peasant Village-Eastern Entrance",
+         "id" : "village3",
+         "description" : "\n\n        The eastern entrance to this tiny village has a barely servicable arch\nmarking the spot where the buildings end and the countryside begins, or vice \nversa.  Indeed, off to the east, the country stretches without interruption, \nwhile to the west, a cluster of wooden huts and storage sheds comprises the \nhome of the low-caste.\n",
+         "altitude" : null
+      },
+      "throneroom@fareast" : {
+         "exits" : {
+            "n" : "fortuhall",
+            "d" : "fortuhall",
+            "s" : "goalroom"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Daimyo's Throne Room",
+         "id" : "throneroom",
+         "description" : "\n\n        The Throne Room's opulent surroundings are befouled by demon stench \nand brimstone haze, and the throne itself is smeared with grime and blood.  \nSilk tapestries that once hung proudly on the walls have been apparently used\nas  handkerchiefs and... toiletries.  The daimyo and his court are piled on \neither side of the throne like so much cordwood, and your ire rises at such \nmocking destruction.\n",
+         "altitude" : null
+      },
+      "cherapple@fareast" : {
+         "exits" : {
+            "s" : "cherent1"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Clearing",
+         "id" : "cherapple",
+         "description" : "\n\n        This clear spot is almost totally surrounded by apple trees, which \ndrop pink and white petals around you as the wind picks up.  A narrow path \nleads back to the south, where a wider road crosses it.  The branches rustle \noccasionally, and you shiver.\n",
+         "altitude" : null
+      },
+      "curse1@fareast" : {
+         "exits" : {
+            "w" : "curse2",
+            "s" : "curse5"
+         },
+         "flags" : [
+            "Dark",
+            "TempExtreme"
+         ],
+         "zone" : "fareast",
+         "title" : "Cursed Forest",
+         "id" : "curse1",
+         "description" : "\n        \n        This forest is revoltingly similar to its surroundings: rotting trees \nintertwine to form a roof overhead, blocking what little light filters through \nthe swirling haze.  This noxious gas makes breathing difficult and rest,\nimpossible.\n",
+         "altitude" : null
+      },
+      "cherorch3@fareast" : {
+         "exits" : {
+            "w" : "cherorchcent",
+            "e" : "cherorch1",
+            "n" : "cherorch4",
+            "s" : "cherorch5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard",
+         "id" : "cherorch3",
+         "description" : "\n\n        The waving branches and falling petals of the cherry trees disorient \nyou and make it difficult to find the way out...\n",
+         "altitude" : "300"
+      },
+      "beachcave@fareast" : {
+         "exits" : {
+            "e" : "cursecave",
+            "n" : "shore2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fareast",
+         "title" : "Sea Cave",
+         "id" : "beachcave",
+         "description" : "\n\n        Carved by the tides, this cave stretches back underneath the cliffs. \nThe cavern is dark, despite being open to the beach on one end, and a cold \nwind saps your strength.  \n",
+         "altitude" : null
+      },
+      "cliffs3@fareast" : {
+         "exits" : {
+            "w" : "shore2",
+            "n" : "village1",
+            "s" : "shore2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Atop the Southern Cliffs- On a Road",
+         "id" : "cliffs3",
+         "description" : "\n\n        At the top of a stone staircase, this road speaks of a fairly advanced\ncivilization nearby.  Shaped stones have been set in a spiralling pattern, \nleading far off to the north.  The staircase leads down the cliffs to the \nsouthwest, where you can hear surf hitting the rocky beach.\n",
+         "altitude" : "500"
+      },
+      "fort3@fareast" : {
+         "exits" : {
+            "w" : "forthall"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Dining Hall",
+         "id" : "fort3",
+         "description" : "\n\n        This vast dining hall was designed to feed the daimyo's troops, as \nwell as to prepare the meals for that ruler and his family.  Now, it stands \nsilent, the low tables smashed and the seat-cushions torn apart.  A pile of \ndiscarded sacks, husks, and other trash stands in the midst of the \ndestruction, like the remnants of a huge midnight snack.\n",
+         "altitude" : null
+      },
+      "fareast_bay@fareast" : {
+         "exits" : {
+            "w" : "surface8@loligo",
+            "e" : "shoreline"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Fareast Bay",
+         "id" : "fareast_bay",
+         "description" : "\n\n        The sea rolls into this small bay, and continues east to roll up on \nthe beach of a haze-shrouded island.  Back to the west, the waves continue on\ntoward the horizon, and clearer skies.\n",
+         "altitude" : "0"
+      },
+      "deadroad@fareast" : {
+         "exits" : {
+            "n" : "countrybend"
+         },
+         "flags" : [
+            "Death",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Off the Edge",
+         "id" : "deadroad",
+         "description" : "\n\n        Stepping off the edge of an abyss is never a good idea, especially \nwhen it is nearly a mile deep.  You splatter disgustingly on the rocks below.\n",
+         "altitude" : null
+      },
+      "countrybend@fareast" : {
+         "exits" : {
+            "n" : "countryb_2",
+            "s" : "deadroad"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "End of the Road",
+         "id" : "countrybend",
+         "description" : "\n\n        The road ends abruptly here... since there is no land for it to cross.\nYou stand on the edge of a abyssal gap, the sod and rock torn away from the \nedge as if scraped out by a titan's foot.  Rocks dislodged from the edge \ntumble for nearly half a minute before hitting the bottom, and you would \nundoubtedly suffer the same freefall and landing if you were to continue on.\n",
+         "altitude" : null
+      },
+      "ricepaddy@fareast" : {
+         "exits" : {
+            "w" : "gapvalley",
+            "e" : "village1",
+            "n" : "cliffs4",
+            "s" : "village1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Rice Paddy",
+         "id" : "ricepaddy",
+         "description" : "\n\n        Peasants comb the rice plants growing in the shallows here, gathering \nthe grain and carrying the sacks back up to their village to the southeast.  \nThe peasants glance at you, but hurry away without asking questions, either \ntoo busy or too afraid to find out who you are.  The stream flows from a slope\nto the north, curves here and continues down to a broad valley to the west, \nand presumably from there out to the sea.\n",
+         "altitude" : "50"
+      },
+      "goalroom@fareast" : {
+         "exits" : {
+            "n" : "throneroom"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "The Heavens",
+         "id" : "goalroom",
+         "description" : "\n\n        The vast, otherworldly aspect of this room takes some time to \nassimilate:  The domed ceiling looks up into the sky, but the view is \nunencumbered by clouds, haze, or indeed, air.  Bare suns and glowing nebulae\nilluminate the space in which you stand.  Dragons wheel about these heavens \noccasionally, glancing down on you in amusement.  And before you... before you\nis the Orb of Yin and Yang, capable of throwing the balance of creation to \ngood or evil exclusively.  The Demon could not harness its full power, so \nundoubtedly you cannot either, but even at its weakest the Orb could make you\na formidable ruler... but it must be returned to its place.  The steel arch \nthat transported you in waits to the north, and a strange circular portal \nhovers to the south, visible but not solid.\n",
+         "altitude" : null
+      },
+      "countrybcurse@fareast" : {
+         "exits" : {
+            "w" : "cursent2",
+            "e" : "countryb_1"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Darkening Skies",
+         "id" : "countrybcurse",
+         "description" : "\n\n        The sky overhead seems to actively darken as you pass this way, going \nfrom a dim storminess to the north, to a sickly slate to the south, where dark\nbranches reach hopelessly toward the swirling clouds.  The road seems \nincreasingly out of repair as you look in that direction, also.\n",
+         "altitude" : null
+      },
+      "curse2@fareast" : {
+         "exits" : {
+            "w" : "curse3",
+            "e" : "curse1",
+            "s" : "cursefire"
+         },
+         "flags" : [
+            "Dark",
+            "TempExtreme"
+         ],
+         "zone" : "fareast",
+         "title" : "Cursed Forest",
+         "id" : "curse2",
+         "description" : "\n\n        This forest is revoltingly similar to its surroundings: rotting trees \nintertwine to form a roof overhead, blocking what little light filters through \nthe swirling haze.  This noxious gas makes breathing difficult and rest,\nimpossible.\n",
+         "altitude" : null
+      },
+      "gardhaus@fareast" : {
+         "exits" : {
+            "e" : "courtyard",
+            "u" : "gardhaus2"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Guard House",
+         "id" : "gardhaus",
+         "description" : "\n\n        The only standing building higher than two stories, other than the \nfortress itself, is this guard tower, set against the defensive wall.  This\nlower floor held rows of bunks, which are now overturned and torn, as well as\nthe armor and personal effects of the city's defenders.  A plank staircase \nleads up to the open platform above.\n",
+         "altitude" : null
+      },
+      "shoreline@fareast" : {
+         "exits" : {
+            "w" : "fareast_bay",
+            "e" : "outlet",
+            "n" : "shore1",
+            "s" : "shore2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Off the Eastern Shores",
+         "id" : "shoreline",
+         "description" : "\n\n        The waves roll up onto the stony beach to the east, bringing new \nwaters back from a freshwater outlet as they recede.  Weathered cliffs obscure\nthe area further inland, but you can see a gap in them where the stream's \nerosion has broken through.  The beach stretches on to your north and south, \nand the choppy sea stretches to the western horizon.\n",
+         "altitude" : "0"
+      },
+      "cherblos@fareast" : {
+         "exits" : {
+            "n" : "enoroad",
+            "s" : "cherorch2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Road of the Cherry Blossoms",
+         "id" : "cherblos",
+         "description" : "\n\n        This road is bound on either side by lines of cherry trees, all in \nfull bloom and drifting their petals down onto the road surface.  You can see \nthe spires of Eno far to the north, and to the south are more cherry trees, \nwhich seem to be planted in an obscuring pattern.\n",
+         "altitude" : "300"
+      },
+      "cursent2@fareast" : {
+         "exits" : {
+            "w" : "curse5",
+            "e" : "countrybcurse"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Entrance to the Cursed Lands",
+         "id" : "cursent2",
+         "description" : "\n\n        The only difference between this area and the desolation to the west \nis that the remains of a forest, black and tangled, reach above you to embrace \nthe noxious clouds.  Within the forest to the east, the road is eroded away \nand eventually vanishes.  \n",
+         "altitude" : null
+      },
+      "cursecave@fareast" : {
+         "exits" : {
+            "w" : "shore2",
+            "e" : "curse4"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Cave in the Cursed Lands",
+         "id" : "cursecave",
+         "description" : "\n\n        This cave, though dark, damp, and cramped, is free of the choking \nvapours that swirl outside.  You can actually breathe and rest here, without \nfearing attack or poisoning.  A tiny, salt-rimmed tunnel seems to be the \nsource of the restoring air, leading back to the west, far underground.\n",
+         "altitude" : null
+      },
+      "enoroad@fareast" : {
+         "exits" : {
+            "n" : "enogate",
+            "s" : "cherblos"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Road to Eno",
+         "id" : "enoroad",
+         "description" : "\n\n        The road stretches across the plain, from a cherry orchard far to the \nsouth to the vast city of Eno to the north.  The city is plainly visible, a \ndark mass of spires and rooftops stacked one on another, surrounded by a \npalisaded earthen wall.  Only the front edge of the orchard can be seen, with\nthe road passing into a gap therein.  The countryside is burnt and blasted, \nand a black streak crosses the road in front of you.\n",
+         "altitude" : "300"
+      },
+      "vilruin@fareast" : {
+         "exits" : {
+            "w" : "courtyard"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Village Ruins",
+         "id" : "vilruin",
+         "description" : "\n\n        There's not much to see or do here, the wooden buildings have burned \ntotally to the ground and the stone structures have been torn apart.  Here and\nthere, you can see lighter patches which often turn out to be bones or broken \nmarble statues, but mostly the landscape is an even, sooty black.  The roads \nare all clogged except for the path back to the west.\n",
+         "altitude" : null
+      },
+      "fishhouse@fareast" : {
+         "exits" : {
+            "n" : "village1"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Fish Warehouse",
+         "id" : "fishhouse",
+         "description" : "\n\n        The warehouse's smell is enough to tell you its former contents: fish.\nNow, however, it is almost empty, and only a few heads and salted pike remain.\nThere didn't seem to be enough peasants in that village to account for an \nempty warehouse of this size, though.\n",
+         "altitude" : null
+      },
+      "dojo2@fareast" : {
+         "exits" : {
+            "s" : "dojo1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fareast",
+         "title" : "Sleeping Hall",
+         "id" : "dojo2",
+         "description" : "\n\n        The northern hall of this dojo has been filled with straw pallets, \nand converted into sleeping quarters.  Students had no need for worldly \nposessions or comfort, and so their bedding was the necessary minimum.  \nBlack tar oozes from the splintered floor, soaking into the matresses. \n",
+         "altitude" : null
+      },
+      "tempruin@fareast" : {
+         "exits" : {
+            "w" : "enogate",
+            "s" : "enoroad"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Ruined Shrine",
+         "id" : "tempruin",
+         "description" : "\n\n        This was once a Shinto shrine outside Eno. Now, it is a pile of rubble\nbeneath two cracked pillars.  The main platform is largely intact beneath the\nrocks, but its surface has been scorched and scraped by something.  Trees that\nonce made this an oasis of nature near the city's walls have been torn down, \ngiving you a clear view of those ramparts and the spires beyond.\n",
+         "altitude" : null
+      },
+      "fortuhall@fareast" : {
+         "exits" : {
+            "w" : "fortu2",
+            "e" : "fortu3",
+            "u" : "throneroom",
+            "n" : "fortu1",
+            "s" : "throneroom"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Fortress- Upper Level",
+         "id" : "fortuhall",
+         "description" : "\n\n        The upper hall of the fortress has been the site of many battle plans,\nbut never before has conflict reached such a secure spot.  Now, however, the \nbodies of many loyal samurai lie atop each other, slain by an enemy powerful \nenough to breach that security and occupy the fortress itself.   A staircase \nleads back down to the fortress' lower floors, and three pairs of double \ndoors stand to the north, east, and south.  \n",
+         "altitude" : null
+      },
+      "dojou1@fareast" : {
+         "exits" : {
+            "n" : "dojou2",
+            "d" : "dojo1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fareast",
+         "title" : "Dojo- Upper Level",
+         "id" : "dojou1",
+         "description" : "\n\n        The covered platform sways from your weight- apparently something has \ndamaged the timbers, which appeared strong enough for four people your size.\nA thin wooden ladder is the only way down short of jumping.\n",
+         "altitude" : null
+      },
+      "enogate@fareast" : {
+         "exits" : {
+            "e" : "tempruin",
+            "s" : "enoroad"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Gates of Eno",
+         "id" : "enogate",
+         "description" : "\n\n        The City of Eno rises high above you to the immediate north.  However,\n a massive gate stands between there and here, and a padlock of proportionate \nsize is on its door.  High earthen walls wrap around to the east and west, and\ntheir smooth sides would make climbing impossible without help.  \nA road leading from the gates reaches off toward the south, to a grove of \ntrees far in the distance, and a narrow dirt path leads off to the east.\n",
+         "altitude" : "300"
+      },
+      "countryacave@fareast" : {
+         "exits" : {
+            "n" : "templepass",
+            "s" : "countrya_5"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "A Tight Squeeze",
+         "id" : "countryacave",
+         "description" : "\n\n        This crack between two rock faces is barely wide enough for an armored\nhuman to squeeze through.  It rises sharply at its midpoint, and an icy wind \nblows north to south, from the high end... a snowy mountainside can be seen \nbeyond. To the south, a rocky field offers more warmth and comfort.\n",
+         "altitude" : null
+      },
+      "ropebridge@fareast" : {
+         "exits" : {
+            "w" : "cliffs6",
+            "e" : "cliffs7",
+            "d" : "rapids"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "On the Rope Bridge",
+         "id" : "ropebridge",
+         "description" : "\n\n        The bridge sways alarmingly as you stand at its center.  It reaches \nfrom east to west, with a small plateau supporting either end.  Looking down, \nthe stream is visible, constrained by the narrow pass and foaming over rapids.\nSomeone crossing this bridge could easily lose their footing and tumble to the\nwater below.\n",
+         "altitude" : "2500"
+      },
+      "countrya_4@fareast" : {
+         "exits" : {
+            "w" : "countrya_3",
+            "e" : "countryacher"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Countryside- Orchards",
+         "id" : "countrya_4",
+         "description" : "\n\n        Planted and cultivated trees form small orchards along the sides of \nthis east-west road, thickening to the east until only a vast pink forest of \nblossoms is distinguishable.  In the west, the trees become more and more \nsparse, giving way to fields and pasture, flat land that makes it easy to see \nwhere this path crosses another, forming a crossroads.\n",
+         "altitude" : "300"
+      },
+      "cherorch6@fareast" : {
+         "exits" : {
+            "w" : "cherorch5",
+            "e" : "cherorch7",
+            "n" : "cherorch1",
+            "s" : "cherorch4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard",
+         "id" : "cherorch6",
+         "description" : "\n\n        The waving branches and falling petals of the cherry trees disorient \nyou and make it difficult to find the way out...\n",
+         "altitude" : "300"
+      },
+      "temple2@fareast" : {
+         "exits" : {
+            "u" : "templeu2",
+            "s" : "temple1"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Dining Hall",
+         "id" : "temple2",
+         "description" : "\n\n        Low stone benches form rows in this room, alternating with rows of \ncushions.  A cold fireplace in the far wall holds enough utensils and pots for\nyou to guess that this must be the dining hall for the temple.  The room \nitself is also cold, as air leaks in from the southern doorway.  \nA wooden staircase leads upward, into a room flickering with candlelight.\n",
+         "altitude" : null
+      },
+      "fortu1@fareast" : {
+         "exits" : {
+            "s" : "fortuhall"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Princess's Quarters",
+         "id" : "fortu1",
+         "description" : "\n\n        Nothing except a smell of sulfur seems out of place in the quarters of \nthe daimyo's daughter.  Odd, considering that the princess' body lies broken \non the flagstones below the window...\n",
+         "altitude" : null
+      },
+      "dojo4@fareast" : {
+         "exits" : {
+            "e" : "dojo1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fareast",
+         "title" : "Weapons Hall",
+         "id" : "dojo4",
+         "description" : "\n\n        Empty hooks, pegs, and rings wait for weapons that will never be hung\nhere again.  Wooden forms for armor stand like bare skeletons. This room once \nheld enough weaponry for a small army, but now only a few pieces remain.  \nEither scavengers or the retreating students have taken everything of value. \n",
+         "altitude" : null
+      },
+      "temple1@fareast" : {
+         "exits" : {
+            "w" : "templand3",
+            "e" : "templeu1",
+            "u" : "templeu1",
+            "n" : "temple2",
+            "s" : "temple3"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Temple Entrance",
+         "id" : "temple1",
+         "description" : "\n\n        The entry to the temple is cold and bare of effects, the only features\nare the three doors: one leading outside, to the west, two others with \ncircular insigne leading north and south, and a staircase leading up and to \nthe east, toward another level of the temple.\n",
+         "altitude" : null
+      },
+      "curseisland1@fareast" : {
+         "exits" : {
+            "w" : "dojoent",
+            "n" : "curseshore3",
+            "s" : "curseisland2"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Cursed Lands",
+         "id" : "curseisland1",
+         "description" : "\n\n        The ground is hard and glassy underfoot, and it is difficult to stand.\nThe mists that cover the northern forest are unrestrained here, and seep down \naround your ankles, rising occasionally in choking plumes.  To the west, a \ngreyish building fights to stay above this flood, but its paper-thin walls \nhave already been breached.  The northern edge of this area is the shore of a\nfoul yellowish river, and to the south, a wall of solid black stone rises to \nblock the horizon.\n",
+         "altitude" : null
+      },
+      "templeu2@fareast" : {
+         "exits" : {
+            "d" : "temple2",
+            "s" : "templeu1"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Temple Altar",
+         "id" : "templeu2",
+         "description" : "\n        \n        The temple's altar is brightly lit, filled from wall to wall with \nelaborate candelabras filled with candles of every size, color, and type.  \nThe flickering lights illuminate brightly colored rugs on the floor and \nelaborate paintings on the ceiling and walls.  A wooden staircase in the far \ncorner leads back down into the ground floor.\n",
+         "altitude" : null
+      },
+      "gapvalley@fareast" : {
+         "exits" : {
+            "w" : "outlet",
+            "e" : "ricepaddy"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "River Valley",
+         "id" : "gapvalley",
+         "description" : "\n\n        The stream here must once have been a powerful river, because the \nvalley it cut is as wide as a small glacial rift.  Trees and small shrubs \nreach up the walls of the gap, and the stream flows by to the west, where it\nwill rejoin the sea.  To the east, human figures move back and forth from a \nwide, shallow bank of the stream, to a forested area further to the southeast.\n",
+         "altitude" : "50"
+      },
+      "templeu1@fareast" : {
+         "exits" : {
+            "n" : "templeu2",
+            "d" : "temple1"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Chamber of Calm",
+         "id" : "templeu1",
+         "description" : "\n\n        This chamber is hung with silk tapestries, elegant and heavy artworks \nvalued more for their acoustic properties than their artistic ones.  The room \nis silent and still, and a scent of incense floats in from the altar to the \nnorth.  It is a perfect place to sit still, relax, and clear one's mind.\n",
+         "altitude" : null
+      },
+      "hermithut@fareast" : {
+         "exits" : {
+            "s" : "templand1"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Dilapidated Hut",
+         "id" : "hermithut",
+         "description" : "\n\n        This hut is a framework of bamboo poles covered with insulating moss,\nan adequate protection against the biting wind.  Not many personal effects \nmark it as inhabited, but there is a fire ring near the center of the floor,\nfilled with charcoal, and a few cooking implements have been set out beside it.\n",
+         "altitude" : null
+      },
+      "cursent1@fareast" : {
+         "exits" : {
+            "n" : "countryacurse",
+            "s" : "curse3"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Entrance to the Cursed Lands",
+         "id" : "cursent1",
+         "description" : "\n\n        Dark, gnarled branches reach over the road, marking a boundary between\nthe merely grotesque and the completely twisted.  The southern road splinters \nand falls to ruins before reaching the dark forest, leaving only brackish mud\nand loose stones to mark the way.  Out to the north, the darkness thins and\nthe road continues undamaged.  \n",
+         "altitude" : null
+      },
+      "curse6@fareast" : {
+         "exits" : {
+            "w" : "curseburnt",
+            "n" : "curse5"
+         },
+         "flags" : [
+            "Dark",
+            "TempExtreme"
+         ],
+         "zone" : "fareast",
+         "title" : "Cursed Forest",
+         "id" : "curse6",
+         "description" : "\n\n        This forest is revoltingly similar to its surroundings: rotting trees \nintertwine to form a roof overhead, blocking what little light filters through \nthe swirling haze.  This noxious gas makes breathing difficult and rest,\nimpossible.\n",
+         "altitude" : null
+      },
+      "fortu2@fareast" : {
+         "exits" : {
+            "e" : "fortuhall",
+            "d" : "fort2"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Upper Stairwell",
+         "id" : "fortu2",
+         "description" : "\n\n        Glowing lamps illuminate the top of this stairwell, which opens onto a\nsmall entrance hall.  Below, the light glimmers off of armor and various \nobjects in the Hall of Honor, where the staircase originates.\n",
+         "altitude" : null
+      },
+      "outlet@fareast" : {
+         "exits" : {
+            "w" : "shoreline",
+            "e" : "gapvalley",
+            "n" : "shore1",
+            "s" : "shore2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Freshwater Outlet",
+         "id" : "outlet",
+         "description" : "\n\n        The beach is broken here by the outpouring waters of a freshwater \nstream, forcing its way down to the ocean.  Standing on the rocks at its edge,\nyou can see a gap in the cliff wall, undoubtedly cut by the stream in its \nyouth.  This leads to an eastern valley between the cliffs, while the beach \nreaches underneath this facade to the north and south.  To the west, the \noutlet has formed a small harbor, where a ship bobs in the choppy waves.\n",
+         "altitude" : "0"
+      },
+      "shore1@fareast" : {
+         "exits" : {
+            "w" : "shoreline",
+            "e" : "cliffs2",
+            "n" : "cliffs1",
+            "s" : "outlet"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Beach- Northern Edge",
+         "id" : "shore1",
+         "description" : "\n\n        The beach ends abruptly here, cut off by high cliffs on two sides, \nand the sea to the west.  It is impossible to see what might be atop the tall \ncliff faces,  but carved paths snake to the north and east, making it possible\nto travel there yourself.  The beach stretches on to the south, where a ship \nfloats in the harbor.\n",
+         "altitude" : "0"
+      },
+      "templand1@fareast" : {
+         "exits" : {
+            "e" : "templand3",
+            "u" : "templand3",
+            "n" : "hermithut",
+            "d" : "templepass",
+            "s" : "templepass"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Mountainside",
+         "id" : "templand1",
+         "description" : "\n\n        The gradual rise here is abutted to the east by a steep face, which is\nrough enough to scale to the temple above.  To the north, a small hut of \nbamboo and moss is wedged into a crack in the blocking stone wall.  \nDown the slope, an easy walk to the south, a narrow gap opens onto the \ncliffside below.\n",
+         "altitude" : "4000"
+      },
+      "countrya_1@fareast" : {
+         "exits" : {
+            "w" : "village3",
+            "e" : "countrya_3"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Countryside- Near a Village",
+         "id" : "countrya_1",
+         "description" : "\n\n        Fields and pastures have been carved into the rocky soil of this land,\na sloping plain descending from the mountainous north toward the low, forested\nsouth.  The road crossing this expanse runs east-west, and at its western \nterminus meets up with a small village of wooden buildings.  Towards the east,\nthe road meets with another at an unmarked crossing.\n",
+         "altitude" : "300"
+      },
+      "cursefire@fareast" : {
+         "exits" : {
+            "w" : "curseshore1",
+            "e" : "curse3",
+            "n" : "curse2",
+            "s" : "curseburnt"
+         },
+         "flags" : [
+            "NegRegen"
+         ],
+         "zone" : "fareast",
+         "title" : "Cursed Forest- Raging Fire",
+         "id" : "cursefire",
+         "description" : "\n\n        In this small patch of the blasted forest, a fire still burns, opening\na hole through the clustered trees and filling the air with blistering smoke.\nIf you stay too long, that smoke could prove fatal.\n",
+         "altitude" : null
+      },
+      "pitpass@fareast" : {
+         "exits" : {
+            "w" : "countrya_2",
+            "e" : "countryb_5"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Karst Sinkhole",
+         "id" : "pitpass",
+         "description" : "\n\n        Sharply sloped on either side, this sinkhole is shallow at the bottom,\nand goes deep under the bedrock of the area through a wide, low tunnel. \nThrough here, you can travel east or west, either way leading back up to the \nlight.  \n",
+         "altitude" : null
+      },
+      "curseacid1@fareast" : {
+         "exits" : {
+            "w" : "curseacid2",
+            "n" : "curseshore1",
+            "s" : "curseshore3"
+         },
+         "flags" : [
+            "NegRegen"
+         ],
+         "zone" : "fareast",
+         "title" : "Acid River",
+         "id" : "curseacid1",
+         "description" : "\n\n        The acidic waters of this festering river eat away at the soles of \nyour boots... It would be best to leave before it reaches the soles of your \nfeet.\n",
+         "altitude" : null
+      },
+      "cliffs5@fareast" : {
+         "exits" : {
+            "w" : "cliffs2",
+            "e" : "cliffs4",
+            "u" : "cliffs4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Along the Northern Cliffside",
+         "id" : "cliffs5",
+         "description" : "\n\n        Rising from the shoreline cliff-face, this narrow reach spans the \nnorthern side of the river valley.  In fact, looking down, you can see the \ngreenish ribbon swirling west toward the sea.  However, it would be a \ndangerous drop from here to the floor below, so your only options are to \ntravel east (ascending) or west (descending) along the path.\n",
+         "altitude" : "1200"
+      },
+      "countryb_3@fareast" : {
+         "exits" : {
+            "w" : "countryb_1",
+            "e" : "countryb_4",
+            "n" : "countryb_5",
+            "s" : "countryb_2"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Countryside- Uncrossedroads",
+         "id" : "countryb_3",
+         "description" : "\n\n        \"Crossroads\" is perhaps not the right name for this area: two roads do\nnot so much meet here as crash together.  The surfaces are buckled and broken,\nand the stone surface of the east-west road dives underneath and then crashes\nthrough its north-south counterpart.  Bits of the paving stones lie on either \nside of the crossing, scattered like gravel.  To the west, a dark haze \nobscures your vision, and to the east, a grey fog blows toward you as if to \nfeed it.  The southern path seems to be snapped off before it reaches very \nfar, and only the northern path, which terminates in a forest of blossoming \ncherry trees, seems to offer any desirable goal.\n",
+         "altitude" : null
+      },
+      "cherorch8@fareast" : {
+         "exits" : {
+            "w" : "cherorch5",
+            "e" : "cherorch1",
+            "n" : "cherorch8",
+            "s" : "cherorch3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard",
+         "id" : "cherorch8",
+         "description" : "\n\n        The waving branches and falling petals of the cherry trees disorient \nyou and make it difficult to find the way out...\n",
+         "altitude" : "300"
+      },
+      "cliffs4@fareast" : {
+         "exits" : {
+            "w" : "cliffs5",
+            "n" : "cliffs6",
+            "d" : "ricepaddy",
+            "s" : "ricepaddy"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Toward the Northern Cliffs",
+         "id" : "cliffs4",
+         "description" : "\n\n        This ridge overlooks a stream descending from further on up the \nnorthwest valley, and you can make out a rice paddy and groups of peasants \ndownstream to the south.  A well-worn path cuts up the side of the rise to the\nnorth, following the valley closely while continuing to climb.  To the west, a\nsloping descent will bring you down and over to a slightly lower spot on the \nsame northern cliff face.\n",
+         "altitude" : "1600"
+      },
+      "countryacurse@fareast" : {
+         "exits" : {
+            "n" : "countrya_2",
+            "s" : "cursent1"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Countryside- Near the Cursed Lands",
+         "id" : "countryacurse",
+         "description" : "\n\n        The once green countryside looks sickly now, as some blight spreads \nnorthward across it.  Nothing stands higher than your calves, and what still \nstands is wilted, broken, or torn.  Puddles of sticky black ooze bubble up in \nsmall patches, which become larger toward the south.  The sickly vapors from \nthese puddles rise and cast a dark haze over the entire southern sky, as well.\nAt the far southern reach of this road, a dark forest tries feebly to block \nthe skyline.  To the north, healthier pastures abut the road.\n",
+         "altitude" : "300"
+      },
+      "curseshore1@fareast" : {
+         "exits" : {
+            "w" : "curseshore2",
+            "e" : "cursefire",
+            "n" : "curse3",
+            "s" : "curseacid1"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Shore of the Acid River",
+         "id" : "curseshore1",
+         "description" : "\n\n        A beach of black, glassy sand divides this area between a thick, \nblackened forest to the north and east, and a stinking, bubbling river of acid\nto the south.  The river looks shallow enough that you could cross quickly, \nbut you still might lose some boot leather.\n",
+         "altitude" : null
+      },
+      "gardhaus2@fareast" : {
+         "exits" : {
+            "d" : "gardhaus"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Guard House Tower",
+         "id" : "gardhaus2",
+         "description" : "\n\n        The top floor of the guard house overlooks the countryside around \nEno.. a view one could easily do without.  To match the destruction within the\ncity walls, sections of the land are also burned away, in strips that match \nthe path of a landing meteorite.  Bubbling pools of various colors have \nerupted from the ground where these streaks end, and seem to spread across \nthe land as you watch.  The cherry orchard to the south smokes where Kashai \nfell.  The only safe way out of here is down...\n",
+         "altitude" : null
+      },
+      "village1@fareast" : {
+         "exits" : {
+            "w" : "ricepaddy",
+            "e" : "village2",
+            "n" : "ricepaddy",
+            "s" : "fishhouse"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Peasant Village - Western Edge",
+         "id" : "village1",
+         "description" : "\n\n        The western entrance to the village is nothing more than a couple of\nlarge buildings for storing rice and fish from the nearby stream.  Further to \nthe east are the small wooden huts that house the inhabitants, who seem intent\non avoiding you.  Many of them disappear down the hill to the west, heading \ntoward the rice paddy.  One of the storehouses is open and unguarded to the\nsouth.\n",
+         "altitude" : null
+      },
+      "countryb_4@fareast" : {
+         "exits" : {
+            "w" : "countryb_3",
+            "s" : "countryb_6"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Countryside- Sticky Morass",
+         "id" : "countryb_4",
+         "description" : "\n\n        Sulfurous ooze laps across the road at its eastern end, seeming to eat\naway at the stone.  A greyish miasma rises from this nasty yellow puddle, and\nthe cold winds from the southeast blow it back past you; a choking, stinking \nvapor that burns your eyes.  Looking for a way out of this cloud, you look \nwest, where the road is still intact, and south, where a dirt path leads down \nto a small clearing.\n",
+         "altitude" : null
+      },
+      "curse3@fareast" : {
+         "exits" : {
+            "w" : "curse4",
+            "e" : "curse2",
+            "n" : "cursent1",
+            "s" : "curseshore1"
+         },
+         "flags" : [
+            "Dark",
+            "TempExtreme"
+         ],
+         "zone" : "fareast",
+         "title" : "Cursed Forest",
+         "id" : "curse3",
+         "description" : "\n\n        This forest is revoltingly similar to its surroundings: rotting trees \nintertwine to form a roof overhead, blocking what little light filters through \nthe swirling haze.  This noxious gas makes breathing difficult and rest,\nimpossible.\n",
+         "altitude" : null
+      },
+      "fort2@fareast" : {
+         "exits" : {
+            "e" : "forthall",
+            "u" : "fortu2"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Hall of Honor",
+         "id" : "fort2",
+         "description" : "\n\n        This hall is filled with unreadable plaques remembering the deeds of\nheroes and leaders long forgotten by the people of the land.  They collect \ndust here, serving only as reminders that rulers love to give themselves \nawards and titles.  \n",
+         "altitude" : null
+      },
+      "curseisland2@fareast" : {
+         "exits" : {
+            "n" : "curseisland1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fareast",
+         "title" : "Cursed Lands",
+         "id" : "curseisland2",
+         "description" : "\n\n        Sheer walls of shining black stone, like obsidian mirrors, jut from \nthe ground, forming a slick, sharp barrier.  You can travel no further south.\n",
+         "altitude" : null
+      },
+      "temple3@fareast" : {
+         "exits" : {
+            "n" : "temple1"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Living Quarters",
+         "id" : "temple3",
+         "description" : "\n\n        Matresses stuffed with straw are lined up in neat rows here, covered \nwith the personal effects of the temple residents and priests.  A washstand \nfilled with icy water stands next to the door.  \n",
+         "altitude" : null
+      },
+      "countryacher@fareast" : {
+         "exits" : {
+            "w" : "countrya_4",
+            "e" : "cherent1"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Countryside- Near a Cherry Orchard",
+         "id" : "countryacher",
+         "description" : "\n\n        Small orchards grow on either side of the road here, increasing in \nnumber the further you look to the east.  This progression ends in a vast \norchard of pink blossomed cherry trees.  To the west, the land grows flatter \nand featureless, a farmed plain reaching to where this road crosses another.\n",
+         "altitude" : "300"
+      },
+      "curse5@fareast" : {
+         "exits" : {
+            "w" : "cursefire",
+            "e" : "cursent2",
+            "n" : "curse1",
+            "s" : "curse6"
+         },
+         "flags" : [
+            "Dark",
+            "TempExtreme"
+         ],
+         "zone" : "fareast",
+         "title" : "Cursed Forest",
+         "id" : "curse5",
+         "description" : "\n\n        This forest is revoltingly similar to its surroundings: rotting trees \nintertwine to form a roof overhead, blocking what little light filters through \nthe swirling haze.  This noxious gas makes breathing difficult and rest,\nimpossible.\n",
+         "altitude" : null
+      },
+      "rapids@fareast" : {
+         "exits" : {
+            "u" : "ropebridge"
+         },
+         "flags" : [
+            "Death",
+            "NoMobiles"
+         ],
+         "zone" : "fareast",
+         "title" : "Rapids on the Stream",
+         "id" : "rapids",
+         "description" : "\n\n        You leap from the rope bridge, and hurtle down toward the water.\nUnfortunately, you miss the deeper water, and smash against the rocks below, \ndying almost instantly.\n",
+         "altitude" : null
+      },
+      "dojo3@fareast" : {
+         "exits" : {
+            "n" : "dojo1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fareast",
+         "title" : "Training Hall",
+         "id" : "dojo3",
+         "description" : "\n\n        Training took many forms for the students of this dojo, as the varied\nequipment here shows.  Wooden targets, some broken, some bloodied, stand to\neither side of a straw ring, which is similarly stained and damaged.  A few \nstraw dummies dressed in clothing and armor were used to begin weapons \ntraining. Of course, there was no substitute for human instruction, and \nseveral marked areas on the floor undoubtedly served as sparring rings.\n",
+         "altitude" : null
+      },
+      "dojo1@fareast" : {
+         "exits" : {
+            "w" : "dojo4",
+            "e" : "dojoent",
+            "u" : "dojou1",
+            "n" : "dojo2",
+            "s" : "dojo3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fareast",
+         "title" : "Unhallowed Halls",
+         "id" : "dojo1",
+         "description" : "\n\n        The everpresent gas seeps into this hallway through rips and tears in \nthe paper walls.  Sliding doors in all major directions do little to hide the\ncontents of this building's other rooms.  From the general layout, this would\nbe a dojo, a training hall.  To the north are the sleeping quarters, to the \nsouth, a training facility, an armory of sorts lies to the west, and the \neastern portal is open to the \"air.\"  A rickety ladder also leads upward onto\nwooden platforms above.\n",
+         "altitude" : null
+      },
+      "templand3@fareast" : {
+         "exits" : {
+            "w" : "templand1",
+            "e" : "temple1",
+            "s" : "templand2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Snowy Peak",
+         "id" : "templand3",
+         "description" : "\n\n        The highest point in this part of the mountains flattens out to form a\nmesa, covered in a thin blanket of powdery snow.  The snow does not reach any \nlower, but seems to stay contained on this level.  Steep slopes lead down into\nthe crags and cliffs below, either to the south or west.  To the east, a short\nwalk would take you to the terraced temple that fills the horizon.  \nSnow clings to its eaves, and piles in drifts before its open doors.\n",
+         "altitude" : "4500"
+      },
+      "curseshore2@fareast" : {
+         "exits" : {
+            "e" : "curseshore1",
+            "n" : "curse4",
+            "s" : "curseacid2"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Shore of the Acid River",
+         "id" : "curseshore2",
+         "description" : "\n\n        A beach of black, glassy sand divides this area between a thick, \nblackened forest to the north and east, and a stinking, bubbling river of acid\nto the south.  The river looks shallow enough that you could cross quickly, \nbut you still might lose some boot leather.\n",
+         "altitude" : null
+      },
+      "curse4@fareast" : {
+         "exits" : {
+            "w" : "cursecave",
+            "e" : "curse3",
+            "s" : "curseshore2"
+         },
+         "flags" : [
+            "Dark",
+            "TempExtreme"
+         ],
+         "zone" : "fareast",
+         "title" : "Cursed Forest",
+         "id" : "curse4",
+         "description" : "\n\n        This forest is revoltingly similar to its surroundings: rotting trees \nintertwine to form a roof overhead, blocking what little light filters through \nthe swirling haze.  This noxious gas makes breathing difficult and rest,\nimpossible.\n",
+         "altitude" : null
+      },
+      "cherorch5@fareast" : {
+         "exits" : {
+            "w" : "cherent1",
+            "e" : "cherorch1",
+            "n" : "cherorch4",
+            "s" : "cherorch7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard",
+         "id" : "cherorch5",
+         "description" : "\n\n        The waving branches and falling petals of the cherry trees disorient \nyou and make it difficult to find the way out...\n",
+         "altitude" : "300"
+      },
+      "dojou2@fareast" : {
+         "exits" : {
+            "s" : "dojou1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fareast",
+         "title" : "Dojo- Upper Room",
+         "id" : "dojou2",
+         "description" : "\n\n        This section of the upper level is open on two sides- to the south to\nallow passage back and forth between the two platforms, and to the north, only\na small window-slit is left open.  A post outside offers some clue as to the \npurpose: small indentations in the wood indicate some sort of impact.  A \npractice course for some skill, perhaps.\n",
+         "altitude" : null
+      },
+      "templepass@fareast" : {
+         "exits" : {
+            "w" : "cliffs7",
+            "e" : "templand2",
+            "n" : "templand1",
+            "s" : "countryacave"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cliffside Pass",
+         "id" : "templepass",
+         "description" : "\n\n        This pass is cold and windswept, due to the breeze coming from the \npeaks high above.  This wind whistles in a crack in the rock face to your \nsouth, a gap wide enough to squeeze through.  A narrow gap in the eastern \nrockface allows you to ascend from here.  Below, a broad plateau stretches off\nto the west, toward a chasm spanned by a narrow rope bridge.  The pass \ncontinues on toward the north, rising more gradually toward a cavern mouth.\n",
+         "altitude" : "3500"
+      },
+      "village2@fareast" : {
+         "exits" : {
+            "w" : "village1",
+            "e" : "village3"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Village Center",
+         "id" : "village2",
+         "description" : "\n\n        The center of the village isn't even far enough from its entrances to\nreally make a difference- if you rode through on a horse and blinked, you \nmight miss the whole place entirely.  There are fewer peasants here, despite\nthere being more houses about... they are definitely trying to avoid you.  \n",
+         "altitude" : null
+      },
+      "forthall@fareast" : {
+         "exits" : {
+            "w" : "fort2",
+            "e" : "fort3",
+            "n" : "fort1",
+            "s" : "courtyard"
+         },
+         "flags" : [],
+         "zone" : "fareast",
+         "title" : "Entrance Hall of the Eno Fortress",
+         "id" : "forthall",
+         "description" : "\n\n        Your footsteps echo in the vast hallway, the only sound in this hollow\nemptiness.  Timbers bracing the lofted ceiling are scraped along the \nunderside, but the walls are unmarked.  Passages lead off in the cardinal \ndirections, with the one to the south opening onto the courtyard outside.\n",
+         "altitude" : null
+      },
+      "cherorch7@fareast" : {
+         "exits" : {
+            "w" : "cherorch6",
+            "e" : "cherorch8",
+            "n" : "cherorch7",
+            "s" : "cherent2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard",
+         "id" : "cherorch7",
+         "description" : "\n\n        The waving branches and falling petals of the cherry trees disorient \nyou and make it difficult to find the way out...\n",
+         "altitude" : "300"
+      },
+      "templand2@fareast" : {
+         "exits" : {
+            "w" : "templepass",
+            "u" : "templand3",
+            "n" : "templand3",
+            "d" : "templepass"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Mountainside",
+         "id" : "templand2",
+         "description" : "\n\n        A level spot here offers a brief respite from the steep slopes in \neither direction.  To the north, a steep but broken face could be climbed \ntoward the looming temple, while a gap in the similarly steep western side \nwould allow you to descend toward the low cliffs.\n",
+         "altitude" : "4000"
+      },
+      "courtyard@fareast" : {
+         "exits" : {
+            "w" : "gardhaus",
+            "e" : "vilruin",
+            "n" : "forthall"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Eno Courtyard",
+         "id" : "courtyard",
+         "description" : "\n\n        Just behind the walls of Eno is the only clear spot in the city: \nA large courtyard flanked by statues and landscaping.  Koi float belly-up in\nsmall pools, and once-beautiful stone gardens have been raked across by claws\nrather than garden tools.  A stench of sulfur hangs in the air, which seems to\ndarken as you near the center of the city, the daimyo's fortress to the north.\nTo the west, a guardhouse has been erected along the wall.   To the east, the \nremains of the city's homes lie in long-dead ashes.\n        The city walls are in the opposite direction- south- and the barred \ngate looks impassable from this side.  The high earthen walls are too smooth \nto climb without aid.\n",
+         "altitude" : "300"
+      },
+      "countrya_3@fareast" : {
+         "exits" : {
+            "w" : "countrya_1",
+            "e" : "countrya_4",
+            "n" : "countrya_5",
+            "s" : "countrya_2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Countryside- Crossroads",
+         "id" : "countrya_3",
+         "description" : "\n\n        The two major roads crossing this island meet here, at an unmarked \ncrossroads.  The only clue as to each road's destination is what can be seen:\nto the west, a small village stands alone.  To the east, the road continues\ntoward groves and orchards of planted trees.  The northern path seems to \ndissappear into the rock-strewn hills, where mountains reach toward the \nhorizon.  And to the south, the road is obscured by a dark haze rising \nfrom the blighted countryside around it.\n",
+         "altitude" : "300"
+      },
+      "cherent2@fareast" : {
+         "exits" : {
+            "n" : "cherorch7",
+            "s" : "countrybcher"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard- Southern Entrance",
+         "id" : "cherent2",
+         "description" : "\n\n        A line of blossoming cherry trees abruptly divides the barren country-\nside from a tangled \"orchard\", stretching back beyond sight.  The trees are so\ntightly packed that only the road offers a way through to the north. The \nsouthern end of the road disappears into the scrub and stone of a blasted\nplain.\n",
+         "altitude" : "300"
+      },
+      "cherorch1@fareast" : {
+         "exits" : {
+            "w" : "cherorch6",
+            "e" : "cherorch1",
+            "n" : "cherorch5",
+            "s" : "cherorch7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fareast",
+         "title" : "Cherry Orchard",
+         "id" : "cherorch1",
+         "description" : "\n\n        The waving branches and falling petals of the cherry trees disorient \nyou and make it difficult to find the way out...\n",
+         "altitude" : "300"
+      }
+   },
+   "mob" : {
+      "ronin@fareast" : {
+         "damage" : "12",
+         "location" : "countrya_5",
+         "speed" : "5",
+         "aggression" : "80",
+         "armor" : "15",
+         "pname" : "The Ronin",
+         "name" : "Ronin",
+         "examine" : "\nSuch Ronin are merely less honorable than Samurai, not less skilled.  \nWalk softly.",
+         "description" : "\nA renegade samurai, without master or marking, stands in your path.",
+         "strength" : "125"
+      },
+      "kane@fareast" : {
+         "damage" : "12",
+         "location" : "cliffs2",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Kane",
+         "name" : "Kane",
+         "examine" : "\nThe priest is peaceful and will not attack, but probably would be a\n        formidable foe.",
+         "description" : "Kane, a Shaolin priest in exile, stands in the road.",
+         "strength" : "125"
+      },
+      "haohmaru@fareast" : {
+         "damage" : "15",
+         "location" : "countryb_3",
+         "speed" : "5",
+         "aggression" : "10",
+         "armor" : "12",
+         "pname" : "Haohmaru",
+         "name" : "Haohmaru",
+         "examine" : "Haohmaru's skill is formidable, perhaps more than you can handle.",
+         "description" : "The samurai Haohmaru is here, awaiting your challenge.",
+         "strength" : "125"
+      },
+      "samurai@fareast" : {
+         "damage" : "10",
+         "location" : "forthall",
+         "speed" : "5",
+         "aggression" : "100",
+         "armor" : "12",
+         "pname" : "The Samurai",
+         "name" : "Samurai",
+         "examine" : "\nThe Samurai are trained for war, and this one will not be defeated easily.",
+         "description" : "\nA Samurai warrior, in ceremonial armor and mask, stands guard here.",
+         "strength" : "175"
+      },
+      "umurshyo@fareast" : {
+         "eflags" : [
+            "Fireball",
+            "Shock",
+            "Frost",
+            "Missile"
+         ],
+         "damage" : "20",
+         "location" : "throneroom",
+         "armor" : "20",
+         "name" : "Umurshyo",
+         "examine" : "You would have to be insane to attack a demon of this stature.",
+         "description" : "The demon lord Umurshyo is here.",
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "100",
+         "pname" : "Umurshyo",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "shaolin@fareast" : {
+         "damage" : "8",
+         "location" : "temple1",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "5",
+         "pname" : "The Shaolin Priest",
+         "name" : "Shaolin",
+         "examine" : "\nShaolin priests are often trained in martial arts: \n        He may be a strong opponent.",
+         "description" : "A man dressed in saffron robes stands here, watching you.",
+         "strength" : "125"
+      },
+      "shubei@fareast" : {
+         "eflags" : [
+            "Frost",
+            "ImmFrost"
+         ],
+         "damage" : "20",
+         "location" : "cherent1",
+         "armor" : "25",
+         "name" : "Shubei",
+         "examine" : "\nThis Oriental dragon trails wisps of icy mist, like liquid nitrogen.",
+         "description" : "The dragon Shubei watches your approach with glimmering eyes.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "Shubei",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "NoGrab",
+            "BarEast"
+         ]
+      },
+      "naga@fareast" : {
+         "damage" : "8",
+         "location" : "dojoent",
+         "armor" : "5",
+         "name" : "Naga",
+         "examine" : "The Naga is large and probably a dangerous opponent.",
+         "description" : "A serpent with a woman's head blocks your path to the west.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "50",
+         "pname" : "The Naga",
+         "mflags" : [
+            "NoHeat",
+            "DrainScr",
+            "BarWest",
+            "QFood"
+         ]
+      },
+      "liukang@fareast" : {
+         "eflags" : [
+            "Fireball"
+         ],
+         "damage" : "12",
+         "location" : "ropebridge",
+         "armor" : "0",
+         "name" : "Liukang",
+         "examine" : "\nLiu Kang is master of many fighting skills.  Defeating him will not be easy.",
+         "description" : "\nA shirtless fighter-priest is here, doing elaborate martial arts forms.",
+         "strength" : "125",
+         "speed" : "0",
+         "pname" : "LiuKang",
+         "aggression" : "25"
+      },
+      "kashai@fareast" : {
+         "eflags" : [
+            "Fireball",
+            "ImmFireball"
+         ],
+         "damage" : "20",
+         "location" : "cherblos",
+         "armor" : "30",
+         "name" : "Kashai",
+         "examine" : "The Oriental dragon has a leonine head with a wise expression.",
+         "description" : "The serpentine body of the Dragon Kashai blocks the path.",
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Kashai",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth",
+            "NoGrab"
+         ]
+      },
+      "larva@fareast" : {
+         "eflags" : [
+            "ImmCripple",
+            "ImmBlind",
+            "ImmMute",
+            "ImmDeaf"
+         ],
+         "damage" : "10",
+         "location" : "cherorchcent",
+         "armor" : "10",
+         "name" : "Larva",
+         "examine" : "\nLarva, Miyu's friend and servant, is Shinma, half-god, half-demon, \n        and immune to human magics.",
+         "description" : "\nA tall figure in black, with white mask and pale hands, \n        stands at the girl's side.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Larva",
+         "aggression" : "0"
+      },
+      "aikuchi@fareast" : {
+         "damage" : "15",
+         "location" : "forthall",
+         "armor" : "30",
+         "name" : "Aikuchi",
+         "examine" : "\nThe armor is empty... only the deathless spirit of Yorube Aikuchi moves it.",
+         "description" : "A dark figure with Samurai armor and glowing eyes stands here.",
+         "strength" : "200",
+         "speed" : "5",
+         "aggression" : "100",
+         "pname" : "Aikuchi",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "peasant@fareast" : {
+         "damage" : "5",
+         "location" : "ricepaddy",
+         "speed" : "0",
+         "aggression" : "10",
+         "armor" : "0",
+         "pname" : "The Peasant",
+         "name" : "Peasant",
+         "examine" : "The peasant is weak, and would not pose a challenge in the least.",
+         "description" : "A peasant in muddy robes trudges past, trying to fill his sack.",
+         "strength" : "50"
+      },
+      "subzero@fareast" : {
+         "eflags" : [
+            "Frost",
+            "ImmFrost"
+         ],
+         "damage" : "10",
+         "location" : "curse1",
+         "armor" : "8",
+         "name" : "Subzero",
+         "examine" : "\nSub-Zero is far from the Lin Kwei, training for another confrontation.",
+         "description" : "A blue-clad ninja watches you warily.",
+         "strength" : "125",
+         "speed" : "5",
+         "pname" : "SubZero",
+         "aggression" : "50"
+      },
+      "tetsuo@fareast" : {
+         "damage" : "15",
+         "location" : "cursent1",
+         "armor" : "5",
+         "name" : "Tetsuo",
+         "examine" : "\nThis union of dragon and human is stronger than either, \n        a powerful combination.",
+         "description" : "The dragonman, Tetsuo, is here.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Tetsuo",
+         "aggression" : "25",
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "miyu@fareast" : {
+         "eflags" : [
+            "Fireball"
+         ],
+         "damage" : "8",
+         "location" : "cherorchcent",
+         "armor" : "0",
+         "name" : "Miyu",
+         "examine" : "\nMiyu's fangs become apparent when you look closer.  The Princess hungers.",
+         "description" : "A young girl in white and a red sash watches your approach.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Miyu"
+      },
+      "kunglao@fareast" : {
+         "damage" : "10",
+         "location" : "temple3",
+         "speed" : "5",
+         "aggression" : "50",
+         "armor" : "5",
+         "pname" : "KungLao",
+         "name" : "Kunglao",
+         "examine" : "Kung Lao is fast and canny, no defenseless clergy.",
+         "description" : "A warrior priest is here. He tips his razor-bladed hat to you.",
+         "strength" : "125"
+      },
+      "chunli@fareast" : {
+         "damage" : "6",
+         "location" : "cherorch8",
+         "armor" : "8",
+         "name" : "Chunli",
+         "examine" : "\nChun Li has seen better days... she is not in top form, and looks tired.",
+         "description" : "Chun Li, a former tournament fighter, is practicing here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "75",
+         "speed" : "5",
+         "pname" : "Chun Li",
+         "aggression" : "33"
+      },
+      "dummy@fareast" : {
+         "eflags" : [
+            "ImmCripple",
+            "ImmBlind",
+            "ImmMute",
+            "ImmDeaf"
+         ],
+         "damage" : "0",
+         "location" : "dojo3",
+         "armor" : "0",
+         "name" : "dummy",
+         "examine" : "\nThe dummy is designed to take abuse while students learn to use their weapons.",
+         "description" : "\nA training dummy, made of packed straw and bamboo limbs, waits to be hit.",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "The training dummy",
+         "aggression" : "0"
+      },
+      "scorpion@fareast" : {
+         "eflags" : [
+            "Fireball",
+            "ImmFireball"
+         ],
+         "damage" : "10",
+         "location" : "curse6",
+         "armor" : "8",
+         "name" : "Scorpion",
+         "examine" : "The undead Scorpion would mock your challenge.",
+         "description" : "A hooded ninja in yellow uniform glares from the shadows.",
+         "strength" : "125",
+         "speed" : "5",
+         "pname" : "Scorpion",
+         "aggression" : "75"
+      },
+      "ogremage@fareast" : {
+         "eflags" : [
+            "Frost",
+            "Shock",
+            "Fireball",
+            "Missile"
+         ],
+         "damage" : "15",
+         "location" : "cherent2",
+         "armor" : "5",
+         "name" : "Ogremage",
+         "examine" : "The Ogremage can cast spells as well as fight- beware.",
+         "description" : "\nA blue-skinned ogre in Samurai armor brandishes his weapon.",
+         "strength" : "175",
+         "speed" : "0",
+         "aggression" : "75",
+         "pname" : "The Ogremage",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "raiden@fareast" : {
+         "eflags" : [
+            "Shock",
+            "ImmShock",
+            "Blind",
+            "ImmCripple",
+            "ImmBlind",
+            "ImmMute",
+            "ImmDeaf"
+         ],
+         "damage" : "50",
+         "location" : "shoreline",
+         "armor" : "25",
+         "name" : "Raiden",
+         "examine" : "Do not attack Raiden... you could not hope to survive.",
+         "description" : "The thunder god, Raiden, hovers nearby, looking invincible.",
+         "strength" : "1000",
+         "speed" : "15",
+         "aggression" : "0",
+         "pname" : "Raiden",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "DrainScr"
+         ]
+      },
+      "jago@fareast" : {
+         "damage" : "10",
+         "location" : "cherorch4",
+         "speed" : "0",
+         "aggression" : "33",
+         "armor" : "10",
+         "pname" : "Jago",
+         "name" : "Jago",
+         "examine" : "\nJago is only moderately strong, many of his victories have been \n        through surprise.",
+         "description" : "\nThe tiger monk Jago stands here.",
+         "strength" : "125"
+      },
+      "ninja@fareast" : {
+         "damage" : "10",
+         "location" : "dojo3",
+         "armor" : "8",
+         "name" : "Ninja",
+         "examine" : "\nNinjas are consummate killers and masters of stealth- \n        this one is no exception.",
+         "description" : "An assassin leaps from the shadows and attacks!",
+         "strength" : "150",
+         "speed" : "10",
+         "pname" : "The Ninja",
+         "aggression" : "100",
+         "mflags" : [
+            "Thief",
+            "NoSteal"
+         ]
+      },
+      "shangtsung@fareast" : {
+         "eflags" : [
+            "Fireball",
+            "Missile",
+            "ImmShock",
+            "ImmCripple",
+            "ImmBlind",
+            "ImmMute",
+            "ImmDeaf"
+         ],
+         "damage" : "10",
+         "location" : "cursent2",
+         "armor" : "0",
+         "name" : "Shangtsung",
+         "examine" : "\nThe wizard, Shang Tsung, looks old, but his spells may well destroy your soul.",
+         "description" : "A wizard with glowing eyes is here.",
+         "strength" : "130",
+         "speed" : "0",
+         "pname" : "ShangTsung",
+         "aggression" : "75"
+      }
+   }
+}

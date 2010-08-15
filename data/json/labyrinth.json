@@ -1,0 +1,566 @@
+{
+   "obj" : {
+      "amethyst@labyrinth" : {
+         "location" : "IN_CONTAINER:casket",
+         "weight" : "1",
+         "altname" : "gem",
+         "name" : "amethyst",
+         "bvalue" : "100",
+         "desc[0]" : "A large, beautifully polished amethyst has been put here.",
+         "size" : "1"
+      },
+      "casket@labyrinth" : {
+         "desc[1]" : "\nA large golden casket shines before you, glittering and sparkling.",
+         "location" : "IN_ROOM:lair",
+         "oflags" : [
+            "Container",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "casket",
+         "desc[2]" : "\nA large locked golden casket shines before you, glittering and sparkling.",
+         "state" : "0",
+         "size" : "40",
+         "weight" : "40",
+         "maxstate" : "2",
+         "bvalue" : "300",
+         "desc[0]" : "\nA large open golden casket shines before you, glittering and sparkling."
+      },
+      "horn@labyrinth" : {
+         "location" : "IN_CONTAINER:casket",
+         "altname" : "silver",
+         "name" : "horn",
+         "size" : "12",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "An engraved silver horn has been carefully placed here."
+      },
+      "mask@labyrinth" : {
+         "desc[1]" : "\nOn the center of the wall is a huge golden mask carved in the shape of a\nhorned demon.",
+         "location" : "IN_ROOM:end2",
+         "armor" : "75",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "GetFlips"
+         ],
+         "altname" : "gold",
+         "name" : "mask",
+         "examine" : "The mask is pure gold, and probably very valuble.",
+         "size" : "30",
+         "state" : "1",
+         "weight" : "30",
+         "maxstate" : "1",
+         "bvalue" : "400",
+         "desc[0]" : "A stunning, horned, gold mask has been placed here.",
+         "aflags" : [
+            "Face",
+            "Head"
+         ]
+      }
+   },
+   "loc" : {
+      "s@labyrinth" : {
+         "exits" : {
+            "w" : "c",
+            "e" : "t",
+            "n" : "d",
+            "s" : "r"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "s",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "c@labyrinth" : {
+         "exits" : {
+            "e" : "d",
+            "s" : "b"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "c",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "h@labyrinth" : {
+         "exits" : {
+            "w" : "u",
+            "n" : "g",
+            "s" : "i"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "h",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "p@labyrinth" : {
+         "exits" : {
+            "e" : "q",
+            "n" : "a",
+            "s" : "o"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "p",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "j@labyrinth" : {
+         "exits" : {
+            "w" : "i",
+            "n" : "i",
+            "s" : "k"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "j",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "lair@labyrinth" : {
+         "exits" : {
+            "u" : "end2"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Minotaur's Lair",
+         "id" : "lair",
+         "description" : "\n   You stand in a huge chamber deep beneath the labyrinth.  The walls and\nceiling of the chamber are lined with the heads of those who failed to find\ntheir way back from this legendary place and starved to death amid the maze.\n",
+         "altitude" : null
+      },
+      "end@labyrinth" : {
+         "exits" : {
+            "d" : "end2",
+            "s" : "x"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "The End of the Labyrinth",
+         "id" : "end",
+         "description" : "\n   ...is something of an anti-climax after you have made it this far.  All it\napparently consists of is a hole in the ground which becomes a spiral staircase\nafter a while.\n",
+         "altitude" : null
+      },
+      "r@labyrinth" : {
+         "exits" : {
+            "w" : "a",
+            "e" : "q",
+            "n" : "t",
+            "s" : "q"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "r",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "humm@labyrinth" : {
+         "exits" : {
+            "u" : "spiral",
+            "d" : "spiral3"
+         },
+         "flags" : [],
+         "zone" : "labyrinth",
+         "title" : "Humm...",
+         "id" : "humm",
+         "description" : "\n   As you stand here a blanket of mist envelopes you.  The only ways out are to\ngrope upwards or downwards.\n",
+         "altitude" : null
+      },
+      "spiral3@labyrinth" : {
+         "exits" : {
+            "u" : "humm",
+            "d" : "start"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Spiral Staircase",
+         "id" : "spiral3",
+         "description" : "\n   The staircase you are on ascends upwards into a blanket of mist or downwards\ninto a large labyrinth of columns, which, from your view point, appears to be\nendless.\n",
+         "altitude" : null
+      },
+      "a@labyrinth" : {
+         "exits" : {
+            "w" : "start",
+            "e" : "r",
+            "n" : "b",
+            "s" : "p"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "a",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "t@labyrinth" : {
+         "exits" : {
+            "w" : "s",
+            "e" : "u",
+            "n" : "e",
+            "s" : "u"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "t",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "i@labyrinth" : {
+         "exits" : {
+            "w" : "u",
+            "n" : "h",
+            "s" : "j"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "i",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "k@labyrinth" : {
+         "exits" : {
+            "w" : "l",
+            "n" : "j"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "k",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "start@labyrinth" : {
+         "exits" : {
+            "e" : "a",
+            "u" : "spiral3"
+         },
+         "flags" : [
+            "dark",
+            "NoMobiles"
+         ],
+         "zone" : "labyrinth",
+         "title" : "The Start of the Labyrinth",
+         "id" : "start",
+         "description" : "\n   ...is a boring sort of place, the only exits being up a spiral staircase and\neast into the Labyrinth.  The Labyrinth itself is composed of tall pillars in\nthe gloom.  There is a message scratched in the dirt here.  It says:\n\n\t\t\tB WA E O  HE M NO AUR\n\n\t\t\t\t\tM rt s\n",
+         "altitude" : null
+      },
+      "spiral@labyrinth" : {
+         "exits" : {
+            "u" : "top",
+            "d" : "spiral2"
+         },
+         "flags" : [],
+         "zone" : "labyrinth",
+         "title" : "Spiral Staircase",
+         "id" : "spiral",
+         "description" : "\n   You are on a spiral staircase, and you are not far from the top of it.\nBelow you it is cold and gloomy, although not yet dark enough to need a light.\n",
+         "altitude" : null
+      },
+      "b@labyrinth" : {
+         "exits" : {
+            "e" : "s",
+            "n" : "c",
+            "s" : "a"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "b",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "e@labyrinth" : {
+         "exits" : {
+            "w" : "d",
+            "e" : "f",
+            "s" : "t"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "e",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "q@labyrinth" : {
+         "exits" : {
+            "w" : "p",
+            "e" : "r",
+            "n" : "r",
+            "s" : "n"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "q",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "w@labyrinth" : {
+         "exits" : {
+            "w" : "v",
+            "e" : "x",
+            "n" : "v",
+            "s" : "m"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "w",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "v@labyrinth" : {
+         "exits" : {
+            "w" : "w",
+            "e" : "u",
+            "n" : "t",
+            "s" : "w"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "v",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "top@labyrinth" : {
+         "exits" : {
+            "u" : "Brink@island",
+            "d" : "spiral"
+         },
+         "flags" : [],
+         "zone" : "labyrinth",
+         "title" : "Top of Spiral Staircase",
+         "id" : "top",
+         "description" : "\n   You are standing at what is a carved spiral staircase descending down into\nthe gloom of below.  From down there come strange sounds, which you cannot\nplace.\n",
+         "altitude" : null
+      },
+      "end2@labyrinth" : {
+         "exits" : {
+            "u" : "end",
+            "d" : "lair"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Spiral Stairs",
+         "id" : "end2",
+         "description" : "\n   You stand almost at the bottom of the stairs.  At the foot of the stairs is\na large room, half obscured by mist.  The walls are decorated with faces and\nspectacular carvings of dying people.\n",
+         "altitude" : null
+      },
+      "o@labyrinth" : {
+         "exits" : {
+            "e" : "n",
+            "n" : "p"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "o",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "d@labyrinth" : {
+         "exits" : {
+            "w" : "c",
+            "e" : "e",
+            "s" : "s"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "d",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "spiral2@labyrinth" : {
+         "exits" : {
+            "u" : "spiral",
+            "d" : "humm"
+         },
+         "flags" : [],
+         "zone" : "labyrinth",
+         "title" : "Spiral Staircase",
+         "id" : "spiral2",
+         "description" : "\n   You are on a spiral staircase which decends into a blanket of mist.  It\nalso (for the uninitiated in spiral staircase design) carries on upwards.\n",
+         "altitude" : null
+      },
+      "x@labyrinth" : {
+         "exits" : {
+            "w" : "w",
+            "n" : "end",
+            "s" : "j"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "x",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "m@labyrinth" : {
+         "exits" : {
+            "w" : "n",
+            "e" : "l",
+            "n" : "v"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "m",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "n@labyrinth" : {
+         "exits" : {
+            "w" : "o",
+            "e" : "m",
+            "n" : "q"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "n",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "l@labyrinth" : {
+         "exits" : {
+            "w" : "m",
+            "e" : "k",
+            "n" : "j"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "l",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "u@labyrinth" : {
+         "exits" : {
+            "w" : "t",
+            "e" : "h",
+            "n" : "f",
+            "s" : "f"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "u",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "g@labyrinth" : {
+         "exits" : {
+            "w" : "f",
+            "s" : "h"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "g",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      },
+      "f@labyrinth" : {
+         "exits" : {
+            "w" : "e",
+            "e" : "g",
+            "s" : "u"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "labyrinth",
+         "title" : "Labyrinth",
+         "id" : "f",
+         "description" : "\n   You are lost in the labyrinth.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "minotaur@labyrinth" : {
+         "damage" : "10",
+         "location" : "k",
+         "armor" : "0",
+         "name" : "minotaur",
+         "description" : "\nA minotaur snarls viciously at you, his huge bulk shaking with rage.",
+         "strength" : "70",
+         "speed" : "8",
+         "pname" : "The Minotaur",
+         "aggression" : "40",
+         "pflags" : [
+            "NoSteal"
+         ],
+         "mflags" : [
+            "PickStuff"
+         ]
+      }
+   }
+}

@@ -1,0 +1,800 @@
+{
+   "obj" : {
+      "cumulogem@windy" : {
+         "location" : "CARRIED_BY:cumulonimbus",
+         "weight" : "5",
+         "pname" : "cumulogem",
+         "name" : "cumulogem",
+         "bvalue" : "800",
+         "desc[0]" : "The CumuloGem lies here, a prize not to be missed.",
+         "size" : "5"
+      },
+      "door_1@windy" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:windy24",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_1",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "key@windy" : {
+         "location" : "CARRIED_BY:highpriest",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "key",
+         "size" : "1",
+         "pname" : "key",
+         "weight" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "A tiny silver key has been dropped here."
+      },
+      "skyblade@windy" : {
+         "damage" : "22",
+         "location" : "IN_ROOM:windy19",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "skyblade",
+         "examine" : "There are four faceted holes in the hilt.",
+         "size" : "10",
+         "pname" : "skyblade",
+         "weight" : "10",
+         "bvalue" : "400",
+         "desc[0]" : "Someone has absent-mindedly left the SkyBlade here."
+      },
+      "signpost1@windy" : {
+         "location" : "IN_ROOM:windy1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "signpost1",
+         "examine" : "\nThe signpost reads 'Go back, lest ye be strong of body and mind!'",
+         "desc[0]" : "A signpost has been staked here."
+      },
+      "skycleaver@windy" : {
+         "damage" : "30",
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "name" : "skycleaver",
+         "examine" : "The four WindGems are set in the hilt.",
+         "size" : "10",
+         "pname" : "skycleaver",
+         "weight" : "10",
+         "bvalue" : "1500",
+         "desc[0]" : "The SkyCleaver lies here, glowing with power."
+      },
+      "zephyrusgem@windy" : {
+         "location" : "CARRIED_BY:zephyrus",
+         "weight" : "5",
+         "pname" : "zephyrusgem",
+         "name" : "zephyrusgem",
+         "bvalue" : "200",
+         "desc[0]" : "The ZephyrusGem lies here, glowing hotly.",
+         "size" : "5"
+      },
+      "austergem@windy" : {
+         "location" : "CARRIED_BY:auster",
+         "weight" : "5",
+         "pname" : "austergem",
+         "name" : "austergem",
+         "bvalue" : "200",
+         "desc[0]" : "The AusterGem lies here, sparkling brilliantly.",
+         "size" : "5"
+      },
+      "pickaxe@windy" : {
+         "damage" : "7",
+         "location" : "WIELDED_BY:bonz",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "pickaxe",
+         "size" : "7",
+         "pname" : "pickaxe",
+         "weight" : "15",
+         "bvalue" : "35",
+         "desc[0]" : "A hefty-looking pickaxe has been left here."
+      },
+      "eurusgem@windy" : {
+         "location" : "CARRIED_BY:eurus",
+         "weight" : "5",
+         "pname" : "eurusgem",
+         "name" : "eurusgem",
+         "bvalue" : "200",
+         "desc[0]" : "The EurusGem lies here, absorbing light.",
+         "size" : "5"
+      },
+      "ruin@windy" : {
+         "location" : "IN_ROOM:windy12",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "ruins",
+         "pname" : "ruin",
+         "name" : "ruin",
+         "examine" : "You notice strange markings which read 'NCC 1701.'",
+         "desc[0]" : ""
+      },
+      "uniform@windy" : {
+         "location" : "IN_CONTAINER:ruin",
+         "armor" : "40",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "uniform",
+         "examine" : "Some careless security goon's old uniform.",
+         "size" : "5",
+         "pname" : "uniform",
+         "weight" : "5",
+         "bvalue" : "110",
+         "desc[0]" : "A StarFleet uniform has been left here.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms",
+            "Legs"
+         ]
+      },
+      "twig@windy" : {
+         "location" : "IN_ROOM:windy16",
+         "oflags" : [
+            "Lightable"
+         ],
+         "name" : "twig",
+         "size" : "1",
+         "pname" : "twig",
+         "weight" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A twig has been blown here by the wind."
+      },
+      "aquilogem@windy" : {
+         "location" : "CARRIED_BY:aquilo",
+         "weight" : "5",
+         "pname" : "aquilogem",
+         "name" : "aquilogem",
+         "bvalue" : "200",
+         "desc[0]" : "The AquiloGem lies here, glowing intensely.",
+         "size" : "5"
+      },
+      "rubble@windy" : {
+         "desc[1]" : "The rubble has been cleared, allowing passage to the south.",
+         "location" : "IN_ROOM:windy9",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "rubble",
+         "examine" : "The rubble has avalanched from the mountain above.",
+         "pname" : "rubble",
+         "maxstate" : "1",
+         "desc[0]" : "Some of the rubble has blocked the trail to the south."
+      },
+      "door@windy" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:windy23",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      }
+   },
+   "loc" : {
+      "windy20@windy" : {
+         "exits" : {
+            "w" : "windy21",
+            "e" : "windy17"
+         },
+         "flags" : [
+            "Light",
+            "OnePerson"
+         ],
+         "zone" : "windy",
+         "title" : "West Altar",
+         "id" : "windy20",
+         "description" : "\n        You stand in a large rectangular room which is lit by large torches\nthat ring the walls.  In the center of the room is a bronze altar, carved       \nwith fiery motifs.  Dark passages extend to the west and east.\n",
+         "altitude" : null
+      },
+      "windy27@windy" : {
+         "exits" : {
+            "n" : "windy28",
+            "s" : "windy26"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnePerson"
+         ],
+         "zone" : "windy",
+         "title" : "North End of Roof",
+         "id" : "windy27",
+         "description" : "\n        A low wall rings this area, protecting a small altar which sits in\nthe center.  The altar is covered with grotesque designs, some of them \nreminding you of the imagery inside the temple.  To the north is a large\ndome.  The roof continues to the south.\n",
+         "altitude" : null
+      },
+      "windy16@windy" : {
+         "exits" : {
+            "n" : "windy17",
+            "s" : "windy15"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "windy",
+         "title" : "Temple Entrance",
+         "id" : "windy16",
+         "description" : "\n        You stand in the columned entrance of this building.  The ceiling\ndisappears into darkness above.  Examining the runes which are scrawled on\nthe walls, you deduce that this is the Temple of the Winds.  A large fire-pit\nin the floor is intended for offerings, although you would rather light your\ntorch from it.  The temple continues to the south.\n",
+         "altitude" : null
+      },
+      "windy14@windy" : {
+         "exits" : {
+            "e" : "windy13",
+            "u" : "windy15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Steep Ledge",
+         "id" : "windy14",
+         "description" : "\n        You are climbing a dangerously narrow ledge which runs up the side of\nthe mountain.  The air is significantly colder and cloudier up here.  The\nrocks rise up vertically to the south, forming an unclimbable surface.\nThrough the haze above, you make out a building of some kind.\n",
+         "altitude" : null
+      },
+      "windy1@windy" : {
+         "exits" : {
+            "s" : "windy2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Misty Plain",
+         "id" : "windy1",
+         "description" : "\n        You stand at the wooded edge of a vast plain, looking out over miles\nof grass and scrub.  A soft lavender mist blankets the ground here, growing\nthicker towards the foothills in the distant south.  Faint trails lead\nfarther into the plain.\n",
+         "altitude" : null
+      },
+      "windy2@windy" : {
+         "exits" : {
+            "w" : "windy4",
+            "e" : "windy4",
+            "n" : "windy1",
+            "s" : "windy3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Misty Trail",
+         "id" : "windy2",
+         "description" : "\n        You are stumbling along a misty trail, trying not to get lost.  Banks\nof fog roll across the plain, blown by a light wind.  An unpleasant gurgling  \nsound is coming from somewhere beyond the haze.\n",
+         "altitude" : null
+      },
+      "windy6@windy" : {
+         "exits" : {
+            "e" : "windy8",
+            "n" : "windy5",
+            "s" : "windy7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Foothills",
+         "id" : "windy6",
+         "description" : "\n        You stand on a small hillock overlooking the mist-shrouded plain.  In\nthe distant north you spy treetops poking out of the fog.  Rolling hills\nbecome towering mountains farther to the south.  The trail widens here,\nsplitting to the south and east, where it heads into a small ravine.\n",
+         "altitude" : null
+      },
+      "windy26@windy" : {
+         "exits" : {
+            "n" : "windy27",
+            "d" : "windy25"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Temple Roof",
+         "id" : "windy26",
+         "description" : "\n        This is the highest point in the southern mountain range.  From here,\nyou see the lands of Mirage laid out like a map.  The mountains continue to        \nthe west, where they turn north and bisect the forest.  A dwarven citadel is\nvisible in the far northwestern corner of the range.  To the direct north are\nthe plains, followed by woodlands.  A small village is visible beyond that,\nresting on the edge of an eternal snowstorm.  To the east is the shoreline of\na vast sea, speckled with tiny islands.  A set of stairs lead down here,\nwhile an altar is visible to the north.\n",
+         "altitude" : null
+      },
+      "windy12@windy" : {
+         "exits" : {
+            "w" : "windy10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "East End of Ravine",
+         "id" : "windy12",
+         "description" : "\n        You have come to the eastern end of this ravine.  The crumbling red\nwalls rise around you, forming a dead end.  Filling nearly the entire area is\na smoking ruin of some kind, filled with metallic struts and surfaces.  The\ndebris lies at the end of a long gouge in the ground.\n",
+         "altitude" : null
+      },
+      "windy4@windy" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "windy",
+         "title" : "Blorp!",
+         "id" : "windy4",
+         "description" : "\n        You seem to have fallen into a tarpit.  Who knows?  Perhaps one day\nyour bones will be excavated and placed in a museum.  Better luck next time.\n",
+         "altitude" : null
+      },
+      "windy24@windy" : {
+         "exits" : {
+            "s" : "^door"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "windy",
+         "title" : "End of Passage",
+         "id" : "windy24",
+         "description" : "\n        You are standing at the end of a dark passage which extends north and\nsouth.  A solid oak door is fitted into the southern wall.\n",
+         "altitude" : null
+      },
+      "windy23@windy" : {
+         "exits" : {
+            "n" : "^door_1",
+            "s" : "windy17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "windy",
+         "title" : "Dark Passage",
+         "id" : "windy23",
+         "description" : "\n        You are walking down a long, dark passage.  The flagstones click\ncoldly under your feet, echoing into the distance.  Tall, plain columns rise        \nto the ceiling.  The passage extends north and south.\n",
+         "altitude" : null
+      },
+      "windy8@windy" : {
+         "exits" : {
+            "e" : "windy10",
+            "w" : "windy6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "West End of Ravine",
+         "id" : "windy8",
+         "description" : "\n        You are in a shallow ravine which cuts through the hills like a\nsavage wound.  Feldspar-rich sediments in the soil give off a ruddy\nreflection to the dim light here.  The ravine continues to the east, and\nrises into the hills to the west.\n",
+         "altitude" : null
+      },
+      "windy11@windy" : {
+         "exits" : {
+            "w" : "windy13",
+            "n" : "windy9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Mountain Trail",
+         "id" : "windy11",
+         "description" : "\n        You are walking along a thin trail which runs along the base of the\nmountain range to the south.  High above, the rocky crags loom menacingly   \nagainst the dark sky.  A terrible wind blows through here, howling at you as\nit whips at your clothes and hair.  The trail leads west and north, towards\nsome low hills.\n",
+         "altitude" : null
+      },
+      "windy28@windy" : {
+         "exits" : {
+            "s" : "windy27"
+         },
+         "flags" : [
+            "OnePerson"
+         ],
+         "zone" : "windy",
+         "title" : "Shrine of Cumulonimbus",
+         "id" : "windy28",
+         "description" : "\n        You have stumbled into the temple's most sacred place... the Shrine\nof Cumulonimbus.  It is nothing but an empty, dome-shaped room with a large \nhole in the ceiling.  The only exit is south.  You should use it.\n",
+         "altitude" : null
+      },
+      "windy13@windy" : {
+         "exits" : {
+            "w" : "windy14",
+            "e" : "windy11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Mountain Ledge",
+         "id" : "windy13",
+         "description" : "\n        You are standing on a thin ledge which runs along the mountain side.\nThick cloud banks have formed at this altitude, restricting your vision to\nonly a few feet.  The ledge becomes a wider trail to the east, while to the\nwest it inclines upward sharply.\n",
+         "altitude" : null
+      },
+      "windy19@windy" : {
+         "exits" : {
+            "w" : "windy18"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "windy",
+         "title" : "Storage Room",
+         "id" : "windy19",
+         "description" : "\n        This is a small room, used for storage by the temple caretakers.  A\ndark passage leads west.        \n",
+         "altitude" : null
+      },
+      "windy10@windy" : {
+         "exits" : {
+            "e" : "windy12",
+            "w" : "windy8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Ravine",
+         "id" : "windy10",
+         "description" : "\n        You are standing in the middle of a ravine which runs east to west.\nThere are many small footprints in the soft earth, leading every which way.\nA sharp wind has picked up, moaning loudly through the rocks.\n",
+         "altitude" : null
+      },
+      "windy18@windy" : {
+         "exits" : {
+            "e" : "windy19",
+            "w" : "windy17"
+         },
+         "flags" : [
+            "OnePerson"
+         ],
+         "zone" : "windy",
+         "title" : "East Altar",
+         "id" : "windy18",
+         "description" : "\n        You stand in a large circular room which has a skylight in its domed\nceiling.  Directly underneath the light is an altar, carved with leering        \nfaces and tortured forms.  Dark passages extend to the east and west.\n",
+         "altitude" : null
+      },
+      "windy22@windy" : {
+         "exits" : {
+            "d" : "windy21"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "windy",
+         "title" : "High Priest's Chambers",
+         "id" : "windy22",
+         "description" : "\n        This room is sparse and cold, furnished only with a straw mat and a\ntable.  A small lamp on the table provides light.  The only exit is a dark        \nstairway leading down.\n",
+         "altitude" : null
+      },
+      "windy3@windy" : {
+         "exits" : {
+            "w" : "windy4",
+            "e" : "windy5",
+            "n" : "windy2",
+            "s" : "windy4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Misty Trail",
+         "id" : "windy3",
+         "description" : "\n        You are stumbling along a misty trail, trying not to get lost.  Banks\nof fog roll across the plain, blown by a light wind.  An unpleasant gurgling  \nsound is coming from somewhere beyond the haze.\n",
+         "altitude" : null
+      },
+      "windy15@windy" : {
+         "exits" : {
+            "n" : "windy16",
+            "d" : "windy14"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnePerson"
+         ],
+         "zone" : "windy",
+         "title" : "Mountain Plateau",
+         "id" : "windy15",
+         "description" : "\n        The view from here is spectacular: To the south spreads out the misty\nexpanse of a plain, and beyond it a thick forest.  The top of this mountain\nis flat and rubble-strewn, eroded by decades of wind and storm.  The only\nnoticeable feature is a fairly large building which squats in the center of\nthe plateau to the north.  A rocky trail winds its way down into the mist.\n",
+         "altitude" : null
+      },
+      "windy5@windy" : {
+         "exits" : {
+            "e" : "windy4",
+            "w" : "windy3",
+            "n" : "windy4",
+            "s" : "windy6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Misty Trail",
+         "id" : "windy5",
+         "description" : "\n        You are stumbling along a misty trail, trying not to get lost.  Banks\nof fog roll across the plain, blown by a light wind.  An unpleasant gurgling  \nsound is coming from somewhere beyond the haze.\n",
+         "altitude" : null
+      },
+      "windy25@windy" : {
+         "exits" : {
+            "u" : "windy26"
+         },
+         "flags" : [],
+         "zone" : "windy",
+         "title" : "Stone Stairway",
+         "id" : "windy25",
+         "description" : "\n        A massive stone stairway rises to the roof of the temple here.  The\nonly other exit is a doorway to the north.        \n",
+         "altitude" : null
+      },
+      "windy17@windy" : {
+         "exits" : {
+            "w" : "windy20",
+            "e" : "windy18",
+            "n" : "windy23",
+            "s" : "windy16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "windy",
+         "title" : "Great Hall",
+         "id" : "windy17",
+         "description" : "\n        This is the main place of worship in the temple, although you don't\nsee very many followers present.  A large statue, formed to resemble a\nmassive cloud, stands atop a dias in the center of the room.  The statue\nseems to have eyes... evil eyes.  Corridors lead north, south, east and west.\n",
+         "altitude" : null
+      },
+      "windy9@windy" : {
+         "exits" : {
+            "n" : "windy7",
+            "s" : "windy11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Rising Trail",
+         "id" : "windy9",
+         "description" : "\n        You stand in front of a massive pile of rubble which has avalanched\nfrom the mountains above, doubtlessly caused by wind erosion.  The trail runs\nsouth into the mountains and north towards the hills.\n",
+         "altitude" : null
+      },
+      "windy7@windy" : {
+         "exits" : {
+            "n" : "windy6",
+            "s" : "windy9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "windy",
+         "title" : "Rocky Trail",
+         "id" : "windy7",
+         "description" : "\n        You are walking along a rocky trail which winds its way through the\nfoothills.  Craggy snow-covered mountains rise to the south, casting dark\nshadows across the land.  A quick breeze has picked up, creating a high-\npitched wail as it rushes through the hills.\n",
+         "altitude" : null
+      },
+      "windy21@windy" : {
+         "exits" : {
+            "e" : "windy20",
+            "u" : "windy22"
+         },
+         "flags" : [],
+         "zone" : "windy",
+         "title" : "Stairway",
+         "id" : "windy21",
+         "description" : "\n        A stairway leads up here, into a lit room.  A passage extends to the\neast.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "zephyrus@windy" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball"
+         ],
+         "damage" : "15",
+         "location" : "windy20",
+         "armor" : "0",
+         "name" : "zephyrus",
+         "description" : "Zephyrus, the West Wind, glares hotly at you.",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "95",
+         "pname" : "Zephyrus",
+         "mflags" : [
+            "Thief",
+            "PickStuff",
+            "NoSteal"
+         ]
+      },
+      "crow@windy" : {
+         "damage" : "5",
+         "location" : "windy1",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Crow",
+         "name" : "crow",
+         "description" : "A large crow eyes you from atop the signpost.",
+         "strength" : "25"
+      },
+      "bonz@windy" : {
+         "eflags" : [
+            "NegFrost",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "windy12",
+         "armor" : "0",
+         "name" : "bonz",
+         "description" : "Bonz the skeleton glares at you, angry that you're not dead yet, Jim.",
+         "strength" : "75",
+         "speed" : "0",
+         "aggression" : "45",
+         "pname" : "Bonz",
+         "mflags" : [
+            "DrainScr",
+            "Cross"
+         ]
+      },
+      "wind_elemental@windy" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegFrost",
+            "NegShock"
+         ],
+         "damage" : "15",
+         "location" : "windy9",
+         "armor" : "0",
+         "name" : "wind_elemental",
+         "description" : "A wind elemental is blowing around the rubble, and it looks mad!",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Wind Elemental",
+         "aggression" : "75"
+      },
+      "quirk@windy" : {
+         "damage" : "10",
+         "location" : "windy12",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Quirk",
+         "name" : "quirk",
+         "description" : "Captain Quirk wanders about, smiling charmingly.",
+         "strength" : "100"
+      },
+      "aquilo@windy" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball",
+            "NegFrost",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "20",
+         "location" : "windy27",
+         "armor" : "0",
+         "name" : "aquilo",
+         "description" : "Aquilo, the North Wind, prepares to do you in.",
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "98",
+         "pname" : "Aquilo",
+         "mflags" : [
+            "Thief",
+            "BarNorth",
+            "PickStuff",
+            "NoSteal"
+         ]
+      },
+      "highpriest@windy" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "windy22",
+         "armor" : "0",
+         "name" : "highpriest",
+         "description" : "The priest is in.",
+         "strength" : "75",
+         "speed" : "0",
+         "pname" : "HighPriest",
+         "aggression" : "50"
+      },
+      "auster@windy" : {
+         "eflags" : [
+            "Frost",
+            "NegFrost"
+         ],
+         "damage" : "10",
+         "location" : "windy15",
+         "armor" : "0",
+         "name" : "auster",
+         "description" : "Auster, the South Wind, blows furiously at you!",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "95",
+         "pname" : "Auster",
+         "mflags" : [
+            "Thief",
+            "PickStuff",
+            "NoSteal"
+         ]
+      },
+      "eurus@windy" : {
+         "eflags" : [
+            "Shock",
+            "NegShock"
+         ],
+         "damage" : "10",
+         "location" : "windy18",
+         "armor" : "0",
+         "name" : "eurus",
+         "description" : "Eurus, the East Wind, fumes darkly at you.",
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "95",
+         "pname" : "Eurus",
+         "mflags" : [
+            "Thief",
+            "PickStuff",
+            "NoSteal"
+         ]
+      },
+      "spork@windy" : {
+         "damage" : "15",
+         "location" : "windy12",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Spork",
+         "name" : "spork",
+         "description" : "Science Officer Spork raises an eyebrow at you.",
+         "strength" : "150"
+      },
+      "cumulonimbus@windy" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball",
+            "NegFrost",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "25",
+         "location" : "windy28",
+         "armor" : "10",
+         "name" : "cumulonimbus",
+         "description" : "Cumulonimbus, the Cloud God, thunders at you angrily.",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "98",
+         "pname" : "Cumulonimbus",
+         "mflags" : [
+            "Thief",
+            "PickStuff",
+            "NoSteal"
+         ]
+      },
+      "ethereal_shape@windy" : {
+         "damage" : "10",
+         "location" : "windy6",
+         "armor" : "0",
+         "name" : "ethereal_shape",
+         "description" : "An ethereal shape guards the southern trail.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Ethereal Shape",
+         "aggression" : "15",
+         "mflags" : [
+            "BarSouth"
+         ]
+      }
+   }
+}

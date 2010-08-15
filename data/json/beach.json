@@ -1,0 +1,562 @@
+{
+   "obj" : {
+      "coconut@beach" : {
+         "location" : "IN_ROOM:beach25",
+         "weight" : "4",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "coconut",
+         "bvalue" : "20",
+         "desc[0]" : "A hairy coconut has fallen from a palm tree, and rests here.",
+         "size" : "4"
+      },
+      "fruit@beach" : {
+         "location" : "IN_CONTAINER:basket",
+         "weight" : "2",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "fruit",
+         "bvalue" : "10",
+         "desc[0]" : "some sweet smelling fruit is here.",
+         "size" : "2"
+      },
+      "yacht@beach" : {
+         "location" : "IN_ROOM:beach3",
+         "armor" : "15",
+         "oflags" : [
+            "Boat"
+         ],
+         "altname" : "boat",
+         "name" : "yacht",
+         "size" : "5",
+         "weight" : "5",
+         "bvalue" : "100",
+         "desc[0]" : "The famed Savannah Jane is here, she is a beauty of a sailingship."
+      },
+      "basket@beach" : {
+         "location" : "IN_ROOM:beach4",
+         "weight" : "5",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "basket",
+         "bvalue" : "150",
+         "desc[0]" : "A large picnic basket is here, maybe it has some goodies in it!",
+         "size" : "60"
+      },
+      "chicken@beach" : {
+         "location" : "IN_CONTAINER:basket",
+         "weight" : "2",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "chicken",
+         "bvalue" : "10",
+         "desc[0]" : "Some tasty looking fried chicken is here, making your mouth water.",
+         "size" : "2"
+      },
+      "evening_gloves@beach" : {
+         "location" : "IN_ROOM:beach1",
+         "armor" : "30",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "gloves",
+         "name" : "evening_gloves",
+         "examine" : "Long and black, these elbow length gloves will enhance your appearance.",
+         "size" : "30",
+         "weight" : "0",
+         "pname" : "gloves",
+         "bvalue" : "100",
+         "desc[0]" : "A pair of elegant looking gloves has been dropped here.",
+         "aflags" : [
+            "Hands"
+         ]
+      }
+   },
+   "loc" : {
+      "beach19@beach" : {
+         "exits" : {
+            "n" : "beach18",
+            "s" : "beach20"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach19",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nTo the south, there is a harbour, from here it looks quiet, and peaceful,\nyou are sure it would be a wonderful place to visit.\n",
+         "altitude" : null
+      },
+      "beach14@beach" : {
+         "exits" : {
+            "e" : "beach17",
+            "w" : "beach8",
+            "n" : "beach13",
+            "s" : "beach15"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach14",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach18@beach" : {
+         "exits" : {
+            "w" : "beach17",
+            "s" : "beach19"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach18",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach13@beach" : {
+         "exits" : {
+            "e" : "beach16",
+            "w" : "beach9",
+            "s" : "beach14"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach13",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach17@beach" : {
+         "exits" : {
+            "e" : "beach18",
+            "w" : "beach14"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach17",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach4@beach" : {
+         "exits" : {
+            "n" : "SandyBeach@eastcoast",
+            "s" : "beach3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Beach",
+         "id" : "beach4",
+         "description" : "\nThis is the secluded northern end of the beach.  For those people who are weary\nof the sun, there is a crop of tropical trees and bushes that help cast a \ncool shadow over a nearby picnic bench.\n",
+         "altitude" : null
+      },
+      "beach23@beach" : {
+         "exits" : {
+            "w" : "beach21"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Paradise",
+         "id" : "beach23",
+         "description" : "\nThis paradise seems to good to be true, its beauty and spendor take your \nbreath away.  Everything is peaceful here, much diffrent than the savage\nlands you are used to.\nare used to.\n",
+         "altitude" : null
+      },
+      "beach27@beach" : {
+         "exits" : {
+            "e" : "beach25",
+            "n" : "beach26"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Paradise",
+         "id" : "beach27",
+         "description" : "\nThis island paradise has could be a goldmine! You are sure that visitors from \nallover the lands would visit here, and visit often, the islands breathtaking\nbeauty has you hooked, thats for sure.  Maybe you should retire from your \nexploring, and work as a guide, showing travelers the beauties of this \nwonderful island.\n",
+         "altitude" : null
+      },
+      "beach20@beach" : {
+         "exits" : {
+            "n" : "beach19",
+            "s" : "beach21"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "beach",
+         "title" : "One Particular Harbour",
+         "id" : "beach20",
+         "description" : "\nHere you have reached a harbour, the air is sweet, and filled with the\nlaughter of children.  The dock here is small but elegant, and the dock hand\neasily guides the Savannah Jane to her dock.  Looking inland you see a small\ntown, filled with peace.  The children here play on the shore here, and all is\nsafe.  You may never want to leave.\n",
+         "altitude" : null
+      },
+      "beach10@beach" : {
+         "exits" : {
+            "s" : "beach9"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach10",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach6@beach" : {
+         "exits" : {
+            "e" : "beach7",
+            "w" : "beach3"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach6",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach24@beach" : {
+         "exits" : {
+            "w" : "beach26",
+            "n" : "beach21",
+            "s" : "beach25"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Paradise",
+         "id" : "beach24",
+         "description" : "\nThis tropical island you have discovered is everything you ever dreamed, \nsmall, quet, and beautiful, you just might never want to leave.\n",
+         "altitude" : null
+      },
+      "beach5@beach" : {
+         "exits" : {
+            "e" : "beach2"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "beach",
+         "title" : "Beach",
+         "id" : "beach5",
+         "description" : "\nThis is a secluded edge of the beach, receded slightly from the incoming tide.\nFrom here you can see the entire beach, and what a marvelous sight it is.\nOff to the north just a small n\\bit further, is a small dock, and past that to\nthe north is what appears to be a picnic area. Hungry?\n",
+         "altitude" : null
+      },
+      "beach25@beach" : {
+         "exits" : {
+            "w" : "beach27",
+            "n" : "beach24"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Paradise",
+         "id" : "beach25",
+         "description" : "\nThe island continues to west and north from here, its sights are so pleasant,\nand your worries are gone.  Just relax, and take in your surroundings.\n",
+         "altitude" : null
+      },
+      "beach9@beach" : {
+         "exits" : {
+            "e" : "beach13",
+            "n" : "beach10",
+            "s" : "beach8"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach9",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach16@beach" : {
+         "exits" : {
+            "w" : "beach13"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach16",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach11@beach" : {
+         "exits" : {
+            "e" : "beach15",
+            "n" : "beach8",
+            "s" : "beach12"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach11",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach26@beach" : {
+         "exits" : {
+            "e" : "beach24",
+            "s" : "beach27"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Paradise",
+         "id" : "beach26",
+         "description" : "\nOhh no! you though you spotted a large evil monster, but turning to look, all \nyou saw was a trick shadow, nothing here will harm you, you are safe here.\n",
+         "altitude" : null
+      },
+      "beach8@beach" : {
+         "exits" : {
+            "e" : "beach14",
+            "w" : "beach7",
+            "n" : "beach9",
+            "s" : "beach11"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach8",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach22@beach" : {
+         "exits" : {
+            "e" : "beach21"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Paradise",
+         "id" : "beach22",
+         "description" : "\nThis is a dense, tropical paradise.  Birds sing, and fly from tree to tree,\nplaying the games that birds play.\n",
+         "altitude" : null
+      },
+      "beach7@beach" : {
+         "exits" : {
+            "e" : "beach8",
+            "w" : "beach6"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach7",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach12@beach" : {
+         "exits" : {
+            "n" : "beach11"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach12",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach15@beach" : {
+         "exits" : {
+            "w" : "beach11",
+            "n" : "beach14"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater"
+         ],
+         "zone" : "beach",
+         "title" : "Beautiful sea",
+         "id" : "beach15",
+         "description" : "\nThis is a calm beautiful sea, the sun casts its rays upon these smooth, calm,\nopen, waters and reflects back into your eyes, as a stunning orange image.\nThere is nothing here that would case you fear, the waters are calm, and\nsmooth, and the sailing is wonderful.\n",
+         "altitude" : null
+      },
+      "beach21@beach" : {
+         "exits" : {
+            "e" : "beach23",
+            "w" : "beach22",
+            "n" : "beach20",
+            "s" : "beach24"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Paradise",
+         "id" : "beach21",
+         "description" : "\nAs you leave the harbour town, this small island turns into a jungle of sorts\nyou can hear parents calling thier children in for dinner, and the sounds of\nthe harbour town in the distance, and a feeling of peace envelopes you.\n",
+         "altitude" : null
+      },
+      "beach3@beach" : {
+         "exits" : {
+            "e" : "beach6",
+            "n" : "beach4",
+            "s" : "beach2"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "beach",
+         "title" : "Beach",
+         "id" : "beach3",
+         "description" : "\nWhat more is there ro say about this wonderful place that you thought \nexisted in your dreams only?  It's splendor and beauty would make this an \nexellent place to retire from your travels. There is a small dock\n",
+         "altitude" : null
+      },
+      "beach2@beach" : {
+         "exits" : {
+            "w" : "beach5",
+            "n" : "beach3",
+            "s" : "beach1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Beach",
+         "id" : "beach2",
+         "description" : "\nThe beach continues to the north and west here.  Its nice warm sand, and \nsmooth wave rolling in, give you such a great feeling of peace, and\nromance, your heart longs for the one you love.\n",
+         "altitude" : null
+      },
+      "beach1@beach" : {
+         "exits" : {
+            "n" : "beach2",
+            "s" : "shore@village"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "beach",
+         "title" : "Beach",
+         "id" : "beach1",
+         "description" : "\nThis is a patch of beach that extends to the north and south.\nThe waves from the sea to the east come rolling gently in, making\nyou feel calm, and careless. Maybe you could take you shoes off and\nand walk barefoot in the sand.  Or even better, wiggle your toes in\nthe soft, warm sand.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "whale@beach" : {
+         "damage" : "5",
+         "location" : "beach15",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "whale",
+         "name" : "whale",
+         "description" : "A large humpbacked whale is here, enjoying the calm open water. ",
+         "strength" : "50"
+      },
+      "dove@beach" : {
+         "damage" : "5",
+         "location" : "beach24",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "dove",
+         "name" : "dove",
+         "description" : "A peaceful white dove is perched here, resting. ",
+         "strength" : "50"
+      },
+      "finch@beach" : {
+         "damage" : "5",
+         "location" : "beach25",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "finch",
+         "name" : "finch",
+         "description" : "A lovely long-tailed finch is perched on a tree here.",
+         "strength" : "50"
+      },
+      "flamingo@beach" : {
+         "damage" : "5",
+         "location" : "beach27",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "flamingo",
+         "name" : "flamingo",
+         "description" : "There is a large pink flamingo here, looking for food",
+         "strength" : "50"
+      },
+      "parrot@beach" : {
+         "damage" : "5",
+         "location" : "beach24",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "parrot",
+         "name" : "parrot",
+         "description" : "A beautiful parrot is here, maybe you could teach him to talk?",
+         "strength" : "50"
+      },
+      "porpoise@beach" : {
+         "damage" : "5",
+         "location" : "beach17",
+         "speed" : "3",
+         "aggression" : "0",
+         "armor" : "5",
+         "pname" : "porpoise",
+         "name" : "porpoise",
+         "description" : "A playful porpoise is here, playing some games.",
+         "strength" : "50"
+      },
+      "cockatiel@beach" : {
+         "damage" : "5",
+         "location" : "beach26",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "cockatiel",
+         "name" : "cockatiel",
+         "description" : "A bright Cockatiel is here, looking beautiful. ",
+         "strength" : "50"
+      }
+   }
+}

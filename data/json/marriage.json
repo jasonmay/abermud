@@ -1,0 +1,52 @@
+{
+   "obj" : {
+      "pillow@marriage" : {
+         "location" : "CARRIED_BY:ring_bearer",
+         "weight" : "0",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "pillow",
+         "bvalue" : "30",
+         "desc[0]" : "A plush, velvet pillow sits here.",
+         "size" : "30"
+      }
+   },
+   "loc" : {
+      "marriage1@marriage" : {
+         "exits" : {},
+         "flags" : [
+            "Party",
+            "Peaceful"
+         ],
+         "zone" : "marriage",
+         "title" : "Gazebo Altar",
+         "id" : "marriage1",
+         "description" : "\nThis is a large open park set in the area just outside Boston.\nThe air smells fresh and sweat, making this a wonderful place to be wed.\nDominating the center of the park is a large gazebo, decorated with\nflowers of many kinds.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "preacher@marriage" : {
+         "damage" : "0",
+         "location" : "marriage1",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "preacher",
+         "description" : "The faithul, and quaint preacher of the MUD stands here, viewing you with a calm, kind eye.",
+         "strength" : "0"
+      },
+      "ring_bearer@marriage" : {
+         "damage" : "0",
+         "location" : "marriage1",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Ring Bearer",
+         "name" : "ring_bearer",
+         "description" : "A young boy, dressed in a tuxedo stands here dressed in a small childs tuxedo.",
+         "strength" : "0"
+      }
+   }
+}

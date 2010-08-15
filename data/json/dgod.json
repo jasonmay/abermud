@@ -1,0 +1,96 @@
+{
+   "obj" : {
+      "fishtank@dgod" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:arctica1",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "armor" : "0",
+         "name" : "fishtank",
+         "examine" : " \nThe fish swim about among a selection of plants from the Silurian period.",
+         "size" : "40",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "\nA large fishtank rests on a table, filled with seawater.  Small primitive fish\nare swimming about inside it, peering at you through the glass."
+      },
+      "rope@dgod" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:fishtank",
+         "oflags" : [
+            "Wearable"
+         ],
+         "armor" : "0",
+         "name" : "rope",
+         "examine" : " \nIt is thin but strong, yet soft and supple.  It would not hurt your wrists.",
+         "size" : "4",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "aflags" : [
+            "Back"
+         ],
+         "desc[0]" : "\nA length of rope is lying here."
+      },
+      "bed@dgod" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:arctica1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "armor" : "0",
+         "name" : "bed",
+         "examine" : " \nIt is sumptuous and looks well-used.",
+         "size" : "100",
+         "state" : "0",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "\nA king-sized double bed looks somewhat out of place here."
+      }
+   },
+   "loc" : {
+      "arctica1@dgod" : {
+         "exits" : {
+            "s" : "devo9@evolution"
+         },
+         "flags" : [
+            "Party",
+            "Private",
+            "Peaceful",
+            "NoMobiles"
+         ],
+         "zone" : "dgod",
+         "title" : "Arctica's Greenhouse",
+         "id" : "arctica1",
+         "description" : "\n    You are in a vast greenhouse whose roof is two hundred feet above you.  You\nstare in awe as you gaze upon a whole host of plantlife taken from every period\nof Earth's history.  To the left are tree ferns, towering thirty feet high,\nspreading their feathery fronds for many yards in all directions.  To the right\nare horsetails as big as trees with great woody trunks that bear no resemblance\nto the little grass-like weeds that are so common around wet ground in the\ncountryside.  And in front of you, towering towards the roof, are several huge\nlycopods, like trees in size and shape but related to mosses and their kin.\nA number of less massive exhibits are lined up against the glass walls of the\ngreenhouse, and some shrubs and monkey puzzle saplings grow here and there\nin the shade of the lycopods.  \n",
+         "altitude" : null
+      },
+      "vaccum@dgod" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "dgod",
+         "title" : "Vacuum",
+         "id" : "Vaccum",
+         "description" : "\n   You are inside a void. There is no way out, other than the way in.\nBones of those before who could not find that way out are neatly piled\nin one discreet corner.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "acanthostega@dgod" : {
+         "damage" : "4",
+         "location" : "arctica1",
+         "speed" : "1",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Acanthostega",
+         "examine" : "\nAcanthostega would really prefer to be in the water.",
+         "description" : "The early tetrapod Acanthostega is crawling about on the floor.",
+         "strength" : "60"
+      }
+   }
+}

@@ -1,0 +1,138 @@
+{
+   "obj" : {
+      "rose@mountain" : {
+         "desc[1]" : "\nAn extremely beautiful white desert rose peeks out of the flower mat.",
+         "location" : "IN_ROOM:Mou6",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "flower",
+         "name" : "rose",
+         "examine" : "Your beloved would like this flower ...",
+         "state" : "1",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "80",
+         "desc[0]" : "\nAn extremely beautiful white desert rose has been left here by someone."
+      },
+      "skull@mountain" : {
+         "desc[1]" : "\nA bleached skull of ox reminds you about your fate, if you stay here for long.",
+         "location" : "IN_ROOM:Mou3",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "skull",
+         "examine" : "Be glad it's not yours.",
+         "state" : "1",
+         "size" : "2",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "An old bleached skull of ox is lying in the sand."
+      }
+   },
+   "loc" : {
+      "mou4@mountain" : {
+         "exits" : {
+            "e" : "Mou5",
+            "w" : "Mou3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "mountain",
+         "title" : "Shadow of the Cactus",
+         "id" : "Mou4",
+         "description" : "\nYou take a deep reliefing breath as you find a nice seat in the shadow of a \ntall thorny cactus. You kick your shoes off and let the heat dry your sweating \ntoes. Weak winds from the east blow gently through your hair and the sweat on \nyour wet shirt slowly evaporates cooling down your back. You glance at the \neastern skyline broken by odd structures in the distance. \nPaths lead east and west.\n",
+         "altitude" : "600"
+      },
+      "mou6@mountain" : {
+         "exits" : {
+            "e" : "Mou3"
+         },
+         "flags" : [
+            "OutDoors",
+            "Peaceful",
+            "NoMobiles"
+         ],
+         "zone" : "mountain",
+         "title" : "Desert Rose",
+         "id" : "Mou6",
+         "description" : "\nA shower of rain has suddenly turned the earlier so dry and barren desert into \na sea of small but colorful flowers. The raincloud is slowly moving west and \nthe sun casts its' first rays upon this scented little paradise. You sit down \non the ground enjoying the peace and silence surrounding you.\n",
+         "altitude" : "550"
+      },
+      "mou2@mountain" : {
+         "exits" : {
+            "n" : "Mou1",
+            "s" : "Mou3"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "mountain",
+         "title" : "Northern Edge of Desert",
+         "id" : "Mou2",
+         "description" : "\nThe sun has reached the zenith as you arrive at the edge of a desert. Your \nfeet start feeling heavy and you think this is your last chance to check your \nwater bottle. To the south you can see the rocky lands continuing far out of \nyour sight. To the north the desert turns into thick thorny bushes.\n",
+         "altitude" : "550"
+      },
+      "mou5@mountain" : {
+         "exits" : {
+            "e" : "Anc24@Ancient",
+            "w" : "Mou4"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "mountain",
+         "title" : "Rocky Path",
+         "id" : "Mou5",
+         "description" : "\nYou can hardly make out a stony path winding between big rocks eastwards. The \npath widens as you wander further east and you can recognize an old town far \non the edge of your sight. Back to the west a vast desert lies in the burning \nheat of the sun. \n",
+         "altitude" : "650"
+      },
+      "mou3@mountain" : {
+         "exits" : {
+            "w" : "Mou6",
+            "e" : "Mou4",
+            "n" : "Mou2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "mountain",
+         "title" : "Wild Ox Crossing",
+         "id" : "Mou3",
+         "description" : "\nThrough the burning heat an dry rocky desert you stomp and stop for a moment \nto have a look around. The sand reflects the heat making you hope it was \nnight. You are desperately trying to distinguish reality from mirage. You \nthink you see paths leading in each direction. To the south you can narrowly \nrecognize a red hill breaking the horizon.\n",
+         "altitude" : "550"
+      },
+      "mou1@mountain" : {
+         "exits" : {
+            "n" : "shady@blizzard",
+            "s" : "Mou2"
+         },
+         "flags" : [
+            "OutDoors",
+            "NoMobiles"
+         ],
+         "zone" : "mountain",
+         "title" : "Thick Bushes",
+         "id" : "Mou1",
+         "description" : "\nYou are strolling through thick bushes trying to find your way out.\nThe sun is climbing high up in the sky casting its' warm rays on you.\nThere's no sign of rain or storm in the sky. A narrow path is winding \nfrom north to south through the bushes.\n",
+         "altitude" : "500"
+      }
+   },
+   "mob" : {
+      "vulture@mountain" : {
+         "damage" : "10",
+         "location" : "Mou6",
+         "armor" : "0",
+         "name" : "vulture",
+         "description" : "A vulture is hovering above you searching for prey.",
+         "strength" : "100",
+         "pname" : "The Vulture",
+         "aggression" : "20",
+         "mflags" : "{}"
+      }
+   }
+}

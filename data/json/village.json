@@ -1,0 +1,580 @@
+{
+   "obj" : {
+      "map@village" : {
+         "location" : "IN_ROOM:slanted",
+         "weight" : "1",
+         "name" : "map",
+         "examine" : "Nothing doing here... yet...",
+         "bvalue" : "100",
+         "desc[0]" : "\nA worn and battered old treasure map lies torn and tattered before you.",
+         "size" : "1"
+      },
+      "poker@village" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:seadog",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "poker",
+         "examine" : "\nThis poker looks a bit more dangerous than a card game, and it appears to be\nslightly bent from meeting various adventurers' heads with force!",
+         "size" : "5",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "A heavy iron poker has been left here."
+      },
+      "leggings@village" : {
+         "location" : "IN_ROOM:Cave",
+         "armor" : "18",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leggings",
+         "name" : "leggings",
+         "examine" : "Dirty and worn, these tattered scraps of fabric just might keep your\nlegs warm.",
+         "size" : "30",
+         "weight" : "0",
+         "pname" : "leggings",
+         "bvalue" : "100",
+         "desc[0]" : "A pirate's old pair of leggings has been dropped here.",
+         "aflags" : [
+            "Legs",
+            "Feet"
+         ]
+      },
+      "jug@village" : {
+         "location" : "IN_ROOM:barman",
+         "weight" : "2",
+         "name" : "jug",
+         "examine" : "\nThis jug is shaped somewhat like a stout man with a cocked hat for the brim.",
+         "bvalue" : "40",
+         "desc[0]" : "A large toby jug has been left here, its face a hideous grin.",
+         "size" : "4"
+      },
+      "sack@village" : {
+         "desc[1]" : "A very large sack has been left here. The sack is closed.",
+         "location" : "IN_ROOM:alley",
+         "oflags" : [
+            "Container",
+            "Openable"
+         ],
+         "name" : "sack",
+         "size" : "50",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "A very large sack has been left here."
+      },
+      "barrel@village" : {
+         "desc[1]" : "A large wooden barrel squats in a corner.",
+         "location" : "IN_ROOM:cellar",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "cask",
+         "name" : "barrel",
+         "size" : "100",
+         "state" : "1",
+         "weight" : "100",
+         "maxstate" : "1",
+         "desc[0]" : "An open wooden barrel stands before you."
+      },
+      "rat@village" : {
+         "location" : "IN_CONTAINER:barrel",
+         "weight" : "1",
+         "name" : "rat",
+         "bvalue" : "1",
+         "desc[0]" : "A dead rat lies rotting on the floor before you.",
+         "size" : "1"
+      },
+      "boat@village" : {
+         "location" : "IN_ROOM:jetty",
+         "oflags" : [
+            "Boat"
+         ],
+         "weight" : "100",
+         "name" : "boat",
+         "bvalue" : "20",
+         "desc[0]" : "A small rowing boat has been left here.",
+         "size" : "100"
+      },
+      "bed@village" : {
+         "location" : "IN_ROOM:barman",
+         "weight" : "200",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bed",
+         "desc[0]" : "\nThe barman's bed lies here, it doesn't appear to have been slept in.",
+         "size" : "100"
+      },
+      "bot_boards@village" : {
+         "location" : "IN_ROOM:passage",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "floorboard",
+         "name" : "Bot_Boards",
+         "linked" : "Top_Boards",
+         "size" : "50",
+         "state" : "1",
+         "weight" : "50",
+         "pname" : "floorboards",
+         "maxstate" : "1",
+         "desc[0]" : "\nThe floorboards above you have been lifted, to allow access to some kind of\nroom above."
+      },
+      "sheets@village" : {
+         "location" : "IN_ROOM:barman",
+         "weight" : "30",
+         "name" : "sheets",
+         "bvalue" : "10",
+         "desc[0]" : "Some sheets lie strewn on the floor.",
+         "size" : "20"
+      },
+      "fire@village" : {
+         "location" : "IN_ROOM:seadog",
+         "oflags" : [
+            "Extinguish",
+            "Lit",
+            "NoGet"
+         ],
+         "altname" : "flames",
+         "name" : "fire",
+         "desc[0]" : "A huge fire burns in the center of the room."
+      },
+      "knife@village" : {
+         "damage" : "4",
+         "location" : "IN_ROOM:yard",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "knife",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "A small filleting knife has been left here carelessly."
+      },
+      "pebble@village" : {
+         "location" : "IN_ROOM:cove",
+         "weight" : "1",
+         "altname" : "stone",
+         "name" : "pebble",
+         "desc[0]" : "A bored pebble sits at your feet, philosophising.",
+         "size" : "1"
+      },
+      "silk@village" : {
+         "location" : "IN_ROOM:chamber",
+         "weight" : "40",
+         "altname" : "bale",
+         "name" : "silk",
+         "bvalue" : "150",
+         "desc[0]" : "A bale of valuable silk has been dropped here.",
+         "size" : "40"
+      },
+      "flag@village" : {
+         "location" : "IN_ROOM:chamber",
+         "weight" : "5",
+         "altname" : "jolly",
+         "name" : "flag",
+         "bvalue" : "50",
+         "desc[0]" : "An old Jolly Roger flag has been left here, carefully folded.",
+         "size" : "10"
+      },
+      "top_boards@village" : {
+         "location" : "IN_ROOM:cellar",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "floorboard",
+         "name" : "Top_Boards",
+         "linked" : "Bot_Boards",
+         "size" : "50",
+         "state" : "1",
+         "weight" : "50",
+         "pname" : "floorboards",
+         "maxstate" : "1",
+         "desc[0]" : "\nOne of the floorboards has been lifted, allowing access down under the cellar,\nto some kind of passage."
+      },
+      "raft@village" : {
+         "location" : "IN_ROOM:cove",
+         "oflags" : [
+            "Boat"
+         ],
+         "weight" : "100",
+         "name" : "raft",
+         "bvalue" : "20",
+         "desc[0]" : "A small wooden raft has been dumped here.",
+         "size" : "100"
+      },
+      "bell@village" : {
+         "location" : "IN_ROOM:barman",
+         "weight" : "40",
+         "name" : "bell",
+         "bvalue" : "120",
+         "desc[0]" : "\nA huge brass ships bell has been placed here, its gleaming surface evidently\nwell polished.",
+         "size" : "30"
+      }
+   },
+   "loc" : {
+      "barman@village" : {
+         "exits" : {
+            "w" : "Behind"
+         },
+         "flags" : [],
+         "zone" : "village",
+         "title" : "Barman's Room",
+         "id" : "Barman",
+         "description" : "\n   You are crouched in the barman's small, and very personalized room.  The\nwalls have a large collection of battered naval memorabilia fastened securely\nto them.  Indeed, even the lone window is a porthole, giving the room that\ndistinctive sea-cabin look.  A single low doorway leads west into the inn\nproper.\n",
+         "altitude" : null
+      },
+      "chamber@village" : {
+         "exits" : {
+            "w" : "Dirt",
+            "s" : "Passage"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "village",
+         "title" : "Dim Chamber",
+         "id" : "Chamber",
+         "description" : "\n   You are standing in a dim, and secret chamber deep underground.  Narrow\nrough passages lead west and south.\n",
+         "altitude" : null
+      },
+      "inn_yard@village" : {
+         "exits" : {
+            "e" : "Seadog",
+            "n" : "Road2",
+            "s" : "flag@noxypickle"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "village",
+         "title" : "Inn Yard",
+         "id" : "Inn_Yard",
+         "description" : "\n   You are standing in the yard of the Old Seadog Inn.  The inn itself stands\nto the east, a battered structure half timbered and sagging, with that pleasant\natmosphere of ages.  To the north a narrow gateway leads back onto the road.\n",
+         "altitude" : "50"
+      },
+      "alley@village" : {
+         "exits" : {
+            "n" : "Road1",
+            "d" : "Well2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "village",
+         "title" : "Narrow Alley",
+         "id" : "Alley",
+         "description" : "\n   You are standing in a narrow alleyway which deadends to the south.  The\nalley is dark and dismal and is simply a walled passage down to a small well\nwhich appears to serve the village itself.\n",
+         "altitude" : "150"
+      },
+      "road1@village" : {
+         "exits" : {
+            "w" : "Track",
+            "e" : "Road2",
+            "n" : "Yard",
+            "s" : "Alley"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "village",
+         "title" : "Village Road",
+         "id" : "Road1",
+         "description" : "\n   You are following a narrow dirt road which leads east into the village.  To\nthe north a track leads into a small yard of some sort, to the south it leads\ndown a narrow walled alley to the village well.\n",
+         "altitude" : "200"
+      },
+      "behind@village" : {
+         "exits" : {
+            "w" : "Seadog",
+            "e" : "Barman",
+            "d" : "Steps"
+         },
+         "flags" : [],
+         "zone" : "village",
+         "title" : "Behind The Bar",
+         "id" : "Behind",
+         "description" : "\n   You are standing behind the bar of the 'Old Seadog'.  The bar surface is\nworn and pitted from years and years of heavy use.  Names are carved into its\nsurface, 'Black Sea Pete', 'Grey Hook', 'Moog The Kipper', no doubt some of the\npirates who long ago made this their haunt.\n   A narrow stairway leads down, and a small room can be seen through a low\ndoorway to the east.\n",
+         "altitude" : null
+      },
+      "yard@village" : {
+         "exits" : {
+            "s" : "Road1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "village",
+         "title" : "Yard",
+         "id" : "Yard",
+         "description" : "\n   You are in a small walled dirt yard in the village.  Various large pieces of\nrotten fishing netting lie all around you, and the yard stinks with the smell\nof rotting fish, a scent which seems to draw thousands of sea birds flapping\naround you.\n",
+         "altitude" : "200"
+      },
+      "shore@village" : {
+         "exits" : {
+            "w" : "Road2",
+            "e" : "Jetty",
+            "n" : "beach1@beach"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "village",
+         "title" : "Village Shore",
+         "id" : "Shore",
+         "description" : "\n   You stand on the sea shore, to the east of the village. A narrow jetty leads\neast out into the waves.  The road also leads westwards back into the center of\nthe village.\n",
+         "altitude" : "50"
+      },
+      "seadog@village" : {
+         "exits" : {
+            "w" : "Inn_Yard",
+            "e" : "Behind"
+         },
+         "flags" : [],
+         "zone" : "village",
+         "title" : "The Old Seadog",
+         "id" : "Seadog",
+         "description" : "\n   You are standing in the 'Old Seadog' inn.  The inn radiates age and charm,\nwith its oak beam roof, and many seafaring momentos secured firmly around the\nwalls.  Even the bar is a single thick oak slab, worn and chipped with years of\nservice to rowdy sailors.\n   The door out is west.\n",
+         "altitude" : null
+      },
+      "cellar@village" : {
+         "exits" : {
+            "u" : "Steps",
+            "d" : "^top_boards"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "village",
+         "title" : "Cellars",
+         "id" : "Cellar",
+         "description" : "\n   You are stooped down low, in the cellars of the 'Old Seadog'.  The room is\ndark and shadowy lit only by a pale light from high above at the top of the\nsteps.  The room stinks of cheap ale and rotting wood.\n",
+         "altitude" : null
+      },
+      "passage@village" : {
+         "exits" : {
+            "u" : "^bot_boards",
+            "n" : "Chamber"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "village",
+         "title" : "Passage End",
+         "id" : "Passage",
+         "description" : "\n   The passage here ends with a blank stone wall, possibly foundations to a\nbuilding.  Above you is a set of floorboards.\n",
+         "altitude" : null
+      },
+      "green@village" : {
+         "exits" : {
+            "w" : "bridge@blizzard",
+            "e" : "Track",
+            "n" : "Church@start",
+            "s" : "r_land@blizzard"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "village",
+         "title" : "The Village Green",
+         "id" : "Green",
+         "description" : "\n   You are standing on a square of grass in the center of the village.  A road\nleads east into the rest of the village.\n   To the north is a small church, and a path leads west into the trees.\n",
+         "altitude" : "350"
+      },
+      "slanted@village" : {
+         "exits" : {
+            "n" : "Narrow",
+            "s" : "Dirt"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "village",
+         "title" : "Slanted Tunnel",
+         "id" : "Slanted",
+         "description" : "\n   You are clambering down a fairly wide earthen passage which descends from a\njunction of passages towards a turning of some sort.  The dirt floor is hard,\nas if heavy objects have passed this way many times.\n",
+         "altitude" : null
+      },
+      "track@village" : {
+         "exits" : {
+            "w" : "Green",
+            "e" : "Road1",
+            "n" : "hick1@hick",
+            "s" : "Hospital"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "village",
+         "title" : "Village Track",
+         "id" : "Track",
+         "description" : "\n   You are following a path which leads east through the village towards the\nsea.  To the west a few buildings are clustered around the village green, while\nto the east the village becomes a collection of small houses and narrow\nstreets.  A small path leads to the north.\n",
+         "altitude" : "300"
+      },
+      "road2@village" : {
+         "exits" : {
+            "w" : "Road1",
+            "e" : "Shore",
+            "s" : "Inn_Yard"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "village",
+         "title" : "Village Road",
+         "id" : "Road2",
+         "description" : "\n   You are following the narrow main street of the village which leads east and\nwest.  To the south, the worn sign of the Old Seadog Inn flaps quietly in the\nwind.\n",
+         "altitude" : "100"
+      },
+      "cave@village" : {
+         "exits" : {
+            "w" : "Narrow",
+            "e" : "Cove"
+         },
+         "flags" : [],
+         "zone" : "village",
+         "title" : "Sea Cave",
+         "id" : "Cave",
+         "description" : "\n   You are standing in a low, reasonably dry sea cave.  The cave echoes the\ngentle pounding of the waves on the sandy beach to the east.  A single narrow\npassage leads west into darkness.\n",
+         "altitude" : null
+      },
+      "well1@village" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "village",
+         "title" : "Down The Well",
+         "id" : "Well1",
+         "description" : "\n   You slip and lose your grip, then plunge helplessly into the waters below...\n",
+         "altitude" : null
+      },
+      "dirt@village" : {
+         "exits" : {
+            "w" : "Tunnel",
+            "e" : "Chamber",
+            "n" : "Slanted"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "village",
+         "title" : "Dirt Tunnel",
+         "id" : "Dirt",
+         "description" : "\n   You are clambering along a low dirt tunnel which leads east and west.\nA wider tunnel joins from the north.\n",
+         "altitude" : null
+      },
+      "steps@village" : {
+         "exits" : {
+            "u" : "Behind",
+            "d" : "Cellar"
+         },
+         "flags" : [],
+         "zone" : "village",
+         "title" : "Cellar Steps",
+         "id" : "Steps",
+         "description" : "\n   You are standing on the narrow, precarious steps which lead down into the\ncellars of the inn.  A pale shaft of light shines down from the top of the\nsteps, revealing the cellars below.\n",
+         "altitude" : null
+      },
+      "tunnel@village" : {
+         "exits" : {
+            "w" : "Well2",
+            "e" : "Dirt"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "village",
+         "title" : "Narrow Tunnel",
+         "id" : "Tunnel",
+         "description" : "\n   You are squeezing down a narrow dirt tunnel, quite crudely dug, and\nsupported with old ships timbers.  The tunnel leads westwards towards a faint\nlight, or descends steeply to the east.\n",
+         "altitude" : null
+      },
+      "well2@village" : {
+         "exits" : {
+            "e" : "Tunnel",
+            "u" : "Alley",
+            "d" : "Well1"
+         },
+         "flags" : [],
+         "zone" : "village",
+         "title" : "Down The Well",
+         "id" : "Well2",
+         "description" : "\n   You are hanging part of the way down the village well, looking upwards\ntowards the light above.  The well descends further but it gets very slippery.\nA narrow passage leads east into absolute darkness.\n",
+         "altitude" : null
+      },
+      "jetty@village" : {
+         "exits" : {
+            "w" : "Shore",
+            "e" : "2@sea",
+            "d" : "camb1@evolution"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "village",
+         "title" : "The Jetty",
+         "id" : "Jetty",
+         "description" : "\n   You stand on the jetty, looking east across the waves.  A path leads west\nalong the jetty back to the village.\n",
+         "altitude" : "0"
+      },
+      "narrow@village" : {
+         "exits" : {
+            "e" : "Cave",
+            "s" : "Slanted"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "village",
+         "title" : "Narrow Tunnel",
+         "id" : "Narrow",
+         "description" : "\n   You are clambering down a narrow tunnel which slopes downwards and east\nturning from the south.  From the east you can smell the sea and hear the sound\nof waves against the shore...\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "beavis@village" : {
+         "damage" : "8",
+         "location" : "Green",
+         "armor" : "0",
+         "name" : "beavis",
+         "examine" : "\nYou are looking at the almighty Beavis. He is wearing his favorite (and only)\nshirt, a Metallica t-shirt. Then he starts to laugh as you turn away.",
+         "description" : "Medieval Beavis is standing here with a grin on his face.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Beavis",
+         "aggression" : "0",
+         "pflags" : [
+            "NoZap",
+            "NoPunt",
+            "NoSteal",
+            "NoExorcise",
+            "NoAlias"
+         ]
+      },
+      "butthead@village" : {
+         "damage" : "8",
+         "location" : "Green",
+         "armor" : "0",
+         "name" : "butthead",
+         "examine" : "\nButthead looks to you and says, 'What are you looking at bunghole?!?'",
+         "description" : "Sir Butthead is here looking very lost.",
+         "strength" : "100",
+         "speed" : "5",
+         "pname" : "Butthead",
+         "aggression" : "0",
+         "pflags" : [
+            "NoZap",
+            "NoPunt",
+            "NoSteal",
+            "NoExorcise",
+            "NoAlias"
+         ]
+      }
+   }
+}

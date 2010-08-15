@@ -1,0 +1,649 @@
+{
+   "obj" : {
+      "book_diary@chlyon" : {
+         "location" : "IN_ROOM:chlyon18",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "book",
+         "name" : "book_diary",
+         "examine" : "A passage catches your eye:\n \"And then the stone forged in fire shall return to the fire.\n    And the claymore shall become one with the fire.\n\tAnd the fire shall repay you in kind.\"\n",
+         "size" : "5",
+         "pname" : "diary",
+         "weight" : "5",
+         "bvalue" : "80",
+         "desc[0]" : "Akhalton's diary lies open in front of you."
+      },
+      "throne@chlyon" : {
+         "location" : "IN_ROOM:chlyon17",
+         "oflags" : [
+            "Pushtoggle",
+            "NoGet"
+         ],
+         "name" : "throne",
+         "examine" : "This guy really likes stone furniture, doesn't he?\n",
+         "linked" : "throne_1",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The throne has been moved to the side, revealing a narrow escape passage."
+      },
+      "door_1@chlyon" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:chlyon18",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door_1",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "forge@chlyon" : {
+         "desc[1]" : "The Thyreenean forge is closed.",
+         "location" : "IN_ROOM:chlyon20",
+         "oflags" : [
+            "Container",
+            "GetFlips",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "forge",
+         "state" : "1",
+         "size" : "60",
+         "weight" : "10",
+         "maxstate" : "1",
+         "desc[0]" : "The Thyreenean forge is open."
+      },
+      "door_gate@chlyon" : {
+         "desc[1]" : "The gate to the north is closed.",
+         "location" : "IN_ROOM:chlyon13",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "door_gate",
+         "desc[2]" : "The gate to the north is locked.",
+         "linked" : "door_gate_1",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "The gate to the north is open."
+      },
+      "desk@chlyon" : {
+         "location" : "IN_ROOM:chlyon18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "desk",
+         "maxstate" : "1"
+      },
+      "stone_firestone@chlyon" : {
+         "location" : "IN_ROOM:chlyon15",
+         "altname" : "stone",
+         "name" : "stone_firestone",
+         "examine" : "It looks.. strange!\n",
+         "size" : "10",
+         "pname" : "firestone",
+         "weight" : "10",
+         "bvalue" : "300",
+         "desc[0]" : "A mystical stone has been dropped here by some careless soul."
+      },
+      "door_gate_1@chlyon" : {
+         "desc[1]" : "The gate is closed.",
+         "location" : "IN_ROOM:chlyon15",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "door_gate_1",
+         "desc[2]" : "The gate is locked.",
+         "linked" : "door_gate",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "The gate is open."
+      },
+      "door@chlyon" : {
+         "desc[1]" : "The door to the west is closed.",
+         "location" : "IN_ROOM:chlyon17",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door",
+         "desc[2]" : "The door to the west is locked.",
+         "linked" : "door_1",
+         "state" : "2",
+         "maxstate" : "2",
+         "desc[0]" : "The door to the west is open."
+      },
+      "fireblade@chlyon" : {
+         "damage" : "30",
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Weapon",
+            "Lit",
+            "Lightable"
+         ],
+         "altname" : "blade",
+         "name" : "fireblade",
+         "examine" : "This is the legendary fireblade of Thyreen, the mystical sword of the\nancient war lords of Chlyon.\n",
+         "size" : "100",
+         "pname" : "fireblade",
+         "weight" : "10",
+         "bvalue" : "1600",
+         "desc[0]" : "A glowing, two-handed sword has been left here by someone."
+      },
+      "cake@chlyon" : {
+         "location" : "IN_ROOM:chlyon18",
+         "weight" : "7",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "cake",
+         "examine" : "The cake whispers in your ear 'Eat me! Eat me!'\n",
+         "bvalue" : "18",
+         "desc[0]" : "A cake fit for a king has been left here.",
+         "size" : "7"
+      },
+      "blue_pendant@chlyon" : {
+         "location" : "WORN_BY:chimera",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "blue",
+         "name" : "blue_pendant",
+         "examine" : "It is made of lapis lazuli and has a white cross on one side. On the reverse\nside, it is enscribed with strange runes of unknown origin.\n",
+         "size" : "5",
+         "weight" : "5",
+         "pname" : "pendant",
+         "bvalue" : "200",
+         "desc[0]" : "A smooth blue pendant has been lost here by someone.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "throne_1@chlyon" : {
+         "desc[1]" : "The passage north is blocked by what seems to be the back of a throne.",
+         "location" : "IN_ROOM:chlyon25",
+         "oflags" : [
+            "Pushtoggle",
+            "NoGet"
+         ],
+         "pname" : "throne",
+         "name" : "throne_1",
+         "maxstate" : "1",
+         "linked" : "throne",
+         "state" : "1"
+      }
+   },
+   "loc" : {
+      "chlyon18@chlyon" : {
+         "exits" : {
+            "e" : "^door_1"
+         },
+         "flags" : [
+            "Private",
+            "Party"
+         ],
+         "zone" : "chlyon",
+         "title" : "The Royal Chambers",
+         "id" : "chlyon18",
+         "description" : "\n  You stand inside the chambers of the king of Thyreen. As the other rooms,\nthis place is lavishly decorated with colorful tapestries. A large feather\nbed occupies most of the room, and a massive black marble desk lies on the\neast wall.\n",
+         "altitude" : null
+      },
+      "chlyon6@chlyon" : {
+         "exits" : {
+            "w" : "chlyon7",
+            "e" : "chlyon6",
+            "n" : "chlyon6",
+            "s" : "chlyon5"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "chlyon",
+         "title" : "Lost Inside The Mountain...",
+         "id" : "chlyon6",
+         "description" : "\n  You are lost among the myriad of tunnels carved inside the mountain. Exits\nare everywhere...\n",
+         "altitude" : null
+      },
+      "chlyon2@chlyon" : {
+         "exits" : {
+            "w" : "chlyon3",
+            "e" : "cottage1@cottage",
+            "u" : "chlyon1",
+            "n" : "town42@town"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "chlyon",
+         "title" : "The Crossroads",
+         "id" : "chlyon2",
+         "description" : "\n  A number of paths branch off from here. To the north, a well travelled\nroads leads off toward a city of some sorts. To the west, a small path\nmeanders into the mountains towards a large entryway carved in stone.\nEastwards, you may attempt to follow a narrow path into the thick forest.\nSomewhere in the distance you hear a volcano erupting.\nThere is a blinking construction sign here.\n",
+         "altitude" : null
+      },
+      "chlyon23@chlyon" : {
+         "exits" : {
+            "e" : "chlyon24",
+            "d" : "chlyon22"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "chlyon",
+         "title" : "Windy Clearing",
+         "id" : "chlyon23",
+         "description" : "\n  You stand atop of a windy clearing on top of the mountain. The view is\nbreathtaking. In the distance you can see the city of Themiscyra, and\nsomewhere in the distance a dark castle with a black tower reigns atop of\na mountain peak. A path windes down to the east from here.\n",
+         "altitude" : null
+      },
+      "chlyon7@chlyon" : {
+         "exits" : {
+            "w" : "chlyon6",
+            "e" : "chlyon6",
+            "n" : "chlyon6",
+            "s" : "chlyon8"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "chlyon",
+         "title" : "Lost Inside The Mountain...",
+         "id" : "chlyon7",
+         "description" : "\n  You are lost among the myriad of tunnels carved inside the mountain. Exits\nare everywhere...\n",
+         "altitude" : null
+      },
+      "chlyon24@chlyon" : {
+         "exits" : {
+            "w" : "chlyon23",
+            "d" : "chlyon27"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "chlyon",
+         "title" : "Narrow Path Winding Down",
+         "id" : "chlyon24",
+         "description" : "\n  You are following a narrow path that descends abruptly along the face of the\nmountain. Below you, another path joins in.\n",
+         "altitude" : null
+      },
+      "chlyon22@chlyon" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "chlyon",
+         "title" : "The Thyreen Forges. But...",
+         "id" : "chlyon22",
+         "description" : "\n  You slip and fall to your death inside the forges of Thyreen.\n",
+         "altitude" : null
+      },
+      "chlyon14@chlyon" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "chlyon",
+         "title" : "The Training Grounds",
+         "id" : "chlyon14",
+         "description" : "\n  The Thyreenean legion commander turns towards you menancingly and then\nshouts an order to his troops. Moments later, you are grabbed, tied up, and\nimpaled!\nThat must hurt!\n",
+         "altitude" : null
+      },
+      "chlyon25@chlyon" : {
+         "exits" : {
+            "n" : "^throne_1",
+            "d" : "chlyon26"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "chlyon",
+         "title" : "Escape Tunel",
+         "id" : "chlyon25",
+         "description" : "\n  You are following a narrow path that descends abruptly along the face of the\nmountain. Below you, another path joins in.\n",
+         "altitude" : null
+      },
+      "chlyon11@chlyon" : {
+         "exits" : {
+            "w" : "chlyon6",
+            "e" : "chlyon6",
+            "n" : "chlyon6",
+            "d" : "chlyon12",
+            "s" : "chlyon6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "chlyon",
+         "title" : "Lost Inside The Mountain...",
+         "id" : "chlyon11",
+         "description" : "\n  You are lost among the myriad of tunnels carved inside the mountain. Exits\nare everywhere...\nA hole has been carved in the floor here.\n",
+         "altitude" : null
+      },
+      "chlyon9@chlyon" : {
+         "exits" : {
+            "w" : "chlyon6",
+            "e" : "chlyon6",
+            "n" : "chlyon10",
+            "s" : "chlyon6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "chlyon",
+         "title" : "Lost Inside The Mountain...",
+         "id" : "chlyon9",
+         "description" : "\n  You are lost among the myriad of tunnels carved inside the mountain. Exits\nare everywhere...\n",
+         "altitude" : null
+      },
+      "chlyon3@chlyon" : {
+         "exits" : {
+            "e" : "chlyon2",
+            "u" : "chlyon4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "chlyon",
+         "title" : "Rocky Path",
+         "id" : "chlyon3",
+         "description" : "\n  You are trudging along a rocky path cut into the face of the mountain.\nAbove you, the path continues toward a large, unnatural cave leading\ninside the mountain. Another path winds down from the very top of the\nmountain, but it is well out of your reach.\n",
+         "altitude" : null
+      },
+      "chlyon13@chlyon" : {
+         "exits" : {
+            "w" : "chlyon14",
+            "n" : "^door_gate",
+            "s" : "chlyon12"
+         },
+         "flags" : [],
+         "zone" : "chlyon",
+         "title" : "The Prison",
+         "id" : "chlyon13",
+         "description" : "\n  You stand inside what seems to be a prison of some sorts. A huge iron gate\non the north wall bars your progress in that direction.\nA plaque above the door seems to speak about a bloodthirsty monster that has\nbeen imprisoned in this place by the ancient gods of the land. A horrible\ncreature, great and swift of foot and strong, whose breath was flame\nunquenchable.\nTo the west, you can spot a legion of Thyreenean warriors practicing their\nmaneuvers. Maybe you shouldn't disturb them!\n",
+         "altitude" : null
+      },
+      "chlyon8@chlyon" : {
+         "exits" : {
+            "w" : "chlyon6",
+            "e" : "chlyon9",
+            "n" : "chlyon6",
+            "s" : "chlyon6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "chlyon",
+         "title" : "Lost Inside The Mountain...",
+         "id" : "chlyon8",
+         "description" : "\n  You are lost among the myriad of tunnels carved inside the mountain. Exits\nare everywhere...\n",
+         "altitude" : null
+      },
+      "chlyon10@chlyon" : {
+         "exits" : {
+            "w" : "chlyon6",
+            "e" : "chlyon6",
+            "n" : "chlyon6",
+            "s" : "chlyon11"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "chlyon",
+         "title" : "Lost Inside The Mountain...",
+         "id" : "chlyon10",
+         "description" : "\n  You are lost among the myriad of tunnels carved inside the mountain. Exits\nare everywhere...\n",
+         "altitude" : null
+      },
+      "chlyon5@chlyon" : {
+         "exits" : {
+            "w" : "chlyon6",
+            "e" : "chlyon4"
+         },
+         "flags" : [],
+         "zone" : "chlyon",
+         "title" : "The Entryway",
+         "id" : "chlyon5",
+         "description" : "\n  As you peer inside the cave from here, you see a myriad of pathways\nleading off in all directions. You shudder at the thought of spending\nthe rest of your life trying to make heads and tails out of this place.\nYou may exit to safety to the east.\n",
+         "altitude" : null
+      },
+      "chlyon17@chlyon" : {
+         "exits" : {
+            "w" : "^door",
+            "n" : "chlyon16",
+            "s" : "^throne"
+         },
+         "flags" : [],
+         "zone" : "chlyon",
+         "title" : "The Thyreenean Throne Room",
+         "id" : "chlyon17",
+         "description" : "\n  Even more beautiful than the hallway, this room is lavishly decorated\nwith lively tapestry and paintings. A small door leads off to the west,\nand the hallway is back to the north. A majestic throne dominates\nthe southern wall. Above the throne, an inscription declares:\n\t\t  \"One god alone of all we loved.\n\t\tWe'll never have a changing heart.\"\n\t\t\n",
+         "altitude" : null
+      },
+      "chlyon1@chlyon" : {
+         "exits" : {
+            "n" : "watch@castle",
+            "d" : "chlyon2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "chlyon",
+         "title" : "Hidden Path",
+         "id" : "chlyon1",
+         "description" : "\n  A small path meanders down from here toward a small meadow from which\na number of roads branch off in all directions.\n",
+         "altitude" : null
+      },
+      "chlyon21@chlyon" : {
+         "exits" : {
+            "u" : "chlyon23",
+            "d" : "chlyon22"
+         },
+         "flags" : [],
+         "zone" : "chlyon",
+         "title" : "Ventilation Shaft",
+         "id" : "chlyon21",
+         "description" : "\n  You stand inside a narrow ventilation shaft. Light trickles in from above\nof you, and below you the forges are emanating an unbearable heat. Feeling\ndizzy, you decide it would be a very good idea to get out of here as soon\nas possible.\n",
+         "altitude" : null
+      },
+      "chlyon19@chlyon" : {
+         "exits" : {
+            "w" : "chlyon12"
+         },
+         "flags" : [],
+         "zone" : "chlyon",
+         "title" : "Lava River",
+         "id" : "chlyon19",
+         "description" : "\n  A river of molten rock blocks your progress. The heat is unbearable, and\nthe air is hot and hard to breathe. Don't even think about trying to cross it!.\nThe low ceiling is cracked from the intense heat and through one large crack\nyou can see another room above you.\n",
+         "altitude" : null
+      },
+      "chlyon4@chlyon" : {
+         "exits" : {
+            "w" : "chlyon5",
+            "d" : "chlyon3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "chlyon",
+         "title" : "Scenic View",
+         "id" : "chlyon4",
+         "description" : "\n  You stand on a wide ledge near the top of the mountain. Below you, the\npath windes down to the safety of the flatlands, and to the west dissapears\ninside the mountain.\n",
+         "altitude" : null
+      },
+      "chlyon26@chlyon" : {
+         "exits" : {
+            "u" : "chlyon25",
+            "d" : "chlyon27"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "chlyon",
+         "title" : "Rocky Path Winding Down",
+         "id" : "chlyon26",
+         "description" : "\n  You are following a narrow path that descends abruptly along the face of the\nmountain. Below you, another path joins in.\n",
+         "altitude" : null
+      },
+      "chlyon15@chlyon" : {
+         "exits" : {
+            "s" : "^door_gate_1"
+         },
+         "flags" : [
+            "Private"
+         ],
+         "zone" : "chlyon",
+         "title" : "The Hold",
+         "id" : "chlyon15",
+         "description" : "\n  You stand in a baren room, everything around you is stone and iron. Large\nchains once hanged from the walls, but now they have been ripped out by\nsome great force. The walls are scarred by gigantic claw marks, and you can\nsee deep fang marks on the chains lying around on the floor.\n",
+         "altitude" : null
+      },
+      "chlyon16@chlyon" : {
+         "exits" : {
+            "n" : "chlyon12",
+            "s" : "chlyon17"
+         },
+         "flags" : [],
+         "zone" : "chlyon",
+         "title" : "Majestic Hallway",
+         "id" : "chlyon16",
+         "description" : "\n  You can't help but admire the beautiful craftmanship that has gone into\nbuilding this hallway. The walls are covered with an ivory-like material,\nand are ornated with ancients runes and symbols whose meaning has been\nlost along the years. One of them you recognize though: The symbol of\nthe people of Thyreen, the warriors who have pledged their lives to serving\nthe ancient dark gods of Chlyon, before they were overthrown. According to\nthe legend, the current gods of the land were impressed with the courage\nthe Thyreeneans displayed in battle and spared their lives with the condition\nthat they will dedicate their lives to making sure the legendary beast\nChimera will never again be unleashed on the lands of Chlyon.\nTo the south, the hallway leads off into what seems to be a throne room.\n",
+         "altitude" : null
+      },
+      "chlyon12@chlyon" : {
+         "exits" : {
+            "e" : "chlyon19",
+            "u" : "chlyon11",
+            "n" : "chlyon13",
+            "s" : "chlyon16"
+         },
+         "flags" : [],
+         "zone" : "chlyon",
+         "title" : "The Heart of the Mountain",
+         "id" : "chlyon12",
+         "description" : "\n  This must be right about the center of the mountain. Paths lead off in\nall directions from here. To the north however, a locked door bars your\nprogress.\n",
+         "altitude" : null
+      },
+      "chlyon20@chlyon" : {
+         "exits" : {
+            "u" : "chlyon21"
+         },
+         "flags" : [],
+         "zone" : "chlyon",
+         "title" : "The Thyreen Forges",
+         "id" : "chlyon20",
+         "description" : "\n  The mythical Thyreenean forge stands before you. According to legend,\nit was created by the old god of fire for the Thyreenean craftsmen to\ncreate weapons for the gods themselves. Some of those weapons have now found\ntheir way in mortal hands. Maybe.. just maybe.. if the legends are true..\nyou could forge your own great weapon!\n",
+         "altitude" : null
+      },
+      "chlyon27@chlyon" : {
+         "exits" : {
+            "u" : "chlyon26",
+            "d" : "chlyon3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "chlyon",
+         "title" : "Abrupt Path",
+         "id" : "chlyon27",
+         "description" : "\n  Below you, a familiar rocky path windes up and down on the face of the\nmountain. You could probably reach it easily, but it will be close to\nimpossible to make it back here from there.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "akhton@chlyon" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "chlyon20",
+         "armor" : "0",
+         "name" : "akhton",
+         "description" : "Akhton, the guardian of the forges is here.. guarding the forges!",
+         "strength" : "140",
+         "speed" : "0",
+         "aggression" : "86",
+         "pname" : "Akhton",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "rexx@chlyon" : {
+         "damage" : "10",
+         "location" : "chlyon23",
+         "speed" : "0",
+         "aggression" : "14",
+         "armor" : "0",
+         "pname" : "Rexx",
+         "name" : "rexx",
+         "description" : "Ellin's dog Rexx is running around chasing its tail.",
+         "strength" : "80"
+      },
+      "ferin@chlyon" : {
+         "damage" : "10",
+         "location" : "chlyon13",
+         "speed" : "0",
+         "aggression" : "86",
+         "armor" : "0",
+         "pname" : "Ferin",
+         "name" : "ferin",
+         "description" : "Ferin, the Thyreenean mercenary blocks your progress!",
+         "strength" : "70"
+      },
+      "akhalton@chlyon" : {
+         "damage" : "10",
+         "location" : "chlyon17",
+         "speed" : "0",
+         "aggression" : "14",
+         "armor" : "0",
+         "pname" : "Akhalton",
+         "name" : "akhalton",
+         "description" : "Akhalton, the King of Thyreen, stands here observing you.",
+         "strength" : "210"
+      },
+      "chimera@chlyon" : {
+         "damage" : "10",
+         "location" : "chlyon15",
+         "speed" : "0",
+         "aggression" : "87",
+         "armor" : "0",
+         "pname" : "Chimera",
+         "name" : "chimera",
+         "description" : "The infamous Chimera prepares to rip your heart out!",
+         "strength" : "330"
+      },
+      "igurd@chlyon" : {
+         "damage" : "10",
+         "location" : "chlyon13",
+         "speed" : "0",
+         "aggression" : "86",
+         "armor" : "0",
+         "pname" : "Igurd",
+         "name" : "igurd",
+         "description" : "Igurd, the Thyreenean commander watches you bemused.",
+         "strength" : "140"
+      },
+      "ellin@chlyon" : {
+         "damage" : "10",
+         "location" : "chlyon23",
+         "speed" : "0",
+         "aggression" : "14",
+         "armor" : "0",
+         "pname" : "Ellin",
+         "name" : "ellin",
+         "description" : "Ellin, the son of the king of Thyreen, is out here having a picnic.",
+         "strength" : "100"
+      }
+   }
+}

@@ -1,0 +1,108 @@
+{
+   "obj" : {
+      "rope@limbo" : {
+         "desc[1]" : "A rope has been coiled here.",
+         "location" : "IN_ROOM:limbo",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "ladder",
+         "name" : "rope",
+         "desc[2]" : "A knotted rope has been coiled here.",
+         "maxstate" : "2",
+         "bvalue" : "30",
+         "desc[0]" : "A coiled rope ladder lies here."
+      },
+      "pouncie@limbo" : {
+         "location" : "IN_ROOM:limbo",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "ball",
+         "name" : "pouncie",
+         "examine" : "\nYou see before you what looks kind of like a Bumble Ball with a belt.\nIt has the name 'Shail' written in italics all over it.\nYou can't drop it so... MAYBE you could WEAR it??",
+         "bvalue" : "10",
+         "desc[0]" : "A strange looking ball is here, moving across the ground.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "ringman@limbo" : {
+         "location" : "IN_ROOM:limbo",
+         "oflags" : [
+            "Wearable",
+            "Lightable"
+         ],
+         "altname" : "wedding",
+         "name" : "RingMan",
+         "size" : "1",
+         "weight" : "1",
+         "pname" : "ring",
+         "bvalue" : "200",
+         "desc[0]" : "A man's wedding ring has been lost here.",
+         "aflags" : [
+            "Hand"
+         ]
+      },
+      "reset@limbo" : {
+         "location" : "IN_ROOM:Limbo",
+         "weight" : "1",
+         "name" : "reset",
+         "examine" : "\nReset in progress....\nReset Completed....\n>\nA voice shouts 'Who the hell reset the game???????'\n\n",
+         "bvalue" : "-10",
+         "desc[0]" : "A reset has been left here somewhere.",
+         "size" : "1"
+      },
+      "ringwoman@limbo" : {
+         "location" : "IN_ROOM:limbo",
+         "oflags" : [
+            "Wearable",
+            "Lightable",
+            "Lit"
+         ],
+         "altname" : "wedding",
+         "name" : "RingWoman",
+         "examine" : "You hold a shining gold ring embossed with tiny hearts.",
+         "size" : "1",
+         "weight" : "1",
+         "pname" : "ring",
+         "bvalue" : "200",
+         "desc[0]" : "A woman's wedding ring has been misplaced.",
+         "aflags" : [
+            "Hand"
+         ]
+      }
+   },
+   "loc" : {
+      "hell@limbo" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "limbo",
+         "title" : "Hell",
+         "id" : "hell",
+         "description" : "\n  You are now in hell. The heat and searing flames slowly drive you mad\nand you start to panic a little. There are clawmarks on the wall from\nthe last person that was brought here, and the pool of blood that you\nstep in doesn't help your nerves any. It seems that you upset the Gods\npretty well and you are now getting the punishment that you deserve.\n",
+         "altitude" : null
+      },
+      "limbo@limbo" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "limbo",
+         "title" : "Limbo",
+         "id" : "limbo",
+         "description" : "\n   You are floating in a formless void, detached from all sensation of physical\nmatter, surrounded by swirling glowing light, which fades into the relative\ndarkness around you without any trace of edges or shadow.\n   There is a \"No Tipping\" notice pinned to the darkness.\n",
+         "altitude" : null
+      },
+      "norun@limbo" : {
+         "exits" : {},
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "limbo",
+         "title" : "Runners Holding Area",
+         "id" : "norun",
+         "description" : "\n  It seems that the Gods are not allowing players to explore the MUD at\nthis\ntime. You may wait here for them to finish what they are doing or you may\nleave and return again later. The Gods apologize for this inconvience.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {}
+}

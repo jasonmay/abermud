@@ -1,0 +1,476 @@
+{
+   "obj" : {
+      "elvencloak@grove" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "armor" : "70",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "elvencloak",
+         "examine" : "\nThis cloak seems to blend in rather well into the surroundings.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "500",
+         "desc[0]" : "\nA light elvencloak, made of the thread of Fates, lies here, nicely folded.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms"
+         ]
+      },
+      "thread@grove" : {
+         "location" : "CARRIED_BY:clotho",
+         "weight" : "1",
+         "oflags" : [
+            "RegenHealth"
+         ],
+         "name" : "thread",
+         "examine" : "\nYou can barely see the strong thin thread, except for the glimmer. Wow.",
+         "bvalue" : "5",
+         "desc[0]" : "\nSome of Clotho's spun thread is here, pulsing with an inner life.",
+         "size" : "1"
+      },
+      "sculpture@grove" : {
+         "location" : "IN_ROOM:flower_garden",
+         "weight" : "8",
+         "name" : "sculpture",
+         "examine" : "\nThis seems to be very priceless, and you've decided to steal it.",
+         "bvalue" : "800",
+         "desc[0]" : "A gorgeous wooden elven sculpture sits here in the flowers.",
+         "size" : "10"
+      },
+      "beaker@grove" : {
+         "desc[1]" : "The beaker is filled with a sickeningly pink fluid.",
+         "location" : "CARRIED_BY:platydonk",
+         "armor" : "-1",
+         "name" : "beaker",
+         "linked" : "pipetman",
+         "state" : "0",
+         "size" : "2",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "An empty beaker lies here."
+      },
+      "donut@grove" : {
+         "location" : "IN_ROOM:study",
+         "weight" : "1",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "donut",
+         "examine" : "Yum, the thing has a bite out of it. Oh well, food is food.",
+         "bvalue" : "10",
+         "desc[0]" : "A half-eaten donut sits on the desk.",
+         "size" : "4"
+      },
+      "figleaf@grove" : {
+         "location" : "IN_ROOM:fig_garden",
+         "armor" : "25",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "figleaf",
+         "examine" : "You think it might have actually been worn by Adam or Eve.",
+         "size" : "5",
+         "weight" : "2",
+         "bvalue" : "50",
+         "desc[0]" : "A fig leaf, fallen from a tree, blows around in the breeze.",
+         "aflags" : [
+            "Legs"
+         ]
+      },
+      "glove@grove" : {
+         "location" : "IN_ROOM:dark_hole",
+         "oflags" : [
+            "Wearable",
+            "Lit"
+         ],
+         "name" : "glove",
+         "examine" : "\nThe glove is very powerful, able to do things you can't see. Bummer, huh?",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "500",
+         "aflags" : [
+            "Hand"
+         ],
+         "desc[0]" : "\nSauron's Glove glows here, ..You have an irresistible urge to wear it."
+      },
+      "pipetman@grove" : {
+         "location" : "IN_ROOM:out_back",
+         "name" : "pipetman",
+         "examine" : "The end is full of an odd fluid, and you wonder what from.",
+         "linked" : "beaker",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "20",
+         "desc[0]" : "A pipetman, used in genetic research, lies here discarded."
+      }
+   },
+   "loc" : {
+      "glen@grove" : {
+         "exits" : {
+            "e" : "cottage",
+            "s" : "grove_path"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Glen",
+         "id" : "glen",
+         "description" : "\n   A small glen opens up before you, several marble benches circle a large \nfountain in the center of the area. The fountain bubbles water and glistens\nbrightly in the warming sun. Carved into the fountain is a sculpture of an\nelven woman playing the lute, perhaps a memorial to some great lady. You see\na hidden cottage through some bushes, amongst some trees.\n",
+         "altitude" : "800"
+      },
+      "over_view@grove" : {
+         "exits" : {
+            "w" : "fig_garden",
+            "e" : "recluse",
+            "n" : "grove_path",
+            "s" : "entrance"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Over View",
+         "id" : "over_view",
+         "description" : "\n   You reach a high point in the forest, overlooking the entire forest. The mist\nslightly curls upwards to the sun, dew sparkling on the ground and leaves. To\nthe north you see a well-worn path. East is a thick crop of shrubs. South you\nsee the meadow of the beginning of the Elven Forest, while westwards lies a\ndense garden. The beauty might make your eyes tear a bit.\n",
+         "altitude" : "800"
+      },
+      "dark_hole@grove" : {
+         "exits" : {
+            "n" : "flower_garden"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Dark Hole Behind the Gate",
+         "id" : "dark_hole",
+         "description" : "\n   You've entered a somewhat dark, dank hole behind the dingy gate. The gate\ncreaks a bit, making squeals that set your hair on end. For some reason, you\ndon't know why, this place is off limits to normal people. There must be \nsomething very special here. \n",
+         "altitude" : "800"
+      },
+      "grove_path@grove" : {
+         "exits" : {
+            "n" : "glen",
+            "s" : "over_view"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Grove Path",
+         "id" : "grove_path",
+         "description" : "\n   You are on a well-made path through the elven forest's beautiful canopy.\nTwisting around the trees, the path takes you deep into the forest, making you\nwonder where you are.\n",
+         "altitude" : "800"
+      },
+      "study@grove" : {
+         "exits" : {
+            "w" : "dwelling"
+         },
+         "flags" : [
+            "soundproof",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Study",
+         "id" : "study",
+         "description" : "\n   Books upon hundreds fill this study. An immense library is secluded in this\nsmall dwelling, vast stores of knowledge lie here. Any book on any subject or\nauthor is here somewhere, waiting for the reader to pick them up lovingly.\nA desk with a highly advanced computer is cluttered by numerous tomes. Bright\nlight filters in through the window, making this a nice place to be.\n",
+         "altitude" : null
+      },
+      "lab@grove" : {
+         "exits" : {
+            "n" : "dwelling"
+         },
+         "flags" : [
+            "soundproof",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Gaea's Laboratory",
+         "id" : "lab",
+         "description" : "\n   Here is where Mother Nature does her nature work. A class 'A' geneticist, \nshe finds ways to alter the paths of DNA. Several large lab desks with large\ncountertops fill the middle of the room, and shelves with beakers and flasks\nfilled with chemicals line the walls. Many odd things are in this room that you \ndon't dare touch, not knowing what next shall happen to you. Among these hum a\nfew HOOD machines, automatically sorting base-pairs from DNA strands.\n",
+         "altitude" : null
+      },
+      "out_back@grove" : {
+         "exits" : {
+            "n" : "ferns"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Out Back in the Bushes",
+         "id" : "out_back",
+         "description" : "\n   You get a nice view of bushes. To the west you see a wall of rocks. Nothing\ntoo special about this area, except that seeing all these nice bushes gives you\nthe urge Mother Nature usually provides.\n",
+         "altitude" : "800"
+      },
+      "dwelling@grove" : {
+         "exits" : {
+            "e" : "study",
+            "n" : "entrance",
+            "s" : "lab"
+         },
+         "flags" : [
+            "soundproof"
+         ],
+         "zone" : "grove",
+         "title" : "Nature's Dwelling",
+         "id" : "dwelling",
+         "description" : "\n   You have entered the dwelling of Mother Nature. Of course she lives in these\nbeautiful lands after creating them. Plants and animals abound within this \nplace, and you feel comfortable and warm. The whirr of insects relaxes you and\nyou wonder what sort of person the Green Mother really is. Couches and chairs\nare made out of the natural things, grown out of either wood, moss, or some\nsuch living material.\n   A miniature sun warms the place, keeping it light. The walls allow fresh air\nthrough to circulate, and little trickles of water flow from the ceiling keeping\neverything alive. The floor is springy with plantlife, and you slightly bounce\nalong as you walk. Two rooms are formed off of this one.\n",
+         "altitude" : null
+      },
+      "flower_garden@grove" : {
+         "exits" : {
+            "w" : "ferns",
+            "n" : "fig_garden",
+            "s" : "gate"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Flower Garden",
+         "id" : "flower_garden",
+         "description" : "\n   The flowers that abound here in color lie all about you. In the trees, \non the ground, in many forms and colors. The breeze blows some of the scent\ntoward you, and you become heady at the fragrance.\n",
+         "altitude" : "800"
+      },
+      "ferns@grove" : {
+         "exits" : {
+            "e" : "flower_garden",
+            "s" : "out_back"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Ferns",
+         "id" : "ferns",
+         "description" : "\n   This place is overloaded with ferns. You wade through the fronds, feeling\nlost in the overgrowth. Nice place to get lost.\n",
+         "altitude" : "800"
+      },
+      "cottage@grove" : {
+         "exits" : {
+            "w" : "glen"
+         },
+         "flags" : [
+            "soundproof",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Dinthiar's Cottage",
+         "id" : "cottage",
+         "description" : "\n   You have entered the home of Dinthiar, the Elven King. It is a rather simple\ndwelling. A bed, table and chair are the only furnishings. However, the whole\nroom is given a 'foresty' feel by the way the ivy which grows up the insides\nof the walls, and by the potted plants which hang from the ceiling. It is \nexactly the type of dwelling that you would expect an elf to have. A large\nelvensword lies on the table, layed there by loving hands.\n",
+         "altitude" : null
+      },
+      "entrance@grove" : {
+         "exits" : {
+            "e" : "grand",
+            "n" : "over_view",
+            "s" : "dwelling"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Entrance to the Elven Forest",
+         "id" : "entrance",
+         "description" : "\n   A magnificent expanse of forest spreads before you. The morning mist has not\nquite lifted totally from the ground, making the Elven Forest a mystical place\nto gaze upon. You feel awed. The ancient forest lies in grand splendor, as yet  \nuntouched by the two evils warring in your present time. Instead of corruptness,\nyou are moved by the beauty the forest and wish that the trees would be this\nlush in your own time. You have no desire to leave this beautiful land. To the \nnorth you see an high overview of the forest, to the south you see the entrance\nof a dwelling of some sort, hidden well behind thick bushes. \n",
+         "altitude" : "800"
+      },
+      "fig_garden@grove" : {
+         "exits" : {
+            "e" : "over_view",
+            "s" : "flower_garden"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Fig Tree Garden",
+         "id" : "fig_garden",
+         "description" : "\n   You arrive at a garden full of fig trees. Some fruit ripens on the branches,\nswaying gently in the sun. Trees are everywhere, creating a nice grove that \nmakes you feel comfortable walking around in.\n   You have this weird feeling you read about this place in some sort of book\ninvolving two people and a snake of some sort.\n",
+         "altitude" : "800"
+      },
+      "recluse@grove" : {
+         "exits" : {
+            "w" : "over_view",
+            "n" : "fates_cavern"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Recluse",
+         "id" : "recluse",
+         "description" : "\n   Forging your way through the thick shrubs, you stumble upon a hidden pond.\nClear and pure, this water allows you to see to the deepest bottom. Multi-\ncolored fishes swim here, cattails rustle slightly in the breeze. Water fowl\nfloat around on it's surface. As you look about, you hear myriads of little\nvoices calling and taunting you. Something seems to be flitting around the \nnorthern end of the pond.\n",
+         "altitude" : "800"
+      },
+      "gate@grove" : {
+         "exits" : {
+            "n" : "flower_garden",
+            "s" : "dark_hole"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Gateway",
+         "id" : "gate",
+         "description" : "\n   A large dingy gate lies before you, half-way open, partially hidden in the\ndense foliage. Even in this beautiful land, you get an odd sense of forboding\nwhen you look at the gate. There is a sign:\n\n                       +-----------------------------+\n                       |  NO MORTALS ALLOWED ACCESS  | \n                       +-----------------------------+ \n",
+         "altitude" : "800"
+      },
+      "fates_cavern@grove" : {
+         "exits" : {
+            "s" : "recluse"
+         },
+         "flags" : [
+            "soundproof",
+            "outdoors",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Fates Cavern",
+         "id" : "fates_cavern",
+         "description" : "\n   This is the Cavern of the Three Fates. In one area you see a place for\nsleep, another a place to cook. In the center, a large fire burns brightly.\nIn one corner, there is a spinning wheel. In another, a large tapestry is\nbeing woven on a loom. The place is quite cozy, and you get a sense of great\npower from being here.\n",
+         "altitude" : "800"
+      },
+      "grand@grove" : {
+         "exits" : {
+            "w" : "entrance"
+         },
+         "flags" : [
+            "soundproof",
+            "cantsummon",
+            "nosummon"
+         ],
+         "zone" : "grove",
+         "title" : "Inside the Grand Oak",
+         "id" : "grand",
+         "description" : "\n   You appear to be in the Old Oak, except that something's different. \nEverything seems to be fresher, newer, and more full of life. The Oak itself \nseems to be smaller, possibly because you've come to a time when it\nwas several centuries younger. There is passage west to the outside.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "atropos@grove" : {
+         "damage" : "10",
+         "location" : "fates_cavern",
+         "armor" : "0",
+         "name" : "atropos",
+         "description" : "Old wise Atropos sits here, cutting the thread of life.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Atropos",
+         "aggression" : "50"
+      },
+      "clotho@grove" : {
+         "damage" : "10",
+         "location" : "fates_cavern",
+         "armor" : "0",
+         "name" : "clotho",
+         "description" : "Young Clotho sits here, spinning the thread of life.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Clotho",
+         "aggression" : "50"
+      },
+      "dinthiar@grove" : {
+         "eflags" : [
+            "Fireball",
+            "Missile",
+            "Shock",
+            "Frost",
+            "ImmCripple",
+            "ImmBlind",
+            "ImmMute",
+            "ImmDeaf"
+         ],
+         "damage" : "20",
+         "location" : "cottage",
+         "armor" : "0",
+         "name" : "dinthiar",
+         "description" : "Dinthiar, King of the Elves, sits here waiting for you.",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "King Dinthiar",
+         "aggression" : "0"
+      },
+      "platydonk@grove" : {
+         "eflags" : [
+            "ImmCripple",
+            "ImmBlind",
+            "ImmMute",
+            "ImmDeaf"
+         ],
+         "damage" : "25",
+         "location" : "lab",
+         "armor" : "0",
+         "name" : "platydonk",
+         "description" : "\nThe PlatyDonk, Nature's horrific mutation, shuffles here, drooling on \nthe floor.",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "The PlatyDonk",
+         "aggression" : "50"
+      },
+      "lachesis@grove" : {
+         "damage" : "10",
+         "location" : "fates_cavern",
+         "armor" : "0",
+         "name" : "lachesis",
+         "description" : "Middle-aged Lachesis is here, weaving the tapestry of life.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Lachesis",
+         "aggression" : "50"
+      }
+   }
+}

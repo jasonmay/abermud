@@ -1,0 +1,967 @@
+{
+   "obj" : {
+      "ladder2cove@pirate" : {
+         "desc[1]" : "A rope ladder is here, curled up neatly.",
+         "location" : "IN_ROOM:pirate0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "ladder2Cove",
+         "linked" : "ladder2pirate",
+         "state" : "0",
+         "pname" : "ladder",
+         "maxstate" : "1",
+         "desc[0]" : "A rope ladder is thrown over the side of the ship."
+      },
+      "wall@pirate" : {
+         "location" : "IN_ROOM:pirate24",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "writing",
+         "name" : "wall",
+         "examine" : "\nThe writing mentions that many talismen and amulets used to exist that allowed\nits wearer to breathe underwater.",
+         "size" : "0",
+         "pname" : "wall",
+         "weight" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "The stone wall appears to have some writing on it."
+      },
+      "powder_door@pirate" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pirate9",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "powder_door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "hallway_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "bush@pirate" : {
+         "desc[1]" : "A small berry bush is here, covered with ripe berries.",
+         "location" : "IN_ROOM:pirate16",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "plant",
+         "name" : "bush",
+         "examine" : "It looks like a blackberry bush.",
+         "linked" : "berries",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "bush",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A small berry bush is here, picked clean."
+      },
+      "mess_door@pirate" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pirate5",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "mess_door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "hold_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "boulder1@pirate" : {
+         "desc[1]" : "A huge boulder block the doorway.",
+         "location" : "IN_ROOM:pirate30",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "rock",
+         "name" : "boulder1",
+         "examine" : "It is firmly wedged. Nothing short of blasting would remove it!",
+         "linked" : "boulder2",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "boulder",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "Fragments from a boulder cover the floor."
+      },
+      "hallway_door@pirate" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pirate7",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "hallway_door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "powder_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "hold_door@pirate" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pirate4",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "hold_door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "mess_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "coral@pirate" : {
+         "location" : "IN_ROOM:pirate28",
+         "oflags" : "{}",
+         "altname" : "piece",
+         "name" : "coral",
+         "examine" : "It seems to have at one time been set in jewelry.",
+         "size" : "111",
+         "pname" : "coral",
+         "weight" : "50",
+         "bvalue" : "250",
+         "desc[0]" : "A small, polished piece of coral lies here."
+      },
+      "plank2@pirate" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:pirate13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "board",
+         "name" : "plank2",
+         "examine" : "",
+         "linked" : "plank1",
+         "state" : "1",
+         "pname" : "plank",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "There is a plank leading east onto the pirate ship."
+      },
+      "ruby@pirate" : {
+         "location" : "IN_ROOM:pirate31",
+         "oflags" : "{}",
+         "altname" : "gem",
+         "name" : "ruby",
+         "examine" : "It looks suitable to put on the hilt of a sword.",
+         "size" : "5",
+         "pname" : "ruby",
+         "weight" : "5",
+         "bvalue" : "600",
+         "desc[0]" : "A large ruby is lying on the floor."
+      },
+      "table@pirate" : {
+         "location" : "IN_ROOM:pirate11",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "table",
+         "name" : "table",
+         "bvalue" : "0",
+         "desc[0]" : ""
+      },
+      "plank1@pirate" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:pirate0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "board",
+         "name" : "plank1",
+         "examine" : "",
+         "linked" : "plank2",
+         "state" : "1",
+         "pname" : "plank",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A plank extends west to the shore."
+      },
+      "keg@pirate" : {
+         "location" : "IN_ROOM:pirate9",
+         "oflags" : "{}",
+         "altname" : "gunpowder",
+         "name" : "keg",
+         "examine" : "It looks powerful enough to destroy a large rock!",
+         "size" : "30",
+         "pname" : "keg",
+         "weight" : "30",
+         "bvalue" : "50",
+         "desc[0]" : "A keg of gunpowder is sitting nearby."
+      },
+      "boulder2@pirate" : {
+         "desc[1]" : "A huge boulder block the doorway.",
+         "location" : "IN_ROOM:pirate31",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "rock",
+         "name" : "boulder2",
+         "examine" : "It is firmly wedged. Nothing would remove it!",
+         "linked" : "boulder1",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "boulder",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "Fragments from a boulder cover the floor."
+      },
+      "telescope@pirate" : {
+         "location" : "IN_ROOM:pirate1",
+         "oflags" : "{}",
+         "altname" : "scope",
+         "name" : "telescope",
+         "examine" : "\nIt is small, and made of brass.  Obviously it is used by sailors to sight\nland.",
+         "size" : "15",
+         "pname" : "telescope",
+         "weight" : "5",
+         "bvalue" : "100",
+         "desc[0]" : "A small telescope is laying here."
+      },
+      "oranges@pirate" : {
+         "location" : "IN_ROOM:pirate6",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "oranges",
+         "examine" : "They look good enough to prevent scurvy!",
+         "size" : "1",
+         "pname" : "oranges",
+         "weight" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "Some tasty looking oranges lie nearby."
+      },
+      "sabre@pirate" : {
+         "damage" : "16",
+         "location" : "BOTH_BY:Redbeard",
+         "armor" : "20",
+         "oflags" : [
+            "Weapon",
+            "Wearable"
+         ],
+         "altname" : "sword",
+         "name" : "sabre",
+         "examine" : "\nIt appears to have a setting for a gem in the hilt, but the gem has been\npried out.",
+         "size" : "40",
+         "weight" : "20",
+         "pname" : "sabre",
+         "bvalue" : "600",
+         "desc[0]" : "A large sabre has been left here.",
+         "aflags" : [
+            "Hands"
+         ]
+      },
+      "coins@pirate" : {
+         "location" : "IN_ROOM:pirate31",
+         "oflags" : "{}",
+         "altname" : "platinum",
+         "name" : "coins",
+         "examine" : "They are made of platinum and are very valuable.",
+         "size" : "5",
+         "pname" : "coins",
+         "weight" : "5",
+         "bvalue" : "400",
+         "desc[0]" : "Coins lay scattered across the floor."
+      },
+      "keychain@pirate" : {
+         "location" : "IN_ROOM:pirate27",
+         "oflags" : "{}",
+         "altname" : "foot",
+         "name" : "keychain",
+         "examine" : "\nA cute, but fragrant hobbit's foot has been cast aside.  Someone has obviously\nused it for a keychain.",
+         "size" : "1",
+         "pname" : "keychain",
+         "weight" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "Hamlet's left foot lies in one corner."
+      },
+      "sail@pirate" : {
+         "desc[1]" : "A sail is raised and billowing in the wind.",
+         "location" : "IN_ROOM:pirate0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Sail",
+         "state" : "0",
+         "pname" : "Sail",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A sail lies here, furled."
+      },
+      "mastrope@pirate" : {
+         "location" : "IN_ROOM:pirate0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "rope",
+         "name" : "mastrope",
+         "bvalue" : "0",
+         "desc[0]" : "A rope hangs down from the mast."
+      },
+      "aft_door@pirate" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pirate10",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "aft_door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "captains_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "ladder2pirate@pirate" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Cove@village",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "ladder2pirate",
+         "linked" : "ladder2Cove",
+         "state" : "0",
+         "pname" : "ladder",
+         "maxstate" : "1",
+         "desc[0]" : "\nA rope ladder climbs up the side of a large pirate ship floating in the cove."
+      },
+      "berries@pirate" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:pirate16",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "blackberries",
+         "name" : "berries",
+         "examine" : "They look like blackberries, but you're not sure.",
+         "linked" : "bush",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "berries",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "Several small berries litter the ground here."
+      },
+      "captains_door@pirate" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pirate11",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "captains_door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "aft_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "lemon@pirate" : {
+         "location" : "IN_ROOM:pirate6",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "lemon",
+         "examine" : "They appear to be edible.",
+         "size" : "1",
+         "pname" : "lemons",
+         "weight" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "Some sour lemons have been left here."
+      }
+   },
+   "loc" : {
+      "pirate7@pirate" : {
+         "exits" : {
+            "w" : "pirate8",
+            "n" : "pirate5",
+            "s" : "^hallway_door"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "Hallway",
+         "id" : "pirate7",
+         "description" : "\n   You are walking in a narrow hallway.  To the west, you see a doorway opening\ninto what appears to be the crew's bunks, and to the south, the hallway ends in\na door.\n",
+         "altitude" : null
+      },
+      "pirate26@pirate" : {
+         "exits" : {
+            "w" : "pirate27",
+            "e" : "pirate25"
+         },
+         "flags" : [
+            "UnderWater",
+            "Dark"
+         ],
+         "zone" : "pirate",
+         "title" : "Temple Entrance",
+         "id" : "pirate26",
+         "description" : "\n   You stand in the entrance room of what was once a proud temple to some\nancient God. Rotted wood floats gently in the room, obscuring your view.\nTo the west, you see the altar room, and a doorway leads outside to the east.\n",
+         "altitude" : null
+      },
+      "pirate9@pirate" : {
+         "exits" : {
+            "n" : "^powder_door"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "Powder Room",
+         "id" : "pirate9",
+         "description" : "\n   You are in the room that the ship stores its gunpowder suppies in.  You\nsee several huge barrels, some full of gunpowder, others full of cannonballs.\nA door can be seen in the north wall.\n",
+         "altitude" : null
+      },
+      "pirate20@pirate" : {
+         "exits" : {
+            "e" : "pirate18",
+            "u" : "pirate19",
+            "d" : "pirate18",
+            "s" : "pirate19"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "Volcano Path",
+         "id" : "pirate20",
+         "description" : "\n   You are standing on a path climbing the side of the volcano. To the south,\nyou can see a level area, apparently the end of the path. To the east, the \npath continues down the volcano.\n",
+         "altitude" : "600"
+      },
+      "pirate17@pirate" : {
+         "exits" : {
+            "w" : "pirate21",
+            "u" : "pirate18",
+            "n" : "pirate16",
+            "s" : "pirate18"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "pirate",
+         "title" : "The Beach",
+         "id" : "pirate17",
+         "description" : "\n   You are standing on the shore of a lovely tropical island. White sand\nextends along the shoreline. The western horizon is dominated by a huge\nvolcano. To the west a small path leads to a tunnel that cuts into the\nheart of the volcano. Another small path leads off to the south, winding\nits way up the side of the volcano, and small bushes can be seen to the\nnorth.\n",
+         "altitude" : "0"
+      },
+      "pirate14@pirate" : {
+         "exits" : {
+            "w" : "pirate22",
+            "e" : "pirate13",
+            "s" : "pirate16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "Among the Trees",
+         "id" : "pirate14",
+         "description" : "\n   You are in the shlter of a group of palm trees that surround you in almost\na perfect circle. To the east, you can see a sandy beach. Small bushes\ndominate the south, and a small hill rises to the west.\n",
+         "altitude" : "0"
+      },
+      "pirate13@pirate" : {
+         "exits" : {
+            "w" : "pirate14",
+            "e" : "^plank2",
+            "s" : "pirate15"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "Sandy Shore",
+         "id" : "pirate13",
+         "description" : "\n   You are standing on a glittering white shore, unmarked save by the waves\nthat are quietly coming and going.  A large pirate ship can be seen floating\nplacidly in the bay.\n",
+         "altitude" : null
+      },
+      "pirate24@pirate" : {
+         "exits" : {
+            "e" : "pirate23",
+            "d" : "pirate23"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "End of the Path",
+         "id" : "pirate24",
+         "description" : "\n   You are at the end of the path, blocked by a solid stone wall. The only\nexit appears to be back down the mountain to the east.\n",
+         "altitude" : "300"
+      },
+      "pirate8@pirate" : {
+         "exits" : {
+            "e" : "pirate7"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "Crew's Quarters",
+         "id" : "pirate8",
+         "description" : "\n   You are in a small room, lined on two walls with bunk beds.  You see all\nsorts of carvings in the wood walls, which were probably made by idle sailors\nwith large knifes.  You see a small table made out of a barrel and a wooden\npanel.  A doorway is in the east wall.\n",
+         "altitude" : null
+      },
+      "pirate30@pirate" : {
+         "exits" : {
+            "w" : "^boulder1",
+            "d" : "pirate29"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pirate",
+         "title" : "Accounting Room",
+         "id" : "pirate30",
+         "description" : "\n   You are in a room that through some miracle is still full of air. Though\nstale, it appears to be breathable. A small desk is in shambles in one corner\nof the room, and papers lie everywhere. There is a doorway to the west, and\nstairs lead down into water.\n",
+         "altitude" : null
+      },
+      "pirate15@pirate" : {
+         "exits" : {
+            "w" : "pirate16",
+            "n" : "pirate13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "White Beach",
+         "id" : "pirate15",
+         "description" : "\n   You are standing on a pure sand beach, blindingly white. Pounding waves\nmake a soothing sound, and you feel relaxed here. Raucous calls of the seagulls\ncan be heard in the distance. Small bushes take over the shore to the west,\nand the beach continues to the north.\n",
+         "altitude" : "0"
+      },
+      "pirate1@pirate" : {
+         "exits" : {
+            "d" : "pirate0"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "In the Crow's Nest",
+         "id" : "pirate1",
+         "description" : "\n   You are inside a large basket far up the ship's main mast.  Upon looking\naround, you see a couple of small islands off in the sea.\n",
+         "altitude" : "0"
+      },
+      "pirate2@pirate" : {
+         "exits" : {
+            "e" : "pirate3",
+            "d" : "pirate4",
+            "s" : "pirate0"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "Foredeck of the Ship",
+         "id" : "pirate2",
+         "description" : "\n   You are standing on the deck at the bow end of the pirate ship.  Cannon\nemplacements line the sides, and a small pile of cannon balls is beside each\ncannon.  A small hatchway leads down into what is apparently the hold, and  a\nsmall plank leads out over the ocean to the east.  Around the ship, you see\nclear blue water, infested with man-eating sharks.\n",
+         "altitude" : "0"
+      },
+      "pirate6@pirate" : {
+         "exits" : {
+            "e" : "pirate5"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "The Galley",
+         "id" : "pirate6",
+         "description" : "\n   You are standing in the middle of the cramped room that serves as the ship's\nkitchen.  Lining the walls are pots, pans, and other kitchen utensils.  A\nsmall stove sits in one corner of the room, amid sacks of flour, sugar, and\npepper.  The only exit to the room is in the east wall.\n",
+         "altitude" : null
+      },
+      "pirate27@pirate" : {
+         "exits" : {
+            "w" : "pirate28",
+            "e" : "pirate26",
+            "s" : "pirate29"
+         },
+         "flags" : [
+            "NoMobiles",
+            "UnderWater",
+            "Dark"
+         ],
+         "zone" : "pirate",
+         "title" : "Altar Room",
+         "id" : "pirate27",
+         "description" : "\n   You are standing amid the pews in the main room of the temple. Murals of\nhobbits in a number of activities cover the walls, giving the room a cheerful\nappearance. On the altar at the front of the room is what appears to be the\nremains of food, apparently some sort of offering to the Gods. Exits lead to\nthe east, south, and west.\n",
+         "altitude" : null
+      },
+      "pirate3@pirate" : {
+         "exits" : {},
+         "flags" : [
+            "Outdoors",
+            "Death"
+         ],
+         "zone" : "pirate",
+         "title" : "The Plank snaps and .... ",
+         "id" : "pirate3",
+         "description" : "\n   As you step out onto the plank, a large crack splits it in two.  You quickly\nplunge into the water below.  As you struggle for breath, several sharks \npromptly make you their next meal...\n",
+         "altitude" : "0"
+      },
+      "pirate25@pirate" : {
+         "exits" : {
+            "w" : "pirate26",
+            "e" : "pirate21",
+            "u" : "pirate21"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "pirate",
+         "title" : "In the Lagoon",
+         "id" : "pirate25",
+         "description" : "\n   You are under the surface of the lagoon. To the west of you, amidst the\nseaweed flaoting gently on the current, you see the entrance to the submerged\ntemple. Though eroded and barnacle covered, it looks stable and remarkably\nintact. To the east, a narrow staircase leads up out of the water.\n",
+         "altitude" : null
+      },
+      "pirate5@pirate" : {
+         "exits" : {
+            "w" : "pirate6",
+            "n" : "^mess_door",
+            "s" : "pirate7"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "Ship's Mess",
+         "id" : "pirate5",
+         "description" : "\n   You are in a large room with several long tables.  Sawdust covers the floor,\nand scraps of food litter both it and the tables.  Smokey light streams in \nfrom several portholes lining the walls, but it does nothing to lighten the\nmood of the place.  A small doorway leads off to the west, a hallway extends\nto the south, and a large door stands in the middle of the north wall.\n",
+         "altitude" : null
+      },
+      "pirate11@pirate" : {
+         "exits" : {
+            "n" : "^captains_door"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "Captain's Quarters",
+         "id" : "pirate11",
+         "description" : "\n   You are standing in what is obviously the captain's room.  It is lushly\naccomodated, and windows abound everywhere.  A large table is set up in the\nmiddle of the room, and a huge map of the ocean is spread out upon it.  To\nthe north, a door opens out onto the deck.\n",
+         "altitude" : null
+      },
+      "pirate12@pirate" : {
+         "exits" : {
+            "d" : "pirate10"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "Ship's Wheel",
+         "id" : "pirate12",
+         "description" : "\n   You are on a large, empty platform.  In front of you, you see a large wheel\nwhich obviously steers this mighty ship.  A small flight of stairs lead down\nto the main deck.\n",
+         "altitude" : null
+      },
+      "pirate16@pirate" : {
+         "exits" : {
+            "e" : "pirate15",
+            "n" : "pirate14",
+            "s" : "pirate17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "The Bushes",
+         "id" : "pirate16",
+         "description" : "\n   You are in a clump of knee-high bushes that are scraping uncomfortably\nagainst your legs. A group of trees stand to the north, and a beach can be\nseen to the east and to the south.\n",
+         "altitude" : "0"
+      },
+      "pirate29@pirate" : {
+         "exits" : {
+            "u" : "pirate30",
+            "n" : "pirate27"
+         },
+         "flags" : [
+            "UnderWater",
+            "Dark"
+         ],
+         "zone" : "pirate",
+         "title" : "Small Storage Room",
+         "id" : "pirate29",
+         "description" : "\n   You stand in what used to be a small, unremarkable store room. It is barren\nexcept for a stairway leading up into an air-filled chamber, and a doorway\nleading to the north.\n",
+         "altitude" : null
+      },
+      "pirate10@pirate" : {
+         "exits" : {
+            "u" : "pirate12",
+            "n" : "pirate0",
+            "s" : "^aft_door"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "Aft Deck",
+         "id" : "pirate10",
+         "description" : "\n   You are near the back of the ship, standing on the deck.  A large cabin\nrises from the deck to the south, with a small door leading into it.  A small\nstairway leads onto the roof of it.  The deck continues on to the north.\n",
+         "altitude" : null
+      },
+      "pirate22@pirate" : {
+         "exits" : {
+            "e" : "pirate14",
+            "u" : "pirate23",
+            "n" : "pirate23",
+            "d" : "pirate14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "Start of the Path",
+         "id" : "pirate22",
+         "description" : "\n   You are standing on the low hill, and stretching out in front of you is a\nsmall path, leading up this side of an old volcano that dominates the western\nhorizon. To the east, at the base of the hill, you see a small circle of\npalm trees, and the path extends off to the north.\n",
+         "altitude" : "100"
+      },
+      "pirate4@pirate" : {
+         "exits" : {
+            "u" : "pirate2",
+            "s" : "^hold_door"
+         },
+         "flags" : [],
+         "zone" : "pirate",
+         "title" : "Ship's Hold",
+         "id" : "pirate4",
+         "description" : "\n   You are in the ship's hold, apparently just a rather large, open space.  It\nis immediately obvious that the pirates have transported a large variety of\nobjects in their ship, for you see everything from scraps of cloth to animal\ndroppings littering the floor.  To the south, a large door leads to the rest\nof the ship.\n",
+         "altitude" : null
+      },
+      "pirate31@pirate" : {
+         "exits" : {
+            "e" : "^boulder2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pirate",
+         "title" : "Temple Treasury",
+         "id" : "pirate31",
+         "description" : "\n   You stand in the temple's treasure room. Rotted foodstuffs are scattered\nacross the floor, but other than this room is bare. A doorway to the east\nis the only way out.\n",
+         "altitude" : null
+      },
+      "pirate21@pirate" : {
+         "exits" : {
+            "w" : "pirate25",
+            "e" : "pirate17",
+            "d" : "pirate25"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "Shore of the Lagoon",
+         "id" : "pirate21",
+         "description" : "\n   You are on the shore of a lagoon that fills the center of the extict\nvolcano. Beautiful blue water laps gently against th sand, and because it is\ncrystal clear, You can make out some sort of submerged building. A small set\nof stairs lead down into the water toward the building, and to the east, a\npathway leads through the side of the volcano.\n",
+         "altitude" : "0"
+      },
+      "pirate19@pirate" : {
+         "exits" : {
+            "n" : "pirate20",
+            "d" : "pirate20",
+            "s" : "Circle@moor"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "pirate",
+         "title" : "The Gateway",
+         "id" : "pirate19",
+         "description" : "\n   You are standing in front of a large, pillared archway. In between the\npillars you see a hazy cloud, through which the moors can be seen. This is\nstrange though, for when you look behind the archway, all you can see is a\nlarge cliff, at the bottom of which you can see waves crash. A path extends\noff to the north here, winding down the side of the volcano.\n",
+         "altitude" : "900"
+      },
+      "pirate0@pirate" : {
+         "exits" : {
+            "w" : "^plank1",
+            "u" : "pirate1",
+            "n" : "pirate2",
+            "d" : "^ladder2Cove",
+            "s" : "pirate10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "On the Deck",
+         "id" : "pirate0",
+         "description" : "\n   You are standing on the wooden planking of the main deck of a large pirate\nship.  A mast climbs into the sky, atop of which you can see the crow's nest.\nThe deck leads around the ship.  North to the forward end of the ship, south\nto the aft.\n",
+         "altitude" : "0"
+      },
+      "pirate28@pirate" : {
+         "exits" : {
+            "e" : "pirate27"
+         },
+         "flags" : [
+            "UnderWater",
+            "Dark"
+         ],
+         "zone" : "pirate",
+         "title" : "High Priest's Quarters",
+         "id" : "pirate28",
+         "description" : "\n   You are in what was once the home of the high priest, but is now the lair\nof the mermaid. Various trinkets of the surface world line the room for\ndecoration, and a soft bed of seaweed is in one corner. At the north end of\nthe room, a large arch is built into the wall. Through the haze that fills\nthe center of the arch, you can make out a clearing in a forest. A doorway \nleads back into the altar room to the east.\n",
+         "altitude" : null
+      },
+      "pirate18@pirate" : {
+         "exits" : {
+            "w" : "pirate20",
+            "u" : "pirate20",
+            "n" : "pirate17",
+            "d" : "pirate17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "Volcano Path",
+         "id" : "pirate18",
+         "description" : "\n   You stand on a rugged, but passable path leading up the side of the\nvolcano. The path continues up to the west, and back down to the north.\n",
+         "altitude" : "300"
+      },
+      "pirate23@pirate" : {
+         "exits" : {
+            "w" : "pirate24",
+            "u" : "pirate24",
+            "d" : "pirate22",
+            "s" : "pirate22"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pirate",
+         "title" : "Hilly Path",
+         "id" : "pirate23",
+         "description" : "\n   You are on low path, gently curving up the side of a volcano. To the\nwest, the path continues up the hill. It also continues down to the south.\n",
+         "altitude" : "200"
+      }
+   },
+   "mob" : {
+      "redbeard@pirate" : {
+         "damage" : "18",
+         "location" : "pirate11",
+         "speed" : "5",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "Redbeard",
+         "name" : "Redbeard",
+         "description" : "Redbeard the cutthroat pirate, scurge of the sea, is here.",
+         "strength" : "265"
+      },
+      "hook@pirate" : {
+         "damage" : "14",
+         "location" : "pirate8",
+         "speed" : "5",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "Hook",
+         "name" : "Hook",
+         "description" : "Hook is here, brandishing his namesake menacingly.",
+         "strength" : "200"
+      },
+      "mermaid@pirate" : {
+         "damage" : "10",
+         "location" : "pirate28",
+         "armor" : "0",
+         "name" : "Mermaid",
+         "description" : "A lovely mermaid is here, singing a beautiful song.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "The Mermaid",
+         "aggression" : "0",
+         "pflags" : [
+            "NoZap"
+         ]
+      },
+      "scurvy@pirate" : {
+         "damage" : "10",
+         "location" : "pirate0",
+         "armor" : "0",
+         "name" : "Scurvy",
+         "description" : "A sailor with scurvy looks at you preparing to attack.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Scurvy",
+         "aggression" : "80"
+      },
+      "pegleg@pirate" : {
+         "damage" : "12",
+         "location" : "pirate4",
+         "speed" : "0",
+         "aggression" : "56",
+         "armor" : "0",
+         "pname" : "Pegleg",
+         "name" : "Pegleg",
+         "description" : "Pegleg, the ship's steward, is taking inventory here.",
+         "strength" : "150"
+      },
+      "gruel@pirate" : {
+         "damage" : "12",
+         "location" : "pirate6",
+         "speed" : "0",
+         "aggression" : "56",
+         "armor" : "0",
+         "pname" : "Gruel",
+         "name" : "Gruel",
+         "description" : "Gruel the cook is here, looking angry at being disturbed.",
+         "strength" : "150"
+      },
+      "scurge@pirate" : {
+         "damage" : "14",
+         "location" : "pirate8",
+         "speed" : "5",
+         "aggression" : "98",
+         "armor" : "0",
+         "pname" : "Scurge",
+         "name" : "Scurge",
+         "description" : "Scurge is here, and he looks mean!",
+         "strength" : "200"
+      },
+      "shark@pirate" : {
+         "damage" : "15",
+         "location" : "pirate25",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "The Shark",
+         "name" : "shark",
+         "description" : "A shark circles you warily, preparing to attack.",
+         "strength" : "200"
+      },
+      "headhunter@pirate" : {
+         "damage" : "10",
+         "location" : "pirate14",
+         "speed" : "15",
+         "aggression" : "40",
+         "pname" : "The Headhunter",
+         "name" : "Headhunter",
+         "description" : "A headhunter is wandering around, looking for heads.",
+         "strength" : "125"
+      },
+      "patch@pirate" : {
+         "damage" : "12",
+         "location" : "pirate1",
+         "speed" : "0",
+         "aggression" : "56",
+         "armor" : "0",
+         "pname" : "Patch",
+         "name" : "Patch",
+         "description" : "Patch is here, trying to sight land.",
+         "strength" : "150"
+      }
+   }
+}
