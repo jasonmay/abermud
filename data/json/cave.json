@@ -518,6 +518,20 @@
       }
    },
    "loc" : {
+      "341@cave" : {
+         "exits" : {
+            "w" : "340",
+            "e" : "342"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cave",
+         "title" : "Fire Blasted Tunnel",
+         "id" : "341",
+         "description" : "\n   The walls glow a faint red as heat cause you to sweat profusely.  The walls\nhave been fire blasted to as smooth as glass.  To the east seems to be the\nsource of the heat.  Back to the west you can see the dark passage continues.\n",
+         "altitude" : null
+      },
       "long@cave" : {
          "exits" : {
             "w" : "^door_long",
@@ -530,6 +544,34 @@
          "title" : "Long Passage",
          "id" : "long",
          "description" : "\n   You are following a long narrow passage which runs west to a door, and turns\nnorth into a hall.\n",
+         "altitude" : null
+      },
+      "haggis@cave" : {
+         "exits" : {
+            "n" : "piper",
+            "s" : "claymore"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "The Lair Of The Haggis",
+         "id" : "haggis",
+         "description" : "\n   This small cave smells of the distinctive odour of haggis, its narrow\nentrance, and tiny size ensures that two people could not easily enter at the\nsame time.  To the south another small entrance leads into a larger cave.\n",
+         "altitude" : null
+      },
+      "342@cave" : {
+         "exits" : {
+            "w" : "341"
+         },
+         "flags" : [
+            "NoMagic",
+            "Dark"
+         ],
+         "zone" : "cave",
+         "title" : "Lair of the FireDrake",
+         "id" : "342",
+         "description" : "\n   The room is very large, you can not see the ceiling for it is lost in the\ndarkness.  A large crack is releasing large amounts of heat causing you to\nsweat profusely.\n",
          "altitude" : null
       },
       "landing@cave" : {
@@ -854,6 +896,19 @@
          "description" : "\n   You are in the huge cellar of the dwarven fortress.   Massive stone pillars\nand arches bear the weight of the mighty stoneworks above.  A narrow staircase\nwinds down into darkness and up into the main castle hall.\n",
          "altitude" : null
       },
+      "claymore@cave" : {
+         "exits" : {
+            "n" : "haggis"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "The Piper's Storeroom",
+         "id" : "claymore",
+         "description" : "\n   You are in a small clean cave, which appears to serve as a storeroom for the\nowner of the cave.  A single narrow exit leads north.\n",
+         "altitude" : null
+      },
       "armory@cave" : {
          "exits" : {
             "n" : "^hole",
@@ -880,6 +935,32 @@
          "title" : "Top Of West Tower",
          "id" : "top_west",
          "description" : "\n   You are in a small room at the top of the west tower.  It looks out across a\nvast expanse of land.  As your eyes wander across the skyline you can pick out\nthe Desert of Fools, the valley and the black tower far in the distance.\nClearly this is the dwarven watch post in times of war.\n   Stone stairs lead down.\n",
+         "altitude" : null
+      },
+      "340@cave" : {
+         "exits" : {
+            "w" : "337",
+            "e" : "341"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cave",
+         "title" : "Dark Passage",
+         "id" : "340",
+         "description" : "\n   The passage gradually begins to widen as you head to the east.  The passage\ncontinues on to the west.\n",
+         "altitude" : null
+      },
+      "339@cave" : {
+         "exits" : {},
+         "flags" : [
+            "Death",
+            "Dark"
+         ],
+         "zone" : "cave",
+         "title" : "Drop Off",
+         "id" : "339",
+         "description" : "\n   The tunnel drops off too quickly and you lose your footing and fall to your\ndeath on the rocks belo.  Geesh!! Come on, I told you the tunnel was very\nsteep to the north, you should have listened and went back!!!\n",
          "altitude" : null
       },
       "treasury@cave" : {
@@ -922,6 +1003,20 @@
          "title" : "The Dwarven Dining Hall",
          "id" : "dining",
          "description" : "\n   This huge hall is another tribute to the skilled stonework of the dwarves,\na circular hall with a spectacular painted domed roof that seems lost in the\nshadows high above you.  From the walls, spectacularly carved gargoyles leer\ndown, attempting to put you off your food.\n   Passages lead north, east and west.\n",
+         "altitude" : null
+      },
+      "338@cave" : {
+         "exits" : {
+            "n" : "339",
+            "s" : "337"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cave",
+         "title" : "Slanted Tunnel",
+         "id" : "338",
+         "description" : "\n   A dwarven tunnel continues steeply down to the north.  To the south a\ngradual slope allows an easy climb out of the mine.\n",
          "altitude" : null
       },
       "n_passage@cave" : {
@@ -1037,6 +1132,20 @@
          "title" : "Narrow Stairs",
          "id" : "n_stairs",
          "description" : "\n   You are descending a set of narrow stairs which twist and turn sharply as\nthey plunge steeply down into darkness.  Above you the stairs flatten out into\na small room.\n",
+         "altitude" : null
+      },
+      "piper@cave" : {
+         "exits" : {
+            "n" : "Npath@Valley",
+            "s" : "haggis"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "The Piper's Lair",
+         "id" : "piper",
+         "description" : "\n   You are standing in a small dry cave, with a low roof some six feet high.\nThe cavemouth is to the north but is twisted enough that you cannot see out,\nand it also provides good shelter against the wind.  To the south a narrow and\nlow arched opening leads into another cave.\n   The cave is clean and evidently well used by its occupant although who he\nis, its hard to tell.\n",
          "altitude" : null
       }
    },
