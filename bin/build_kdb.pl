@@ -582,6 +582,7 @@ sub link_location_exits {
             $linked_loc_id =~ /@/
                 or $linked_loc_id .= '@' . $loc_data->zone->name;
 
+            (my $linked_zone = $linked_loc_id) =~ s/.+@//;
 
             if ($linked_loc_id =~ /^\^/) {
                 (my $door_id = lc($linked_loc_id)) =~ s/^\^//;
@@ -590,15 +591,14 @@ sub link_location_exits {
                     = lc($info->{obj}{$door_id}{linked}||'') or die "no linked for $door_id";
 
                 $linked_door_id =~ /@/
-                    or $linked_door_id .= '@' . $loc_data->zone->name;
-
+                    or $linked_door_id .= '@' . $linked_zone;
 
                 my $link_attr = "${direction}_link";
 
-                warn "no object for $door_id", next
+                do { warn "no object for $door_id"; next }
                     unless $expanded->{obj}{$door_id};
 
-                do { warn "no object for $linked_door_id"; next }
+                do {warn $door_id; warn "no object for $linked_door_id"; next }
                     unless $expanded->{obj}{$linked_door_id};
 
                 $expanded->{obj}{$door_id}->$link_attr(
