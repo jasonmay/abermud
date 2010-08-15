@@ -506,11 +506,12 @@ sub calculate_rolebased_params {
     my %params;
 
     foreach my $flag (keys %data) {
-        if ($obj_data->{flags}{$flag}) {
+        my $flags = format_flags($obj_data->{oflags});
+        if ($flags->{$flag}) {
             foreach my $attr (keys %{ $data{$flag} }) {
                 my $legacy_attr = 'desc[' . $data{$flag}{$attr} . ']';
                 $obj_data->{$legacy_attr} and
-                    $params{$attr} = $obj_data->{$legacy_attr}
+                    do {$params{$attr} = $obj_data->{$legacy_attr } };
             }
         }
     }
