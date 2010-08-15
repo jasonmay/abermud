@@ -9,6 +9,9 @@ use autodie;
 
 use KiokuDB;
 
+use lib 'dep/mud/dep/iomi/lib';
+use lib 'dep/mud/lib';
+use lib 'lib';
 use AberMUD::Zone;
 use AberMUD::Mobile;
 use AberMUD::Location;
@@ -190,24 +193,29 @@ my @zone_files;
     or @zone_files = get_all_zone_files();
 
 my $json = JSON->new->pretty or die $!;
+my (%expanded, %info);
 foreach my $file (@zone_files) {
     my $contents = read_file($file);
-    print STDERR "$file...";
+    print STDERR "$file... ";
     $contents =~ s{/\* .*? \*/}{}gmsx;
     if ($contents =~ $parser) {
-        warn " parsed!";
         my %results = %/;
 
         (my $zone_name = lc $file) =~ s{zones/(.+?)\.zone}{$1}s or die "invalid zone";
 
-        my $info = construct_info_from_parsed(\%results, $zone_name);
 
+        print STDERR "massaging... ";
+        construct_info_from_parsed(\%info, \%results, $zone_name);
+
+        print STDERR "expanding... ";
         #FIXME oops this is supposed ot be run AFTER all zones are processed
-        my $expanded = expand_zone_data($info, $zone_name);
-        link_zone_data($expanded, $info);
+        expand_zone_data(\%expanded, \%info, $zone_name);
         #use Carp::REPL; die;
+        print STDERR "constructed!\n";
     }
 }
+
+link_zone_data(\%expanded, \%info);
 
 ###########################################
 ###########################################
@@ -230,7 +238,7 @@ sub write_pretty_json {
 }
 
 sub construct_info_from_parsed {
-    my ($results, $zone_name) = @_;
+    my ($info, $results, $zone_name) = @_;
 
     my @locs = map {
         $_->{LocFlags}{lflags} = +{ FlagItem => [] }
@@ -251,19 +259,17 @@ sub construct_info_from_parsed {
             },
         },
     } @{ $results->{Zone}{Locations}{Location} };
-    my %locs = map {; "$_->{id}\@$zone_name" => $_ } @locs;
+    $info->{loc}{"$_->{id}\@$zone_name"} = $_ for @locs;
 
     my @mobs = map {
         +{ create_map_from_statements( @{ $_->{Statement} } ) },
     } @{ $results->{Zone}{Mobiles}{Mobile} };
-    my %mobs = map {; "$_->{name}\@$zone_name" => $_  } @mobs;
+    $info->{mob}{"$_->{name}\@$zone_name"} = $_ for @mobs;
 
     my @objs = map {
         +{ create_map_from_statements( @{ $_->{ObjectStatement} } ) },
     } @{ $results->{Zone}{Objects}{Object} };
-    my %objs = map {; "$_->{name}\@$zone_name" => $_  } @objs;
-
-    return +{mob => \%mobs, obj => \%objs, loc => \%locs};
+    $info->{obj}{"$_->{name}\@$zone_name"} = $_ for @objs;
 }
 
 sub create_map_from_statements {
@@ -336,17 +342,17 @@ sub format_flags {
 }
 
 sub expand_zone_data {
+    my $expanded      = shift;
     my $info      = shift;
     my $zone_name = shift;
 
-    return +{
-        mob => expand_mobiles($info->{mob}, $zone_name),
-        obj => expand_objects($info->{obj}, $zone_name),
-        loc => expand_locations($info->{loc}, $zone_name),
-    };
+    expand_mobiles($expanded, $info->{mob}, $zone_name),
+    expand_objects($expanded, $info->{obj}, $zone_name),
+    expand_locations($expanded, $info->{loc}, $zone_name),
 }
 
 sub expand_mobiles {
+    my $expanded      = shift;
     my $mobs = shift;
     my $zone_name = shift;
 
@@ -377,13 +383,12 @@ sub expand_mobiles {
 
         my $m = AberMUD::Mobile->new(%params);
 
-        $mob_objects{sprintf q[%s@%s], $mob_data->{name}, $zone_name} = $m;
+        $expanded->{mob}{sprintf q[%s@%s], $mob_data->{name}, $zone_name} = $m;
     }
-
-    return \%mob_objects;
 }
 
 sub expand_objects {
+    my $expanded      = shift;
     my $objs      = shift;
     my $zone_name = shift;
 
@@ -407,10 +412,8 @@ sub expand_objects {
 
         my $key = $obj_data->{name} . '@' . $zone_name;
 
-        $obj_objects{$key} = $oclass->new(%params);
+        $expanded->{obj}{$key} = $oclass->new(%params);
     }
-
-    return \%obj_objects;
 }
 
 sub calculate_object_traits {
@@ -435,6 +438,7 @@ sub calculate_object_traits {
 }
 
 sub expand_locations {
+    my $expanded      = shift;
     my $locs      = shift;
     my $zone_name = shift;
 
@@ -452,9 +456,8 @@ sub expand_locations {
 
         my $key = sprintf q[%s@%s], $loc_data->{id}, $zone_name;
 
-        $loc_objects{$key} = $l;
+        $expanded->{loc}{$key} = $l;
     }
-    return \%loc_objects;
 }
 
 sub link_zone_data {
