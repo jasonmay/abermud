@@ -369,7 +369,7 @@ sub format_flags {
 
     foreach my $flags (@_) {
         next unless ref $flags eq 'ARRAY';
-        $result{$_} = 1 for @$flags;
+        $result{lc $_} = 1 for @$flags;
     }
 
     return \%result;
@@ -425,7 +425,8 @@ sub expand_mobiles {
 
         my $m = AberMUD::Mobile->new(%params);
 
-        $expanded->{mob}{sprintf q[%s@%s], $mob_data->{name}, $zone_name} = $m;
+        my $key = sprintf q[%s@%s], $mob_data->{name}, $zone_name;
+        $expanded->{mob}{lc $key} = $m;
     }
 }
 
@@ -454,9 +455,9 @@ sub expand_objects {
 
         my $key = $obj_data->{name} . '@' . $zone_name;
 
-        my %extra_params = calculate_rolebased_params($expanded, $obj_data);
+        my %extra_params = calculate_rolebased_params($obj_data);
 
-        $expanded->{obj}{$key} = $oclass->new(%params, %extra_params);
+        $expanded->{obj}{lc $key} = $oclass->new(%params, %extra_params);
     }
 }
 
@@ -533,7 +534,7 @@ sub expand_locations {
 
         my $key = sprintf q[%s@%s], $loc_data->{id}, $zone_name;
 
-        $expanded->{loc}{$key} = $l;
+        $expanded->{loc}{lc $key} = $l;
 
     }
 }
