@@ -136,7 +136,7 @@ my $parser = qr{
         (?: <.LocationOptions> : )? <.FullLocID>
 
     <token: ObjectID>
-        <.Word>
+        <.Word> (?: @ <.Word> )?
 
     <token: LocationOptions>
         IN_ROOM | CARRIED_BY | WIELDED_BY | WORN_BY | BOTH_BY | IN_CONTAINER
@@ -520,7 +520,7 @@ sub calculate_rolebased_params {
 }
 
 sub expand_locations {
-    my $expanded      = shift;
+    my $expanded  = shift;
     my $locs      = shift;
     my $zone_name = shift;
 

@@ -442,6 +442,32 @@
          "description" : "\n   You are standing in a low, reasonably dry sea cave.  The cave echoes the\ngentle pounding of the waves on the sandy beach to the east.  A single narrow\npassage leads west into darkness.\n",
          "altitude" : null
       },
+      "hospital@village" : {
+         "exits" : {
+            "n" : "Track"
+         },
+         "flags" : [
+            "Peace"
+         ],
+         "zone" : "village",
+         "title" : "The Village Hospital",
+         "id" : "Hospital",
+         "description" : "\n   You are in the waiting room of the hospital.  On the south wall is a\ndoor with a sign reading \"Emergency\" above it.  From the sounds coming from\nwithin, it seems as if the doctors are frantically trying to save someone.\nThere is a small green button on the counter.\n",
+         "altitude" : null
+      },
+      "cove@village" : {
+         "exits" : {
+            "w" : "Cave",
+            "e" : "7@sea",
+            "u" : "^ladder2pirate@pirate"
+         },
+         "flags" : [],
+         "zone" : "village",
+         "title" : "Secret Cove",
+         "id" : "Cove",
+         "description" : "\n   You are standing in a secret cove surrounded by high black crags.  A narrow\n cavemouth leads west into darkness. The rocks and pounding surf along the shore\nhere makes launching boats well nigh impossible.\n",
+         "altitude" : null
+      },
       "well1@village" : {
          "exits" : {},
          "flags" : [
@@ -492,6 +518,18 @@
          "title" : "Narrow Tunnel",
          "id" : "Tunnel",
          "description" : "\n   You are squeezing down a narrow dirt tunnel, quite crudely dug, and\nsupported with old ships timbers.  The tunnel leads westwards towards a faint\nlight, or descends steeply to the east.\n",
+         "altitude" : null
+      },
+      "emergency@village" : {
+         "exits" : {},
+         "flags" : [
+            "SoundProof",
+            "Peace"
+         ],
+         "zone" : "village",
+         "title" : "The Emergency Room",
+         "id" : "Emergency",
+         "description" : "\n   This is a busy area with many doctors frantically running around to save\npatients.  There are about 32 beds here, all with seperate sets of machines;\nsome of these go BLIP-BLIP, others have red and green flashing lights, and\nthe remaining ones are some sort of measurement of your vitality.\n",
          "altitude" : null
       },
       "well2@village" : {
