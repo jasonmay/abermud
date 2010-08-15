@@ -205,11 +205,11 @@ foreach my $file (@zone_files) {
 
 
         print STDERR "massaging... ";
-        construct_info_from_parsed(\%info, \%results, $zone_name);
+        my $zone_info = construct_info_from_parsed(\%info, \%results, $zone_name);
 
         print STDERR "expanding... ";
         #FIXME oops this is supposed ot be run AFTER all zones are processed
-        expand_zone_data(\%expanded, \%info, $zone_name);
+        expand_zone_data(\%expanded, $zone_info, $zone_name);
         #use Carp::REPL; die;
         print STDERR "constructed!\n";
     }
@@ -270,6 +270,12 @@ sub construct_info_from_parsed {
         +{ create_map_from_statements( @{ $_->{ObjectStatement} } ) },
     } @{ $results->{Zone}{Objects}{Object} };
     $info->{obj}{lc "$_->{name}\@$zone_name"} = $_ for @objs;
+
+    return +{
+        mob => +{ map {; lc("$_->{name}\@$zone_name") => $_ } @mobs },
+        obj => +{ map {; lc("$_->{name}\@$zone_name") => $_ } @objs },
+        loc => +{ map {; lc("$_->{id}\@$zone_name") => $_ } @locs },
+    }
 }
 
 sub create_map_from_statements {
