@@ -259,17 +259,17 @@ sub construct_info_from_parsed {
             },
         },
     } @{ $results->{Zone}{Locations}{Location} };
-    $info->{loc}{"$_->{id}\@$zone_name"} = $_ for @locs;
+    $info->{loc}{lc "$_->{id}\@$zone_name"} = $_ for @locs;
 
     my @mobs = map {
         +{ create_map_from_statements( @{ $_->{Statement} } ) },
     } @{ $results->{Zone}{Mobiles}{Mobile} };
-    $info->{mob}{"$_->{name}\@$zone_name"} = $_ for @mobs;
+    $info->{mob}{lc "$_->{name}\@$zone_name"} = $_ for @mobs;
 
     my @objs = map {
         +{ create_map_from_statements( @{ $_->{ObjectStatement} } ) },
     } @{ $results->{Zone}{Objects}{Object} };
-    $info->{obj}{"$_->{name}\@$zone_name"} = $_ for @objs;
+    $info->{obj}{lc "$_->{name}\@$zone_name"} = $_ for @objs;
 }
 
 sub create_map_from_statements {
