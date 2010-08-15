@@ -462,6 +462,7 @@ sub expand_locations {
         my $key = sprintf q[%s@%s], $loc_data->{id}, $zone_name;
 
         $expanded->{loc}{$key} = $l;
+
     }
 }
 
@@ -516,14 +517,13 @@ sub link_location_exits {
                                                 );
 
     while (my ($loc_id, $loc_data) = each %{ $expanded->{loc} }) {
-        #warn $json->encode($info);exit();
         while (my ($letter, $direction) = each %letter_map) {
-            #warn $json->encode([$info->{loc}{$loc_id}]);exit;
             my $linked_loc_id = $info->{loc}{$loc_id}{exits}{$letter};
             next unless $linked_loc_id;
 
             $linked_loc_id =~ /@/
                 or $linked_loc_id .= '@' . $loc_data->zone->name;
+
 
             if ($linked_loc_id =~ /^\^/) {
                 (my $door_id = lc($linked_loc_id)) =~ s/^\^//;
@@ -531,12 +531,16 @@ sub link_location_exits {
                 my $linked_door_id
                     = lc($info->{obj}{$door_id}{linked}||'') or die "no linked for $door_id";
 
+                $linked_door_id =~ /@/
+                    or $linked_door_id .= '@' . $loc_data->zone->name;
+
+
                 my $link_attr = "${direction}_link";
 
                 warn "no object for $door_id", next
                     unless $expanded->{obj}{$door_id};
 
-                warn "no object for $linked_door_id", next
+                do { warn "no object for $linked_door_id"; next }
                     unless $expanded->{obj}{$linked_door_id};
 
                 $expanded->{obj}{$door_id}->$link_attr(
