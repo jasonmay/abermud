@@ -10,7 +10,7 @@ use AberMUD::Input::State::Login::Name;
 use AberMUD::Input::State::Game;
 use AberMUD::Config;
 
-my $kdb = KiokuDB->connect('dbi:SQLite:dbname=:memory:', create => 1);
+my $kdb = KiokuDB->connect('hash');
 {
     my $zone = AberMUD::Zone->new(name => 'test');
 

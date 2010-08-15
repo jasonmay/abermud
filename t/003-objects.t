@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Test::More 'no_plan';
+use Test::More;
 use KiokuDB;
 use AberMUD::Container;
 use AberMUD::Storage;
@@ -12,7 +12,7 @@ use AberMUD::Zone;
 use AberMUD::Universe::Sets;
 use AberMUD::Config;
 
-my $kdb = KiokuDB->connect('dbi:SQLite:dbname=:memory:', create => 1);
+my $kdb = KiokuDB->connect('hash', create => 1);
 {
     my $zone = AberMUD::Zone->new(name => 'test');
 
@@ -126,7 +126,7 @@ sub player_logs_in {
 }
 
 SKIP: {
-    skip 32;
+    skip 'got broken. gonna fix soon', 32;
     ok(my @o = @{$u->objects}, 'objects loaded');
     is_deeply(
         [sort map { $_->does('AberMUD::Object::Role::Getable') } @o],
@@ -200,3 +200,5 @@ SKIP: {
     like($two->types_in('examine sign'), qr{Why do you care});
     like($two->types_in('examine rock'), qr{You don't notice anything special\.});
 }
+
+done_testing();

@@ -8,7 +8,7 @@ use AberMUD::Input::State::Game;
 use AberMUD::Config;
 
 my $kdb = KiokuDB->connect(
-    "dbi:SQLite:dbname=:memory:",
+    "hash",
     create => 1,
 );
 
