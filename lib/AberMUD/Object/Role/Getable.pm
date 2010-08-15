@@ -22,6 +22,10 @@ has held_by => (
     clearer => '_stop_being_held',
 );
 
+has dropped_description => (
+    is  => 'rw',
+    isa => 'Str',
+);
 
 1;
 

@@ -426,7 +426,9 @@ sub expand_objects {
 
         my $key = $obj_data->{name} . '@' . $zone_name;
 
-        $expanded->{obj}{$key} = $oclass->new(%params);
+        my %extra_params = calculate_rolebased_params($expanded, $obj_data);
+
+        $expanded->{obj}{$key} = $oclass->new(%params, %extra_params);
     }
 }
 
@@ -449,6 +451,42 @@ sub calculate_object_traits {
     push @traits, 'Gateway'               if $data->{linked};
 
     return map { "AberMUD::Object::Role::$_" } @traits;
+}
+
+sub calculate_rolebased_params {
+    my $obj_data = shift;
+
+    my %data = (
+        openable => {
+            open_description   => 0,
+            closed_description => 1,
+        },
+        lockable => {
+            locked_description => 2,
+        },
+        getflips => {
+            dropped_description => 0,
+            description         => 1,
+        },
+        pushable => {
+            pushed_description => 0,
+            description        => 1,
+        },
+    );
+
+    my %params;
+
+    foreach my $flag (keys %data) {
+        if ($obj_data->{flags}{$flag}) {
+            foreach my $attr (keys %{ $data{$flag} }) {
+                my $legacy_attr = 'desc[' . $data{$flag}{$attr} . ']';
+                $obj_data->{$legacy_attr} and
+                    $params{$attr} = $obj_data->{$legacy_attr}
+            }
+        }
+    }
+
+    return %params;
 }
 
 sub expand_locations {
