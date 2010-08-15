@@ -576,6 +576,8 @@ sub link_location_exits {
             my $linked_loc_id = $info->{loc}{$loc_id}{exits}{$letter};
             next unless $linked_loc_id;
 
+            $linked_loc_id = lc $linked_loc_id;
+
             $linked_loc_id =~ /@/
                 or $linked_loc_id .= '@' . $loc_data->zone->name;
 
