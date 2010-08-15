@@ -6,14 +6,14 @@ use namespace::autoclean;
 
 has all_objects => (
     is  => 'rw',
-    isa => 'HashRef[AberMUD::Object]',
-    default => sub { +{} },
+    isa => 'ArrayRef[AberMUD::Object]',
+    default => sub { [] },
 );
 
 has all_mobiles => (
     is  => 'rw',
-    isa => 'HashRef[AberMUD::Mobile]',
-    default => sub { +{} },
+    isa => 'ArrayRef[AberMUD::Mobile]',
+    default => sub { [] },
 );
 
 __PACKAGE__->meta->make_immutable;

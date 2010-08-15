@@ -112,7 +112,7 @@ sub _load_objects {
     my $universe_sets = $k->lookup('universe-sets');
     return unless $universe_sets;
 
-    $self->universe->objects([values %{ $universe_sets->all_objects }]);
+    $self->universe->objects($universe_sets->all_objects);
 }
 
 sub _load_mobiles {
@@ -122,7 +122,7 @@ sub _load_mobiles {
     my $universe_sets = $k->lookup('universe-sets');
     return unless $universe_sets;
 
-    $self->universe->mobiles([values %{ $universe_sets->all_mobiles }]);
+    $self->universe->mobiles($universe_sets->all_mobiles);
 
     $_->universe($self->universe) for $self->universe->mobiles;
 }

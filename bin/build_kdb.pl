@@ -240,7 +240,10 @@ foreach my $file (@zone_files) {
     print STDERR "\n";
 }
 
+#die %info;
 link_zone_data(\%expanded, \%info);
+
+store_zone_data(\%expanded);
 
 ###########################################
 ###########################################
@@ -555,24 +558,6 @@ sub link_to_zones {
     }
 }
 
-sub link_mobiles_to_zones {
-    my ($expanded, $info) = @_;
-
-    while (my ($loc_id, $loc_data) = each %{ $expanded->{mob} }) {
-        (my $zone_name = $loc_id) =~ s{.+@}{};
-        $loc_data->zone($expanded->{zone}{$zone_name});
-    }
-}
-
-sub link_objects_to_zones {
-    my ($expanded, $info) = @_;
-
-    while (my ($loc_id, $loc_data) = each %{ $expanded->{loc} }) {
-        (my $zone_name = $loc_id) =~ s{.+@}{};
-        $loc_data->zone($expanded->{zone}{$zone_name});
-    }
-}
-
 sub link_location_exits {
     my ($expanded, $info) = @_;
 
@@ -629,5 +614,25 @@ sub link_location_exits {
 }
 
 sub store_zone_data {
-    unlink 'abermud';
+    my $expanded = shift;
+
+    unlink 'abermud' if -e 'abermud';
+
+    my $config = AberMUD::Config->new(
+        location => $expanded->{loc}{'church@start'},
+        input_states => [qw(Login::Name Game)],
+    );
+
+    my $usets = AberMUD::Universe::Sets->new;
+
+    $usets->all_mobiles([values %{ $expanded->{mob} }]);
+    $usets->all_objects([values %{ $expanded->{obj} }]);
+
+    my $kdb = KiokuDB->connect(AberMUD::Util::dsn, create => 1);
+
+    $kdb->scoped_txn(sub {
+        $kdb->store(values %{ $expanded->{loc} });
+        $kdb->store('universe-sets' => $usets, config => $config);
+    });
+
 }
