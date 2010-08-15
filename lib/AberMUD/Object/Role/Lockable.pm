@@ -8,7 +8,7 @@ has lock_description => (
     isa => 'Str',
 );
 
-has lock_action => (
+has lock_text => (
     is  => 'rw',
     isa => 'Str',
 );

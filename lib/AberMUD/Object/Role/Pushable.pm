@@ -8,6 +8,11 @@ has pushed_description => (
     isa => 'Str',
 );
 
+has push_text => (
+    is  => 'rw',
+    isa => 'Str',
+);
+
 has pushed => (
     is  => 'rw',
     isa => 'Bool',
