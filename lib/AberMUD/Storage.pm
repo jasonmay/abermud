@@ -9,6 +9,8 @@ use namespace::autoclean;
 
 extends 'KiokuX::Model';
 
+has '+dsn' => (default => AberMUD::Util::dsn);
+
 has scope => (
     is      => 'rw',
     isa     => 'KiokuDB::LiveObjects::Scope',
@@ -55,6 +57,11 @@ sub gen_world_id {
 
     my $new_num = max(@id_nums) + 1;
     return $zone->name . $new_num;
+}
+
+sub BUILD {
+    my $self = shift;
+    $self->scope; # can't make it eager. things break(?)
 }
 
 __PACKAGE__->meta->make_immutable;
