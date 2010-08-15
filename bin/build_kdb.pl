@@ -240,7 +240,6 @@ foreach my $file (@zone_files) {
     print STDERR "\n";
 }
 
-#die %info;
 link_zone_data(\%expanded, \%info);
 
 store_zone_data(\%expanded);
@@ -444,7 +443,6 @@ sub expand_objects {
 
         my $oflags = format_flags($obj_data->{oflags});
         my %params = (
-            ungetable           => $oflags->{noget},
             flags               => $oflags,
             name                => $obj_data->{name},
             examine_description => $obj_data->{examine},
@@ -457,7 +455,18 @@ sub expand_objects {
 
         my %extra_params = calculate_rolebased_params($obj_data);
 
-        $expanded->{obj}{lc $key} = $oclass->new(%params, %extra_params);
+        if (@traits) {
+            my $anon = AberMUD::Object->with_traits(@traits) ->new(
+                %params, %extra_params,
+            );
+
+            $expanded->{obj}{lc $key} = $anon;
+        }
+        else {
+            $expanded->{obj}{lc $key} = AberMUD::Object->new(
+                %params, %extra_params,
+            );
+        }
     }
 }
 
@@ -476,6 +485,7 @@ sub calculate_object_traits {
     push @traits, 'Lightable'             if $flags->{lightable};
     push @traits, 'Weapon'                if $flags->{weapon};
     push @traits, 'Container'             if $flags->{container};
+    push @traits, 'Getable'               if !$flags->{noget};
 
     push @traits, 'Gateway'               if $data->{linked};
 
