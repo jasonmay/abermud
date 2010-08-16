@@ -297,14 +297,20 @@ sub look {
     my $loc    = shift || $self->location;
 
     my $output = sprintf(
-        "&+M%s&* &+B[&+C%s@%s&+B]&* (%s)\n",
+        "&+M%s&* &+B[&+C%s@%s&+B]&*\n",
         $loc->title,
-        $loc->id,
+        lc substr($self->universe->storage->object_to_id($loc), 0, 8),
         $loc->zone->name,
-        $loc->world_id
     );
 
     $output .= $loc->description;
+
+    foreach my $object (@{ $self->universe->objects }) {
+        next unless $object->description;
+        next unless $object->location;
+        next unless $object->location == $loc;
+        $output .= $object->description . "\n" if $object->description;
+    }
 
     foreach my $mobile (@{$self->universe->mobiles || []}) {
         next unless $mobile->location;

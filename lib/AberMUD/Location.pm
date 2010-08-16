@@ -9,11 +9,6 @@ has id => (
     isa => 'Str',
 );
 
-has world_id => (
-    is  => 'rw',
-    isa => 'Str',
-);
-
 has title => (
     is  => 'rw',
     isa => 'Str',

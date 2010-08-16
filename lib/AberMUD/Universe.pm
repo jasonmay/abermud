@@ -120,9 +120,9 @@ sub identify {
     @list =
     grep {
     (
-        ($_->can('name')         && lc($_->name)         eq $word) ||
-        ($_->can('display_name') && lc($_->display_name) eq $word) ||
-        ($_->can('alt_name')     && lc($_->alt_name)     eq $word)
+        ($_->can('name') && $_->name                 && lc($_->name)         eq $word) ||
+        ($_->can('display_name') && $_->display_name && lc($_->display_name) eq $word) ||
+        ($_->can('alt_name') && $_->alt_name         && lc($_->alt_name)     eq $word)
     )
     && $_->can('location') && $_->location
     && $_->location == $location
