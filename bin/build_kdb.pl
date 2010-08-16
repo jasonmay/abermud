@@ -632,15 +632,27 @@ sub link_object_locations {
     while (my ($obj_id, $obj) = each %{ $expanded->{obj} }) {
         my $full_oloc = $info->{obj}{$obj_id}{location} or next;
 
-        my ($loctype, $oloc) = split /:/, $full_oloc;
+        my ($loctype, $odest) = split /:/, $full_oloc;
+
+        $odest =~ /@/ or $odest .= '@' . $obj->zone->name;
 
         if ($loctype eq 'IN_ROOM') {
-            $oloc =~ /@/ or $oloc .= '@' . $obj->zone->name;
 
-            do { warn "no loc for $oloc"; next }
-                unless $expanded->{loc}{lc $oloc};
+            do { warn "no loc for $odest"; next }
+                unless $expanded->{loc}{lc $odest};
 
-            $obj->location($expanded->{loc}{lc $oloc});
+            $obj->location($expanded->{loc}{lc $odest});
+        }
+        elsif ($loctype eq 'CARRIED_BY') {
+            $odest =~ /@/ or $odest .= '@' . $obj->zone->name;
+
+            do { warn "$odest can't be carried"; next }
+                unless $obj->can('held_by');
+
+            do { warn "no mob called $odest"; next }
+                unless $expanded->{mob}{lc $odest};
+
+            $obj->held_by($expanded->{mob}{lc $odest});
         }
     }
 }
