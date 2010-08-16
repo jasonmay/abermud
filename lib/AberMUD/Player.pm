@@ -309,6 +309,7 @@ sub look {
         next unless $object->description;
         next unless $object->location;
         next unless $object->location == $loc;
+        next unless $object->on_the_ground;
         $output .= $object->description . "\n" if $object->description;
     }
 
@@ -318,8 +319,11 @@ sub look {
         $desc .= sprintf q( [%s/%s]), $mobile->current_strength, $mobile->max_strength;
         $desc .= sprintf q( [agg: %s]), $mobile->aggression;
 
-        $output .= "$desc\n"
-            if $mobile->location == $self->location;
+        if ($mobile->location == $self->location) {
+            $output .= "$desc\n";
+            my $inv = $mobile->show_inventory;
+            $output .= "$inv\n" if $inv;
+        }
     }
 
     foreach my $player (values %{$self->universe->players_in_game}) {

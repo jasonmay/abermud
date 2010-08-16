@@ -14,5 +14,19 @@ has coverage => (
     default => sub { +{} },
 );
 
+has worn => (
+    is => 'rw',
+    isa => 'Bool',
+    default => 0,
+);
+
+around on_the_ground => sub {
+    my ($orig, $self) = @_;
+
+    return 0 if $self->worn;
+
+    $self->$orig(@_);
+};
+
 1;
 

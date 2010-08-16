@@ -27,5 +27,13 @@ has dropped_description => (
     isa => 'Str',
 );
 
+around on_the_ground => sub {
+    my ($orig, $self) = @_;
+
+    return 0 if $self->held_by;
+
+    $self->$orig(@_);
+};
+
 1;
 

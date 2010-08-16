@@ -92,6 +92,19 @@ sub max_strength {
     return $self->basestrength + $self->levelstrength * $level;
 }
 
+sub show_inventory {
+    my $self = shift;
+
+    return undef unless $self->can('universe');
+
+    my @objs = (
+        grep { $_->can('held_by') && $_->held_by && $_->held_by == $self }
+        @{ $self->universe->objects }
+    ) or return undef;
+
+    return "&+CCarrying:&*\n    " . join("\n    ", map { $_->name } @objs);
+}
+
 no Moose::Role;
 
 1;
