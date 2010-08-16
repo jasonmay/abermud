@@ -88,10 +88,8 @@ my $kdb = KiokuDB->connect('hash', create => 1);
 
     $kdb->update($_) foreach values %locations;
 
-    for (@objects) {
-        my $id = $kdb->store($_);
-        $sets->all_objects->{$id} = $_;
-    }
+    $kdb->store(@objects);
+    $sets->all_objects(\@objects);
 
     $kdb->store("universe-sets" => $sets);
 
