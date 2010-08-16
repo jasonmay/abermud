@@ -556,7 +556,8 @@ sub link_zone_data {
     # locations
     link_to_zones($expanded, $info);
     link_location_exits($expanded, $info);  # L->dir = L
-#    link_object_locations($expande, $info); # O->location = L
+    link_object_locations($expanded, $info); # O->location = L
+    link_mobile_locations($expanded, $info); # M->location = L
 }
 
 sub link_to_zones {
@@ -622,6 +623,39 @@ sub link_location_exits {
             }
             else { warn "$linked_loc_id doesn't exist" }
         }
+    }
+}
+
+sub link_object_locations {
+    my ($expanded, $info) = @_;
+
+    while (my ($obj_id, $obj) = each %{ $expanded->{obj} }) {
+        my $full_oloc = $info->{obj}{$obj_id}{location} or next;
+
+        my ($loctype, $oloc) = split /:/, $full_oloc;
+
+        if ($loctype eq 'IN_ROOM') {
+            $oloc =~ /@/ or $oloc .= '@' . $obj->zone->name;
+
+            do { warn "no loc for $oloc"; next }
+                unless $expanded->{loc}{lc $oloc};
+
+            $obj->location($expanded->{loc}{lc $oloc});
+        }
+    }
+}
+
+sub link_mobile_locations {
+    my ($expanded, $info) = @_;
+
+    while (my ($mob_id, $mob) = each %{ $expanded->{mob} }) {
+        my $mloc = $info->{mob}{$mob_id}{location} or next;
+        $mloc =~ /@/ or $mloc .= '@' . $mob->zone->name;
+
+        do { warn "no loc for $mloc"; next }
+            unless $expanded->{loc}{lc $mloc};
+
+        $mob->location($expanded->{loc}{lc $mloc});
     }
 }
 
