@@ -38,6 +38,8 @@ around on_the_ground => sub {
 
     return 0 if $self->held_by;
 
+    return 0 if $self->contained_by;
+
     $self->$orig(@_);
 };
 

@@ -70,7 +70,10 @@ my %objects                       = map { $_->name => $_ } @o;
 my $one                           = $c->player_logs_in('playerone');
 my $two                           = $c->player_logs_in('playertwo');
 
-like($one->types_in('look'),      qr{A rock is laying on the ground here\.});
+unlike($one->types_in('look'),    qr{sack});
+unlike($one->types_in('look'),    qr{potato});
+like($one->types_in('look'),      qr{chest});
+
 like($one->types_in('take rock'), qr{You take the rock\.});
 like($two->get_output,            qr{playerone picks up a rock\.}i);
 
