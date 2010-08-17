@@ -442,8 +442,13 @@ sub expand_objects {
                              : 'AberMUD::Object';
 
         my $oflags = format_flags($obj_data->{oflags});
+        my $coverage = format_flags($obj_data->{aflags});
         my %params = (
             flags               => $oflags,
+            coverage            => $coverage,
+            damage              => $obj_data->{damage},
+            buy_value           => $obj_data->{bvalue},
+            size                => $obj_data->{size},
             name                => $obj_data->{name},
             examine_description => $obj_data->{examine},
             alt_name            => $obj_data->{altname},
