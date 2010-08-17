@@ -13,7 +13,6 @@ has location => (
 has input_states => (
     is => 'rw',
     isa => 'ArrayRef[Str]',
-    auto_deref => 1,
 );
 
 __PACKAGE__->meta->make_immutable;

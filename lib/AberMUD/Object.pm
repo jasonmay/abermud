@@ -41,7 +41,7 @@ has examine_description => (
     isa => 'Str',
 );
 
-sub on_the_ground { } # overridden by roles
+sub on_the_ground { 1 } # overridden by roles
 
 sub o_does {
     my $self = shift;

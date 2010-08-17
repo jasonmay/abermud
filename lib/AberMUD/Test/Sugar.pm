@@ -8,21 +8,28 @@ use AberMUD::Player;
 use AberMUD::Container;
 use AberMUD::Config;
 use AberMUD::Storage;
+use AberMUD::Zone;
 use AberMUD::Universe::Sets;
+
+use base 'Exporter';
+our @EXPORT = qw(build_game);
 
 sub build_game {
     my %data = @_;
 
     my $locs = $data{locations};
     my $default_loc = $data{default_location};
-    my $dsn = $data{dsn};
+    my $dsn = $data{dsn} || 'hash';
     my $zone_name = $data{zone};
 
+
+    my $zone = AberMUD::Zone->new(name => $zone_name);
     my (@all_objects, @all_mobiles, %all_locations);
     foreach my $loc (keys %$locs) {
         my %loc_params = (
             title       => $locs->{$loc}{title},
             description => $locs->{$loc}{description},
+            zone        => $zone,
         );
 
         my (@objects, @mobiles);
@@ -40,12 +47,12 @@ sub build_game {
             }
         }
 
-        push @all_objects, @objects;
-        push @all_mobiles, @mobiles;
-
         my $loc_node = AberMUD::Location->new(%loc_params);
 
         do { $_->location($loc_node) } for ((grep { $_->on_the_ground } @objects), @mobiles);
+
+        push @all_objects, @objects;
+        push @all_mobiles, @mobiles;
         $all_locations{$loc} = $loc_node;
     }
 
@@ -62,19 +69,9 @@ sub build_game {
 
     my $players = $data{players};
 
-    my @all_players;
-#    while ( my ($player_key, $player_data) = each %$players) {
-#        my $player = AberMUD::Player->new(
-#            name     => ucfirst $player_key,
-#            password => crypt($player_data->{password}, lc($player_key)),
-#            location => $all_locations{ $player_data->{location} },
-#            storage  => $storage,
-#        );
-#        push @all_players, $player;
-#    }
-
     my $config = AberMUD::Config->new(
         input_states => [qw(Login::Name Game)],
+        location => $all_locations{$data{default_location}},
     );
 
     my $usets = AberMUD::Universe::Sets->new(
@@ -87,9 +84,6 @@ sub build_game {
             $storage->store('universe-sets' => $usets);
             $storage->store(config => $config);
             $storage->store(values %all_locations);
-
-            # the only stuff with its self-managed ID
-            #$k->store(map { 'player-' . $_->name => $_ } @all_players);
         }
     );
 
@@ -107,13 +101,13 @@ sub build_game {
 sub _handle_object {
     my ($obj_name, $obj_data) = @_;
     my @objects;
-    my $description = $obj_data->{$obj_name}{description}
+    my $description = $obj_data->{description}
                     || "Here lies a normal $obj_name";
 
-    my $examine = $obj_data->{$obj_name}{examine}
-                || "It looks just like a normal $obj_name!";
+    my $examine = $obj_data->{examine};
+    #    || "It looks just like a normal $obj_name!";
 
-    my @contained = _handle_container($obj_data);
+    my @contained = _handle_objects_from_key($obj_data, 'contains');
 
     $obj_data->{covers} = +{ map {; $_ => 1 } @{ $obj_data->{covers} } };
     my %params = (
@@ -149,19 +143,6 @@ sub _handle_object {
     return(@contained, $obj);
 }
 
-sub _handle_container {
-    my $data = shift;
-
-    my @objects;
-    if ($data->{contains}) {
-        while (my ($inside, $inside_data) = each %{ $data->{contains} }) {
-            push @objects, _handle_object($inside, $inside_data);
-        }
-    }
-
-    return @objects;
-}
-
 sub _handle_mobile {
     my ($mob_name, $mob_data) = @_;
     my @mobiles;
@@ -193,9 +174,9 @@ sub _handle_mobile {
 
     push @mobiles, $mob;
 
-    my @carrying = _handle_carrying($mob_data);
-    my @wielding = _handle_wielding($mob_data);
-    my @wearing = _handle_wearing($mob_data);
+    my @carrying = _handle_objects_from_key($mob_data, 'carrying');
+    my @wielding = _handle_objects_from_key($mob_data, 'wielding');
+    my @wearing  = _handle_objects_from_key($mob_data, 'wearing');
 
     $_->held_by($mob) for @carrying, @wielding, @wearing;
     $_->worn(1)       for @wearing;
@@ -207,38 +188,13 @@ sub _handle_mobile {
     );
 }
 
-sub _handle_carrying {
+sub _handle_objects_from_key {
     my $data = shift;
+    my $key  = shift;
 
     my @objects;
-    if ($data->{carrying}) {
-        while (my ($inside, $inside_data) = each %{ $data->{carrying} }) {
-            push @objects, _handle_object($inside, $inside_data);
-        }
-    }
-
-    return @objects;
-}
-
-sub _handle_wearing {
-    my $data = shift;
-
-    my @objects;
-    if ($data->{wearing}) {
-        while (my ($inside, $inside_data) = each %{ $data->{wearing} }) {
-            push @objects, _handle_object($inside, $inside_data);
-        }
-    }
-
-    return @objects;
-}
-
-sub _handle_wielding {
-    my $data = shift;
-
-    my @objects;
-    if ($data->{wielding}) {
-        while (my ($inside, $inside_data) = each %{ $data->{wielding} }) {
+    if ($data->{$key}) {
+        while (my ($inside, $inside_data) = each %{ $data->{$key} }) {
             push @objects, _handle_object($inside, $inside_data);
         }
     }

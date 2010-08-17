@@ -2,143 +2,76 @@
 use strict;
 use warnings;
 use Test::More;
-use KiokuDB;
-use AberMUD::Container;
-use AberMUD::Storage;
-use AberMUD::Location;
-use AberMUD::Object;
-use AberMUD::Input::State::Game;
-use AberMUD::Zone;
-use AberMUD::Universe::Sets;
-use AberMUD::Config;
+use AberMUD::Test::Sugar;
 
-my $kdb = KiokuDB->connect('hash', create => 1);
-{
-    my $zone = AberMUD::Zone->new(name => 'test');
+my $c = build_game
+    zone => 'test',
+    default_location => 'test1',
 
-    my %locations = (
-        test1 => AberMUD::Location->new(
-            id                 => 'road',
+    locations => {
+        test1 => {
             title              => 'A road',
-            description        => "There is a road here heading north. "
-            . "You hear noises in the distance. ",
-            zone               => $zone,
-            active             => 1,
-        ),
-        test2 => AberMUD::Location->new(
-            id                 => 'path',
+            description        => "There is a road here heading north. " .
+                                  "You hear noises in the distance.\n",
+            exits => { north => 'test2' },
+            has_objects => {
+                rock => {
+                    traits => [qw/Getable/],
+                    description => 'A rock is laying on the ground here.',
+                },
+                sign => {
+                    description         => 'There is a sign here.',
+                    examine => "Why do you care what it says? " .
+                                           "You're just a perl script!",
+                },
+                chest => {
+                    traits      => [qw/Getable Openable Closeable Container/],
+                    description => 'There is a chest here.',
+                    contains    => {
+                        sack => {
+                            traits      => [qw/Getable Container/],
+                            description => 'There is a sack here.',
+                            contains => {
+                                potato => {
+                                    traits => [qw/Getable Food/],
+                                    description => 'mmm potato',
+                                }
+                            }
+                        },
+                    },
+                },
+            },
+        },
+        test2 => {
             title              => 'Path',
-            description        => "This path goes north and south.",
-            zone               => $zone,
-            active             => 1,
-        ),
-    );
-
-    my @objects = (
-        AberMUD::Object->new_with_traits(
-            name        => 'rock',
-            description => 'A rock is laying on the ground here.',
-            location    => $locations{test1},
-            traits      => ['AberMUD::Object::Role::Getable'],
-        ),
-
-        AberMUD::Object->new_with_traits(
-            name        => 'sword',
-            description => 'Here lies a sword run into the ground.',
-            location    => $locations{test2},
-            traits      => [
-                'AberMUD::Object::Role::Weapon',
-                'AberMUD::Object::Role::Getable',
-            ],
-        ),
-
-        AberMUD::Object->new(
-            name                => 'sign',
-            description         => 'There is a sign here.',
-            examine_description => "Why do you care what it says? " .
-            "You're just a perl script!",
-            location            => $locations{test1},
-        ),
-
-        AberMUD::Object->new_with_traits(
-            name                => 'sack',
-            description         => 'There is a sack here.',
-            location            => $locations{test1},
-            traits              => [
-                'AberMUD::Object::Role::Container',
-                'AberMUD::Object::Role::Getable',
-            ],
-        ),
-
-        AberMUD::Object->new_with_traits(
-            name                => 'chest',
-            description         => 'There is a chest here.',
-            location            => $locations{test1},
-            traits              => [
-                'AberMUD::Object::Role::Openable',
-                'AberMUD::Object::Role::Closeable',
-                'AberMUD::Object::Role::Container',
-            ],
-        ),
-    );
-
-    my $sets = AberMUD::Universe::Sets->new;
-
-    my $scope = $kdb->new_scope;
-    $kdb->store("location-$_" => $locations{$_}) foreach keys %locations;
-
-    $locations{test1}->north($locations{test2});
-    $locations{test2}->south($locations{test1});
-
-    $kdb->update($_) foreach values %locations;
-
-    $kdb->store(@objects);
-    $sets->all_objects(\@objects);
-
-    $kdb->store("universe-sets" => $sets);
-
-    my $config = AberMUD::Config->new(
-        input_states => [qw(Login::Name Game)],
-    );
-
-    $kdb->store(config => $config);
-
-    $config->location($locations{test1}); $kdb->update($config);
-}
-
-
-my $c = AberMUD::Container->new_with_traits(
-    traits         => ['AberMUD::Container::Role::Test'],
-    test_storage => AberMUD::Storage->new(
-        directory => $kdb,
-    )
-)->container;
+            description        => "This path goes north and south.\n",
+            exits              => { south => 'test1' },
+            has_objects => {
+                sword => {
+                    traits => [qw/Weapon Getable/],
+                    description => 'Here lies a sword run into the ground.',
+                },
+            },
+        },
+    },
+;
 
 my $u = $c->fetch('universe')->get;
-
-$c->fetch('controller')->get->_load_objects();
-
-sub player_logs_in {
-    my $p = $c->fetch('player')->get;
-    $p->input_state([AberMUD::Input::State::Game->new]);
-
-    $p->name(shift);
-    $p->location($c->fetch('storage')->get->lookup('location-test1'));
-    $p->_join_game;
-}
 
 SKIP: {
 #    skip 'got broken. gonna fix soon', 32;
     ok(my @o = @{$u->objects}, 'objects loaded');
+
+    #warn map { $_->name } @o;
     is_deeply(
         [sort map { $_->does('AberMUD::Object::Role::Getable') } @o],
-        [0, 0, 1, 1, 1]
+        [0, 1, 1, 1, 1, 1]
     );
 
     my %objects = map { $_->name => $_ } @o;
 
-    my $one = player_logs_in('playerone');
-    my $two = player_logs_in('playertwo');
+    my $one = $c->player_logs_in('playerone');
+    my $two = $c->player_logs_in('playertwo');
 
     like($one->types_in('look'), qr{A rock is laying on the ground here\.});
 
