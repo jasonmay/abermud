@@ -18,7 +18,6 @@ my $kdb = KiokuDB->connect('hash', create => 1);
 
     my %locations = (
         test1 => AberMUD::Location->new(
-            world_id           => 'test1',
             id                 => 'road',
             title              => 'A road',
             description        => "There is a road here heading north. "
@@ -27,7 +26,6 @@ my $kdb = KiokuDB->connect('hash', create => 1);
             active             => 1,
         ),
         test2 => AberMUD::Location->new(
-            world_id           => 'test2',
             id                 => 'path',
             title              => 'Path',
             description        => "This path goes north and south.",
@@ -41,30 +39,25 @@ my $kdb = KiokuDB->connect('hash', create => 1);
             name        => 'rock',
             description => 'A rock is laying on the ground here.',
             location    => $locations{test1},
+            traits      => ['AberMUD::Object::Role::Getable'],
         ),
 
         AberMUD::Object->new_with_traits(
             name        => 'sword',
             description => 'Here lies a sword run into the ground.',
             location    => $locations{test2},
-            traits      => ['AberMUD::Object::Role::Weapon'],
+            traits      => [
+                'AberMUD::Object::Role::Weapon',
+                'AberMUD::Object::Role::Getable',
+            ],
         ),
 
-        AberMUD::Object->new_with_traits(
+        AberMUD::Object->new(
             name                => 'sign',
             description         => 'There is a sign here.',
             examine_description => "Why do you care what it says? " .
             "You're just a perl script!",
             location            => $locations{test1},
-            ungetable           => 1,
-            traits              => ['AberMUD::Object::Role::Weapon'],
-        ),
-
-        AberMUD::Object->new_with_traits(
-            name                => 'sack',
-            description         => 'There is a sack here.',
-            location            => $locations{test1},
-            traits              => ['AberMUD::Object::Role::Container'],
         ),
 
         AberMUD::Object->new_with_traits(
@@ -72,8 +65,19 @@ my $kdb = KiokuDB->connect('hash', create => 1);
             description         => 'There is a sack here.',
             location            => $locations{test1},
             traits              => [
+                'AberMUD::Object::Role::Container',
+                'AberMUD::Object::Role::Getable',
+            ],
+        ),
+
+        AberMUD::Object->new_with_traits(
+            name                => 'chest',
+            description         => 'There is a chest here.',
+            location            => $locations{test1},
+            traits              => [
                 'AberMUD::Object::Role::Openable',
                 'AberMUD::Object::Role::Closeable',
+                'AberMUD::Object::Role::Container',
             ],
         ),
     );
@@ -124,11 +128,11 @@ sub player_logs_in {
 }
 
 SKIP: {
-    skip 'got broken. gonna fix soon', 32;
+#    skip 'got broken. gonna fix soon', 32;
     ok(my @o = @{$u->objects}, 'objects loaded');
     is_deeply(
         [sort map { $_->does('AberMUD::Object::Role::Getable') } @o],
-        [0, 1, 1, 1]
+        [0, 0, 1, 1, 1]
     );
 
     my %objects = map { $_->name => $_ } @o;
@@ -196,7 +200,7 @@ SKIP: {
 
 # examine
     like($two->types_in('examine sign'), qr{Why do you care});
-    like($two->types_in('examine rock'), qr{You don't notice anything special\.});
+    like($two->types_in('examine rock'), qr{You notice nothing special\.});
 }
 
 done_testing();
