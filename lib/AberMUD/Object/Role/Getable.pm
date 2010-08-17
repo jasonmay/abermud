@@ -22,6 +22,12 @@ has held_by => (
     clearer => '_stop_being_held',
 );
 
+has contained_by => (
+    is      => 'rw',
+    isa     => 'AberMUD::Object',
+    clearer => '_stop_being_contained',
+);
+
 has dropped_description => (
     is  => 'rw',
     isa => 'Str',
