@@ -24,6 +24,12 @@ my $c = build_game
                     examine => "Why do you care what it says? " .
                                            "You're just a perl script!",
                 },
+                helmet => {
+                    traits => [qw/Wearable Getable/],
+                    armor      => 8,
+                    covers     => [qw/head/],
+                    description => 'There is a helmet on the ground.',
+                },
                 chest => {
                     traits      => [qw/Getable Openable Closeable Container/],
                     description => 'There is a chest here.',
@@ -63,7 +69,7 @@ ok(my @o = @{$u->objects}, 'objects loaded');
 #warn map { $_->name } @o;
 is_deeply(
     [sort map { $_->does('AberMUD::Object::Role::Getable') } @o],
-    [0, 1, 1, 1, 1, 1]
+    [0, 1, 1, 1, 1, 1, 1]
 );
 
 my %objects                       = map { $_->name => $_ } @o;
@@ -134,5 +140,65 @@ $_->held_by($two) for grep { $_->can('held_by') } @o;
 # examine
 like($two->types_in('examine sign'), qr{Why do you care});
 like($two->types_in('examine rock'), qr{You notice nothing special\.});
+
+TODO: {
+    local $TODO = 'object manip not yet supported' unless $ENV{TODO};
+
+    like($one->types_in('open chest'),           qr{you open the chest}i);
+    like($one->types_in('open chest'),           qr{the chest is already open}i);
+
+    like($one->types_in('look in chest'),        qr{sack}i);
+    like($one->types_in('take sack from chest'), qr{you take the sack from the chest}i);
+
+    my $inv                                     = $one->types_in('inventory');
+    like($inv,                                  qr{sack}i);
+    like($inv,                                  qr{potato}i); # inside the sack
+
+    like($one->types_in('drop sack'),           qr{you drop the sack}i);
+
+    my $look                                    = $one->types_in('look');
+    like($look,                                  qr{sack}i);
+    unlike($look,                                qr{potato}i); # shouldn't see it
+
+    like($one->types_in('close chest'),         qr{you close the chest}i);
+    like($one->types_in('close chest'),         qr{the chest is already closed}i);
+
+    like($one->types_in('open door'),           qr{you open the door}i);
+    like($one->types_in('look'),                qr{there is an open door here.+east}i); # east exit shows up
+
+    like($one->types_in('close door'),          qr{you open the door}i);
+    unlike($one->types_in('look'),              qr{east}i);
+
+    unlike($one->types_in('east'),              qr{you can't go that way}i);
+    unlike($one->types_in('west'),              qr{you can't go that way}i);
+
+    like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
+    like($one->types_in('look'),                qr{down}i);
+
+    unlike($one->types_in('down'),              qr{you can't go that way}i);
+
+    like($one->types_in('close trapdoor'),      qr{you close the trapdoor}i);
+    like($one->types_in('look'),                qr{none}i); # no exits -- trapped!
+
+    like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
+
+    like($one->types_in('look'),                qr{up}i);
+}
+
+TODO: {
+    local $TODO = 'object equipping not yet supported' unless $ENV{TODO};
+
+    like($one->types_in('wield sword'),         qr{you wield the sword}i);
+    like($one->types_in('wear helmet'),         qr{you put on the helmet}i);
+
+    ok($objects{sword}->wielded,                 'sword got wielded');
+    ok($objects{helmet}->worn,                   'helmet got worn');
+
+    my $eq                                      = $one->types_in('equipment');
+    like($eq,                                   qr{on hand .+ sword}i);
+    like($eq,                                   qr{head    .+ helmet}xi);
+
+    like($one->types_in('remove helmet'),       qr{you take off the helmet}i);
+}
 
 done_testing();
