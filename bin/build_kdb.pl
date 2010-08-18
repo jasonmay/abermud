@@ -449,9 +449,9 @@ sub expand_objects {
             damage              => $obj_data->{damage},
             buy_value           => $obj_data->{bvalue},
             size                => $obj_data->{size},
-            name                => $obj_data->{name},
+            name                => $obj_data->{pname} || $obj_data->{name},
             examine_description => $obj_data->{examine},
-            alt_name            => $obj_data->{altname},
+            alt_name            => $obj_data->{altname} || $obj_data->{name},
         );
 
         delete $params{$_} for grep { not defined $params{$_} } keys %params;
@@ -642,14 +642,20 @@ sub link_object_locations {
         $odest =~ /@/ or $odest .= '@' . $obj->zone->name;
 
         if ($loctype eq 'IN_ROOM') {
-
             do { warn "no loc for $odest"; next }
                 unless $expanded->{loc}{lc $odest};
 
             $obj->location($expanded->{loc}{lc $odest});
         }
-        elsif ($loctype eq 'CARRIED_BY') {
-            $odest =~ /@/ or $odest .= '@' . $obj->zone->name;
+        elsif ($loctype eq 'IN_CONTAINER') {
+            $obj->contained_by($expanded->{obj}{lc $odest});
+        }
+        elsif (
+            $loctype eq 'CARRIED_BY'
+                or $loctype eq 'WIELDED_BY'
+                or $loctype eq 'WORN_BY'
+                or $loctype eq 'BOTH_BY'
+        ) {
 
             do { warn "$odest can't be carried"; next }
                 unless $obj->can('held_by');
@@ -658,6 +664,14 @@ sub link_object_locations {
                 unless $expanded->{mob}{lc $odest};
 
             $obj->held_by($expanded->{mob}{lc $odest});
+
+            if ($loctype eq 'WORN_BY' or $loctype eq 'BOTH_BY') {
+                $obj->worn(1);
+            }
+
+            if ($loctype eq 'WIELDED_BY' or $loctype eq 'BOTH_BY') {
+                $obj->wielded(1);
+            }
         }
     }
 }
