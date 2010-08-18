@@ -46,6 +46,14 @@ my $c = build_game
                         },
                     },
                 },
+                door => {
+                    traits      => [qw/Openable Closeable Gateway/],
+                    east_link   => 'door@red',
+                },
+                trapdoor => {
+                    traits      => [qw/Openable Closeable Gateway/],
+                    down_link   => 'trapdoor@yellow',
+                },
             },
         },
         test2 => {
@@ -56,6 +64,26 @@ my $c = build_game
                 sword => {
                     traits => [qw/Weapon Getable/],
                     description => 'Here lies a sword run into the ground.',
+                },
+            },
+        },
+        red => {
+            title              => 'Red Room',
+            description        => "It smells like strawberries!\n",
+            has_objects => {
+                door => {
+                    traits      => [qw/Openable Closeable Gateway/],
+                    west_link   => 'door@test1',
+                },
+            },
+        },
+        yellow => {
+            title              => 'Yellow Room',
+            description        => "It smells like banans!\n",
+            has_objects => {
+                trapdoor => {
+                    traits      => [qw/Openable Closeable Gateway/],
+                    up_link   => 'trapdoor@test1',
                 },
             },
         },
