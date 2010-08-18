@@ -184,53 +184,49 @@ $_->held_by($two) for grep { $_->can('held_by') } @o;
 like($two->types_in('examine sign'), qr{Why do you care});
 like($two->types_in('examine rock'), qr{You notice nothing special\.});
 
-TODO: {
-    local $TODO = 'object manip not yet supported' unless $ENV{TODO};
+like($one->types_in('look in chest'),        qr{it's closed}i);
+like($one->types_in('open chest'),           qr{you open the chest}i);
+like($one->types_in('open chest'),           qr{that's already open}i);
 
-    like($one->types_in('look in chest'),        qr{it's closed}i);
-    like($one->types_in('open chest'),           qr{you open the chest}i);
-    like($one->types_in('open chest'),           qr{that's already open}i);
+like($one->types_in('look in chest'),        qr{sack}i);
+like($one->types_in('take sack from chest'), qr{you take the sack out of the chest}i);
 
-    like($one->types_in('look in chest'),        qr{sack}i);
-    like($one->types_in('take sack from chest'), qr{you take the sack out of the chest}i);
+my $inv                                     = $one->types_in('inventory');
+like($inv,                                  qr{sack}i);
+like($inv,                                  qr{potato}i); # inside the sack
 
-    my $inv                                     = $one->types_in('inventory');
-    like($inv,                                  qr{sack}i);
-    like($inv,                                  qr{potato}i); # inside the sack
+like($one->types_in('drop sack'),           qr{you drop the sack}i);
 
-    like($one->types_in('drop sack'),           qr{you drop the sack}i);
+my $look                                    = $one->types_in('look');
+like($look,                                  qr{sack}i);
+unlike($look,                                qr{potato}i); # shouldn't see it
 
-    my $look                                    = $one->types_in('look');
-    like($look,                                  qr{sack}i);
-    unlike($look,                                qr{potato}i); # shouldn't see it
+like($one->types_in('close chest'),         qr{you close the chest}i);
+like($one->types_in('close chest'),         qr{that's already closed}i);
 
-    like($one->types_in('close chest'),         qr{you close the chest}i);
-    like($one->types_in('close chest'),         qr{that's already closed}i);
+like($one->types_in('open door'),           qr{you open the door}i);
+like($one->types_in('look'),                qr{there is an open door here.+east}ism); # east exit shows up
 
-    like($one->types_in('open door'),           qr{you open the door}i);
-    like($one->types_in('look'),                qr{there is an open door here.+east}ism); # east exit shows up
+like($one->types_in('close door'),          qr{you close the door}i);
+unlike($one->types_in('look'),              qr{east}i);
 
-    like($one->types_in('close door'),          qr{you close the door}i);
-    unlike($one->types_in('look'),              qr{east}i);
+like($one->types_in('east'),                qr{you can't go that way}i);
 
-    like($one->types_in('east'),                qr{you can't go that way}i);
+like($one->types_in('open door'),           qr{you open the door}i);
+unlike($one->types_in('east'),              qr{you can't go that way}i);
+unlike($one->types_in('west'),              qr{you can't go that way}i);
 
-    like($one->types_in('open door'),           qr{you open the door}i);
-    unlike($one->types_in('east'),              qr{you can't go that way}i);
-    unlike($one->types_in('west'),              qr{you can't go that way}i);
+like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
+like($one->types_in('look'),                qr{down}i);
 
-    like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
-    like($one->types_in('look'),                qr{down}i);
+unlike($one->types_in('down'),              qr{you can't go that way}i);
 
-    unlike($one->types_in('down'),              qr{you can't go that way}i);
+like($one->types_in('close trapdoor'),      qr{you close the trapdoor}i);
+like($one->types_in('look'),                qr{none}i); # no exits -- trapped!
 
-    like($one->types_in('close trapdoor'),      qr{you close the trapdoor}i);
-    like($one->types_in('look'),                qr{none}i); # no exits -- trapped!
+like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
 
-    like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
-
-    like($one->types_in('look'),                qr{up}i);
-}
+like($one->types_in('look'),                qr{up}i);
 
 TODO: {
     local $TODO = 'object equipping not yet supported' unless $ENV{TODO};
