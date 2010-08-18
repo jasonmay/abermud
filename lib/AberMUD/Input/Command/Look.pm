@@ -57,13 +57,18 @@ sub _show_container_contents {
     }
 
     foreach (@contained_containers) {
-        my @contained = $universe->objects_contained_by($_)
-            or next;
-
-        $output .= sprintf(
-            "\n%sThe %s contains:\n%s",
-            '    ' x $tabs, $_->name, _show_container_contents($universe, $_, $tabs + 1),
-        );
+        if ($_->openable and !$_->opened) {
+            $output .= sprintf(
+                "\n%sThe %s is closed.",
+                '    ' x $tabs, $_->name,
+            );
+        }
+        elsif ($universe->objects_contained_by($_)) {
+            $output .= sprintf(
+                "\n%sThe %s contains:\n%s",
+                '    ' x $tabs, $_->name, _show_container_contents($universe, $_, $tabs + 1),
+            );
+        }
     }
 
     return $output;
