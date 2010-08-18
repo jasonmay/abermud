@@ -55,7 +55,7 @@ sub new_universe {
                     $class->new(
                         universe => $self,
                     )
-                } $config->input_states
+                } @{ $config->input_states }
                 ],
             );
 
