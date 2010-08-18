@@ -228,21 +228,17 @@ like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
 
 like($one->types_in('look'),                qr{up}i);
 
-TODO: {
-    local $TODO = 'object equipping not yet supported' unless $ENV{TODO};
+like($two->types_in('wield sword'),         qr{you wield the sword}i);
 
-    like($two->types_in('wield sword'),         qr{you wield the sword}i);
+like($two->types_in('wear helmet'),         qr{you put on the helmet}i);
 
-    like($two->types_in('wear helmet'),         qr{you put on the helmet}i);
+ok($objects{sword}->wielded,                 'sword got wielded');
+ok($objects{helmet}->worn,                   'helmet got worn');
 
-    ok($objects{sword}->wielded,                 'sword got wielded');
-    ok($objects{helmet}->worn,                   'helmet got worn');
+my $eq                                      = $two->types_in('equipment');
+like($eq,                                   qr{on hand:.+sword}i);
+like($eq,                                   qr{head:.+helmet}i);
 
-    my $eq                                      = $one->types_in('equipment');
-    like($eq,                                   qr{on hand .+ sword}i);
-    like($eq,                                   qr{head    .+ helmet}xi);
-
-    like($one->types_in('remove helmet'),       qr{you take off the helmet}i);
-}
+like($two->types_in('remove helmet'),       qr{you take off the helmet}i);
 
 done_testing();
