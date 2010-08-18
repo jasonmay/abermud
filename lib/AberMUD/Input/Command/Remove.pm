@@ -6,7 +6,7 @@ command remove => sub {
     my $you  = shift;
     my $args = shift;
     my @args = split ' ', $args
-        or return "What do you want to wear?";
+        or return "What do you want to take off?";
 
     my $object = $you->universe->identify_object($you->location, $args[0])
         or return "Nothing like that was found.";
