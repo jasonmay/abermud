@@ -61,7 +61,30 @@ command take => sub {
         return "No object of that name is here.";
     }
     elsif (@args == 3 and lc($args[1]) eq 'from') {
-        return "Not supported yet.";
+        my $object    = $you->universe->identify_object($you->location, $args[0])
+            or return "I don't know what that is.";
+
+        my $container = $you->universe->identify_object($you->location, $args[2])
+            or return "I don't know what that is.";
+
+        $container->container or return "That's not a contanier!";
+
+        $container->contained_by
+            and return "You need to take the " .
+                $container->name . " out of the " .
+                $container->contained_by->name . " first.";
+
+        if ($object->containable and $object->contained_by == $container) {
+            $object->_stop_being_contained;
+            $object->held_by($you);
+            return sprintf(
+                'You take the %s out of the %s.',
+                $object->name, $container->name,
+            );
+        }
+        else {
+            return "That isn't inside the " . $container->name;
+        }
     }
     else {
         return "That command syntax is not recognized.";

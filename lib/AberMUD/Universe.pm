@@ -146,8 +146,6 @@ sub identify_from_list {
     $_->in($location) and $_->name_matches($word)
     } @list;
 
-    #warn "@subset <-- $word";
-
     my $index = $offset - 1;
     return $subset[$index] if $index <= @subset;
     return undef;
