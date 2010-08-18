@@ -144,8 +144,9 @@ like($two->types_in('examine rock'), qr{You notice nothing special\.});
 TODO: {
     local $TODO = 'object manip not yet supported' unless $ENV{TODO};
 
+    like($one->types_in('look in chest'),        qr{it's closed}i);
     like($one->types_in('open chest'),           qr{you open the chest}i);
-    like($one->types_in('open chest'),           qr{the chest is already open}i);
+    like($one->types_in('open chest'),           qr{that's already open}i);
 
     like($one->types_in('look in chest'),        qr{sack}i);
     like($one->types_in('take sack from chest'), qr{you take the sack from the chest}i);

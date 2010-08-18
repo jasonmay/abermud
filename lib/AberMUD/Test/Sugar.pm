@@ -120,6 +120,7 @@ sub _handle_object {
         buy_value           => $obj_data->{bvalue},
         flags               => $obj_data->{oflags},
         coverage            => $obj_data->{covers},
+        opened              => $obj_data->{opened} || 0,
     );
 
     # delete all undef values (for default fallback)

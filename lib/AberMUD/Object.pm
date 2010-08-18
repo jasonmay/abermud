@@ -45,6 +45,7 @@ sub wearable    { 0 }
 sub wieldable   { 0 }
 sub edible      { 0 }
 sub containable { 0 }
+sub container   { 0 }
 sub openable    { 0 }
 sub closeable   { 0 }
 sub pushable    { 0 }

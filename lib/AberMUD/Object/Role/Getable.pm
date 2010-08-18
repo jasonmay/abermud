@@ -33,7 +33,8 @@ has dropped_description => (
     isa => 'Str',
 );
 
-override getable => sub { 1 };
+override getable     => sub { 1 };
+override containable => sub { 1 };
 
 around in_direct_possession => sub {
     my ($orig, $self, $killable) = @_;

@@ -15,7 +15,7 @@ has open_text => (
 
 has opened => (
     is  => 'rw',
-    isa => 'Str',
+    isa => 'Bool',
 );
 
 override openable => sub { 1 };

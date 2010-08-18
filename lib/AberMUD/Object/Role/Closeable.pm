@@ -3,15 +3,23 @@ package AberMUD::Object::Role::Closeable;
 use Moose::Role;
 use namespace::autoclean;
 
-has close_description => (
+has closed_description => (
     is  => 'rw',
     isa => 'Str',
 );
 
-has closed => (
-    is  => 'rw',
-    isa => 'Str',
-);
+sub closed {
+    my $self = shift;
+    my $arg = shift;
+
+    if ($arg) {
+        return $self->opened(!$arg);
+    }
+
+    $self->openable or return 1;
+
+    return !$self->opened;
+}
 
 override closeable => sub { 1 };
 

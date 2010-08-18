@@ -153,6 +153,20 @@ sub identify_from_list {
     return undef;
 }
 
+sub objects_contained_by {
+    my $self   = shift;
+    my $object = shift;
+
+    return () unless $object->container;
+
+    return
+        grep {
+        $_->containable
+            && $_->contained_by
+            && $_->contained_by == $object
+        } $self->objects;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
