@@ -44,9 +44,14 @@ sub _show_container_contents {
         next unless $_->containable;
         next unless $_->contained_by($object);
 
-        $first_object and $output .= ' ' x (4 * $tabs - 1);
+        if ($first_object) {
+            $output .= '    ' x $tabs;
+        }
+        else {
+            $output .= ' ';
+        }
 
-        $output .= ' ' . $_->name;
+        $output .= $_->name;
 
         push @contained_containers, $_ if $_->container;
     }
