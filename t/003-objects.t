@@ -149,7 +149,7 @@ TODO: {
     like($one->types_in('open chest'),           qr{that's already open}i);
 
     like($one->types_in('look in chest'),        qr{sack}i);
-    like($one->types_in('take sack from chest'), qr{you take the sack from the chest}i);
+    like($one->types_in('take sack from chest'), qr{you take the sack out of the chest}i);
 
     my $inv                                     = $one->types_in('inventory');
     like($inv,                                  qr{sack}i);
