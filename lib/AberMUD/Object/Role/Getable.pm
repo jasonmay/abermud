@@ -33,6 +33,25 @@ has dropped_description => (
     isa => 'Str',
 );
 
+override getable => sub { 1 };
+
+around in_direct_possession => sub {
+    my ($orig, $self, $killable) = @_;
+
+    my $return = $self->$orig(@_);
+
+    return 1 if $return;
+
+    if ($killable) {
+        return $self->held_by
+            and $self->held_by == $killable
+            and not $self->contained_by;
+    }
+    else {
+        return $self->held_by and not $self->contained_by;
+    }
+};
+
 around on_the_ground => sub {
     my ($orig, $self) = @_;
 

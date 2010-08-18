@@ -13,10 +13,9 @@ command take => sub {
     elsif (@args == 1) {
         if ($args[0] eq 'all') {
             my @objects_you_can_take = grep {
-            $_->location and
-            $_->location == $you->location
-                and $_->can('held_by')
-                and !$_->held_by
+                $_->on_the_ground
+                    and $_->local_to($you)
+                    and $_->getable
             }  $you->universe->objects;
 
             $_->held_by($you) for @objects_you_can_take;
@@ -29,14 +28,12 @@ command take => sub {
                 except => $you,
             ) if @objects_you_can_take;
 
-
             return @objects_you_can_take
                 ? "You take everything you can."
                 : "There is nothing here for you to take.";
         }
         my @matching_objects = grep {
-            $_->location
-            and $_->location == $you->location
+            $_->local_to($you)
             and lc($_->name) eq lc($args[0])
         } $you->universe->objects;
 

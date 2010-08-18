@@ -8,5 +8,7 @@ has eaten => (
     isa => 'Bool',
 );
 
+override edible => sub { 1 };
+
 1;
 

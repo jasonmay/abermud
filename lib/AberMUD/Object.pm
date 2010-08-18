@@ -10,11 +10,6 @@ with qw(
     AberMUD::Role::InGame
 );
 
-has name => (
-    is => 'rw',
-    isa => 'Str',
-);
-
 has alt_name => (
     is => 'rw',
     isa => 'Str',
@@ -41,13 +36,35 @@ has examine_description => (
     isa => 'Str',
 );
 
-sub on_the_ground { 1 } # overridden by roles
+# methods wrapped by roles
+sub in_direct_possession { 0 }
+sub on_the_ground { 1 }
+
+sub getable     { 0 }
+sub wearable    { 0 }
+sub wieldable   { 0 }
+sub edible      { 0 }
+sub containable { 0 }
+sub openable    { 0 }
+sub closeable   { 0 }
+sub pushable    { 0 }
 
 sub o_does {
     my $self = shift;
     my $base = shift;
     $self->does("AberMUD::Object::Role::$base");
 }
+
+around name_matches => sub {
+    my ($orig, $self) = (shift, shift);
+    return 1 if $self->$orig(@_) or (
+        $self->alt_name
+        and lc($self->alt_name) eq lc($_[0])
+    );
+
+    return 0;
+};
+
 
 __PACKAGE__->meta->make_immutable;
 

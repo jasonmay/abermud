@@ -7,6 +7,11 @@ use AberMUD::Location;
 use AberMUD::Location::Util qw(directions);
 use List::MoreUtils qw(any);
 
+has name => (
+    is  => 'rw',
+    isa => 'Str',
+);
+
 has universe => (
     is       => 'rw',
     isa      => 'AberMUD::Universe',
@@ -64,5 +69,31 @@ sub say {
 
     return $self;
 }
+
+sub local_to {
+    my $self    = shift;
+    my $in_game = shift;
+
+    return 0 unless $in_game->can('location');
+    return 0 unless $in_game->location;
+    return 0 unless $self->location;
+
+    return($in_game->location == $self->location);
+}
+
+sub in {
+    my $self     = shift;
+    my $location = shift;
+    return ($self->location && $self->location == $location);
+}
+
+sub name_matches {
+    my $self = shift;
+    my $word = shift or return 0;
+
+    return 1 if $self->name and lc($self->name) eq lc($word);
+
+    return 0;
+};
 
 1;

@@ -13,6 +13,7 @@ has closed => (
     isa => 'Str',
 );
 
+override closeable => sub { 1 };
 
 1;
 

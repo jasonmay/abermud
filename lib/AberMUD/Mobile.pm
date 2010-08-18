@@ -16,11 +16,6 @@ has id => (
     isa => 'Str',
 );
 
-has name => (
-    is  => 'rw',
-    isa => 'Str',
-);
-
 has display_name => (
     is  => 'rw',
     isa => 'Str',
@@ -75,6 +70,16 @@ sub move {
 
     return $self;
 }
+
+around name_matches => sub {
+    my ($orig, $self) = (shift, shift);
+    return 1 if $self->$orig(@_) or (
+        $self->display_name
+        and lc($self->display_name) eq lc($_[0])
+    );
+
+    return 0;
+};
 
 __PACKAGE__->meta->make_immutable;
 

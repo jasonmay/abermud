@@ -18,6 +18,7 @@ has opened => (
     isa => 'Str',
 );
 
+override openable => sub { 1 };
 
 1;
 

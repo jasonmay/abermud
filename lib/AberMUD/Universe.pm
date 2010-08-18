@@ -107,30 +107,49 @@ sub advance {
     my $self = shift;
 }
 
-# identify everything
 sub identify {
+    my $self     = shift;
+    my ($location, $word) = @_;
+
+    $self->identify_from_list(
+        $location, $word, (
+            $self->game_list,
+            $self->mobiles,
+            $self->objects,
+        ),
+    );
+}
+
+sub identify_object {
+    my $self     = shift;
+    my ($location, $word) = @_;
+
+    $self->identify_from_list($location, $word, $self->objects);
+}
+
+sub identify_mobile {
+    my $self     = shift;
+    my ($location, $word) = @_;
+
+    $self->identify_from_list($location, $word, $self->mobiles);
+}
+
+sub identify_from_list {
     my $self     = shift;
     my $location = shift;
     my $word     = lc shift;
+    my @list     = @_;
 
     my ($offset) = ($word =~ s/(\d+)$//) || 1;
-    my @list;
 
+    my @subset = grep {
+    $_->in($location) and $_->name_matches($word)
+    } @list;
 
-    @list =
-    grep {
-    (
-        ($_->can('name') && $_->name                 && lc($_->name)         eq $word) ||
-        ($_->can('display_name') && $_->display_name && lc($_->display_name) eq $word) ||
-        ($_->can('alt_name') && $_->alt_name         && lc($_->alt_name)     eq $word)
-    )
-    && $_->can('location') && $_->location
-    && $_->location == $location
-    } ($self->game_list, $self->mobiles, $self->objects);
+    #warn "@subset <-- $word";
 
-    #warn "@list";
     my $index = $offset - 1;
-    return $list[$index] if $index <= @list;
+    return $subset[$index] if $index <= @subset;
     return undef;
 }
 

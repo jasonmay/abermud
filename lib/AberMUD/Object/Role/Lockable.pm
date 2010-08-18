@@ -13,6 +13,7 @@ has lock_text => (
     isa => 'Str',
 );
 
+override lockable => sub { 1 };
 
 1;
 
