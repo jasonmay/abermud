@@ -8,6 +8,7 @@ use AberMUD::Location;
 use AberMUD::Location::Util qw(directions show_exits);
 
 use Carp qw(cluck);
+use List::Util qw(first);
 use List::MoreUtils qw(first_value);
 
 =head1 NAME
@@ -80,8 +81,25 @@ foreach my $direction ( directions() ) {
         sub {
             my $self = shift;
 
-            return "You can't go that way.\n"
-                unless $self->${\"can_go_$direction"};
+            my $link_method = $direction . '_link';
+            my $door = first {
+                $_->local_to($self)
+                    and $_->gateway and $_->$link_method
+                    and ($_->openable ? $_->opened : 1)
+            } $self->universe->objects;
+
+            if (!$door) {
+                return "You can't go that way.\n"
+                    unless $self->${\"can_go_$direction"};
+            }
+
+            my $destination;
+
+            if ($door) {
+                $destination = $door->$link_method->location;
+            }
+
+            $destination ||= $self->location->$direction;
 
             my @players = $self->universe->game_list;
 
@@ -90,7 +108,7 @@ foreach my $direction ( directions() ) {
                 except => $self,
             );
 
-            $self->location($self->location->$direction);
+            $self->location($destination);
 
             my %opp_dir = (
                 east  => 'the west',

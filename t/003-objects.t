@@ -48,11 +48,12 @@ my $c = build_game
                 },
                 door => {
                     traits      => [qw/Openable Closeable Gateway/],
-                    east_link   => 'door@red',
+                    description => 'There is a door here.',
+                    open_description => 'There is an open door here.',
                 },
                 trapdoor => {
                     traits      => [qw/Openable Closeable Gateway/],
-                    down_link   => 'trapdoor@yellow',
+                    open_description => 'A trapdoor is open here.',
                 },
             },
         },
@@ -73,7 +74,8 @@ my $c = build_game
             has_objects => {
                 door => {
                     traits      => [qw/Openable Closeable Gateway/],
-                    west_link   => 'door@test1',
+                    description => 'There is a door here.',
+                    open_description => 'There is an open door here.',
                 },
             },
         },
@@ -83,9 +85,23 @@ my $c = build_game
             has_objects => {
                 trapdoor => {
                     traits      => [qw/Openable Closeable Gateway/],
-                    up_link   => 'trapdoor@test1',
+                    open_description => 'A trapdoor is open here.',
                 },
             },
+        },
+    },
+    gateways => {
+        'door@test1' => {
+            east => 'door@red',
+        },
+        'door@red' => {
+            west => 'door@test1',
+        },
+        'trapdoor@test1' => {
+            down => 'trapdoor@yellow',
+        },
+        'trapdoor@yellow' => {
+            up => 'trapdoor@test1',
         },
     },
 ;
@@ -94,10 +110,9 @@ my $u = $c->fetch('universe')->get;
 
 ok(my @o = @{$u->objects}, 'objects loaded');
 
-#warn map { $_->name } @o;
 is_deeply(
     [sort map { $_->does('AberMUD::Object::Role::Getable') } @o],
-    [0, 1, 1, 1, 1, 1, 1]
+    [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1]
 );
 
 my %objects                       = map { $_->name => $_ } @o;
@@ -193,11 +208,14 @@ TODO: {
     like($one->types_in('close chest'),         qr{that's already closed}i);
 
     like($one->types_in('open door'),           qr{you open the door}i);
-    like($one->types_in('look'),                qr{there is an open door here.+east}i); # east exit shows up
+    like($one->types_in('look'),                qr{there is an open door here.+east}ism); # east exit shows up
 
-    like($one->types_in('close door'),          qr{you open the door}i);
+    like($one->types_in('close door'),          qr{you close the door}i);
     unlike($one->types_in('look'),              qr{east}i);
 
+    like($one->types_in('east'),                qr{you can't go that way}i);
+
+    like($one->types_in('open door'),           qr{you open the door}i);
     unlike($one->types_in('east'),              qr{you can't go that way}i);
     unlike($one->types_in('west'),              qr{you can't go that way}i);
 

@@ -76,9 +76,8 @@ sub local_to {
 
     return 0 unless $in_game->can('location');
     return 0 unless $in_game->location;
-    return 0 unless $self->location;
 
-    return($in_game->location == $self->location);
+    return $self->in($in_game->location);
 }
 
 sub in {

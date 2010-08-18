@@ -23,4 +23,6 @@ has "${_}_link" => (
     isa => 'AberMUD::Object',
 ) for directions();
 
+override gateway => sub { 1 };
+
 1;

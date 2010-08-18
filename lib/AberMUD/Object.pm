@@ -48,6 +48,7 @@ sub containable { 0 }
 sub container   { 0 }
 sub openable    { 0 }
 sub closeable   { 0 }
+sub gateway     { 0 }
 sub pushable    { 0 }
 
 sub o_does {

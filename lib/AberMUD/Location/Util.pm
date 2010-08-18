@@ -36,22 +36,29 @@ sub show_exits {
             and $_->does('AberMUD::Object::Role::Gateway')
     } @{$args{universe}->objects};
     $output = "&+CObvious exits are:&*\n";
+    my $has_exits = 0;
     foreach my $direction ( directions() ) {
         my $exit;
         my $link = "${direction}_link";
-        my $obj = first {defined($_->$link) } @objects;
+        my $obj = first {
+            defined($_->$link)
+                and $_->openable and $_->opened
+        } @objects;
         $exit =   $obj->$link->location if $obj;
         $exit ||= $args{location}->$direction;
-        warn $obj->$link->name if $obj;
+
         next unless $exit;
+
+        $has_exits = 1;
         my $show_direction = ucfirst $direction;
-        $show_direction = "($show_direction)" if $obj;
         $output .= sprintf(
             "%-5s &+Y: &+G%s&*\n",
             $show_direction,
             $exit->title
         );
     }
+
+    $output .= '&+RNone&*' unless $has_exits;
     return $output;
 }
 

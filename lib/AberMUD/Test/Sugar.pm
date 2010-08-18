@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use AberMUD::Object;
 use AberMUD::Location;
+use AberMUD::Location::Util qw(directions);
 use AberMUD::Player;
 use AberMUD::Container;
 use AberMUD::Config;
@@ -22,9 +23,8 @@ sub build_game {
     my $dsn = $data{dsn} || 'hash';
     my $zone_name = $data{zone};
 
-
     my $zone = AberMUD::Zone->new(name => $zone_name);
-    my (@all_objects, @all_mobiles, %all_locations);
+    my (%all_objects, @all_mobiles, %all_locations);
     foreach my $loc (keys %$locs) {
         my %loc_params = (
             title       => $locs->{$loc}{title},
@@ -51,7 +51,7 @@ sub build_game {
 
         do { $_->location($loc_node) } for ((grep { $_->on_the_ground } @objects), @mobiles);
 
-        push @all_objects, @objects;
+        $all_objects{$_->name . '@' . $loc} = $_ for @objects;
         push @all_mobiles, @mobiles;
         $all_locations{$loc} = $loc_node;
     }
@@ -62,6 +62,18 @@ sub build_game {
         foreach my $exit (keys %{ $locs->{$loc}{exits} }) {
             $all_locations{$loc}->$exit($all_locations{$locs->{$loc}{exits}{$exit}});
         }
+    }
+
+    my $gateways = $data{gateways};
+
+    if ($gateways) {
+        while (my ($object, $data) = each %$gateways) {
+            while (my ($exit, $link) = each %$data) {
+                my $method = $exit . '_link';
+                $all_objects{$object}->$method($all_objects{$link});
+            }
+        }
+
     }
 
     #my $k = KiokuDB->connect('hash', create => 1);
@@ -75,7 +87,7 @@ sub build_game {
     );
 
     my $usets = AberMUD::Universe::Sets->new(
-        all_objects => \@all_objects,
+        all_objects => [values %all_objects],
         all_mobiles => \@all_mobiles,
     );
 
@@ -101,8 +113,8 @@ sub build_game {
 sub _handle_object {
     my ($obj_name, $obj_data) = @_;
     my @objects;
-    my $description = $obj_data->{description}
-                    || "Here lies a normal $obj_name";
+    my $description = $obj_data->{description};
+    #                || "Here lies a normal $obj_name";
 
     my $examine = $obj_data->{examine};
     #    || "It looks just like a normal $obj_name!";
@@ -131,6 +143,7 @@ sub _handle_object {
         # TODO _trait_namespace in mx-traits can solve this
         my @traits = map { "AberMUD::Object::Role::$_" }
                         @{$obj_data->{traits}};
+
         $obj_class = AberMUD::Object->with_traits(@traits);
     }
     else {

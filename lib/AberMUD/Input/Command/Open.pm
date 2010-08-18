@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Open;
 use AberMUD::OO::Commands;
+use AberMUD::Location::Util qw(directions);
 
 command open => sub {
     my $you  = shift;
@@ -16,6 +17,15 @@ command open => sub {
     $object->opened and return "That's already open.";
 
     $object->opened(1);
+
+    if ($object->gateway) {
+        foreach my $direction (directions()) {
+            my $link_method = $direction . '_link';
+            next unless $object->$link_method;
+            next unless $object->$link_method->openable;
+            $object->$link_method->opened(1);
+        }
+    }
 
     return "You open the " . $object->name;
 };
