@@ -332,17 +332,6 @@ sub look {
             if $player->location == $self->location;
     }
 
-    $output .= sprintf("%s\n", $_->description)
-        for grep {
-            $_->description and
-            $_->location and
-            $_->location == $loc
-            and not (
-                $_->can('held_by')
-                and $_->held_by
-            )
-        } $self->universe->objects;
-
     $output .= "\n" . show_exits(location => $loc, universe => $self->universe);
 
     return $output;
