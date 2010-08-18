@@ -17,7 +17,7 @@ command close => sub {
 
     $object->closed(1);
 
-    return "You open the " . $object->name;
+    return "You close the " . $object->name;
 };
 
 __PACKAGE__->meta->make_immutable;
