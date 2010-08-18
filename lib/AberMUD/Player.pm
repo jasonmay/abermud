@@ -81,25 +81,8 @@ foreach my $direction ( directions() ) {
         sub {
             my $self = shift;
 
-            my $link_method = $direction . '_link';
-            my $door = first {
-                $_->local_to($self)
-                    and $_->gateway and $_->$link_method
-                    and ($_->openable ? $_->opened : 1)
-            } $self->universe->objects;
-
-            if (!$door) {
-                return "You can't go that way.\n"
-                    unless $self->${\"can_go_$direction"};
-            }
-
-            my $destination;
-
-            if ($door) {
-                $destination = $door->$link_method->location;
-            }
-
-            $destination ||= $self->location->$direction;
+            my $destination = $self->${\"can_go_$direction"}
+                or return "You can't go that way.\n";
 
             my @players = $self->universe->game_list;
 
