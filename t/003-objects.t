@@ -162,7 +162,7 @@ TODO: {
     unlike($look,                                qr{potato}i); # shouldn't see it
 
     like($one->types_in('close chest'),         qr{you close the chest}i);
-    like($one->types_in('close chest'),         qr{the chest is already closed}i);
+    like($one->types_in('close chest'),         qr{that's already closed}i);
 
     like($one->types_in('open door'),           qr{you open the door}i);
     like($one->types_in('look'),                qr{there is an open door here.+east}i); # east exit shows up
