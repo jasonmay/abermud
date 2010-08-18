@@ -22,6 +22,8 @@ command 'look', priority => -10, sub {
 
         $object->container or return "You can't look in that!";
 
+        $object->openable and $object->opened or return "It's closed.";
+
         my $output = _show_container_contents($you->universe, $object, 0);
     }
     else {
