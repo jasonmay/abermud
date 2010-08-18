@@ -24,55 +24,12 @@ command 'look', priority => -10, sub {
 
         $object->openable and $object->opened or return "It's closed.";
 
-        my $output = _show_container_contents($you->universe, $object, 0);
+        my $output = $you->universe->_show_container_contents($object, 0);
     }
     else {
         return "LOL"; # TODO should do same as "examine"
     }
 };
-
-sub _show_container_contents {
-    my ($universe, $object, $tabs) = @_;
-
-    my $output = '';
-    my $first_object = 1;
-    my @contained_containers;
-    my @contained = $universe->objects_contained_by($object);
-
-    #warn map { $_->name } @contained;
-    foreach (@contained) {
-        next unless $_->containable;
-        next unless $_->contained_by($object);
-
-        if ($first_object) {
-            $output .= '    ' x $tabs;
-        }
-        else {
-            $output .= ' ';
-        }
-
-        $output .= $_->name;
-
-        push @contained_containers, $_ if $_->container;
-    }
-
-    foreach (@contained_containers) {
-        if ($_->openable and !$_->opened) {
-            $output .= sprintf(
-                "\n%sThe %s is closed.",
-                '    ' x $tabs, $_->name,
-            );
-        }
-        elsif ($universe->objects_contained_by($_)) {
-            $output .= sprintf(
-                "\n%sThe %s contains:\n%s",
-                '    ' x $tabs, $_->name, _show_container_contents($universe, $_, $tabs + 1),
-            );
-        }
-    }
-
-    return $output;
-}
 
 __PACKAGE__->meta->make_immutable;
 

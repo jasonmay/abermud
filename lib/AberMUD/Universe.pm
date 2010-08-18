@@ -167,6 +167,60 @@ sub objects_contained_by {
         } $self->objects;
 }
 
+sub display_container_contents {
+    my $self      = shift;
+    my $container = shift;
+
+    return undef unless $container->container;
+
+    return $self->_show_container_contents($container, 0);
+}
+
+
+sub _show_container_contents {
+    my $self = shift;
+
+    my ($object, $tabs) = @_;
+
+    my $output = '';
+    my $first_object = 1;
+    my @contained_containers;
+    my @contained = $self->objects_contained_by($object);
+
+    #warn map { $_->name } @contained;
+    foreach (@contained) {
+        next unless $_->containable;
+        next unless $_->contained_by($object);
+
+        if ($first_object) {
+            $output .= '    ' x $tabs;
+        }
+        else {
+            $output .= ' ';
+        }
+
+        $output .= $_->name;
+
+        push @contained_containers, $_ if $_->container;
+    }
+
+    foreach (@contained_containers) {
+        if ($_->openable and !$_->opened) {
+            $output .= sprintf(
+                "\n%sThe %s is closed.",
+                '    ' x $tabs, $_->name,
+            );
+        }
+        elsif ($self->objects_contained_by($_)) {
+            $output .= sprintf(
+                "\n%sThe %s contains:\n%s",
+                '    ' x $tabs, $_->name, $self->_show_container_contents($_, $tabs + 1),
+            );
+        }
+    }
+
+    return $output;
+}
 __PACKAGE__->meta->make_immutable;
 
 1;
