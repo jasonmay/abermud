@@ -231,8 +231,9 @@ like($one->types_in('look'),                qr{up}i);
 TODO: {
     local $TODO = 'object equipping not yet supported' unless $ENV{TODO};
 
-    like($one->types_in('wield sword'),         qr{you wield the sword}i);
-    like($one->types_in('wear helmet'),         qr{you put on the helmet}i);
+    like($two->types_in('wield sword'),         qr{you wield the sword}i);
+
+    like($two->types_in('wear helmet'),         qr{you put on the helmet}i);
 
     ok($objects{sword}->wielded,                 'sword got wielded');
     ok($objects{helmet}->worn,                   'helmet got worn');
