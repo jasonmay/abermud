@@ -34,7 +34,7 @@ command take => sub {
         }
         my @matching_objects = grep {
             $_->local_to($you)
-            and lc($_->name) eq lc($args[0])
+                and $_->name_matches($args[0])
         } $you->universe->objects;
 
         if (@matching_objects) {
