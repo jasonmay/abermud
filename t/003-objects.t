@@ -110,10 +110,7 @@ my $u = $c->fetch('universe')->get;
 
 ok(my @o = @{$u->objects}, 'objects loaded');
 
-is_deeply(
-    [sort map { $_->does('AberMUD::Object::Role::Getable') } @o],
-    [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1]
-);
+ok(scalar(grep { $_->does('AberMUD::Object::Role::Getable') } @o) >= 6);
 
 my %objects                       = map { $_->name => $_ } @o;
 my $one                           = $c->player_logs_in('playerone');
