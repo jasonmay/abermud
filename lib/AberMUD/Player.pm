@@ -324,7 +324,12 @@ sub look {
             }
         }
         else {
-            $output .= $object->description . "\n" if $object->description;
+            if ($object->getable and $object->dropped) {
+                $output .= $object->dropped_description . "\n" if $object->dropped_description;
+            }
+            else {
+                $output .= $object->description . "\n" if $object->description;
+            }
         }
     }
 

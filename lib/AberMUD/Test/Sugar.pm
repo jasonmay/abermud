@@ -129,6 +129,7 @@ sub _handle_object {
         open_description    => $obj_data->{open_description},
         closed_description  => $obj_data->{closed_description},
         locked_description  => $obj_data->{locked_description},
+        dropped_description => $obj_data->{dropped_description},
         buy_value           => $obj_data->{bvalue},
         flags               => $obj_data->{oflags},
         coverage            => $obj_data->{covers},

@@ -81,6 +81,7 @@ my $c = build_game
                 sword => {
                     traits => [qw/Weapon Getable/],
                     description => 'Here lies a sword run into the ground.',
+                    dropped_description => 'There is a sword laying on the ground here.',
                 },
             },
         },
@@ -192,7 +193,11 @@ like($two->get_output,             qr{playerone drops everything he can\.}i);
 $one->types_in('take sword');      $two->get_output;
 like($two->types_in('take rock'),  qr{You take the rock\.});
 
-$_->held_by($two) for grep { $_->can('held_by') } @o;
+$_->held_by($two) for grep { $_->can('held_by') and not $_->contained_by } @o;
+
+$two->types_in('drop sword');
+like($two->types_in('look'),       qr{sword laying on the ground});
+$objects{sword}->held_by($two);
 
 # examine
 like($two->types_in('examine sign'), qr{Why do you care});

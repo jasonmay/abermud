@@ -14,6 +14,7 @@ command drop => sub {
         for ($you->carrying_loosely) {
             $_->location($you->location);
             $_->_stop_being_held;
+            $_->dropped(1) if $_->flags->{getflips};
         }
 
         $you->say(
@@ -34,6 +35,7 @@ command drop => sub {
 
         if (@matching_objects) {
             $matching_objects[0]->_stop_being_held;
+            $matching_objects[0]->dropped(1) if $matching_objects[0]->dropped_description;
             $matching_objects[0]->location($you->location);
             $you->say(
                 sprintf(

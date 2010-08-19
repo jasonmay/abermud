@@ -33,6 +33,11 @@ has dropped_description => (
     isa => 'Str',
 );
 
+has dropped => (
+    is  => 'rw',
+    isa => 'Str',
+);
+
 override getable     => sub { 1 };
 override containable => sub { 1 };
 
