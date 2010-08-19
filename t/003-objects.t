@@ -30,6 +30,18 @@ my $c = build_game
                     covers     => [qw/head/],
                     description => 'There is a helmet on the ground.',
                 },
+                shoes => {
+                    traits => [qw/Wearable Getable/],
+                    armor      => 8,
+                    covers     => [qw/left_foot right_foot/],
+                    description => 'There are some pants on the ground.',
+                },
+                boots => {
+                    traits => [qw/Wearable Getable/],
+                    armor      => 8,
+                    covers     => [qw/left_foot right_foot/],
+                    description => 'There are some pants on the ground.',
+                },
                 chest => {
                     traits      => [qw/Getable Openable Closeable Container/],
                     description => 'There is a chest here.',
@@ -238,6 +250,11 @@ like($one->types_in('look'),                qr{up}i);
 like($two->types_in('wield sword'),         qr{you wield the sword}i);
 
 like($two->types_in('wear helmet'),         qr{you put on the helmet}i);
+
+
+$objects{$_}->held_by($one) for qw/shoes boots/;
+like($one->types_in('wear shoes'),          qr{you put on the shoes}i);
+like($one->types_in('wear boots'),          qr{remove your shoes first}i);
 
 ok($objects{sword}->wielded,                 'sword got wielded');
 ok($objects{helmet}->worn,                   'helmet got worn');
