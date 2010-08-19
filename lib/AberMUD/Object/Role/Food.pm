@@ -8,6 +8,12 @@ has eaten => (
     isa => 'Bool',
 );
 
+has nutritionn => (
+    is  => 'rw',
+    isa => 'Int',
+    default => 10,
+);
+
 override edible => sub { 1 };
 
 1;
