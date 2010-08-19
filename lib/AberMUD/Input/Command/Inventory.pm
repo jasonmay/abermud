@@ -13,7 +13,12 @@ command inventory => sub {
 
     if (@objects_you_carry) {
         $output = "Your backpack contains:\n";
-        $output .= join(' ', map { $_->name } @objects_you_carry);
+        $output .= join(
+            ' ',
+            map { $_->formatted_name }
+            grep { !($_->wearable and $_->worn) and !($_->wieldable and $_->wielded) }
+            @objects_you_carry
+        );
 
         my @containers = grep { $_->container } @objects_you_carry;
 

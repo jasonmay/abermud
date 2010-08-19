@@ -67,6 +67,17 @@ around name_matches => sub {
     return 0;
 };
 
+sub formatted_name {
+    my $self = shift;
+
+    my $name = $self->name;
+
+    if ($self->edible) {
+        $name = "&+G$name&*";
+    }
+
+    return $name;
+}
 
 __PACKAGE__->meta->make_immutable;
 
