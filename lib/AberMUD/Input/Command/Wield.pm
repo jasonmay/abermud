@@ -23,6 +23,7 @@ command wield => sub {
     foreach my $wielded ($you->universe->objects) {
         next unless $wielded->wieldable;
         next unless $wielded->getable;
+        next unless $wielded->held_by;
         next unless $wielded->held_by == $you;
 
         $wielded->wielded(0) if $wielded->wielded;
