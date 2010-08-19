@@ -2,6 +2,7 @@
 package AberMUD::Input::Command::Equipment;
 use AberMUD::OO::Commands;
 use List::Util qw(first);
+use AberMUD::Object::Util qw(bodyparts);
 
 command equipment => sub {
     my $you  = shift;
@@ -15,6 +16,7 @@ command equipment => sub {
             and $_->held_by == $you
     } $you->universe->objects;
 
+    $output .= sprintf('%-15s', 'Wielding:');
     if ($weapon) {
         $output .= $weapon->name;
     }
@@ -22,22 +24,23 @@ command equipment => sub {
         $output = 'Unarmed';
     }
 
-    $output .= "\n=============================\n";
+    $output .= "\n&+C=============================\n";
 
     my $bare = 1;
-    foreach my $armor ($you->universe->objects) {
-        next unless $armor->getable;
-        next unless $armor->wearable;
-        next unless $armor->worn;
-        next unless $armor->held_by == $you;
 
-        foreach my $part (keys %{$armor->coverage || {}}) {
-            $output .= $part . ': ' . $armor->name . "\n";
+    my %coverage = $you->coverage;
+
+    foreach my $part (bodyparts()) {
+        next unless $coverage{$part};
+        $output .= sprintf('%-15s', '&+G'.ucfirst($part).':&*');
+
+        if ($coverage{$part}) {
+            $output .= $coverage{$part}->name;
         }
-        $bare = 0;
+        $output .= "\n";
     }
 
-    $output .= "=============================\n";
+    $output .= "&+C=============================\n";
 
     return $output;
 };

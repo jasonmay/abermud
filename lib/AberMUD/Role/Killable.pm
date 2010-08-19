@@ -105,6 +105,30 @@ sub show_inventory {
     return "&+CCarrying:&*\n    " . join("\n    ", map { $_->name } @objs);
 }
 
+sub coverage {
+    my $self = shift;
+    return undef unless $self->can('universe');
+
+    my $u = $self->universe;
+
+    my @worn = grep {
+        $_->wearable   && $_->getable
+        && $_->held_by && $_->held_by == $self
+        && $_->worn
+    } $u->objects;
+
+    my %covering = ();
+    foreach my $worn (@worn) {
+        next unless $worn->coverage;
+
+        $covering{$_} = $worn
+            for grep { $worn->coverage->{$_} }
+                keys %{ $worn->coverage };
+    }
+
+    return %covering;
+}
+
 no Moose::Role;
 
 1;
