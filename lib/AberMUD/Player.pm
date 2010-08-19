@@ -312,11 +312,16 @@ sub look {
         next unless $object->location == $loc;
         next unless $object->on_the_ground;
 
-        if ($object->openable
-            and $object->opened
-            and $object->open_description
-        ) {
-            $output .= $object->open_description . "\n";
+        if ($object->openable) {
+            if ($object->opened) {
+                $output .= $object->open_description . "\n";
+            }
+            elsif (defined $object->opened) {
+                $output .= $object->closed_description . "\n";
+            }
+            else {
+                $output .= $object->description . "\n";
+            }
         }
         else {
             $output .= $object->description . "\n" if $object->description;

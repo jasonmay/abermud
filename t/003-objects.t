@@ -33,6 +33,8 @@ my $c = build_game
                 chest => {
                     traits      => [qw/Getable Openable Closeable Container/],
                     description => 'There is a chest here.',
+                    open_description => 'There is an open chest here.',
+                    closed_description => 'There is a closed chest here.',
                     contains    => {
                         sack => {
                             traits      => [qw/Getable Container/],
@@ -49,7 +51,9 @@ my $c = build_game
                 door => {
                     traits      => [qw/Openable Closeable Gateway/],
                     description => 'There is a door here.',
+
                     open_description => 'There is an open door here.',
+                    closed_description => 'There is a closed door here.',
                 },
                 trapdoor => {
                     traits      => [qw/Openable Closeable Gateway/],
@@ -76,6 +80,7 @@ my $c = build_game
                     traits      => [qw/Openable Closeable Gateway/],
                     description => 'There is a door here.',
                     open_description => 'There is an open door here.',
+                    closed_description => 'There is a closed door here.',
                 },
             },
         },
