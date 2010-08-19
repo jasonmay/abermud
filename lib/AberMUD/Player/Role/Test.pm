@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Player::Role::Test;
 use Moose::Role;
+use AberMUD::Util;
 
 requires qw(setup universe id name);
 
@@ -35,8 +36,10 @@ sub types_in {
 
     return unless $self->id;
 
-    return $self->universe->_controller->build_response(
-        $self->id => $command
+    return AberMUD::Util::strip_color(
+        $self->universe->_controller->build_response(
+            $self->id => $command
+        )
     );
 }
 

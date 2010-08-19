@@ -81,6 +81,11 @@ around name_matches => sub {
     return 0;
 };
 
+sub formatted_name {
+    my $self = shift;
+    return $self->display_name;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;

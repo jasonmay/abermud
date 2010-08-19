@@ -129,6 +129,11 @@ sub coverage {
     return %covering;
 }
 
+sub formatted_name {
+    my $self = shift;
+    return $self->name;
+}
+
 no Moose::Role;
 
 1;

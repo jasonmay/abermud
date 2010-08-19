@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use Test::More;
 use AberMUD::Test::Sugar;
+use AberMUD::Util;
 
 my $c = build_game
     zone => 'test',
@@ -217,8 +218,16 @@ like($inv,                                  qr{potato}i); # inside the sack
 like($one->types_in('drop sack'),           qr{you drop the sack}i);
 
 my $look                                    = $one->types_in('look');
-like($look,                                  qr{sack}i);
-unlike($look,                                qr{potato}i); # shouldn't see it
+like($look,                                 qr{sack}i);
+unlike($look,                               qr{potato}i); # shouldn't see it
+
+# test the 'empty' command
+like($one->types_in('empty sack'),          qr{you take the potato from the sack, and put it on the ground}i);
+like($one->types_in('look'),                qr{potato});
+
+#test 'put'
+like($one->types_in('put potato in chest'), qr{you put the potato in the chest});
+like($one->types_in('look in chest'),       qr{potato});
 
 like($one->types_in('close chest'),         qr{you close the chest}i);
 like($one->types_in('close chest'),         qr{that's already closed}i);

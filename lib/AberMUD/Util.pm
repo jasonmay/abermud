@@ -56,6 +56,9 @@ sub colorify {
 
 sub strip_color {
     my $text = shift;
+    $text =~ s/\e\[.+?[a-zA-Z]//g;
+
+    return $text;
 }
 
 #sub dsn { 'bdb:dir=abermud.bdb' }
