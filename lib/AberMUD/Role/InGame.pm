@@ -89,14 +89,7 @@ sub in {
     my $self     = shift;
     my $location = shift;
 
-    my $in_game = $self;
-    if ($in_game->isa('AberMUD::Object')) {
-        while ($in_game->containable and $in_game->contained_by) {
-            $in_game = $in_game->contained_by;
-        }
-    }
-
-    return ($in_game->location && $in_game->location == $location);
+    return ($self->location && $self->location == $location);
 }
 
 sub name_matches {

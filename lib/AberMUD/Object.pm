@@ -79,6 +79,26 @@ sub formatted_name {
     return $name;
 }
 
+sub final_location {
+    my $self = shift;
+
+    my $o = $self;
+
+    $o = $o->contained_by
+        while $o->getable and $o->contained_by;
+
+    return $o->held_by->location
+        if $o->getable and $o->held_by;
+
+    return $o->location;
+}
+
+sub in {
+    my ($self, $location) = @_;
+
+    return ($self->final_location && $self->final_location == $location);
+};
+
 __PACKAGE__->meta->make_immutable;
 
 1;
