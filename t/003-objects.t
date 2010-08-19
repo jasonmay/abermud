@@ -41,7 +41,7 @@ my $c = build_game
                     traits => [qw/Wearable Getable/],
                     armor      => 8,
                     covers     => [qw/left_foot right_foot/],
-                    description => 'There are some pants on the ground.',
+                    description => 'There are some boots on the ground.',
                 },
                 chest => {
                     traits      => [qw/Getable Openable Closeable Container/],
@@ -134,6 +134,7 @@ ok(scalar(grep { $_->does('AberMUD::Object::Role::Getable') } @o) >= 6);
 my %objects                       = map { $_->name => $_ } @o;
 my $one                           = $c->player_logs_in('playerone');
 my $two                           = $c->player_logs_in('playertwo');
+
 
 unlike($one->types_in('look'),    qr{sack});
 unlike($one->types_in('look'),    qr{potato});
