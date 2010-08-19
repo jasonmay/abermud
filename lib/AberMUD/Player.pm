@@ -321,11 +321,6 @@ sub look {
         else {
             $output .= $object->description . "\n" if $object->description;
         }
-
-        if ($object->container) {
-            my $c_output = $self->universe->display_container_contents($object, 0);
-            $output .= $c_output if $c_output;
-        }
     }
 
     foreach my $mobile (@{$self->universe->mobiles || []}) {
