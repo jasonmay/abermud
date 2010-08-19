@@ -265,7 +265,7 @@ ok($objects{sword}->wielded,                 'sword got wielded');
 ok($objects{helmet}->worn,                   'helmet got worn');
 
 my $eq                                      = $two->types_in('equipment');
-like($eq,                                   qr{on hand:.+sword}i);
+like($eq,                                   qr{wielding:.+sword}i);
 like($eq,                                   qr{head:.+helmet}i);
 
 like($two->types_in('remove helmet'),       qr{you take off the helmet}i);

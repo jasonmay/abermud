@@ -15,7 +15,7 @@ command equipment => sub {
             and $_->held_by == $you
     } $you->universe->objects;
 
-    $output .= sprintf('%-15s', 'Wielding:');
+    my $output = sprintf('%-15s', 'Wielding:');
     if ($weapon) {
         $output .= $weapon->name;
     }
