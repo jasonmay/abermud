@@ -69,7 +69,7 @@ command take => sub {
 
         $container->container or return "That's not a contanier!";
 
-        $container->contained_by
+        $container->getable and $container->contained_by
             and return "You need to take the " .
                 $container->name . " out of the " .
                 $container->contained_by->name . " first.";
