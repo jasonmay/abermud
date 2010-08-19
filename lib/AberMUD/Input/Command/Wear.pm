@@ -18,7 +18,19 @@ command wear => sub {
 
     $object->worn and return "You're already wearing that!";
 
-    # FIXME can't overlap body parts
+    my %coverage = $you->coverage;
+
+    if ($object->coverage) {
+        foreach my $part (keys %{ $object->coverage }) {
+            next unless $object->coverage->{$part};
+
+            if ($coverage{$part}) {
+                return "Please remove your " .
+                    $coverage{$part}->name . " first.";
+            }
+        }
+    }
+
     $object->worn(1);
 
     return "You put on the " . $object->name . ".";
