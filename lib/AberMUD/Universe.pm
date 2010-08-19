@@ -174,7 +174,6 @@ sub display_container_contents {
     return $self->_show_container_contents($container, 0);
 }
 
-
 sub _show_container_contents {
     my $self = shift;
 

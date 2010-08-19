@@ -452,6 +452,7 @@ sub expand_objects {
             name                => $obj_data->{pname} || $obj_data->{name},
             examine_description => $obj_data->{examine},
             alt_name            => $obj_data->{altname} || $obj_data->{name},
+            description         => $obj_data->{'desc[0]'},
         );
 
         delete $params{$_} for grep { not defined $params{$_} } keys %params;
