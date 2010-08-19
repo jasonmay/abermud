@@ -38,16 +38,9 @@ sub show_exits {
     $output = "&+CObvious exits are:&*\n";
     my $has_exits = 0;
     foreach my $direction ( directions() ) {
-        my $exit;
-        my $link = "${direction}_link";
-        my $obj = first {
-            defined($_->$link)
-                and $_->openable and $_->opened
-        } @objects;
-        $exit =   $obj->$link->location if $obj;
-        $exit ||= $args{location}->$direction;
 
-        next unless $exit;
+        my $exit = $args{universe}->check_exit($args{location}, $direction)
+            or next;
 
         $has_exits = 1;
         my $show_direction = ucfirst $direction;

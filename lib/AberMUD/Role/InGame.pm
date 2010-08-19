@@ -28,21 +28,12 @@ has location => (
             (
                 "can_go_$direction" => sub {
                     my $self = shift;
+                    return 0 unless $self->location;
 
-
-                    my $link_method = $direction . '_link';
-                    my $door;
-                    foreach my $obj ($self->universe->objects) {
-                        if (
-                            $obj->local_to($self)
-                                and $obj->gateway and $obj->$link_method
-                                and ($obj->openable ? $obj->opened : 1)
-                        ) {
-                            $door = $obj; last;
-                        }
-                    }
-
-                    $door ? $door->$link_method->location : $self->location->$direction;
+                    return $self->universe->check_exit(
+                        $self->location,
+                        $direction,
+                    );
                 }
             )
         } directions()

@@ -218,6 +218,27 @@ sub _show_container_contents {
 
     return $output;
 }
+
+sub check_exit {
+    my $self = shift;
+    my ($location, $direction) = @_;
+
+    my $link_method = $direction . '_link';
+    my $door;
+    foreach my $obj ($self->objects) {
+        if (
+            $obj->in($location)
+                and $obj->gateway and $obj->$link_method
+                and ($obj->openable ? $obj->opened : 1)
+        ) {
+            $door = $obj; last;
+        }
+    }
+
+    $door ? $door->$link_method->location : $location->$direction;
+
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
