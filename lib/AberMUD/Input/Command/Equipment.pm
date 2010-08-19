@@ -8,7 +8,6 @@ command equipment => sub {
     my $you  = shift;
     my $args = shift;
 
-    my $output = 'On Hand:             ';
 
     my $weapon = first {
         $_->wieldable and $_->getable
