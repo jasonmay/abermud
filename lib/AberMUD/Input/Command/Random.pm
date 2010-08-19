@@ -14,14 +14,13 @@ command 'random' , priority => -10, sub {
 
     my $output = "Scanning...\n";
     my $n = 0;
-    do {
+    until ($location or $n > 100) {
         my $o = $o[rand @o];
         $output .= "Trying " . $o->name . "...\n";
 
         if (!$o->location) {
             $o->getable or next;
             while ($o->getable and ($o->contained_by or $o->held_by)) {
-                warn "===========";
                 if ($o->contained_by) {
                     $output .= $o->name . " contained by " .
                         $o->contained_by->name . "...\n";
@@ -39,8 +38,8 @@ command 'random' , priority => -10, sub {
         else {
             $location = $o->location;
         }
-    $n++;
-    } until $location or $n > 100;
+        $n++;
+    }
 
     return "I give up.\n" unless $location;
 
