@@ -67,7 +67,7 @@ command take => sub {
         my $container = $you->universe->identify_object($you->location, $args[2])
             or return "I don't know what that is.";
 
-        $container->container or return "That's not a contanier!";
+        $container->container or return "That's not a container!";
 
         $container->getable and $container->contained_by
             and return "You need to take the " .
