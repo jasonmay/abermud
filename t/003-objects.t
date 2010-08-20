@@ -227,7 +227,8 @@ like($one->types_in('empty sack'),          qr{you take the potato from the sack
 like($one->types_in('look'),                qr{potato});
 
 #test 'put'
-like($one->types_in('put potato in chest'), qr{you put the potato in the chest});
+like($one->types_in('put potato in chest'), qr{you put the potato in the chest}i);
+like($one->types_in('put potato in chest'), qr{that's already inside something}i);
 like($one->types_in('look in chest'),       qr{potato});
 
 like($one->types_in('close chest'),         qr{you close the chest}i);
