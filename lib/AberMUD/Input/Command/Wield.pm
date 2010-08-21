@@ -20,7 +20,7 @@ command wield => sub {
 
     $object->wielded and return "You're already wielding that!";
 
-    foreach my $wielded ($you->universe->objects) {
+    foreach my $wielded ($you->universe->get_objects) {
         next unless $wielded->wieldable;
         next unless $wielded->getable;
         next unless $wielded->held_by;

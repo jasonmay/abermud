@@ -99,7 +99,7 @@ sub show_inventory {
 
     my @objs = (
         grep { $_->can('held_by') && $_->held_by && $_->held_by == $self }
-        @{ $self->universe->objects }
+        $self->universe->get_objects
     ) or return undef;
 
     return "&+CCarrying:&*\n    " . join("\n    ", map { $_->name } @objs);
@@ -115,7 +115,7 @@ sub coverage {
         $_->wearable   && $_->getable
         && $_->held_by && $_->held_by == $self
         && $_->worn
-    } $u->objects;
+    } $u->get_objects;
 
     my %covering = ();
     foreach my $worn (@worn) {

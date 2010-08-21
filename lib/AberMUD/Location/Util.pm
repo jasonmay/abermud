@@ -34,7 +34,7 @@ sub show_exits {
     $_->location
         and $_->location == $args{location}
             and $_->does('AberMUD::Object::Role::Gateway')
-    } @{$args{universe}->objects};
+    } $args{universe}->get_objects;
     $output = "&+CObvious exits are:&*\n";
     my $has_exits = 0;
     foreach my $direction ( directions() ) {

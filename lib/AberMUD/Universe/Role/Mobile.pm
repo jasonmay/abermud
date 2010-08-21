@@ -6,7 +6,10 @@ use namespace::autoclean;
 has mobiles => (
     is  => 'rw',
     isa => 'ArrayRef[AberMUD::Mobile]',
-    auto_deref => 1,
+    traits => ['Array'],
+    handles => {
+        get_mobiles => 'elements',
+    },
     default => sub { [] },
 );
 
@@ -14,7 +17,7 @@ around advance => sub {
     my $orig = shift;
     my $self = shift;
 
-    for my $mobile ($self->mobiles) {
+    for my $mobile ($self->get_mobiles) {
         if ($self->roll_to_move($mobile)) {
             $mobile->move;
         }

@@ -31,7 +31,7 @@ command drop => sub {
             $_->can('held_by') and $_->held_by
             and $_->held_by == $you
             and lc($_->name) eq lc($args[0])
-        } $you->universe->objects;
+        } $you->universe->get_objects;
 
         if (@matching_objects) {
             $matching_objects[0]->_stop_being_held;

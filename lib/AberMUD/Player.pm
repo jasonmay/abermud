@@ -306,7 +306,7 @@ sub look {
 
     $output .= $loc->description;
 
-    foreach my $object (@{ $self->universe->objects }) {
+    foreach my $object ($self->universe->get_objects) {
         next unless $object->description;
         next unless $object->location;
         next unless $object->location == $loc;
@@ -333,7 +333,7 @@ sub look {
         }
     }
 
-    foreach my $mobile (@{$self->universe->mobiles || []}) {
+    foreach my $mobile ($self->universe->get_mobiles) {
         next unless $mobile->location;
         my $desc = $mobile->description;
         $desc .= sprintf q( [%s/%s]), $mobile->current_strength, $mobile->max_strength;

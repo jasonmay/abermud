@@ -7,7 +7,7 @@ use AberMUD::OO::Commands;
 command 'random' , priority => -10, sub {
     my ($you, $args) = @_;
 
-    my @o = $you->universe->objects;
+    my @o = $you->universe->get_objects;
 
 
     my $location;

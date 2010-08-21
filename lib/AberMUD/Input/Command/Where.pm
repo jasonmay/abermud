@@ -12,7 +12,7 @@ command where => sub {
         "\n"
         => map {
             sprintf("%20s : %s", $_->name, $_->location->id)
-        } grep { $_->location } @{ $you->universe->mobiles }  );
+        } grep { $_->location } $you->universe->get_mobiles  );
 
     $output .= "\n$blue_line\n";
 

@@ -16,7 +16,7 @@ command take => sub {
                 $_->on_the_ground
                     and $_->local_to($you)
                     and $_->getable
-            }  $you->universe->objects;
+            }  $you->universe->get_objects;
 
             $_->held_by($you) for @objects_you_can_take;
 
@@ -35,7 +35,7 @@ command take => sub {
         my @matching_objects = grep {
             $_->local_to($you)
                 and $_->name_matches($args[0])
-        } $you->universe->objects;
+        } $you->universe->get_objects;
 
         if (@matching_objects) {
             if ($matching_objects[0]->can('held_by')) {

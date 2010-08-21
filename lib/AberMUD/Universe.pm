@@ -27,52 +27,41 @@ has '+spawn_player_code' => (
 has players_in_game => (
     is         => 'rw',
     isa        => 'HashRef[AberMUD::Player]',
-    traits     => ['Hash'],
+    traits => ['Hash', 'KiokuDB::DoNotSerialize'],
     handles    => {
         game_name_list => 'keys',
         game_list      => 'values',
     },
-    default    => sub { +{} },
 );
 
 has storage => (
-    is => 'ro',
+    is => 'rw',
     isa => 'AberMUD::Storage',
-    required => 1,
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 has _controller => (
-    is       => 'ro',
+    is       => 'rw',
     isa      => 'MUD::Controller',
-    required => 1,
     handles  => {
         _get_input_state => 'get_input_state',
     },
-);
-
-has nowhere_location => (
-    is => 'rw',
-    isa => 'AberMUD::Location',
-    default => sub {
-        AberMUD::Location->new(
-            id          => '__nowhere',
-            world_id    => '__nowhere@void',
-            title       => 'Nowhere',
-            description => 'You are nowhere...',
-        )
-    }
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 has objects => (
     is  => 'rw',
     isa => 'ArrayRef[AberMUD::Object]',
-    auto_deref => 1,
+    traits => ['Array'],
+    handles => {
+        get_objects => 'elements',
+    },
     default => sub { [] },
 );
 
 sub killables {
     my $self = shift;
-    return ($self->players, $self->mobiles);
+    return ($self->game_list, $self->get_mobiles);
 }
 
 sub broadcast {
@@ -119,8 +108,8 @@ sub identify {
     $self->identify_from_list(
         $location, $word, (
             $self->game_list,
-            $self->mobiles,
-            $self->objects,
+            $self->get_mobiles,
+            $self->get_objects,
         ),
     );
 }
@@ -129,7 +118,7 @@ sub identify_object {
     my $self     = shift;
     my ($location, $word) = @_;
 
-    $self->identify_from_list($location, $word, $self->objects);
+    $self->identify_from_list($location, $word, $self->get_objects);
 }
 
 sub identify_mobile {
@@ -156,81 +145,13 @@ sub identify_from_list {
     return undef;
 }
 
-sub objects_contained_by {
-    my $self   = shift;
-    my $object = shift;
-
-    return () unless $object->container;
-
-    return
-        grep {
-        $_->containable
-            && $_->contained_by
-            && $_->contained_by == $object
-        } $self->objects;
-}
-
-sub display_container_contents {
-    my $self      = shift;
-    my $container = shift;
-
-    return undef unless $container->container;
-
-    return $self->_show_container_contents($container, 0);
-}
-
-sub _show_container_contents {
-    my $self = shift;
-
-    my ($object, $tabs) = @_;
-
-    my $output = '';
-    my $first_object = 1;
-    my @contained_containers;
-    my @contained = $self->objects_contained_by($object);
-
-    #warn map { $_->name } @contained;
-    foreach (@contained) {
-        next unless $_->containable;
-        next unless $_->contained_by($object);
-
-        if ($first_object) {
-            $output .= '    ' x $tabs;
-        }
-        else {
-            $output .= ' ';
-        }
-
-        $output .= $_->name;
-
-        push @contained_containers, $_ if $_->container;
-    }
-
-    foreach (@contained_containers) {
-        if ($_->openable and !$_->opened) {
-            $output .= sprintf(
-                "\n%sThe %s is closed.",
-                '    ' x $tabs, $_->name,
-            );
-        }
-        elsif ($self->objects_contained_by($_)) {
-            $output .= sprintf(
-                "\n%sThe %s contains:\n%s",
-                '    ' x $tabs, $_->name, $self->_show_container_contents($_, $tabs + 1),
-            );
-        }
-    }
-
-    return $output;
-}
-
 sub check_exit {
     my $self = shift;
     my ($location, $direction) = @_;
 
     my $link_method = $direction . '_link';
     my $door;
-    foreach my $obj ($self->objects) {
+    foreach my $obj ($self->get_objects) {
         if (
             $obj->in($location)
                 and $obj->gateway and $obj->$link_method

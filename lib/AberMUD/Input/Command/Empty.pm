@@ -28,7 +28,7 @@ command empty => sub {
                 ". I don't think they'd appreciated that.";
         }
 
-        my @contents = $you->universe->objects_contained_by($container)
+        my @contents = $container->containing
             or return "Nothing comes out.";
 
 

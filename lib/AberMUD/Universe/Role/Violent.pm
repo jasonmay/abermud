@@ -10,7 +10,7 @@ around advance => sub {
     my $self = shift;
 
     return $self->$orig(@_) unless $self->does('AberMUD::Universe::Role::Mobile');
-    for my $mobile ($self->mobiles) {
+    for my $mobile ($self->get_mobiles) {
         next unless $mobile->can('start_fight');
         if ($self->roll_to_start_fight) {
             #warn sprintf( "fight %s fight!", $mobile->name);

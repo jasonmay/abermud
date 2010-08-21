@@ -9,13 +9,13 @@ command inventory => sub {
     my @objects_you_carry = grep {
         $_->can('held_by') and $_->held_by
             and $_->held_by == $you
-    } $you->universe->objects;
+    } $you->universe->get_objects;
 
     if (@objects_you_carry) {
         $output = "Your backpack contains:\n";
         $output .= join(
             ' ',
-            map { $_->formatted_name }
+            map { $_->name_in_inv }
             grep { !($_->wearable and $_->worn) and !($_->wieldable and $_->wielded) }
             @objects_you_carry
         );
@@ -33,7 +33,6 @@ command inventory => sub {
         $you->name . " rummages through his backpack.\n",
         except => $you,
     );
-
 
     return $output;
 };
