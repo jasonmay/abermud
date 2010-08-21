@@ -79,6 +79,20 @@ sub formatted_name {
     return $name;
 }
 
+sub name_in_inv {
+    my $self = shift;
+    $self->getable or return '';
+
+    my $name = $self->formatted_name;
+
+    $self->edible       and $name = "&+G$name&*";
+    $self->wieldable and $name .= " &+M<weapon>&*";
+    $self->wearable  and $name .= " &+C<armor>&*";
+    $self->container and $name .= " &+y<cont>&*";
+
+    return $name;
+}
+
 sub final_location {
     my $self = shift;
 
@@ -98,6 +112,61 @@ sub in {
 
     return ($self->final_location && $self->final_location == $location);
 };
+
+sub display_container_contents {
+    my $self      = shift;
+    my $container = shift;
+
+    return undef unless $container->container;
+
+    return $self->_show_container_contents($container, 0);
+}
+
+sub _show_container_contents {
+    my $self = shift;
+
+    my ($object, $tabs) = @_;
+
+    my $output = '';
+    my $first_object = 1;
+    my @contained_containers;
+    my @contained = $self->objects_contained_by($object);
+
+    #warn map { $_->name } @contained;
+    foreach (@contained) {
+        next unless $_->containable;
+        next unless $_->contained_by($object);
+
+        if ($first_object) {
+            $output .= '    ' x $tabs;
+        }
+        else {
+            $output .= ' ';
+        }
+
+        $output .= $_->name;
+
+        push @contained_containers, $_ if $_->container;
+    }
+
+    foreach (@contained_containers) {
+        if ($_->openable and !$_->opened) {
+            $output .= sprintf(
+                "\n%sThe %s is closed.",
+                '    ' x $tabs, $_->name,
+            );
+        }
+        elsif ($self->objects_contained_by($_)) {
+            $output .= sprintf(
+                "\n%sThe %s contains:\n%s",
+                '    ' x $tabs, $_->name, $self->_show_container_contents($_, $tabs + 1),
+            );
+        }
+    }
+
+    return $output;
+}
+
 
 __PACKAGE__->meta->make_immutable;
 
