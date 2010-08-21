@@ -13,7 +13,7 @@ use lib 'dep/mud/dep/iomi/lib';
 use lib 'dep/mud/lib';
 use lib 'lib';
 use AberMUD::Util;
-use AberMUD::Universe::Sets;
+use AberMUD::Universe;
 use AberMUD::Config;
 use AberMUD::Zone;
 use AberMUD::Mobile;
@@ -710,16 +710,21 @@ sub store_zone_data {
         input_states => [qw(Login::Name Game)],
     );
 
-    my $usets = AberMUD::Universe::Sets->new;
+    my $universe = AberMUD::Universe->new;
 
-    $usets->all_mobiles([values %{ $expanded->{mob} }]);
-    $usets->all_objects([values %{ $expanded->{obj} }]);
+    $_->universe($universe)
+        for map { values %{ $expanded->{$_} } } qw/mob obj loc/;
+
+    $universe->mobiles([values %{ $expanded->{mob} }]);
+    $universe->objects([values %{ $expanded->{obj} }]);
+
+    $config->universe($universe);
 
     my $kdb = KiokuDB->connect(AberMUD::Util::dsn, create => 1);
 
     $kdb->scoped_txn(sub {
         $kdb->store(values %{ $expanded->{loc} });
-        $kdb->store('universe-sets' => $usets, config => $config);
+        $kdb->store(config => $config);
     });
 
 }

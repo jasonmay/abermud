@@ -28,44 +28,6 @@ has container => (
     handles    => [qw(fetch param)],
 );
 
-sub new_universe {
-    my $self = shift;
-    my $container = shift;
-    my $b = shift;
-    weaken(my $w = $b);
-
-    my $config = $w->param('storage')->lookup('config')
-        or die "No config found in kdb!";
-
-    my $u = AberMUD::Universe->new(
-        storage   => $w->param('storage'),
-        _controller => $w->param('controller'),
-        spawn_player_code => sub {
-            my $self     = shift;
-            my $id       = shift;
-            #weaken(my $c = $container);
-            my $player   = $container->fetch('player')->get(
-                id          => $id,
-                prompt      => '&*[ &+C%h/%H&* ] &+Y$&* ',
-                location    => $config->location,
-                input_state => [
-                map {
-                    my $class = "AberMUD::Input::State::$_";
-                    Class::MOP::load_class($class);
-                    $class->new(
-                        universe => $self,
-                    )
-                } @{ $config->input_states }
-                ],
-            );
-
-            return $player;
-        }
-    );
-
-    return $u;
-}
-
 sub _build_container {
     my $container = shift;
 
@@ -79,30 +41,13 @@ sub _build_container {
             class => 'AberMUD::Universe',
             lifecycle => 'Singleton',
             block     => sub {
-                weaken(my $w = $container);
-                $container->new_universe($w, @_)
+                $container->new_universe(@_)
             },
             dependencies => [
                 depends_on('storage'),
                 depends_on('controller'),
             ],
         );
-
-        #service input_states => {
-        #    block => sub {
-        #        my $s = shift;
-        #        +{
-        #            map {
-        #                my $class = "AberMUD::Input::State::$_";
-        #                Class::MOP::load_class($class);
-        #                $class->new(
-        #                    universe => $self,
-        #                )
-        #            } $config->input_states
-        #        };
-        #    },
-        #    dependencies => 
-        #};
 
         service player => (
             class => 'AberMUD::Player',
@@ -137,6 +82,48 @@ sub _build_container {
             ]
         );
     };
+}
+
+sub new_universe {
+    my $container = shift;
+    my $b         = shift;
+
+    weaken(my $weakcontainer = $container);
+
+    weaken(my $w = $b);
+
+    my $config = $w->param('storage')->lookup('config')
+        or die "No config found in kdb!";
+
+    my $u = $config->universe;
+
+    $u->storage($b->param('storage'));
+    $u->_controller($b->param('controller'));
+    $u->players(+{});
+    $u->players_in_game(+{});
+
+    $u->spawn_player_code(
+        sub {
+            my $self     = shift;
+            my $id       = shift;
+            my $player   = $weakcontainer->fetch('player')->get(
+                id          => $id,
+                prompt      => '&*[ &+C%h/%H&* ] &+Y$&* ',
+                location    => $config->location,
+                input_state => [
+                    map {
+                        $w->param('controller')->get_input_state(
+                            "AberMUD::Input::State::$_"
+                        )
+                    } @{ $config->input_states }
+                ],
+            );
+
+            return $player;
+        }
+    );
+
+    return $u;
 }
 
 1;

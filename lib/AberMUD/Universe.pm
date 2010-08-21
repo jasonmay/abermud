@@ -15,8 +15,13 @@ with qw(
 );
 
 has '+players' => (
-    traits  => ['Hash'],
+    traits  => ['Hash', 'KiokuDB::DoNotSerialize'],
     handles => {player_list => 'values'}
+);
+
+has '+spawn_player_code' => (
+    required => 0,
+    traits   => ['KiokuDB::DoNotSerialize'],
 );
 
 has players_in_game => (

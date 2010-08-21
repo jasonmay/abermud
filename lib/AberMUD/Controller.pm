@@ -100,39 +100,17 @@ sub _load_input_states {
     foreach my $input_state_class ($self->_input_states) {
         next unless $input_state_class;
         Class::MOP::load_class($input_state_class);
-        my $input_state_object = $input_state_class->new;
+        my $input_state_object = $input_state_class->new(
+            universe => $self->universe,
+        );
         $self->set_input_state($input_state_class => $input_state_object);
     }
-}
-
-sub _load_objects {
-    my $self = shift;
-    my $k = $self->universe->storage->directory;
-
-    my $universe_sets = $k->lookup('universe-sets');
-    return unless $universe_sets;
-
-    $self->universe->objects($universe_sets->all_objects);
-}
-
-sub _load_mobiles {
-    my $self = shift;
-    my $k = $self->universe->storage->directory;
-
-    my $universe_sets = $k->lookup('universe-sets');
-    return unless $universe_sets;
-
-    $self->universe->mobiles($universe_sets->all_mobiles);
-
-    $_->universe($self->universe) for $self->universe->mobiles;
 }
 
 sub BUILD {
     my $self = shift;
 
     $self->_load_input_states;
-    $self->_load_objects;
-    $self->_load_mobiles;
 }
 
 {

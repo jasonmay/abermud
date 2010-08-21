@@ -36,6 +36,12 @@ has active => (
     isa => 'Bool',
 );
 
+has universe => (
+    is => 'rw',
+    isa => 'AberMUD::Universe',
+    weak_ref => 1,
+);
+
 has [ directions() ] => (
     is        => 'rw',
     isa       => 'AberMUD::Location',

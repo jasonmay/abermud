@@ -15,6 +15,11 @@ has input_states => (
     isa => 'ArrayRef[Str]',
 );
 
+has universe => (
+    is => 'rw',
+    isa => 'AberMUD::Universe',
+);
+
 __PACKAGE__->meta->make_immutable;
 
 1;

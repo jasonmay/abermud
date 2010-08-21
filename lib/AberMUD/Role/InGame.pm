@@ -16,7 +16,6 @@ has universe => (
     is       => 'rw',
     isa      => 'AberMUD::Universe',
     weak_ref => 1,
-    traits   => ['KiokuDB::DoNotSerialize'],
 );
 
 has location => (
