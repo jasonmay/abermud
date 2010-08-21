@@ -32,7 +32,7 @@ command equipment => sub {
 
     foreach my $part (bodyparts()) {
         next unless $coverage{$part};
-        $output .= sprintf('%-15s', '&+G'.ucfirst($part).':&*');
+        $output .= sprintf('%-20s', '&+C'.ucfirst($part).':&*');
 
         if ($coverage{$part}) {
             $output .= $coverage{$part}->name;
