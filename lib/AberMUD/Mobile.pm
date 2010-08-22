@@ -53,20 +53,9 @@ sub move {
     return $self unless @dirs;
 
     my $way = $dirs[rand @dirs];
-    my %opp_dir = (
-        east  => 'the west',
-        west  => 'the east',
-        north => 'the south',
-        south => 'the north',
-        up    => 'below',
-        down  => 'above',
-    );
 
-    my $opp = $opp_dir{$way};
-
-    $self->say($self->name . " goes $way.\n");
-    $self->location($self->location->$way);
-    $self->say($self->name . " arrives from $opp.\n");
+    my $go_way = "go_$way";
+    $self->$go_way;
 
     return $self;
 }

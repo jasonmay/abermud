@@ -21,22 +21,6 @@ has universe => (
 has location => (
     is => 'rw',
     isa => 'AberMUD::Location',
-    handles => {
-        map {
-            my $direction = $_;
-            (
-                "can_go_$direction" => sub {
-                    my $self = shift;
-                    return 0 unless $self->location;
-
-                    return $self->universe->check_exit(
-                        $self->location,
-                        $direction,
-                    );
-                }
-            )
-        } directions()
-    },
 );
 
 has zone => (
@@ -53,6 +37,20 @@ has examine_description => (
     is  => 'rw',
     isa => 'Str',
 );
+
+foreach my $direction ( directions() ) {
+    __PACKAGE__->meta->add_method(
+        "can_go_$direction" => sub {
+            my $self = shift;
+            return 0 unless $self->location;
+
+            return $self->universe->check_exit(
+                $self->location,
+                $direction,
+            );
+        }
+    );
+}
 
 sub say {
     my $self    = shift;

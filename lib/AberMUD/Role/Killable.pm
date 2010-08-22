@@ -157,8 +157,6 @@ foreach my $direction ( directions() ) {
             my $destination = $self->${\"can_go_$direction"}
                 or return undef;
 
-            my @players = $self->universe->game_list;
-
             $self->say(
                 sprintf("\n%s goes %s\n", $self->name, $direction),
                 except => $self,

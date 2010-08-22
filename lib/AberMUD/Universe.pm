@@ -7,6 +7,8 @@ use Scalar::Util qw(weaken);
 use KiokuDB;
 use KiokuDB::Backend::DBI;
 use List::MoreUtils qw(any);
+use List::Util qw(first);
+use Try::Tiny;
 use AberMUD::Util;
 
 with qw(
@@ -145,24 +147,30 @@ sub identify_from_list {
     return undef;
 }
 
+my @doors;
 sub check_exit {
     my $self = shift;
     my ($location, $direction) = @_;
 
     my $link_method = $direction . '_link';
-    my $door;
-    foreach my $obj ($self->get_objects) {
-        if (
-            $obj->in($location)
-                and $obj->gateway and $obj->$link_method
-                and ($obj->openable ? $obj->opened : 1)
-        ) {
-            $door = $obj; last;
-        }
+
+    if (!@doors) {
+        @doors = grep {
+            $_->gateway and ($_->openable ? $_->opened : 1)
+        } $self->get_objects;
     }
 
-    $door ? $door->$link_method->location : $location->$direction;
+    my $door = first {
+        $_->$link_method and
+        $_->in($location)
+    } @doors;
 
+    if ($door and !$door->$link_method) {
+        warn $location->title . " -> $direction not found" ;
+        return undef;
+    }
+
+    return $door ? $door->$link_method->location : $location->$direction;
 }
 
 __PACKAGE__->meta->make_immutable;
