@@ -18,7 +18,6 @@ command remove => sub {
 
     $object->worn or return "You're not wearing that!";
 
-    # FIXME can't overlap body parts
     $object->worn(0);
 
     return "You take off the " . $object->name . ".";
