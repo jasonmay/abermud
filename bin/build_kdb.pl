@@ -725,6 +725,8 @@ sub store_zone_data {
     $kdb->scoped_txn(sub {
         $kdb->store(values %{ $expanded->{loc} });
         $kdb->store(config => $config);
+        $_->id($kdb->object_to_id($_)) for values %{ $expanded->{loc} };
+        $kdb->update(values %{ $expanded->{loc} });
     });
 
 }
