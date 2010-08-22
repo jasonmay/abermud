@@ -121,10 +121,10 @@ sub BUILD {
         my $self = shift;
 
         if ($two_second_toggle) {
-            $self->universe->can('advance')
-                && $self->universe->advance;
-            }
-            $two_second_toggle = !$two_second_toggle;
+                $self->universe->can('advance')
+                    && $self->universe->advance;
+        }
+        $two_second_toggle = !$two_second_toggle;
     };
 }
 
