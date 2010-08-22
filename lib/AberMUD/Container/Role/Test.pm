@@ -21,16 +21,16 @@ has test_storage => (
     isa => 'AberMUD::Storage',
 );
 
-override _build_container => sub {
+sub _build_container {
     my $self = shift;
 
     my $c = container 'AberMUD' => as {
+        weaken(my $weakself = $self);
         service storage => (
             class     => 'AberMUD::Storage',
             lifecycle => 'Singleton',
             block     => sub {
-                weaken(my $weak_self = $self);
-                $weak_self->test_storage || AberMUD::Storage->new
+                $weakself->test_storage || AberMUD::Storage->new
             },
         );
 
@@ -38,8 +38,7 @@ override _build_container => sub {
             class => 'AberMUD::Universe',
             lifecycle => 'Singleton',
             block     => sub {
-                weaken(my $w = $self);
-                $self->new_universe($w, @_)
+                $weakself->new_universe(@_)
             },
             dependencies => [
                 depends_on('storage'),

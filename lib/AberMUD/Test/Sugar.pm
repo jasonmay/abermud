@@ -10,7 +10,7 @@ use AberMUD::Container;
 use AberMUD::Config;
 use AberMUD::Storage;
 use AberMUD::Zone;
-use AberMUD::Universe::Sets;
+use AberMUD::Universe;
 
 use base 'Exporter';
 our @EXPORT = qw(build_game);
@@ -81,19 +81,23 @@ sub build_game {
 
     my $players = $data{players};
 
-    my $config = AberMUD::Config->new(
-        input_states => [qw(Login::Name Game)],
-        location => $all_locations{$data{default_location}},
+    my $universe = AberMUD::Universe->new(
+        objects => [values %all_objects],
+        mobiles => \@all_mobiles,
     );
 
-    my $usets = AberMUD::Universe::Sets->new(
-        all_objects => [values %all_objects],
-        all_mobiles => \@all_mobiles,
+    $_->universe($universe) for $universe->get_objects,
+                                $universe->get_mobiles,
+                                values(%all_locations);
+
+    my $config = AberMUD::Config->new(
+        input_states => [qw(Login::Name Game)],
+        location     => $all_locations{$data{default_location}},
+        universe     => $universe,
     );
 
     $storage->scoped_txn(
         sub {
-            $storage->store('universe-sets' => $usets);
             $storage->store(config => $config);
             $storage->store(values %all_locations);
         }
@@ -103,9 +107,8 @@ sub build_game {
         test_storage => $storage,
     );
 
-    $c->fetch('controller')->get->_load_objects();
-    $c->fetch('controller')->get->_load_mobiles();
-    #use Carp::REPL; die;
+    # pre-load universe data
+    $c->fetch('universe')->get;
 
     return $c;
 }

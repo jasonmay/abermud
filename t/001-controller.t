@@ -6,6 +6,7 @@ use AberMUD::Storage;
 use KiokuDB;
 use AberMUD::Zone;
 use AberMUD::Container;
+use AberMUD::Universe;
 use AberMUD::Input::State::Login::Name;
 use AberMUD::Input::State::Game;
 use AberMUD::Config;
@@ -44,6 +45,7 @@ my $kdb = KiokuDB->connect('hash');
 
     my $config = AberMUD::Config->new(
         input_states => [qw(Login::Name Game)],
+        universe => AberMUD::Universe->new,
     );
 
     $kdb->store(config => $config);

@@ -45,6 +45,7 @@ my $kdb = KiokuDB->connect(
 
     my $config = AberMUD::Config->new(
         input_states => [qw(Login::Name Game)],
+        universe     => AberMUD::Universe->new,
     );
 
     $kdb->store(config => $config);
