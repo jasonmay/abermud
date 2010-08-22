@@ -7,8 +7,9 @@ use AberMUD::OO::Commands;
 command 'random' , priority => -10, sub {
     my ($you, $args) = @_;
 
-    my @o = $you->universe->get_objects;
+    return goto_mobile($you) if $args =~ /mob/i;
 
+    my @o = $you->universe->get_objects;
 
     my $location;
 
@@ -54,6 +55,21 @@ command 'random' , priority => -10, sub {
     $output .= $you->look();
     return $output;
 };
+
+sub goto_mobile {
+    my $you  = shift;
+
+    my @moving_mobiles = grep {
+    $_->location and
+    $_->speed and
+    $_->speed > 0
+    } $you->universe->get_mobiles;
+
+    my $m = $moving_mobiles[rand @moving_mobiles];
+
+    $you->location($m->location);
+    return $you->look;
+}
 
 __PACKAGE__->meta->make_immutable;
 
