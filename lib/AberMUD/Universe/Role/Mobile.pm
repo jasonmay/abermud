@@ -17,11 +17,15 @@ around advance => sub {
     my $orig = shift;
     my $self = shift;
 
-    for my $mobile ($self->get_mobiles) {
-        if ($self->roll_to_move($mobile)) {
-            $mobile->move;
-        }
-    }
+    my @moving_mobiles = grep {
+        $_->speed and $_->speed > 0
+            and $self->roll_to_move($_)
+    } $self->get_mobiles;
+
+    warn "START";
+    $_->move for @moving_mobiles;
+    warn "END";
+
     return $self->$orig(@_);
 };
 
