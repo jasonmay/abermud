@@ -362,7 +362,7 @@ sub carrying {
 
     return grep {
         $_->can('held_by') and $_->held_by and $_->held_by == $self
-    } $self->universe->objects;
+    } $self->universe->get_objects;
 }
 
 sub carrying_loosely {

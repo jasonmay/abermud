@@ -24,7 +24,7 @@ command 'look', priority => -10, sub {
 
         $object->openable and $object->opened or return "It's closed.";
 
-        my $output = $you->universe->_show_container_contents($object, 0);
+        my $output = $object->display_contents();
     }
     else {
         return "LOL"; # TODO should do same as "examine"

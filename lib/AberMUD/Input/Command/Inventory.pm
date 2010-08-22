@@ -22,7 +22,7 @@ command inventory => sub {
 
         my @containers = grep { $_->container } @objects_you_carry;
 
-        $output .= "\n" . $you->universe->display_container_contents($_)
+        $output .= "\n" . $_->display_contents()
             for @containers;
     }
     else {
