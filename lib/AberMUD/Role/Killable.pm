@@ -3,7 +3,7 @@ package AberMUD::Role::Killable;
 use Moose::Role;
 use Moose::Util::TypeConstraints;
 use AberMUD::Player;
-#use AberMUD::Mobile;
+use AberMUD::Location::Util qw(directions);
 
 has fighting => (
     is     => 'rw',
@@ -127,6 +127,65 @@ sub coverage {
     }
 
     return %covering;
+}
+
+sub carrying {
+    my $self = shift;
+
+    return grep {
+        $_->can('held_by') and $_->held_by and $_->held_by == $self
+    } $self->universe->get_objects;
+}
+
+sub carrying_loosely {
+    my $self = shift;
+
+    return grep {
+        not
+        ($_->can('wielded_by') and $_->wielded_by and $_->wielded_by == $self)
+
+        and not
+        ($_->can('worn_by') and $_->worn_by and $_->worn_by == $self)
+    } $self->carrying;
+}
+
+foreach my $direction ( directions() ) {
+    __PACKAGE__->meta->add_method("go_$direction" =>
+        sub {
+            my $self = shift;
+
+            my $destination = $self->${\"can_go_$direction"}
+                or return undef;
+
+            my @players = $self->universe->game_list;
+
+            $self->say(
+                sprintf("\n%s goes %s\n", $self->name, $direction),
+                except => $self,
+            );
+
+            $self->location($destination);
+
+            my %opp_dir = (
+                east  => 'the west',
+                west  => 'the east',
+                north => 'the south',
+                south => 'the north',
+                up    => 'below',
+                down  => 'above',
+            );
+
+            $self->say(
+                sprintf(
+                    "\n%s arrives from %s\n",
+                    $self->name, $opp_dir{$direction}
+                ),
+                except => $self,
+            );
+
+            return $destination;
+        }
+    );
 }
 
 sub formatted_name {
