@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use Moose::Meta::Class ();
+use KiokuDB::Util qw(set);
 
 use AberMUD::Object;
 use AberMUD::Location;
@@ -105,8 +106,8 @@ sub build_game {
     my $players = $data{players};
 
     my $universe = AberMUD::Universe->new(
-        objects => [values %all_objects],
-        mobiles => \@all_mobiles,
+        objects => set(values %all_objects),
+        mobiles => set(@all_mobiles),
     );
 
     $_->universe($universe) for $universe->get_objects,
@@ -118,13 +119,11 @@ sub build_game {
         location     => $all_locations{$data{default_location}},
         universe     => $universe,
     );
+    my $locations = set(values %all_locations);
 
-
-    $storage->scoped_txn(
-        sub {
-            $storage->store(config => $config);
-            $storage->store(values %all_locations);
-        }
+    $storage->build_universe(
+        config    => $config,
+        locations => $locations,
     );
 
     # pre-load universe data

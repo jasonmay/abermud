@@ -127,7 +127,7 @@ my $c = build_game
 
 my $u = $c->resolve(service => 'universe');
 
-ok(my @o = @{$u->objects}, 'objects loaded');
+ok(my @o = $u->objects->members, 'objects loaded');
 
 ok(scalar(grep { $_->does('AberMUD::Object::Role::Getable') } @o) >= 6);
 
