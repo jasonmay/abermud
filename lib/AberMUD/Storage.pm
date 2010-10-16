@@ -71,20 +71,34 @@ sub build_universe {
 
     my ($config, $locations) = ($args{config}, $args{locations});
 
-    $self->txn_do(sub {
+    $self->txn_do(
+        sub {
+            my $backend = $self->directory->backend;
+            if (
+                blessed($backend->storage) &&
+                $backend->storage->isa('DBIx::Class::Storage::DBI')
+            ) {
+                $backend->dbh_do(
+                    sub {
+                        my ($storage, $dbh) = @_;
+                        $dbh->do('truncate entries cascade');
+                    }
+                );
+            }
 
-        $self->store($locations);
-        $self->store(config => $config);
+            $self->store($locations);
+            $self->store(config => $config);
 
-        # assign IDs to locations and update
-        $_->id($self->object_to_id($_)) for $locations->members;
-        $self->update($locations->members);
+            # assign IDs to locations and update
+            $_->id($self->object_to_id($_)) for $locations->members;
+            $self->update($locations->members);
 
-        # set root to everything we stored
-        my @all_objects = $self->scope->live_objects->live_objects;
-        $self->set_root(@all_objects);
-        $self->update(@all_objects);
-    });
+            # set root to everything we stored
+            my @all_objects = $self->scope->live_objects->live_objects;
+            $self->set_root(@all_objects);
+            $self->update(@all_objects);
+        }
+    );
 }
 
 sub BUILD {
