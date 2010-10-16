@@ -63,11 +63,12 @@ sub _build_universe_block {
         $u->players_in_game(+{});
 
         weaken(my $weakservice = $service);
+        weaken(my $weakcontainer = $self);
         $u->spawn_player_code(
             sub {
                 my $self     = shift;
                 my $id       = shift;
-                my $player   = $self->fetch('player')->get(
+                my $player   = $weakcontainer->fetch('player')->get(
                     id          => $id,
                     prompt      => '&*[ &+C%h/%H&* ] &+Y$&* ',
                     location    => $config->location,
