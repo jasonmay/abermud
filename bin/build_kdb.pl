@@ -19,6 +19,7 @@ use AberMUD::Zone;
 use AberMUD::Mobile;
 use AberMUD::Location;
 use AberMUD::Object;
+use AberMUD::Container::Storage;
 
 my $parser = qr{
     <logfile:debug.log>
@@ -720,13 +721,17 @@ sub store_zone_data {
 
     $config->universe($universe);
 
-    my $kdb = KiokuDB->connect(AberMUD::Util::dsn, create => 1);
+    my $storage_container = AberMUD::Container::Storage->new(
+        name => 'Storage',
+    );
 
-    $kdb->scoped_txn(sub {
-        $kdb->store(values %{ $expanded->{loc} });
-        $kdb->store(config => $config);
-        $_->id($kdb->object_to_id($_)) for values %{ $expanded->{loc} };
-        $kdb->update(values %{ $expanded->{loc} });
+    my $storage = $storage_container->resolve(service => 'Storage/object');
+
+    $storage->scoped_txn(sub {
+        $storage->store(values %{ $expanded->{loc} });
+        $storage->store(config => $config);
+        $_->id($storage->object_to_id($_)) for values %{ $expanded->{loc} };
+        $storage->update(values %{ $expanded->{loc} });
     });
 
 }

@@ -53,13 +53,13 @@ sub player_logs_in {
     my $name = shift;
     my %params = @_;
 
-    $params{location} ||= $self->fetch('storage')->get->lookup('config')->location;
+    $params{location} ||= $self->storage_object->lookup('config')->location;
 
-    my $p = $self->fetch('player')->get;
+    my $p = $self->resolve(service => 'player');
     $p->input_state([AberMUD::Input::State::Game->new]);
 
     $p->name($name);
-    $p->location($self->fetch('storage')->get->lookup('location-test1'));
+    $p->location($self->storage_object->lookup('location-test1'));
     $p->_join_game;
     $p->location($params{location});
 

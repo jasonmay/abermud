@@ -125,7 +125,7 @@ my $c = build_game
     },
 ;
 
-my $u = $c->fetch('universe')->get;
+my $u = $c->resolve(service => 'universe');
 
 ok(my @o = @{$u->objects}, 'objects loaded');
 

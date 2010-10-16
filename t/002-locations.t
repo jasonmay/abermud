@@ -33,7 +33,7 @@ my $c = build_container();
         ),
     );
 
-    my $storage = $c->fetch('storage')->get;
+    my $storage = $c->storage_object;
     my $scope = $storage->new_scope;
     $storage->store("location-$_" => $locations{$_}) foreach keys %locations;
 
@@ -52,14 +52,14 @@ my $c = build_container();
     $config->location($locations{test1}); $storage->update($config);
 }
 
-my $u = $c->fetch('universe')->get;
+my $u = $c->resolve(service => 'universe');
 
 sub player_logs_in {
-    my $p = $c->fetch('player')->get;
+    my $p = $c->resolve(service => 'player');
     $p->input_state([AberMUD::Input::State::Game->new]);
 
     $p->name(shift);
-    $p->location($c->fetch('storage')->get->lookup('location-test1'));
+    $p->location($c->storage_object->lookup('location-test1'));
     $p->_join_game;
 }
 

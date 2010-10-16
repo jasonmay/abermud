@@ -38,7 +38,7 @@ my $c = build_container();
         ),
     );
 
-    my $storage = $c->fetch('storage')->get;
+    my $storage = $c->storage_object;
     $storage->store("location-$_" => $locations{$_}) foreach keys %locations;
 
     $locations{test1}->north($locations{test2});
@@ -57,14 +57,14 @@ my $c = build_container();
     $storage->update($config);
 }
 
-my $u = $c->fetch('universe')->get;
+my $u = $c->resolve(service => 'universe');
 
 sub player_joins_game {
-    my $p = $c->fetch('player')->get;
+    my $p = $c->resolve(service => 'player');
     $p->input_state([
         map {
             eval "require $_";
-            $_->new(universe => $c->fetch('universe')->get)
+            $_->new(universe => $c->resolve(service => 'universe'))
         } qw(
         AberMUD::Input::State::Login::Name
         AberMUD::Input::State::Game)
@@ -108,13 +108,13 @@ my $txn_block = sub {
 
     $p1->types_in('123456'); #re-enter password
     is($p1->input_state->[0]->meta->name, 'AberMUD::Input::State::Game');
-    ok($c->fetch('storage')->get->lookup('player-foo'), 'player stored in kioku');
+    ok($c->storage_object->lookup('player-foo'), 'player stored in kioku');
 
     ok(%{ $u->players_in_game });
 
 
     SKIP: {
-        my $loc = $c->fetch('storage')->get->lookup('location-test1');
+        my $loc = $c->storage_object->lookup('location-test1');
         skip 'missing locations in test kdb', 1 unless $loc;
 
         $p1->location($loc);
@@ -154,6 +154,6 @@ my $txn_block = sub {
 
 };
 
-$c->fetch('storage')->get->txn_do($txn_block);
+$c->storage_object->txn_do($txn_block);
 
 done_testing();

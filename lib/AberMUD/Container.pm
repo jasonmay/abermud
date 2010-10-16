@@ -2,7 +2,7 @@
 package AberMUD::Container;
 use Moose;
 use Bread::Board;
-use Scalar::Util qw(weaken isweak);
+use Scalar::Util qw(weaken);
 
 use AberMUD::Storage;
 use AberMUD::Controller;
@@ -13,6 +13,7 @@ use AberMUD::Object;
 use AberMUD::Mobile;
 use AberMUD::Object::Role::Getable;
 use AberMUD::Object::Role::Weapon;
+use AberMUD::Container::Storage;
 
 use AberMUD::Util ();
 
@@ -23,7 +24,7 @@ has container => (
     isa        => 'Bread::Board::Container',
     lazy_build => 1,
     builder    => '_build_container',
-    handles    => [qw(fetch param)],
+    handles    => [qw(resolve param)],
 );
 
 has dsn => (
@@ -68,17 +69,20 @@ sub _build_universe_block {
             sub {
                 my $self     = shift;
                 my $id       = shift;
-                my $player   = $weakcontainer->fetch('player')->get(
-                    id          => $id,
-                    prompt      => '&*[ &+C%h/%H&* ] &+Y$&* ',
-                    location    => $config->location,
-                    input_state => [
-                        map {
-                            $weakservice->param('controller')->get_input_state(
-                                "AberMUD::Input::State::$_"
-                            )
-                        } @{ $config->input_states }
-                    ],
+                my $player   = $weakcontainer->resolve(
+                    service => 'player',
+                    parameters => {
+                        id          => $id,
+                        prompt      => '&*[ &+C%h/%H&* ] &+Y$&* ',
+                        location    => $config->location,
+                        input_state => [
+                            map {
+                                $weakservice->param('controller')->get_input_state(
+                                    "AberMUD::Input::State::$_"
+                                )
+                            } @{ $config->input_states }
+                        ],
+                    }
                 );
 
                 return $player;
@@ -123,32 +127,22 @@ sub _build_container {
             $weakself->controller_block->($weakself, @_)
         } if $self->controller_block;
 
-        service storage => (
-            class     => 'AberMUD::Storage',
-            lifecycle => 'Singleton',
-            block     => sub {
-                return AberMUD::Storage->new(
-                    dsn => $weakself->dsn,
-                );
-            },
-        );
-
         service universe => (
             class => 'AberMUD::Universe',
             lifecycle => 'Singleton',
             block     => sub { $weakself->universe_block->($weakself, @_) },
-            dependencies => [
-                depends_on('storage'),
-                depends_on('controller'),
-            ],
+            dependencies => {
+                storage    => depends_on('Storage/object'),
+                controller => depends_on('controller'),
+            },
         );
 
         service player => (
             class => 'AberMUD::Player',
-            dependencies => [
-                depends_on('storage'),
-                depends_on('universe'),
-            ],
+            dependencies => {
+                storage  => depends_on('Storage/object'),
+                universe => depends_on('universe'),
+            },
             %player_args,
         );
 
@@ -156,22 +150,36 @@ sub _build_container {
             class     => 'AberMUD::Controller',
             lifecycle => 'Singleton',
             %controller_args,
-            dependencies => [
-                depends_on('storage'),
-                depends_on('universe'),
-            ]
+            dependencies => {
+                storage => depends_on('Storage/object'),
+                universe => depends_on('universe'),
+            },
         );
 
         service app => (
             class => 'AberMUD',
             lifecycle => 'Singleton',
-            dependencies => [
-                depends_on('storage'),
-                depends_on('controller'),
-                depends_on('universe'),
-            ]
+            dependencies => {
+                storage    => depends_on('Storage/object'),
+                controller => depends_on('controller'),
+                universe   => depends_on('universe'),
+            }
         );
     };
+
+    my $storage_container = AberMUD::Container::Storage->new(
+        name => 'Storage',
+        dsn  => $self->dsn,
+    );
+
+    $c->add_sub_container($storage_container);
+    return $c;
+}
+
+sub storage_object {
+    my $self = shift;
+
+    return $self->resolve(service => 'Storage/object');
 }
 
 1;
@@ -187,7 +195,7 @@ AberMUD::Container - wires all the AberMUD components together
   use AberMUD::Container;
   
   my $c = AberMUD::Container->new->container;
-  $c->fetch('app')->get->run;
+  $c->resolve(service => 'app')->run;
 
 =head1 DESCRIPTION
 

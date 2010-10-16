@@ -100,7 +100,7 @@ sub build_game {
 
     #my $k = KiokuDB->connect('hash', create => 1);
 
-    my $storage = $c->fetch('storage')->get;
+    my $storage = $c->storage_object;
 
     my $players = $data{players};
 
@@ -128,7 +128,7 @@ sub build_game {
     );
 
     # pre-load universe data
-    $c->fetch('universe')->get;
+    $c->resolve(service => 'universe');
 
     return $c;
 }
