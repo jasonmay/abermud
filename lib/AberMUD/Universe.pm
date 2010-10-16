@@ -5,6 +5,8 @@ use namespace::autoclean;
 extends 'MUD::Universe';
 use Scalar::Util qw(weaken);
 use KiokuDB;
+use KiokuDB::Util qw(set);
+use KiokuDB::Set;
 use KiokuDB::Backend::DBI;
 use List::MoreUtils qw(any);
 use List::Util qw(first);
@@ -52,13 +54,12 @@ has _controller => (
 );
 
 has objects => (
-    is  => 'rw',
-    isa => 'ArrayRef[AberMUD::Object]',
-    traits => ['Array'],
+    is      => 'rw',
+    isa     => 'KiokuDB::Set',
     handles => {
-        get_objects => 'elements',
+        get_objects => 'members',
     },
-    default => sub { [] },
+    default => sub { set() },
 );
 
 sub killables {

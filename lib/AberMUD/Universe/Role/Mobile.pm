@@ -1,16 +1,17 @@
 #!/usr/bin/env perl
 package AberMUD::Universe::Role::Mobile;
 use Moose::Role;
+use KiokuDB::Set;
+use KiokuDB::Util qw(set);
 use namespace::autoclean;
 
 has mobiles => (
     is  => 'rw',
-    isa => 'ArrayRef[AberMUD::Mobile]',
-    traits => ['Array'],
+    isa => 'KiokuDB::Set',
     handles => {
-        get_mobiles => 'elements',
+        get_mobiles => 'members',
     },
-    default => sub { [] },
+    default => sub { set() },
 );
 
 around advance => sub {

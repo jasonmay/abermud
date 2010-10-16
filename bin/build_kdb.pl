@@ -717,8 +717,8 @@ sub store_zone_data {
     $_->universe($universe)
         for map { values %{ $expanded->{$_} } } qw/mob obj loc/;
 
-    $universe->mobiles([values %{ $expanded->{mob} }]);
-    $universe->objects([values %{ $expanded->{obj} }]);
+    $universe->mobiles->insert(values %{ $expanded->{mob} });
+    $universe->objects->insert(values %{ $expanded->{obj} });
 
     $config->universe($universe);
 
