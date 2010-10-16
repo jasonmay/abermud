@@ -13,7 +13,6 @@ use AberMUD::Object;
 use AberMUD::Mobile;
 use AberMUD::Object::Role::Getable;
 use AberMUD::Object::Role::Weapon;
-use AberMUD::Container::Storage;
 
 use AberMUD::Util ();
 
@@ -25,12 +24,6 @@ has container => (
     lazy_build => 1,
     builder    => '_build_container',
     handles    => [qw(resolve param)],
-);
-
-has dsn => (
-    is  => 'ro',
-    isa => 'Str',
-    default => AberMUD::Util::dsn,
 );
 
 has controller_block => (
@@ -127,12 +120,17 @@ sub _build_container {
             $weakself->controller_block->($weakself, @_)
         } if $self->controller_block;
 
+        service storage => (
+            class     => 'AberMUD::Storage',
+            lifecycle => 'Singleton',
+        );
+
         service universe => (
             class => 'AberMUD::Universe',
             lifecycle => 'Singleton',
             block     => sub { $weakself->universe_block->($weakself, @_) },
             dependencies => {
-                storage    => depends_on('Storage/object'),
+                storage    => depends_on('storage'),
                 controller => depends_on('controller'),
             },
         );
@@ -140,7 +138,7 @@ sub _build_container {
         service player => (
             class => 'AberMUD::Player',
             dependencies => {
-                storage  => depends_on('Storage/object'),
+                storage  => depends_on('storage'),
                 universe => depends_on('universe'),
             },
             %player_args,
@@ -151,7 +149,7 @@ sub _build_container {
             lifecycle => 'Singleton',
             %controller_args,
             dependencies => {
-                storage => depends_on('Storage/object'),
+                storage => depends_on('storage'),
                 universe => depends_on('universe'),
             },
         );
@@ -160,26 +158,20 @@ sub _build_container {
             class => 'AberMUD',
             lifecycle => 'Singleton',
             dependencies => {
-                storage    => depends_on('Storage/object'),
+                storage    => depends_on('storage'),
                 controller => depends_on('controller'),
                 universe   => depends_on('universe'),
             }
         );
     };
 
-    my $storage_container = AberMUD::Container::Storage->new(
-        name => 'Storage',
-        dsn  => $self->dsn,
-    );
-
-    $c->add_sub_container($storage_container);
     return $c;
 }
 
 sub storage_object {
     my $self = shift;
 
-    return $self->resolve(service => 'Storage/object');
+    return $self->resolve(service => 'storage');
 }
 
 1;

@@ -19,7 +19,7 @@ use AberMUD::Zone;
 use AberMUD::Mobile;
 use AberMUD::Location;
 use AberMUD::Object;
-use AberMUD::Container::Storage;
+use AberMUD::Storage;
 
 my $parser = qr{
     <logfile:debug.log>
@@ -721,11 +721,7 @@ sub store_zone_data {
 
     $config->universe($universe);
 
-    my $storage_container = AberMUD::Container::Storage->new(
-        name => 'Storage',
-    );
-
-    my $storage = $storage_container->resolve(service => 'Storage/object');
+    my $storage = AberMUD::Storage->new;
 
     $storage->scoped_txn(sub {
         $storage->store(values %{ $expanded->{loc} });

@@ -2,14 +2,20 @@
 package AberMUD::Storage;
 use Moose;
 use KiokuDB;
-use AberMUD::Util;
 use KiokuDB::LiveObjects::Scope;
-use Carp;
+use YAML::XS qw(LoadFile);
+use Scalar::Util qw(weaken);
 use namespace::autoclean;
 
 extends 'KiokuX::Model';
 
-has '+dsn' => (default => AberMUD::Util::dsn);
+my $config = LoadFile('etc/db.yml');
+
+has '+dsn' => ( default => delete($config->{dsn}) );
+
+has '+extra_args' => (
+    default => sub { $config },
+);
 
 has scope => (
     is      => 'rw',
