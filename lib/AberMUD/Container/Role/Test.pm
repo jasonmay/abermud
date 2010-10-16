@@ -48,6 +48,15 @@ sub _build_controller_block {
     }
 }
 
+sub _build_storage_block {
+    return sub {
+        return AberMUD::Storage->new(
+            dsn        => 'hash',
+            extra_args => [],
+        );
+    }
+}
+
 sub player_logs_in {
     my $self = shift;
     my $name = shift;

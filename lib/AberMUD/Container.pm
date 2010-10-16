@@ -26,6 +26,15 @@ has container => (
     handles    => [qw(resolve param)],
 );
 
+has storage_block => (
+    is      => 'ro',
+    isa     => 'Maybe[CodeRef]',
+    builder => '_build_storage_block',
+    lazy    => 1,
+);
+
+sub _build_storage_block { undef }
+
 has controller_block => (
     is      => 'ro',
     isa     => 'Maybe[CodeRef]',
@@ -120,9 +129,15 @@ sub _build_container {
             $weakself->controller_block->($weakself, @_)
         } if $self->controller_block;
 
+        my %storage_args;
+        $storage_args{block} = sub {
+            $weakself->storage_block->($weakself, @_)
+        } if $self->storage_block;
+
         service storage => (
             class     => 'AberMUD::Storage',
             lifecycle => 'Singleton',
+            %storage_args,
         );
 
         service universe => (
