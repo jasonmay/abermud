@@ -8,6 +8,7 @@ use File::Basename;
 use autodie;
 
 use KiokuDB;
+use KiokuDB::Util qw(set);
 
 use lib 'dep/mud/dep/iomi/lib';
 use lib 'dep/mud/lib';
@@ -723,11 +724,10 @@ sub store_zone_data {
 
     my $storage = AberMUD::Storage->new;
 
-    $storage->scoped_txn(sub {
-        $storage->store(values %{ $expanded->{loc} });
-        $storage->store(config => $config);
-        $_->id($storage->object_to_id($_)) for values %{ $expanded->{loc} };
-        $storage->update(values %{ $expanded->{loc} });
-    });
+    $storage->build_universe(
+        config    => $config,
+        locations => set(values %{ $expanded->{loc} }),
+    );
+
 
 }

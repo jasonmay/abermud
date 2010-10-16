@@ -65,6 +65,28 @@ sub gen_world_id {
     return $zone->name . $new_num;
 }
 
+sub build_universe {
+    my $self = shift;
+    my %args = @_;
+
+    my ($config, $locations) = ($args{config}, $args{locations});
+
+    $self->txn_do(sub {
+
+        $self->store($locations);
+        $self->store(config => $config);
+
+        # assign IDs to locations and update
+        $_->id($self->object_to_id($_)) for $locations->members;
+        $self->update($locations->members);
+
+        # set root to everything we stored
+        my @all_objects = $self->scope->live_objects->live_objects;
+        $self->set_root(@all_objects);
+        $self->update(@all_objects);
+    });
+}
+
 sub BUILD {
     my $self = shift;
     $self->scope; # can't make it eager. things break(?)
