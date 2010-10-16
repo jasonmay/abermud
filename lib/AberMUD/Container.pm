@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Container;
 use Moose;
+
 use Bread::Board;
 use Scalar::Util qw(weaken);
 
@@ -13,7 +14,6 @@ use AberMUD::Object;
 use AberMUD::Mobile;
 use AberMUD::Object::Role::Getable;
 use AberMUD::Object::Role::Weapon;
-
 use AberMUD::Util ();
 
 use namespace::autoclean;

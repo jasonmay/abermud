@@ -1,10 +1,14 @@
 #!/usr/bin/env perl
 package AberMUD::Storage;
 use Moose;
+
 use KiokuDB;
 use KiokuDB::LiveObjects::Scope;
+
 use YAML::XS qw(LoadFile);
+
 use Scalar::Util qw(weaken);
+
 use namespace::autoclean;
 
 extends 'KiokuX::Model';
