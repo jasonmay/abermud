@@ -11,7 +11,7 @@ my @methods_to_stub = qw(
 );
 __PACKAGE__->can($_) && override($_ => sub { }) for @methods_to_stub;
 
-override send => sub {
+sub send {
     my $self = shift;
     my ($id, $message) = @_;
 
@@ -26,7 +26,7 @@ override send => sub {
     $p->add_output($message);
 };
 
-override multisend => sub {
+sub multisend {
     my $self = shift;
     my %messages = @_;
 
@@ -35,7 +35,7 @@ override multisend => sub {
     }
 };
 
-override force_disconnect => sub {
+sub force_disconnect {
     my $self = shift;
     my $id   = shift;
 

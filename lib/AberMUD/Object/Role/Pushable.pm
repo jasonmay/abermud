@@ -18,7 +18,7 @@ has pushed => (
     isa => 'Bool',
 );
 
-override pushable => sub { 1 };
+sub pushable { 1 }
 
 1;
 

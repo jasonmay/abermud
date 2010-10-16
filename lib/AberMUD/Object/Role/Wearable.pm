@@ -20,7 +20,7 @@ has worn => (
     default => 0,
 );
 
-override wearable => sub { 1 };
+sub wearable { 1 }
 
 around on_the_ground => sub {
     my ($orig, $self) = @_;

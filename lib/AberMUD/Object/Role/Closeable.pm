@@ -21,7 +21,7 @@ sub closed {
     return !$self->opened;
 }
 
-override closeable => sub { 1 };
+sub closeable { 1 }
 
 1;
 

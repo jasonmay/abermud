@@ -4,7 +4,7 @@ use Moose::Role;
 use namespace::autoclean;
 use KiokuDB::Set qw(weak_set);
 
-override container => sub { 1 };
+sub container { 1 }
 
 sub containing {
     my $self   = shift;

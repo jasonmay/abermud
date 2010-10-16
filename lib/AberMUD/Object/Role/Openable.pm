@@ -18,7 +18,7 @@ has opened => (
     isa => 'Bool',
 );
 
-override openable => sub { 1 };
+sub openable { 1 }
 
 1;
 

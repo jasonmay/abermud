@@ -14,7 +14,7 @@ has nutritionn => (
     default => 10,
 );
 
-override edible => sub { 1 };
+sub edible { 1 }
 
 1;
 

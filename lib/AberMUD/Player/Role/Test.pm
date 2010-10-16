@@ -19,7 +19,7 @@ has output_queue => (
 sub add_output { push @{ shift->output_queue }, @_ }
 sub get_output { shift @{ shift->output_queue } }
 
-override setup => sub { };
+sub setup { 'stub' }
 
 around materialize => sub {
     my $orig = shift;

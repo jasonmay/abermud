@@ -9,7 +9,7 @@ has wielded => (
     default => 0,
 );
 
-override wieldable => sub { 1 };
+sub wieldable { 1 }
 
 around on_the_ground => sub {
     my ($orig, $self) = @_;

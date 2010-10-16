@@ -38,8 +38,8 @@ has dropped => (
     isa => 'Str',
 );
 
-override getable     => sub { 1 };
-override containable => sub { 1 };
+sub getable { 1 }
+sub containable { 1 }
 
 around in_direct_possession => sub {
     my ($orig, $self, $killable) = @_;
