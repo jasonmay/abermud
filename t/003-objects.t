@@ -241,7 +241,7 @@ like($one->types_in('close door'),          qr{you close the door}i);
 
 {
     my $look                                = $one->types_in('look');
-    ::unlike($look,                         qr{east}i, 'door reveals new exit (east)');
+    ::unlike($look,                         qr{east}i, 'door conceals new exit (east)');
     ::like($look,                           qr{closed door}i, 'player sees that door has been closed');
 }
 
