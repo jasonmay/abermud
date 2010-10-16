@@ -2,6 +2,9 @@
 package AberMUD::Test::Sugar;
 use strict;
 use warnings;
+
+use Moose::Meta::Class ();
+
 use AberMUD::Object;
 use AberMUD::Location;
 use AberMUD::Location::Util qw(directions);
@@ -14,6 +17,23 @@ use AberMUD::Universe;
 
 use base 'Exporter';
 our @EXPORT = qw(build_game);
+
+our @EXPORT_OK = qw(build_container);
+
+sub build_container {
+    my %args = @_;
+    my $dsn = $args{dsn} || 'hash';
+    my $test_container_metaclass = Moose::Meta::Class->create_anon_class(
+        superclasses => ['AberMUD::Container'],
+        roles        => ['AberMUD::Container::Role::Test'],
+    );
+
+    my $test_container = $test_container_metaclass->name->new(
+        dsn => $dsn,
+    );
+
+    return $test_container;
+}
 
 sub build_game {
     my %data = @_;
@@ -76,8 +96,11 @@ sub build_game {
 
     }
 
+    my $c = build_container();
+
     #my $k = KiokuDB->connect('hash', create => 1);
-    my $storage = AberMUD::Storage->new(dsn => $dsn);
+
+    my $storage = $c->fetch('storage')->get;
 
     my $players = $data{players};
 
@@ -96,15 +119,12 @@ sub build_game {
         universe     => $universe,
     );
 
+
     $storage->scoped_txn(
         sub {
             $storage->store(config => $config);
             $storage->store(values %all_locations);
         }
-    );
-
-    my $c = AberMUD::Container->with_traits('AberMUD::Container::Role::Test')->new(
-        test_storage => $storage,
     );
 
     # pre-load universe data

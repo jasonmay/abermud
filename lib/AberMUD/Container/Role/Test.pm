@@ -14,88 +14,39 @@ use List::Util qw(max);
 
 use namespace::autoclean;
 
-requires qw(container new_universe);
+requires qw(container);
 
-has test_storage => (
-    is  => 'ro',
-    isa => 'AberMUD::Storage',
-);
+sub _build_player_block {
+    return sub {
 
-sub _build_container {
-    my $self = shift;
+        my ($self, $s) = @_;
 
-    my $c = container 'AberMUD' => as {
-        weaken(my $weakself = $self);
-        service storage => (
-            class     => 'AberMUD::Storage',
-            lifecycle => 'Singleton',
-            block     => sub {
-                $weakself->test_storage || AberMUD::Storage->new
-            },
+        my $u      = $s->param('universe');
+        my $max_id = max(keys %{ $u->players }) || 0;
+        my $player = AberMUD::Player->new_with_traits(
+            traits    => ['AberMUD::Player::Role::Test'],
+            universe  => $u,
+            storage => $s->param('storage'),
         );
 
-        service universe => (
-            class => 'AberMUD::Universe',
-            lifecycle => 'Singleton',
-            block     => sub {
-                $weakself->new_universe(@_)
-            },
-            dependencies => [
-                depends_on('storage'),
-                depends_on('controller'),
-            ],
+        $player->_join_server($max_id + 1);
+
+        return $player;
+    }
+
+}
+
+sub _build_controller_block {
+    return sub {
+        my ($self, $s) = @_;
+
+        return AberMUD::Controller->new_with_traits(
+            traits   => ['AberMUD::Controller::Role::Test'],
+            storage  => $s->param('storage'),
+            universe => $s->param('universe'),
         );
-
-        service player => (
-            class => 'AberMUD::Player',
-            block => sub {
-                my $s      = shift;
-                my $u      = $s->param('universe');
-                my $max_id = max(keys %{ $u->players }) || 0;
-                my $player = AberMUD::Player->new_with_traits(
-                    traits    => ['AberMUD::Player::Role::Test'],
-                    universe  => $u,
-                    storage => $s->param('storage'),
-                );
-
-                $player->_join_server($max_id + 1);
-
-                return $player;
-            },
-            dependencies => [
-                depends_on('storage'),
-                depends_on('universe'),
-            ],
-        );
-
-        service controller => (
-            class     => 'AberMUD::Controller',
-            lifecycle => 'Singleton',
-            block     => sub {
-                my $s = shift;
-                AberMUD::Controller->new_with_traits(
-                    traits    => ['AberMUD::Controller::Role::Test'],
-                    storage => $s->param('storage'),
-                    universe  => $s->param('universe'),
-                );
-            },
-            dependencies => [
-                depends_on('storage'),
-                depends_on('universe'),
-            ]
-        );
-
-        service app => (
-            class => 'AberMUD',
-            lifecycle => 'Singleton',
-            dependencies => [
-                depends_on('storage'),
-                depends_on('controller'),
-                depends_on('universe'),
-            ]
-        );
-    };
-};
+    }
+}
 
 sub player_logs_in {
     my $self = shift;

@@ -6,11 +6,9 @@ use AberMUD::Container;
 use AberMUD::Zone;
 use AberMUD::Input::State::Game;
 use AberMUD::Config;
+use AberMUD::Test::Sugar qw(build_container);
 
-my $kdb = KiokuDB->connect(
-    "hash",
-    create => 1,
-);
+my $c = build_container();
 
 {
     my $zone = AberMUD::Zone->new(name => 'test');
@@ -35,30 +33,24 @@ my $kdb = KiokuDB->connect(
         ),
     );
 
-    my $scope = $kdb->new_scope;
-    $kdb->store("location-$_" => $locations{$_}) foreach keys %locations;
+    my $storage = $c->fetch('storage')->get;
+    my $scope = $storage->new_scope;
+    $storage->store("location-$_" => $locations{$_}) foreach keys %locations;
 
     $locations{test1}->north($locations{test2});
     $locations{test2}->south($locations{test1});
 
-    $kdb->update($_) foreach values %locations;
+    $storage->update($_) foreach values %locations;
 
     my $config = AberMUD::Config->new(
         input_states => [qw(Login::Name Game)],
         universe     => AberMUD::Universe->new,
     );
 
-    $kdb->store(config => $config);
+    $storage->store(config => $config);
 
-    $config->location($locations{test1}); $kdb->update($config);
+    $config->location($locations{test1}); $storage->update($config);
 }
-
-my $c = AberMUD::Container->new_with_traits(
-    traits         => ['AberMUD::Container::Role::Test'],
-    test_storage => AberMUD::Storage->new(
-        directory => $kdb,
-    )
-)->container;
 
 my $u = $c->fetch('universe')->get;
 

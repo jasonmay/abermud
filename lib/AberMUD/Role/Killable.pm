@@ -39,11 +39,10 @@ has wimpy => (
 );
 
 has current_strength => (
-    is => 'rw',
-    isa => 'Num',
+    is         => 'rw',
+    isa        => 'Int',
     lazy_build => 1,
-    traits => [ qw(KiokuDB::DoNotSerialize Number) ],
-    handles => {reduce_strength => 'sub'},
+    traits     => [ qw(KiokuDB::DoNotSerialize) ],
 );
 
 sub _build_current_strength {
