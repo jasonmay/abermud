@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Input::Command::Close;
 use AberMUD::OO::Commands;
+use AberMUD::Location::Util qw(directions);
 
 command close => sub {
     my $you  = shift;
@@ -15,7 +16,16 @@ command close => sub {
 
     $object->closed and return "That's already closed.";
 
-    $object->closed(1);
+    $object->close();
+
+    if ($object->gateway) {
+        foreach my $direction (directions()) {
+            my $link_method = $direction . '_link';
+            next unless $object->$link_method;
+            next unless $object->$link_method->closeable;
+            $object->$link_method->close();
+        }
+    }
 
     return "You close the " . $object->name;
 };
