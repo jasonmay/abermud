@@ -156,15 +156,17 @@ sub check_exit {
     my $link_method = $direction . '_link';
 
     if (!@doors) {
-        @doors = grep {
-            $_->gateway and ($_->openable ? $_->opened : 1)
-        } $self->get_objects;
+        @doors = grep { $_->gateway } $self->get_objects;
     }
+
+    my @open_doors = grep {
+        $_->openable ? $_->opened : 1
+    } @doors;
 
     my $door = first {
         $_->$link_method and
         $_->in($location)
-    } @doors;
+    } @open_doors;
 
     if ($door and !$door->$link_method) {
         warn $location->title . " -> $direction not found" ;
