@@ -161,7 +161,7 @@ foreach my $direction ( directions() ) {
                 except => $self,
             );
 
-            $self->location($destination);
+            $self->change_location($destination);
 
             my %opp_dir = (
                 east  => 'the west',

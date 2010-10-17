@@ -18,6 +18,14 @@ has opened => (
     isa => 'Bool',
 );
 
+sub open {
+    my $self = shift;
+
+    $self->opened(1);
+    $self->universe->revealing_gateway_cache->insert($self)
+        if $self->gateway;
+}
+
 sub openable { 1 }
 
 1;

@@ -14,7 +14,7 @@ command goto => sub {
         return "Could not find that location.";
     }
 
-    $you->location($loc);
+    $you->change_location($loc);
     return $you->look;
 };
 

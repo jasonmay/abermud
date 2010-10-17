@@ -30,11 +30,7 @@ sub show_exits {
     my %args = @_;
     my $output;
     my %override;
-    my @objects = grep {
-    $_->location
-        and $_->location == $args{location}
-            and $_->does('AberMUD::Object::Role::Gateway')
-    } $args{universe}->get_objects;
+
     $output = "&+CObvious exits are:&*\n";
     my $has_exits = 0;
     foreach my $direction ( directions() ) {

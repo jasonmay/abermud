@@ -3,6 +3,7 @@ package AberMUD::Location;
 use KiokuDB::Class;
 use namespace::autoclean;
 use AberMUD::Location::Util qw(directions);
+use Set::Object;
 
 has id => (
     is  => 'rw',
@@ -48,6 +49,24 @@ has [ directions() ] => (
     weak_ref  => 1,
     traits    => [ qw(KiokuDB::Lazy) ],
 );
+
+has objects_in_room => (
+    is => 'rw',
+    isa => 'Set::Object::Weak',
+    lazy => 1,
+    builder => '_build_objects_in_room',
+);
+
+sub _build_objects_in_room {
+    my $self = shift;
+
+    Set::Object::Weak->new(
+        grep {
+            $_->location &&
+            $_->location == $self
+        } $self->universe->get_objects
+    );
+}
 
 __PACKAGE__->meta->make_immutable;
 

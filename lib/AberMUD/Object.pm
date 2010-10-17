@@ -113,6 +113,15 @@ sub in {
     return ($self->final_location && $self->final_location == $location);
 };
 
+around change_location => sub {
+    my ($orig, $self) = (shift, shift);
+
+    $self->location->objects_in_room->remove($self)
+        if $self->location;
+
+    $self->$orig(@_);
+    $self->location->objects_in_room->insert($self);
+};
 
 __PACKAGE__->meta->make_immutable;
 

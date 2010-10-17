@@ -16,14 +16,14 @@ command open => sub {
 
     $object->opened and return "That's already open.";
 
-    $object->opened(1);
+    $object->open();
 
     if ($object->gateway) {
         foreach my $direction (directions()) {
             my $link_method = $direction . '_link';
             next unless $object->$link_method;
             next unless $object->$link_method->openable;
-            $object->$link_method->opened(1);
+            $object->$link_method->open();
         }
     }
 

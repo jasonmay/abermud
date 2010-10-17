@@ -21,6 +21,14 @@ sub closed {
     return !$self->opened;
 }
 
+sub close {
+    my $self = shift;
+
+    $self->closed(1);
+    $self->universe->revealing_gateway_cache->remove($self)
+        if $self->gateway;
+}
+
 sub closeable { 1 }
 
 1;

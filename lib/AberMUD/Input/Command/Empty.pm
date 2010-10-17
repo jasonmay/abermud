@@ -49,7 +49,7 @@ command empty => sub {
                 $o->held_by($container->held_by);
             }
             else {
-                $o->location($you->location);
+                $o->change_location($you->location);
             }
         }
         return $output;

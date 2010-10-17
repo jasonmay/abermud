@@ -7,6 +7,7 @@ use Scalar::Util qw(weaken);
 use KiokuDB;
 use KiokuDB::Util qw(set);
 use KiokuDB::Set;
+use Set::Object::Weak;
 use KiokuDB::Backend::DBI;
 use List::MoreUtils qw(any);
 use List::Util qw(first);
@@ -61,6 +62,44 @@ has objects => (
     },
     default => sub { set() },
 );
+
+has gateway_cache => (
+    is      => 'rw',
+    isa     => 'Set::Object::Weak',
+    builder => '_build_gateway_cache',
+    lazy    => 1,
+    traits  => ['KiokuDB::DoNotSerialize'],
+);
+
+sub _build_gateway_cache {
+    my $self = shift;
+
+    my @objects = grep { $_->gateway } $self->get_objects;
+    my $set = Set::Object::Weak->new(@objects);
+
+    return $set;
+}
+
+has revealing_gateway_cache => (
+    is      => 'rw',
+    isa     => 'Set::Object::Weak',
+    builder => '_build_revealing_gateway_cache',
+    lazy    => 1,
+    traits  => ['KiokuDB::DoNotSerialize'],
+);
+
+sub _build_revealing_gateway_cache {
+    my $self = shift;
+
+    my @objs = ();
+    if ($self->gateway_cache) {
+        @objs = grep { $_->openable ? $_->opened : 1 }
+                $self->gateway_cache->members;
+    }
+
+    my $set = Set::Object::Weak->new(@objs);
+    return $set;
+}
 
 sub killables {
     my $self = shift;
@@ -148,25 +187,19 @@ sub identify_from_list {
     return undef;
 }
 
-my @doors;
 sub check_exit {
     my $self = shift;
     my ($location, $direction) = @_;
 
     my $link_method = $direction . '_link';
 
-    if (!@doors) {
-        @doors = grep { $_->gateway } $self->get_objects;
-    }
-
-    my @open_doors = grep {
-        $_->openable ? $_->opened : 1
-    } @doors;
+    my $open_doors = $self->revealing_gateway_cache *
+                     $location->objects_in_room;
 
     my $door = first {
         $_->$link_method and
         $_->in($location)
-    } @open_doors;
+    } $open_doors->members;
 
     if ($door and !$door->$link_method) {
         warn $location->title . " -> $direction not found" ;

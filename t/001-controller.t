@@ -44,12 +44,15 @@ my $c = build_container();
     $locations{test1}->north($locations{test2});
     $locations{test2}->south($locations{test1});
 
-    $storage->update($_) foreach values %locations;
+    $storage->store(my $u = AberMUD::Universe->new);
+    $_->universe($u) for values %locations;
 
     my $config = AberMUD::Config->new(
         input_states => [qw(Login::Name Game)],
-        universe => AberMUD::Universe->new,
+        universe => $u,
     );
+
+    $storage->update($_) for values %locations;
 
     $storage->store(config => $config);
 
@@ -117,7 +120,7 @@ my $txn_block = sub {
         my $loc = $c->storage_object->lookup('location-test1');
         skip 'missing locations in test kdb', 1 unless $loc;
 
-        $p1->location($loc);
+        $p1->change_location($loc);
 
         like(
             $p1->types_in("look"), qr{A road},

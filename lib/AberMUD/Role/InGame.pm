@@ -98,4 +98,12 @@ sub name_matches {
     return 0;
 };
 
+# separate layer for cache updates, etc.
+sub change_location {
+    my $self     = shift;
+    my $location = shift;
+
+    $self->location($location);
+}
+
 1;

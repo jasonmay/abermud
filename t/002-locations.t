@@ -40,11 +40,16 @@ my $c = build_container();
     $locations{test1}->north($locations{test2});
     $locations{test2}->south($locations{test1});
 
-    $storage->update($_) foreach values %locations;
+    $storage->store(my $u = AberMUD::Universe->new);
+
+    for (values %locations) {
+        $_->universe($u);
+        $storage->update($_);
+    }
 
     my $config = AberMUD::Config->new(
         input_states => [qw(Login::Name Game)],
-        universe     => AberMUD::Universe->new,
+        universe     => $u,
     );
 
     $storage->store(config => $config);
@@ -59,7 +64,7 @@ sub player_logs_in {
     $p->input_state([AberMUD::Input::State::Game->new]);
 
     $p->name(shift);
-    $p->location($c->storage_object->lookup('location-test1'));
+    $p->change_location($c->storage_object->lookup('location-test1'));
     $p->_join_game;
 }
 
