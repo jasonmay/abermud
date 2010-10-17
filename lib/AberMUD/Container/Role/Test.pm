@@ -68,7 +68,6 @@ sub player_logs_in {
     $p->input_state([AberMUD::Input::State::Game->new]);
 
     $p->name($name);
-    $p->location($self->storage_object->lookup('location-test1'));
     $p->_join_game;
     $p->location($params{location});
 
