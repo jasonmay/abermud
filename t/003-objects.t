@@ -100,7 +100,7 @@ my $c = build_game
         },
         yellow => {
             title              => 'Yellow Room',
-            description        => "It smells like banans!\n",
+            description        => "It smells like bananas!\n",
             has_objects => {
                 trapdoor => {
                     traits      => [qw/Openable Closeable Gateway/],
