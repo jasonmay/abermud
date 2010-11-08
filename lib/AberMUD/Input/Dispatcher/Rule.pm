@@ -36,8 +36,8 @@ sub _match {
 
     my $leftover = join ' ' => @words;
 
-    return 0 unless $truncated eq $entered_command;
-    return (1, $leftover);
+    return unless $truncated eq $entered_command;
+    return {leftover => $leftover};
 }
 
 sub readable_attributes { q{"} . shift->command_name . q{"} }

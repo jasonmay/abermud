@@ -53,7 +53,7 @@ sub BUILD {
             AberMUD::Input::Dispatcher::Rule->new(
                 command_name => $command_method->name,
                 block        => sub {
-                    $command_method->body->(@_);
+                    shift; $command_method->body->(@_);
                 },
 
                 priority => $command_method->priority,
@@ -75,6 +75,7 @@ sub run {
         unless $dispatch->has_matches;
 
      my $match = (sort { $a->rule->priority <=> $b->rule->priority } $dispatch->matches)[0];
+
      return $match->run($you, $match->leftover, $txn_id);
 }
 
