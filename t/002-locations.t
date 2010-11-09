@@ -6,65 +6,17 @@ use AberMUD::Container;
 use AberMUD::Zone;
 use AberMUD::Input::State::Game;
 use AberMUD::Config;
-use AberMUD::Test::Sugar qw(build_container);
+use AberMUD::Test::Sugar qw(build_preset_game);
 
-my $c = build_container();
-
-{
-    my $zone = AberMUD::Zone->new(name => 'test');
-
-    my %locations = (
-        test1 => AberMUD::Location->new(
-            world_id    => 'test1',
-            id          => 'road',
-            title       => 'A road',
-            description => "There is a road here heading north. "
-                        . "You hear noises in the distance. ",
-            zone        => $zone,
-            active      => 1,
-        ),
-        test2 => AberMUD::Location->new(
-            world_id    => 'test2',
-            id          => 'path',
-            title       => 'Path',
-            description => "This path goes north and south.",
-            zone        => $zone,
-            active      => 1,
-        ),
-    );
-
-    my $storage = $c->storage_object;
-    my $scope = $storage->new_scope;
-    $storage->store("location-$_" => $locations{$_}) foreach keys %locations;
-
-    $locations{test1}->north($locations{test2});
-    $locations{test2}->south($locations{test1});
-
-    $storage->store(my $u = AberMUD::Universe->new);
-
-    for (values %locations) {
-        $_->universe($u);
-        $storage->update($_);
-    }
-
-    my $config = AberMUD::Config->new(
-        input_states => [qw(Login::Name Game)],
-        universe     => $u,
-    );
-
-    $storage->store(config => $config);
-
-    $config->location($locations{test1}); $storage->update($config);
-}
-
+my ($c, $locations) = build_preset_game('two_wide');
 my $u = $c->resolve(service => 'universe');
 
 sub player_logs_in {
     my $p = $c->resolve(service => 'player');
     $p->input_state([AberMUD::Input::State::Game->new]);
 
+    $p->location($locations->{room1});
     $p->name(shift);
-    $p->change_location($c->storage_object->lookup('location-test1'));
     $p->_join_game;
 }
 
@@ -72,13 +24,13 @@ my $one = player_logs_in('playerone');
 my $two = player_logs_in('playertwo');
 
 like($one->types_in('look'),  qr{playertwo is standing here}i);
-like($one->types_in('north'), qr{This path goes north and south});
-like($two->get_output,        qr{playerone goes north}i);
-like($two->types_in('north'), qr{playerone is standing here}i);
-like($one->get_output,        qr{playertwo arrives from the south}i);
+like($one->types_in('east'),  qr{second});
+like($two->get_output,        qr{playerone goes east}i);
+like($two->types_in('east'), qr{playerone is standing here}i);
+like($one->get_output,        qr{playertwo arrives from the west}i);
 
-$one->types_in('south');
-$one->types_in('north');
+$one->types_in('west');
+$one->types_in('east');
 
-like($two->get_output, qr{playerone goes south});
-like($two->get_output, qr{playerone arrives from the south});
+like($two->get_output, qr{playerone goes west});
+like($two->get_output, qr{playerone arrives from the west});

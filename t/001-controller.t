@@ -11,54 +11,11 @@ use AberMUD::Input::State::Login::Name;
 use AberMUD::Input::State::Game;
 use AberMUD::Config;
 
-use AberMUD::Test::Sugar qw(build_container);
+use AberMUD::Test::Sugar qw(build_preset_game);
 
-my $c = build_container();
+#my $c = build_container();
 
-{
-    my $zone = AberMUD::Zone->new(name => 'test');
-
-    my %locations = (
-        test1 => AberMUD::Location->new(
-            world_id    => 'test1',
-            id          => 'road',
-            title       => 'A road',
-            description => "There is a road here heading north. "
-                        . "You hear noises in the distance. ",
-            zone        => $zone,
-            active      => 1,
-        ),
-        test2 => AberMUD::Location->new(
-            world_id    => 'test2',
-            id          => 'path',
-            title       => 'Path',
-            description => "This path goes north and south.",
-            zone        => $zone,
-            active      => 1,
-        ),
-    );
-
-    my $storage = $c->storage_object;
-    $storage->store("location-$_" => $locations{$_}) foreach keys %locations;
-
-    $locations{test1}->north($locations{test2});
-    $locations{test2}->south($locations{test1});
-
-    $storage->store(my $u = AberMUD::Universe->new);
-    $_->universe($u) for values %locations;
-
-    my $config = AberMUD::Config->new(
-        input_states => [qw(Login::Name Game)],
-        universe => $u,
-    );
-
-    $storage->update($_) for values %locations;
-
-    $storage->store(config => $config);
-
-    $config->location($locations{test1});
-    $storage->update($config);
-}
+my ($c, $locations) = build_preset_game('two_wide');
 
 my $u = $c->resolve(service => 'universe');
 
@@ -114,19 +71,6 @@ my $txn_block = sub {
     ok($c->storage_object->lookup('player-foo'), 'player stored in kioku');
 
     ok(%{ $u->players_in_game });
-
-
-    SKIP: {
-        my $loc = $c->storage_object->lookup('location-test1');
-        skip 'missing locations in test kdb', 1 unless $loc;
-
-        $p1->change_location($loc);
-
-        like(
-            $p1->types_in("look"), qr{A road},
-            'player tries to see a road'
-        ); #look
-    }
 
     $p1->leaves_game;
 

@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 use Test::More;
-use AberMUD::Test::Sugar;
+use AberMUD::Test::Sugar qw(build_game);
 use AberMUD::Util;
 
 my $c = build_game

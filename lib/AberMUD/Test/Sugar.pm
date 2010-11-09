@@ -19,9 +19,7 @@ use AberMUD::Zone;
 use AberMUD::Universe;
 
 use base 'Exporter';
-our @EXPORT = qw(build_game);
-
-our @EXPORT_OK = qw(build_container);
+our @EXPORT_OK = qw(build_container build_game build_preset_game);
 
 sub build_container {
     my %args = @_;
