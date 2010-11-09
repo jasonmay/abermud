@@ -33,7 +33,6 @@ sub get_default_location {
 
 {
     my $game = AberMUD::Test::Sugar::build_preset_game('jack');
-
     my $l = get_default_location($game);
 
     is($l->title,        'Center Room');
@@ -50,6 +49,31 @@ sub get_default_location {
     is ($l->west->east,   $l);
     is ($l->up->down,     $l);
     is ($l->down->up,     $l);
+}
+
+{
+    my $game = AberMUD::Test::Sugar::build_preset_game(
+        'plus', {
+            locations => {
+                center => {
+                    has_objects => {
+                        thing => {
+                            description => 'A thing is here.',
+                        }
+                    },
+                },
+            },
+        }
+    );
+    my $l = get_default_location($game);
+
+    my $u = $game->resolve(service => 'universe');
+
+    ok($u->objects);
+    is(scalar(@{[$u->get_objects]}), 1);
+    my ($o) = $u->get_objects;
+
+    is($o->name, 'thing');
 }
 
 done_testing();
