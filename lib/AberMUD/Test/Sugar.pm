@@ -5,6 +5,8 @@ use warnings;
 
 use Moose::Meta::Class ();
 use KiokuDB::Util qw(set);
+use Hash::Merge;
+use Clone;
 
 use AberMUD::Object;
 use AberMUD::Location;
@@ -237,6 +239,214 @@ sub _handle_objects_from_key {
     }
 
     return @objects;
+}
+
+sub location_preset {
+    my $type = shift;
+    my @extra = @_;
+
+    # square, plus, N_wide, jack
+    my %preset_dispatch = (
+        square     => {
+            default_location => 'northwest',
+            locations => {
+                northwest => {
+                    title => 'Northwest Corner',
+                    description => 'You are in the northwest corner of the universe.',
+                    exits => {
+                        south => 'southwest',
+                        east  => 'northeast',
+                    },
+                },
+                northeast => {
+                    title => 'Northeast Corner',
+                    description => 'You are in the northeast corner of the universe.',
+                    exits => {
+                        south => 'southeast',
+                        west  => 'northwest',
+                    },
+                },
+                southwest => {
+                    title => 'Southwest Corner',
+                    description => 'You are in the southwest corner of the universe.',
+                    exits => {
+                        north => 'northwest',
+                        east  => 'southeast',
+                    },
+                },
+                southeast => {
+                    title => 'Southeast Corner',
+                    description => 'You are in the southeast corner of the universe.',
+                    exits => {
+                        north => 'northeast',
+                        west  => 'southwest',
+                    },
+                },
+            }
+        },
+        plus       => {
+            default_location => 'center',
+            locations => {
+                center => {
+                    title => 'Center Room',
+                    description => 'You are in the center of the universe.',
+                    exits => {
+                        north => 'northwing',
+                        south => 'southwing',
+                        east  => 'eastwing',
+                        west => 'westwing',
+                    },
+                },
+                northwing => {
+                    title => 'Northern Wing',
+                    description => 'You are in the north wing of the universe.',
+                    exits => {
+                        south => 'center',
+                    },
+                },
+                southwing => {
+                    title => 'Southern Wing',
+                    description => 'You are in the south wing of the universe.',
+                    exits => {
+                        north => 'center',
+                    },
+                },
+                eastwing => {
+                    title => 'Eastern Wing',
+                    description => 'You are in the east wing of the universe.',
+                    exits => {
+                        west => 'center',
+                    },
+                },
+                westwing => {
+                    title => 'Western Wing',
+                    description => 'You are in the west wing of the universe.',
+                    exits => {
+                        west => 'center',
+                    },
+                },
+            },
+        },
+        two_wide   => {
+            default_location => 'room1',
+            locations => {
+                room1 => {
+                    title => 'Room One',
+                    description => 'You are in the first room.',
+                    exits => {
+                        east => 'room2',
+                    },
+                },
+                room2 => {
+                    title => 'Room Two',
+                    description => 'You are in the second room.',
+                    exits => {
+                        west => 'room1',
+                    },
+                },
+            }
+        },
+        three_wide => {
+            default_location => 'room1',
+            locations => {
+                room1 => {
+                    title => 'Room One',
+                    description => 'You are in the first room.',
+                    exits => {
+                        east => 'room2',
+                    },
+                },
+                room2 => {
+                    title => 'Room Two',
+                    description => 'You are in the second room.',
+                    exits => {
+                        west => 'room1',
+                        east => 'room3',
+                    },
+                },
+                room3 => {
+                    title => 'Room Three',
+                    description => 'You are in the third room.',
+                    exits => {
+                        west => 'room2',
+                    },
+                },
+            }
+        },
+        four_wide  => {
+            default_location => 'room1',
+            locations => {
+                room1 => {
+                    title => 'Room One',
+                    description => 'You are in the first room.',
+                    exits => {
+                        east => 'room2',
+                    },
+                },
+                room2 => {
+                    title => 'Room Two',
+                    description => 'You are in the second room.',
+                    exits => {
+                        west => 'room1',
+                        east => 'room3',
+                    },
+                },
+                room3 => {
+                    title => 'Room Three',
+                    description => 'You are in the third room.',
+                    exits => {
+                        west => 'room2',
+                        east => 'room4',
+                    },
+                },
+                room4 => {
+                    title => 'Room Four',
+                    description => 'You are in the fourth room.',
+                    exits => {
+                        west => 'room1',
+                        east => 'room3',
+                    },
+                },
+            }
+        },
+    );
+
+    # jack is 'plus' but with an 'up' and 'down' room
+    $preset_dispatch{jack} = Clone::clone($preset_dispatch{plus});
+    $preset_dispatch{jack}{locations}{highwing} = {
+        title       => 'High Wing',
+        description => 'You are in the high wing of the universe.',
+        down        => 'center',
+    };
+    $preset_dispatch{jack}{locations}{lowwing} = {
+        title       => 'Low Wing',
+        description => 'You are in the low wing of the universe.',
+        up          => 'center',
+    };
+
+    return unless exists $preset_dispatch{$type};
+
+    my $config = $preset_dispatch{$type};
+
+    $config->{zone} = $type;
+
+    my $merger = Hash::Merge->new('RIGHT_PRECEDENT');
+    for (@extra) {
+        next unless ref() eq 'HASH';
+
+        $config = $merger->merge($config, $_);
+    }
+
+    return %$config;
+}
+
+sub build_preset_game {
+    my $type = shift;
+    my @extra = @_;
+
+    my %config = location_preset($type, @extra);
+
+    return build_game(%config);
 }
 
 1;

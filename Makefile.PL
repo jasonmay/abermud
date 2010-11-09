@@ -4,6 +4,8 @@ name           'AberMUD';
 all_from       'lib/AberMUD.pm';
 
 build_requires 'Test::More';
+requires  'Hash::Merge';
+requires  'Clone';
 requires       'Moose';
 requires       'MooseX::POE';
 requires       'MooseX::Traits' => '0.09';
