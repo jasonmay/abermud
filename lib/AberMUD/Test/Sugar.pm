@@ -131,7 +131,12 @@ sub build_game {
     # pre-load universe data
     $c->resolve(service => 'universe');
 
-    return $c;
+    if (wantarray) {
+        return($c, \%all_locations);
+    }
+    else {
+        return $c;
+    }
 }
 
 sub _handle_object {
