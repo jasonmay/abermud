@@ -322,7 +322,7 @@ sub location_preset {
                     title => 'Western Wing',
                     description => 'You are in the west wing of the universe.',
                     exits => {
-                        west => 'center',
+                        east => 'center',
                     },
                 },
             },
@@ -416,13 +416,21 @@ sub location_preset {
     $preset_dispatch{jack}{locations}{highwing} = {
         title       => 'High Wing',
         description => 'You are in the high wing of the universe.',
-        down        => 'center',
+        exits => {
+            down        => 'center',
+        },
     };
     $preset_dispatch{jack}{locations}{lowwing} = {
         title       => 'Low Wing',
         description => 'You are in the low wing of the universe.',
-        up          => 'center',
+        exits       => {
+            up          => 'center',
+        },
     };
+    $preset_dispatch{jack}{locations}{center}{exits}{up}
+        = 'highwing';
+    $preset_dispatch{jack}{locations}{center}{exits}{down}
+        = 'lowwing';
 
     return unless exists $preset_dispatch{$type};
 
