@@ -77,6 +77,7 @@ does_ok($objs{withmobw}, 'AberMUD::Object::Role::Getable');
 
 ok($mobs{$_}) for qw(mobz moby mobx mobw);
 
+is($mobs{mobz}->name, 'mobz');
 is($mobs{mobz}->description,         'mobz desc');
 is($mobs{mobz}->examine_description, 'mobz ex');
 is($mobs{mobz}->gender, 'Female');
