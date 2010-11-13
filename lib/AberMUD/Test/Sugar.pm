@@ -189,10 +189,10 @@ sub _handle_mobile {
     my ($mob_name, $mob_data) = @_;
     my @mobiles;
 
-    my $description = $mob_data->{$mob_name}{description};
+    my $description = $mob_data->{description};
     #                || "Here stands a normal $mob_name";
 
-    my $examine = $mob_data->{$mob_name}{examine};
+    my $examine = $mob_data->{examine};
     #|| "They look just like a normal $mob_name!";
 
     my @spells = (@{$mob_data->{sflags}||[]}, @{$mob_data->{pflags}||[]});

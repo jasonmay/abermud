@@ -22,6 +22,7 @@ my ($c, $locations) = AberMUD::Test::Sugar::build_game(
             has_mobiles => {
                 mobz => {
                     description => 'mobz desc',
+                    examine     => 'mobz ex',
                 },
                 moby => {
                     description => 'moby desc',
@@ -64,6 +65,9 @@ ok($locations->{myloc});
 is($locations->{myloc}->title,       'foo');
 is($locations->{myloc}->description, 'bar');
 ok($mobs{$_}) for qw(mobz moby mobx mobw);
+
+is($mobs{mobz}->description,         'mobz desc');
+is($mobs{mobz}->examine_description, 'mobz ex');
 
 ok($objs{$_}) for qw(myobj withmoby withmobx withmobw);
 
