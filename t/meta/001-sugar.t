@@ -23,6 +23,7 @@ my ($c, $locations) = AberMUD::Test::Sugar::build_game(
                 mobz => {
                     description => 'mobz desc',
                     examine     => 'mobz ex',
+                    gender      => 'Female',
                 },
                 moby => {
                     description => 'moby desc',
@@ -78,6 +79,7 @@ ok($mobs{$_}) for qw(mobz moby mobx mobw);
 
 is($mobs{mobz}->description,         'mobz desc');
 is($mobs{mobz}->examine_description, 'mobz ex');
+is($mobs{mobz}->gender, 'Female');
 
 ok($mobs{mobx}->wielding);
 

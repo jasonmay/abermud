@@ -207,6 +207,7 @@ sub _handle_mobile {
         armor               => $mob_data->{locked_description},
         speed               => $mob_data->{speed},
         spells              => { map {; $_ => 1 } @spells },
+        gender              => $mob_data->{gender},
     );
 
     # delete all undef values (for default fallback)
