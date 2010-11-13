@@ -4,6 +4,7 @@ use Moose::Role;
 use Moose::Util::TypeConstraints;
 use AberMUD::Player;
 use AberMUD::Location::Util qw(directions);
+use List::MoreUtils qw(first);
 
 has fighting => (
     is     => 'rw',
@@ -133,6 +134,14 @@ sub carrying {
 
     return grep {
         $_->can('held_by') and $_->held_by and $_->held_by == $self
+    } $self->universe->get_objects;
+}
+
+sub wielding {
+    return first {
+        $_->can('wielded_by')
+            and $_->wielded_by
+            and $_->wielded
     } $self->universe->get_objects;
 }
 
