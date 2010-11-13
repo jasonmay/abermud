@@ -23,8 +23,7 @@ sub start_fight {
 
     return unless @potential_victims;
     my $killable = $potential_victims[rand @potential_victims];
-    $self->fighting($killable);
-    $killable->fighting($self);
+    $self->start_fighting($killable);
 }
 
 1;

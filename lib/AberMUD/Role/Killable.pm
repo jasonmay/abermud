@@ -235,6 +235,13 @@ sub formatted_name {
     return $self->name;
 }
 
+sub start_fighting {
+    my $self = shift;
+    my $victim = shift;
+    $self->fighting($victim);
+    $victim->fighting($self);
+}
+
 sub attack {
     my $self = shift;
 

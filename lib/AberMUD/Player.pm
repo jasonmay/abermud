@@ -357,6 +357,7 @@ after die => sub {
     $self->dematerialize();
 
     $self->sendf(<<DEATH);
+
 &+r***********************************&N
       I guess you died? *shrug*
 &+r***********************************&N

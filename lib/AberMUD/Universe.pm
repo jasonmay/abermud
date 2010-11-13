@@ -182,7 +182,7 @@ sub identify_mobile {
     my $self     = shift;
     my ($location, $word) = @_;
 
-    $self->identify_from_list($location, $word, $self->mobiles);
+    $self->identify_from_list($location, $word, $self->get_mobiles);
 }
 
 sub identify_from_list {
