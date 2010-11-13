@@ -47,6 +47,11 @@ has max_level => (
     default => 1,
 );
 
+has following => (
+    is   => 'rw',
+    does => 'AberMUD::Role::Killable',
+);
+
 no Moose::Role;
 
 1;
