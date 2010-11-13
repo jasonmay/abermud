@@ -4,7 +4,7 @@ use Moose::Role;
 use Moose::Util::TypeConstraints;
 use AberMUD::Player;
 use AberMUD::Location::Util qw(directions);
-use List::MoreUtils qw(first);
+use List::Util qw(first);
 
 has fighting => (
     is     => 'rw',
@@ -138,6 +138,7 @@ sub carrying {
 }
 
 sub wielding {
+    my $self = shift;
     return first {
         $_->can('wielded_by')
             and $_->wielded_by
