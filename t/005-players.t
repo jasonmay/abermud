@@ -20,13 +20,19 @@ sub player_logs_in {
     $p->_join_game;
 }
 
-my $p = player_logs_in('myplayer');
+my $one = player_logs_in('playerone');
+my $two = player_logs_in('playertwo');
 
-my $look = $p->types_in('look');
-like($look,  qr{Room One}, 'player sees location title');
-like($look,  qr{first room}, 'player sees location description');
-like($look,  qr{East\s*:\s+Room Two}, 'player sees location description');
+like($one->types_in('look'),  qr{playertwo is standing here}i);
+like($one->types_in('east'),  qr{second});
+like($two->get_output,        qr{playerone goes east}i);
+like($two->types_in('east'), qr{playerone is standing here}i);
+like($one->get_output,        qr{playertwo arrives from the west}i);
 
-like($p->types_in('east'),  qr{second}, 'player successfully goes east');
+$one->types_in('west');
+$one->types_in('east');
+
+like($two->get_output, qr{playerone goes west});
+like($two->get_output, qr{playerone arrives from the west});
 
 done_testing();
