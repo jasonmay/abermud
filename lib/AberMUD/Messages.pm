@@ -114,7 +114,7 @@ use constant BodyPart => {
 };
 
 sub format_fight_message {
-    my $msg  = clone(shift);
+    my $msg  = Clone::clone(shift);
     my %data = @_;
 
     my $attacker = $data{attacker};
@@ -144,7 +144,7 @@ sub format_fight_message {
     $msg =~ s/%w/$attacker->wielding->name/eg;
 
     if ($p eq 'attacker') {
-        $msg =~ s/%g/your/eg;
+        $msg =~ s/%g/your/g;
         $msg =~ s/%a/you/g;
         $msg =~ s/%e/your/g;
         $msg =~ s/%[Ss]//g;
@@ -172,6 +172,7 @@ sub format_fight_message {
         $msg =~ s/%T/S/g;
     }
 
+    return $msg;
 }
 
 # body part, or any armor covering it
