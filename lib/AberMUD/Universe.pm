@@ -104,6 +104,8 @@ sub _build_revealing_gateway_cache {
 has corpse_location => (
     is  => 'ro',
     isa => 'AberMUD::Location',
+    builder => '_build_corpse_location',
+    lazy => 1,
 );
 
 sub _build_corpse_location {

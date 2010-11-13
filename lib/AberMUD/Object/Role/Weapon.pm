@@ -9,6 +9,12 @@ has wielded => (
     default => 0,
 );
 
+has damage => (
+    is => 'rw',
+    isa => 'Int',
+    default => 10,
+);
+
 sub wieldable { 1 }
 
 around on_the_ground => sub {
