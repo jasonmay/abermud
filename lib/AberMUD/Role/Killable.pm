@@ -133,15 +133,15 @@ sub carrying {
     my $self = shift;
 
     return grep {
-        $_->can('held_by') and $_->held_by and $_->held_by == $self
+        $_->getable and $_->held_by == $self
     } $self->universe->get_objects;
 }
 
 sub wielding {
     my $self = shift;
     return first {
-        $_->can('wielded_by')
-            and $_->wielded_by
+        $_->wieldable
+            and $_->held_by == $self
             and $_->wielded
     } $self->universe->get_objects;
 }

@@ -64,11 +64,6 @@ my %objs = map { $_->name => $_ } $u->get_objects;
 ok($locations->{myloc});
 is($locations->{myloc}->title,       'foo');
 is($locations->{myloc}->description, 'bar');
-ok($mobs{$_}) for qw(mobz moby mobx mobw);
-
-is($mobs{mobz}->description,         'mobz desc');
-is($mobs{mobz}->examine_description, 'mobz ex');
-
 ok($objs{$_}) for qw(myobj withmoby withmobx withmobw);
 
 does_ok($objs{withmoby}, 'AberMUD::Object::Role::Getable');
@@ -78,5 +73,12 @@ does_ok($objs{withmobx}, 'AberMUD::Object::Role::Getable');
 
 does_ok($objs{withmobw}, 'AberMUD::Object::Role::Wearable');
 does_ok($objs{withmobw}, 'AberMUD::Object::Role::Getable');
+
+ok($mobs{$_}) for qw(mobz moby mobx mobw);
+
+is($mobs{mobz}->description,         'mobz desc');
+is($mobs{mobz}->examine_description, 'mobz ex');
+
+ok($mobs{mobx}->wielding);
 
 done_testing();
