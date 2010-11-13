@@ -189,11 +189,11 @@ sub _handle_mobile {
     my ($mob_name, $mob_data) = @_;
     my @mobiles;
 
-    my $description = $mob_data->{$mob_name}{description}
-                    || "Here stands a normal $mob_name";
+    my $description = $mob_data->{$mob_name}{description};
+    #                || "Here stands a normal $mob_name";
 
-    my $examine = $mob_data->{$mob_name}{examine}
-                || "They look just like a normal $mob_name!";
+    my $examine = $mob_data->{$mob_name}{examine};
+    #|| "They look just like a normal $mob_name!";
 
     my @spells = (@{$mob_data->{sflags}||[]}, @{$mob_data->{pflags}||[]});
 
@@ -237,6 +237,23 @@ sub _handle_objects_from_key {
     my @objects;
     if ($data->{$key}) {
         while (my ($inside, $inside_data) = each %{ $data->{$key} }) {
+            my @traits = ();
+            if ($key eq 'carrying') {
+                push(@traits, 'Getable');
+            }
+            elsif ($key eq 'wearing') {
+                push(@traits, 'Getable');
+                push(@traits, 'Wearable');
+            }
+            elsif ($key eq 'wielding') {
+                push(@traits, 'Getable');
+                push(@traits, 'Weapon');
+            }
+
+            $inside_data->{traits} ||= [];
+
+            push @{$inside_data->{traits}}, @traits;
+
             push @objects, _handle_object($inside, $inside_data);
         }
     }
