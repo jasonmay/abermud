@@ -19,6 +19,8 @@ my ($c, $locations) = build_preset_game('two_wide');
 
 my $u = $c->resolve(service => 'universe');
 
+# not using login sugar because we want to test
+# internals
 sub player_joins_game {
     my $p = $c->resolve(service => 'player');
     $p->input_state([
