@@ -6,13 +6,22 @@ my $blue_line = sprintf( '&+b%s&*', ('='x60) );
 
 command where => sub {
     my $you  = shift;
+    my $args  = shift;
     my $output = "$blue_line\n";
 
     $output .= join(
         "\n"
         => map {
             sprintf("%20s : %s", $_->name, $_->location->id)
-        } grep { $_->location } $you->universe->get_mobiles  );
+        } grep { $_->location and $_->name eq $args } $you->universe->get_mobiles
+    );
+
+    $output .= join(
+        "\n"
+        => map {
+            sprintf("%20s : %s", $_->name, $_->location->id)
+        } grep { $_->location and $_->name eq $args } $you->universe->get_objects
+    );
 
     $output .= "\n$blue_line\n";
 
