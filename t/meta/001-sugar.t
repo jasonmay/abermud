@@ -14,7 +14,7 @@ my ($c, $locations) = AberMUD::Test::Sugar::build_game(
             title => 'foo',
             description => 'bar',
             has_objects => {
-                objx => {
+                myobj => {
                     description => 'myobj desc',
                 },
             },
@@ -42,7 +42,7 @@ my ($c, $locations) = AberMUD::Test::Sugar::build_game(
                 mobw => {
                     description => 'mobw desc',
                     wearing => {
-                        withmobx => {
+                        withmobw => {
                             description => 'obj with mobx',
                             covers      => ['head'],
                         }
@@ -56,9 +56,15 @@ my ($c, $locations) = AberMUD::Test::Sugar::build_game(
 
 ok(my $u = $c->resolve(service => 'universe'));
 ok($u->get_mobiles);
-ok(my %mobs = map { $_->name => $_ } $u->get_mobiles);
+
+my %mobs = map { $_->name => $_ } $u->get_mobiles;
+my %objs = map { $_->name => $_ } $u->get_objects;
+
 ok($locations->{myloc});
 is($locations->{myloc}->title,       'foo');
 is($locations->{myloc}->description, 'bar');
 ok($mobs{$_}) for qw(mobz moby mobx mobw);
+
+ok($objs{$_}) for qw(myobj withmoby withmobx withmobw);
+
 done_testing();
