@@ -300,6 +300,17 @@ sub attack {
         $final_messages{bystander},
         except => [$self, $victim],
     );
+
+    # if this attack killed the victim
+    if ($victim->dead) {
+        $self->say(
+            sprintf(
+                qq[%s falls to the ground.\n],
+                $victim->formatted_name,
+            ),
+            except => [$victim],
+        );
+    }
 }
 
 sub die {

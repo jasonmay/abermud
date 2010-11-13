@@ -172,7 +172,7 @@ sub format_fight_message {
         $msg =~ s/%T/S/g;
     }
 
-    return $msg;
+    return ucfirst($msg);
 }
 
 # body part, or any armor covering it
