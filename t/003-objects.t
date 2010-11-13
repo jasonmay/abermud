@@ -132,8 +132,8 @@ ok(my @o = $u->get_objects, 'objects loaded');
 ok(scalar(grep { $_->does('AberMUD::Object::Role::Getable') } @o) >= 6);
 
 my %objects                       = map { $_->name => $_ } @o;
-my $one                           = $c->player_logs_in('playerone');
-my $two                           = $c->player_logs_in('playertwo');
+my $one                           = $c->gen_player('playerone');
+my $two                           = $c->gen_player('playertwo');
 
 
 unlike($one->types_in('look'),    qr{sack});

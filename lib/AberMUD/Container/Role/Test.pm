@@ -57,7 +57,7 @@ sub _build_storage_block {
     }
 }
 
-sub player_logs_in {
+sub gen_player {
     my $self = shift;
     my $name = shift;
     my %params = @_;

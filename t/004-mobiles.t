@@ -26,7 +26,7 @@ my $u = $c->resolve(service => 'universe');
 ok(my @m = $u->get_mobiles, 'mobiles loaded');
 
 my %mobiles                       = map { $_->name => $_ } @m;
-my $one                           = $c->player_logs_in('playerone');
+my $one                           = $c->gen_player('playerone');
 
 ok($mobiles{knight});
 ok($mobiles{knight}->description);

@@ -11,8 +11,8 @@ use AberMUD::Test::Sugar qw(build_preset_game);
 my ($c, $locations) = build_preset_game('two_wide');
 my $u = $c->resolve(service => 'universe');
 
-my $one = $c->player_logs_in('playerone');
-my $two = $c->player_logs_in('playertwo');
+my $one = $c->gen_player('playerone');
+my $two = $c->gen_player('playertwo');
 
 like($one->types_in('look'),  qr{playertwo is standing here}i);
 like($one->types_in('east'),  qr{second});
