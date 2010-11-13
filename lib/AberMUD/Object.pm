@@ -51,12 +51,6 @@ sub closeable   { 0 }
 sub gateway     { 0 }
 sub pushable    { 0 }
 
-sub o_does {
-    my $self = shift;
-    my $base = shift;
-    $self->does("AberMUD::Object::Role::$base");
-}
-
 around name_matches => sub {
     my ($orig, $self) = (shift, shift);
     return 1 if $self->$orig(@_) or (
