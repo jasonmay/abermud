@@ -47,6 +47,8 @@ sub move {
     my $self = shift;
     return unless $self->location;
 
+    return $self if $self->can('fighting') and $self->fighting;
+
     my $loc  = $self->location;
     my @dirs = grep { $self->${\"can_go_$_"} } directions();
 
@@ -75,6 +77,11 @@ sub formatted_name {
     my $result = $self->display_name || $self->name;
     return $result;
 }
+
+after die => sub {
+    my $self = shift;
+    $self->location($self->universe->corpse_location);
+};
 
 __PACKAGE__->meta->make_immutable;
 

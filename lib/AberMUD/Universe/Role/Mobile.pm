@@ -39,9 +39,7 @@ around advance => sub {
         $self->roll_to_move($_)
     } $self->get_traversable_mobiles;
 
-    warn "START: " . Time::HiRes::gettimeofday;
     $_->move for @moving_mobiles;
-    warn "END: " . Time::HiRes::gettimeofday;
 
     return $self->$orig(@_);
 };

@@ -101,6 +101,21 @@ sub _build_revealing_gateway_cache {
     return $set;
 }
 
+has corpse_location => (
+    is  => 'ro',
+    isa => 'AberMUD::Location',
+);
+
+sub _build_corpse_location {
+    my $self = shift;
+
+    return AberMUD::Location->new(
+        title => 'Dead Zone',
+        description => q[This is the zone for corpses. ] .
+                       q[Mortals do not belong here.],
+    );
+}
+
 sub killables {
     my $self = shift;
     return ($self->game_list, $self->get_mobiles);

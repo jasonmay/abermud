@@ -53,7 +53,7 @@ use constant WeaponHit => {
     ],
 };
 
-use constant BareHit => [
+use constant BareHit => {
     miss => [
         "%d evade%t %e weak punch.",
         "%a curl%s %g fist, charge%s at %p %b, and trip%s.",
@@ -87,7 +87,7 @@ use constant BareHit => [
         "%d reel%t as %a jab%s %p %b!",
         "%d stagger%t as %a give%s a brutal punch!"
     ],
-];
+};
 
 use constant Death => [
     "%a gutt%s %d with the %w!",

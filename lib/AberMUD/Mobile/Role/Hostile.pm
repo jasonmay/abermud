@@ -13,17 +13,18 @@ has aggression => (
 sub start_fight {
     my $self = shift;
     return unless $self->can('fighting');
-
     return unless $self->location;
-    my @killables_in_room = grep {
+
+    my @potential_victims = grep {
         $_ != $self and
         $_->location and
         $_->location == $self->location
     } $self->universe->game_list;
 
-    return unless @killables_in_room;
-    my $killable = $killables_in_room[rand @killables_in_room];
+    return unless @potential_victims;
+    my $killable = $potential_victims[rand @potential_victims];
     $self->fighting($killable);
+    $killable->fighting($self);
 }
 
 1;

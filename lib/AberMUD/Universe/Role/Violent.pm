@@ -9,25 +9,46 @@ around advance => sub {
     my $orig = shift;
     my $self = shift;
 
-    return $self->$orig(@_) unless $self->does('AberMUD::Universe::Role::Mobile');
+    return $self->$orig(@_)
+        unless $self->does('AberMUD::Universe::Role::Mobile');
+
     for my $mobile ($self->get_mobiles) {
         next unless $mobile->can('start_fight');
-        if ($self->roll_to_start_fight) {
-            #warn sprintf( "fight %s fight!", $mobile->name);
+        next unless $mobile->aggression;
+        next if $mobile->fighting;
+
+        if ($self->roll_to_start_fight($mobile)) {
             $mobile->start_fight;
         }
     }
+
+    $self->fight_iteration();
+
     return $self->$orig(@_);
 };
 
 sub roll_to_start_fight {
     my $self = shift;
+    my ($mob) = @_;
 
-    my $go = !!(10 >= rand 100);
-    # 1 to 10 odds
+    my $roll = rand 100;
+    my $go = !!($mob->aggression >= $roll);
+
     return $go;
 }
 
+sub fight_iteration {
+    my $self = shift;
+    my $type = shift || '';
+
+    foreach my $mobile ($self->get_mobiles) {
+        $mobile->attack if $mobile->fighting;
+    }
+
+    foreach my $player ($self->game_list) {
+        $player->attack if $player->fighting;
+    }
+}
 
 1;
 

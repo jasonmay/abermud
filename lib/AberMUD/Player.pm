@@ -350,6 +350,21 @@ sub final_prompt {
     return $prompt;
 }
 
+after die => sub {
+    my $self = shift;
+
+    $self->save_data();
+    $self->dematerialize();
+
+    $self->sendf(<<DEATH);
+&+r***********************************&N
+      I guess you died? *shrug*
+&+r***********************************&N
+DEATH
+
+    $self->disconnect;
+};
+
 __PACKAGE__->meta->make_immutable;
 
 1;
