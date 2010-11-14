@@ -167,7 +167,7 @@ sub carrying {
     my $self = shift;
 
     return grep {
-        $_->getable and $_->held_by == $self
+        $_->getable and $_->held_by and $_->held_by == $self
     } $self->universe->get_objects;
 }
 
