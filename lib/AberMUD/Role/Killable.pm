@@ -118,8 +118,9 @@ sub total_damage {
 }
 
 sub take_damage {
-    my $self   = shift;
-    my $damage = shift;
+    my $self           = shift;
+    my $damage         = shift;
+    my $predeath_block = shift;
 
     my $prev_strength = $self->current_strength;
     my $new_strength  = $self->current_strength - $damage;
@@ -133,6 +134,8 @@ sub take_damage {
         my $xp = $prev_strength - $new_strength;
         $self->fighting->change_score($xp);
     }
+
+    $predeath_block->($self, $damage) if $predeath_block;
 
     if ($self->current_strength <= 0) {
         $self->death;
@@ -302,12 +305,21 @@ sub attack {
         } qw(attacker victim bystander)
     );
 
-    $victim->take_damage($damage);
+    $self->sendf($final_messages{attacker})
+        if $self->isa('AberMUD::Player');
 
-    $self->sendf($final_messages{attacker}) if $self->isa('AberMUD::Player');
+    $victim->take_damage(
+        $damage, sub {
+            my $self = shift;
 
-    $victim->sendf($final_messages{victim})
-        if $victim->isa('AberMUD::Player');
+            # send the (potentially) final message right
+            # before death. this displays the prompt
+            # at the right time and stuff
+            $victim->sendf($final_messages{victim})
+                if $victim->isa('AberMUD::Player');
+        }
+    );
+
 
     $self->say(
         $final_messages{bystander},
