@@ -26,4 +26,16 @@ $one->types_in('east');
 like($two->get_output, qr{playerone goes west});
 like($two->get_output, qr{playerone arrives from the west});
 
+$one->score(2000);
+is($one->level, 1);
+
+$one->score(7999);
+is($one->level, 2);
+
+$one->score(8000);
+is($one->level, 3);
+
+$one->score(8001);
+is($one->level, 3);
+
 done_testing();

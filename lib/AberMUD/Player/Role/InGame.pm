@@ -2,8 +2,10 @@
 package AberMUD::Player::Role::InGame;
 use Moose::Role;
 
-use AberMUD::Location;
 use DateTime;
+
+use AberMUD::Location;
+use AberMUD::Data::Levels;
 
 with qw(AberMUD::Role::InGame);
 
@@ -19,12 +21,6 @@ has visibility_level => (
     is => 'rw',
     isa => 'Num',
     default => 0,
-);
-
-has level => (
-    is => 'rw',
-    isa => 'Num',
-    default => 1,
 );
 
 has helping => (
@@ -51,6 +47,20 @@ has following => (
     is   => 'rw',
     does => 'AberMUD::Role::Killable',
 );
+
+sub level {
+    my $self = shift;
+
+    my $levelpoints = AberMUD::Data::Levels->level_points;
+
+    return 0 if $self->score < 0;
+
+    for (my $i = 1; $i < @$levelpoints; ++$i) {
+        if ($self->score < $levelpoints->[$i]) {
+            return $i - 1;
+        }
+    }
+}
 
 no Moose::Role;
 
