@@ -350,7 +350,7 @@ sub final_prompt {
     return $prompt;
 }
 
-after die => sub {
+sub death {
     my $self = shift;
 
     $self->save_data();

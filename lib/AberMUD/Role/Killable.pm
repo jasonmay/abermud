@@ -9,6 +9,8 @@ use AberMUD::Location::Util qw(directions);
 use AberMUD::Object::Util qw(bodyparts);
 use AberMUD::Messages;
 
+requires 'death';
+
 has fighting => (
     is     => 'rw',
     does   => __PACKAGE__,
@@ -93,6 +95,7 @@ has dead => (
     is      => 'rw',
     isa     => 'Bool',
     default => 0,
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 sub max_strength {
@@ -132,7 +135,7 @@ sub take_damage {
     }
 
     if ($self->current_strength <= 0) {
-        $self->die;
+        $self->death;
     }
 }
 
@@ -323,7 +326,7 @@ sub attack {
     }
 }
 
-sub die {
+before death => sub {
     my $self = shift;
 
     if (my $opponent = $self->fighting) {
@@ -331,7 +334,7 @@ sub die {
         $opponent->stop_fighting;
     }
     $self->dead(1);
-}
+};
 
 no Moose::Role;
 

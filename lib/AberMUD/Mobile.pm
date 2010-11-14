@@ -78,7 +78,7 @@ sub formatted_name {
     return $result;
 }
 
-after die => sub {
+sub death {
     my $self = shift;
     $self->location($self->universe->corpse_location);
 };
