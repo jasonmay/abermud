@@ -1,0 +1,44 @@
+*** QUESTS
+
+So, what I was thinking for quests
+is to do something like
+special hooks for a bunch of things
+changing locations, an enemy dying, etc.
+
+but there'd be a thing where you could add
+method advice to *any* command
+
+SYNTAX
+
+add_advice(
+    hook => 'command:jump',
+    type => 'around',
+    block => sub {
+        ...
+    }
+);
+
+add_advice(
+    hook => 'move',
+    type => 'after',
+    block => sub {
+        ...
+    }
+);
+
+depending on the hook (and advice type), different
+arguments would be passed to the block
+
+QUESTS AS PLUGINS
+
+So each quest would be its own file. You wouldn't add in special-case stuff
+in each command code or anything like that. The only changes would be special-
+case hooks, which would only have to be added once, used everywhere (by future
+quest plugins)
+
+WISHLIST
+
+Hopefully I get far enough to justify actually making a quests
+system in the first place!
+
+-jasonmay
