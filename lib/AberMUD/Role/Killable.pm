@@ -118,8 +118,18 @@ sub take_damage {
     my $self   = shift;
     my $damage = shift;
 
-    $self->current_strength($self->current_strength - $damage)
+    my $prev_strength = $self->current_strength;
+    my $new_strength  = $self->current_strength - $damage;
+
+    $new_strength = 0 if $new_strength < 0;
+
+    $self->current_strength($new_strength)
         if $self->current_strength;
+
+    if ($self->fighting and $self->fighting->isa('AberMUD::Player')) {
+        my $xp = $prev_strength - $new_strength;
+        $self->fighting->change_score($xp);
+    }
 
     if ($self->current_strength <= 0) {
         $self->die;

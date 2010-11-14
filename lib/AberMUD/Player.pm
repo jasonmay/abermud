@@ -366,6 +366,15 @@ DEATH
     $self->disconnect;
 };
 
+sub change_score {
+    my $self = shift;
+    my $delta = shift;
+
+    $self->score($self->score + $delta);
+
+    $self->save_data();
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
