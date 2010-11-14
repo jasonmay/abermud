@@ -8,16 +8,12 @@ requires qw(setup universe id name);
 has output_queue => (
     is => 'rw',
     isa => 'ArrayRef[Str]',
-    #traits => ['Array'],
-    #handles => {
-    #    add_output => 'push',
-    #    get_output => 'shift',
-    #},
     default => sub { [] },
 );
 
 sub add_output { push @{ shift->output_queue }, @_ }
 sub get_output { shift @{ shift->output_queue } }
+sub clear_output { shift->output_queue([]) };
 
 sub setup { 'stub' }
 

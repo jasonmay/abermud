@@ -370,7 +370,33 @@ sub change_score {
     my $self = shift;
     my $delta = shift;
 
+    my $prev_level = $self->level;
+
     $self->score($self->score + $delta);
+
+    if ($self->level > $prev_level) {
+
+        if ($self->level > $self->max_level) {
+            for ($prev_level + 1 .. $self->level) {
+                $self->universe->broadcast(
+                    sprintf(
+                        "Congratulations to %s for making it to level &+C$_&*.\n",
+                        $self->name
+                    ),
+                    except => $self,
+                );
+
+                $self->send("Congratulations! You made it to level &+C$_&*.\n"),
+            }
+            $self->max_level($self->level);
+        }
+    }
+    elsif ($self->level < $prev_level) {
+            $self->sendf(
+                "You are back to level &+C%s&*.\n",
+                $self->level,
+            );
+    }
 
     $self->save_data();
 }

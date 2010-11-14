@@ -38,4 +38,13 @@ is($one->level, 3);
 $one->score(8001);
 is($one->level, 3);
 
+$one->score(7999);
+
+$one->clear_output;
+$one->change_score(1);
+like($one->get_output, qr{congratulations! you made it to level .*3}i);
+
+$one->take_damage($one->max_strength);
+ok($one->dead);
+
 done_testing();
