@@ -46,6 +46,7 @@ has max_level => (
 has following => (
     is   => 'rw',
     does => 'AberMUD::Role::Killable',
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 sub level {
