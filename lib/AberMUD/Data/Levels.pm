@@ -1,7 +1,11 @@
 package AberMUD::Data::Levels;
 use Moose;
 
-use constant WizLevels => {
+use constant classes => [
+    'Mage', 'Warrior', 'Priest', 'Thief',
+];
+
+use constant wiz_levels => {
     Male => [
         undef, qw(
             Apprentice Emeriti    Wizard
