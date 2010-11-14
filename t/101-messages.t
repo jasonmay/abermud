@@ -49,9 +49,9 @@ my %message_map = (
             victim   => $dude,
         },
         result => [
-            'foo comes very close to hitting dude with her sword.',
-            'you come very close to hitting dude with your sword.',
-            'foo comes very close to hitting you with her sword.',
+            'Foo comes very close to hitting dude with her sword.',
+            'You come very close to hitting dude with your sword.',
+            'Foo comes very close to hitting you with her sword.',
         ],
     },
     '%a deliver%s a good hit to %p %b.' => {
@@ -61,9 +61,9 @@ my %message_map = (
             bodypart => 'left_arm',
         },
         result => [
-            q[chick delivers a good hit to baz's &+mleft arm&N.],
-            q[you deliver a good hit to baz's &+mleft arm&N.],
-            q[chick delivers a good hit to your &+mleft arm&N.],
+            q[Chick delivers a good hit to baz's &+mleft arm&N.],
+            q[You deliver a good hit to baz's &+mleft arm&N.],
+            q[Chick delivers a good hit to your &+mleft arm&N.],
         ],
     },
 );
