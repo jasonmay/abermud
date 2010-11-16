@@ -497,6 +497,16 @@ sub calculate_object_traits {
 
     push @traits, 'Gateway'               if $data->{linked};
 
+    {
+        next unless $data->{linked};
+        next if $flags->{openable};
+        next if $flags->{pushable};
+        next if $flags->{pushtoggle};
+        next if $flags->{lockable};
+
+        push @traits, 'Multistate';
+    }
+
     return map { "AberMUD::Object::Role::$_" } @traits;
 }
 
@@ -550,9 +560,10 @@ sub calculate_rolebased_params {
     # multi-state but not openable/etc...
     if ($obj_data->{linked} and !$preset_multistate) {
         my @descs = map { $obj_data->{"desc[$_]"} }
-                    (0 .. $obj_data->{max_state}||0);
+                    (0 .. $obj_data->{maxstate}||0);
 
         $params{descriptions} = \@descs;
+        $params{state} = $obj_data->{state} || 0;
     }
 
     return %params;
