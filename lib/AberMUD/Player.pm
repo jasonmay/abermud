@@ -266,6 +266,7 @@ sub look {
     );
 
     $output .= $loc->description;
+    chomp $output; $output .= "\n";
 
     foreach my $object ($self->universe->get_objects) {
         next unless $object->location;
@@ -289,7 +290,7 @@ sub look {
         }
         elsif ($object->multistate and defined $object->state) {
             my $desc = $object->descriptions->[$object->state] // '';
-            $output .= $desc if length($desc) > 0;
+            $output .= "$desc\n" if length($desc) > 0;
         }
         elsif (length($object->description) > 0) {
             $output .= $object->description . "\n" if $object->description;
