@@ -49,6 +49,12 @@ has following => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
+has class => (
+    is => 'rw',
+    isa => 'Str',
+    default => 'Warrior',
+);
+
 sub level {
     my $self = shift;
 
