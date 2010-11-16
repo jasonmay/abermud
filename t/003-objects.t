@@ -2,128 +2,121 @@
 use strict;
 use warnings;
 use Test::More;
-use AberMUD::Test::Sugar qw(build_game);
+use AberMUD::Test::Sugar qw(build_preset_game);
 use AberMUD::Util;
 
-my $c = build_game
-    zone => 'test',
-    default_location => 'test1',
-
-    locations => {
-        test1 => {
-            title              => 'A road',
-            description        => "There is a road here heading north. " .
-                                  "You hear noises in the distance.\n",
-            exits => { north => 'test2' },
-            has_objects => {
-                rock => {
-                    traits => [qw/Getable/],
-                    description => 'A rock is laying on the ground here.',
-                },
-                sign => {
-                    description         => 'There is a sign here.',
-                    examine => "Why do you care what it says? " .
-                                           "You're just a perl script!",
-                },
-                helmet => {
-                    traits => [qw/Wearable Getable/],
-                    armor      => 8,
-                    covers     => [qw/head/],
-                    description => 'There is a helmet on the ground.',
-                },
-                shoes => {
-                    traits => [qw/Wearable Getable/],
-                    armor      => 8,
-                    covers     => [qw/left_foot right_foot/],
-                    description => 'There are some pants on the ground.',
-                },
-                boots => {
-                    traits => [qw/Wearable Getable/],
-                    armor      => 8,
-                    covers     => [qw/left_foot right_foot/],
-                    description => 'There are some boots on the ground.',
-                },
-                chest => {
-                    traits      => [qw/Getable Openable Closeable Container/],
-                    description => 'There is a chest here.',
-                    open_description => 'There is an open chest here.',
-                    closed_description => 'There is a closed chest here.',
-                    contains    => {
-                        sack => {
-                            traits      => [qw/Getable Container/],
-                            description => 'There is a sack here.',
-                            contains => {
-                                potato => {
-                                    traits => [qw/Getable Food/],
-                                    description => 'mmm potato',
+my $c = build_preset_game(
+    'two_wide',
+    {
+        locations => {
+            room1 => {
+                has_objects => {
+                    rock => {
+                        traits => [qw/Getable/],
+                        description => 'A rock is laying on the ground here.',
+                    },
+                    sign => {
+                        description         => 'There is a sign here.',
+                        examine => "Why do you care what it says? " .
+                                            "You're just a perl script!",
+                    },
+                    helmet => {
+                        traits => [qw/Wearable Getable/],
+                        armor      => 8,
+                        covers     => [qw/head/],
+                        description => 'There is a helmet on the ground.',
+                    },
+                    shoes => {
+                        traits => [qw/Wearable Getable/],
+                        armor      => 8,
+                        covers     => [qw/left_foot right_foot/],
+                        description => 'There are some pants on the ground.',
+                    },
+                    boots => {
+                        traits => [qw/Wearable Getable/],
+                        armor      => 8,
+                        covers     => [qw/left_foot right_foot/],
+                        description => 'There are some boots on the ground.',
+                    },
+                    chest => {
+                        traits      => [qw/Getable Openable Closeable Container/],
+                        description => 'There is a chest here.',
+                        open_description => 'There is an open chest here.',
+                        closed_description => 'There is a closed chest here.',
+                        contains    => {
+                            sack => {
+                                traits      => [qw/Getable Container/],
+                                description => 'There is a sack here.',
+                                contains => {
+                                    potato => {
+                                        traits => [qw/Getable Food/],
+                                        description => 'mmm potato',
+                                    }
                                 }
-                            }
+                            },
                         },
                     },
-                },
-                door => {
-                    traits      => [qw/Openable Closeable Gateway/],
-                    description => 'There is a door here.',
+                    door => {
+                        traits      => [qw/Openable Closeable Gateway/],
+                        description => 'There is a door here.',
 
-                    open_description => 'There is an open door here.',
-                    closed_description => 'There is a closed door here.',
+                        open_description => 'There is an open door here.',
+                        closed_description => 'There is a closed door here.',
+                    },
+                    trapdoor => {
+                        traits      => [qw/Openable Closeable Gateway/],
+                        open_description => 'A trapdoor is open here.',
+                    },
                 },
-                trapdoor => {
-                    traits      => [qw/Openable Closeable Gateway/],
-                    open_description => 'A trapdoor is open here.',
+            },
+            room2 => {
+                has_objects => {
+                    sword => {
+                        traits => [qw/Weapon Getable/],
+                        description => 'Here lies a sword run into the ground.',
+                        dropped_description => 'There is a sword laying on the ground here.',
+                    },
+                },
+            },
+            red => {
+                title              => 'Red Room',
+                description        => "It smells like strawberries!\n",
+                has_objects => {
+                    door => {
+                        traits      => [qw/Openable Closeable Gateway/],
+                        description => 'There is a door here.',
+                        open_description => 'There is an open door here.',
+                        closed_description => 'There is a closed door here.',
+                    },
+                },
+            },
+            yellow => {
+                title              => 'Yellow Room',
+                description        => "It smells like bananas!\n",
+                has_objects => {
+                    trapdoor => {
+                        traits      => [qw/Openable Closeable Gateway/],
+                        open_description => 'A trapdoor is open here.',
+                    },
                 },
             },
         },
-        test2 => {
-            title              => 'Path',
-            description        => "This path goes north and south.\n",
-            exits              => { south => 'test1' },
-            has_objects => {
-                sword => {
-                    traits => [qw/Weapon Getable/],
-                    description => 'Here lies a sword run into the ground.',
-                    dropped_description => 'There is a sword laying on the ground here.',
-                },
+        gateways => {
+            'door@room1' => {
+                north => 'door@red',
+            },
+            'door@red' => {
+                south => 'door@room1',
+            },
+            'trapdoor@room1' => {
+                down => 'trapdoor@yellow',
+            },
+            'trapdoor@yellow' => {
+                up => 'trapdoor@room1',
             },
         },
-        red => {
-            title              => 'Red Room',
-            description        => "It smells like strawberries!\n",
-            has_objects => {
-                door => {
-                    traits      => [qw/Openable Closeable Gateway/],
-                    description => 'There is a door here.',
-                    open_description => 'There is an open door here.',
-                    closed_description => 'There is a closed door here.',
-                },
-            },
-        },
-        yellow => {
-            title              => 'Yellow Room',
-            description        => "It smells like bananas!\n",
-            has_objects => {
-                trapdoor => {
-                    traits      => [qw/Openable Closeable Gateway/],
-                    open_description => 'A trapdoor is open here.',
-                },
-            },
-        },
-    },
-    gateways => {
-        'door@test1' => {
-            east => 'door@red',
-        },
-        'door@red' => {
-            west => 'door@test1',
-        },
-        'trapdoor@test1' => {
-            down => 'trapdoor@yellow',
-        },
-        'trapdoor@yellow' => {
-            up => 'trapdoor@test1',
-        },
-    },
-;
+    }
+);
 
 my $u = $c->resolve(service => 'universe');
 
@@ -158,11 +151,11 @@ like($one->types_in('take sword'), qr{No object of that name is here\.});
 # make sure nothing broadcasts to self
 is_deeply($one->output_queue,     []);
 
-$two->types_in('north');                                      $one->get_output;
+$two->types_in('east');                                      $one->get_output;
 like($two->types_in('take sword'), qr{You take the sword\.}); $one->get_output;
 like($two->types_in('take sword'), qr{You are already carrying that!});
 
-$two->types_in('south');           $one->get_output;
+$two->types_in('west');           $one->get_output;
 $two->types_in('drop sword');      $one->get_output;
 
 my $look_output                    = $one->types_in('look');
@@ -241,15 +234,15 @@ like($one->types_in('close door'),          qr{you close the door}i);
 
 {
     my $look                                = $one->types_in('look');
-    ::unlike($look,                         qr{east}i, 'door conceals new exit (east)');
+    ::unlike($look,                         qr{north}i, 'door conceals new exit (east)');
     ::like($look,                           qr{closed door}i, 'player sees that door has been closed');
 }
 
-like($one->types_in('east'),                qr{you can't go that way}i);
+like($one->types_in('north'),                qr{you can't go that way}i);
 
 like($one->types_in('open door'),           qr{you open the door}i);
-unlike($one->types_in('east'),              qr{you can't go that way}i);
-unlike($one->types_in('west'),              qr{you can't go that way}i);
+unlike($one->types_in('north'),              qr{you can't go that way}i);
+unlike($one->types_in('south'),              qr{you can't go that way}i);
 
 like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
 like($one->types_in('look'),                qr{down}i);
