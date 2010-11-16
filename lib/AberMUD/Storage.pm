@@ -94,8 +94,12 @@ sub build_universe {
             $self->store(config => $config);
 
             # assign IDs to locations and update
-            $_->id($self->object_to_id($_)) for $locations->members;
-            $self->update($locations->members);
+            my @with_ids = map { ($_->members) } $locations,
+                                                 $config->universe->objects,
+                                                 $config->universe->mobiles;
+
+            $_->id($self->object_to_id($_)) for @with_ids;
+            $self->update(@with_ids);
 
             # set root to everything we stored
             my @all_objects = $self->scope->live_objects->live_objects;

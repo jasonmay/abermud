@@ -60,8 +60,10 @@ has objects => (
     handles => {
         get_objects => 'members',
     },
-    default => sub { set() },
+    lazy    => 1,
+    builder => '_build_objects',
 );
+sub _build_objects { set() }
 
 has gateway_cache => (
     is      => 'rw',

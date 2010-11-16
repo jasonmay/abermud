@@ -10,6 +10,11 @@ with qw(
     AberMUD::Role::InGame
 );
 
+has id => (
+    is => 'rw',
+    isa => 'Str',
+);
+
 has alt_name => (
     is => 'rw',
     isa => 'Str',
