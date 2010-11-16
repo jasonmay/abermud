@@ -526,9 +526,11 @@ sub calculate_rolebased_params {
     my %params;
 
     my $flags = format_flags($obj_data->{oflags});
+    my $preset_multistate = 0;
     foreach my $flag (keys %data) {
         if ($flags->{$flag}) {
             foreach my $attr (keys %{ $data{$flag} }) {
+                $preset_multistate = 1;
                 my $legacy_attr = 'desc[' . $data{$flag}{$attr} . ']';
                 $obj_data->{$legacy_attr} and
                     do {$params{$attr} = $obj_data->{$legacy_attr } };
@@ -543,6 +545,14 @@ sub calculate_rolebased_params {
         elsif ($obj_data->{state} eq '0') {
             $params{opened} = 1;
         }
+    }
+
+    # multi-state but not openable/etc...
+    if ($obj_data->{linked} and !$preset_multistate) {
+        my @descs = map { $obj_data->{"desc[$_]"} }
+                    (0 .. $obj_data->{max_state}||0);
+
+        $params{descriptions} = \@descs;
     }
 
     return %params;
