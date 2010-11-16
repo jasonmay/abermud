@@ -61,6 +61,7 @@ has objects_in_room => (
     #weak_ref => 1,
     lazy => 1,
     builder => '_build_objects_in_room',
+    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 sub _build_objects_in_room {
