@@ -509,6 +509,8 @@ sub calculate_rolebased_params {
             closed_description => 1,
         },
         lockable => {
+            open_description   => 0,
+            closed_description => 1,
             locked_description => 2,
         },
         getflips => {
