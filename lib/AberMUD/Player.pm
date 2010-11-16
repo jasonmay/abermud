@@ -358,10 +358,10 @@ sub death {
     $self->save_data();
     $self->dematerialize();
 
-    $self->sendf(<<DEATH);
+    $self->send(<<DEATH, no_prompt => 1);
 
 &+r***********************************&N
-      I guess you died? *shrug*
+      I guess you died! LOL!
 &+r***********************************&N
 DEATH
 
