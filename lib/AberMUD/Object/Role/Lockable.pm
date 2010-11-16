@@ -13,6 +13,12 @@ has lock_text => (
     isa => 'Str',
 );
 
+has locked => (
+    is => 'rw',
+    isa => 'Bool',
+    default => 0,
+);
+
 sub lockable { 1 }
 
 1;
