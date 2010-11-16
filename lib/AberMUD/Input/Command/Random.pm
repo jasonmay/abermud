@@ -18,9 +18,17 @@ command 'random' , priority => -10, sub {
     until ($location or $n > 100) {
         my $o = $o[rand @o];
         $output .= "Trying " . $o->name . "...\n";
-        next unless $o->getable;
-
-        next unless $o->container or $o->wieldable or $o->wearable or $o->edible;
+        
+        if ($args =~ /door/) {
+            next unless $o->gateway;
+        }
+        elsif ($args =~ /multistate/) {
+            next unless $o->multistate;
+        }
+        else {
+            next unless $o->getable;
+            next unless $o->container or $o->wieldable or $o->wearable or $o->edible;
+        }
 
         if (rand(1) > .5) {
             next unless $o->on_the_ground;
