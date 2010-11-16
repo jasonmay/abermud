@@ -226,7 +226,7 @@ sub materialize {
     my $self = shift;
     my $u    = $self->universe;
 
-    return if $self->in_game;
+    return $self if $self->in_game;
 
     $self->sys_message("materialize");
 
@@ -234,7 +234,7 @@ sub materialize {
 
     if ($m_player != $self && $m_player->in_game) {
         $self->_ghost($m_player);
-        return;
+        return $self;
     }
 
     if (!$m_player->in_game) {
