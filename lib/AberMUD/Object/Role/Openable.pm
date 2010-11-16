@@ -16,6 +16,7 @@ has open_text => (
 has opened => (
     is  => 'rw',
     isa => 'Bool',
+    default => 0,
 );
 
 sub open {

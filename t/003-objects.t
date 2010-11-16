@@ -67,6 +67,13 @@ my $c = build_preset_game(
                         traits      => [qw/Openable Closeable Gateway/],
                         open_description => 'A trapdoor is open here.',
                     },
+                    ladder => {
+                        traits      => [qw/Multistate Gateway/],
+                        descriptions => [
+                            undef, # user doesn't see it when it's not open
+                            'A ladder levitates in the sky',
+                        ],
+                    },
                 },
             },
             room2 => {
@@ -75,6 +82,19 @@ my $c = build_preset_game(
                         traits => [qw/Weapon Getable/],
                         description => 'Here lies a sword run into the ground.',
                         dropped_description => 'There is a sword laying on the ground here.',
+                    },
+                },
+            },
+            blue => {
+                title              => 'Blue Room',
+                description        => "It smells like a sky!\n",
+                has_objects => {
+                    ladder => {
+                        traits      => [qw/Multistate Gateway/],
+                        descriptions => [
+                            undef,
+                            'A levitating ladder below awaits your descent.',
+                        ]
                     },
                 },
             },
@@ -114,6 +134,12 @@ my $c = build_preset_game(
             'trapdoor@yellow' => {
                 up => 'trapdoor@room1',
             },
+            'ladder@room1' => {
+                up => 'ladder@blue',
+            },
+            'ladder@blue' => {
+                down => 'ladder@room1',
+            },
         },
     }
 );
@@ -124,7 +150,10 @@ ok(my @o = $u->get_objects, 'objects loaded');
 
 ok(scalar(grep { $_->does('AberMUD::Object::Role::Getable') } @o) >= 6);
 
-my %objects                       = map { $_->name => $_ } @o;
+my %objects                       = map {;
+    sprintf('%s@%s', $_->name, $_->final_location->moniker) => $_
+} @o;
+
 my $one                           = $c->gen_player('playerone');
 my $two                           = $c->gen_player('playertwo');
 
@@ -136,7 +165,7 @@ like($one->types_in('look'),      qr{chest});
 like($one->types_in('take rock'), qr{You take the rock\.});
 like($two->get_output,            qr{playerone picks up a rock\.}i);
 
-is($objects{rock}->held_by, $one);
+is($objects{'rock@room1'}->held_by, $one);
 
 unlike($one->types_in('look'),    qr{A rock is laying on the ground here\.});
 
@@ -192,7 +221,7 @@ $_->held_by($two) for grep { $_->can('held_by') and not $_->contained_by } @o;
 
 $two->types_in('drop sword');
 like($two->types_in('look'),       qr{sword laying on the ground});
-$objects{sword}->held_by($two);
+$objects{'sword@room2'}->held_by($two);
 
 # examine
 like($two->types_in('examine sign'), qr{Why do you care});
@@ -234,7 +263,7 @@ like($one->types_in('close door'),          qr{you close the door}i);
 
 {
     my $look                                = $one->types_in('look');
-    ::unlike($look,                         qr{north}i, 'door conceals new exit (east)');
+    ::unlike($look,                         qr{north}i, 'door conceals north exit');
     ::like($look,                           qr{closed door}i, 'player sees that door has been closed');
 }
 
@@ -261,17 +290,26 @@ like($two->types_in('wield sword'),         qr{you wield the sword}i);
 like($two->types_in('wear helmet'),         qr{you put on the helmet}i);
 
 
-$objects{$_}->held_by($one) for qw/shoes boots/;
+$objects{$_}->held_by($one) for qw/shoes@room1 boots@room1/;
 like($one->types_in('wear shoes'),          qr{you put on the shoes}i);
 like($one->types_in('wear boots'),          qr{remove your shoes first}i);
 
-ok($objects{sword}->wielded,                 'sword got wielded');
-ok($objects{helmet}->worn,                   'helmet got worn');
+ok($objects{'sword@room2'}->wielded,                 'sword got wielded');
+ok($objects{'helmet@room1'}->worn,                   'helmet got worn');
 
 my $eq                                      = $two->types_in('equipment');
 like($eq,                                   qr{wielding:.+sword}i);
 like($eq,                                   qr{head:.+helmet}i);
 
 like($two->types_in('remove helmet'),       qr{you take off the helmet}i);
+$one->types_in('up');
+
+
+unlike($one->types_in('look'), qr{ladder}, "player doesn't see ladder");
+$objects{'ladder@room1'}->set_state(1);
+like($one->types_in('look'), qr{ladder}, "ladder is revealed by state change");
+my $l = $one->location;
+$one->types_in('up');
+isnt($one->location, $l, "ladder's state change allowed the player to go to revealed exit");
 
 done_testing();

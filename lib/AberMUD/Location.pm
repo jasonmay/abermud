@@ -43,6 +43,11 @@ has universe => (
     weak_ref => 1,
 );
 
+has moniker => (
+    is  => 'rw',
+    isa => 'Str',
+);
+
 has [ directions() ] => (
     is        => 'rw',
     isa       => 'AberMUD::Location',

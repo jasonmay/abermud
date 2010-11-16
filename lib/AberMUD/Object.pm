@@ -50,6 +50,7 @@ sub openable    { 0 }
 sub closeable   { 0 }
 sub gateway     { 0 }
 sub pushable    { 0 }
+sub multistate  { 0 }
 
 around name_matches => sub {
     my ($orig, $self) = (shift, shift);
@@ -92,11 +93,13 @@ sub final_location {
 
     my $o = $self;
 
-    $o = $o->contained_by
-        while $o->getable and $o->contained_by;
+    if ($o->getable) {
+        $o = $o->contained_by
+            while $o->getable and $o->contained_by;
 
-    return $o->held_by->location
-        if $o->getable and $o->held_by;
+        return $o->held_by->location
+            if $o->getable and $o->held_by;
+    }
 
     return $o->location;
 }

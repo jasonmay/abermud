@@ -268,7 +268,6 @@ sub look {
     $output .= $loc->description;
 
     foreach my $object ($self->universe->get_objects) {
-        next unless $object->description;
         next unless $object->location;
         next unless $object->location == $loc;
         next unless $object->on_the_ground;
@@ -277,20 +276,23 @@ sub look {
             if ($object->opened) {
                 $output .= $object->open_description . "\n";
             }
-            elsif (defined $object->opened) {
+            elsif (defined($object->opened) and $object->closed_description) {
                 $output .= $object->closed_description . "\n";
             }
-            else {
-                $output .= $object->description . "\n";
-            }
+            #else { warn "not sure what to do with " . $object->name; }
         }
-        else {
-            if ($object->getable and $object->dropped) {
-                $output .= $object->dropped_description . "\n" if $object->dropped_description;
-            }
-            else {
-                $output .= $object->description . "\n" if $object->description;
-            }
+        elsif ($object->pushable and $object->pushed) {
+            $output .= $object->pushed_description . "\n";
+        }
+        elsif ($object->getable and $object->dropped) {
+            $output .= $object->dropped_description . "\n" if $object->dropped_description;
+        }
+        elsif ($object->multistate and defined $object->state) {
+            my $desc = $object->descriptions->[$object->state] // '';
+            $output .= $desc if length($desc) > 0;
+        }
+        elsif (length($object->description) > 0) {
+            $output .= $object->description . "\n" if $object->description;
         }
     }
 

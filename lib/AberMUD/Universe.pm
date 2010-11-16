@@ -210,20 +210,22 @@ sub check_exit {
 
     my $link_method = $direction . '_link';
 
-    my $open_doors = $self->revealing_gateway_cache *
-                     $location->objects_in_room;
+    my $in_room = $location->objects_in_room->_objects;
 
-    my $door = first {
+    my $open_gateways = $self->revealing_gateway_cache *
+                      $in_room;
+
+    my $gateway = first {
         $_->$link_method and
         $_->in($location)
-    } $open_doors->members;
+    } $open_gateways->members;
 
-    if ($door and !$door->$link_method) {
+    if ($gateway and !$gateway->$link_method) {
         warn $location->title . " -> $direction not found" ;
         return undef;
     }
 
-    return $door ? $door->$link_method->location : $location->$direction;
+    return $gateway ? $gateway->$link_method->location : $location->$direction;
 }
 
 __PACKAGE__->meta->make_immutable;

@@ -51,6 +51,7 @@ sub build_game {
             title       => $locs->{$loc}{title},
             description => $locs->{$loc}{description},
             zone        => $zone,
+            moniker     => $loc,
         );
 
         my (@objects, @mobiles);
@@ -157,6 +158,7 @@ sub _handle_object {
         closed_description  => $obj_data->{closed_description},
         locked_description  => $obj_data->{locked_description},
         dropped_description => $obj_data->{dropped_description},
+        descriptions        => $obj_data->{descriptions},
         buy_value           => $obj_data->{bvalue},
         flags               => $obj_data->{oflags},
         coverage            => $obj_data->{covers},
