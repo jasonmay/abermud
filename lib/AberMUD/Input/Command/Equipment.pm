@@ -17,12 +17,8 @@ command equipment => sub {
 
     my $output = sprintf('%-20s', '&+CWielding:&*');
 
-    if ($weapon) {
-        $output .= $weapon->name;
-    }
-    else {
-        $output = 'Unarmed';
-    }
+    my $weapon_name = $weapon ? $weapon->name : 'Unarmed';
+    $output .= sprintf('[%3s] %s', $you->total_damage, $weapon_name);
 
     $output .= "\n&+C=============================\n";
 
