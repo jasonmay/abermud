@@ -16,18 +16,24 @@ command open => sub {
 
     $object->opened and return "That's already open.";
 
-    $object->open();
+    my $key;
+    if ($object->lockable and $object->locked) {
+        # TODO check if user is carrying a key
+        $key = $you->carrying_key
+            or return "You can't open that. It's locked.";
 
-    if ($object->gateway) {
-        foreach my $direction (directions()) {
-            my $link_method = $direction . '_link';
-            next unless $object->$link_method;
-            next unless $object->$link_method->openable;
-            $object->$link_method->open();
-        }
+        $object->locked(0);
     }
 
-    return "You open the " . $object->name;
+    $object->open();
+
+    return sprintf(
+        'You use your %s to unlock and open the %s',
+        $key->formatted_name,
+        $object->formatted_name,
+    ) if $key;
+
+    return "You open the " . $object->formatted_name;
 };
 
 __PACKAGE__->meta->make_immutable;

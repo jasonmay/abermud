@@ -16,11 +16,19 @@ command 'random' , priority => -10, sub {
     my $output = "Scanning...\n";
     my $n = 0;
     until ($location or $n > 100) {
+        $n++;
         my $o = $o[rand @o];
         $output .= "Trying " . $o->name . "...\n";
         
         if ($args =~ /door/) {
             next unless $o->gateway;
+        }
+        elsif ($args =~ /key/) {
+            next unless $o->key;
+        }
+        elsif ($args =~ /locked/) {
+            next unless $o->lockable;
+            next unless $o->locked;
         }
         elsif ($args =~ /multistate/) {
             next unless $o->multistate;
@@ -54,7 +62,6 @@ command 'random' , priority => -10, sub {
         else {
             $location = $o->location;
         }
-        $n++;
     }
 
     return "I give up.\n" unless $location;

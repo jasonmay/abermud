@@ -13,7 +13,7 @@ sub closed {
     my $arg = shift;
 
     if ($arg) {
-        return $self->opened(!$arg);
+        return $self->_opened(!$arg);
     }
 
     $self->openable or return 1;
@@ -24,9 +24,7 @@ sub closed {
 sub close {
     my $self = shift;
 
-    $self->closed(1);
-    $self->universe->revealing_gateway_cache->remove($self)
-        if $self->gateway;
+    $self->_opened(0);
 }
 
 sub closeable { 1 }

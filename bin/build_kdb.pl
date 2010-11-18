@@ -486,7 +486,9 @@ sub calculate_object_traits {
     my @traits;
     push @traits, 'Gateway'               if $flags->{linked};
     push @traits, 'Openable', 'Closeable' if $flags->{openable};
+    push @traits, 'Lockable'              if $flags->{lockable};
     push @traits, 'Pushable'              if $flags->{pushable};
+    push @traits, 'Pushable'              if $flags->{pushtoggle};
     push @traits, 'Food'                  if $flags->{food};
     push @traits, 'Wearable'              if $flags->{wearable}
                                           or $flags->{armor};
@@ -555,6 +557,15 @@ sub calculate_rolebased_params {
         }
         elsif ($obj_data->{state} eq '0') {
             $params{opened} = 1;
+        }
+    }
+
+    if ($flags->{lockable} and $obj_data->{state}) {
+        if ($obj_data->{state} eq '2') {
+            $params{locked} = 1;
+        }
+        else {
+            $params{locked} = 0;
         }
     }
 

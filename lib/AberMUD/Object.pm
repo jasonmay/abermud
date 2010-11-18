@@ -53,9 +53,11 @@ sub containable { 0 }
 sub container   { 0 }
 sub openable    { 0 }
 sub closeable   { 0 }
+sub lockable    { 0 }
 sub gateway     { 0 }
 sub pushable    { 0 }
 sub multistate  { 0 }
+sub key         { 0 }
 
 around name_matches => sub {
     my ($orig, $self) = (shift, shift);

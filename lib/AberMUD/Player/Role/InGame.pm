@@ -69,6 +69,16 @@ sub level {
     }
 }
 
+sub carrying_key {
+    my $self = shift;
+
+    my @available = grep
+                    { $_->key && $_->in_direct_possession }
+                    $self->carrying_loosely;
+
+    return @available ? $available[0] : undef;
+}
+
 no Moose::Role;
 
 1;
