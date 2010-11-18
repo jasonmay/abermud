@@ -108,12 +108,14 @@ has corpse_location => (
     isa => 'AberMUD::Location',
     builder => '_build_corpse_location',
     lazy => 1,
+    #weak_ref => 1,
 );
 
 sub _build_corpse_location {
     my $self = shift;
 
     return AberMUD::Location->new(
+        universe => $self,
         title => 'Dead Zone',
         description => q[This is the zone for corpses. ] .
                        q[Mortals do not belong here.],

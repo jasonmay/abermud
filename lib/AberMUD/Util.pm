@@ -4,7 +4,7 @@ use Moose;
 use namespace::autoclean;
 
 sub colorify {
-    my $text = shift;
+    my $text = shift or return;
 
     my %letter_to_ansi = (
         l => 0, L => 0,

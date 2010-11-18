@@ -94,7 +94,6 @@ has dead => (
     is      => 'rw',
     isa     => 'Bool',
     default => 0,
-    traits => ['KiokuDB::DoNotSerialize'],
 );
 
 sub max_strength {

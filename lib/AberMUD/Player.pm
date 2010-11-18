@@ -107,7 +107,7 @@ sub save_data {
     my $u    = $self->universe;
 
     if (!$self->in_game) {
-        cluck "Trying to call save when the player is not in-game";
+        #cluck "Trying to call save when the player is not in-game";
         return;
     }
 
@@ -209,6 +209,17 @@ sub _join_server {
 # game stuff
 sub setup {
     my $self = shift;
+
+    if ($self->dead) {
+
+        my $restore = int($self->max_strength * 2 / 3);
+        $restore = 40 if $restore < 40;
+
+        # restore strength
+        $self->current_strength($restore);
+        $self->dead(0);
+        $self->save_data();
+    }
 }
 
 sub _ghost {
