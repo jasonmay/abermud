@@ -12,6 +12,7 @@ sub run {
     my $self = shift;
     my ($you, $pass) = @_;
 
+    return $self->entry_message unless $pass;
     if ($you->dir_player) {
         if (crypt($pass, lc $you->name) eq $you->dir_player->password) {
             $you->shift_state;

@@ -13,6 +13,8 @@ sub run {
     my ($you, $name) = @_;
     $name = lc $name;
 
+    return $self->entry_message unless $name;
+
     $you->name($name);
     $you->dir_player($you->universe->storage->player_lookup($name));
     if ($you->dir_player) {

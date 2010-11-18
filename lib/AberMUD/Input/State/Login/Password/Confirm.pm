@@ -14,6 +14,7 @@ sub run {
     my ($you, $pass) = @_;
     my $output = q{};
 
+    return $self->entry_message unless $pass;
     if (crypt($pass, $you->name) eq $you->password) {
         $you->shift_state;
     }
