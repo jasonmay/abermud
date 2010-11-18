@@ -86,6 +86,13 @@ sub goto_mobile {
     return $you->look;
 }
 
+command heal => sub {
+    my $you = shift;
+
+    $you->current_strength($you->max_strength);
+    return sprintf('Aww yeah. Back to %s!', $you->current_strength);
+};
+
 __PACKAGE__->meta->make_immutable;
 
 1;
