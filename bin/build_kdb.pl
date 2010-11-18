@@ -411,6 +411,7 @@ sub expand_mobiles {
             description         => $mob_data->{description},
             examine_description => $mob_data->{examine},
             display_name        => $mob_data->{pname}
+                                || $mob_data->{altname}
                                 || ucfirst($mob_data->{name}),
             basestrength        => $mob_data->{strength},
             intrinsics          => format_flags(
