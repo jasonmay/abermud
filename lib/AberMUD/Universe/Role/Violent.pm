@@ -41,12 +41,28 @@ sub fight_iteration {
     my $self = shift;
     my $type = shift || '';
 
-    foreach my $mobile ($self->get_mobiles) {
-        $mobile->attack if $mobile->fighting;
-    }
+    #foreach my $mobile ($self->get_mobiles) {
+    #    if ($mobile->fighting) {
+    #        $mobile->fighting->fighting($mobile)
+    #            if $mobile->fighting->fighting != $mobile;
+    #        $mobile->attack;
+    #    }
+    #}
 
     foreach my $player ($self->game_list) {
-        $player->attack if $player->fighting;
+        if ($player->fighting) {
+            if ($player->location != $player->fighting->location) {
+                $player->send("I guess you're not fighting anymore..\n");
+                $player->stop_fighting;
+                next;
+            }
+            $player->fighting->fighting($player)
+                if $player->fighting->fighting != $player;
+            $player->attack;
+            if ($player->fighting) { #could have killed
+                $player->fighting->attack;
+            }
+        }
     }
 }
 
