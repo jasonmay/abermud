@@ -273,28 +273,10 @@ sub look {
         next unless $object->location == $loc;
         next unless $object->on_the_ground;
 
-        if ($object->openable) {
-            if ($object->opened) {
-                $output .= $object->open_description . "\n";
-            }
-            elsif (defined($object->opened) and $object->closed_description) {
-                $output .= $object->closed_description . "\n";
-            }
-            #else { warn "not sure what to do with " . $object->name; }
-        }
-        elsif ($object->pushable and $object->pushed) {
-            $output .= $object->pushed_description . "\n";
-        }
-        elsif ($object->getable and $object->dropped) {
-            $output .= $object->dropped_description . "\n" if $object->dropped_description;
-        }
-        elsif ($object->multistate and defined $object->state) {
-            my $desc = $object->descriptions->[$object->state] // '';
-            $output .= "$desc\n" if length($desc) > 0;
-        }
-        elsif (length($object->description) > 0) {
-            $output .= $object->description . "\n" if $object->description;
-        }
+        my $desc = $object->final_description;
+        next unless $desc;
+
+        $output .= "$desc\n";
     }
 
     foreach my $mobile ($self->universe->get_mobiles) {

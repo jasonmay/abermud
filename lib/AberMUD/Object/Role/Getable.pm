@@ -68,5 +68,13 @@ around on_the_ground => sub {
     $self->$orig(@_);
 };
 
+around final_description => sub {
+    my ($orig, $self) = @_;
+
+    return $self->dropped_description if $self->dropped_description;
+
+    return $self->$orig(@_);
+};
+
 1;
 

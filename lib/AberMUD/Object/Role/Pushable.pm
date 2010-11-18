@@ -20,5 +20,13 @@ has pushed => (
 
 sub pushable { 1 }
 
+around final_description => sub {
+    my ($orig, $self) = @_;
+
+    return $self->pushed_description if $self->pushed_description;
+
+    return $self->$orig(@_);
+};
+
 1;
 

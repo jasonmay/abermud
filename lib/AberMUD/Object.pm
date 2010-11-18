@@ -127,6 +127,11 @@ around change_location => sub {
     $self->location->objects_in_room->insert($self);
 };
 
+sub final_description {
+    my $self = shift;
+    return $self->description;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
