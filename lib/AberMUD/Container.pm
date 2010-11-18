@@ -70,11 +70,9 @@ sub _build_universe_block {
         $u->spawn_player_code(
             sub {
                 my $self     = shift;
-                my $id       = shift;
                 my $player   = $weakcontainer->resolve(
                     service => 'player',
                     parameters => {
-                        id          => $id,
                         prompt      => '&*[ &+C%h/%H&* ] &+Y$&* ',
                         location    => $config->location,
                         input_state => [
@@ -117,7 +115,6 @@ sub _build_container {
         }
         else {
             $player_args{parameters} = {
-                id          => { isa => 'Str' },
                 prompt      => { isa => 'Str' },
                 location    => { isa => 'AberMUD::Location' },
                 input_state => { isa => 'ArrayRef' },
