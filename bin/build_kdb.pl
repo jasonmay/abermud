@@ -461,6 +461,7 @@ sub expand_objects {
         delete $params{$_} for grep { not defined $params{$_} } keys %params;
 
         my $key = $obj_data->{name} . '@' . $zone_name;
+        $params{moniker} = $key;
 
         my %extra_params = calculate_rolebased_params($obj_data);
 
@@ -589,13 +590,15 @@ sub expand_locations {
     my %loc_objects;
     foreach my $loc_data (values %$locs) {
 
+        my $key = sprintf q[%s@%s], $loc_data->{id}, $zone_name;
+
         my $l = AberMUD::Location->new(
             title       => $loc_data->{title},
             description => $loc_data->{description},
             flags       => format_flags($loc_data->{flags}),
+            moniker     => $key,
         );
 
-        my $key = sprintf q[%s@%s], $loc_data->{id}, $zone_name;
 
         $expanded->{loc}{lc $key} = $l;
 

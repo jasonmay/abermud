@@ -9,24 +9,36 @@ except      => [__PACKAGE__],
 sub_name    => 'commands',
 require     => 1;
 
-foreach my $command_class (__PACKAGE__->commands) {
-    Class::MOP::load_class($command_class);
-    next unless $command_class->meta;
+sub get_command_methods {
+    my @methods;
+    foreach my $command_class (__PACKAGE__->commands) {
+        Class::MOP::load_class($command_class);
 
-    $command_class->meta->isa('AberMUD::Meta::Command::Composite')
-        and next;
+        $command_class->meta->isa('AberMUD::Meta::Command::Composite')
+            and next;
 
-    my $method_metaclass = $command_class->meta->method_metaclass;
+        my $method_metaclass = $command_class->meta->method_metaclass;
 
-    foreach my $method ($command_class->meta->get_all_methods) {
+        foreach my $method ($command_class->meta->get_all_methods) {
 
-        next unless $method->meta->can('does_role');
-        next unless $method->meta->does_role('AberMUD::Role::Command');
+            next unless $method->meta->can('does_role');
+            next unless $method->meta->does_role('AberMUD::Role::Command');
 
-        __PACKAGE__->meta->add_method($method->name => $method);
-
+            push @methods, $method;
+        }
     }
-};
+
+    return @methods;
+}
+
+sub get_command_names {
+    my $class = shift;
+    map { $_->name } $class->get_command_methods;
+}
+
+foreach my $method (__PACKAGE__->get_command_methods) {
+    __PACKAGE__->meta->add_method($method->name => $method)
+}
 
 __PACKAGE__->meta->make_immutable;
 

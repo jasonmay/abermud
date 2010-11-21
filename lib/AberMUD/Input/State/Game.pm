@@ -3,7 +3,6 @@ package AberMUD::Input::State::Game;
 use Moose;
 extends 'AberMUD::Input::State';
 use AberMUD::Input::Dispatcher;
-use AberMUD::Input::Command::Composite;
 
 sub welcome_message { "\e[2J" . << '_STOP_';
 &+G    _    _               __  __ _   _ ____&*
@@ -41,10 +40,22 @@ has dispatcher => (
     handles => ['dispatch'],
 );
 
+has command_composite => (
+    is => 'ro',
+    isa => 'AberMUD::Input::Command::Composite',
+    required => 1,
+);
+
+has special_composite => (
+    is => 'ro',
+    isa => 'AberMUD::Special',
+    required => 1,
+);
+
 sub BUILD {
     my $self = shift;
 
-    foreach my $command_method (AberMUD::Input::Command::Composite->meta->get_all_methods) {
+    foreach my $command_method ($self->command_composite->meta->get_all_methods) {
         next unless $command_method->meta->can('does_role');
         next unless $command_method->meta->does_role('AberMUD::Role::Command');
 

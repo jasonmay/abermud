@@ -64,8 +64,16 @@ sub gen_player {
 
     $params{location} ||= $self->storage_object->lookup('config')->location;
 
+    require AberMUD::INput::State::Game;
     my $p = $self->resolve(service => 'player');
-    $p->input_state([AberMUD::Input::State::Game->new]);
+    $p->input_state(
+        [
+            AberMUD::Input::State::Game->new(
+                special_composite => $self->resolve(service => 'special_composite'),
+                command_composite => $self->resolve(service => 'command_composite'),
+            )
+        ]
+    );
 
     $p->name($name);
     $p->_join_game;

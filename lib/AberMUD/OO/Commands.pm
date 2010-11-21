@@ -15,12 +15,13 @@ sub command {
     my ($caller, $name, $code) = (shift, shift, pop);
     my %options = @_;
 
-    my $meta = $caller->meta;
-
     # extend method-metaclass with a new trait
     my $method_metaclass = Moose::Meta::Class->create_anon_class(
-        superclasses => [ $meta->method_metaclass ],
-        roles        => ['AberMUD::Role::Command'],
+        superclasses => [ $caller->meta->method_metaclass ],
+        roles        => [
+            'AberMUD::Role::Command',
+            'AberMUD::OO::Command::Method::Meta::Role::Specials',
+        ],
     );
 
     # create a bare metamethod

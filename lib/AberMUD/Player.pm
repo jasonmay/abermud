@@ -76,6 +76,13 @@ has '+input_state' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
+has special_composite => (
+    is => 'rw',
+    isa => 'AberMUD::Special',
+    traits => ['KiokuDB::DoNotSerialize'],
+    required => 1,
+);
+
 sub unshift_state {
     my $self = shift;
     unshift @{$self->input_state}, @_;

@@ -208,6 +208,18 @@ sub identify_from_list {
     return undef;
 }
 
+sub get_object_by_moniker {
+    my $self    = shift;
+    my $moniker = shift;
+
+    my ($object) =
+    grep {
+        $_->moniker and $_->moniker eq $moniker
+    } $self->get_objects;
+
+    return $object;
+}
+
 sub check_exit {
     my $self = shift;
     my ($location, $direction) = @_;

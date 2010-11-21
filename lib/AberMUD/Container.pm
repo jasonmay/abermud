@@ -42,7 +42,32 @@ has controller_block => (
     lazy    => 1,
 );
 
-sub _build_controller_block { undef }
+sub _build_controller_block {
+    return sub {
+        my ($self, $service) = @_;
+
+        my $controller = AberMUD::Controller->new(
+            storage  => $service->param('storage'),
+            universe => $service->param('universe'),
+        );
+
+        foreach my $input_state_class ($controller->_input_states) {
+            next unless $input_state_class;
+            Class::MOP::load_class($input_state_class);
+            my $input_state_object = $input_state_class->new(
+                universe          => $service->param('universe'),
+                command_composite => $service->param('command_composite'),
+                special_composite => $service->param('special_composite'),
+            );
+
+            $controller->set_input_state(
+                $input_state_class => $input_state_object,
+            );
+        }
+
+        return $controller;
+    };
+}
 
 has universe_block => (
     is  => 'ro',
@@ -82,6 +107,7 @@ sub _build_universe_block {
                                 )
                             } @{ $config->input_states }
                         ],
+                        special_composite => $weakservice->param('special_composite'),
                     }
                 );
 
@@ -115,9 +141,10 @@ sub _build_container {
         }
         else {
             $player_args{parameters} = {
-                prompt      => { isa => 'Str' },
-                location    => { isa => 'AberMUD::Location' },
-                input_state => { isa => 'ArrayRef' },
+                prompt            => { isa => 'Str' },
+                location          => { isa => 'AberMUD::Location' },
+                input_state       => { isa => 'ArrayRef' },
+                special_composite => { isa => 'AberMUD::Special' },
             };
         }
 
@@ -142,8 +169,9 @@ sub _build_container {
             lifecycle => 'Singleton',
             block     => sub { $weakself->universe_block->($weakself, @_) },
             dependencies => {
-                storage    => depends_on('storage'),
-                controller => depends_on('controller'),
+                storage           => depends_on('storage'),
+                controller        => depends_on('controller'),
+                special_composite => depends_on('special_composite'),
             },
         );
 
@@ -161,9 +189,24 @@ sub _build_container {
             lifecycle => 'Singleton',
             %controller_args,
             dependencies => {
-                storage => depends_on('storage'),
-                universe => depends_on('universe'),
+                storage           => depends_on('storage'),
+                universe          => depends_on('universe'),
+                command_composite => depends_on('command_composite'),
+                special_composite => depends_on('special_composite'),
             },
+        );
+
+        service special_composite => (
+            class     => 'AberMUD::Special',
+            lifecycle => 'Singleton',
+            dependencies => {
+                command_composite => depends_on('command_composite'),
+            },
+        );
+
+        service command_composite => (
+            class     => 'AberMUD::Input::Command::Composite',
+            lifecycle => 'Singleton',
         );
 
         service app => (

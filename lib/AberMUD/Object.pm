@@ -41,6 +41,11 @@ has examine_description => (
     isa => 'Str',
 );
 
+has moniker => (
+    is => 'rw',
+    isa => 'Str',
+);
+
 # methods wrapped by roles
 sub in_direct_possession { 0 }
 sub on_the_ground { 1 }

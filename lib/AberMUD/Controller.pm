@@ -94,25 +94,6 @@ around disconnect_hook => sub {
     return $result;
 };
 
-sub _load_input_states {
-    my $self = shift;
-
-    foreach my $input_state_class ($self->_input_states) {
-        next unless $input_state_class;
-        Class::MOP::load_class($input_state_class);
-        my $input_state_object = $input_state_class->new(
-            universe => $self->universe,
-        );
-        $self->set_input_state($input_state_class => $input_state_object);
-    }
-}
-
-sub BUILD {
-    my $self = shift;
-
-    $self->_load_input_states;
-}
-
 {
     # AberMUDs have a tick every two seconds
     my $two_second_toggle = 0;
