@@ -2,8 +2,6 @@ package AberMUD::Special::Plugin::Quest::Excalibur;
 use Moose::Role;
 use List::MoreUtils qw(any);
 
-#with 'AberMUD::Special::Quest';
-
 around command_blow => sub {
     my ($orig, $self) = (shift, shift);
 
@@ -25,6 +23,7 @@ around command_blow => sub {
 
     my $excal = $you->universe->get_object_by_moniker('excalibur@sea');
     $excal->location($you->location);
+    $you->complete_quest('excalibur');
 
     return(1, "A hand breaks through the water holding up the sword Excalibur!");
 };
