@@ -12,9 +12,7 @@ around wrap => sub {
 
     my $applied_code = sub {
         my ($player) = @_;
-        warn $player;
         my $special = $player->special_composite;
-        warn $special;
 
         # XXX I want to do the check only one time but
         # outside the closure is way too early :(

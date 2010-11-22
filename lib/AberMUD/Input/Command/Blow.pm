@@ -1,7 +1,6 @@
 package AberMUD::Input::Command::Blow;
 use Moose;
 use AberMUD::OO::Commands;
-warn "BAGH";
 
 command blow => sub {
     my $you = shift;
