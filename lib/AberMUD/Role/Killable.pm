@@ -9,6 +9,8 @@ use AberMUD::Location::Util qw(directions);
 use AberMUD::Object::Util qw(bodyparts);
 use AberMUD::Messages;
 
+use Array::IntSpan;
+
 requires 'death';
 
 has fighting => (
@@ -268,19 +270,14 @@ sub attack {
 
     my $perc = $damage * 100 / $self->total_damage;
 
-    my $damage_level;
-    if ($perc == 0) {
-        $damage_level = 'futile';
-    }
-    if ($perc <= 33) {
-        $damage_level = 'weak';
-    }
-    elsif ($perc <= 67) {
-        $damage_level = 'med';
-    }
-    else {
-        $damage_level = 'strong';
-    }
+    my $spans = Array::IntSpan->new(
+        [(0, 0) => 'futile'],
+        [(1, 33) => 'weak'],
+        [(34, 66) => 'med'],
+        [(67, 100) => 'strong'],
+    );
+
+    my $damage_level = $spans->lookup(int $perc);
 
     # keep reading as Shit_type and is making me laugh
     my $hit_type = $self->wielding ? 'WeaponHit' : 'BareHit';

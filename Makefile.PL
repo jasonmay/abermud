@@ -38,6 +38,8 @@ requires 'Config::General';
 requires 'List::Util';
 requires 'List::MoreUtils';
 
+requires 'Array::IntSpan';
+
 install_script glob('script/*.pl');
 
 auto_install;
