@@ -11,6 +11,7 @@ requires       'MooseX::POE';
 requires       'MooseX::Traits' => '0.09';
 #requires       'MUD'; XXX
 requires       'KiokuDB::Backend::DBI';
+requires       'KiokuX::Model';
 requires       'File::Basename';
 requires       'String::Util';
 requires       'Carp';
