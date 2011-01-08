@@ -72,10 +72,10 @@ sub complete_quest {
     if (!$self->completed_quests->{$quest}) {
         $output .=
             q[Since this is your first time completing it, you have been ] .
-            qq[awarded &+Y$exp_award&* experience points!\n]
+            qq[awarded &+Y$exp_award&* experience points!\n];
 
         $self->change_score($exp_award);
-    );
+    };
 
     $self->sendf($output);
     $self->completed_quests->{$quest}++;
