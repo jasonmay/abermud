@@ -71,7 +71,6 @@ sub gen_player {
     $p->input_state(
         [
             AberMUD::Input::State::Game->new(
-                special_composite => $self->resolve(service => 'special_composite'),
                 command_composite => $self->resolve(service => 'command_composite'),
             )
         ]
