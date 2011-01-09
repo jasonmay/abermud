@@ -24,12 +24,9 @@ my $u = $c->resolve(service => 'universe');
 sub player_joins_game {
     my $p = $c->resolve(service => 'player');
     $p->input_state([
-        map {
-            eval "require $_";
-            $_->new(universe => $c->resolve(service => 'universe'))
-        } qw(
-        AberMUD::Input::State::Login::Name
-        AberMUD::Input::State::Game)
+        $c->resolve(service => 'controller')->get_input_state(
+            'AberMUD::Input::State::Login::Name', 'AberMUD::Input::State::Game',
+        )
     ]);
 
     return $p;

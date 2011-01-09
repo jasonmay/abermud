@@ -46,12 +46,6 @@ has command_composite => (
     required => 1,
 );
 
-has special_composite => (
-    is => 'ro',
-    isa => 'AberMUD::Special',
-    required => 1,
-);
-
 sub BUILD {
     my $self = shift;
 

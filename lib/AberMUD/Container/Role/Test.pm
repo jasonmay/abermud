@@ -14,19 +14,17 @@ use AberMUD::Object;
 
 use namespace::autoclean;
 
-requires qw(container);
+requires qw(container setup_controller);
 
 sub _build_player_block {
     return sub {
 
         my ($self, $s) = @_;
 
-        my $u      = $s->param('universe');
-        my $max_id = max(keys %{ $u->players }) || 0;
+        my $max_id = max(keys %{ $s->param('universe')->players }) || 0;
         my $player = AberMUD::Player->new_with_traits(
             traits    => ['AberMUD::Player::Role::Test'],
-            universe  => $u,
-            storage => $s->param('storage'),
+            %{ $s->params || {} },
         );
 
         $player->_join_server($max_id + 1);
@@ -40,11 +38,15 @@ sub _build_controller_block {
     return sub {
         my ($self, $s) = @_;
 
-        return AberMUD::Controller->new_with_traits(
+        my $controller = AberMUD::Controller->new_with_traits(
             traits   => ['AberMUD::Controller::Role::Test'],
             storage  => $s->param('storage'),
             universe => $s->param('universe'),
         );
+
+        $self->setup_controller($s, $controller);
+
+        return $controller;
     }
 }
 

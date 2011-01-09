@@ -42,6 +42,25 @@ has controller_block => (
     lazy    => 1,
 );
 
+sub setup_controller {
+    my ($self, $service, $controller) = @_;
+
+    foreach my $input_state_class ($controller->_input_states) {
+        next unless $input_state_class;
+        Class::MOP::load_class($input_state_class);
+        my $input_state_object = $input_state_class->new(
+            universe          => $service->param('universe'),
+            command_composite => $service->param('command_composite'),
+            special_composite => $service->param('special_composite'),
+        );
+
+        $controller->set_input_state(
+            $input_state_class => $input_state_object,
+        );
+    }
+
+}
+
 sub _build_controller_block {
     return sub {
         my ($self, $service) = @_;
@@ -51,19 +70,7 @@ sub _build_controller_block {
             universe => $service->param('universe'),
         );
 
-        foreach my $input_state_class ($controller->_input_states) {
-            next unless $input_state_class;
-            Class::MOP::load_class($input_state_class);
-            my $input_state_object = $input_state_class->new(
-                universe          => $service->param('universe'),
-                command_composite => $service->param('command_composite'),
-                special_composite => $service->param('special_composite'),
-            );
-
-            $controller->set_input_state(
-                $input_state_class => $input_state_object,
-            );
-        }
+        $self->setup_controller($service, $controller);
 
         return $controller;
     };
@@ -180,6 +187,7 @@ sub _build_container {
             dependencies => {
                 storage  => depends_on('storage'),
                 universe => depends_on('universe'),
+                special_composite => depends_on('special_composite'),
             },
             %player_args,
         );
