@@ -1,6 +1,8 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+# PODNAME: build_kdb_old.pl
+
 use lib 'lib';
 use AberMUD::Util;
 use AberMUD::Location;

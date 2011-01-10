@@ -1,6 +1,8 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+# PODNAME: search.pl
+
 use DBI;
 use DBD::SQLite;
 use YAML;

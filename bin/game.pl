@@ -1,4 +1,6 @@
 #!/usr/bin/env perl
+# PODNAME: game.pl
+
 use strict;
 use warnings;
 use lib 'dep/mud/lib';

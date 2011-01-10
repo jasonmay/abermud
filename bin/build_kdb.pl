@@ -1,6 +1,8 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+# PODNAME: build_kdb.pl
+
 use Regexp::Grammars;
 use JSON;
 use File::Slurp;
