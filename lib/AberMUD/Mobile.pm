@@ -8,6 +8,7 @@ use AberMUD::Location::Util qw(directions);
 with qw(
     AberMUD::Role::InGame
     AberMUD::Role::Killable
+    AberMUD::Role::Humanoid
     AberMUD::Mobile::Role::Hostile
 );
 

@@ -29,6 +29,7 @@ with qw(
     MooseX::Traits
     AberMUD::Player::Role::InGame
     AberMUD::Role::Killable
+    AberMUD::Role::Humanoid
 );
 
 has '+location' => (
