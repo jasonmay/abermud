@@ -513,7 +513,7 @@ sub calculate_object_traits {
         push @traits, 'Multistate';
     }
 
-    return map { "AberMUD::Object::Role::$_" } @traits;
+    return @traits;
 }
 
 sub calculate_rolebased_params {

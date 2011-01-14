@@ -10,6 +10,10 @@ with qw(
     AberMUD::Role::InGame
 );
 
+has '+_trait_namespace' => (
+    default => sub { 'AberMUD::Object::Role' },
+);
+
 has id => (
     is => 'rw',
     isa => 'Str',

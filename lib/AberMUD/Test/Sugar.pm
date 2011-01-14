@@ -171,7 +171,7 @@ sub _handle_object {
     my $obj_class;
     if ($obj_data->{traits}) {
         # TODO _trait_namespace in mx-traits can solve this
-        my @traits = map { "AberMUD::Object::Role::$_" }
+        my @traits = #map { "AberMUD::Object::Role::$_" }
                         @{$obj_data->{traits}};
 
         $obj_class = AberMUD::Object->with_traits(@traits);
