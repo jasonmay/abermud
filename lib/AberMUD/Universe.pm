@@ -13,6 +13,7 @@ use List::MoreUtils qw(any);
 use List::Util qw(first);
 use Try::Tiny;
 use AberMUD::Util;
+use Data::UUID::LibUUID;
 
 with qw(
     AberMUD::Universe::Role::Mobile
@@ -242,6 +243,23 @@ sub check_exit {
     }
 
     return $gateway ? $gateway->$link_method->location : $location->$direction;
+}
+
+sub clone_object {
+    my $self = shift;
+    my ($object, %extra_params) = @_;
+
+    my $new_object = $object->meta->clone_object(
+        $object,
+        id => new_uuid_string(),
+        %extra_params
+    );
+
+    $self->objects->insert($new_object);
+
+    # TODO insert into caches if applicable?
+
+    return $new_object;
 }
 
 __PACKAGE__->meta->make_immutable;

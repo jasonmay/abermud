@@ -120,6 +120,10 @@ my $c = build_preset_game(
                     },
                 },
             },
+            misc => {
+                title              => 'Room of Etcetera',
+                description        => "The other stuff.",
+            },
         },
         gateways => {
             'door@room1' => {
@@ -304,12 +308,23 @@ like($eq,                                   qr{head:.+helmet}i);
 like($two->types_in('remove helmet'),       qr{you take off the helmet}i);
 $one->types_in('up');
 
-
 unlike($one->types_in('look'), qr{ladder}, "player doesn't see ladder");
 $objects{'ladder@room1'}->set_state(1);
 like($one->types_in('look'), qr{ladder}, "ladder is revealed by state change");
 my $l = $one->location;
 $one->types_in('up');
 isnt($one->location, $l, "ladder's state change allowed the player to go to revealed exit");
+
+# test cloning
+
+my $cloned = $u->clone_object(
+    $objects{'rock@room1'},
+    location    => $locations->{misc},
+);
+
+ok($cloned);
+$one->change_location($locations->{misc});
+like($one->types_in('look'), qr{A rock is laying on the ground here\.}, 'cloned object is seen in the universe');
+like($one->types_in('t rock'), qr{You take the rock\.}, 'cloned object is seen in the universe');
 
 done_testing();
