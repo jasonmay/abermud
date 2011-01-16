@@ -85,7 +85,12 @@ sub build_universe {
                 $backend->dbh_do(
                     sub {
                         my ($storage, $dbh) = @_;
-                        $dbh->do('truncate entries cascade');
+                        if ($storage->isa('DBIx::Class::Storage::DBI::Pg')) {
+                            $dbh->do('truncate entries cascade');
+                        }
+                        else {
+                            $dbh->do("delete from $_") for qw/gin_index entries/;
+                        }
                     }
                 );
             }
