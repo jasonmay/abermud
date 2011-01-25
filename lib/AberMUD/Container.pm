@@ -99,23 +99,24 @@ sub _build_universe_block {
 
         weaken(my $weakservice = $service);
         weaken(my $weakcontainer = $self);
+
+        my @input_states = map {
+            $u->_controller->get_input_state("AberMUD::Input::State::$_")
+        } @{ $config->input_states };
+
+        my %player_params = (
+            prompt            => '&*[ &+C%h/%H&* ] &+Y$&* ',
+            location          => $config->location,
+            input_state       => \@input_states,
+            special_composite => $weakservice->param('special_composite'),
+        );
+
         $u->spawn_player_code(
             sub {
                 my $self     = shift;
                 my $player   = $weakcontainer->resolve(
-                    service => 'player',
-                    parameters => {
-                        prompt      => '&*[ &+C%h/%H&* ] &+Y$&* ',
-                        location    => $config->location,
-                        input_state => [
-                            map {
-                                $weakservice->param('controller')->get_input_state(
-                                    "AberMUD::Input::State::$_"
-                                )
-                            } @{ $config->input_states }
-                        ],
-                        special_composite => $weakservice->param('special_composite'),
-                    }
+                    service    => 'player',
+                    parameters => \%player_params,
                 );
 
                 return $player;
