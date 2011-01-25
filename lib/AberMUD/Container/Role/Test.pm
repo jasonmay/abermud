@@ -83,5 +83,11 @@ sub gen_player {
     return $p;
 }
 
+sub config {
+    my $self = shift;
+
+    return $self->resolve(service => 'storage')->lookup('config');
+}
+
 1;
 
