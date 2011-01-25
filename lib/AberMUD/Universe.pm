@@ -249,11 +249,18 @@ sub clone_object {
     my $self = shift;
     my ($object, %extra_params) = @_;
 
+
     my $new_object = $object->meta->clone_object(
         $object,
         id => new_uuid_string(),
-        %extra_params
+        %extra_params,
     );
+
+    if ($object->getable) {
+        $new_object->_stop_being_held;
+        $new_object->_stop_being_contained;
+        $new_object->dropped(1);
+    }
 
     $self->objects->insert($new_object);
 
