@@ -5,6 +5,9 @@ use namespace::autoclean;
 use AberMUD::Location::Util qw(directions);
 use KiokuDB::Util qw(weak_set);
 
+with 'MooseX::Traits';
+has '+_trait_namespace' => (default => 'AberMUD::Location::Role');
+
 has id => (
     is  => 'rw',
     isa => 'Str',
