@@ -52,6 +52,7 @@ sub build_game {
             description => $locs->{$loc}{description},
             zone        => $zone,
             moniker     => $loc,
+            %{ $locs->{$loc}{extra_params} || {} }
         );
 
         my (@objects, @mobiles);
@@ -69,7 +70,14 @@ sub build_game {
             }
         }
 
-        my $loc_node = AberMUD::Location->new(%loc_params);
+        my $loc_node;
+        if (my $loc_traits_ref = $locs->{$loc}{traits}) {
+            $loc_node = AberMUD::Location->with_traits(@$loc_traits_ref)
+                        ->new(%loc_params);
+        }
+        else {
+            $loc_node = AberMUD::Location->new(%loc_params);
+        }
 
         do { $_->location($loc_node) } for ((grep { $_->on_the_ground } @objects), @mobiles);
 
@@ -170,11 +178,7 @@ sub _handle_object {
 
     my $obj_class;
     if ($obj_data->{traits}) {
-        # TODO _trait_namespace in mx-traits can solve this
-        my @traits = #map { "AberMUD::Object::Role::$_" }
-                        @{$obj_data->{traits}};
-
-        $obj_class = AberMUD::Object->with_traits(@traits);
+        $obj_class = AberMUD::Object->with_traits(@{delete $obj_data->{traits}});
     }
     else {
         $obj_class = 'AberMUD::Object';
