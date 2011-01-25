@@ -5,7 +5,7 @@ use Test::More;
 use AberMUD::Test::Sugar qw(build_preset_game);
 use AberMUD::Util;
 
-my $c = build_preset_game(
+my ($c, $locations) = build_preset_game(
     'two_wide',
     {
         locations => {
