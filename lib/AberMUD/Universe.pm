@@ -31,18 +31,18 @@ has '+spawn_player_code' => (
 );
 
 has players_in_game => (
-    is         => 'rw',
-    isa        => 'HashRef[AberMUD::Player]',
-    traits => ['Hash', 'KiokuDB::DoNotSerialize'],
-    handles    => {
+    is      => 'rw',
+    isa     => 'HashRef[AberMUD::Player]',
+    traits  => ['Hash', 'KiokuDB::DoNotSerialize'],
+    handles => {
         game_name_list => 'keys',
         game_list      => 'values',
     },
 );
 
 has storage => (
-    is => 'rw',
-    isa => 'AberMUD::Storage',
+    is     => 'rw',
+    isa    => 'AberMUD::Storage',
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
@@ -105,10 +105,10 @@ sub _build_revealing_gateway_cache {
 }
 
 has corpse_location => (
-    is  => 'ro',
-    isa => 'AberMUD::Location',
-    builder => '_build_corpse_location',
-    lazy => 1,
+    is        => 'ro',
+    isa       => 'AberMUD::Location',
+    builder   => '_build_corpse_location',
+    lazy      => 1,
     #weak_ref => 1,
 );
 
@@ -116,8 +116,8 @@ sub _build_corpse_location {
     my $self = shift;
 
     return AberMUD::Location->new(
-        universe => $self,
-        title => 'Dead Zone',
+        universe    => $self,
+        title       => 'Dead Zone',
         description => q[This is the zone for corpses. ] .
                        q[Mortals do not belong here.],
     );

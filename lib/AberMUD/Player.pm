@@ -37,21 +37,21 @@ has '+location' => (
 );
 
 has prompt => (
-    is  => 'rw',
-    isa => 'Str',
+    is      => 'rw',
+    isa     => 'Str',
     default => '>',
 );
 
 has storage => (
-    is        => 'rw',
-    isa       => 'AberMUD::Storage',
-    required  => 1,
-    weak_ref  => 1,
-    traits => ['KiokuDB::DoNotSerialize'],
+    is       => 'rw',
+    isa      => 'AberMUD::Storage',
+    required => 1,
+    weak_ref => 1,
+    traits   => ['KiokuDB::DoNotSerialize'],
 );
 
 has password => (
-    is => 'rw',
+    is  => 'rw',
     isa => 'Str',
 );
 
@@ -67,8 +67,8 @@ sub id {
 }
 
 has dir_player => (
-    is        => 'rw',
-    isa       => 'AberMUD::Player',
+    is     => 'rw',
+    isa    => 'AberMUD::Player',
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
@@ -78,9 +78,9 @@ has '+input_state' => (
 );
 
 has special_composite => (
-    is => 'rw',
-    isa => 'AberMUD::Special',
-    traits => ['KiokuDB::DoNotSerialize'],
+    is       => 'rw',
+    isa      => 'AberMUD::Special',
+    traits   => ['KiokuDB::DoNotSerialize'],
     required => 1,
 );
 

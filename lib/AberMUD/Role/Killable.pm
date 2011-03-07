@@ -14,36 +14,36 @@ use Array::IntSpan;
 requires 'death';
 
 has fighting => (
-    is     => 'rw',
-    does   => __PACKAGE__,
-    traits => ['KiokuDB::DoNotSerialize'],
+    is      => 'rw',
+    does    => __PACKAGE__,
+    traits  => ['KiokuDB::DoNotSerialize'],
     clearer => 'stop_fighting',
 );
 
 has sitting => (
-    is => 'rw',
-    isa => 'Bool',
+    is      => 'rw',
+    isa     => 'Bool',
     default => 0,
-    traits => ['KiokuDB::DoNotSerialize'],
+    traits  => ['KiokuDB::DoNotSerialize'],
 );
 
 # the aber-convention for hitting power
 has damage => (
-    is => 'rw',
-    isa => 'Num',
+    is      => 'rw',
+    isa     => 'Num',
     default => 8,
 );
 
 has armor => (
-    is => 'rw',
-    isa => 'Num',
+    is      => 'rw',
+    isa     => 'Num',
     default => 0,
 );
 
 # aber-convention for threshold of auto-flee
 has wimpy => (
-    is => 'rw',
-    isa => 'Num',
+    is      => 'rw',
+    isa     => 'Num',
     default => 25,
 );
 
@@ -61,34 +61,34 @@ sub _build_current_strength {
 
 # aber-convention for the the base of your hit points
 has basestrength => (
-    is => 'rw',
-    isa => 'Num',
+    is      => 'rw',
+    isa     => 'Num',
     default => 40,
 );
 
 # aber-convention for the the level-based part of your hit points
 has levelstrength => (
-    is => 'rw',
-    isa => 'Num',
+    is      => 'rw',
+    isa     => 'Num',
     default => 0,
 );
 
 # aber-convention for the the base of your mana
 has basemana => (
-    is => 'rw',
-    isa => 'Num',
+    is      => 'rw',
+    isa     => 'Num',
     default => 40,
 );
 
 # aber-convention for the the level-based part of your mana
 has levelmana => (
-    is => 'rw',
-    isa => 'Num',
+    is      => 'rw',
+    isa     => 'Num',
     default => 0,
 );
 
 has gender => (
-    is => 'rw',
+    is  => 'rw',
     isa => subtype('Str' => where { !$_ or $_ eq 'Male' or $_ eq 'Female' }),
 );
 

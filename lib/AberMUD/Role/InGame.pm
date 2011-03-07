@@ -19,7 +19,7 @@ has universe => (
 );
 
 has location => (
-    is => 'rw',
+    is  => 'rw',
     isa => 'AberMUD::Location',
 );
 

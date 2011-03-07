@@ -15,38 +15,38 @@ has '+_trait_namespace' => (
 );
 
 has id => (
-    is => 'rw',
+    is  => 'rw',
     isa => 'Str',
 );
 
 has alt_name => (
-    is => 'rw',
+    is  => 'rw',
     isa => 'Str',
 );
 
 has buy_value => (
-    is => 'rw',
+    is  => 'rw',
     isa => 'Int',
 );
 
 has description => (
-    is => 'rw',
+    is  => 'rw',
     isa => 'Str',
 );
 
 has flags => (
-    is => 'ro',
-    isa => 'HashRef',
+    is      => 'ro',
+    isa     => 'HashRef',
     default => sub { +{} },
 );
 
 has examine_description => (
-    is => 'rw',
+    is  => 'rw',
     isa => 'Str',
 );
 
 has moniker => (
-    is => 'rw',
+    is  => 'rw',
     isa => 'Str',
 );
 
@@ -96,7 +96,7 @@ sub name_in_inv {
 
     my $name = $self->formatted_name;
 
-    $self->edible       and $name = "&+G$name&*";
+    $self->edible    and $name  = "&+G$name&*";
     $self->wieldable and $name .= " &+M<weapon>&*";
     $self->wearable  and $name .= " &+C<armor>&*";
     $self->container and $name .= " &+y<cont>&*";
