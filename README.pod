@@ -1,0 +1,34 @@
+=head1 NAME
+
+AberMUD - A quest-based MUD flavor
+
+=head1 HOW TO INSTALL
+
+You don't. Just download run it from the dist!
+
+You will need to be running io-multiplex-intermediary from git:
+L<http://github.com/jasonmay/io-multiplex-intermediary>
+
+Also you will need MUD.pm installed:
+L<http://github.com/jasonmay/mud> B<note:> not on CPAN - git only.
+
+  git clone git://github.com/jasonmay/abermud.git
+  dzil listdeps | <your favorite cpan installer>
+  (edit etc/db.yml)
+  ./bin/build_kdb.pl
+  ./bin/game.pl [port]
+
+=head1 DESCRIPTION
+
+AberMUD is a MUD flavor that is known to be quest-driven and
+have a more organized item system.
+
+C<port> is optional. Defaults to 6715.
+
+=head1 AUTHOR
+
+Jason May C<< <jason.a.may@gmail.com> >>
+
+=head1 LICENSE
+
+You may use this code under the same terms of Perl itself.
