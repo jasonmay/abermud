@@ -164,6 +164,7 @@ sub new_connection {
     my @states = $self->storage->lookup_default_input_states();
     return AberMUD::Connection->new(
         input_states => [ @{$self->input_states}{@states} ],
+        storage      => $self->storage,
     );
 }
 
