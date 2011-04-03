@@ -99,13 +99,13 @@ around disconnect_hook => sub {
     my ($data) = @_;
 
     my $u = $self->universe;
-    my $player = $self->universe->players->{ $data->{data}{id} };
+    my $conn = $self->connection( $data->{data}{id} );
     if ($player && exists $u->players_in_game->{$player->name}) {
-        $player->disconnect;
-        $player->dematerialize;
+        $player->disconnect; # XXX tell players leaving the game,
+                             #     then mark to disconnect
 
-        $u->broadcast($player->name . " disconnected.\n")
-            unless $data->{data}->{ghost};
+        #$u->broadcast($player->name . " disconnected.\n")
+        #    unless $data->{data}->{ghost};
 
         $player->shift_state;
     }
