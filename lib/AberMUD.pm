@@ -9,7 +9,12 @@ has controller => (
     isa          => 'AberMUD::Controller',
     handles      => [ qw(run) ],
     lifecycle    => 'Singleton',
-    dependencies => ['universe', 'storage'],
+    dependencies => [
+        'universe',
+        'storage',
+        'special_composite',
+        'command_composite',
+    ],
 );
 
 has universe => (
@@ -21,6 +26,18 @@ has universe => (
 has storage => (
     is        => 'ro',
     isa       => 'AberMUD::Storage',
+    lifecycle => 'Singleton',
+);
+
+has command_composite => (
+    is        => 'ro',
+    isa       => 'AberMUD::Input::Command::Composite',
+    lifecycle => 'Singleton',
+);
+
+has special_composite => (
+    is        => 'ro',
+    isa       => 'AberMUD::Special',
     lifecycle => 'Singleton',
 );
 

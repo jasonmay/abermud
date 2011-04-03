@@ -158,6 +158,15 @@ sub load_player_data {
     return $player;
 }
 
+sub lookup_default_input_states {
+    my $self = shift;
+
+    my $config = $self->lookup('config');
+
+    my @states = @{ $config->input_states };
+
+    return map { "AberMUD::Input::State::$_" } @states;
+}
 
 __PACKAGE__->meta->make_immutable;
 

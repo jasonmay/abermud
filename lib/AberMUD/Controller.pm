@@ -45,6 +45,23 @@ sub _build_input_states {
     return \%input_states;
 }
 
+has special_composite => (
+    is  => 'ro',
+    isa => 'AberMUD::Special',
+);
+
+has command_composite => (
+    is       => 'ro',
+    isa      => 'AberMUD::Input::Command::Composite',
+    required => 1,
+);
+
+has storage => (
+    is       => 'ro',
+    isa      => 'AberMUD::Storage',
+    required => 1,
+);
+
 around build_response => sub {
     my $orig = shift;
     my $self = shift;
@@ -81,11 +98,14 @@ around connect_hook => sub {
     return $result if $data->{param} ne 'connect';
 
     my $id = $data->{data}->{id};
+
+    my $conn = $self->connection($id);
+
     return +{
         param => 'output',
         data => {
             id    => $id,
-            value => $self->connection($id)->input_state->entry_message,
+            value => $conn->input_state->entry_message,
         },
         txn_id => new_uuid_string(),
     }
@@ -137,6 +157,14 @@ around disconnect_hook => sub {
         }
         $two_second_toggle = !$two_second_toggle;
     };
+}
+
+sub new_connection {
+    my $self = shift;
+    my @states = $self->storage->lookup_default_input_states();
+    return AberMUD::Connection->new(
+        input_states => [ @{$self->input_states}{@states} ],
+    );
 }
 
 sub materialize_player {
