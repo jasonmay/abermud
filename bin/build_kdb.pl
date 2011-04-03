@@ -745,7 +745,7 @@ sub link_mobile_locations {
 sub store_zone_data {
     my $expanded = shift;
 
-    unlink 'abermud' if -e 'abermud';
+    unlink 'abermud.db' if -e 'abermud.db';
 
     my $config = AberMUD::Config->new(
         location => $expanded->{loc}{'church@start'},
