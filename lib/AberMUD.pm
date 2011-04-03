@@ -1,24 +1,27 @@
 package AberMUD;
 use Moose;
-use namespace::autoclean;
+use Bread::Board::Declare;
 
 our $VERSION = '0.01';
 
 has controller => (
-    is       => 'rw',
-    isa      => 'MUD::Controller',
-    required => 1,
-    handles  => [ qw(run) ],
+    is           => 'ro',
+    isa          => 'AberMUD::Controller',
+    handles      => [ qw(run) ],
+    lifecycle    => 'Singleton',
+    dependencies => ['universe', 'storage'],
 );
 
 has universe => (
-    is  => 'rw',
-    isa => 'AberMUD::Universe',
+    is        => 'ro',
+    isa       => 'AberMUD::Universe',
+    lifecycle => 'Singleton',
 );
 
 has storage => (
-    is  => 'rw',
-    isa => 'AberMUD::Storage',
+    is        => 'ro',
+    isa       => 'AberMUD::Storage',
+    lifecycle => 'Singleton',
 );
 
 1;

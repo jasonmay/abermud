@@ -59,6 +59,16 @@ has '+universe' => (
     handles => {get_global_input_state => '_get_input_state'},
 );
 
+has markings => (
+    is  => 'ro',
+    isa => 'HashRef',
+    default => sub { +{} },
+    traits => ['Hash'],
+    handles => {
+        'mark' => 'set',
+    }
+);
+
 sub id {
     my $self = shift;
 
@@ -108,73 +118,6 @@ sub is_saved {
     return $self->universe->storage->lookup('player-' . lc $self->name);
 }
 
-sub save_data {
-    my $self = shift;
-    my %args = @_;
-
-    my $u    = $self->universe;
-
-    if (!$self->in_game) {
-        #cluck "Trying to call save when the player is not in-game";
-        return;
-    }
-
-    if ($self->storage->player_lookup($self->name)) {
-        $u->storage->update($self);
-    }
-    else {
-        $u->storage->store('player-' . lc $self->name => $self);
-    }
-}
-
-sub load_data {
-    my $self = shift;
-    my $u    = $self->universe;
-
-    if ($self->is_saved) {
-        my $player
-            = $u->storage->lookup('player-' . lc $self->name);
-        for ($player->meta->get_all_attributes) {
-            if ($_->does('KiokuDB::DoNotSerialize')) {
-                my $attr = $_->accessor;
-                $player->$attr($self->$attr)
-            }
-        }
-        $u->players->{$self->id} = $player;
-        return $player;
-    }
-
-    return $self;
-}
-
-sub sys_message {
-    my $self = shift;
-    return unless $self->universe;
-    $self->universe->abermud_message(@_);
-}
-
-sub dump_states {
-    my $self = shift;
-    $self->sys_message(
-    join ' ' =>
-        map { my $ref = ref; $ref =~ s/AberMUD::Input::State:://; $ref }
-        @{$self->input_states}
-    );
-}
-
-sub _copy_unserializable_data {
-    my $self = shift;
-    my $player = shift;
-
-    for ($player->meta->get_all_attributes) {
-        if ($_->does('KiokuDB::DoNotSerialize')) {
-            my $attr = $_->accessor;
-            next if $attr eq 'dir_player';
-            $self->$attr($player->$attr) if defined $player->$attr;
-        }
-    }
-}
-
 sub _join_game {
     my $self = shift;
     my $u = $self->universe;
@@ -191,29 +134,6 @@ sub _join_game {
     $u->players_in_game->{lc $self->name} = $self;
 }
 
-sub _join_server {
-    my $self = shift;
-    my $id   = shift;
-    my $u    = $self->universe;
-
-    if (!$u) {
-        warn "No universe!";
-        return;
-    }
-
-    if (!$u->players) {
-        warn "universe->players undefined!";
-        return;
-    }
-
-    if (!$id && !$self->id) {
-        warn "undefined id";
-        return;
-    }
-
-    $u->players->{$id || $self->id} = $self;
-}
-
 # game stuff
 sub setup {
     my $self = shift;
@@ -228,49 +148,6 @@ sub setup {
         $self->dead(0);
         $self->save_data();
     }
-}
-
-sub _ghost {
-    my $self   = shift;
-    my $victim = shift;
-    my $u = $self->universe;
-
-    return unless $victim->id and $self->id;
-
-    $u->_controller->force_disconnect($victim->id, ghost => 1);
-    $u->players->{$self->id} = delete $u->players->{$victim->id};
-}
-
-sub materialize {
-    my $self = shift;
-    my $u    = $self->universe;
-
-    return $self if $self->in_game;
-
-    $self->sys_message("materialize");
-
-    my $m_player = $self->dir_player || $self;
-
-    if ($m_player != $self && $m_player->in_game) {
-        $self->_ghost($m_player);
-        return $self;
-    }
-
-    if (!$m_player->in_game) {
-        $m_player->_copy_unserializable_data($self);
-        $m_player->_join_server($self->id);
-    }
-
-    $m_player->_join_game;
-    $m_player->save_data if $m_player == $self;
-    $m_player->setup;
-
-    return $m_player;
-}
-
-sub dematerialize {
-    my $self = shift;
-    delete $self->universe->players_in_game->{lc $self->name};
 }
 
 sub look {

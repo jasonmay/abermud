@@ -107,7 +107,6 @@ sub _build_universe_block {
         my %player_params = (
             prompt            => '&*[ &+C%h/%H&* ] &+Y$&* ',
             location          => $config->location,
-            input_state       => \@input_states,
             special_composite => $weakservice->param('special_composite'),
         );
 

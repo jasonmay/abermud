@@ -40,21 +40,6 @@ has players_in_game => (
     },
 );
 
-has storage => (
-    is     => 'rw',
-    isa    => 'AberMUD::Storage',
-    traits => ['KiokuDB::DoNotSerialize'],
-);
-
-has _controller => (
-    is       => 'rw',
-    isa      => 'MUD::Controller',
-    handles  => {
-        _get_input_state => 'get_input_state',
-    },
-    traits => ['KiokuDB::DoNotSerialize'],
-);
-
 has objects => (
     is      => 'rw',
     isa     => 'KiokuDB::Set',
@@ -139,18 +124,19 @@ sub broadcast {
             ? @{$args{except}}
             : (defined($args{except}) ? $args{except} : ());
 
-            my %outputs;
     foreach my $player (values %{ $self->players_in_game }) {
         next if @except && any { $_ == $player } @except;
         my $player_output = $output;
 
         $player_output .= sprintf("\n%s", $player->final_prompt) if $args{prompt};
-        $outputs{$player->id} = AberMUD::Util::colorify("\n$player_output");
+        $player->append_output_buffer(
+            AberMUD::Util::colorify("\n$player_output")
+        );
     }
 
-    $self->_controller->multisend(%outputs);
 }
 
+# should be thrown into a logger object?
 sub abermud_message {
     return unless $ENV{'ABERMUD_DEBUG'} && $ENV{'ABERMUD_DEBUG'} > 0;
 

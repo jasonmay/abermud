@@ -16,11 +16,31 @@ use Module::Pluggable
     sub_name    => '_input_states',
 ;
 
-#use namespace::autoclean;
-
 with qw(
     MooseX::Traits
 );
+
+has '+input_states' => (
+    lazy    => 1,
+    builder => '_build_input_states',
+);
+
+sub _build_input_states {
+    my %input_states;
+    foreach my $input_state_class ($controller->_input_states) {
+        next unless $input_state_class;
+        Class::MOP::load_class($input_state_class);
+        my $input_state_object = $input_state_class->new(
+            universe          => $self->universe,
+            command_composite => $self->command_composite,
+            special_composite => $self->special_composite,
+        );
+
+        $input_states{ $input_state_class } = $input_state_object;
+    }
+
+    return \%input_states;
+}
 
 around build_response => sub {
     my $orig = shift;
@@ -43,6 +63,8 @@ around build_response => sub {
         $output = $response;
     }
 
+    # sweep here
+
     return AberMUD::Util::colorify($output);
 };
 
@@ -60,7 +82,7 @@ around connect_hook => sub {
         param => 'output',
         data => {
             id    => $id,
-            value => $self->universe->players->{$id}->input_state->[0]->entry_message,
+            value => $self->connection($id)->input_state->entry_message,
         },
         txn_id => new_uuid_string(),
     }
@@ -108,6 +130,67 @@ around disconnect_hook => sub {
         $two_second_toggle = !$two_second_toggle;
     };
 }
+
+sub materialize_player {
+    my $self   = shift;
+    my $player = shift;
+
+    my $u = $self->universe;
+
+    return $player if $player->in_game;
+
+    my $m_player = $player->dir_player || $self;
+
+    if ($m_player != $player && $m_player->in_game) {
+        $self->ghost_player($m_player);
+        return $self;
+    }
+
+    if (!$m_player->in_game) {
+        $self->copy_unserializable_player_data($m_player, $player);
+        $u->players->{$player->id} = $player;
+    }
+
+    $m_player->_join_game;
+    $m_player->save_data if $m_player == $self;
+    $m_player->setup;
+
+    return $m_player;
+}
+
+sub dematerialize_payer {
+    my $self   = shift;
+    my $player = shift;
+    delete $self->universe->players_in_game->{lc $player->name};
+}
+
+sub copy_unserializable_player_data {
+    my $self = shift;
+    my $source_player = shift;
+    my $dest_player = shift;
+
+    for ($source_player->meta->get_all_attributes) {
+        if ($_->does('KiokuDB::DoNotSerialize')) {
+            my $attr = $_->accessor;
+            next if $attr eq 'dir_player';
+            $dest_player->$attr($source_player->$attr)
+                if defined $source_player->$attr;
+        }
+    }
+}
+
+sub ghost_player {
+    my $self   = shift;
+    my $new_player = shift;
+    my $old_player = shift;
+    my $u = $self->universe;
+
+    return unless $old_player->id and $new_player->id;
+
+    $u->_controller->force_disconnect($old_player->id, ghost => 1);
+    $u->players->{$new_player->id} = delete $u->players->{$old_player->id};
+}
+
 
 __PACKAGE__->meta->make_immutable;
 

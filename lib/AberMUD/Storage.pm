@@ -27,6 +27,11 @@ has scope => (
     lazy_build => 1,
 );
 
+sub BUILD {
+    my $self = shift;
+    $self->scope;
+}
+
 sub player_lookup {
     my $self = shift;
     my $name = shift;
@@ -114,10 +119,43 @@ sub build_universe {
     );
 }
 
-sub BUILD {
+sub save_player {
     my $self = shift;
-    $self->scope; # can't make it eager. things break(?)
+    my %args = @_;
+
+    if (!$self->in_game) {
+        return;
+    }
+
+    if ($self->storage->player_lookup($self->name)) {
+        $u->storage->update($self);
+    }
+    else {
+        $u->storage->store('player-' . lc $self->name => $self);
+    }
 }
+
+sub load_player_data {
+    my $self   = shift;
+    my $player = shift;
+    my $u    = $self->universe;
+
+    if ($player->is_saved) {
+        my $stored_player
+            = $u->storage->lookup('player-' . lc $player->name);
+        for ($stored_player->meta->get_all_attributes) {
+            if ($_->does('KiokuDB::DoNotSerialize')) {
+                my $attr = $_->accessor;
+                $stored_player->$attr($self->$attr)
+            }
+        }
+        $u->players->{$self->id} = $stored_player;
+        return $stored_player;
+    }
+
+    return $player;
+}
+
 
 __PACKAGE__->meta->make_immutable;
 

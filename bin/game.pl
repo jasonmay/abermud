@@ -3,19 +3,19 @@
 
 use strict;
 use warnings;
-use lib 'dep/mud/lib';
-use lib 'dep/mud/dep/iomi/lib';
+use lib '../mud/lib';
+use lib '../io-multiplex-intermediary/lib';
 use lib 'lib';
 use AberMUD::Container;
 use KiokuDB;
 
-my $c = AberMUD::Container->new->container;
+my $abermud = AberMUD->new;
 if (@ARGV) {
-    $c->storage_object->directory(
+    $abermud->storage_object->directory(
         KiokuDB->connect(
             "dbi:SQLite:dbname=$ARGV[0]"
         )
     )
 }
 
-$c->resolve(service => 'app')->run;
+$abermud->run;
