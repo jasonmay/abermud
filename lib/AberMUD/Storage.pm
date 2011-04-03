@@ -121,35 +121,37 @@ sub build_universe {
 
 sub save_player {
     my $self = shift;
+    my $player = shift;
     my %args = @_;
 
-    if (!$self->in_game) {
-        return;
-    }
+    # XXX
+    #if (!$player->in_game) {
+    #    return;
+    #}
 
-    if ($self->storage->player_lookup($self->name)) {
-        $u->storage->update($self);
+    if ($self->player_lookup($self->name)) {
+        $self->update($player);
     }
     else {
-        $u->storage->store('player-' . lc $self->name => $self);
+        $self->store('player-'.lc($player->name) => $player);
     }
 }
 
 sub load_player_data {
     my $self   = shift;
     my $player = shift;
-    my $u    = $self->universe;
 
     if ($player->is_saved) {
         my $stored_player
-            = $u->storage->lookup('player-' . lc $player->name);
+            = $self->lookup('player-' . lc $player->name);
         for ($stored_player->meta->get_all_attributes) {
             if ($_->does('KiokuDB::DoNotSerialize')) {
                 my $attr = $_->accessor;
                 $stored_player->$attr($self->$attr)
             }
         }
-        $u->players->{$self->id} = $stored_player;
+        # XXX
+        #$u->players->{$self->id} = $stored_player;
         return $stored_player;
     }
 
