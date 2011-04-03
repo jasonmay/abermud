@@ -41,8 +41,14 @@ has dispatcher => (
 );
 
 has command_composite => (
-    is => 'ro',
-    isa => 'AberMUD::Input::Command::Composite',
+    is       => 'ro',
+    isa      => 'AberMUD::Input::Command::Composite',
+    required => 1,
+);
+
+has special_composite => (
+    is       => 'ro',
+    isa      => 'AberMUD::Special',
     required => 1,
 );
 
@@ -58,7 +64,7 @@ sub BUILD {
             AberMUD::Input::Dispatcher::Rule->new(
                 command_name => $command_method->name,
                 block        => sub {
-                    shift; $command_method->body->(@_);
+                    shift; $command_method->body->($self->special_composite, @_);
                 },
 
                 priority => $command_method->priority,
@@ -70,7 +76,7 @@ sub BUILD {
 
 sub run {
     my $self = shift;
-    my ($you, $input, $txn_id) = @_;
+    my ($controller, $conn, $input, $txn_id) = @_;
 
     my $dispatch = $self->dispatch($input);
 
@@ -81,7 +87,7 @@ sub run {
 
      my $match = (sort { $a->rule->priority <=> $b->rule->priority } $dispatch->matches)[0];
 
-     return $match->run($you, $match->leftover, $txn_id);
+     return $match->run($conn->associated_player, $match->leftover, $txn_id);
 }
 
 __PACKAGE__->meta->make_immutable;

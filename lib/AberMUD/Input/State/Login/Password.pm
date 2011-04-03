@@ -10,13 +10,14 @@ has '+entry_message' => (
 
 sub run {
     my $self = shift;
-    my ($you, $pass) = @_;
+    my ($controller, $conn, $pass) = @_;
 
     return $self->entry_message unless $pass;
-    if ($you->dir_player) {
-        if (crypt($pass, lc $you->name) eq $you->dir_player->password) {
-            $you->shift_state;
-            return $you->input_state->[0]->entry_message;
+    if (my $player = $conn->associated_player) {
+        my $crypted = crypt($pass, lc $player->name);
+        if ($crypted eq $player->password) {
+            $conn->shift_state;
+            return $conn->input_state->entry_message;
         }
         else {
             return "Nope. Try again.\n" . $self->entry_message;
@@ -24,7 +25,7 @@ sub run {
     }
     else {
         warn "The player should have been saved by this input state";
-        $you->disconnect;
+        $conn->disconnect;
     }
 }
 

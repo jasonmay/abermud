@@ -19,6 +19,9 @@ has storage => (
     required => 1,
 );
 
+sub shift_state { shift @{$_[0]->input_states} }
+sub unshift_state { unshift @{shift->input_states}, @_ }
+
 __PACKAGE__->meta->make_immutable;
 no Moose;
 
