@@ -42,14 +42,6 @@ has prompt => (
     default => '>',
 );
 
-has storage => (
-    is       => 'rw',
-    isa      => 'AberMUD::Storage',
-    required => 1,
-    weak_ref => 1,
-    traits   => ['KiokuDB::DoNotSerialize'],
-);
-
 has password => (
     is  => 'rw',
     isa => 'Str',
@@ -78,11 +70,6 @@ has dir_player => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-has '+input_state' => (
-    isa    => 'ArrayRef[AberMUD::Input::State]',
-    traits => ['KiokuDB::DoNotSerialize'],
-);
-
 has special_composite => (
     is       => 'rw',
     isa      => 'AberMUD::Special',
@@ -90,45 +77,43 @@ has special_composite => (
     required => 1,
 );
 
-sub unshift_state {
-    my $self = shift;
-    unshift @{$self->input_state}, @_;
-}
+# XXX input states are in ::Connection now
+#sub unshift_state {
+#    my $self = shift;
+#    unshift @{$self->input_state}, @_;
+#}
+#
+#sub shift_state {
+#    my $self = shift;
+#    shift @{$self->input_state};
+#}
 
-sub shift_state {
-    my $self = shift;
-    shift @{$self->input_state};
-}
+# XXX belongs in universe
+#sub in_game {
+#    my $self = shift;
+#    my $u    = $self->universe;
+#
+#    return 0 unless $u;
+#    return 0 unless exists($u->players_in_game->{$self->name});
+#    return $u->players_in_game->{$self->name} == $self;
+#}
 
-sub in_game {
-    my $self = shift;
-    my $u    = $self->universe;
-
-    return 0 unless $u;
-    return 0 unless exists($u->players_in_game->{$self->name});
-    return $u->players_in_game->{$self->name} == $self;
-}
-
-sub is_saved {
-    my $self = shift;
-    return $self->universe->storage->lookup('player-' . lc $self->name);
-}
-
-sub _join_game {
-    my $self = shift;
-    my $u = $self->universe;
-
-    if (!$u) {
-        warn "No universe!";
-        return;
-    }
-
-    if (!$u->players_in_game) {
-        warn "players_in_game undefined!";
-        return;
-    }
-    $u->players_in_game->{lc $self->name} = $self;
-}
+# XXX belongs in universe
+#sub _join_game {
+#    my $self = shift;
+#    my $u = $self->universe;
+#
+#    if (!$u) {
+#        warn "No universe!";
+#        return;
+#    }
+#
+#    if (!$u->players_in_game) {
+#        warn "players_in_game undefined!";
+#        return;
+#    }
+#    $u->players_in_game->{lc $self->name} = $self;
+#}
 
 # game stuff
 sub setup {
