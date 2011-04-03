@@ -28,8 +28,9 @@ has '+input_states' => (
 );
 
 sub _build_input_states {
+    my $self = shift;
     my %input_states;
-    foreach my $input_state_class ($controller->_input_states) {
+    foreach my $input_state_class ($self->_input_states) {
         next unless $input_state_class;
         Class::MOP::load_class($input_state_class);
         my $input_state_object = $input_state_class->new(
@@ -102,17 +103,22 @@ around disconnect_hook => sub {
 
     my $u = $self->universe;
     my $conn = $self->connection( $data->{data}{id} );
-    if ($player && exists $u->players_in_game->{$player->name}) {
-        $player->disconnect; # XXX tell players leaving the game,
-                             #     then mark to disconnect
+    if ($conn && $conn->has_associated_player) {
+        my $player = $conn->associated_player;
 
+        # XXX tell players leaving the game,
+        # then mark to disconnect
+        $player->disconnect;
+
+        # XXX
         #$u->broadcast($player->name . " disconnected.\n")
         #    unless $data->{data}->{ghost};
 
-        $player->shift_state;
+        $conn->shift_state;
+
+        delete $u->players_in_game->{$player->name};
     }
 
-    delete $u->players_in_game->{$player->name};
     my $result = $self->$orig(@_);
 
     return $result;
@@ -189,7 +195,7 @@ sub ghost_player {
 
     return unless $old_player->id and $new_player->id;
 
-    $u->_controller->force_disconnect($old_player->id, ghost => 1);
+    $self->force_disconnect($old_player->id, ghost => 1);
     $u->players->{$new_player->id} = delete $u->players->{$old_player->id};
 }
 

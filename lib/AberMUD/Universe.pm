@@ -25,10 +25,11 @@ has '+players' => (
     handles => {player_list => 'values'}
 );
 
-has '+spawn_player_code' => (
-    required => 0,
-    traits   => ['KiokuDB::DoNotSerialize'],
-);
+# XXX
+#has '+spawn_player_code' => (
+#    required => 0,
+#    traits   => ['KiokuDB::DoNotSerialize'],
+#);
 
 has players_in_game => (
     is      => 'rw',

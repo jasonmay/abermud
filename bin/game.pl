@@ -6,7 +6,7 @@ use warnings;
 use lib '../mud/lib';
 use lib '../io-multiplex-intermediary/lib';
 use lib 'lib';
-use AberMUD::Container;
+use AberMUD;
 use KiokuDB;
 
 my $abermud = AberMUD->new;
