@@ -16,6 +16,8 @@ use Module::Pluggable
     sub_name    => '_input_states',
 ;
 
+use constant connection_class => 'AberMUD::Connection';
+
 with qw(
     MooseX::Traits
 );
