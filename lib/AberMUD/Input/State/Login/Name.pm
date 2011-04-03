@@ -10,30 +10,32 @@ has '+entry_message' => (
 
 sub run {
     my $self = shift;
-    my ($you, $name) = @_;
+    my ($controller, $conn, $name) = @_;
     $name = lc $name;
 
     return $self->entry_message unless $name;
 
-    $you->name($name);
-    $you->dir_player($you->universe->storage->player_lookup($name));
-    if ($you->dir_player) {
-        $you->input_state->[0]
-            = $you->get_global_input_state('AberMUD::Input::State::Login::Password');
+    $conn->name_buffer($name);
+    $conn->associated_player($conn->storage->player_lookup($name));
+    if ($conn->has_associated_player) {
+
+        # replace current state (this) with asking for the password
+        my $state = 'AberMUD::Input::State::Login::Password';
+        $conn->input_states->[0]
+            = $controller->input_states->{$state};
     }
     else {
         # trash this state and add some new ones
-        $you->shift_state;
-        $you->unshift_state(
-                map { $you->get_global_input_state($_) }
-                qw/
-                    AberMUD::Input::State::Login::Password::New
-                    AberMUD::Input::State::Login::Password::Confirm
-                /
-            )
-    }
+        shift @{$conn->input_states};
+        unshift @{$conn->input_states},
+        map { $controller->input_states->{$_} }
+        qw/
+            AberMUD::Input::State::Login::Password::New
+            AberMUD::Input::State::Login::Password::Confirm
+        /;
+}
 
-    return $you->input_state->[0]->entry_message;
+    return $conn->input_state->entry_message;
 }
 
 __PACKAGE__->meta->make_immutable;
