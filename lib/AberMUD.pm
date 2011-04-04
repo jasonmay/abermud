@@ -18,9 +18,11 @@ has controller => (
 );
 
 has universe => (
-    is        => 'ro',
-    isa       => 'AberMUD::Universe',
-    lifecycle => 'Singleton',
+    is           => 'ro',
+    isa          => 'AberMUD::Universe',
+    block        => sub { (shift)->param('storage')->lookup_universe() },
+    lifecycle    => 'Singleton',
+    dependencies => ['storage'],
 );
 
 has storage => (
