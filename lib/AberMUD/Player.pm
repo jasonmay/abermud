@@ -64,19 +64,6 @@ sub id {
     return first_value { $p->{$_} == $self } keys %$p;
 }
 
-has dir_player => (
-    is     => 'rw',
-    isa    => 'AberMUD::Player',
-    traits => ['KiokuDB::DoNotSerialize'],
-);
-
-has special_composite => (
-    is       => 'rw',
-    isa      => 'AberMUD::Special',
-    traits   => ['KiokuDB::DoNotSerialize'],
-    required => 1,
-);
-
 # XXX input states are in ::Connection now
 #sub unshift_state {
 #    my $self = shift;
