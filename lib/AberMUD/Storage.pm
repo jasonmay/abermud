@@ -171,6 +171,12 @@ sub lookup_default_location {
     return $config->location;
 }
 
+sub lookup_universe {
+    my $self   = shift;
+    my $config = $self->lookup('config');
+    return $config->universe;
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;

@@ -179,7 +179,7 @@ sub new_connection {
 
 sub new_player {
     my $self   = shift;
-    my %params = shift;
+    my %params = @_;
 
     my $player = AberMUD::Player->new(%params);
 

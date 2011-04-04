@@ -24,12 +24,15 @@ sub run {
         my $location = $controller->storage->lookup_default_location;
 
         # save the player here.
-        my $player = $controller->new_payer(
+        my $player = $controller->new_player(
+            name     => $conn->name_buffer,
+            password => $conn->password_buffer,
             location => $location,
             prompt   => '&*[ &+C%h/%H&* ] &+Y$&* ',
         );
 
         $controller->storage->save_player($player);
+        $conn->associated_player($player);
     }
     else {
         # gah these namespaces are long
