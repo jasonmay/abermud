@@ -129,7 +129,7 @@ sub save_player {
     #    return;
     #}
 
-    if ($self->player_lookup($self->name)) {
+    if ($self->player_lookup($player->name)) {
         $self->update($player);
     }
     else {
@@ -159,13 +159,16 @@ sub load_player_data {
 }
 
 sub lookup_default_input_states {
-    my $self = shift;
-
+    my $self   = shift;
     my $config = $self->lookup('config');
-
     my @states = @{ $config->input_states };
-
     return map { "AberMUD::Input::State::$_" } @states;
+}
+
+sub lookup_default_location {
+    my $self   = shift;
+    my $config = $self->lookup('config');
+    return $config->location;
 }
 
 __PACKAGE__->meta->make_immutable;

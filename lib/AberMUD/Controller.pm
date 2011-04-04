@@ -60,22 +60,31 @@ has storage => (
     is       => 'ro',
     isa      => 'AberMUD::Storage',
     required => 1,
+    handles => [
+        'save_player',
+    ],
 );
 
 around build_response => sub {
     my $orig = shift;
     my $self = shift;
-    my $id   = shift;
-    my $player = $self->universe->players->{$id};
+    my ($id) = @_;
 
-    my $response = $self->$orig($id, @_);
+    my $conn = $self->connection($id);
+
+    my $response = $self->$orig(@_);
     my $output;
 
-    $output = "You are in a void of nothingness...\n"
-        unless $player && @{$player->input_state};
+    $output = "NULL!\n"
+        unless $conn && @{$conn->input_states};
 
-    if ($player && ref $player->input_state->[0] eq 'AberMUD::Input::State::Game') {
-        $player = $player->materialize;
+    my $player = $conn->associated_player;
+    if (
+        $player &&
+        !$self->universe->player($player->name) &&
+        ref $conn->input_state eq 'AberMUD::Input::State::Game'
+    ) {
+        $player = $self->materialize_player($conn, $player);
         my $prompt = $player->final_prompt;
         $output = "$response\n$prompt";
     }
@@ -168,34 +177,46 @@ sub new_connection {
     );
 }
 
+sub new_player {
+    my $self   = shift;
+    my %params = shift;
+
+    my $player = AberMUD::Player->new(%params);
+
+    # ...
+
+    return $player;
+}
+
 sub materialize_player {
     my $self   = shift;
-    my $player = shift;
+    my ($conn, $player) = @_;
 
     my $u = $self->universe;
 
-    return $player if $player->in_game;
-
-    my $m_player = $player->dir_player || $self;
+    my $m_player = $conn->associated_player || $player;
 
     if ($m_player != $player && $m_player->in_game) {
         $self->ghost_player($m_player);
         return $self;
     }
 
-    if (!$m_player->in_game) {
-        $self->copy_unserializable_player_data($m_player, $player);
-        $u->players->{$player->id} = $player;
-    }
+    # XXX I'm sure we need this, just don't feel like
+    # making this work right now
+    #if (!$m_player->in_game) {
+    #    $self->copy_unserializable_player_data($m_player, $player);
+    #    $u->players->{$player->name} = $player;
+    #}
 
-    $m_player->_join_game;
-    $m_player->save_data if $m_player == $self;
+    # XXX
+    #$m_player->_join_game;
+    $self->save_player($m_player) if $m_player == $player;
     $m_player->setup;
 
     return $m_player;
 }
 
-sub dematerialize_payer {
+sub dematerialize_player {
     my $self   = shift;
     my $player = shift;
     delete $self->universe->players_in_game->{lc $player->name};

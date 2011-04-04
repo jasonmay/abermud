@@ -22,7 +22,10 @@ with qw(
 
 has '+players' => (
     traits  => ['Hash', 'KiokuDB::DoNotSerialize'],
-    handles => {player_list => 'values'}
+    handles => {
+        player_list => 'values',
+        player      => 'get',
+    }
 );
 
 # XXX

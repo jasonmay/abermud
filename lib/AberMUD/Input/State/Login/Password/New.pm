@@ -10,14 +10,15 @@ has '+entry_message' => (
 
 sub run {
     my $self = shift;
-    my ($you, $pass) = @_;
+    my ($controller, $conn, $pass) = @_;
 
     return $self->entry_message unless $pass;
 
-    $you->password(crypt($pass, $you->name));
+    my $crypted = crypt($pass, $conn->name_buffer);
+    $conn->password_buffer($crypted);
 
-    $you->shift_state;
-    return $you->input_state->[0]->entry_message;
+    $conn->shift_state;
+    return $conn->input_state->entry_message;
 }
 
 __PACKAGE__->meta->make_immutable;
