@@ -118,55 +118,6 @@ sub setup {
     }
 }
 
-sub look {
-    my $self   = shift;
-    my $loc    = shift || $self->location;
-
-    my $output = sprintf(
-        "&+M%s&* &+B[&+C%s@%s&+B]&*\n",
-        $loc->title,
-        lc substr($self->universe->storage->object_to_id($loc), 0, 8),
-        $loc->zone->name,
-    );
-
-    $output .= $loc->description;
-    chomp $output; $output .= "\n";
-
-    foreach my $object ($self->universe->get_objects) {
-        next unless $object->location;
-        next unless $object->location == $loc;
-        next unless $object->on_the_ground;
-
-        my $desc = $object->final_description;
-        next unless $desc;
-
-        $output .= "$desc\n";
-    }
-
-    foreach my $mobile ($self->universe->get_mobiles) {
-        next unless $mobile->location;
-        my $desc = $mobile->description;
-        $desc .= sprintf q( [%s/%s]), $mobile->current_strength, $mobile->max_strength;
-        $desc .= sprintf q( [agg: %s]), $mobile->aggression;
-
-        if ($mobile->location == $self->location) {
-            $output .= "$desc\n";
-            my $inv = $mobile->show_inventory;
-            $output .= "$inv\n" if $inv;
-        }
-    }
-
-    foreach my $player (values %{$self->universe->players_in_game}) {
-        next if $player == $self;
-        $output .= ucfirst($player->name) . " is standing here.\n"
-            if $player->location == $self->location;
-    }
-
-    $output .= "\n" . show_exits(location => $loc, universe => $self->universe);
-
-    return $output;
-}
-
 sub send {
     my $self    = shift;
     my $message = shift;

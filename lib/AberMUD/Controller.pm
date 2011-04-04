@@ -210,7 +210,7 @@ sub materialize_player {
 
     # XXX
     #$m_player->_join_game;
-    $self->save_player($m_player) if $m_player == $player;
+    # $self->save_player($m_player) if $m_player == $player;
     $m_player->setup;
 
     return $m_player;

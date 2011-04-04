@@ -14,6 +14,7 @@ use List::Util qw(first);
 use Try::Tiny;
 use AberMUD::Util;
 use Data::UUID::LibUUID;
+use AberMUD::Location::Util qw(show_exits);
 
 with qw(
     AberMUD::Universe::Role::Mobile
@@ -233,6 +234,56 @@ sub check_exit {
     }
 
     return $gateway ? $gateway->$link_method->location : $location->$direction;
+}
+
+sub look {
+    my $self   = shift;
+    my $loc    = shift;
+
+    my $output = '';
+    #my $output .= sprintf(
+    #    "&+M%s&* &+B[&+C%s@%s&+B]&*\n",
+    #    $loc->title,
+    #    lc substr($self->universe->storage->object_to_id($loc), 0, 8),
+    #    $loc->zone->name,
+    #);
+
+    $output .= $loc->description;
+    chomp $output; $output .= "\n";
+
+    foreach my $object ($self->get_objects) {
+        next unless $object->location;
+        next unless $object->location == $loc;
+        next unless $object->on_the_ground;
+
+        my $desc = $object->final_description;
+        next unless $desc;
+
+        $output .= "$desc\n";
+    }
+
+    foreach my $mobile ($self->get_mobiles) {
+        next unless $mobile->location;
+        my $desc = $mobile->description;
+        $desc .= sprintf q( [%s/%s]), $mobile->current_strength, $mobile->max_strength;
+        $desc .= sprintf q( [agg: %s]), $mobile->aggression;
+
+        if ($mobile->location == $loc) {
+            $output .= "$desc\n";
+            my $inv = $mobile->show_inventory;
+            $output .= "$inv\n" if $inv;
+        }
+    }
+
+    foreach my $player (values %{$self->players}) {
+        next if $player == $self;
+        $output .= ucfirst($player->name) . " is standing here.\n"
+            if $player->location == $self->location;
+    }
+
+    $output .= "\n" . show_exits(location => $loc, universe => $self);
+
+    return $output;
 }
 
 sub clone_object {

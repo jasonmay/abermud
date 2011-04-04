@@ -87,7 +87,12 @@ sub run {
 
      my $match = (sort { $a->rule->priority <=> $b->rule->priority } $dispatch->matches)[0];
 
-     return $match->run($conn->associated_player, $match->leftover, $txn_id);
+     return $match->run(
+         $controller->universe,
+         $conn->associated_player,
+         $match->leftover,
+         $txn_id,
+    );
 }
 
 __PACKAGE__->meta->make_immutable;

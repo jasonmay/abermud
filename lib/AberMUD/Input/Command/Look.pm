@@ -3,12 +3,13 @@ package AberMUD::Input::Command::Look;
 use AberMUD::OO::Commands;
 
 command 'look', priority => -10, sub {
-    my $you  = shift;
-    my $args = shift;
+    my $universe = shift;
+    my $you      = shift;
+    my $args     = shift;
 
     if (!$args) {
         return "You are somehow nowhere." unless defined $you->location;
-        return $you->look;
+        return $universe->look($you->location);
     }
 
     my @args = split ' ', $args;

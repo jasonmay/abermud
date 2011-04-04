@@ -11,7 +11,7 @@ around wrap => sub {
     my $method_after = "command_$args{name}_AFTER";
 
     my $applied_code = sub {
-        my ($special, $player) = (shift, @_);
+        my $special = shift;
 
         # XXX I want to do the check only one time but
         # outside the closure is way too early :(
