@@ -7,8 +7,8 @@ extends 'MUD::Player';
 use AberMUD::Location;
 use AberMUD::Location::Util qw(directions show_exits);
 
-use Carp qw(cluck);
-use List::Util qw(first);
+use Carp            qw(cluck);
+use List::Util      qw(first);
 use List::MoreUtils qw(first_value);
 
 =head1 NAME
