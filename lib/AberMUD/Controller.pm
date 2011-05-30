@@ -9,7 +9,6 @@ use AberMUD::Universe;
 use AberMUD::Util;
 use JSON;
 use Data::UUID::LibUUID;
-use DDS;
 
 use Module::Pluggable
     search_path => ['AberMUD::Input::State'],

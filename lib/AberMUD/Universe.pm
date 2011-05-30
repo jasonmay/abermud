@@ -29,12 +29,6 @@ has '+players' => (
     }
 );
 
-# XXX
-#has '+spawn_player_code' => (
-#    required => 0,
-#    traits   => ['KiokuDB::DoNotSerialize'],
-#);
-
 has players_in_game => (
     is      => 'rw',
     isa     => 'HashRef[AberMUD::Player]',
