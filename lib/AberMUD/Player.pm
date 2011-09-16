@@ -2,7 +2,6 @@
 package AberMUD::Player;
 use KiokuDB::Class;
 use namespace::autoclean;
-extends 'MUD::Player';
 
 use AberMUD::Location;
 use AberMUD::Location::Util qw(directions show_exits);
@@ -26,7 +25,6 @@ XXX
 =cut
 
 with qw(
-    MooseX::Traits
     AberMUD::Player::Role::InGame
     AberMUD::Role::Killable
     AberMUD::Role::Humanoid
@@ -34,6 +32,15 @@ with qw(
 
 has '+location' => (
     traits => ['KiokuDB::DoNotSerialize'],
+);
+
+has markings => (
+    is      => 'ro',
+    isa     => 'HashRef',
+    traits  => ['Hash'],
+    handles => {
+        mark => 'set',
+    },
 );
 
 has prompt => (
@@ -55,6 +62,12 @@ has markings => (
     handles => {
         'mark' => 'set',
     }
+);
+
+has send_sub => (
+    is       => 'ro',
+    isa      => 'CodeRef',
+    required => 1,
 );
 
 sub id {
@@ -89,7 +102,7 @@ sub send {
 
     $message .= AberMUD::Util::colorify($self->final_prompt) unless $args{no_prompt};
 
-    $self->universe->_controller->send($self->id => AberMUD::Util::colorify($message));
+    $self->send_sub->($self->id => AberMUD::Util::colorify($message));
 }
 
 sub sendf {

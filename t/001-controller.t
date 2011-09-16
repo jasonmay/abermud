@@ -13,8 +13,6 @@ use AberMUD::Config;
 
 use AberMUD::Test::Sugar qw(build_preset_game);
 
-#my $c = build_container();
-
 my ($c, $locations) = build_preset_game('two_wide');
 
 my $u = $c->resolve(service => 'universe');

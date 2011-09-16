@@ -3,9 +3,7 @@
 
 use strict;
 use warnings;
-use lib '../mud/lib';
-use lib '../io-multiplex-intermediary/lib';
-use lib 'lib';
+use lib 'lib', 'extlib';
 use AberMUD;
 use KiokuDB;
 
@@ -18,4 +16,5 @@ if (@ARGV) {
     )
 }
 
+warn "running...";
 $abermud->run;

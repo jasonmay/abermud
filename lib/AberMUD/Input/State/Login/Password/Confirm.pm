@@ -1,9 +1,11 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State::Login::Password::Confirm;
 use Moose;
-use namespace::autoclean;
+
 use AberMUD::Input::State::Login::Password::New;
 extends 'AberMUD::Input::State';
+
+use Scalar::Util 'weaken';
 
 has '+entry_message' => (
     default => 'Please type in that password again to confirm it: ',
@@ -23,16 +25,25 @@ sub run {
 
         my $location = $controller->storage->lookup_default_location;
 
+        weaken(my $w = $controller);
+        my $send = sub {
+            my ($id, $message) = @_;
+
+            $w->send($id => $message);
+        };
+
         # save the player here.
-        my $player = $controller->new_player(
+        my $player = $conn->create_player(
             name     => $conn->name_buffer,
             password => $conn->password_buffer,
             location => $location,
             prompt   => '&*[ &+C%h/%H&* ] &+Y$&* ',
+            send_sub => $send,
         );
 
+        warn "before";
         $controller->storage->save_player($player);
-        $conn->associated_player($player);
+        warn "after";
     }
     else {
         # gah these namespaces are long

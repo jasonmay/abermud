@@ -1,15 +1,20 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State;
 use Moose;
-use namespace::autoclean;
-extends 'MUD::Input::State';
+
+sub run { die "This method must be overwritten" }
+
+has universe => (
+    is       => 'rw',
+    isa      => 'AberMUD::Universe',
+);
 
 has entry_message => (
     is => 'rw',
     isa => 'Str',
 );
 
-__PACKAGE__->meta->make_immutable;
+no Moose;
 
 1;
 

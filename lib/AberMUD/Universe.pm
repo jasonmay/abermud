@@ -1,8 +1,7 @@
 #!/usr/bin/env perl
 package AberMUD::Universe;
 use Moose;
-use namespace::autoclean;
-extends 'MUD::Universe';
+
 use Scalar::Util qw(weaken);
 use KiokuDB;
 use KiokuDB::Util qw(set);
@@ -16,17 +15,20 @@ use AberMUD::Util;
 use Data::UUID::LibUUID;
 use AberMUD::Location::Util qw(show_exits);
 
-with qw(
-    AberMUD::Universe::Role::Mobile
-    AberMUD::Universe::Role::Violent
-);
-
-has '+players' => (
+has players => (
+    is      => 'ro',
+    isa     => 'HashRef[AberMUD::Player]',
     traits  => ['Hash', 'KiokuDB::DoNotSerialize'],
+    default => sub { {} },
     handles => {
         player_list => 'values',
         player      => 'get',
     }
+);
+
+with qw(
+    AberMUD::Universe::Role::Mobile
+    AberMUD::Universe::Role::Violent
 );
 
 has players_in_game => (

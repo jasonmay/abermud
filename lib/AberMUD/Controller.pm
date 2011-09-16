@@ -1,27 +1,64 @@
 #!/usr/bin/env perl
 package AberMUD::Controller;
 use Moose;
-#use MooseX::POE;
-extends 'MUD::Controller';
 use AberMUD::Player;
-use AberMUD::Mobile;
-use AberMUD::Universe;
-use AberMUD::Util;
-use JSON;
-use Data::UUID::LibUUID;
+use AberMUD::Connection;
 
 use Module::Pluggable
     search_path => ['AberMUD::Input::State'],
     sub_name    => '_input_states',
 ;
 
-use constant connection_class => 'AberMUD::Connection';
+use constant backend_class => 'AberMUD::Backend::Reflex';
 
-with qw(
-    MooseX::Traits
+has storage => (
+    is  => 'ro',
+    isa => 'AberMUD::Storage',
 );
 
-has '+input_states' => (
+has port => (
+    is      => 'ro',
+    isa     => 'Int',
+    lazy    => 1,
+    default => 6715,
+);
+
+has backend => (
+    is      => 'ro',
+    does    => 'AberMUD::Backend',
+    lazy    => 1,
+    default => sub {
+        my $self = shift;
+        Class::MOP::load_class($self->backend_class);
+        return $self->backend_class->new(
+            port         => $self->port,
+            input_states => $self->input_states,
+            storage      => $self->storage,
+        );
+    },
+    handles => ['run'],
+);
+
+has universe => (
+    is       => 'ro',
+    isa      => 'AberMUD::Universe',
+    required => 1,
+);
+
+has connections => (
+    is => 'ro',
+    isa => 'HashRef[MUD::Connection]',
+    traits  => ['Hash'],
+    handles => {
+        add_connection  => 'set',
+        connection      => 'get',
+        has_connections => 'count',
+    },
+);
+
+has input_states => (
+    is      => 'ro',
+    isa     => 'HashRef',
     lazy    => 1,
     builder => '_build_input_states',
 );
@@ -64,127 +101,12 @@ has storage => (
     ],
 );
 
-around build_response => sub {
-    my $orig = shift;
-    my $self = shift;
-    my ($id) = @_;
-
-    my $conn = $self->connection($id);
-
-    my $response = $self->$orig(@_);
-    my $output;
-
-    $output = "NULL!\n"
-        unless $conn && @{$conn->input_states};
-
-    my $player = $conn->associated_player;
-    if (
-        $player &&
-        !$self->universe->player($player->name) &&
-        ref $conn->input_state eq 'AberMUD::Input::State::Game'
-    ) {
-        $player = $self->materialize_player($conn, $player);
-        my $prompt = $player->final_prompt;
-        $output = "$response\n$prompt";
-    }
-    else {
-        $output = $response;
-    }
-
-    # sweep here
-
-    return AberMUD::Util::colorify($output);
-};
-
-around connect_hook => sub {
-    my $orig   = shift;
-    my $self   = shift;
-    my ($data) = @_;
-
-    my $result = $self->$orig(@_);
-
-    return $result if $data->{param} ne 'connect';
-
-    my $id = $data->{data}->{id};
-
-    my $conn = $self->connection($id);
-
-    return +{
-        param => 'output',
-        data => {
-            id    => $id,
-            value => $conn->input_state->entry_message,
-        },
-        txn_id => new_uuid_string(),
-    }
-};
-
-before input_hook => sub {
-    my $self = shift;
-    my ($data) = @_;
-};
-
-around disconnect_hook => sub {
-    my $orig   = shift;
-    my $self   = shift;
-    my ($data) = @_;
-
-    my $u = $self->universe;
-    my $conn = $self->connection( $data->{data}{id} );
-    if ($conn && $conn->has_associated_player) {
-        my $player = $conn->associated_player;
-
-        # XXX tell players leaving the game,
-        # then mark to disconnect
-        $player->disconnect;
-
-        # XXX
-        #$u->broadcast($player->name . " disconnected.\n")
-        #    unless $data->{data}->{ghost};
-
-        $conn->shift_state;
-
-        delete $u->players_in_game->{$player->name};
-    }
-
-    my $result = $self->$orig(@_);
-
-    return $result;
-};
-
-{
-    # AberMUDs have a tick every two seconds
-    my $two_second_toggle = 0;
-    around tick => sub {
-        my $orig = shift;
-        my $self = shift;
-
-        if ($two_second_toggle) {
-            $self->universe->can('advance')
-                && $self->universe->advance;
-        }
-        $two_second_toggle = !$two_second_toggle;
-    };
-}
-
 sub new_connection {
     my $self = shift;
     my @states = $self->storage->lookup_default_input_states();
     return AberMUD::Connection->new(
         input_states => [ @{$self->input_states}{@states} ],
-        storage      => $self->storage,
     );
-}
-
-sub new_player {
-    my $self   = shift;
-    my %params = @_;
-
-    my $player = AberMUD::Player->new(%params);
-
-    # ...
-
-    return $player;
 }
 
 sub materialize_player {

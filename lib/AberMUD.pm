@@ -4,6 +4,10 @@ use Bread::Board::Declare;
 
 our $VERSION = '0.01';
 
+has backend => (
+    is           => 'ro',
+    does          => 'AberMUD::Backend',
+);
 has controller => (
     is           => 'ro',
     isa          => 'AberMUD::Controller',

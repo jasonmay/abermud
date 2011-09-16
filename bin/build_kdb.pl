@@ -12,9 +12,7 @@ use autodie;
 use KiokuDB;
 use KiokuDB::Util qw(set);
 
-use lib '../io-multiplex-intermediary/lib';
-use lib '../mud/lib';
-use lib 'lib';
+use lib 'lib', 'extlib';
 use AberMUD::Util;
 use AberMUD::Universe;
 use AberMUD::Config;

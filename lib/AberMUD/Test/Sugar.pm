@@ -8,6 +8,7 @@ use KiokuDB::Util qw(set);
 use Hash::Merge;
 use Clone;
 
+use AberMUD;
 use AberMUD::Object;
 use AberMUD::Location;
 use AberMUD::Location::Util qw(directions);
@@ -28,6 +29,15 @@ sub build_container {
         superclasses => ['AberMUD::Container'],
         roles        => ['AberMUD::Container::Role::Test'],
     );
+
+    my $controller = AberMUD::Controller->new(
+        backend  => AberMUD::Backend
+        storage  => $s->param('storage'),
+        universe => $s->param('universe'),
+    );
+   $self->setup_controller($s, $controller);
+    my $abermud = AberMUD->new(
+        controller =>     );
 
     my $test_container = $test_container_metaclass->name->new(
         dsn => $dsn,
