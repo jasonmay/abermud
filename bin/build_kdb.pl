@@ -696,6 +696,7 @@ sub link_object_locations {
                 unless $expanded->{loc}{lc $odest};
 
             $obj->location($expanded->{loc}{lc $odest});
+            $obj->location->objects_in_room->insert($obj);
         }
         elsif ($loctype eq 'IN_CONTAINER') {
             $obj->contained_by($expanded->{obj}{lc $odest});
@@ -751,9 +752,6 @@ sub store_zone_data {
     );
 
     my $universe = AberMUD::Universe->new;
-
-    $_->universe($universe)
-        for map { values %{ $expanded->{$_} } } qw/mob obj loc/;
 
     $universe->mobiles->insert(values %{ $expanded->{mob} });
     $universe->objects->insert(values %{ $expanded->{obj} });

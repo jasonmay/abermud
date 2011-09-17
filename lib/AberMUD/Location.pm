@@ -59,26 +59,10 @@ has [ directions() ] => (
 );
 
 has objects_in_room => (
-    is => 'rw',
-    #isa => 'Set::Object',
-    #weak_ref => 1,
-    lazy => 1,
-    builder => '_build_objects_in_room',
-    traits => ['KiokuDB::DoNotSerialize'],
+    is      => 'rw',
+    lazy    => 1,
+    default => sub { weak_set() },
 );
-
-sub _build_objects_in_room {
-    my $self = shift;
-
-    my $set = weak_set(
-        grep {
-            $_->location &&
-            $_->location == $self
-        } $self->universe->get_objects
-    );
-
-    return $set;
-}
 
 __PACKAGE__->meta->make_immutable;
 
