@@ -127,6 +127,27 @@ sub broadcast {
 
 }
 
+sub send_to_location {
+    my $self    = shift;
+    my $ingame  = shift;
+    my $message = shift;
+    my %args    = @_;
+
+   my @except = ref($args{except}) eq 'ARRAY'
+                    ? (@{$args{except} || []})
+                    : ($args{except} || ());
+
+    my @players = grep {
+        my $p = $_;
+        $p->location == $ingame->location && !any { $p == $_ } @except
+    } $self->player_list;
+
+    $_->send("\n$message") for @players;
+
+    return $self;
+}
+
+
 # should be thrown into a logger object?
 sub abermud_message {
     return unless $ENV{'ABERMUD_DEBUG'} && $ENV{'ABERMUD_DEBUG'} > 0;
@@ -294,6 +315,53 @@ sub clone_object {
     # TODO insert into caches if applicable?
 
     return $new_object;
+}
+
+sub can_move {
+    my $self = shift;
+    my ($ingame, $direction) = @_;
+    return 0 unless $ingame->location;
+
+    return $self->check_exit(
+        $ingame->location,
+        $direction,
+    );
+}
+
+sub move {
+    my $self = shift;
+    my ($ingame, $direction, %args) = @_;
+
+    my $destination = $self->can_move($ingame, $direction)
+        or return undef;
+
+    $self->send_to_location(
+        $ingame,
+        sprintf("\n%s goes %s\n", $ingame->name, $direction),
+        except => $ingame,
+    ) if $args{announce};
+
+    $ingame->change_location($destination);
+
+    my %opp_dir = (
+        east  => 'the west',
+        west  => 'the east',
+        north => 'the south',
+        south => 'the north',
+        up    => 'below',
+        down  => 'above',
+    );
+
+    $self->send_to_location(
+        $ingame,
+        sprintf(
+            "\n%s arrives from %s\n",
+            $ingame->name, $opp_dir{$direction}
+        ),
+        except => $ingame,
+    ) if $args{announce};
+
+    return $destination;
 }
 
 __PACKAGE__->meta->make_immutable;

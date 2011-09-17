@@ -4,16 +4,15 @@ use AberMUD::Location::Util qw(directions);
 
 foreach my $direction (directions()) {
     command $direction, priority => -10, sub {
-        my $you   = shift;
+        my ($universe, $you) = @_;
 
         if ($you->fighting) {
             return "You're in the middle of a fight! You'll have to flee.";
         }
 
-        my $go_direction = "go_$direction";
-        my $destination = $you->$go_direction();
+        my $destination = $universe->move($you, $direction, announce => 1);
 
-        return $destination ? $you->look : "You can't go that way.";
+        return $destination ? $universe->look($you->location) : "You can't go that way.";
     };
 };
 

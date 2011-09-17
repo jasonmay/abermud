@@ -209,43 +209,6 @@ sub carrying_loosely {
     } $self->carrying;
 }
 
-foreach my $direction ( directions() ) {
-    __PACKAGE__->meta->add_method("go_$direction" =>
-        sub {
-            my $self = shift;
-
-            my $destination = $self->${\"can_go_$direction"}
-                or return undef;
-
-            $self->say(
-                sprintf("\n%s goes %s\n", $self->name, $direction),
-                except => $self,
-            );
-
-            $self->change_location($destination);
-
-            my %opp_dir = (
-                east  => 'the west',
-                west  => 'the east',
-                north => 'the south',
-                south => 'the north',
-                up    => 'below',
-                down  => 'above',
-            );
-
-            $self->say(
-                sprintf(
-                    "\n%s arrives from %s\n",
-                    $self->name, $opp_dir{$direction}
-                ),
-                except => $self,
-            );
-
-            return $destination;
-        }
-    );
-}
-
 sub formatted_name {
     my $self = shift;
     return $self->name;

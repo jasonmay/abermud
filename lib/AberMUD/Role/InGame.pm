@@ -12,12 +12,6 @@ has name => (
     isa => 'Str',
 );
 
-has universe => (
-    is       => 'rw',
-    isa      => 'AberMUD::Universe',
-    weak_ref => 1,
-);
-
 has location => (
     is  => 'rw',
     isa => 'AberMUD::Location',
@@ -37,40 +31,6 @@ has examine_description => (
     is  => 'rw',
     isa => 'Str',
 );
-
-foreach my $direction ( directions() ) {
-    __PACKAGE__->meta->add_method(
-        "can_go_$direction" => sub {
-            my $self = shift;
-            return 0 unless $self->location;
-
-            return $self->universe->check_exit(
-                $self->location,
-                $direction,
-            );
-        }
-    );
-}
-
-sub say {
-    my $self    = shift;
-    my $message = shift;
-    my %args    = @_;
-
-   my @except = ref($args{except}) eq 'ARRAY'
-                    ? (@{$args{except} || []})
-                    : ($args{except} || ());
-
-    my @players = grep {
-        my $p = $_;
-        $p->location == $self->location && !any { $p == $_ } @except
-    }
-    $self->universe->game_list;
-
-    $_->send("\n$message") for @players;
-
-    return $self;
-}
 
 sub local_to {
     my $self    = shift;
