@@ -6,7 +6,6 @@ use namespace::autoclean;
 use AberMUD::Location;
 use AberMUD::Location::Util qw(directions show_exits);
 
-use Carp            qw(cluck);
 use List::Util      qw(first);
 use List::MoreUtils qw(first_value);
 
@@ -67,6 +66,7 @@ has markings => (
 has send_sub => (
     is       => 'ro',
     isa      => 'CodeRef',
+    traits   => ['KiokuDB::DoNotSerialize'],
     required => 1,
 );
 

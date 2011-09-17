@@ -130,10 +130,16 @@ sub save_player {
     #}
 
     if ($self->player_lookup($player->name)) {
-        $self->update($player);
+        # XXX yuck
+        $self->directory->txn_do(
+            sub {
+                $self->delete('player-'.lc($player->name));
+                $self->insert('player-'.lc($player->name) => $player);
+            }
+        );
     }
     else {
-        $self->store('player-'.lc($player->name) => $player);
+        $self->insert('player-'.lc($player->name) => $player);
     }
 }
 

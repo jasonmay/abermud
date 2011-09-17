@@ -41,9 +41,7 @@ sub run {
             send_sub => $send,
         );
 
-        warn "before";
         $controller->storage->save_player($player);
-        warn "after";
     }
     else {
         # gah these namespaces are long
