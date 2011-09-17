@@ -3,15 +3,14 @@ package AberMUD::Input::Command::Put;
 use AberMUD::OO::Commands;
 
 command put => sub {
-    my $you  = shift;
-    my $args = shift;
+    my ($universe, $you, $args) = @_;
     my @args = split ' ', $args;
 
     if (@args == 3 and lc($args[1]) eq 'in') {
-        my $object    = $you->universe->identify_object($you->location, $args[0])
+        my $object    = $universe->identify_object($you->location, $args[0])
             or return "I don't know what that is.";
 
-        my $container = $you->universe->identify_object($you->location, $args[2])
+        my $container = $universe->identify_object($you->location, $args[2])
             or return "I don't know what that is.";
 
         $container->container or return "That's not a container!";

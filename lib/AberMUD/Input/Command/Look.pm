@@ -3,9 +3,7 @@ package AberMUD::Input::Command::Look;
 use AberMUD::OO::Commands;
 
 command 'look', priority => -10, sub {
-    my $universe = shift;
-    my $you      = shift;
-    my $args     = shift;
+    my ($universe, $you, $args) = @_;
 
     if (!$args) {
         return "You are somehow nowhere." unless defined $you->location;
@@ -17,7 +15,7 @@ command 'look', priority => -10, sub {
     if (lc($args[0]) eq 'in') {
         return "Look in what?" unless $args[1];
 
-        my $object = $you->universe->identify_object(
+        my $object = $universe->identify_object(
             $you->location, $args[1]
         ) or return "I don't see anything like that.";
 

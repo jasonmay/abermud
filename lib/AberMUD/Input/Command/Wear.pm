@@ -3,8 +3,7 @@ package AberMUD::Input::Command::Wear;
 use AberMUD::OO::Commands;
 
 command wear => sub {
-    my $you  = shift;
-    my $args = shift;
+    my ($universe, $you, $args) = @_;
     my @args = split ' ', $args
         or return "What do you want to wear?";
 

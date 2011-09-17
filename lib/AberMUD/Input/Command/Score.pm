@@ -4,7 +4,7 @@ use AberMUD::OO::Commands;
 my $blue_line = sprintf( '&+b%s&*', ('='x60) );
 
 command score => sub {
-    my $you  = shift;
+    my $you  = $_[1];
     my $output = "$blue_line\n";
 
     $output .= sprintf("Your score: %s\n", $you->score);

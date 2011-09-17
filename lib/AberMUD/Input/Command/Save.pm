@@ -3,8 +3,7 @@ use Moose;
 use AberMUD::OO::Commands;
 
 command save => sub {
-    my $you     = shift;
-    my $args    = shift;
+    my $you     = $_[1];
 
     $you->save_data();
     return "Saved!";

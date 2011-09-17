@@ -3,8 +3,7 @@ package AberMUD::Input::Command::Take;
 use AberMUD::OO::Commands;
 
 command take => sub {
-    my $you  = shift;
-    my $args = shift;
+    my ($universe, $you, $args) = @_;
     my @args = split ' ', $args;
 
     if (!@args) {

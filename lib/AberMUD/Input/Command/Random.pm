@@ -5,11 +5,11 @@ use AberMUD::OO::Commands;
 # this is just for testing so I can play around on my MUD :D
 
 command 'random' , priority => -10, sub {
-    my ($you, $args) = @_;
+    my ($universe, $you, $args) = @_;
 
-    return goto_mobile($you) if $args =~ /mob/i;
+    return goto_mobile($universe, $you) if $args =~ /mob/i;
 
-    my @o = $you->universe->get_objects;
+    my @o = $universe->get_objects;
 
     my $location;
 
@@ -72,13 +72,13 @@ command 'random' , priority => -10, sub {
 };
 
 sub goto_mobile {
-    my $you  = shift;
+    my ($universe, $you)  = @_;
 
     my @moving_mobiles = grep {
     $_->location and
     $_->speed and
     $_->speed > 0
-    } $you->universe->get_mobiles;
+    } $universe->get_mobiles;
 
     my $m = $moving_mobiles[rand @moving_mobiles];
 

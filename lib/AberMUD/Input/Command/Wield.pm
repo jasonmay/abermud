@@ -3,12 +3,12 @@ package AberMUD::Input::Command::Wield;
 use AberMUD::OO::Commands;
 
 command wield => sub {
-    my $you  = shift;
-    my $args = shift;
+    my ($universe, $you, $args) = @_;
+
     my @args = split ' ', $args
         or return "What do you want to wield?";
 
-    my $object = $you->universe->identify_object($you->location, $args[0])
+    my $object = $universe->identify_object($you->location, $args[0])
         or return "Nothing like that was found.";
 
     $object->wieldable or return "That's not a weapon!";
@@ -20,7 +20,7 @@ command wield => sub {
 
     $object->wielded and return "You're already wielding that!";
 
-    foreach my $wielded ($you->universe->get_objects) {
+    foreach my $wielded ($universe->get_objects) {
         next unless $wielded->wieldable;
         next unless $wielded->getable;
         next unless $wielded->held_by;

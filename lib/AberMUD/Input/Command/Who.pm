@@ -5,10 +5,10 @@ use AberMUD::OO::Commands;
 my $blue_line = sprintf( '&+b%s&*', ('='x60) );
 
 command who => sub {
-    my $you  = shift;
+    my ($universe, $you) = @_;
     my $output = "$blue_line\n";
 
-    my @names       = $you->universe->game_name_list;
+    my @names       = $universe->player_names;
     my $num_players = @names;
 
     $output .= join(

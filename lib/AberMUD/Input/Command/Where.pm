@@ -5,8 +5,7 @@ use AberMUD::OO::Commands;
 my $blue_line = sprintf( '&+b%s&*', ('='x60) );
 
 command where => sub {
-    my $you  = shift;
-    my $args  = shift;
+    my ($universe, $you, $args) = @_;
     my $output = "$blue_line\n";
 
     $output .= join(
