@@ -9,7 +9,7 @@ has name => (
 
 has input_states => (
     is      => 'rw',
-    isa     => 'ArrayRef[AberMUD::Input::State]',
+    isa     => 'ArrayRef',
     lazy    => 1,
     traits  => ['Array'],
     handles => {
