@@ -32,7 +32,7 @@ around run => sub {
     if ($in_game) {
         $player    = $self->materialize_player($conn, $player, $backend->storage);
         my $prompt = $player->final_prompt;
-        $output    = "$response\n$prompt";
+        $output    = $response . $prompt;
     }
     else {
         $output = $response;
