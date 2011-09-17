@@ -35,6 +35,15 @@ has_many connections => (
     handles => {remember_connection => 'remember'},
 );
 
+around build_response => sub {
+    my ($orig, $self) = (shift, shift);
+    my ($conn, $input) = @_;
+
+    chop $input until $input !~ /[\r\n]/;
+
+    $self->$orig($conn, $input);
+};
+
 sub on_accept {
     my ($self, $args) = @_;
 
