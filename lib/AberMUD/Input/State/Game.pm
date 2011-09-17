@@ -80,9 +80,8 @@ sub run {
     my $self = shift;
     my ($controller, $conn, $input, $txn_id) = @_;
 
-    my $dispatch = $self->dispatch($input);
-
     return "" unless $input =~ /\S/;
+    my $dispatch = $self->dispatch($input);
 
     return "I don't know any commands by that name."
         unless $dispatch->has_matches;
