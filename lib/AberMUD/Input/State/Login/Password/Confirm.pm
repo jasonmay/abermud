@@ -47,7 +47,7 @@ sub run {
         # gah these namespaces are long
         my $new_password_state = 'AberMUD::Input::State::Login::Password::New';
         my $enter_new_password
-            = $conn->input_states->{$new_password_state};
+            = $backend->input_states->{$new_password_state};
 
         $conn->unshift_state($enter_new_password);
         $output = "That did not match what you originally typed. Please try again.\n";
