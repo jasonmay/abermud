@@ -63,6 +63,18 @@ has markings => (
     }
 );
 
+has output_buffer => (
+    is      => 'rw',
+    isa     => 'Str',
+    clearer => 'clear_output_buffer',
+    traits  => ['String', 'KiokuDB::DoNotSerialize'],
+    lazy    => 1,
+    default => '',
+    handles => {
+        append_output_buffer => 'append',
+    },
+);
+
 has send_sub => (
     is       => 'ro',
     isa      => 'CodeRef',

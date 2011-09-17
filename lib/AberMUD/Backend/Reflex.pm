@@ -44,6 +44,18 @@ around build_response => sub {
     $self->$orig($conn, $input);
 };
 
+after build_response => sub {
+    my $self = shift;
+
+    for my $conn ($self->connections->get_objects) {
+        my $player = $conn->associated_player or next;
+        if (length $player->output_buffer) {
+            $conn->put($player->output_buffer);
+            $player->clear_output_buffer;
+        }
+    }
+};
+
 sub on_accept {
     my ($self, $args) = @_;
 
