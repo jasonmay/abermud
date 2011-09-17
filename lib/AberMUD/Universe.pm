@@ -115,7 +115,7 @@ sub broadcast {
             ? @{$args{except}}
             : (defined($args{except}) ? $args{except} : ());
 
-    foreach my $player (values %{ $self->players_in_game }) {
+    foreach my $player ($self->player_list) {
         next if @except && any { $_ == $player } @except;
         my $player_output = $output;
 
