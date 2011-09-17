@@ -80,9 +80,10 @@ sub copy_unserializable_player_data {
 
     for ($source_player->meta->get_all_attributes) {
         if ($_->does('KiokuDB::DoNotSerialize')) {
-            my $attr = $_->accessor;
-            $dest_player->$attr($source_player->$attr)
-                if defined $source_player->$attr;
+            my $writer = $_->get_write_method;
+            my $reader = $_->get_read_method;
+            $dest_player->$writer($source_player->$reader)
+                if defined $source_player->$reader;
         }
     }
 }
