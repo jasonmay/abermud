@@ -9,7 +9,7 @@ command 'look', priority => -10, sub {
 
     if (!$args) {
         return "You are somehow nowhere." unless defined $you->location;
-        return $universe->look($you->location);
+        return $universe->look($you->location, except => $you);
     }
 
     my @args = split ' ', $args;

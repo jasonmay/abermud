@@ -246,6 +246,7 @@ sub check_exit {
 sub look {
     my $self   = shift;
     my $loc    = shift;
+    my %args   = @_;
 
     my $output = '';
     #my $output .= sprintf(
@@ -283,9 +284,9 @@ sub look {
     }
 
     foreach my $player (values %{$self->players}) {
-        next if $player == $self;
+        next if exists($args{except}) && $player == $args{except};
         $output .= ucfirst($player->name) . " is standing here.\n"
-            if $player->location == $self->location;
+            if $player->location == $loc;
     }
 
     $output .= "\n" . show_exits(location => $loc, universe => $self);

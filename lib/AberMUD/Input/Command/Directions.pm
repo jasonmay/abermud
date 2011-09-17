@@ -12,7 +12,7 @@ foreach my $direction (directions()) {
 
         my $destination = $universe->move($you, $direction, announce => 1);
 
-        return $destination ? $universe->look($you->location) : "You can't go that way.";
+        return $destination ? $universe->look($you->location, except => $you) : "You can't go that way.";
     };
 };
 
