@@ -28,29 +28,11 @@ sub build_response {
     my $self = shift;
     my ($conn, $input) = @_;
 
-    my $response = $conn->input_state->run($self, $conn, $input);
-    my $output;
-
-    $output = "NULL!\n"
-        unless $conn && @{$conn->input_states};
-
-    my $player = $conn->associated_player;
-    if (
-        $player &&
-        !$self->universe->player($player->name) &&
-        ref $conn->input_state eq 'AberMUD::Input::State::Game'
-    ) {
-        $player    = $self->materialize_player($conn, $player);
-        my $prompt = $player->final_prompt;
-        $output    = "$response\n$prompt";
-    }
-    else {
-        $output = $response;
-    }
+    my $response = $conn->process_input($self, $input);
 
     # sweep here
 
-    return AberMUD::Util::colorify($output);
+    return $response;
 };
 
 no Moose::Role;

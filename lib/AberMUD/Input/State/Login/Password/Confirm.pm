@@ -13,7 +13,7 @@ has '+entry_message' => (
 
 sub run {
     my $self = shift;
-    my ($controller, $conn, $pass) = @_;
+    my ($backend, $conn, $pass) = @_;
     my $output = q{};
 
     return $self->entry_message unless $pass;
@@ -23,9 +23,9 @@ sub run {
     if ($crypted eq $conn->password_buffer) {
         $conn->shift_state;
 
-        my $location = $controller->storage->lookup_default_location;
+        my $location = $backend->storage->lookup_default_location;
 
-        weaken(my $w = $controller);
+        weaken(my $w = $backend);
         my $send = sub {
             my ($id, $message) = @_;
 
@@ -41,13 +41,13 @@ sub run {
             send_sub => $send,
         );
 
-        $controller->storage->save_player($player);
+        $backend->storage->save_player($player);
     }
     else {
         # gah these namespaces are long
         my $new_password_state = 'AberMUD::Input::State::Login::Password::New';
         my $enter_new_password
-            = $controller->input_states->{$new_password_state};
+            = $conn->input_states->{$new_password_state};
 
         $conn->unshift_state($enter_new_password);
         $output = "That did not match what you originally typed. Please try again.\n";

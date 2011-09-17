@@ -44,6 +44,13 @@ sub create_player {
 
 sub input_state { $_[0]->input_states->[0] }
 
+sub process_input {
+    my $self = shift;
+    my ($backend, $input) = @_;
+
+    return $self->input_state->run($backend, $self, $input);
+}
+
 sub disconnect {
     my $self = shift;
     my $txn_id;
