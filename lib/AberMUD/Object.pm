@@ -2,7 +2,6 @@
 package AberMUD::Object;
 use KiokuDB::Class;
 use Moose::Util qw(apply_all_roles);;
-use Data::Dumper;
 use namespace::autoclean;
 
 with qw(

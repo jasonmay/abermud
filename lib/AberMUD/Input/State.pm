@@ -26,7 +26,6 @@ around run => sub {
 
     my $in_game = 0;
     $in_game = 1 if $player
-        and $self->universe->player($player)
         and ref($conn->input_state) eq 'AberMUD::Input::State::Game';
 
     my $output;
@@ -56,12 +55,12 @@ sub materialize_player {
     #    return $;
     #}
 
-    if (!$m_player->in_game) {
+    if (!$u->player($m_player->name)) {
         $self->copy_unserializable_player_data($m_player, $player);
         $u->players->{$player->name} = $player;
     }
 
-    $m_player->_join_game;
+    #$m_player->_join_game;
     $storage->save_player($m_player) if $m_player == $player;
     $m_player->setup;
 
