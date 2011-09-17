@@ -3,9 +3,9 @@ package AberMUD::Input::State::Login::Password::Confirm;
 use Moose;
 
 use AberMUD::Input::State::Login::Password::New;
-extends 'AberMUD::Input::State';
-
 use Scalar::Util 'weaken';
+
+with 'AberMUD::Input::State';
 
 has '+entry_message' => (
     default => 'Please type in that password again to confirm it: ',

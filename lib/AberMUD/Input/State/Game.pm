@@ -1,8 +1,10 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State::Game;
 use Moose;
-extends 'AberMUD::Input::State';
+
 use AberMUD::Input::Dispatcher;
+
+with 'AberMUD::Input::State';
 
 sub welcome_message { "\e[2J" . << '_STOP_';
 &+G    _    _               __  __ _   _ ____&*

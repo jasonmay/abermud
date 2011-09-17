@@ -1,8 +1,6 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State;
-use Moose;
-
-sub run { die "This method must be overwritten" }
+use Moose::Role;
 
 has universe => (
     is       => 'rw',
@@ -14,7 +12,9 @@ has entry_message => (
     isa => 'Str',
 );
 
-no Moose;
+requires 'run';
+
+no Moose::Role;
 
 1;
 

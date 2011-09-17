@@ -1,8 +1,7 @@
-#!/usr/bin/env perl
 package AberMUD::Input::State::Login::Password::New;
 use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::State';
+
+with 'AberMUD::Input::State';
 
 has '+entry_message' => (
     default => 'Please enter a new password for your character: ',

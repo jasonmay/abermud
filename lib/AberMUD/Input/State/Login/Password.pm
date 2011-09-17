@@ -1,8 +1,8 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State::Login::Password;
 use Moose;
-use namespace::autoclean;
-extends 'AberMUD::Input::State';
+
+with 'AberMUD::Input::State';
 
 has '+entry_message' => (
     default => 'Please enter your password: ',

@@ -1,8 +1,10 @@
 #!/usr/bin/env perl
 package AberMUD::Input::State::Login::Name;
 use Moose;
-extends 'AberMUD::Input::State';
+
 use AberMUD::Input::State::Login::Password;
+
+with 'AberMUD::Input::State';
 
 has '+entry_message' => (
     default => 'Please enter your name: ',
