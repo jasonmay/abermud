@@ -75,20 +75,6 @@ has output_buffer => (
     },
 );
 
-has send_sub => (
-    is       => 'ro',
-    isa      => 'CodeRef',
-    traits   => ['KiokuDB::DoNotSerialize'],
-    required => 1,
-);
-
-sub id {
-    my $self = shift;
-
-    my $p = $self->universe->players;
-    return first_value { $p->{$_} == $self } keys %$p;
-}
-
 # game stuff
 sub setup {
     my $self = shift;
