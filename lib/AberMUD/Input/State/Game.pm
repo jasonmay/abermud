@@ -90,7 +90,7 @@ sub run {
      my $match = (sort { $a->rule->priority <=> $b->rule->priority } $dispatch->matches)[0];
 
      return $match->run(
-         $controller->universe,
+         $self->universe,
          $conn->associated_player,
          $match->leftover,
          $txn_id,
