@@ -31,16 +31,6 @@ with qw(
     AberMUD::Universe::Role::Violent
 );
 
-has players_in_game => (
-    is      => 'rw',
-    isa     => 'HashRef[AberMUD::Player]',
-    traits  => ['Hash', 'KiokuDB::DoNotSerialize'],
-    handles => {
-        game_name_list => 'keys',
-        game_list      => 'values',
-    },
-);
-
 has objects => (
     is      => 'rw',
     isa     => 'KiokuDB::Set',

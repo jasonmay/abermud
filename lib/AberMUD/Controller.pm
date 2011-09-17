@@ -109,68 +109,6 @@ sub new_connection {
     );
 }
 
-sub materialize_player {
-    my $self   = shift;
-    my ($conn, $player) = @_;
-
-    my $u = $self->universe;
-
-    my $m_player = $conn->associated_player || $player;
-
-    if ($m_player != $player && $m_player->in_game) {
-        $self->ghost_player($m_player);
-        return $self;
-    }
-
-    # XXX I'm sure we need this, just don't feel like
-    # making this work right now
-    #if (!$m_player->in_game) {
-    #    $self->copy_unserializable_player_data($m_player, $player);
-    #    $u->players->{$player->name} = $player;
-    #}
-
-    # XXX
-    #$m_player->_join_game;
-    # $self->save_player($m_player) if $m_player == $player;
-    $m_player->setup;
-
-    return $m_player;
-}
-
-sub dematerialize_player {
-    my $self   = shift;
-    my $player = shift;
-    delete $self->universe->players_in_game->{lc $player->name};
-}
-
-sub copy_unserializable_player_data {
-    my $self = shift;
-    my $source_player = shift;
-    my $dest_player = shift;
-
-    for ($source_player->meta->get_all_attributes) {
-        if ($_->does('KiokuDB::DoNotSerialize')) {
-            my $attr = $_->accessor;
-            next if $attr eq 'dir_player';
-            $dest_player->$attr($source_player->$attr)
-                if defined $source_player->$attr;
-        }
-    }
-}
-
-sub ghost_player {
-    my $self   = shift;
-    my $new_player = shift;
-    my $old_player = shift;
-    my $u = $self->universe;
-
-    return unless $old_player->id and $new_player->id;
-
-    $self->force_disconnect($old_player->id, ghost => 1);
-    $u->players->{$new_player->id} = delete $u->players->{$old_player->id};
-}
-
-
 __PACKAGE__->meta->make_immutable;
 
 1;
