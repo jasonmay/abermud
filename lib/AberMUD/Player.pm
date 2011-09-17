@@ -105,25 +105,6 @@ sub setup {
     }
 }
 
-sub send {
-    my $self    = shift;
-    my $message = shift;
-    my %args    = @_;
-
-    return unless $self->id;
-
-    $message .= AberMUD::Util::colorify($self->final_prompt) unless $args{no_prompt};
-
-    $self->send_sub->($self->id => AberMUD::Util::colorify($message));
-}
-
-sub sendf {
-    my $self    = shift;
-    my $message = shift;
-
-    $self->send(sprintf($message, @_));
-}
-
 sub final_prompt {
     my $self = shift;
     my $prompt = $self->prompt;
@@ -143,7 +124,7 @@ sub death {
     $self->save_data();
     $self->dematerialize();
 
-    $self->send(<<DEATH, no_prompt => 1);
+    $self->append_output_buffer(<<DEATH, no_prompt => 1);
 
 &+r***********************************&N
       I guess you died! LOL!

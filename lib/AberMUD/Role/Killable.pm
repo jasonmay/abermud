@@ -263,7 +263,7 @@ sub attack {
         } qw(attacker victim bystander)
     );
 
-    $self->sendf($final_messages{attacker})
+    $self->append_output_buffer($final_messages{attacker})
         if $self->isa('AberMUD::Player');
 
     $victim->take_damage(
@@ -273,7 +273,7 @@ sub attack {
             # send the (potentially) final message right
             # before death. this displays the prompt
             # at the right time and stuff
-            $victim->sendf($final_messages{victim})
+            $victim->append_output_buffer($final_messages{victim})
                 if $victim->isa('AberMUD::Player');
         }
     );

@@ -142,7 +142,7 @@ sub send_to_location {
         $p->location == $ingame->location && !any { $p == $_ } @except
     } $self->player_list;
 
-    $_->send("\n$message") for @players;
+    $_->append_output_buffer("\n$message") for @players;
 
     return $self;
 }

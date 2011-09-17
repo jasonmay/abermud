@@ -25,20 +25,12 @@ sub run {
 
         my $location = $backend->storage->lookup_default_location;
 
-        weaken(my $w = $backend);
-        my $send = sub {
-            my ($id, $message) = @_;
-
-            $w->send($id => $message);
-        };
-
         # save the player here.
         my $player = $conn->create_player(
             name     => $conn->name_buffer,
             password => $conn->password_buffer,
             location => $location,
             prompt   => '&*[ &+C%h/%H&* ] &+Y$&* ',
-            send_sub => $send,
         );
 
         $backend->storage->save_player($player);

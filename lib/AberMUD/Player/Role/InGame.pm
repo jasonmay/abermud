@@ -77,7 +77,7 @@ sub complete_quest {
         $self->change_score($exp_award);
     };
 
-    $self->sendf($output);
+    $self->append_output_buffer($output);
     $self->completed_quests->{$quest}++;
     $self->save_data;
 }

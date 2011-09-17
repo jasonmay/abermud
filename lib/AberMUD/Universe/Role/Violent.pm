@@ -52,7 +52,7 @@ sub fight_iteration {
     foreach my $player ($self->game_list) {
         if ($player->fighting) {
             if ($player->location != $player->fighting->location) {
-                $player->send("I guess you're not fighting anymore..\n");
+                $player->append_output_buffer("I guess you're not fighting anymore..\n");
                 $player->stop_fighting;
                 next;
             }
