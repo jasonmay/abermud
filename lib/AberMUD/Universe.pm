@@ -21,8 +21,9 @@ has players => (
     traits  => ['Hash', 'KiokuDB::DoNotSerialize'],
     default => sub { {} },
     handles => {
-        player_list => 'values',
-        player      => 'get',
+        player_names => 'keys',
+        player_list  => 'values',
+        player       => 'get',
     }
 );
 
