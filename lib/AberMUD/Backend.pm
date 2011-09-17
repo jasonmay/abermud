@@ -30,8 +30,6 @@ sub build_response {
 
     my $response = $conn->process_input($self, $input);
 
-    # sweep here
-
     return $response;
 };
 

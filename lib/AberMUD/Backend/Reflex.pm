@@ -68,6 +68,7 @@ sub on_accept {
         storage      => $self->storage,
     );
 
+    $stream->put($stream->input_state->entry_message);
     $self->remember_connection($stream);
 }
 
