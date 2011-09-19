@@ -9,12 +9,7 @@ has universe => (
     isa      => 'AberMUD::Universe',
 );
 
-has entry_message => (
-    is => 'rw',
-    isa => 'Str',
-);
-
-requires 'run';
+requires 'entry_message', 'run';
 
 around run => sub {
     my ($orig, $self) = (shift, shift);

@@ -4,9 +4,7 @@ use Moose;
 
 with 'AberMUD::Input::State';
 
-has '+entry_message' => (
-    default => 'Please enter your password: ',
-);
+sub entry_message { 'Please enter your password: ' }
 
 sub run {
     my $self = shift;

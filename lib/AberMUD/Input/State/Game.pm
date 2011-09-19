@@ -6,7 +6,7 @@ use AberMUD::Input::Dispatcher;
 
 with 'AberMUD::Input::State';
 
-sub welcome_message { "\e[2J" . << '_STOP_';
+sub entry_message { "\e[2J" . << '_STOP_';
 &+G    _    _               __  __ _   _ ____&*
 &+G   / \  | |__   ___ _ __|  \/  | | | |  _ \&*
 &+G  / _ \ | '_ \ / _ \ '__| |\/| | | | | | | |&*
@@ -30,10 +30,6 @@ for other MUDs. So far it has the following features:
   &+Y*&* Info
 _STOP_
 }
-
-has '+entry_message' => (
-    default => welcome_message(),
-);
 
 has dispatcher => (
     is => 'rw',

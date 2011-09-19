@@ -7,9 +7,7 @@ use Scalar::Util 'weaken';
 
 with 'AberMUD::Input::State';
 
-has '+entry_message' => (
-    default => 'Please type in that password again to confirm it: ',
-);
+sub entry_message { 'Please type in that password again to confirm it: ' }
 
 sub run {
     my $self = shift;

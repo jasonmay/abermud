@@ -6,9 +6,7 @@ use AberMUD::Input::State::Login::Password;
 
 with 'AberMUD::Input::State';
 
-has '+entry_message' => (
-    default => 'Please enter your name: ',
-);
+sub entry_message { 'Please enter your name: ' }
 
 sub run {
     my $self = shift;
