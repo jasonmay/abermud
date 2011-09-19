@@ -3,8 +3,7 @@ package AberMUD::Input::Command::Drop;
 use AberMUD::OO::Commands;
 
 command drop => sub {
-    my $you  = shift;
-    my $args = shift;
+    my ($universe, $you, $args) = @_;
     my @args = split ' ', $args;
 
     if (!@args) {
@@ -17,7 +16,8 @@ command drop => sub {
             $_->dropped(1) if $_->flags->{getflips};
         }
 
-        $you->say(
+        $universe->send_to_location(
+            $you,
             sprintf(
                 "%s drops everything he can.\n",
                 $you->name,
@@ -31,13 +31,14 @@ command drop => sub {
             $_->can('held_by') and $_->held_by
             and $_->held_by == $you
             and lc($_->name) eq lc($args[0])
-        } $you->universe->get_objects;
+        } $universe->get_objects;
 
         if (@matching_objects) {
             $matching_objects[0]->_stop_being_held;
             $matching_objects[0]->dropped(1) if $matching_objects[0]->dropped_description;
             $matching_objects[0]->change_location($you->location);
-            $you->say(
+            $universe->send_to_location(
+                $you,
                 sprintf(
                     "%s drops a %s.\n",
                     $you->name, $matching_objects[0]->name

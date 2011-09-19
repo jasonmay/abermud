@@ -3,13 +3,13 @@ package AberMUD::Input::Command::Inventory;
 use AberMUD::OO::Commands;
 
 command inventory => sub {
-    my $you  = shift;
+    my ($universe, $you) = @_;
     my $output = q{};
 
     my @objects_you_carry = grep {
         $_->can('held_by') and $_->held_by
             and $_->held_by == $you
-    } $you->universe->get_objects;
+    } $universe->get_objects;
 
     if (@objects_you_carry) {
         $output = "Your backpack contains:\n";
@@ -29,7 +29,8 @@ command inventory => sub {
         $output = "Your backpack contains nothing.";
     }
 
-    $you->say(
+    $universe->send_to_location(
+        $you,
         $you->name . " rummages through his backpack.\n",
         except => $you,
     );

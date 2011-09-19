@@ -15,11 +15,12 @@ command take => sub {
                 $_->on_the_ground
                     and $_->local_to($you)
                     and $_->getable
-            }  $you->universe->get_objects;
+            }  $universe->get_objects;
 
             $_->held_by($you) for @objects_you_can_take;
 
-            $you->say(
+            $universe->send_to_location(
+                $you,
                 sprintf(
                     "%s takes everything he can.\n",
                     $you->name
@@ -34,7 +35,7 @@ command take => sub {
         my @matching_objects = grep {
             $_->local_to($you)
                 and $_->name_matches($args[0])
-        } $you->universe->get_objects;
+        } $universe->get_objects;
 
         if (@matching_objects) {
             if ($matching_objects[0]->can('held_by')) {
@@ -46,7 +47,8 @@ command take => sub {
                         . " is not on the ground for you to take.";
                 }
                 $matching_objects[0]->held_by($you);
-                $you->say(
+                $universe->send_to_location(
+                    $you,
                     sprintf(
                         "%s picks up a %s.\n",
                         $you->name, $matching_objects[0]->name
@@ -60,10 +62,10 @@ command take => sub {
         return "No object of that name is here.";
     }
     elsif (@args == 3 and lc($args[1]) eq 'from') {
-        my $object    = $you->universe->identify_object($you->location, $args[0])
+        my $object    = $universe->identify_object($you->location, $args[0])
             or return "I don't know what that is.";
 
-        my $container = $you->universe->identify_object($you->location, $args[2])
+        my $container = $universe->identify_object($you->location, $args[2])
             or return "I don't know what that is.";
 
         $container->container or return "That's not a container!";
