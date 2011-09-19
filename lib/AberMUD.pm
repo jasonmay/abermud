@@ -4,10 +4,19 @@ use Bread::Board::Declare;
 
 our $VERSION = '0.01';
 
-has backend => (
-    is           => 'ro',
-    does          => 'AberMUD::Backend',
+has backend_class => (
+    is        => 'ro',
+    value     => 'AberMUD::Backend::Reflex',
+    lifecycle => 'Singleton',
 );
+
+has backend_params => (
+    is        => 'ro',
+    isa       => 'Ref',
+    block     => sub { [ qw/port input_states storage/ ] },
+    lifecycle => 'Singleton',
+);
+
 has controller => (
     is           => 'ro',
     isa          => 'AberMUD::Controller',
@@ -16,6 +25,8 @@ has controller => (
     dependencies => [
         'universe',
         'storage',
+        'backend_class',
+        'backend_params',
         'special_composite',
         'command_composite',
     ],

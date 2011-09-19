@@ -9,7 +9,17 @@ use Module::Pluggable
     sub_name    => '_input_states',
 ;
 
-use constant backend_class => 'AberMUD::Backend::Reflex';
+has backend_class => (
+    is       => 'ro',
+    isa      => 'Str',
+    required => 1,
+);
+
+has backend_params => (
+    is       => 'ro',
+    isa      => 'Ref',
+    required => 1,
+);
 
 has storage => (
     is  => 'ro',
@@ -30,11 +40,18 @@ has backend => (
     default => sub {
         my $self = shift;
         Class::MOP::load_class($self->backend_class);
-        return $self->backend_class->new(
-            port         => $self->port,
-            input_states => $self->input_states,
-            storage      => $self->storage,
-        );
+
+        my $p = $self->backend_params;
+        my %param_map =
+            ref($self->backend_params) eq 'HASH' ? (%$p) :
+            ref($self->backend_params) eq 'ARRAY'? (map { $_ => $_ } @$p) :
+            ();
+
+        my %params = ();
+        while (my ($param_key, $param_value) = each %param_map) {
+            $params{$param_key} = $self->$param_value;
+        }
+        return $self->backend_class->new(%params);
     },
     handles => ['run'],
 );
