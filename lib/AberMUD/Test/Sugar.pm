@@ -120,7 +120,7 @@ sub build_game {
 
     #my $k = KiokuDB->connect('hash', create => 1);
 
-    my $storage = $c->storage_object;
+    my $storage = $c->storage;
 
     my $players = $data{players};
 

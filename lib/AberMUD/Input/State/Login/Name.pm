@@ -16,7 +16,7 @@ sub run {
     return $self->entry_message unless $name;
 
     $conn->name_buffer($name);
-    $conn->associated_player($conn->storage->player_lookup($name));
+    $conn->associated_player($controller->storage->player_lookup($name));
     if ($conn->has_associated_player) {
 
         # replace current state (this) with asking for the password
