@@ -25,25 +25,14 @@ our @EXPORT_OK = qw(build_container build_game build_preset_game);
 sub build_container {
     my %args = @_;
     my $dsn = $args{dsn} || 'hash';
-    my $test_container_metaclass = Moose::Meta::Class->create_anon_class(
-        superclasses => ['AberMUD::Container'],
-        roles        => ['AberMUD::Container::Role::Test'],
+
+    my $c = AberMUD->new(
+        backend_class  => 'AberMUD::Backend::Test',
+        backend_params => ['input_states', 'storage'],
+        storage        => AberMUD::Storage->new(dsn => $dsn),
     );
 
-    my $controller = AberMUD::Controller->new(
-        backend  => AberMUD::Backend
-        storage  => $s->param('storage'),
-        universe => $s->param('universe'),
-    );
-   $self->setup_controller($s, $controller);
-    my $abermud = AberMUD->new(
-        controller =>     );
-
-    my $test_container = $test_container_metaclass->name->new(
-        dsn => $dsn,
-    );
-
-    return $test_container;
+    return $c;
 }
 
 sub build_game {
@@ -128,10 +117,6 @@ sub build_game {
         objects => set(values %all_objects),
         mobiles => set(@all_mobiles),
     );
-
-    $_->universe($universe) for $universe->get_objects,
-                                $universe->get_mobiles,
-                                values(%all_locations);
 
     my $config = AberMUD::Config->new(
         input_states => [qw(Login::Name Game)],
