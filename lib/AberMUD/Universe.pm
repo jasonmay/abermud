@@ -250,12 +250,12 @@ sub look {
     my %args   = @_;
 
     my $output = '';
-    #my $output .= sprintf(
-    #    "&+M%s&* &+B[&+C%s@%s&+B]&*\n",
-    #    $loc->title,
-    #    lc substr($self->universe->storage->object_to_id($loc), 0, 8),
-    #    $loc->zone->name,
-    #);
+    $output .= sprintf(
+        "&+M%s&* &+B[&+C%s@%s&+B]&*\n",
+        $loc->title,
+        '(TODO id)',#lc substr($self->storage->object_to_id($loc), 0, 8),
+        $loc->zone->name,
+    );
 
     $output .= $loc->description;
     chomp $output; $output .= "\n";
