@@ -22,6 +22,8 @@ use AberMUD::Location;
 use AberMUD::Object;
 use AberMUD::Storage;
 
+use constant DEFAULT_START_LOC => 'church@start';
+
 my $parser = qr{
     <logfile:debug.log>
 #        <debug:run>
@@ -747,7 +749,7 @@ sub store_zone_data {
     unlink 'abermud.db' if -e 'abermud.db';
 
     my $config = AberMUD::Config->new(
-        location => $expanded->{loc}{'church@start'},
+        location => $expanded->{loc}{+DEFAULT_START_LOC},
         input_states => [qw(Login::Name Game)],
     );
 
