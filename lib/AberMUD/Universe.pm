@@ -389,7 +389,7 @@ sub _set_opened {
             my $link_method = $direction . '_link';
             next unless $object->$link_method;
             next unless $object->$link_method->openable;
-            $self->_set_opened($object->$link_method, 1, 1);
+            $self->_set_opened($object->$link_method, $open, 1);
         }
     }
 
