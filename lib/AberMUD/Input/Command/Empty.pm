@@ -43,7 +43,7 @@ command empty => sub {
                 $o->formatted_name, $container->formatted_name, $where,
             );
 
-            $o->_stop_being_contained;
+            $o->take_from($container);
 
             if ($container->getable and $container->held_by) {
                 $o->held_by($container->held_by);

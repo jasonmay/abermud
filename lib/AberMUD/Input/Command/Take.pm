@@ -76,7 +76,7 @@ command take => sub {
                 $container->contained_by->name . " first.";
 
         if ($object->containable and $object->contained_by == $container) {
-            $object->_stop_being_contained;
+            $object->take_from($container);
             $object->held_by($you);
             return sprintf(
                 'You take the %s out of the %s.',
