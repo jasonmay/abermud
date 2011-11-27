@@ -78,7 +78,10 @@ sub build_game {
             $loc_node = AberMUD::Location->new(%loc_params);
         }
 
-        do { $_->location($loc_node) } for ((grep { $_->on_the_ground } @objects), @mobiles);
+        for ((grep { $_->on_the_ground } @objects), @mobiles) {
+            $_->location($loc_node);
+            $loc_node->objects_in_room->insert($_);
+        }
 
         $all_objects{$_->name . '@' . $loc} = $_ for @objects;
         push @all_mobiles, @mobiles;
