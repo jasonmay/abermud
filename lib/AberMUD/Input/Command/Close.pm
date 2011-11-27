@@ -15,14 +15,14 @@ command close => sub {
 
     $object->closed and return "That's already closed.";
 
-    $object->close();
+    $universe->close($object);
 
     if ($object->gateway) {
         foreach my $direction (directions()) {
             my $link_method = $direction . '_link';
             next unless $object->$link_method;
             next unless $object->$link_method->closeable;
-            $object->$link_method->close();
+            $universe->close($object->$link_method);
         }
     }
 

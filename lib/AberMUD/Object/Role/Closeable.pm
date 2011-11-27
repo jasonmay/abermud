@@ -21,12 +21,6 @@ sub closed {
     return !$self->opened;
 }
 
-sub close {
-    my $self = shift;
-
-    $self->_opened(0);
-}
-
 sub closeable { 1 }
 
 1;

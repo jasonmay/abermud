@@ -26,10 +26,14 @@ command wield => sub {
         next unless $wielded->held_by;
         next unless $wielded->held_by == $you;
 
-        $wielded->wielded(0) if $wielded->wielded;
+        if ($wielded->wielded) {
+            $wielded->wielded(0);
+            $you->_stop_wielding;
+        }
     }
 
     $object->wielded(1);
+    $you->wielding($object);
 
     return "You wield the " . $object->name . ".";
 };

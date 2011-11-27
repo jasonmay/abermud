@@ -368,6 +368,68 @@ sub move {
     return $destination;
 }
 
+sub open {
+    my $self = shift;
+    my ($object) = @_;
+    $self->_set_opened($object, 1);
+}
+
+sub close {
+    my $self = shift;
+    my ($object) = @_;
+    $self->_set_opened($object, 0);
+}
+
+sub _set_opened {
+    my $self = shift;
+    my ($object, $open, $only_this_object) = @_;
+
+    $object->opened($open);
+
+    if ($object->gateway and !$only_this_object) {
+        foreach my $direction (directions()) {
+            my $link_method = $direction . '_link';
+            next unless $object->$link_method;
+            next unless $object->$link_method->openable;
+            $self->_set_opened($object->$link_method, 1, 1);
+        }
+    }
+
+    if ($object->gateway) {
+        if ($open) {
+            $self->revealing_gateway_cache->insert($self)
+        }
+        else {
+            $self->revealing_gateway_cache->remove($self)
+        }
+    }
+}
+
+sub set_state {
+    my $self      = shift;
+    my $object    = shift;
+    my $state     = shift;
+    my $last_call = shift || 0; # base case to prevent loops
+
+    if ($state == 0) {
+        $self->revealing_gateway_cache->delete($self);
+    }
+    else {
+        $self->revealing_gateway_cache->insert($self);
+    }
+
+    $object->state($state);
+
+    if ($object->gateway and !$last_call) {
+        foreach my $direction (directions()) {
+            my $link_method = $direction . '_link';
+            next unless $object->$link_method;
+            next unless $object->$link_method->multistate;
+            $self->set_state($object->$link_method, $state, 1);
+        }
+    }
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;

@@ -21,38 +21,6 @@ has opened => (
     default => 0,
 );
 
-sub open {
-    my $self = shift;
-
-    $self->_opened(1);
-}
-
-sub _opened {
-    my $self = shift;
-    my $open = shift;
-    my $only_this_object = shift;
-
-    $self->opened($open);
-
-    if ($self->gateway and !$only_this_object) {
-        foreach my $direction (directions()) {
-            my $link_method = $direction . '_link';
-            next unless $self->$link_method;
-            next unless $self->$link_method->openable;
-            $self->$link_method->_opened($open, 1);
-        }
-    }
-
-    if ($self->gateway) {
-        if ($open) {
-            $self->universe->revealing_gateway_cache->insert($self)
-        }
-        else {
-            $self->universe->revealing_gateway_cache->remove($self)
-        }
-    }
-}
-
 around final_description => sub {
     my ($orig, $self) = @_;
 

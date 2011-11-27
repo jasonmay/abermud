@@ -24,7 +24,7 @@ command open => sub {
         $object->locked(0);
     }
 
-    $object->open();
+    $universe->open($object);
 
     return sprintf(
         'You use your %s to unlock and open the %s',
