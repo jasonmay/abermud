@@ -306,6 +306,8 @@ sub clone_object {
         %extra_params,
     );
 
+    $new_object->location->objects_in_room->insert($new_object);
+
     if ($object->getable) {
         $new_object->_stop_being_held;
         $new_object->_clear_contained_by;
