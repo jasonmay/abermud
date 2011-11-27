@@ -262,9 +262,7 @@ sub look {
     $output .= $loc->description;
     chomp $output; $output .= "\n";
 
-    foreach my $object ($self->get_objects) {
-        next unless $object->location;
-        next unless $object->location == $loc;
+    foreach my $object ($loc->objects_in_room->members) {
         next unless $object->on_the_ground;
 
         my $desc = $object->final_description;
