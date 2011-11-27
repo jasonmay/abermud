@@ -716,7 +716,7 @@ sub link_object_locations {
             do { warn "no mob called $odest"; next }
                 unless $expanded->{mob}{lc $odest};
 
-            $obj->held_by($expanded->{mob}{lc $odest});
+            $expanded->{mob}{lc $odest}->take($obj);
 
             if ($loctype eq 'WORN_BY' or $loctype eq 'BOTH_BY') {
                 $obj->worn(1);

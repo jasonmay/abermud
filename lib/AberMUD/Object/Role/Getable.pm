@@ -17,9 +17,10 @@ has size => (
 );
 
 has held_by => (
-    is      => 'rw',
-    isa     => 'AberMUD::Player|AberMUD::Mobile',
-    clearer => '_stop_being_held',
+    is       => 'rw',
+    isa      => 'AberMUD::Player|AberMUD::Mobile',
+    weak_ref => 1,
+    clearer  => '_stop_being_held',
 );
 
 has dropped_description => (

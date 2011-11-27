@@ -172,7 +172,7 @@ sub identify {
 
     $self->identify_from_list(
         $location, $word, (
-            $self->game_list,
+            $self->player_list,
             $self->get_mobiles,
             $self->get_objects,
         ),

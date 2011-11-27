@@ -2,6 +2,10 @@
 package AberMUD::Role::Killable;
 use Moose::Role;
 use Moose::Util::TypeConstraints;
+
+use KiokuDB::Util 'set';
+
+use Array::IntSpan;
 use List::Util qw(first);
 
 use AberMUD::Player;
@@ -9,7 +13,6 @@ use AberMUD::Location::Util qw(directions);
 use AberMUD::Object::Util qw(bodyparts);
 use AberMUD::Messages;
 
-use Array::IntSpan;
 
 requires 'death';
 
@@ -98,6 +101,12 @@ has dead => (
     default => 0,
 );
 
+has _carrying => (
+    is      => 'ro',
+    default => sub { set() },
+    handles => {carrying => 'members'},
+);
+
 sub max_strength {
     my $self = shift;
     my $level = $self->can('level') ? $self->level : 0;
@@ -179,14 +188,6 @@ sub coverage {
     return %covering;
 }
 
-sub carrying {
-    my $self = shift;
-
-    return grep {
-        $_->getable and $_->held_by and $_->held_by == $self
-    } $self->universe->get_objects;
-}
-
 sub wielding {
     my $self = shift;
     return first {
@@ -207,6 +208,22 @@ sub carrying_loosely {
         and not
         ($_->can('worn_by') and $_->worn_by and $_->worn_by == $self)
     } $self->carrying;
+}
+
+sub take {
+    my $self = shift;
+    my ($object) = @_;
+
+    $self->_carrying->insert($object);
+    $object->held_by($self);
+}
+
+sub drop {
+    my $self = shift;
+    my ($object) = @_;
+
+    $self->_carrying->remove($object);
+    $object->_stop_being_held;
 }
 
 sub formatted_name {

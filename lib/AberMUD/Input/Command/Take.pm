@@ -17,7 +17,7 @@ command take => sub {
                     and $_->getable
             }  $universe->get_objects;
 
-            $_->held_by($you) for @objects_you_can_take;
+            $you->take($_) for @objects_you_can_take;
 
             $universe->send_to_location(
                 $you,
@@ -46,7 +46,7 @@ command take => sub {
                     return "The " . $matching_objects[0]->name
                         . " is not on the ground for you to take.";
                 }
-                $matching_objects[0]->held_by($you);
+                $you->take($matching_objects[0]);
                 $universe->send_to_location(
                     $you,
                     sprintf(
@@ -77,7 +77,7 @@ command take => sub {
 
         if ($object->containable and $object->contained_by == $container) {
             $object->take_from($container);
-            $object->held_by($you);
+            $you->take($object);
             return sprintf(
                 'You take the %s out of the %s.',
                 $object->name, $container->name,
