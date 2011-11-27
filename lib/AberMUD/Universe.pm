@@ -138,10 +138,12 @@ sub send_to_location {
                     ? (@{$args{except} || []})
                     : ($args{except} || ());
 
-    my @players = grep {
-        my $p = $_;
-        $p->location == $ingame->location && !any { $p == $_ } @except
-    } $self->player_list;
+    my @players;
+    for my $player ($self->player_list) {
+        next unless $player->location == $ingame->location;
+        next if     any { $player == $_ } @except;
+        push @players, $player;
+    }
 
     $_->append_output_buffer("\n$message") for @players;
 

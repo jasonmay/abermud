@@ -41,8 +41,9 @@ sub new_player {
         location => $params{location},
     );
 
+    my $universe = $self->storage->lookup('config')->universe;
     my $game_state = AberMUD::Input::State::Game->new(
-        universe          => $self->storage->lookup('config')->universe,
+        universe          => $universe,
         command_composite => $command_composite,
         special_composite => $special_composite,
     );
@@ -51,6 +52,8 @@ sub new_player {
         associated_player => $player,
         input_states      => [$game_state],
     );
+
+    $universe->players->{$name} = $player;
 
     return ($player, $conn);
 }
