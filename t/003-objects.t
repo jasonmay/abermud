@@ -148,7 +148,8 @@ my ($c, $locations) = build_preset_game(
     }
 );
 
-my $u = $c->resolve(service => 'universe');
+my $u = $c->universe;
+my $b = $c->controller->backend;
 
 ok(my @o = $u->get_objects, 'objects loaded');
 
@@ -158,161 +159,162 @@ my %objects                       = map {;
     sprintf('%s@%s', $_->name, $_->final_location->moniker) => $_
 } @o;
 
-my $one                           = $c->gen_player('playerone');
-my $two                           = $c->gen_player('playertwo');
+my ($one, $conn_one)              = $b->new_player('playerone');
+my ($two, $conn_two)              = $b->new_player('playertwo');
 
 
-unlike($one->types_in('look'),    qr{sack});
-unlike($one->types_in('look'),    qr{potato});
-like($one->types_in('look'),      qr{chest});
+unlike($b->inject_input($conn_one, 'look'),    qr{sack});
+unlike($b->inject_input($conn_one, 'look'),    qr{potato});
+like($b->inject_input($conn_one, 'look'),      qr{chest});
 
-like($one->types_in('take rock'), qr{You take the rock\.});
-like($two->get_output,            qr{playerone picks up a rock\.}i);
+like($b->inject_input($conn_one, 'take rock'), qr{You take the rock\.});
+like($conn_two->get_output,            qr{playerone picks up a rock\.}i);
 
 is($objects{'rock@room1'}->held_by, $one);
 
-unlike($one->types_in('look'),    qr{A rock is laying on the ground here\.});
+unlike($b->inject_input($conn_one, 'look'),    qr{A rock is laying on the ground here\.});
 
-like($one->types_in('drop rock'), qr{You drop the rock\.});
-is_deeply($one->output_queue,     []);
+like($b->inject_input($conn_one, 'drop rock'), qr{You drop the rock\.});
+is_deeply($conn_one->output_queue,     []);
 
-like($two->get_output,            qr{playerone drops a rock\.}i);
-is_deeply($one->output_queue,     []);
+like($conn_two->get_output,            qr{playerone drops a rock\.}i);
+is_deeply($conn_one->output_queue,     []);
 
-like($one->types_in('take sword'), qr{No object of that name is here\.});
+like($b->inject_input($conn_one, 'take sword'), qr{No object of that name is here\.});
 
 # make sure nothing broadcasts to self
-is_deeply($one->output_queue,     []);
+is_deeply($conn_one->output_queue,     []);
 
-$two->types_in('east');                                      $one->get_output;
-like($two->types_in('take sword'), qr{You take the sword\.}); $one->get_output;
-like($two->types_in('take sword'), qr{You are already carrying that!});
+$b->inject_input($conn_two, 'east');                                      $conn_one->get_output;
+like($b->inject_input($conn_two, 'take sword'), qr{You take the sword\.}); $conn_one->get_output;
+like($b->inject_input($conn_two, 'take sword'), qr{You are already carrying that!});
 
-$two->types_in('west');           $one->get_output;
-$two->types_in('drop sword');      $one->get_output;
+$b->inject_input($conn_two, 'west');           $conn_one->get_output;
+$b->inject_input($conn_two, 'drop sword');      $conn_one->get_output;
 
-my $look_output                    = $one->types_in('look');
+my $look_output                    = $b->inject_input($conn_one, 'look');
 
 like($look_output,                 qr{A rock});
 like($look_output,                 qr{a sword});
 
-like($one->types_in('take all'),   qr{You take everything you can\.});
-like($two->get_output,             qr{playerone takes everything he can\.});
-is_deeply($one->output_queue,      []);
+like($b->inject_input($conn_one, 'take all'),   qr{You take everything you can\.});
+like($conn_two->get_output,             qr{playerone takes everything he can\.});
+is_deeply($conn_one->output_queue,      []);
 
-like($one->types_in('take all'),   qr{There is nothing here for you to take\.});
+like($b->inject_input($conn_one, 'take all'),   qr{There is nothing here for you to take\.});
 
-my @output_lines                   = split /\n/, $one->types_in('inventory');
+my @output_lines                   = split /\n/, $b->inject_input($conn_one, 'inventory');
 
 is($output_lines[0],               q{Your backpack contains:});
 like($output_lines[1],             qr{\brock\b});
 like($output_lines[1],             qr{\bsword\b});
 
-like($two->get_output,             qr{playerone rummages through his backpack}i);
-is_deeply($one->output_queue,      []);
+like($conn_two->get_output,             qr{playerone rummages through his backpack}i);
+is_deeply($conn_one->output_queue,      []);
 
-like($two->types_in('inventory'),  qr{Your backpack contains nothing\.});
-$one->get_output;
+like($b->inject_input($conn_two, 'inventory'),  qr{Your backpack contains nothing\.});
+$conn_one->get_output;
 
-like($one->types_in('drop all'),   qr{You drop everything you can\.});
-like($two->get_output,             qr{playerone drops everything he can\.}i);
+like($b->inject_input($conn_one, 'drop all'),   qr{You drop everything you can\.});
+like($conn_two->get_output,             qr{playerone drops everything he can\.}i);
+
 
 # test bug where I don't see the rock on the ground
-$one->types_in('take sword');      $two->get_output;
-like($two->types_in('take rock'),  qr{You take the rock\.});
+$b->inject_input($conn_one, 'take sword');      $conn_two->get_output;
+like($b->inject_input($conn_two, 'take rock'),  qr{You take the rock\.});
 
 $_->held_by($two) for grep { $_->can('held_by') and not $_->contained_by } @o;
 
-$two->types_in('drop sword');
-like($two->types_in('look'),       qr{sword laying on the ground});
+$b->inject_input($conn_two, 'drop sword');
+like($b->inject_input($conn_two, 'look'),       qr{sword laying on the ground});
 $objects{'sword@room2'}->held_by($two);
 
 # examine
-like($two->types_in('examine sign'), qr{Why do you care});
-like($two->types_in('examine rock'), qr{You notice nothing special\.});
+like($b->inject_input($conn_two, 'examine sign'), qr{Why do you care});
+like($b->inject_input($conn_two, 'examine rock'), qr{You notice nothing special\.});
 
-like($one->types_in('look in chest'),        qr{it's closed}i);
-like($one->types_in('open chest'),           qr{you open the chest}i);
-like($one->types_in('open chest'),           qr{that's already open}i);
+like($b->inject_input($conn_one, 'look in chest'),        qr{it's closed}i);
+like($b->inject_input($conn_one, 'open chest'),           qr{you open the chest}i);
+like($b->inject_input($conn_one, 'open chest'),           qr{that's already open}i);
 
-like($one->types_in('look in chest'),        qr{sack}i);
-like($one->types_in('take sack from chest'), qr{you take the sack out of the chest}i);
+like($b->inject_input($conn_one, 'look in chest'),        qr{sack}i);
+like($b->inject_input($conn_one, 'take sack from chest'), qr{you take the sack out of the chest}i);
 
-my $inv                                     = $one->types_in('inventory');
+my $inv                                     = $b->inject_input($conn_one, 'inventory');
 like($inv,                                  qr{sack}i);
 like($inv,                                  qr{potato}i); # inside the sack
 
-like($one->types_in('drop sack'),           qr{you drop the sack}i);
+like($b->inject_input($conn_one, 'drop sack'),           qr{you drop the sack}i);
 
-my $look                                    = $one->types_in('look');
+my $look                                    = $b->inject_input($conn_one, 'look');
 like($look,                                 qr{sack}i);
 unlike($look,                               qr{potato}i); # shouldn't see it
 
 # test the 'empty' command
-like($one->types_in('empty sack'),          qr{you take the potato from the sack, and put it on the ground}i);
-like($one->types_in('look'),                qr{potato});
+like($b->inject_input($conn_one, 'empty sack'),          qr{you take the potato from the sack, and put it on the ground}i);
+like($b->inject_input($conn_one, 'look'),                qr{potato});
 
 #test 'put'
-like($one->types_in('put potato in chest'), qr{you put the potato in the chest}i);
-like($one->types_in('put potato in chest'), qr{that's already inside something}i);
-like($one->types_in('look in chest'),       qr{potato});
+like($b->inject_input($conn_one, 'put potato in chest'), qr{you put the potato in the chest}i);
+like($b->inject_input($conn_one, 'put potato in chest'), qr{that's already inside something}i);
+like($b->inject_input($conn_one, 'look in chest'),       qr{potato});
 
-like($one->types_in('close chest'),         qr{you close the chest}i);
-like($one->types_in('close chest'),         qr{that's already closed}i);
+like($b->inject_input($conn_one, 'close chest'),         qr{you close the chest}i);
+like($b->inject_input($conn_one, 'close chest'),         qr{that's already closed}i);
 
-like($one->types_in('open door'),           qr{you open the door}i);
-like($one->types_in('look'),                qr{there is an open door here.+east}ism); # east exit shows up
+like($b->inject_input($conn_one, 'open door'),           qr{you open the door}i);
+like($b->inject_input($conn_one, 'look'),                qr{there is an open door here.+east}ism); # east exit shows up
 
-like($one->types_in('close door'),          qr{you close the door}i);
+like($b->inject_input($conn_one, 'close door'),          qr{you close the door}i);
 
 {
-    my $look                                = $one->types_in('look');
+    my $look                                = $b->inject_input($conn_one, 'look');
     ::unlike($look,                         qr{north}i, 'door conceals north exit');
     ::like($look,                           qr{closed door}i, 'player sees that door has been closed');
 }
 
-like($one->types_in('north'),                qr{you can't go that way}i);
+like($b->inject_input($conn_one, 'north'),                qr{you can't go that way}i);
 
-like($one->types_in('open door'),           qr{you open the door}i);
-unlike($one->types_in('north'),              qr{you can't go that way}i);
-unlike($one->types_in('south'),              qr{you can't go that way}i);
+like($b->inject_input($conn_one, 'open door'),           qr{you open the door}i);
+unlike($b->inject_input($conn_one, 'north'),              qr{you can't go that way}i);
+unlike($b->inject_input($conn_one, 'south'),              qr{you can't go that way}i);
 
-like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
-like($one->types_in('look'),                qr{down}i);
+like($b->inject_input($conn_one, 'open trapdoor'),       qr{you open the trapdoor}i);
+like($b->inject_input($conn_one, 'look'),                qr{down}i);
 
-unlike($one->types_in('down'),              qr{you can't go that way}i);
+unlike($b->inject_input($conn_one, 'down'),              qr{you can't go that way}i);
 
-like($one->types_in('close trapdoor'),      qr{you close the trapdoor}i);
-like($one->types_in('look'),                qr{none}i); # no exits -- trapped!
+like($b->inject_input($conn_one, 'close trapdoor'),      qr{you close the trapdoor}i);
+like($b->inject_input($conn_one, 'look'),                qr{none}i); # no exits -- trapped!
 
-like($one->types_in('open trapdoor'),       qr{you open the trapdoor}i);
+like($b->inject_input($conn_one, 'open trapdoor'),       qr{you open the trapdoor}i);
 
-like($one->types_in('look'),                qr{up}i);
+like($b->inject_input($conn_one, 'look'),                qr{up}i);
 
-like($two->types_in('wield sword'),         qr{you wield the sword}i);
+like($b->inject_input($conn_two, 'wield sword'),         qr{you wield the sword}i);
 
-like($two->types_in('wear helmet'),         qr{you put on the helmet}i);
+like($b->inject_input($conn_two, 'wear helmet'),         qr{you put on the helmet}i);
 
 
 $objects{$_}->held_by($one) for qw/shoes@room1 boots@room1/;
-like($one->types_in('wear shoes'),          qr{you put on the shoes}i);
-like($one->types_in('wear boots'),          qr{remove your shoes first}i);
+like($b->inject_input($conn_one, 'wear shoes'),          qr{you put on the shoes}i);
+like($b->inject_input($conn_one, 'wear boots'),          qr{remove your shoes first}i);
 
 ok($objects{'sword@room2'}->wielded,                 'sword got wielded');
 ok($objects{'helmet@room1'}->worn,                   'helmet got worn');
 
-my $eq                                      = $two->types_in('equipment');
+my $eq                                      = $b->inject_input($conn_two, 'equipment');
 like($eq,                                   qr{wielding:.+sword}i);
 like($eq,                                   qr{head:.+helmet}i);
 
-like($two->types_in('remove helmet'),       qr{you take off the helmet}i);
-$one->types_in('up');
+like($b->inject_input($conn_two, 'remove helmet'),       qr{you take off the helmet}i);
+$b->inject_input($conn_one, 'up');
 
-unlike($one->types_in('look'), qr{ladder}, "player doesn't see ladder");
-$objects{'ladder@room1'}->set_state(1);
-like($one->types_in('look'), qr{ladder}, "ladder is revealed by state change");
+unlike($b->inject_input($conn_one, 'look'), qr{ladder}, "player doesn't see ladder");
+$u->set_state($objects{'ladder@room1'}, 1);
+like($b->inject_input($conn_one, 'look'), qr{ladder}, "ladder is revealed by state change");
 my $l = $one->location;
-$one->types_in('up');
+$b->inject_input($conn_one, 'up');
 isnt($one->location, $l, "ladder's state change allowed the player to go to revealed exit");
 
 # test cloning
@@ -324,7 +326,7 @@ my $cloned = $u->clone_object(
 
 ok($cloned);
 $one->change_location($locations->{misc});
-like($one->types_in('look'), qr{A rock is laying on the ground here\.}, 'cloned object is seen in the universe');
-like($one->types_in('t rock'), qr{You take the rock\.}, 'cloned object is seen in the universe');
+like($b->inject_input($conn_one, 'look'), qr{A rock is laying on the ground here\.}, 'cloned object is seen in the universe');
+like($b->inject_input($conn_one, 't rock'), qr{You take the rock\.}, 'cloned object is seen in the universe');
 
 done_testing();
