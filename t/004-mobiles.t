@@ -21,19 +21,20 @@ my $c = build_preset_game(
     }
 );
 
-my $u = $c->resolve(service => 'universe');
+my $u = $c->universe;
+my $b = $c->controller->backend;
 
 ok(my @m = $u->get_mobiles, 'mobiles loaded');
 
 my %mobiles                       = map { $_->name => $_ } @m;
-my $one                           = $c->gen_player('playerone');
+my ($one, $conn_one)              = $b->new_player('playerone');
 
 ok($mobiles{knight});
 ok($mobiles{knight}->description);
 
 is($one->location, $mobiles{knight}->location);
 
-like($one->types_in('look'),           qr{knight is standing here});
-like($one->types_in('examine knight'), qr{very metallic});
+like($b->inject_input($conn_one, 'look'),           qr{knight is standing here});
+like($b->inject_input($conn_one, 'examine knight'), qr{very metallic});
 
 done_testing();

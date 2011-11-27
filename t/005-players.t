@@ -9,22 +9,23 @@ use AberMUD::Config;
 use AberMUD::Test::Sugar qw(build_preset_game);
 
 my ($c, $locations) = build_preset_game('two_wide');
-my $u = $c->resolve(service => 'universe');
+my $u = $c->universe;
+my $b = $c->controller->backend;
 
-my $one = $c->gen_player('playerone');
-my $two = $c->gen_player('playertwo');
+my ($one, $conn_one) = $b->new_player('playerone');
+my ($two, $conn_two) = $b->new_player('playertwo');
 
-like($one->types_in('look'),  qr{playertwo is standing here}i);
-like($one->types_in('east'),  qr{second});
-like($two->get_output,        qr{playerone goes east}i);
-like($two->types_in('east'), qr{playerone is standing here}i);
-like($one->get_output,        qr{playertwo arrives from the west}i);
+like($b->inject_input($conn_one, 'look'),  qr{playertwo is standing here}i);
+like($b->inject_input($conn_one, 'east'),  qr{second});
+like($conn_two->get_output,        qr{playerone goes east}i);
+like($b->inject_input($conn_two, 'east'), qr{playerone is standing here}i);
+like($conn_one->get_output,        qr{playertwo arrives from the west}i);
 
-$one->types_in('west');
-$one->types_in('east');
+$b->inject_input($conn_one, 'west');
+$b->inject_input($conn_one, 'east');
 
-like($two->get_output, qr{playerone goes west});
-like($two->get_output, qr{playerone arrives from the west});
+like($conn_two->get_output, qr{playerone goes west});
+like($conn_two->get_output, qr{playerone arrives from the west});
 
 $one->score(2000);
 is($one->level, 1);
@@ -40,9 +41,9 @@ is($one->level, 3);
 
 $one->score(7999);
 
-$one->clear_output;
-$one->change_score(1);
-like($one->get_output, qr{congratulations! you made it to level .*3}i);
+$one->clear_output_buffer;
+$u->change_score($one, 1);
+like($conn_one->get_output, qr{congratulations! you made it to level .*3}i);
 
 $one->take_damage($one->max_strength);
 ok($one->dead);

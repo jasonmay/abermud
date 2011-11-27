@@ -29,12 +29,13 @@ my ($c, $locations) = build_preset_game(
     }
 );
 
+my $b = $c->controller->backend;
 
 ok($locations->{room1}->does('AberMUD::Location::Role::Shop'));
 
-my $p = $c->gen_player('jason');
+my $p = $b->new_player('jason');
 
 #$p->add_money(
-$p->types_in('buy gizmo');
+$b->inject_input($p, 'buy gizmo');
 
 done_testing();
