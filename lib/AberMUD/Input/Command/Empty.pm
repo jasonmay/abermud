@@ -42,7 +42,7 @@ command empty => sub {
                 $o->formatted_name, $container->formatted_name, $where,
             );
 
-            $o->take_from($container);
+            $container->take_from($o);
 
             if ($container->getable and $container->held_by) {
                 $o->held_by($container->held_by);
