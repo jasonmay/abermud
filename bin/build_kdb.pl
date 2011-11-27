@@ -701,7 +701,7 @@ sub link_object_locations {
             $obj->location->objects_in_room->insert($obj);
         }
         elsif ($loctype eq 'IN_CONTAINER') {
-            $obj->contained_by($expanded->{obj}{lc $odest});
+            $expanded->{obj}{lc $odest}->put_in($obj);
         }
         elsif (
             $loctype eq 'CARRIED_BY'

@@ -2,21 +2,30 @@
 package AberMUD::Object::Role::Container;
 use Moose::Role;
 use namespace::autoclean;
-use KiokuDB::Set qw(weak_set);
+use KiokuDB::Util 'set';
 
 sub container { 1 }
 
-sub containing {
-    my $self   = shift;
+has contents => (
+    is      => 'ro',
+    handles => {containing => 'members'},
+    default => sub { set() },
+);
 
-    return () unless $self->container;
+sub put_in {
+    my $self = shift;
+    my ($object) = @_;
 
-    return
-        grep {
-        $_->containable
-            && $_->contained_by
-            && $_->contained_by == $self
-        } $self->universe->get_objects;
+    $self->contents->insert($object);
+    $object->contained_by($self);
+}
+
+sub take_from {
+    my $self = shift;
+    my ($object) = @_;
+
+    $self->contents->remove($object);
+    $object->_clear_contained_by;
 }
 
 sub display_contents {

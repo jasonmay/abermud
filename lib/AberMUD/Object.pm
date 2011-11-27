@@ -50,8 +50,10 @@ has moniker => (
 );
 
 has contained_by => (
-    is  => 'rw',
-    isa => 'Maybe[AberMUD::Object]',
+    is       => 'rw',
+    isa      => 'Maybe[AberMUD::Object]',
+    clearer  => '_clear_contained_by',
+    weak_ref => 1,
 );
 
 # methods wrapped by roles
