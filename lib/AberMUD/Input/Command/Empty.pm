@@ -3,15 +3,14 @@ package AberMUD::Input::Command::Empty;
 use AberMUD::OO::Commands;
 
 command empty => sub {
-    my $you  = shift;
-    my $args = shift;
+    my ($universe, $you, $args) = @_;
     my @args = split ' ', $args;
 
     if (!@args) {
         return "Empty what?";
     }
     elsif (@args == 1) {
-        my $container = $you->universe->identify_object(
+        my $container = $universe->identify_object(
             $you->location,
             $args[0],
         ) or return "I don't see anything like that.";
