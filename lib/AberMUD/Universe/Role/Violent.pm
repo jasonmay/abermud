@@ -58,9 +58,9 @@ sub fight_iteration {
             }
             $player->fighting->fighting($player)
                 if $player->fighting->fighting != $player;
-            $player->attack;
+            $player->attack(universe => $self);
             if ($player->fighting) { #could have killed
-                $player->fighting->attack;
+                $player->fighting->attack(universe => $self);
             }
         }
     }

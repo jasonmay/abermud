@@ -134,6 +134,7 @@ sub total_damage {
 
 sub take_damage {
     my $self           = shift;
+    my $universe       = shift;
     my $damage         = shift;
     my $predeath_block = shift;
 
@@ -147,13 +148,13 @@ sub take_damage {
 
     if ($self->fighting and $self->fighting->isa('AberMUD::Player')) {
         my $xp = $prev_strength - $new_strength;
-        $self->fighting->change_score($xp);
+        $universe->change_score($self->fighting, $xp);
     }
 
     $predeath_block->($self, $damage) if $predeath_block;
 
     if ($self->current_strength <= 0) {
-        $self->death;
+        $self->death(universe => $universe);
     }
 }
 
@@ -236,6 +237,9 @@ sub start_fighting {
 
 sub attack {
     my $self = shift;
+    my %args = @_;
+
+    my $universe = $args{universe};
 
     my $victim = $self->fighting
         or return;
@@ -280,7 +284,7 @@ sub attack {
         if $self->isa('AberMUD::Player');
 
     $victim->take_damage(
-        $damage, sub {
+        $universe, $damage, sub {
             my $self = shift;
 
             # send the (potentially) final message right

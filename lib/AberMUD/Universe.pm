@@ -430,6 +430,39 @@ sub set_state {
     }
 }
 
+sub change_score {
+    my $self = shift;
+    my ($player, $delta) = @_;
+
+    my $prev_level = $player->level;
+
+    $player->score($player->score + $delta);
+
+    if ($player->level > $prev_level) {
+
+        if ($player->level > $player->max_level) {
+            for ($prev_level + 1 .. $player->level) {
+                $self->broadcast(
+                    sprintf(
+                        "Congratulations to %s for making it to level &+C$_&*.\n",
+                        $player->name
+                    ),
+                    except => $player,
+                );
+
+                $player->append_output_buffer("Congratulations! You made it to level &+C$_&*.\n"),
+            }
+            $player->max_level($player->level);
+        }
+    }
+    elsif ($player->level < $prev_level) {
+        $player->sendf(
+            "You are back to level &+C%s&*.\n",
+            $player->level,
+        );
+    }
+}
+
 __PACKAGE__->meta->make_immutable;
 
 1;
