@@ -184,7 +184,10 @@ sub _handle_object {
 
     my $obj = $obj_class->new(%params);
 
-    $_->contained_by($_->contained_by || $obj) for @contained;
+    if (@contained) {
+        $obj->contents->insert(@contained);
+        $_->contained_by($_->contained_by || $obj) for @contained;
+    }
 
     return(@contained, $obj);
 }
