@@ -221,6 +221,8 @@ sub drop {
 
     $self->_carrying->remove($object);
     $object->_stop_being_held;
+
+    $self->location->objects_in_room->insert($object);
 }
 
 sub formatted_name {
