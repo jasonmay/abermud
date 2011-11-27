@@ -395,10 +395,10 @@ sub _set_opened {
 
     if ($object->gateway) {
         if ($open) {
-            $self->revealing_gateway_cache->insert($self)
+            $self->revealing_gateway_cache->insert($object)
         }
         else {
-            $self->revealing_gateway_cache->remove($self)
+            $self->revealing_gateway_cache->remove($object)
         }
     }
 }
@@ -410,10 +410,10 @@ sub set_state {
     my $last_call = shift || 0; # base case to prevent loops
 
     if ($state == 0) {
-        $self->revealing_gateway_cache->delete($self);
+        $self->revealing_gateway_cache->delete($object);
     }
     else {
-        $self->revealing_gateway_cache->insert($self);
+        $self->revealing_gateway_cache->insert($object);
     }
 
     $object->state($state);
