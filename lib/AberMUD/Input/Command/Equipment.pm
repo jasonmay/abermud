@@ -5,15 +5,13 @@ use List::Util qw(first);
 use AberMUD::Object::Util qw(bodyparts);
 
 command equipment => sub {
-    my $you  = shift;
-    my $args = shift;
-
+    my ($universe, $you, $args) = @_;
 
     my $weapon = first {
         $_->wieldable and $_->getable
             and $_->wielded
             and $_->held_by == $you
-    } $you->universe->get_objects;
+    } $universe->get_objects;
 
     my $output = sprintf('%-20s', '&+CWielding:&*');
 

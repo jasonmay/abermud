@@ -13,7 +13,7 @@ use List::Util qw(first);
 use Try::Tiny;
 use AberMUD::Util;
 use Data::UUID::LibUUID;
-use AberMUD::Location::Util qw(show_exits);
+use AberMUD::Location::Util qw(show_exits directions);
 
 has players => (
     is      => 'ro',
@@ -310,7 +310,7 @@ sub clone_object {
 
     if ($object->getable) {
         $new_object->_stop_being_held;
-        $new_object->_stop_being_contained;
+        $new_object->_clear_contained_by;
         $new_object->dropped(1);
     }
 

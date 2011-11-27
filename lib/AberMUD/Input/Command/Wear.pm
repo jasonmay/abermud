@@ -7,7 +7,7 @@ command wear => sub {
     my @args = split ' ', $args
         or return "What do you want to wear?";
 
-    my $object = $you->universe->identify_object($you->location, $args[0])
+    my $object = $universe->identify_object($you->location, $args[0])
         or return "Nothing like that was found.";
 
     $object->getable and $object->wearable or return "You can't wear that!";
