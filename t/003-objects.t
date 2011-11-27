@@ -297,6 +297,7 @@ like($b->inject_input($conn_two, 'wear helmet'),         qr{you put on the helme
 
 
 $objects{$_}->held_by($one) for qw/shoes@room1 boots@room1/;
+$one->_carrying->insert(@objects{qw/shoes@room1 boots@room1/});
 like($b->inject_input($conn_one, 'wear shoes'),          qr{you put on the shoes}i);
 like($b->inject_input($conn_one, 'wear boots'),          qr{remove your shoes first}i);
 

@@ -173,15 +173,12 @@ sub show_inventory {
 
 sub coverage {
     my $self = shift;
-    return undef unless $self->can('universe');
-
-    my $u = $self->universe;
 
     my @worn = grep {
         $_->wearable   && $_->getable
         && $_->held_by && $_->held_by == $self
         && $_->worn
-    } $u->get_objects;
+    } $self->carrying;
 
     my %covering = ();
     foreach my $worn (@worn) {
