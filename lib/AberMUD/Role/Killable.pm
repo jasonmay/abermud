@@ -107,6 +107,12 @@ has _carrying => (
     handles => {carrying => 'members'},
 );
 
+has wielding => (
+    is      => 'rw',
+    isa     => 'AberMUD::Object',
+    clearer => '_stop_wielding',
+);
+
 sub max_strength {
     my $self = shift;
     my $level = $self->can('level') ? $self->level : 0;
@@ -186,16 +192,6 @@ sub coverage {
     }
 
     return %covering;
-}
-
-sub wielding {
-    my $self = shift;
-    return first {
-        $_->getable and $_->wieldable
-            and $_->held_by
-            and $_->held_by == $self
-            and $_->wielded
-    } $self->universe->get_objects;
 }
 
 sub carrying_loosely {
