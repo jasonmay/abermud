@@ -49,6 +49,11 @@ has moniker => (
     isa => 'Str',
 );
 
+has contained_by => (
+    is  => 'rw',
+    isa => 'Maybe[AberMUD::Object]',
+);
+
 # methods wrapped by roles
 sub in_direct_possession { 0 }
 sub on_the_ground { 1 }
