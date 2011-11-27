@@ -12,8 +12,7 @@ command wear => sub {
 
     $object->getable and $object->wearable or return "You can't wear that!";
 
-    $object->held_by &&
-        $object->held_by == $you or return "You aren't carrying that.";
+    $you->_carrying->has($object) or return "You aren't carrying that.";
 
     $object->worn and return "You're already wearing that!";
 

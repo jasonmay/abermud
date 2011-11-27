@@ -223,7 +223,9 @@ like($conn_two->get_output,             qr{playerone drops everything he can\.}i
 $b->inject_input($conn_one, 'take sword');      $conn_two->get_output;
 like($b->inject_input($conn_two, 'take rock'),  qr{You take the rock\.});
 
-$_->held_by($two) for grep { $_->can('held_by') and not $_->contained_by } @o;
+my @objects_for_two = grep { $_->can('held_by') and not $_->contained_by } @o;
+$_->held_by($two) for @objects_for_two;
+$two->_carrying->insert(@objects_for_two);
 
 $b->inject_input($conn_two, 'drop sword');
 like($b->inject_input($conn_two, 'look'),       qr{sword laying on the ground});
