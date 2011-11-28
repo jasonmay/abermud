@@ -113,7 +113,8 @@ sub death {
 
     delete $universe->players->{$self->name};
 
-    $self->append_output_buffer(<<DEATH, no_prompt => 1);
+    # no_prompt => 1 omitted
+    $self->append_output_buffer(<<DEATH);
 
 &+r***********************************&N
       I guess you died! LOL!
