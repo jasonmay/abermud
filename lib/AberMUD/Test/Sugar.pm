@@ -234,6 +234,8 @@ sub _handle_mobile {
     $_->worn(1)       for @wearing;
     $_->wielded(1)    for @wielding;
 
+    $mob->wielding($wielding[0]) if @wielding;
+
     return(
         objects => [@carrying, @wielding, @wearing],
         mobiles => [@mobiles],

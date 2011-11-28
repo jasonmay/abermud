@@ -31,13 +31,14 @@ my $c = build_preset_game(
     }
 );
 
+my $b = $c->controller->backend;
 my %mobs = map {; $_->name => $_ }
-            $c->resolve(service => 'universe')->get_mobiles;
+            $c->universe->get_mobiles;
 
-my $dude = $c->gen_player('dude');
+my ($dude, $conn_dude) = $b->new_player('dude');
 $dude->gender('Male');
 
-my $chick = $c->gen_player('chick');
+my ($chick, $conn_chick) = $b->new_player('chick');
 $chick->gender('Female');
 
 can_ok('AberMUD::Messages', 'format_fight_message');
