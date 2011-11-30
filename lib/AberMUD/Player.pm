@@ -33,15 +33,6 @@ has '+location' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
-has markings => (
-    is      => 'ro',
-    isa     => 'HashRef',
-    traits  => ['Hash'],
-    handles => {
-        mark => 'set',
-    },
-);
-
 has prompt => (
     is      => 'rw',
     isa     => 'Str',

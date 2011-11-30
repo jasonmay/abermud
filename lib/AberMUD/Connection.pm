@@ -21,10 +21,6 @@ has input_states => (
 
 sub _build_input_states { [] }
 
-has markings => (
-    is => 'ro'
-);
-
 has associated_player => (
     is        => 'rw',
     isa       => 'Maybe[AberMUD::Player]',
