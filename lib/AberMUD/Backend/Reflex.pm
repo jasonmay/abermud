@@ -56,16 +56,31 @@ after build_response => sub {
     }
 };
 
+sub _post_response_hook {
+    return sub {
+        my ($conn) = @_;
+        my $player = $conn->associated_player;
+
+        return unless defined $player;
+
+        my $markings = $player->markings;
+        if (delete $markings->{disconnect}) {
+            $conn->stopped();
+        }
+    };
+}
+
 sub on_accept {
     my ($self, $args) = @_;
 
     weaken(my $wself = $self);
     my @states = $self->storage->lookup_default_input_states();
     my $stream = AberMUD::Backend::Reflex::Stream->new(
-        handle       => $args->{socket},
-        data_cb      => sub { $wself->build_response(@_) },
-        input_states => [ @{$self->input_states}{@states} ],
-        storage      => $self->storage,
+        handle             => $args->{socket},
+        data_cb            => sub { $wself->build_response(@_) },
+        post_response_hook => $self->_post_response_hook,
+        input_states       => [ @{$self->input_states}{@states} ],
+        storage            => $self->storage,
     );
 
     $stream->put($stream->input_state->entry_message);

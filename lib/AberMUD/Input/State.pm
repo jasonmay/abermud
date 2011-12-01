@@ -21,7 +21,8 @@ around run => sub {
 
     my $in_game = 0;
     $in_game = 1 if $player
-        and ref($conn->input_state) eq 'AberMUD::Input::State::Game';
+        and ref($conn->input_state) eq 'AberMUD::Input::State::Game'
+        and !$player->markings->{disconnect};
 
     my $output;
     if ($in_game) {

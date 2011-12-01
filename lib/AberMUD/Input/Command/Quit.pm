@@ -3,11 +3,9 @@ package AberMUD::Input::Command::Quit;
 use AberMUD::OO::Commands;
 
 command quit => sub {
-    my $you       = shift;
-    my $args      = shift;
-    my $txn_id    = shift;
+    my ($universe, $you, $args) = @_;
 
-    $you->disconnect(undef, $txn_id);
+    $you->mark(disconnect => 1);
     return "BYE!";
 };
 
