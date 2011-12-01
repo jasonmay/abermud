@@ -67,7 +67,7 @@ command 'random' , priority => -10, sub {
     return "I give up.\n" unless $location;
 
     $you->change_location($location);
-    $output .= $you->look();
+    $output .= $universe->look($you->location);
     return $output;
 };
 
