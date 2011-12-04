@@ -6,21 +6,16 @@ command inventory => sub {
     my ($universe, $you) = @_;
     my $output = q{};
 
-    my @objects_you_carry = grep {
-        $_->can('held_by') and $_->held_by
-            and $_->held_by == $you
-    } $universe->get_objects;
-
-    if (@objects_you_carry) {
+    if ($you->carrying) {
         $output = "Your backpack contains:\n";
         $output .= join(
             ' ',
             map { $_->name_in_inv }
             grep { !($_->wearable and $_->worn) and !($_->wieldable and $_->wielded) }
-            @objects_you_carry
+            $you->carrying
         );
 
-        my @containers = grep { $_->container } @objects_you_carry;
+        my @containers = grep { $_->container } $you->carrying;
 
         $output .= "\n" . $_->display_contents()
             for @containers;
