@@ -322,6 +322,7 @@ isnt($one->location, $l, "ladder's state change allowed the player to go to reve
 
 # test cloning
 
+$b->inject_input($conn_two, 'drop rock');
 my $cloned = $u->clone_object(
     $objects{'rock@room1'},
     location    => $locations->{misc},

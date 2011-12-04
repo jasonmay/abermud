@@ -309,17 +309,17 @@ sub clone_object {
         %extra_params,
     );
 
-    $new_object->location->objects_in_room->insert($new_object);
+    $new_object->location->objects_in_room->insert($new_object)
+        if $new_object->location;
 
-    if ($object->getable) {
-        $new_object->_stop_being_held;
-        $new_object->_clear_contained_by;
-        $new_object->dropped(1);
+    if ($new_object->getable and $new_object->held_by) {
+        $new_object->held_by->_carrying->insert($new_object);
+    }
+    if ($new_object->contained_by) {
+        $new_object->contained_by->contents->insert($new_object);
     }
 
     $self->objects->insert($new_object);
-
-    # TODO insert into caches if applicable?
 
     return $new_object;
 }
