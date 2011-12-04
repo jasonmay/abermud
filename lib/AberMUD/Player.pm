@@ -66,6 +66,12 @@ has output_buffer => (
     },
 );
 
+has money => (
+    is      => 'rw',
+    isa     => 'Int',
+    default => 0,
+);
+
 # game stuff
 sub setup {
     my $self = shift;

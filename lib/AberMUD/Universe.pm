@@ -100,6 +100,9 @@ sub _build_corpse_location {
     );
 }
 
+sub money_unit        { 'coin'  }
+sub money_unit_plural { 'coins' }
+
 sub killables {
     my $self = shift;
     return ($self->game_list, $self->get_mobiles);

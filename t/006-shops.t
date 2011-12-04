@@ -13,15 +13,19 @@ my ($c, $locations) = build_preset_game(
             room1 => {
                 traits => ['Shop'],
                 extra_params => {
-                    stock_objects => {
-                        gizmo => AberMUD::Object->new(
-                            buy_value => 42,
-                            traits => ['Getable'],
-                        ),
-                        doodad => AberMUD::Object->new(
-                            buy_value => 100,
-                            traits => ['Getable'],
-                        ),
+                    _stock_objects => {
+                        gizmo => {
+                            object => AberMUD::Object->new(
+                                buy_value => 42,
+                                traits => ['Getable'],
+                            ),
+                        },
+                        doodad => {
+                            object => AberMUD::Object->new(
+                                buy_value => 100,
+                                traits => ['Getable'],
+                            ),
+                        },
                     },
                 },
             },
@@ -33,9 +37,12 @@ my $b = $c->controller->backend;
 
 ok($locations->{room1}->does('AberMUD::Location::Role::Shop'));
 
-my $p = $b->new_player('jason');
+my $conn = $b->new_player('jason');
 
-#$p->add_money(
-$b->inject_input($p, 'buy gizmo');
+$conn->associated_player->money(90);
+like($b->inject_input($conn, 'buy gizmo'),  qr/You buy the gizmo for 42 coins./);
+like($b->inject_input($conn, 'buy doodad'), qr/You can't afford that./);
+
+like($b->inject_input($conn, 'inventory'),  qr/gizmo/);
 
 done_testing();

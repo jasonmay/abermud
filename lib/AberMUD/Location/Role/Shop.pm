@@ -13,9 +13,11 @@ use Moose::Role;
 #}
 
 # NOTE keep this abstracted
-has stock_objects => (
+has _stock_objects => (
     is       => 'rw',
-    isa      => 'HashRef[AberMUD::Object]',
+    isa      => 'HashRef',
+    traits   => ['Hash'],
+    handles  => {stock_objects => 'keys' },
     required => 1,
 );
 
@@ -23,14 +25,14 @@ sub stock_object {
     my $self = shift;
     my $object_name = shift;
 
-    return $self->stock_objects->{$object_name};
+    return $self->_stock_objects->{$object_name}->{object};
 }
 
 sub in_stock {
     my $self         = shift;
     my $stock_object = shift;
 
-    return ($self->stock_objects->{$stock_object}->{stock} > 0);
+    return ($self->_stock_objects->{$stock_object}->{stock} > 0);
 }
 
 sub make_transaction {
@@ -39,13 +41,18 @@ sub make_transaction {
 
     my $buyer        = delete $args{buyer};
     my $stock_object = delete $args{stock_object};
+    my $universe     = delete $args{universe};
 
-    warn "Unknown arguments in make_transaction: "
-        . join(', ', sort keys %args);
+    if (scalar keys %args) {
+        warn "Unknown arguments in make_transaction: "
+            . join(', ', sort keys %args)
+    }
 
-    $self->universe->clone_object(
-        $self->stock_object($stock_object),
-        carried_by => $buyer,
+    $buyer->money($buyer->money - $stock_object->buy_value);
+    my $new_object = $universe->clone_object(
+        $stock_object,
+        held_by  => $buyer,
+        location => $buyer->location,
     );
 }
 
