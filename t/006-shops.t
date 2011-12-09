@@ -6,6 +6,16 @@ use AberMUD::Test::Sugar qw(build_preset_game);
 use AberMUD::Util;
 use AberMUD::Object;
 
+my ($gizmo, $doodad) = (
+    AberMUD::Object->with_traits('Getable')->new(
+        name      => 'gizmo',
+        buy_value => 42,
+    ),
+    AberMUD::Object->with_traits('Getable')->new(
+        name      => 'doodad',
+        buy_value => 100,
+    ),
+);
 my ($c, $locations) = build_preset_game(
     'two_wide',
     {
@@ -15,16 +25,10 @@ my ($c, $locations) = build_preset_game(
                 extra_params => {
                     _stock_objects => {
                         gizmo => {
-                            object => AberMUD::Object->new(
-                                buy_value => 42,
-                                traits => ['Getable'],
-                            ),
+                            object => $gizmo,
                         },
                         doodad => {
-                            object => AberMUD::Object->new(
-                                buy_value => 100,
-                                traits => ['Getable'],
-                            ),
+                            object => $doodad,
                         },
                     },
                 },
