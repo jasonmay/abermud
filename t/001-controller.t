@@ -5,7 +5,6 @@ use Test::More;
 use AberMUD::Storage;
 use KiokuDB;
 use AberMUD::Zone;
-use AberMUD::Container;
 use AberMUD::Universe;
 use AberMUD::Input::State::Login::Name;
 use AberMUD::Input::State::Game;

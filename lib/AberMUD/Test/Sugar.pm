@@ -9,11 +9,11 @@ use Hash::Merge;
 use Clone;
 
 use AberMUD;
+use AberMUD::Mobile;
 use AberMUD::Object;
 use AberMUD::Location;
 use AberMUD::Location::Util qw(directions);
 use AberMUD::Player;
-use AberMUD::Container;
 use AberMUD::Config;
 use AberMUD::Storage;
 use AberMUD::Zone;

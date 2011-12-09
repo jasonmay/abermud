@@ -2,7 +2,6 @@
 use strict;
 use warnings;
 use Test::More;
-use AberMUD::Container;
 use AberMUD::Zone;
 use AberMUD::Input::State::Game;
 use AberMUD::Config;
