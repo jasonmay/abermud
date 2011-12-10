@@ -45,10 +45,11 @@ has password => (
 );
 
 has markings => (
-    is  => 'rw',
-    isa => 'HashRef',
+    is      => 'rw',
+    isa     => 'HashRef',
+    lazy    => 1,
     default => sub { +{} },
-    traits => ['Hash', 'KiokuDB::DoNotSerialize'],
+    traits  => ['Hash', 'KiokuDB::DoNotSerialize'],
     handles => {
         'mark' => 'set',
     }

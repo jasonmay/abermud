@@ -19,6 +19,7 @@ has players => (
     is      => 'ro',
     isa     => 'HashRef[AberMUD::Player]',
     traits  => ['Hash', 'KiokuDB::DoNotSerialize'],
+    lazy    => 1,
     default => sub { {} },
     handles => {
         player_names => 'keys',
