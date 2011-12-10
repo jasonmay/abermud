@@ -609,6 +609,7 @@ sub expand_locations {
                         'Getable',
                         'Lightable',
                     )->new(
+                        name      => 'torch',
                         buy_value => 10,
                     ),
                 },
