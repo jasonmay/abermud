@@ -30,7 +30,7 @@ has display_part_name => (
 
 has owner => (
     is       => 'ro',
-    does     => 'AberMUD::Role::Killable',
+    isa      => 'AberMUD::Killable',
     required => 1,
 );
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
-package AberMUD::Role::Killable;
-use Moose::Role;
+package AberMUD::Killable;
+use Moose;
 use Moose::Util::TypeConstraints;
 
 use KiokuDB::Util 'set';
@@ -8,13 +8,9 @@ use KiokuDB::Util 'set';
 use Array::IntSpan;
 use List::Util qw(first);
 
-use AberMUD::Player;
 use AberMUD::Location::Util qw(directions);
 use AberMUD::Object::Util qw(bodyparts);
 use AberMUD::Messages;
-
-
-requires 'death';
 
 has fighting => (
     is      => 'rw',
@@ -103,6 +99,7 @@ has dead => (
 
 has _carrying => (
     is      => 'ro',
+    lazy    => 1,
     default => sub { set() },
     handles => {carrying => 'members'},
 );
@@ -312,7 +309,7 @@ sub attack {
     }
 }
 
-before death => sub {
+sub death {
     my $self = shift;
 
     if (my $opponent = $self->fighting) {
@@ -322,7 +319,7 @@ before death => sub {
     $self->dead(1);
 };
 
-no Moose::Role;
+no Moose;
 
 1;
 

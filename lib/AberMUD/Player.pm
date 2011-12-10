@@ -3,6 +3,8 @@ package AberMUD::Player;
 use KiokuDB::Class;
 use namespace::autoclean;
 
+extends 'AberMUD::Killable';
+
 use AberMUD::Location;
 use AberMUD::Location::Util qw(directions show_exits);
 
@@ -25,7 +27,6 @@ XXX
 
 with qw(
     AberMUD::Player::Role::InGame
-    AberMUD::Role::Killable
     AberMUD::Role::Humanoid
 );
 
@@ -73,6 +74,10 @@ has money => (
     default => 0,
 );
 
+has '+_carrying' => (
+    traits => ['KiokuDB::DoNotSerialize'],
+);
+
 # game stuff
 sub setup {
     my $self = shift;
@@ -102,7 +107,7 @@ sub final_prompt {
     return $prompt;
 }
 
-sub death {
+after death => sub {
     my $self = shift;
     my %args = @_;
     my $universe = $args{universe};

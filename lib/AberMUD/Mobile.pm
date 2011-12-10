@@ -3,11 +3,12 @@ package AberMUD::Mobile;
 use Moose;
 use namespace::autoclean;
 
+extends 'AberMUD::Killable';
+
 use AberMUD::Location::Util qw(directions);
 
 with qw(
     AberMUD::Role::InGame
-    AberMUD::Role::Killable
     AberMUD::Role::Humanoid
     AberMUD::Mobile::Role::Hostile
 );
@@ -79,8 +80,9 @@ sub formatted_name {
     return $result;
 }
 
-sub death {
+after death => sub {
     my $self = shift;
+
     $self->location($self->universe->corpse_location);
 };
 
