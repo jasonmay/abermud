@@ -594,12 +594,30 @@ sub expand_locations {
 
         my $key = sprintf q[%s@%s], $loc_data->{id}, $zone_name;
 
-        my $l = AberMUD::Location->new(
+        my $loc_class;
+        my %params = (
             title       => $loc_data->{title},
             description => $loc_data->{description},
             flags       => format_flags($loc_data->{flags}),
             moniker     => $key,
         );
+        if (lc($key) eq 'store@blizzard') {
+            $loc_class = AberMUD::Location->with_traits('Shop');
+            $params{_stock_objects} = {
+                torch => {
+                    object => AberMUD::Object->with_traits(
+                        'Getable',
+                        'Lightable',
+                    )->new(
+                        buy_value => 10,
+                    ),
+                },
+            };
+        }
+        else {
+            $loc_class = 'AberMUD::Location';
+        }
+        my $l = $loc_class->new(%params);
 
 
         $expanded->{loc}{lc $key} = $l;
