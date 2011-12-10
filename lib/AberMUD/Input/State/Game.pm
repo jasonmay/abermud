@@ -79,7 +79,7 @@ sub run {
     return "" unless $input =~ /\S/;
     my $dispatch = $self->dispatch($input);
 
-    return "I don't know any commands by that name."
+    return "I don't know any commands by that name.\n"
         unless $dispatch->has_matches;
 
      my $match = (sort { $a->rule->priority <=> $b->rule->priority } $dispatch->matches)[0];
@@ -89,7 +89,7 @@ sub run {
          $conn->associated_player,
          $match->leftover,
          $txn_id,
-    );
+    ) . "\n";
 }
 
 __PACKAGE__->meta->make_immutable;
