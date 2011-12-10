@@ -126,6 +126,13 @@ sub new_connection {
     );
 }
 
+before run => sub {
+    my $self = shift;
+
+    warn "Loaded " . scalar(my @o = $self->universe->objects->members) . " objects...\n";
+    warn "Loaded " . scalar(my @m = $self->universe->mobiles->members) . " mobiles...\n";
+};
+
 __PACKAGE__->meta->make_immutable;
 
 1;
