@@ -613,6 +613,15 @@ sub expand_locations {
                         buy_value => 10,
                     ),
                 },
+                bread => {
+                    object => AberMUD::Object->with_traits(
+                        'Getable',
+                        'Food',
+                    )->new(
+                        name      => 'bread',
+                        buy_value => 10,
+                    ),
+                },
             };
         }
         else {

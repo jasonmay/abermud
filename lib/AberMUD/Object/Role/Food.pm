@@ -4,11 +4,12 @@ use Moose::Role;
 use namespace::autoclean;
 
 has eaten => (
-    is  => 'rw',
-    isa => 'Bool',
+    is      => 'rw',
+    isa     => 'Bool',
+    default => 0,
 );
 
-has nutritionn => (
+has nutrition => (
     is  => 'rw',
     isa => 'Int',
     default => 10,

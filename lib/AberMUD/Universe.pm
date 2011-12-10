@@ -101,6 +101,25 @@ sub _build_corpse_location {
     );
 }
 
+has eaten_location => (
+    is        => 'ro',
+    isa       => 'AberMUD::Location',
+    builder   => '_build_eaten_location',
+    lazy      => 1,
+    #weak_ref => 1,
+);
+
+sub _build_eaten_location {
+    my $self = shift;
+
+    return AberMUD::Location->new(
+        universe    => $self,
+        title       => 'Eaten Zone',
+        description => q[This is the zone for eaten food. ] .
+                       q[Mortals do not belong here.],
+    );
+}
+
 sub money_unit        { 'coin'  }
 sub money_unit_plural { 'coins' }
 
