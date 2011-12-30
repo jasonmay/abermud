@@ -71,12 +71,12 @@ sub _post_response_hook {
 }
 
 sub on_accept {
-    my ($self, $args) = @_;
+    my ($self, $event) = @_;
 
     weaken(my $wself = $self);
     my @states = $self->storage->lookup_default_input_states();
     my $stream = AberMUD::Backend::Reflex::Stream->new(
-        handle             => $args->{socket},
+        handle             => $event->handle,
         data_cb            => sub { $wself->build_response(@_) },
         post_response_hook => $self->_post_response_hook,
         input_states       => [ @{$self->input_states}{@states} ],

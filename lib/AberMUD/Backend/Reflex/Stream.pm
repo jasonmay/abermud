@@ -24,12 +24,13 @@ has storage => (
 );
 
 sub on_data {
-    my ($self, $args) = @_;
+    my ($self, $event) = @_;
 
-    my $response = $self->data_cb->($self, $args->{data});
+    my $data = $event->octets;
+    my $response = $self->data_cb->($self, $data);
     $self->put($response);
     if ($self->has_post_response_hook) {
-        $self->post_response_hook->($self, $args->{data}, $response);
+        $self->post_response_hook->($self, $data, $response);
     }
 }
 
