@@ -63,7 +63,7 @@ sub move_mobile {
 
     my $way = $dirs[rand @dirs];
 
-    $self->move($mobile, $way);
+    $self->move($mobile, $way, announce => 1);
 }
 
 1;
