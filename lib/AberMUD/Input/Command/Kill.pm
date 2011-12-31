@@ -10,9 +10,14 @@ command kill => sub {
         return "Kill what?";
     }
     else {
-        #TODO support player logic
-        my $in_game = $universe->identify_mobile($you->location, $args[0])
-            or return "No one of that name is here.";
+        my $in_game = $universe->identify_mobile($you->location, $args[0]);
+
+        if (!$in_game) {
+            $in_game = $universe->players->{$args[0]};
+            return "You can't attack yourself!" if $in_game == $you;
+        }
+
+        return "No one of that name is here." unless $in_game;
 
         $you->start_fighting($in_game);
 
