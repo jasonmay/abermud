@@ -3,9 +3,9 @@ use Moose;
 use AberMUD::OO::Commands;
 
 command save => sub {
-    my $you     = $_[1];
+    my ($universe, $you) = @_;
 
-    $you->save_data();
+    $you->mark(save => 1);
     return "Saved!";
 };
 

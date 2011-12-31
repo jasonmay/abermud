@@ -64,6 +64,8 @@ sub on_timer_tick {
     my $scope = $self->storage->new_scope;
     $self->storage->lookup_universe->advance();
     $self->flush_player_buffers();
+
+    $self->sweep_for_saves();
     $self->sweep_for_disconnects();
 }
 
@@ -92,6 +94,25 @@ sub sweep_for_disconnects {
             $conn->stopped();
         }
     }
+}
+
+sub sweep_for_saves {
+    my $self = shift;
+    for my $conn ($self->connections->get_objects) {
+        my $player = $conn->associated_player;
+        next unless defined $player;
+
+        my $markings = $player->markings;
+        if (delete $markings->{saves}) {
+            $self->storage->save_player($player);
+        }
+    }
+}
+
+sub cleanup_after_response {
+    my $self = shift;
+    $self->sweep_for_saves;
+    $self->sweep_for_disconnects();
 }
 
 sub on_accept {
