@@ -28,6 +28,8 @@ command put => sub {
 
         $object->contained_by and return "That's already inside something.";
 
+        return "That would be quite the topological feat." if $object == $container;
+
         $object->_stop_being_held() if $object->held_by;
 
         $object->contained_by($container);
