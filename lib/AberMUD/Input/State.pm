@@ -15,7 +15,21 @@ around run => sub {
     my ($orig, $self) = (shift, shift);
     my ($backend, $conn) = @_;
 
-    my $response = $self->$orig(@_);
+    my $response = eval {
+        local $SIG{ALRM} = sub { die "TIMED OUT" };
+        alarm 5;
+        my $r = eval { $self->$orig(@_) };
+        if ($@) {
+            $r = $@;
+            alarm 0;
+        }
+        alarm 0;
+        $r;
+    };
+    if ($@) {
+        warn $@;
+        $response = $@;
+    }
 
     my $player = $conn->associated_player;
 
