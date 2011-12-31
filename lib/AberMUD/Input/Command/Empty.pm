@@ -48,7 +48,7 @@ command empty => sub {
                 $o->held_by($container->held_by);
             }
             else {
-                $o->change_location($you->location);
+                $universe->change_location($o, $you->location);
             }
         }
         return $output;

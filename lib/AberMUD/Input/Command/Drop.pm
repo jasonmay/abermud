@@ -11,7 +11,7 @@ command drop => sub {
     }
     elsif ($args[0] eq 'all') {
         for ($you->carrying_loosely) {
-            $_->change_location($you->location);
+            $universe->change_location($_, $you->location);
             $you->drop($_);
             $_->dropped(1) if $_->flags->{getflips};
         }
@@ -36,7 +36,7 @@ command drop => sub {
         if (@matching_objects) {
             $you->drop($matching_objects[0]);
             $matching_objects[0]->dropped(1) if $matching_objects[0]->dropped_description;
-            $matching_objects[0]->change_location($you->location);
+            $universe->change_location($matching_objects[0], $you->location);
             $universe->send_to_location(
                 $you,
                 sprintf(

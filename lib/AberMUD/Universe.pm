@@ -379,7 +379,7 @@ sub move {
         except => $ingame,
     ) if $args{announce};
 
-    $ingame->change_location($destination);
+    $self->change_location($ingame, $destination);
 
     my %opp_dir = (
         east  => 'the west',
@@ -400,6 +400,14 @@ sub move {
     ) if $args{announce};
 
     return $destination;
+}
+
+# In case we need to do any universe-level caching
+sub change_location {
+    my $self = shift;
+    my ($ingame, $location, %args) = @_;
+
+    $ingame->change_location($location);
 }
 
 sub open {

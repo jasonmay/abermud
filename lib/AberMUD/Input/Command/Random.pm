@@ -66,7 +66,7 @@ command 'random' , priority => -10, sub {
 
     return "I give up.\n" unless $location;
 
-    $you->change_location($location);
+    $universe->change_location($you, $location);
     $output .= $universe->look($you->location);
     return $output;
 };
@@ -82,7 +82,7 @@ sub goto_mobile {
 
     my $m = $moving_mobiles[rand @moving_mobiles];
 
-    $you->change_location($m->location);
+    $universe->change_location($you, $m->location);
     return $you->look;
 }
 

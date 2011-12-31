@@ -329,7 +329,7 @@ my $cloned = $u->clone_object(
 );
 
 ok($cloned);
-$one->change_location($locations->{misc});
+$u->change_location($one, $locations->{misc});
 like($b->inject_input($conn_one, 'look'), qr{A rock is laying on the ground here\.}, 'cloned object is seen in the universe');
 like($b->inject_input($conn_one, 't rock'), qr{You take the rock\.}, 'cloned object is seen in the universe');
 
