@@ -284,7 +284,7 @@ sub look {
     $output .= sprintf(
         "&+M%s&* &+B[&+C%s@%s&+B]&*\n",
         $loc->title,
-        '(TODO id)',#lc substr($self->storage->object_to_id($loc), 0, 8),
+        $loc->id,
         $loc->zone->name,
     );
 
