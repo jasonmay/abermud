@@ -15,6 +15,7 @@ sub run {
         my $crypted = crypt($pass, lc $player->name);
         if ($crypted eq $player->password) {
             $player->location($controller->storage->lookup_default_location);
+            $player->mark(setup => 1);
             $conn->shift_state;
             return $conn->input_state->entry_message;
         }

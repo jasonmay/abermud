@@ -26,7 +26,9 @@ around run => sub {
 
     my $output;
     if ($in_game) {
-        $player    = $self->materialize_player($conn, $player, $backend->storage);
+        if (delete $player->markings->{setup}) {
+            $player    = $self->materialize_player($conn, $player, $backend->storage);
+        }
         my $prompt = $player->final_prompt;
         $output    = $response . $prompt;
     }

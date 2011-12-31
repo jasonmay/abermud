@@ -89,7 +89,6 @@ sub setup {
         # restore strength
         $self->current_strength($restore);
         $self->dead(0);
-        $self->save_data();
     }
 }
 

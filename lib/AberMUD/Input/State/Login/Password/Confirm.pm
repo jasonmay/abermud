@@ -31,6 +31,7 @@ sub run {
             prompt   => '&*[ &+C%h/%H&* ] &+Y$&* ',
         );
 
+        $player->mark(setup => 1);
         $backend->storage->save_player($player);
     }
     else {
