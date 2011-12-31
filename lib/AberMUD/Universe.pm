@@ -144,9 +144,7 @@ sub broadcast {
         my $player_output = $output;
 
         $player_output .= sprintf("\n%s", $player->final_prompt) if $args{prompt};
-        $player->append_output_buffer(
-            AberMUD::Util::colorify("\n$player_output")
-        );
+        $player->append_output_buffer("\n$player_output");
     }
 
 }

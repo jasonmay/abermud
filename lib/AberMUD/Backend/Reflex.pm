@@ -4,9 +4,12 @@ extends 'Reflex::Acceptor';
 
 use IO::Socket::INET;
 use Reflex::Collection;
-use AberMUD::Backend::Reflex::Stream;
+use Reflex::Interval;
 
 use Scalar::Util 'weaken';
+
+use AberMUD::Backend::Reflex::Stream;
+use AberMUD::Util;
 
 with 'AberMUD::Backend';
 
@@ -50,7 +53,7 @@ sub flush_player_buffers {
     for my $conn ($self->connections->get_objects) {
         my $player = $conn->associated_player or next;
         if (length $player->output_buffer) {
-            $conn->put($player->output_buffer);
+            $conn->put(AberMUD::Util::colorify $player->output_buffer);
             $player->clear_output_buffer;
         }
     }
