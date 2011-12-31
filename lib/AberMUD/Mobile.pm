@@ -74,8 +74,10 @@ sub formatted_name {
 
 after death => sub {
     my $self = shift;
+    my %args = @_;
+    my $universe = $args{universe} or return;
 
-    $self->location($self->universe->corpse_location);
+    $self->location($universe->corpse_location);
 };
 
 __PACKAGE__->meta->make_immutable;
