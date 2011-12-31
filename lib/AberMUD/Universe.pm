@@ -33,6 +33,14 @@ with qw(
     AberMUD::Universe::Role::Violent
 );
 
+has locations => (
+    is      => 'rw',
+    isa     => 'KiokuDB::Set',
+    lazy    => 1,
+    builder => '_build_locations',
+);
+sub _build_locations { set() }
+
 has objects => (
     is      => 'rw',
     isa     => 'KiokuDB::Set',

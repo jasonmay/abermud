@@ -131,6 +131,7 @@ before run => sub {
 
     warn "Loaded " . scalar(my @o = $self->universe->objects->members) . " objects...\n";
     warn "Loaded " . scalar(my @m = $self->universe->mobiles->members) . " mobiles...\n";
+    warn "Loaded " . scalar(my @l = $self->universe->locations->members) . " locations...\n";
 };
 
 __PACKAGE__->meta->make_immutable;

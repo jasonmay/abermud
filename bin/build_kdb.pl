@@ -785,6 +785,7 @@ sub store_zone_data {
 
     $universe->mobiles->insert(values %{ $expanded->{mob} });
     $universe->objects->insert(values %{ $expanded->{obj} });
+    $universe->locations->insert(values %{ $expanded->{loc} }); # FIXME should be lazy-loadable
 
     $config->universe($universe);
 
