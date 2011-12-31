@@ -77,6 +77,10 @@ has '+_carrying' => (
     traits => ['KiokuDB::DoNotSerialize'],
 );
 
+has '+wielding' => (
+    traits => ['KiokuDB::DoNotSerialize'],
+);
+
 # game stuff
 sub setup {
     my $self = shift;
@@ -110,18 +114,18 @@ after death => sub {
     my %args = @_;
     my $universe = $args{universe};
 
-    # TODO Save, dematerialize
+    $universe->detach_things($self);
 
     delete $universe->players->{$self->name};
 
-    # no_prompt => 1 omitted
     $self->append_output_buffer(<<DEATH);
 
 &+r***********************************&N
-      I guess you died! LOL!
+      You died.
 &+r***********************************&N
 DEATH
 
+    $self->mark(save => 1);
     $self->mark(disconnect => 1);
 };
 

@@ -5,8 +5,9 @@ use AberMUD::OO::Commands;
 command quit => sub {
     my ($universe, $you, $args) = @_;
 
+    $universe->detach_things($you);
     $you->mark(disconnect => 1);
-    return "BYE!";
+    return "So long!";
 };
 
 __PACKAGE__->meta->make_immutable;

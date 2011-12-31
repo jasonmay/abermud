@@ -402,6 +402,20 @@ sub move {
     return $destination;
 }
 
+sub detach_things {
+    my $self = shift;
+    my ($player) = @_;
+
+    my @objects = ($player->carrying);
+    for my $object (@objects) {
+        $object->_stop_being_held;
+        $object->worn(0) if $object->wearable;
+        $object->wielded(0) if $object->wieldable;
+        $self->change_location($object, $player->location);
+    }
+
+}
+
 # In case we need to do any universe-level caching
 sub change_location {
     my $self = shift;
