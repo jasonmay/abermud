@@ -622,6 +622,15 @@ sub expand_locations {
                         buy_value => 10,
                     ),
                 },
+                sack => {
+                    object => AberMUD::Object->with_traits(
+                        'Getable',
+                        'Container',
+                    )->new(
+                        name      => 'sack',
+                        buy_value => 10,
+                    ),
+                },
             };
         }
         else {
