@@ -362,6 +362,11 @@ sub move {
     my $destination = $self->can_move($ingame, $direction)
         or return undef;
 
+    if ($ingame->isa('AberMUD::Mobile')) {
+        return undef
+            if $ingame->can('fighting') and $ingame->fighting;
+    }
+
     $self->send_to_location(
         $ingame,
         sprintf("\n%s goes %s\n", $ingame->name, $direction),

@@ -1,10 +1,10 @@
-#!/usr/bin/env perl
 package AberMUD::Universe::Role::Mobile;
 use Moose::Role;
 use KiokuDB::Set;
 use KiokuDB::Util qw(set);
 use Time::HiRes ();
 use namespace::autoclean;
+use AberMUD::Location::Util 'directions';
 
 has mobiles => (
     is  => 'rw',
@@ -39,7 +39,7 @@ around advance => sub {
         $self->roll_to_move($_)
     } $self->get_traversable_mobiles;
 
-    $_->move for @moving_mobiles;
+    $self->move_mobile($_) for @moving_mobiles;
 
     return $self->$orig(@_);
 };
@@ -51,6 +51,19 @@ sub roll_to_move {
 
     my $go = !!( rand(30) < $mobile->speed );
     return $go;
+}
+
+sub move_mobile {
+    my $self = shift;
+    my ($mobile) = @_;
+
+    my @dirs = grep { $self->can_move($mobile, $_) } directions();
+
+    return $self unless @dirs;
+
+    my $way = $dirs[rand @dirs];
+
+    $self->move($mobile, $way);
 }
 
 1;

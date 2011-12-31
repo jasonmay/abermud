@@ -87,7 +87,7 @@ sub goto_mobile {
 }
 
 command heal => sub {
-    my $you = shift;
+    my ($universe, $you) = @_;
 
     $you->current_strength($you->max_strength);
     return sprintf('Aww yeah. Back to %s!', $you->current_strength);

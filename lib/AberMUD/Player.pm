@@ -6,7 +6,6 @@ use namespace::autoclean;
 extends 'AberMUD::Killable';
 
 use AberMUD::Location;
-use AberMUD::Location::Util qw(directions show_exits);
 
 use List::Util      qw(first);
 use List::MoreUtils qw(first_value);

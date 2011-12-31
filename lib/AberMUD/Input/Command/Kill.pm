@@ -3,8 +3,7 @@ use Moose;
 use AberMUD::OO::Commands;
 
 command kill => sub {
-    my $you  = shift;
-    my $args = shift;
+    my ($universe, $you, $args) = @_;
     my @args = split ' ', $args;
 
     if (!@args) {
@@ -12,7 +11,7 @@ command kill => sub {
     }
     else {
         #TODO support player logic
-        my $in_game = $you->universe->identify_mobile($you->location, $args[0])
+        my $in_game = $universe->identify_mobile($you->location, $args[0])
             or return "No one of that name is here.";
 
         $you->start_fighting($in_game);

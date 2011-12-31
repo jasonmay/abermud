@@ -3,8 +3,6 @@ package AberMUD::Universe::Role::Violent;
 use Moose::Role;
 use namespace::autoclean;
 
-requires qw(players);
-
 around advance => sub {
     my $orig = shift;
     my $self = shift;
@@ -13,12 +11,10 @@ around advance => sub {
         unless $self->does('AberMUD::Universe::Role::Mobile');
 
     for my $mobile ($self->get_mobiles) {
-        next unless $mobile->can('start_fight');
-        next unless $mobile->aggression;
-        next if $mobile->fighting;
+        next unless $mobile->does('AberMUD::Mobile::Role::Hostile');
 
         if ($self->roll_to_start_fight($mobile)) {
-            $mobile->start_fight;
+            $self->start_fight($mobile);
         }
     }
 
@@ -49,7 +45,7 @@ sub fight_iteration {
     #    }
     #}
 
-    foreach my $player ($self->game_list) {
+    foreach my $player ($self->player_list) {
         if ($player->fighting) {
             if ($player->location != $player->fighting->location) {
                 $player->append_output_buffer("I guess you're not fighting anymore..\n");
@@ -64,6 +60,24 @@ sub fight_iteration {
             }
         }
     }
+}
+
+sub start_fight {
+    my $self   = shift;
+    my $mobile = shift;
+
+    return unless $mobile->can('fighting');
+    return unless $mobile->location;
+
+    my @potential_victims = grep {
+        $_ != $mobile and
+        $_->location and
+        $_->location == $mobile->location
+    } $self->player_list;
+
+    return unless @potential_victims;
+    my $killable = $potential_victims[rand @potential_victims];
+    $mobile->start_fighting($killable);
 }
 
 1;

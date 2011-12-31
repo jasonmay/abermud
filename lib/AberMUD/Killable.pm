@@ -291,15 +291,15 @@ sub attack {
         }
     );
 
-
-    $self->say(
-        $final_messages{bystander},
+    $universe->send_to_location(
+        $self, $final_messages{bystander},
         except => [$self, $victim],
     );
 
     # if this attack killed the victim
     if ($victim->dead) {
-        $self->say(
+        $universe->send_to_location(
+            $self,
             sprintf(
                 qq[%s falls to the ground.\n],
                 $victim->formatted_name,

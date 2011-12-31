@@ -52,14 +52,6 @@ sub move {
     return $self if $self->can('fighting') and $self->fighting;
 
     my $loc  = $self->location;
-    my @dirs = grep { $self->${\"can_go_$_"} } directions();
-
-    return $self unless @dirs;
-
-    my $way = $dirs[rand @dirs];
-
-    my $go_way = "go_$way";
-    $self->$go_way;
 
     return $self;
 }

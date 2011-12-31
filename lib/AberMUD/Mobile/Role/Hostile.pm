@@ -10,21 +10,5 @@ has aggression => (
     default => 0,
 );
 
-sub start_fight {
-    my $self = shift;
-    return unless $self->can('fighting');
-    return unless $self->location;
-
-    my @potential_victims = grep {
-        $_ != $self and
-        $_->location and
-        $_->location == $self->location
-    } $self->universe->game_list;
-
-    return unless @potential_victims;
-    my $killable = $potential_victims[rand @potential_victims];
-    $self->start_fighting($killable);
-}
-
 1;
 
