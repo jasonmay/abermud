@@ -11,15 +11,15 @@ command where => sub {
     $output .= join(
         "\n"
         => map {
-            sprintf("%20s : %s", $_->name, $_->location->id)
-        } grep { $_->location and $_->name eq $args } $you->universe->get_mobiles
+            sprintf("%20s : %s", $_->name, $_->location->title)
+        } grep { $_->location and $_->name eq $args } $universe->get_mobiles
     );
 
     $output .= join(
         "\n"
         => map {
-            sprintf("%20s : %s", $_->name, $_->location->id)
-        } grep { $_->location and $_->name eq $args } $you->universe->get_objects
+            sprintf("%20s : %s", $_->name, $_->location->title)
+        } grep { $_->location and $_->name eq $args } $universe->get_objects
     );
 
     $output .= "\n$blue_line\n";
