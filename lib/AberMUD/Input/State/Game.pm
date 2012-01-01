@@ -45,12 +45,6 @@ has command_composite => (
     required => 1,
 );
 
-has special_composite => (
-    is       => 'ro',
-    isa      => 'AberMUD::Special',
-    required => 1,
-);
-
 sub BUILD {
     my $self = shift;
 
@@ -63,7 +57,7 @@ sub BUILD {
             AberMUD::Input::Dispatcher::Rule->new(
                 command_name => $command_method->name,
                 block        => sub {
-                    shift; $command_method->body->($self->special_composite, @_);
+                    shift; $command_method->body->(@_);
                 },
 
                 priority => $command_method->priority,

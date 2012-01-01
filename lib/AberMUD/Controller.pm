@@ -89,7 +89,6 @@ sub _build_input_states {
         my $input_state_object = $input_state_class->new(
             universe          => $self->universe,
             command_composite => $self->command_composite,
-            special_composite => $self->special_composite,
         );
 
         $input_states{ $input_state_class } = $input_state_object;
@@ -97,11 +96,6 @@ sub _build_input_states {
 
     return \%input_states;
 }
-
-has special_composite => (
-    is  => 'ro',
-    isa => 'AberMUD::Special',
-);
 
 has command_composite => (
     is       => 'ro',

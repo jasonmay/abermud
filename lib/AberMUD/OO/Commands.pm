@@ -20,7 +20,7 @@ sub command {
         superclasses => [ $caller->meta->method_metaclass ],
         roles        => [
             'AberMUD::Role::Command',
-            'AberMUD::OO::Command::Method::Meta::Role::Specials',
+            #'AberMUD::OO::Command::Method::Meta::Role::Specials',
         ],
     );
 

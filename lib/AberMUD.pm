@@ -27,7 +27,6 @@ has controller => (
         'storage',
         'backend_class',
         'backend_params',
-        'special_composite',
         'command_composite',
     ],
 );
@@ -49,12 +48,6 @@ has storage => (
 has command_composite => (
     is        => 'ro',
     isa       => 'AberMUD::Input::Command::Composite',
-    lifecycle => 'Singleton',
-);
-
-has special_composite => (
-    is        => 'ro',
-    isa       => 'AberMUD::Special',
     lifecycle => 'Singleton',
 );
 
