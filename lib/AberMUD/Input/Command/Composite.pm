@@ -31,6 +31,17 @@ sub get_command_methods {
     return @methods;
 }
 
+sub trigger_command {
+    my ($self, $command, $e) = @_;
+    my $meth = $self->meta->find_method_by_name($command);
+    return unless $meth->meta->can('does_role');
+    return unless $meth->meta->does_role('AberMUD::Role::Command');
+
+    my $response = $meth->body->($self, $e);
+
+    return $response;
+}
+
 sub get_command_names {
     my $class = shift;
     map { $_->name } $class->get_command_methods;

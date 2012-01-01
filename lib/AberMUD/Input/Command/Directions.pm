@@ -2,6 +2,8 @@ package AberMUD::Input::Command::Directions;
 use AberMUD::OO::Commands;
 use AberMUD::Location::Util qw(directions);
 
+use AberMUD::Event::Command;
+
 foreach my $direction (directions()) {
     command $direction, priority => -10, sub {
         my ($self, $e) = @_;
@@ -12,7 +14,12 @@ foreach my $direction (directions()) {
 
         my $destination = $e->universe->move($e->player, $direction, announce => 1);
 
-        return $destination ? $e->universe->look($e->player->location, except => $e->player) : "You can't go that way.";
+        my $look_event = AberMUD::Event::Command->new(
+            universe  => $e->universe,
+            player    => $e->player,
+            arguments => '',
+        );
+        return $destination ? $self->trigger_command('look', $look_event) : "You can't go that way.";
     };
 };
 
