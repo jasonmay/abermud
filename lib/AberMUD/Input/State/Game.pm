@@ -3,6 +3,7 @@ package AberMUD::Input::State::Game;
 use Moose;
 
 use AberMUD::Input::Dispatcher;
+use AberMUD::Event::Command;
 
 with 'AberMUD::Input::State';
 
@@ -84,12 +85,13 @@ sub run {
 
      my $match = (sort { $a->rule->priority <=> $b->rule->priority } $dispatch->matches)[0];
 
-     return $match->run(
-         $self->universe,
-         $conn->associated_player,
-         $match->leftover,
-         $txn_id,
-    ) . "\n";
+     my $event = AberMUD::Event::Command->new(
+         universe  => $self->universe,
+         player    => $conn->associated_player,
+         arguments => $match->leftover,
+     );
+
+     return $match->run( $self->command_composite, $event) . "\n";
 }
 
 __PACKAGE__->meta->make_immutable;

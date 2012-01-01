@@ -3,12 +3,13 @@ package AberMUD::Input::Command::Say;
 use AberMUD::OO::Commands;
 
 command 'say', alias => q['], sub {
-    my ($universe, $you, $args) = @_;
+    my ($self, $e) = @_;
+    my $args = $e->arguments;
     my $output = q{};
 
-    $you->say(
-        $you->name . " says &+Y'$args'&*\n",
-        except => $you,
+    $e->player->say(
+        $e->player->name . " says &+Y'$args'&*\n",
+        except => $e->player,
     );
 
     return "You say, &+Y'$args'";

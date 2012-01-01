@@ -3,20 +3,20 @@ package AberMUD::Input::Command::Look;
 use AberMUD::OO::Commands;
 
 command 'look', priority => -10, sub {
-    my ($universe, $you, $args) = @_;
+    my ($self, $e) = @_;
 
-    if (!$args) {
-        return "You are somehow nowhere." unless defined $you->location;
-        return $universe->look($you->location, except => $you);
+    if (!$e->arguments) {
+        return "You are somehow nowhere." unless defined $e->player->location;
+        return $e->universe->look($e->player->location, except => $e->player);
     }
 
-    my @args = split ' ', $args;
+    my @args = split ' ', $e->arguments;
 
     if (lc($args[0]) eq 'in') {
         return "Look in what?" unless $args[1];
 
-        my $object = $universe->identify_object(
-            $you->location, $args[1]
+        my $object = $e->universe->identify_object(
+            $e->player->location, $args[1]
         ) or return "I don't see anything like that.";
 
         $object->container or return "You can't look in that!";

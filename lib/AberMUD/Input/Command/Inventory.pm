@@ -3,19 +3,19 @@ package AberMUD::Input::Command::Inventory;
 use AberMUD::OO::Commands;
 
 command inventory => sub {
-    my ($universe, $you) = @_;
+    my ($self, $e) = @_;
     my $output = q{};
 
-    if ($you->carrying) {
+    if ($e->player->carrying) {
         $output = "Your backpack contains:\n";
         $output .= join(
             ' ',
             map { $_->name_in_inv }
             grep { !($_->wearable and $_->worn) and !($_->wieldable and $_->wielded) }
-            $you->carrying
+            $e->player->carrying
         );
 
-        my @containers = grep { $_->container } $you->carrying;
+        my @containers = grep { $_->container } $e->player->carrying;
 
         $output .= "\n" . $_->display_contents()
             for @containers;
@@ -24,10 +24,10 @@ command inventory => sub {
         $output = "Your backpack contains nothing.";
     }
 
-    $universe->send_to_location(
-        $you,
-        $you->name . " rummages through his backpack.\n",
-        except => $you,
+    $e->universe->send_to_location(
+        $e->player,
+        $e->player->name . " rummages through his backpack.\n",
+        except => $e->player,
     );
 
     return $output;

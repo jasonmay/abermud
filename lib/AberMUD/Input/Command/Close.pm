@@ -4,25 +4,25 @@ use AberMUD::OO::Commands;
 use AberMUD::Location::Util qw(directions);
 
 command close => sub {
-    my ($universe, $you, $args) = @_;
-    my @args = split ' ', $args
+    my ($self, $e) = @_;
+    my @args = split ' ', $e->arguments
         or return "What do you want to close?";
 
-    my $object = $universe->identify_object($you->location, $args[0])
+    my $object = $e->universe->identify_object($e->player->location, $args[0])
         or return "Nothing like that was found.";
 
     $object->closeable or return "You can't close that.";
 
     $object->closed and return "That's already closed.";
 
-    $universe->close($object);
+    $e->universe->close($object);
 
     if ($object->gateway) {
         foreach my $direction (directions()) {
             my $link_method = $direction . '_link';
             next unless $object->$link_method;
             next unless $object->$link_method->closeable;
-            $universe->close($object->$link_method);
+            $e->universe->close($object->$link_method);
         }
     }
 

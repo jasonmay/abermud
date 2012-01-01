@@ -3,20 +3,20 @@ package AberMUD::Input::Command::Wear;
 use AberMUD::OO::Commands;
 
 command wear => sub {
-    my ($universe, $you, $args) = @_;
-    my @args = split ' ', $args
+    my ($self, $e) = @_;
+    my @args = split ' ', $e->arguments
         or return "What do you want to wear?";
 
-    my $object = $universe->identify_object($you->location, $args[0])
+    my $object = $e->universe->identify_object($e->player->location, $args[0])
         or return "Nothing like that was found.";
 
     $object->getable and $object->wearable or return "You can't wear that!";
 
-    $you->_carrying->has($object) or return "You aren't carrying that.";
+    $e->player->_carrying->has($object) or return "You aren't carrying that.";
 
     $object->worn and return "You're already wearing that!";
 
-    my %coverage = $you->coverage;
+    my %coverage = $e->player->coverage;
 
     if ($object->coverage) {
         foreach my $part (keys %{ $object->coverage }) {

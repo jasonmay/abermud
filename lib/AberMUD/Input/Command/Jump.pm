@@ -1,9 +1,8 @@
-#!/usr/bin/env perl
 package AberMUD::Input::Command::Jump;
 use AberMUD::OO::Commands;
 
 command jump => sub {
-    my $you  = shift;
+    my ($self, $e) = @_;
 
     return "Wheee...";
 };

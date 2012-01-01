@@ -3,14 +3,13 @@ use Moose;
 use AberMUD::OO::Commands;
 
 command blow => sub {
-    my $you = shift;
-    my $args = shift;
+    my ($self, $e) = @_;
 
-    if (!$args) {
+    if (!$e->arguments) {
         return "What do you want to blow?";
     }
 
-    my $obj = $you->universe->identify_object($you->location, $args);
+    my $obj = $e->universe->identify_object($e->player->location, $e->arguments);
 
     if (!$obj) {
         return "I could not find anything by that name.";

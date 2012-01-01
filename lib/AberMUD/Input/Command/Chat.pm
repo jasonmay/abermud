@@ -3,10 +3,10 @@ package AberMUD::Input::Command::Chat;
 use AberMUD::OO::Commands;
 
 command 'chat', alias  => '0', sub {
-    my ($universe, $you, $args) = @_;
+    my ($self, $e) = @_;
 
-    my $message = sprintf("&+M[Chat] %s:&* %s", $you->name, $args);
-    $universe->broadcast($message, except => $you);
+    my $message = sprintf("&+M[Chat] %s:&* %s", $e->player->name, $e->arguments);
+    $e->universe->broadcast($message, except => $e->player);
 
     return $message;
 };

@@ -5,11 +5,12 @@ use AberMUD::OO::Commands;
 # this is just for testing so I can play around on my MUD :D
 
 command 'random' , priority => -10, sub {
-    my ($universe, $you, $args) = @_;
+    my ($self, $e) = @_;
+    my $args = $e->arguments;
 
-    return goto_mobile($universe, $you) if $args =~ /mob/i;
+    return goto_mobile($e->universe, $e->player) if $args =~ /mob/i;
 
-    my @o = $universe->get_objects;
+    my @o = $e->universe->get_objects;
 
     my $location;
 
@@ -19,7 +20,7 @@ command 'random' , priority => -10, sub {
         $n++;
         my $o = $o[rand @o];
         $output .= "Trying " . $o->name . "...\n";
-        
+
         if ($args =~ /door/) {
             next unless $o->gateway;
         }
@@ -66,8 +67,8 @@ command 'random' , priority => -10, sub {
 
     return "I give up.\n" unless $location;
 
-    $universe->change_location($you, $location);
-    $output .= $universe->look($you->location);
+    $e->universe->change_location($e->player, $location);
+    $output .= $e->universe->look($e->player->location);
     return $output;
 };
 
@@ -87,10 +88,10 @@ sub goto_mobile {
 }
 
 command heal => sub {
-    my ($universe, $you) = @_;
+    my ($self, $e) = @_;
 
-    $you->current_strength($you->max_strength);
-    return sprintf('Aww yeah. Back to %s!', $you->current_strength);
+    $e->player->current_strength($e->player->max_strength);
+    return sprintf('Aww yeah. Back to %s!', $e->player->current_strength);
 };
 
 __PACKAGE__->meta->make_immutable;

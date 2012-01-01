@@ -3,30 +3,30 @@ use Moose;
 use AberMUD::OO::Commands;
 
 command buy => sub {
-    my ($universe, $you, $args) = @_;
+    my ($self, $e) = @_;
 
-    if (!$args) {
+    if (!$e->arguments) {
         return "Buy what?";
     }
 
-    unless ($you->location->does('AberMUD::Location::Role::Shop')) {
+    unless ($e->player->location->does('AberMUD::Location::Role::Shop')) {
         return "Sorry, you can only buy things at shops.";
     }
 
-    my $stock_objects = $you->location->_stock_objects;
-    foreach my $stock_name ($you->location->stock_objects) {
-        my $stock_object = $you->location->stock_object($stock_name);
-        if ($args eq $stock_name) {
-            if ($you->money >= $stock_object->buy_value) {
-                $you->location->make_transaction(
-                    buyer        => $you,
+    my $stock_objects = $e->player->location->_stock_objects;
+    foreach my $stock_name ($e->player->location->stock_objects) {
+        my $stock_object = $e->player->location->stock_object($stock_name);
+        if ($e->arguments eq $stock_name) {
+            if ($e->player->money >= $stock_object->buy_value) {
+                $e->player->location->make_transaction(
+                    buyer        => $e->player,
                     stock_object => $stock_object,
-                    universe     => $universe,
+                    universe     => $e->universe,
                 );
                 return sprintf
                     "You buy the %s for %d %s.",
                     $stock_name, $stock_object->buy_value,
-                    $universe->money_unit_plural;
+                    $e->universe->money_unit_plural;
             }
             else {
                 return "You can't afford that.";

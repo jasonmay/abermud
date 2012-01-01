@@ -3,15 +3,15 @@ package AberMUD::Input::Command::Empty;
 use AberMUD::OO::Commands;
 
 command empty => sub {
-    my ($universe, $you, $args) = @_;
-    my @args = split ' ', $args;
+    my ($self, $e) = @_;
+    my @args = split ' ', $e->arguments;
 
     if (!@args) {
         return "Empty what?";
     }
     elsif (@args == 1) {
-        my $container = $universe->identify_object(
-            $you->location,
+        my $container = $e->universe->identify_object(
+            $e->player->location,
             $args[0],
         ) or return "I don't see anything like that.";
 
@@ -20,7 +20,7 @@ command empty => sub {
         if (
             $container->getable
                 and $container->held_by
-                and $container->held_by != $you
+                and $container->held_by != $e->player
         ) {
             return "That belongs to " .
                 $container->held_by->formatted_name .
@@ -48,7 +48,7 @@ command empty => sub {
                 $o->held_by($container->held_by);
             }
             else {
-                $universe->change_location($o, $you->location);
+                $e->universe->change_location($o, $e->player->location);
             }
         }
         return $output;

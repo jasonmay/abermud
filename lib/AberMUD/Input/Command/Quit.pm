@@ -3,10 +3,10 @@ package AberMUD::Input::Command::Quit;
 use AberMUD::OO::Commands;
 
 command quit => sub {
-    my ($universe, $you, $args) = @_;
+    my ($self, $e) = @_;
 
-    $universe->detach_things($you);
-    $you->mark(disconnect => 1);
+    $e->universe->detach_things($e->player);
+    $e->player->mark(disconnect => 1);
     return "So long!";
 };
 

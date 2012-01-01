@@ -4,11 +4,11 @@ use AberMUD::OO::Commands;
 use AberMUD::Location::Util qw(directions);
 
 command open => sub {
-    my ($universe, $you, $args) = @_;
-    my @args = split ' ', $args
+    my ($self, $e) = @_;
+    my @args = split ' ', $e->arguments
         or return "What do you want to open?";
 
-    my $object = $universe->identify_object($you->location, $args[0])
+    my $object = $e->universe->identify_object($e->player->location, $args[0])
         or return "Nothing like that was found.";
 
     $object->openable or return "You can't open that.";
@@ -18,13 +18,13 @@ command open => sub {
     my $key;
     if ($object->lockable and $object->locked) {
         # TODO check if user is carrying a key
-        $key = $you->carrying_key
+        $key = $e->player->carrying_key
             or return "You can't open that. It's locked.";
 
         $object->locked(0);
     }
 
-    $universe->open($object);
+    $e->universe->open($object);
 
     return sprintf(
         'You use your %s to unlock and open the %s',

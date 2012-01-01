@@ -4,14 +4,14 @@ use AberMUD::OO::Commands;
 my $blue_line = sprintf( '&+b%s&*', ('='x60) );
 
 command score => sub {
-    my ($universe, $you) = @_;
+    my ($self, $e) = @_;
     my $output = "$blue_line\n";
 
-    $output .= sprintf("Your score: %d\n", $you->score);
+    $output .= sprintf("Your score: %d\n", $e->player->score);
     $output .= sprintf(
         "Qty of %s: %d\n",
-        $universe->money_unit_plural,
-        $you->money,
+        $e->universe->money_unit_plural,
+        $e->player->money,
     );
 
     $output .= "$blue_line\n";

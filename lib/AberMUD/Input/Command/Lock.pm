@@ -3,16 +3,15 @@ use Moose;
 use AberMUD::OO::Commands;
 
 command unlock => sub {
-    my $you = shift;
-    my $args = shift;
+    my ($self, $e) = @_;
 
-    my $obj = $you->universe->identify_object($you->location, $args)
+    my $obj = $e->universe->identify_object($e->player->location, $e->arguments)
         or return "Nothing of that name is here.";
 
     $obj->lockable or return "You can't unlock that!";
     $obj->locked   or return "It's already unlocked.";
 
-    my $key = $you->carrying_key
+    my $key = $e->player->carrying_key
         or return "You need a key to unlock things.";
 
     $obj->unlock();

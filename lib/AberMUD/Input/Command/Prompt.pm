@@ -3,10 +3,9 @@ use Moose;
 use AberMUD::OO::Commands;
 
 command prompt => sub {
-    my $you     = shift;
-    my $args    = shift;
+    my ($self, $e) = @_;
 
-    $you->prompt($args);
+    $e->player->prompt($e->arguments);
     return "Your prompt has been changed.";
 };
 

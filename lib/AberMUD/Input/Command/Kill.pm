@@ -3,23 +3,23 @@ use Moose;
 use AberMUD::OO::Commands;
 
 command kill => sub {
-    my ($universe, $you, $args) = @_;
-    my @args = split ' ', $args;
+    my ($self, $e) = @_;
+    my @args = split ' ', $e->arguments;
 
     if (!@args) {
         return "Kill what?";
     }
     else {
-        my $in_game = $universe->identify_mobile($you->location, $args[0]);
+        my $in_game = $e->universe->identify_mobile($e->player->location, $args[0]);
 
         if (!$in_game) {
-            $in_game = $universe->players->{$args[0]};
-            return "You can't attack yourself!" if $in_game == $you;
+            $in_game = $e->universe->players->{$args[0]};
+            return "You can't attack yourself!" if $in_game == $e->player;
         }
 
         return "No one of that name is here." unless $in_game;
 
-        $you->start_fighting($in_game);
+        $e->player->start_fighting($in_game);
 
         return 'You engage in battle with ' . $in_game->formatted_name . '!';
     }
