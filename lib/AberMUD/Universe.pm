@@ -128,6 +128,18 @@ sub _build_eaten_location {
     );
 }
 
+has special => (
+    is     => 'ro',
+    isa    => 'AberMUD::Special',
+    traits => ['KiokuDB::DoNotSerialize'],
+);
+
+has connpleted_quests => (
+    is     => 'ro',
+    isa    => 'HashRef',
+    traits => ['KiokuDB::DoNotSerialize'],
+);
+
 sub money_unit        { 'coin'  }
 sub money_unit_plural { 'coins' }
 
@@ -421,7 +433,38 @@ sub change_location {
     my $self = shift;
     my ($ingame, $location, %args) = @_;
 
+    my $previous_location = $ingame->location;
+
+    if ($ingame->isa('AberMUD::Player')) {
+        my ($interrupt, @results) = $self->special->call_hooks(
+            type => 'change_location',
+            when => 'before',
+            arguments => [
+                src => $previous_location,
+                dest => $location,
+            ],
+        );
+
+        $ingame->append_output_buffer("$_\n") for @results;
+
+        # short-circult if we are told to interrupt
+        return if $interrupt;
+    }
+
     $ingame->change_location($location);
+
+    if ($ingame->isa('AberMUD::Player')) {
+        (undef, my @results) = $self->special->call_hooks(
+            type      => 'change_location',
+            when      => 'after',
+            arguments => [
+                src => $previous_location,
+                dest => $location,
+            ],
+        );
+
+        $ingame->append_output_buffer("$_\n") for @results;
+    }
 }
 
 sub open {

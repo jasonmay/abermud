@@ -28,15 +28,24 @@ has controller => (
         'backend_class',
         'backend_params',
         'command_composite',
+        'special',
     ],
 );
 
 has universe => (
     is           => 'ro',
     isa          => 'AberMUD::Universe',
-    block        => sub { (shift)->param('storage')->lookup_universe() },
+    block        => sub {
+        my $service = shift;
+        my $u = $service->param('storage')->lookup_universe();
+
+        #$u->special($service->param('special'));
+        $u->meta->get_attribute('special')->set_value($u, $service->param('special'));
+
+        return $u;
+    },
     lifecycle    => 'Singleton',
-    dependencies => ['storage'],
+    dependencies => ['storage', 'special'],
 );
 
 has storage => (
@@ -48,6 +57,12 @@ has storage => (
 has command_composite => (
     is        => 'ro',
     isa       => 'AberMUD::Input::Command::Composite',
+    lifecycle => 'Singleton',
+);
+
+has special => (
+    is        => 'ro',
+    isa       => 'AberMUD::Special',
     lifecycle => 'Singleton',
 );
 

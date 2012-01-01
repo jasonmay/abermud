@@ -45,21 +45,24 @@ has command_composite => (
     required => 1,
 );
 
+has special => (
+    is       => 'ro',
+    isa      => 'AberMUD::Special',
+    required => 1,
+);
+
 sub BUILD {
     my $self = shift;
 
     foreach my $command_method ($self->command_composite->meta->get_all_methods) {
         next unless $command_method->meta->can('does_role');
         next unless $command_method->meta->does_role('AberMUD::Role::Command');
-
-
         $self->dispatcher->add_rule(
             AberMUD::Input::Dispatcher::Rule->new(
                 command_name => $command_method->name,
                 block        => sub {
                     shift; $command_method->body->(@_);
                 },
-
                 priority => $command_method->priority,
                 aliases  => $command_method->aliases,
             )
