@@ -7,145 +7,147 @@ use AberMUD::Util;
 
 my ($c, $locations) = build_preset_game(
     'two_wide',
-    {
-        locations => {
-            room1 => {
-                has_objects => {
-                    rock => {
-                        traits => [qw/Getable/],
-                        description => 'A rock is laying on the ground here.',
-                    },
-                    sign => {
-                        description         => 'There is a sign here.',
-                        examine => "Why do you care what it says? " .
-                                            "You're just a perl script!",
-                    },
-                    helmet => {
-                        traits => [qw/Wearable Getable/],
-                        armor      => 8,
-                        covers     => [qw/head/],
-                        description => 'There is a helmet on the ground.',
-                    },
-                    shoes => {
-                        traits => [qw/Wearable Getable/],
-                        armor      => 8,
-                        covers     => [qw/left_foot right_foot/],
-                        description => 'There are some pants on the ground.',
-                    },
-                    boots => {
-                        traits => [qw/Wearable Getable/],
-                        armor      => 8,
-                        covers     => [qw/left_foot right_foot/],
-                        description => 'There are some boots on the ground.',
-                    },
-                    chest => {
-                        traits      => [qw/Getable Openable Closeable Container/],
-                        description => 'There is a chest here.',
-                        open_description => 'There is an open chest here.',
-                        closed_description => 'There is a closed chest here.',
-                        contains    => {
-                            sack => {
-                                traits      => [qw/Getable Container/],
-                                description => 'There is a sack here.',
-                                contains => {
-                                    potato => {
-                                        traits => [qw/Getable Food/],
-                                        description => 'mmm potato',
+    extra => [
+        {
+            locations => {
+                room1 => {
+                    has_objects => {
+                        rock => {
+                            traits => [qw/Getable/],
+                            description => 'A rock is laying on the ground here.',
+                        },
+                        sign => {
+                            description         => 'There is a sign here.',
+                            examine => "Why do you care what it says? " .
+                                                "You're just a perl script!",
+                        },
+                        helmet => {
+                            traits => [qw/Wearable Getable/],
+                            armor      => 8,
+                            covers     => [qw/head/],
+                            description => 'There is a helmet on the ground.',
+                        },
+                        shoes => {
+                            traits => [qw/Wearable Getable/],
+                            armor      => 8,
+                            covers     => [qw/left_foot right_foot/],
+                            description => 'There are some pants on the ground.',
+                        },
+                        boots => {
+                            traits => [qw/Wearable Getable/],
+                            armor      => 8,
+                            covers     => [qw/left_foot right_foot/],
+                            description => 'There are some boots on the ground.',
+                        },
+                        chest => {
+                            traits      => [qw/Getable Openable Closeable Container/],
+                            description => 'There is a chest here.',
+                            open_description => 'There is an open chest here.',
+                            closed_description => 'There is a closed chest here.',
+                            contains    => {
+                                sack => {
+                                    traits      => [qw/Getable Container/],
+                                    description => 'There is a sack here.',
+                                    contains => {
+                                        potato => {
+                                            traits => [qw/Getable Food/],
+                                            description => 'mmm potato',
+                                        }
                                     }
-                                }
+                                },
                             },
                         },
-                    },
-                    door => {
-                        traits      => [qw/Openable Closeable Gateway/],
-                        description => 'There is a door here.',
+                        door => {
+                            traits      => [qw/Openable Closeable Gateway/],
+                            description => 'There is a door here.',
 
-                        open_description => 'There is an open door here.',
-                        closed_description => 'There is a closed door here.',
-                    },
-                    trapdoor => {
-                        traits      => [qw/Openable Closeable Gateway/],
-                        open_description => 'A trapdoor is open here.',
-                    },
-                    ladder => {
-                        traits      => [qw/Multistate Gateway/],
-                        descriptions => [
-                            undef, # user doesn't see it when it's not open
-                            'A ladder levitates in the sky',
-                        ],
-                    },
-                },
-            },
-            room2 => {
-                has_objects => {
-                    sword => {
-                        traits => [qw/Weapon Getable/],
-                        description => 'Here lies a sword run into the ground.',
-                        dropped_description => 'There is a sword laying on the ground here.',
+                            open_description => 'There is an open door here.',
+                            closed_description => 'There is a closed door here.',
+                        },
+                        trapdoor => {
+                            traits      => [qw/Openable Closeable Gateway/],
+                            open_description => 'A trapdoor is open here.',
+                        },
+                        ladder => {
+                            traits      => [qw/Multistate Gateway/],
+                            descriptions => [
+                                undef, # user doesn't see it when it's not open
+                                'A ladder levitates in the sky',
+                            ],
+                        },
                     },
                 },
-            },
-            blue => {
-                title              => 'Blue Room',
-                description        => "It smells like a sky!\n",
-                has_objects => {
-                    ladder => {
-                        traits      => [qw/Multistate Gateway/],
-                        descriptions => [
-                            undef,
-                            'A levitating ladder below awaits your descent.',
-                        ]
+                room2 => {
+                    has_objects => {
+                        sword => {
+                            traits => [qw/Weapon Getable/],
+                            description => 'Here lies a sword run into the ground.',
+                            dropped_description => 'There is a sword laying on the ground here.',
+                        },
                     },
                 },
-            },
-            red => {
-                title              => 'Red Room',
-                description        => "It smells like strawberries!\n",
-                has_objects => {
-                    door => {
-                        traits      => [qw/Openable Closeable Gateway/],
-                        description => 'There is a door here.',
-                        open_description => 'There is an open door here.',
-                        closed_description => 'There is a closed door here.',
+                blue => {
+                    title              => 'Blue Room',
+                    description        => "It smells like a sky!\n",
+                    has_objects => {
+                        ladder => {
+                            traits      => [qw/Multistate Gateway/],
+                            descriptions => [
+                                undef,
+                                'A levitating ladder below awaits your descent.',
+                            ]
+                        },
                     },
                 },
-            },
-            yellow => {
-                title              => 'Yellow Room',
-                description        => "It smells like bananas!\n",
-                has_objects => {
-                    trapdoor => {
-                        traits      => [qw/Openable Closeable Gateway/],
-                        open_description => 'A trapdoor is open here.',
+                red => {
+                    title              => 'Red Room',
+                    description        => "It smells like strawberries!\n",
+                    has_objects => {
+                        door => {
+                            traits      => [qw/Openable Closeable Gateway/],
+                            description => 'There is a door here.',
+                            open_description => 'There is an open door here.',
+                            closed_description => 'There is a closed door here.',
+                        },
                     },
                 },
+                yellow => {
+                    title              => 'Yellow Room',
+                    description        => "It smells like bananas!\n",
+                    has_objects => {
+                        trapdoor => {
+                            traits      => [qw/Openable Closeable Gateway/],
+                            open_description => 'A trapdoor is open here.',
+                        },
+                    },
+                },
+                misc => {
+                    title              => 'Room of Etcetera',
+                    description        => "The other stuff.",
+                },
             },
-            misc => {
-                title              => 'Room of Etcetera',
-                description        => "The other stuff.",
+            gateways => {
+                'door@room1' => {
+                    north => 'door@red',
+                },
+                'door@red' => {
+                    south => 'door@room1',
+                },
+                'trapdoor@room1' => {
+                    down => 'trapdoor@yellow',
+                },
+                'trapdoor@yellow' => {
+                    up => 'trapdoor@room1',
+                },
+                'ladder@room1' => {
+                    up => 'ladder@blue',
+                },
+                'ladder@blue' => {
+                    down => 'ladder@room1',
+                },
             },
         },
-        gateways => {
-            'door@room1' => {
-                north => 'door@red',
-            },
-            'door@red' => {
-                south => 'door@room1',
-            },
-            'trapdoor@room1' => {
-                down => 'trapdoor@yellow',
-            },
-            'trapdoor@yellow' => {
-                up => 'trapdoor@room1',
-            },
-            'ladder@room1' => {
-                up => 'ladder@blue',
-            },
-            'ladder@blue' => {
-                down => 'ladder@room1',
-            },
-        },
-    }
+    ],
 );
 
 my $u = $c->universe;

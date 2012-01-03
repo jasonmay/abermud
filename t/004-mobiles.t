@@ -6,19 +6,22 @@ use AberMUD::Test::Sugar qw(build_preset_game);
 use AberMUD::Util;
 
 my $c = build_preset_game(
-    'two_wide', {
-        locations => {
-            room1 => {
-                has_mobiles => {
-                    knight => {
-                        description => 'A knight is standing here.',
-                        pname => 'Knight',
-                        examine => 'very metallic',
+    'two_wide',
+    extra => [
+        {
+            locations => {
+                room1 => {
+                    has_mobiles => {
+                        knight => {
+                            description => 'A knight is standing here.',
+                            pname => 'Knight',
+                            examine => 'very metallic',
+                        },
                     },
-                }
-            }
-        }
-    }
+                },
+            },
+        },
+    ],
 );
 
 my $u = $c->universe;

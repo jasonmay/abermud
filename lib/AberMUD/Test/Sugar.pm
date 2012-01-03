@@ -24,19 +24,22 @@ our @EXPORT_OK = qw(build_container build_game build_preset_game);
 
 sub build_container {
     my %args = @_;
-    my $dsn = $args{dsn} || 'hash';
+    # XXX deleting dsn from args is weird
+    my $dsn = delete $args{dsn} || 'hash';
 
     my $c = AberMUD->new(
         backend_class  => 'AberMUD::Backend::Test',
         backend_params => ['input_states', 'storage'],
         storage        => AberMUD::Storage->new(dsn => $dsn),
+        %args,
     );
 
     return $c;
 }
 
 sub build_game {
-    my %data = @_;
+    my %args = @_;
+    my %data = %{ $args{config} || {} };
 
     my $locs = $data{locations};
     my $default_loc = $data{default_location};
@@ -110,7 +113,7 @@ sub build_game {
 
     }
 
-    my $c = build_container();
+    my $c = build_container(%{$args{container_args} || {}});
 
     #my $k = KiokuDB->connect('hash', create => 1);
 
@@ -482,11 +485,12 @@ sub location_preset {
 
 sub build_preset_game {
     my $type = shift;
-    my @extra = @_;
+    my %args = @_;
 
+    my @extra = @{ $args{extra} || [] };
     my %config = location_preset($type, @extra);
 
-    return build_game(%config);
+    return build_game(container_args => $args{container_args}, config => \%config);
 }
 
 1;

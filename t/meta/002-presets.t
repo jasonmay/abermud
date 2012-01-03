@@ -53,17 +53,20 @@ sub get_default_location {
 
 {
     my $game = AberMUD::Test::Sugar::build_preset_game(
-        'plus', {
-            locations => {
-                center => {
-                    has_objects => {
-                        thing => {
-                            description => 'A thing is here.',
-                        }
+        'plus',
+        extra => [
+            {
+                locations => {
+                    center => {
+                        has_objects => {
+                            thing => {
+                                description => 'A thing is here.',
+                            }
+                        },
                     },
                 },
             },
-        }
+        ],
     );
     my $l = get_default_location($game);
 

@@ -6,29 +6,32 @@ use AberMUD::Messages;
 use AberMUD::Test::Sugar qw(build_preset_game);
 
 my $c = build_preset_game(
-    'two_wide', {
-        locations => {
-            room1 => {
-                has_mobiles => {
-                    foo => {
-                        wielding => {
-                            sword => {
-                                description => 'uh oh',
-                                damage => 1,
+    'two_wide',
+    extra => [
+        {
+            locations => {
+                room1 => {
+                    has_mobiles => {
+                        foo => {
+                            wielding => {
+                                sword => {
+                                    description => 'uh oh',
+                                    damage => 1,
+                                },
                             },
+                            gender => 'Female',
                         },
-                        gender => 'Female',
-                    },
-                    bar => {
-                        gender => 'Male',
-                    },
-                    baz => {
-                        description => 'baz is gender-neutral',
-                    },
+                        bar => {
+                            gender => 'Male',
+                        },
+                        baz => {
+                            description => 'baz is gender-neutral',
+                        },
+                    }
                 }
-            }
+            },
         },
-    }
+    ],
 );
 
 my $b = $c->controller->backend;

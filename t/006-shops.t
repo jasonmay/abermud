@@ -18,23 +18,25 @@ my ($gizmo, $doodad) = (
 );
 my ($c, $locations) = build_preset_game(
     'two_wide',
-    {
-        locations => {
-            room1 => {
-                traits => ['Shop'],
-                extra_params => {
-                    _stock_objects => {
-                        gizmo => {
-                            object => $gizmo,
-                        },
-                        doodad => {
-                            object => $doodad,
+    extra => [
+        {
+            locations => {
+                room1 => {
+                    traits => ['Shop'],
+                    extra_params => {
+                        _stock_objects => {
+                            gizmo => {
+                                object => $gizmo,
+                            },
+                            doodad => {
+                                object => $doodad,
+                            },
                         },
                     },
                 },
             },
         },
-    }
+    ],
 );
 
 my $b = $c->controller->backend;
