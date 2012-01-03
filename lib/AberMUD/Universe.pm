@@ -467,6 +467,29 @@ sub change_location {
     }
 }
 
+sub complete_quest {
+    my $self  = shift;
+    my ($player, $quest) = @_;
+
+    my $exp_award = 3000;
+
+    # TODO $player->mark() and display the congrats
+    # after we've processed everything
+    my $output = "Congratulations! You've completed the &+C$quest&* quest!\n";
+
+    if (!$player->completed_quests->{$quest}) {
+        $output .=
+            q[Since this is your first time completing it, you have been ] .
+            qq[awarded &+Y$exp_award&* experience points!\n];
+
+        $self->change_score($player, $exp_award);
+    };
+
+    $player->append_output_buffer($output);
+    $player->completed_quests->{$quest}++;
+    $player->mark(save => 1);
+}
+
 sub open {
     my $self = shift;
     my ($object) = @_;

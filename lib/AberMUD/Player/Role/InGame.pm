@@ -61,27 +61,6 @@ has completed_quests => (
     default => sub { +{} },
 );
 
-sub complete_quest {
-    my $self  = shift;
-    my $quest = shift;
-
-    my $exp_award = 3000;
-
-    my $output = "Congratulations! You've completed the &+C$quest&* quest!\n";
-
-    if (!$self->completed_quests->{$quest}) {
-        $output .=
-            q[Since this is your first time completing it, you have been ] .
-            qq[awarded &+Y$exp_award&* experience points!\n];
-
-        $self->change_score($exp_award);
-    };
-
-    $self->append_output_buffer($output);
-    $self->completed_quests->{$quest}++;
-    $self->save_data;
-}
-
 sub level {
     my $self = shift;
 
