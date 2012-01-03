@@ -80,15 +80,25 @@ has input_states => (
     builder => '_build_input_states',
 );
 
+has special => (
+    is       => 'ro',
+    isa      => 'AberMUD::Special',
+    required => 1,
+);
+
 sub _build_input_states {
     my $self = shift;
     my %input_states;
+    my $game_class = 'AberMUD::Input::State::Game';
     foreach my $input_state_class ($self->_input_states) {
         next unless $input_state_class;
         Class::MOP::load_class($input_state_class);
         my $input_state_object = $input_state_class->new(
             universe          => $self->universe,
             command_composite => $self->command_composite,
+            $input_state_class eq $game_class ?
+                (special => $self->special) :
+                (),
         );
 
         $input_states{ $input_state_class } = $input_state_object;

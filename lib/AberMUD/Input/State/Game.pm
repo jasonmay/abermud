@@ -80,15 +80,39 @@ sub run {
     return "I don't know any commands by that name.\n"
         unless $dispatch->has_matches;
 
-     my $match = (sort { $a->rule->priority <=> $b->rule->priority } $dispatch->matches)[0];
+    my $match = (sort { $a->rule->priority <=> $b->rule->priority } $dispatch->matches)[0];
 
-     my $event = AberMUD::Event::Command->new(
-         universe  => $self->universe,
-         player    => $conn->associated_player,
-         arguments => $match->leftover,
-     );
+    my $event = AberMUD::Event::Command->new(
+        universe  => $self->universe,
+        player    => $conn->associated_player,
+        arguments => $match->leftover,
+    );
 
-     return $match->run( $self->command_composite, $event) . "\n";
+    my ($interrupt, @hook_results) = $self->special->call_hooks(
+        type => 'command',
+        when => 'before',
+        arguments => [
+            name  => $match->rule->command_name,
+            event => $event,
+        ],
+    );
+    if ($interrupt) {
+        return join('', map { "$_\n" } @hook_results);
+    }
+    my $output = $match->run( $self->command_composite, $event) . "\n";
+
+    (undef, @hook_results) = $self->special->call_hooks(
+        type => 'command',
+        when => 'after',
+        arguments => [
+            name  => $match->rule->command_name,
+            event => $event,
+        ],
+    );
+    if (@hook_results) {
+        $output .= join('', map { "$_\n" } @hook_results);
+    }
+    return $output
 }
 
 __PACKAGE__->meta->make_immutable;
