@@ -157,7 +157,7 @@ my $parser = qr{
         <LocID> <[Exit]>* ;
 
     <rule: AltitudeLine>
-        Altitude = <alt=Number>
+        (?i:Altitude) = <alt=Number>
 
     <rule: LocFlags>
         (?i:lflags?) <lflags=Flag>
@@ -166,7 +166,7 @@ my $parser = qr{
         <ExitLetter> : (?: <exit_dest=Door> | <exit_dest=FullLocID> )
 
     <token: ExitLetter>
-        [nsewudNSEWUD]
+        (?i:[nsewud]|n[ew]|s[we])
 
     <token: LocID>
         <.Word>
