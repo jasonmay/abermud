@@ -19,8 +19,9 @@ sub entry_message { "\e[2J" . << '_STOP_';
 for other MUDs. So far it has the following features:
   &+R*&* Locations (n/s/e/w/u/d)
   &+R*&* Communication (chat, say)
-  &+R*&* Over 4000 rooms
-  &+R*&* Over 900 mobiles
+  &+R*&* Over 7000 rooms
+  &+R*&* Over 2700 mobiles
+  &+R*&* Over 4600 objects
 
 &+YTHINGS TO DO&*
   &+Y*&* Fighting
