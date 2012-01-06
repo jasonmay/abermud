@@ -1,7 +1,7 @@
 {
    "obj" : {
       "houseoutdoor@hick" : {
-         "desc[1]" : "The door leading inside is closed.",
+         "desc[1]" : "The door leading outside is closed.",
          "location" : "IN_ROOM:house1",
          "oflags" : [
             "NoGet",
@@ -12,18 +12,20 @@
          "state" : "1",
          "pname" : "Door",
          "maxstate" : "1",
-         "desc[0]" : "The door leading inside is open."
+         "desc[0]" : "The door leading outside is open."
       },
       "jeremy_knife@hick" : {
+         "damage" : "4",
          "location" : "IN_ROOM:house16",
-         "weight" : "3",
          "oflags" : [
             "Weapon"
          ],
-         "pname" : "Knife",
          "name" : "jeremy_knife",
-         "desc[0]" : "A small knife has been left here.",
-         "size" : "3"
+         "size" : "3",
+         "pname" : "Knife",
+         "weight" : "3",
+         "bvalue" : "-10",
+         "desc[0]" : "A small knife has been left here."
       },
       "pitchfork@hick" : {
          "damage" : "10",
@@ -40,18 +42,20 @@
       },
       "boots@hick" : {
          "location" : "IN_ROOM:cattle4",
+         "armor" : "20",
          "oflags" : [
-            "Wearable"
+            "Wearable",
+            "Armor"
          ],
          "name" : "Boots",
          "size" : "2",
          "pname" : "Boots",
          "weight" : "2",
          "bvalue" : "40",
+         "desc[0]" : "A pair of work boots rests on the ground.",
          "aflags" : [
             "Feet"
-         ],
-         "desc[0]" : "A pair of work boots rests on the ground."
+         ]
       },
       "sink@hick" : {
          "location" : "IN_ROOM:house10",
@@ -84,17 +88,19 @@
          ]
       },
       "oven@hick" : {
-         "desc[1]" : "The over door is closed.",
+         "desc[1]" : "The oven door is closed.",
          "location" : "IN_ROOM:house10",
          "oflags" : [
             "Openable",
             "Container",
             "NoGet"
          ],
-         "pname" : "Oven",
          "name" : "Oven",
-         "desc[0]" : "The oven door is open.",
-         "size" : "5"
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Oven",
+         "maxstate" : "1",
+         "desc[0]" : "The oven door is open."
       },
       "turkey@hick" : {
          "desc[1]" : "A delicious looking turkey is in the oven.",
@@ -110,6 +116,17 @@
          "weight" : "3",
          "maxstate" : "1",
          "desc[0]" : "A delicious looking turkey has been left here."
+      },
+      "volume@hick" : {
+         "location" : "IN_ROOM:house19",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_II",
+         "name" : "volume",
+         "examine" : "\nAid is a useful spell that confers 5 strength for 3 mana.  There  are\npendants which enhance its effect.  Aid becomes certain with\nknowledge 4 and is an excellent investment.  Aid can be used in combat,\nand it can be used to speed your healing, since both strength and mana\nrecover during healing.  To use aid for yourself, incant \"aid me\".\nYou can also aid another person.",
+         "desc[0]" : "&+YVolume II&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "2"
       },
       "corn@hick" : {
          "location" : "IN_ROOM:field13",
@@ -151,7 +168,7 @@
          "desc[0]" : "A nice red apple has been left here."
       },
       "houseindoor@hick" : {
-         "desc[1]" : "The door leading outside is closed.",
+         "desc[1]" : "The door leading inside is closed.",
          "location" : "IN_ROOM:house2",
          "oflags" : [
             "NoGet",
@@ -162,7 +179,7 @@
          "state" : "1",
          "pname" : "Door",
          "maxstate" : "1",
-         "desc[0]" : "The door leading outside is open."
+         "desc[0]" : "The door leading inside is open."
       }
    },
    "loc" : {
@@ -555,7 +572,7 @@
             "NoMobiles"
          ],
          "zone" : "hick",
-         "title" : "In Front of the Bull Pin",
+         "title" : "In Front of the Bull Pen",
          "id" : "cattle6",
          "description" : "\n  To the north of here you can see a large bull pin and you wonder if it \nis currently occupied. The road leads south into the livestock area.\n",
          "altitude" : "400"
@@ -827,7 +844,7 @@
             "Outdoors"
          ],
          "zone" : "hick",
-         "title" : "Bull Pin",
+         "title" : "Bull Pen",
          "id" : "cattle9",
          "description" : "\n  There are a few barrels laying around the pin, they must have rodeos \nhere from time to time. The pin is very large with enough room for a bull \nto run around freely, a very large bull that is. You can exit to the south.\n",
          "altitude" : "400"
@@ -923,19 +940,19 @@
       "mother@hick" : {
          "damage" : "9",
          "location" : "house10",
+         "sflag" : [
+            "Female"
+         ],
          "armor" : "0",
          "name" : "Mother",
          "description" : "Jane, the Hickdale mother is here cooking food.",
-         "sflags" : [
-            "Female"
-         ],
          "strength" : "100",
+         "mflag" : [
+            "NoGrab"
+         ],
          "speed" : "0",
          "aggression" : "0",
-         "pname" : "Jane",
-         "mflags" : [
-            "NoGrab"
-         ]
+         "pname" : "Jane"
       },
       "worker@hick" : {
          "damage" : "9",
@@ -954,9 +971,9 @@
          "speed" : "0",
          "aggression" : "0",
          "armor" : "0",
-         "pname" : "Pig",
+         "pname" : "Hog",
          "name" : "FirstPig",
-         "description" : "A large, smelly pig is here oinking happily.",
+         "description" : "A large, smelly hog is here oinking happily.",
          "strength" : "100"
       },
       "horse@hick" : {
@@ -971,18 +988,21 @@
          "strength" : "110"
       },
       "grandma@hick" : {
-         "damage" : "7",
-         "location" : "house19",
-         "armor" : "0",
-         "name" : "Grandma",
-         "description" : "Grandma is here resting quietly.",
-         "sflags" : [
+         "damage" : "10",
+         "location" : "house15",
+         "sflag" : [
             "Female"
          ],
-         "strength" : "90",
+         "armor" : "5",
+         "name" : "Grandma",
+         "description" : "Grandma is here with fire in her eyes and says 'Get out! You invader!'",
+         "strength" : "140",
          "speed" : "0",
+         "aggression" : "0",
          "pname" : "Grandma",
-         "aggression" : "0"
+         "mflags" : [
+            "BarS"
+         ]
       },
       "grandpa@hick" : {
          "damage" : "9",
@@ -1042,13 +1062,16 @@
       "secondpig@hick" : {
          "damage" : "9",
          "location" : "cattle8",
-         "speed" : "0",
-         "aggression" : "0",
+         "sflag" : [
+            "Female"
+         ],
          "armor" : "0",
-         "pname" : "Pig",
          "name" : "SecondPig",
-         "description" : "A large, smelly pig is here oinking happily.",
-         "strength" : "100"
+         "description" : "A large, smelly sow is here oinking happily.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Sow",
+         "aggression" : "0"
       },
       "wheatworker@hick" : {
          "damage" : "9",
@@ -1064,13 +1087,16 @@
       "cow@hick" : {
          "damage" : "10",
          "location" : "cattle4",
-         "speed" : "0",
-         "aggression" : "0",
+         "sflag" : [
+            "Female"
+         ],
          "armor" : "0",
-         "pname" : "Cow",
          "name" : "Cow",
          "description" : "A cow is here mooing softly.",
-         "strength" : "110"
+         "strength" : "110",
+         "speed" : "0",
+         "pname" : "Cow",
+         "aggression" : "0"
       },
       "jeremy@hick" : {
          "damage" : "6",

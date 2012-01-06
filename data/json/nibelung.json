@@ -150,14 +150,16 @@
       "pendant@nibelung" : {
          "location" : "IN_ROOM:Nibelung9",
          "oflags" : [
-            "Wearable"
+            "Wearable",
+            "AidSpell",
+            "NoPit"
          ],
          "altname" : "yellow",
          "name" : "pendant",
          "examine" : "\n    A thin leather strap would allow you to wear it.  There is a lightning bolt\netched into one of its many facets.",
          "size" : "7",
          "pname" : "pendant",
-         "bvalue" : "150",
+         "bvalue" : "0",
          "desc[0]" : "A yellow pendant is lying here.",
          "aflags" : [
             "Neck"
@@ -393,10 +395,21 @@
          "weight" : "0",
          "pname" : "backplate",
          "bvalue" : "150",
-         "desc[0]" : "A rusty old backplate has be left here.",
+         "desc[0]" : "A rusty old backplate has been left here.",
          "aflags" : [
             "Back"
          ]
+      },
+      "volume@nibelung" : {
+         "location" : "IN_ROOM:Nibelvolume",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_XIX",
+         "name" : "volume",
+         "examine" : "\nBrew is a spell requiring great exertion: 50 strength and\n50 mana.  It is certain at knowledge 0.  It results in\nthe production of a home brewed potion.\nYou may brew as many potions as you wish.  You should\nbrew your potions before going into battle, then recover.\nThe recovery time is repaid during battle when the potion\nwill restore up to 50 strength and 50 mana.\n",
+         "desc[0]" : "&+YVolume XIX&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "19"
       },
       "emerald@nibelung" : {
          "location" : "IN_ROOM:Nibelung87",
@@ -429,7 +442,7 @@
          "location" : "IN_ROOM:Nibelung81",
          "oflags" : [
             "Wearable",
-            "Lit"
+            "Glowing"
          ],
          "altname" : "light",
          "name" : "ring",
@@ -665,6 +678,19 @@
          "description" : "\n   You find yourself ankle deep in a grey-brownish mud, which sucks at your \nboots, almost pulling them off.  The going is a bit more difficult, but you \nnotice dryer road to the north and south.  With a bit of perseverance you\nshould be able to make it to either end. \n",
          "altitude" : "1300"
       },
+      "nibelvolume@nibelung" : {
+         "exits" : {
+            "w" : "Nibelung35"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "nibelung",
+         "title" : "Dark Hole",
+         "id" : "Nibelvolume",
+         "description" : "\n    This is just a small hole with crumbling dirt walls.\n",
+         "altitude" : null
+      },
       "nibelung67@nibelung" : {
          "exits" : {
             "w" : "Nibelung78",
@@ -676,7 +702,7 @@
          "zone" : "nibelung",
          "title" : "Anteroom",
          "id" : "Nibelung67",
-         "description" : "\n   You find yourself in a small anteroom of the castle.  The room is now bare,\nbut looks like it was once comfortably furnished.  Some cobwebs have been \nspun by spiders past, and now collect dust in the corners.  To the north you\nsee the main entrance to the castle, to the west is the library.  A small\nhole has been made on the south wall.\n",
+         "description" : "\n   You find yourself in a small anteroom of the castle.  The room is now bare,\nbut looks like it was once comfortably furnished.  Some cobwebs have been \nspun by spiders past, and now collect dust in the corners.  To the north you\nsee the main entrance to the castle, to the west is the library.  A small\n&+yhole&* has been made on the south wall.\n",
          "altitude" : null
       },
       "nibelung70@nibelung" : {
@@ -1067,6 +1093,19 @@
          "description" : "\n   You are in the northern foothills of Zaryat's Teeth.  The tall mountain \ncraggs rise up to the south, their snow covered peaks reflecting the orange\nglow of the setting sun.  Above you there is a clearing, which would appear to\noffer a beautiful vantage point to look out over the lands below.  A trail\nwinds its way down to the northern areas.\n",
          "altitude" : "2800"
       },
+      "nibellearn@nibelung" : {
+         "exits" : {
+            "s" : "Nibelung56"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "nibelung",
+         "title" : "Castle Study Annex",
+         "id" : "NibelLearn",
+         "description" : "\n   The room is lined with row upon row of books, maps, and charts.  You\nsmell incense, and your nose leads you through the maze of shelves towards\nthe middle of the room.  In the middle is a recession lined with pillows in \nwhich a slender woman sits cross-legged.  Her white and red robes flow about \nthe floor, and seem much too heavy for such a slight body.  \nUpon your entrance though, she stands fully up and glides over to you without \na hint of effort, white and red following behind her.\n",
+         "altitude" : null
+      },
       "nibelung83@nibelung" : {
          "exits" : {
             "e" : "Nibelung82",
@@ -1313,7 +1352,7 @@
          "zone" : "nibelung",
          "title" : "Trophy Room",
          "id" : "Nibelung79",
-         "description" : "\n   You are in a room with murals adorning the walls, depicting the great con-\nflicts once fought by the knights of this castle.  Some chairs and a small\ntapestry are arranged about a fire, which burns happily in a large stone fire-\nplace.  Some logs are stacked off to one side of the fireplace, and a poker\nhangs just off to the right.\n",
+         "description" : "\n   You are in a room with murals adorning the walls, depicting the great \nconflicts once fought by the knights of this castle.  Some chairs and a small\ntapestry are arranged about a &+Rfire&*, which burns happily in a large stone \nfireplace.  Some logs are stacked off to one side of the fireplace, and a \npoker hangs just off to the right.\n",
          "altitude" : null
       },
       "nibelung91@nibelung" : {
@@ -1400,6 +1439,18 @@
          "description" : "\n   This small room used to house the castle's many fine tapestries.  A few \nmouldy ones remain, hanging limply and unattractively from the walls.  Some\nstraw covers the floor, apparently an attempt to make the room more comfort-\nable.  There are several iron hooks in the wall that used to hold torches, but\nhave been emptied long ago.   \n",
          "altitude" : null
       },
+      "nibelstudy@nibelung" : {
+         "exits" : {},
+         "flags" : [
+            "Peaceful",
+            "SoundProof"
+         ],
+         "zone" : "nibelung",
+         "title" : "Castle Study Room",
+         "id" : "NibelStudy",
+         "description" : "\n   The young woman hands you off to a steward, who shows you into a yard \nwhere some people are studiously trying to meditate while ignoring students\nwho practice stealing techniques on each other.  On the far western side of\nthe yard, novices practice coating the wall with frost.\n",
+         "altitude" : null
+      },
       "nibelung87@nibelung" : {
          "exits" : {
             "u" : "Nibelung86",
@@ -1459,6 +1510,7 @@
       "nibelung56@nibelung" : {
          "exits" : {
             "e" : "Nibelung55",
+            "n" : "NibelLearn",
             "s" : "Nibelung57"
          },
          "flags" : [
@@ -1467,7 +1519,7 @@
          "zone" : "nibelung",
          "title" : "Northern Gate",
          "id" : "Nibelung56",
-         "description" : "\n   You have found the northern gate of the castle.  A large iron porticullis\nbars exit to the north.  To the east you notice a small guardhouse, while the\ncastle wall runs off to the south.\n",
+         "description" : "\n   You have found the northern gate of the castle.  A large iron porticullis\nbars exit to the north.  To the east you notice a small guardhouse, while the\ncastle wall runs off to the south.  To the north you spot a rather well kept\nlargish building.  Smoke rises through the chimney.\n",
          "altitude" : "1200"
       },
       "nibelung2@nibelung" : {
@@ -1521,7 +1573,7 @@
          "zone" : "nibelung",
          "title" : "Wooden Bridge",
          "id" : "Nibelung21",
-         "description" : "\n   You are standing on a wooden bridge which spans a small river below you.\nThe sun reflects off the clear water, dazzling your eyes.  On the railing are\nsome carvings by various lovers and couples of years past.  To the west is a\nroad, which runs off into the horizon.\n",
+         "description" : "\n   You are standing on a wooden bridge which spans a small river below you.\nThe sun reflects off the clear water, dazzling your eyes.  On the railing are\nsome &+ycarvings&* by various lovers and couples of years past.  To the west is a\nroad, which runs off into the horizon.\n",
          "altitude" : "1250"
       },
       "nibelung33@nibelung" : {
@@ -1737,6 +1789,7 @@
       },
       "nibelung13@nibelung" : {
          "exits" : {
+            "w" : "khanjar9571@khanjar",
             "u" : "Nibelung12"
          },
          "flags" : [
@@ -1750,6 +1803,7 @@
       },
       "nibelung35@nibelung" : {
          "exits" : {
+            "e" : "Nibelvolume",
             "w" : "Nibelung34",
             "n" : "Nibelung32",
             "s" : "Nibelung38"
@@ -1765,6 +1819,7 @@
       },
       "nibelung8@nibelung" : {
          "exits" : {
+            "w" : "tread17@treadmill",
             "n" : "Nibelung9",
             "s" : "Nibelung7"
          },
@@ -1906,27 +1961,17 @@
       "bookwyrm@nibelung" : {
          "damage" : "8",
          "location" : "Nibelung78",
-         "speed" : "0",
-         "aggression" : "98",
          "armor" : "0",
-         "pname" : "Bookwyrm",
          "name" : "Bookwyrm",
          "description" : "A bookwyrm is here, looking for some books to eat.",
-         "strength" : "70"
-      },
-      "nimbus@nibelung" : {
-         "damage" : "20",
-         "location" : "Nibelung13",
-         "armor" : "0",
-         "name" : "Nimbus",
-         "description" : "A Nimbus hovers above you.",
          "sflags" : [
-            "Female"
+            "NoArms",
+            "NoLegs"
          ],
-         "strength" : "2000",
+         "strength" : "70",
          "speed" : "0",
-         "pname" : "Nimbus",
-         "aggression" : "0"
+         "pname" : "Bookwyrm",
+         "aggression" : "98"
       },
       "gunther@nibelung" : {
          "damage" : "8",
@@ -1972,28 +2017,6 @@
          "description" : "\nThere is a small brown racoon here, foaming about the mouth as it searches for\nsome garbage to dig through.",
          "strength" : "70"
       },
-      "bully@nibelung" : {
-         "damage" : "8",
-         "location" : "Nibelung35",
-         "speed" : "5",
-         "aggression" : "50",
-         "armor" : "0",
-         "pname" : "Bully",
-         "name" : "Bully",
-         "description" : "\nA burly kid is here, who looks like he should be finished with school. You wish\nhe were finished with life in general.",
-         "strength" : "110"
-      },
-      "protector@nibelung" : {
-         "damage" : "8",
-         "location" : "Nibelung45",
-         "speed" : "0",
-         "aggression" : "50",
-         "armor" : "0",
-         "pname" : "Protector",
-         "name" : "Protector",
-         "description" : "The Protector is here guarding his lands.",
-         "strength" : "100"
-      },
       "boatman@nibelung" : {
          "damage" : "8",
          "location" : "Nibelung28",
@@ -2019,13 +2042,16 @@
       "vampire@nibelung" : {
          "damage" : "8",
          "location" : "Limbo@limbo",
-         "speed" : "0",
-         "aggression" : "70",
          "armor" : "0",
-         "pname" : "Vampire",
          "name" : "Vampire",
          "description" : "\nA man stands before you with dark brown hair, wearing a cape. He has unusually\nlarge, sharp teeth and a fixating gaze.",
-         "strength" : "200"
+         "sflags" : [
+            "Vampire"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Vampire",
+         "aggression" : "70"
       },
       "faffner@nibelung" : {
          "eflags" : [
@@ -2047,21 +2073,6 @@
          "aggression" : "98",
          "pname" : "Faffner"
       },
-      "maitred@nibelung" : {
-         "damage" : "8",
-         "location" : "Nibelung97",
-         "armor" : "0",
-         "name" : "MaitreD",
-         "description" : "The Maitre D' stares down his nose at you condesendingly.",
-         "sflags" : [
-            "Female"
-         ],
-         "strength" : "150",
-         "speed" : "0",
-         "aggression" : "0",
-         "pname" : "MaitreD",
-         "pflags" : "{}"
-      },
       "gatekeeper@nibelung" : {
          "damage" : "8",
          "location" : "Nibelung29",
@@ -2072,6 +2083,76 @@
          "name" : "Gatekeeper",
          "description" : "\nA large man stands before you in some sort of uniform. A ring with many keys is\nhanging from his belt.",
          "strength" : "110"
+      },
+      "nimbus@nibelung" : {
+         "damage" : "20",
+         "location" : "Nibelung13",
+         "armor" : "0",
+         "name" : "Nimbus",
+         "description" : "A Nimbus hovers above you.",
+         "sflags" : [
+            "Female",
+            "NoBody"
+         ],
+         "strength" : "2000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Nimbus",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "bully@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung35",
+         "speed" : "5",
+         "aggression" : "50",
+         "armor" : "0",
+         "pname" : "Bully",
+         "name" : "Bully",
+         "description" : "\nA burly kid is here, who looks like he should be finished with school. You wish\nhe were finished with life in general.",
+         "strength" : "110"
+      },
+      "teacher@nibelung" : {
+         "damage" : "25",
+         "location" : "nibellearn",
+         "armor" : "5",
+         "name" : "teacher",
+         "examine" : "\nThe woman sternly returns your gaze.  You hear '&+WHere we teach.&*', though\nyou swear her lips never moved.",
+         "description" : "\nThe young womans &+Ggreen&* eyed stare penetrates you, and seems to inquire what\nit is you are here for?",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "Laessa",
+         "aggression" : "0"
+      },
+      "protector@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung45",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "pname" : "Protector",
+         "name" : "Protector",
+         "description" : "The Protector is here guarding his lands.",
+         "strength" : "100"
+      },
+      "maitred@nibelung" : {
+         "damage" : "8",
+         "location" : "Nibelung97",
+         "armor" : "0",
+         "name" : "MaitreD",
+         "description" : "The Maitre D' stares down her nose at you condecendingly.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "MaitreD",
+         "pflags" : "{}"
       },
       "bratty@nibelung" : {
          "damage" : "8",

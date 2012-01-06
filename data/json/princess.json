@@ -1,0 +1,636 @@
+{
+   "obj" : {
+      "drawbridge@princess" : {
+         "location" : "IN_ROOM:entrance",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "drawbridge",
+         "examine" : "The drawbridge is made of wood.  It leads into the castle.\n"
+      },
+      "in_tower_door@princess" : {
+         "desc[1]" : "The door has been closed to keep the cold out.",
+         "location" : "IN_ROOM:downtower",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "in_tower_door",
+         "examine" : "It is a very small door.  One would have to stoop to go through it.\n",
+         "desc[2]" : "The door is locked...you could be trapped up here!",
+         "linked" : "out_tower_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door to the tower stands wide open."
+      },
+      "towershield@princess" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "armor" : "50",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "shield",
+         "name" : "towershield",
+         "examine" : "\nThis shield looks like it has been through many battles.  It will protect\nyou from the greatest of blows!",
+         "size" : "10",
+         "bvalue" : "50",
+         "desc[0]" : "\nThe magical Towershield has been left here."
+      },
+      "out_door@princess" : {
+         "desc[1]" : "A great oak door bars your way into the castle.",
+         "location" : "entrance",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "out_door",
+         "examine" : "The door looks big and heavy, and is made of oak.  It is meant to keep\nintruders out.\n",
+         "desc[2]" : "There is a great oak door behind the &+Cportcullis&* bars.",
+         "linked" : "in_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "Someone managed to open the door to the castle."
+      },
+      "bones@princess" : {
+         "location" : "IN_ROOM:tower",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "pile",
+         "name" : "bones",
+         "examine" : "Looks like the last guests never left!"
+      },
+      "flags@princess" : {
+         "location" : "IN_ROOM:entrance",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "flag",
+         "name" : "flags",
+         "examine" : "&+WThese flags show the royal crest of the royal family: a big &+Yeagle\n&+Wsoaring over &+Bblue mountains.\n"
+      },
+      "tile@princess" : {
+         "desc[1]" : "You notice that one tile on the floor looks out of place.",
+         "location" : "IN_ROOM:throne",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "tile",
+         "examine" : "You look at the tile and notice that it is a little loose.\n",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A tile has been pushed to one side."
+      },
+      "flowers@princess" : {
+         "location" : "IN_ROOM:courtyard",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "walkway",
+         "name" : "flowers",
+         "examine" : "\nThese flowers display a variety of colors and types.  They range from red\nto blue to gold, and there is a wonderful selection of roses and orchids.\n"
+      },
+      "chains@princess" : {
+         "location" : "IN_ROOM:tower",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "chain",
+         "name" : "chains",
+         "examine" : "\nThe chains hold the princess to the wall.  They look to be made of some\nstrange metal.  They probably can't be broken."
+      },
+      "eternalsword@princess" : {
+         "damage" : "17",
+         "location" : "IN_CONTAINER:opening",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "altname" : "sword",
+         "name" : "eternalsword",
+         "examine" : "The sword has an unusual glow to it...and it looks sharp!!\n",
+         "size" : "15",
+         "bvalue" : "80",
+         "desc[0]" : "The mighty EternalSword is sticking out of a stump."
+      },
+      "plant@princess" : {
+         "desc[1]" : "&+wA beautiful odd-looking &+Rred &+wplant is growing here.",
+         "location" : "IN_ROOM:forest3",
+         "altname" : "plant",
+         "name" : "plant",
+         "examine" : "\nThis beautiful red plant looks odd at first sight.  As you look at it, you\ncan see that it is very unique.  You remember from somewhere that the &+Rjuice&*\nof these red plants, called winterglove, can heal all kinds of illnesses.\n",
+         "state" : "1",
+         "size" : "3",
+         "pname" : "winterglove",
+         "maxstate" : "1",
+         "bvalue" : "35",
+         "desc[0]" : "This plant looks shrivelled.  Someone squeezed all the juice out of it."
+      },
+      "portcullis@princess" : {
+         "desc[1]" : "A portcullis bars the entrance to keep out unwelcome visitors.",
+         "location" : "IN_ROOM:entrance",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "portcullis",
+         "examine" : "The bars are made of strong iron to keep people out.\n",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The portcullis has been lifted to reveal a door."
+      },
+      "tower@princess" : {
+         "location" : "IN_ROOM:mountain",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "tower",
+         "examine" : "The tower is old and gray.  It looks like it reaches up to the sky!\n"
+      },
+      "throne@princess" : {
+         "location" : "IN_ROOM:throne",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "throne",
+         "examine" : "This throne is made of pure gold with rubies set in it."
+      },
+      "in_door@princess" : {
+         "desc[1]" : "The door is closed to keep intruders out.",
+         "location" : "hall",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "in_door",
+         "examine" : "The door is made of solid oak and is powerfully reinforced.  It would be\nimpossible to force one's way through it.\n",
+         "desc[2]" : "The door has been barred from the inside.",
+         "linked" : "out_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "Someone left the door open!"
+      },
+      "out_tower_door@princess" : {
+         "desc[1]" : "You can't get into the tower while the door is closed!",
+         "location" : "IN_ROOM:mountain",
+         "oflags" : [
+            "Destroyed",
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "out_tower_door",
+         "examine" : "There is a sign on the door that says &+RKEEP OUT!\n",
+         "desc[2]" : "The door to the tower has been locked and chained.",
+         "linked" : "in_tower_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door to the tower stands wide open."
+      },
+      "table@princess" : {
+         "location" : "IN_ROOM:hall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "table",
+         "examine" : "\nThe table is round and sturdy.  It is made of a rare wood and is so big\nthat only a King could afford it!  Looking under the table, you see a\nlittle &+Clatch&*.  How odd.\n"
+      },
+      "stairs@princess" : {
+         "location" : "IN_ROOM:downtower",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "stairs",
+         "examine" : "They are old crumbling stairs.  Be careful!  Don't fall!'\n"
+      },
+      "opening@princess" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "hole",
+         "name" : "opening",
+         "examine" : "You see a nice big opening.  You could hide lots of things in here!\n",
+         "desc[0]" : "There is an unusual opening in the floor.",
+         "size" : "16"
+      },
+      "potions@princess" : {
+         "location" : "IN_ROOM:tower",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "potion",
+         "name" : "potions",
+         "examine" : "\nThese potions are made from lizard's tongue, bat's wing, and warts with\none eye.  They don't sound appetizing."
+      },
+      "tapestries@princess" : {
+         "location" : "IN_ROOM:hall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "tapestry",
+         "name" : "tapestries",
+         "examine" : "The tapestries are red with sapphires embroidered in the borders.\n"
+      },
+      "bushes@princess" : {
+         "desc[1]" : "Some bushes grow around the base of the tower.",
+         "location" : "IN_ROOM:mountain",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "bush",
+         "name" : "bushes",
+         "examine" : "They're thorn bushes.  Be careful!",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The bushes have been burned away."
+      },
+      "comb@princess" : {
+         "location" : "IN_ROOM:forest5",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "comb",
+         "examine" : "\nThe comb is gold-plated and has sapphires embroidered in it.  You may be\nable to wear it.\n",
+         "bvalue" : "-300",
+         "desc[0]" : "A funny looking comb is lying in the dirt.",
+         "size" : "2",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "tapestries_2@princess" : {
+         "location" : "IN_ROOM:throne",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "tapestry",
+         "pname" : "tapestries",
+         "name" : "tapestries_2",
+         "examine" : "The sapphires are red with sapphires embroidered in the borders.\n"
+      },
+      "latch@princess" : {
+         "location" : "IN_ROOM:hall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "latch",
+         "examine" : "It's a funny looking latch.   It looks like it could be moved.",
+         "maxstate" : "1",
+         "state" : "1"
+      },
+      "banners@princess" : {
+         "location" : "IN_ROOM:entrance",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "banner",
+         "name" : "banners",
+         "examine" : "The yellow and blue banners are flapping in the wind.\n"
+      }
+   },
+   "loc" : {
+      "death@princess" : {
+         "exits" : {
+            "e" : "forest4"
+         },
+         "flags" : [],
+         "zone" : "princess",
+         "title" : "Cave of the Grizzy Bear",
+         "id" : "death",
+         "description" : "\n   You walk into the cave, wondering what could possibly be in a bear cave\n(besides a grizzy bear of course).  The first thing you notice is that\nyou're still alive for now.  Then you notice a strange growling from the\nback of the cave. \n",
+         "altitude" : null
+      },
+      "courtyard@princess" : {
+         "exits" : {
+            "n" : "hall",
+            "s" : "forest1"
+         },
+         "flags" : [
+            "NoMobiles",
+            "OutDoors"
+         ],
+         "zone" : "princess",
+         "title" : "The Courtyard",
+         "id" : "courtyard",
+         "description" : "\n   You have entered a courtyard behind the castle.  It is quite peaceful\nhere.  You can hear birds singing in the trees.  The walk way is bordered\nwith beautiful &+Yflowers&*.  You see the deep, dark forest looming to the\nsouth.\n",
+         "altitude" : null
+      },
+      "forest1@princess" : {
+         "exits" : {
+            "w" : "forest3",
+            "e" : "forest2",
+            "n" : "courtyard",
+            "s" : "forest4"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "princess",
+         "title" : "The Forest",
+         "id" : "forest1",
+         "description" : "\n   You enter a forest.  There are paths in every direction.  The northern\npath leads back to the castle.  The other paths lead deeper into the\nwoods.\n",
+         "altitude" : null
+      },
+      "forest5@princess" : {
+         "exits" : {
+            "n" : "forest4",
+            "s" : "forest6"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "princess",
+         "title" : "The Forest",
+         "id" : "forest5",
+         "description" : "\n   The path continues northward and southward.  In the distance you can see\nmountains.  The trees become fewer and fewer as you continue down the path.\n",
+         "altitude" : null
+      },
+      "path2@princess" : {
+         "exits" : {
+            "e" : "entrance",
+            "n" : "path1"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "princess",
+         "title" : "Winding Pathway",
+         "id" : "path2",
+         "description" : "\n   You are walking down a long winding narrow path.  A large castle reaches\nup towards the sky in the distance to the east.  But here, there is little\nout of the ordinary.  The path is just sand, and not well travelled\neither.\n",
+         "altitude" : null
+      },
+      "tower@princess" : {
+         "exits" : {
+            "d" : "downtower"
+         },
+         "flags" : [],
+         "zone" : "princess",
+         "title" : "Upstairs In the Tower",
+         "id" : "tower",
+         "description" : "\n   You have reached the top of the tower.  Everything here is dreary, and \nyou can tell that this is the tower of an evil person.  Piles of &+Cbones&* and\nhorrible looking &+Cpotions&* are scattered all over the floor of the tower.\nThis looks like a terrible place to be!!\n",
+         "altitude" : null
+      },
+      "forest2@princess" : {
+         "exits" : {
+            "w" : "forest1",
+            "e" : "forest3",
+            "n" : "forest2",
+            "s" : "forest2"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "princess",
+         "title" : "The Forest ",
+         "id" : "forest2",
+         "description" : "\n   You are deep in the forest.  Maybe you took a wrong turn somewhere?\nNothing looks familiar.\n",
+         "altitude" : null
+      },
+      "forest3@princess" : {
+         "exits" : {
+            "w" : "forest2",
+            "e" : "forest1",
+            "n" : "forest3",
+            "s" : "forest3"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "princess",
+         "title" : "The Forest",
+         "id" : "forest3",
+         "description" : "\n   You are deep in the forest.  Maybe you took a wrong turn somewhere?\nNothing looks familiar.\n",
+         "altitude" : null
+      },
+      "throne@princess" : {
+         "exits" : {
+            "w" : "hall"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "princess",
+         "title" : "Castle Throne Room",
+         "id" : "throne",
+         "description" : "\n   You walk into the throne room.  In the center of the room, you see a\nthrone.  The &+Ythrone&* is made of gold with gemstones embroidered in it.  On\nthe walls hang &+Rtapestries.   \n",
+         "altitude" : null
+      },
+      "path1@princess" : {
+         "exits" : {
+            "n" : "stream_3@novice",
+            "s" : "path2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "princess",
+         "title" : "Sandy Pathway",
+         "id" : "path1",
+         "description" : "\n   This path is covered in sand that has washed up upon the dirt track \nduring a previous flooding.  The sand is relatively dry not holding onto\nthe tracks made by travelers.  The bend in the stream is to the north and\nthe sandy path winds further south.\n",
+         "altitude" : null
+      },
+      "entrance@princess" : {
+         "exits" : {
+            "w" : "path2",
+            "e" : "^out_door"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "princess",
+         "title" : "The Entrance to the Castle",
+         "id" : "entrance",
+         "description" : "\n   You stand on a &+ydrawbridge&* looking at a majestic white castle.  Hanging\nfrom the walls are yellow and blue &+Gbanners&*.  &+YFlags&* of the same colors are\nwaving in the wind.  You wonder who lives here; the castle looks\nabandoned!\n",
+         "altitude" : null
+      },
+      "mountain@princess" : {
+         "exits" : {
+            "n" : "forest6",
+            "d" : "forest6",
+            "s" : "^out_tower_door"
+         },
+         "flags" : [
+            "OutDoors",
+            "NoMobiles"
+         ],
+         "zone" : "princess",
+         "title" : "On Top of the Mountain",
+         "id" : "mountain",
+         "description" : "\n   You reach the top of the mountain.  A huge &+Ctower&* rises out of the ground!!\nThe air seems much thinner up here.\n",
+         "altitude" : null
+      },
+      "forest4@princess" : {
+         "exits" : {
+            "w" : "death",
+            "e" : "forest2",
+            "n" : "forest1",
+            "s" : "forest5"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "princess",
+         "title" : "The Forest",
+         "id" : "forest4",
+         "description" : "\n   You continue along the path.  You notice that the trees have changed\ncolors from blue to green to yellow.  What a strange forest this is!!  The\npath continues south.  An ominous growling comes from a cave to the west.\n",
+         "altitude" : null
+      },
+      "forest6@princess" : {
+         "exits" : {
+            "u" : "mountain",
+            "n" : "forest5",
+            "s" : "mountain"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "princess",
+         "title" : "The Edge of the Forest",
+         "id" : "forest6",
+         "description" : "\n   As you continue down the path, you are able to see the mountains looming\nin the distance.  There are fewer and fewer trees.  You hope to get out of\nthis crazy forest soon!!\n",
+         "altitude" : null
+      },
+      "hall@princess" : {
+         "exits" : {
+            "w" : "^in_door",
+            "e" : "throne",
+            "s" : "courtyard"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "princess",
+         "title" : "The Great Hall",
+         "id" : "hall",
+         "description" : "\n   You have now entered the Great Hall.  You look around only to discover\nthat it is deserted.  Red &+Rtapestries&* hang from the walls.  In the center\nof the room you see a table.  Many kings have feasted at this &+Ctable.\n",
+         "altitude" : null
+      },
+      "downtower@princess" : {
+         "exits" : {
+            "u" : "tower",
+            "n" : "^in_tower_door"
+         },
+         "flags" : [],
+         "zone" : "princess",
+         "title" : "Inside the Sorceress' Tower",
+         "id" : "downtower",
+         "description" : "\n   There is a sense of evil pervading this whole tower.  There is a case of\n&+Cstairs&* going up, and you hear sounds coming from there.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "gwendolyn@princess" : {
+         "damage" : "4",
+         "location" : "tower",
+         "name" : "gwendolyn",
+         "examine" : "She doesn't look happy to be so chained up.  Hopefully you can save her!\n",
+         "description" : "The lovely Princess Gwendolyn has been chained to the wall.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "pname" : "Gwendolyn",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "gizelle@princess" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "10",
+         "location" : "mountain",
+         "name" : "gizelle",
+         "examine" : "She looks at you and says &+C'Come to fight me, eh?  Let the fight begin!'\n",
+         "description" : "Standing in front of you is the evil sorceress &+RGizelle!",
+         "sflags" : [
+            "Female",
+            "Nobody"
+         ],
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "Gizelle",
+         "mflags" : [
+            "BarSouth",
+            "NoCorpse"
+         ]
+      },
+      "ffox@princess" : {
+         "damage" : "8",
+         "location" : "forest1",
+         "name" : "ffox",
+         "examine" : "Vixan is a shy fox.  She bats her eyes looking at you curiously.\n",
+         "description" : "&+CVixan, a pretty little fox with &+Bblue &+Ceyes is looking at you from\nthe bushes.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "70",
+         "speed" : "10",
+         "pname" : "Vixan"
+      },
+      "rabbit@princess" : {
+         "damage" : "8",
+         "location" : "forest2",
+         "speed" : "10",
+         "pname" : "Peter",
+         "name" : "rabbit",
+         "examine" : "&+cPeter looks at you and wiggles his nose &+C*hello*.  &+cIsn't he so cute?\n",
+         "description" : "You see a cute little bunny wiggling his nose.",
+         "strength" : "50"
+      },
+      "fox@princess" : {
+         "damage" : "9",
+         "location" : "forest1",
+         "speed" : "10",
+         "pname" : "Foxy Loxy",
+         "name" : "fox",
+         "examine" : "&+cFoxy looks back at you with those piercing &+Ggreen &+ceyes.  He looks \nhungry.\n",
+         "description" : "Foxy Loxy is a cute little fox.",
+         "strength" : "70"
+      },
+      "child@princess" : {
+         "damage" : "9",
+         "location" : "courtyard",
+         "name" : "child",
+         "examine" : "\nYou see a little girl with brown eyes and brown hair.  She is wearing a\ndull brown dress and a grey shawl.  Her appearance may look drabby, but\nRose has a big smile on her face.",
+         "description" : "A small child is playing in the courtyard.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "45",
+         "speed" : "0",
+         "pname" : "Rose"
+      },
+      "stephen@princess" : {
+         "damage" : "5",
+         "location" : "throne",
+         "speed" : "0",
+         "pname" : "King Stephen",
+         "name" : "stephen",
+         "examine" : "\n&+CKing Stephen &+wtells you &+W'Hello adventurer.  Come to save my daughter,  \n&+Whave you? Well go ahead and try if you think you can.  Be careful of\n&+Wshiny things!  Good luck!!'",
+         "description" : "King Stephen is sitting on his throne, waiting for you.",
+         "strength" : "50"
+      },
+      "bear@princess" : {
+         "damage" : "15",
+         "location" : "death",
+         "speed" : "0",
+         "aggression" : "50",
+         "pname" : "The Hungry Bear",
+         "name" : "bear",
+         "examine" : "\n&+gThe hungry bear bares his teeth.  He looks at you with his &+Rblood red\n&+geyes.  He looks like he hasn't eaten in weeks.  Run away while you still can!\n",
+         "description" : "Look out!  It's a hungry bear!",
+         "strength" : "300"
+      }
+   }
+}

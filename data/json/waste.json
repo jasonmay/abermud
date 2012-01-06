@@ -48,12 +48,15 @@
       },
       "ball@waste" : {
          "location" : "IN_ROOM:gardens",
-         "weight" : "5",
+         "oflags" : [
+            "BlurSpell"
+         ],
          "altname" : "gold",
          "name" : "ball",
+         "size" : "5",
+         "weight" : "5",
          "bvalue" : "200",
-         "desc[0]" : "A golden ball has been placed here, glittering gently.",
-         "size" : "5"
+         "desc[0]" : "A golden ball has been placed here, showing a blurred image."
       },
       "greatsword@waste" : {
          "damage" : "25",
@@ -81,6 +84,17 @@
          "weight" : "20",
          "bvalue" : "200",
          "desc[0]" : "A golden staff shines before you with a hellish red light."
+      },
+      "volume@waste" : {
+         "location" : "IN_ROOM:Crack",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_IX",
+         "name" : "volume",
+         "examine" : "\nFrost is an attack spell.  It requires 4 mana and does 10 damage.\nWintergreen will enhance its effect.  It becomes certain for\nknowledge 8.",
+         "desc[0]" : "&+YVolume IX&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "9"
       }
    },
    "loc" : {
@@ -90,7 +104,9 @@
             "e" : "Guard",
             "u" : "Golden"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "The Foot Of The Golden Stairs",
          "id" : "Foot",
@@ -104,7 +120,9 @@
             "n" : "2",
             "s" : "2"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Wasteland",
          "id" : "3",
@@ -117,7 +135,9 @@
             "e" : "Ledge",
             "n" : "Salamander"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Fiery Passage",
          "id" : "Passage",
@@ -128,7 +148,9 @@
          "exits" : {
             "e" : "Passage"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Burning Gardens",
          "id" : "Gardens",
@@ -140,7 +162,9 @@
             "w" : "^door_fire",
             "e" : "Top"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "The Fire Hall",
          "id" : "Fire",
@@ -153,7 +177,9 @@
             "n" : "Crystal",
             "s" : "Salamander"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Fiery Hall",
          "id" : "Hall",
@@ -165,7 +191,9 @@
             "w" : "Fire",
             "d" : "Golden"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Top Of Stairs",
          "id" : "Top",
@@ -177,7 +205,9 @@
             "w" : "Ledge",
             "e" : "Foot"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Fiery Tunnel",
          "id" : "Tunnel",
@@ -189,7 +219,9 @@
             "n" : "Hall",
             "s" : "Passage"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Salamander's Fire Pit",
          "id" : "Salamander",
@@ -203,7 +235,9 @@
             "n" : "1",
             "s" : "2"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Wasteland",
          "id" : "1",
@@ -215,7 +249,9 @@
             "w" : "Before",
             "e" : "Hall"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "The Flaming Gates",
          "id" : "Flaming",
@@ -229,7 +265,9 @@
             "n" : "1",
             "s" : "1"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Wasteland",
          "id" : "2",
@@ -243,7 +281,9 @@
             "n" : "2",
             "s" : "2"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Fiery Crack",
          "id" : "Crack",
@@ -254,7 +294,9 @@
          "exits" : {
             "e" : "^door_king"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "The Fiery King's Hall",
          "id" : "King",
@@ -266,7 +308,9 @@
             "w" : "Passage",
             "e" : "Tunnel"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Fiery Ledge",
          "id" : "Ledge",
@@ -278,7 +322,9 @@
             "u" : "Top",
             "d" : "Foot"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "The Golden Stairs",
          "id" : "Golden",
@@ -289,7 +335,9 @@
          "exits" : {
             "s" : "Hall"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Crystal Fire",
          "id" : "Crystal",
@@ -303,7 +351,9 @@
             "n" : "1",
             "s" : "2"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Before The Gates",
          "id" : "Before",
@@ -314,7 +364,9 @@
          "exits" : {
             "w" : "Foot"
          },
-         "flags" : [],
+         "flags" : [
+            "Hot"
+         ],
          "zone" : "waste",
          "title" : "Guard Room",
          "id" : "Guard",
@@ -324,12 +376,18 @@
    },
    "mob" : {
       "beast@waste" : {
-         "damage" : "15",
+         "eflags" : [
+            "NegFireball",
+            "NegBHands",
+            "FearFrost",
+            "FearIceStorm"
+         ],
+         "damage" : "20",
          "location" : "flaming",
-         "armor" : "0",
+         "armor" : "20",
          "name" : "beast",
          "description" : "\nA huge, fiery beast stands before you, 12 feet tall and rippling with muscle.",
-         "strength" : "100",
+         "strength" : "300",
          "speed" : "0",
          "pname" : "The Beast",
          "aggression" : "100",
@@ -338,12 +396,12 @@
          ]
       },
       "djinni@waste" : {
-         "damage" : "10",
+         "damage" : "20",
          "location" : "king",
-         "armor" : "0",
+         "armor" : "20",
          "name" : "djinni",
          "description" : "A huge djinni glares at you and flexes his muscles.",
-         "strength" : "130",
+         "strength" : "500",
          "pname" : "The Djinni",
          "aggression" : "60",
          "pflags" : [
@@ -352,27 +410,34 @@
       },
       "lavaman@waste" : {
          "eflags" : [
-            "NegFireball"
+            "NegFireball",
+            "NegBHands",
+            "FearIceStorm",
+            "FearFrost"
          ],
-         "damage" : "12",
+         "damage" : "15",
          "location" : "crack",
-         "armor" : "0",
+         "armor" : "30",
          "name" : "lavaman",
          "description" : "A lavaman snarls harshly as he sees you.",
-         "strength" : "40",
+         "strength" : "120",
+         "speed" : "0",
          "pname" : "The Lavaman",
-         "aggression" : "30",
+         "aggression" : "100",
          "pflags" : [
             "NoSummon"
          ]
       },
       "efreet@waste" : {
          "eflags" : [
-            "NegFireball"
+            "NegFireball",
+            "NegBHands",
+            "FearFrost",
+            "FearIceStorm"
          ],
-         "damage" : "12",
+         "damage" : "15",
          "location" : "guard",
-         "armor" : "0",
+         "armor" : "25",
          "name" : "efreet",
          "description" : "A huge, flaming efreet glares ferociously at you.",
          "strength" : "120",
@@ -398,32 +463,45 @@
       },
       "flame@waste" : {
          "eflags" : [
-            "NegFireball"
+            "NegFireball",
+            "NegBHands",
+            "FearFrost",
+            "FearIceStorm"
          ],
-         "damage" : "10",
+         "damage" : "25",
          "location" : "Hall",
-         "armor" : "0",
+         "armor" : "30",
          "name" : "flame",
          "description" : "\nA giant, flickering and glowing flame dances before you in an incandescent\nhaze of heat.  It seems almost alive.",
-         "strength" : "200",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "400",
          "speed" : "0",
          "pname" : "The Flame",
          "aggression" : "30",
          "pflags" : [
             "NoSummon"
+         ],
+         "mflags" : [
+            "NoCorpse"
          ]
       },
       "guard@waste" : {
-         "damage" : "10",
+         "damage" : "20",
          "location" : "top",
-         "armor" : "0",
+         "armor" : "25",
          "name" : "guard",
          "description" : "\nA strange looking guard of some sort watches you cautiously.",
-         "strength" : "50",
+         "strength" : "300",
+         "speed" : "0",
          "pname" : "The Guard",
          "aggression" : "30",
          "pflags" : [
             "NoSummon"
+         ],
+         "mflags" : [
+            "BarW"
          ]
       }
    }

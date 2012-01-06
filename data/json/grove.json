@@ -86,7 +86,8 @@
          "location" : "IN_ROOM:dark_hole",
          "oflags" : [
             "Wearable",
-            "Lit"
+            "Glowing",
+            "Hitchance"
          ],
          "name" : "glove",
          "examine" : "\nThe glove is very powerful, able to do things you can't see. Bummer, huh?",
@@ -99,12 +100,15 @@
          "desc[0]" : "\nSauron's Glove glows here, ..You have an irresistible urge to wear it."
       },
       "pipetman@grove" : {
+         "desc[1]" : "Someone has left a perfectly useable pipetman here.",
          "location" : "IN_ROOM:out_back",
          "name" : "pipetman",
          "examine" : "The end is full of an odd fluid, and you wonder what from.",
          "linked" : "beaker",
+         "state" : "0",
          "size" : "2",
          "weight" : "2",
+         "maxstate" : "1",
          "bvalue" : "20",
          "desc[0]" : "A pipetman, used in genetic research, lies here discarded."
       }
@@ -148,7 +152,7 @@
       },
       "dark_hole@grove" : {
          "exits" : {
-            "n" : "flower_garden"
+            "n" : "gate"
          },
          "flags" : [
             "soundproof",
@@ -425,11 +429,7 @@
             "Fireball",
             "Missile",
             "Shock",
-            "Frost",
-            "ImmCripple",
-            "ImmBlind",
-            "ImmMute",
-            "ImmDeaf"
+            "Frost"
          ],
          "damage" : "20",
          "location" : "cottage",
@@ -438,16 +438,13 @@
          "description" : "Dinthiar, King of the Elves, sits here waiting for you.",
          "strength" : "1000",
          "speed" : "0",
+         "aggression" : "0",
          "pname" : "King Dinthiar",
-         "aggression" : "0"
+         "pflags" : [
+            "NoMagic"
+         ]
       },
       "platydonk@grove" : {
-         "eflags" : [
-            "ImmCripple",
-            "ImmBlind",
-            "ImmMute",
-            "ImmDeaf"
-         ],
          "damage" : "25",
          "location" : "lab",
          "armor" : "0",
@@ -456,7 +453,10 @@
          "strength" : "250",
          "speed" : "0",
          "pname" : "The PlatyDonk",
-         "aggression" : "50"
+         "aggression" : "50",
+         "pflags" : [
+            "NoMagic"
+         ]
       },
       "lachesis@grove" : {
          "damage" : "10",

@@ -230,22 +230,6 @@
          "bvalue" : "250",
          "desc[0]" : "The Scarecrow's brain has been rolled up to keep it safe."
       },
-      "door_tree_1@fairybook" : {
-         "desc[1]" : "The tree is closed.",
-         "location" : "IN_ROOM:fairybook39",
-         "oflags" : [
-            "Lockable",
-            "Openable",
-            "NoGet"
-         ],
-         "altname" : "door",
-         "name" : "door_tree_1",
-         "linked" : "door_tree",
-         "state" : "2",
-         "pname" : "tree",
-         "maxstate" : "2",
-         "desc[0]" : "The tree is open."
-      },
       "rose_red@fairybook" : {
          "location" : "IN_ROOM:fairybook40",
          "altname" : "rose",
@@ -326,9 +310,9 @@
          "desc[0]" : "A blue pitcher sits here, on a blue table."
       },
       "bouncy_bed@fairybook" : {
+         "desc[1]" : "A huge canopy bed is pushed against the wall.",
          "location" : "IN_ROOM:fairybook80",
          "oflags" : [
-            "Pushable",
             "Pushtoggle",
             "NoGet"
          ],
@@ -337,14 +321,15 @@
          "examine" : "It is very bouncy, and very heavy.\n",
          "state" : "1",
          "pname" : "bed",
+         "maxstate" : "1",
          "bvalue" : "50",
-         "desc[0]" : "A huge canopy bed is pushed against the wall."
+         "desc[0]" : "A huge canopy bed is here, right next to a trap door."
       },
       "fairytale_book@fairybook" : {
          "location" : "IN_ROOM:Fairybook98",
          "altname" : "fairytale",
          "name" : "fairytale_book",
-         "examine" : "This book is a collection of fairytales from\nlong ago. It seems that someone has torn out the last \nfour pages!\n",
+         "examine" : "This book is a collection of fairytales from long ago. It seems that\nsomeone has torn out the last four pages!\n",
          "size" : "10",
          "pname" : "book",
          "weight" : "10",
@@ -363,10 +348,8 @@
          "desc[0]" : "A comb lies here, dropped by a mermaid."
       },
       "small_curtain_1@fairybook" : {
-         "desc[1]" : "The curtains are closed.",
          "location" : "IN_ROOM:fairybook11",
          "oflags" : [
-            "Lockable",
             "Openable",
             "NoGet"
          ],
@@ -374,9 +357,9 @@
          "name" : "small_curtain_1",
          "desc[2]" : "A curtain hangs in the corner.",
          "linked" : "small_curtain",
-         "state" : "2",
+         "state" : "1",
          "pname" : "curtain",
-         "maxstate" : "2",
+         "maxstate" : "1",
          "desc[0]" : "The curtains are open."
       },
       "door_tree@fairybook" : {
@@ -389,7 +372,8 @@
          ],
          "altname" : "door",
          "name" : "door_tree",
-         "linked" : "door_tree_1",
+         "examine" : "You find a small door in the tree.",
+         "linked" : "door_tree1",
          "state" : "2",
          "pname" : "tree",
          "maxstate" : "2",
@@ -466,20 +450,18 @@
          "desc[0]" : "A piece of egg here looks edible."
       },
       "discreet_curtain@fairybook" : {
-         "desc[1]" : "The curtain is closed.",
+         "desc[1]" : "A curtain hangs discreetly in one corner.",
          "location" : "IN_ROOM:fairybook145",
          "oflags" : [
-            "Lockable",
             "Openable",
             "NoGet"
          ],
          "altname" : "discreet",
          "name" : "discreet_curtain",
-         "desc[2]" : "A curtain hangs discreetly in one corner.",
          "linked" : "discreet_curtain_1",
-         "state" : "2",
+         "state" : "1",
          "pname" : "curtain",
-         "maxstate" : "2",
+         "maxstate" : "1",
          "desc[0]" : "The curtain is open."
       },
       "brown_door_1@fairybook" : {
@@ -532,8 +514,9 @@
             "Openable",
             "NoGet"
          ],
-         "altname" : "hole",
+         "altname" : "door",
          "name" : "hole_tree_1",
+         "examine" : "You find a door in the tree.",
          "linked" : "hole_tree",
          "state" : "2",
          "pname" : "tree",
@@ -548,8 +531,9 @@
             "Openable",
             "NoGet"
          ],
-         "altname" : "hole",
+         "altname" : "door",
          "name" : "hole_tree",
+         "examine" : "You find a door in the tree.",
          "linked" : "hole_tree_1",
          "state" : "2",
          "pname" : "tree",
@@ -728,21 +712,17 @@
          "desc[0]" : "A piece of paper flutters in the breeze."
       },
       "trap_door@fairybook" : {
-         "desc[1]" : "The trap door is closed.",
          "location" : "IN_ROOM:fairybook80",
          "oflags" : [
-            "Lockable",
-            "Openable",
             "Destroyed",
             "NoGet"
          ],
          "altname" : "trap",
          "name" : "trap_door",
-         "desc[2]" : "The trap door is locked.",
-         "state" : "2",
+         "state" : "0",
          "pname" : "door",
-         "maxstate" : "2",
-         "desc[0]" : "The trap door is open"
+         "maxstate" : "0",
+         "desc[0]" : "The trap door is locked."
       },
       "distant_gate@fairybook" : {
          "location" : "IN_ROOM:fairybook140",
@@ -766,7 +746,7 @@
          ],
          "altname" : "silver",
          "name" : "silver_slippers",
-         "examine" : "They look like they might fit.  Written on the bottom of each sole is the word 'home'.\n",
+         "examine" : "They look like they might fit.  Written on the bottom of each sole is the \nword 'home'.\n",
          "size" : "5",
          "weight" : "5",
          "pname" : "slippers",
@@ -777,11 +757,7 @@
          ]
       },
       "pig_baby@fairybook" : {
-         "damage" : "25",
          "location" : "CARRIED_BY:duchess",
-         "oflags" : [
-            "Weapon"
-         ],
          "altname" : "pig",
          "name" : "pig_baby",
          "examine" : "The baby has cute little eyes and a pug nose.\n",
@@ -792,20 +768,18 @@
          "desc[0]" : "The baby lies on the ground, squealing."
       },
       "small_curtain@fairybook" : {
-         "desc[1]" : "The curtains are closed.",
+         "desc[1]" : "A curtain hangs in the corner.",
          "location" : "IN_ROOM:fairybook10",
          "oflags" : [
-            "Lockable",
             "Openable",
             "NoGet"
          ],
          "altname" : "small",
          "name" : "small_curtain",
-         "desc[2]" : "A curtain hangs in the corner.",
          "linked" : "small_curtain_1",
-         "state" : "2",
+         "state" : "1",
          "pname" : "curtain",
-         "maxstate" : "2",
+         "maxstate" : "1",
          "desc[0]" : "The curtains are open."
       },
       "flower_poppy@fairybook" : {
@@ -843,26 +817,14 @@
       },
       "fairy_dust@fairybook" : {
          "location" : "IN_ROOM:fairybook93",
-         "oflags" : [
-            "Wearable"
-         ],
          "altname" : "fairy",
          "name" : "fairy_dust",
          "examine" : "Think of the magic you could perform with this dust...\n",
          "size" : "5",
-         "weight" : "5",
          "pname" : "dust",
+         "weight" : "5",
          "bvalue" : "100",
-         "desc[0]" : "A bag of fairy dust lies here.",
-         "aflags" : [
-            "Head",
-            "Face",
-            "Arms",
-            "Back",
-            "Chest",
-            "Legs",
-            "Hands"
-         ]
+         "desc[0]" : "A bag of fairy dust lies here."
       },
       "white_hat@fairybook" : {
          "location" : "IN_ROOM:fairybook37",
@@ -882,20 +844,18 @@
          ]
       },
       "discreet_curtain_1@fairybook" : {
-         "desc[1]" : "The curtain is closed.",
+         "desc[1]" : "A curtain hangs discreetly in one corner.",
          "location" : "IN_ROOM:fairybook146",
          "oflags" : [
-            "Lockable",
             "Openable",
             "NoGet"
          ],
          "altname" : "discreet",
          "name" : "discreet_curtain_1",
-         "desc[2]" : "A curtain hangs discreetly in one corner.",
          "linked" : "discreet_curtain",
-         "state" : "2",
+         "state" : "1",
          "pname" : "curtain",
-         "maxstate" : "2",
+         "maxstate" : "1",
          "desc[0]" : "The curtain is open."
       },
       "cloth_shawl@fairybook" : {
@@ -970,6 +930,23 @@
          "bvalue" : "80",
          "desc[0]" : "The Neversword gleams brightly from where it lays."
       },
+      "door_tree1@fairybook" : {
+         "desc[1]" : "The tree is closed.",
+         "location" : "IN_ROOM:fairybook39",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "door_tree1",
+         "examine" : "You find a small door in the tree.",
+         "linked" : "door_tree",
+         "state" : "2",
+         "pname" : "tree",
+         "maxstate" : "2",
+         "desc[0]" : "The tree is open."
+      },
       "bread_white@fairybook" : {
          "location" : "CARRIED_BY:lion",
          "oflags" : [
@@ -1005,7 +982,7 @@
          "location" : "IN_ROOM:fairybook80",
          "altname" : "wonderland",
          "name" : "wonderland_book",
-         "examine" : "The book makes for interesting reading, and seems somehow familiar...\n",
+         "examine" : "The book makes for interesting reading, and seems somehow familiar...\nBut you don't see any pages missing out of this book...hmmm...\n",
          "size" : "20",
          "pname" : "book",
          "weight" : "10",
@@ -1070,7 +1047,7 @@
          ],
          "altname" : "bear",
          "name" : "bear_teddy",
-         "examine" : "The teddy bear looks lonely.  No one has cuddled it in quite some\ntime.\n",
+         "examine" : "The teddy bear looks lonely.  No one has cuddled it in quite some time.\n",
          "size" : "10",
          "weight" : "10",
          "pname" : "teddy",
@@ -1408,7 +1385,8 @@
             "s" : "fairybook110"
          },
          "flags" : [
-            "NoMobiles"
+            "NoMobiles",
+            "Outdoors"
          ],
          "zone" : "fairybook",
          "title" : "Brook",
@@ -1858,7 +1836,7 @@
       "fairybook39@fairybook" : {
          "exits" : {
             "e" : "fairybook40",
-            "s" : "fairybook38"
+            "s" : "^door_tree1"
          },
          "flags" : [],
          "zone" : "fairybook",
@@ -2027,7 +2005,7 @@
       },
       "fairybook78@fairybook" : {
          "exits" : {
-            "e" : "fairybook77"
+            "n" : "fairybook77"
          },
          "flags" : [],
          "zone" : "fairybook",
@@ -2360,7 +2338,6 @@
       },
       "fairybook80@fairybook" : {
          "exits" : {
-            "w" : "fairytale99@fairytale",
             "d" : "fairybook77"
          },
          "flags" : [
@@ -2369,7 +2346,7 @@
          "zone" : "fairybook",
          "title" : "Bedroom",
          "id" : "fairybook80",
-         "description" : "\nYou ascend to an A-shaped room. As you gaze around it, you are\nastonished at the awesome spectacle about. All of the things here\nare made of gold, and all are adorned with the letter 'A'. Upon the A-\nshaped bed lies a beautiful little girl with blonde hair and a blue\ndress. A strange window looks west into a library.\n",
+         "description" : "\nYou ascend to an A-shaped room. As you gaze around it, you are astonished \nat the awesome spectacle about. All of the things here are made of gold, \nand all are adorned with the letter 'A'. Upon the A-shaped bed lies a \nbeautiful little girl with blonde hair and a blue dress. \n",
          "altitude" : null
       },
       "fairybook171@fairybook" : {
@@ -2428,7 +2405,7 @@
       },
       "fairybook173@fairybook" : {
          "exits" : {
-            "n" : "fairybook172",
+            "n" : "fairybook171",
             "d" : "fairytale99@fairytale"
          },
          "flags" : [],
@@ -2440,8 +2417,8 @@
       },
       "fairybook166@fairybook" : {
          "exits" : {
-            "u" : "fairybook167",
-            "d" : "fairybook165"
+            "n" : "fairybook165",
+            "s" : "fairybook167"
          },
          "flags" : [
             "Outdoors"
@@ -2449,7 +2426,7 @@
          "zone" : "fairybook",
          "title" : "Atop the Wall",
          "id" : "fairybook166",
-         "description" : "\nYou stand atop the wall, looking into the yard beyond. Before you is\na great stretch of country having a floor as smooth and shining and\nwhite as the bottom of a big platter. Scattered around are many\nhouses made entirely of china and painted in the brightest colours.\nThese houses are quite small, the biggest of them reaching only as\nhigh as your waist. There are also pretty little barns, with china\nfences around them, and many cows and sheep and horses and pigs\nand chickens, all made of china, standing around in groups. But the\nstrangest of all are the people who live in this queer country. There\nare milk-maids and shepherdesses, with bright-colored bodices and\ngolden spots all over their gowns; and princesses with most\ngorgeous frocks of silver and gold and purple; and shepherds dressed\nin knee-breeches with pink and yellow and blue stripes down them,\nand golden buckles on their shoes; and princes with jewelled crowns\nupon their heads, wearing ermine robes and satin doublets; and funny\nclowns in ruffled gowns, with round red spots upon their cheeks and\ntall, pointed caps. And, strangest of all, these people are all made\nof china, even to their clothes, and are so small that the tallest of\nthem is no higher than your knee. A ladder leads down to the China\nLand, and up to a strange path.\n",
+         "description" : "\nYou stand atop the wall, looking into the yard beyond. Before you is\na great stretch of country having a floor as smooth and shining and\nwhite as the bottom of a big platter. Scattered around are many\nhouses made entirely of china and painted in the brightest colours.\nThese houses are quite small, the biggest of them reaching only as\nhigh as your waist. There are also pretty little barns, with china\nfences around them, and many cows and sheep and horses and pigs\nand chickens, all made of china, standing around in groups. But the\nstrangest of all are the people who live in this queer country. There\nare milk-maids and shepherdesses, with bright-colored bodices and\ngolden spots all over their gowns; and princesses with most\ngorgeous frocks of silver and gold and purple; and shepherds dressed\nin knee-breeches with pink and yellow and blue stripes down them,\nand golden buckles on their shoes; and princes with jewelled crowns\nupon their heads, wearing ermine robes and satin doublets; and funny\nclowns in ruffled gowns, with round red spots upon their cheeks and\ntall, pointed caps. And, strangest of all, these people are all made\nof china, even to their clothes, and are so small that the tallest of\nthem is no higher than your knee. A ladder leads south to the China\nLand, and north to a strange path.\n",
          "altitude" : null
       },
       "fairybook115@fairybook" : {
@@ -2467,7 +2444,7 @@
       },
       "fairybook79@fairybook" : {
          "exits" : {
-            "s" : "fairybook78"
+            "s" : "fairybook77"
          },
          "flags" : [
             "NoMobiles"
@@ -2850,7 +2827,7 @@
       },
       "fairybook136@fairybook" : {
          "exits" : {
-            "w" : "fairybook135",
+            "e" : "fairybook135",
             "n" : "fairybook137"
          },
          "flags" : [
@@ -2859,7 +2836,7 @@
          "zone" : "fairybook",
          "title" : "On the Road",
          "id" : "fairybook136",
-         "description" : "\nYou stand on the yellow brick road, which goes north to the \nEmerald City and west to a poppy field.\n",
+         "description" : "\nYou stand on the yellow brick road, which goes north to the \nEmerald City and east to a poppy field.\n",
          "altitude" : null
       },
       "fairybook65@fairybook" : {
@@ -3012,7 +2989,7 @@
       },
       "fairybook105@fairybook" : {
          "exits" : {
-            "e" : "fairybook94",
+            "w" : "fairybook94",
             "n" : "fairytale99@fairytale"
          },
          "flags" : [
@@ -3021,7 +2998,7 @@
          "zone" : "fairybook",
          "title" : "The Doorway Home",
          "id" : "fairybook105",
-         "description" : "\nGuarded by a single boy, the doorway home beckons. \"Once you go,\"\nThe boy tells you, \"you may never return . . .\" He draws his sword,\nprepared to prevent you from leaving Neverland. An exit lies north,\nbeyond him. To the east is a large gulch.\n",
+         "description" : "\nGuarded by a single boy, the doorway home beckons. \"Once you go,\"\nThe boy tells you, \"you may never return . . .\" He draws his sword,\nprepared to prevent you from leaving Neverland. An exit lies north,\nbeyond him. To the west is a large gulch.\n",
          "altitude" : null
       },
       "fairybook14@fairybook" : {
@@ -3092,7 +3069,7 @@
       "fairybook95@fairybook" : {
          "exits" : {
             "e" : "fairybook96",
-            "s" : "fairybook104"
+            "n" : "fairybook104"
          },
          "flags" : [
             "Outdoors"
@@ -3106,7 +3083,7 @@
       "fairybook38@fairybook" : {
          "exits" : {
             "e" : "fairybook35",
-            "n" : "fairybook39"
+            "n" : "^door_tree"
          },
          "flags" : [
             "Outdoors"
@@ -3256,7 +3233,8 @@
             "w" : "fairybook134"
          },
          "flags" : [
-            "Outdoors"
+            "Outdoors",
+            "NoMobiles"
          ],
          "zone" : "fairybook",
          "title" : "Flowered Bank",
@@ -3505,19 +3483,22 @@
          "armor" : "0",
          "pname" : "Flamingogo",
          "name" : "flamingogo",
-         "description" : "A flamingoa flaps his wings wildly.",
+         "description" : "A flamingo flaps his wings wildly.",
          "strength" : "150"
       },
       "lily@fairybook" : {
          "damage" : "10",
          "location" : "fairybook104",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Lily",
          "name" : "lily",
          "description" : "Tiger Lily, the beautiful Redskin princess, proudly attacks you.",
-         "strength" : "150"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Lily",
+         "aggression" : "25"
       },
       "eats@fairybook" : {
          "damage" : "10",
@@ -3555,13 +3536,17 @@
       "rose@fairybook" : {
          "damage" : "10",
          "location" : "fairybook49",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Rose",
          "name" : "rose",
          "description" : "A rose points back the way you came.",
-         "strength" : "150"
+         "sflags" : [
+            "NoLegs",
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Rose",
+         "aggression" : "25"
       },
       "frogfoot@fairybook" : {
          "damage" : "10",
@@ -3599,13 +3584,16 @@
       "gnat@fairybook" : {
          "damage" : "10",
          "location" : "fairybook56",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Gnat",
          "name" : "gnat",
          "description" : "A gnat lands on your shoulder.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Gnat",
+         "aggression" : "25"
       },
       "walks@fairybook" : {
          "damage" : "10",
@@ -3632,13 +3620,16 @@
       "nibs@fairybook" : {
          "damage" : "10",
          "location" : "fairybook104",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Nibs",
          "name" : "nibs",
          "description" : "Nibs, the debonair Lost Boy, smiles innocently as he hovers above you.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Nibs",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "haigha@fairybook" : {
          "damage" : "10",
@@ -3691,7 +3682,8 @@
          "name" : "vermillion",
          "description" : "A vermillion mermaid swims past you, slapping you with her fins.",
          "sflags" : [
-            "Female"
+            "Female",
+            "NoLegs"
          ],
          "strength" : "150",
          "speed" : "2",
@@ -3737,13 +3729,16 @@
       "crow@fairybook" : {
          "damage" : "10",
          "location" : "fairybook117",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Crow",
          "name" : "crow",
          "description" : "A crow spins and wheels in the air around your head.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Crow",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "cheshirecat@fairybook" : {
          "damage" : "10",
@@ -3817,13 +3812,16 @@
       "hollo@fairybook" : {
          "damage" : "10",
          "location" : "fairybook153",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Hollo",
          "name" : "hollo",
          "description" : "A flying monkey throws darts at you with deadly accuracy.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Hollo",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "chinacow@fairybook" : {
          "damage" : "10",
@@ -3841,13 +3839,13 @@
          "location" : "fairybook34",
          "armor" : "0",
          "name" : "babe",
-         "description" : "Babe Bunny hops around the room, impersonating famous comedians.",
+         "description" : "Babs Bunny hops around the room, impersonating famous comedians.",
          "sflags" : [
             "Female"
          ],
          "strength" : "200",
          "speed" : "0",
-         "pname" : "Babe",
+         "pname" : "Babs",
          "aggression" : "25"
       },
       "mock@fairybook" : {
@@ -3855,7 +3853,7 @@
          "location" : "fairybook43",
          "speed" : "2",
          "aggression" : "25",
-         "armor" : "0",
+         "armor" : "20",
          "pname" : "Mock",
          "name" : "mock",
          "description" : "The Mock Turtle talks about the good old days.",
@@ -3872,8 +3870,11 @@
          ],
          "strength" : "150",
          "speed" : "2",
+         "aggression" : "25",
          "pname" : "Tinkerbel",
-         "aggression" : "25"
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "nine@fairybook" : {
          "damage" : "10",
@@ -3900,46 +3901,61 @@
       "lem@fairybook" : {
          "damage" : "10",
          "location" : "fairybook117",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Lem",
          "name" : "lem",
          "description" : "A crow lets out a startled 'Squawk!' as someone pulls his tail.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Lem",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "alice@fairybook" : {
          "damage" : "10",
          "location" : "fairybook80",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Alice",
          "name" : "alice",
          "description" : "Alice sits here, glaring at you.",
-         "strength" : "150"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Alice",
+         "aggression" : "25"
       },
       "flaminga@fairybook" : {
          "damage" : "10",
          "location" : "fairybook42",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Flaminga",
          "name" : "flaminga",
          "description" : "A flamingo stretches out her neck.",
-         "strength" : "150"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Flaminga",
+         "aggression" : "25"
       },
       "breadfly@fairybook" : {
          "damage" : "10",
          "location" : "fairybook56",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Breadfly",
          "name" : "breadfly",
          "description" : "A Bread-And-Butterfly lands face down on your foot.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Breadfly",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "larkspur@fairybook" : {
          "damage" : "10",
@@ -3969,24 +3985,33 @@
       "swarm@fairybook" : {
          "damage" : "10",
          "location" : "fairybook151",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Swarm",
          "name" : "swarm",
          "description" : "A swarm of bees flies around your head, looking for a place to sting.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Swarm",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "wildcat@fairybook" : {
          "damage" : "10",
          "location" : "fairybook136",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Wildcat",
          "name" : "wildcat",
          "description" : "A wildcat snarls at you from her treetop perch.",
-         "strength" : "150"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Wildcat",
+         "aggression" : "25"
       },
       "oz@fairybook" : {
          "damage" : "10",
@@ -4085,24 +4110,30 @@
       "kingcrow@fairybook" : {
          "damage" : "10",
          "location" : "fairybook150",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Kingcrow",
          "name" : "kingcrow",
          "description" : "The King of the Crows drops a rock on your head!",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Kingcrow",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "elm@fairybook" : {
          "damage" : "10",
          "location" : "fairybook168",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Elm",
          "name" : "elm",
          "description" : "A tree threatens you with its branches.",
-         "strength" : "150"
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Elm",
+         "aggression" : "25"
       },
       "quentin@fairybook" : {
          "damage" : "10",
@@ -4118,13 +4149,16 @@
       "zizzy@fairybook" : {
          "damage" : "10",
          "location" : "fairybook154",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Zizzy",
          "name" : "zizzy",
          "description" : "A flying monkey hums as he flies in circles over your head.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Zizzy",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "timmer@fairybook" : {
          "damage" : "10",
@@ -4173,20 +4207,26 @@
       "pudding@fairybook" : {
          "damage" : "10",
          "location" : "fairybook78",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Pudding",
          "name" : "pudding",
          "description" : "A plate of pudding introduces itself to you.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "Pudding",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "knaght@fairybook" : {
          "damage" : "10",
          "location" : "fairybook77",
          "armor" : "0",
          "name" : "knaght",
-         "description" : "A Knight bars your way up.  \"The Queen is resting,\" he says.",
+         "description" : "A Knight bars your way up. 'The Queen is resting,' he says.",
          "strength" : "150",
          "speed" : "0",
          "pname" : "Knaght",
@@ -4209,13 +4249,16 @@
       "hello@fairybook" : {
          "damage" : "10",
          "location" : "fairybook154",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Hello",
          "name" : "hello",
          "description" : "A flying monkey smiles politely.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Hello",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "soldier@fairybook" : {
          "damage" : "10",
@@ -4297,13 +4340,16 @@
       "oyster@fairybook" : {
          "damage" : "10",
          "location" : "fairybook60",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Oyster",
          "name" : "oyster",
          "description" : "An oyster spits water at you.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Oyster",
+         "aggression" : "25"
       },
       "fox@fairybook" : {
          "damage" : "10",
@@ -4341,13 +4387,16 @@
       "duchess@fairybook" : {
          "damage" : "10",
          "location" : "fairybook29",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Duchess",
          "name" : "duchess",
          "description" : "The Duchess protects her baby.",
-         "strength" : "150"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Duchess",
+         "aggression" : "25"
       },
       "sleepyhead@fairybook" : {
          "damage" : "10",
@@ -4402,13 +4451,16 @@
       "oak@fairybook" : {
          "damage" : "10",
          "location" : "fairybook168",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Oak",
          "name" : "oak",
          "description" : "A tree waves its limbs menacingly at you.",
-         "strength" : "150"
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Oak",
+         "aggression" : "25"
       },
       "flamingo@fairybook" : {
          "damage" : "10",
@@ -4424,13 +4476,17 @@
       "tigerlily@fairybook" : {
          "damage" : "10",
          "location" : "fairybook48",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Tigerlily",
          "name" : "tigerlily",
          "description" : "A tiger-lily nods her head at you.",
-         "strength" : "150"
+         "sflags" : [
+            "Female",
+            "NoLegs"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Tigerlily",
+         "aggression" : "25"
       },
       "tommer@fairybook" : {
          "damage" : "10",
@@ -4457,13 +4513,16 @@
       "stork@fairybook" : {
          "damage" : "10",
          "location" : "fairybook133",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Stork",
          "name" : "stork",
          "description" : "A very large stork lands in front of you.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Stork",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "wendy@fairybook" : {
          "damage" : "10",
@@ -4482,13 +4541,16 @@
       "tem@fairybook" : {
          "damage" : "10",
          "location" : "fairybook117",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Tem",
          "name" : "tem",
          "description" : "A crow screams at you with indolence.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Tem",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "mason@fairybook" : {
          "damage" : "10",
@@ -4504,13 +4566,16 @@
       "zik@fairybook" : {
          "damage" : "10",
          "location" : "fairybook155",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Zik",
          "name" : "zik",
          "description" : "A flying monkey wears a golden cap.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Zik",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "tootles@fairybook" : {
          "damage" : "10",
@@ -4534,8 +4599,11 @@
          ],
          "strength" : "150",
          "speed" : "2",
+         "aggression" : "25",
          "pname" : "Magpie",
-         "aggression" : "25"
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "quirk@fairybook" : {
          "damage" : "10",
@@ -4620,8 +4688,11 @@
          ],
          "strength" : "150",
          "speed" : "2",
+         "aggression" : "25",
          "pname" : "Canary",
-         "aggression" : "25"
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "ace@fairybook" : {
          "damage" : "10",
@@ -4631,7 +4702,7 @@
          "armor" : "0",
          "pname" : "Ace",
          "name" : "ace",
-         "description" : "The Ace of Clubs paints white roses red",
+         "description" : "The Ace of Clubs paints white roses red.",
          "strength" : "150"
       },
       "crocodile@fairybook" : {
@@ -4648,13 +4719,16 @@
       "eppe@fairybook" : {
          "damage" : "10",
          "location" : "fairybook152",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Eppe",
          "name" : "eppe",
          "description" : "A flying monkey carries a rope.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Eppe",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "panther@fairybook" : {
          "damage" : "10",
@@ -4675,7 +4749,7 @@
          "armor" : "0",
          "pname" : "Humbug",
          "name" : "humbug",
-         "description" : "A tiny man shouts \"Pay no attention to the man behind the curtain!\"",
+         "description" : "A tiny man shouts 'Pay no attention to the man behind the curtain!'",
          "strength" : "150"
       },
       "noodler@fairybook" : {
@@ -4765,6 +4839,7 @@
          "name" : "daisy",
          "description" : "A daisy shakes her head sadly.",
          "sflags" : [
+            "NoLegs",
             "Female"
          ],
          "strength" : "150",
@@ -4775,24 +4850,30 @@
       "crower@fairybook" : {
          "damage" : "10",
          "location" : "fairybook149",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Crower",
          "name" : "crower",
          "description" : "A huge crow swoops down and attacks you!",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Crower",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "hillo@fairybook" : {
          "damage" : "10",
          "location" : "fairybook153",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Hillo",
          "name" : "hillo",
          "description" : "A flying monkey swings his mace wildly.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Hillo",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "captainhook@fairybook" : {
          "damage" : "10",
@@ -4802,19 +4883,22 @@
          "armor" : "0",
          "pname" : "Captainhook",
          "name" : "captainhook",
-         "description" : "Hook brandishes his hook, shouting \"Bad form!\" as he attacks.",
+         "description" : "Hook brandishes his hook, shouting 'Bad form!' as he attacks.",
          "strength" : "300"
       },
       "slightly@fairybook" : {
          "damage" : "10",
          "location" : "fairybook104",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Slightly",
          "name" : "slightly",
          "description" : "Slightly, the conceited Lost Boy, sneers at you from where he floats.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Slightly",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "ten@fairybook" : {
          "damage" : "10",
@@ -4824,7 +4908,7 @@
          "armor" : "0",
          "pname" : "Ten",
          "name" : "ten",
-         "description" : "The Ten of Clubs paints white roses red",
+         "description" : "The Ten of Clubs paints white roses red.",
          "strength" : "150"
       },
       "rush@fairybook" : {
@@ -4852,13 +4936,19 @@
       "mutton@fairybook" : {
          "damage" : "10",
          "location" : "fairybook78",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Mutton",
          "name" : "mutton",
          "description" : "A leg of mutton introduces itself to you.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "Mutton",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "fieldmouse@fairybook" : {
          "damage" : "10",
@@ -5064,8 +5154,11 @@
          ],
          "strength" : "150",
          "speed" : "2",
+         "aggression" : "25",
          "pname" : "Eaglet",
-         "aggression" : "25"
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "hedgehogy@fairybook" : {
          "damage" : "10",
@@ -5095,13 +5188,16 @@
       "peppe@fairybook" : {
          "damage" : "10",
          "location" : "fairybook152",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Peppe",
          "name" : "peppe",
          "description" : "A flying monkey carrying a harness flies towards you.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Peppe",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "four@fairybook" : {
          "damage" : "10",
@@ -5111,19 +5207,22 @@
          "armor" : "0",
          "pname" : "Four",
          "name" : "four",
-         "description" : "The Four of Clubs paints white roses red",
+         "description" : "The Four of Clubs paints white roses red.",
          "strength" : "150"
       },
       "jem@fairybook" : {
          "damage" : "10",
          "location" : "fairybook117",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Jem",
          "name" : "jem",
          "description" : "A crow dives lower to see you better.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Jem",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "amazon@fairybook" : {
          "damage" : "10",
@@ -5150,8 +5249,11 @@
          ],
          "strength" : "150",
          "speed" : "0",
+         "aggression" : "25",
          "pname" : "Neverbird",
-         "aggression" : "25"
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "boar@fairybook" : {
          "damage" : "10",
@@ -5187,15 +5289,22 @@
          "strength" : "150"
       },
       "witch@fairybook" : {
+         "eflags" : [
+            "Bhands",
+            "Fireball"
+         ],
          "damage" : "10",
          "location" : "fairybook151",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Witch",
          "name" : "witch",
          "description" : "The Wicked Witch of the West grins evilly at you.",
-         "strength" : "350"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "350",
+         "speed" : "2",
+         "pname" : "Witch",
+         "aggression" : "25"
       },
       "pan@fairybook" : {
          "damage" : "10",
@@ -5208,7 +5317,8 @@
          "pname" : "Pan",
          "aggression" : "25",
          "mflags" : [
-            "BarNorth"
+            "BarNorth",
+            "Flyer"
          ]
       },
       "bianca@fairybook" : {
@@ -5304,6 +5414,9 @@
          "armor" : "0",
          "name" : "glinda",
          "description" : "Glinda the Good Witch smiles benevolently at you.",
+         "sflags" : [
+            "Female"
+         ],
          "strength" : "150",
          "speed" : "2",
          "pname" : "Glinda",
@@ -5323,13 +5436,16 @@
       "maple@fairybook" : {
          "damage" : "10",
          "location" : "fairybook168",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Maple",
          "name" : "maple",
          "description" : "A tree grumbles at you from deep inside its trunk.",
-         "strength" : "150"
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Maple",
+         "aggression" : "25"
       },
       "ochre@fairybook" : {
          "damage" : "10",
@@ -5338,7 +5454,8 @@
          "name" : "ochre",
          "description" : "A ochre mermaid swims past you, slapping you with her tail.",
          "sflags" : [
-            "Female"
+            "Female",
+            "NoLegs"
          ],
          "strength" : "150",
          "speed" : "2",
@@ -5394,7 +5511,7 @@
          "location" : "fairybook41",
          "armor" : "0",
          "name" : "queenohearts",
-         "description" : "The Queen of Hearts shouts \"Off with her head!\"",
+         "description" : "The Queen of Hearts shouts 'Off with her head!'",
          "sflags" : [
             "Female"
          ],
@@ -5422,7 +5539,7 @@
          "armor" : "0",
          "pname" : "Eight",
          "name" : "eight",
-         "description" : "The Eight of Clubs paints white roses red",
+         "description" : "The Eight of Clubs paints white roses red.",
          "strength" : "150"
       },
       "guinea@fairybook" : {
@@ -5439,24 +5556,33 @@
       "rockingfly@fairybook" : {
          "damage" : "10",
          "location" : "fairybook56",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Rockingfly",
          "name" : "rockingfly",
          "description" : "A Rockinghorsefly rocks in place.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Rockingfly",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "oysterer@fairybook" : {
          "damage" : "10",
          "location" : "fairybook60",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Oysterer",
          "name" : "oysterer",
          "description" : "An oyster lies here, cracked open on a rock.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Oysterer",
+         "aggression" : "25"
       },
       "quisby@fairybook" : {
          "damage" : "10",
@@ -5508,13 +5634,16 @@
       "kekke@fairybook" : {
          "damage" : "10",
          "location" : "fairybook152",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Kekke",
          "name" : "kekke",
          "description" : "A flying monkey with a bridle and saddle grins at you.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Kekke",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "henry@fairybook" : {
          "damage" : "10",
@@ -5530,24 +5659,36 @@
       "zuzzy@fairybook" : {
          "damage" : "10",
          "location" : "fairybook155",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Zuzzy",
          "name" : "zuzzy",
          "description" : "A flying monkey calls out nasty names as she dances out of your reach.",
-         "strength" : "150"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Zuzzy",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "snapfly@fairybook" : {
          "damage" : "10",
          "location" : "fairybook56",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Snapfly",
          "name" : "snapfly",
          "description" : "A Snapdragonfly explodes in your ear.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Snapfly",
+         "aggression" : "25",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "kingohearts@fairybook" : {
          "damage" : "10",

@@ -1,0 +1,713 @@
+{
+   "obj" : {
+      "portcullis_1@opera" : {
+         "desc[1]" : "A heavy iron portcullis bars the way south.",
+         "location" : "IN_ROOM:opera35",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "portcullis_1",
+         "examine" : "You find yourself examining a hard iron portcullis, which you have no chance in\nof lifting or breaking through!\n",
+         "linked" : "portcullis",
+         "state" : "0",
+         "pname" : "portcullis",
+         "maxstate" : "1",
+         "desc[0]" : "A raised portcullis allows you to go south."
+      },
+      "box@opera" : {
+         "location" : "IN_ROOM:opera35",
+         "weight" : "10",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "box",
+         "bvalue" : "300",
+         "desc[0]" : "A paper mache music box in the shape of a barrel organ sits here.",
+         "size" : "40"
+      },
+      "chandelier_1@opera" : {
+         "desc[1]" : "You see a chandelier hanging above you.",
+         "location" : "IN_ROOM:opera9",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "chandelier",
+         "name" : "chandelier_1",
+         "maxstate" : "1",
+         "desc[0]" : "A shattered chandelier lies here.",
+         "state" : "1"
+      },
+      "portcullis@opera" : {
+         "desc[1]" : "The heavy iron portcullis bars the way north.",
+         "location" : "IN_ROOM:opera34",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "portcullis",
+         "examine" : "You find yourself examining a hard iron portcullis, which you have absolutely\nno chance of lifting or breaking through!\n",
+         "linked" : "portcullis_1",
+         "state" : "0",
+         "maxstate" : "1",
+         "desc[0]" : "The portcullis is raised."
+      },
+      "rubble_1@opera" : {
+         "desc[1]" : "Uh oh, the opera's only exit is blocked by rubble!",
+         "location" : "IN_ROOM:opera8",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "rubble",
+         "name" : "rubble_1",
+         "maxstate" : "1",
+         "linked" : "rubble",
+         "state" : "0"
+      },
+      "rope@opera" : {
+         "desc[1]" : "A tightly streched rope supports the chandelier.",
+         "location" : "IN_ROOM:opera25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "rope",
+         "examine" : "It looks tattered and old.\n",
+         "linked" : "chandelier",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A frayed rope hangs here."
+      },
+      "music_book@opera" : {
+         "location" : "IN_ROOM:opera35",
+         "altname" : "music",
+         "name" : "music_book",
+         "examine" : "It is titled \"Don Juan Triumphant.\"\n",
+         "size" : "5",
+         "pname" : "book",
+         "weight" : "5",
+         "bvalue" : "400",
+         "desc[0]" : "A book of music lies here."
+      },
+      "crossbow@opera" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:opera10",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "crossbow",
+         "examine" : "It is apparently out of arrows.",
+         "size" : "12",
+         "weight" : "10",
+         "bvalue" : "75",
+         "desc[0]" : "A heavy crossbow is lying here."
+      },
+      "boat@opera" : {
+         "location" : "IN_ROOM:opera9",
+         "weight" : "10",
+         "oflags" : [
+            "Boat"
+         ],
+         "name" : "boat",
+         "examine" : "It has the words \"Property of the Opera House\" stamped on it.\n",
+         "bvalue" : "20",
+         "desc[0]" : "A small rowing boat has been left here.",
+         "size" : "100"
+      },
+      "evening_gloves@opera" : {
+         "location" : "WORN_BY:carlotta",
+         "armor" : "8",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "evening_gloves",
+         "examine" : "Long and black, these elbow length gloves will enhance your \n          appearance.",
+         "size" : "10",
+         "weight" : "0",
+         "pname" : "gloves",
+         "bvalue" : "100",
+         "desc[0]" : "A pair of elegant looking gloves has been dropped here.",
+         "aflags" : [
+            "Hands"
+         ]
+      },
+      "scorpion@opera" : {
+         "location" : "IN_CONTAINER:box_ebony",
+         "weight" : "10",
+         "name" : "scorpion",
+         "bvalue" : "500",
+         "desc[0]" : "A beautifully crafted scorpion sits in the case.",
+         "size" : "20"
+      },
+      "note@opera" : {
+         "location" : "CARRIED_BY:andre",
+         "weight" : "1",
+         "name" : "note",
+         "examine" : "The note reads:\n\tDear Mr. Manager:\n\t\tI am sorry to have to trouble you at a time when you must\n\tbe so very busy, renewing important engagements, signing fresh ones\n\tand generally displaying your excellent taste.  I know what you\n\thave done for Carlotta and for a few others whose admirable\n\tqualities of talent or genius you have suspected.  Of course when I\n\tuse these words, I do not mean to apply them to La Carlotta, who\n\tsings like a squirt and who ought never to have been allowed to\n\tleave the Cafe Jacquine.  And I am not speaking of Christine Daae\n\teither, though her genius is certain, whereas your jealousy prevents\n\ther from creating any important part.  All the same I should like\n\tto take advantage of the fact that you have not yet turned her out\n\tof doors by hearing her this evening.  I will watch the performance\n\tfrom my normal seat in Box 5, which will be kept empty for me.\n\tShould these commands be ignored, a disaster beyond your\n\timagination will occur.\n\t\t\t\tYour Most Humble and Obedient Servant,\n\t\t\t\tOpera Ghost\n",
+         "bvalue" : "50",
+         "desc[0]" : "A note lies here.",
+         "size" : "1"
+      },
+      "mirror@opera" : {
+         "desc[1]" : "There is a large mirror against the north wall.",
+         "location" : "IN_ROOM:opera12",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "name" : "mirror",
+         "examine" : "You see a reflection of yourself.  You cower in fear.\n",
+         "linked" : "hole",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A large mirror on the north wall has been moved to reveal a secret passage\nleading north."
+      },
+      "hole@opera" : {
+         "location" : "IN_ROOM:opera13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hole",
+         "examine" : "It's a hole.\n",
+         "linked" : "mirror",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A secret passage leads south."
+      },
+      "stone@opera" : {
+         "location" : "IN_ROOM:opera15",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "stone",
+         "examine" : "It turns out to be fairly securely imbedded in the floor.\n",
+         "desc[0]" : "A stone in the doorway does not appear to be attached the way the others are."
+      },
+      "chandelier@opera" : {
+         "desc[1]" : "You see the chandelier hanging from the ceiling below your feet.",
+         "location" : "IN_ROOM:opera25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "chandelier",
+         "maxstate" : "1",
+         "linked" : "rope",
+         "state" : "1"
+      },
+      "rubble@opera" : {
+         "desc[1]" : "The entrance to the Opera House has been crushed in an explosion.",
+         "location" : "IN_ROOM:road3e@newvillage",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "rubble",
+         "maxstate" : "1",
+         "linked" : "rubble_1",
+         "desc[0]" : "To the north, the doors of the Opera House stand open.",
+         "state" : "0"
+      },
+      "box_ivory@opera" : {
+         "desc[1]" : "A white ivory box sits on the mantle.",
+         "location" : "IN_ROOM:opera35",
+         "oflags" : [
+            "Container",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "box",
+         "name" : "box_ivory",
+         "state" : "1",
+         "pname" : "ivory",
+         "maxstate" : "1",
+         "desc[0]" : "The white ivory box is open."
+      },
+      "box_ebony@opera" : {
+         "desc[1]" : "An black ebony box sits on the mantle.",
+         "location" : "IN_ROOM:opera35",
+         "oflags" : [
+            "Container",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "box",
+         "name" : "box_ebony",
+         "state" : "1",
+         "pname" : "ebony",
+         "maxstate" : "1",
+         "desc[0]" : "The black ebony box is open."
+      },
+      "grasshopper@opera" : {
+         "desc[1]" : "A cunningly crafted grasshopper is inside the box.",
+         "location" : "IN_CONTAINER:box_ivory",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "grasshopper",
+         "examine" : "It seems to be held down by a pin.\n",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A cunningly crafted grasshopper lies on the ground here."
+      },
+      "tux_tuxedo@opera" : {
+         "location" : "WORN_BY:andre",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "tux",
+         "name" : "tux_tuxedo",
+         "examine" : "It looks like a penguin suit!\n",
+         "size" : "1",
+         "pname" : "tuxedo",
+         "weight" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A formal Tuxedo is here."
+      }
+   },
+   "loc" : {
+      "opera33@opera" : {
+         "exits" : {
+            "w" : "opera29",
+            "e" : "opera31",
+            "n" : "opera34",
+            "s" : "opera30"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "opera",
+         "title" : "Lost in the Mist",
+         "id" : "opera33",
+         "description" : "\n   As you cross the silent, mist-enshrouded waters, you lose sight\nof all landmarks and get a feeling of being completely alone.\n",
+         "altitude" : null
+      },
+      "opera25@opera" : {
+         "exits" : {
+            "w" : "opera24"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "Above the Ceiling",
+         "id" : "opera25",
+         "description" : "\n   Here you are among the rafters and ropes in between the roof and the\nceiling of the opera house.  You can see the seats below your feet through\npeepholes in the floor.\n",
+         "altitude" : null
+      },
+      "opera14@opera" : {
+         "exits" : {
+            "e" : "opera16",
+            "u" : "opera13"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "Bottom Of the Secret Stairs",
+         "id" : "opera14",
+         "description" : "\n   You guess you are at about the level of the third cellar underneath\nthe opera house.  A flight of narrow stone steps leads upward and a\npassage leads off to the east.\n",
+         "altitude" : null
+      },
+      "opera9@opera" : {
+         "exits" : {
+            "n" : "opera10",
+            "s" : "opera8"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "In The Aisles",
+         "id" : "opera9",
+         "description" : "\n   Here amongst the soft, red velvet seats, you can look around at the\nornate gold scrollwork that lines each tier of boxes, the magnificant\nfrescoed ceiling, and the enormous, gas lit, crystal chandelier.  To\nthe north is the stage and to the south is the lobby.\n",
+         "altitude" : null
+      },
+      "opera22@opera" : {
+         "exits" : {
+            "u" : "opera23",
+            "d" : "opera26",
+            "s" : "opera21"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Third Cellar",
+         "id" : "opera22",
+         "description" : "\n   Among the props and scenery you see a spriral staircase going both\nup and down.\n",
+         "altitude" : null
+      },
+      "opera27@opera" : {
+         "exits" : {
+            "w" : "opera26",
+            "n" : "opera28"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "opera",
+         "title" : "The Underground Lake",
+         "id" : "opera27",
+         "description" : "\n   You see to the north a large underground lake here in the fifth cellar\nof the opera house.  It is covered by a thick mist that seems to be\nmysteriously lit from within.  A passage leads west.\n",
+         "altitude" : null
+      },
+      "opera16@opera" : {
+         "exits" : {
+            "w" : "opera14",
+            "e" : "opera18",
+            "n" : "opera17",
+            "s" : "opera16"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Third Cellar",
+         "id" : "opera16",
+         "description" : "\n   You are surrounded by old scenery and props from past operas.\nPassages lead off in all directions.\n",
+         "altitude" : null
+      },
+      "opera35@opera" : {
+         "exits" : {
+            "s" : "opera34"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Phantom's Lair",
+         "id" : "opera35",
+         "description" : "\n   The large room hung completely in black with an enormous stave of\nmusic containing the notes of the Dies Irae many times repeated.  Off\nto one side of the room there is a canopy, from which hangs curtains\nof red brocaded material, and, under the canopy, an open coffin.  An\nenormous organ covers one entire wall.  Against the far wall is a dais,\nupon which sits a black throne.\n",
+         "altitude" : null
+      },
+      "opera29@opera" : {
+         "exits" : {
+            "w" : "opera29",
+            "e" : "opera31",
+            "n" : "opera30",
+            "s" : "opera29"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "opera",
+         "title" : "Lost in the Mist",
+         "id" : "opera29",
+         "description" : "\n   Here the mist swirls around you, then thins slightly, allowing you\nto look into the glass-like surface of the inky waters.\n",
+         "altitude" : null
+      },
+      "opera36@opera" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "opera",
+         "title" : "The Torture Chamber",
+         "id" : "opera36",
+         "description" : "\n   You have fallen into a hexoganal room made of mirrors.  In one\ncorner stands an iron tree with one branch, from which hangs a noose.\nIn the bright light, the tree is reflected into a huge forest.  As the\nroom is slowly heated up, you begin to hallucinate that you are in an\nAfrican forest.  The room continues to get hotter until you either are\nroasted alive, or, unable to take the torture any longer, hang yourself\non the iron tree.\n",
+         "altitude" : null
+      },
+      "opera30@opera" : {
+         "exits" : {
+            "w" : "opera31",
+            "e" : "opera29",
+            "n" : "opera30",
+            "s" : "opera28"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "opera",
+         "title" : "Lost in the Mist",
+         "id" : "opera30",
+         "description" : "\n   As you cross the silent, mist-enshrouded waters, you lose sight\nof all landmarks and get a feeling of being completely alone.\n",
+         "altitude" : null
+      },
+      "opera24@opera" : {
+         "exits" : {
+            "e" : "opera25",
+            "d" : "opera23"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "Top of the Spiral Stairs",
+         "id" : "opera24",
+         "description" : "\n   At the top of the staircase you feel like you are much more then\none storey up from the bottom.  To your east there is a passage.\n",
+         "altitude" : null
+      },
+      "opera8@opera" : {
+         "exits" : {
+            "u" : "opera9",
+            "n" : "opera9",
+            "s" : "^rubble_1"
+         },
+         "flags" : [
+            "Nomobiles"
+         ],
+         "zone" : "opera",
+         "title" : "The Grand Staircase",
+         "id" : "opera8",
+         "description" : "\n   You stand in the magnificant lobby of the opera house.  All around\nyou are marble sculptures and ornate columns.  To the north lies the\nenormous marble Grand Staircase leading further into the theatre.  To\nthe south lie the front doors of the opera house.\n",
+         "altitude" : null
+      },
+      "opera17@opera" : {
+         "exits" : {
+            "w" : "opera16",
+            "e" : "opera16",
+            "n" : "opera18",
+            "s" : "opera17"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Third Cellar",
+         "id" : "opera17",
+         "description" : "\n   You are surrounded by old scenery and props from past operas.\nPassages lead off in all directions.\n",
+         "altitude" : null
+      },
+      "opera19@opera" : {
+         "exits" : {
+            "w" : "opera15",
+            "e" : "opera17",
+            "n" : "opera20",
+            "s" : "opera18"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Third Cellar",
+         "id" : "opera19",
+         "description" : "\n   You are surrounded by old scenery and props from past operas.\nPassages lead off in all directions.\n",
+         "altitude" : null
+      },
+      "opera20@opera" : {
+         "exits" : {
+            "w" : "opera36",
+            "e" : "opera16",
+            "n" : "opera17",
+            "s" : "opera21"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Furnaces",
+         "id" : "opera20",
+         "description" : "\n   From here you can see black sillouttes shoveling coal into the\nfirey furnaces.  Passages lead off in all directions.\n",
+         "altitude" : null
+      },
+      "opera34@opera" : {
+         "exits" : {
+            "n" : "opera35",
+            "s" : "opera33"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Far Shore",
+         "id" : "opera34",
+         "description" : "\n   A stone dock juts out into the dark waters.  There is a passage\nleading north.\n",
+         "altitude" : null
+      },
+      "opera10@opera" : {
+         "exits" : {
+            "w" : "opera11",
+            "s" : "opera9"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Stage",
+         "id" : "opera10",
+         "description" : "\n   From here you have an even better view of the ornate interior of the\nopera house.  You can also observe singers and dancers rehearsing as well\nas carpenters building the scenery for the next performance.  To the west\nis a hallway.\n",
+         "altitude" : null
+      },
+      "opera32@opera" : {
+         "exits" : {
+            "w" : "opera31",
+            "e" : "opera30",
+            "n" : "opera29",
+            "s" : "opera33"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "opera",
+         "title" : "Lost in the Mist",
+         "id" : "opera32",
+         "description" : "\n   The mist seems to deaden all sound around you until all you can\nhear is the lapping of the water against the boat and the beating\nof your own heart.\n",
+         "altitude" : null
+      },
+      "opera13@opera" : {
+         "exits" : {
+            "d" : "opera14",
+            "s" : "^hole"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "Secret Stairs",
+         "id" : "opera13",
+         "description" : "\n   A set of narrow stone steps leads downward into darkness.\n",
+         "altitude" : null
+      },
+      "opera23@opera" : {
+         "exits" : {
+            "u" : "opera24",
+            "d" : "opera22"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "On the Spiral Stairs",
+         "id" : "opera23",
+         "description" : "\n   You stand on the spiral stone staircase that extends both up and down.\n",
+         "altitude" : null
+      },
+      "opera11@opera" : {
+         "exits" : {
+            "w" : "opera12",
+            "e" : "opera10"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Hallway",
+         "id" : "opera11",
+         "description" : "\n   This hallway connects the stage to the main dressing rooms.  It is\ndecorated with colorful posters advertising past operas.  To the east\nis the stage, to the west is a door.\n",
+         "altitude" : null
+      },
+      "opera31@opera" : {
+         "exits" : {
+            "w" : "opera30",
+            "e" : "opera32",
+            "n" : "opera31",
+            "s" : "opera29"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "opera",
+         "title" : "Lost in the Mist",
+         "id" : "opera31",
+         "description" : "\n   You pass near one of the iron candelabras that jut out of the\ndark water to light the mist.\n",
+         "altitude" : null
+      },
+      "opera21@opera" : {
+         "exits" : {
+            "w" : "opera17",
+            "e" : "opera19",
+            "n" : "opera22",
+            "s" : "opera36"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Third Cellar",
+         "id" : "opera21",
+         "description" : "\n   You are surrounded by old scenery and props from past operas.\nThere is a narrow opening between a farmhouse and a scene from the\n\"Roi de Lahore.\"  Passages lead north, east, and west.\n",
+         "altitude" : null
+      },
+      "opera15@opera" : {
+         "exits" : {
+            "e" : "opera19",
+            "u" : "opera10"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Organ",
+         "id" : "opera15",
+         "description" : "\n   You are in the room under the stage from which all the stage\nlighting is controlled.  The mass of gas pipes and controls along\none wall gives this room its name.  A dark passage leads east.\n",
+         "altitude" : null
+      },
+      "opera18@opera" : {
+         "exits" : {
+            "w" : "opera17",
+            "e" : "opera36",
+            "n" : "opera16",
+            "s" : "opera19"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Furnaces",
+         "id" : "opera18",
+         "description" : "\n   From here you can see black sillouttes shoveling coal into the\nfirey furnaces.  Passages lead off in all directions.\n",
+         "altitude" : null
+      },
+      "opera12@opera" : {
+         "exits" : {
+            "e" : "opera11",
+            "n" : "^mirror"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "A Dressing Room",
+         "id" : "opera12",
+         "description" : "\n   You stand in a plainly furnished room in which there is a table\nand some chairs, a few makeup cases, and a vase with some flowers in it.\n",
+         "altitude" : null
+      },
+      "opera28@opera" : {
+         "exits" : {
+            "w" : "opera30",
+            "e" : "opera28",
+            "n" : "opera29",
+            "s" : "opera27"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "opera",
+         "title" : "Lost in the Mist",
+         "id" : "opera28",
+         "description" : "\n   As you cross the silent, mist-enshrouded waters, you lose sight\nof all landmarks and get a feeling of being completely alone.\n",
+         "altitude" : null
+      },
+      "opera26@opera" : {
+         "exits" : {
+            "e" : "opera27",
+            "u" : "opera22"
+         },
+         "flags" : [],
+         "zone" : "opera",
+         "title" : "The Bottom of the Spiral Stairs",
+         "id" : "opera26",
+         "description" : "\n   It feels much cooler here for some reason.  You also seem to hear the\nsound of water along the passage to the east.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "workman@opera" : {
+         "damage" : "10",
+         "location" : "limbo@limbo",
+         "speed" : "0",
+         "aggression" : "15",
+         "armor" : "0",
+         "pname" : "Workman",
+         "name" : "workman",
+         "description" : "A workman looks at you and says, \"Hey, get outta here.\"",
+         "strength" : "140"
+      },
+      "joseph@opera" : {
+         "damage" : "10",
+         "location" : "opera25",
+         "speed" : "2",
+         "aggression" : "10",
+         "armor" : "0",
+         "pname" : "Joseph",
+         "name" : "joseph",
+         "description" : "Joseph, the scene-shifter, stands here shifting the scene.",
+         "strength" : "130"
+      },
+      "carlotta@opera" : {
+         "damage" : "10",
+         "location" : "opera10",
+         "armor" : "0",
+         "name" : "carlotta",
+         "description" : "La Carlotta says \"Out of my way, churl!\"",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "2",
+         "pname" : "Carlotta",
+         "aggression" : "18"
+      },
+      "andre@opera" : {
+         "damage" : "10",
+         "location" : "opera9",
+         "speed" : "2",
+         "aggression" : "19",
+         "armor" : "0",
+         "pname" : "Andre",
+         "name" : "andre",
+         "description" : "Mr. Andre, in his pressed tuxedo, stands here flitting nervously.",
+         "strength" : "90"
+      },
+      "ratcatcher@opera" : {
+         "damage" : "10",
+         "location" : "opera17",
+         "speed" : "2",
+         "aggression" : "17",
+         "armor" : "0",
+         "pname" : "Ratcatcher",
+         "name" : "ratcatcher",
+         "description" : "The Ratcatcher says \"I am the Ratcatcher, let me pass with my rats.\"",
+         "strength" : "140"
+      }
+   }
+}

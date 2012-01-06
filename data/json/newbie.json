@@ -1,8 +1,166 @@
 {
    "obj" : {
+      "sign@newbie" : {
+         "location" : "IN_ROOM:newbie1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "note",
+         "name" : "sign",
+         "examine" : " The note reads:\nThis looks like an Aber based system, has the church, temple, and village \nof an Aber based system, but BE WARNED: there are significant differences.\nIn particular, you have an unplayably weak character with just 40 strength\npoints which will not automatically increase with levels(!)  If you didn't\ntake one of the 'quickstart' options that gave you a set of stats, you \nneed to proceed to the Strength and Magic training centers to build up your\npower while picking up a sword, armor, and supplies.  You should also \nexamine the 'Knowledge' and 'Handicaps' rooms.",
+         "desc[0]" : "A very important sign reading &+YNote For Experienced Players&N is here."
+      },
+      "salad@newbie" : {
+         "location" : "IN_ROOM:newbie17",
+         "weight" : "1",
+         "oflags" : [
+            "Newbie",
+            "Food"
+         ],
+         "name" : "salad",
+         "examine" : "Go on, EAT IT!",
+         "desc[0]" : "There is a small bowl of &+Gsalad&* here ready to eat.",
+         "size" : "1"
+      },
+      "pagan@newbie" : {
+         "location" : "IN_ROOM:newbie15",
+         "oflags" : [
+            "Noget"
+         ],
+         "altname" : "pagan",
+         "pname" : "idol",
+         "name" : "pagan",
+         "examine" : "\nThis isn't a REAL god, but if it WERE a real god, making an OFFER would go\ntoward getting the god to like you and do you a favor.  The more you offer,\nthe more willing that god is to help you out.  What do you OFFER them?\nYou can OFFER <items> that is valuable treasures, or you can OFFER them\nthe souls of the mobiles you have destroyed.  How do you catch souls?  You\nhave a set chance of absorbing one whenever you slay a mobile.  You can\ndouble your chances of catching them every time if you acquire the SPOTSOUL\nability.  All you have to do is collect ten souls and offer them to a god.\nThen you can REQUEST SPOTSOUL to get the ability.  Note your diety will \nalways ask you to bring back a certain item before they will grant it.",
+         "desc[0]" : "&+GA couple of monks are bowed before this idol."
+      },
+      "signzone@newbie" : {
+         "location" : "IN_ROOM:newbie9",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "sign",
+         "name" : "signzone",
+         "examine" : "\n    To give you a basic idea of the layout of the land, type &+YINFO MAP&*.  \nAs to which places you can go that are recommended for low level players, a\nlist is provided with directions in &+YINFO NEWBIEZONES&*.\n    There are a number of adventures you can go on, &+CQUESTS&* will give you a\nlist of tasks to tangle with to persue your quest for glory.  &+CQDONE&* will\nlist what has been done, &+CQLIST&* will tell you if someone is trying a\nparticular quest as well as a rating of its difficulty.\n    &+GQINFO <quest>&* will give you some information on a certain quest as to \nwhat you have to do.  If you complete a quest, you get a reward. :)\n",
+         "desc[0]" : "&+GA glowing green sign is here that says &+gREAD ME!"
+      },
+      "club@newbie" : {
+         "damage" : "4",
+         "location" : "CARRIED_BY:Troll",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "club",
+         "examine" : "Good for whacking people on the head.",
+         "size" : "4",
+         "weight" : "4",
+         "bvalue" : "0",
+         "desc[0]" : "A small simple club is here."
+      },
+      "newbietorch@newbie" : {
+         "desc[1]" : "There is a &+Ytorch&* here for new players.",
+         "location" : "IN_ROOM:newbie17",
+         "oflags" : [
+            "Newbie",
+            "Lightable",
+            "Extinguish"
+         ],
+         "altname" : "torch",
+         "name" : "newbietorch",
+         "examine" : "LIGHT ME!",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "There is a &+Rlit torch&* for new players here."
+      },
+      "bulletin@newbie" : {
+         "location" : "IN_ROOM:newbie18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "frobs",
+         "name" : "bulletin",
+         "examine" : " The bulletin reads:\nMany of the most important and interesting decisions on this MUD are\nmade at low levels, so we frob levels to FIVE which allows you use of\nall the newbie equipment and access here.  Alternatively, we will \nrecognize achievement on other MUDs to give coins as follows:\nRank Elsewhere    Coins\nWizard             500\nArchWizard        1000\nGod/dess          1500\n",
+         "desc[0]" : "A bulletin nailed to the wall reads &+RFrobs Policy&*."
+      },
+      "newbieboat@newbie" : {
+         "location" : "IN_ROOM:newbie9",
+         "oflags" : [
+            "Newbie",
+            "Boat"
+         ],
+         "altname" : "boat",
+         "name" : "newbieboat",
+         "examine" : "This boat is for new players that wish to explore the seas.",
+         "size" : "10",
+         "weight" : "10",
+         "desc[0]" : "&+MA brand new rowing boat is here for the taking."
+      },
+      "penny@newbie" : {
+         "location" : "IN_ROOM:newbie19",
+         "oflags" : [
+            "PitReset"
+         ],
+         "altname" : "coin",
+         "name" : "penny",
+         "examine" : "Just pick it up, make your wish, and drop it in the pit.",
+         "bvalue" : "1",
+         "desc[0]" : "There's a &+ypenny&* here for you to make a wish with."
+      },
+      "coffee@newbie" : {
+         "location" : "IN_ROOM:newbie17",
+         "weight" : "1",
+         "oflags" : [
+            "Newbie",
+            "Food"
+         ],
+         "name" : "coffee",
+         "examine" : "DRINK ME!",
+         "desc[0]" : "There is a small pot of &+ycoffee&* cooking over the fire.",
+         "size" : "1"
+      },
+      "signact@newbie" : {
+         "location" : "IN_ROOM:newbie4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "signact",
+         "examine" : "\nThere is more to communicating on MUDs than just talking.  You can &+RSMILE\nor &+RLAUGH&* when someone says something funny, or you can use any of the\nother predefined &+RACTIONS&* that can be found here in the Promised Land.\n\nType &+RACTIONS&* to view the list of them all and use Dave here to try \nthem out.  (&+RACTIONS TAG&* will tell you what TAG does without you having\nto try it out.",
+         "desc[0]" : "&+GThere's a big sign here nailed to a pole that says &+gREAD ME."
+      },
+      "signobj@newbie" : {
+         "location" : "IN_ROOM:newbie6",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "signobj",
+         "examine" : "\n    While you play the game you will come across many treasures.  You can\ngain valuable points from them by sacrificing them in a pit.  To find out \nhow much an item is worth, you can type &+YVALUE <item>&* or to value all\nthe items you carry, type &+YVALUE ALL&*.  Two of the pits to drop items \nin are located in the Temple Of Paradise and the Village Church.  There \nare other pits to find as you roam the world, including a portable hole.  \nTo claim your points you stand in the room with a pit and type &+YDROP <item>&* \nor &+YDROP ALL&* to dump everything.\n\n    Some items, like this sign, can't be picked up, and are just there\nto provide scenery.",
+         "desc[0]" : "&+GThere's another big sign here that says &+gEXAMINE ME."
+      },
+      "bodyparts@newbie" : {
+         "location" : "IN_ROOM:newbie8",
+         "oflags" : [
+            "Noget"
+         ],
+         "altname" : "limbs",
+         "name" : "bodyparts",
+         "examine" : "\nThis is all that's left of the last guy who charged through here without\npreparing themselves properly for their adventures here.  Unlike other\nMUDs, you or your opposition can chop off parts of your body--if you don't\nprotect it very well or get proper medical care.  Fortunately, there's a\nhospital in the village to treat your wounds or even sew a detatched\n(*eek*) limb back on.  You should type &+RINFO BODYPARTS&* for more info.\n",
+         "desc[0]" : "&+YSome &+Rsevered limbs and bodyparts &+Ylitter the ground here inviting some\n&+Yinvestigation."
+      },
+      "fountain@newbie" : {
+         "location" : "IN_ROOM:newbie18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "fountain",
+         "examine" : "Its water looks invigorating.",
+         "desc[0]" : "A small icy fountain burbles gently in the centre of the room."
+      },
       "towel@newbie" : {
          "damage" : "0",
-         "location" : "IN_ROOM:newbie5",
+         "location" : "IN_ROOM:newbie6",
          "oflags" : [
             "Newbie"
          ],
@@ -14,7 +172,7 @@
          "weight" : "0",
          "maxstate" : "0",
          "bvalue" : "0",
-         "desc[0]" : "A damp and rather smelly towel has been dropped in a heap here."
+         "desc[0]" : "&+GA damp and rather smelly towel has been dropped in a heap here."
       },
       "newsword1@newbie" : {
          "damage" : "20",
@@ -23,19 +181,15 @@
             "Newbie",
             "Weapon"
          ],
-         "armor" : "0",
          "altname" : "sword",
          "name" : "newsword1",
+         "examine" : "WIELD ME!",
          "size" : "25",
-         "state" : "0",
-         "weight" : "0",
          "pname" : "newbiesword",
-         "maxstate" : "0",
-         "bvalue" : "0",
-         "desc[0]" : "A long sharp sword is propped up against one wall."
+         "weight" : "25",
+         "desc[0]" : "&+gA long sharp sword is propped up against one wall."
       },
       "newarmor1@newbie" : {
-         "damage" : "0",
          "location" : "IN_ROOM:newbie7",
          "oflags" : [
             "Newbie",
@@ -45,12 +199,10 @@
          "armor" : "30",
          "altname" : "armor",
          "name" : "newarmor1",
+         "examine" : "WEAR ME!",
          "size" : "40",
-         "state" : "0",
-         "weight" : "0",
          "pname" : "newbiearmor",
-         "maxstate" : "0",
-         "bvalue" : "0",
+         "weight" : "0",
          "aflags" : [
             "Arms",
             "Legs",
@@ -59,137 +211,355 @@
             "Face",
             "Chest"
          ],
-         "desc[0]" : "A shiny new suit of armor is lying here."
+         "desc[0]" : "&+GA shiny new suit of armor is lying here."
+      },
+      "pit@newbie" : {
+         "location" : "IN_ROOM:newbie19",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "pit",
+         "examine" : "Somewhere down there you think you see the glint of treasure!",
+         "desc[0]" : "\n   At your feet a huge sacrificial pit allows you to give valuables to the gods\nin the hope of being rewarded."
+      },
+      "campfire@newbie" : {
+         "location" : "IN_ROOM:newbie17",
+         "oflags" : [
+            "Lit",
+            "Noget"
+         ],
+         "pname" : "fire",
+         "name" : "campfire",
+         "examine" : "Light your torch here!",
+         "desc[0]" : "A small &+Rcampfire&* burns away here."
       }
    },
    "loc" : {
+      "newbie11@newbie" : {
+         "exits" : {
+            "n" : "newbie15",
+            "s" : "newbie18"
+         },
+         "flags" : [
+            "newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "Handicaps",
+         "id" : "newbie11",
+         "description" : "\n    The object of this game is to make Wizard.  If you are new to MUDs, that \nwill be challenging enough.  If you are an experienced player, however, you \nmight like a greater challenge.  We have worked to find handicaps which leave \nthe game challenging and not tedious.  The handicap levels are &+CSTANDARD&*, \n&+CFAMED&* and &+CGREAT&*.  To find out the handicap conditions type &+BHANDICAP <level>&*.\n    What you get from playing with a handicap is greater recognition.  The\nusers and who commands will show your handicap, and if you make it to wizard, \nyou will be a 'Famedwizard' or a 'Greatwizard'.  All the wizards have a core \nof capabilities, but Famedwizards and Greatwizards have a few extras.  Mostly \nit is the recognition of a more difficult achievement.  \n    You cannot take a handicap if you have learned the fence skill, solved\nany quests, killed 40 or more mobs, or have ever advanced beyond level 4.\nThe *only* location in which the handicap command is active is this room.\n    Accumulating experience suggests that even experienced players will\nmake critical strategic mistakes in building their first character.  On\nthe standard handicap you have enough income to correct this, so you\nshould probably not take a handicap if this is your first character here.\n",
+         "altitude" : null
+      },
+      "newbiedead@newbie" : {
+         "exits" : {
+            "w" : "newbie3"
+         },
+         "flags" : [
+            "newbie",
+            "peaceful"
+         ],
+         "zone" : "newbie",
+         "title" : "Crumbling Cliff Edge",
+         "id" : "newbiedead",
+         "description" : "\n    You boldly go ahead into this location without thinking twice to take a \nlook below the cliff edge, and the cliff COLLASPES ON YOU!!!  You fall \nthousands of feet, smash into billions of pieces and make a small crater \nwhere you land!\n\n&+B---------------------------------------------------------------------------\n\n\t&+CYou seem to have died...\n\n&+B---------------------------------------------------------------------------\n\n    Fortunately this was all an illusion designed to warn you to watch where\nyou're going.  Had it been real, you would had lost everything and be \nresurrected in Between Worlds.  There is a way to tell for sure if a location \nis deadly, which you will find out later.  You can return to the tour west.\n",
+         "altitude" : null
+      },
+      "newbie16@newbie" : {
+         "exits" : {
+            "w" : "newbie17",
+            "u" : "newbie9"
+         },
+         "flags" : [
+            "Onwater",
+            "Peaceful",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "Sailing on a Pond",
+         "id" : "newbie16",
+         "description" : "\n   Some rooms can also be over water, underwater, or in the sky.  You will\nneed to find something that allows you to travel to these places.  You brought\nalong a boat with you, so you were able to enter here without having to swim.\nLater on, you will need scuba gear to swim underwater, or wings to fly in the\nsky.  Be careful that you don't lose your boat while on water, or you will\ndrown.  Some rooms are also too dark to see in or are dark during the night, of \nwhich you need to have an object to light up the room.  An island is to the\nwest of you, or you can climb up on the bank upwards.\n",
+         "altitude" : null
+      },
+      "newbie10@newbie" : {
+         "exits" : {
+            "n" : "newbie12",
+            "s" : "newbie9"
+         },
+         "flags" : [
+            "Newbie",
+            "Peaceful"
+         ],
+         "zone" : "newbie",
+         "title" : "Your Character",
+         "id" : "newbie10",
+         "description" : "\n    It is important to keep track of your own status, especially when fighting.\nType &+CSCORE&* to see how you are doing.  If your strength ever falls below zero\nyou will die and lose half or more of your earned points.  Your &+CWIMPY&* value\nwill help to prevent this by making you flee from a battle automatically if\nyour strength falls below that value.  Your prompt displays your stats.\n    Some things you will notice right away, you start with only &+R40 hit points\nwhich alas is unplayably weak and doesn't increase with levels.  Don't worry,\nwe'll show you how to fix that in the next room.  You will also see what your\ncurrent level is, how many mobiles you've killed, how many times you've been\nslain, what wimpy is set at, how much money you have, how many souls you've\nreaped, and how much you are armored.  Since you are starting with &+Y2000 coins,\nyou can use it to start building your character to the north.\n",
+         "altitude" : null
+      },
+      "newbie1@newbie" : {
+         "exits" : {
+            "s" : "newbie2"
+         },
+         "flags" : [
+            "Newbie",
+            "Peaceful"
+         ],
+         "zone" : "newbie",
+         "title" : "New Players' Welcome Centre",
+         "id" : "newbie1",
+         "description" : "\n    You are standing in a large room, covered with pictures and paintings of\nthe lands around the world.  One large sign says 'Welcome to Promised Land!'\nFor those of you unfamiliar with this kind of adventure game, an Abermud, or\nMUDs in general, the objective is to score points and complete quests,\neventually reaching the level of wizard, at which point you become immortal\nand gain all kinds of special powers.  Typing the words &+YINFO GAME&* will\ngive you an overview of the game.  A tour for new players begins to the\nsouth of here.  Type &+MS&* to go south.\n    First MUD ever players should type '&+MINFO README&*' at this time.\n",
+         "altitude" : null
+      },
       "newbie6@newbie" : {
          "exits" : {
             "w" : "newbie7",
-            "e" : "newbie5",
-            "s" : "newbie8"
+            "n" : "newbie5"
          },
          "flags" : [
-            "Soundproof",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "Scavenging for Items",
+         "id" : "newbie6",
+         "description" : "\n    You will come across many items as you progress through the mud.  Some \nwill be useful to you; others will not.  You can only carry a certain number \nof items, but you will soon get a feel for what you need and what you do not.  \nPick up items using the command &+GGET&* or &+GTAKE&*.  Drop them again using \nthe command &+GDROP&*.  To see what you are carrying at any time, type &+YI&* or &+YINV&* for \n&+YINVENTORY&*).  You can practice these commands on the towel in this room.\n    There may be something interesting about the object, so you should use the \n&+CEXAMINE&* command, or &+CEX&* for short, followed by the name of the object.\nThere are many types of items, some of which you will come across shortly.\n    The path takes a turn here, to continue the tour, go west.\n",
+         "altitude" : null
+      },
+      "newbie17@newbie" : {
+         "exits" : {
+            "e" : "newbie16",
+            "n" : "newbie10"
+         },
+         "flags" : [
+            "Peaceful",
+            "Real",
+            "Newbie"
+         ],
+         "zone" : "newbie",
+         "title" : "A Small Island",
+         "id" : "newbie17",
+         "description" : "\n   When you enter dark areas, you need to have something that is lit, glowing,\nor can be lighted.  Before you can light an item like a torch, you may have \nto find something to light something else.  There is a fire in this room, and\nyou have an unlit torch, type &+YLIGHT TORCH&*.  To put it out, you can type\n&+YUNLIGHT TORCH&* or &+YEXTINGUISH TORCH&*.\n   Sometimes you will need to eat or drink food to quelsh your hunger and \nthrist and keep your strength up in the heat of battle.  Here is a pot of \nhot coffee, you would type &+GDRINK COFFEE&*.  Here is a bowl of salad, take\nit for when you are hungry, where you would type &+GEAT SALAD&*.  Carry food\nwith you when you explore the land, it comes in handy.\n   You can cross a bridge north, or sail back out east.\n",
+         "altitude" : null
+      },
+      "newbie18@newbie" : {
+         "exits" : {
+            "w" : "newbee13@newbee",
+            "n" : "newbie11",
+            "s" : "palace@icecave"
+         },
+         "flags" : [],
+         "zone" : "newbie",
+         "title" : "The Fountain",
+         "id" : "newbie18",
+         "description" : "\n    To help you start, there is a fountain from which you can drink to gain\n4000 points.  Type &+CLEVELS&*.  This will show you how many points you need for\neach level.  Drinking the fountain will take you to level 3.  To drink, simply\ntype &+GDRINK FOUNTAIN&*.  You must drink several times to reach level 3.  But\nrelax!  You don't need to type &+GDRINK FOUNTAIN&* forty times.  The command &+G!\nwill repeat whatever your last command was.  So type &+GDRINK FOUNTAIN&* once,\nthen &+G!&* repeatedly or so until you get a message telling you that you are now\na hero/heroine.\n    If you happen to drop below level 3, you can return to the fountain to\nregain your level.\n\n&+Y    If you rather just head directly into danger, go west...\n",
+         "altitude" : null
+      },
+      "newbie14@newbie" : {
+         "exits" : {
+            "e" : "newbie13",
+            "w" : "newbie15"
+         },
+         "flags" : [
+            "newbie",
+            "peaceful"
+         ],
+         "zone" : "newbie",
+         "title" : "Knowledge",
+         "id" : "newbie14",
+         "description" : "\n    Most of what is known about spells are in the lost Books of Knowledge.\nHowever, this much has been learned.  Knowledge determines your ability\nto cast a spell.  Knowledge is acquired somehow by finding the twenty\nvolumes of the Book of Knowledge.  &+YINFO SPELLS&* tells about each book.\n     The first volume of the Book of Knowledge has been seen in the Library \nbehind the Cliff Window.  There is a Figure which guards that volume, and\nit is believed that each volume is also guarded.  The Figure will only let \n\"real sorcerers\" past, but it seems that his notion of a \"real sorcerer\" is \ndetermined entirely by what you wear.\n    To gain the knowledge in the book, first you ought to &+YREAD&* what it says,\nthen embed the book into your mind through &+YSTUDY <volume>&*.\n    Be warned though, the other nineteen books are carefully guarded, and\nthe ones guarding them won't let you see them without a fight.\n    Reading these volumes is necessary to attain full wizhood.\n",
+         "altitude" : null
+      },
+      "newbie13@newbie" : {
+         "exits" : {
+            "w" : "newbie14",
+            "d" : "Icelearn@icecave",
+            "s" : "newbie12"
+         },
+         "flags" : [
+            "Newbie",
+            "Peaceful"
+         ],
+         "zone" : "newbie",
+         "title" : "Magic Power",
+         "id" : "newbie13",
+         "description" : "\n    Besides health, you also have the ability to cast spells.  But to cast\nspells, you have to have mana points.  But before you can cast spells, \nyou have to learn those as well.  Below you is Magician's Mana Tutoring.\nThough actual spells aren't taught there, they train you in gathering\nthe magical energies to cast them.  &+CINFO MANA&* will give more info.\n    You may well want to save some of your coins for the many specials that \nare available around the mud.  There are seven learning locations besides \nthese two, and part of the game is finding them.  Each learning center \nteaches different specials. &+YINFO SPECIALS&* will get you more detail \non what they are. The coins to pay for continued lessons will come the \nfirst time you reach a level (250 coins), and the first time you solve a \nquest (200 coins). You can give the command &+YSPECIALS&* (or &+YSPEC&* for \nshort) to see what specials you have at any time.\n    &+ROkay then, go down now to train in the magical energies.\n",
+         "altitude" : null
+      },
+      "newbie8@newbie" : {
+         "exits" : {
+            "e" : "newbie19",
+            "w" : "newbie9"
+         },
+         "flags" : [
             "Newbie"
          ],
          "zone" : "newbie",
          "title" : "Mobiles And Combat",
-         "id" : "newbie6",
-         "description" : "\n    Mobiles, or non-playing characters, are your adversaries in this game.\nSome are there to help you, but most are ripe for the killing.  Beware though -\nsome may be tougher or better-armed than you, so it is advisable to find out\nhow strong a mobile is before attacking it.  To do this, use the 'examine'\ncommand, or 'ex' for short, followed by the name of the mobile.  This will tell\nyou how tough it is.  To attack a mobile called 'elf' type 'kill elf'.\n    It is important to keep track of your own status, especially when fighting.\nType 'score' to see how you are doing.  If your strength ever falls below zero\nyou will die and lose half your points.  Your 'wimpy' value will help to\nprevent this by making you flee from a battle automatically if your strength\nfalls below that value.\n    To continue the tour go south.  To get some equipment, go west.\n",
+         "id" : "newbie8",
+         "description" : "\n    Mobiles, or non-playing characters, are your adversaries in this game.\nSome are there to help you, but most are ripe for the killing.  Beware though,\nsome may be tougher or better-armed than you, so it is advisable to find out\nhow strong a mobile is before attacking it.  To do this, use the &+CEXAMINE\ncommand, or &+CEX&* for short, followed by the name of the mobile.  This will tell\nyou how tough it is.  To attack a mobile called 'Troll' type &+RKILL TROLL&*.\nFor every mob you slay, you gain points.  If you &+CFLEE&* from a mob, you\nlose points.  Sometimes you have to &+CFLEE&* to stay alive.\n    The mobiles regain their strength here, meaning you can't damage them, \nrun away, heal, and return to finish them off.  \n",
+         "altitude" : null
+      },
+      "newbie3@newbie" : {
+         "exits" : {
+            "e" : "newbiedead",
+            "n" : "newbie1",
+            "s" : "newbie4"
+         },
+         "flags" : [
+            "Newbie",
+            "Peaceful"
+         ],
+         "zone" : "newbie",
+         "title" : "Rooms",
+         "id" : "newbie3",
+         "description" : "\n    There are thousands of rooms on the mud, all linked together so that you\ncan get from here to any other part of the mud.  The rooms are not arranged\nin a haphazard specific theme.  Some zones contain quests which you will\nhave to solve eventually, but for a beginner it is best to get a feel for the\nmud first before attempting these.\n    There are also several different types of rooms.  Some are outdoors, some\nare on water, some are underwater, some are private, some are hot, some are \ncold, and some will suck the life out of you!  But the worst place to walk\ninto is a deathroom!  If you walk into a deathroom, you die and lose all you \ncarry.  Then you are resurrected back in Between Worlds.  To avoid them, you\ncan pick up clues by reading the room titles.  You're standing near the edge\nof a cliff right now.  To the east is the '&+RCrumbling Cliff-Edge&*', do you\nthink it could be a deathroom??  Often the description of the room you are in \nwill tell you something about your exits, so it is always a good idea to read \nthe description of any room you have not been in before.\n   To continue with the tour, go south.  To retrace your steps, go north.\n",
+         "altitude" : null
+      },
+      "newbie5@newbie" : {
+         "exits" : {
+            "n" : "newbie4",
+            "s" : "newbie6"
+         },
+         "flags" : [
+            "Newbie",
+            "Peaceful"
+         ],
+         "zone" : "newbie",
+         "title" : "Talk to the Whole World",
+         "id" : "newbie5",
+         "description" : "\n    If you wish everyone on the mud to hear what you say, you can use the\ncommand &+YSHOUT <MESSAGE>&*.  But avoid using it when you can use TELLs or SAYs.\n    If you wanted to send a message to just all the wizards on the game, \nyou can use the &+YWISH MESSAGE&* command, .\n    A better way to talk to everyone is the &+YCHAT&* command.  Chatting a\nlot will not offend people, because everyone has the ability to switch off\nthe chat line.  To do this type &+YNOCHAT&*.  To switch the chat line\nback on again, simply type &+YNOCHAT&* again.\n    There are other chatlines available, including &+YGCHAT&*, and &+YABERCHAT&*. \nThe other help commands are listed in the HELP command.  The tour continues \nto the south.\n",
          "altitude" : null
       },
       "newbie2@newbie" : {
          "exits" : {
-            "e" : "newbie3",
-            "n" : "newbie1"
+            "n" : "newbie1",
+            "s" : "newbie3"
          },
          "flags" : [
-            "Soundproof",
-            "Newbie"
+            "Newbie",
+            "Peaceful"
          ],
          "zone" : "newbie",
-         "title" : "Communication (1)",
+         "title" : "Movement",
          "id" : "newbie2",
-         "description" : "\n    There are many ways to communicate with the people on this mud.  If you\nwish to talk to somebody directly without anyone else hearing, use the 'tell'\ncommand.  For example if you wish to say hello to a player called Dave, type:\ntell Dave hello\nUsually the word 'tell' is not necessary - you could also type:\nDave hello\nIf you are in the same room as other people and you wish to say something which\nthey can all hear, use the 'say' command.  For example, type:\nsay Hi guys!  What's new?\nTo continue with the tour, type 'e' for east.  Alternatively you can return to\nthe welcome centre by typing 'n' for north.\n",
+         "description" : "\n    To move between rooms you type in a direction.  The available  directions\nare &+YNORTH&*, &+YSOUTH&*, &+YWEST&*, &+YEAST&*, &+YUP&*, &+YDOWN&*, and &+YNE&*, &+YNW&*, &+YSE&*, &+YSW&*.\n    From here you can go &+YSOUTH&* by typing the word itself or just the\nfirst letter '&+MS&*'.  You can also type '&+YGO&*' (move randomly).\n    To find out what exits you can use from the room you are standing in and\nget some clues as to where they lead, you can type &+YEXITS&* or just &+YEXI&*.\nIf you want to automatically see the exits as you enter a new room, type\n&+YAUTOEXIT&*.  (Type it again to turn off this feature.)\n    To get help at any time, type &+BHELP&* and &+BHELP HELP&*.\n",
+         "altitude" : null
+      },
+      "newbie4@newbie" : {
+         "exits" : {
+            "n" : "newbie3",
+            "s" : "newbie5"
+         },
+         "flags" : [
+            "Newbie",
+            "Peaceful"
+         ],
+         "zone" : "newbie",
+         "title" : "Interacting with Others",
+         "id" : "newbie4",
+         "description" : "\n    There are many ways to communicate with the people on this mud.  If you\nwish to talk to somebody directly without anyone else hearing, use the &+YTELL\ncommand.  For example if you wish to say hello to a player called Dave, type:\n&+Ytell Dave hello&+w\n    Usually the word &+YTELL&* is not necessary - you could also type: &+YDave hello\n    You can also type &+CREPLY MESSAGE&* to respond to a most previous tell.\n    If you are in the same room as other people and you wish to say something\nwhich they can all hear, use the &+YSAY MESSAGE&* command.  For example, type:\n&+YSAY Hi guys!  What's new?\n    You can also do&+Y 'Hi guys!  What's new? &*with a single quote in\nplace of &+YSAY&*.  Next, we tell you how to communicate with the world.\n",
          "altitude" : null
       },
       "newbie7@newbie" : {
          "exits" : {
-            "e" : "newbie6"
+            "e" : "newbie6",
+            "w" : "newbie19"
          },
          "flags" : [
-            "Soundproof",
             "Newbie"
          ],
          "zone" : "newbie",
          "title" : "Weapons And Armor",
          "id" : "newbie7",
-         "description" : "\n    Your fighting abilities will be greatly enhanced by wielding a weapon and\nwearing armor.  Armor can take many forms, and the more pieces you are wearing,\nthe better you will be protected.  You can only wield one weapon at a time, but\nsome weapons are better than others.  The equipment provided here is fairly\ngood, but it is for new players only - use it to try to find where to find good\nequipment elsewhere on the mud.  Make sure that when you get a weapon, you\nwield it, and when you get some armor, wear it!  If you type 'wearall' you will\nautomatically wear anything you are carrying that is wearable.\n",
+         "description" : "\n    If you didn't already know, the Promised Land is a dangerous place.  \nAnd as you run around the world saving princesses and finding treasure, \nfighting with your bare hands isn't your best option.  The key to survival\nis equipping yourself with weapons and armor.\n    Armor can take many forms, and the more pieces you are wearing, the \nbetter you will be protected.  You can only wield one weapon at a time, \nbut some weapons are better than others.  The equipment provided here is \nfairly good, but it is for new players only - use it to try to find where \nto find good equipment elsewhere on the mud.  You can come back again and\nagain to take this stuff until you reach level 6.  To use this weapon,\ntype &+YWIELD NEWBIESWORD&*, and to use the armor, type &+YWEAR NEWBIEARMOR&*. \nIf you are carrying a lot of clothes, you can put them all on at once using\nthe &+YWEARALL&* command--granted that aren't wearing something else there.\n    To see what equipment you are using and how much protection and power \nyou have, type &+YEQUIPMENT&* or just &+YEQ&*.\n",
          "altitude" : null
       },
-      "newbie4@newbie" : {
+      "newbie19@newbie" : {
          "exits" : {
-            "w" : "newbie3",
-            "s" : "newbie5"
+            "e" : "newbie7",
+            "w" : "newbie8"
          },
          "flags" : [
-            "Soundproof",
+            "Peaceful",
             "Newbie"
          ],
          "zone" : "newbie",
-         "title" : "Rooms",
-         "id" : "newbie4",
-         "description" : "\n    This is now the fourth room that you have visited.  There are thousands of\nrooms on the mud, all linked together so that you can get from here to any\nother part of the mud.  The rooms are not arranged in a haphazard manner but\nare grouped together into zones, each zone very often having a specific theme.\nSome zones contain quests which you will have to solve eventually, but for a\nbeginner it is best to get a feel for the mud first before attempting these.\n    If you type 'exits' you will see which rooms lie adjacent to yours, and\nquite often this will provide you with important information.  If the exit to\nthe south is called 'Crumbling Cliff-Edge', you would be wise to think twice\nbefore going south!  Often the description of the room you are in will tell you\nsomething about your exits, so it is always a good idea to read the description\nof any room you have not been in before.\n    To continue with the tour, go south.  To retrace your steps, go west.\n",
+         "title" : "The Sacificial Pit",
+         "id" : "newbie19",
+         "description" : "\n    While you're running around gathering items, at some point your arms\nbecome full and you can't carry anymore.  Other times you pillage a treasure\ntrove full of jewels, gold, silver, and other valuables and need to unload \nit all somewhere before ending your running session.  This is when you \ntravel to one of the many sacificial pits in the game and drop it in to add \nbig points to your score.  But be careful, you want to &+YVALUE ALL&* the \nstuff you're carrying and avoid dropping items that aren't worth anything or \ntake points away.  \n",
          "altitude" : null
       },
-      "newbie1@newbie" : {
+      "newbie15@newbie" : {
          "exits" : {
-            "d" : "Temple@start",
-            "s" : "newbie2"
+            "e" : "newbie14",
+            "s" : "newbie11"
          },
          "flags" : [
-            "Soundproof",
-            "Newbie"
+            "newbie",
+            "peaceful"
          ],
          "zone" : "newbie",
-         "title" : "New Players' Welcome Centre",
-         "id" : "newbie1",
-         "description" : "\n    Welcome to a C-Dirt MUD!  For those of you unfamiliar with this kind of\nadventure game, the object is to acquire points and complete quests, eventually\nreaching the level of wizard, at which point you become immortal and gain all\nkinds of special powers.  A tour for new players begins to the south of here.\nIf you do not wish to take the tour, go down to the temple.  If you would like\nto learn how to play the game, go south by typing 's' for south.\n",
+         "title" : "Religions",
+         "id" : "newbie15",
+         "description" : "\n    A world cannot be created without a creator, and we have such figures\nlooking over the world.  This chamber however contains a pagan god, an idol\nthat doesn't exist but was put here to demostrate what to do if you happen\nto find the temples where they reside.  Call this idol, the PAGAN.  To find\nout how you should interact with a god, &+YINFO RELIGION&* will give you the\nguide to perform the proper rituals.\n    The END OF THE TOUR is to the south of you.\n",
          "altitude" : null
       },
-      "newbie8@newbie" : {
+      "newbie9@newbie" : {
          "exits" : {
-            "e" : "palace@icecave",
-            "n" : "newbie6",
-            "d" : "Temple@start",
-            "s" : "church@start"
+            "e" : "newbie8",
+            "n" : "newbie10",
+            "d" : "newbie16"
          },
          "flags" : [
-            "Soundproof",
-            "Newbie"
+            "newbie",
+            "peaceful"
          ],
          "zone" : "newbie",
-         "title" : "The Fountain",
-         "id" : "newbie8",
-         "description" : "\n    To help you start, there is a fountain from which you can drink to gain\n2000 points.  Type 'levels'.  This will show you how many points you need for\neach level.  Drinking the fountain will take you to level 3.  To drink, simply\ntype 'drink fountain'.  You must drink about fifty times to reach level 3.  But\nrelax!  You don't need to type 'drink fountain' fifty times.  The command '!'\nwill repeat whatever your last command was.  So type 'drink fountain' once,\nthen '!' fifty times or so until you get a message telling you that you are now\na hero/heroine.\n    To get to the fountain, go east.  If you want to go to the Temple of\nParadise, go down.  If you wish to go to the Village Church, go south.\n",
+         "title" : "Zones and Quests",
+         "id" : "newbie9",
+         "description" : "\n    For all these thousands of rooms, objects, and mobiles, they are grouped \ntogether into zones.  The beings in these zones may be friendly, or hostile.  \nSome have lots of treasure, some have lots of items to use.  Some are good \nplaces to visit, and others you would never want to visit without good \nequipment--those usually demand a hero to defeat some evil and save someone.\nFor information on this quest thing, read &+YINFO QUESTS&*.\n\n   There appears to be a small lake here, maybe you should go sailing on\nit by taking the boat and going down.\n",
          "altitude" : null
       },
-      "newbie5@newbie" : {
+      "newbie12@newbie" : {
          "exits" : {
-            "w" : "newbie6",
-            "n" : "newbie4"
+            "n" : "newbie13",
+            "d" : "Villlearn@village",
+            "s" : "newbie10"
          },
          "flags" : [
-            "Soundproof",
-            "Newbie"
+            "Newbie",
+            "Peaceful"
          ],
          "zone" : "newbie",
-         "title" : "Objects",
-         "id" : "newbie5",
-         "description" : "\n    You will find many items as you progress through the mud.  Some will be\nuseful to you; others will not.  You can only carry a certain number of items,\nbut you will soon get a feel for what you need and what you do not.  Pick up\nitems using the command 'get' or 'take'.  Drop them again using the command\n'drop'.  To see what you are carrying at any time, type 'i' or 'inv' (short for\ninventory).  You can practise these commands on the towel in this room.\n    When you are ready to leave the game, you can get points for the things you\nare carrying.  Simply return to the Temple Of Paradise or the Village Church\nand type 'drop all'.  Your stuff will disappear into the pit and you will gain\npoints.\n    To continue the tour, go west.\n",
-         "altitude" : null
-      },
-      "newbie3@newbie" : {
-         "exits" : {
-            "w" : "newbie2",
-            "e" : "newbie4"
-         },
-         "flags" : [
-            "Soundproof",
-            "Newbie"
-         ],
-         "zone" : "newbie",
-         "title" : "Communication (2)",
-         "id" : "newbie3",
-         "description" : "\n    If you wish everyone on the mud to hear what you say, you can use the\ncommand 'shout'.  However if used a lot this will irritate many people, so\nplease keep your shouting to a minimum.\n    A better way to talk to everyone is the 'chat' command.  Chatting a lot\nwill not offend people, because everyone has the ability to switch off the chat\nline.  To do this type 'nochat'.  To switch the chat line back on again, simply\ntype 'nochat' again.\n    To continue with the tour, type 'e' for east.  To return to the first\ncommunication room, type 'w' for west.\n",
+         "title" : "Building Yourself Up",
+         "id" : "newbie12",
+         "description" : "\n    So how do you want to build your character?  Buy strength? Mana?  Surely \nyou want to get your strength increasing with level.  Firstly you should go\nin the gym and build up your hit points.  Sam's Strength Center will increase\nyour health, and if you have more health, you won't flee from battle as \noften.  Whenever you enter a training center, typing &+CLEARN INFO&* will \nlist everything they offer.  To train yourself in a particular craft, type\n&+CLEARN <craft>&*.  Go down now to start training your hit points.\n&+RWe strongly urge you to take the opportunity to build your character now.\n",
          "altitude" : null
       }
    },
    "mob" : {
+      "dave@newbie" : {
+         "damage" : "0",
+         "location" : "newbie4",
+         "speed" : "0",
+         "armor" : "0",
+         "name" : "Dave",
+         "examine" : "He doesn't say much, he just listens.",
+         "description" : "Dave stands here ready to listen to your every word.",
+         "strength" : "10"
+      },
+      "receptionist@newbie" : {
+         "damage" : "8",
+         "location" : "newbie1",
+         "speed" : "0",
+         "name" : "Receptionist",
+         "examine" : "This woman is here to greet new players and give you tips on getting started.",
+         "description" : "A receptionist stands here smiling at you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50"
+      },
       "troll@newbie" : {
          "damage" : "0",
-         "location" : "newbie6",
+         "location" : "newbie8",
          "speed" : "0",
          "aggression" : "0",
          "armor" : "0",

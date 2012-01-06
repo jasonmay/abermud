@@ -1,16 +1,5 @@
 {
    "obj" : {
-      "pit_west@catacomb" : {
-         "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
-         "location" : "IN_ROOM:west",
-         "oflags" : [
-            "NoGet"
-         ],
-         "pname" : "pit",
-         "name" : "Pit_West",
-         "maxstate" : "1",
-         "desc[0]" : "\nThere is a sacrificial pit in the floor.  Within it you see only darkness."
-      },
       "pit_north@catacomb" : {
          "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
          "location" : "IN_ROOM:north",
@@ -28,26 +17,16 @@
          "oflags" : [
             "Armor",
             "Wearable",
-            "Shield"
+            "Shield",
+            "Antimagic"
          ],
          "altname" : "silver",
          "name" : "shield",
-         "examine" : "\nIt's rather heavy, and, being made of silver, looks quite valuable.  The coat\nof arms includes the sigil of Camelot, suggesting that the original owner was\namong those few honored with a seat at the Round Table.",
+         "examine" : "\nIt's rather heavy, and, being made of silver, looks quite valuable.  The coat\nof arms includes the sigil of Camelot, suggesting that the original owner was\namong those few honored with a seat at the Round Table.\n\n                             |============|\n                             |++#\\.||./#++|\n                             |...\\\\||//...|\n                             |-==#<OO>#==-|\n                              \\_.//||\\\\._/\n                               \\\\/.||.\\//\n                                \\\\.||.//\n                                 \\\\||//\n                                   \\/\n\n\t\t\t   The Shield of Tom\n",
          "size" : "10",
          "weight" : "15",
          "bvalue" : "300",
          "desc[0]" : "\nA silver shield, bearing a striking coat of arms, lies at your feet."
-      },
-      "koan@catacomb" : {
-         "location" : "IN_ROOM:crypt",
-         "oflags" : [
-            "Destroyed",
-            "NoGet"
-         ],
-         "altname" : "message",
-         "name" : "koan",
-         "examine" : "\nThe koan reads:\n        One day, Cedric and Ged found themselves standing at the\n        entrance to the Catacombs.\n        Said Ced, \"How are we ever to traverse this maze of catacombs?\"\n        Said Ged, \"I do not know, for the interconnections of its\n                   chambers are most intricate.  Perhaps we should ask\n                   Tedd, the Zen Master of Aber.\"\n        So they did.\n        Said Ged, \"Oh wise and most learned Tedd, how can one find one's\n                   way through the treacherous maze of the catacombs?\"\n        Said Tedd, \"One can't.  Send Ned.\"\n        And suddenly Cedric and Ged were most pleased, for Tedd had\n        shown them the path to enlightenment.\n",
-         "desc[0]" : "A koan has been carved into the eastern wall."
       },
       "dust@catacomb" : {
          "location" : "IN_ROOM:crypt",
@@ -73,42 +52,16 @@
          "maxstate" : "2",
          "desc[0]" : "The door is open."
       },
-      "door2seraph@catacomb" : {
-         "desc[1]" : "The door is closed.",
-         "location" : "IN_ROOM:resting_place",
+      "volume@catacomb" : {
+         "location" : "IN_ROOM:8",
          "oflags" : [
-            "Openable",
-            "Lockable",
-            "NoGet"
+            "Noget"
          ],
-         "name" : "Door2Seraph",
-         "desc[2]" : "The door is locked.",
-         "linked" : "Door1Seraph",
-         "state" : "2",
-         "pname" : "door",
-         "maxstate" : "2",
-         "desc[0]" : "The door is open."
-      },
-      "pit_south@catacomb" : {
-         "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
-         "location" : "IN_ROOM:south",
-         "oflags" : [
-            "NoGet"
-         ],
-         "pname" : "pit",
-         "name" : "Pit_South",
-         "maxstate" : "1",
-         "desc[0]" : "\nThere is a sacrificial pit in the floor.  Within it you see only darkness."
-      },
-      "notebook@catacomb" : {
-         "location" : "CARRIED_BY:skeleton",
-         "weight" : "5",
-         "altname" : "diary",
-         "name" : "notebook",
-         "examine" : "\nMost of the writing is too faint to read.  It appears to have been a diary.\nThe only legible parts remaining are individual phrases scattered throughout\nits pages:\n\n        long quest ... nearly ended\n        who is Ned?\n        lost in Catacombs\n        torch exhausted\n        last of my rations\n        dark...  lonely...  hungry...\n        a locked door ... my quest is over!\n",
-         "bvalue" : "50",
-         "desc[0]" : "\nAn old notebook, its pages and binding in decay, has been left here.",
-         "size" : "3"
+         "pname" : "Volume_XII",
+         "name" : "volume",
+         "examine" : "\nFireball is an attack spell. It requires 5 mana and does 15 damage.\nSulphur will enhance its effect.  It becomes certain for knowldge 12.",
+         "desc[0]" : "&+YVolume XII&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "12"
       },
       "cupseraph@catacomb" : {
          "desc[1]" : "A stone cup rests upon the pedestal.",
@@ -142,15 +95,6 @@
          "pname" : "door",
          "maxstate" : "2",
          "desc[0]" : "A massive iron door lies open to the south."
-      },
-      "umbrellas@catacomb" : {
-         "location" : "IN_ROOM:cavern",
-         "oflags" : [
-            "NoGet"
-         ],
-         "altname" : "umbrella",
-         "name" : "umbrellas",
-         "desc[0]" : "A pile of discarded umbrellas does nothing to lift your spirits."
       },
       "pit_east@catacomb" : {
          "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
@@ -191,6 +135,74 @@
          "pname" : "door",
          "maxstate" : "2",
          "desc[0]" : "The door is open."
+      },
+      "pit_west@catacomb" : {
+         "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
+         "location" : "IN_ROOM:west",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pit",
+         "name" : "Pit_West",
+         "maxstate" : "1",
+         "desc[0]" : "\nThere is a sacrificial pit in the floor.  Within it you see only darkness."
+      },
+      "koan@catacomb" : {
+         "location" : "IN_ROOM:crypt",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "altname" : "message",
+         "name" : "koan",
+         "examine" : "\nThe koan reads:\n        One day, Cedric and Ged found themselves standing at the\n        entrance to the Catacombs.\n        Said Ced, \"How are we ever to traverse this maze of catacombs?\"\n        Said Ged, \"I do not know, for the interconnections of its\n                   chambers are most intricate.  Perhaps we should ask\n                   Tedd, the Zen Master of Aber.\"\n        So they did.\n        Said Ged, \"Oh wise and most learned Tedd, how can one find one's\n                   way through the treacherous maze of the catacombs?\"\n        Said Tedd, \"One can't.  Send Ned.\"\n        And suddenly Cedric and Ged were most pleased, for Tedd had\n        shown them the path to enlightenment.\n",
+         "desc[0]" : "A koan has been carved into the eastern wall."
+      },
+      "door2seraph@catacomb" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:resting_place",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "Door2Seraph",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door1Seraph",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "pit_south@catacomb" : {
+         "desc[1]" : "\nThere is a sacrificial pit in the floor.  A faint glow emanates from deep\nwithin it.",
+         "location" : "IN_ROOM:south",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pit",
+         "name" : "Pit_South",
+         "maxstate" : "1",
+         "desc[0]" : "\nThere is a sacrificial pit in the floor.  Within it you see only darkness."
+      },
+      "notebook@catacomb" : {
+         "location" : "CARRIED_BY:skeleton",
+         "weight" : "5",
+         "altname" : "diary",
+         "name" : "notebook",
+         "examine" : "\nMost of the writing is too faint to read.  It appears to have been a diary.\nThe only legible parts remaining are individual phrases scattered throughout\nits pages:\n\n        long quest ... nearly ended\n        who is Ned?\n        lost in Catacombs\n        torch exhausted\n        last of my rations\n        dark...  lonely...  hungry...\n        a locked door ... my quest is over!\n",
+         "bvalue" : "50",
+         "desc[0]" : "\nAn old notebook, its pages and binding in decay, has been left here.",
+         "size" : "3"
+      },
+      "umbrellas@catacomb" : {
+         "location" : "IN_ROOM:cavern",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "umbrella",
+         "name" : "umbrellas",
+         "desc[0]" : "A pile of discarded umbrellas does nothing to lift your spirits."
       }
    },
    "loc" : {
@@ -909,11 +921,15 @@
          "armor" : "0",
          "name" : "ghost",
          "description" : "A ghostly apparition hovers about you, preparing to strike.",
+         "sflags" : [
+            "NoBody"
+         ],
          "strength" : "80",
          "pname" : "The Ghost",
          "aggression" : "10",
          "mflags" : [
-            "Cross"
+            "Cross",
+            "NoCorpse"
          ]
       },
       "beggar@catacomb" : {
@@ -937,7 +953,8 @@
          "pname" : "The Skeleton",
          "aggression" : "70",
          "mflags" : [
-            "Cross"
+            "Cross",
+            "NoCorpse"
          ]
       },
       "defender@catacomb" : {
@@ -961,10 +978,14 @@
          "armor" : "0",
          "name" : "shadow",
          "description" : "\nA spooky black shadow, human in shape, slides across the wall.",
+         "sflags" : [
+            "NoBody"
+         ],
          "strength" : "100",
          "pname" : "The Shadow",
          "aggression" : "50",
          "mflags" : [
+            "NoCorpse",
             "Cross"
          ]
       },

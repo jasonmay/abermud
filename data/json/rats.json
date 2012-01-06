@@ -1,0 +1,1034 @@
+{
+   "obj" : {
+      "d_coalstore@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Coldstore",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_Coalstore",
+         "linked" : "D_Coldstore",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "pipe@rats" : {
+         "location" : "IN_ROOM:Rat4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Pipe",
+         "examine" : "\nIt smells horrible. There is going some liquid out of the pipe and rats \nseem to like it much. Every rat gets a small dose of it and more they get, \nthen more they are stronger.",
+         "maxstate" : "1",
+         "state" : "1"
+      },
+      "rattrap@rats" : {
+         "desc[1]" : "A rat trap with a spring is here.",
+         "location" : "IN_CONTAINER:Drawer",
+         "oflags" : "{ }",
+         "altname" : "trap",
+         "name" : "Rattrap",
+         "examine" : "For catching rats.",
+         "desc[2]" : "A perfectly prepared rat trap is here.",
+         "size" : "12",
+         "state" : "0",
+         "weight" : "12",
+         "maxstate" : "2",
+         "bvalue" : "24",
+         "desc[0]" : "You see a rat trap lacking a spring."
+      },
+      "bench@rats" : {
+         "location" : "IN_ROOM:Workroom",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "table",
+         "name" : "Bench",
+         "examine" : "Father seems to like chaos. There is a drawer in the table.\n",
+         "size" : "12",
+         "state" : "0",
+         "weight" : "12",
+         "maxstate" : "0",
+         "bvalue" : "24"
+      },
+      "d_hallway12@rats" : {
+         "desc[1]" : "The toliet room door is closed.",
+         "location" : "IN_ROOM:Toilet",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "toliet",
+         "name" : "D_Hallway12",
+         "linked" : "D_Toilet",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The toliet room door is open."
+      },
+      "d_garden@rats" : {
+         "desc[1]" : "The front door is closed.",
+         "location" : "IN_ROOM:Hallway_1",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "front",
+         "name" : "D_Garden",
+         "linked" : "D_Hallway_1",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The front door is open."
+      },
+      "d_saw@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:ChBedRoom",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_Saw",
+         "linked" : "D_ChBedRoom",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "d_guestroom@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:StairsUp",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_Guestroom",
+         "linked" : "D_StairsUp",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "drawer@rats" : {
+         "location" : "IN_ROOM:Workroom",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Container"
+         ],
+         "name" : "Drawer",
+         "examine" : "You see that it is openable.",
+         "size" : "12",
+         "state" : "1",
+         "weight" : "12",
+         "maxstate" : "1",
+         "bvalue" : "24",
+         "desc[0]" : "A drawer has been opened here."
+      },
+      "bookcase@rats" : {
+         "location" : "IN_ROOM:LivRoom",
+         "oflags" : [
+            "NoGet",
+            "Pushable"
+         ],
+         "altname" : "case",
+         "name" : "Bookcase",
+         "examine" : "It doesn't look very stable.",
+         "size" : "12",
+         "state" : "1",
+         "weight" : "12",
+         "maxstate" : "1",
+         "bvalue" : "24"
+      },
+      "ring@rats" : {
+         "location" : "IN_CONTAINER:Chest",
+         "armor" : "0",
+         "oflags" : [
+            "RegenMana",
+            "RegenHealth",
+            "Lit",
+            "Wearable"
+         ],
+         "name" : "Ring",
+         "examine" : "Amazing.",
+         "state" : "0",
+         "maxstate" : "0",
+         "bvalue" : "500",
+         "desc[0]" : "A valuable ring is laying here."
+      },
+      "d_chbedroom@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Saw",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_ChBedRoom",
+         "linked" : "D_Saw",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "dust@rats" : {
+         "location" : "IN_CONTAINER:Ratthrone",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "Dust",
+         "examine" : "Maybe if you blow it, it will reveal something.",
+         "maxstate" : "0",
+         "desc[0]" : "Dust is laying here.",
+         "state" : "0"
+      },
+      "d_toilet@rats" : {
+         "desc[1]" : "The toliet room door is closed.",
+         "location" : "IN_ROOM:Hallway_1",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "toliet",
+         "name" : "D_Toilet",
+         "linked" : "D_Hallway12",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The toliet room door is open."
+      },
+      "hole@rats" : {
+         "location" : "IN_ROOM:Laundry",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Hole",
+         "size" : "12",
+         "state" : "1",
+         "weight" : "12",
+         "maxstate" : "1",
+         "bvalue" : "24"
+      },
+      "d_foodstore@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:LivRoom",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_Foodstore",
+         "linked" : "D_LivRoom",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "d_hallway_1@rats" : {
+         "desc[1]" : "The front door is closed.",
+         "location" : "IN_ROOM:Garden",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "front",
+         "name" : "D_Hallway_1",
+         "linked" : "D_Garden",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The front door is open."
+      },
+      "d_kitchen@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Cutlet",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_Kitchen",
+         "linked" : "D_Cutlet",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "d_cutlet@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Kitchen",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_Cutlet",
+         "linked" : "D_Kitchen",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "ratcounter@rats" : {
+         "location" : "IN_ROOM:Credits",
+         "armor" : "8",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Ratcounter",
+         "maxstate" : "0",
+         "state" : "0"
+      },
+      "d_livroom@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Foodstore",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_LivRoom",
+         "linked" : "D_Foodstore",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "ratthrone@rats" : {
+         "location" : "IN_ROOM:Rat4",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "throne",
+         "name" : "Ratthrone",
+         "examine" : "What might be in it?",
+         "size" : "12",
+         "state" : "0",
+         "weight" : "12",
+         "maxstate" : "0",
+         "bvalue" : "24",
+         "desc[0]" : "The throne of the rat master is standing here."
+      },
+      "d_coldstore@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Coalstore",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_Coldstore",
+         "linked" : "D_Coalstore",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "wall@rats" : {
+         "location" : "IN_ROOM:Laundry",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "Wall",
+         "maxstate" : "1",
+         "linked" : "Wall2",
+         "desc[0]" : "The destroyed wall reveals you an exit to north.",
+         "state" : "1"
+      },
+      "chest@rats" : {
+         "desc[1]" : "An old chest is unlocked here.",
+         "location" : "IN_ROOM:Roof",
+         "armor" : "8",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable",
+            "Container"
+         ],
+         "name" : "Chest",
+         "desc[2]" : "An old chest is locked here.",
+         "state" : "2",
+         "maxstate" : "2",
+         "desc[0]" : "An old chest is opened here."
+      },
+      "bed@rats" : {
+         "desc[1]" : "Child's bed is standing here.",
+         "location" : "IN_ROOM:ChBedRoom",
+         "oflags" : [
+            "NoGet",
+            "Pushable"
+         ],
+         "name" : "Bed",
+         "examine" : "Oh, that's sweet.",
+         "size" : "12",
+         "state" : "1",
+         "weight" : "12",
+         "maxstate" : "1",
+         "bvalue" : "24",
+         "desc[0]" : "Child's bed is standing here."
+      },
+      "wall2@rats" : {
+         "location" : "IN_ROOM:Rat1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Wall2",
+         "linked" : "Wall",
+         "state" : "1",
+         "pname" : "Wall",
+         "maxstate" : "1",
+         "desc[0]" : "The destroyed wall reveals you an exit to south."
+      },
+      "spring@rats" : {
+         "location" : "IN_ROOM:Credits",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "Spring",
+         "examine" : "Looks very hard.",
+         "size" : "12",
+         "state" : "0",
+         "weight" : "12",
+         "maxstate" : "0",
+         "bvalue" : "24",
+         "desc[0]" : "A spring is laying here."
+      },
+      "sink@rats" : {
+         "location" : "IN_ROOM:Bathroom",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "basin",
+         "name" : "Sink",
+         "size" : "12",
+         "state" : "1",
+         "weight" : "12",
+         "maxstate" : "1",
+         "bvalue" : "24"
+      },
+      "wardrobe@rats" : {
+         "desc[1]" : "There is a white, closed wardrobe here.",
+         "location" : "IN_ROOM:Bedroom",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "robe",
+         "name" : "Wardrobe",
+         "examine" : "It is made of the whitest wood you have ever seen.",
+         "size" : "12",
+         "state" : "1",
+         "weight" : "12",
+         "maxstate" : "1",
+         "bvalue" : "24",
+         "desc[0]" : "There is a white, opened wardrobe here."
+      },
+      "d_stairsup@rats" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Guestroom",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "D_StairsUp",
+         "linked" : "D_Guestroom",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      }
+   },
+   "loc" : {
+      "woodstore@rats" : {
+         "exits" : {
+            "u" : "Coalstore",
+            "s" : "Cutlet"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Wood store",
+         "id" : "Woodstore",
+         "description" : "\n\tYou are standing in the wood store. It is a very simple room with\njust one purpose: to store dry wood to be used in the cutlet.\n",
+         "altitude" : null
+      },
+      "rat2@rats" : {
+         "exits" : {
+            "w" : "Rat1",
+            "n" : "Rat3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Continuing Tunnel",
+         "id" : "Rat2",
+         "description" : "\n\tYou are standing in a stinking tunnel. The stench is really\nhorrible. There is nothing special here; everything is covered some type\nof green mass. Eehh!\n",
+         "altitude" : null
+      },
+      "coldstore@rats" : {
+         "exits" : {
+            "n" : "^D_Coalstore",
+            "s" : "Foodstore"
+         },
+         "flags" : [
+            "Cold",
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Food store",
+         "id" : "Coldstore",
+         "description" : "\n\tYou are standing in another food store, but it is much colder\nhere.  This room is supposed to store food which wouldn't be able to stay\nedible in normal temperatures. It looks to be well prepared, but all\nfood was touched by the rats.\n",
+         "altitude" : null
+      },
+      "rat4@rats" : {
+         "exits" : {
+            "s" : "Rat3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Master's room",
+         "id" : "Rat4",
+         "description" : "\n\tHow disgusting. It is a room full of pieces of different foods.\nThere is a huge pipe dripping some green liquid on the food.\n",
+         "altitude" : null
+      },
+      "chbedroom@rats" : {
+         "exits" : {
+            "e" : "StairsUp",
+            "n" : "^D_Saw",
+            "s" : "Bedroom"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Child's bedroom",
+         "id" : "ChBedRoom",
+         "description" : "\n\tYou are standing in the child's bedroom. The floor is covered with \na very soft carpet. There is also a large sofa made of leather; against \nthe sofa is a cupboard filled with lot of porcelan. In the middle of the\nroom is a small &+Cbed&*, just for the child.\n",
+         "altitude" : null
+      },
+      "chimney@rats" : {
+         "exits" : {
+            "d" : "Roof"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "On the chimney",
+         "id" : "Chimney",
+         "description" : "\n\tWhere did you bring this eagle? You are on a chimney! You can try\nto climb down like a Santa Claus.\n",
+         "altitude" : null
+      },
+      "bedroom@rats" : {
+         "exits" : {
+            "n" : "ChBedRoom"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Bedroom",
+         "id" : "Bedroom",
+         "description" : "\n\tYou are standing in the bedroom. The whole room could also be named\nthe white room, because everything is made in white. There is a large\ndouble bed, a mirror and a huge &+Cwardrobe&*.\n",
+         "altitude" : null
+      },
+      "guestroom@rats" : {
+         "exits" : {
+            "w" : "^D_StairsUp"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Guest room",
+         "id" : "Guestroom",
+         "description" : "\n\tYou are standing in the guest room. It is very nicely decorated.\nThe ceiling follows the shape of the roof so the room looks a little bit\nlike a triangle. There is a sofa that can be changed into a comfortable bed, \na table, and a bookcase.\n",
+         "altitude" : null
+      },
+      "laundry@rats" : {
+         "exits" : {
+            "n" : "^Wall",
+            "s" : "Bathroom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Laundry",
+         "id" : "Laundry",
+         "description" : "\n\tYou are standing in the laundry. It's a dark room, and maybe if\nyou were a child, you would fear yourself entering this room. There is\nalso a bath, but not such a one like in the bathroom--this one looks\nrather old. You can see some pipes following the ceiling leading in to the\nwall. Right next to the bath is a &+yhole&*, where an awful stench is\ncoming out.\n",
+         "altitude" : null
+      },
+      "saw@rats" : {
+         "exits" : {
+            "u" : "Hallway_3",
+            "s" : "^D_ChBedRoom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Saw",
+         "id" : "Saw",
+         "description" : "\n\tYou are standing at a saw. This is used to prepare the wood for\nthe cutlet. You also can see a hole leading down and as you look through \nit, you see the wood store. It is not often used because of the baby.\nThere is a staircase leading up.\n",
+         "altitude" : null
+      },
+      "terrace@rats" : {
+         "exits" : {
+            "s" : "Hallway_1"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Terrace room",
+         "id" : "Terrace",
+         "description" : "\n\tYou are standing in a room which was once a terrace, but someone \nfound it not good to have a terrace, so walls were built and a new room was \ncreated. This room is supposedly a relaxing room for Mom, because there is\na sewing-machine and a lot of textile and style magazines. Maybe you \nshouldn't move anything, because people owning a room like this have mostly \nan organized chaos in their items.\n",
+         "altitude" : null
+      },
+      "rat3@rats" : {
+         "exits" : {
+            "n" : "Rat4",
+            "s" : "Rat2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Another Tunnel",
+         "id" : "Rat3",
+         "description" : "\n\tYou are standing in a stinking tunnel. The stench is really\nhorrible. There is nothing special here; everything is covered some type\nof green mass. Eehh!\n",
+         "altitude" : null
+      },
+      "rat1@rats" : {
+         "exits" : {
+            "e" : "Rat2",
+            "s" : "^Wall2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Tunnel",
+         "id" : "Rat1",
+         "description" : "\n\tYou are standing in a stinking tunnel. The stench is really\nhorrible. There is nothing special here; everything is covered some type\nof green mass. Eehh!\n",
+         "altitude" : null
+      },
+      "foodstore@rats" : {
+         "exits" : {
+            "w" : "^D_LivRoom",
+            "n" : "Coldstore"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Food store",
+         "id" : "Foodstore",
+         "description" : "\n\tYou are standing in the food store. You see many cases with food\ninside, but most of it is half-eaten by rats. It looks quite disgusting.\n",
+         "altitude" : null
+      },
+      "coalstore@rats" : {
+         "exits" : {
+            "d" : "Woodstore",
+            "s" : "^D_Coldstore"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Coal store",
+         "id" : "Coalstore",
+         "description" : "\n\tYou are standing in a dirty room. There are lumps of coal for the \ncutlet stored. You see some buckets, shovels, and, of course, lots of\ncoal.\n",
+         "altitude" : null
+      },
+      "stairsup@rats" : {
+         "exits" : {
+            "e" : "^D_Guestroom",
+            "w" : "ChBedroom",
+            "d" : "StairsDown"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Hallway",
+         "id" : "StairsUp",
+         "description" : "\n\tYou are standing in the hallway in first floor. All things in this \nroom are made of wood. This room is full of sunshine because of the large\nwindow above the staircase. Against the window stands an armchair. It\nlooks to be very comfortable for reading.\n",
+         "altitude" : null
+      },
+      "toilet@rats" : {
+         "exits" : {
+            "e" : "^D_Hallway12"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Toilet",
+         "id" : "Toilet",
+         "description" : "\n\tYou are standing in the smallest room in the whole house. There\nis just one thing here and that is the toilet. It is very clear.\n",
+         "altitude" : null
+      },
+      "hallway_3@rats" : {
+         "exits" : {
+            "d" : "Saw",
+            "s" : "Workroom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Hallway",
+         "id" : "Hallway_3",
+         "description" : "\n\tYou are standing in the hallway. This is more a room for storing\nall possible things like old wood, boxes, bottles, and everything that\ncould be used again sometime.\n",
+         "altitude" : null
+      },
+      "hallway_1@rats" : {
+         "exits" : {
+            "w" : "^D_Toilet",
+            "e" : "Hallway_2",
+            "n" : "Terrace",
+            "s" : "^D_Garden"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Hallway",
+         "id" : "Hallway_1",
+         "description" : "\n\tYou are standing in the hallway. All the walls are made of wood.\nThere is a large window to the west and there is a door next to it. You\nalso can have a look at yourself in the mirror hanging on the south wall.\nYou see some shoes laying around, though not many.  It looks like a small \nfamily is living here.\n",
+         "altitude" : null
+      },
+      "kitchen@rats" : {
+         "exits" : {
+            "n" : "^D_Cutlet",
+            "s" : "LivRoom"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Kitchen",
+         "id" : "Kitchen",
+         "description" : "\n\tYou are standing in Mom's kingdom. Everything is boiling here.\nEverything is smelling very good. There are many cases, drawers, and\nalso an oven. You don't think you should move around anything here.\n",
+         "altitude" : null
+      },
+      "stairsdown@rats" : {
+         "exits" : {
+            "u" : "StairsUp",
+            "d" : "Hallway_2"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "On the staircase",
+         "id" : "StairsDown",
+         "description" : "\n\tYou are standing on a small landing in the middle of the\nstaircase.  The whole staircase is made of wood.\n",
+         "altitude" : null
+      },
+      "garden@rats" : {
+         "exits" : {
+            "w" : "road10@village",
+            "n" : "^D_Hallway_1"
+         },
+         "flags" : [
+            "NoMobiles",
+            "OutDoors"
+         ],
+         "zone" : "rats",
+         "title" : "Small garden",
+         "id" : "Garden",
+         "description" : "\n\tYou are standing in a small garden. There are just some flowers\ngrowing here. It will need much work to make it larger and more beautiful.\n",
+         "altitude" : null
+      },
+      "cutlet@rats" : {
+         "exits" : {
+            "n" : "Woodstore",
+            "s" : "^D_Kitchen"
+         },
+         "flags" : [
+            "Dark",
+            "Hot"
+         ],
+         "zone" : "rats",
+         "title" : "Cutlet",
+         "id" : "Cutlet",
+         "description" : "\n\tYou are standing in the cutlet. The large stove dominates the\nroom. You see many different pipes going out of the stove. It is rather\nhot and dirty here.\n",
+         "altitude" : null
+      },
+      "credits@rats" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Credits",
+         "id" : "Credits",
+         "description" : "\n\tThank you for visiting this room. I hope this quest was fun for you\nand made you some nice moments. If you have any comments, please write me\nan e-mail: etrimon@falcor.karlin.mff.cuni.cz. I have written more quests,\nthere avaible on request. That's all for now. See you in the next\nadventure. &+CEtrimon&*\n",
+         "altitude" : null
+      },
+      "bathroom@rats" : {
+         "exits" : {
+            "n" : "Laundry",
+            "s" : "Hallway_2"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Bathroom",
+         "id" : "Bathroom",
+         "description" : "\n\tYou are standing in the bathroom. The floor is made of white\ntiles and they continue also on walls to the height about as high as your\nneck. A large bath dominates the room and must be very comfortable. There\nis also a &+Csink&* with a mirror above it. Against the mirror is a second\nmirror, so you can see yourself from both sides. Don't forget the table\nwhich is used for storing towels, toothpastes, and toothbrushes.\n",
+         "altitude" : null
+      },
+      "roof@rats" : {
+         "exits" : {
+            "u" : "Chimney"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "rats",
+         "title" : "Under the roof",
+         "id" : "Roof",
+         "description" : "\n\tThe chimney didn't lead you very far. You are standing on a\nwooden floor after a few steps. It's a totally empty room, there is only\none old pirate style chest laying here.\n",
+         "altitude" : null
+      },
+      "workroom@rats" : {
+         "exits" : {
+            "n" : "Hallway_3"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Father's workroom",
+         "id" : "Workroom",
+         "description" : "\n\tYou are standing in the father's kingdom now. It's a room filled \nwith materials, hammers, nails, screwdrivers ... Your eyes catch a large\nworkbench that has a drawer in it. On the bench are pieces of wood that\nhave been made into a small square.\n",
+         "altitude" : null
+      },
+      "livroom@rats" : {
+         "exits" : {
+            "w" : "Hallway_2",
+            "e" : "^D_Foodstore",
+            "n" : "Kitchen"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Living room",
+         "id" : "LivRoom",
+         "description" : "\n\tYou are standing in the living room.  It looks very relaxing.\nThere is a long sofa, two armchairs, and a wooden table in the middle with\nfour chairs around it. You also locate a &+Cbookcase&* next to the door. \nIt seems that this room was really decorated with passion.\n",
+         "altitude" : null
+      },
+      "hallway_2@rats" : {
+         "exits" : {
+            "w" : "Hallway_1",
+            "u" : "StairsDown",
+            "n" : "Bathroom",
+            "s" : "LivRoom"
+         },
+         "flags" : [],
+         "zone" : "rats",
+         "title" : "Hallway",
+         "id" : "Hallway_2",
+         "description" : "\n\tYou are standing in the hallway. All the walls are made of wood.\nThere is nothing special about this room; it looks just like a crossway.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "erat4@rats" : {
+         "damage" : "10",
+         "location" : "Foodstore",
+         "armor" : "10",
+         "name" : "ERat4",
+         "description" : "It's Rat-tat-touille!",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "Rattattouille",
+         "aggression" : "100",
+         "mflags" : "{ }"
+      },
+      "masterrat@rats" : {
+         "damage" : "24",
+         "location" : "Rat4",
+         "armor" : "2",
+         "name" : "MasterRat",
+         "description" : "\nThe master rat is licking the &+Ggreen&* liquid coming out of the pipe.",
+         "strength" : "360",
+         "speed" : "0",
+         "pname" : "The Master Rat",
+         "aggression" : "0",
+         "mflags" : [
+            "NoGrab"
+         ]
+      },
+      "eagle@rats" : {
+         "damage" : "8",
+         "location" : "Nibelung59@nibelung",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "name" : "Eagle",
+         "description" : "A proud &+Yeagle&* is sitting here.",
+         "strength" : "20",
+         "mflags" : "{ }"
+      },
+      "guardrat@rats" : {
+         "damage" : "12",
+         "location" : "Rat2",
+         "armor" : "12",
+         "name" : "GuardRat",
+         "description" : "A guard rat is guarding here.",
+         "strength" : "180",
+         "speed" : "0",
+         "pname" : "The Guardrat",
+         "aggression" : "0",
+         "mflags" : [
+            "BarN"
+         ]
+      },
+      "credit@rats" : {
+         "damage" : "0",
+         "location" : "Credits",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "name" : "Credit",
+         "description" : "Credit is standing here.",
+         "strength" : "1",
+         "mflags" : "{ }"
+      },
+      "erat8@rats" : {
+         "damage" : "10",
+         "location" : "Hallway_1",
+         "armor" : "10",
+         "name" : "ERat8",
+         "description" : "A rat is running here.",
+         "strength" : "60",
+         "speed" : "50",
+         "pname" : "Rat",
+         "aggression" : "100",
+         "mflags" : "{ }"
+      },
+      "erat7@rats" : {
+         "damage" : "10",
+         "location" : "Cutlet",
+         "armor" : "10",
+         "name" : "ERat7",
+         "description" : "A smoke rat is running here.",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The Smokerat",
+         "aggression" : "100",
+         "mflags" : "{ }"
+      },
+      "erat2@rats" : {
+         "damage" : "10",
+         "location" : "Credits",
+         "armor" : "10",
+         "name" : "ERat2",
+         "description" : "A sink rat is running here.",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The Sinkrat",
+         "aggression" : "100",
+         "mflags" : "{ }"
+      },
+      "guardrat3@rats" : {
+         "damage" : "12",
+         "location" : "Rat3",
+         "armor" : "12",
+         "name" : "GuardRat3",
+         "description" : "Ratty the guard rat is guarding here.",
+         "strength" : "180",
+         "speed" : "0",
+         "pname" : "Ratty",
+         "aggression" : "0",
+         "mflags" : [
+            "BarN"
+         ]
+      },
+      "mrat@rats" : {
+         "damage" : "10",
+         "location" : "Rat1",
+         "armor" : "10",
+         "name" : "MRat",
+         "description" : "A fat rat is running here.",
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "The Fatrat",
+         "aggression" : "100",
+         "mflags" : "{ }"
+      },
+      "guardrat4@rats" : {
+         "damage" : "12",
+         "location" : "Rat3",
+         "armor" : "12",
+         "name" : "GuardRat4",
+         "description" : "An elite guardrat is guarding here.",
+         "strength" : "180",
+         "speed" : "0",
+         "pname" : "The Elite Guardrat",
+         "aggression" : "0",
+         "mflags" : [
+            "BarN"
+         ]
+      },
+      "erat6@rats" : {
+         "damage" : "10",
+         "location" : "Credits",
+         "armor" : "10",
+         "name" : "ERat6",
+         "description" : "A bed rat is running here.",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The Bedrat",
+         "aggression" : "100",
+         "mflags" : "{ }"
+      },
+      "erat3@rats" : {
+         "damage" : "10",
+         "location" : "Credits",
+         "armor" : "10",
+         "name" : "ERat3",
+         "description" : "A robe rat is running here.",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The Roberat",
+         "aggression" : "100",
+         "mflags" : "{ }"
+      },
+      "erat1@rats" : {
+         "damage" : "10",
+         "location" : "Credits",
+         "armor" : "10",
+         "name" : "ERat1",
+         "description" : "A book rat is running here.",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The Bookrat",
+         "aggression" : "100",
+         "mflags" : "{ }"
+      },
+      "erat5@rats" : {
+         "damage" : "10",
+         "location" : "Foodstore",
+         "armor" : "10",
+         "name" : "ERat5",
+         "description" : "It's Rat-tat-tailie!",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "Rattattailie",
+         "aggression" : "100",
+         "mflags" : "{ }"
+      },
+      "mom@rats" : {
+         "damage" : "1",
+         "location" : "LivRoom",
+         "armor" : "0",
+         "name" : "Mom",
+         "description" : "Mom, holding her baby, is standing here. She says, 'Help us from the rats.'",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "10",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "mflags" : "{ }"
+      },
+      "guardrat2@rats" : {
+         "damage" : "12",
+         "location" : "Rat2",
+         "armor" : "12",
+         "name" : "GuardRat2",
+         "description" : "It's Ratta-tat-tat!.",
+         "strength" : "180",
+         "speed" : "0",
+         "pname" : "Rattatattat",
+         "aggression" : "0",
+         "mflags" : [
+            "BarN"
+         ]
+      }
+   }
+}

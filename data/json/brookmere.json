@@ -1,0 +1,2114 @@
+{
+   "obj" : {
+      "signature@brookmere" : {
+         "location" : "IN_ROOM:Brookmere32",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "figure",
+         "name" : "signature",
+         "examine" : "\nStraining out of the corner of one eye you can see a seated figure staring at \na kind of open book. The inside cover has a strange glow, and every so often \nthe figure taps with her fingers at what must be the pages.  The figure looks \nup and seems to see you.  She turns back to the book, taps furiously for a \nfew seconds then looks up again and points to the floor. Looking down you see \nthe words: `zone by Brynhild' traced in the dust. They remain for a few \nseconds, then, together with the seated figure, fade away.  How mysterious."
+      },
+      "stool@brookmere" : {
+         "damage" : "7",
+         "location" : "IN_ROOM:Brookmere11",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "stool",
+         "examine" : " \nOf rough goblin workmanship, this stool is very solid and looks better for \nhitting people with than for sitting on.",
+         "size" : "5",
+         "weight" : "4",
+         "bvalue" : "3",
+         "desc[0]" : "A rather chunky stool squats here."
+      },
+      "block@brookmere" : {
+         "location" : "Brookmere53",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "marble",
+         "pname" : "block",
+         "name" : "block",
+         "examine" : "\nThe block and its pillars look like they were cut from the same block of \nmarble that yielded Orobius' throne. Scratched into the surface are the \nletters `T O  A L R M S'."
+      },
+      "goblin_bulletin_board@brookmere" : {
+         "location" : "IN_ROOM:Brookmere23",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "board",
+         "pname" : "board",
+         "name" : "goblin_bulletin_board",
+         "examine" : "\nThere isn't much to speak of on this bulletin board; a calendar, an \nadvertisment for a slightly used size 4 helmet, some silly cartoons and a \nnotice saying ` MEETING TONIGHT, 9 O'CLOCK'  signed Taurig."
+      },
+      "slip@brookmere" : {
+         "location" : "CARRIED_BY:Taurig",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "paper",
+         "name" : "slip",
+         "examine" : "The slip reads:\n\t\t\t       MESSAGE TO ALL GOBLINS\nWe will soon be ready to take over Brookmere and get rid of the meddling orcs \nand gnolls. Carry weapons at all times and be ready to fight within a moments \nnotice. A signal will be given for the attack through the message pipes - as \nsoon as we figure out how they work.\n\nGasp! the goblins are planning to turn on their allies! You wonder what these \nmessage pipes are - and could they be of any advantage to you?",
+         "state" : "1",
+         "pname" : "slip",
+         "maxstate" : "1",
+         "desc[0]" : "A slip of paper has been forgotten here."
+      },
+      "block2@brookmere" : {
+         "location" : "IN_ROOM:Brookmere4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "marble",
+         "pname" : "block",
+         "name" : "block2",
+         "examine" : "\nThis marble block in every way mimics the one in Orobius' workroom, with the \nexception of some letters carved into its surface that read: `T O  W R K  R M'."
+      },
+      "sand@brookmere" : {
+         "location" : "IN_ROOM:Brookmere57B",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sand"
+      },
+      "footprints@brookmere" : {
+         "location" : "IN_ROOM:Brookmere54",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "footprints",
+         "examine" : "\nUsing your expert tracking skills you deduce from the footprints that a group \nof rather large creature wearing boots came by here recently, and that they \nwere going west.  There are no footprints going back the other way, so \nwhatever passed here is probably still hanging around, maybe just around the \ncorner. Is it safe to continue?",
+         "desc[0]" : "Some muddy footprints have tracked themselves along the floor."
+      },
+      "chest@brookmere" : {
+         "desc[1]" : "An old battered chest sits here.",
+         "location" : "IN_ROOM:Brookmere48",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "name" : "chest",
+         "examine" : "You see a faded label on the lid:\n \t\tLUGS STUF - KEP OWT!",
+         "desc[2]" : "An old battered chest sits here.",
+         "state" : "2",
+         "size" : "20",
+         "maxstate" : "2",
+         "desc[0]" : "An old battered chest sits here."
+      },
+      "pipe_end@brookmere" : {
+         "location" : "IN_ROOM:Brookmere25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "hole",
+         "pname" : "hole",
+         "name" : "pipe_end",
+         "examine" : "Looking closer you see some piping sticking out of it.",
+         "desc[0]" : "There is a curious hole in the wall near the ceiling."
+      },
+      "south_door@brookmere" : {
+         "location" : "IN_ROOM:Brookmere45",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "south_door",
+         "examine" : "\nThe door is wooden and perfectly round. It swings on steel hinges that have \nresisted any corrosion over the years.",
+         "linked" : "south_door2",
+         "state" : "1",
+         "pname" : "south",
+         "maxstate" : "0"
+      },
+      "hole@brookmere" : {
+         "location" : "IN_ROOM:Brookmere40",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hole",
+         "examine" : " \nAlthough from your side the hole feels perfectly smooth, putting your hand \naround the rim you feel only jagged edges and sharp rocks. The hole is \nunderwater, so if you wish to get through it you will have to swim."
+      },
+      "fish@brookmere" : {
+         "location" : "IN_ROOM:Brookmere8",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "fish",
+         "examine" : "\nTrying to catch any of these fish to eat would be a bad idea as they are almost \ncertainly very unhealthy for you. They don't even look healthy themselves."
+      },
+      "dust2@brookmere" : {
+         "location" : "IN_ROOM:Brookmere29",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "dust2",
+         "examine" : "Aaaaachoooooooo!!!",
+         "linked" : "dust",
+         "state" : "1",
+         "pname" : "dust",
+         "maxstate" : "1"
+      },
+      "waterfall_door2@brookmere" : {
+         "desc[1]" : "The end of the tunnel appears to be blocked by a large lump of sandstone.",
+         "location" : "IN_ROOM:Brookmere54",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "waterfall_door2",
+         "examine" : "Upon closer inspection you find that the stone is actually hinged on the rock \nwall, making a door.",
+         "linked" : "waterfall_door",
+         "state" : "1",
+         "pname" : "sandstone",
+         "maxstate" : "1",
+         "desc[0]" : "A large block of sandstone has been moved aside from the end of the tunnel, \nallowing passage east."
+      },
+      "mirrors@brookmere" : {
+         "location" : "IN_ROOM:Brookmere28",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "mirrors",
+         "examine" : " \nThese mirrors all look exactly the same, but for one with a &+Ccrack&* in it and \nanother that looks slightly &+Cwarped&*. You can see no clear way out of your \npredicament."
+      },
+      "north_door2@brookmere" : {
+         "location" : "IN_ROOM:Brookmere46",
+         "oflags" : [
+            "Noget"
+         ],
+         "name" : "north_door2",
+         "examine" : "The door is wooden and perfectly square. It swings on iron hinges turned\norange from rust.",
+         "linked" : "north_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : "The hinges on the door to the south have rusted, leaving the door stuck half \nopen."
+      },
+      "wall@brookmere" : {
+         "location" : "IN_ROOM:Brookmere17",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "wall",
+         "examine" : "Dusting away some of the earth from the wall you find the lid of a stone store.",
+         "desc[0]" : "Part of the wall has been badly damaged."
+      },
+      "shield@brookmere" : {
+         "location" : "IN_ROOM:Brookmere23",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "shield",
+         "examine" : "Yuck! You don't want to use that! it's covered with squashed peas and gravy!"
+      },
+      "torch@brookmere" : {
+         "location" : "IN_ROOM:Brookmere13",
+         "oflags" : [
+            "Lit",
+            "NoGet"
+         ],
+         "name" : "torch",
+         "examine" : "Well, its made of wood and some combustion of the wood and air is happening \nat the end.",
+         "desc[0]" : "A burning torch flickers in a torch bracket."
+      },
+      "bench@brookmere" : {
+         "location" : "IN_ROOM:Brookmere4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bench",
+         "examine" : "\nIt is bare but for two buttons, set side by side. One, already depressed, is \na &+Rred button&* with the remarkably lifelike image of a dragon on it, the other \nis &+Ggreen&* with an equally realistic picture of a unicorn.",
+         "desc[0]" : "A chunky stone bench occupies the centre of the room."
+      },
+      "salamanders@brookmere" : {
+         "location" : "IN_ROOM:Brookmere8",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "salamanders",
+         "examine" : "\nSalamanders look ugly enough when viewed outdoors; they look absolutely \nhorrible underground in the greenish glow of who-knows-what."
+      },
+      "goblin_helmet@brookmere" : {
+         "desc[1]" : "A dented goblin helmet hangs on the wall.",
+         "location" : "IN_ROOM:Brookmere15",
+         "armor" : "23",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "GetFlips"
+         ],
+         "name" : "goblin_helmet",
+         "examine" : "A typical goblin helmet, made of metal with iron rivets and a noseguard on \nthe front.",
+         "state" : "1",
+         "size" : "4",
+         "weight" : "3",
+         "pname" : "helmet",
+         "maxstate" : "1",
+         "bvalue" : "4",
+         "desc[0]" : "An old dented goblin helmet is laying here.",
+         "aflags" : [
+            "Head",
+            "Face"
+         ]
+      },
+      "arrow56@brookmere" : {
+         "location" : "IN_ROOM:Brookmere55",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stairs",
+         "pname" : "stairs",
+         "name" : "arrow56",
+         "examine" : "\nThe stairs are smooth and well worn, but on the wall, close to the ground, \nyou find a small arrow inscribed, pointing downwards."
+      },
+      "wooden_door@brookmere" : {
+         "desc[1]" : "There is a huge wooden door on the east wall.",
+         "location" : "IN_ROOM:Brookmere26",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "wooden",
+         "name" : "wooden_door",
+         "linked" : "treasure_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : "There is a huge wooden door open on the east wall."
+      },
+      "solid_door2@brookmere" : {
+         "desc[1]" : "A solid door blocks any leakage of noise or goblin from this room to the next.",
+         "location" : "IN_ROOM:Brookmere26",
+         "oflags" : [
+            "openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "solid_door2",
+         "linked" : "solid_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : "The door to the next room stands wide open."
+      },
+      "arrow55b@brookmere" : {
+         "location" : "IN_ROOM:Brookmere56B",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stairs",
+         "pname" : "stairs",
+         "name" : "arrow55B",
+         "examine" : "\nThe stairs are clean and unscuffed, but in the shadow of a riser you spy a \nsmall arrow scratched into the stone, pointing north."
+      },
+      "brick@brookmere" : {
+         "location" : "IN_ROOM:Brookmere51",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "brick",
+         "examine" : "\nYou poke and pry at the mortar surrounding the brick, trying to prise it \nloose.  Suddenly it slips from its place and falls to the floor, with a \nmini - avalanche of not mortar, but plaster. Where the brick was, you see \na small, triangle shaped hole."
+      },
+      "cracked_mirror2@brookmere" : {
+         "location" : "IN_ROOM:Brookmere32",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "mirror",
+         "name" : "cracked_mirror2",
+         "maxstate" : "1",
+         "linked" : "cracked_mirror",
+         "state" : "1"
+      },
+      "dinner@brookmere" : {
+         "oflag" : [
+            "Food"
+         ],
+         "location" : "IN_ROOM:Brookmere23",
+         "weight" : "3",
+         "name" : "dinner",
+         "examine" : "A standard rank-and-file goblin army issue meal.",
+         "bvalue" : "0",
+         "desc[0]" : "Someone has left his dinner here.",
+         "size" : "4"
+      },
+      "pipe12@brookmere" : {
+         "location" : "IN_ROOM:Brookmere12",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pipe",
+         "name" : "pipe12",
+         "examine" : "\nWhatever use it may have had, it is quite useless now. Painted onto the pipe \nare the letters T O  W  C A V N .",
+         "desc[0]" : "The broken end of a pipe sticks out from behind a beam."
+      },
+      "uni_button2@brookmere" : {
+         "location" : "IN_ROOM:Brookmere5",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "button",
+         "name" : "uni_button2",
+         "linked" : "unicorn_button"
+      },
+      "south_door2@brookmere" : {
+         "location" : "IN_ROOM:Brookmere47",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "south_door2",
+         "examine" : "\nThe door is wooden and perfectly round. It swings on steel hinges that have \nresisted any corrosion over the years.",
+         "linked" : "south_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "0"
+      },
+      "mirrored_door@brookmere" : {
+         "location" : "IN_ROOM:Brookmere28",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "mirrored_door",
+         "examine" : " \nThe door is an actual mirror, with a nearly invisible doorknob in the centre. \nWhat are you waiting for? Open it!",
+         "linked" : "other_mirrored_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : "A mirrored door is open on the west wall."
+      },
+      "pipe49@brookmere" : {
+         "location" : "IN_ROOM:Brookmere49",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pipe",
+         "name" : "pipe49",
+         "examine" : "Painted on the pipe are the letters T O  T H R O N  R M .",
+         "desc[0]" : "A pipe emerges from the wall and crosses the ceiling in front of you."
+      },
+      "dragon_button@brookmere" : {
+         "location" : "IN_ROOM:Brookmere4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "red",
+         "pname" : "button",
+         "name" : "dragon_button"
+      },
+      "wall_hanging@brookmere" : {
+         "location" : "IN_ROOM:Brookmere35",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "tapestry",
+         "pname" : "hanging",
+         "name" : "wall_hanging",
+         "examine" : " \nAs you slide by you lean towards the hanging to try and get a closer look, \nbut all you see is a blur of gold and green before you past it by."
+      },
+      "waterfall@brookmere" : {
+         "location" : "IN_ROOM:Brookmere18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "waterfall",
+         "examine" : "\nThe waterfall is truly magnificent; a miracle of Mother Nature. You run your \nhand over the stony drops of water and marvel to think how many centuries \nwent into the creation of these frozen falls. But although it does look \nspectacular, you can't help thinking that a living, moving waterfall is far \nsuperior.  Underneath the arc of the waterfall you spy a large chunk of \n&+Csandstone&* that seems out of place."
+      },
+      "dust@brookmere" : {
+         "location" : "IN_ROOM:Brookmere30",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "dust",
+         "examine" : "The dust is thick and impregnable - its going to take a lot of dusting to \nget through this!",
+         "maxstate" : "1",
+         "linked" : "dust2",
+         "state" : "1"
+      },
+      "throne@brookmere" : {
+         "location" : "IN_ROOM:Brookmere18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "throne",
+         "examine" : "\nYou climb up a steep set of steps rising up the wave to the throne. It has \nbeen skillfully and intricately carved out of a single block of red granite \nand polished until it shines. The orcs dragged it down here from the castle \nproper before it was burned to the ground. Leaning against one carved arm is \na rather grubby &+Rred cushion&* for the comfort of the occupier.",
+         "desc[0]" : "The throne is very imposing, set high up on the waterfall."
+      },
+      "gnoll_bulletin_board@brookmere" : {
+         "location" : "IN_ROOM:Brookmere25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "board",
+         "pname" : "board",
+         "name" : "gnoll_bulletin_board",
+         "examine" : "Amidst the layers of paper you find a note reading:\n\t\t\tATTENTION GNOLLS\nWe will soon be ready to take over Brookmere and get rid of the foolish orcs \nand goblins. Practice your combat charms and be ready to attack at a moments \nnotice.  A signal will be given through the message pipes - as soon as we \nfigure out how to use them.\n\nHmmm, so the gnolls are planning to take over Brookmere. What are those \nmessage pipes?"
+      },
+      "glasses@brookmere" : {
+         "location" : "IN_CONTAINER:chest",
+         "armor" : "5",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "glasses",
+         "examine" : " \nWearing these glasses hurts your eyes, so you'd better not wear them unless \nyou really need to. After all, they weren't made for you. They belong to Lug, \nwho needs these glasses to read - if he could read at all. Generally he just \nuses them to see things more clearly. Perhaps they might serve a similar \npurpose for you? ",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "15",
+         "desc[0]" : "A pair of glasses have been dropped here.",
+         "aflags" : [
+            "Face"
+         ]
+      },
+      "instructions@brookmere" : {
+         "location" : "IN_ROOM:Brookmere30",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "altname" : "runes",
+         "pname" : "instructions",
+         "name" : "instructions",
+         "examine" : " \nThe runes are some sort of evacuation plan. There is a map showing emergency \nexits in case of fire, flood, earthquake or invasion and a set of \ninstructions. The instructions read : `On the sounding of the dragon alarm \nfrom the throne room all residents of Brookmere apart from soldiers and \nemergency services will evacuate using the exits indicated and regroup at \nthe secret outpost in the forest. The sounding of the unicorn alarm will \nindicate that it is safe to return and all residents may do so immediately.' \nBut surely evacuation alarms wouldn't be placed in the throne room, the first \nplace in any castle to be looted? Maybe there is more than one in Brookmere."
+      },
+      "goldnuggets@brookmere" : {
+         "location" : "IN_ROOM:Brookmere57B",
+         "oflags" : [
+            "GetFlips",
+            "Destroyed"
+         ],
+         "altname" : "claim",
+         "name" : "goldnuggets",
+         "examine" : "\nThere are five small gold nuggets in all, none bigger than your fingernail, \nbut all are heavy for their size and untainted with impurities or alloys.  \nYou could put a deposit on a nice mansion with these!",
+         "state" : "1",
+         "size" : "2",
+         "pname" : "goldnuggets",
+         "weight" : "4",
+         "maxstate" : "1",
+         "bvalue" : "40",
+         "desc[0]" : "Someone has lost the fruits of their mining claim here."
+      },
+      "package@brookmere" : {
+         "location" : "IN_ROOM:Brookmere36",
+         "weight" : "5",
+         "name" : "package",
+         "examine" : "\nThis package, like the others, is well sealed. No amount of prising at its \nfolds will undo it. It is a very bulky package, and very heavy. Whatever is \nin here, you bet it's valuable in one way or another.",
+         "bvalue" : "24",
+         "desc[0]" : "One package has fallen off the crowded shelves.",
+         "size" : "6"
+      },
+      "cheese@brookmere" : {
+         "location" : "IN_ROOM:Brookmere11",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "cheese",
+         "examine" : "A lovely pale yellow, this cheese looks smooth and creamy.",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "3",
+         "desc[0]" : "A lump of good cheese has been thoughtlessly left here."
+      },
+      "wax@brookmere" : {
+         "location" : "IN_ROOM:Brookmere22",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "wax",
+         "examine" : " Ouch! That wax is hot!"
+      },
+      "arrow55c@brookmere" : {
+         "location" : "IN_ROOM:Brookmere56C",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stairs",
+         "pname" : "stairs",
+         "name" : "arrow55C",
+         "examine" : "\nThe stairs are blank and uniform, but in a corner you find a small arrow \ncarved into the stone, pointing west."
+      },
+      "cards@brookmere" : {
+         "location" : "IN_ROOM:Brookmere27",
+         "weight" : "1",
+         "altname" : "card",
+         "name" : "cards",
+         "examine" : "\nA ten, Jack, Queen, King and Ace of Spades - a royal flush. You wonder if the \nholder of this hand won the deal.",
+         "bvalue" : "20",
+         "desc[0]" : "A discarded hand from a game of Blackjack has been scattered here.",
+         "size" : "1"
+      },
+      "arrow56b@brookmere" : {
+         "location" : "IN_ROOM:Brookmere55B",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stairs",
+         "pname" : "stairs",
+         "name" : "arrow56B",
+         "examine" : "\nThe stairs are clean and unscuffed, but in the shadow of a riser you spy a \nsmall arrow scratched into the stone, pointing south."
+      },
+      "arrow55@brookmere" : {
+         "location" : "IN_ROOM:Brookmere56",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stairs",
+         "pname" : "stairs",
+         "name" : "arrow55",
+         "examine" : "\nThe stairs are smooth and well worn, but on the wall, close to the ground, \nyou find a small arrow inscribed, pointing upwards."
+      },
+      "pipe13@brookmere" : {
+         "location" : "IN_ROOM:Brookmere13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "something",
+         "pname" : "pipe",
+         "name" : "pipe13",
+         "examine" : "It appears to be part of a pipe, though what it's doing on the ceiling you \ncan't imagine.",
+         "desc[0]" : "Something is sticking out of the ceiling."
+      },
+      "moss@brookmere" : {
+         "location" : "IN_ROOM:Brookmere43",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "moss",
+         "examine" : "The moss is cool, thick and soft - so soothing when you rest your cheek \nupon it.",
+         "desc[0]" : "The moss grows very thickly just here."
+      },
+      "crack@brookmere" : {
+         "location" : "IN_ROOM:Brookmere28",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "crack",
+         "examine" : "\nYou wonder how this crackedmirror could have lost a piece of itself. \nFingering behind the crack you feel something kind of like a slide."
+      },
+      "brick_wall@brookmere" : {
+         "desc[1]" : "A brick has fallen out of the wall, revealing a triangle-shaped hole in \nit's place.",
+         "location" : "IN_ROOM:Brookmere51",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "hole",
+         "name" : "brick_wall",
+         "examine" : "\nPutting your hand to the wall, you are surprised to find that it doesn't \nfeel cold like the other stone walls. One of the bricks seems loose.",
+         "linked" : "brick_wall2",
+         "state" : "2",
+         "pname" : "wall",
+         "maxstate" : "0",
+         "desc[0]" : "A false wall has been swung open revealing a secret room."
+      },
+      "arrow56c@brookmere" : {
+         "location" : "IN_ROOM:Brookmere55C",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stairs",
+         "pname" : "stairs",
+         "name" : "arrow56C",
+         "examine" : "\nThe stairs are blank and uniform, but in a corner you find a small arrow \ncarved into the stone, pointing east."
+      },
+      "waterfall_door@brookmere" : {
+         "location" : "IN_ROOM:Brookmere18",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "waterfall_door",
+         "examine" : "A large block of sandstone has been hinged here behind the waterfall to make \na secret door. ",
+         "linked" : "waterfall_door2",
+         "state" : "1",
+         "pname" : "sandstone",
+         "maxstate" : "1"
+      },
+      "duster@brookmere" : {
+         "location" : "IN_CONTAINER:stonestore",
+         "oflags" : [
+            "GetFlips",
+            "Cross"
+         ],
+         "altname" : "feather",
+         "name" : "duster",
+         "examine" : "\nMore than anything else goblins and orcs fear cleanliness and cleaning \nimplements.  This pink feather duster may look harmless enough to you, but \norcs and goblins would avoid it at all costs. ",
+         "size" : "3",
+         "weight" : "2",
+         "bvalue" : "15",
+         "desc[0]" : "This feather duster has been left here to gather....well, dust."
+      },
+      "warped_mirror@brookmere" : {
+         "location" : "IN_ROOM:Brookmere28",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "warped",
+         "name" : "warped_mirror",
+         "examine" : "\nA weakness in the mirror has caused it to bulge in the middle, making the \nstupid sort of reflections you see in carnival sideshows.",
+         "linked" : "backing",
+         "state" : "1",
+         "pname" : "warpedmirror",
+         "maxstate" : "0",
+         "desc[0]" : "Another mirror has been smashed, leaving an opening to the south."
+      },
+      "solid_door@brookmere" : {
+         "desc[1]" : "A solid door blocks any noise that may be coming from the room beyond.",
+         "location" : "IN_ROOM:Brookmere21",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "solid_door",
+         "linked" : "solid_door2",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : "The door to the next room has been opened, letting in all the noise."
+      },
+      "north_door@brookmere" : {
+         "location" : "IN_ROOM:Brookmere45",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "north_door",
+         "examine" : "\nThe door is wooden and perfectly square. It swings on iron hinges which have \nturned orange from rust.",
+         "linked" : "north_door2",
+         "state" : "1",
+         "pname" : "north",
+         "maxstate" : "0",
+         "desc[0]" : "The door to the north is rusted half open."
+      },
+      "fungus@brookmere" : {
+         "desc[1]" : "Some green fungus is growing here.",
+         "location" : "IN_ROOM:Brookmere9",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "fungus",
+         "examine" : "Looks edible - sort of.",
+         "state" : "1",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "Some green fungus lies here."
+      },
+      "schooner@brookmere" : {
+         "location" : "CARRIED_BY:Grout",
+         "weight" : "2",
+         "oflags" : [
+            "Food",
+            "Alcohol"
+         ],
+         "name" : "schooner",
+         "bvalue" : "2",
+         "desc[0]" : "That schooner of beer looks nice and cold.",
+         "size" : "2"
+      },
+      "mantle@brookmere" : {
+         "location" : "IN_ROOM:Brookmere14",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "mantle",
+         "examine" : "\nYou kick at the mantle and idly read some of the graffiti scratched into it. \nOne part says:\n        \t'Goblins rule, Orcs drool, Gnolls too!' \nIn the background you can hear the goblins complain about how it was their \nroom in the first place. It suddenly dawns on you that this room must have \nbeen destroyed in an ARGUMENT between the gnolls, orcs and goblins over the \nuse of the room. You shudder to think what would happen if  battle broke out \nbetween the three of them - the whole place would come crashing down around \ntheir ears probably.",
+         "desc[0]" : "A large wooden mantle lies in the corner."
+      },
+      "table@brookmere" : {
+         "location" : "IN_ROOM:Brookmere11",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "table",
+         "examine" : "It has a rough top and uneven legs. A lump of cheese has been placed on it.",
+         "desc[0]" : "A wobbly table has been placed here."
+      },
+      "dice@brookmere" : {
+         "location" : "IN_ROOM:Brookmere27",
+         "weight" : "1",
+         "altname" : "die",
+         "name" : "dice",
+         "examine" : "Die is the singular, dice is plural, so you have here TWO white cubes with \nblack dots on them.",
+         "bvalue" : "17",
+         "desc[0]" : "Some dice lie here.",
+         "size" : "1"
+      },
+      "head@brookmere" : {
+         "desc[1]" : "This shovel is encrusted with mud.",
+         "location" : "IN_ROOM:Brookmere13",
+         "armor" : "24",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "GetFlips",
+            "Shield"
+         ],
+         "altname" : "shovel",
+         "name" : "head",
+         "examine" : "\nThis shovel was evidently not very well made. The metal head has fallen \ncompletely off the handle! However it is undamaged, and quite big. Maybe you \ncould use it as a shield?",
+         "state" : "1",
+         "size" : "4",
+         "pname" : "head",
+         "weight" : "4",
+         "maxstate" : "1",
+         "bvalue" : "6",
+         "desc[0]" : " The metal head of an old shovel has been dumped here."
+      },
+      "other_mirrored_door@brookmere" : {
+         "desc[1]" : "A funny looking door bars the way east.",
+         "location" : "IN_ROOM:Brookmere35",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "other_mirrored_door",
+         "examine" : "The `door' is actually a flat mirror on hinges, not just a door with a mirror \nhung on it.",
+         "linked" : "mirrored_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : "This mirror is currently occupied being a door and leads east."
+      },
+      "arrow56x@brookmere" : {
+         "location" : "IN_ROOM:Brookmere55X",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stairs",
+         "pname" : "stairs",
+         "name" : "arrow56X",
+         "examine" : "\nThe stairs are dull and monotonus, but on one wall you see a small cross \nscribed. Its four arms point up, down, north and south."
+      },
+      "unicorn_button@brookmere" : {
+         "location" : "IN_ROOM:Brookmere4",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "altname" : "green",
+         "pname" : "button",
+         "name" : "unicorn_button",
+         "maxstate" : "1",
+         "linked" : "uni_button2",
+         "state" : "1"
+      },
+      "triangle@brookmere" : {
+         "location" : "IN_ROOM:Brookmere36",
+         "weight" : "1",
+         "oflags" : [
+            "Unlocatable",
+            "Key"
+         ],
+         "name" : "triangle",
+         "examine" : "\nIt is constructed in such a way that the inside becomes the outside and the \noutside becomes the inside. Looking at it gives you a headache.",
+         "bvalue" : "13",
+         "desc[0]" : "A small wooden triangle frame stands on one shelf.",
+         "size" : "1"
+      },
+      "brick_wall2@brookmere" : {
+         "desc[1]" : "The door bars the way west.",
+         "location" : "IN_ROOM:Brookmere52",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "brick_wall2",
+         "examine" : "It's just a door for goodness sake!",
+         "desc[2]" : "A locked door bars the way west.",
+         "linked" : "brick_wall",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : "An open door leads west."
+      },
+      "boots@brookmere" : {
+         "location" : "IN_ROOM:Brookmere12",
+         "weight" : "4",
+         "name" : "boots",
+         "examine" : "\nThey look way too big to be of any use to you, but the fine leatherwork makes \nyou think any plunderer would be glad to count them as part of his booty.",
+         "bvalue" : "17",
+         "desc[0]" : "These boots look like they haven't seen the light of day for a long time.",
+         "size" : "6"
+      },
+      "fork@brookmere" : {
+         "desc[1]" : "An ordinary, two - pronged fork is stuck into a potato here.",
+         "location" : "IN_ROOM:Brookmere23",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "fork",
+         "examine" : "\nAt first glance this seems like an ordinary fork, but there's something odd \nabout it you can't quite put your finger on. Glancing at the end however,\nyou realise this is in fact a very unusual fork. At the handle it looks like \nit has two prongs, but at the end it appears to have three!",
+         "state" : "1",
+         "size" : "2",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "13",
+         "desc[0]" : "A funny looking fork lies here."
+      },
+      "goblin_cloak@brookmere" : {
+         "location" : "IN_ROOM:Brookmere15",
+         "armor" : "18",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "goblin_cloak",
+         "examine" : " \nIt looks horrible and smells worse, but maybe you can pass yourself off as a \nsmall goblin with it in bad light.",
+         "size" : "5",
+         "weight" : "4",
+         "pname" : "cloak",
+         "bvalue" : "5",
+         "desc[0]" : "An old and dirty goblin cloak is laying here.",
+         "aflags" : [
+            "Chest",
+            "Head",
+            "Arms",
+            "Legs",
+            "Back"
+         ]
+      },
+      "pipe54@brookmere" : {
+         "location" : "IN_ROOM:Brookmere54",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pipe",
+         "name" : "pipe54",
+         "examine" : "Painted onto the pipe are the letters T O  M E E T G  R M and an arrow \npointing west.",
+         "desc[0]" : "A skinny pipe is bolted to the ceiling here."
+      },
+      "door@brookmere" : {
+         "desc[1]" : "The door has fallen off its hinges into the room.",
+         "location" : "IN_ROOM:Brookmere36",
+         "oflags" : [
+            "Boat",
+            "GetFlips"
+         ],
+         "name" : "door",
+         "examine" : "\nYou cannot for the life of you see how this door could have fallen off its \nhinges, since both it and its hinges are in good repair. The door looks \nstrong and sturdy, though when you lift one corner it feels very light. It \nwould do good service as a raft if you were ever to need one.",
+         "state" : "1",
+         "size" : "12",
+         "weight" : "3",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A door has been torn from its hinges and flung into a corner."
+      },
+      "tapestry@brookmere" : {
+         "location" : "IN_ROOM:Brookmere29",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "hanging",
+         "pname" : "tapestry",
+         "name" : "tapestry",
+         "examine" : " \nThough dull and muted now, the colours of this tapestry must once have been \ngarish and bright from the dyeing techniques used by the elves. The \nintricately worked scene depicts a dazzlingly beautiful elf lady in white \nand silver in front of a homely house.  She is farewelling a host of \ncreatures - elves, dwarves and some smaller people you cannot identify. She \nis astride a white horse preparing to depart with what appears to be a mortal \nman. How strange; this tapestry must depict some ancient elf legend.",
+         "desc[0]" : "One tapestry has been spared by the spiders, if not the dust."
+      },
+      "cushion@brookmere" : {
+         "location" : "IN_ROOM:Brookmere18",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "pillow",
+         "name" : "cushion",
+         "examine" : " \nThis cushion can't have been very comfortable. There is a big hole in it and \nnearly all the stuffing has fallen out. This of course means that other stuff \ncan be put into it.",
+         "size" : "32",
+         "pname" : "cushion",
+         "weight" : "4",
+         "bvalue" : "15"
+      },
+      "cracked_mirror@brookmere" : {
+         "location" : "IN_ROOM:Brookmere28",
+         "oflags" : [
+            "NoGet",
+            "Pushable"
+         ],
+         "altname" : "cracked",
+         "name" : "cracked_mirror",
+         "examine" : "\nIt doesn't sit flush with the wall, and there is a crack, wide enough for a \nfinger, near the bottom left hand corner.",
+         "linked" : "cracked_mirror2",
+         "state" : "1",
+         "pname" : "crackedmirror",
+         "maxstate" : "1",
+         "desc[0]" : "A crackedmirror has been pushed aside, revealing an opening north."
+      },
+      "pipe24@brookmere" : {
+         "location" : "IN_ROOM:Brookmere24",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pipe",
+         "name" : "pipe24",
+         "examine" : "\nAt first glance this looked like a water pipe, but the corridor has a low\nroof and putting your ear to the pipe you can't hear any water gurgling. How \nstrange.",
+         "desc[0]" : "A small rusted pipe runs along the ceiling here."
+      },
+      "arrow55x@brookmere" : {
+         "location" : "IN_ROOM:Brookmere56X",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stairs",
+         "pname" : "stairs",
+         "name" : "arrow55X",
+         "examine" : "\nThe stairs are dull and monotonus, but on one wall you see a small cross \nscribed. Its four arms point up, down, east and west."
+      },
+      "stonestore@brookmere" : {
+         "location" : "IN_ROOM:Brookmere17",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Container",
+            "GetFlips"
+         ],
+         "altname" : "store",
+         "name" : "stonestore",
+         "examine" : "\nThis stone storage space must have been built into the wall of the original \ntunnel, which has since been fortified with earth by the hobgoblins.",
+         "size" : "50",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The lid of a stone storage space is set into the wall here."
+      },
+      "chestkey@brookmere" : {
+         "desc[1]" : "Something shiny is half-buried in the silt at the edge of the river.",
+         "location" : "IN_ROOM:Brookmere42",
+         "oflags" : [
+            "GetFlips",
+            "Key",
+            "Unlocatable"
+         ],
+         "altname" : "key",
+         "name" : "chestkey",
+         "examine" : "This chestkey has the letters L U G scratched into it.",
+         "state" : "1",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A scratched old key lies here."
+      },
+      "treasure_door@brookmere" : {
+         "desc[1]" : "There is a huge wooden door on the west wall.",
+         "location" : "IN_ROOM:Brookmere27",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "treasure_door",
+         "linked" : "wooden_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : " A large wooden door opens out onto the common room."
+      },
+      "backing@brookmere" : {
+         "desc[1]" : "The end of the tunnel appears to be blocked by some kind of backing",
+         "location" : "IN_ROOM:Brookmere12",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "backing",
+         "examine" : "It appears to be made of sackcloth. What could it be backing onto?",
+         "linked" : "warped_mirror",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "Shards of glass are scattered around an opening leading northwards."
+      },
+      "chests@brookmere" : {
+         "location" : "IN_ROOM:Brookmere46",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "chests",
+         "examine" : " \nThe chests are every size and shape you can think of, stolen from as many \ndifferent castles. Big iron bound chests, wooden barrel-shaped ones, small \nones with leather lids, antiquated family heirlooms with brass nameplates on \nthe front. The only thing they all have in common (apart from a lock) is \nthat they all look rather the worse for wear after being dragged across the \ncountryside by their owners."
+      }
+   },
+   "loc" : {
+      "brookmere40@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere39"
+         },
+         "flags" : [
+            "Dark",
+            "Soundproof"
+         ],
+         "zone" : "brookmere",
+         "title" : "Wet Corridor",
+         "id" : "Brookmere40",
+         "description" : "\n    The black corridor winds on endlessly, down into the earth. Cold and \nmiserable, any flame you had reduced to a bluish dot, you struggle on, wet to \nthe waist. Suddenly you are aware of a roaring noise that must have been with \nyou down the whole corridor. The tunnel ends suddenly, and you realise the \nwater in the corridor has become quite turbulent. Looking under a nob of rock \nyou find a small &+Chole&* underwater, that looks like it leads into an open space. \nIt would be a squeeze, but you think you could manage to swim through and get \nout of the corridor.\n",
+         "altitude" : null
+      },
+      "brookmere6@brookmere" : {
+         "exits" : {
+            "w" : "hills2@caledonia",
+            "n" : "hills7@caledonia",
+            "s" : "hills8@caledonia"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "brookmere",
+         "title" : "Forest Edge",
+         "id" : "Brookmere6",
+         "description" : "\n    You are standing at the edge of a forest that once ringed a castle. The \nonly thing that still stands now is the broken shell of a tower - all else is \nruins - but all that is soon set to change. Elves in construction hats stride \nindustriously all over the ruins and scaffolding is already being constructed \naround the remnants of the tower. Scattered across the ground are enormous \npiles of boulders and chunks of masonry. Carved on one such boulder you spy \nthe word 'Brookmere'. The famous Brookmere castle was at one time was occupied \nby orcs, goblins and gnolls from the surrounding lands, but they have been \ndestroyed and now Brookmere's rightful inhabitants are busy rebuilding their \nhome. You decide not to intrude on them.\n",
+         "altitude" : null
+      },
+      "brookmere37@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere56X",
+            "e" : "Brookmere55X",
+            "u" : "Brookmere56",
+            "n" : "Brookmere35",
+            "d" : "Brookmere55",
+            "s" : "Brookmere38"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "The Stairs",
+         "id" : "Brookmere37",
+         "description" : "\n    You stand at the top of some shallow, neatly carved, geometric stone \nsteps, that lead down and to the east in a square spiral out of sight. There \nare also steps that come down to your level from the west, before joining the \nsteps going down. Oddly enough, despite the fact that it isn't particularly \ndark in here you can't tell where either set of steps lead. A step on these \nsteps would be a step into the unknown... There is also a narrow balcony \nleading around the perimeter of the stairs to an opening leading south, from \nwhich you can feel a slight breeze.   \n",
+         "altitude" : null
+      },
+      "brookmere25@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere24",
+            "e" : "Brookmere26"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Gnoll Guard Room",
+         "id" : "Brookmere25",
+         "description" : "\n    This must be the gnoll guard room, it's so neat and tidy. Helmets hung up, \nswords put away in the cupboard, dinner cleared off the table and no smell \nwhatsoever. In fact, the only untidy thing about the room is the &+Cbulletin\n&+Cboard&*, which is crammed with notices and messages.\n",
+         "altitude" : null
+      },
+      "brookmere56x@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere56X",
+            "n" : "Brookmere56B",
+            "u" : "Brookmere56C",
+            "d" : "Brookmere56",
+            "s" : "Brookmere56"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Up the &+WStairs",
+         "id" : "Brookmere56X",
+         "description" : "\n    Up is down and down is up on this staircase, as both directions lead \nnowhere. Still you plod on, up, down, around and around, trying to figure out \na way to get back to the bottom of them.\n",
+         "altitude" : null
+      },
+      "brookmere43@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere44",
+            "n" : "Brookmere10",
+            "s" : "Brookmere42"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "brookmere",
+         "title" : "Smallish Tunnel",
+         "id" : "Brookmere43",
+         "description" : "\n    This tunnel must be a squeeze to the orcs and goblins currently occupying \nBrookmere, but it is still bigger than average for you. It looks very old, \nbeing built of unshaped stone boulders, with &+Gmoss&* and other things that don't \nneed much light growing in the cracks. The tunnel  climbs upwards to the north, \nwhile another good sized tunnel branches off west. To the south you can hear \nsounds of moving water.\n",
+         "altitude" : null
+      },
+      "brookmere57@brookmere" : {
+         "exits" : {
+            "n" : "Brookmere42",
+            "s" : "Brookmere57B"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "brookmere",
+         "title" : "The Churning River",
+         "id" : "Brookmere57",
+         "description" : "\n    You are bobbing up and down on the underground river as it swirls and \nboils around you. From here you can direct your craft to the sandy island in \nthe middle of the river or to the silty shore.\n",
+         "altitude" : null
+      },
+      "brookmere55c@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere55D",
+            "n" : "Brookmere55B",
+            "u" : "Brookmere55X",
+            "d" : "Brookmere55X"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Down the &+WStairs",
+         "id" : "Brookmere55C",
+         "description" : "\n    Up is down and down is up on this staircase, as both directions lead \nnowhere. Still you plod on, up, down, around and around, trying to figure out \na way to get back to the top of them.\n",
+         "altitude" : null
+      },
+      "brookmere55@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere55X",
+            "u" : "Brookmere55X",
+            "d" : "Brookmere55B",
+            "s" : "Brookmere55X"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Down the &+WStairs",
+         "id" : "Brookmere55",
+         "description" : "\n    Walking down the stairs, you at are at first eager to see what is at the \nbottom and hurry down. But after a long time going down, you decide that \nwhatever is at the bottom is not worth the time and start to make your way \nback up. However, after an equally long time you are still not back in the \nroom in which you started. You start to run up the stairs, striving to reach \nthe top, but to no avail. The stairs just go down, or up, and around and \naround without going anywhere.\n",
+         "altitude" : null
+      },
+      "brookmere49b@brookmere" : {
+         "exits" : {
+            "n" : "Brookmere50",
+            "s" : "Brookmere49"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "End of the Long Corridor",
+         "id" : "Brookmere49B",
+         "description" : "\n    As you draw closer to the end of the corridor you see a light. The light \ncomes from a strange doorway set in the stone wall of the passageway. The \ndoorway glows with the brightness of sun on snow, making everything around you \ndark. Thick white clouds puff and roll between the door frames. Stray whips \nreach out toward you, beckoning you to see what is beyond the door. Will you \nfollow the footprints?\n",
+         "altitude" : null
+      },
+      "brookmere21@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere20",
+            "s" : "^solid_door"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Gnoll Quarters",
+         "id" : "Brookmere21",
+         "description" : "\n    Cautiously you enter the room, lit only by the soft glow of a candle,\nand stifle a gasp as you see the huddled forms of a dozen or more gnolls! \nThen, observing that they are all lying horizontally on bunks, you relax,\nrealising they are asleep. Gnolls love a snooze, at any time of the day\nor night, and never miss a chance to catch forty winks. All is still, but\nfor the quiet breathing of the sleepers, the rise and fall of their\nchests under the covers and the flame of the solitary candle melting in a\nsconce. There is nothing of interest here. You can probably leave without \nwaking anyone if you tiptoe. \n",
+         "altitude" : null
+      },
+      "brookmere51@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere49",
+            "e" : "^brick_wall"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Alcove",
+         "id" : "Brookmere51",
+         "description" : "\n    An ordinary old indentation in the main corridor, about a metre deep, \ntraditionally used to display large objects tastefully that would otherwise \nblock traffic - except that there isn't any `object d'art' being displayed \nhere. There is only the &+Rbrick wall&* at the back of the alcove, which looks a \nbit out of place compared to the stone walls surrounding it.\n",
+         "altitude" : null
+      },
+      "brookmere31@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere14",
+            "s" : "Brookmere30"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "brookmere",
+         "title" : "Cobwebbed Corridor",
+         "id" : "Brookmere31",
+         "description" : "\n    Usually the odd cobweb doesn't faze you at all, but walking down this\ncorridor you can't help but cringe a little from the hundreds of cobwebs\nthat look like they are holding the place together. They plaster the\nwalls, hang in tatters from the ceiling and are stitched across every\ncorner. With every breath or breeze that escapes you the webs shiver\nominously, a signal to their occupants. You can only hope they decide to\nignore you.\n",
+         "altitude" : null
+      },
+      "brookmere10@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere9",
+            "w" : "Brookmere12",
+            "n" : "Brookmere11",
+            "s" : "Brookmere43"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Corridor",
+         "id" : "Brookmere10",
+         "description" : "\n    You find yourself in another corridor, cut roughly out of the earth and \nsupported by rotting timbers. This corridor is unlit by the eerie green glow. \nThe corridor opens to the north into what looks like was once a treasure room. \nContinuing to the west is a dark decrepit tunnel and to the south is another \nearthen tunnel.\n",
+         "altitude" : null
+      },
+      "brookmere19@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere18",
+            "e" : "Brookmere24",
+            "n" : "Brookmere20",
+            "s" : "Brookmere22"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Short Corridor",
+         "id" : "Brookmere19",
+         "description" : "\n   This rocky corridor is very short - in fact, there is only enough room\nin it for one person before it branches to the north, east and south. An\nexit to the west leads into a cavern.\n",
+         "altitude" : null
+      },
+      "brookmere46@brookmere" : {
+         "exits" : {
+            "s" : "^north_door2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Treasure Storeroom",
+         "id" : "Brookmere46",
+         "description" : "\n    This must be where the orcs store all their loot - The room is filled with \n&+ychests&* in various states of decay, with tarnished plaques and ragged labels \nsaying things like ` MOORGS FINGS' and ` PERSUNAL N PRIVAT' . You try all the \nchests eagerly (you little thief!) and find that, much to your dismay, all of \nthem require a key and cannot be bypassed by your lockpicking skills. \n",
+         "altitude" : null
+      },
+      "brookmere49@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere51",
+            "n" : "Brookmere49B",
+            "s" : "Brookmere7"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Long Corridor",
+         "id" : "Brookmere49",
+         "description" : "\n    Hurrying along, you find that it is actually a pleasure to walk along this \ncorridor. The paving stones on the floor are smooth and even, the walls are \nsturdy and well made, a neat alcove has been set into the east wall and the \nroof doesn't even sag. It is in such good condition it starts to make you \nsuspicious. How is it that this corridor has survived the onslaught of the \nhobgoblins undamaged? On the floor you can see some faint muddy footprints \nleading toward the end of the corridor, but you can find none leading back the \nother way.\n",
+         "altitude" : null
+      },
+      "brookmere7@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere8",
+            "u" : "Brookmere3",
+            "n" : "Brookmere49"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Foot of the Rock Fall",
+         "id" : "Brookmere7",
+         "description" : "\n    At the bottom of the rockfall you almost lose your footing on some\ngravel and utter a whispered curse. Peering into the darkness you can see\ntwo dark stone tunnels at the foot of the rock fall, one going east, the\nother, north. Looking carefully, you can see a green glow at the end of\nthe west tunnel. To the north you can see only darkness.\n",
+         "altitude" : null
+      },
+      "brookmere9@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere10",
+            "e" : "Brookmere8"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Ruined Room",
+         "id" : "Brookmere9",
+         "description" : "\n    You are in a small ruined room, one that must have been wrecked when\nBrookmere was invaded. The stone walls and ceiling have been taken away to\nfortify other parts of the dungeon, so bare earth, threaded through with\nthe roots of weeds on the surface, is all that remains. The green glow is\nespecially bright here after the dimness of the corridor. The source of\nthe glow is an archway at the far end of the room, dripping with a glowing\ngreen fungus. A bitter smell like rotting mushrooms fills your nostrils.\nSlowly, small pieces of the fungus break off and fall to the floor where\nthey collect in a shimmering pool.\n",
+         "altitude" : null
+      },
+      "brookmere12@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere10",
+            "n" : "^backing"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "brookmere",
+         "title" : "Decrepit Tunnel",
+         "id" : "Brookmere12",
+         "description" : "\n    Enormous boulders, dirt and fallen timers half fill the passageway\nand block your path. This tunnel must have been this way since Brookmere\nfell. You push your way through the rubble and accidentally hit your head\non a beam - the passage must be far too small for any of Brookmere's\ncurrent inhabitants in this state. The beam shudders and dirt trickles\ndown from the ceiling. From the looks of it the tunnel could collapse at\nany time. You decide to get out of it quickly just in case. \n",
+         "altitude" : null
+      },
+      "brookmere56@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere56X",
+            "n" : "Brookmere56X",
+            "u" : "Brookmere56B",
+            "d" : "Brookmere56X"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Up the &+WStairs",
+         "id" : "Brookmere56",
+         "description" : "\n    Walking up the stairs, you at are at first eager to see what is at the \ntop and hurry along. But after a long time going up, you decide that whatever \nis at the top is not worth the time and start to make your way back down. \nHowever, after an equally long time you are still not back in the room in \nwhich you started. You start to run down the stairs, striving to reach the \nbottom, but to no avail. The stairs just go down, or up, and around and \naround without going anywhere.\n",
+         "altitude" : null
+      },
+      "brookmere16@brookmere" : {
+         "exits" : {
+            "n" : "Brookmere17",
+            "s" : "Brookmere14"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "South End of Corridor",
+         "id" : "Brookmere16",
+         "description" : "\n    This is the beginning of a straight corridor that leads south to a\nlarge room. The corridor continues onto the north. The corridor was\nobviously damaged in the invasion and has been crudely repaired by the\ninvaders. Masonry is propped up with beams and poles, some of which are\nbending under the strain, and the flagstone floor is very lumpy and\nuneven, like an unmade bed. You shake your head at the hobgoblins\npathetic attempt to render the corridor even serviceable and sigh, \nremembering the skill of the elves.\n",
+         "altitude" : null
+      },
+      "brookmere55d@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere55C",
+            "n" : "Brookmere55X",
+            "u" : "Brookmere28",
+            "d" : "Brookmere55X"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Down the &+WStairs",
+         "id" : "Brookmere55D",
+         "description" : "\n     Dragging your feet across the endless stairs, you happen to glance up - \nand almost weep at the sight of an open door and a small veranda. You've \nfinally made it back to the top of the steps!\n",
+         "altitude" : null
+      },
+      "brookmere57b@brookmere" : {
+         "exits" : {
+            "n" : "Brookmere57"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "&+ySandy Island",
+         "id" : "Brookmere57B",
+         "description" : "\n    The river has carried with it many tonnes of sand and sediment from \nfaraway shores on its journey, much of which has lodged here, perhaps building \nup on a large rock beneath the surface, creating an alluvial island. You \nwonder if any alluvial gold dust has been washed up onto the island recently.\n",
+         "altitude" : null
+      },
+      "brookmere35@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere37",
+            "e" : "Brookmere28",
+            "s" : "Brookmere36"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Smooth Corridor",
+         "id" : "Brookmere35",
+         "description" : "\n    Stepping out into the corridor you find that there is no need to put a \nsecond foot down as you are sliding along the floor on one foot! The floor is \nso smooth and polished that the gentlest push will send you from one end of \nthe corridor to the other. Gliding along you see a wall &+Changing&* that you would \nvery much like to examine, but when you put your hand to a wall to stop \nyourself your fingers slip right off! The only thing you can grab hold of is \nthe doorway of what looks like a supply room. From here you can take a proper \nlook at the room at the other end of the corridor, or turn back and go the \nother way. Looking through the doorway of the room at the west end of the \ncorridor you can see steps leading down. To the east is a smooth door.\n",
+         "altitude" : null
+      },
+      "brookmere5@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "brookmere",
+         "title" : "The Elves of Brookmere",
+         "id" : "Brookmere5",
+         "description" : "\n    Emerging from the ruins you at first squint in the bright sunlight after \nhaving been underground so long. When your eyes have adjusted you look around. \nElves in construction hats scurry about investigating the ruins, while nearby \nin the shelter of the trees you can see the outskirts of an elven campsite, \nwith elf children playing up in the trees. The elves have returned to Brookmere \nto start anew! Already you notice scaffolding being erected at the far side of \nthe ruin and stone masons trundling blocks of stone around in wheelbarrows. \nTurning, you look down into the crater that used to harbour the dungeons of \nBrookmere. You can still see the white block of marble that transported you to \nthe alarm room. Almost unconsiously you kick a stone over the edge of the \ncrater. It bounces down, dislodging more stones and rocks as it goes, until it \nbecomes apparent you have started a landslide. The whole thing lands at the \nbottom making a lot of noise, and when the dust clears the white block is \nobscured. The elves look toward the crater briefly, then return to their \nerrands. No-one seems to have noticed the mortal who climbed out of the ruin. \nOh well, you are just glad that things have been restored to their rightful \norder in the world.\n",
+         "altitude" : null
+      },
+      "brookmere26@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere25",
+            "e" : "^wooden_door",
+            "n" : "^solid_door2",
+            "s" : "Brookmere23"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Common Room",
+         "id" : "Brookmere26",
+         "description" : "\n    This room is, in theory, where gnolls and goblins can hang out and\n`get to know each other'. In practice the room is divided by an invisible\nline into gnoll and goblin territory, and no-one crosses the border. Other\nthan that, the room is quite inviting, with a large fireplace generating\nlots of heat, stools arranged into groups conducive to a nice chat and the\nfaint smell of amber liquid wafting about.\n",
+         "altitude" : null
+      },
+      "brookmere56b@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere55X",
+            "n" : "Brookmere55C",
+            "u" : "Brookmere56X",
+            "d" : "Brookmere56"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Up the &+WStairs",
+         "id" : "Brookmere56B",
+         "description" : "\n    Up is down and down is up on this staircase, as both directions lead \nnowhere. Still you plod on, up, down, around and around, trying to figure out \na way to get back to the bottom of them.\n",
+         "altitude" : null
+      },
+      "brookmere3@brookmere" : {
+         "exits" : {
+            "u" : "Brookmere2",
+            "d" : "Brookmere7"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Rock Fall",
+         "id" : "Brookmere3",
+         "description" : "\n    It appears that at some point part of the hole above collapsed, creating \na landslide of earth and rocks from the ruin. This is what you are know\ngingerly climbing. Far above you, you can see a faint light and the rim of\nthe hole. Below, you can make out the dim outline of a passageway leading\ninto the gloom.\n",
+         "altitude" : null
+      },
+      "brookmere32@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere33",
+            "s" : "Brookmere28"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Room",
+         "id" : "Brookmere32",
+         "description" : "\n    This room is fairly nondescript - in fact, it's completely bare. But it \nis not only bare of any furniture or objects, even the walls, the ceiling and \nthe floor don't look all there.  They look very..well, they are indescribable, \napart from being very forgettable. Only by staring hard at the wall does it \nlook solid and real. Otherwise they hover at the edge of your perephiral \nvision looking vague when you try to see them. Fleetingly you think you see \nthe &+Cfigure&* of a seated person out of the corner of your eye, but the image \nquickly seuges into nothingness. The room makes you uneasy. It is so \nforgettable you are in danger of forgetting where you are. Better leave \nquickly. \n",
+         "altitude" : null
+      },
+      "brookmere15@brookmere" : {
+         "exits" : {
+            "n" : "Brookmere14"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Cloakroom",
+         "id" : "Brookmere15",
+         "description" : "\n    This room is no bigger than a good sized cupboard, with bent and\nsnapped hooks in a line on one wall. This where the goblins store many of\ntheir supplies. There are many tattered and rumpled goblin cloaks and\nhelmets strewn about.\n",
+         "altitude" : null
+      },
+      "brookmere38@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere39",
+            "n" : "Brookmere37"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Damp Corridor",
+         "id" : "Brookmere38",
+         "description" : "\n    Judging from this corridor you are nearing some body of water. The \nwalls feel cold and damp, even more so than is usual underground, and water \ndrips through the ceiling in numerous places, collecting in just as many \npuddles. A light breeze blows from the west and brings with it the smell of \nwater and earth. The corridor continues on to the wetter west and back to the \ndryer north.\n",
+         "altitude" : null
+      },
+      "brookmere1@brookmere" : {
+         "exits" : {
+            "w" : "hills2@caledonia",
+            "n" : "hills7@caledonia",
+            "d" : "Brookmere2",
+            "s" : "hills8@caledonia"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "brookmere",
+         "title" : "Ruinous Forest Edge",
+         "id" : "Brookmere1",
+         "description" : "\n    You stop at the edge of a forest that once ringed a castle and stare in \ndisbelief.  The only thing that still stands is the broken shell of a tower. \nAll else is ruins.  Scattered across the ground are enormous piles of boulders\nand chunks of masonry.  Carved on one such boulder you spy the word\n'Brookmere'. This then must have been the great elven castle of Brookmere,\nor at least it was until it was invaded by the orcs, goblins and gnolls\nfrom the surrounding lands, forcing the elves to flee. The most noticeable\nfeature on the ruined landscape is a wide black hole in the area of the\ncastle that once seems to have housed the dungeons of Brookmere.\n",
+         "altitude" : null
+      },
+      "brookmere44@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere45",
+            "e" : "Brookmere43"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Biggish Tunnel",
+         "id" : "Brookmere44",
+         "description" : "\n    This tunnel must have been built at the same time as the one to the east, \nwith large, uneven stone boulders, but there is nothing growing between the \ncracks like there is in most old walls. There is only dirt that has been spilt \non the floor near both walls, which makes you think any plant life has been \npulled from the wall and trampled underfoot. There is a small room to the west.\n",
+         "altitude" : null
+      },
+      "brookmere13@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere14",
+            "s" : "Brookmere11"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Lighted Corridor",
+         "id" : "Brookmere13",
+         "description" : "\n    This corridor is well lighted and seems to be heavily traveled.  It\nlooks newly dug, indeed it appears that construction is still going on\nwith several mud caked shovels lying around. Fortunately the corridor\ntwists and turns, and leaves lots of places to hide in to avoid being\ndiscovered - It must be one of the newer tunnels, built by the orcs, \ngoblins and gnolls, who, although inspired at war and carnage, are less \nthan adequate builders. \n",
+         "altitude" : null
+      },
+      "brookmere56d@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere56C",
+            "n" : "Brookmere56X",
+            "u" : "Brookmere56X",
+            "d" : "Brookmere28"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Up the &+WStairs",
+         "id" : "Brookmere56D",
+         "description" : "\n     Dragging your feet across the endless stairs, you happen to glance down \n- and almost weep at the sight of an open door and a small veranda. You've \nfinally made it back to the bottom of the steps!\n",
+         "altitude" : null
+      },
+      "brookmere22@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere23",
+            "n" : "Brookmere19"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Poorly Lit Corridor",
+         "id" : "Brookmere22",
+         "description" : "\n    This corridor is only lit by a guttering candle in a sconce at the\nfar end, dripping &+Cwax&* onto the floor. It leads to the north and curves\naround to the east, in which direction you can smell some sort of food.\n",
+         "altitude" : null
+      },
+      "brookmere17@brookmere" : {
+         "exits" : {
+            "n" : "Brookmere18",
+            "s" : "Brookmere16"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Straight Corridor",
+         "id" : "Brookmere17",
+         "description" : "\n    This straight corridor is lit at intervals by torches. You notice\nthat the walls have been greatly damaged and that now they are braced\nwith wooden beams. The corridor continues on to the south, where the\ndamage is more pronounced, and to the north it opens up into an enormous\ncavern.\n",
+         "altitude" : null
+      },
+      "brookmere33@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere32",
+            "n" : "Brookmere34"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Corridor",
+         "id" : "Brookmere33",
+         "description" : "\n    Looking down the length of this corridor you see that it tapers off \nsharply as it goes along. Even the opening you stand at is small. Fighting \nback claustrophobia you crouch, crawl and finally wriggle you way along, \ngetting scratched and bruised by sharp rocks in the process. Towards the end \nof the `corridor' you see a luminous green glow, coming from a cave at the \nvery end. This glow is nothing like that produced by the glowing fungus in \nthe wetter parts of Brookmere. It looks ominous and creepy. You have a bad \nfeeling about the cave up ahead. You couldn't say exactly why, but past \nexperience has taught you to trust your intuition.\n",
+         "altitude" : null
+      },
+      "brookmere53@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere52"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "brookmere",
+         "title" : "Workroom",
+         "id" : "Brookmere53",
+         "description" : "\n    Apart from a rough-hewn workbench and an empty glass-fronted cabinet on \none wall, the workroom of Orobius looks empty. Only a fool would believe it is \nreally empty though; Orobius would have hidden his secret work before he left \nBrookmere with a blanket illusion. Behind the door though, you find a small \n&+Cblock of white marble&*, just big enough to support a person or elf, standing \nbetween four white marble pillars.\n",
+         "altitude" : null
+      },
+      "brookmere54@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere34",
+            "e" : "^waterfall_door2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Long Tunnel",
+         "id" : "Brookmere54",
+         "description" : "\n    A wide, dark tunnel travels a lengthy path straight ahead before curving \ngently to the south, cutting off any view of the other end save a faint green \nglow that makes you feel edgy. All of a sudden you feel the oppressive weight \nof the tones of earth above you, and remember that, from this point of view, \nthe laws of gravity do not work in your favour. \n",
+         "altitude" : null
+      },
+      "brookmere8@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere9",
+            "e" : "Brookmere7"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Corridor",
+         "id" : "Brookmere8",
+         "description" : "\n    It is cold here under the earth in this stone passageway. Walking is\ndifficult as water drips from the walls and collects on the slippery\nstone floor, meaning that you splash softly through the gloom. The green\nglow is brighter at the west end of the corridor. A deep pool of water\nhas collected in a dip in the floor and is filled with small blind cave\n&+Cfish&* and pale large-eyed &+Csalamanders.\n",
+         "altitude" : null
+      },
+      "brookmere41@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere42"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Bottom of the Falls",
+         "id" : "Brookmere41",
+         "description" : "\n    Standing on a silty shoreline you gaze up in awe at a huge waterfall \nplummeting down from on high. The spray arcs out in all directions, making the \ncavern walls glisten and filling the air with a fine mist. The noise is \nincredible, amplified by the acoustics of the cavern, making any conversation \nsave a yell impossible. The waterfall cascades into a circular pool, beaten \nwhite and frothy by the force of the water. The pool overflows on one side, \nletting the water race on into an underground river to the east. On the other \nside of the pool you think you see a small jagged hole leading into darkness, \nbut there is no way you could reach it from this side of the waterfall.\n",
+         "altitude" : null
+      },
+      "brookmere18@brookmere" : {
+         "exits" : {
+            "w" : "^waterfall_door",
+            "e" : "Brookmere19",
+            "s" : "Brookmere17"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Enormous Cavern",
+         "id" : "Brookmere18",
+         "description" : "\n    The roof of the cavern flickers in the red light of many torches. The\nwalls are known to learned people as ribbon rock, and are striped with\nbands of orange and red.  Stalagmites and stalacties rise and descend out\nof the gloom like huge teeth that look stained with blood from the colour\nin the limestone. Centuries of dripping mineral water have created this\nglittering crystalised room. At the back wall of the cavern a fossilised\n&+Cwaterfall&* hangs in frozen space. A throne sits on the crest of the stone\nwave. Corridors lead east and south out of the cavern.\n",
+         "altitude" : null
+      },
+      "brookmere55x@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere55",
+            "w" : "Brookmere55B",
+            "u" : "Brookmere55",
+            "d" : "Brookmere55C",
+            "s" : "Brookmere55X"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Down the &+WStairs",
+         "id" : "Brookmere55X",
+         "description" : "\n     Up is down and down is up on this staircase, as both directions lead \nnowhere. Still you plod on, up, down, around and around, trying to figure \nout a way to get back to the top of them.\n",
+         "altitude" : null
+      },
+      "brookmere27@brookmere" : {
+         "exits" : {
+            "w" : "^treasure_door"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Dungeon Treasure Room",
+         "id" : "Brookmere27",
+         "description" : "\n    Despite the room being heavily fortified, with thick stone walls and\ndoor, there is no treasure here - not the usual kind anyway.  This is\nwhere the goblins and gnolls are supposed to store any treasure or unusual\nobjects they find in Brookmere. The generals check this room on their\nrounds every week, in case there is something `dangerous' that needs to be\ntaken away for further examination. Of course, the goblins and gnolls know\nwhat the really means and keep anything they find under their pillows or\nin their lockers instead.  This room has instead become a makeshift\ncasino, where any hobgoblin might stake their wages on a game of blackjack\nor gin rummy. Its treasures are the dice and the cards scattered around \non the floor.\n",
+         "altitude" : null
+      },
+      "brookmere36@brookmere" : {
+         "exits" : {
+            "n" : "Brookmere35"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Supply Room",
+         "id" : "Brookmere36",
+         "description" : "\n    This supply room is very well stocked, the shelves groaning under the \nweight of packages of food and things like soap and tallow candles. \nUnfortunately all the packages are well sealed, by normal means or magic you \ncouldn't say, and they are impossible to open.\n",
+         "altitude" : null
+      },
+      "brookmere24@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere19",
+            "e" : "Brookmere25"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Narrow Corridor",
+         "id" : "Brookmere24",
+         "description" : " \n    This corridor is rather quaint and skinny, but so narrow as to be one\nway! It leads east and west.\n",
+         "altitude" : null
+      },
+      "brookmere34@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere54",
+            "s" : "Brookmere33"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "brookmere",
+         "title" : "Glowing Cave",
+         "id" : "Brookmere34",
+         "description" : "\n    Plucking up some courage you walk through an opening and stumble into a \nmeeting of all the hobgoblin generals and officers! Horrified you turn to flee \nbefore you are seen. Alas, your foot slips on a smooth rock and you fall, \nletting out a loud cry, rolling to a stop in the middle of the crowd of \nhobgoblins. Shaking your head to clear it you see three large, well-armed orcs \nsurrounding you. Chuckling evilly they pick you up, tie you securely, throw \nyou over their shoulders and walk off into the gloom.\n\n    Always trust your intuition....\n",
+         "altitude" : null
+      },
+      "brookmere52@brookmere" : {
+         "exits" : {
+            "w" : "^brick_wall2",
+            "e" : "Brookmere53"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "brookmere",
+         "title" : "Throne Room of Orobius",
+         "id" : "Brookmere52",
+         "description" : "\n    The only thing in the entire room is a large white marble throne, shot \nthrough with black, set up on a dais. However, when you walk towards it to get \na closer look you end up on the other side of the room. When you turn around \nand try again the same thing happens - you just can't get to it. You walk up \nand down the room for some time trying to examine the throne, getting \nincreasingly frustrated, until you find the trick of walking directly away from \nthe throne, which gets you right up onto the dais. Looking at the back of the \nthrone you find a silver plaque with the words `Throne of Orobius, Master \nIlluisionist and Enchanter' and some runes below that probably say the same \nthing. This room then belonged to the great Orobius, Master Illusionist of \nBrookmere, purveyor of illusions of sight, hearing, sound, smell and taste. \nTo the east is a doorway leading to what looks like the Masters workroom - \nunless, of course, it is an illusion.\n",
+         "altitude" : null
+      },
+      "brookmere4@brookmere" : {
+         "exits" : {
+            "u" : "^unicorn_button"
+         },
+         "flags" : [
+            "NoSummon",
+            "Soundproof"
+         ],
+         "zone" : "brookmere",
+         "title" : "The Alarms Room",
+         "id" : "Brookmere4",
+         "description" : "\n    Stepping off the marble block you look around quizzically at your new \nsurroundings. You are in a small, bare stone room, with light coming from \nsomewhere far above. Raising your eyes skyward you discern that you are gazing \nup the middle of a very long square spiral staircase, though you can't see \nwhat is at the top. The bottom step lurks in the shadows to your right, but \nyou are daunted by the height of the stairs and decide against attempting to \nclimb them. Behind you is a &+Cblock of marble&*, identical to the one in Orobius' \nworkroom, that you suppose would take you back there if you stood on it.\n",
+         "altitude" : null
+      },
+      "brookmere30@brookmere" : {
+         "exits" : {
+            "n" : "Brookmere31",
+            "s" : "^dust"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Musty Room",
+         "id" : "Brookmere30",
+         "description" : "\n    You stride boldly into the room - and then stagger back clutching your\nthroat. This room needs a good dusting! The place is choked with the\nstuff and nearly choked you along with it. A thick grey fog seethes around\nthe room, particles glowing when they come in reach of your light. The\n&+ydust&* is so thick you cannot see a metre in front of you. Vague shapes here\nand there indicate furniture of some sort, but aside from that and what is\ninside your circle of light, you can see nothing.\n",
+         "altitude" : null
+      },
+      "brookmere48@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere45"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Orc Barracks",
+         "id" : "Brookmere48",
+         "description" : "\n    The barracks are mostly empty and smell like a stable. Wooden bunk beds are \nbuilt three high against the walls. The beds are unmade and armor and pieces of \ndirty orc underwear litter the floor. Pictures of female orc beauties are on \nthe walls. A wooden table in the middle of the room is covered with torn cards \nand a set of dice made from real bones.\n",
+         "altitude" : null
+      },
+      "brookmere20@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere21",
+            "s" : "Brookmere19"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Darkened Corridor",
+         "id" : "Brookmere20",
+         "description" : "\n    Ouch! You stub your toe on a jagged rock. It's so dark in this \ncorridor you can barely see your hand in front of your face. It leads to\nthe south and curves around to the east, where you can see candlelight\nglowing from an open doorway.\n",
+         "altitude" : null
+      },
+      "brookmere50@brookmere" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "brookmere",
+         "title" : "Through the White Mist",
+         "id" : "Brookmere50",
+         "description" : "\n   Grasping the shimmering doorway, you place your head and upper half of your \nbody in the misty clouds and try to see what lies ahead. For a minute nothing \nhappens, then slowly the upper half of your body begins to glow and shimmer \nwith unearthly light, spreading down to the rest of you. The glow fades, taking \nwith it your features and colour. The outline of your body can still be seen \nbut it starts to smudge and blur. Soon, all that is left is white, billowing \nsmoke moving gently in the quiet corridor, then drifting through the door and \nbecoming part of the larger cloud mass.\n\nYou have tried to pass through a door of nothingness, which no mortal may do \nand live.\n",
+         "altitude" : null
+      },
+      "brookmere29@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere28",
+            "n" : "Brookmere30"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Dusty Corridor",
+         "id" : "Brookmere29",
+         "description" : "\n    This corridor is a lot less dusty than the room to the north, although\nit could still do with a good clean. Tapestries on the walls are obscured\nby a mantle of cobwebs and dust has piled up in drifts along the wall.\nWith each step you take a gray cloud erupts under your foot and dust gets\ninto your nose, making you sneeze.  To the west you can see an open\ndoorway, and something flashes in the dark.\n",
+         "altitude" : null
+      },
+      "brookmere56c@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere56D",
+            "u" : "Brookmere56X",
+            "d" : "Brookmere56X",
+            "s" : "Brookmere56B"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Up the &+WStairs",
+         "id" : "Brookmere56C",
+         "description" : "\n    Up is down and down is up on this staircase, as both directions lead \nnowhere. Still you plod on, up, down, around and around, trying to figure out \na way to get back to the bottom of them.\n",
+         "altitude" : null
+      },
+      "brookmere28@brookmere" : {
+         "exits" : {
+            "w" : "^mirrored_door",
+            "n" : "^cracked_mirror",
+            "s" : "^warped_mirror"
+         },
+         "flags" : [
+            "NoSummon",
+            "CantSummon"
+         ],
+         "zone" : "brookmere",
+         "title" : "Long and Narrow Room",
+         "id" : "Brookmere28",
+         "description" : "\n    This room is long, narrow and...full of mirrors! They panel the roof,\nhang floor to ceiling on the walls and even cover the floor. Every square\ncentimetre of the place is covered in a reflective surface. Looking around\nin wonder, you can see yourself reflected a thousand times in every\ndirection to infinity. Unfortunately as you entered for the first time the\ndoor swung shut behind you, revealing another mirror on the back, making\nit impossible to find again. You find yourself trapped in a room of\nseemingly infinite proportions.\n",
+         "altitude" : null
+      },
+      "brookmere2@brookmere" : {
+         "exits" : {
+            "u" : "Brookmere1",
+            "d" : "Brookmere3"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "brookmere",
+         "title" : "Gaping Hole",
+         "id" : "Brookmere2",
+         "description" : "\n    The hole lies in the shadow of the hulking remains of Brookmere's\nwatchtower. It looks quite old, as various grasses and weeds have sprung\nup around the rim, obscuring any exposed digging work. The hole leads\ndown into the dungeons that the orcs, goblins and gnolls must have made\ntheir home. Peering down into the wide, gaping maw you see a rockfall\nthat would take you down to the dungeon level if you are careful.\n",
+         "altitude" : null
+      },
+      "brookmere55b@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere55X",
+            "u" : "Brookmere55",
+            "d" : "Brookmere55X",
+            "s" : "Brookmere55C"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Down the &+WStairs",
+         "id" : "Brookmere55B",
+         "description" : "\n    Up is down and down is up on this staircase, as both directions lead \nnowhere. Still you plod on, up, down, around and around, trying to figure out \na way to get back to the top of them.\n",
+         "altitude" : null
+      },
+      "brookmere39@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere40",
+            "e" : "Brookmere38"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Soggy Corridor",
+         "id" : "Brookmere39",
+         "description" : "\n    The corridor is a good deal wetter here, and much less pleasant that the \ncorridor to the north. Black water drips fast from the walls and ceiling. You \nsense you are descending as the water on the floor is now ankle deep. A strong \nbreeze blows, a threat to any flame. The air is damp and uncomfortable, and \nyour hair is limp as it soaks up the moisture in the air.  Gloomily you splash \nonwards, downhill to the west or uphill to the east.\n",
+         "altitude" : null
+      },
+      "brookmere23@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere22",
+            "n" : "Brookmere26"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Goblin Guard Room",
+         "id" : "Brookmere23",
+         "description" : "\n    This is where the goblins hang out when not on duty - the goblin guard \nheadquarters if you will, with a &+Cbulletin board&* hung up behind the door\nfor goblin related messages. The place looks and smells absolutely \ndisgusting. The goblins must be in the habit of simply throwing everything\non the floor when they have finished with it. Mouldy food spews out of a\ncupboard, grubby tunics in lumps on the floor are decaying like piles of\nrotten fruit, several goblin swords have been slung into a corner\nuncleaned of any blood or guts that might still be on them and on the\ntable among the remnants of a recent dinner is a &+Cshield&* which has obviously \nbeen used as a plate.\n",
+         "altitude" : null
+      },
+      "brookmere11@brookmere" : {
+         "exits" : {
+            "n" : "Brookmere13",
+            "s" : "Brookmere10"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Old Treasure Room",
+         "id" : "Brookmere11",
+         "description" : "\n    You stand in a room that was once used to store elven treasure before the \ninvasion. There are cracked flagstones on the floor and the walls are black \nwith smoke from the burning of fire and torches.  Any treasure that might\nhave lain here has long since been stolen or hidden away. The room now marks \nthe entrance to the only inhabited part of Brookmere and is empty but for\na small table and a three-leegged stool for the guard. \n",
+         "altitude" : null
+      },
+      "brookmere42@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere41",
+            "n" : "Brookmere43",
+            "s" : "Brookmere57"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Water Cavern",
+         "id" : "Brookmere42",
+         "description" : "\n    You have passed into an enormous cavern with a sandy floor and a fast \nflowing river bubbling its way along to the east, until it disapears beneath \nthe cavern wall. The cavern is as high as a cathederal, the roof invisible in \nshadow, and the walls are smooth and shiny, polished over countless centuries \nby the river than now flows under them. The river has also washed sand and silt \ninto the cavern from faraway riverbanks, creating a beach, and, in the middle \nof the river, a small island. The cavern is lit by lines of light scribbled on \nthe walls of the cavern by reflections off the eddying surface of the water. To \nthe west you can hear a continuous dull roar over the gurgles of the river. To \nthe north is a small tunnel.\n",
+         "altitude" : null
+      },
+      "brookmere45@brookmere" : {
+         "exits" : {
+            "w" : "Brookmere48",
+            "e" : "Brookmere44",
+            "n" : "^north_door",
+            "s" : "^south_door"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Small Room",
+         "id" : "Brookmere45",
+         "description" : "\n    This room is much like the tunnels you have just passed through, only this \nroom has smoke stains on the roof and torches spaced evenly along the walls in \nmetal holders. Not all of them are lit and those that are are of different \ntypes; some are new and green, some old and splintery, some blackend and burnt \ndown to almost nothing. There are doors to both the north and south. There is \nanother, larger room to the west.\n",
+         "altitude" : null
+      },
+      "brookmere14@brookmere" : {
+         "exits" : {
+            "e" : "Brookmere13",
+            "w" : "Brookmere31",
+            "n" : "Brookmere16",
+            "s" : "Brookmere15"
+         },
+         "flags" : [],
+         "zone" : "brookmere",
+         "title" : "Large Room",
+         "id" : "Brookmere14",
+         "description" : "\n    You are now in a large room where it looks as if a battle has taken\nplace recently. The wall on the far side of the room shows great destruction. \nMost of the stonework has fallen into the room. Large boulders lie scattered \nabout the floor and the earthen wall is braced with a crisscross of metal\nplates held in place by massive wooden beams. Furniture has been thrown\nabout and a great mantle has been thrown down from the fireplace. What on \nearth happened here?   \n",
+         "altitude" : null
+      },
+      "brookmere47@brookmere" : {
+         "exits" : {
+            "n" : "^south_door2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "brookmere",
+         "title" : "Weapon Storeroom",
+         "id" : "Brookmere47",
+         "description" : "\n    This room is full of oversized swords, scabbards, shields and other \nimplements of war, belonging to the orcs. There are bottles of lard on a shelf \nin the back and bunches of chain hung on a hook for cleaning sword blades, but \nthey don't look like they have been used very often, all the sword blades you \ncan see being encrusted with something dark and congealed. Unfortunately \neverything in here is way too big for you to use. \n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "lug@brookmere" : {
+         "damage" : "12",
+         "location" : "Brookmere48",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Lug",
+         "examine" : "\nLug is what you might call `mentally challanged'. Of course, orcs aren't \nknown for their mental prowess generally, but Lug is exceptional. Even other \norcs call him slow!",
+         "description" : "Lug is here ogling the orc - pinups in a girly magazine.",
+         "strength" : "180",
+         "mflags" : [
+            "Cross",
+            "NoGrab"
+         ]
+      },
+      "murguth@brookmere" : {
+         "damage" : "11",
+         "location" : "Brookmere26",
+         "speed" : "7",
+         "aggression" : "8",
+         "armor" : "0",
+         "name" : "Murguth",
+         "examine" : "\nMurguth's name is actually Murgus, but his lisp, caused by an unfortunate \nharelip, has led to his current nickname.",
+         "description" : "Murguth the goblin is glowering here.",
+         "strength" : "170",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "taurig@brookmere" : {
+         "damage" : "9",
+         "location" : "Brookmere14",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Taurig",
+         "examine" : "\nTaurig is a goblin, member of the most notorious of the three races of \nmountain dwellers called orcs, goblins and gnolls.  Hobgoblins are not, as \none might think, a derivative of this race, but the collective name given to \nall three. Goblins are less reclusive than the orcs or gnolls and were the \nfirst of the three to emerge in the world of men.  When the orcs and gnolls \nappeared later they were given the same name, which evolved to 'hobgoblin'.\n\nTaurig is extremely bored right now - he wants to get back to the goblin \nguardroom and finish his dinner. Instead he has to hang around here, \nlistening to Rooke whining about the orcs and gnolls.",
+         "description" : "Taurig the goblin is here, looking bored.",
+         "strength" : "150",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "nasnath@brookmere" : {
+         "eflags" : [
+            "Cripple"
+         ],
+         "damage" : "10",
+         "location" : "Brookmere1",
+         "armor" : "0",
+         "name" : "Nasnath",
+         "examine" : "\nNasnath is one of the race of mountain dwellers called gnolls, cousins to the \ngoblins and orcs. Gnolls are the slightest of the three, being hardly bigger \nthan a man, but are also the cleverest, possesing some crude magic that \nenables them to compete with the other two. Nasnath signed up for their army \nto learn combat charms, but hates violence of any kind and refuses to attack \nanything. The only reason she is here guarding the entrance to Brookmere is \nthat no-one ever visits this bleak part of the forest anyway - except you of \ncourse.",
+         "description" : "Nasnath the pacifist gnoll sits here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic"
+         ]
+      },
+      "frang@brookmere" : {
+         "damage" : "15",
+         "location" : "Brookmere18",
+         "speed" : "0",
+         "aggression" : "55",
+         "armor" : "0",
+         "name" : "Frang",
+         "examine" : "This is a large, chunky, very mean orc killing machine! ",
+         "description" : "Frang, Render Of Flesh, sees you and begins to attack.",
+         "strength" : "270",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "rooke@brookmere" : {
+         "damage" : "9",
+         "location" : "Brookmere14",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Rooke",
+         "examine" : "\nRooke is annoyed about having to share his less than adequate portion of \nBrookmere booty with the orcs and gnolls. He is complaining about them now, \ngrumbling '...don't see why we had to drag THEM along anyway, they're just \nholding US back. If I were in charge...' Hmmm, the allies are obviously not \nas friendly as their generals would like to think.",
+         "description" : "Rooke, a goblin guard, is complaining about his share of plunder.",
+         "strength" : "150",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "kurak@brookmere" : {
+         "damage" : "8",
+         "location" : "Brookmere14",
+         "speed" : "15",
+         "aggression" : "5",
+         "armor" : "0",
+         "name" : "Kurak",
+         "examine" : "He looks like a moody sort of gnoll, with a face as sour as an unripe lemon.",
+         "description" : "Kurak is here looking sulky.",
+         "strength" : "150",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "swart@brookmere" : {
+         "damage" : "13",
+         "location" : "Brookmere15",
+         "speed" : "0",
+         "armor" : "0",
+         "name" : "Swart",
+         "examine" : "\nSwart is an orc, orcs being the largest of the three races now inhabiting Brookmere. \nThe goblins and gnolls think them slow and dull, but what they lack in \ncunning they make up for in brute strength. \n\nAs you come closer you hear Swart mutter 'crummy goblins, no fair goblins, \ngoblins fink they're so tricksy...' ",
+         "description" : "Swart, an orc guard, is here mumbling something about crummy goblins.",
+         "strength" : "200",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "sprak@brookmere" : {
+         "damage" : "7",
+         "location" : "Brookmere31",
+         "speed" : "0",
+         "aggression" : "55",
+         "armor" : "0",
+         "name" : "Sprak",
+         "examine" : "Sprak is a fairly small, mildly poisonous spider who is missing a leg.",
+         "description" : "Sprak the shortsighted spider thinks you are a moth that has flown into his web.",
+         "strength" : "90",
+         "mflags" : [
+            "Cross",
+            "Venom"
+         ]
+      },
+      "grout@brookmere" : {
+         "eflags" : [
+            "Deaf"
+         ],
+         "damage" : "10",
+         "location" : "Brookmere26",
+         "armor" : "0",
+         "name" : "Grout",
+         "examine" : " Grout nuzzles his drink and glances up at you with a sinister air.",
+         "description" : "Grout the gnoll is lurking here.",
+         "strength" : "150",
+         "speed" : "7",
+         "aggression" : "6",
+         "mflags" : [
+            "Cross"
+         ]
+      }
+   }
+}

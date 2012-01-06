@@ -1,0 +1,138 @@
+{
+   "obj" : {
+      "jacket@cresso" : {
+         "location" : "IN_ROOM:Closet1",
+         "armor" : "100",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "jacket",
+         "examine" : "\nFurther examining the jacket, you find its premium quality black leather with \ndiamond-studded buttons. Very chic.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "5000",
+         "desc[0]" : "Cresso's Jacket has been thrown aside here, gathering dust."
+      },
+      "hat@cresso" : {
+         "location" : "IN_ROOM:Closet1",
+         "armor" : "100",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hat",
+         "examine" : "\nThis is a black hat with the words Promised Land in red embroidered on the side and a silver sword in a gray stone on the front.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "5000",
+         "desc[0]" : "Cresso's hat sits on a shelf here."
+      },
+      "narsya@cresso" : {
+         "desc[1]" : "The fabled ring &+mNarsya&* is here, glowing.",
+         "damage" : "99999",
+         "location" : "IN_ROOM:Cresso1",
+         "armor" : "0",
+         "oflags" : [
+            "Getflips",
+            "regenmana",
+            "armor",
+            "regenhealth",
+            "lit",
+            "noget",
+            "wearable"
+         ],
+         "altname" : "Nar",
+         "name" : "Narsya",
+         "examine" : "Altough it is just a ring, it gives you a powerful feeling. In\nfact, it is the legendary Narsya which has been lost trough time.",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10000",
+         "aflags" : [
+            "Hand"
+         ]
+      }
+   },
+   "loc" : {
+      "cresso1@cresso" : {
+         "exits" : {
+            "n" : "Church@start",
+            "s" : "Closet1"
+         },
+         "flags" : [
+            "party",
+            "owner",
+            "fastmana",
+            "fastheal",
+            "noat"
+         ],
+         "zone" : "cresso",
+         "title" : "&+cCresso's bedroom",
+         "id" : "Cresso1",
+         "description" : "\n\tYou enter a nice bedroom. There is a huge bed in the center of \nthe room. The person who owns this room must be a pretty important one. \nAlso, this probably means that you are not supposed to be in here. This \nroom isn't realy part of this world. It somehow contains elements from \nanother dimension. Like an obese cat and a slot machine.\nThere is a closet on the south side of the room.\nThe ambiance is fantastic. You feel like you could stay here forever.\n",
+         "altitude" : null
+      },
+      "closet1@cresso" : {
+         "exits" : {
+            "n" : "Cresso1"
+         },
+         "flags" : [],
+         "zone" : "cresso",
+         "title" : "Cresso's Closet",
+         "id" : "Closet1",
+         "description" : "\n    As you look around in His closet, you see sun beams filtering through\nthe dust and reflecting off the wooden floor. There are three chairs \nsitting around a table, showing off the closet's large size. There is not \nmuch too this room except the odd aura of energy surrounding everything \ninside it, making you feel quite powerful and tranquil at the same time.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "guardian@cresso" : {
+         "damage" : "100",
+         "location" : "Closet1",
+         "armor" : "100",
+         "name" : "Guardian",
+         "examine" : "\nThe Guardian of Cresso's Closet blocks your way to his bedroom. Mortals, you\nstand NO chance against him.",
+         "description" : "A large, hulking figure prevents you from entering Cresso's Bedroom.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The Guardian",
+         "aggression" : "0",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "charlie@cresso" : {
+         "location" : "Closet1",
+         "speed" : "0",
+         "pname" : "Charlie the Hamster",
+         "name" : "Charlie",
+         "examine" : "\nTaking a second look at this hamster, it stops running and says 'Hello' while wa\nving at you. How odd?",
+         "description" : "A small brown hamster with a white spot on its left ear runs\non his wheel here.",
+         "strength" : "20"
+      },
+      "cathy@cresso" : {
+         "damage" : "500",
+         "location" : "Cresso1",
+         "armor" : "400",
+         "name" : "Cathy",
+         "examine" : "She is awfully obese. She looks very old and tired. When you look\nat her, you feel an intense feeling of respect. She has been\nliving on the Promised Land for a very long time and her power is almost\ninfinite.",
+         "description" : "The big cat, &+RCathy&*, is here looking if you have some food\non you.",
+         "sflags" : [
+            "female"
+         ],
+         "strength" : "2000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "nopunt",
+            "nozap",
+            "noexorcise",
+            "noalias",
+            "nosummon",
+            "nosteal",
+            "noforce",
+            "noburn",
+            "nosic"
+         ]
+      }
+   }
+}

@@ -1,0 +1,994 @@
+{
+   "obj" : {
+      "sign_2@haunted" : {
+         "location" : "IN_ROOM:haunted_23",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "sign_2",
+         "examine" : "&+BWorld famous Texas Chili.  Made from a secret family recipe.  It's to DIE for!&*",
+         "desc[0]" : "A sign hangs beside the door."
+      },
+      "pumpkin_2@haunted" : {
+         "location" : "IN_CONTAINER:boulder",
+         "pname" : "pumpkin",
+         "name" : "Pumpkin_2",
+         "examine" : "To win the quest, you must find my two siblings. They are hidden throughout \nthe zone.  Only with the three of us, can you defeat the Jack O' Lantern Demon!",
+         "bvalue" : "100",
+         "desc[0]" : "A pumpkin is lying here."
+      },
+      "journal@haunted" : {
+         "location" : "IN_ROOM:haunted_19",
+         "name" : "journal",
+         "examine" : "\nThe journal tells about the journey of three students to find the Blair Witch.\nThe last entry sends chills down your spine as you read the words.\n'I am so scared.  She has already gotten the others.  Now all that is left is \nme.  Where do I run? What am I going to do?  Maybe I should just surrender to \nher and let her make of me what she wants.'",
+         "bvalue" : "60",
+         "desc[0]" : "As you bend down, you see a torn journal laying here."
+      },
+      "mask@haunted" : {
+         "location" : "WORN_BY:Jason",
+         "armor" : "10",
+         "oflags" : [
+            "Armor"
+         ],
+         "name" : "mask",
+         "examine" : "Looks like this hockey mask as been in a fight.  Hate to see who lost....",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "aflags" : [
+            "Face"
+         ],
+         "desc[0]" : "A hockey mask lies here."
+      },
+      "girl@haunted" : {
+         "location" : "IN_CONTAINER:bathtub",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "girl",
+         "examine" : "The girl's body sits up, and her eyes open.  Her head turns toward you and\nshe says, Freddy's coming for you!"
+      },
+      "pumpkin_1@haunted" : {
+         "location" : "CARRIED_BY:Freddy",
+         "pname" : "pumpkin",
+         "name" : "Pumpkin_1",
+         "examine" : "\nTo win the quest, you must find my two siblings.  They are hidden throughout \nthe haunt.  Only with the three of us, can you defeat the Jack O' Lantern Demon!",
+         "bvalue" : "100",
+         "desc[0]" : "A pumpkin rests here."
+      },
+      "pumpkin_3@haunted" : {
+         "location" : "CARRIED_BY:Blob",
+         "pname" : "pumpkin",
+         "name" : "Pumpkin_3",
+         "examine" : "To win the quest, you must find my two siblings. They are hidden throughout \nthe zone.  Only with the three of us, can you defeat the Jack O' Lantern Demon!",
+         "bvalue" : "100",
+         "desc[0]" : "A pumpkin lies here."
+      },
+      "sofa@haunted" : {
+         "location" : "IN_ROOM:haunted_5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "sofa",
+         "name" : "sofa",
+         "examine" : "The slashed sofa looks like a huge cat with big claws used it for a\nscratching post.",
+         "desc[0]" : "A ripped up sofa sits among the trashed up room."
+      },
+      "door_2@haunted" : {
+         "desc[1]" : "The door to the house is closed.",
+         "location" : "IN_ROOM:haunted_5",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door_2",
+         "linked" : "door_1",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door to the house is opened."
+      },
+      "mirror@haunted" : {
+         "location" : "IN_ROOM:haunted_7",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "mirror",
+         "examine" : "\nYou see your own reflection...change...there are MAGGOTS CRAWLING ON YOUR FACE!\nYou start trying to pull them all off your face, but chunks start coming off \nuntil you become a &+Rbloody mess&*...then you look away and look back in the \nmirror...and find that your face is perfectly fine.  What WERE you looking at \nanyway?",
+         "desc[0]" : "A mirror hangs on the wall."
+      },
+      "knife@haunted" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:Jason",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "knife",
+         "examine" : "\nBlood stains on the handle.  No doubt this is Jason Vorhees' knife.  Wonder\nwho got it from him?",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "Seems Jason lost his knife."
+      },
+      "boulder@haunted" : {
+         "desc[1]" : "A boulder is sitting here.",
+         "location" : "IN_ROOM:haunted_20",
+         "oflags" : [
+            "Container",
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "boulder",
+         "examine" : "Weird.  Seems like there is a way to open up this boulder.",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "Someone has opened up a boulder."
+      },
+      "tent@haunted" : {
+         "location" : "IN_ROOM:haunted_19",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "tent",
+         "examine" : "\nYou wonder why someone would leave a tent here in the middle of the woods.\nOr for that matter, why anyone would even camp here in this spooky place.  \nDirt and mud are caked all over it. You wonder where the person or persons \nthat were camping here are.",
+         "desc[0]" : "A collapsed tent lies torn on the ground."
+      },
+      "sign@haunted" : {
+         "location" : "IN_ROOM:haunted_0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "sign",
+         "name" : "sign",
+         "examine" : "\n&+CThis zone and quest was written by Kira for Halloween for Promised Land MUD.\n&+CHope you have fun in this adventure!",
+         "desc[0]" : "A moss-covered, rotting sign sits beside the path."
+      },
+      "bathtub@haunted" : {
+         "location" : "IN_ROOM:haunted_8",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "tub",
+         "name" : "bathtub",
+         "examine" : "As you pull back the curtains, you COMPLETLY freak out!  The body of a young\ngirl lies there.  There are claw marks from her throat to her belly.  You \ngasp in horror.",
+         "desc[0]" : "The bathtub sits over on the other side."
+      },
+      "door_1@haunted" : {
+         "desc[1]" : "The door to the house is closed.",
+         "location" : "IN_ROOM:haunted_4",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door_1",
+         "linked" : "door_2",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door to the house is opened."
+      }
+   },
+   "loc" : {
+      "haunted_18@haunted" : {
+         "exits" : {
+            "w" : "haunted_21",
+            "e" : "haunted_20",
+            "n" : "haunted_19",
+            "s" : "haunted_19"
+         },
+         "flags" : [
+            "Real",
+            "Maze"
+         ],
+         "zone" : "haunted",
+         "title" : "Lost in the Woods",
+         "id" : "haunted_18",
+         "description" : "\n    You run through the woods, not knowing where you are. You are completely \nlost.\n",
+         "altitude" : null
+      },
+      "haunted_23@haunted" : {
+         "exits" : {
+            "e" : "haunted_16",
+            "s" : "haunted_24"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Texas Chili Shack",
+         "id" : "haunted_23",
+         "description" : "\n    Looks like this shack has been converted into a little chili cafe.  At \nleast, that what the letters on the door says.  Maybe you should go in and get \na bite to eat.\n",
+         "altitude" : null
+      },
+      "haunted_1@haunted" : {
+         "exits" : {
+            "w" : "haunted_14",
+            "e" : "haunted_2",
+            "n" : "haunted_16",
+            "s" : "haunted_0"
+         },
+         "flags" : [
+            "Real",
+            "Outdoors"
+         ],
+         "zone" : "haunted",
+         "title" : "Path into the Haunted Woods",
+         "id" : "haunted_1",
+         "description" : "\n    After taking a few steps, you turn and find that you are completly \nengulfed in the forest.  Lightening strikes all over the dark sky, and \nthunder booms throughout the land.  There are three directions in which to \nchoose where to go.  Each one looks dark and gloomy.\n",
+         "altitude" : null
+      },
+      "haunted_0@haunted" : {
+         "exits" : {
+            "n" : "haunted_1",
+            "s" : "entry@novice"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "The Haunted Woods",
+         "id" : "haunted_0",
+         "description" : "\n    You come to a dark wooded area.  Limbs from leafless trees swoop to the \nearth like boney fingers reaching for you.  Fear races through your body, \nmaking your blood ice-cold with fright.  Should you continue?\n",
+         "altitude" : null
+      },
+      "haunted_29@haunted" : {
+         "exits" : {
+            "e" : "haunted_27"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Clear Land",
+         "id" : "haunted_29",
+         "description" : "\n    Well, just when you think that you finally found a safe haven, it turns \nout you didn't.  Looks like all the worn-to-death horror characters are here, \ntrying to figure out what movie role to take next.\n",
+         "altitude" : null
+      },
+      "haunted_28@haunted" : {
+         "exits" : {
+            "s" : "haunted_27"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "haunted",
+         "title" : "The Cave",
+         "id" : "haunted_28",
+         "description" : "\n    The cave is dark and stuffy.  You turn your light to look at the walls. \nThere are drawings on the walls.  You can make out two men dressed in suits \nchoking each other. In another picture, a huge white house has a rope wrapped \naround it.  The same two men are pulling on each end of the rope. Two podiums \nwith regal looking seals stand before you. A sign on the wall reads, &+Y'Next \n&+Ydebate in 15 minutes.'&* You think it would be a good idea to run the other \nway and miss this most horrid event!\n",
+         "altitude" : null
+      },
+      "haunted_27@haunted" : {
+         "exits" : {
+            "e" : "haunted_30",
+            "w" : "haunted_29",
+            "n" : "haunted_28",
+            "s" : "haunted_16"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "End of the Path",
+         "id" : "haunted_27",
+         "description" : "\n    You come to a dead end in the path.  Straight in front of you is a \npeculair looking cave.  To the right is a pumpkin patch.  As you glance left, \nyou see a section of land where the sun is shining.\n",
+         "altitude" : null
+      },
+      "haunted_19@haunted" : {
+         "exits" : {
+            "w" : "haunted_20",
+            "e" : "haunted_21",
+            "n" : "haunted_18",
+            "s" : "haunted_20"
+         },
+         "flags" : [
+            "Real",
+            "Maze"
+         ],
+         "zone" : "haunted",
+         "title" : "Lost in the Woods",
+         "id" : "haunted_19",
+         "description" : "\n    You continue on, still lost in the woods.\nA low, moaning sound echoes through your ears.\n",
+         "altitude" : null
+      },
+      "haunted_11@haunted" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "haunted",
+         "title" : "Furnace",
+         "id" : "haunted_11",
+         "description" : "\n    As you look into the furnace, you feel someone behind you.  Before you \ncan turn around, you are pushed into the lit furnace.  You hear Freddy cackle \nand slam the door shut.  &+RHot....hot....HOT!!!\n\nYou are one of his children now!\n",
+         "altitude" : null
+      },
+      "haunted_38@haunted" : {
+         "exits" : {
+            "n" : "haunted_37"
+         },
+         "flags" : [],
+         "zone" : "haunted",
+         "title" : "Lair of the Jack O' Lantern Demon",
+         "id" : "haunted_38",
+         "description" : "\n    Oh MAN!  This place is a sugar addicts HEAVEN!  Candy wrappers line the \nfloor, and sacks and sacks of goodies are piled to the ceiling. As your eyes \nmove over the wonderous sight, they come to rest on a enourmous pumpkin.  His \nbody is perfectly carved, and his eyes radiate a greenish light.  He is \nstuffing candy down at a great rate of speed. So, this must be the infamous \nJack O' Lantern Demon!\n",
+         "altitude" : null
+      },
+      "haunted_35@haunted" : {
+         "exits" : {
+            "e" : "haunted_34",
+            "w" : "haunted_36"
+         },
+         "flags" : [],
+         "zone" : "haunted",
+         "title" : "Start of the Lair",
+         "id" : "haunted_35",
+         "description" : "\n    You come to a glowing section of the pumpkin patch.  The pumpkins glow \ngreen as you make your way through them. Two peculair little kids stand guard \nnot allowing you to pass.\n",
+         "altitude" : null
+      },
+      "haunted_34@haunted" : {
+         "exits" : {
+            "w" : "haunted_35",
+            "e" : "haunted_32",
+            "n" : "haunted_33",
+            "s" : "haunted_31"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Pumpkin Patch",
+         "id" : "haunted_34",
+         "description" : "\n    You are franticaly trying to find your way out of this crazy patch.  You \nalmost give up hope when you notice to the west is a glow of green radiating. \nMaybe you should check it out.\n",
+         "altitude" : null
+      },
+      "haunted_25@haunted" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "haunted",
+         "title" : "Freezer",
+         "id" : "haunted_25",
+         "description" : "\n    As you step into the walk-in freezer, you are harshly pushed into it.  As \nyou fall to the ground, a grotesque creature with a leather mask for a face \nswings an axe at you.\n\n&+RLooks like you are the special of the day!&*\n",
+         "altitude" : null
+      },
+      "haunted_12@haunted" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "haunted",
+         "title" : "Woodshop",
+         "id" : "haunted_12",
+         "description" : "\n    As you look over the tools, you hear a chainsaw start up.  As you turn, \nthe last thing you see is Freddy swinging a large saw at you.  Decapiated...\n\nYou are one of his children now!\n",
+         "altitude" : null
+      },
+      "haunted_30@haunted" : {
+         "exits" : {
+            "w" : "haunted_27",
+            "e" : "haunted_32",
+            "n" : "haunted_31",
+            "s" : "haunted_32"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Start of the Pumpkin Patch",
+         "id" : "haunted_30",
+         "description" : "\n    This is the start of the pumpkin patch.  Pumpkins lay as far as the eye \ncan see.  \n",
+         "altitude" : null
+      },
+      "haunted_5@haunted" : {
+         "exits" : {
+            "e" : "haunted_7",
+            "n" : "haunted_6",
+            "s" : "^door_2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "haunted",
+         "title" : "Living Room",
+         "id" : "haunted_5",
+         "description" : "\n    Oh MAN!  This place could use some maid service!  Trash is scattered all \nover the room, and red splashes cover the once white walls.  The sofa and \nchairs are ripped up, and the TV has been thrown against the wall, leaving a \nhuge hole in it.  \nYou hear a loud screeching noise coming from beneath your feet.  Hmmm, sounds \nlike it's coming from the basement.\n",
+         "altitude" : null
+      },
+      "haunted_10@haunted" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "haunted",
+         "title" : "Behind the Stairs",
+         "id" : "haunted_10",
+         "description" : "\n    As you walk behind the stairs, Freddy jumps out and stabs you with his \nclaws through the heart.  Impaled...\n\nYou are one of his children now!\n",
+         "altitude" : null
+      },
+      "haunted_20@haunted" : {
+         "exits" : {
+            "w" : "haunted_21",
+            "e" : "haunted_18",
+            "n" : "haunted_19",
+            "s" : "haunted_20"
+         },
+         "flags" : [
+            "Real",
+            "Maze"
+         ],
+         "zone" : "haunted",
+         "title" : "Lost in the Woods",
+         "id" : "haunted_20",
+         "description" : "\n    You feel like you are running in circles. Will you ever find your way out?\n",
+         "altitude" : null
+      },
+      "haunted_6@haunted" : {
+         "exits" : {
+            "s" : "haunted_5"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "haunted",
+         "title" : "Kitchen",
+         "id" : "haunted_6",
+         "description" : "\n    Just your typical kitchen, except that the appliances are broken and \nthrown on the floor and food is smeared all over the walls.  As you look \naround, you notice there is some writing on the wall.  Upon closer \ninspection, you notice three words spelled out in grape jelly.....&+mFREDDY'S \n&+mNOT DEAD!!!!!!\n",
+         "altitude" : null
+      },
+      "haunted_3@haunted" : {
+         "exits" : {
+            "n" : "haunted_4",
+            "s" : "haunted_2"
+         },
+         "flags" : [
+            "Real",
+            "Outdoors"
+         ],
+         "zone" : "haunted",
+         "title" : "Abandoned House",
+         "id" : "haunted_3",
+         "description" : "\n    You stand in front of a huge two-story house.  Although the windows are \nboarded up, bars also cover the windows.  The house looks run-down and \ncondemed, but no signs tell you if it's ok or not to proceed in.  \n",
+         "altitude" : null
+      },
+      "haunted_2@haunted" : {
+         "exits" : {
+            "w" : "haunted_1",
+            "n" : "haunted_3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Elm Street",
+         "id" : "haunted_2",
+         "description" : "\n    Wow!  Looks like you've entered into a ghost town.  As you walk along the \nsidewalk in this abadoned neighboorhood, you notice all the windows are \nboarded up in the houses.  You see a peculair house to the north.\n",
+         "altitude" : null
+      },
+      "haunted_7@haunted" : {
+         "exits" : {
+            "w" : "haunted_5",
+            "n" : "haunted_9",
+            "s" : "haunted_8"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "haunted",
+         "title" : "Hallway",
+         "id" : "haunted_7",
+         "description" : "\n    As you walk down the hallway, you see pictures have fallen off the walls \nand been smashed.  The only item that remains on the wall is a large mirror.  \nA bathroom is just to the east.\nSeems someone left the basement door open.\n",
+         "altitude" : null
+      },
+      "haunted_24@haunted" : {
+         "exits" : {
+            "e" : "haunted_25",
+            "n" : "haunted_23",
+            "s" : "haunted_26"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "haunted",
+         "title" : "Dining Area",
+         "id" : "haunted_24",
+         "description" : "\n    It's a little musty in here.  The tables have fake faded flowers in \ncracked vases sitting on them.  Cobwebs hang from the ceiling. The decor in \nthe room tells you maybe you shouldn't be in here.  Rusted tools adorn the \nwalls. Saws, picks, and large knives hang from the ceiling.\n",
+         "altitude" : null
+      },
+      "haunted_9@haunted" : {
+         "exits" : {
+            "w" : "haunted_10",
+            "e" : "haunted_12",
+            "n" : "haunted_11",
+            "s" : "haunted_13"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "haunted",
+         "title" : "Basement",
+         "id" : "haunted_9",
+         "description" : "\n    As you peer into the opening of the basement, you notice it is very hot \nand steamy. You proceed down the steps slowly.  The screeching noise you \nheard becomes louder and louder.  As you turn back and look, you notice that \nas you leave each step, the step disappears.  Well, guess there is no turning \nback now.\n",
+         "altitude" : null
+      },
+      "haunted_33@haunted" : {
+         "exits" : {
+            "w" : "haunted_33",
+            "e" : "haunted_31",
+            "n" : "haunted_34",
+            "s" : "haunted_32"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Pumpkin Patch",
+         "id" : "haunted_33",
+         "description" : "\n    You are STILL lost in the pumpkin patch.\n",
+         "altitude" : null
+      },
+      "haunted_26@haunted" : {
+         "exits" : {
+            "n" : "haunted_24"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "haunted",
+         "title" : "Behind the Counter",
+         "id" : "haunted_26",
+         "description" : "\n    As you step behind the counter, you see a huge pot on the stove. The \nsmell of delicious chili entices your nose. You turn as you feel someone \nlooking at you.\n",
+         "altitude" : null
+      },
+      "haunted_13@haunted" : {
+         "exits" : {
+            "e" : "haunted_1"
+         },
+         "flags" : [
+            "NoSnoop",
+            "Dark"
+         ],
+         "zone" : "haunted",
+         "title" : "The Way Out",
+         "id" : "haunted_13",
+         "description" : "\n    Just as you think you are going to get out of this crazy house, a burned \nman with razor claws stands before you.  He tells you, 'You will become one \nof my children. There is no escape.'\n",
+         "altitude" : null
+      },
+      "haunted_22@haunted" : {
+         "exits" : {
+            "e" : "haunted_16"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Small Clearing",
+         "id" : "haunted_22",
+         "description" : "\n    You come to a clearing.  Just to the east you see a way back to the main \npath.  As you try to move that way, a hidious looking creature blocks your \nway out.  \n",
+         "altitude" : null
+      },
+      "haunted_14@haunted" : {
+         "exits" : {
+            "w" : "haunted_15",
+            "e" : "haunted_1"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Beach of Crystal Lake",
+         "id" : "haunted_14",
+         "description" : "\n    You find yourself walking along the shore of a dark, murky lake. Fog \nrises up from the water like steam. It is so thick, you can hardly see.  \nPerhaps walking out on the dock would give you a clearer view.\n",
+         "altitude" : null
+      },
+      "haunted_17@haunted" : {
+         "exits" : {
+            "w" : "haunted_21",
+            "e" : "haunted_19",
+            "n" : "haunted_18",
+            "s" : "haunted_20"
+         },
+         "flags" : [
+            "Real",
+            "Maze"
+         ],
+         "zone" : "haunted",
+         "title" : "Lost in the Woods",
+         "id" : "haunted_17",
+         "description" : "\n    You are lost in the woods.  You feel a presence surrond you in the wooded \narea.  It gives you chills.  Which way do you go?\n",
+         "altitude" : null
+      },
+      "haunted_32@haunted" : {
+         "exits" : {
+            "w" : "haunted_32",
+            "e" : "haunted_33",
+            "n" : "haunted_31",
+            "s" : "haunted_31"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Pumpkin Patch",
+         "id" : "haunted_32",
+         "description" : "\n    You are lost in the pumpkin patch.\n",
+         "altitude" : null
+      },
+      "haunted_31@haunted" : {
+         "exits" : {
+            "w" : "haunted_30",
+            "e" : "haunted_33",
+            "n" : "haunted_32",
+            "s" : "haunted_31"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Pumpkin Patch",
+         "id" : "haunted_31",
+         "description" : "\n    You are lost in the pumpkin patch. \n",
+         "altitude" : null
+      },
+      "haunted_15@haunted" : {
+         "exits" : {
+            "e" : "haunted_14"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "The Dock",
+         "id" : "haunted_15",
+         "description" : "\n    What on earth??? As you come to the end of the dock, you notice bubbles \nin the water at the foot of the dock.  \n",
+         "altitude" : null
+      },
+      "haunted_8@haunted" : {
+         "exits" : {
+            "n" : "haunted_7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "haunted",
+         "title" : "Bathroom",
+         "id" : "haunted_8",
+         "description" : "\n    Looks like the bathroom hasn't been touched.  Pretty blue towels hang \nfrom the holders.  Decorative soap sits beside the sink.  You look over at \nthe bathtub and wonder what is behind the curtains.\n",
+         "altitude" : null
+      },
+      "haunted_16@haunted" : {
+         "exits" : {
+            "w" : "haunted_23",
+            "e" : "haunted_17",
+            "n" : "haunted_27",
+            "s" : "haunted_1"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "The Path Continues...",
+         "id" : "haunted_16",
+         "description" : "\n    As you continue down the dark and gloomy path, you notice a out-of-place \nsection of woods to the right.  To the left you see a worn-down shack.  In \nfront of you the path continues on.\n",
+         "altitude" : null
+      },
+      "haunted_36@haunted" : {
+         "exits" : {
+            "w" : "haunted_37",
+            "e" : "haunted_35"
+         },
+         "flags" : [],
+         "zone" : "haunted",
+         "title" : "Eerie Path to the Lair",
+         "id" : "haunted_36",
+         "description" : "\n    Talk about a sugar rush!  As you walk down the path, you see the trees \nare made of what appear to be gumdrops. Little furry animals are feasting on \nflowers, which appear to be made of popcorn balls.  As your eyes turn to look \nfurther west, you see the greenish glow gets brighter as you proceed.\n",
+         "altitude" : null
+      },
+      "haunted_21@haunted" : {
+         "exits" : {
+            "w" : "haunted_22",
+            "e" : "haunted_19",
+            "n" : "haunted_18",
+            "s" : "haunted_20"
+         },
+         "flags" : [
+            "Real",
+            "Maze"
+         ],
+         "zone" : "haunted",
+         "title" : "Lost in the Woods",
+         "id" : "haunted_21",
+         "description" : "\n    You are still lost in the woods. Will you ever find your way out?\n",
+         "altitude" : null
+      },
+      "haunted_37@haunted" : {
+         "exits" : {
+            "e" : "haunted_36",
+            "s" : "haunted_38"
+         },
+         "flags" : [],
+         "zone" : "haunted",
+         "title" : "End of the Path",
+         "id" : "haunted_37",
+         "description" : "\n    You come to the end of the path. To the right, you see a little covered \narea. You hear some strange chomping noises coming from inside.\n",
+         "altitude" : null
+      },
+      "haunted_4@haunted" : {
+         "exits" : {
+            "n" : "^door_1",
+            "s" : "haunted_3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "haunted",
+         "title" : "Porch of the House",
+         "id" : "haunted_4",
+         "description" : "\n    You stand on the porch of the old house.  A funny smell, almost like \ngasoline, radiates from inside the house.  It stings your eyes so bad they \nshut.  As you open them, you notice a little girl is standing to the side of \nyou.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "norman@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_29",
+         "speed" : "2",
+         "aggression" : "2",
+         "name" : "Norman",
+         "description" : "Norman Bates is frantically trying to find his mother.",
+         "strength" : "100"
+      },
+      "blob@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_29",
+         "name" : "Blob",
+         "description" : "The Blob is just....sitting, er lying here.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "mflags" : [
+            "NoSteal"
+         ]
+      },
+      "linus@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_31",
+         "speed" : "0",
+         "name" : "Linus",
+         "examine" : "\nLinus starts to tell you about a evil demon that has taken over the pumpkin \npatch.  Long ago, the Jack O' Lantern demon took over the patch, and possessed \nhis friends.  Every Halloween they reek havoc in the streets and rob little \nkids of their precious candy.  Thanks to him, Halloween for the little kids \nwill never be the same.  Can you find him and destroy him before Halloween is \ncanceled all together?\n",
+         "description" : "Linus is here, talking about something other than the &+y'Great Pumpkin.'",
+         "strength" : "50"
+      },
+      "shawn@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_16",
+         "speed" : "2",
+         "name" : "Shawn",
+         "examine" : "Shawn decided to go as Marilyn Monroe this year.",
+         "description" : "Shawn is here, trying fix a heel on his shoe.",
+         "strength" : "50"
+      },
+      "pigpen@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_35",
+         "speed" : "0",
+         "name" : "PigPen",
+         "description" : "Pig Pen is gathering dust as he pops some gum in his mouth.",
+         "strength" : "100",
+         "mflags" : [
+            "BarW"
+         ]
+      },
+      "leatherface@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_26",
+         "speed" : "0",
+         "aggression" : "25",
+         "name" : "Leatherface",
+         "examine" : "Guess he don't get out much.",
+         "description" : "Leatherface is here, ready to put you in the pot.",
+         "strength" : "500"
+      },
+      "freda@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_4",
+         "speed" : "0",
+         "name" : "Freda",
+         "examine" : "\n&+ROne, two, Freddy's coming for you.\n&+RThree, four, better lock your door.\n&+RFive, six, grab your crucifix.\n&+RSeven, eight, gonna stay up late.\n&+RNine, ten, never sleep again.  ",
+         "description" : "Freda is giggling at you.  She wants to tell you a secret.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50"
+      },
+      "tim@haunted" : {
+         "damage" : "5",
+         "location" : "haunted_3",
+         "name" : "Tim",
+         "examine" : "Tim decided to dress up as a zombie this year.",
+         "description" : "Tim is here, trying to figure out which house to toilet paper first.",
+         "strength" : "50"
+      },
+      "roxanne@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_20",
+         "speed" : "2",
+         "name" : "Roxanne",
+         "examine" : "Roxanne decided to go as a amazon princess this year.",
+         "description" : "Roxanne is here, trying to hide some of her candy.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50"
+      },
+      "vince@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_15",
+         "speed" : "2",
+         "name" : "Vince",
+         "examine" : "\nVince decided to trick or treat as a seven inch giant space mutant hamster \nthis year.",
+         "description" : "Vince is here, trying to fix his mask.",
+         "strength" : "50"
+      },
+      "freddy@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_13",
+         "armor" : "5",
+         "name" : "Freddy",
+         "examine" : "Man, is this guy UGLY!",
+         "description" : "Freddy stands here, daring you to pass him.",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "5",
+         "mflags" : [
+            "BarEast",
+            "NoSteal"
+         ]
+      },
+      "jas@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_15",
+         "speed" : "2",
+         "name" : "Jas",
+         "examine" : "Jas decided to dress up as the Highlander this year.",
+         "description" : "Jas is standing here, wondering where he put his popcorn ball at.",
+         "strength" : "50"
+      },
+      "elease@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_2",
+         "name" : "Elease",
+         "examine" : "Elease decided this year to dress up as a sorceress.",
+         "description" : "Elease is running around ringing doorbells.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50",
+         "speed" : "2",
+         "aggression" : "2"
+      },
+      "blair@haunted" : {
+         "eflags" : [
+            "Vtouch",
+            "Blind",
+            "Fireball",
+            "BHands"
+         ],
+         "damage" : "10",
+         "location" : "haunted_22",
+         "name" : "blair",
+         "examine" : "\nHer red eyes penetrate through your soul.  Her long fingers point to you, as\nif to say, Try to cross me.",
+         "description" : "The Blair Witch cackles at you, daring you to leave her woods.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "The Blair Witch",
+         "aggression" : "20",
+         "mflags" : [
+            "DrainScr"
+         ]
+      },
+      "steven@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_1",
+         "speed" : "2",
+         "aggression" : "2",
+         "name" : "Steven",
+         "examine" : "Steven decided to dress up as a police officer this year.",
+         "description" : "Little Steven is running around looking for his sack of candy.",
+         "strength" : "50"
+      },
+      "jackolantern@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_38",
+         "speed" : "0",
+         "armor" : "5",
+         "name" : "JackOLantern",
+         "examine" : "Eew.....this guy really can pack in the candy.",
+         "description" : "The evil Jack O'Lantern Demon is here stuffing his face.",
+         "strength" : "500",
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "scream@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_29",
+         "aggression" : "0",
+         "name" : "Scream",
+         "description" : "Scream is here relaxing and reading a book.",
+         "strength" : "200"
+      },
+      "lucy@haunted" : {
+         "damage" : "5",
+         "location" : "haunted_32",
+         "name" : "Lucy",
+         "examine" : "\nLooks like little Lucy wants your candy.  The fire in her eyes tells you that \nyou had better hurry and give it to her!",
+         "description" : "Lucy is trying to steal your candy!",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "2",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "snake@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_7",
+         "speed" : "2",
+         "name" : "Snake",
+         "examine" : "\nUpon closer inspection, you see that the face of this gastly creature is \nburnt.  It's body is slimy and icky.  As it slithers around you, you see that \nit's face resembles a man you have seen in dreams before.",
+         "description" : "A long, slimy snake slithers around you.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "100"
+      },
+      "sally@haunted" : {
+         "damage" : "5",
+         "location" : "haunted_33",
+         "speed" : "0",
+         "name" : "Sally",
+         "examine" : "\nSally's eyes light up as you come into view, until she finds out you're not \nLinus. Now she growls at you and demands to know where her sweet 'babboo' is!",
+         "description" : "Sally is here, looking for Linus.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50"
+      },
+      "jason@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_15",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "15",
+         "name" : "Jason",
+         "examine" : "He don't play for the Rangers, I can tell you that!",
+         "description" : "\nAs you bend down to get a closer look, a hockey mask surfaces.  You reach to \ntry to pick it up, and find that there is a face and body attached to it!\nJason pops out of the water, wielding a knife!",
+         "strength" : "200"
+      },
+      "charlie@haunted" : {
+         "damage" : "10",
+         "location" : "haunted_35",
+         "speed" : "0",
+         "aggression" : "2",
+         "name" : "Charlie",
+         "description" : "Charlie Brown stands here, eating a candy bar.",
+         "strength" : "100",
+         "mflags" : [
+            "BarW"
+         ]
+      }
+   }
+}

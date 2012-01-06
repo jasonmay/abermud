@@ -47,6 +47,7 @@
          "desc[1]" : "The Thyreenean forge is closed.",
          "location" : "IN_ROOM:chlyon20",
          "oflags" : [
+            "Lightable",
             "Container",
             "GetFlips",
             "Openable",
@@ -141,7 +142,7 @@
          "size" : "100",
          "pname" : "fireblade",
          "weight" : "10",
-         "bvalue" : "1600",
+         "bvalue" : "1000",
          "desc[0]" : "A glowing, two-handed sword has been left here by someone."
       },
       "cake@chlyon" : {
@@ -433,8 +434,8 @@
       },
       "chlyon1@chlyon" : {
          "exits" : {
-            "n" : "watch@castle",
-            "d" : "chlyon2"
+            "d" : "chlyon2",
+            "s" : "CliffTop@eastcoast"
          },
          "flags" : [
             "Outdoors"

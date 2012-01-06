@@ -1,0 +1,1931 @@
+{
+   "obj" : {
+      "silverarmor@fantasy" : {
+         "desc[1]" : "A full suit of silver armor rests behind the counter.",
+         "location" : "IN_ROOM:DForestShop",
+         "armor" : "60",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "armor",
+         "name" : "silverarmor",
+         "examine" : "A full suit of shiny silver armor that looks extremely protectful.",
+         "size" : "60",
+         "state" : "1",
+         "weight" : "60",
+         "pname" : "Armor",
+         "maxstate" : "1",
+         "bvalue" : "500",
+         "desc[0]" : "A full suit of silver armor rests on the ground.",
+         "aflags" : [
+            "Head",
+            "Arms",
+            "Legs",
+            "Back",
+            "Chest"
+         ]
+      },
+      "diamond@fantasy" : {
+         "location" : "IN_ROOM:dcave17",
+         "name" : "diamond",
+         "examine" : "A very beautiful diamond.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Diamond",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A gleaming diamond rests of the ground for the taking."
+      },
+      "glaivearmor@fantasy" : {
+         "location" : "WORN_BY:glaive",
+         "armor" : "60",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "armor",
+         "name" : "glaivearmor",
+         "size" : "8",
+         "state" : "0",
+         "weight" : "8",
+         "pname" : "Armor",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "Lord Glaive's suit of armor has been left here.",
+         "aflags" : [
+            "Head",
+            "Arms",
+            "Legs",
+            "Back",
+            "Chest"
+         ]
+      },
+      "treeforest@fantasy" : {
+         "location" : "IN_ROOM:dforest14",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "altname" : "tree",
+         "name" : "treeforest",
+         "examine" : "An old rotten tree, looks like it could be easily pushed over.",
+         "linked" : "treecave",
+         "state" : "1",
+         "pname" : "Tree",
+         "maxstate" : "1",
+         "desc[0]" : "A fallen tree reveals an entrance to a cave."
+      },
+      "goldnugget@fantasy" : {
+         "location" : "CARRIED_BY:goldminer",
+         "altname" : "gold",
+         "name" : "goldnugget",
+         "examine" : "A real 24 karet hunk of gold, probably good for trading.",
+         "size" : "2",
+         "state" : "0",
+         "weight" : "2",
+         "pname" : "Gold",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A large gold nugget rests on the ground nearby."
+      },
+      "stonesword@fantasy" : {
+         "location" : "IN_ROOM:dcave14",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "stonesword",
+         "size" : "0",
+         "state" : "0",
+         "pname" : "stonesword",
+         "maxstate" : "0",
+         "desc[0]" : "A massive stone block rests in the middle of the room."
+      },
+      "minerpick@fantasy" : {
+         "damage" : "12",
+         "location" : "WIELDED_BY:goldminer",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "pick",
+         "name" : "minerpick",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "Pick",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A pickaxe has been dropped here."
+      },
+      "glaivesword@fantasy" : {
+         "damage" : "25",
+         "location" : "WIELDED_BY:glaive",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "glaivesword",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "Sword",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "Lord Glaive's longsword has been dropped here."
+      },
+      "cavewallout@fantasy" : {
+         "location" : "IN_ROOM:dcave16",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wall",
+         "name" : "cavewallout",
+         "linked" : "cavewallin",
+         "state" : "1",
+         "pname" : "Wall",
+         "maxstate" : "1",
+         "desc[0]" : "A collapsed wall gives an exit to the west."
+      },
+      "silver@fantasy" : {
+         "location" : "IN_ROOM:dcave17",
+         "name" : "silver",
+         "examine" : "A large bag with a good amount of silver in it.",
+         "size" : "3",
+         "state" : "0",
+         "pname" : "Silver",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "A bag full of silver has been left on the ground."
+      },
+      "dwarfarmor@fantasy" : {
+         "location" : "WORN_BY:dwarf",
+         "armor" : "45",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "armor",
+         "name" : "dwarfarmor",
+         "examine" : "It looks to have been used before, but still looks protective.",
+         "size" : "60",
+         "state" : "1",
+         "weight" : "60",
+         "pname" : "Armor",
+         "maxstate" : "1",
+         "bvalue" : "400",
+         "desc[0]" : "A full suit of armor has been left on the ground.",
+         "aflags" : [
+            "Head",
+            "Arms",
+            "Legs",
+            "Chest",
+            "Back"
+         ]
+      },
+      "swordinstone@fantasy" : {
+         "desc[1]" : "A mighty greatsword sticks out of the stone.",
+         "damage" : "20",
+         "location" : "IN_ROOM:dcave14",
+         "oflags" : [
+            "GetFlips",
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "swordinstone",
+         "examine" : "It is a finely crafted greatsword with ancient dwarven writing on the hilt.",
+         "size" : "20",
+         "state" : "1",
+         "weight" : "20",
+         "pname" : "Sword",
+         "maxstate" : "1",
+         "bvalue" : "400",
+         "desc[0]" : "A finely crafted greatsword rests on the ground."
+      },
+      "guardarmor@fantasy" : {
+         "location" : "WORN_BY:guard",
+         "armor" : "55",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "armor",
+         "name" : "guardarmor",
+         "size" : "8",
+         "state" : "0",
+         "weight" : "8",
+         "pname" : "Armor",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "A suit of armor has been left here.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms",
+            "Legs"
+         ]
+      },
+      "dcavefire@fantasy" : {
+         "location" : "IN_ROOM:dcave2",
+         "oflags" : [
+            "NoGet",
+            "Lit"
+         ],
+         "altname" : "torch",
+         "name" : "dcavefire",
+         "examine" : "It is fastened securely to the wall.",
+         "state" : "0",
+         "pname" : "Fire",
+         "maxstate" : "0",
+         "desc[0]" : "A small torch hangs on the cave wall."
+      },
+      "goldsword@fantasy" : {
+         "desc[1]" : "A finely crafted golden sword rests behind the counter.",
+         "damage" : "18",
+         "location" : "IN_ROOM:ForestShop",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "goldsword",
+         "examine" : "A fine golden sword that looks to be very powerful.",
+         "size" : "18",
+         "state" : "1",
+         "weight" : "18",
+         "pname" : "Sword",
+         "maxstate" : "1",
+         "bvalue" : "400",
+         "desc[0]" : "A finely crafted golden sword lays on the ground."
+      },
+      "bag@fantasy" : {
+         "desc[1]" : "A nice sized bag rests in the corner.",
+         "location" : "IN_ROOM:dcave17",
+         "oflags" : [
+            "GetFlips",
+            "Container"
+         ],
+         "name" : "bag",
+         "size" : "30",
+         "state" : "0",
+         "weight" : "25",
+         "pname" : "Bag",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A nice sized bag rests on the ground."
+      },
+      "volume@fantasy" : {
+         "location" : "IN_ROOM:mountain13",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_XIII",
+         "name" : "volume",
+         "examine" : "\nProtect is a defensive spell which may be cast on yourself or\nother players. It requires 20 mana to cast it.  While its effects\nlast, protect acts as 25 permanent armor.  There is a feather which\nenhances its duration.  Protect becomes certain with knowledge 8.",
+         "desc[0]" : "&+YVolume XIII&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "13"
+      },
+      "gauntlets@fantasy" : {
+         "location" : "IN_ROOM:dcave17",
+         "armor" : "70",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "gauntlets",
+         "examine" : "A very protective looking set of gauntlets.",
+         "size" : "4",
+         "state" : "0",
+         "weight" : "4",
+         "pname" : "Gauntlets",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A set of gauntlets have been left on the ground.",
+         "aflags" : [
+            "Hands"
+         ]
+      },
+      "sign@fantasy" : {
+         "location" : "IN_ROOM:mountain1",
+         "oflags" : [
+            "Noget"
+         ],
+         "name" : "sign",
+         "examine" : "\n          KEEP OUT!\n          KEEP OUT!\n\nDwarves only allowed beyond here, by order of the\nDwarven Council.  If you aren't a Dwarf, you \nwon't be able to tell which ledges are too weak.\nThere are lots of ways for you to die unless \nyou have the senses of a Dwarf.  Don't say\nyou weren't warned!\n",
+         "desc[0]" : "A sign reading &+RKEEP OUT&N is here."
+      },
+      "dwarfaxe@fantasy" : {
+         "damage" : "12",
+         "location" : "WIELDED_BY:dwarf",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "axe",
+         "name" : "dwarfaxe",
+         "examine" : "A mighty weapon, sure to strike fear into your enemies!",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "Axe",
+         "maxstate" : "0",
+         "bvalue" : "280",
+         "desc[0]" : "A large battleaxe has been left here."
+      },
+      "cavewallin@fantasy" : {
+         "location" : "IN_ROOM:dcave17",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wall",
+         "name" : "cavewallin",
+         "linked" : "cavewallout",
+         "state" : "1",
+         "pname" : "Wall",
+         "maxstate" : "1",
+         "desc[0]" : "A collapsed wall gives an exit to the east."
+      },
+      "leafshield@fantasy" : {
+         "location" : "IN_ROOM:tree1",
+         "armor" : "65",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leaf",
+         "name" : "leafshield",
+         "examine" : "A leaf from the tree of mana, looks quite protective.",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "5",
+         "pname" : "Shield",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A large leaf from the mana tree has fell to the ground.",
+         "aflags" : [
+            "Arm"
+         ]
+      },
+      "treecave@fantasy" : {
+         "location" : "IN_ROOM:dcave1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "tree",
+         "name" : "treecave",
+         "linked" : "treeforest",
+         "state" : "1",
+         "pname" : "Tree",
+         "maxstate" : "1"
+      },
+      "shield@fantasy" : {
+         "location" : "IN_ROOM:dcave17",
+         "armor" : "55",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "name" : "shield",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "5",
+         "pname" : "Shield",
+         "maxstate" : "0",
+         "bvalue" : "150",
+         "desc[0]" : "A finely polished shield lays on the ground."
+      },
+      "silversword@fantasy" : {
+         "desc[1]" : "A beautiful silver greatsword rests behind the counter.",
+         "damage" : "25",
+         "location" : "IN_ROOM:DForestShop",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "silversword",
+         "examine" : "A very finely crafted silver greatsword with an ancient inscription on it.",
+         "size" : "20",
+         "state" : "1",
+         "weight" : "20",
+         "pname" : "Sword",
+         "maxstate" : "1",
+         "bvalue" : "500",
+         "desc[0]" : "A beautiful silver greatsword lies on the ground."
+      },
+      "pick@fantasy" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:miner",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "pick",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "Pick",
+         "maxstate" : "0",
+         "bvalue" : "90",
+         "desc[0]" : "A miner's pick has been left here."
+      },
+      "branch@fantasy" : {
+         "location" : "IN_ROOM:dcave1",
+         "oflags" : [
+            "Lightable"
+         ],
+         "altname" : "stick",
+         "name" : "branch",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "pname" : "Branch",
+         "maxstate" : "0",
+         "bvalue" : "40",
+         "desc[0]" : "A nice sized branch rests on the ground."
+      },
+      "mana@fantasy" : {
+         "location" : "WORN_BY:glaive",
+         "oflags" : [
+            "Wearable",
+            "SpellChance"
+         ],
+         "name" : "mana",
+         "examine" : "\nThe pendant is attached to a necklace. As you feel the pendant in your \nhand, you feel a magical force.",
+         "size" : "2",
+         "state" : "0",
+         "weight" : "2",
+         "pname" : "Mana",
+         "maxstate" : "0",
+         "bvalue" : "600",
+         "desc[0]" : "The pendant of mana has been left here on the ground."
+      },
+      "guardsword@fantasy" : {
+         "damage" : "20",
+         "location" : "WIELDED_BY:guard",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "guardsword",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "Sword",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A longsword has been dropped here."
+      },
+      "ruby@fantasy" : {
+         "location" : "IN_ROOM:dcave17",
+         "name" : "ruby",
+         "examine" : "A fine ruby, sure to please the Gods.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Ruby",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A large red ruby lays on the ground."
+      }
+   },
+   "loc" : {
+      "swamp2@fantasy" : {
+         "exits" : {
+            "w" : "swamp1",
+            "s" : "swamp3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Swampy Path",
+         "id" : "swamp2",
+         "description" : "\n  You are now inside of a swamp area. The air has a foul odor to it and \nyou start to feel a little sick as you look down at the mud around your \nfeet. The path looks to head to the south from here.\n",
+         "altitude" : "350"
+      },
+      "mountain13@fantasy" : {
+         "exits" : {
+            "w" : "mountain12"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "End of Mountain Cave",
+         "id" : "mountain13",
+         "description" : "\n  The cave looks to end here. There are shovels and picks laying around \nthat the miners must use to chip away the rock to search for gold.\n",
+         "altitude" : null
+      },
+      "mountain12@fantasy" : {
+         "exits" : {
+            "e" : "mountain13",
+            "w" : "mmaze7"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "Mountain Cave",
+         "id" : "mountain12",
+         "description" : "\n  The cave is a little bit lighter here and to the west the passage looks \nto start twisting and turning alot.\n",
+         "altitude" : null
+      },
+      "mountain1@fantasy" : {
+         "exits" : {
+            "n" : "mountain2",
+            "s" : "forest2"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "Head of Mountain Path",
+         "id" : "mountain1",
+         "description" : "\n  Looking ahead you notice that the mountains that this path goes through \nare pretty impressive. They seem to just continue onward and upward forever.\nThe path continues to the north and the forest is to the south.\n",
+         "altitude" : "550"
+      },
+      "dcave15@fantasy" : {
+         "exits" : {
+            "n" : "dcave11",
+            "d" : "dcave16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Southern Passageway",
+         "id" : "dcave15",
+         "description" : "\n  A cold blast of air jets from the chamber below you and you turn your \nhead from the freezing jet of air. The blast of air also brought up a \nhorrible stench of rotting meat and you start to choke a little. You can \nturn back and go north or go downward.\n",
+         "altitude" : null
+      },
+      "dforest3@fantasy" : {
+         "exits" : {
+            "e" : "dforest2",
+            "w" : "dforest4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Path",
+         "id" : "dforest3",
+         "description" : "\n  You are on a path that leads through the dwarven forest. You marvel at \nthe beauty of this ancient forest and look up towards the clear blue sky.\n",
+         "altitude" : "350"
+      },
+      "dforest12@fantasy" : {
+         "exits" : {
+            "w" : "dforest15",
+            "e" : "dforest11",
+            "n" : "dforest13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Southeast corner of a circular path",
+         "id" : "dforest12",
+         "description" : "\n  The path seems to be in the shape of a circle through here. The path \ncurves to the north and to the west. The trees here are very dense and \nyou figure that they are at least a few hundred years old.\n",
+         "altitude" : "350"
+      },
+      "dforest5@fantasy" : {
+         "exits" : {
+            "w" : "dforest7",
+            "e" : "dforest4",
+            "u" : "dforest6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Fork in Path",
+         "id" : "dforest5",
+         "description" : "\n  The path looks to fork into two different directions here. You can stay \non the path through the Dwarven Forest, or you can hike up to the Cave of \nGaia.\n",
+         "altitude" : "350"
+      },
+      "castle7@fantasy" : {
+         "exits" : {
+            "n" : "castle8",
+            "s" : "castle6"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "Northern Hallway",
+         "id" : "castle7",
+         "description" : "\n  Looking at the walls you see writings of the Tree of Mana, the \nvery lifeforce of this world. There is a room to the north with \nan eerie light burning in it and you can see a dark figure moving\naround.\n",
+         "altitude" : null
+      },
+      "mmaze4@fantasy" : {
+         "exits" : {
+            "w" : "mmaze6",
+            "e" : "mmaze2",
+            "n" : "mmaze1",
+            "s" : "mmaze3"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "fantasy",
+         "title" : "Lost in Mountain Cave",
+         "id" : "mmaze4",
+         "description" : "\n  The cave twists and turns here and you cannot tell which direction you \nlast came from.\n",
+         "altitude" : null
+      },
+      "dcave5@fantasy" : {
+         "exits" : {
+            "w" : "dcave6",
+            "e" : "dcave4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Dwarf Mine",
+         "id" : "dcave5",
+         "description" : "\n  A cold chill blows in from the tunnel in front of you and you clench \nyour teeth to stop them from chattering from the cold. Looking at the \nwalls you notice that there may be some minerals still left here for the \ntaking. The passage continues to the west.\n",
+         "altitude" : null
+      },
+      "dforest9@fantasy" : {
+         "exits" : {
+            "n" : "dforest10",
+            "s" : "dforest8"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "End of the Path",
+         "id" : "dforest9",
+         "description" : "\n  The path seems to end here and the dwarven forest continues onward. You \nlook into the forest and see the rustling of animals of various shapes \nand sizes. You know that the dwarven forest is a place that is full of \ndanger and evil monsters. You also know that the forest is a place full \nof mystery and many treasures lie within it.\n",
+         "altitude" : "350"
+      },
+      "airship2@fantasy" : {
+         "exits" : {
+            "w" : "castle1"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "On The Airship..",
+         "id" : "airship2",
+         "description" : "\n  You are onboard of a mighty airship..\n",
+         "altitude" : "500"
+      },
+      "dcave14@fantasy" : {
+         "exits" : {
+            "n" : "dcave13"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "End of Passageway",
+         "id" : "dcave14",
+         "description" : "\n  This room is warm and bright and you start to feel a sense of good \nenter your soul. Upon the walls are pictures of what looks like an evil \nbeing that destroyed part of the dwarven empire. It shows a great fight \nbetween the monster and a dwarf with a sword.\n",
+         "altitude" : null
+      },
+      "mmaze8@fantasy" : {
+         "exits" : {
+            "w" : "mmaze6",
+            "e" : "mmaze5",
+            "n" : "mmaze7",
+            "s" : "mmaze2"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "fantasy",
+         "title" : "Lost in Mountain Cave",
+         "id" : "mmaze8",
+         "description" : "\n  The cave twists and turns here and you cannot tell which direction you \nlast came from.\n",
+         "altitude" : null
+      },
+      "start@fantasy" : {
+         "exits" : {
+            "w" : "shady@blizzard",
+            "e" : "forest1"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "Forest Clearing",
+         "id" : "start",
+         "description" : "\n  You are standing in a clearing in a forest. All around the clearing \nthere are trees that stand as tall as giants, this must be a very old \nforest. To the north you see a large waterfall that seems to go up for \nmiles and miles and you stare at it in awe. The clearing becomes smaller \nand turns into a very large path to the east.\n",
+         "altitude" : "450"
+      },
+      "mountain6@fantasy" : {
+         "exits" : {
+            "e" : "mountain7",
+            "w" : "mountain4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Mountain Path",
+         "id" : "mountain6",
+         "description" : "\n  You are on a small mountain path that is only a few feet wide as you \nlook down the side of the mountain you feel a little sick to your stomach.\nThe path winds to the east and goes back to a ledge to the west.\n",
+         "altitude" : "900"
+      },
+      "mountain7@fantasy" : {
+         "exits" : {
+            "e" : "mountain8",
+            "w" : "mountain6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "In front of Cave",
+         "id" : "mountain7",
+         "description" : "\n  The path here leads right into a cave that looks to be lit by something \nfrom inside.\n",
+         "altitude" : "900"
+      },
+      "dforest13@fantasy" : {
+         "exits" : {
+            "w" : "dforest14",
+            "s" : "dforest12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Northeast corner of a circular path",
+         "id" : "dforest13",
+         "description" : "\n  The path seems to be in the shape of a circle through here. The path \ncurves to the west and to the south. The trees here look very healthy and \ngreen.\n",
+         "altitude" : "350"
+      },
+      "forestshop@fantasy" : {
+         "exits" : {
+            "s" : "forest4"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Peaceful"
+         ],
+         "zone" : "fantasy",
+         "title" : "Small Shop",
+         "id" : "forestshop",
+         "description" : "\n  This is a small shop with assorted weapons hanging on the walls behind \nthe large desk that the shopkeep is sitting at. The shopkeep smiles at \nyou and gestures for you to sit down and rest.\n",
+         "altitude" : null
+      },
+      "gaia1@fantasy" : {
+         "exits" : {
+            "n" : "gaia2",
+            "s" : "dforest6"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "Entrance to Gaia Cave",
+         "id" : "gaia1",
+         "description" : "\n  The Gaia cave is a very strange place, you can feel that something is \nalive in here yet you do not see anything moving.\n",
+         "altitude" : null
+      },
+      "mountain3@fantasy" : {
+         "exits" : {
+            "u" : "mountain4",
+            "d" : "mountain2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Vines leading up the mountain",
+         "id" : "mountain3",
+         "description" : "\n  You are climbing up a large set of vines that leads up the side of the \nmountain. The vines continue to the north and to the south is a path.\n",
+         "altitude" : "800"
+      },
+      "forest2@fantasy" : {
+         "exits" : {
+            "e" : "forest3",
+            "w" : "forest1",
+            "n" : "mountain1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Aside the River in the Forest",
+         "id" : "forest2",
+         "description" : "\n  You are next to a river that you figure runs from the waterfall that \nyou saw back in a clearing. The trees here are a little shorter than \nthe other ones that you have seen. There is a bridge that goes over the \nriver that leads up to some mountains to the north and to the east the \nforest continues.\n",
+         "altitude" : "450"
+      },
+      "forest3@fantasy" : {
+         "exits" : {
+            "e" : "forest4",
+            "w" : "forest2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Old Forest",
+         "id" : "forest3",
+         "description" : "\n  You are once again in the forest with trees that seem to have been \ngrowing for centuries. The sound of chipmunks running on the branches of \nthe trees seems to sooth you a little bit and you look down the path and \nnotice a small pond up ahead.\n",
+         "altitude" : "450"
+      },
+      "dforest17@fantasy" : {
+         "exits" : {
+            "e" : "dforest16",
+            "w" : "dforest18"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Further into the Forest",
+         "id" : "dforest17",
+         "description" : "\n  The forest seems to have a large clearing up ahead to the west. You\ncan still see the waterfall to the north, and you see some sort of \nlarge tree at the top of the waterfall.\n",
+         "altitude" : "350"
+      },
+      "dforest6@fantasy" : {
+         "exits" : {
+            "n" : "gaia1",
+            "d" : "dforest5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "In front of the Gaia Cave",
+         "id" : "dforest6",
+         "description" : "\n  As you stand in front of this cave you notice that the cave entrance \nlooks alot like a face of somesort. There are tiny holes for eyes and a \nlarge hole for a mouth. You notice that the \"mouth\" has some silver on \nit.\n",
+         "altitude" : "350"
+      },
+      "mountain2@fantasy" : {
+         "exits" : {
+            "u" : "mountain3",
+            "s" : "mountain1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Mountain Path",
+         "id" : "mountain2",
+         "description" : "\n  The mountain path is climbing quite quickly and you stop to catch your \nbreath before deciding to go onward. Against a cliff face to the north \nthere are a few vines that look to be a few inches thick which would give\nplenty of support for a body to climb up them. \n",
+         "altitude" : "750"
+      },
+      "dcave3@fantasy" : {
+         "exits" : {
+            "n" : "dcave4",
+            "s" : "dcave2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Dwarf Mine",
+         "id" : "dcave3",
+         "description" : "\n  The mine has gotten a little darker now that you are past the entrance. \nIt is a little colder too and you shiver slightly and look around. You \ncan see that the mine leads onward to the north and you can see the \nentrance to the south.\n",
+         "altitude" : null
+      },
+      "swamp5@fantasy" : {
+         "exits" : {
+            "n" : "swamp4",
+            "s" : "swamp6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Murkier Swamp",
+         "id" : "swamp5",
+         "description" : "\n  The swamp is still getting murkier and even colder as you trudge \nonward. Your legs are half frozen now and you are starting to lose all \nhope of ever making it out of this swamp.\n",
+         "altitude" : "350"
+      },
+      "dcave11@fantasy" : {
+         "exits" : {
+            "w" : "dcave10",
+            "e" : "dcave12",
+            "s" : "dcave15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "A fork in the passage",
+         "id" : "dcave11",
+         "description" : "\n  The passage looks to lead in three different directions here. The \npassage leads to the east, to the south, and back to the west.\n",
+         "altitude" : null
+      },
+      "gaia5@fantasy" : {
+         "exits" : {
+            "n" : "dforest16",
+            "s" : "gaia4"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "End of the Gaia Cave",
+         "id" : "gaia5",
+         "description" : "\n  You have reached the end of the Gaia cave, looking out of the cave you\nnotice that the dwarven forest must cover the entire area around the cave.\n",
+         "altitude" : null
+      },
+      "castle6@fantasy" : {
+         "exits" : {
+            "w" : "castle5",
+            "n" : "castle7"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "Eastern Hallway",
+         "id" : "castle6",
+         "description" : "\n  This looks to the be the end of the eastern hallway as it branches\nto the north.\n",
+         "altitude" : null
+      },
+      "mountain8a@fantasy" : {
+         "exits" : {
+            "w" : "mountain8"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "fantasy",
+         "title" : "Mountain Path",
+         "id" : "mountain8a",
+         "description" : "\n  You step out along the ledge, but it crumbles and gives way.  You plunge\ndown the mountain and break your neck.\n",
+         "altitude" : null
+      },
+      "dforest16@fantasy" : {
+         "exits" : {
+            "w" : "dforest17",
+            "s" : "gaia5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Dwarven Forest",
+         "id" : "dforest16",
+         "description" : "\n  You have reached the other side of the dwarven forest on the other\nside of the Gaia cave. A small path leads to the west and the entrance\nto the Gaia cave is to the south. Looking to the north you see the top\nof the waterfall that you saw from the clearing earlier.\n",
+         "altitude" : "350"
+      },
+      "mountain9@fantasy" : {
+         "exits" : {
+            "w" : "mountain10",
+            "e" : "mountain11",
+            "s" : "mountain8"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "Mountain Cave",
+         "id" : "mountain9",
+         "description" : "\n  You are inside of the cave now and it is a little dark in here but you \ncan still see fairly well. To both east and west there are mine shafts.\n",
+         "altitude" : null
+      },
+      "dcave8@fantasy" : {
+         "exits" : {
+            "e" : "dcave7",
+            "s" : "dcave9"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "And another turn in the mine",
+         "id" : "dcave8",
+         "description" : "\n  You are hit by a smell of rotting meat as you enter this corridor and \nyou being to feel a little sick to your stomach. You figure that some \nworker just left some food down here long ago and it has been rotting \never sense. The passage leads to the south.\n",
+         "altitude" : null
+      },
+      "mmaze7@fantasy" : {
+         "exits" : {
+            "w" : "mmaze2",
+            "e" : "mountain12",
+            "n" : "mmaze6",
+            "s" : "mmaze5"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "fantasy",
+         "title" : "Lost in Mountain Cave",
+         "id" : "mmaze7",
+         "description" : "\n  The cave twists and turns here and you cannot tell which direction you \nlast came from. You see a lighter area to the east of here.\n",
+         "altitude" : null
+      },
+      "dcave9@fantasy" : {
+         "exits" : {
+            "n" : "dcave8",
+            "s" : "dcave10"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Mine gets a little smaller",
+         "id" : "dcave9",
+         "description" : "\n  The mine seems to get a little bit smaller here and you begin to feel \nclaustrophobia set in. You look down the passage way and see that it \nturns up ahead.\n",
+         "altitude" : null
+      },
+      "dforestshop@fantasy" : {
+         "exits" : {
+            "s" : "dforest4"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Peaceful"
+         ],
+         "zone" : "fantasy",
+         "title" : "Dwarf Shop",
+         "id" : "dforestshop",
+         "description" : "\n  This is a fine shop full of many powerful looking weapons and strong \narmor. The shopkeep is busy polishing up silver weapons and silver armor \nas he looks up at you and fixes his hair. He greets you and welcomes you \nto his shop.\n",
+         "altitude" : "350"
+      },
+      "dforest11@fantasy" : {
+         "exits" : {
+            "w" : "dforest12",
+            "e" : "dforest10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Dwarven Forest",
+         "id" : "dforest11",
+         "description" : "\n  As you go further into the forest you being to feel a little more \nuneasy about being here. You have a feeling that there are things looking \nat you but when you turn around there is nothing there.\n",
+         "altitude" : "350"
+      },
+      "airship1@fantasy" : {
+         "exits" : {
+            "e" : "dforest18"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "On The Airship..",
+         "id" : "airship1",
+         "description" : "\n  You are onboard of a mighty airship..\n",
+         "altitude" : "500"
+      },
+      "mmaze3@fantasy" : {
+         "exits" : {
+            "w" : "mmaze4",
+            "e" : "mmaze2",
+            "n" : "mmaze8",
+            "s" : "mmaze3"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "fantasy",
+         "title" : "Lost in Mountain Cave",
+         "id" : "mmaze3",
+         "description" : "\n  The cave twists and turns here and you cannot tell which direction you \nlast came from.\n",
+         "altitude" : null
+      },
+      "swamp7@fantasy" : {
+         "exits" : {
+            "n" : "swamp6",
+            "s" : "dforest1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "End of Swamp",
+         "id" : "swamp7",
+         "description" : "\n  You smile happily and sigh a breath of relief as you realize that you \nhave reached the end of the swamp. To the south you can see a forest \nwhich makes you feel even better.\n",
+         "altitude" : "350"
+      },
+      "castle1@fantasy" : {
+         "exits" : {
+            "e" : "airship2",
+            "n" : "castle2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "In Front of Castle Glaive",
+         "id" : "castle1",
+         "description" : "\n  You are standing in front of a monsterous looking castle that seems to\nreach up to the sky. The black walls block out most of the sunlight \nallowing only a few rays on sunlight to strike against the ground \nrevealing large bushes that climb the sides of the castle walls. The \ndrawbridge leading into the castle is open allowing you to see inside\nof the dimly lit entrance.\n",
+         "altitude" : "500"
+      },
+      "swamp3@fantasy" : {
+         "exits" : {
+            "n" : "swamp2",
+            "s" : "swamp4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Swamp",
+         "id" : "swamp3",
+         "description" : "\n  The path that you thought you were walking on seems to have \ndisappeared. You are starting to get a little sick of this swamp as you \npick up your feet and look at the sludge on the bottom of your shoes.\n",
+         "altitude" : "350"
+      },
+      "mountain4@fantasy" : {
+         "exits" : {
+            "e" : "mountain6",
+            "u" : "mountain5",
+            "d" : "mountain3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Ledge",
+         "id" : "mountain4",
+         "description" : "\n  You are standing on a ledge that feels crumbly, but seems to lead east.\n  The vines continue upward.\n",
+         "altitude" : "900"
+      },
+      "dforest15@fantasy" : {
+         "exits" : {
+            "e" : "dforest12",
+            "n" : "dforest14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Southwest corner of a circular path",
+         "id" : "dforest15",
+         "description" : "\n  The path seems to be in the shape of a circle through here. The path \ncurves to the east and the north. The trees look very ancient and \nadmirable and you just start to wonder how old they could be.\n",
+         "altitude" : "350"
+      },
+      "dforest14@fantasy" : {
+         "exits" : {
+            "w" : "^treeforest",
+            "e" : "dforest13",
+            "s" : "dforest15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Northwest corner of a circular path",
+         "id" : "dforest14",
+         "description" : "\n  The path seems to be in the shape of a circle through here. The path \ncurves to the south and to the east. The trees here look very weak and \nbrittle. \n",
+         "altitude" : "350"
+      },
+      "mmaze1@fantasy" : {
+         "exits" : {
+            "w" : "mmaze5",
+            "e" : "mountain10",
+            "n" : "mmaze2",
+            "s" : "mmaze3"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "fantasy",
+         "title" : "Lost in Mountain Cave",
+         "id" : "mmaze1",
+         "description" : "\n  The cave twists and turns here and you cannot tell which direction you \nlast came from. You can see a lighter area to the east of here.\n",
+         "altitude" : null
+      },
+      "gaia2@fantasy" : {
+         "exits" : {
+            "w" : "gaia3",
+            "s" : "gaia1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Entering the Gaia Cave",
+         "id" : "gaia2",
+         "description" : "\n  You swear that something is alive in this cave, you just can't figure \nout what it is.\n",
+         "altitude" : null
+      },
+      "dforest8@fantasy" : {
+         "exits" : {
+            "e" : "dforest7",
+            "n" : "dforest9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Shady Path",
+         "id" : "dforest8",
+         "description" : "\n  The trees have blocked out the sun here making it a little shadier than \nthe other parts of the forest. A cool breeze blows through your hair \nsending a small chill down your neck.\n",
+         "altitude" : "350"
+      },
+      "dcave10@fantasy" : {
+         "exits" : {
+            "e" : "dcave11",
+            "n" : "dcave9"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Turn in the mine",
+         "id" : "dcave10",
+         "description" : "\n  Looking around this mine is beginning to make you feel uneasy and you \ndon't know how much longer you can stand being in here. You can see that \nthe passage turns to the east.\n",
+         "altitude" : null
+      },
+      "forest4@fantasy" : {
+         "exits" : {
+            "e" : "swamp1",
+            "w" : "forest3",
+            "n" : "forestshop"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "Small Pond in Forest",
+         "id" : "forest4",
+         "description" : "\n  There is a large clearing in the forest here with a small pond in the \nmiddle of it. The pond is a beautiful shade of blue and you can see \nlittle fish swimming around in it. To the north is a small shop and to \nthe east is what looks to be the beginning of a swamp.\n",
+         "altitude" : "450"
+      },
+      "castle4@fantasy" : {
+         "exits" : {
+            "e" : "castle5",
+            "s" : "castle3"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "Main Hallway",
+         "id" : "castle4",
+         "description" : "\n  The hallway is very dim and you can only make out the direction\nthe hall goes, which is to the east.\n",
+         "altitude" : null
+      },
+      "mmaze5@fantasy" : {
+         "exits" : {
+            "w" : "mmaze5",
+            "e" : "mmaze5",
+            "n" : "mmaze1",
+            "s" : "mmaze4"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "fantasy",
+         "title" : "Lost in Mountain Cave",
+         "id" : "mmaze5",
+         "description" : "\n  The cave twists and turns here and you cannot tell which direction you \nlast came from.\n",
+         "altitude" : null
+      },
+      "dforest10@fantasy" : {
+         "exits" : {
+            "w" : "dforest11",
+            "s" : "dforest9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Inside of the Dwarven Forest",
+         "id" : "dforest10",
+         "description" : "\n  The dwarven forest seems to be a lot darker than the other parts that \nyou have been through so far. You can not hear the sounds of birds \nchirping here and you feel a little uneasy because of it.\n",
+         "altitude" : "350"
+      },
+      "dcave1@fantasy" : {
+         "exits" : {
+            "w" : "dcave2",
+            "e" : "^treecave"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "In front of the Dwarf Mine",
+         "id" : "dcave1",
+         "description" : "\n  You are in front of what looks to be an old abandoned mine. This area \nlooks to be long forgotten as well, there are overgrown shrubs and bushes \nthat are partially covering the entrance to the cave.\n",
+         "altitude" : "350"
+      },
+      "dcave12@fantasy" : {
+         "exits" : {
+            "w" : "dcave11",
+            "e" : "dcave13"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Eastern Passageway",
+         "id" : "dcave12",
+         "description" : "\n  This passageway is a little bit warmer than the passages that you have \nbeen in already, this makes you feel a little bit better. The passage \ncontinues to the east.\n",
+         "altitude" : null
+      },
+      "dforest2@fantasy" : {
+         "exits" : {
+            "w" : "dforest3",
+            "e" : "dforest1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Beginning of Path",
+         "id" : "dforest2",
+         "description" : "\n  You are on what looks to be the beginning of a path that winds through \nthe vast forest ahead of you. You are surrounded by a huge forest that \nseems to never end.\n",
+         "altitude" : "350"
+      },
+      "dcave6@fantasy" : {
+         "exits" : {
+            "e" : "dcave5",
+            "s" : "dcave7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Another turn in the mine",
+         "id" : "dcave6",
+         "description" : "\n  You can no longer see any kind of light coming from the way you came \nand it is still getting colder in here. You look around for an exit and \nfind one to the south.\n",
+         "altitude" : null
+      },
+      "dforest18@fantasy" : {
+         "exits" : {
+            "e" : "dforest17",
+            "w" : "airship1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Large Clearing",
+         "id" : "dforest18",
+         "description" : "\n  You are standing in a large clearing. To the west is what looks like\nan airship of some sort. The waterfall and the tree at the top of it\nare much clearer now, and you realize that the tree is the Tree of Mana,\nthe source of life for the world.\n",
+         "altitude" : "350"
+      },
+      "dcave7@fantasy" : {
+         "exits" : {
+            "w" : "dcave8",
+            "n" : "dcave6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Yet another turn in the mine",
+         "id" : "dcave7",
+         "description" : "\n  While shining around your light you notice that the walls seem to \nsparkle a little bit. Looking around you find an exit to the west.\n",
+         "altitude" : null
+      },
+      "mmaze6@fantasy" : {
+         "exits" : {
+            "w" : "mmaze6",
+            "e" : "mmaze7",
+            "n" : "mmaze3",
+            "s" : "mmaze7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "fantasy",
+         "title" : "Lost in Mountain Cave",
+         "id" : "mmaze6",
+         "description" : "\n  The cave twists and turns here and you cannot tell which direction you \nlast came from.\n",
+         "altitude" : null
+      },
+      "castle3@fantasy" : {
+         "exits" : {
+            "n" : "castle4",
+            "s" : "castle2"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "Main Hallway",
+         "id" : "castle3",
+         "description" : "\n  You are in the main hallway of Castle Glaive. You look to the north\nto see what is furthur up ahead but the dim lighting prevents you\nfrom doing so.\n",
+         "altitude" : null
+      },
+      "dforest1@fantasy" : {
+         "exits" : {
+            "w" : "dforest2",
+            "n" : "swamp7"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "Beginning of Dwarven Forest",
+         "id" : "dforest1",
+         "description" : "\n  A sign here tells you that you are entering the Dwarven Forest. You \nknow that the dwarfs are a nice bunch of people, but the monsters lurking \nin their ancient forest are not. \n",
+         "altitude" : "350"
+      },
+      "gaia3@fantasy" : {
+         "exits" : {
+            "w" : "gaia4",
+            "e" : "gaia2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Past the Entrance",
+         "id" : "gaia3",
+         "description" : "\n  It is beginning to get a bit darker in the cave as you go furthur into \nthe cave. You still have this feeling that something is watching you in \nhere, you just can't figure out what it is.\n",
+         "altitude" : null
+      },
+      "swamp4@fantasy" : {
+         "exits" : {
+            "n" : "swamp3",
+            "s" : "swamp5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Murky Swamp",
+         "id" : "swamp4",
+         "description" : "\n  The swamp here is a little more murky than the other swampy areas that \nyou have seen so far. The mud is very cold here and you start to feel \nlike this swamp will never end.\n",
+         "altitude" : "350"
+      },
+      "dcave2@fantasy" : {
+         "exits" : {
+            "e" : "dcave1",
+            "n" : "dcave3"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "Entrance to Dwarf Mine",
+         "id" : "dcave2",
+         "description" : "\n  Once inside of the mine you realize that your first impression was \nprobably correct, this mine has been long forgotten. A thick layer of \ndust covers the walls, the floor and the ceiling. The mine looks to lead \nto the north, and the exit is to the east.\n",
+         "altitude" : null
+      },
+      "castle2@fantasy" : {
+         "exits" : {
+            "n" : "castle3",
+            "s" : "castle1"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "Entrance to Castle Glaive",
+         "id" : "castle2",
+         "description" : "\n  The inside of Castle Glaive is just as illumating as the outside is.\nDark statues are set along the walls and you can make out shadows of\nfigures lurking in the dark corners.\n",
+         "altitude" : null
+      },
+      "mountain5@fantasy" : {
+         "exits" : {},
+         "flags" : [
+            "Outdoors",
+            "Death"
+         ],
+         "zone" : "fantasy",
+         "title" : "Vines leading up the mountain",
+         "id" : "mountain5",
+         "description" : "\n  You grab ahold of the vines and start to climb up them. About halfway \nup the vine starts to rip and tear, you try to climb down as fast as you \ncan but it's too late..the vine rips and you plummet hundreds of feet to \nthe ground smashing your head against a large rock...\n",
+         "altitude" : "950"
+      },
+      "dcave16@fantasy" : {
+         "exits" : {
+            "w" : "^cavewallout",
+            "n" : "dcave15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Lower Passage",
+         "id" : "dcave16",
+         "description" : "\n  Now you see where the stench was coming from, there are rotting bodies \nall over the floor and the walls have blood stains on them.\n",
+         "altitude" : null
+      },
+      "castle5@fantasy" : {
+         "exits" : {
+            "w" : "castle4",
+            "e" : "castle6"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "Eastern Hallway",
+         "id" : "castle5",
+         "description" : "\n  There is a bit of light coming from the hallway to the east of \nhere that helps to illuminate this hallway. You see blocked off \ndoors to the north and south in the hallway and realize that there \nis no way to go through them and decide to head to the east instead.\n",
+         "altitude" : null
+      },
+      "mountain10@fantasy" : {
+         "exits" : {
+            "w" : "mmaze1",
+            "e" : "mountain9"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "Mine Shaft",
+         "id" : "mountain10",
+         "description" : "\n  You walk into the mine shaft and it twists and turns.\n",
+         "altitude" : null
+      },
+      "dcave13@fantasy" : {
+         "exits" : {
+            "w" : "dcave12",
+            "s" : "dcave14"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Turn in the passageway",
+         "id" : "dcave13",
+         "description" : "\n  The passageway turns to the south here. You can see some sort of light \ncoming from the end of the passage.\n",
+         "altitude" : null
+      },
+      "gaia4@fantasy" : {
+         "exits" : {
+            "e" : "gaia3",
+            "n" : "gaia5"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Towards the Exit",
+         "id" : "gaia4",
+         "description" : "\n  Looking to the north you can see the end of the Gaia cave. You still have\nan uneasy feeling of something watching you though.\n",
+         "altitude" : null
+      },
+      "castle8@fantasy" : {
+         "exits" : {
+            "s" : "castle7"
+         },
+         "flags" : [],
+         "zone" : "fantasy",
+         "title" : "The Magician's Room",
+         "id" : "castle8",
+         "description" : "\n  This is the room of Julius, the magician to Lord Glaive. Looking\nat the walls you see more writings of the Tree of Mana and many\nscriptures that you can not even read. The room is slightly cluttered \nwith various papers and books and you wonder what Julius could be up to.\n",
+         "altitude" : null
+      },
+      "mmaze2@fantasy" : {
+         "exits" : {
+            "w" : "mmaze2",
+            "e" : "mmaze4",
+            "n" : "mmaze3",
+            "s" : "mmaze4"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "fantasy",
+         "title" : "Lost in Mountain Cave",
+         "id" : "mmaze2",
+         "description" : "\n  The cave twists and turns here and you cannot tell which direction you \nlast came from.\n",
+         "altitude" : null
+      },
+      "dforest7@fantasy" : {
+         "exits" : {
+            "w" : "dforest8",
+            "e" : "dforest5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Forest Path",
+         "id" : "dforest7",
+         "description" : "\n  The path is partially covered with leaves that are falling from the \nbranches of the trees above you. The sound of the leaves rustling from \nthe wind is very soothing to you and you sigh happily.\n",
+         "altitude" : "350"
+      },
+      "tree1@fantasy" : {
+         "exits" : {
+            "n" : "tree2"
+         },
+         "flags" : [
+            "FastHeal",
+            "FastMana"
+         ],
+         "zone" : "fantasy",
+         "title" : "The Path to the Tree of Mana",
+         "id" : "tree1",
+         "description" : "\n  You look to the north and see the mighty Tree of Mana. You can feel\nit's magical energy even from this distance and begin to feel your\nvery lifeforce be returned to you.\n",
+         "altitude" : null
+      },
+      "mountain11@fantasy" : {
+         "exits" : {
+            "e" : "mmaze1",
+            "w" : "mountain9"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "fantasy",
+         "title" : "Mine Shaft",
+         "id" : "mountain11",
+         "description" : "\n  You walk into the mine shaft, but it drops away fast.  You slip down,..\nyou start to fall,... you land in a pool of water and knock your head\non the bottom,... you are knocked out and drown.\n",
+         "altitude" : null
+      },
+      "mountain8@fantasy" : {
+         "exits" : {
+            "e" : "mountain8a",
+            "w" : "mountain7",
+            "n" : "mountain9"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "Cave Entrance",
+         "id" : "mountain8",
+         "description" : "\n  You are at the cave entrance that is lit by several torches that have \nbeen stuck into the walls. The cave leads to the north and the ledge \ncontinues to the east.\n",
+         "altitude" : null
+      },
+      "tree2@fantasy" : {
+         "exits" : {
+            "s" : "tree1"
+         },
+         "flags" : [
+            "FastHeal",
+            "FastMana"
+         ],
+         "zone" : "fantasy",
+         "title" : "The Tree of Mana",
+         "id" : "tree2",
+         "description" : "\n  You are standing before the mighty Tree of Mana. Its great branches\nloom up towards the sky as it takes in the sun's warm rays and passes\nthe life of the sun back onto the land. Large green leaves that have \nfallen from the tree partially cover the ground.\n",
+         "altitude" : null
+      },
+      "dcave17@fantasy" : {
+         "exits" : {
+            "e" : "^cavewallin"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Treasure Room",
+         "id" : "dcave17",
+         "description" : "\n  Now you see what the monster was guarding all this time, a treasure \nroom filled with many assorted treasures and wonders. You also see dead \nbodies laying around, people that have tried to get to this room before but \nhave failed in their quest for riches.\n",
+         "altitude" : null
+      },
+      "forest1@fantasy" : {
+         "exits" : {
+            "e" : "forest2",
+            "w" : "start"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Old Forest",
+         "id" : "forest1",
+         "description" : "\n  As you look up you notice that the trees seem to almost touch the sky. \nThe path that you are walking on is covered with pine needles and pine \ncones of various sizes and sorts. The path continues to the east and \nthere is a clearing to the west.\n",
+         "altitude" : "450"
+      },
+      "dcave4@fantasy" : {
+         "exits" : {
+            "w" : "dcave5",
+            "s" : "dcave3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fantasy",
+         "title" : "Turn in the Dwarf Mine",
+         "id" : "dcave4",
+         "description" : "\n  The mine has not gotten much colder, but it sure is getting a little \nbit darker. Looking around you see that the mine turns to the west.\n",
+         "altitude" : null
+      },
+      "swamp6@fantasy" : {
+         "exits" : {
+            "n" : "swamp5",
+            "s" : "swamp7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "Less Murky Swamp",
+         "id" : "swamp6",
+         "description" : "\n  The swamp is looking a little murky here. You feel a little bit better \nas you look to the south and notice that the swamp is coming to an end.\n",
+         "altitude" : "350"
+      },
+      "dforest4@fantasy" : {
+         "exits" : {
+            "w" : "dforest5",
+            "e" : "dforest3",
+            "n" : "dforestshop"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "fantasy",
+         "title" : "In Front of a Shop",
+         "id" : "dforest4",
+         "description" : "\n  To the north of here is a little shop that has a sign that shows that \nit is a weapons and armor shop. Perhaps you can get a good deal on a new \nsword in here.\n",
+         "altitude" : "350"
+      },
+      "swamp1@fantasy" : {
+         "exits" : {
+            "e" : "swamp2",
+            "w" : "forest4"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "fantasy",
+         "title" : "Swampy Forest Path",
+         "id" : "swamp1",
+         "description" : "\n  The forest seems to mix into a swamp here. The swamp looks to extend to \nthe east.\n",
+         "altitude" : "350"
+      }
+   },
+   "mob" : {
+      "muckman@fantasy" : {
+         "damage" : "10",
+         "location" : "swamp3",
+         "speed" : "2",
+         "aggression" : "90",
+         "armor" : "0",
+         "pname" : "Muckman",
+         "name" : "muckman",
+         "description" : "An angry looking muckman is here, dripping with his own mud.",
+         "strength" : "120"
+      },
+      "goldminer@fantasy" : {
+         "damage" : "10",
+         "location" : "mmaze7",
+         "armor" : "0",
+         "name" : "goldminer",
+         "description" : "An old miner is here digging away with a gleam in his eye for gold.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Miner",
+         "aggression" : "200",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "wolf@fantasy" : {
+         "damage" : "10",
+         "location" : "dforest9",
+         "speed" : "4",
+         "aggression" : "70",
+         "armor" : "0",
+         "pname" : "Wolf",
+         "name" : "wolf",
+         "description" : "A large mean looking wolf is here.",
+         "strength" : "100"
+      },
+      "bat@fantasy" : {
+         "damage" : "8",
+         "location" : "dcave11",
+         "armor" : "0",
+         "name" : "bat",
+         "description" : "A large black bat hovers above you.",
+         "strength" : "60",
+         "speed" : "4",
+         "pname" : "Bat",
+         "aggression" : "80",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "dwarf@fantasy" : {
+         "damage" : "8",
+         "location" : "dcave7",
+         "speed" : "5",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Dwarf",
+         "name" : "dwarf",
+         "description" : "A crazed dwarf is here swinging his axe around.",
+         "strength" : "120"
+      },
+      "shopkeepertwo@fantasy" : {
+         "damage" : "0",
+         "location" : "DForestShop",
+         "armor" : "0",
+         "name" : "shopkeepertwo",
+         "description" : "An old dwarven shopkeeper stands at his counter eager to serve you.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Shopkeeper",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal",
+            "NoHassle"
+         ]
+      },
+      "julius@fantasy" : {
+         "eflags" : [
+            "Fireball",
+            "Missile"
+         ],
+         "damage" : "12",
+         "location" : "castle8",
+         "armor" : "10",
+         "name" : "julius",
+         "description" : "Lord Glaive's magician Julius is here studying various spells.",
+         "strength" : "400",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "Julius",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "miner@fantasy" : {
+         "damage" : "15",
+         "location" : "mountain12",
+         "armor" : "20",
+         "name" : "miner",
+         "description" : "A dwarven miner is here chipping away at the rocks.",
+         "strength" : "400",
+         "speed" : "0",
+         "pname" : "Miner",
+         "aggression" : "0",
+         "mflags" : [
+            "BarE"
+         ]
+      },
+      "squirrel@fantasy" : {
+         "damage" : "8",
+         "location" : "forest2",
+         "speed" : "10",
+         "aggression" : "10",
+         "armor" : "0",
+         "pname" : "Squirrel",
+         "name" : "squirrel",
+         "description" : "A curious little squirrel is here looking around.",
+         "strength" : "30"
+      },
+      "crow@fantasy" : {
+         "damage" : "8",
+         "location" : "dforest4",
+         "armor" : "0",
+         "name" : "crow",
+         "description" : "A black crow is perched on a nearby tree.",
+         "strength" : "60",
+         "speed" : "8",
+         "pname" : "Crow",
+         "aggression" : "40",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "snake@fantasy" : {
+         "damage" : "10",
+         "location" : "swamp5",
+         "armor" : "0",
+         "name" : "snake",
+         "description" : "A rather large snake is here hissing at you.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "70",
+         "speed" : "5",
+         "pname" : "Snake",
+         "aggression" : "70"
+      },
+      "guard@fantasy" : {
+         "damage" : "14",
+         "location" : "castle3",
+         "armor" : "10",
+         "name" : "guard",
+         "description" : "A castle guard stands here, not letting you pass to the north.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Guard",
+         "aggression" : "0",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "silvermonster@fantasy" : {
+         "damage" : "15",
+         "location" : "dcave16",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "10",
+         "pname" : "Snake Creature",
+         "name" : "silvermonster",
+         "description" : "An ancient snake creature stands here hissing at you.",
+         "strength" : "380"
+      },
+      "glaive@fantasy" : {
+         "damage" : "15",
+         "location" : "tree2",
+         "armor" : "15",
+         "name" : "glaive",
+         "description" : "Lord Glaive is standing here with his sword at his side.",
+         "strength" : "500",
+         "speed" : "0",
+         "pname" : "Lord Glaive",
+         "aggression" : "10",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "shopkeeperone@fantasy" : {
+         "damage" : "0",
+         "location" : "ForestShop",
+         "armor" : "0",
+         "name" : "shopkeeperone",
+         "description" : "An old elven shopkeeper stands at his counter eager to serve you.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Shopkeeper",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal",
+            "NoHassle"
+         ]
+      }
+   }
+}

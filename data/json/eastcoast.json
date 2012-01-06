@@ -91,7 +91,8 @@
          "armor" : "30",
          "oflags" : [
             "Wearable",
-            "Armor"
+            "Armor",
+            "Nopit"
          ],
          "altname" : "braes",
          "name" : "Braes",
@@ -99,7 +100,7 @@
          "size" : "30",
          "weight" : "0",
          "pname" : "braes",
-         "bvalue" : "125",
+         "bvalue" : "0",
          "desc[0]" : "A set of leather braes lays discarded here.",
          "aflags" : [
             "Chest"
@@ -112,7 +113,8 @@
          "oflags" : [
             "Wearable",
             "Armor",
-            "GetFlips"
+            "GetFlips",
+            "Nopit"
          ],
          "armor" : "35",
          "name" : "visor",
@@ -132,15 +134,16 @@
          "armor" : "45",
          "oflags" : [
             "Wearable",
-            "Armor"
+            "Armor",
+            "NoPit"
          ],
          "altname" : "choker",
          "name" : "neckplate",
-         "examine" : "Made of lightweight steel, this neckplate might keep your head attached to your shoulders.",
+         "examine" : "\nMade of lightweight steel, this neckplate might keep your head attached to \nyour shoulders.",
          "size" : "30",
          "weight" : "0",
          "pname" : "choker",
-         "bvalue" : "125",
+         "bvalue" : "0",
          "desc[0]" : "A choker has been dropped here.",
          "aflags" : [
             "Neck"
@@ -286,7 +289,7 @@
          "desc[0]" : "\nYou see a small diary labeled 'My Diary' lying at your feet."
       },
       "branch@eastcoast" : {
-         "desc[1]" : "\nA large branch of brambleweed appears useable, though still covered in \nthorns.",
+         "desc[1]" : "\nA burning branch of brambleweed lies here.",
          "damage" : "5",
          "location" : "IN_ROOM:MStream",
          "oflags" : [
@@ -301,7 +304,7 @@
          "weight" : "1",
          "maxstate" : "1",
          "bvalue" : "40",
-         "desc[0]" : "\nA burning branch of brambleweed lies here."
+         "desc[0]" : "\nA large branch of brambleweed appears useable, though still covered in \nthorns."
       }
    },
    "loc" : {
@@ -394,11 +397,11 @@
       },
       "lagoon@eastcoast" : {
          "exits" : {
+            "e" : "tread16@treadmill",
             "w" : "Gentle"
          },
          "flags" : [
-            "Outdoors",
-            "NoMobiles"
+            "Outdoors"
          ],
          "zone" : "eastcoast",
          "title" : "In the Shallow Lagoon",
@@ -540,7 +543,7 @@
          "zone" : "eastcoast",
          "title" : "On the Rocks",
          "id" : "Rocks",
-         "description" : "\n        You carefully pick your way among large boulders lined in an east- \nwest line, going out about forty feet from the shore, obviously built by \npast inhabitants to break the dangerous waves that come into the beach. \n>From here, you can see paths following the beach to the north and south, \nand you can go inland by walking west toward a patch of thorny brambles, or \nby following a steep path up a sandy dune.  If you are careful, you can \nmake your way east out to the end of the rocks.\n",
+         "description" : "\n        You carefully pick your way among large boulders lined in an east- \nwest line, going out about forty feet from the shore, obviously built by \npast inhabitants to break the dangerous waves that come into the beach. \nFrom here, you can see paths following the beach to the north and south, \nand you can go inland by walking west toward a patch of thorny brambles, or \nby following a steep path up a sandy dune.  If you are careful, you can \nmake your way east out to the end of the rocks.\n",
          "altitude" : "0"
       },
       "niche@eastcoast" : {
@@ -588,6 +591,7 @@
          "exits" : {
             "w" : "Hillock",
             "e" : "CliffTop",
+            "n" : "nelatra@nelatra",
             "s" : "Field"
          },
          "flags" : [
@@ -616,7 +620,8 @@
       "waistdeep@eastcoast" : {
          "exits" : {
             "w" : "SandyBeach",
-            "n" : "KneeDeep"
+            "n" : "KneeDeep",
+            "s" : "ledge53@ledge"
          },
          "flags" : [
             "Outdoors"
@@ -634,7 +639,8 @@
             "s" : "WaistDeep"
          },
          "flags" : [
-            "Outdoors"
+            "Outdoors",
+            "NoMobiles"
          ],
          "zone" : "eastcoast",
          "title" : "In Knee-Deep",
@@ -703,6 +709,7 @@
       "clifftop@eastcoast" : {
          "exits" : {
             "w" : "Gold",
+            "n" : "chlyon1@chlyon",
             "d" : "Coastal",
             "s" : "Point"
          },
@@ -769,7 +776,7 @@
       },
       "escpath@eastcoast" : {
          "exits" : {
-            "u" : "Path@Castle",
+            "u" : "slott1@slott",
             "d" : "Escarpment"
          },
          "flags" : [
@@ -889,7 +896,7 @@
          "exits" : {
             "e" : "WaistDeep",
             "n" : "Surf",
-            "s" : "beach4@beach"
+            "s" : "ledge51@ledge"
          },
          "flags" : [
             "Outdoors",
@@ -969,12 +976,16 @@
          "name" : "maya",
          "description" : "\nMaya the Bee flits from flower to flower here, looking terminally happy.",
          "sflags" : [
-            "Female"
+            "Female",
+            "NoBody"
          ],
          "strength" : "20",
          "speed" : "0",
          "pname" : "Maya",
-         "aggression" : "0"
+         "aggression" : "0",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "blackie@eastcoast" : {
          "damage" : "10",
@@ -993,7 +1004,7 @@
          "speed" : "0",
          "aggression" : "0",
          "armor" : "0",
-         "pname" : "SheepDog",
+         "pname" : "The Sheep Dog",
          "name" : "sheepdog",
          "description" : "\nA lean and swift sheepdog is here, looking for sheep to round up.",
          "strength" : "60"
@@ -1012,13 +1023,16 @@
       "herman@eastcoast" : {
          "damage" : "10",
          "location" : "Rocks",
-         "speed" : "2",
-         "aggression" : "0",
          "armor" : "0",
-         "pname" : "Herman",
          "name" : "herman",
          "description" : "\nHerman the Pelican waddles nearby, looking for a fish.",
-         "strength" : "35"
+         "strength" : "35",
+         "speed" : "2",
+         "pname" : "Herman the Pelican",
+         "aggression" : "0",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "shepherd@eastcoast" : {
          "damage" : "10",
@@ -1045,24 +1059,36 @@
       "swallowtail@eastcoast" : {
          "damage" : "10",
          "location" : "Gold",
-         "speed" : "2",
-         "aggression" : "0",
          "armor" : "0",
-         "pname" : "The Swallowtail",
          "name" : "swallowtail",
          "description" : "\nA Zebra Swallowtail flys nearby, fluttering gracefully in the breeze.",
-         "strength" : "10"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "10",
+         "speed" : "2",
+         "pname" : "The Swallowtail",
+         "aggression" : "0",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "manta@eastcoast" : {
          "damage" : "10",
          "location" : "Bank",
-         "speed" : "2",
-         "aggression" : "0",
          "armor" : "0",
-         "pname" : "Manta",
          "name" : "manta",
          "description" : "\nFlat against the sandy bottom of the shallow sea floor, a manta ray rests\nhere.",
-         "strength" : "70"
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "70",
+         "speed" : "2",
+         "pname" : "Manta",
+         "aggression" : "0",
+         "mflags" : [
+            "Aquatic"
+         ]
       },
       "flock@eastcoast" : {
          "damage" : "10",
@@ -1078,13 +1104,16 @@
       "jaws@eastcoast" : {
          "damage" : "10",
          "location" : "WaistDeep",
-         "speed" : "0",
-         "aggression" : "15",
          "armor" : "0",
-         "pname" : "Jaws",
          "name" : "jaws",
          "description" : "\nA big shark fin sticks out from the water, approaching you, and it's no fake!",
-         "strength" : "110"
+         "strength" : "110",
+         "speed" : "0",
+         "pname" : "Jaws",
+         "aggression" : "15",
+         "mflags" : [
+            "Aquatic"
+         ]
       }
    }
 }

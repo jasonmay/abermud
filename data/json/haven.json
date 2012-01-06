@@ -1,5 +1,14 @@
 {
    "obj" : {
+      "applications@haven" : {
+         "location" : "CARRIED_BY:Applicant",
+         "weight" : "10",
+         "name" : "applications",
+         "examine" : "\nIt appears to be one application from each individual company that exists\non the planet!  Wouldn't it be easier on us if they'd just have one uniform\napplication so you can run it through a copy machine?\n",
+         "bvalue" : "50",
+         "desc[0]" : "A massive pile of job applications has been left here.",
+         "size" : "5"
+      },
       "fire@haven" : {
          "location" : "IN_ROOM:haven",
          "oflags" : [
@@ -45,6 +54,15 @@
          "pname" : "The Bard",
          "name" : "bard",
          "description" : "\nAn ageless bard sits on a stool by the fire, strumming a mandolin and telling\ncryptic tales of times long-past.",
+         "strength" : "50"
+      },
+      "applicant@haven" : {
+         "damage" : "10",
+         "location" : "haven",
+         "speed" : "0",
+         "name" : "Applicant",
+         "examine" : "\nThe applicant stands here in total misery filling out one application after\nanother knowing that he will never be hired because he has little or no work \nexperience to prove to an employer that he's qualified.  You too, can join\nin on this horrible existance when you're old enough.",
+         "description" : "A doomed soul is here, filling out a massive pile of applications.",
          "strength" : "50"
       }
    }

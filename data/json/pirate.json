@@ -95,6 +95,17 @@
          "bvalue" : "0",
          "desc[0]" : "Fragments from a boulder cover the floor."
       },
+      "volume@pirate" : {
+         "location" : "IN_ROOM:piratevol",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_V",
+         "name" : "volume",
+         "examine" : "\nMissile is the simplest attack spell.  It does 6 damage for 3 mana.\nThere is at least one talisman which enhances its effect.  Missile\nbecomes certain with knowledge 4.",
+         "desc[0]" : "&+YVolume V&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "5"
+      },
       "hallway_door@pirate" : {
          "desc[1]" : "The door is closed.",
          "location" : "IN_ROOM:pirate7",
@@ -225,14 +236,17 @@
       },
       "telescope@pirate" : {
          "location" : "IN_ROOM:pirate1",
-         "oflags" : "{}",
+         "oflags" : [
+            "BlurSpell",
+            "NoPit"
+         ],
          "altname" : "scope",
          "name" : "telescope",
-         "examine" : "\nIt is small, and made of brass.  Obviously it is used by sailors to sight\nland.",
+         "examine" : "\nIt is small, and made of brass.  Obviously it is used by sailors to sight\nland.  Looking through it, however, things look pretty blurry.",
          "size" : "15",
          "pname" : "telescope",
          "weight" : "5",
-         "bvalue" : "100",
+         "bvalue" : "0",
          "desc[0]" : "A small telescope is laying here."
       },
       "oranges@pirate" : {
@@ -252,7 +266,6 @@
       "sabre@pirate" : {
          "damage" : "16",
          "location" : "BOTH_BY:Redbeard",
-         "armor" : "20",
          "oflags" : [
             "Weapon",
             "Wearable"
@@ -261,13 +274,10 @@
          "name" : "sabre",
          "examine" : "\nIt appears to have a setting for a gem in the hilt, but the gem has been\npried out.",
          "size" : "40",
-         "weight" : "20",
          "pname" : "sabre",
+         "weight" : "20",
          "bvalue" : "600",
-         "desc[0]" : "A large sabre has been left here.",
-         "aflags" : [
-            "Hands"
-         ]
+         "desc[0]" : "A large sabre has been left here."
       },
       "coins@pirate" : {
          "location" : "IN_ROOM:pirate31",
@@ -496,6 +506,19 @@
          "description" : "\n   You are standing on a glittering white shore, unmarked save by the waves\nthat are quietly coming and going.  A large pirate ship can be seen floating\nplacidly in the bay.\n",
          "altitude" : null
       },
+      "piratevol@pirate" : {
+         "exits" : {
+            "n" : "pirate11"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pirate",
+         "title" : "Captain's Quarter's",
+         "id" : "piratevol",
+         "description" : "\n    You are in a tight room, but realize it is large for one person's\nquarters on a ship.  There is a bunk, a coule of chairs, a small table,\nand a liquor cabinet.\n",
+         "altitude" : null
+      },
       "pirate24@pirate" : {
          "exits" : {
             "e" : "pirate23",
@@ -647,13 +670,14 @@
       },
       "pirate11@pirate" : {
          "exits" : {
-            "n" : "^captains_door"
+            "n" : "^captains_door",
+            "s" : "piratevol"
          },
          "flags" : [],
          "zone" : "pirate",
-         "title" : "Captain's Quarters",
+         "title" : "Officer's Room",
          "id" : "pirate11",
-         "description" : "\n   You are standing in what is obviously the captain's room.  It is lushly\naccomodated, and windows abound everywhere.  A large table is set up in the\nmiddle of the room, and a huge map of the ocean is spread out upon it.  To\nthe north, a door opens out onto the deck.\n",
+         "description" : "\n   You are standing in what is obviously an officers' room.  It is lushly\naccomodated, and it is large for a ship.  A large table is set up in the\nmiddle of the room, and a huge map of the ocean is spread out upon it.  To\nthe north, a door opens out onto the deck.\n",
          "altitude" : null
       },
       "pirate12@pirate" : {
@@ -802,7 +826,8 @@
       },
       "pirate28@pirate" : {
          "exits" : {
-            "e" : "pirate27"
+            "e" : "pirate27",
+            "n" : "grassy@blizzard"
          },
          "flags" : [
             "UnderWater",
@@ -851,13 +876,16 @@
       "redbeard@pirate" : {
          "damage" : "18",
          "location" : "pirate11",
-         "speed" : "5",
-         "aggression" : "98",
-         "armor" : "0",
-         "pname" : "Redbeard",
+         "armor" : "10",
          "name" : "Redbeard",
          "description" : "Redbeard the cutthroat pirate, scurge of the sea, is here.",
-         "strength" : "265"
+         "strength" : "265",
+         "speed" : "0",
+         "pname" : "Redbeard",
+         "aggression" : "98",
+         "mflags" : [
+            "BarS"
+         ]
       },
       "hook@pirate" : {
          "damage" : "14",
@@ -877,14 +905,18 @@
          "name" : "Mermaid",
          "description" : "A lovely mermaid is here, singing a beautiful song.",
          "sflags" : [
-            "Female"
+            "Female",
+            "NoLegs"
          ],
          "strength" : "250",
          "speed" : "0",
-         "pname" : "The Mermaid",
          "aggression" : "0",
+         "pname" : "The Mermaid",
          "pflags" : [
             "NoZap"
+         ],
+         "mflags" : [
+            "Aquatic"
          ]
       },
       "scurvy@pirate" : {
@@ -934,13 +966,19 @@
       "shark@pirate" : {
          "damage" : "15",
          "location" : "pirate25",
-         "speed" : "0",
-         "aggression" : "80",
          "armor" : "0",
-         "pname" : "The Shark",
          "name" : "shark",
          "description" : "A shark circles you warily, preparing to attack.",
-         "strength" : "200"
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Shark",
+         "aggression" : "80",
+         "mflags" : [
+            "Aquatic"
+         ]
       },
       "headhunter@pirate" : {
          "damage" : "10",

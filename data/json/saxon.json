@@ -1,0 +1,1644 @@
+{
+   "obj" : {
+      "sign@saxon" : {
+         "location" : "IN_ROOM:saxon3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sign",
+         "examine" : "\n\n          Heorot          -----          South\n          Mountain        -----          North\n          Sea             -----           Down\n",
+         "state" : "0",
+         "pname" : "sign",
+         "maxstate" : "0",
+         "desc[0]" : "Stuck in the ground is a wooden sign."
+      },
+      "door1@saxon" : {
+         "desc[1]" : "The door into Heorot is closed.",
+         "location" : "IN_ROOM:saxon7",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door1",
+         "desc[2]" : "The door into Heorot is locked shut.",
+         "linked" : "door2",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door into Heorot is wide open."
+      },
+      "axe@saxon" : {
+         "damage" : "25",
+         "location" : "WIELDED_BY:demon",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "name" : "axe",
+         "size" : "25",
+         "state" : "0",
+         "weight" : "25",
+         "pname" : "axe",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A large axe covered in blood rests here."
+      },
+      "flyer@saxon" : {
+         "location" : "IN_ROOM:saxon1",
+         "name" : "flyer",
+         "examine" : "\nHear Ye! Hear Ye!\nThe great mead hall Heorot is being subjected to the attacks of an evil\ncreature of the dark. If any person think that they are brave enough,\nstrong enough, and in need of money, take this flyer to Beowulf in the\ngreat mead hall.\n                                        Thank You,\n                                        Hrothgar",
+         "size" : "2",
+         "state" : "0",
+         "weight" : "1",
+         "pname" : "flyer",
+         "maxstate" : "0",
+         "desc[0]" : "A piece of paper lays on the ground, perhaps you should look at it."
+      },
+      "flask@saxon" : {
+         "location" : "CARRIED_BY:Wealhtheow",
+         "oflags" : [
+            "Food",
+            "Potion"
+         ],
+         "name" : "flask",
+         "examine" : "\nThe liquid indeed looks strange, but it would help you immensely in a time\nof need.",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "5",
+         "pname" : "flask",
+         "maxstate" : "0",
+         "bvalue" : "250",
+         "desc[0]" : "A clear flask with a glowing liquid inside of it sits here."
+      },
+      "corpse@saxon" : {
+         "location" : "IN_ROOM:saxon29",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "corpse",
+         "examine" : "He's dead, ok? What did you think, it'd be food or something?",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "35",
+         "pname" : "corpse",
+         "maxstate" : "0",
+         "desc[0]" : "A bloodied and mangled corpse lies here, one eye hanging from a socket."
+      },
+      "helmet@saxon" : {
+         "location" : "WORN_BY:beowulf",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "36",
+         "name" : "helmet",
+         "size" : "15",
+         "state" : "0",
+         "pname" : "helmet",
+         "weight" : "15",
+         "maxstate" : "0",
+         "bvalue" : "250",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A shiny helmet, decorated with jewels sparkles in the light."
+      },
+      "throne@saxon" : {
+         "location" : "IN_ROOM:saxon18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "throne",
+         "examine" : "This throne is fit for a king, and no one else. Step back fool!",
+         "size" : "100",
+         "state" : "0",
+         "weight" : "100",
+         "pname" : "throne",
+         "maxstate" : "0",
+         "desc[0]" : "A large golden throne rests against the south wall."
+      },
+      "raft@saxon" : {
+         "desc[1]" : "A raft has been left here on the Sandy Shoreline.",
+         "location" : "IN_ROOM:saxon26",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "boat",
+         "name" : "raft",
+         "size" : "50",
+         "state" : "1",
+         "weight" : "25",
+         "pname" : "raft",
+         "maxstate" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "A raft has been dropped here."
+      },
+      "pear@saxon" : {
+         "desc[1]" : "There is a pear hanging from a tree, ready to be picked.",
+         "location" : "IN_ROOM:saxon41",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "pear",
+         "size" : "4",
+         "state" : "1",
+         "weight" : "3",
+         "pname" : "pear",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A tasty looking pear is laying on the ground."
+      },
+      "door2@saxon" : {
+         "desc[1]" : "The door leading outside is closed.",
+         "location" : "IN_ROOM:saxon10",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door2",
+         "desc[2]" : "The door leading outside is locked shut.",
+         "linked" : "door1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door leading outside is open, letting in a slight breeze."
+      },
+      "mace@saxon" : {
+         "damage" : "27",
+         "location" : "WIELDED_BY:guard2",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "mace",
+         "size" : "20",
+         "state" : "0",
+         "pname" : "mace",
+         "weight" : "20",
+         "maxstate" : "0",
+         "bvalue" : "75",
+         "desc[0]" : "A menacing looking mace dares you to kill with it."
+      },
+      "necklace@saxon" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Wearable",
+            "Cross",
+            "HitChance",
+            "MissileSpell"
+         ],
+         "name" : "necklace",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "250",
+         "desc[0]" : "A golden necklace has been dropped here, attached to it is a glowing cross."
+      },
+      "shield@saxon" : {
+         "location" : "WORN_BY:gateguard",
+         "oflags" : [
+            "Shield",
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "30",
+         "name" : "shield",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "shield",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "desc[0]" : "A shield rests here, bearing the coat of the Danes."
+      },
+      "grendel_head@saxon" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "grendel_head",
+         "size" : "50",
+         "state" : "0",
+         "pname" : "Head",
+         "weight" : "50",
+         "maxstate" : "0",
+         "bvalue" : "-666",
+         "desc[0]" : "\nThe severed head of Grendel lies here on the floor, blood oozing from the\nempty eye sockets."
+      },
+      "knife@saxon" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:bandit1",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "name" : "knife",
+         "state" : "0",
+         "pname" : "knife",
+         "maxstate" : "0",
+         "desc[0]" : "A sharp knife covered in blood lies on the ground."
+      },
+      "hrunting@saxon" : {
+         "damage" : "28",
+         "location" : "WIELDED_BY:beowulf",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "armor" : "0",
+         "name" : "hrunting",
+         "examine" : "\nHrunting is the name of this hilted sword. The edge is iron, colored with\npoison-stripes, and hardened with blood shed in battle. It has never failed\nany of the men who have grasped it in their hands.",
+         "size" : "30",
+         "state" : "0",
+         "weight" : "40",
+         "pname" : "Hrunting",
+         "maxstate" : "0",
+         "bvalue" : "500",
+         "desc[0]" : "Hrunting, the finest sword ever crafted is stuck in the ground here."
+      },
+      "mail@saxon" : {
+         "location" : "WORN_BY:beowulf",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "40",
+         "altname" : "coat",
+         "name" : "mail",
+         "size" : "30",
+         "state" : "0",
+         "weight" : "40",
+         "pname" : "mail",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "aflags" : [
+            "Arms",
+            "Chest",
+            "Back"
+         ],
+         "desc[0]" : "A well polished coat of mail has been tossed aside."
+      },
+      "mask@saxon" : {
+         "location" : "WORN_BY:guard3",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "24",
+         "name" : "mask",
+         "size" : "15",
+         "state" : "0",
+         "weight" : "20",
+         "pname" : "mask",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "aflags" : [
+            "Face"
+         ],
+         "desc[0]" : "A mask of chain mail sits lost here."
+      },
+      "boots@saxon" : {
+         "damage" : "0",
+         "location" : "WORN_BY:bandit2",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "25",
+         "name" : "boots",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "boots",
+         "maxstate" : "0",
+         "aflags" : [
+            "Feet"
+         ],
+         "desc[0]" : "A pair of leather boots, slightly torn, lay here."
+      },
+      "dagger@saxon" : {
+         "damage" : "18",
+         "location" : "WIELDED_BY:guard1",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "name" : "dagger",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "7",
+         "pname" : "dagger",
+         "maxstate" : "0",
+         "bvalue" : "75",
+         "desc[0]" : "A sharp dagger gleams in the light."
+      },
+      "mead@saxon" : {
+         "desc[1]" : "There is a bottle of mead sitting on the cook's counter.",
+         "location" : "IN_ROOM:saxon16",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "mead",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "5",
+         "pname" : "mead",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A bottle of mead is waiting to be drunk."
+      },
+      "gold@saxon" : {
+         "desc[1]" : "The Red Dragon's treasure is stowed in the corner.",
+         "location" : "IN_ROOM:saxon52",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "gold",
+         "size" : "25",
+         "state" : "1",
+         "weight" : "35",
+         "pname" : "gold",
+         "maxstate" : "1",
+         "bvalue" : "600",
+         "desc[0]" : "A large bag of gold has been left here."
+      }
+   },
+   "loc" : {
+      "saxon34@saxon" : {
+         "exits" : {
+            "w" : "saxon31",
+            "e" : "saxon31",
+            "n" : "saxon31",
+            "d" : "saxon35",
+            "s" : "saxon31"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+rBlood &+bSea&*",
+         "id" : "saxon34",
+         "description" : "\n  As float atop the sea, you can hear the cries of tortured souls drifting\nup from the bottom. You wonder what lives down below this hordid sea. If\nyou could only find the way down..\n",
+         "altitude" : null
+      },
+      "saxon33@saxon" : {
+         "exits" : {
+            "w" : "saxon31",
+            "e" : "saxon31",
+            "n" : "saxon34",
+            "d" : "saxon31",
+            "s" : "saxon31"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+rBlood &+bSea&*",
+         "id" : "saxon33",
+         "description" : "\n  As float atop the sea, you can hear the cries of tortured souls drifting\nup from the bottom. You wonder what lives down below this hordid sea. If\nyou could only find the way down..\n",
+         "altitude" : null
+      },
+      "saxon27@saxon" : {
+         "exits" : {
+            "d" : "saxon28",
+            "s" : "saxon19"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "saxon",
+         "title" : "&*Entering the &+LCave&*",
+         "id" : "saxon27",
+         "description" : "\n  Your body trembles from the feeling of evil that washes over you in this\ncave. It is very cold, and your extremeties start to ache from not moving\naround. A path leads down deeper into the cave, while another exit leads to\nthe south.\n",
+         "altitude" : null
+      },
+      "saxon47@saxon" : {
+         "exits" : {
+            "ne" : "saxon54",
+            "w" : "saxon46",
+            "n" : "saxon48",
+            "nw" : "saxon53"
+         },
+         "flags" : [
+            "Light",
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+yCovered &+gPath&*",
+         "id" : "saxon47",
+         "description" : "\n  A path emerges from the forest to the west of here. It is covered with\nsmall bushes and trees, and has not been travelled on for many months. To\nthe north you spy flames shooting up into the sky from a house that's on\nfire and filling the sky with smoke.  \n",
+         "altitude" : null
+      },
+      "saxon11@saxon" : {
+         "exits" : {
+            "e" : "saxon10",
+            "s" : "saxon12"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+YGreat &+RHall&*",
+         "id" : "saxon11",
+         "description" : "\n  Here in the northwestern part of Heorot is where the warriors weapons are\nstowed whilst they eat. There are racks here which contain many a sword,\naxe, and mace. Along the walls are large hooks from which suits of mail can\nbe hung to ease ones load. A little higher up on the walls are windows from\nwhich a person can view the rolling prairie outside. Exits lead to the east\nand south.\n",
+         "altitude" : null
+      },
+      "saxon29@saxon" : {
+         "exits" : {
+            "e" : "saxon28",
+            "n" : "saxon30"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+LCave&*",
+         "id" : "saxon29",
+         "description" : "\n  The cold is overbearing here and you wish you had brought that parka with\nwith you afterall. A loud roaring sound can be heard to the north, if you\ncan make it there without falling down on the slippery ice. The evil in you\nhas built so high, any small argument could lead to death..\n",
+         "altitude" : null
+      },
+      "saxon23@saxon" : {
+         "exits" : {
+            "w" : "saxon24",
+            "e" : "saxon22",
+            "n" : "saxon23",
+            "s" : "saxon24"
+         },
+         "flags" : [
+            "Light",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+CCalm &+BSea&*",
+         "id" : "saxon23",
+         "description" : "\n  Out here on the open sea you feel an inner peace. It is only you and the\nbeautiful dwellers of the deep here. As you look out on every direction,\nyou see nothing but endless sea...\n",
+         "altitude" : null
+      },
+      "saxon9@saxon" : {
+         "exits" : {
+            "w" : "saxon6",
+            "e" : "saxon41",
+            "n" : "saxon8"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+gRolling Prairie&*",
+         "id" : "saxon9",
+         "description" : "\n  The tall grasses abruptly end to the east, as a forest looms there. A\npen has been built here, the home of a peasants sheep. The sheep softly\nmurmur and whimper at their enclosure, but it is best for them. Such\nanimals make a welcome feast for evil creatures of the dark which occupy\nthe surroundings. Maybe a touch from a good soul would calm their fears.\n",
+         "altitude" : null
+      },
+      "saxon24@saxon" : {
+         "exits" : {
+            "w" : "saxon24",
+            "e" : "saxon24",
+            "n" : "saxon23",
+            "s" : "saxon25"
+         },
+         "flags" : [
+            "Light",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+CCalm &+BSea&*",
+         "id" : "saxon24",
+         "description" : "\n  Out here on the open sea you feel an inner peace. It is only you and the\nbeautiful dwellers of the deep here. As you look out on every direction,\nyou see nothing but endless sea.\n",
+         "altitude" : null
+      },
+      "saxon7@saxon" : {
+         "exits" : {
+            "n" : "saxon6",
+            "s" : "^door1"
+         },
+         "flags" : [
+            "Light",
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+YGrand &+WEntrance&*",
+         "id" : "saxon7",
+         "description" : "\n  To the south of you lies Heorot. This is the great mead hall of the Danish\npeople, and Hrothgar's present to his many warriors. The hall does not hold\nthe mystique it once did, as the evil creature Grendel has many a night\nmurdered the sleeping heroes in this hall. A sense of foreboding overwhelms\nyou as you take in the site, but you still feel drawn to it.\n",
+         "altitude" : null
+      },
+      "saxon52@saxon" : {
+         "exits" : {
+            "s" : "saxon51"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "NegRegen"
+         ],
+         "zone" : "saxon",
+         "title" : "&+rI&+Rn&+rf&+Re&+rr&+Rn&+ro&*",
+         "id" : "saxon52",
+         "description" : "\n  This cavern is unbelieveably hot, and you start sweating as soon as you\nenter it. The walls are covered in what appears to be soot, and it looks very\nthick. A huge shadow covers the back of the cavern, making it impossible to\nsee anything.\n",
+         "altitude" : null
+      },
+      "saxon44@saxon" : {
+         "exits" : {
+            "w" : "saxon44",
+            "e" : "saxon45",
+            "n" : "saxon44",
+            "s" : "saxon44"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LDeep &*in the &+gForest&*",
+         "id" : "saxon44",
+         "description" : "\n  You are lost inside the forest. There are no clear paths in any direction.\nA harsh sense of forebodeing hangs in the air as you fumble for any sign of\ncivilization.\n",
+         "altitude" : null
+      },
+      "saxon30@saxon" : {
+         "exits" : {
+            "s" : "saxon29"
+         },
+         "flags" : [
+            "Dark",
+            "Cold",
+            "NegRegen"
+         ],
+         "zone" : "saxon",
+         "title" : "&+RG&+Lr&+Re&+Ln&+Rd&+Le&+Rl&+L'&+Rs &+LL&+Ra&+Li&+Rr&*",
+         "id" : "saxon30",
+         "description" : "\n  This is the home of pure evil himself, Grendel. The floor is covered with\nrotting bodies and skeletons. The walls are covered in ice, and the ice is\ncovered in blood, an eerie combination. The moaning of a dying bear reaches\nyour ears from the back of the chamber.\n",
+         "altitude" : null
+      },
+      "saxon40@saxon" : {
+         "exits" : {
+            "u" : "saxon39"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "DeepWater"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LBottom &*of the &+rMere&*",
+         "id" : "saxon40",
+         "description" : "\n  Here at the very bottom of the mere is the home of a pure evil. Lined on\nthe walls are the weapons of past warriors who tryed their luck here and\nlost. Suits of armor lie piled in one corner, the bones of their owners lie\nin another. What kind of creature could cause such destruction? Stay around\nand you will definitely find out.\n",
+         "altitude" : null
+      },
+      "saxon41@saxon" : {
+         "exits" : {
+            "w" : "saxon9",
+            "e" : "saxon42"
+         },
+         "flags" : [
+            "Light",
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LDying &+gForest&*",
+         "id" : "saxon41",
+         "description" : "\n  Here on the edge of the prairie lies a dying forest. As you look eastward\nyou see nothing but drooping tree tops, which seem to extend out forever.\nDue to the fact the cover is dying, small undergrowth has started to grow,\nbut will not last for long. You can descend into the forest by going east,\nor head west back to the prairie.\n",
+         "altitude" : null
+      },
+      "saxon39@saxon" : {
+         "exits" : {
+            "w" : "saxon39",
+            "e" : "saxon39",
+            "u" : "saxon39",
+            "n" : "saxon39",
+            "d" : "saxon40",
+            "s" : "saxon38"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "NoMobiles",
+            "DeepWater"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+rMere&*",
+         "id" : "saxon39",
+         "description" : "\n  The mere is not a pleasant site. It is like being in a sea composed of pure\nblood, and having a blindfold on so that you can't see where you are headed.\nThe floor of the mere is covered with bones of dead animals, and their solid\nrotting flesh. You also sense small sea-going vessels crumpled in pieces, no\ndoubt that their owners went down with them.\n",
+         "altitude" : null
+      },
+      "saxon31@saxon" : {
+         "exits" : {
+            "w" : "saxon31",
+            "e" : "saxon32",
+            "u" : "saxon21",
+            "n" : "saxon31",
+            "d" : "saxon31",
+            "s" : "saxon31"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+rBlood &+bSea&*",
+         "id" : "saxon31",
+         "description" : "\n  As float atop the sea, you can hear the cries of tortured souls drifting\nup from the bottom. You wonder what lives down below this hordid sea. If\nyou could only find the way down..\n",
+         "altitude" : null
+      },
+      "saxon8@saxon" : {
+         "exits" : {
+            "w" : "saxon4",
+            "s" : "saxon9"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+gRolling Prairie&*",
+         "id" : "saxon8",
+         "description" : "\n  The wild grasslands extend from here, but what appears to be a forest is\nfar away to the southeast. No signs of human destruction mark this place,\na welcome sight in this world of ours. To the south and west the prairie\nfills the horizon.\n",
+         "altitude" : null
+      },
+      "saxon51@saxon" : {
+         "exits" : {
+            "n" : "saxon52",
+            "d" : "saxon50"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LDark Cave&*",
+         "id" : "saxon51",
+         "description" : "\n  The walls are pitch black, but an overpowering glow shines in from the\nnorth. There are skeletons scattered about of bears, deer, and some even\nappear to be humans. The whole sight brings to mind a slaughterhouse you\nsaw when you were younger, but these bones are broken and licked clean.\n",
+         "altitude" : null
+      },
+      "saxon50@saxon" : {
+         "exits" : {
+            "u" : "saxon51",
+            "s" : "saxon49"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LCharcoal&*",
+         "id" : "saxon50",
+         "description" : "\n  The forest here is nothing but charcoal, nothing stands over six inches\nabove the ground. Total destruction describes it best. Glancing upward, you\nsee the fireplace is actually a huge cave, and climbing upward will take you\nthere.\n",
+         "altitude" : null
+      },
+      "saxon32@saxon" : {
+         "exits" : {
+            "w" : "saxon31",
+            "e" : "saxon31",
+            "n" : "saxon31",
+            "d" : "saxon33",
+            "s" : "saxon31"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+rBlood &+bSea&*",
+         "id" : "saxon32",
+         "description" : "\n  As float atop the sea, you can hear the cries of tortured souls drifting\nup from the bottom. You wonder what lives down below this hordid sea. If\nyou could only find the way down..\n",
+         "altitude" : null
+      },
+      "saxon43@saxon" : {
+         "exits" : {
+            "w" : "saxon44",
+            "e" : "saxon43",
+            "n" : "saxon43",
+            "s" : "saxon43"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LDeep &*in the &+gForest&*",
+         "id" : "saxon43",
+         "description" : "\n  You are lost inside the forest. There are no clear paths in any direction.\nA harsh sense of forebodeing hangs in the air as you fumble for any sign of\ncivilization.\n",
+         "altitude" : null
+      },
+      "saxon28@saxon" : {
+         "exits" : {
+            "w" : "saxon29",
+            "u" : "saxon27"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+LCave&*",
+         "id" : "saxon28",
+         "description" : "\n  The floor is covered with ice, making it hard for you to keep your balance.\nThe ice is spotted with blood, and skulls lay here and there. The evil grows\nstronger here, and the temperature colder. Going west leads deeper into the\ncave, and climbing back out leads to the shadow of the mountain.\n",
+         "altitude" : null
+      },
+      "saxon22@saxon" : {
+         "exits" : {
+            "w" : "saxon23",
+            "e" : "saxon1",
+            "n" : "saxon23",
+            "s" : "saxon23"
+         },
+         "flags" : [
+            "Light",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+WFoaming &+BWaters&*",
+         "id" : "saxon22",
+         "description" : "\n  Here the waters come dangerously close to the sharp rocks which have fallen\nfrom the cliffs above. The sound of the water crashing against the rocks is\nloud enough to deafen a person. Maybe you can make it to land.\n",
+         "altitude" : null
+      },
+      "saxon45@saxon" : {
+         "exits" : {
+            "w" : "saxon45",
+            "e" : "saxon45",
+            "n" : "saxon46",
+            "s" : "saxon45"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LDeep &*in the &+gForest&*",
+         "id" : "saxon45",
+         "description" : "\n  You are lost inside the forest. There are no clear paths in any direction.\nA harsh sense of forebodeing hangs in the air as you fumble for any sign of\ncivilization.\n",
+         "altitude" : null
+      },
+      "saxon13@saxon" : {
+         "exits" : {
+            "w" : "saxon12",
+            "e" : "saxon14",
+            "n" : "saxon10",
+            "s" : "saxon18"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+YGreat &+RHall&*",
+         "id" : "saxon13",
+         "description" : "\n  As you stand in the center of Heorot, your attention is immediately drawn to\nthe south, where you notice a large glittering object. The tables here are\ncovered with tablecloths, and have candles on them. This is where the very\nprestigious guests of Hrothgar sit at meal time. It is also where the men\ngather to drink, tell stories and be merry. Two fireplaces are built in to\nthe southern walls around the exit to the glittering room. Exits lead in all\ndirections.\n",
+         "altitude" : null
+      },
+      "saxon37@saxon" : {
+         "exits" : {
+            "w" : "saxon37",
+            "e" : "saxon38",
+            "u" : "saxon37",
+            "n" : "saxon37",
+            "d" : "saxon37",
+            "s" : "saxon36"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "DeepWater"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+rMere&*",
+         "id" : "saxon37",
+         "description" : "\n  The mere is not a pleasant site. It is like being in a sea composed of pure\nblood, and having a blindfold on so that you can't see where you are headed.\nThe floor of the mere is covered with bones of dead animals, and their solid\nrotting flesh. You also sense small sea-going vessels crumpled in pieces, no\ndoubt that their owners went down with them.\n",
+         "altitude" : null
+      },
+      "saxon20@saxon" : {
+         "exits" : {
+            "e" : "saxon19",
+            "d" : "saxon21"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "Path to &+bSea&*",
+         "id" : "saxon20",
+         "description" : "\n  This path winds to the west and slightly downhill. You see at the end of\nit a large sea, which appears to be dark red, and boiling. The path is grown\nover with brush, this must not be the way to a popular fishing hole.\n",
+         "altitude" : null
+      },
+      "saxon4@saxon" : {
+         "exits" : {
+            "e" : "saxon8",
+            "n" : "saxon3",
+            "s" : "saxon6"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+gRolling Prairie&*",
+         "id" : "saxon4",
+         "description" : "\n  The land here is beautiful, trees scattered over the landscape to provide\ncover from the wind. Long flowing grasses sway in the breeze, and small\nanimals scurry around you looking for food. It is a welcome contrast to the\nbarren land north of you. On southward, a dirt road becomes visible to you.\n",
+         "altitude" : null
+      },
+      "saxon2@saxon" : {
+         "exits" : {
+            "u" : "saxon3",
+            "d" : "saxon1"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+RSteep &+LCliff&*",
+         "id" : "saxon2",
+         "description" : "\n  Places to hang on to here are scattered, and rocks tear at your fingers\nand legs. The wind blows forcefully from above, making the climbing\ntreacherous and frightening. Thank goodness for the small trees growing out\nof the cliff, or you might be dead right now.\n",
+         "altitude" : null
+      },
+      "saxon18@saxon" : {
+         "exits" : {
+            "n" : "saxon13"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+YT&+Wh&+Yr&+Wo&+Yn&+We &*Room",
+         "id" : "saxon18",
+         "description" : "\n  This is Hrothgar's throne room. In each corner of the room is a suit of\narmor stood up to resemble a knight. The throne itself is raised above the\nfloor on a platform adorned with gold. A large red carpet leads from the\nentrance of the room to the platform. On the walls are paintings of past\nDanish rulers, and of great warriors whose days have passed. Hanging on the\nwall behind the throne are the Danish colors. The only exit is back to the\nnorth.\n",
+         "altitude" : null
+      },
+      "saxon19@saxon" : {
+         "exits" : {
+            "w" : "saxon20",
+            "n" : "saxon27",
+            "s" : "saxon5"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LShadow&*",
+         "id" : "saxon19",
+         "description" : "\n  The shadow of he huge mountain engulfs your body as you approach it. Wild\nbrush nor tree nor weed can grow here, the lack of sunshine is too much of\na strain. Since the sun's rays do not penetrate here, the temperature remains\nvery cold at all times. The wind here blows strongly from the south, as if\nthe mountain is attempting to suck you in.\n",
+         "altitude" : null
+      },
+      "saxon1@saxon" : {
+         "exits" : {
+            "w" : "saxon22",
+            "u" : "saxon2"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+BWater's &*Edge",
+         "id" : "saxon1",
+         "description" : "\n  As you stand on the rocky beach here, you see the expansion of a beautiful\nclear blue sea to the west of you. Above you towers a steep cliff which may\nlead to treasure and glory, or pain and loss of life. Seagulls call out as\nyou take in the beauty and ponder your options.\n",
+         "altitude" : null
+      },
+      "saxon36@saxon" : {
+         "exits" : {
+            "w" : "saxon37",
+            "e" : "saxon37",
+            "u" : "saxon35",
+            "n" : "saxon37",
+            "d" : "saxon37",
+            "s" : "saxon37"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "DeepWater",
+            "NegRegen"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LDown &*in the &+rMere&*",
+         "id" : "saxon36",
+         "description" : "\n  Here underwater, the liquid blood and water mix makes it impossible to see.\nThe sea is also hotter here than above, and more bubbles rise past you. Many\na warrior have lost his life here, maybe you will be the next.\n",
+         "altitude" : null
+      },
+      "saxon6@saxon" : {
+         "exits" : {
+            "e" : "saxon9",
+            "n" : "saxon4",
+            "s" : "saxon7"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LTravelled &+yRoad&*",
+         "id" : "saxon6",
+         "description" : "\n  This dirt road holds the scars of many warriors heading to their destiny.\nTracks of many a man's boots mark the way, along with a larger, claw-like\ntrack. These large prints are fresher than the others, dried blood still\ncaked in the prints of a supernatural being. To the north and east lies the\ngrassy prairie, and to the south lies the grand mead hall Heorot.\n",
+         "altitude" : null
+      },
+      "saxon12@saxon" : {
+         "exits" : {
+            "e" : "saxon13",
+            "n" : "saxon11",
+            "s" : "saxon16"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+YGreat &+RHall&*",
+         "id" : "saxon12",
+         "description" : "\n  In the southwestern part of Heorot lies the smaller tables of the hall. The\npeople who serve the warriors food leave the large containers of beans, soup\nor whatever is being served here so that they can easily refill the plates\nof the warriors, who are known to eat quite a lot. After the main feast has\ntaken place, the peasants and servants eat here afterwards, to show their\nrespect for the higher classes. Exits lead north and east in Heorot and \nsouth into the kitchen.\n",
+         "altitude" : null
+      },
+      "saxon21@saxon" : {
+         "exits" : {
+            "u" : "saxon20",
+            "d" : "saxon31"
+         },
+         "flags" : [
+            "Light",
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+yShore &*of the &+rBlood &+bSea&*",
+         "id" : "saxon21",
+         "description" : "\n  As you look at the sea, large bubbles rise up and pop every few seconds.\nThe water does not feel that hot, but it also does not look like water. It\nhas a deep red tint to it, and you can not see past the surface of the\nwater.\n",
+         "altitude" : null
+      },
+      "saxon14@saxon" : {
+         "exits" : {
+            "w" : "saxon13",
+            "n" : "saxon15",
+            "s" : "saxon17"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+YGreat &+RHall&*",
+         "id" : "saxon14",
+         "description" : "\n  Here against the eastern walls of Heorot the floors are bare. No tables, no\nracks, and no carpets. This is the sleeping area of the warriors during the\nnight time. They sleep here because the king's bed chambers lie to the south,\nand they must protect him at all times. Interestingly, the red spots on the\nfloor are greater here than anywhere.\n",
+         "altitude" : null
+      },
+      "saxon53@saxon" : {
+         "exits" : {
+            "ne" : "saxon49",
+            "se" : "saxon47"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+RBeside A Burning Shanty",
+         "id" : "saxon53",
+         "description" : "\n  The shanty burns with thick, sooty-black smoke filling the sky.  The \nsides of the building begin to collapse inward.  With no means to fight\nthe fire, you can only stand and watch helplessly.\n",
+         "altitude" : null
+      },
+      "saxon54@saxon" : {
+         "exits" : {
+            "sw" : "saxon47",
+            "nw" : "saxon49"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+RBeside A Burning Shanty",
+         "id" : "saxon54",
+         "description" : "\n  The shanty burns with thick, sooty-black smoke filling the sky.  The \nsides of the building begin to collapse inward.  With no means to fight\nthe fire, you can only stand and watch helplessly.\n",
+         "altitude" : null
+      },
+      "saxon35@saxon" : {
+         "exits" : {
+            "w" : "saxon34",
+            "e" : "saxon33",
+            "u" : "saxon34",
+            "n" : "saxon33",
+            "d" : "saxon36",
+            "s" : "saxon32"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+rBlood &+bSea&*",
+         "id" : "saxon35",
+         "description" : "\n  As float atop the sea, you can hear the cries of tortured souls drifting\nup from the bottom. You wonder what lives down below this hordid sea. If\nyou could only find the way down..\n",
+         "altitude" : null
+      },
+      "saxon26@saxon" : {
+         "exits" : {
+            "w" : "town53@town",
+            "e" : "saxon25"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+ySandy &+CShoreline&*",
+         "id" : "saxon26",
+         "description" : "\n  You are standing on the shoreline to a large sea. The beach is covered with\nsoft sand, which you barely sink into as you walk. Scattered here and there\nare sea shells which have washed onto the shore. A large sea expands to the\neast.\n",
+         "altitude" : null
+      },
+      "saxon49@saxon" : {
+         "exits" : {
+            "n" : "saxon50",
+            "se" : "saxon54",
+            "sw" : "saxon53",
+            "s" : "saxon48"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+yBurnt &+gForest&*",
+         "id" : "saxon49",
+         "description" : "\n  The trees here are singed a horrible black color. It would appear to the\naverage eye that a raging forest fire came through here, but the large foot\nprints in the ground hint otherwise. To the north you notice a hole in the\nside of the mountain, which resembles a fireplace. Back to the south is the\nburning shanty and the forest.\n",
+         "altitude" : null
+      },
+      "saxon15@saxon" : {
+         "exits" : {
+            "w" : "saxon10",
+            "s" : "saxon14"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+YGreat &+RHall&*",
+         "id" : "saxon15",
+         "description" : "\n  In this section of Heorot the common folk gather together. Here they gather\nto socialize and relax from a hard day in the field. Small children play\nwith one another here, finding security inside these thick stone walls. No\none is gathered here today though, it appears the walls are caked with blood\nfrom last nights festivities.\n",
+         "altitude" : null
+      },
+      "saxon10@saxon" : {
+         "exits" : {
+            "w" : "saxon11",
+            "e" : "saxon15",
+            "n" : "^door2",
+            "s" : "saxon13"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+YGreat &+RHall&*",
+         "id" : "saxon10",
+         "description" : "\n  The mead hall Heorot surrounds you. As you look south you see large wooden\ntables lined to the west and east of you. These tables are where some of the\ngreatest warriors known to the world eat together. The ceiling is very high,\nso high that you can barely make out the paintings way up there. The floor\nitself is stone, and is covered no where in your sight. As you peer closer\nyou notice small red spots in some of the stones.\n",
+         "altitude" : null
+      },
+      "saxon5@saxon" : {
+         "exits" : {
+            "n" : "saxon19",
+            "s" : "saxon3"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&*Toward the &+LMountain&*",
+         "id" : "saxon5",
+         "description" : "\n  The mountain to the north is ominously bare. Nothing grows on it, and no\ncries from animals can be heard around it. The ground here is scorched\nblack, making it a dark grey. If you journey north, you will be with the\nmountain, or going south will take you to the barren cliff.\n",
+         "altitude" : null
+      },
+      "saxon46@saxon" : {
+         "exits" : {
+            "w" : "saxon42",
+            "e" : "saxon47",
+            "n" : "saxon44",
+            "s" : "saxon43"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LDeep &*in the &+gForest&*",
+         "id" : "saxon46",
+         "description" : "\n  You are lost inside the forest. There are no clear paths in any direction.\nA harsh sense of forebodeing hangs in the air as you fumble for any sign of\ncivilization.\n",
+         "altitude" : null
+      },
+      "saxon3@saxon" : {
+         "exits" : {
+            "n" : "saxon5",
+            "d" : "saxon2",
+            "s" : "saxon4"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&*On the &+LCliff&*",
+         "id" : "saxon3",
+         "description" : "\n  The top of the cliff is barren, no wildlife, just jagged rocks filling\nyour view. Anything that resides here is an open target to be attacked as\nfood. The sound of the waves crashing against the rocks below travels to\nyour ears, and cries from circling birds raise the hair on your neck. To\nthe south of you a green prairie emerges, and to the north a mountain looms\nin the distance.\n",
+         "altitude" : null
+      },
+      "saxon25@saxon" : {
+         "exits" : {
+            "e" : "saxon23",
+            "w" : "saxon26",
+            "n" : "saxon24",
+            "s" : "saxon23"
+         },
+         "flags" : [
+            "Light",
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+WSmall &+BCurrent&*",
+         "id" : "saxon25",
+         "description" : "\n  The water is not too deep, but deep enough you need a boat. The current\nlightly pushes you southward toward the shore, but to the east the sea\nappears to open up to a great size.\n",
+         "altitude" : null
+      },
+      "saxon16@saxon" : {
+         "exits" : {
+            "n" : "saxon12"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+rKitchen&*",
+         "id" : "saxon16",
+         "description" : "\n  This is the kitchen area of Heorot. It is here where Hrothgar's cook\nprepares meals for all of his warriors. There are whole beeves hanging here\nwaiting to be cooked for the special guests of the hall. The walls are lined\nwith cooking accessories such as knives and tenderizing mallets. The only\nexit is back to the north into Heorot.\n",
+         "altitude" : null
+      },
+      "saxon48@saxon" : {
+         "exits" : {
+            "n" : "saxon49",
+            "s" : "saxon47"
+         },
+         "flags" : [
+            "Light",
+            "Hot",
+            "Outdoors",
+            "NegRegen"
+         ],
+         "zone" : "saxon",
+         "title" : "&+RB&+Yu&+Rr&+Yn&+Ri&+Yn&+Rg &+yShanty&*",
+         "id" : "saxon48",
+         "description" : "\n  This house is on fire! The walls start to come down as you enter the house\nand the flames and smoke make breathing almost impossible. Screams can be\nheard coming from a caved in bedroom, but there is no hope in saving the\nlost soul.\n",
+         "altitude" : null
+      },
+      "saxon42@saxon" : {
+         "exits" : {
+            "w" : "saxon41",
+            "e" : "saxon43",
+            "n" : "saxon43",
+            "s" : "saxon43"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "saxon",
+         "title" : "&+LDeep &*in the &+gForest&*",
+         "id" : "saxon42",
+         "description" : "\n  This the entrance from the west into the forest. From here the forest\nextends to the north, south and east. Back to the west is less dense forest\nand eventually the rolling prairie.\n",
+         "altitude" : null
+      },
+      "saxon38@saxon" : {
+         "exits" : {
+            "w" : "saxon37",
+            "e" : "saxon37",
+            "u" : "saxon37",
+            "n" : "saxon39",
+            "d" : "saxon37",
+            "s" : "saxon37"
+         },
+         "flags" : [
+            "Dark",
+            "Hot",
+            "DeepWater"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+rMere&*",
+         "id" : "saxon38",
+         "description" : "\n  The mere is not a pleasant site. It is like being in a sea composed of pure\nblood, and having a blindfold on so that you can't see where you are headed.\nThe floor of the mere is covered with bones of dead animals, and their solid\nrotting flesh. You also sense small sea-going vessels crumpled in pieces, no\ndoubt that their owners went down with them.\n",
+         "altitude" : null
+      },
+      "saxon17@saxon" : {
+         "exits" : {
+            "n" : "saxon14"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "saxon",
+         "title" : "&*The &+BB&+me&+Bd&+mc&+Bh&+ma&+Bm&+mb&+Be&+mr&*",
+         "id" : "saxon17",
+         "description" : "\n  This is the bed chambers of Hrothgar and Wealhtheow. The room's walls are\ncovered in paintings of noble warriors and evil dragons. The furniture is\nornamented with gold, showing the wealth of this great kingdom. There is a\nfireplace in the middle of the southern wall, to help keep the stone room\nwarm for the rulers. The floor is covered with large rugs, all very plush\nand valuable looking. To the north is the exit back to Heorot.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "wealhtheow@saxon" : {
+         "damage" : "12",
+         "location" : "saxon17",
+         "armor" : "10",
+         "name" : "Wealhtheow",
+         "sflags" : [
+            "Female"
+         ],
+         "description" : "Wealhtheow, Hrothgar's queen, is here adorned in gold.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Wealhtheow",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal",
+            "NoExorcise",
+            "NoZap"
+         ]
+      },
+      "guard2@saxon" : {
+         "damage" : "15",
+         "location" : "saxon11",
+         "armor" : "5",
+         "name" : "guard2",
+         "description" : "James stands here pondering how to kill the awesome monster Grendel.",
+         "strength" : "400",
+         "speed" : "5",
+         "pname" : "James",
+         "aggression" : "0"
+      },
+      "gateguard@saxon" : {
+         "damage" : "15",
+         "location" : "saxon7",
+         "armor" : "10",
+         "name" : "gateguard",
+         "description" : "Thomas stares at you, trying to decipher if you pose a threat to the king.",
+         "strength" : "350",
+         "speed" : "0",
+         "pname" : "Thomas",
+         "aggression" : "0"
+      },
+      "guard3@saxon" : {
+         "damage" : "10",
+         "location" : "saxon15",
+         "armor" : "20",
+         "name" : "guard3",
+         "description" : "Peter is staring at the wall, pictures of the cruel monster Grendel running\nthrough his mind.",
+         "strength" : "400",
+         "speed" : "5",
+         "pname" : "Peter",
+         "aggression" : "0"
+      },
+      "whale@saxon" : {
+         "damage" : "20",
+         "location" : "saxon23",
+         "armor" : "5",
+         "name" : "whale",
+         "description" : "There is a killer whale frolicking here in the sea.",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "50",
+         "pname" : "Killer Whale",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "demon@saxon" : {
+         "eflags" : [
+            "NegFireball",
+            "Fireball"
+         ],
+         "damage" : "10",
+         "location" : "saxon38",
+         "armor" : "3",
+         "name" : "demon",
+         "description" : "A Demon made of blood and fire draws his axe at the site of you.",
+         "strength" : "450",
+         "speed" : "5",
+         "aggression" : "50",
+         "pname" : "Sea Demon",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "hrothgar@saxon" : {
+         "damage" : "20",
+         "location" : "saxon18",
+         "armor" : "10",
+         "name" : "Hrothgar",
+         "description" : "Hrothgar, son of Healfdene, lord of the Danes is here.",
+         "strength" : "350",
+         "speed" : "0",
+         "pname" : "Hrothgar",
+         "aggression" : "0",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap"
+         ]
+      },
+      "grendel@saxon" : {
+         "eflags" : [
+            "NegFrost",
+            "Frost"
+         ],
+         "damage" : "15",
+         "location" : "saxon30",
+         "armor" : "25",
+         "name" : "Grendel",
+         "description" : "The midnight marauder of Heorot growls angrily at your approach.",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "Grendel",
+         "aggression" : "100",
+         "pflags" : [
+            "NoExorcise",
+            "NoAlias",
+            "NoZap",
+            "NoSummon"
+         ]
+      },
+      "peasant@saxon" : {
+         "damage" : "5",
+         "location" : "saxon9",
+         "armor" : "5",
+         "name" : "peasant",
+         "description" : "A peasant is here tending to his flock.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Peasant",
+         "aggression" : "0"
+      },
+      "hawk@saxon" : {
+         "damage" : "15",
+         "location" : "saxon3",
+         "armor" : "5",
+         "name" : "hawk",
+         "description" : "A red tailed hawk swoops out of the sky and tears at your face.",
+         "strength" : "150",
+         "speed" : "2",
+         "aggression" : "100",
+         "pname" : "Hawk",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "dragon@saxon" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball",
+            "NegMissile",
+            "NegFrost"
+         ],
+         "damage" : "30",
+         "location" : "saxon52",
+         "armor" : "15",
+         "name" : "dragon",
+         "description" : "A hulking mass emerges from the shadows, flames erupting from it's \nnostrils.",
+         "strength" : "1500",
+         "speed" : "0",
+         "aggression" : "100",
+         "pname" : "Red Dragon",
+         "pflags" : [
+            "NoExorcise",
+            "NoAlias",
+            "NoZap",
+            "NoSummon"
+         ],
+         "mflags" : [
+            "BarSouth",
+            "GrabHostile"
+         ]
+      },
+      "guard1@saxon" : {
+         "damage" : "10",
+         "location" : "saxon10",
+         "armor" : "10",
+         "name" : "guard1",
+         "description" : "Andrew paces back and forth, readying himself for another attack on Heorot.",
+         "strength" : "400",
+         "speed" : "5",
+         "pname" : "Andrew",
+         "aggression" : "0"
+      },
+      "bandit2@saxon" : {
+         "damage" : "15",
+         "location" : "saxon42",
+         "armor" : "0",
+         "name" : "bandit2",
+         "description" : "A figure lurks in the shadows, contemplating how much you value your life.",
+         "strength" : "275",
+         "speed" : "5",
+         "pname" : "Bandit",
+         "aggression" : "25",
+         "mflags" : [
+            "PickStuff"
+         ]
+      },
+      "reptile@saxon" : {
+         "eflags" : [
+            "NegFireball",
+            "Fireball"
+         ],
+         "damage" : "15",
+         "location" : "saxon31",
+         "armor" : "5",
+         "name" : "reptile",
+         "description" : "A massive Sea Reptile lurks here, hungry to feed on you.",
+         "strength" : "400",
+         "speed" : "5",
+         "pname" : "Sea Reptile",
+         "aggression" : "66",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "bass@saxon" : {
+         "damage" : "5",
+         "location" : "saxon25",
+         "armor" : "5",
+         "name" : "bass",
+         "description" : "A small mouth bass swims by you, its back glittering in the sun.",
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Small Mouth Bass",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "beowulf@saxon" : {
+         "damage" : "25",
+         "location" : "saxon13",
+         "armor" : "10",
+         "name" : "beowulf",
+         "description" : "Beowulf, the greatest warrior ever born, stands proudly here.",
+         "strength" : "1500",
+         "speed" : "0",
+         "pname" : "Beowulf",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal",
+            "NoExorcise",
+            "NoAlias",
+            "NoZap",
+            "NoSummon",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "bandit1@saxon" : {
+         "damage" : "10",
+         "location" : "saxon46",
+         "armor" : "5",
+         "name" : "bandit1",
+         "description" : "A bandit eyes you from a distance, wondering if you are worth killing.",
+         "strength" : "250",
+         "speed" : "5",
+         "pname" : "Bandit",
+         "aggression" : "50",
+         "mflags" : [
+            "PickStuff"
+         ]
+      },
+      "rat@saxon" : {
+         "damage" : "10",
+         "location" : "saxon27",
+         "armor" : "0",
+         "name" : "rat",
+         "description" : "A rat scrambles here on the floor, looking for food.",
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "Rat",
+         "aggression" : "25"
+      },
+      "mother@saxon" : {
+         "eflags" : [
+            "NegFireball",
+            "Fireball"
+         ],
+         "damage" : "30",
+         "location" : "saxon40",
+         "armor" : "20",
+         "name" : "mother",
+         "sflags" : [
+            "Female"
+         ],
+         "description" : "A hideous growl shoots from a corner of the room as Grendel's mother senses\nyour arrival.",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "Grendels Mother",
+         "aggression" : "100",
+         "pflags" : [
+            "NoExorcise",
+            "NoAlias",
+            "NoZap",
+            "NoSummon"
+         ]
+      },
+      "shark@saxon" : {
+         "eflags" : [
+            "NegFireball",
+            "Fireball",
+            "FearFrost"
+         ],
+         "damage" : "10",
+         "location" : "saxon36",
+         "armor" : "10",
+         "name" : "shark",
+         "description" : "A flame swims by, and you notice it resembles a Great White shark.",
+         "strength" : "300",
+         "speed" : "5",
+         "pname" : "Fire Shark",
+         "aggression" : "75",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "crab@saxon" : {
+         "damage" : "10",
+         "location" : "saxon1",
+         "armor" : "0",
+         "name" : "crab",
+         "description" : "A small crab, about the size of a baseball nips at your toes.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Crab",
+         "aggression" : "50"
+      },
+      "serpent@saxon" : {
+         "eflags" : [
+            "NegFireball",
+            "NegBHands",
+            "Fireball"
+         ],
+         "damage" : "10",
+         "location" : "saxon34",
+         "armor" : "5",
+         "name" : "serpent",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "description" : "A small serpent, its veins glowing with fire slithers by you.",
+         "strength" : "250",
+         "speed" : "5",
+         "pname" : "Serpent",
+         "aggression" : "25"
+      },
+      "widow@saxon" : {
+         "damage" : "5",
+         "location" : "saxon48",
+         "armor" : "5",
+         "name" : "widow",
+         "sflags" : [
+            "Female"
+         ],
+         "description" : "An old woman cries out at the site of you.",
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Widow",
+         "pflags" : [
+            "NoSteal",
+            "NoExorcise",
+            "NoHassle",
+            "NoAlias",
+            "NoZap",
+            "NoSummon"
+         ]
+      },
+      "cook@saxon" : {
+         "damage" : "15",
+         "location" : "saxon16",
+         "armor" : "5",
+         "name" : "cook",
+         "description" : "Hrothgar's cook is preparing a feast for the warriors.",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "Cook",
+         "aggression" : "15"
+      }
+   }
+}

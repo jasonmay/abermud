@@ -7,7 +7,8 @@
          "oflags" : [
             "Armor",
             "Wearable",
-            "GetFlips"
+            "GetFlips",
+            "Nopit"
          ],
          "name" : "WarMask",
          "examine" : "\nThe mask has covered some upper class soldiers face protecting it and making\nthe bearer look more scaring.",
@@ -16,7 +17,7 @@
          "weight" : "4",
          "pname" : "mask",
          "maxstate" : "1",
-         "bvalue" : "200",
+         "bvalue" : "0",
          "desc[0]" : "A heavy golden mask is dumped here.",
          "aflags" : [
             "Face",
@@ -245,10 +246,10 @@
          "name" : "HealBalsam",
          "examine" : "\nHmmm...the balsam has a very antiseptic smell.  Applying this balsam can\nperhaps heal some wounds in short time.",
          "size" : "1",
+         "desc[]" : "Some creamy balsam has been left here.",
          "pname" : "balsam",
          "weight" : "1",
-         "bvalue" : "25",
-         "desc[0]" : "Some creamy balsam has been left here."
+         "bvalue" : "25"
       },
       "tlalocstatue@ancient" : {
          "location" : "IN_ROOM:Anc15",
@@ -292,13 +293,12 @@
          "desc[0]" : "A stone knife has been left here."
       },
       "lbook@ancient" : {
-         "desc[1]" : "",
          "location" : "IN_ROOM:Anc58",
          "oflags" : [
             "GetFlips"
          ],
+         "altname" : "books",
          "name" : "LBook",
-         "examine" : "",
          "state" : "1",
          "size" : "3",
          "pname" : "book",
@@ -328,10 +328,11 @@
       "atalisman@ancient" : {
          "location" : "WORN_BY:aczuma",
          "oflags" : [
+            "MissileSpell",
             "Wearable"
          ],
          "name" : "ATalisman",
-         "examine" : "It's a kind of an animal figure.",
+         "examine" : "It's a kind of an animal figure apparently spitting something.",
          "size" : "1",
          "pname" : "talisman",
          "weight" : "1",
@@ -376,7 +377,7 @@
          "pname" : "altar",
          "name" : "QAltar",
          "examine" : "The surface of this altar is smooth and tidy.",
-         "desc[0]" : ""
+         "desc[0]" : "An altar to Quetzalcoatl stands here before the monolith."
       },
       "bluegem@ancient" : {
          "location" : "IN_CONTAINER:TlalocStatue",
@@ -546,10 +547,10 @@
          "name" : "EmbBalsam",
          "examine" : "\nThe smell of this balsam fills your mind with strange thoughts of mummies\nand preservation.",
          "size" : "1",
+         "desc[]" : "Some white balsam has been dropped here.",
          "pname" : "balsam",
          "weight" : "1",
-         "bvalue" : "25",
-         "desc[0]" : "Some white balsam has been dropped here."
+         "bvalue" : "25"
       }
    },
    "loc" : {
@@ -581,6 +582,7 @@
       },
       "anc15@ancient" : {
          "exits" : {
+            "e" : "AncLearn",
             "s" : "Anc44"
          },
          "flags" : [
@@ -589,7 +591,7 @@
          "zone" : "ancient",
          "title" : "The Sanctuary of Tlaloc",
          "id" : "Anc15",
-         "description" : "\nYour heart beats fast and you stop for a while to breath deep and recover\nfrom the battle with the alligators. You have an odd feeling that Mr Dundee\ndidn't have so much trouble with the gators. You wipe the sweat from your \nforehead and look around. You find yourself in a small room sanctified to \nsome god of these unknown people. On the north wall there stands a small \nbronze statue decorated with colorful stones. The statue stands firmly on \nthe floor and it's almost impossible to move. The stone decorations, \nhowever, seem to be quite loose on the statue. Maybe you still can bring \nsomething home to your sweetheart from your adventures - if you survive, \nthat is.\n",
+         "description" : "\nYour heart beats fast and you stop for a while to breath deep and recover\nfrom the battle with the alligators. You have an odd feeling that Mr Dundee\ndidn't have so much trouble with the gators. You wipe the sweat from your \nforehead and look around. You find yourself in a small room sanctified to \nsome god of these unknown people. On the north wall there stands a small \n&+ybronze statue&* decorated with colorful stones. The statue stands firmly on \nthe floor and it's almost impossible to move. The stone decorations, \nhowever, seem to be quite loose on the statue. Maybe you still can bring \nsomething home to your sweetheart from your adventures - if you survive, \nthat is.\n",
          "altitude" : null
       },
       "anc44@ancient" : {
@@ -685,7 +687,7 @@
          "zone" : "ancient",
          "title" : "Embalming Chamber",
          "id" : "Anc22",
-         "description" : "\nYou have stepped into a small chamber, though you can't figure out the \npurpose of its' being. You see piles of used bandages in the corner and a \ncouple of big pots made of clay placed near the northern wall. There's a \nstone platform in the middle of the room. This might have been some kind \nof a hospital or something. You hear a loud crack!\n",
+         "description" : "\nYou have stepped into a small chamber, though you can't figure out the \npurpose of its' being. You see piles of used bandages in the corner and a \ncouple of &+ybig pots&* made of clay placed near the northern wall. There's a \nstone platform in the middle of the room. This might have been some kind \nof a hospital or something. You hear a loud crack!\n",
          "altitude" : null
       },
       "anc39@ancient" : {
@@ -703,6 +705,19 @@
          "description" : "\nYou have discovered a moist dark passageway that disappears under the \ngreat sun pyramid. The air inside this narrow tunnel is stuffy and you\nseriously consider whether you should go further or not. The tunnel \ncontinues to the east. To the south you see a narrow crack which makes \nyou once again think about losing weight to make it easier to move \nbetween those rugged stone walls.\n",
          "altitude" : null
       },
+      "anclearn@ancient" : {
+         "exits" : {
+            "w" : "Anc15"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "ancient",
+         "title" : "Aztec Learning Center",
+         "id" : "AncLearn",
+         "description" : "\n   The walls of the room are covered with brightly colored fresco murals\nfrom floor to ceiling,..  and onto the ceiling too.  A man whose face\nreminds you of some canyon lanscapes you have seen sits on his haunches\nstaring at you.  It seems like he might have a lot to teach you.\nTry \"learn info\" to see if you can afford his fees.\n",
+         "altitude" : null
+      },
       "anc41@ancient" : {
          "exits" : {
             "w" : "Anc40"
@@ -713,7 +728,7 @@
          "zone" : "ancient",
          "title" : "The Fountain Cave",
          "id" : "Anc41",
-         "description" : "\nYou enter a round walled chamber which has a fountain gurgling in the center.\nThe water flows out to the direction where you came from. On the back wall \nthere are carvings on the stone. The walls block your way to any other \ndirection, but west.\n",
+         "description" : "\nYou enter a round walled chamber which has a &+Cfountain&* gurgling in the center.\nThe water flows out to the direction where you came from. On the back wall \nthere are carvings on the stone. The walls block your way to any other \ndirection, but west.\n",
          "altitude" : null
       },
       "anc26@ancient" : {
@@ -748,9 +763,9 @@
             "Death"
          ],
          "zone" : "ancient",
-         "title" : "The Swamp",
+         "title" : "Altitude = 900\nThe Swamp",
          "id" : "Anc5",
-         "description" : "\nYou have entered a large swamp area. Suddenly you find out that you can't \nmove your feet any more.\n\nThe Swamp Thing rises up from the mud...\nYou are swallowed by the Swamp Thing...\nYou are not feeling very good now...\n\n*BURP*\n",
+         "description" : "\nYou have entered a large swamp area. Suddenly you find out that you can't \nmove your feet any more.\n\n&+gThe Swamp Thing rises up from the mud...\n&+gYou are swallowed by the Swamp Thing...\n&+gYou are not feeling very good now...\n\n&+R*BURP*\n",
          "altitude" : null
       },
       "anc40@ancient" : {
@@ -795,7 +810,7 @@
          "zone" : "ancient",
          "title" : "Beneath the Cross",
          "id" : "Anc20",
-         "description" : "\nYou stand beneath a huge cross wondering the reason of its' presence. It \nlooks like it has been here more than thousand years - long before anyone \nknew anything of the Christian faith. From some strange markings on its' base \nyou draw the conclusion that there might be one more cross like this \nsomewhere in the town (what a detective!).\n",
+         "description" : "\nYou stand beneath a huge &+Ycross&* wondering the reason of its' presence. It \nlooks like it has been here more than thousand years - long before anyone \nknew anything of the Christian faith. From some strange markings on its' base \nyou draw the conclusion that there might be one more cross like this \nsomewhere in the town (what a detective!).\n",
          "altitude" : "800"
       },
       "anc35@ancient" : {
@@ -809,7 +824,7 @@
          "zone" : "ancient",
          "title" : "Top of the Sun Pyramid",
          "id" : "Anc35",
-         "description" : "\nYou are standing on the top of the pyramid the sun shining brightly into your\nface. Right before you there is a small altar probably made for sacrificing \nyoung virgins to the sun God.  You might feel a great relief that you are no \nlonger a virgin, but just simply another, run of the mill, filthy foul-\nmouthed wanderer.\n",
+         "description" : "\nYou are standing on the top of the pyramid the sun shining brightly into your\nface. Right before you there is a small &+Yaltar&* probably made for sacrificing \nyoung virgins to the sun God.  You might feel a great relief that you are no \nlonger a virgin, but just simply another, run of the mill, filthy foul-\nmouthed wanderer.\n",
          "altitude" : "1000"
       },
       "anc53@ancient" : {
@@ -865,7 +880,7 @@
          "zone" : "ancient",
          "title" : "Top of the Moon Pyramid",
          "id" : "Anc30",
-         "description" : "\nYou finally reach the top of the pyramid, understanding now the purpose of \nthe physical training your friends used to keep in good condition. \nBefore you, the moon shines brightly, appearing to be a gigantic wheel of\ncheese.  You can imagine yourself taking a few steps ahead and grabbing a \nslice of that great big cheese. Before you on the floor there is a big cross-\nshaped figure. The carvings on the stone floor are telling tales about secret\nhalls of ancient kings and holy men.  You wonder where these mighty halls\nmight be located, and you think that the cross has something to do with it.\n",
+         "description" : "\nYou finally reach the top of the pyramid, understanding now the purpose of \nthe physical training your friends used to keep in good condition. \nBefore you, the moon shines brightly, appearing to be a gigantic wheel of\ncheese.  You can imagine yourself taking a few steps ahead and grabbing a \nslice of that great big cheese. Before you on the floor there is a big cross-\nshaped figure. The carvings on the stone floor are telling tales about secret\nhalls of ancient kings and holy men.  You wonder where these mighty halls\nmight be located, and you think that the &+Ycross&* has something to do with it.\n",
          "altitude" : "950"
       },
       "anc3@ancient" : {
@@ -1055,11 +1070,12 @@
          "zone" : "ancient",
          "title" : "Pluto",
          "id" : "Anc56",
-         "description" : "\nNow what?! You suddenly find yourself in a world totally different from where\nyou were. This desolate cold planet, however, makes you feel strange peace\nof mind and freedom you never had on earth.\nBelow your feel there's a cave.\n",
+         "description" : "\nNow what?! You suddenly find yourself in a world totally different from where\nyou were. This desolate cold planet, however, makes you feel strange peace\nof mind and freedom you never had on earth.\nBelow your feet, there's a cave.\n",
          "altitude" : null
       },
       "anc19@ancient" : {
          "exits" : {
+            "w" : "pyramid1@pyramid",
             "n" : "Anc18"
          },
          "flags" : [
@@ -1068,7 +1084,7 @@
          "zone" : "ancient",
          "title" : "River Bank",
          "id" : "Anc19",
-         "description" : "\nYou stand on a slippery river bank watching carefully where to step to \navoid slipping down to the river. The water is calm and quite warm, but a \nstrange feeling inside makes you decide not to take a bath.  There is a\npath leeding north from here.\n",
+         "description" : "\nYou stand on a slippery river bank watching carefully where to step to \navoid slipping down to the river. The water is calm and quite warm, but a \nstrange feeling inside makes you decide not to take a bath.  There are paths\nleading north and west from here.\n",
          "altitude" : "700"
       },
       "anc24@ancient" : {
@@ -1142,7 +1158,7 @@
          "zone" : "ancient",
          "title" : "Before the Moon",
          "id" : "Anc37",
-         "description" : "\nYou cautiously take some steps ahead and stand right before the moon. \nAs you examine it more closely you suddenly start feeling a strange\ndesire for dairy products. My, this great heavenly body really is one \nbig Emmental cheese. Maybe you could cut a piece or two of it. \n",
+         "description" : "\nYou cautiously take some steps ahead and stand right before the moon. \nAs you examine it more closely you suddenly start feeling a strange\ndesire for dairy products. My, this great heavenly body really is one \n&+Ybig Emmental cheese&*. Maybe you could cut a piece or two of it. \n",
          "altitude" : null
       },
       "anc60@ancient" : {
@@ -1285,7 +1301,7 @@
          "zone" : "ancient",
          "title" : "Inside the Sun Pyramid",
          "id" : "Anc33",
-         "description" : "\nA big stone block separates the ceiling from the floor looking anything \nbut steady. Seems that the ancient architects never learned to construct\nvaults even though they had the skill to build these great monuments. \nThis wide, but rather low room has obviously served as some kind of a storage\nroom since there are several clay pots near the back wall.  \n",
+         "description" : "\nA big stone block separates the ceiling from the floor looking anything \nbut steady. Seems that the ancient architects never learned to construct\nvaults even though they had the skill to build these great monuments. \nThis wide, but rather low room has obviously served as some kind of a storage\nroom since there are several &+yclay pots&* near the back wall.  \n",
          "altitude" : null
       },
       "anc58@ancient" : {
@@ -1300,7 +1316,7 @@
          "zone" : "ancient",
          "title" : "Library",
          "id" : "Anc58",
-         "description" : "\nThe wisdom of the universe has been collected on the shelves of this room \nin the form of old books, written centuries ago by wizards and mages who \nreigned these, now so desolated, lands. The books have been written in some \nunknown language so you can't share the wisdom with those wizards who died\na long time ago. The owner of the books, however, seems not to have this\nproblem for the books look as if they have been read through thousands of\ntimes during the preceding centuries.\n",
+         "description" : "\nThe wisdom of the universe has been collected on the shelves of this room \nin the form of old &+Cbooks&*, written centuries ago by wizards and mages who \nreigned these, now so desolated, lands. The books have been written in some \nunknown language so you can't share the wisdom with those wizards who died\na long time ago. The owner of the &+Cbooks&*, however, seems not to have this\nproblem for the books look as if they have been read through thousands of\ntimes during the preceding centuries.\n",
          "altitude" : null
       },
       "anc8@ancient" : {
@@ -1316,6 +1332,18 @@
          "id" : "Anc8",
          "description" : "\nLooking back down where you came from makes you feel dizzy so you decide \nto pay more attention to a huge monolith laying before you. The monolith \nis four feet high and twelve feet wide. Its' face is smooth, but covered \nwith dark red and brown spots all over it. This is probably a place where\nthe priests of this ancient city used to worship their god of Earth and the \nUniverse later known as Quetzalcoatl by the Aztecs. The sight could easily \nturn a flesh-eating beast to a true vegetarian.\n",
          "altitude" : "1000"
+      },
+      "ancstudy@ancient" : {
+         "exits" : {},
+         "flags" : [
+            "Peaceful",
+            "SoundProof"
+         ],
+         "zone" : "ancient",
+         "title" : "Aztec Study Center",
+         "id" : "AncStudy",
+         "description" : "\n   You are strapped to a table.  Your head screams with pain. The canyon\nfaced man seems to have a very direct method of putting knowledge into\nyour brain...  He has cut your skull open and has a funnel into which\nwhispy streamers of ... something ... are pouring.\n",
+         "altitude" : null
       },
       "anc59@ancient" : {
          "exits" : {
@@ -1407,15 +1435,25 @@
          ]
       },
       "rattlesnake@ancient" : {
+         "eflags" : [
+            "immdeaf"
+         ],
          "damage" : "15",
          "location" : "Anc55",
-         "speed" : "0",
          "armor" : "0",
-         "aggression" : "0",
-         "pname" : "The rattlesnake",
          "name" : "rattlesnake",
          "description" : "The rattlesnake is keeping horrifying noises before you.",
-         "strength" : "150"
+         "sflags" : [
+            "nolegs",
+            "noarms"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "The rattlesnake",
+         "aggression" : "0",
+         "mflags" : [
+            "Venom"
+         ]
       },
       "anara@ancient" : {
          "damage" : "10",
@@ -1450,7 +1488,10 @@
          "aggression" : "90",
          "name" : "tiny",
          "description" : "\nA tiny mosquito before you looks even more energetic than the others.",
-         "strength" : "80"
+         "strength" : "80",
+         "mflags" : [
+            "BarS"
+         ]
       },
       "old@ancient" : {
          "damage" : "8",
@@ -1460,7 +1501,10 @@
          "aggression" : "50",
          "name" : "old",
          "description" : "An old mosquito is considering attacking you.",
-         "strength" : "60"
+         "strength" : "60",
+         "mflags" : [
+            "BarS"
+         ]
       },
       "hungry@ancient" : {
          "damage" : "12",
@@ -1470,14 +1514,24 @@
          "aggression" : "80",
          "name" : "hungry",
          "description" : "\nA very hungry mosquito orders a bloody mary (a la you).",
-         "strength" : "50"
+         "strength" : "50",
+         "mflags" : [
+            "BarS"
+         ]
       },
       "quetzalcoatl@ancient" : {
+         "eflags" : [
+            "ImmBlind"
+         ],
          "damage" : "20",
          "location" : "Anc7",
          "armor" : "0",
          "name" : "quetzalcoatl",
-         "description" : "",
+         "description" : "This monolith is alive!!!",
+         "sflags" : [
+            "Noarms",
+            "NoLegs"
+         ],
          "strength" : "1000",
          "speed" : "0",
          "pname" : "The snake head",
@@ -1499,27 +1553,36 @@
       "mosquito@ancient" : {
          "damage" : "10",
          "location" : "Anc18",
-         "speed" : "0",
          "armor" : "0",
-         "aggression" : "80",
-         "pname" : "The Mosquito",
          "name" : "mosquito",
          "description" : "A giant mosquito is thinking no good about you.",
-         "strength" : "60"
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The Mosquito",
+         "aggression" : "80",
+         "mflags" : [
+            "BarS"
+         ]
       },
       "bloodthirsty@ancient" : {
-         "damage" : "8",
+         "damage" : "10",
          "location" : "Anc18",
          "speed" : "0",
          "armor" : "0",
          "aggression" : "80",
          "name" : "bloodthirsty",
          "description" : "\nA bloodthirsty mosquito thinks your blood would taste good.",
-         "strength" : "60"
+         "strength" : "60",
+         "mflags" : [
+            "BarS"
+         ]
       },
       "aczuma@ancient" : {
          "eflags" : [
-            "Missile"
+            "Missile",
+            "ImmMute",
+            "Blind",
+            "ImmCripple"
          ],
          "damage" : "10",
          "location" : "Anc51",
@@ -1533,7 +1596,9 @@
       },
       "arantxa@ancient" : {
          "eflags" : [
-            "Frost"
+            "Frost",
+            "Deaf",
+            "Mute"
          ],
          "damage" : "10",
          "location" : "Anc53",
@@ -1550,15 +1615,21 @@
          "pflags" : "{ }"
       },
       "emperor@ancient" : {
+         "eflags" : [
+            "Cripple",
+            "Mute",
+            "ImmBlind",
+            "ImmMute"
+         ],
          "damage" : "10",
          "location" : "Anc50",
-         "speed" : "0",
          "armor" : "0",
-         "aggression" : "30",
-         "pname" : "The Emperor",
          "name" : "emperor",
          "description" : "The Son of the Sun God is sitting here on his throne.",
-         "strength" : "400"
+         "strength" : "400",
+         "speed" : "0",
+         "pname" : "The Emperor",
+         "aggression" : "30"
       },
       "bloodyjaws@ancient" : {
          "damage" : "10",
@@ -1574,7 +1645,7 @@
          "damage" : "10",
          "location" : "Anc25",
          "speed" : "0",
-         "armor" : "0",
+         "armor" : "30",
          "aggression" : "0",
          "pname" : "The monolith",
          "name" : "monolith",
@@ -1598,13 +1669,16 @@
       "mummy@ancient" : {
          "damage" : "12",
          "location" : "Anc22",
-         "speed" : "0",
          "armor" : "0",
-         "aggression" : "30",
-         "pname" : "The mummy",
          "name" : "mummy",
          "description" : "There's something rotten in the corner.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "The mummy",
+         "aggression" : "30",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "alligator@ancient" : {
          "damage" : "10",
@@ -1618,7 +1692,12 @@
       },
       "mano@ancient" : {
          "eflags" : [
-            "Shock"
+            "Shock",
+            "Blind",
+            "Mute",
+            "Cripple",
+            "ImmCripple",
+            "ImmMute"
          ],
          "damage" : "10",
          "location" : "Anc54",

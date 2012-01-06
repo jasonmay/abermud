@@ -59,7 +59,8 @@
       "ale@quarry" : {
          "location" : "IN_ROOM:store",
          "oflags" : [
-            "Food"
+            "Food",
+            "Alcohol"
          ],
          "altname" : "skin",
          "name" : "ale",
@@ -337,9 +338,10 @@
       },
       "bottom@quarry" : {
          "exits" : {
+            "e" : "bishop1@bishop",
             "w" : "N_Face",
             "u" : "Ladder_D4",
-            "d" : "N_Face"
+            "d" : "Mine"
          },
          "flags" : [
             "Dark"
@@ -347,7 +349,7 @@
          "zone" : "quarry",
          "title" : "Bottom Of The Mine",
          "id" : "Bottom",
-         "description" : "\n   You are standing at the bottom of a treacherous ladder which climbs up a\nnarrow vertical shaft.  To the west you can crawl along a low, heavily shored\nup tunnel towards a face.  Another ladder leads further down, but it is rotted\nand descends only about ten feet before it dissappears into the flooded depths\nof the mine.\n   To judge from the moss and slime on the wall, this part of the mine is often\nflooded too.\n",
+         "description" : "\n   You are standing at the bottom of a treacherous ladder which climbs up a\nnarrow vertical shaft.  To the west you can crawl along a low, heavily shored\nup tunnel towards a face.  Another ladder leads further down, but it is rotted\nand descends only about ten feet before it dissappears into the flooded depths\nof the mine.  A hand-carved passage going east glows very dimly.\n   To judge from the moss and slime on the wall, this part of the mine is often\nflooded too.\n",
          "altitude" : null
       }
    },

@@ -1,0 +1,1275 @@
+{
+   "obj" : {
+      "cscroll@eirias" : {
+         "location" : "IN_ROOM:gallery",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "cscroll",
+         "examine" : "The words on the third scroll say, 'I am the queen of every hive'",
+         "state" : "0",
+         "pname" : "scroll",
+         "maxstate" : "0",
+         "desc[0]" : "An ancient scroll with some gold lettering on lies here."
+      },
+      "secret@eirias" : {
+         "location" : "IN_ROOM:staircase",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "door",
+         "name" : "secret",
+         "maxstate" : "1",
+         "linked" : "tapestry",
+         "state" : "1"
+      },
+      "hazelnut@eirias" : {
+         "desc[1]" : "A hazelnut hangs off one of the branches.",
+         "location" : "IN_ROOM:tree4",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "nut",
+         "name" : "hazelnut",
+         "examine" : "Haven't you seen one before.. nutlike and edible..",
+         "desc[0]" : "A hazelnut lies here."
+      },
+      "seefountain@eirias" : {
+         "location" : "IN_ROOM:fountain",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "fountain",
+         "name" : "seefountain"
+      },
+      "shield@eirias" : {
+         "desc[1]" : "Your eye is caught by something high on the wall.. a golden shield.",
+         "damage" : "0",
+         "location" : "IN_ROOM:towerent",
+         "armor" : "60",
+         "oflags" : [
+            "Armor",
+            "Shield",
+            "Wearable",
+            "Antimagic"
+         ],
+         "name" : "shield",
+         "examine" : "It is truly a beautiful shield, and it glows with the power of the Light.",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "There is an ornate golden shield lying here."
+      },
+      "castlewheel@eirias" : {
+         "location" : "IN_ROOM:dark",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "castlewheel",
+         "examine" : "Hmm, it's a large spinning wheel.. can you imagine that?",
+         "linked" : "wheel",
+         "state" : "1",
+         "pname" : "wheel",
+         "maxstate" : "1",
+         "desc[0]" : "The wheel has spun to a halt."
+      },
+      "tapestry@eirias" : {
+         "desc[1]" : "One of the tapestries, a great battle, catches your eye.",
+         "location" : "IN_ROOM:vaulted",
+         "oflags" : [
+            "NoGet",
+            "Pushable"
+         ],
+         "altname" : "wall",
+         "name" : "tapestry",
+         "examine" : "Part of the tapestry looks a little loose...",
+         "linked" : "secret",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "One of the tapestries has been moved aside."
+      },
+      "twig@eirias" : {
+         "location" : "IN_ROOM:tree1",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "twig",
+         "examine" : "Its a twig.",
+         "desc[0]" : "An alder twig lies here."
+      },
+      "escroll@eirias" : {
+         "location" : "IN_ROOM:towerent",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "escroll",
+         "examine" : "The words on the fifth scroll say, 'I am the tomb of every hope'",
+         "state" : "0",
+         "pname" : "scroll",
+         "maxstate" : "0",
+         "desc[0]" : "An ancient scroll with some gold lettering on lies here."
+      },
+      "galdoor@eirias" : {
+         "location" : "IN_ROOM:gallery",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "door",
+         "name" : "galdoor",
+         "maxstate" : "1",
+         "linked" : "stairdoor",
+         "state" : "1"
+      },
+      "jewelstone@eirias" : {
+         "location" : "IN_ROOM:toproom",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "stone",
+         "name" : "jewelstone",
+         "examine" : "All shiny, as if it was polished by the sea.",
+         "bvalue" : "150",
+         "desc[0]" : "A small blue-green stone lies here."
+      },
+      "latticedown@eirias" : {
+         "location" : "IN_ROOM:wooddoor",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "lattice",
+         "name" : "latticedown",
+         "maxstate" : "1",
+         "linked" : "latticeup",
+         "state" : "1"
+      },
+      "prosign@eirias" : {
+         "location" : "IN_ROOM:mountain",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "prosign",
+         "examine" : "\nEirias quest written by Stress, February 1998. Taken from 'The Dark is\nRising' series by Susan Cooper, Book 5, 'Silver on the Tree'",
+         "desc[0]" : "An old weathered sign stands here."
+      },
+      "stairdoor@eirias" : {
+         "location" : "IN_ROOM:staircase",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "stairdoor",
+         "linked" : "galdoor",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "A door that you hadn't noticed before stands open here."
+      },
+      "ascroll@eirias" : {
+         "location" : "IN_ROOM:fountain",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "ascroll",
+         "examine" : "The words on the first scroll say, 'I am the womb of every holt'",
+         "state" : "0",
+         "pname" : "scroll",
+         "maxstate" : "0",
+         "desc[0]" : "An ancient scroll with some gold lettering on lies here."
+      },
+      "crest@eirias" : {
+         "location" : "IN_ROOM:square",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "crest",
+         "examine" : "\nIt is a golden crest, of a leaping fish with some roses. It is called formally\nAzure, a Salmon naiant Or between three Roses Argent seeded and barbed.  It is\nthe crest of Gwyddno the King."
+      },
+      "wooden@eirias" : {
+         "location" : "IN_ROOM:wooddoor",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "door",
+         "name" : "wooden",
+         "maxstate" : "1",
+         "linked" : "indoor",
+         "state" : "1"
+      },
+      "bundle@eirias" : {
+         "location" : "IN_ROOM:tree2",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "twigs",
+         "name" : "bundle",
+         "examine" : "Know what twigs are? They have somehow made themselves into an arrow!",
+         "desc[0]" : "A bundle of twigs lies here."
+      },
+      "smallmirror@eirias" : {
+         "location" : "IN_ROOM:cottage",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "smallmirror",
+         "examine" : "\nYou see an old face in the mirror. A voice says, 'Remember what you have been\ntold here in the Lost Land. And when you have the sword the Light will carry\nyou home.'",
+         "state" : "0",
+         "pname" : "mirror",
+         "maxstate" : "0",
+         "desc[0]" : "There is a small mirror on one of the shelves."
+      },
+      "apple@eirias" : {
+         "desc[1]" : "A small apple hangs off one of the branches.",
+         "location" : "IN_ROOM:tree6",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "apple",
+         "examine" : "It's a small apple.. edible...",
+         "desc[0]" : "A small apple lies here."
+      },
+      "eiriassword@eirias" : {
+         "damage" : "37",
+         "location" : "IN_ROOM:toproom",
+         "oflags" : [
+            "Weapon",
+            "Lit",
+            "Destroyed"
+         ],
+         "pname" : "eirias",
+         "name" : "eiriassword",
+         "examine" : "Made for the Light, this sword pulls towards the Light always.",
+         "bvalue" : "200",
+         "desc[0]" : "The glowing sword of the Light lies here."
+      },
+      "parchment@eirias" : {
+         "location" : "IN_ROOM:mountain",
+         "altname" : "roll",
+         "name" : "parchment",
+         "examine" : "\nThe parchment reads:\n        You must go to the Lost Land, in the moment when it shall\n        show itself between the land and the sea. And a white bone\n        will prevent you, and a flying maytree will save you, and\n        only the horn can stop the wheel. And in the glass tower\n        among the seven trees you will find the crystal sword of\n        the Light. There are five barriers to be broken to reach\n        the crystal sword, and they are told in five lines that are\n        written in letters of golden fire over the sword itself.",
+         "desc[0]" : "An old forgotten roll of parchment lies here."
+      },
+      "dscroll@eirias" : {
+         "location" : "IN_ROOM:cottage",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "dscroll",
+         "examine" : "The words on the fourth scroll say, 'I am the shield for every head'",
+         "state" : "0",
+         "pname" : "scroll",
+         "maxstate" : "0",
+         "desc[0]" : "An ancient scroll with some gold lettering on lies here."
+      },
+      "doorcoach@eirias" : {
+         "location" : "IN_ROOM:wooddoor",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "doorcoach",
+         "linked" : "doorcountry",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "There is another coach waiting here for you."
+      },
+      "sand@eirias" : {
+         "location" : "IN_ROOM:shore",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sand",
+         "examine" : "If the sand has been disturbed what do you think that means?",
+         "desc[0]" : "There is a little pile of disturbed sand here."
+      },
+      "latticeup@eirias" : {
+         "location" : "IN_ROOM:lostland",
+         "oflags" : [
+            "NoGet",
+            "Pushable"
+         ],
+         "altname" : "roof",
+         "name" : "latticeup",
+         "examine" : "A section of the lattice looks loose..",
+         "linked" : "latticedown",
+         "state" : "1",
+         "pname" : "lattice",
+         "maxstate" : "1"
+      },
+      "galbook@eirias" : {
+         "location" : "IN_ROOM:gallery",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "book",
+         "name" : "galbook",
+         "desc[0]" : "There is a large book on one of the tables."
+      },
+      "horn@eirias" : {
+         "location" : "IN_ROOM:shore",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "horn",
+         "examine" : "\nIt is a small curved horn. It seems old and battered yet it gleams in the \nsunlight.",
+         "bvalue" : "50",
+         "desc[0]" : "An old horn lies here."
+      },
+      "doorcountry@eirias" : {
+         "location" : "IN_ROOM:country",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "door",
+         "name" : "doorcountry",
+         "maxstate" : "1",
+         "linked" : "doorcoach",
+         "state" : "1"
+      },
+      "bscroll@eirias" : {
+         "location" : "IN_ROOM:deadend",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "bscroll",
+         "examine" : "The words on the second scroll say, 'I am the blaze on every hill'",
+         "state" : "0",
+         "pname" : "scroll",
+         "maxstate" : "0",
+         "desc[0]" : "An ancient scroll with some gold lettering on lies here."
+      },
+      "scabbard@eirias" : {
+         "location" : "IN_ROOM:toproom",
+         "armor" : "35",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Destroyed"
+         ],
+         "name" : "scabbard",
+         "examine" : "Truly a kings armor",
+         "bvalue" : "100",
+         "desc[0]" : "A white leather scabbard with jewels inset lies here",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ]
+      },
+      "wheel@eirias" : {
+         "desc[1]" : "The spinning, razor-sharp wheel blocks the way into the tower.",
+         "location" : "IN_ROOM:wydyr",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "wheel",
+         "examine" : "Hmm, it's a large spinning wheel.. can you imagine that?",
+         "linked" : "castlewheel",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The wheel has spun to a halt."
+      },
+      "crosskey@eirias" : {
+         "location" : "IN_ROOM:balustrade",
+         "oflags" : [
+            "Key"
+         ],
+         "pname" : "key",
+         "name" : "crosskey",
+         "examine" : "The top is wrought into a decorative pattern, a circle quartered by a cross..",
+         "bvalue" : "100",
+         "desc[0]" : "A heavy iron key lies here."
+      },
+      "indoor@eirias" : {
+         "location" : "IN_ROOM:inside",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "pname" : "door",
+         "name" : "indoor",
+         "maxstate" : "1",
+         "linked" : "wooden",
+         "state" : "1"
+      }
+   },
+   "loc" : {
+      "forest4@eirias" : {
+         "exits" : {
+            "n" : "clearing",
+            "s" : "forest3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "End of the Forest?",
+         "id" : "forest4",
+         "description" : "\n   The trees interlace overhead..it is dark, cold and gloomy, then.. suddenly..\nlight begins to filter through the branches overhead once more, sand appears \nbetween the tight-woven green leaves of the matted path. You feel an immense\nsense of relief.\n",
+         "altitude" : "900"
+      },
+      "toproom@eirias" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "eirias",
+         "title" : "Dome of the Tower",
+         "id" : "toproom",
+         "description" : "\n   The light filtering through these walls is not cool and icy-green, but \ndimmer, more subdued, for you now stand inside a great hemisphere, banded in\ngold and translucent glass. The dome is warm, its floor striped with the \nsunlight that slants in through the banded roof; and yet it is a strangely\ngloomy place, bringing a heaviness to the senses. The room only holds one\nsquare table, a carved wooden screen, and a scattering of big high-backed\nchairs, as sturdy as if they were carved from solid blocks of wood.\n",
+         "altitude" : null
+      },
+      "river@eirias" : {
+         "exits" : {
+            "e" : "tree1",
+            "n" : "field7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "River",
+         "id" : "river",
+         "description" : "\n   This is a little reed-fringed stream, running swiftly between high banks.\n",
+         "altitude" : "925"
+      },
+      "dark@eirias" : {
+         "exits" : {
+            "s" : "^castlewheel"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Beyond the Wheel",
+         "id" : "dark",
+         "description" : "\n   A surge of darkness and fury and menace is streaming up the steps of the \nTower towards you. You feel the Terror of the Dark's Rising. You can't take \nyour eyes off the &+Cwheel&*, knowing that at any moment, the Dark could come\npouring through to take what they see as rightfully theirs, Eirias!\n",
+         "altitude" : "1000"
+      },
+      "vaulted@eirias" : {
+         "exits" : {
+            "u" : "^tapestry"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eirias",
+         "title" : "Vaulted Hall",
+         "id" : "vaulted",
+         "description" : "\n   You are in a high vaulted hall, whose white walls are hung with rich \ntapestries and brilliant paintings. You look and there is the door that slammed \nshut behind you at the start of the maze, but there is no sign of the maze. You \nwonder if it was real...\n",
+         "altitude" : null
+      },
+      "wydyr@eirias" : {
+         "exits" : {
+            "n" : "dark",
+            "s" : "tree7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Caer Wydyr",
+         "id" : "wydyr",
+         "description" : "\n   The great door of Caer Wydyr, the Tower of Glass, is visible at last, high\non the rocky base at the top of a steep rough-hewn flight of steps. But it is\na door barred against entry by an enchantment you could never have imagined. \nBefore it, spinning so fast that it is like a bright disc, hangs a gigantic\n&+Cwheel&*. There is no axle, nor any kind of support. The wheel hangs there in the\nair, deadly, forbidding approach, flashing round and round with a speed that\ngives out a menacing hum.\n",
+         "altitude" : "950"
+      },
+      "tree2@eirias" : {
+         "exits" : {
+            "n" : "tree3",
+            "s" : "tree1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Second Tree - Willow",
+         "id" : "tree2",
+         "description" : "\n   A slender branched, long leaved, canopy of a tree. Willow, the enchanter's \ntree. 'Strong as a young lion, pliant as a loving woman, and bitter to the \ntaste, as all enchantment in the end must be.'\n",
+         "altitude" : "950"
+      },
+      "field5@eirias" : {
+         "exits" : {
+            "e" : "field2",
+            "w" : "field4",
+            "n" : "field6",
+            "s" : "field3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Fields",
+         "id" : "field5",
+         "description" : "\n   There is a lot of farmland round here, obviously. There are fields on every\nside of you.\n",
+         "altitude" : "950"
+      },
+      "field3@eirias" : {
+         "exits" : {
+            "e" : "field2",
+            "w" : "clearing2",
+            "n" : "field4",
+            "s" : "field1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Fields",
+         "id" : "field3",
+         "description" : "\n   There is a lot of farmland round here, obviously. There are fields on every\nside of you, except west which is the clearing by the forest.\n",
+         "altitude" : "950"
+      },
+      "garden@eirias" : {
+         "exits" : {
+            "n" : "fountain"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "The Garden",
+         "id" : "garden",
+         "description" : "\n   You pause for a moment, held by delight. The air is heavy with fragrance, \nand everywhere there are roses. Squares, triangles, circles of bright blossom \npatch the grass all around, red and yellow and white and all colours between. \nBefore you is the entrance to an enclosed circular garden, a tall arch in a \nhigh hedge of tumbling red roses.\n",
+         "altitude" : "1000"
+      },
+      "country@eirias" : {
+         "exits" : {
+            "n" : "forest1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "The Coach",
+         "id" : "country",
+         "description" : "\n   You get into the coach and it moves off, out of the City. Before you lie \nbroad green fields, and a rough sandy road stretching brown-gold into the \ndistance with a wood beyond. Somewhere a lark sings in the summer sky, a blue \nsky, patched here and there with puffy fair-weather clouds, the sun high \namongst them now.\n",
+         "altitude" : "1000"
+      },
+      "field2@eirias" : {
+         "exits" : {
+            "w" : "field3",
+            "e" : "field1",
+            "n" : "clearing2",
+            "s" : "field4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Fields",
+         "id" : "field2",
+         "description" : "\n   There is a lot of farmland round here, obviously. There are fields on every\nside of you, except north which is the clearing by the forest.\n",
+         "altitude" : "950"
+      },
+      "field4@eirias" : {
+         "exits" : {
+            "e" : "field5",
+            "w" : "field1",
+            "n" : "field2",
+            "s" : "field3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Fields",
+         "id" : "field4",
+         "description" : "\n   There is a lot of farmland round here, obviously. There are fields on every\nside of you.\n",
+         "altitude" : "950"
+      },
+      "mirror5@eirias" : {
+         "exits" : {
+            "w" : "mirror5",
+            "e" : "mirror3",
+            "n" : "mirror6",
+            "s" : "mirror4"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "eirias",
+         "title" : "Maze of Mirrors",
+         "id" : "mirror5",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of\nyourself. It is a maze of mirrors...\n",
+         "altitude" : null
+      },
+      "cottage@eirias" : {
+         "exits" : {
+            "e" : "clearing"
+         },
+         "flags" : [],
+         "zone" : "eirias",
+         "title" : "Cottage",
+         "id" : "cottage",
+         "description" : "\n   There is one small window that lets in a dim shadowy light, a broken shutter\nhangs from that wall. There are a couple of crude shelves on the wall, but \nthis cottage was never lived in. Probably used for animals, judging by the \nsmell.\n",
+         "altitude" : null
+      },
+      "tree4@eirias" : {
+         "exits" : {
+            "n" : "tree5",
+            "s" : "tree3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Fourth Tree - Hazel",
+         "id" : "tree4",
+         "description" : "\n   The tree is broad and spreading, with the blunt rounded leaves and budding\nfeathery nuts seen in a lot of country hedges. Hazel is said to be for healing,\nand for feeding starving travellers.\n",
+         "altitude" : "950"
+      },
+      "gallery@eirias" : {
+         "exits" : {
+            "w" : "^galdoor",
+            "e" : "light",
+            "d" : "inside"
+         },
+         "flags" : [],
+         "zone" : "eirias",
+         "title" : "Gallery",
+         "id" : "gallery",
+         "description" : "\n   You come up through a trapdoor, close to one end of a long gallery. The \nfloor stretches before you in curious sections, one after another, on different \nlevels, so that one might be higher than the one before, and the next lower \nthan either. The place seems to be a kind of library. Heavy square tables and \nchairs fill it, separated by low stacks of bookshelves, and the wall on your \nleft is covered entirely in books. The ceiling is wood-panelled. There are \npeople throughout the room, looking at various books, but they don't seem to \nsee or hear you. You look at one book a man is holding, but the title seems to \nbe in a foreign language and the pages are completely blank. You walk up the \nlength of the gallery, past all the people. As you turn a corner, the last \nsection of the gallery is filled with strong light blazing in from whatever \nlies beyond.\n",
+         "altitude" : null
+      },
+      "coach@eirias" : {
+         "exits" : {
+            "n" : "garden"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "The Coach",
+         "id" : "coach",
+         "description" : "\n   The coach begins to move as soon as you are inside. You look out of the \nwindow, into the brightness of the street. You are moving along a broad street \nlined with curving arcades of houses that seem to you strangely beautiful, with \ntheir clear lines and arches doors and wide-set, even windows, and walls of \nwarm golden stone. Then the brightness of the sun seems to dim a little, and as \nyou look outside to see why, you can see a rider following the coach. You don't \nknow why, but you know he is evil. He gallops effortlessly past you and onwards \ntowards your destination. The coach follows him, and turns into the entrance to \na magnificent garden. It stops suddenly and you know you have arrived.\n",
+         "altitude" : "1000"
+      },
+      "field7@eirias" : {
+         "exits" : {
+            "e" : "field2",
+            "w" : "field6",
+            "n" : "field4",
+            "s" : "river"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Fields",
+         "id" : "field7",
+         "description" : "\n   There is a lot of farmland round here, obviously. There are fields on every\nside of you, except for the river which is to the south.\n",
+         "altitude" : "950"
+      },
+      "forest3@eirias" : {
+         "exits" : {
+            "n" : "forest4",
+            "s" : "forest2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Deep Forest",
+         "id" : "forest3",
+         "description" : "\n  You can hear nothing now except the creaking of the coachs wheels as it \nmoves along the track. The path is completely overgrown, yet still visible; \ncovered, as if to mark it from its surroundings, by a mat of some small \ncreeping weed with dark green leaves. It is quite dark in here, and gloomy.\n",
+         "altitude" : "900"
+      },
+      "inside@eirias" : {
+         "exits" : {
+            "w" : "^indoor",
+            "u" : "gallery"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eirias",
+         "title" : "Inside",
+         "id" : "inside",
+         "description" : "\n   A glimmer of light from somewhere, untraceable, shows you that you are in a \nnarrow corridor, low-roofed, ending a few yards ahead where a ladder rises \nupwards out of sight.\n",
+         "altitude" : null
+      },
+      "tree5@eirias" : {
+         "exits" : {
+            "n" : "tree6",
+            "s" : "tree4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Fifth Tree - Holly",
+         "id" : "tree5",
+         "description" : "\n   The tree has a smooth grey trunk, it glossy dark green leaves sharp-spined\non the lower branches, and smooth ovals higher up.\n",
+         "altitude" : "950"
+      },
+      "forest2@eirias" : {
+         "exits" : {
+            "n" : "forest3",
+            "s" : "forest1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Deeper into the Forest",
+         "id" : "forest2",
+         "description" : "\n   There are patches of grass growing in the sand of the track now, and the \narms of creeping plants reaching across. The air is cool as the forest grows \ndeeper. Few birds sing here. The trees are larger and thicker.. the forest goes\non and on.\n",
+         "altitude" : "900"
+      },
+      "mirror4@eirias" : {
+         "exits" : {
+            "w" : "mirror5",
+            "e" : "mirror3",
+            "n" : "mirror2",
+            "s" : "mirror4"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "eirias",
+         "title" : "Maze of Mirrors",
+         "id" : "mirror4",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of\nyourself. It is a maze of mirrors...\n",
+         "altitude" : null
+      },
+      "mirror9@eirias" : {
+         "exits" : {
+            "w" : "mirror9",
+            "e" : "mirror7",
+            "n" : "mirror10",
+            "s" : "mirror8"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "eirias",
+         "title" : "Maze of Mirrors",
+         "id" : "mirror9",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of\nyourself. It is a maze of mirrors...\n",
+         "altitude" : null
+      },
+      "light@eirias" : {
+         "exits" : {
+            "w" : "gallery"
+         },
+         "flags" : [],
+         "zone" : "eirias",
+         "title" : "Light",
+         "id" : "light",
+         "description" : "\n   A great empty expanse of floor stretches before you, its walls lost in \nshadow, its roof too high to be seen. A strong resonant voice says, \"Welcome to \nthe Lost Land. You may call me Gwion. Have you come for Eirias, the crystal \nsword?\"\n",
+         "altitude" : null
+      },
+      "mirror6@eirias" : {
+         "exits" : {
+            "w" : "mirror6",
+            "e" : "mirror7",
+            "n" : "mirror4",
+            "s" : "mirror5"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "eirias",
+         "title" : "Maze of Mirrors",
+         "id" : "mirror6",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of\nyourself. It is a maze of mirrors...\n",
+         "altitude" : null
+      },
+      "field1@eirias" : {
+         "exits" : {
+            "w" : "field2",
+            "e" : "field4",
+            "n" : "field3",
+            "s" : "clearing2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Fields",
+         "id" : "field1",
+         "description" : "\n   There is a lot of farmland round here, obviously. There are fields on every\nside of you, except south which is the clearing by the forest.\n",
+         "altitude" : "950"
+      },
+      "mirror10@eirias" : {
+         "exits" : {
+            "w" : "mirror10",
+            "e" : "deadend",
+            "n" : "mirror8",
+            "s" : "mirror9"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "eirias",
+         "title" : "Maze of Mirrors",
+         "id" : "mirror10",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of\nyourself. It is a maze of mirrors...but you think you see something different\nto the east...\n",
+         "altitude" : null
+      },
+      "mirror2@eirias" : {
+         "exits" : {
+            "w" : "mirror2",
+            "e" : "mirror3",
+            "n" : "mirror2",
+            "s" : "mirror2"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "eirias",
+         "title" : "Maze of Mirrors",
+         "id" : "mirror2",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of\nyourself. It is a maze of mirrors...\n",
+         "altitude" : null
+      },
+      "tree7@eirias" : {
+         "exits" : {
+            "n" : "wydyr",
+            "s" : "tree6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Seventh Tree - Oak",
+         "id" : "tree7",
+         "description" : "\n   The king of trees, the sturdy oak is massive, and towers above all the \nother trees here. You could fit twenty men in the shade its branches cast, and\nit is cool and beautiful standing here.\n",
+         "altitude" : "950"
+      },
+      "lostland@eirias" : {
+         "exits" : {
+            "d" : "^latticeup"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "The Lost Land",
+         "id" : "lostland",
+         "description" : "\n   You stand high up, on a golden roof, behind a low &+ylattice&* of wrought gold. \nBehind you, and at either side, stretch the roofs of a great city, gleaming \nspires, towers and turrets crowding the skyline, some as golden as the place \nwhere you stand, some dark as night. You can see, amongst the peaks and ridges \nof the roofs, a great golden dome, topped with a golden arrow pointing \nwestwards to the blue horizon-line of the sea. The sides of the dome are banded \nwith panels of crystal running between strips of gold.\n",
+         "altitude" : "1000"
+      },
+      "road@eirias" : {
+         "exits" : {},
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Along the Road",
+         "id" : "road",
+         "description" : "\n  OK if you got this far you aren't mortal so WHAT THE HECK are you doing the\nquest for? *grin*\n",
+         "altitude" : "900"
+      },
+      "fountain@eirias" : {
+         "exits" : {
+            "s" : "garden"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "The Fountain",
+         "id" : "fountain",
+         "description" : "\n   In the great circle of the garden, formal balustrades and seats of white \nmarble are set around a glittering &+Cfountain&* where three white dolphins \nendlessly leap, spouting a high triple spray of tasselled water drops, with a \nfaint arching rainbow caught all over by the sun. And as if to offset the cool \nlines of the marble, mounds of roses grow everywhere, tall as trees.\n",
+         "altitude" : "1000"
+      },
+      "tree1@eirias" : {
+         "exits" : {
+            "w" : "river",
+            "n" : "tree2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "First Tree - Alder",
+         "id" : "tree1",
+         "description" : "\n   Facing you, with their backs to the river, are a crowded clump of slender\ntrunks, green-barked, with broad round dancing leaves. Alder, growing with its\nfeet wet, as the saying goes. The tree of fire, to free the earth from water.\n",
+         "altitude" : "950"
+      },
+      "wooddoor@eirias" : {
+         "exits" : {
+            "w" : "^doorcoach",
+            "e" : "^wooden",
+            "u" : "^latticedown"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Wooden Door",
+         "id" : "wooddoor",
+         "description" : "\n   You are standing in front of a &+ywooden door&*, its surface scarred and pitted \nas if by age.\n",
+         "altitude" : "1000"
+      },
+      "staircase@eirias" : {
+         "exits" : {
+            "e" : "^stairdoor",
+            "u" : "balustrade",
+            "d" : "^secret"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "eirias",
+         "title" : "Staircase",
+         "id" : "staircase",
+         "description" : "\n   The stairs seem to wind endlessly up and up. You feel like you have been \non the stairs forever.\n",
+         "altitude" : null
+      },
+      "deadend@eirias" : {
+         "exits" : {
+            "w" : "mirror10"
+         },
+         "flags" : [],
+         "zone" : "eirias",
+         "title" : "Dead End?",
+         "id" : "deadend",
+         "description" : "\n   Suddenly, after the last turn, you come face to face with yourself in a \nblank mirrored wall. Is it a dead end? You seem to hear a voice whispering \"I\nthink you should perhaps remember it...\"\n",
+         "altitude" : null
+      },
+      "mountain@eirias" : {
+         "exits" : {
+            "w" : "hills1@caledonia",
+            "s" : "shore"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Mountain Path",
+         "id" : "mountain",
+         "description" : "\n   You are standing on a mountain path leading downwards towards a lake. A \nmist covers the lake and everything around you.\n",
+         "altitude" : "2500"
+      },
+      "balustrade@eirias" : {
+         "exits" : {
+            "d" : "staircase"
+         },
+         "flags" : [],
+         "zone" : "eirias",
+         "title" : "Balustrade",
+         "id" : "balustrade",
+         "description" : "\n   You find yourself behind a balustrade of pure wrought gold, looking out over \nthe gold and glittering roofs of the City and the mounded green sweep of the \npark, just as you did at the very beginning, but you are much higher up now. \nYou see that the balcony you are on is the lower rim of a great curving white \nand golden roof, and you realise that it is this, the Empty Palace of King \nGwyddno Garanhir, that is topped by the marvellous dome, banded in gold and \ncrystal, that you first saw glittering in the dawn. \n",
+         "altitude" : null
+      },
+      "clearing2@eirias" : {
+         "exits" : {
+            "w" : "cottage",
+            "e" : "field3",
+            "n" : "field1",
+            "s" : "field2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Out of the Forest",
+         "id" : "clearing2",
+         "description" : "\n   When you ran into the cottage, you seem to have lost track of the road\nsomehow, and all you can see around you now are fields, stretching off into \nthe distance. You have no idea which way to go, but you do remember that the \nroad was going north of here, or at least you think it was.\n",
+         "altitude" : "950"
+      },
+      "mirror3@eirias" : {
+         "exits" : {
+            "w" : "mirror3",
+            "e" : "mirror3",
+            "n" : "mirror2",
+            "s" : "mirror4"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "eirias",
+         "title" : "Maze of Mirrors",
+         "id" : "mirror3",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of\nyourself. It is a maze of mirrors...\n",
+         "altitude" : null
+      },
+      "mirror1@eirias" : {
+         "exits" : {
+            "e" : "mirror2"
+         },
+         "flags" : [],
+         "zone" : "eirias",
+         "title" : "Entrance to the Palace",
+         "id" : "mirror1",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of \nyourself. It is a corridor of mirrors leading only one way, east. There is no\nway out back to the courtyard.\n",
+         "altitude" : null
+      },
+      "forest1@eirias" : {
+         "exits" : {
+            "n" : "forest2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Forest",
+         "id" : "forest1",
+         "description" : "\n   The woodland through which you are passing is sparse and open at first, \nleafy with bracken and undergrowth, still bright through the dappling shade. \nThe road, though narrowed to a track, winds through the trees, clear and sandy, \nbut gradually it becomes less distinct.\n",
+         "altitude" : "900"
+      },
+      "towerent@eirias" : {
+         "exits" : {
+            "u" : "towerstairc"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Tower Entrance",
+         "id" : "towerent",
+         "description" : "\n   Brightness is everywhere: a soft greenish light filters through the quartz-\nlike walls of the room. It could be a cave of ice. But it is a cluttered, busy\nplace, as if someone left it in a hurry, while preoccupied with some great\ncomplex matter. Piles of curling manuscript lie on the tables and shelves, \nand on the thick rush mat that covers the floor; against one wall an enormous\nheavy table is littered with strips of shining metal, and chunks of glass and\nrock, red and white, and greenish-blue, all among an array of gleaming tools\nwhich are obviously delicate jewelry tools.\n",
+         "altitude" : "1000"
+      },
+      "field6@eirias" : {
+         "exits" : {
+            "e" : "field7",
+            "w" : "field3",
+            "n" : "field1",
+            "s" : "field5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Fields",
+         "id" : "field6",
+         "description" : "\n   There is a lot of farmland round here, obviously. There are fields on every\nside of you.\n",
+         "altitude" : "950"
+      },
+      "mirror7@eirias" : {
+         "exits" : {
+            "w" : "mirror7",
+            "e" : "mirror6",
+            "n" : "mirror5",
+            "s" : "mirror8"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "eirias",
+         "title" : "Maze of Mirrors",
+         "id" : "mirror7",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of\nyourself. It is a maze of mirrors...\n",
+         "altitude" : null
+      },
+      "mirror8@eirias" : {
+         "exits" : {
+            "w" : "mirror9",
+            "e" : "mirror7",
+            "n" : "mirror6",
+            "s" : "mirror8"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "eirias",
+         "title" : "Maze of Mirrors",
+         "id" : "mirror8",
+         "description" : "\n  All around, in an endless fierce glitter, are countless repeated images of\nyourself. It is a maze of mirrors...\n",
+         "altitude" : null
+      },
+      "tree3@eirias" : {
+         "exits" : {
+            "n" : "tree4",
+            "s" : "tree2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Third Tree - Birch",
+         "id" : "tree3",
+         "description" : "\n   A great knotted white tree rises before you, hard catkins dancing from its\nlong thin brown twigs. Beneath the fluttering green leaves it is an old tree, \nwith white-spotted scarlet toadstools growing between its roots.\n",
+         "altitude" : "950"
+      },
+      "square@eirias" : {
+         "exits" : {
+            "n" : "coach"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "City Square",
+         "id" : "square",
+         "description" : "\n   You are in a great open city square. It is edged by pillared grey-white \nbuildings gleaming in the sunlight, filled with people and music and the calls \nof traders at bright coloured stalls, and the sparkle and splash of water flung \nhigh by fountains.\n   There is a stir in the crowd, heads turning. You can see a coach, its roof \ndark blue and splendidly decorated with gold, and blue plumes tossing before it \nfrom the foreheads of tall midnight-black horses. A &+Ycrest&* is engraved on the \nglossy door of the coach in gold, higher than your head.\n",
+         "altitude" : "1000"
+      },
+      "palace@eirias" : {
+         "exits" : {
+            "u" : "mirror1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "The Courtyard",
+         "id" : "palace",
+         "description" : "\n   You are in the arched entrance to a courtyard. High pillared walls rise on \nall sides, set with tall nine-paned windows, and fantastic pointed towers rise \nabove the balustraded line of the roof. Every window is blank, there are no\nfaces anywhere. Before you, a narrowing stone staircase rises to a square\npillared doorway, ornamented with carved stone scrolls and figures, and a \nreplica of the crest of the leaping fish from the coach door.\n",
+         "altitude" : "1000"
+      },
+      "tree6@eirias" : {
+         "exits" : {
+            "n" : "tree7",
+            "s" : "tree5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Sixth Tree - Apple",
+         "id" : "tree6",
+         "description" : "\n   An ancient sprawling apple tree curves to the ground before you like a bent-\nbacked ancient man; it is the only tree that grows low and spreading and does\nnot tower over your head.\n",
+         "altitude" : "950"
+      },
+      "shore@eirias" : {
+         "exits" : {
+            "n" : "mountain"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Shore",
+         "id" : "shore",
+         "description" : "\n   You walk out of the mist into brilliant sunshine. Ahead of you is the lake, \nwith the sun glittering off the waves.  There is a vast expanse of trees all \naround you, stretching for miles to either side of you.\n",
+         "altitude" : "700"
+      },
+      "clearing@eirias" : {
+         "exits" : {
+            "w" : "cottage",
+            "n" : "road"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "eirias",
+         "title" : "Out of the Forest",
+         "id" : "clearing",
+         "description" : "\n   The coach stops here, and somehow you know you have to walk the rest of the\nway. You get out, and look around you. You have come out of the forest into\na country area, with a little lane continuing on northwards and fields all \naround. There is a little cottage to the west with a white maytree growing out\nof the roof.\n",
+         "altitude" : "900"
+      },
+      "towerstairc@eirias" : {
+         "exits" : {
+            "u" : "toproom",
+            "d" : "towerent"
+         },
+         "flags" : [],
+         "zone" : "eirias",
+         "title" : "Wrought-iron staircase",
+         "id" : "towerstairc",
+         "description" : "\n   You climb and climb this staircase, past rooms that are scattered with the\nimpedimenta of living, of eating and sleeping, and yet had too, the strange\ndeserted look of places left abandoned for a long time.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "blackrider@eirias" : {
+         "eflags" : [
+            "NegFireball",
+            "NegFrost",
+            "NegShock"
+         ],
+         "damage" : "8",
+         "location" : "tree7",
+         "armor" : "0",
+         "name" : "blackrider",
+         "examine" : "Another of the mighty Lords of the Dark, he is probably even more powerful than\nthe White Rider. Beware!",
+         "description" : "The Black Rider of the Dark stands here, barring your way to the seventh tree.",
+         "strength" : "750",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Black Rider",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "gwyddno@eirias" : {
+         "damage" : "0",
+         "location" : "toproom",
+         "armor" : "0",
+         "name" : "gwyddno",
+         "examine" : "\nThe Dark have shown Gwyddno his uncertainty, and trapped him within his own mind.",
+         "description" : "The King of the Lost Land, Gwyddno Garanhir, sits here.",
+         "strength" : "20",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic"
+         ]
+      },
+      "skeleton@eirias" : {
+         "damage" : "10",
+         "location" : "clearing",
+         "armor" : "0",
+         "name" : "skeleton",
+         "examine" : "\nIt is the Mari Llwyd, a nightmare figure from legend, used to frighten young\nchildren. It gets ever nearer you and you are terrified by it!",
+         "description" : "The skeleton of a giant horse prances in front of you blocking the way north.",
+         "sflags" : [
+            "Female",
+            "NoBody"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Mari Llwyd",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarNorth",
+            "NoCorpse"
+         ]
+      },
+      "rider@eirias" : {
+         "eflags" : [
+            "NegFrost"
+         ],
+         "damage" : "10",
+         "location" : "river",
+         "armor" : "0",
+         "name" : "rider",
+         "examine" : "\nHe is one of the mighty Lords of the Dark, and as such very powerful. Be wary.",
+         "description" : "The White Rider of the Dark stands here, sneering at you contemptuously.",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "White Rider",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "minion@eirias" : {
+         "damage" : "8",
+         "location" : "garden",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "minion",
+         "examine" : "You know this is the rider you saw from the coach.",
+         "description" : "A threatening minion of the dark powers blocks your way north.",
+         "strength" : "300",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "gwion@eirias" : {
+         "damage" : "0",
+         "location" : "light",
+         "armor" : "0",
+         "name" : "gwion",
+         "examine" : "\nGwion is a smallish man, not very tall, with a strong-featured face creased by \nhumour at the eyes and mouth, though with no sign of a smile now. His hair is \ngrey, tightly curled, and he has a neat crisp curling grey beard with a curious \ndark line down the centre like a stripe.",
+         "description" : "A small man stands here watching you.",
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic"
+         ]
+      }
+   }
+}

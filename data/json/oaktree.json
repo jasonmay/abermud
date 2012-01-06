@@ -18,7 +18,6 @@
          "desc[0]" : "A bust of fine Italian marble has been placed here."
       },
       "portal1@oaktree" : {
-         "desc[1]" : "",
          "location" : "IN_ROOM:Oaktree32",
          "oflags" : [
             "NoGet"
@@ -185,7 +184,6 @@
          "desc[0]" : "Some roots have been burned away allowing passage east."
       },
       "portal2@oaktree" : {
-         "desc[1]" : "",
          "location" : "IN_ROOM:Oaktree26",
          "oflags" : [
             "NoGet"
@@ -218,7 +216,7 @@
          "pname" : "water",
          "name" : "water",
          "bvalue" : "0",
-         "desc[0]" : ""
+         "desc[0]" : "There's fresh water here."
       },
       "soup@oaktree" : {
          "location" : "IN_ROOM:bedroom",
@@ -241,6 +239,7 @@
          ],
          "altname" : "painting",
          "name" : "picture",
+         "examine" : "What are you looking for?  A safe behind the painting?",
          "state" : "1",
          "size" : "20",
          "pname" : "picture",
@@ -250,7 +249,6 @@
          "desc[0]" : "\nA rather ugly looking painting of an old grue has been discarded here."
       },
       "depression@oaktree" : {
-         "desc[1]" : "",
          "location" : "IN_ROOM:Oaktree26",
          "oflags" : [
             "NoGet",
@@ -368,7 +366,7 @@
       },
       "spike@oaktree" : {
          "desc[1]" : "There is a silvery object laying in the ashes of the sapling.",
-         "location" : "IN_ROOM:Oaktree35",
+         "location" : "IN_ROOM:limbo@limbo",
          "oflags" : [
             "Destroyed",
             "GetFlips"
@@ -390,7 +388,7 @@
          ],
          "altname" : "silver",
          "name" : "whistle",
-         "examine" : "\nThe whistle is shaped like a dog's head and bears the engraving:\n\"Ottimo Massimo\"",
+         "examine" : "\nThe whistle is shaped like a dog's head and bears the engraving:\nQQUOTOttimo MassimoQQUOT",
          "size" : "2",
          "weight" : "1",
          "bvalue" : "200",
@@ -514,6 +512,7 @@
          ],
          "altname" : "lion",
          "name" : "mouth1",
+         "examine" : "It looks like there was something in its mouth at one time.",
          "linked" : "mouth2",
          "state" : "1",
          "size" : "0",
@@ -653,7 +652,8 @@
       "mansion@oaktree" : {
          "exits" : {
             "w" : "Entrance",
-            "u" : "Landing"
+            "u" : "Landing",
+            "s" : "fairytale99@fairytale"
          },
          "flags" : [],
          "zone" : "oaktree",
@@ -873,7 +873,8 @@
       },
       "gardens@oaktree" : {
          "exits" : {
-            "e" : "Entrance"
+            "e" : "Entrance",
+            "n" : "fairytale1@fairytale"
          },
          "flags" : [
             "Outdoors"
@@ -1067,13 +1068,19 @@
       "sapling@oaktree" : {
          "damage" : "10",
          "location" : "Oaktree35",
-         "speed" : "0",
-         "aggression" : "0",
-         "armor" : "0",
-         "pname" : "Sapling",
-         "name" : "Sapling",
+         "armor" : "10",
+         "name" : "sapling",
          "description" : "\n  There is a small Sapling standing majestically here absorbing bolts of \nlightning and casting a few of its own back at the sky.",
-         "strength" : "100"
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Sapling",
+         "aggression" : "0",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "dryad@oaktree" : {
          "damage" : "10",
@@ -1094,13 +1101,18 @@
          "location" : "Oaktree34",
          "armor" : "0",
          "name" : "Ent",
+         "examine" : "His branches look a little wilted, perhaps you should water him?",
          "description" : "There is a large Tree Ent blocking the entrance.",
+         "sflags" : [
+            "NoLegs"
+         ],
          "strength" : "180",
          "speed" : "0",
-         "pname" : "Ent",
          "aggression" : "0",
+         "pname" : "Ent",
          "pflags" : [
-            "NoSummon"
+            "NoSummon",
+            "NoHassle"
          ],
          "mflags" : [
             "BarEast"
@@ -1166,6 +1178,7 @@
          ],
          "mflags" : [
             "NoGrab",
+            "GrabHostile",
             "NoSteal"
          ]
       }

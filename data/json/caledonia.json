@@ -136,7 +136,7 @@
          "bvalue" : "0",
          "desc[0]" : "A young pine sapling is growing here."
       },
-      "blaeberries@caledonia" : {
+      "blueberries@caledonia" : {
          "desc[1]" : "You spy a large number of dark blue berries in amongst the heather.",
          "damage" : "0",
          "location" : "IN_ROOM:hills5",
@@ -146,7 +146,7 @@
          ],
          "armor" : "0",
          "altname" : "berries",
-         "name" : "blaeberries",
+         "name" : "blueberries",
          "size" : "1",
          "state" : "1",
          "weight" : "0",
@@ -264,7 +264,7 @@
       "hills2@caledonia" : {
          "exits" : {
             "w" : "hills5",
-            "e" : "hills1",
+            "e" : "Brookmere1@brookmere",
             "n" : "hills3",
             "s" : "hills4"
          },
@@ -293,6 +293,7 @@
       },
       "hills15@caledonia" : {
          "exits" : {
+            "e" : "hills1",
             "w" : "hills18",
             "n" : "hills12"
          },
@@ -308,6 +309,7 @@
       "hills8@caledonia" : {
          "exits" : {
             "w" : "hills4",
+            "n" : "Brookmere1@brookmere",
             "s" : "hills12"
          },
          "flags" : [
@@ -394,20 +396,22 @@
       },
       "hills7@caledonia" : {
          "exits" : {
-            "w" : "hills3"
+            "w" : "hills3",
+            "s" : "Brookmere1@brookmere"
          },
          "flags" : [
             "Outdoors"
          ],
          "zone" : "caledonia",
-         "title" : "Ardvreck Castle",
+         "title" : "Brookmere Castle",
          "id" : "hills7",
          "description" : "\n    You are wandering about amongst the ruins of an old castle.  One solitary\ntower remains standing, as well as much of the outer wall, but you discount\nimmediately any thought of an ascent - the crumbling stone looks as if it may\ncollapse at any time.  Once, though, you can imagine, this was probably an\nimpressive place, though somewhat vulnerable to assault.  Perhaps that is why\nit now lies in ruins.\n",
          "altitude" : "1200"
       },
       "hills1@caledonia" : {
          "exits" : {
-            "w" : "hills2",
+            "e" : "mountain@eirias",
+            "w" : "hills15",
             "d" : "Gap@valley"
          },
          "flags" : [
@@ -473,13 +477,16 @@
       "eagle@caledonia" : {
          "damage" : "10",
          "location" : "hills10",
-         "speed" : "0",
-         "aggression" : "30",
          "armor" : "0",
-         "pname" : "Golden Eagle",
          "name" : "Eagle",
          "description" : "A golden eagle is perched proudly on the rocky peak.",
-         "strength" : "60"
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "Golden Eagle",
+         "aggression" : "30",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "badger@caledonia" : {
          "damage" : "10",
@@ -488,7 +495,7 @@
          "aggression" : "0",
          "armor" : "0",
          "name" : "Badger",
-         "description" : "A badger is peering at you from its sett with sleepy eyes.",
+         "description" : "A badger is peering at you from its set with sleepy eyes.",
          "strength" : "50"
       },
       "cow@caledonia" : {
@@ -508,13 +515,16 @@
       "marten@caledonia" : {
          "damage" : "8",
          "location" : "hills12",
-         "speed" : "1",
-         "aggression" : "30",
          "armor" : "0",
-         "pname" : "Pine Marten",
          "name" : "Marten",
          "description" : "A vicious little pine marten nips at your heels.",
-         "strength" : "25"
+         "strength" : "25",
+         "speed" : "1",
+         "pname" : "Pine Marten",
+         "aggression" : "30",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "adder@caledonia" : {
          "damage" : "10",
@@ -523,7 +533,9 @@
          "name" : "Adder",
          "description" : "An adder hisses at you when you almost step on her.",
          "sflags" : [
-            "Female"
+            "Female",
+            "Noarms",
+            "NoLegs"
          ],
          "strength" : "40",
          "speed" : "0",

@@ -141,9 +141,11 @@
       "pearls@abyss" : {
          "desc[1]" : "A string of pearls is on the altar.",
          "location" : "IN_ROOM:Web",
+         "armor" : "45",
          "oflags" : [
             "GetFlips",
-            "Wearable"
+            "Wearable",
+            "Armor"
          ],
          "altname" : "string",
          "name" : "pearls",
@@ -180,6 +182,13 @@
          "name" : "box",
          "bvalue" : "0",
          "size" : "1"
+      },
+      "weapon@abyss" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "weapon"
       },
       "carbuncle@abyss" : {
          "location" : "IN_ROOM:Cell",
@@ -223,18 +232,17 @@
          "desc[0]" : "A clear potion has been left here."
       },
       "slimyboulder@abyss" : {
-         "desc[1]" : "\nA huge boulder blocks the tunnel.",
+         "desc[1]" : "A huge boulder blocks the tunnel.",
          "location" : "IN_ROOM:Slimy",
          "oflags" : [
             "Pushable",
             "Noget"
          ],
-         "name" : "SlimyBoulder",
-         "linked" : "L663Boulder",
-         "state" : "1",
          "pname" : "boulder",
-         "maxstate" : "0",
-         "desc[0]" : "\n"
+         "name" : "SlimyBoulder",
+         "maxstate" : "1",
+         "linked" : "L663Boulder",
+         "state" : "1"
       },
       "dust@abyss" : {
          "location" : "IN_ROOM:Shelf",
@@ -292,7 +300,7 @@
          "desc[0]" : "The door is open."
       },
       "longsword@abyss" : {
-         "desc[1]" : "A broken longsword lies half burried in the dust.",
+         "desc[1]" : "A broken longsword lies half buried in the dust.",
          "damage" : "8",
          "location" : "IN_ROOM:Bones",
          "oflags" : [
@@ -386,6 +394,17 @@
          "maxstate" : "0",
          "desc[0]" : "A stairway leading downward has been cleared of rubble."
       },
+      "volume@abyss" : {
+         "location" : "IN_ROOM:Pile",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_VI",
+         "name" : "volume",
+         "examine" : "\nThe chance of spells increases by 8 percent with each increment to\nyour knowledge.   Each powerstone carried also increases the chance\nby 8 percent, as does the sunstone.  The mana increases the chance \nby 16 percent.",
+         "desc[0]" : "&+YVolume VI&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "6"
+      },
       "timber@abyss" : {
          "desc[1]" : "There is a good sized timber among the fallen trees.",
          "location" : "IN_ROOM:Trees",
@@ -404,7 +423,7 @@
       },
       "bodyarmor@abyss" : {
          "desc[1]" : "Hanging on the coat rack is Abaddon's body-armor.",
-         "location" : "IN_ROOM:Secret",
+         "location" : "IN_ROOM:secret",
          "armor" : "60",
          "oflags" : [
             "GetFlips",
@@ -873,7 +892,7 @@
          "zone" : "abyss",
          "title" : "Control Room",
          "id" : "Control",
-         "description" : "\n   A large table dominates this room. On the table are charts, maps and\nvarious scraps of vellum that detail the construction of a new world.\nA piece of slate has been mounted on the back wall and on the slate are\nstrange formulae written with colored chalk.\n",
+         "description" : "\n   A large table dominates this room. On the table are charts, maps, and\nvarious scraps of vellum that detail the construction of a new world.\nA piece of slate has been mounted on the back wall and on the slate are\nstrange formulae written with colored chalk.\n",
          "altitude" : null
       },
       "pillars3@abyss" : {
@@ -901,7 +920,7 @@
          "zone" : "abyss",
          "title" : "Snare of Guxx",
          "id" : "Snare2",
-         "description" : "\n   You are in a labrynth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
+         "description" : "\n   You are in a labyrinth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
          "altitude" : null
       },
       "bank1@abyss" : {
@@ -1109,7 +1128,7 @@
          "zone" : "abyss",
          "title" : "Husk Pile",
          "id" : "Pile",
-         "description" : "\n   Decayed filth coats the floor here and overpowers you with its odor.\nWeb enshrouded husks of various creatures, some of which are the remains\nof humans, are piled underneath a shaft in the ceiling.  \n",
+         "description" : "\n   Decayed filth coats the floor here and overpowers you with its odor.\nWeb-enshrouded husks of various creatures, some of which are the remains\nof humans, are piled underneath a shaft in the ceiling.  \n",
          "altitude" : null
       },
       "pain@abyss" : {
@@ -1123,7 +1142,7 @@
          "zone" : "abyss",
          "title" : "Archway of Pain",
          "id" : "Pain",
-         "description" : "\n   At the far end of the vault here is a twenty foot high archway. On either\nside of the arch is a mound of skulls and set above the keystone is a statue\nof a large winged demon, half ram - half human. Through the arch to the west\ncan be seen a large palatial room.\n",
+         "description" : "\n   At the far end of the vault here is a twenty-foot-high archway. On either\nside of the arch is a mound of skulls and set above the keystone is a statue\nof a large winged demon, half ram - half human. Through the arch to the west\ncan be seen a large palatial room.\n",
          "altitude" : null
       },
       "web@abyss" : {
@@ -1197,7 +1216,7 @@
          "zone" : "abyss",
          "title" : "Snare of Guxx",
          "id" : "Snare6",
-         "description" : "\n   You are in a labrynth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
+         "description" : "\n   You are in a labyrinth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
          "altitude" : null
       },
       "swamp3@abyss" : {
@@ -1270,7 +1289,7 @@
          "zone" : "abyss",
          "title" : "Widow's Lair",
          "id" : "Widow",
-         "description" : "\n   This is where the Black Widow makes her home. Her latest conquest hangs\nfrom the ceiling in a cocoon of silk. From a dark shaft at your feet comes\na stomach turning odor.\n",
+         "description" : "\n   This is where the Black Widow makes her home. Her latest conquest hangs\nfrom the ceiling in a cocoon of silk. From a dark shaft at your feet comes\na stomach-turning odor.\n",
          "altitude" : null
       },
       "wicket@abyss" : {
@@ -1355,7 +1374,7 @@
          "zone" : "abyss",
          "title" : "Snare of Guxx",
          "id" : "Snare7",
-         "description" : "\n   You are in a labrynth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
+         "description" : "\n   You are in a labyrinth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
          "altitude" : null
       },
       "pillars6@abyss" : {
@@ -1464,7 +1483,7 @@
          "zone" : "abyss",
          "title" : "Westside Room",
          "id" : "Westside",
-         "description" : "\n   This is a small room used by the Demon Queen's attendants to rest between\nsacrifices. It is barren, cold and dark.\n",
+         "description" : "\n   This is a small room used by the Demon Queen's attendants to rest between\nsacrifices. It is barren, cold, and dark.\n",
          "altitude" : null
       },
       "snare4@abyss" : {
@@ -1494,7 +1513,7 @@
          "zone" : "abyss",
          "title" : "Boggy Bank",
          "id" : "Boggy",
-         "description" : "\n   The ground gets softer the further south you move along the mucus river.\nIn that direction you see a stand of trees partially obscurred by mist.\nThe river runs right up to the bank here, allowing easy boat launching.\n",
+         "description" : "\n   The ground gets softer the further south you move along the mucus river.\nIn that direction you see a stand of trees partially obscured by mist.\nThe river runs right up to the bank here, allowing easy boat launching.\n",
          "altitude" : null
       },
       "pillars9@abyss" : {
@@ -1550,7 +1569,7 @@
          "zone" : "abyss",
          "title" : "Web City",
          "id" : "City",
-         "description" : "\n   You are standing amoung a cluster of boulders high up on one side of a\nlarge cavern. The other side of the cavern is filled with giant spider webs.\nBelow you the cavern is split by a gaping chasm. A path winds down from here\ntoward a bridge, which spans the chasm.\n",
+         "description" : "\n   You are standing among a cluster of boulders high up on one side of a\nlarge cavern. The other side of the cavern is filled with giant spider webs.\nBelow you the cavern is split by a gaping chasm. A path winds down from here\ntoward a bridge, which spans the chasm.\n",
          "altitude" : null
       },
       "goo@abyss" : {
@@ -1659,7 +1678,7 @@
          "zone" : "abyss",
          "title" : "In the Rocks",
          "id" : "Rocks",
-         "description" : "\n   This mound of rocks could have been the ancient remains of a watchtower\nthat afforded a good view of the river. The far bank looks even more desolate\nand forbidding than the near one, it is probably a good thing that the river\nseperates them. Up river, to the north, the current is much swifter as it\ngushes through a rocky narrow canyon. To the south the river wends it way\nslowly out of sight.\n",
+         "description" : "\n   This mound of rocks could have been the ancient remains of a watchtower\nthat afforded a good view of the river. The far bank looks even more desolate\nand forbidding than the near one, it is probably a good thing that the river\nseparates them. Up river, to the north, the current is much swifter as it\ngushes through a rocky narrow canyon. To the south the river wends it way\nslowly out of sight.\n",
          "altitude" : null
       },
       "pillars2@abyss" : {
@@ -1753,7 +1772,7 @@
          "zone" : "abyss",
          "title" : "Snare of Guxx",
          "id" : "Snare3",
-         "description" : "\n   You are in a labrynth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
+         "description" : "\n   You are in a labyrinth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
          "altitude" : null
       },
       "cellar@abyss" : {
@@ -1806,7 +1825,7 @@
          "zone" : "abyss",
          "title" : "Snare of Guxx",
          "id" : "Snare1",
-         "description" : "\n   You are in a labrynth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
+         "description" : "\n   You are in a labyrinth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
          "altitude" : null
       },
       "pillars4@abyss" : {
@@ -1846,7 +1865,7 @@
          "zone" : "abyss",
          "title" : "Eastside Room",
          "id" : "Eastside",
-         "description" : "\n   This is a small room used by the Demon Queen's attendants to rest between\nsacrifices. It is barren, cold and dark.\n",
+         "description" : "\n   This is a small room used by the Demon Queen's attendants to rest between\nsacrifices. It is barren, cold, and dark.\n",
          "altitude" : null
       },
       "bottom@abyss" : {
@@ -1896,7 +1915,7 @@
          "zone" : "abyss",
          "title" : "Snare of Guxx",
          "id" : "Snare5",
-         "description" : "\n   You are in a labrynth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
+         "description" : "\n   You are in a labyrinth of steel walls and doors designed to keep prisoners\nfrom escaping this demonic prison. The walls seem to shift as you move around.\n",
          "altitude" : null
       },
       "forge@abyss" : {
@@ -1909,7 +1928,7 @@
          "zone" : "abyss",
          "title" : "Demon's Forge",
          "id" : "Forge",
-         "description" : "\n   Heat scorched bricks line this room and the floor is covered in sand.\nScraps of iron, steel and other metals lie about the room. Tongs, hammers\nand various other tools line the walls. A large anvil sits next to a forge\nand bellows.\n",
+         "description" : "\n   Heat-scorched bricks line this room and the floor is covered in sand.\nScraps of iron, steel, and other metals lie about the room. Tongs, hammers,\nand various other tools line the walls. A large anvil sits next to a forge\nand bellows.\n",
          "altitude" : null
       },
       "downstream@abyss" : {
@@ -1989,7 +2008,7 @@
          "zone" : "abyss",
          "title" : "The Abyss",
          "id" : "Abyss",
-         "description" : "\n   You are at the face of an enormous curved basalt cliff that extends down\nout of sight into a dark pit. A small sign, hand painted in blood, tells you: \n\n     Mortals keep out!\n\nA black door set into the face of the cliff has a dark arrow above it pointing\ndown. A sign pasted on the door informs you the elevator is out of order.\nFor those hearty souls, a large, circular stairway has been carved into the,\ncliff face, allowing you to make the long descent into the black pit.\n",
+         "description" : "\n   You are at the face of an enormous curved basalt cliff that extends down\nout of sight into a dark pit. A small sign, hand painted in blood, tells you: \n\n     Mortals keep out!\n\nA black door set into the face of the cliff has a dark arrow above it pointing\ndown. A sign pasted on the door informs you the elevator is out of order.\nFor those hearty souls, a large, circular stairway has been carved into the\ncliff face, allowing you to make the long descent into the black pit.\n",
          "altitude" : null
       },
       "road3@abyss" : {
@@ -2016,7 +2035,7 @@
          "zone" : "abyss",
          "title" : "Store Room",
          "id" : "StoreRoom",
-         "description" : "\n   This is where the jailors keep spare chains, locks and food for their\nprisoners. Most of the shelves are empty now.\n",
+         "description" : "\n   This is where the jailors keep spare chains, locks, and food for their\nprisoners. Most of the shelves are empty now.\n",
          "altitude" : null
       },
       "cell@abyss" : {
@@ -2097,17 +2116,20 @@
          "strength" : "120"
       },
       "widow@abyss" : {
-         "damage" : "10",
+         "damage" : "20",
          "location" : "Widow",
-         "armor" : "0",
+         "armor" : "15",
          "name" : "Widow",
          "description" : "The Black Widow sits here spinning her web.",
          "sflags" : [
             "Female"
          ],
-         "strength" : "120",
+         "strength" : "150",
          "speed" : "0",
-         "aggression" : "35"
+         "aggression" : "85",
+         "mflags" : [
+            "BarD"
+         ]
       },
       "daemon@abyss" : {
          "damage" : "8",
@@ -2182,12 +2204,15 @@
       "mush@abyss" : {
          "damage" : "8",
          "location" : "Swamp3",
-         "speed" : "0",
          "armor" : "0",
-         "aggression" : "5",
          "name" : "Mush",
          "description" : "The brown mush sits here bubbling.",
-         "strength" : "50"
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "5"
       },
       "rocksteady@abyss" : {
          "damage" : "12",

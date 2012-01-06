@@ -2,12 +2,15 @@
    "obj" : {
       "sulphur@island" : {
          "location" : "IN_ROOM:waste1",
-         "weight" : "1",
+         "oflags" : [
+            "FireballSpell"
+         ],
          "altname" : "pile",
          "name" : "sulphur",
+         "size" : "1",
+         "weight" : "1",
          "bvalue" : "20",
-         "desc[0]" : "Some sulphur lies here in a small pile.",
-         "size" : "1"
+         "desc[0]" : "Some sulphur lies here in a small pile."
       },
       "spear@island" : {
          "damage" : "6",
@@ -24,7 +27,11 @@
       "feather@island" : {
          "location" : "IN_ROOM:path",
          "weight" : "1",
+         "oflags" : [
+            "ArmorSpell"
+         ],
          "name" : "feather",
+         "examine" : "\nLooking at the feather you imagine a dancer with feathers like this as\nher only protection.",
          "bvalue" : "100",
          "desc[0]" : "A multi-colored feather has been left here.",
          "size" : "1"
@@ -152,6 +159,7 @@
       },
       "path@island" : {
          "exits" : {
+            "e" : "island13",
             "n" : "Ruins2",
             "s" : "Cragg"
          },
@@ -161,7 +169,7 @@
          "zone" : "island",
          "title" : "Narrow Path",
          "id" : "Path",
-         "description" : "\n   You are following a narrow, and suprisingly, if not alarmingly, well used\npath.  The path leads northwards towards some ruins, and south through the\nbushes and trees, towards a low crag.\n",
+         "description" : "\n   You are following a narrow, and suprisingly, if not alarmingly, well used\npath.  The path leads northwards towards some ruins, and south through the\nbushes and trees, towards a low crag.  An additional path leads east.\n",
          "altitude" : "150"
       },
       "ruins1@island" : {
@@ -193,6 +201,34 @@
          "id" : "Beach",
          "description" : "\n   You are standing on a lonely sandy beach shielded from the howling winds by\ntwo huge old lava flows to the north and south. Thick bushes cover a huge array\nof old decaying ruins to the east.\n",
          "altitude" : "0"
+      },
+      "island15@island" : {
+         "exits" : {
+            "e" : "eosia1@eosia",
+            "w" : "island14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Road",
+         "id" : "island15",
+         "description" : "\n     The road definately has become more of a structure than it was towards\nthe west.  The air here is cooler than it was to the west.  Towards the east\nyou can see people on the road traveling.  A town must be ahead.\n",
+         "altitude" : "100"
+      },
+      "island14@island" : {
+         "exits" : {
+            "e" : "island15",
+            "w" : "island13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Path",
+         "id" : "island14",
+         "description" : "\n     The path becomes a worn road here, continuing along to the east.  Further\ntown the road, the vegetation becomes more thick, and the landscape a little\nflatter.  The road becomes a path to the west, where it turns around behind\na volcano.\n",
+         "altitude" : "100"
       },
       "bushes@island" : {
          "exits" : {
@@ -227,9 +263,24 @@
          "description" : "\n   You are clambering across a steep lava slope.  The slope is barren and bare\nsave for a few bushes which break from cracks in the rock.  Up above you to the\nnorth a narrow path zig zags to the rim of the volcano itself.\n",
          "altitude" : "150"
       },
+      "island13@island" : {
+         "exits" : {
+            "e" : "island14",
+            "w" : "Path"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "island",
+         "title" : "Path",
+         "id" : "island13",
+         "description" : "\n     You are following an easterly path along the base of the volcano.  It\nappears that this road, such as it is, has been used frequently.  You\ncan continue to follow it east, where it looks a little flatter, or head to\nthe west towards the shore.\n",
+         "altitude" : "150"
+      },
       "cragg@island" : {
          "exits" : {
-            "n" : "Path"
+            "n" : "Path",
+            "d" : "crystalcave1@crystalcave"
          },
          "flags" : [
             "Outdoors"

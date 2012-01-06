@@ -29,13 +29,16 @@
       },
       "cross@church" : {
          "location" : "IN_ROOM:behind",
-         "weight" : "40",
+         "oflags" : [
+            "Cross"
+         ],
          "altname" : "gold",
          "name" : "cross",
          "examine" : "\nThis cross would look just right on the wall of St. Patt, but seems out of\nplace here.",
+         "size" : "10",
+         "weight" : "40",
          "bvalue" : "200",
-         "desc[0]" : "A hefty gold cross lies sparkling before you!",
-         "size" : "10"
+         "desc[0]" : "A hefty gold cross lies sparkling before you!"
       },
       "wreath@church" : {
          "location" : "IN_ROOM:silent",
@@ -119,17 +122,20 @@
          "desc[0]" : "A long key lies here."
       },
       "rope@church" : {
-         "damage" : "12",
-         "location" : "IN_ROOM:bell",
-         "oflags" : [
+         "oflag" : [
             "NoGet"
          ],
+         "damage" : "12",
+         "location" : "IN_ROOM:bell",
          "name" : "rope"
       }
    },
    "loc" : {
       "n_barrow@church" : {
          "exits" : {
+            "e" : "gold1a@gold",
+            "w" : "NW_Barrow",
+            "n" : "BarrowLearn",
             "s" : "Barrow"
          },
          "flags" : [
@@ -138,7 +144,7 @@
          "zone" : "church",
          "title" : "The North Barrow",
          "id" : "N_Barrow",
-         "description" : "\n   You stand on the top of a large mound at the north end of the graveyard.\nA path leads back southward.\n   On a small gravestone is written \"Beware of the Moog\".\n",
+         "description" : "\n   You stand on the top of a large mound at the north end of the graveyard.\nTo the north you spy an old rotted out shack, perhaps property of the\ngravemaster.  A path also leads back southward.\n   On a small gravestone is written \"Beware of the Moog\".\n",
          "altitude" : "800"
       },
       "altar@church" : {
@@ -181,6 +187,7 @@
       "church1@church" : {
          "exits" : {
             "e" : "Decaying",
+            "n" : "way@blackknight",
             "s" : "Church2"
          },
          "flags" : [],
@@ -213,6 +220,19 @@
          "title" : "Gloop",
          "id" : "Gloop",
          "description" : "\n   You sink into the treacherous marsh with a gloop!\n",
+         "altitude" : null
+      },
+      "barrowlearn@church" : {
+         "exits" : {
+            "s" : "N_Barrow"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "church",
+         "title" : "Moog's Mutilation Taught",
+         "id" : "BarrowLearn",
+         "description" : "\n  Upon entering the small rotten shack, your feet crackle on what sound like\nnutshells.  What you have actually stepped on, you do not care to speculate. \nThe one known as Moog hobbles in through the rear of the shack with a \ncouple cages of mice. His appendages are disfigured, and his milky white \nstare leads you to believe he knows of your position by some other sense.\n",
          "altitude" : null
       },
       "entry@church" : {
@@ -326,6 +346,7 @@
       "g_yard@church" : {
          "exits" : {
             "w" : "Gloop",
+            "e" : "1@saic",
             "n" : "G_Yard2",
             "s" : "C_Yard"
          },
@@ -353,6 +374,7 @@
       },
       "t_barrow@church" : {
          "exits" : {
+            "e" : "ildharas00@ildharas",
             "w" : "Barrow",
             "d" : "^slab_top"
          },
@@ -379,6 +401,31 @@
          "description" : "\n   You stand on a set of slippery stone steps which lead both downwards and\nupwards from here.  Doorways lead south into a small room and west into the\nmain church hall.\n",
          "altitude" : null
       },
+      "barrowstudy@church" : {
+         "exits" : {},
+         "flags" : [
+            "Peaceful",
+            "SoundProof"
+         ],
+         "zone" : "church",
+         "title" : "Moog's Workout Grounds",
+         "id" : "BarrowStudy",
+         "description" : "\n  You learn quickly what the mice were for...Moog catches them to practice\nhis techniques on.  There must be dozens of mice skittering around, some\nlook dead, some look reasonably unharmed, while still others run headlong into\ntrees and stones.  Plenty for you to practice on... or cure?\n",
+         "altitude" : null
+      },
+      "nw_barrow@church" : {
+         "exits" : {
+            "e" : "N_Barrow"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "church",
+         "title" : "The Northwest Barrow",
+         "id" : "NW_Barrow",
+         "description" : "\n    The heaviness and darkness of this grave is so prevalent that even during\nthe middle of the day you need a light to see.  The mound here is overgrown\nwith weeds and the tombstone is old and uncared for.  The stone, although\naged and cracked, is readable, and says:\n\n  Do you know that it hurts?       Yet this is their reward?\n  Do you feel my pain?             Tied up in anguish?\n  Can you understand my meaning,   What example is this,\n  My reason for what I do?         That they do not understand?\n\n                     In the end I failed,\n                     At what I most loved,\n                     Hurting them, I care.\n\t\t\t\t\t-Pooka\n\t\t\t   \n",
+         "altitude" : "800"
+      },
       "c_yard@church" : {
          "exits" : {
             "e" : "Entry",
@@ -396,6 +443,18 @@
       }
    },
    "mob" : {
+      "teacher@church" : {
+         "damage" : "20",
+         "location" : "barrowlearn",
+         "armor" : "5",
+         "name" : "teacher",
+         "examine" : "\nMoog somehow notices yo looking, and directs an opaque stare at you.",
+         "description" : "\nMoog aims a level gaze your way and says '&+YYou have come to learn, yes?&*'",
+         "strength" : "75",
+         "speed" : "0",
+         "pname" : "The Moog",
+         "aggression" : "0"
+      },
       "zombie@church" : {
          "damage" : "10",
          "location" : "church2",
@@ -407,7 +466,8 @@
          "pname" : "The Zombie",
          "aggression" : "2",
          "mflags" : [
-            "Cross"
+            "Cross",
+            "Soulless"
          ]
       }
    }

@@ -1,0 +1,1838 @@
+{
+   "obj" : {
+      "cell_door_46s@ildharas" : {
+         "desc[1]" : "The cell door is closed.",
+         "location" : "IN_ROOM:ildharas45",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "cell_door_46s",
+         "desc[2]" : "The cell door is locked.",
+         "linked" : "cell_door_45",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The cell door is open."
+      },
+      "paintings@ildharas" : {
+         "location" : "IN_ROOM:ildharas20",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "tapestries",
+         "pname" : "paintings",
+         "name" : "paintings",
+         "examine" : " \nNot even their subjects are distinguishable anymore, such is the level of \ndestruction."
+      },
+      "bowl@ildharas" : {
+         "desc[1]" : "A golden bowl lies under the table.",
+         "location" : "IN_ROOM:ildharas32",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "golden",
+         "name" : "bowl",
+         "examine" : "Small whorls decorate the outside.  The inside is smooth and polished.",
+         "size" : "3",
+         "state" : "1",
+         "pname" : "bowl",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A golden bowl lies upon the ground."
+      },
+      "cell_door_51@ildharas" : {
+         "desc[1]" : "The northern cell door is closed.",
+         "location" : "IN_ROOM:ildharas52",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "northern",
+         "name" : "cell_door_51",
+         "desc[2]" : "The northern cell door is locked.",
+         "linked" : "cell_door_52",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The northern cell door is open."
+      },
+      "yorjudek_door_1@ildharas" : {
+         "location" : "IN_ROOM:ildharas49",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "yorjudek_door_1",
+         "linked" : "yorjudek_door_2",
+         "state" : "1",
+         "pname" : "wall",
+         "maxstate" : "1",
+         "desc[0]" : "The southern wall has vanished, allowing you to enter the cell."
+      },
+      "cell_door_45@ildharas" : {
+         "desc[1]" : "The southern cell door is closed.",
+         "location" : "IN_ROOM:ildharas46",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "southern",
+         "name" : "cell_door_45",
+         "desc[2]" : "The southern cell door is locked.",
+         "linked" : "cell_door_46s",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The southern cell door is open."
+      },
+      "force63@ildharas" : {
+         "desc[1]" : "A powerful force field blocks your way, you can only stand and watch.",
+         "location" : "IN_ROOM:ildharas62",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "force",
+         "name" : "force63",
+         "maxstate" : "1",
+         "linked" : "sigil",
+         "state" : "0"
+      },
+      "cell_door_47@ildharas" : {
+         "desc[1]" : "The northern cell door is closed.",
+         "location" : "IN_ROOM:ildharas46",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "northern",
+         "name" : "cell_door_47",
+         "desc[2]" : "The northern cell door is locked.",
+         "linked" : "cell_door_46n",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The northern cell door is open."
+      },
+      "crown@ildharas" : {
+         "location" : "IN_CONTAINER:satchel",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "crown",
+         "examine" : " \nBeautiful filigreed whorls decorate the outside.  The silver gleams brightly, \nbarely tarnished.",
+         "size" : "8",
+         "pname" : "crown",
+         "bvalue" : "200",
+         "desc[0]" : "An old silver crown lies here, awaiting a new wearer.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "candelabra@ildharas" : {
+         "desc[1]" : "A strange candelabra sits by the desk, it's candles casting a rich light\nabout the room.",
+         "location" : "IN_ROOM:ildharas58",
+         "oflags" : [
+            "GetFlips",
+            "Lightable",
+            "Extinguish",
+            "Lit"
+         ],
+         "altname" : "strange",
+         "name" : "candelabra",
+         "examine" : " \nThe gold has been carved to resemble flames.  When lit, the entire piece\nseems to burn with a light all its own.  ",
+         "size" : "15",
+         "state" : "0",
+         "pname" : "candelabra",
+         "maxstate" : "1",
+         "bvalue" : "70",
+         "desc[0]" : "A strange candelabra sits to the side."
+      },
+      "iron_door_2@ildharas" : {
+         "desc[1]" : "The doors are closed.",
+         "location" : "IN_ROOM:ildharas62",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "iron_door_2",
+         "linked" : "iron_door_1",
+         "state" : "1",
+         "pname" : "doors",
+         "maxstate" : "1",
+         "desc[0]" : "The doors are open."
+      },
+      "ring_signet@ildharas" : {
+         "desc[1]" : "A signet ring lies on the table.",
+         "location" : "IN_ROOM:ildharas58",
+         "oflags" : [
+            "Wearable",
+            "GetFlips"
+         ],
+         "altname" : "signet",
+         "name" : "ring_signet",
+         "examine" : "\nHighly polished, it houses a square ruby on the front, carved with the\nsymbol of a stylized lion.",
+         "size" : "1",
+         "pname" : "ring",
+         "bvalue" : "70",
+         "desc[0]" : "A signet ring lies nearby."
+      },
+      "king_door_2@ildharas" : {
+         "desc[1]" : "The king's door is closed.",
+         "location" : "IN_ROOM:ildharas41",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "king_door_2",
+         "desc[2]" : "The king's door is locked.",
+         "linked" : "king_door_1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The king's door is open."
+      },
+      "page_torn@ildharas" : {
+         "location" : "IN_ROOM:ildharas23",
+         "oflags" : "{  }",
+         "altname" : "torn",
+         "name" : "page_torn",
+         "examine" : " \n...Technology has made the Eye more concrete.  The conditions of modern \nsociety encourage the Eye's acceptance as an integral part of life.  It has \nbecome like a modern-day God.  Mythologies over the centuries often had \ndeities who saw their peoples and took interest in their lives...Those who \nwatch us now, however, we know for fellow humans.  Big Brother has usurped \nthe place of the deity.  We take this human Eye for granted.  How often do \nwe think of the security cameras that track our movements through a store?  \nOr the data that is gathered when we charge a purchase? We...",
+         "size" : "1",
+         "pname" : "page",
+         "bvalue" : "50",
+         "desc[0]" : "A torn page rests against your foot."
+      },
+      "iron_door_1@ildharas" : {
+         "desc[1]" : "The doors are closed.",
+         "location" : "IN_ROOM:ildharas61",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "iron_door_1",
+         "linked" : "iron_door_2",
+         "state" : "1",
+         "pname" : "doors",
+         "maxstate" : "1",
+         "desc[0]" : "The doors are open."
+      },
+      "sign@ildharas" : {
+         "location" : "IN_ROOM:ildharas49",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "sign",
+         "examine" : "Here is Yorjudek, imprisoned for his annoying stupidity.",
+         "desc[0]" : "A sign has been posted on the southern wall."
+      },
+      "area@ildharas" : {
+         "location" : "IN_ROOM:ildharas21",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "blackened",
+         "pname" : "area",
+         "name" : "area",
+         "examine" : " \nThe flames were so hot they melted the stone around them.  Certainly not an \nordinary blaze."
+      },
+      "sigil@ildharas" : {
+         "location" : "IN_ROOM:ildharas63",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "sigil",
+         "name" : "sigil",
+         "examine" : " \nYou notice a small circular groove cut into the exact center of the star.\nIt's ring shaped, with a notch on one side to allow for a stone.\n",
+         "linked" : "force63",
+         "state" : "0",
+         "size" : "1",
+         "pname" : "wardment",
+         "maxstate" : "1"
+      },
+      "ruby@ildharas" : {
+         "location" : "IN_ROOM:ildharas55",
+         "oflags" : "{ }",
+         "altname" : "large",
+         "name" : "ruby",
+         "examine" : " \nFlawless and faceted, it weighs about 200 karats.  When you look at it \nclosely, you imagine you can see someone wandering around inside, but it's \nprobably just a trick of the light.",
+         "size" : "2",
+         "pname" : "ruby",
+         "bvalue" : "200",
+         "desc[0]" : "A large ruby sits here, glittering with a malignant red light."
+      },
+      "demonslayer@ildharas" : {
+         "desc[1]" : "Lusitan's Demonslayer lies gleaming on the desk.",
+         "damage" : "25",
+         "location" : "IN_ROOM:ildharas58",
+         "oflags" : [
+            "Weapon",
+            "GetFlips"
+         ],
+         "armor" : "0",
+         "altname" : "sword",
+         "name" : "demonslayer",
+         "examine" : " Forged from an unknown metal, its style reminds you vaguely of Excalibur.\n",
+         "size" : "7",
+         "state" : "1",
+         "pname" : "Demonslayer",
+         "maxstate" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "Lusitan's Demonslayer lies here, gleaming with a cold light."
+      },
+      "cell_door_49@ildharas" : {
+         "desc[1]" : "The cell door is closed.",
+         "location" : "IN_ROOM:ildharas48",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "cell_door_49",
+         "desc[2]" : "The cell door is locked.",
+         "linked" : "cell_door_48",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The cell door is open."
+      },
+      "junk@ildharas" : {
+         "location" : "IN_ROOM:ildharas12",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "mess",
+         "name" : "junk",
+         "examine" : "What a mess!",
+         "state" : "1",
+         "pname" : "junk",
+         "maxstate" : "1"
+      },
+      "stick@ildharas" : {
+         "damage" : "5",
+         "location" : "WIELDED_BY:Ardast",
+         "oflags" : [
+            "Weapon",
+            "Lightable",
+            "Extinguish"
+         ],
+         "armor" : "0",
+         "name" : "stick",
+         "examine" : " \nEver since 225 damage, 225 armor sticks have been outlawed, the last owner \nof this one has not been doing too well.",
+         "size" : "5",
+         "pname" : "stick",
+         "bvalue" : "15",
+         "desc[0]" : "A gnarled stick lies here."
+      },
+      "map@ildharas" : {
+         "location" : "IN_ROOM:ildharas31",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "map",
+         "name" : "map",
+         "examine" : " \nThe map details the land as it was many many years ago.  Everything has \nchanged since then and the map has nothing but scholarly value.  In the \nlower right-hand corner are the initials M & F."
+      },
+      "medallion@ildharas" : {
+         "damage" : "0",
+         "location" : "WORN_BY:Maric",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "25",
+         "altname" : "wardment",
+         "name" : "medallion",
+         "examine" : " \nGleaming a cold silver, Lusitan's sigil Wardment is a seven-rayed star \nformed by a line going to every other point.",
+         "size" : "2",
+         "pname" : "medallion",
+         "bvalue" : "300",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "Lusitan's Wardment medallion lies here."
+      },
+      "coins@ildharas" : {
+         "desc[1]" : "Some gold coins lie scattered on the table.",
+         "location" : "IN_ROOM:ildharas66",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "counterfeit",
+         "name" : "coins",
+         "examine" : " \nThe coins would probably be more valuable if they were not filled with lead.",
+         "size" : "2",
+         "state" : "1",
+         "pname" : "coins",
+         "maxstate" : "1",
+         "bvalue" : "15",
+         "desc[0]" : "Some gold coins lie scattered upon the ground."
+      },
+      "yorjudek_door_2@ildharas" : {
+         "location" : "IN_ROOM:ildharas50",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "yorjudek_door_2",
+         "linked" : "yorjudek_door_1",
+         "state" : "1",
+         "pname" : "wall",
+         "maxstate" : "1",
+         "desc[0]" : "The northern wall has vanished, allowing you to exit the cell."
+      },
+      "letters@ildharas" : {
+         "location" : "IN_ROOM:ildharas33",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "blood",
+         "pname" : "letters",
+         "name" : "letters",
+         "examine" : " \nLooks like I've won, Lusitan.  I've killed your legend. --Falathzar"
+      },
+      "statue@ildharas" : {
+         "location" : "IN_ROOM:ildharas22",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "lusitan",
+         "pname" : "statue",
+         "name" : "statue",
+         "examine" : " \nIt still holds its power.  Looking closer, you notice that Lusitan's hair \nis waved around his brow, as if something used to encircle it.",
+         "desc[0]" : "The statue of Lusitan witnesses all that happens in the hall.\nThough it's covered with urine and feces, you still feel a sense of awe."
+      },
+      "stair_door_22@ildharas" : {
+         "location" : "IN_ROOM:ildharas56",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "stair_door_22",
+         "linked" : "stair_door_56",
+         "state" : "1",
+         "pname" : "ceiling",
+         "maxstate" : "1",
+         "desc[0]" : "The stairs end against a ceiling of stone."
+      },
+      "starstone@ildharas" : {
+         "desc[1]" : "Lying on the desk to one side is a reddish starstone.",
+         "location" : "IN_ROOM:ildharas41",
+         "oflags" : [
+            "Glowing",
+            "GetFlips"
+         ],
+         "name" : "starstone",
+         "examine" : " \nUncut, reddish and translucent, it seems to glow  with a light of its own.",
+         "size" : "2",
+         "state" : "1",
+         "pname" : "starstone",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "A reddish starstone lies here, emitting a soft light."
+      },
+      "cards@ildharas" : {
+         "location" : "IN_ROOM:ildharas41",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "tarot",
+         "pname" : "cards",
+         "name" : "cards",
+         "examine" : " \nThe reading starts with hope but then becomes rather grim.  The Two of \nSwords lies in the conclusionary position."
+      },
+      "walls@ildharas" : {
+         "location" : "IN_ROOM:ildharas55",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "outer",
+         "pname" : "walls",
+         "name" : "walls",
+         "examine" : "The breaks correspond perfectly to the breaches outside.\n"
+      },
+      "chink@ildharas" : {
+         "location" : "IN_ROOM:ildharas49",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "carving",
+         "name" : "chink",
+         "examine" : "\nYou see a stone pentagram within a circle.  A small chink in one side looks \nlike it was meant to be pushed out of alignment. ",
+         "state" : "1",
+         "pname" : "chink",
+         "maxstate" : "1"
+      },
+      "journal@ildharas" : {
+         "desc[1]" : "A journal lies open on the table.",
+         "location" : "IN_ROOM:ildharas66",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "diary",
+         "name" : "journal",
+         "examine" : " \nAll the pages have been snipped out except for the last entry.  Written by \nthe last king, it reads:\n\n   We know many things about Lusitan.  He founded our nation. He constructed \nthe castle, he ruled during a time of great prosperity.  Yet what does this \nreally tell us?  Time has shrouded everything.  What feud did he have with \nthe prince of demons, that years after our king's death, those demons haunt \nus still?  Legend has it that he crafted a weapon capable of combating \ndemon magic.  Legend also has it that in our darkest time, he will come to \nus again.  Our darkest times are upon us.  The demons are howling at our \ngate, and Falathzar has vowed to raze the castle within a year. \n\nI've been having disturbing dreams.  The elders all stand around me, \nexpecting me to do something that will save us from the demons.  I don't \nknow where to begin.  The statue of Lusitan comes to life and frowns at me.  \nI wake up, more afraid of it than of the demons, which I know are at that \nmoment tearing down our walls.\n\nI've also seen strange portents in the sky:  two-headed swallows, strange \nlights to the north.  Sometimes, when I dream, I see a battlefield filled \nwith corpses.  They are Ildharas corpses.\n",
+         "size" : "4",
+         "state" : "1",
+         "pname" : "journal",
+         "maxstate" : "1",
+         "bvalue" : "90",
+         "desc[0]" : "A mangled journal lies here."
+      },
+      "key@ildharas" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "small",
+         "name" : "key",
+         "examine" : "It's a small key with an intricate handle and several notches.",
+         "size" : "2",
+         "pname" : "key",
+         "bvalue" : "10",
+         "desc[0]" : "A small key lies here."
+      },
+      "dagger@ildharas" : {
+         "desc[1]" : "A flame-bladed dagger lies where it was dropped.",
+         "damage" : "18",
+         "location" : "IN_ROOM:ildharas30",
+         "oflags" : [
+            "Weapon",
+            "GetFlips"
+         ],
+         "armor" : "0",
+         "altname" : "flame",
+         "name" : "dagger",
+         "examine" : " \nIt's warm to the touch and seems to almost flicker.  Fresh blood stains the \nhilt.",
+         "size" : "5",
+         "state" : "1",
+         "pname" : "dagger",
+         "maxstate" : "1",
+         "bvalue" : "110",
+         "desc[0]" : "A flame-bladed dagger lies discarded next to the stain, covered in blood."
+      },
+      "parchment@ildharas" : {
+         "location" : "IN_ROOM:ildharas58",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "parchment",
+         "name" : "parchment",
+         "examine" : " \nMany may die before these words are known.  Therefore, I charge thee with a\nquest: banish Falathzar, who has wreaked havoc among my people.  Though he\nis immortal, purge him from this realm that he may never again traverse its\nfields. For this task I have created five objects to aid thee:\n\nThe Crown that brought thee here.\nThe Ring within my sigil, to prepare the summoning.\nThe Candelabra, to light the way.\nDemonslayer, my sword, to do the deed.\nWardment to protect you from ill outcome.\n\n--Lusitan\n",
+         "desc[0]" : "A parchment has been left on the table."
+      },
+      "stair_door_56@ildharas" : {
+         "location" : "IN_ROOM:ildharas22",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "northern",
+         "name" : "stair_door_56",
+         "linked" : "stair_door_22",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "\nThe hall center has sunk away, revealing a staircase spiraling downwards."
+      },
+      "cell_door_48@ildharas" : {
+         "desc[1]" : "The northern cell door is closed.",
+         "location" : "IN_ROOM:ildharas49",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "northern",
+         "name" : "cell_door_48",
+         "desc[2]" : "The northern cell door is locked.",
+         "linked" : "cell_door_49",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The northern cell door is open."
+      },
+      "treasures@ildharas" : {
+         "location" : "IN_ROOM:ildharas21",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "heirlooms",
+         "pname" : "treasures",
+         "name" : "treasures",
+         "examine" : " \nThe destruction was systematic.  You can find nothing of value, or even \nintact, for that matter."
+      },
+      "croissant@ildharas" : {
+         "location" : "IN_ROOM:ildharas32",
+         "oflags" : [
+            "Food"
+         ],
+         "pname" : "croissant",
+         "name" : "croissant",
+         "examine" : "It looks quite edible.",
+         "bvalue" : "15",
+         "desc[0]" : "A reasonably fresh croissant lies here.",
+         "size" : "1"
+      },
+      "necklace_golden@ildharas" : {
+         "location" : "IN_CONTAINER:satchel",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "golden",
+         "name" : "necklace_golden",
+         "examine" : " \nThin gold strands have been ingeniously shaped into a series of holly leaves \nintertwined with ruby berries.",
+         "size" : "1",
+         "pname" : "necklace",
+         "bvalue" : "350",
+         "desc[0]" : "A golden necklace lies here, glittering with rubies."
+      },
+      "bodies@ildharas" : {
+         "location" : "IN_ROOM:ildharas55",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "ildharas",
+         "pname" : "bodies",
+         "name" : "bodies",
+         "examine" : "Dead bodies everywhere!  A gruesome sight--what did you expect?\n"
+      },
+      "page_crumpled@ildharas" : {
+         "location" : "IN_ROOM:ildharas23",
+         "oflags" : "{  }",
+         "altname" : "crumpled",
+         "name" : "page_crumpled",
+         "examine" : " \n...Ilanya Festa loiters outside the doors to the audience chamber, wearing \nthe dragon headpiece that took nearly 250 hours to construct.  Doesn't young \nCarlaaki know better than to want a woman who thinks nothing of wasting so \nmuch time?  Of course, it's not her time she's wasting, but the time of the \npalace maids and servants.  Commoners' time, which doesn't seem to matter.  \nBut it's all accounted for in the end.  And when enough collective time is \nspent in any given world without results, the gods begin thinking of \nstarting over.",
+         "size" : "1",
+         "pname" : "page",
+         "bvalue" : "50",
+         "desc[0]" : "\nA crumpled page lies nearby."
+      },
+      "wall_outer@ildharas" : {
+         "location" : "IN_ROOM:ildharas07",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "wall",
+         "name" : "wall_outer",
+         "examine" : "Looks like many small creatures live here now."
+      },
+      "king_door_1@ildharas" : {
+         "desc[1]" : "The door to the king's chambers is closed.",
+         "location" : "IN_ROOM:ildharas38",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "king_door_1",
+         "desc[2]" : "The door to the king's chambers is locked.",
+         "linked" : "king_door_2",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door to the king's chambers is open."
+      },
+      "floor@ildharas" : {
+         "location" : "IN_ROOM:ildharas54",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "polished",
+         "pname" : "floor",
+         "name" : "floor"
+      },
+      "cell_door_52@ildharas" : {
+         "desc[1]" : "The cell door is closed.",
+         "location" : "IN_ROOM:ildharas51",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "cell_door_52",
+         "desc[2]" : "The cell door is locked.",
+         "linked" : "cell_door_51",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The cell door is open."
+      },
+      "roll@ildharas" : {
+         "desc[1]" : "A small buttered roll lies atop a dirty plate.",
+         "location" : "IN_ROOM:ildharas32",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "buttered",
+         "name" : "roll",
+         "examine" : "Someone sure slathered on the butter.",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "roll",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A small buttered roll lies here."
+      },
+      "cell_door_46n@ildharas" : {
+         "desc[1]" : "The cell door is closed.",
+         "location" : "IN_ROOM:ildharas47",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "cell_door_46n",
+         "desc[2]" : "The cell door is locked.",
+         "linked" : "cell_door_47",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The cell door is open."
+      },
+      "project@ildharas" : {
+         "location" : "IN_ROOM:ildharas16",
+         "oflags" : "{  }",
+         "pname" : "project",
+         "name" : "project",
+         "examine" : " \nIt looks like some poor clod beat it with a hammer until it cracked, then \nthrew it away in disgust.",
+         "bvalue" : "10",
+         "desc[0]" : "A small iron lump lies here, probably some poor apprentice's.",
+         "size" : "1"
+      },
+      "pile@ildharas" : {
+         "location" : "IN_ROOM:ildharas42",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "contents",
+         "pname" : "pile",
+         "name" : "pile",
+         "examine" : "The pile has already been gone through."
+      },
+      "satchel@ildharas" : {
+         "location" : "WORN_BY:Periol",
+         "oflags" : [
+            "Wearable",
+            "Container",
+            "Unbreakable"
+         ],
+         "altname" : "large",
+         "name" : "satchel",
+         "examine" : " \nStitched together from various pieces of leather, it looks quite serviceable.",
+         "size" : "15",
+         "pname" : "satchel",
+         "bvalue" : "75",
+         "aflags" : [
+            "Back"
+         ],
+         "desc[0]" : "A large satchel sits on the floor."
+      },
+      "carpet@ildharas" : {
+         "location" : "IN_ROOM:ildharas30",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stain",
+         "pname" : "carpet",
+         "name" : "carpet",
+         "examine" : " \nThe stain still looks wet. Judging from the amount of blood lost, the victim \nprobably died here."
+      },
+      "sign_wiz@ildharas" : {
+         "visibility" : "25",
+         "location" : "IN_ROOM:ildharas00",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "sign",
+         "name" : "sign_wiz",
+         "examine" : "\nThe Ildharas zone, created by Kalivir in 1991 for Abermud IV, revised in \n1998.  Specials and project to convert initiated by Crimefighter.\n",
+         "desc[0]" : "A sign floats here, seen only by immortals."
+      }
+   },
+   "loc" : {
+      "ildharas37@ildharas" : {
+         "exits" : {
+            "n" : "ildharas40",
+            "d" : "ildharas23",
+            "s" : "ildharas35"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Second Floor Landing East",
+         "id" : "ildharas37",
+         "description" : "\n\tYou stand at the top of a flight of marble steps.  A long hallway runs \nnorth to south while windows decorate the eastern wall.  A balcony to the \nwest allows you to survey the hall below in all its ruined splendor. \n",
+         "altitude" : null
+      },
+      "ildharas58@ildharas" : {
+         "exits" : {
+            "w" : "ildharas57"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Small Room",
+         "id" : "ildharas58",
+         "description" : "\n\tYou enter a small, square room.  A desk and chair sit in the center, the\nchair pushed away as if someone had been sitting there recently.  A quill\nrests in a silver inkwell, and the ink comes away wet when you examine it.\n",
+         "altitude" : null
+      },
+      "ildharas10@ildharas" : {
+         "exits" : {
+            "w" : "ildharas07",
+            "e" : "ildharas11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Along the Ruined Wall",
+         "id" : "ildharas10",
+         "description" : "\n\tYou walk along the outside of a crumbling wall.  The stone, once pure \nwhite, is speckled now with moss and lichen. Time has worn any straight \nedges into soft, organic lines, while little insects have found their way \ninto the cracks.  The trees crowd closely against the wall in places, waging \na war of their own.\n",
+         "altitude" : "950"
+      },
+      "ildharas00@ildharas" : {
+         "exits" : {
+            "w" : "T_Barrow@church",
+            "n" : "ildharas01"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "East of the Barrow",
+         "id" : "ildharas00",
+         "description" : "\n\tYou stand in a large field littered with grave markers.  Periwinkles \nand dandelions occasionally dot the grass, and a stand of weeping willows \nrustles with a slight breeze.  A barrow mound rises to the west, its shadow \nsomewhat ominous against the horizon.  The field continues north where it \neventually ends next to a forest-covered hillside.\n",
+         "altitude" : "800"
+      },
+      "ildharas06@ildharas" : {
+         "exits" : {
+            "u" : "ildharas07",
+            "n" : "ildharas07",
+            "s" : "ildharas05"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Small Valley",
+         "id" : "ildharas06",
+         "description" : "\n\tA small valley nestles between the last foothill and the beginning of \nthe first mountain.  The path has become very overgrown here, dwindling down \nto a footpath and less. Your nostrils tingle from the astringency of pine. \nEvery once in a while, when there is a break in the foliage, you catch a \nglimpse of a castle against the northern mountainside.\n",
+         "altitude" : "950"
+      },
+      "ildharas32@ildharas" : {
+         "exits" : {
+            "n" : "ildharas35",
+            "s" : "ildharas30"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Guest Room",
+         "id" : "ildharas32",
+         "description" : "\n\tThe room smells of expensive musks and spicy food.  A long wooden \ntable sits in the center with the remains of a feast upon it.  Silver \ncandlesticks stand untarnished by age, and no dust adorns the settings.  \nGoblets half-filled with wine litter the table beside greasy napkins and \ndirty plates.  It looks to have been a mirthful evening.\n",
+         "altitude" : null
+      },
+      "ildharas20@ildharas" : {
+         "exits" : {
+            "w" : "ildharas18",
+            "n" : "ildharas23"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Sitting Room",
+         "id" : "ildharas20",
+         "description" : "\n\tThe once plush furniture has been ripped to shreds by many claws.  \nThe tapestries and paintings have been treated likewise.  With so many \nbeautiful things destroyed, you regret the senseless waste.\n",
+         "altitude" : null
+      },
+      "ildharas48@ildharas" : {
+         "exits" : {
+            "s" : "^cell_door_49"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Empty Cell",
+         "id" : "ildharas48",
+         "description" : "\n\tThe wood on the inside of this door has been scratched to a smooth \nfinish long ago.  The ensuing years have embalmed it in a fine layer of \nmoisture.  Rusted iron chains look as if they could be easily snapped.  This \ncell probably fell into disuse long before the Ildharas were attacked.\n",
+         "altitude" : null
+      },
+      "ildharas03@ildharas" : {
+         "exits" : {
+            "u" : "ildharas04",
+            "s" : "ildharas02"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Steep Trail",
+         "id" : "ildharas03",
+         "description" : "\n\tThe hill begins to rise, and the path (what you can see of it) starts \nto switch back and forth on itself.  Large, rocky outcroppings jut out from \nthe slope, giving you a place to rest from time to time. The trail continues \nup and down the hillside.\n",
+         "altitude" : "900"
+      },
+      "ildharas47@ildharas" : {
+         "exits" : {
+            "s" : "^cell_door_46n"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Empty Cell",
+         "id" : "ildharas47",
+         "description" : "\n\tSomewhat cleaner and larger than most, it must have been used to house \nmore important guests.  Clean straw somehow manages to keep the dankness at \nbay, and a small cot in the corner looks pretty much pest-free.\n",
+         "altitude" : null
+      },
+      "ildharas44@ildharas" : {
+         "exits" : {
+            "e" : "ildharas46",
+            "u" : "ildharas43"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Guardroom",
+         "id" : "ildharas44",
+         "description" : "\n\tSome chairs have been thrown against the far wall with enough force to \nshatter them.  A few playing cards lie scattered in a corner by a broken \ntable.  A doorway leads to the east, and a set of steep steps goes up to the \ncastle proper.\n",
+         "altitude" : null
+      },
+      "ildharas63@ildharas" : {
+         "exits" : {
+            "s" : "^sigil"
+         },
+         "flags" : [
+            "CantSummon"
+         ],
+         "zone" : "ildharas",
+         "title" : "The Sigil Wardment",
+         "id" : "ildharas63",
+         "description" : "\n\tGreat power exists here.  You can sense it without trying.  It thrills \nup and down your spine and numbs your feet as the quiet argence paints your \nboots silver.  This symbol, you realize, focuses power into something not \nquite recognizable.  From here, you can sense the various rooms and even \nthe surrounding land. \n",
+         "altitude" : null
+      },
+      "ildharas24@ildharas" : {
+         "exits" : {
+            "e" : "ildharas25",
+            "n" : "ildharas28",
+            "d" : "ildharas27"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Kitchen",
+         "id" : "ildharas24",
+         "description" : "\n\tUtensils and iron pots lie strewn all over the floor.  Strangely, the \nsmell of cooking meat lingers on in this place.   \n",
+         "altitude" : null
+      },
+      "ildharas38@ildharas" : {
+         "exits" : {
+            "e" : "ildharas39",
+            "n" : "^king_door_1",
+            "s" : "ildharas36"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Hallway",
+         "id" : "ildharas38",
+         "description" : "\n\tThe hallway continues west and south.  A vaulted ceiling lofts \ngracefully overhead, making the white stone seem almost ethereal.  The King's \nchambers lie to the north.  \n",
+         "altitude" : null
+      },
+      "ildharas23@ildharas" : {
+         "exits" : {
+            "w" : "ildharas22",
+            "u" : "ildharas37",
+            "s" : "ildharas20"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Library",
+         "id" : "ildharas23",
+         "description" : "\n\tThe books have all been gutted, their contents scattered throughout \nthe room.  The pages rustle like leaves as you walk.  You behold not the \ndestruction of knowledge, but it's chaotic fusion, a systematic but random \ndispersion of it's potency. \n\tA set of marble stairs leads up to the second floor, and doorways lead \nsouth and west.\n",
+         "altitude" : null
+      },
+      "ildharas50@ildharas" : {
+         "exits" : {
+            "n" : "^yorjudek_door_2"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "SoundProof"
+         ],
+         "zone" : "ildharas",
+         "title" : "Yorjudek's Cell",
+         "id" : "ildharas50",
+         "description" : "\n\tThis cell is circular, somewhat larger than the others.  Silver-runed \nmanacles hang broken and useless against the far wall.  Deep scores cover \nthe rock on the floor, resembling claw marks. The air is charged with hatred \nand frustration. \n",
+         "altitude" : null
+      },
+      "ildharas01@ildharas" : {
+         "exits" : {
+            "e" : "gold1b@gold",
+            "w" : "gold1a@gold",
+            "n" : "ildharas02",
+            "s" : "ildharas00"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Grassy Field",
+         "id" : "ildharas01",
+         "description" : "\n\tTall, knee high grass rustles gently with your passing.  Tiny insects \nfly up at the disturbance and buzz around your head. A forest of spruce and \npine grows to the north. Upon closer inspection, you can see a narrow and \noften overgrown path through the trees. Much of the southern field has been \nconverted into a graveyard.  Two large boulders surround a path to the west,\nthe fields turn golden toward the east.\n",
+         "altitude" : "800"
+      },
+      "ildharas05@ildharas" : {
+         "exits" : {
+            "n" : "ildharas06",
+            "d" : "ildharas04",
+            "s" : "ildharas04"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Foothills",
+         "id" : "ildharas05",
+         "description" : "\n\tThe path winds its way through the foothills, rising in altitude as it \ngoes north.  The air has become crisp.  It feels good on your face and in \nyour lungs.  The path continues its way north or south.\n",
+         "altitude" : "1100"
+      },
+      "ildharas61@ildharas" : {
+         "exits" : {
+            "n" : "^iron_door_1",
+            "s" : "ildharas60"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "At the Doors of the Black Hall",
+         "id" : "ildharas61",
+         "description" : "\n\tTwo doors bound in iron bar the entrance to the Black Hall.  Curiously \nwrought flowers and gargoyles decorate their surfaces.  A large ring on each \nallows you to pull them open.  A corridor stretches away to the south.\n",
+         "altitude" : null
+      },
+      "ildharas19@ildharas" : {
+         "exits" : {
+            "e" : "ildharas18",
+            "d" : "ildharas43"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Guardroom",
+         "id" : "ildharas19",
+         "description" : "\n\tTables and chairs lie smashed and splintered across the floor.  Bits \nof weapons and armor make walking here hazardous.  A narrow stairway leads \ndown and a doorway goes back out east to the entry hall.\n",
+         "altitude" : null
+      },
+      "ildharas29@ildharas" : {
+         "exits" : {
+            "u" : "ildharas39",
+            "s" : "ildharas25"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Behind the Throne",
+         "id" : "ildharas29",
+         "description" : "\n\tThis small room served as a place for the king to relax before he went \nout to court.  A blue vase lies against the wall where it was thrown, a \ndainty yellow flower looking slightly wilted.  A small staircase leads up \nand a doorway enters the main hall to the south.\n",
+         "altitude" : null
+      },
+      "ildharas62@ildharas" : {
+         "exits" : {
+            "n" : "^force63",
+            "s" : "^iron_door_2"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "The Black Hall",
+         "id" : "ildharas62",
+         "description" : "\n\tA sense of peace pervades you in this dark, silent place.  A great \nseven-rayed star is inscribed on the floor in the center, glowing with a \nsilvery lambency.  Aligned with each of the points are seven pillars of jet \nsupporting a roof somewhere above.  Seven eternal candles gleam on the \npillars, small pinpoints of light in infinity.  A set of doors leads south.\n",
+         "altitude" : null
+      },
+      "ildharas17@ildharas" : {
+         "exits" : {
+            "n" : "ildharas18",
+            "s" : "ildharas15"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "ildharas",
+         "title" : "Inner Gates",
+         "id" : "ildharas17",
+         "description" : "\n\tUnlike the outer gates, the inner gates have been destroyed by the \nmarauders.  One swings soundlessly in the slight breeze, half of the \nsplintered bar still in its housing. A white and ethereal castle lies \ndirectly to the north and its courtyard to the south.\n",
+         "altitude" : "950"
+      },
+      "ildharas66@ildharas" : {
+         "exits" : {
+            "e" : "ildharas41"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "The King's Library",
+         "id" : "ildharas66",
+         "description" : "\n\tIt seems this is where the king kept all his important documents and \nprivate resources.  A large ebony table dominates the room center, and \nbookcases line all the available walls.  These go from floor to ceiling, \nbut all their contents have been removed.\n",
+         "altitude" : null
+      },
+      "ildharas12@ildharas" : {
+         "exits" : {
+            "d" : "ildharas11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Rodney's Nest",
+         "id" : "ildharas12",
+         "description" : "\n\tYou clamber up upon the wall and peer into Rodney's nest.  What a \ndiverse collection of valueless junk!  Bits of old string lie matted and \nchewed next to old papers, pen caps, odd socks, bent pennies, candy wrappers, \nruined and discarded floppies, and rusted nails.  What a useless mess.  It \nstinks, too.\n",
+         "altitude" : "975"
+      },
+      "ildharas22@ildharas" : {
+         "exits" : {
+            "w" : "ildharas21",
+            "e" : "ildharas23",
+            "n" : "ildharas25",
+            "d" : "^stair_door_56",
+            "s" : "ildharas18"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Main Hall",
+         "id" : "ildharas22",
+         "description" : "\n\tThe methodic destruction has been carried on into the castle's main \nhall.  Scorch marks mar the southern end, searing the great murals that once \ndecorated the ceiling high above.  Tapestries that once encircled the walls \nmust have fueled the blaze.  A few charcoal strands disintegrate beneath \nyour boots.  A balcony on the second level allowed courtiers to gaze down \non the proceedings below.  Doorways lead off to the south, east and west, \nwhile to the north sits a sundered throne. \n",
+         "altitude" : null
+      },
+      "ildharas18@ildharas" : {
+         "exits" : {
+            "w" : "ildharas19",
+            "e" : "ildharas20",
+            "n" : "ildharas22",
+            "s" : "ildharas17"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Entry Hall",
+         "id" : "ildharas18",
+         "description" : "\n\tThe attackers have systematically ruined this room, slashing \ntapestries, cracking floor tiles, and carving on the walls.  Puddles of \nsmeared blood decorate the white marble.  It glistens wetly.  You wonder \nbriefly where all the bodies are.  Exits lead off in all directions.\n",
+         "altitude" : null
+      },
+      "ildharas51@ildharas" : {
+         "exits" : {
+            "s" : "^cell_door_52"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Storage",
+         "id" : "ildharas51",
+         "description" : "\n\tPiles of burlap, sacks of straw, and old bits of leather fill this \ncell.  The Ildharas must not have had very many prisoners.\n",
+         "altitude" : null
+      },
+      "ildharas49@ildharas" : {
+         "exits" : {
+            "w" : "ildharas46",
+            "e" : "ildharas52",
+            "n" : "^cell_door_48",
+            "s" : "^yorjudek_door_1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Dark corridor",
+         "id" : "ildharas49",
+         "description" : "\n\tThe way becomes somewhat wider here.  The rock on the southern wall \nflattens out and then abruptly changes color and texture, turning into the \nwhite marble of the castle above.  You notice a curious carving on the \nsouthern wall.\n",
+         "altitude" : null
+      },
+      "ildharas40@ildharas" : {
+         "exits" : {
+            "w" : "ildharas39",
+            "n" : "ildharas42",
+            "s" : "ildharas37"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Hallway",
+         "id" : "ildharas40",
+         "description" : "\n\tThe hallway branches to the south and west, and a door leads north.  \nBelow you see the ruins of the main hall, and above, where hungry flames have \nlicked away the paintings on the ceiling.  \n",
+         "altitude" : null
+      },
+      "ildharas15@ildharas" : {
+         "exits" : {
+            "w" : "ildharas14",
+            "e" : "ildharas16",
+            "n" : "ildharas17",
+            "s" : "ildharas07"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Outer Courtyard",
+         "id" : "ildharas15",
+         "description" : "\n      The outer courtyard offers a strange juxtaposition between then and now. \nA majestic castle rests against the mountainside to the north, untouched by \ntime.  A crumbling and age-worn wall molders to the south, ruined and ancient.  \nThe architectural styles suggest the two were built together, but how could \none age and the other not?  A smithy lies to the east and a barracks to the \nwest, these also intact.\n",
+         "altitude" : "950"
+      },
+      "ildharas31@ildharas" : {
+         "exits" : {
+            "n" : "ildharas33"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Maric's Room",
+         "id" : "ildharas31",
+         "description" : "\n\tNumerous scorch marks decorate the walls, and the remains of a melted \nchandelier lie in the room's center in a solidified heap of gold and crystal. \nYour boots stir up clouds of glittering dust from pulverized vases, statues \nand other breakables.  Oddly, the only thing spared this fate is a large map \nhanging on the southern wall.\n",
+         "altitude" : null
+      },
+      "ildharas36@ildharas" : {
+         "exits" : {
+            "n" : "ildharas38",
+            "d" : "ildharas21",
+            "s" : "ildharas33"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Second Floor Landing West",
+         "id" : "ildharas36",
+         "description" : "\n\tA long corridor runs to the north and south through the castle.  A \nbalcony lies to the east, allowing you to survey the ruined hall below.  \nNarrow windows along the west wall afford a sweeping view of the valley. \n",
+         "altitude" : null
+      },
+      "ildharas60@ildharas" : {
+         "exits" : {
+            "w" : "ildharas59",
+            "n" : "ildharas61"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Stately White Corridor",
+         "id" : "ildharas60",
+         "description" : "\n\tThe corridor continues for a bit and ends at a set of iron doors to \nthe north.  Candles burn in arches created by a series of vaults in the \nceiling, creating a dramatic passage of light and stone.  A stairway to the \nwest leads up to the ground floor.\n",
+         "altitude" : null
+      },
+      "ildharas11@ildharas" : {
+         "exits" : {
+            "w" : "ildharas10",
+            "u" : "ildharas12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Along the Ruined Wall",
+         "id" : "ildharas11",
+         "description" : "\n\tThe wall seems to have crumbled on its own accord in some places, \nfalling in on itself as time and the elements have worn it down.  Looking up, \nyou notice what appears to be a nest of sorts.  Years of bird droppings have \neaten away at the stone, making it rough enough to climb if you really cared.\n",
+         "altitude" : "950"
+      },
+      "ildharas07@ildharas" : {
+         "exits" : {
+            "w" : "ildharas09",
+            "e" : "ildharas10",
+            "n" : "ildharas15",
+            "d" : "ildharas06",
+            "s" : "ildharas06"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "The Gates of the Outer Wall",
+         "id" : "ildharas07",
+         "description" : "\n\tA castle rests at the northern end of the valley, its walls in ruins.  \nThe gates remain the only portion of the outer defenses still intact.  The \nwalls on either side are breached in many places. Oddly, the castle beyond \nseems untouched by the elements.\n",
+         "altitude" : "950"
+      },
+      "ildharas16@ildharas" : {
+         "exits" : {
+            "w" : "ildharas15"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Smithy",
+         "id" : "ildharas16",
+         "description" : "\n\tThe forge is cold, but the smith's tools are well cared for and well \nused.  The beginnings of a long dagger rest in a bucket of water.  A few \nhorseshoes lie thrown in a corner and a cracked pot sits on the work bench.\n",
+         "altitude" : null
+      },
+      "ildharas04@ildharas" : {
+         "exits" : {
+            "n" : "ildharas05",
+            "d" : "ildharas03"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Steep Trail",
+         "id" : "ildharas04",
+         "description" : "\n\tThe trail flattens out a little and enters a clearing.  Looking south, \nyou can see the graveyard and the barrow mound, then the forest beyond them.  \nTo the north, it looks like the hill you stand on is only the first in a \nseries of foothills leading to a craggy mountain range.\n",
+         "altitude" : "1000"
+      },
+      "ildharas57@ildharas" : {
+         "exits" : {
+            "e" : "ildharas58",
+            "u" : "ildharas56"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Bottom of the Staircase",
+         "id" : "ildharas57",
+         "description" : "\n\tThe stairs end at a small door, carved from an exotic dark wood \nstreaked with silver.  Looking straight up, you see the ceiling covered with \nthe burnt remnants of a mural.  The various parts left seem to be focusing \non a spot right above, but it's too blackened to guess it's subject or \nintent.\n",
+         "altitude" : null
+      },
+      "ildharas56@ildharas" : {
+         "exits" : {
+            "u" : "^stair_door_22",
+            "d" : "ildharas57"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Stone Stairway",
+         "id" : "ildharas56",
+         "description" : "\n\tThe wide, shallow stairs curve gracefully around in a circle.  Made \nfrom the same stone as the castle, they gleam in the ambient light.\n",
+         "altitude" : null
+      },
+      "ildharas55@ildharas" : {
+         "exits" : {
+            "n" : "ildharas54"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Ward Room",
+         "id" : "ildharas55",
+         "description" : "\n\tYou feel the power centered in this heptagonal room.  A scale model of \nthe castle sits in the center and mystical symbols cover the entire floor.  \nYou realize at once that this is the heart of the castle's magical defense \nsystem.  Some of the symbols have been marred, and the outer wall of the \nmodel has been broken in several places.\n\tThe Ildharas slain during the attack are stacked along the walls like \nfirewood, perfectly preserved by the strange timeless properties of the \ncastle.\n",
+         "altitude" : null
+      },
+      "ildharas09@ildharas" : {
+         "exits" : {
+            "w" : "ildharas08",
+            "e" : "ildharas07",
+            "n" : "ildharas14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Along the Ruined Wall",
+         "id" : "ildharas09",
+         "description" : "\n\tCrafted from a strange white stone, the wall must have been quite \nimpressive before the attack--though now you can see the castle through its \nmossy gaps.  The trees have grown up against the walls over the years, and \nthe ground beneath your boots is filled with twisting roots.  Eventually, \nyou guess, the trees may undermine the stones.\n",
+         "altitude" : "950"
+      },
+      "ildharas08@ildharas" : {
+         "exits" : {
+            "e" : "ildharas09"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Along the Ruined Wall",
+         "id" : "ildharas08",
+         "description" : "\n\tYou wander about the outside perimeter of an old and crumbling wall.  \nA woodpecker rattles nearby.  Small insects buzz about, and the drone of a \nlocust fills your ears.  Whatever drama was played out here has long since \nbeen finished.  Peace reigns in the forest.\n",
+         "altitude" : "950"
+      },
+      "ildharas64@ildharas" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Inside the Ruby",
+         "id" : "ildharas64",
+         "description" : "\n\tYou wander an architect's nightmare of stairways that double back on \nthemselves, halls with but a single end, and random, chaotic angles.  Time \nstretches out to eternity.  There is nowhere to go here, and nothing to do.  \nMemory grows dim, fading against the monotony of the present.  \n",
+         "altitude" : null
+      },
+      "ildharas02@ildharas" : {
+         "exits" : {
+            "n" : "ildharas03",
+            "s" : "ildharas01"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ildharas",
+         "title" : "Forest",
+         "id" : "ildharas02",
+         "description" : "\n\t Sunlight dapples the path, and small rodents scurry from your \napproach. Overhead, birds chirp and flutter amidst the branches.  The path \nruns vaguely north to south.  It appears to be little used, for even the \nwheel ruts sport large tufts of grass.\n",
+         "altitude" : "800"
+      },
+      "ildharas46@ildharas" : {
+         "exits" : {
+            "w" : "ildharas44",
+            "e" : "ildharas49",
+            "n" : "^cell_door_47",
+            "s" : "^cell_door_45"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Dark Corridor",
+         "id" : "ildharas46",
+         "description" : "\n\tThe mountain bears down on you in massive silence.  Off in the \ninterminable distance, you can hear the endless drip-drip-drip of water \nstriking stone.  The corridor leads east and west.\n",
+         "altitude" : null
+      },
+      "ildharas53@ildharas" : {
+         "exits" : {
+            "w" : "ildharas52",
+            "e" : "ildharas54"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Narrow Passage",
+         "id" : "ildharas53",
+         "description" : "\n\tThis passage is low and very narrow.  Though it winds to and fro a bit \nso you cannot see both your starting point and your destination, it stays in \na roughly east-west line.\n",
+         "altitude" : null
+      },
+      "ildharas25@ildharas" : {
+         "exits" : {
+            "w" : "ildharas24",
+            "e" : "ildharas26",
+            "n" : "ildharas29",
+            "s" : "ildharas22"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Before the Sundered Throne",
+         "id" : "ildharas25",
+         "description" : "\n\tThe throne has been cloven in twain by a monstrous blow, and its \nprecious stones have all been pried from their settings. Rubble and debris \nlitter everything, but it still looks majestic in all its ruined splendor.  \nDoorways lead north, east, and west, and the main hall continues south.\n",
+         "altitude" : null
+      },
+      "ildharas28@ildharas" : {
+         "exits" : {
+            "s" : "ildharas24"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Servants' Quarters",
+         "id" : "ildharas28",
+         "description" : "\n\tAnother tableau of annihilation, meticulously crafted down to the \ntiniest detail.  A small hand mirror lies upon the floor in several shards, \nsymbolic, perhaps, of a shattered identity.  A single doorway leads south to \nthe kitchen.\n",
+         "altitude" : null
+      },
+      "ildharas27@ildharas" : {
+         "exits" : {
+            "u" : "ildharas24"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Pantry",
+         "id" : "ildharas27",
+         "description" : "\n\tMuch of the food has been eaten or spilled upon the ground.  Flour \ncoats the entire room like snow.  You marvel that nothing has gone bad yet. \nA set of stairs leads up.\n",
+         "altitude" : null
+      },
+      "ildharas30@ildharas" : {
+         "exits" : {
+            "n" : "ildharas32"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "ildharas",
+         "title" : "Small Sunlit Chamber",
+         "id" : "ildharas30",
+         "description" : "\n\tThis small, cheery room is filled with plush chairs and footstools.  \nFrom a window in the southern wall, you can see the overgrown forest in the \nvalley.  A thick and priceless carpet of tan and cream nestles comfortably \nagainst your feet, beautiful except for the enormous blood stain in the \ncenter. \n",
+         "altitude" : null
+      },
+      "ildharas34@ildharas" : {
+         "exits" : {
+            "w" : "ildharas33",
+            "e" : "ildharas35"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Hallway",
+         "id" : "ildharas34",
+         "description" : "\n\tYou wander along an east-west hallway in the southern part of the \ncastle, surrounded by cold, white stone. You wonder what kind of person \nLusitan was, to have built such a stark place, and what kind of people the \nIldharas were to have lived in it later. Looking out over the balcony, you \ncan see where a defiled Lusitan presides over the wreckage below. \n",
+         "altitude" : null
+      },
+      "ildharas65@ildharas" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "The Palace of Darhaveret",
+         "id" : "ildharas65",
+         "description" : "\n\tAtop a high hill, the palace overlooks a dusty city filled with bright \nawnings and a wide, crescent-shaped harbor.  Arabic in much of its design, \nyou could lose yourself contemplating the intricate friezes and the \nperfection of its geometry.\n",
+         "altitude" : null
+      },
+      "ildharas35@ildharas" : {
+         "exits" : {
+            "w" : "ildharas34",
+            "n" : "ildharas37",
+            "s" : "ildharas32"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Hallway",
+         "id" : "ildharas35",
+         "description" : "\n\tYou notice no dust as you walk these halls.  How odd.  After all these \nyears you'd think you'd see a carpet of it. The hallway continues to the \nnorth and west, and a doorway leads south.\n",
+         "altitude" : null
+      },
+      "ildharas54@ildharas" : {
+         "exits" : {
+            "w" : "ildharas53",
+            "s" : "ildharas55"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Small Antechamber",
+         "id" : "ildharas54",
+         "description" : "\n\tA small antechamber lies outside a much larger room, perhaps meant as \na waiting area. Eternal candles gleam softly in their silver holders, and \nyou note that the walls are purple and curiously smooth, like glass.  The \nfloor is so polished that you can see yourself in it.  Silence lingers here, \ndeeper than the falling snow.\n",
+         "altitude" : null
+      },
+      "ildharas39@ildharas" : {
+         "exits" : {
+            "w" : "ildharas38",
+            "e" : "ildharas40",
+            "d" : "ildharas29"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Second Floor Landing North",
+         "id" : "ildharas39",
+         "description" : "\n\t A balcony to the south looks out over the audience chamber below, \nwhere you can see the back of the sundered throne.  You notice that the \nhall's flagstones have been laid out in a circular pattern not really \nobvious when viewed at floor level.  The corridor runs east to west.\n",
+         "altitude" : null
+      },
+      "ildharas26@ildharas" : {
+         "exits" : {
+            "w" : "ildharas25"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Private Chamber",
+         "id" : "ildharas26",
+         "description" : "\n\tOstensibly, this is where the king used to hold private audiences.  A \nlarge fireplace occupies north wall, and you kick away the remains of a \ntable and chairs as you walk.  Defaced paintings stare down at you in silent \naccusation.  The only exit is to the west.\n",
+         "altitude" : null
+      },
+      "ildharas42@ildharas" : {
+         "exits" : {
+            "s" : "ildharas40"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Muralain's Room",
+         "id" : "ildharas42",
+         "description" : "\n\tStrangely untouched by vandals, this beautiful room with pale \ncarpeting and dark-stained paneling has seen other intruders.  Someone has \ntaken whatever valuables there were and dumped the contents of the shelves \nand drawers into a central pile, hoping to find more.  A doorway leads south. \n",
+         "altitude" : null
+      },
+      "ildharas52@ildharas" : {
+         "exits" : {
+            "w" : "ildharas49",
+            "e" : "ildharas53",
+            "n" : "^cell_door_51"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Dark Corridor",
+         "id" : "ildharas52",
+         "description" : "\n\tWater drips somewhere off in the distance.  A rat squeaks shrilly, and \na body scuttles over the cold stone.  Small stones lie scattered about a \nhole in the eastern wall.  The corridor runs back to the west with a cell \ndoor to the north.\n",
+         "altitude" : null
+      },
+      "ildharas59@ildharas" : {
+         "exits" : {
+            "e" : "ildharas60",
+            "u" : "ildharas21"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Bottom of the Staircase",
+         "id" : "ildharas59",
+         "description" : "\n\tA narrow corridor leads off to the east.  Although there are no windows \nhere, enough light exists from an unseen source to make a torch unnecessary.  \nIn the dimness, the walls seem on the verge of glowing. \n",
+         "altitude" : null
+      },
+      "ildharas45@ildharas" : {
+         "exits" : {
+            "n" : "^cell_door_46s"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Empty Cell",
+         "id" : "ildharas45",
+         "description" : "\n\tDamp, cramped and dreary, this cell reminds of you of all the other \ncells you've seen and reinforces the concept that such a cell should not be \nyour terminal destination.  \n",
+         "altitude" : null
+      },
+      "ildharas14@ildharas" : {
+         "exits" : {
+            "e" : "ildharas15",
+            "w" : "ildharas13",
+            "s" : "ildharas09"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Barracks",
+         "id" : "ildharas14",
+         "description" : "\n\tYou get the impression that the inhabitants have merely stepped out on \na drill.  The beds look as though they've been recently slept in, and greasy \ncards lie scattered on a wooden table, halfway through a hand of poker. \nSomeone held four kings. but never got to collect.  A doorway leads back \noutside to the east and another goes west to the stables.\n",
+         "altitude" : null
+      },
+      "ildharas41@ildharas" : {
+         "exits" : {
+            "w" : "ildharas66",
+            "s" : "^king_door_2"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "The King's Chambers",
+         "id" : "ildharas41",
+         "description" : "\n\tSparsely furnished, they do not look as grand as you might have \nimagined.  A bed, nightstand, desk and chair are all pushed together in a \ndreary, unimaginative way.  Several tarot cards lie on the desk, spread out \nin an unfamiliar pattern.  A doorway leads south and you see a small alcove \ncontaining a library to the west. \n",
+         "altitude" : null
+      },
+      "ildharas33@ildharas" : {
+         "exits" : {
+            "e" : "ildharas34",
+            "n" : "ildharas36",
+            "s" : "ildharas31"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Hallway",
+         "id" : "ildharas33",
+         "description" : "\n\tHallways stretch out before you to the north and east, and a door on \none hinge swings silently to the south.  Letters formed from a sharp \ninstrument dipped in blood decorate the western wall.  \n",
+         "altitude" : null
+      },
+      "ildharas43@ildharas" : {
+         "exits" : {
+            "u" : "ildharas19",
+            "d" : "ildharas44"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ildharas",
+         "title" : "Steep Staircase",
+         "id" : "ildharas43",
+         "description" : "\n\tThe stairs here are narrow, steep and rather uneven.  Rock encases you \nbottom, top, left and right.  Somewhere along here, you pass ground level \nand the white marble becomes the granite of the mountainside.  \n",
+         "altitude" : null
+      },
+      "ildharas21@ildharas" : {
+         "exits" : {
+            "e" : "ildharas22",
+            "u" : "ildharas36",
+            "d" : "ildharas59"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Monument Room",
+         "id" : "ildharas21",
+         "description" : "\n\tOnce a place where treasures and heirlooms were stored, it now holds \nonly rubble and the sad memory of forgotten significance.  You see a \nblackened area in the center of the room where everything flammable was \nburned.  Other things, like weapons, statues and pottery lie scattered in \npieces or in pulverized dust.  A marble staircase at far end of the room \nleads to the floors above and below.\n",
+         "altitude" : null
+      },
+      "ildharas13@ildharas" : {
+         "exits" : {
+            "e" : "ildharas14"
+         },
+         "flags" : [],
+         "zone" : "ildharas",
+         "title" : "Stables",
+         "id" : "ildharas13",
+         "description" : "\n\tIt smells like hay and horses.  The straw scattered on the ground looks \nnew and you notice fresh water in the troughs.  Without looking at the \nruined wall, you would think that horses lived here quite recently.  The \nbarracks lie to the east.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "maric@ildharas" : {
+         "damage" : "5",
+         "location" : "ildharas64",
+         "armor" : "0",
+         "name" : "Maric",
+         "examine" : "\nYou see a somber man in a sumptuous black doublet. The unwilling dupe for \nthe Ildharas demise, he carries so much bad karma that it may be unlucky to \nkill him before his time.",
+         "description" : "Maric wanders by, digesting the consequences of a drunken boast.",
+         "strength" : "30",
+         "speed" : "3",
+         "aggression" : "0",
+         "pflags" : [
+            "NoExorcise",
+            "NoSummon",
+            "NoSteal",
+            "NoAlias"
+         ],
+         "mflags" : [
+            "DrainLev"
+         ]
+      },
+      "yorjudek@ildharas" : {
+         "eflags" : [
+            "Fireball",
+            "Shock"
+         ],
+         "damage" : "18",
+         "location" : "ildharas50",
+         "armor" : "0",
+         "name" : "Yorjudek",
+         "examine" : "\nImprisoned by Falathzar, Yorjudek has cooled his heels until the seal of his \ncell was broken.  Now he's pissed and ready to destroy everything he sees.",
+         "description" : "Yorjudek the Third plots his revenge.",
+         "strength" : "200",
+         "speed" : "4",
+         "aggression" : "95",
+         "pflags" : [
+            "NoSummon",
+            "NoAlias"
+         ]
+      },
+      "periol@ildharas" : {
+         "damage" : "10",
+         "location" : "ildharas40",
+         "armor" : "0",
+         "name" : "Periol",
+         "examine" : "\nYou see a young man with an easy smile and laughing eyes.  His garments look \nclean, albeit threadbare.  He gestures broadly with deft, graceful hands.",
+         "description" : "Periol Tarhmenin wanders by, looking for small valuables.",
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Periol Tarhmenin",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "StealWorn",
+            "StealWeapon",
+            "PickStuff"
+         ]
+      },
+      "falathzar@ildharas" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball"
+         ],
+         "damage" : "20",
+         "location" : "ildharas65",
+         "armor" : "15",
+         "name" : "Falathzar",
+         "examine" : "\nFalathzar chooses to appear as a tall man of courtly stature, wearing a\nscarlet doublet, matching half-cape, and broad brimmed hat. His expression \nis distant and disdainful, and his hair is the color of sullen flame. ",
+         "description" : "Falathzar sneers coldly at you.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "400",
+         "speed" : "5",
+         "aggression" : "50",
+         "pname" : "Falathzar",
+         "pflags" : [
+            "NoAlias",
+            "NoSummon",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "dijek@ildharas" : {
+         "eflags" : [
+            "Fireball",
+            "Frost"
+         ],
+         "damage" : "10",
+         "location" : "ildharas31",
+         "armor" : "0",
+         "name" : "Dijek",
+         "examine" : "\nA tall, scholarly type, Dijek inspects the damage and notes where the magic \nis still strong.",
+         "description" : "Dijek inspects the castle.",
+         "strength" : "150",
+         "speed" : "3",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon",
+            "NoMagic",
+            "NoAlias"
+         ]
+      },
+      "haog@ildharas" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball"
+         ],
+         "damage" : "15",
+         "location" : "ildharas55",
+         "armor" : "0",
+         "name" : "Haog",
+         "examine" : "\nYou see a large white rat with a bloated body and spindly legs.  \nHis eyes are pink and feral.",
+         "description" : "Haog the Albino Rat skitters across the floor.",
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Haog the Albino Rat",
+         "mflags" : [
+            "GrabHostile"
+         ]
+      },
+      "bear@ildharas" : {
+         "damage" : "12",
+         "location" : "ildharas18",
+         "speed" : "4",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Brown Bear",
+         "name" : "Bear",
+         "examine" : "\nSmaller than his cousin in the Elven Forest, this brown bear would rather \nforage for food in the castle than pick on passersby.",
+         "description" : "A brown bear regards you curiously.",
+         "strength" : "100"
+      },
+      "tarphalir@ildharas" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball"
+         ],
+         "damage" : "20",
+         "location" : "ildharas23",
+         "armor" : "0",
+         "name" : "Tarphalir",
+         "examine" : "\nYou behold a scaled demon with burning eyes and a toothy leer.  Vestigal \nwings sprout from lumpy shoulders, and he exudes a foul, putrefying stench.",
+         "description" : "Tarphalir, Falathzar's lieutenant, snacks on the pages.",
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "ardast@ildharas" : {
+         "eflags" : [
+            "Fireball",
+            "Frost",
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "ildharas25",
+         "speed" : "3",
+         "aggression" : "30",
+         "armor" : "0",
+         "name" : "Ardast",
+         "examine" : "\nYou behold a greasy, ill-kempt fellow with a broken nose and shifty eyes.\nHis expression is sullen--he's having another bad reset.",
+         "description" : "Ardast the Not-Quite-Necromancer slouches in a corner, looking for something \neasy to kill.",
+         "strength" : "110"
+      },
+      "fluffy@ildharas" : {
+         "damage" : "8",
+         "location" : "ildharas04",
+         "armor" : "0",
+         "name" : "Fluffy",
+         "examine" : "\nFluffy has perky ears, cute button eyes, and a long bushy tail.  She runs\nup to you and waits expectantly.  Rather annoying, isn't she?",
+         "description" : "Fluffy the Squirrel is here, soliciting a free peanut.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "70",
+         "speed" : "5",
+         "aggression" : "0",
+         "pname" : "Fluffy the squirrel",
+         "mflags" : [
+            "Thief",
+            "PickStuff"
+         ]
+      },
+      "rodney@ildharas" : {
+         "damage" : "8",
+         "location" : "ildharas11",
+         "armor" : "0",
+         "name" : "Rodney",
+         "examine" : "\nYou see a plump little bird with sooty feathers and a scavenging tendency.",
+         "description" : "Rodney the pigeon flutters by.",
+         "strength" : "70",
+         "speed" : "5",
+         "pname" : "Rodney the pigeon",
+         "aggression" : "0",
+         "mflags" : [
+            "PickStuff"
+         ]
+      }
+   }
+}

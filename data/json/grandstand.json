@@ -1,0 +1,72 @@
+{
+   "obj" : {},
+   "loc" : {
+      "party@grandstand" : {
+         "exits" : {
+            "w" : "grandstand",
+            "s" : "betting"
+         },
+         "flags" : [
+            "Peace",
+            "Party"
+         ],
+         "zone" : "grandstand",
+         "title" : "Party Room",
+         "id" : "party",
+         "description" : "\n  Champagne? Mead? Cider?  All have taps on the wall.  If you\nonly care if your bet wins, then have blast...\n",
+         "altitude" : null
+      },
+      "betting@grandstand" : {
+         "exits" : {
+            "e" : "party",
+            "n" : "grandstand"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "grandstand",
+         "title" : "The Parimutuel Betting Window",
+         "id" : "betting",
+         "description" : "\n Old form sheets plaster the walls.  A polished but nicked\noak wall has a grilled opening behind which stands the Bookie.\nA sign pasted over the grille reads \n          UNDER CONSTRUCTION\n       if you want to place a bet\n           tell a power\n",
+         "altitude" : null
+      },
+      "grandstand@grandstand" : {
+         "exits" : {
+            "e" : "party",
+            "s" : "betting"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "grandstand",
+         "title" : "The Grandstand",
+         "id" : "grandstand",
+         "description" : "\nThe flags are flying; the bleachers are loaded.  The Sportscaster\nhas its microphone ready.  The Tourney!  Promised Land pauses --\nwho will win?\nMORTALS: note that in this specific location you can do the following:\nwhere (with whatzone)\neq <player>\nspec <player>\nscore <player>\nknowledge <player>\nsnoop <contestant>\nuser   -- will show what immortals usually see\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "bookie@grandstand" : {
+         "damage" : "10",
+         "location" : "betting",
+         "armor" : "100",
+         "name" : "bookie",
+         "description" : "A tall, lean elf stands behind the grilled window.",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The Bookie",
+         "aggression" : "0"
+      },
+      "sportscaster@grandstand" : {
+         "damage" : "10",
+         "location" : "grandstand",
+         "armor" : "100",
+         "name" : "sportscaster",
+         "description" : "The fangs on the Sportscaster suggest it's just &+Rblood&+g that he likes.",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The Sportscaster",
+         "aggression" : "0"
+      }
+   }
+}

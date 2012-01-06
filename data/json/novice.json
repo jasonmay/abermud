@@ -1,0 +1,807 @@
+{
+   "obj" : {
+      "leaf@novice" : {
+         "location" : "IN_ROOM:clearing",
+         "weight" : "2",
+         "name" : "leaf",
+         "examine" : "The leaf is very beautiful and seems to shine with inner magic.",
+         "bvalue" : "50",
+         "desc[0]" : "An oak leaf lies on the ground here.",
+         "size" : "1"
+      },
+      "stone@novice" : {
+         "location" : "CARRIED_BY:Molley",
+         "weight" : "2",
+         "altname" : "rock",
+         "name" : "stone",
+         "examine" : "This rock would be perfect for skipping on water!",
+         "bvalue" : "40",
+         "desc[0]" : "A perfectly smooth and flat rock lies here.",
+         "size" : "2"
+      },
+      "diamond@novice" : {
+         "desc[1]" : "A small diamond chip is a bit loose from the wall...",
+         "location" : "IN_ROOM:mine",
+         "altname" : "chip",
+         "name" : "diamond",
+         "examine" : "This little chip doesn't look too valuable, but it is light to carry.",
+         "state" : "1",
+         "size" : "2",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A small diamond chip lies here."
+      },
+      "clover@novice" : {
+         "location" : "IN_ROOM:hut",
+         "armor" : "28",
+         "oflags" : [
+            "Armor",
+            "Newbie",
+            "Wearable",
+            "HitChance"
+         ],
+         "name" : "clover",
+         "examine" : "Upon closer examination, you see that this is a four-leaf clover.  Perhaps you \nshould wear it for good luck.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "A small green clover is wilting away here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "shield@novice" : {
+         "location" : "IN_ROOM:top",
+         "armor" : "45",
+         "oflags" : [
+            "Armor",
+            "Newbie",
+            "Shield",
+            "Wearable"
+         ],
+         "name" : "shield",
+         "examine" : "It's a small shield, but it would probably protect you in a battle.",
+         "size" : "10",
+         "weight" : "5",
+         "bvalue" : "200",
+         "desc[0]" : "A small shield lies here."
+      },
+      "pitchfork@novice" : {
+         "damage" : "15",
+         "location" : "IN_ROOM:cellar",
+         "oflags" : [
+            "Newbie",
+            "Weapon"
+         ],
+         "altname" : "fork",
+         "name" : "pitchfork",
+         "examine" : "It looks rather rusty, but it would make a fine weapon.",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "600",
+         "desc[0]" : "An old rusty pitchfork lies here.  Perhaps you should pick it up."
+      },
+      "pot@novice" : {
+         "location" : "CARRIED_BY:Mike",
+         "weight" : "4",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "pot",
+         "examine" : "This looks like a fair-sized pot.  You wish it were full of gold.",
+         "bvalue" : "100",
+         "desc[0]" : "A small pot lies on the ground here.",
+         "size" : "15"
+      },
+      "moss@novice" : {
+         "location" : "IN_ROOM:dead",
+         "weight" : "1",
+         "name" : "moss",
+         "examine" : "The moss is fragile and looks like it could fall apart in your hands.",
+         "bvalue" : "50",
+         "desc[0]" : "Growing on the tree is a bit of moss.",
+         "size" : "1"
+      },
+      "root@novice" : {
+         "location" : "IN_ROOM:tree",
+         "weight" : "2",
+         "name" : "root",
+         "examine" : "It's just a twisted brown root.  What did you expect to see?",
+         "bvalue" : "70",
+         "desc[0]" : "A small root lies loose here.",
+         "size" : "4"
+      }
+   },
+   "loc" : {
+      "corner_2@novice" : {
+         "exits" : {
+            "e" : "southern",
+            "n" : "western"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Corner Oak",
+         "id" : "corner_2",
+         "description" : "\n    \tYou have come out from between the roots of the tree.  You remember \nthat when you last passed this tree the hole was the size of your hand.  You \npanic as you realize that you must have shrunk while on your journey.  As you \nlook around, the trees look much bigger than they did before.  Just when you \ndecided that you are stuck at this small size forever, you feel yourself \ngrowing once again back to your normal size.  You shake your head in disbelief \nand decide to go back to the safety of the mighty Gate of Sorcerers.\n",
+         "altitude" : null
+      },
+      "tree@novice" : {
+         "exits" : {
+            "w" : "mine",
+            "u" : "roots"
+         },
+         "flags" : [],
+         "zone" : "novice",
+         "title" : "Beneath the Roots",
+         "id" : "tree",
+         "description" : "\n    \tYou have left the mine and are standing in an area beneath a tree's \nroots.  Looking straight up you can see the structure of the root system.  \nThere is a root nearby and it looks like, with a little effort, you could reach \nit and pull yourself up.\n",
+         "altitude" : null
+      },
+      "lawn@novice" : {
+         "exits" : {
+            "w" : "track",
+            "s" : "valley"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Green Lawn",
+         "id" : "lawn",
+         "description" : "\n    \tThe grass you are walking on is perfectly green and very soft.  The \nhill continues gently down to the south.  You have an uncontrollable urge to \nroll down the hill.   But you keep your composure as you search for whatever \nmight be watching you.\n",
+         "altitude" : null
+      },
+      "roots@novice" : {
+         "exits" : {
+            "u" : "corner_2",
+            "d" : "fall"
+         },
+         "flags" : [],
+         "zone" : "novice",
+         "title" : "In the Roots",
+         "id" : "roots",
+         "description" : "\n    \tYou are sitting amidst the roots of a tree.  You notice now that to go \nback down now would probably be fatal.  You do, however, notice that there is a \nhole between two of the biggest roots that you think you might be able to fit \nthrough.\n",
+         "altitude" : null
+      },
+      "grand@novice" : {
+         "exits" : {
+            "w" : "western",
+            "e" : "clearing",
+            "u" : "top",
+            "n" : "northern",
+            "s" : "southern"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "The Grand Oak",
+         "id" : "grand",
+         "description" : "\n    \tYou are now standing at the base of this VERY large oak tree.  This \ntree is absolutely breath-taking!  You look at the other trees circling around \nit and wonder how such a freak of nature occurred.  You look up at the massive \nbranches and discover you can easily climb up the tree.\n",
+         "altitude" : null
+      },
+      "fall@novice" : {
+         "exits" : {
+            "s" : "tree"
+         },
+         "flags" : [],
+         "zone" : "novice",
+         "title" : "Falling...",
+         "id" : "fall",
+         "description" : "\n    \tYou ignore your\tbetter judgment and you jump down from the roots.  \nYou land with a thud, bewildered and banged up a bit, but not seriously hurt.  \nBrushing the dirt off of your clothes, you look around for an exit.\n",
+         "altitude" : null
+      },
+      "trail_2@novice" : {
+         "exits" : {
+            "w" : "clearing",
+            "e" : "trail_1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Forest Trail",
+         "id" : "trail_2",
+         "description" : "\n    \tThe trail continues toward the west and up ahead seems to open up into \nan area dominated by very old oak trees.  You see what appears to be a cluster \nof them up ahead.\n",
+         "altitude" : null
+      },
+      "clearing@novice" : {
+         "exits" : {
+            "w" : "grand",
+            "e" : "trail_2",
+            "n" : "dead",
+            "s" : "enchanting"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Oak Clearing",
+         "id" : "clearing",
+         "description" : "\n    \tYou have reached the cluster of oaks, but as you stand at the edge of \nit, you notice that it is not a cluster, but a ring of trees!  In the center of \nthe ring is the largest oak tree you have ever seen.  You stare up at it with a \nfeeling of utter awe.  You suddenly feel very small and insignificant.\n",
+         "altitude" : null
+      },
+      "northern@novice" : {
+         "exits" : {
+            "w" : "small",
+            "e" : "dead",
+            "s" : "grand"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "The Northern Oak",
+         "id" : "northern",
+         "description" : "\n    \tYou have reached the northern-most tree in the circle.  This one seems \nto be one of the youngest in the cluster, even though they all seem to be about \nthe same age.  This tree is just a little smaller and the bark is just a bit \nsmoother than many of the others.\n",
+         "altitude" : null
+      },
+      "cellar@novice" : {
+         "exits" : {
+            "u" : "hut"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "In the Cellar",
+         "id" : "cellar",
+         "description" : "\n    \tIf the hut you are standing in was in better repair, this would be a \nvery dark and foreboding room.  The shape of the walls, however, allows you to \nlook around and see that this is a simple storage area which the owner of this \nhut must have once used to keep his gardening tools.\n",
+         "altitude" : null
+      },
+      "valley@novice" : {
+         "exits" : {
+            "w" : "square",
+            "n" : "lawn",
+            "s" : "tunnel"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "In the Valley",
+         "id" : "valley",
+         "description" : "\n    \tThis is the lowest point of the valley.  To the north and south the \nhill slopes gently up.  You can still see the stream curving off to the west.  \nA curious tunnel is coming up to the south.\n",
+         "altitude" : null
+      },
+      "bottom@novice" : {
+         "exits" : {
+            "w" : "entrance",
+            "e" : "hill",
+            "u" : "hill",
+            "s" : "lawn"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Bottom of the Hill",
+         "id" : "bottom",
+         "description" : "\n    \tYou have just come to the bottom of the hill.  You are standing in a \nvery beautiful valley with tall trees all around you.  Out of the corner of \nyour eye, you think you see something move.  You hear a sound that resembles \ngiggling.  Could something be laughing at you? Watching you???\n",
+         "altitude" : null
+      },
+      "western@novice" : {
+         "exits" : {
+            "e" : "grand",
+            "n" : "small",
+            "s" : "corner"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Western Oak",
+         "id" : "western",
+         "description" : "\n    \tYou are now standing at the base of the western-most oak in the ring.  \nThis particular tree captures your attention because it seems almost as \ngrandiose as the center tree, although you almost get a feeling that the center \ntree would never allow for such competition.\n",
+         "altitude" : null
+      },
+      "stream@novice" : {
+         "exits" : {
+            "e" : "entrance",
+            "s" : "pool"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "By the Stream",
+         "id" : "stream",
+         "description" : "\n    \tA small rippling stream flows by here.  The very sounds that the stream \nmakes lifts your spirits and you feel like you could stay here forever.  All of \na sudden, something to the south flashes in front of your eyes.  You feel sure \nby now that this is not just your imagination.\n",
+         "altitude" : null
+      },
+      "entrance@novice" : {
+         "exits" : {
+            "w" : "stream",
+            "e" : "bottom",
+            "s" : "track"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Entrance to the Village",
+         "id" : "entrance",
+         "description" : "\n    \tAll around you is green!  You seem to have stepped into an enchanted \nvillage.  You still think you hear giggling and curious whispers as you wander \naround.\n",
+         "altitude" : null
+      },
+      "hut@novice" : {
+         "exits" : {
+            "d" : "cellar",
+            "s" : "trail_1"
+         },
+         "flags" : [
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Inside the Hut",
+         "id" : "hut",
+         "description" : "\n    \tYou have entered a small hut.  The structure is falling down and is \nbadly in need of maintenance.  There are holes in the wood that make up that \nwalls, which allow for some light to get through.  On the floor you notice a \nsmall green object that seems to be wilting away.  You wonder what it is and \nhow it got there.\n",
+         "altitude" : null
+      },
+      "small@novice" : {
+         "exits" : {
+            "e" : "northern",
+            "n" : "trail_3",
+            "s" : "western"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Small Oak",
+         "id" : "small",
+         "description" : "\n    \tThis particular tree seems like it has lost a few limbs in its day.  \nYou feel sad for it and decide to move on before you get too depressed.  You \nnotice another small path to the north, and to the south, you can still see the \nother trees that comprise this marvelous ring.\n",
+         "altitude" : null
+      },
+      "entry@novice" : {
+         "exits" : {
+            "w" : "trail_1",
+            "n" : "haunted_0@haunted",
+            "s" : "trail1@aephir"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "NoMobiles"
+         ],
+         "zone" : "novice",
+         "title" : "The Forest Trail",
+         "id" : "entry",
+         "description" : "\n    \tYou have wandered into a forest filled with very large and majestic \ntrees of every type imaginable.  The quietness of the forest amazes you as your \nfeet crunch quietly on the fallen pine needles.  The path that you are on leads \nto the west.\n",
+         "altitude" : null
+      },
+      "trail_1@novice" : {
+         "exits" : {
+            "w" : "trail_2",
+            "e" : "entry",
+            "n" : "hut"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Forest Trail",
+         "id" : "trail_1",
+         "description" : "\n    \tWalking a little bit deeper into the forest you notice how tranquil \neverything is.  You start to feel a little strange, however, and you get light \nbutterflies in your stomach as you get the feeling that you might be intruding. \n To the north you notice a small hut, and to the west the forest continues.  \nThe section of forest to the west seems to be made up almost entirely of very \nlarge oak trees.\n",
+         "altitude" : null
+      },
+      "stream_2@novice" : {
+         "exits" : {
+            "e" : "square",
+            "n" : "pool",
+            "s" : "stream_3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Further Downstream",
+         "id" : "stream_2",
+         "description" : "\n    \tThe water forms more of a stream once again at this point.  The water \nmoves a little faster and you can see more signs of erosion.  For the first \ntime you notice that it is not really grass that you are walking on, but \nclover.\n",
+         "altitude" : null
+      },
+      "corner@novice" : {
+         "exits" : {
+            "e" : "southern",
+            "n" : "western"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Corner Oak",
+         "id" : "corner",
+         "description" : "\n    \tThis tree is in the southwestern corner of the ring.  If trees could \nappear 'ordinary,' this one would, except for one small detail.  There would \nappear to be a small hole between the roots about the size of your hand... but \nyou don't really think there could be anything down there... or do you?\n",
+         "altitude" : null
+      },
+      "trail_3@novice" : {
+         "exits" : {
+            "w" : "hill",
+            "s" : "small"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Forest Path",
+         "id" : "trail_3",
+         "description" : "\n    \tYou have left the circle of oaks and are back on a trail that leads \nnorth, then turns to the west.  The trail gets steep here and goes down into a \nlush valley that is covered in green.  Everywhere, green.\n",
+         "altitude" : null
+      },
+      "dead@novice" : {
+         "exits" : {
+            "w" : "northern",
+            "s" : "clearing"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "A Dead Oak",
+         "id" : "dead",
+         "description" : "\n    \tIn front of you is a tree that was apparently struck by lightning.  You \nfeel sad as you look at what is left of it.  The tree almost seems to cry out \nin pain.\n",
+         "altitude" : null
+      },
+      "southern@novice" : {
+         "exits" : {
+            "w" : "corner",
+            "e" : "enchanting",
+            "n" : "grand"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Southern Oak",
+         "id" : "southern",
+         "description" : "\n    \tYou now stand near the base of the southern-most tree of the ring.  You \nlook back at the center tree and are still amazed at the size and grandeur of \nit.  You wonder again how all this happened.\n",
+         "altitude" : null
+      },
+      "hill@novice" : {
+         "exits" : {
+            "w" : "bottom",
+            "e" : "trail_3",
+            "d" : "bottom"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Path to the Valley",
+         "id" : "hill",
+         "description" : "\n    \tYou are picking your way down the hill and into a lush-looking valley.  \nOut of the corner of your eye, you think you see something moving among the \ntrees.\n",
+         "altitude" : null
+      },
+      "enchanting@novice" : {
+         "exits" : {
+            "w" : "southern",
+            "n" : "clearing"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Enchanting Oak",
+         "id" : "enchanting",
+         "description" : "\n    \tThis particular tree is rather beautiful to look at.  Its branches are \nhealthy and wide-spread.   The tree seems almost happy and you think it look a \nlittle out of place here in this ring.\n",
+         "altitude" : null
+      },
+      "top@novice" : {
+         "exits" : {
+            "d" : "grand"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Top of the Oak Tree",
+         "id" : "top",
+         "description" : "\n    \tYou are sitting safely in a fork in the tree trunk.  You feel kind of \nbad for climbing the tree, but you see that it was worth the effort, if only \nbecause of the view you get of the forest from where you sit.  You feel like a \nkind on a throne as you look down into a valley to the northwest.  You wonder \nwhat could be down there.  You decide to climb down and have a look.\n",
+         "altitude" : null
+      },
+      "pool@novice" : {
+         "exits" : {
+            "e" : "track",
+            "n" : "stream",
+            "s" : "stream_2"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "By the Pool",
+         "id" : "pool",
+         "description" : "\n    \tThe stream widens into a sort of pool before it continues downstream \nand out of the village.  You can see your reflection in the clear water, and \nwhile looking into the pool, you see something very small dart behind you.\n",
+         "altitude" : null
+      },
+      "square@novice" : {
+         "exits" : {
+            "w" : "stream_2",
+            "e" : "valley",
+            "n" : "track",
+            "s" : "end"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Small Clearing",
+         "id" : "square",
+         "description" : "\n    \tYou are now in the tiniest of clearings you have ever seen.  It reminds \nyou somewhat of a miniature version of the village greens that were commonly \nfound in Colonial American towns.\n",
+         "altitude" : null
+      },
+      "stream_3@novice" : {
+         "exits" : {
+            "e" : "end",
+            "n" : "stream_2",
+            "s" : "path1@princess"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Bend in the Stream",
+         "id" : "stream_3",
+         "description" : "\n    \tHere the stream bends off to the west.  You watch the sunlight dance \noff the ripples and find it all extremely relaxing.  Piles of sand have \naccumulated against the bank and to the south after a recent flooding.\n",
+         "altitude" : null
+      },
+      "mine@novice" : {
+         "exits" : {
+            "e" : "tree",
+            "n" : "tunnel"
+         },
+         "flags" : [],
+         "zone" : "novice",
+         "title" : "In the Mine",
+         "id" : "mine",
+         "description" : "\n    \tThe walls are, as you can now see, lit by the reflection of the sun on \nsmall diamond chips in the walls.  If you try hard enough, you may be able to \npry a chip or two loose.  As you do this, you cause a minor quake that seas the \nexit behind you.  It looks like the only way out of here is to the east.\n",
+         "altitude" : null
+      },
+      "tunnel@novice" : {
+         "exits" : {
+            "w" : "end",
+            "n" : "valley",
+            "s" : "mine"
+         },
+         "flags" : [],
+         "zone" : "novice",
+         "title" : "Entrance to the Mine Tunnel",
+         "id" : "tunnel",
+         "description" : "\n    \tAhead of you is a long tunnel that reminds you of a mine of some kind.  \nIt should logically be dark in there, but something in the walls seems to \nreflect sunlight from the outside and light the tunnel for you.\n",
+         "altitude" : null
+      },
+      "end@novice" : {
+         "exits" : {
+            "w" : "stream_3",
+            "e" : "tunnel",
+            "n" : "square"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "End of the Path",
+         "id" : "end",
+         "description" : "\n    \tYou have reached the end of the main village path.  To the west you can \nsee the water slowly heading away from you.  To the east is the entrance to a \ntunnel.\n",
+         "altitude" : null
+      },
+      "track@novice" : {
+         "exits" : {
+            "w" : "pool",
+            "e" : "lawn",
+            "n" : "entrance",
+            "s" : "square"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real"
+         ],
+         "zone" : "novice",
+         "title" : "Main Village Track",
+         "id" : "track",
+         "description" : "\n    \tThe path widens here and you now see that you have indeed entered a \nsmall village.  In all of the grass around you, you can feel little eyes \nwatching you.  The Leprechauns who live here seem very curious, and you being \nto wonder if you might be able to catch one.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "erik@novice" : {
+         "damage" : "10",
+         "location" : "square",
+         "pname" : "erik",
+         "name" : "erik",
+         "examine" : "Erik has light hair and a mischevious grin.",
+         "description" : "Erik whistles happily as he darts from tree to tree.",
+         "strength" : "70"
+      },
+      "samson@novice" : {
+         "damage" : "10",
+         "location" : "tunnel",
+         "pname" : "samson",
+         "name" : "samson",
+         "examine" : "Samson is very excited about his find!",
+         "description" : "Samson found a four-leaf clover and is running home to show it off.",
+         "strength" : "75"
+      },
+      "tallie@novice" : {
+         "damage" : "10",
+         "location" : "stream_3",
+         "pname" : "tallie",
+         "name" : "tallie",
+         "examine" : "Tallie seems young and very shy.",
+         "description" : "Tallie quickly darts behind a rock as you approach her.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "75"
+      },
+      "shanon@novice" : {
+         "damage" : "10",
+         "location" : "pool",
+         "pname" : "shanon",
+         "name" : "shanon",
+         "examine" : "Shanon is a very giggly child.",
+         "description" : "Shanon giggles at you as you vainly watch your reflection in the pool.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "65"
+      },
+      "colleen@novice" : {
+         "damage" : "10",
+         "location" : "track",
+         "pname" : "colleen",
+         "name" : "colleen",
+         "examine" : "Colleen seems to be preoccupied with her flowers.",
+         "description" : "Colleen is here, quietly picking flowers.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "65"
+      },
+      "danny@novice" : {
+         "damage" : "10",
+         "location" : "valley",
+         "pname" : "danny",
+         "name" : "danny",
+         "examine" : "He is a clever-looking boy with red hair and freckles.",
+         "description" : "Danny wonders where he should hide his new pot of gold.",
+         "strength" : "70"
+      },
+      "sally@novice" : {
+         "damage" : "10",
+         "location" : "mine",
+         "pname" : "sally",
+         "name" : "sally",
+         "examine" : "She looks older than some of the others, but she does not seem to be taller.",
+         "description" : "Sally is rushing home to fix dinner for her children.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "80"
+      },
+      "clyde@novice" : {
+         "damage" : "10",
+         "location" : "tree",
+         "pname" : "clyde",
+         "name" : "clyde",
+         "examine" : "Clyde is eagerly anticipating Sally's specialty stew.",
+         "description" : "Clyde rushes after his wife, Sally.",
+         "strength" : "90"
+      },
+      "mike@novice" : {
+         "damage" : "10",
+         "location" : "hill",
+         "name" : "mike",
+         "examine" : "Mike is a jolly little fellow with red hair.  He is holding an empty pot.",
+         "description" : "Mike thinks he's doing a pretty good job at blocking your way west.",
+         "strength" : "50",
+         "pname" : "mike",
+         "pflags" : [
+            "NoSummon"
+         ],
+         "mflags" : [
+            "BarWest"
+         ]
+      },
+      "tricia@novice" : {
+         "damage" : "10",
+         "location" : "stream",
+         "pname" : "tricia",
+         "name" : "tricia",
+         "examine" : "Tricia seems to be the pensive type.  With long, dark hair, she looks very\nbeautiful as she daydreams.",
+         "description" : "Tricia is sitting on a stone, gazing out over the water.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "65"
+      },
+      "paddy@novice" : {
+         "damage" : "10",
+         "location" : "bottom",
+         "pname" : "paddy",
+         "name" : "paddy",
+         "examine" : "Paddy is a gruff little man.  He has a red beard and is dressed in green.",
+         "description" : "Paddy looks at you curiously from behind a tree stump.",
+         "strength" : "55"
+      },
+      "millie@novice" : {
+         "damage" : "10",
+         "location" : "end",
+         "pname" : "millie",
+         "name" : "millie",
+         "examine" : "Millie is singing to herself gleefully.",
+         "description" : "You caught Millie dancing happily in the grass.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "75"
+      },
+      "scottie@novice" : {
+         "damage" : "10",
+         "location" : "roots",
+         "pname" : "scottie",
+         "name" : "scottie",
+         "examine" : "Scottie is old and worn by years of work.",
+         "description" : "Scottie peers at you curiously from the shadows.",
+         "strength" : "100"
+      },
+      "molley@novice" : {
+         "damage" : "10",
+         "location" : "stream_2",
+         "pname" : "molley",
+         "name" : "molley",
+         "examine" : "Molley's raven hair catches the light in a very attractive way.",
+         "description" : "Molley smiles happily as she skips stones.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "70"
+      },
+      "malcomb@novice" : {
+         "damage" : "10",
+         "location" : "lawn",
+         "pname" : "malcomb",
+         "name" : "malcomb",
+         "examine" : "He seems to be proud of his clover bouquet.",
+         "description" : "Malcomb is carrying a handful of clover to his girlfriend.",
+         "strength" : "65"
+      },
+      "stanley@novice" : {
+         "damage" : "10",
+         "location" : "entrance",
+         "pname" : "stanley",
+         "name" : "stanley",
+         "examine" : "Stanley, too, is short with red hair.",
+         "description" : "Stanley giggles at you as you pass him unaware.",
+         "strength" : "60"
+      }
+   }
+}

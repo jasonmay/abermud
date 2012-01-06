@@ -1,70 +1,416 @@
 {
    "obj" : {
-      "sign@batcave" : {
-         "location" : "IN_ROOM:batcave1",
+      "sofa@batcave" : {
+         "location" : "IN_ROOM:batcave10",
          "oflags" : [
             "NoGet"
          ],
+         "altname" : "couch",
+         "name" : "sofa",
+         "examine" : "\nOne of the &+ycushions&* appears lumpier than the rest.  You wonder if the\nWerewolves ever lose loose change . . ."
+      },
+      "sofa_cushion@batcave" : {
+         "location" : "IN_ROOM:batcave10",
+         "oflags" : [
+            "NoGet",
+            "Container",
+            "Unlocatable"
+         ],
+         "pname" : "cushion",
+         "name" : "sofa_cushion",
+         "examine" : "You might even find something in here....",
+         "size" : "3"
+      },
+      "utilitybelt@batcave" : {
+         "location" : "IN_CONTAINER:batmobile",
+         "armor" : "5",
+         "oflags" : [
+            "Container",
+            "Wearable"
+         ],
+         "altname" : "belt",
+         "name" : "utilitybelt",
+         "examine" : "\nCylindrical containers attached to a woven belt whose construction \nresembles a net.  You can't resist saying, 'Holey utility belt!'...\n",
+         "size" : "12",
+         "pname" : "utilitybelt",
+         "weight" : "12",
+         "bvalue" : "15",
+         "desc[0]" : "A utility belt lies here."
+      },
+      "bandedmail@batcave" : {
+         "location" : "IN_ROOM:batcave21",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "65",
+         "altname" : "armor",
+         "name" : "bandedmail",
+         "examine" : "\nThe craftsmanship is fine, it has a good heft to it.  You think it would \neven fit you.",
+         "size" : "30",
+         "bvalue" : "80",
+         "desc[0]" : "A suit of banded mail armor was abandoned here.",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ]
+      },
+      "tofu_treat@batcave" : {
+         "desc[1]" : "A high-protein tofu treat sits on the table.",
+         "location" : "IN_ROOM:batcave10",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "treat",
+         "name" : "tofu_treat",
+         "examine" : "It's tofu.  What do you expect?!",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "2",
+         "pname" : "tofu",
+         "maxstate" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A tasteless tofu treat sits here."
+      },
+      "riddles@batcave" : {
+         "location" : "IN_ROOM:batcave16",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "riddles",
+         "examine" : "\nThere are all manner of mind-boggling riddles written on these walls.  \nYou spend some time pondering the more difficult ones before an \nintriguing rhyme catches your eye:\n\t\t\tThe ways to solve are more than one,\n\t\t\tIt may be fine to use a pun.\n\t\t\tOf ironic paths the gods are fond,\n\t\t\tBe not afraid of double entendre."
+      },
+      "fur@batcave" : {
+         "location" : "IN_ROOM:batcave11",
+         "oflags" : [
+            "Wearable",
+            "Unlocatable",
+            "GetFlips"
+         ],
+         "altname" : "hair",
+         "name" : "fur",
+         "examine" : "\nThe werewolf's shed fur.  It is quite smelly indeed.  In fact, it's what\ngives him his overpowering odor.",
+         "size" : "3",
+         "state" : "1",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "3",
+         "desc[0]" : "Some fur has been dropped in a pile here."
+      },
+      "runes@batcave" : {
+         "location" : "IN_ROOM:batcave13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "runes",
+         "examine" : "\nThe runes are in some language so ancient, it no longer even resembles \nany modern language you have ever seen.  The eerie blue glow tells you \nmagic is at work here."
+      },
+      "aa_doors@batcave" : {
+         "desc[1]" : "The doors are closed and held in place by an enormous oak beam.",
+         "location" : "IN_ROOM:batcave19",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "aa_doors",
+         "examine" : "\nThe oak beam is huge.  It would take several men to lift it, possibly \nlevers and ropes too!",
+         "linked" : "bb_doors",
+         "state" : "1",
+         "pname" : "doors",
+         "maxstate" : "1",
+         "desc[0]" : "The giant beam is propped against the wall and the doors are open."
+      },
+      "mosaics@batcave" : {
+         "location" : "IN_ROOM:batcave21",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "mosaics",
+         "examine" : "\nThey are gorgeous.  Brilliantly elaborate.  One employs vibrantly\ncolored tiles to depict the sun rising behind the point of the Great\nPyramid at Giza.  Another, smaller pyramid in the background is still \nunder construction.  It all looks so real, you feel you could step \ninto it and watch the sun move across the sky."
+      },
+      "journal_page@batcave" : {
+         "desc[1]" : "Under the cushion is a page fragment.",
+         "location" : "IN_CONTAINER:sofa_cushion",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "page",
+         "name" : "journal_page",
+         "examine" : "\nA fragment of a journal page written in a barbaric hand, but legible:\n\t\tI suspect it's my smell that comforts Akasha\n\t\tand allows me to approach her.  That, or my\n\t\tability to bring her fresh victims so regularly.\n\t\tThose two in tights, with the capes, particularly\n\t\tpleased her....",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "fragment",
+         "maxstate" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "Here lies the fragment of a journal page."
+      },
+      "stalagmites@batcave" : {
+         "location" : "IN_ROOM:batcave21",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "stalagmites",
+         "examine" : "They are carved into figures of the Egyptian gods and goddesses."
+      },
+      "flowers@batcave" : {
+         "location" : "IN_ROOM:batcave20",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "flowers",
+         "examine" : "\nThere are so many varieties covering most of the floor, that you feel \nlike you're walking in a garden."
+      },
+      "ruby@batcave" : {
+         "location" : "IN_ROOM:batcave21",
+         "weight" : "10",
+         "name" : "ruby",
+         "examine" : "It's a spectacular gemstone!",
+         "bvalue" : "65",
+         "desc[0]" : "A large ruby shines at you.",
+         "size" : "10"
+      },
+      "glue_jar@batcave" : {
+         "location" : "IN_CONTAINER:utilitybelt",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "jar",
+         "name" : "glue_jar",
+         "examine" : "It says 'Elmer's' on the label.  It even smells like glue!",
+         "size" : "3",
+         "pname" : "glue",
+         "weight" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "There is a small jar of glue here."
+      },
+      "quiche@batcave" : {
+         "desc[1]" : "A quiche is cooling on the table.",
+         "location" : "IN_ROOM:batcave10",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "quiche",
+         "examine" : "Spinach quiche! Oh boy!",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "18",
+         "desc[0]" : "A quiche sits here steaming."
+      },
+      "sign@batcave" : {
+         "location" : "IN_ROOM:batcave1",
+         "oflags" : [
+            "Noget"
+         ],
          "name" : "sign",
-         "examine" : "The sign reads :\n\tBeware, this area is not for the weak or lone adventurer.  Certain\n\tdeath awaits those who venture without friend or care.\n",
+         "examine" : "\nThe sign reads :\n\tBatcave:\n\tBeware, this area is not for the weak or lone adventurer.  Certain\n\tdeath awaits the cowardly or ill-equipped.\n",
          "desc[0]" : "A battered old sign sits on the floor here."
       },
-      "seppuku_dagger_knife@batcave" : {
-         "damage" : "7",
-         "location" : "IN_ROOM:batcave4",
-         "oflags" : [
-            "Weapon"
-         ],
-         "altname" : "seppuku_dagger",
-         "name" : "seppuku_dagger_knife",
-         "examine" : "Be careful with this knife!  You may cut yourself.\n",
-         "size" : "30",
-         "pname" : "knife",
+      "gold_nugget@batcave" : {
+         "location" : "IN_ROOM:batcave21",
+         "altname" : "nugget",
+         "name" : "gold_nugget",
+         "examine" : "It's a rather hefty gold nugget.",
+         "size" : "10",
+         "pname" : "gold",
          "weight" : "10",
-         "bvalue" : "200",
-         "desc[0]" : "A blood stained seppuku dagger rests here."
+         "bvalue" : "65",
+         "desc[0]" : "The shine of gold catches your eye."
+      },
+      "furcoat@batcave" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "10",
+         "altname" : "coat",
+         "name" : "furcoat",
+         "examine" : "\nIt looks only vaguely like a werewolf, but it smells an awful lot like  \none.  The key word being awful.",
+         "size" : "15",
+         "weight" : "10",
+         "bvalue" : "20",
+         "desc[0]" : "A very smelly fur coat is here.",
+         "aflags" : [
+            "Chest"
+         ]
+      },
+      "bb_doors@batcave" : {
+         "desc[1]" : "The doors are closed!  Someone has barred the door shut on you!",
+         "location" : "IN_ROOM:batcave20",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "bb_doors",
+         "linked" : "aa_doors",
+         "state" : "1",
+         "pname" : "doors",
+         "maxstate" : "1",
+         "desc[0]" : "The doors are opened allowing passage."
+      },
+      "frescos@batcave" : {
+         "location" : "IN_ROOM:batcave21",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "frescos",
+         "examine" : "\nThey display such fine craftsmanship that there is no doubt in your \nmind that their creator is one of the greatest artists in history.\nOn one you find the signature, 'Marius', and are surprised you've \nnever heard of him."
+      },
+      "diamond@batcave" : {
+         "location" : "IN_ROOM:batcave21",
+         "weight" : "10",
+         "name" : "diamond",
+         "examine" : "Dazzling.  And huge!",
+         "bvalue" : "65",
+         "desc[0]" : "A sparkling diamond is waiting for you to grab it!",
+         "size" : "10"
       },
       "sword_katana@batcave" : {
          "damage" : "17",
          "location" : "IN_ROOM:batcave4",
          "oflags" : [
             "Weapon",
-            "Lit"
+            "Glowing"
          ],
          "altname" : "sword",
          "name" : "sword_katana",
-         "examine" : "The blade is engraved with the scenes of great battles of samuri swordsmen.\n",
+         "examine" : "The blade is so keen, merely its shine almost blinds you.",
          "size" : "90",
          "pname" : "katana",
          "weight" : "10",
-         "bvalue" : "750",
+         "bvalue" : "250",
          "desc[0]" : "A magnificent katana rests here."
+      },
+      "candles@batcave" : {
+         "location" : "IN_ROOM:batcave21",
+         "oflags" : [
+            "NoGet",
+            "Lit"
+         ],
+         "name" : "candles",
+         "examine" : "There are too many to count, in all shapes and sizes."
+      },
+      "batmobile@batcave" : {
+         "location" : "IN_ROOM:batcave5",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "chariot",
+         "pname" : "batmobile",
+         "name" : "batmobile",
+         "examine" : "\nYou can see no way to attach horses to this vehicle, but the presence of \nfour wheels leads you to believe it must be a chariot of some sort.  \nThere is room for two people and there's even a wheel to steer with\n(like a ship!).  In the back you find a small metal sign that reads,\n'Batmobile.'  It sure is large enough to contain lots of bats...\n",
+         "desc[0]" : "The chariot looms large and imposing.",
+         "size" : "30"
+      },
+      "oil_lamps@batcave" : {
+         "location" : "IN_ROOM:batcave19",
+         "oflags" : [
+            "NoGet",
+            "Lit"
+         ],
+         "altname" : "lamp",
+         "pname" : "lamps",
+         "name" : "oil_lamps",
+         "examine" : "They are polished oil lamps set on tall stands on either side of the doors."
+      },
+      "paper@batcave" : {
+         "location" : "IN_ROOM:batcave5",
+         "altname" : "note",
+         "name" : "paper",
+         "examine" : "\nIt reads:  'A man-wolf keeps Those Who Must Be Kept.  It is recommended \nthat' and here the paper is torn off.\n",
+         "size" : "1",
+         "pname" : "paper",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A paper has fallen from the slot of some sort of machine..."
+      },
+      "katana_scabbard@batcave" : {
+         "location" : "IN_ROOM:batcave4",
+         "weight" : "10",
+         "pname" : "scabbard",
+         "name" : "katana_scabbard",
+         "examine" : "\nThe lacquered katana scabbard is wrapped in fine silk, and gilt with gold.\nThough broken and useless as a scabbard, it is nonetheless beautiful\nif only for its craftsmanship.\n",
+         "bvalue" : "100",
+         "desc[0]" : "A broken scabbard rests here.",
+         "size" : "30"
       },
       "hand@batcave" : {
          "location" : "IN_ROOM:batcave1",
          "weight" : "7",
          "oflags" : [
-            "Container"
+            "Container",
+            "Noget"
          ],
          "name" : "hand",
-         "examine" : "Probably left by some unfortunate adventurer.  Now known as \"lefty\".\n",
-         "bvalue" : "20",
+         "examine" : "\nProbably left by some unfortunate adventurer.  Now known as 'lefty'.",
+         "bvalue" : "10",
          "desc[0]" : "A bloody dismembered hand is laying here.",
          "size" : "7"
       },
-      "samuri_body@batcave" : {
+      "votive_candles@batcave" : {
+         "location" : "IN_ROOM:batcave20",
+         "oflags" : [
+            "NoGet",
+            "Lit"
+         ],
+         "altname" : "candles",
+         "pname" : "votive",
+         "name" : "votive_candles",
+         "examine" : "\nThe votive candles are arranged haphazardly all over the floor, so be \ncareful where you step!"
+      },
+      "book@batcave" : {
+         "location" : "IN_ROOM:batcave12",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "book",
+         "examine" : "\nIt's an interesting tale by a Frenchman named Lestat.  The page that\nit is open to mentions two hideously powerful vampire rulers named Enkil\nand Akasha.  The book refers to them as Those Who Must Be Kept.  It seems \nto be the author's opinion that Akasha really wants to be free of her \nhusband.",
+         "desc[0]" : "There is a book lying open here."
+      },
+      "hero_body@batcave" : {
          "location" : "IN_ROOM:batcave4",
          "oflags" : [
             "NoGet"
          ],
-         "altname" : "samuri",
+         "altname" : "hero",
          "pname" : "body",
-         "name" : "samuri_body",
-         "examine" : "The body has been stripped of all its armor, adornments and dignity.\nYou notice a knife wound in the belly of the samuri.\n",
-         "desc[0]" : "The body of a dead samuri lays here."
+         "name" : "hero_body",
+         "examine" : "\nYou immediately notice two things:  1) The hero died because his throat \nwas torn out.  2) There is no blood in the body.",
+         "desc[0]" : "\nThe body of a dead hero lays here.  It has been stripped of all its armor, \nadornments and dignity."
+      },
+      "solution@batcave" : {
+         "location" : "IN_ROOM:batcave5",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "vial",
+         "name" : "solution",
+         "examine" : "It is some kind of solution.  And it glows faintly.",
+         "bvalue" : "2",
+         "desc[0]" : "\nA small glass vial containing a strange looking fluid is on the ground."
       }
    },
    "loc" : {
+      "batcave25@batcave" : {
+         "exits" : {
+            "u" : "batcave7",
+            "n" : "batcave26"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "batcave",
+         "title" : "Drafty Room",
+         "id" : "batcave25",
+         "description" : "\n    Gee, it's dark and windy in here!\n",
+         "altitude" : null
+      },
       "batcave4@batcave" : {
          "exits" : {
             "n" : "batcave3"
@@ -73,24 +419,23 @@
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "Tomb of the Unknown Samurai",
+         "title" : "Tomb of the Dead Hero",
          "id" : "batcave4",
-         "description" : "\nThis room stands as a shrine to the mightiest samurai warrior of them all,\nToshiro Mafune.  The walls are covered with Japanese water color paintings\nof fantastic battles and proud Shogun rulers.\n",
+         "description" : "\n    This room for a change is musty and dark.  You could call this the\ndumping ground of this corpse, but something about his square jaw and \nheroic look causes you to use more respect.  Therefore this is his tomb.  \nThe walls are rough hewn and not at all natural.\n",
          "altitude" : null
       },
       "batcave19@batcave" : {
          "exits" : {
-            "n" : "batcave20",
+            "n" : "^aa_doors",
             "s" : "batcave18"
          },
          "flags" : [
-            "Dark",
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "empty room",
+         "title" : "The Antechamber",
          "id" : "batcave19",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    This chamber possesses a feeling of overwhelming age.  It feels as\nthough the steps, carved doorways, polished floor were all made the same\ntime as the cavern itself formed.  It simply feels impossibly old, and\nthough it is not a very large chamber, and is very plain, its unimaginable\nage makes you feel suddenly very insignificant.\n    The only objects are two burning oil &+Ylamps&* on either side of a pair of\ndoors.\n",
          "altitude" : null
       },
       "batcave16@batcave" : {
@@ -99,13 +444,15 @@
             "n" : "batcave18"
          },
          "flags" : [
-            "Dark",
+            "CantSummon",
+            "NoQuit",
+            "Soundproof",
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "Hall of Riddles",
+         "title" : "Hall of &+YRiddles",
          "id" : "batcave16",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    This room is perfectly cylindrical; so perfectly smooth and\nproportional that it must have been carved out of the earth magically.\nThe featureless wall that forms the circumference of the room is broken\nonly by the entrances to the west and the north.  The ceiling is as flat\nas the floor, (and the two are exactly parallel, a feat you know to be\notherwise impossible in nature), and perhaps five feet above your head.\n",
          "altitude" : null
       },
       "batcave21@batcave" : {
@@ -113,13 +460,26 @@
             "s" : "batcave20"
          },
          "flags" : [
-            "Dark",
             "NoSummon"
          ],
          "zone" : "batcave",
          "title" : "Temple of Akasha",
          "id" : "batcave21",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    You've reached the deepest heart of the cavern's network.  You must be\nhundreds of meters beneath the surface.  And yet, this is surely one of the \nmost beautiful rooms you've seen in a long long time.  Hundreds of &+Ycandles \nburn quietly.  Potted plants hang from stalactites carved to resemble figures.  \nScattered &+ystalagmites&* likewise have been carved to resemble all manner of \nfantastical creatures:  most look like men and women with the heads of \nanimals; all wear distinctly Egyptian garb.  &+CFrescos&* cover parts of the walls, \nwhile magnificent &+Mmosaics&* brilliantly portray ancient scenes of Egyptian life.\n",
+         "altitude" : null
+      },
+      "batcave24@batcave" : {
+         "exits" : {
+            "s" : "batcave9"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Drafty Room",
+         "id" : "batcave24",
+         "description" : "\n    Gee, it's dark and windy in here!\nA thick layer of bat dung covers the floor.\n",
          "altitude" : null
       },
       "batcave2@batcave" : {
@@ -134,7 +494,7 @@
          "zone" : "batcave",
          "title" : "Bat Cave",
          "id" : "batcave2",
-         "description" : "\nYou have entered a large cave.  High above you, through the dim light you\nmake out what appears to be hundreds of small stalactites hanging from the\nceiling.  There is a strong musty smell in the air which is almost\noverpowering.  Belatedly you realize the smell comes from the animal droppings\nwhich cover the floor, and that what you thought were stalactites are actually\nhundreds of vampire bats.\n",
+         "description" : "\n    You have entered a large cave.  High above you, through the dim light\nyou make out what appears to be hundreds of small stalactites hanging from \nthe ceiling.  There is a strong musty smell in the air which is almost\noverpowering.  Belatedly you realize the smell comes from the animal\ndroppings which cover the floor, and that what you thought were stalactites \nare actually hundreds of vampire bats.\n",
          "altitude" : null
       },
       "batcave15@batcave" : {
@@ -148,9 +508,9 @@
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "empty room",
+         "title" : "Stalactite City",
          "id" : "batcave15",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    You've reached a cavern so deep you can feel the air pressure in your\neardrums.  Stalactites and stalagmites are so large and numerous here,\ntheir tips beginning to merge in most cases, that you feel you are in a\nroom of columns.  Or a limestone forest.  To the north you catch a glimpse\nof a doorway obviously carved by hand.  The floor of the entryway is\nsplattered with dried blood.  The openings to the east and west feel more\ninviting.\n",
          "altitude" : null
       },
       "batcave17@batcave" : {
@@ -164,7 +524,7 @@
          "zone" : "batcave",
          "title" : "Guillotine Room",
          "id" : "batcave17",
-         "description" : "\nYou notice the room spinning about you.  Ultimately you realize it is not the\nroom, but your head which is rolling across the blood stained floor as your\nbody collapses to the ground.\n",
+         "description" : "\n    You notice the room spinning about you.  Ultimately you realize it is not\nthe room, but your head which is rolling across the blood stained floor as\nyour body collapses to the ground.\n",
          "altitude" : null
       },
       "batcave13@batcave" : {
@@ -173,17 +533,36 @@
             "s" : "batcave12"
          },
          "flags" : [
+            "NoMagic",
+            "Peaceful",
+            "Party",
+            "NoSummon"
+         ],
+         "zone" : "batcave",
+         "title" : "Safe Space",
+         "id" : "batcave13",
+         "description" : "\n    The roof of this cave is hidden high in darkness.  The floor has gone\nfrom soil to hard limestone, and the walls are carved with intricate &+Crunes\nthat glow faintly blue.\n    You feel completely at ease here.  A sense of peacefulness is strongly\nwashing over you, and you realize how long it has been since you've felt \nsafe.  The floor tilts upwards to the south, and there is a small, dark \nopening in the eastern wall.\n",
+         "altitude" : null
+      },
+      "batcave23@batcave" : {
+         "exits" : {
+            "e" : "batcave7",
+            "n" : "batcave9",
+            "s" : "batcave22"
+         },
+         "flags" : [
             "Dark",
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "empty room",
-         "id" : "batcave13",
-         "description" : "\n<desc pending>\n",
+         "title" : "Drafty Room",
+         "id" : "batcave23",
+         "description" : "\n    Gee, it's dark and windy in here!\nA thick layer of bat dung covers the floor.\n",
          "altitude" : null
       },
       "batcave1@batcave" : {
          "exits" : {
+            "w" : "batcave5",
             "e" : "batcave2",
             "n" : "falls@valley"
          },
@@ -192,9 +571,9 @@
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "Bottom of the stairs.",
+         "title" : "Bottom of the Stairs.",
          "id" : "batcave1",
-         "description" : "\nFlashing lights come from the room to the west, and a strange flapping sound\ncomes from the east.\n",
+         "description" : "\n    A wave of dank air hits and you almost choke; it smells as though \nsomething is rotting down here, and has been for quite a while.  Flashing \nlights come from the room to the west, and a strange flapping sound comes \nfrom the east.\n",
          "altitude" : null
       },
       "batcave22@batcave" : {
@@ -205,27 +584,28 @@
          "zone" : "batcave",
          "title" : "Punjee Trap",
          "id" : "batcave22",
-         "description" : "\nIts only after you notice the many poison punjee sticks pertruding from\nyour chest, that you realize you have surely taken a wrong turn.  You\nwon't make this mistake again.\n",
+         "description" : "\n    Its only after you notice the many poison punjee sticks protruding from\nyour chest, that you realize you have surely taken a wrong turn.  You won't \nmake this mistake again.\n",
          "altitude" : null
       },
       "batcave20@batcave" : {
          "exits" : {
             "n" : "batcave21",
-            "s" : "batcave19"
+            "s" : "^bb_doors"
          },
          "flags" : [
-            "Dark",
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "Enkil's Tomb",
+         "title" : "Enkil's Chapel",
          "id" : "batcave20",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    This is a large room gorgeously decorated.  Potted &+Cflowers&* of all hues\nare arranged on the floor. Brightly tiled mosaics comprise the walls of\nthe chapel, depicting scenes of ancient Egypt. The soft flicker of &+Yvotive\ncandles and the perfume of a thousand bouquets almost mask the sense of\noverpowering age this room exudes.  If it's possible, you feel this\nchamber is even more ancient than the antechamber.\n",
          "altitude" : null
       },
       "batcave7@batcave" : {
          "exits" : {
+            "w" : "batcave23",
             "n" : "batcave8",
+            "d" : "batcave25",
             "s" : "batcave6"
          },
          "flags" : [
@@ -235,7 +615,7 @@
          "zone" : "batcave",
          "title" : "Drafty Room",
          "id" : "batcave7",
-         "description" : "\nGee, it's dark and windy in here!\n",
+         "description" : "\n    Gee, it's dark and windy in here!\nA thick layer of bat dung covers the floor.\n",
          "altitude" : null
       },
       "batcave18@batcave" : {
@@ -249,15 +629,14 @@
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "empty room",
+         "title" : "Ramp to the Antechamber",
          "id" : "batcave18",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    This is a long, widened passageway that slants downward to the north.\nIt was obviously carved and smoothed by hand.  It resembles a hallway you\nmight find in a castle above ground, but for the fact that it has been\ntunneled out of solid limestone.  Halfway down the ramp on the western\nwall is a narrow opening spattered with old, dried blood.  To the north,\nthe ramp comes to an end at a doorway wide enough for two men.\n",
          "altitude" : null
       },
       "batcave8@batcave" : {
          "exits" : {
             "w" : "batcave9",
-            "e" : "batcave10",
             "s" : "batcave7"
          },
          "flags" : [
@@ -267,7 +646,7 @@
          "zone" : "batcave",
          "title" : "Drafty Room",
          "id" : "batcave8",
-         "description" : "\nGee, it's dark and windy in here!\n",
+         "description" : "\n    Gee, it's dark and windy in here!\nA thick layer of bat dung covers the floor.\n",
          "altitude" : null
       },
       "batcave3@batcave" : {
@@ -282,7 +661,7 @@
          "zone" : "batcave",
          "title" : "Dark Hall",
          "id" : "batcave3",
-         "description" : "\nThis hall is dark and musty.  The walls are made of solid soil and the floor\nis muddy and silppery.  A small light appears in the room south of you and\ncurious flapping sounds can be heard from the west.\n",
+         "description" : "\n    This hall is dark and musty.  The walls are made of solid soil and the\nfloor is muddy and slippery.  A small light appears in the room south of \nyou and curious flapping sounds can be heard from the west.\n",
          "altitude" : null
       },
       "batcave14@batcave" : {
@@ -292,17 +671,18 @@
          },
          "flags" : [
             "Dark",
-            "NoSummon"
+            "NoSummon",
+            "OnePerson"
          ],
          "zone" : "batcave",
-         "title" : "empty room",
+         "title" : "Narrow Way Into Darkness",
          "id" : "batcave14",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    This passageway is so narrow you have to turn sideways to squeeze\nthrough.  At several points you nearly get stuck between bottlenecks of\nlimestone.  Finally, tearing your clothes, you make your way through the\npassage.\n",
          "altitude" : null
       },
       "batcave10@batcave" : {
          "exits" : {
-            "w" : "batcave8",
+            "w" : "batcave26",
             "e" : "batcave11",
             "n" : "batcave12"
          },
@@ -313,7 +693,7 @@
          "zone" : "batcave",
          "title" : "Werewolf's Parlor",
          "id" : "batcave10",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    It's actually the Werewolf's wife that keeps the house (or cave as it\nwere), so the place is remarkably _unlike_ what you expected.  For one \nthing, the furniture is gorgeous and perfectly matches the carpeting.  The \n&+Csofa&* against one wall is tastefully accentuated by the mood uplighting in \nthe room.  It also appears that the Mrs. is attempting to turn Mr. Werewolf \ninto a vegetarian, for the table is spread with a huge meal decidedly \nlacking in meat.\n",
          "altitude" : null
       },
       "batcave6@batcave" : {
@@ -329,7 +709,7 @@
          "zone" : "batcave",
          "title" : "Drafty Room",
          "id" : "batcave6",
-         "description" : "\nGee, it's dark and windy in here!\n",
+         "description" : "\n    Gee, it's dark and windy in here!\n",
          "altitude" : null
       },
       "batcave5@batcave" : {
@@ -342,9 +722,9 @@
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "Laboratory",
+         "title" : "The Batcave",
          "id" : "batcave5",
-         "description" : "\nYou are standing in an old laboratory that seems to have been abandoned long\nago.  Discarded glassware on high shelves is filled with dust, the long\nsince rotted-out remains of spell components and magical substances.  Off to\nthe west you hear a low moaning sound, but all you hear is quiet to the\neast.\n",
+         "description" : "\n    You are standing in an old laboratory that seems to have been abandoned \nlong ago.  A few bats cling to the ceiling, and their droppings cover much \nof the equipment.  There are machines with blinking lights everywhere, along \nwith strange objects you cannot even begin to understand.  In the center of \nthe giant room is a black metal chariot of some sort.  Off to the west you \nhear a low moaning sound, but all you hear is quiet to the east.\n",
          "altitude" : null
       },
       "batcave11@batcave" : {
@@ -358,7 +738,7 @@
          "zone" : "batcave",
          "title" : "Werewolf's Den",
          "id" : "batcave11",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    Not the wood-paneled den you expected after the parlor, but since the\nparlor wasn't what you expected in the first place, this is truly the \nwerewolf den you _should_ have expected.  It is dark, smells like wet dog, \nand every inch of the walls and floor are covered in &+yhair&*.  You can't \nimagine how he must shed in the summer!\n",
          "altitude" : null
       },
       "batcave12@batcave" : {
@@ -371,14 +751,16 @@
             "NoSummon"
          ],
          "zone" : "batcave",
-         "title" : "empty room",
+         "title" : "Empty Room",
          "id" : "batcave12",
-         "description" : "\n<desc pending>\n",
+         "description" : "\n    What else do you need to know?  Well, okay, you're in another chamber\nof the cave.\nThe floor tilts down gradually toward the north.\n",
          "altitude" : null
       },
       "batcave9@batcave" : {
          "exits" : {
-            "e" : "batcave8"
+            "e" : "batcave8",
+            "n" : "batcave24",
+            "s" : "batcave23"
          },
          "flags" : [
             "Dark",
@@ -387,7 +769,21 @@
          "zone" : "batcave",
          "title" : "Drafty Room",
          "id" : "batcave9",
-         "description" : "\nGee, it's dark and windy in here!\n",
+         "description" : "\n    Gee, it's dark and windy in here!\nA thick layer of bat dung covers the floor.\n",
+         "altitude" : null
+      },
+      "batcave26@batcave" : {
+         "exits" : {
+            "e" : "batcave10",
+            "s" : "batcave25"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "batcave",
+         "title" : "Drafty Room",
+         "id" : "batcave26",
+         "description" : "\n    Gee, it's dark and windy in here!\n",
          "altitude" : null
       }
    },
@@ -395,13 +791,16 @@
       "bat3@batcave" : {
          "damage" : "10",
          "location" : "batcave2",
-         "speed" : "0",
-         "aggression" : "98",
          "armor" : "0",
-         "pname" : "bat",
          "name" : "bat3",
          "description" : "A bat is hanging out here, sensing fresh warm blood.",
-         "strength" : "60"
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "PolPotVamBat",
+         "aggression" : "98",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "bat5@batcave" : {
          "damage" : "10",
@@ -409,49 +808,55 @@
          "armor" : "0",
          "name" : "bat5",
          "description" : "A Bat is hanging out here, sensing fresh warm blood.",
-         "sflags" : [
-            "Female"
-         ],
          "strength" : "60",
          "speed" : "0",
-         "pname" : "bat",
-         "aggression" : "98"
+         "pname" : "StalinVamBat",
+         "aggression" : "48",
+         "mflags" : [
+            "NoHeat",
+            "Flyer"
+         ]
       },
       "spirit@batcave" : {
          "damage" : "10",
          "location" : "batcave4",
-         "speed" : "0",
-         "aggression" : "98",
          "armor" : "0",
-         "pname" : "spirit",
          "name" : "spirit",
-         "description" : "The spirit of the dead samuri is here, angered by your presence.",
-         "strength" : "340"
+         "examine" : "\nHe must have been tall and good looking when he was alive.  And\nrich.  Even his death shroud is embroidered with his initials:  BW.",
+         "description" : "\nThe spirit of the dead hero is here, hovering over his worldly body.",
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "340",
+         "speed" : "0",
+         "aggression" : "15",
+         "pname" : "spirit",
+         "pflags" : [
+            "Nomagic"
+         ],
+         "mflags" : [
+            "BarNorth",
+            "Nocorpse",
+            "Flyer"
+         ]
       },
-      "bat1@batcave" : {
+      "bat4@batcave" : {
          "damage" : "10",
          "location" : "batcave2",
          "armor" : "0",
-         "name" : "bat1",
+         "name" : "bat4",
          "description" : "A bat is hanging out here, sensing fresh warm blood.",
          "sflags" : [
             "Female"
          ],
          "strength" : "60",
          "speed" : "0",
-         "pname" : "bat",
-         "aggression" : "98"
-      },
-      "bat4@batcave" : {
-         "damage" : "10",
-         "location" : "batcave2",
-         "speed" : "0",
-         "aggression" : "98",
-         "armor" : "0",
-         "pname" : "bat",
-         "name" : "bat4",
-         "description" : "A bat is hanging out here, sensing fresh warm blood.",
-         "strength" : "60"
+         "aggression" : "58",
+         "pname" : "MorganVamBat",
+         "mflags" : [
+            "Flyer",
+            "NoHeat"
+         ]
       },
       "bat2@batcave" : {
          "damage" : "10",
@@ -464,8 +869,114 @@
          ],
          "strength" : "60",
          "speed" : "0",
-         "pname" : "bat",
-         "aggression" : "98"
+         "aggression" : "98",
+         "pname" : "AminVamBat",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "enkil@batcave" : {
+         "eflags" : [
+            "Fireball",
+            "ImmVtouch"
+         ],
+         "damage" : "10",
+         "location" : "batcave20",
+         "armor" : "5",
+         "name" : "Enkil",
+         "examine" : "\nThis is no statue!  As you get in for a closer look you realize the 'statue' \nis a living being.  He is a vampire so old and powerful his skin has since \nturned white and is cold and hard as marble.",
+         "description" : "A white marble statue is standing here, fully dressed in clothes and jewels.",
+         "sflags" : [
+            "Vampire"
+         ],
+         "strength" : "800",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The Statue of Enkil",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "werewolf@batcave" : {
+         "damage" : "15",
+         "location" : "batcave11",
+         "armor" : "0",
+         "name" : "Werewolf",
+         "examine" : "\nHis wife's attempts to turn him vegetarian seem only to have made him \ncrave meat more strongly.",
+         "description" : "A werewolf seems to have spotted his next meal . . .",
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "The Werewolf",
+         "aggression" : "70",
+         "mflags" : [
+            "GrabHostile"
+         ]
+      },
+      "mrs_werewolf@batcave" : {
+         "damage" : "10",
+         "location" : "batcave10",
+         "armor" : "0",
+         "name" : "Mrs_Werewolf",
+         "examine" : "\nShe looks up from polishing the fixtures and growls, 'You're tracking \nbat dung all over my carpet!'",
+         "description" : "\nThis She-Werewolf is engaged in the never-ending struggle against\nhair on the furniture.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "90",
+         "speed" : "0",
+         "pname" : "She-Werewolf",
+         "aggression" : "5"
+      },
+      "akasha@batcave" : {
+         "eflags" : [
+            "Fireball",
+            "ImmVTouch"
+         ],
+         "damage" : "10",
+         "location" : "batcave21",
+         "armor" : "5",
+         "name" : "Akasha",
+         "examine" : "\nShe is as old as Enkil, and perhaps even more powerful.  Her skin, like\nhis, is white and hard as marble.  She exudes power.  You are quite\nrelieved that she does not need to feed at the moment.",
+         "description" : "Akasha, Queen of the Damned, is finally free of Enkil.  She looks\nat you as at a fly.",
+         "sflags" : [
+            "Female",
+            "Vampire"
+         ],
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Queen Akasha"
+      },
+      "bat1@batcave" : {
+         "damage" : "10",
+         "location" : "batcave2",
+         "armor" : "0",
+         "name" : "bat1",
+         "description" : "A bat is hanging out here, sensing fresh warm blood.",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "GatesVamBat",
+         "aggression" : "98",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "riddlemaster@batcave" : {
+         "damage" : "10",
+         "location" : "batcave16",
+         "name" : "Riddlemaster",
+         "examine" : "\nThe relationship is simple:  give him what he's looking for, and he'll let \nyou continue on.  He is a nondescript man except for the fact that he glows \nfaintly.  His enigmatic expression is directed at you.",
+         "description" : "The Master of Riddles stands firmly before the north exit.",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
       }
    }
 }

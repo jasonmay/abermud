@@ -1,0 +1,1754 @@
+{
+   "obj" : {
+      "ladder@avairy" : {
+         "desc[1]" : "An old wooden ladder sits in the fireplace.",
+         "location" : "IN_ROOM:build1",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "ladder",
+         "state" : "1",
+         "pname" : "ladder",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "An old wooden ladder has been left here."
+      },
+      "bird@avairy" : {
+         "desc[1]" : "A very large golden bird is pirched here.",
+         "location" : "IN_ROOM:build2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bird",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "bird",
+         "weight" : "2",
+         "maxstate" : "1",
+         "desc[0]" : "A large golden bird has kneeled for you to sit."
+      },
+      "cracker@avairy" : {
+         "location" : "IN_CONTAINER:cabinet",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "cracker",
+         "size" : "1",
+         "pname" : "cracker",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A cracker has been left here."
+      },
+      "lava_pit@avairy" : {
+         "location" : "IN_ROOM:shore10",
+         "oflags" : [
+            "NoGet",
+            "Lit"
+         ],
+         "pname" : "lava",
+         "name" : "lava_pit",
+         "examine" : "Thankfully this is just a minor crack, instead of a major volcano.",
+         "desc[0]" : "A lava pit spits hot lava and flames here."
+      },
+      "panel@avairy" : {
+         "location" : "IN_ROOM:fall1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "paneling",
+         "name" : "panel",
+         "examine" : "Looks like it wouldn't take much to smash through it.",
+         "state" : "1",
+         "pname" : "panel",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A piece of panel has been broken through allowing passage west."
+      },
+      "beans@avairy" : {
+         "desc[1]" : "A bowl of beans sits on the stove.",
+         "location" : "IN_ROOM:build1",
+         "oflags" : [
+            "GetFlips",
+            "Food"
+         ],
+         "name" : "beans",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "beans",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "25",
+         "desc[0]" : "A bowl of beans has been left here."
+      },
+      "axe@avairy" : {
+         "desc[1]" : "A brilliantly shining golden axe hangs on the wall.",
+         "damage" : "21",
+         "location" : "IN_ROOM:fall2",
+         "oflags" : [
+            "Weapon",
+            "Glowing",
+            "GetFlips"
+         ],
+         "name" : "axe",
+         "size" : "10",
+         "state" : "1",
+         "weight" : "15",
+         "pname" : "GoldenAxe",
+         "maxstate" : "1",
+         "bvalue" : "400",
+         "desc[0]" : "A stunning golden axe has been discarded here."
+      },
+      "swan_obj@avairy" : {
+         "location" : "IN_ROOM:castle28",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Princess",
+         "name" : "swan_obj",
+         "examine" : "Hmmm...how will these chains come off?",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "2",
+         "pname" : "chains",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "The Swan Princess is here, bound by magical chains."
+      },
+      "bed@avairy" : {
+         "desc[1]" : "There appears to be some type of book on the bed.",
+         "location" : "IN_ROOM:build1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "bed",
+         "name" : "bed",
+         "maxstate" : "0",
+         "bvalue" : "0"
+      },
+      "worm_cage@avairy" : {
+         "desc[1]" : "A small worm cage sits on a table, closed.",
+         "location" : "IN_ROOM:castle7",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "NoGet"
+         ],
+         "name" : "worm_cage",
+         "examine" : "Alas, most of the worms have slipped through the bars.",
+         "state" : "1",
+         "pname" : "cage",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A small worm cage has been left open."
+      },
+      "cabinet@avairy" : {
+         "desc[1]" : "An old wooden cabinet sit on a counter, closed.",
+         "location" : "IN_ROOM:fall1",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "NoGet"
+         ],
+         "name" : "cabinet",
+         "examine" : "Maybe it has stuff in there?",
+         "state" : "1",
+         "pname" : "cabinet",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "An old wooden cabinet has been left open."
+      },
+      "worm@avairy" : {
+         "location" : "IN_CONTAINER:worm_cage",
+         "oflags" : "{ }",
+         "name" : "worm",
+         "size" : "4",
+         "state" : "0",
+         "weight" : "5",
+         "pname" : "worm",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A small worm wiggles here."
+      },
+      "umbrella@avairy" : {
+         "desc[1]" : "An umbrella lies here, opened.",
+         "location" : "IN_ROOM:jungle5",
+         "oflags" : [
+            "Openable"
+         ],
+         "name" : "umbrella",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "2",
+         "pname" : "umbrella",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "An umbrella lies here, closed."
+      },
+      "driftwood@avairy" : {
+         "desc[1]" : "A sizeable piece of driftwood has washed ashore here.",
+         "location" : "IN_ROOM:shore13",
+         "oflags" : [
+            "Lightable",
+            "GetFlips"
+         ],
+         "name" : "driftwood",
+         "size" : "4",
+         "state" : "1",
+         "weight" : "2",
+         "pname" : "driftwood",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A sizeable piece of driftwood has been left here."
+      },
+      "knife@avairy" : {
+         "damage" : "12",
+         "location" : "WIELDED_BY:chef",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "knife",
+         "size" : "4",
+         "state" : "0",
+         "weight" : "5",
+         "pname" : "knife",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "A chopping knife has been left here."
+      },
+      "harness@avairy" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : "{ }",
+         "name" : "harness",
+         "size" : "1",
+         "pname" : "harness",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "\nA golden harness has been left here."
+      },
+      "gold_egg@avairy" : {
+         "desc[1]" : "\nA golden egg sits here in a nest.",
+         "location" : "IN_ROOM:tree1",
+         "oflags" : "{  }",
+         "name" : "gold_egg",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "2",
+         "pname" : "GoldEgg",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "\nA golden egg has been left here."
+      },
+      "shirt@avairy" : {
+         "desc[1]" : "A steel shirt has just been dug up.",
+         "location" : "IN_ROOM:cave1",
+         "armor" : "39",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Destroyed"
+         ],
+         "name" : "shirt",
+         "state" : "1",
+         "pname" : "steelshirt",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A dirty steel shirt has been left here.",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ]
+      },
+      "traptop@avairy" : {
+         "location" : "IN_ROOM:castle14",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "traptop",
+         "linked" : "trapbottom",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "2",
+         "pname" : "trapdoor",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "\nA trapdoor has been opened allowing passage under the stage."
+      },
+      "steak@avairy" : {
+         "location" : "IN_ROOM:cave1",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "steak",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "steak",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "25",
+         "desc[0]" : "A piece of steak lies here."
+      },
+      "banana@avairy" : {
+         "location" : "IN_ROOM:jungle5",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "banana",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "banana",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "20",
+         "desc[0]" : "A fallen banana lies here."
+      },
+      "fireplace@avairy" : {
+         "location" : "IN_ROOM:build1",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "pname" : "fireplace",
+         "name" : "fireplace",
+         "examine" : "The old fireplace hasn't been used in years.",
+         "maxstate" : "0",
+         "bvalue" : "0"
+      },
+      "trapbottom@avairy" : {
+         "location" : "IN_ROOM:castle26",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "trapbottom",
+         "linked" : "traptop",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "2",
+         "pname" : "trapdoor",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A trapdoor has been opened allowing passage onto the stage."
+      },
+      "dirt@avairy" : {
+         "desc[1]" : "A pile of dirt looks like it was just used to cover something up.",
+         "location" : "IN_ROOM:cave1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "dirt",
+         "state" : "1",
+         "pname" : "dirt",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "Some dirt has been dug up here."
+      },
+      "diary@avairy" : {
+         "location" : "IN_ROOM:build1",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "diary",
+         "examine" : "\nYou skim the diary and pick out some starred passages:\n *  Wize parrot by the shore is securing ride to castle.\n *  Only have one cracker left.\n *  Pigeon under stage knows where Swan Princess is being held.\n *  Need worms to get info from Pigeon.\n",
+         "pname" : "diary",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "An old diary has been left here."
+      }
+   },
+   "loc" : {
+      "cave2@avairy" : {
+         "exits" : {
+            "w" : "shore14"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "avairy",
+         "title" : "Inside the Cave",
+         "id" : "cave2",
+         "description" : "\n    You are in a dark, dank cave.  Judging by the smoothness of the \nwalls, you can tell this cave was made by thousands of years of waves \nsmashing against it.\n    The floor is covered with little bird foot prints.  A small pirch \nmade from well warn drift wood is off to one corner.\n",
+         "altitude" : null
+      },
+      "castle22@avairy" : {
+         "exits" : {
+            "w" : "castle24",
+            "e" : "castle23",
+            "s" : "castle21"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Sitting Room",
+         "id" : "castle22",
+         "description" : "\n    This is the sitting room.  Apparently, birds sit here.\n",
+         "altitude" : null
+      },
+      "castle10@avairy" : {
+         "exits" : {
+            "e" : "castle11",
+            "s" : "castle5"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Corner Corridor",
+         "id" : "castle10",
+         "description" : "\n   You have entered a corner hallway.  You may go either south or east.\nSome ooze drips down the northern wall.  If you see housekeeping you may \njust want to point that out.\n",
+         "altitude" : null
+      },
+      "jungle4@avairy" : {
+         "exits" : {
+            "e" : "shore4",
+            "w" : "jungle8",
+            "n" : "jungle4"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle4",
+         "description" : "\n    The steamy jungle surrounds you.  Pathes lead into the jungle to the  \nnorth and west.  The shore is off to the east.\n",
+         "altitude" : null
+      },
+      "jungle1@avairy" : {
+         "exits" : {
+            "e" : "shore1",
+            "w" : "jungle5",
+            "s" : "jungle2"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle1",
+         "description" : "\n    Trees rise high into the sky and you can not find the tops of most.  \nVarious types of birds fly in and out of the trees and bushes all around you.\n    The island shore is to the east, while the jungle continues on west and\nsouth.\n",
+         "altitude" : null
+      },
+      "shore18@avairy" : {
+         "exits" : {
+            "e" : "shore19",
+            "w" : "shore17"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore18",
+         "description" : "\n    You are meandering along the northern edge of the Avairy Island.  The\nbreeze coming off the sea almost knocks you down and you struggle to stand.\nLooking out over the sea you can find no sign of land.  A large cliff shoots up\nto your south blocking all passage in that direction.\n    The shoreline continues east and west.\n",
+         "altitude" : null
+      },
+      "shore7@avairy" : {
+         "exits" : {
+            "e" : "shore6",
+            "w" : "shore8",
+            "n" : "jungle8"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore7",
+         "description" : "\n    You are on the southern shore of Avairy Island.  To the south are miles\nand miles of breaking seas.  You notice an occasional human skeleton lying\nhalf buried in the sand.\n    The shore line continues to the east and west.\n",
+         "altitude" : null
+      },
+      "fall2@avairy" : {
+         "exits" : {
+            "e" : "fall1"
+         },
+         "flags" : [
+            "Dark",
+            "NoMagic"
+         ],
+         "zone" : "avairy",
+         "title" : "A Secret Room",
+         "id" : "fall2",
+         "description" : "\n   The hole in the panel has led you to this concealed room.  It appears \nas though it was only created as a hiding place for special items.  There \nis not furniture or decoration.\n",
+         "altitude" : null
+      },
+      "jungle10@avairy" : {
+         "exits" : {
+            "e" : "jungle8",
+            "w" : "build1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle10",
+         "description" : "\n    The steamy jungle surrounds you.  A path leads east into the \njungle, while a western path leads to a small cottage.\n",
+         "altitude" : null
+      },
+      "castle11@avairy" : {
+         "exits" : {
+            "w" : "castle10",
+            "e" : "castle12",
+            "n" : "castle16"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Corridor",
+         "id" : "castle11",
+         "description" : "\n    You are in a branching corridor.  Halls lead off to the north, east, \nand west.  You decide to whistle a happy tune.\n",
+         "altitude" : null
+      },
+      "jungle5@avairy" : {
+         "exits" : {
+            "e" : "jungle1",
+            "s" : "jungle6"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle5",
+         "description" : "\n    The steamy jungle surrounds you.  Pathes lead into the jungle to the  \nsouth and east. \n",
+         "altitude" : null
+      },
+      "castle2@avairy" : {
+         "exits" : {
+            "e" : "castle4",
+            "w" : "castle3",
+            "n" : "castle9",
+            "s" : "castle1"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Grand Hall",
+         "id" : "castle2",
+         "description" : "\n    Definition:  Grand Hall -  A really large, high ceiling hallway, \nusually found upon entering a castle.\n    Useful information?  Probably not.\n",
+         "altitude" : null
+      },
+      "jungle11@avairy" : {
+         "exits" : {
+            "e" : "jungle9",
+            "w" : "shore12"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle11",
+         "description" : "\n    The steamy jungle surrounds you.  A path leads east into the \njungle, while a western path leads to the shoreline.\n",
+         "altitude" : null
+      },
+      "castle18@avairy" : {
+         "exits" : {
+            "e" : "castle17"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Cell",
+         "id" : "castle18",
+         "description" : "\n    You are in a plain, barren cell.  The more you think about it, you \nrealize you haven't been in an exciting, well decorated cell.\n",
+         "altitude" : null
+      },
+      "castle28@avairy" : {
+         "exits" : {
+            "w" : "castle27"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Royal Cell",
+         "id" : "castle28",
+         "description" : "\n    You have entered a very strong, nicely decorated cell.  This is \napparently where royal prisoners are kept. \n",
+         "altitude" : null
+      },
+      "shore9@avairy" : {
+         "exits" : {
+            "e" : "shore8",
+            "w" : "shore10"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore9",
+         "description" : "\n    You are on the southern shore of Avairy Island.  To the south are miles\nand miles of breaking seas.  You notice an occasional human skeleton lying\nhalf buried in the sand.\n    The shore line continues to the east and west.\n",
+         "altitude" : null
+      },
+      "tower@avairy" : {
+         "exits" : {
+            "s" : "forest5"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Overlooking the Avairy Kingdom",
+         "id" : "tower",
+         "description" : "\n      You are standing on a high cliff overlooking the kingdom of Avairy.\nIn the middle is a graceful lake encircled by trees populated by a large\nnumber of swans.  The Swan Princess speaks...\n      'Thank you for destroying that evil sorceror.  Rothbart has hurt so\nmany innocent people with his mad ambitions for power turning all the women\ninto swans.  With him vanquished, he cannot turn anyone else into one.  \nBut the spell over us cannot be broken, for we all need handsome princes\nto fall in love with us.  Though we can transform into humans for a few\nhours in the middle of the night, we must stay at Swan Lake for our safety.'\n\n      There is a glowing portal here, ready to send you back to where you \nwere brought.  You can't help but feel sorry for all the swans, yet you are\nonly one person and could only break the spell for one of them.\n",
+         "altitude" : null
+      },
+      "castle21@avairy" : {
+         "exits" : {
+            "n" : "castle22",
+            "s" : "castle20"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Entrance to Royal Quarters",
+         "id" : "castle21",
+         "description" : "\n    You stand before a large set of double stained glass doors.  A set of \nbird armor stands on each side of the doors.\n",
+         "altitude" : null
+      },
+      "shore15@avairy" : {
+         "exits" : {
+            "e" : "shore16",
+            "s" : "shore14"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore15",
+         "description" : "\n    You have enter the northwestern corner of the island.  You notice a\nsignificant difference in the sea north and the sea to the west.  You are\ndrenched as a five foot wave crashes on the rocks about five feet north of you.\nThe breeze from the north almost blows you to the ground and you struggle\nagainst it.\n    The shore continues to the south and east.\n",
+         "altitude" : null
+      },
+      "castle27@avairy" : {
+         "exits" : {
+            "e" : "castle28",
+            "s" : "castle18"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Security Hold",
+         "id" : "castle27",
+         "description" : "\n    You have found the hidden guardroom of the Avairy Castle.  A single \ncell is off to the east.\n",
+         "altitude" : null
+      },
+      "pond1@avairy" : {
+         "exits" : {
+            "e" : "jungle6",
+            "w" : "water1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light",
+            "NoMagic"
+         ],
+         "zone" : "avairy",
+         "title" : "By a Peaceful Pond",
+         "id" : "pond1",
+         "description" : "\n    You can't help but stop to relax in the peacefulness of your \nsurroundings.  Water flows swiftly into the pond from a small waterfall \nto the west.  You can't help but wonder where the water flows to.\n    Small birds chirp, flying from tree to tree and the sun shines down \nto the clearing in the trees.\n",
+         "altitude" : null
+      },
+      "forest2@avairy" : {
+         "exits" : {
+            "e" : "forest1",
+            "n" : "forest3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Within the Forest",
+         "id" : "forest2",
+         "description" : "\n      You are within a large, florishing forest.  You hear many birds\nwhistling and squaking to one another.  Squirrels and chipmunks scurry \nhere and there. The floor is covered by leaves, twigs, and large branches \nmaking your walk very unstable.\n",
+         "altitude" : null
+      },
+      "castle24@avairy" : {
+         "exits" : {
+            "e" : "castle22"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Closet",
+         "id" : "castle24",
+         "description" : "\n    A typical everyday royal closet.\n",
+         "altitude" : null
+      },
+      "castle19@avairy" : {
+         "exits" : {
+            "w" : "castle17"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Cell",
+         "id" : "castle19",
+         "description" : "\n    You are in a plain, barren cell.  The more you think about it, you \nrealize you haven't been in an exciting, well decorated cell.\n",
+         "altitude" : null
+      },
+      "jungle2@avairy" : {
+         "exits" : {
+            "e" : "shore2",
+            "w" : "jungle6",
+            "n" : "jungle1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle2",
+         "description" : "\n    The island shore is to the east.  The jungle continues to the north and\nwest.\n",
+         "altitude" : null
+      },
+      "shore11@avairy" : {
+         "exits" : {
+            "n" : "shore12",
+            "s" : "shore10"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore11",
+         "description" : "\n    This is the western shore line of Avairy Island.  To your east, dense\nclusters of jungle bush and trees block your way.  The waves to the west are\nnot as bad as most you have seen from the island.  The breeze here is\nsignificantly weaker than that of other parts of the island and sweat begins\nto form on your forehead.\n    The shore line continues north and south.\n",
+         "altitude" : null
+      },
+      "castle25@avairy" : {
+         "exits" : {
+            "s" : "castle23"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Royal Bird Bath",
+         "id" : "castle25",
+         "description" : "\n    The royal bird bath is much nicer than the peasantry bird bath on the \nlower floor.  This bath is made from pure gold, the water glistening of \npurity. \n",
+         "altitude" : null
+      },
+      "castle23@avairy" : {
+         "exits" : {
+            "w" : "castle22",
+            "n" : "castle25"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Master Bed Room",
+         "id" : "castle23",
+         "description" : "\n    You have entered the castle master bedroom, where the Avairy monarchs \nsleep.  Examining the bed, you find it is puzzlingly made from feathers.\n",
+         "altitude" : null
+      },
+      "fall1@avairy" : {
+         "exits" : {
+            "u" : "water1"
+         },
+         "flags" : [
+            "Dark",
+            "NoMagic"
+         ],
+         "zone" : "avairy",
+         "title" : "A Cave Under the Falls",
+         "id" : "fall1",
+         "description" : "\n    You are in a dark, mildewy cave beneath the waterfall.  Water leaks \nin through the dirt roof over your head causing a constant dripping \nnoise.  The walls of the room are lined with paneling which you note \nlooks extremely flimsy in one particular spot and sways as if there is a \nhole behind it.  Footprints in the dirt floor are extremely hardened and \nit does not appear that anyone has been down here in quite some time.\n",
+         "altitude" : null
+      },
+      "shore2@avairy" : {
+         "exits" : {
+            "w" : "jungle2",
+            "n" : "shore1",
+            "s" : "shore3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore2",
+         "description" : "\n    You are on the shore of Avairy Island.  To the east the sea crashes\nviolently against the shore line.  To the west, the jungle bush separates\nallowing you passage west.\n    The sand is beautifully clean and pure.  You hear the sound of birds\nchirping somewhere off to the west.\n",
+         "altitude" : null
+      },
+      "shore13@avairy" : {
+         "exits" : {
+            "n" : "shore14",
+            "s" : "shore12"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore13",
+         "description" : "\n    This is the western shore line of Avairy Island.  To your east, dense\nclusters of jungle bush and trees block your way.  The waves to the west are\nnot as bad as most you have seen from the island.  The breeze here is\nsignificantly weaker than that of other parts of the island and sweat begins\nto form on your forehead.\n    The shore line continues north and south.\n",
+         "altitude" : null
+      },
+      "castle20@avairy" : {
+         "exits" : {
+            "n" : "castle21",
+            "d" : "castle16"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Top of the Stairs",
+         "id" : "castle20",
+         "description" : "\n    You are on the second floor if the castle.  After walking up the \ncountless number of stairs you begin to wonder why birds even need stairs.\n",
+         "altitude" : null
+      },
+      "tree1@avairy" : {
+         "exits" : {
+            "d" : "forest5"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "High up in a Tree",
+         "id" : "tree1",
+         "description" : "\n    You have climbed high up into a tree.  You can see far... but you can only\nsee trees.\n",
+         "altitude" : null
+      },
+      "jungle7@avairy" : {
+         "exits" : {
+            "e" : "jungle3",
+            "w" : "jungle9",
+            "s" : "jungle8"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle7",
+         "description" : "\n    The steamy jungle surrounds you.  Pathes lead into the jungle to the  \nsouth, west, and eastern directions.\n",
+         "altitude" : null
+      },
+      "castle9@avairy" : {
+         "exits" : {
+            "e" : "castle8",
+            "s" : "castle2"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Grand Ballroom",
+         "id" : "castle9",
+         "description" : "\n   You have enter a majestic, high ceilied ballroom.  Large crystaline \nchandelliers hang down from above.  Many fine golden bird feeders line \nthe walls.\n",
+         "altitude" : null
+      },
+      "castle1@avairy" : {
+         "exits" : {
+            "n" : "castle2"
+         },
+         "flags" : [
+            "OutDoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Castle Entrance",
+         "id" : "castle1",
+         "description" : "\n    The golden bird has flown you high in the sky to the Avairy Castle.  \nIt appears as though the castle is made from some mixture of straw, \nleaves, and clay.  In fact, it seems to be one very elaborate nest. \n",
+         "altitude" : null
+      },
+      "shore14@avairy" : {
+         "exits" : {
+            "e" : "cave2",
+            "n" : "shore15",
+            "s" : "shore13"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore14",
+         "description" : "\n    This is the western shore line of Avairy Island.  The waves to the west\nare not as bad as most you have seen from the island.  The breeze here is\nsignificantly weaker than that of other parts of the island and sweat begins\nto form on your forehead.\n    A cave entrance allows passage east, while the shore line continues north\nand west.\n",
+         "altitude" : null
+      },
+      "shore1@avairy" : {
+         "exits" : {
+            "w" : "jungle1",
+            "n" : "shore20",
+            "s" : "shore2"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore1",
+         "description" : "\n    You are on the shore of Avairy Island.  To the east the sea crashes\nviolently against the shore line.  A passage to the west appears to exist\nthrough the thick trees.\n    The sand is beautifully clean and pure.  You hear the sound of birds\nchirping somewhere off to the west.\n",
+         "altitude" : null
+      },
+      "castle16@avairy" : {
+         "exits" : {
+            "u" : "castle20",
+            "n" : "castle17",
+            "s" : "castle11"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Stairwell",
+         "id" : "castle16",
+         "description" : "\n    You are in a stairwell leading, well go figure, up and down.  You can \nalso go either north or south. \n",
+         "altitude" : null
+      },
+      "forest5@avairy" : {
+         "exits" : {
+            "w" : "forest4",
+            "u" : "tree1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Within the Forest",
+         "id" : "forest5",
+         "description" : "\n      You are within a large, florishing forest.  You hear many birds\nwhistling and squaking to one another.  Squirrels and chipmunks scurry \nhere and there. The floor is covered by leaves, twigs, and large branches \nmaking your walk very unstable.\n",
+         "altitude" : null
+      },
+      "castle7@avairy" : {
+         "exits" : {
+            "s" : "castle6"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Kitchen Storage Room",
+         "id" : "castle7",
+         "description" : "\n    You are in the kitchen storage room.  Must be a famine going on \naround here cause it doesn't appear like too much is being stored.\n",
+         "altitude" : null
+      },
+      "forest3@avairy" : {
+         "exits" : {
+            "n" : "forest4",
+            "s" : "forest2"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Within the Forest",
+         "id" : "forest3",
+         "description" : "\n      You are within a large, florishing forest.  You hear many birds \nwhistling and squaking to one another.  Squirrels and chipmunks scurry \nhere and there. The floor is covered by leaves, twigs, and large branches \nmaking your walk very unstable.\n",
+         "altitude" : null
+      },
+      "build2@avairy" : {
+         "exits" : {
+            "d" : "build1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Roof of the Small Shack",
+         "id" : "build2",
+         "description" : "\n    Having climbed the ladder in the cottage, you now stand on the \ncottages somewhat sturdy roof.  Although you are now at a higher point, \nthe immense trees of the jungle still hinder your view.\n",
+         "altitude" : null
+      },
+      "castle17@avairy" : {
+         "exits" : {
+            "w" : "castle18",
+            "e" : "castle19",
+            "s" : "castle16"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Security Office",
+         "id" : "castle17",
+         "description" : "\n    This is the castle security office.  A desk covered with papers sits \nagainst one wall.\n",
+         "altitude" : null
+      },
+      "castle15@avairy" : {
+         "exits" : {
+            "w" : "castle12"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Bird Bath",
+         "id" : "castle15",
+         "description" : "\n    You stand in the middle of a fountain bird bath, and, you are in fact \ngetting quite wet.  Little blue birds are frollicking to one side of the \nbath and you do a double take as one winks at you.\n",
+         "altitude" : null
+      },
+      "jungle8@avairy" : {
+         "exits" : {
+            "e" : "jungle4",
+            "w" : "jungle10",
+            "n" : "jungle7",
+            "s" : "shore7"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle8",
+         "description" : "\n    The steamy jungle surrounds you.  Pathes lead into the jungle to the  \nnorth, west, and eastern directions.  To the south is the shoreline.\n",
+         "altitude" : null
+      },
+      "castle26@avairy" : {
+         "exits" : {
+            "u" : "^trapbottom"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Under the Stage",
+         "id" : "castle26",
+         "description" : "\n    You are under the stage of the Castle Playhouse.  Cobwebs cover the \nwalls and you break through them as you walk.\n",
+         "altitude" : null
+      },
+      "shore10@avairy" : {
+         "exits" : {
+            "e" : "shore9",
+            "n" : "shore11"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore10",
+         "description" : "\n    You have reached the south western corner of the island.  You stop to take\na rest as the hot sun beats down on you.  If it were not for the breeze coming\noff the sea, you would surely be brought to your knees by the island's\ntropical climate.\n",
+         "altitude" : null
+      },
+      "jungle9@avairy" : {
+         "exits" : {
+            "e" : "jungle7",
+            "w" : "jungle11"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle9",
+         "description" : "\n    The steamy jungle surrounds you.  Pathes lead into the jungle to the  \neast and west.\n",
+         "altitude" : null
+      },
+      "castle14@avairy" : {
+         "exits" : {
+            "d" : "^traptop",
+            "s" : "castle13"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Castle Playhouse",
+         "id" : "castle14",
+         "description" : "\n    You have entered the castle playhouse.  The stage is right in front \nof you.  Examining the floor, you can almost make out the edges of a trap \ndoor.\n    It appears as though the bird crew is in preparation for a new play \nas you notices pieces of the set in works everywhere.\n",
+         "altitude" : null
+      },
+      "forest1@avairy" : {
+         "exits" : {
+            "w" : "forest2",
+            "s" : "sundhaven6748@sundhaven"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Within the Forest",
+         "id" : "forest1",
+         "description" : "\n      You are within a large, florishing forest.  You hear many birds\nwhistling and squaking to one another.  Squirrels and chipmunks scurry \nhere and there. The floor is covered by leaves, twigs, and large branches \nmaking your walk very unstable.\n",
+         "altitude" : null
+      },
+      "jungle3@avairy" : {
+         "exits" : {
+            "e" : "shore3",
+            "w" : "jungle7",
+            "s" : "jungle4"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle3",
+         "description" : "\n    The steamy jungle surrounds you.  Pathes lead into the jungle to the  \nsouth, west, and eastern directions.\n",
+         "altitude" : null
+      },
+      "castle8@avairy" : {
+         "exits" : {
+            "w" : "castle9",
+            "n" : "castle12",
+            "s" : "castle4"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Corridor",
+         "id" : "castle8",
+         "description" : "\n    You are in a branching corridor.  Halls lead off to the south, north, \nand west.\n",
+         "altitude" : null
+      },
+      "shore19@avairy" : {
+         "exits" : {
+            "e" : "shore20",
+            "w" : "shore18"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore19",
+         "description" : "\n    You are meandering along the northern edge of the Avairy Island.  The\nbreeze coming off the sea almost knocks you down and you struggle to stand.  A\nlarge cliff shoots up to your south blocking all passage in that direction.\n    The shoreline continues east and west.\n",
+         "altitude" : null
+      },
+      "water1@avairy" : {
+         "exits" : {
+            "e" : "pond1",
+            "d" : "fall1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light",
+            "NoMagic"
+         ],
+         "zone" : "avairy",
+         "title" : "A Waterfall",
+         "id" : "water1",
+         "description" : "\n    You stand next to a small waterfall.  Crisp clear water falls rapidly \nin its passage to the pond to the east.  Through the water you can see a \nsmall passage leading down. \n",
+         "altitude" : null
+      },
+      "shore5@avairy" : {
+         "exits" : {
+            "w" : "shore6",
+            "n" : "shore4"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore5",
+         "description" : "\n    You have reached the south eastern corner of the island.  You stare out\nover the waters in search of any land, but all you see are three and four feet\nhigh waves breaking for miles.\n    You hear bird chirping coming from the north-west.\n",
+         "altitude" : null
+      },
+      "castle6@avairy" : {
+         "exits" : {
+            "e" : "castle5",
+            "n" : "castle7"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Castle Kitchen",
+         "id" : "castle6",
+         "description" : "\n    You are in the castle kitchen.  One wall is lined with cookbooks with \nsuch titles as \"Worms Delicassies\", \"Worms, Worms, Worms\", and \"Low Fat \nWorm Dinners\". \n",
+         "altitude" : null
+      },
+      "shore17@avairy" : {
+         "exits" : {
+            "e" : "shore18",
+            "w" : "shore16",
+            "s" : "cave1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore17",
+         "description" : "\n    You are on the northern shore line.  To the south, a large opening in a\ncliff allows passage into a dark cave.\n    Looking down, you notice the beauty and purity of the sand.  You remove a\nshoe and run your toes through it.\n    The shore line continues to the east and west.\n",
+         "altitude" : null
+      },
+      "shore12@avairy" : {
+         "exits" : {
+            "e" : "jungle11",
+            "n" : "shore13",
+            "s" : "shore11"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore12",
+         "description" : "\n    This is the western shore line of Avairy Island.  The waves to the west\nare not as bad as most you have seen from the island.  The breeze here is\nsignificantly weaker than that of other parts of the island and sweat begins\nto form on your forehead.\n    To your east you notice that the jungle has thinned leaving a small path.\nThe shore line continues north and south.\n",
+         "altitude" : null
+      },
+      "shore4@avairy" : {
+         "exits" : {
+            "w" : "jungle4",
+            "n" : "shore3",
+            "s" : "shore5"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore4",
+         "description" : "\n    You are on the shore of Avairy Island.  To the east the sea crashes\nviolently against the shore line.  To the west a gap in the dense jungle\nallows you passage.\n    The sand is beautifully clean and pure.  You hear the sound of birds\nchirping somewhere off to the west.\n",
+         "altitude" : null
+      },
+      "castle4@avairy" : {
+         "exits" : {
+            "w" : "castle2",
+            "e" : "castle13",
+            "n" : "castle8"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Corridor",
+         "id" : "castle4",
+         "description" : "\n    Well, it's a corridor.  Another drab boring everyday, run of the \nmill, castle corridor.  Why do zone writers like corridors so much?\n",
+         "altitude" : null
+      },
+      "castle5@avairy" : {
+         "exits" : {
+            "w" : "castle6",
+            "n" : "castle10",
+            "s" : "castle3"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Corridor",
+         "id" : "castle5",
+         "description" : "\n    There is nothing to say about this corridor.  I'm sorry, I've been \ntrying to think of something creative to say about it, but I can't... \nIt's just a corridor.  \"And that's all I have to say about that.\"\n",
+         "altitude" : null
+      },
+      "shore8@avairy" : {
+         "exits" : {
+            "e" : "shore7",
+            "w" : "shore9"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore8",
+         "description" : "\n    You are on the southern shore of Avairy Island.  To the south are miles\nand miles of breaking seas.  You notice an occasional human skeleton lying\nhalf buried in the sand.\n    The shore line continues to the east and west.\n",
+         "altitude" : null
+      },
+      "cave1@avairy" : {
+         "exits" : {
+            "n" : "shore17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "avairy",
+         "title" : "Inside the Cave",
+         "id" : "cave1",
+         "description" : "\n    You are in a dark, dank cave.  It appears to be man made by the shaping \nof the walls.  Mist blows in from the shoreline to the north giving a \nstrong fishy oder.  The ground is all a white sandy color except for one \ncorner of the cave where orange and yellow clays appear. \n",
+         "altitude" : null
+      },
+      "castle13@avairy" : {
+         "exits" : {
+            "w" : "castle4",
+            "n" : "castle14"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Ticket Booth",
+         "id" : "castle13",
+         "description" : "\n    This is where the bird community buys their tickets to the Castle \nPlayhouse.  Surprisingly enough, the play currently being featured is \"Cats\".\n",
+         "altitude" : null
+      },
+      "jungle6@avairy" : {
+         "exits" : {
+            "e" : "jungle2",
+            "w" : "pond1",
+            "n" : "jungle5"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Avairy Jungle",
+         "id" : "jungle6",
+         "description" : "\n    Pathes lead into the jungle to the north and east.  Through the \nfoilage ahead, you can make out a peacelful pond.\n",
+         "altitude" : null
+      },
+      "castle3@avairy" : {
+         "exits" : {
+            "e" : "castle2",
+            "n" : "castle5"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Corner Corridor",
+         "id" : "castle3",
+         "description" : "\n    Oooo... A corner corridor, to tell the truth that's just a really \nfancy way of saying a hallway that doesn't run in a straight line.\n",
+         "altitude" : null
+      },
+      "shore3@avairy" : {
+         "exits" : {
+            "w" : "jungle3",
+            "n" : "shore2",
+            "s" : "shore4"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore3",
+         "description" : "\n    You are on the shore of Avairy Island.  To the east the sea crashes\nviolently against the shore line.  Passage to the west is allowed by a gap in\nthe dense jungle.\n    The sand is beautifully clean and pure.  You hear the sound of birds\nchirping somewhere off to the west.\n",
+         "altitude" : null
+      },
+      "castle12@avairy" : {
+         "exits" : {
+            "w" : "castle11",
+            "e" : "castle15",
+            "s" : "castle8"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Corridor",
+         "id" : "castle12",
+         "description" : "\n    You are in a branching corridor.  Halls lead off to the east, west, \nand south.  You hear someone whistling a happy tune.\n",
+         "altitude" : null
+      },
+      "shore20@avairy" : {
+         "exits" : {
+            "w" : "shore19",
+            "s" : "shore1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore20",
+         "description" : "\n    You have found the northeastern corner of Avairy Island.  You hear the\nchirping and squawking of birds to the southwest.\n    There is a great difference in the sea to the north and the one to the\neast, as the sea north of you is much more violent.\n    The shore line continues to the south and west.\n",
+         "altitude" : null
+      },
+      "shore6@avairy" : {
+         "exits" : {
+            "e" : "shore5",
+            "w" : "shore7"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore6",
+         "description" : "\n    You are on the southern shore of Avairy Island.  To the south are miles\nand miles of breaking seas.  You notice an occasional human skeleton lying\nhalf buried in the sand.\n    The shore line continues to the east and west.\n",
+         "altitude" : null
+      },
+      "build1@avairy" : {
+         "exits" : {
+            "e" : "jungle10"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "avairy",
+         "title" : "Inside a Small Shack",
+         "id" : "build1",
+         "description" : "\n    You are inside a small shack.  There's a &+Yfireplace&* on the northern \nwall, a small &+Ybed&* against the western wall and a small kitchen area with \na stove on the southern wall.\n",
+         "altitude" : null
+      },
+      "forest4@avairy" : {
+         "exits" : {
+            "e" : "forest5",
+            "s" : "forest3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "Within the Forest",
+         "id" : "forest4",
+         "description" : "\n      You are within a large, florishing forest.  You hear many birds\nwhistling and squaking to one another.  Squirrels and chipmunks scurry \nhere and there. The floor is covered by leaves, twigs, and large branches \nmaking your walk very unstable.\n",
+         "altitude" : null
+      },
+      "shore16@avairy" : {
+         "exits" : {
+            "e" : "shore17",
+            "w" : "shore15"
+         },
+         "flags" : [
+            "Outdoors",
+            "Light"
+         ],
+         "zone" : "avairy",
+         "title" : "The Shore",
+         "id" : "shore16",
+         "description" : "\n    A large bird flies over head and you wonder why he is circling you.  It is\nalmost like you are being watched.  The waves from the north spray you with\nmist as they break on large jagged rocks.\n    Passage south is blocked as a large cliff darts up twenty feet into the\nair.  The shore line continues east and west.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "blackswan@avairy" : {
+         "damage" : "10",
+         "location" : "pond1",
+         "name" : "blackswan",
+         "examine" : "\nIs this the Swan Princess?  No way...swans aren't naturally all black.  This\none appears to be trying to get you to pledge your undivided love to her.\nShe must be the daughter of that evil Rothbart in the form of a swan.",
+         "description" : "A black swan stands here trying to seduce you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Black Swan",
+         "aggression" : "0",
+         "mflags" : [
+            "BarWest"
+         ]
+      },
+      "chef@avairy" : {
+         "damage" : "7",
+         "location" : "castle6",
+         "armor" : "2",
+         "name" : "chef",
+         "description" : "\nThe cooking bird is chopping up some steamed words.",
+         "strength" : "400",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "Cooking Bird",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "crab3@avairy" : {
+         "location" : "shore5",
+         "speed" : "0",
+         "pname" : "Crabbie",
+         "name" : "crab3",
+         "description" : "\nAn abnormally large crab tries to grab you.",
+         "strength" : "150"
+      },
+      "crab2@avairy" : {
+         "damage" : "7",
+         "location" : "shore15",
+         "armor" : "4",
+         "name" : "crab2",
+         "description" : "\nAn abnormally large crab tries to grab you.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Crabbie",
+         "aggression" : "20"
+      },
+      "parrot@avairy" : {
+         "damage" : "10",
+         "location" : "cave2",
+         "armor" : "100",
+         "name" : "parrot",
+         "description" : "\nThe WiZe Parr0t stand here with a straw cane.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The WiZe ParrOt",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "rothbart@avairy" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball",
+            "BHands",
+            "NegBhands",
+            "Missile",
+            "NegMissile",
+            "Mute"
+         ],
+         "damage" : "20",
+         "location" : "castle27",
+         "name" : "Rothbart",
+         "examine" : "\nHow does one evil sorceror take over a kingdom?  By kidnapping the king's\ndaughter and force her to marry him.  And if she refuses, turn her into a\nswan, along with all the other madiens and damsels of the kingdom.  He was\nexpecting Prince Siegfried to attempt a rescue, but is surprised you're here.\nNo matter, he will do anything to prevent you from saving the Swan Princess.\n",
+         "description" : "The evil sorceror Rothbart wonders who the stool pigeon was that ratted him \nout.  Now he has to totally anniliate you.",
+         "strength" : "600",
+         "speed" : "0",
+         "aggression" : "99",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "humming3@avairy" : {
+         "damage" : "8",
+         "location" : "castle17",
+         "armor" : "0",
+         "name" : "humming3",
+         "description" : "\nA humming bird guard buzzes busily.",
+         "strength" : "300",
+         "speed" : "1",
+         "aggression" : "15",
+         "pname" : "Humming Bird",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "vulture2@avairy" : {
+         "damage" : "10",
+         "location" : "jungle3",
+         "armor" : "0",
+         "name" : "vulture2",
+         "description" : "\nA large vulture flies through the trees above.",
+         "strength" : "150",
+         "speed" : "1",
+         "aggression" : "20",
+         "pname" : "Vulture",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "crow4@avairy" : {
+         "damage" : "10",
+         "location" : "jungle11",
+         "armor" : "0",
+         "name" : "crow4",
+         "description" : "\nA crow flies through the trees above.",
+         "strength" : "150",
+         "speed" : "1",
+         "aggression" : "20",
+         "pname" : "Crow",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "humming1@avairy" : {
+         "damage" : "8",
+         "location" : "castle2",
+         "armor" : "0",
+         "name" : "humming1",
+         "description" : "\nA humming bird guard buzzes busily.",
+         "strength" : "300",
+         "speed" : "1",
+         "aggression" : "15",
+         "pname" : "Humming Bird",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "crab1@avairy" : {
+         "damage" : "7",
+         "location" : "shore10",
+         "armor" : "4",
+         "name" : "crab1",
+         "description" : "\nAn abnormally large crab tries to grab you.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Crabbie",
+         "aggression" : "20"
+      },
+      "humming6@avairy" : {
+         "damage" : "8",
+         "location" : "castle10",
+         "armor" : "0",
+         "name" : "humming6",
+         "description" : "\nA humming bird guard buzzes busily.",
+         "strength" : "300",
+         "speed" : "1",
+         "aggression" : "15",
+         "pname" : "Humming Bird",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "humming4@avairy" : {
+         "damage" : "8",
+         "location" : "castle13",
+         "armor" : "0",
+         "name" : "humming4",
+         "description" : "\nA humming bird guard buzzes busily.",
+         "strength" : "300",
+         "speed" : "1",
+         "aggression" : "15",
+         "pname" : "Humming Bird",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "vulture@avairy" : {
+         "damage" : "10",
+         "location" : "jungle1",
+         "armor" : "0",
+         "name" : "vulture",
+         "description" : "\nA large vulture flies through the trees above.",
+         "strength" : "150",
+         "speed" : "1",
+         "aggression" : "20",
+         "pname" : "Vulture",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "humming5@avairy" : {
+         "damage" : "8",
+         "location" : "castle20",
+         "armor" : "0",
+         "name" : "humming5",
+         "description" : "\nA humming bird guard buzzes busily.",
+         "strength" : "300",
+         "speed" : "1",
+         "aggression" : "15",
+         "pname" : "Humming Bird",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "crow1@avairy" : {
+         "damage" : "10",
+         "location" : "jungle5",
+         "armor" : "0",
+         "name" : "crow1",
+         "description" : "\nA crow flies through the trees above.",
+         "strength" : "150",
+         "speed" : "1",
+         "aggression" : "20",
+         "pname" : "Crow",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "humming2@avairy" : {
+         "damage" : "8",
+         "location" : "castle2",
+         "armor" : "0",
+         "name" : "humming2",
+         "description" : "\nA humming bird guard buzzes busily.",
+         "strength" : "300",
+         "speed" : "1",
+         "aggression" : "15",
+         "pname" : "Humming Bird",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "swan@avairy" : {
+         "damage" : "10",
+         "location" : "tower",
+         "armor" : "100",
+         "name" : "swan",
+         "examine" : "\nThis is Odoette, the princess of the Avairy Kingdom.  She was turned into a\nswan by the evil sorceror Rothbart after he tried to force her into a marriage\nwith him.  Now the only thing that can break the spell is that a handsome\nprince expresses his undivided love to her.",
+         "description" : "The Swan Princess looks at you thankfully.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The Swan Princess",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "crow3@avairy" : {
+         "damage" : "10",
+         "location" : "jungle11",
+         "armor" : "0",
+         "name" : "crow3",
+         "description" : "\nA crow flies through the trees above.",
+         "strength" : "150",
+         "speed" : "1",
+         "aggression" : "20",
+         "pname" : "Crow",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "pigeon@avairy" : {
+         "damage" : "10",
+         "location" : "castle26",
+         "armor" : "100",
+         "name" : "pigeon",
+         "examine" : "Maybe he can be made into a stool pigeon...",
+         "description" : "The castle pigeon walks back and forth looking for worms.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The Stage Pigeon",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "crow2@avairy" : {
+         "damage" : "10",
+         "location" : "jungle4",
+         "armor" : "0",
+         "name" : "crow2",
+         "description" : "\nA crow flies through the trees above.",
+         "strength" : "150",
+         "speed" : "1",
+         "aggression" : "20",
+         "pname" : "Crow",
+         "mflags" : [
+            "Flyer"
+         ]
+      }
+   }
+}

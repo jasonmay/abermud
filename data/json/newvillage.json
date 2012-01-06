@@ -1,0 +1,715 @@
+{
+   "obj" : {
+      "coins1@newvillage" : {
+         "desc[1]" : "Resting on the grate are a few scattered coins.",
+         "location" : "IN_ROOM:downoldwell",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "coins1",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "coins",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "You find some coins littered over the ground here."
+      },
+      "innerdoor@newvillage" : {
+         "desc[1]" : "\nThe room is dark except for light showing through a few cracks in the wall.",
+         "location" : "IN_ROOM:hidden",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "metal",
+         "name" : "innerdoor",
+         "linked" : "outerdoor",
+         "state" : "1",
+         "pname" : "sheet",
+         "maxstate" : "1",
+         "desc[0]" : "Light comes into the room through a hole in the outer wall."
+      },
+      "coins@newvillage" : {
+         "desc[1]" : "In the bottom of the rotted chest are two gold coins.",
+         "location" : "IN_ROOM:hidden",
+         "name" : "coins",
+         "examine" : "\nThe coins are of a currency foreign to you.  You wonder how old they might be.",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "There are some coins scattered on the ground."
+      },
+      "outerdoor@newvillage" : {
+         "desc[1]" : "There is a piece of sheet metal attached to the wall.",
+         "location" : "IN_ROOM:under",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "metal",
+         "name" : "outerdoor",
+         "linked" : "innerdoor",
+         "state" : "1",
+         "pname" : "sheet",
+         "maxstate" : "1",
+         "desc[0]" : "A piece of sheet metal is lying on the ground."
+      }
+   },
+   "loc" : {
+      "bank@newvillage" : {
+         "exits" : {
+            "n" : "road1w"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The Bank",
+         "id" : "bank",
+         "description" : "\n   You are in a little town bank where the village people can deposit and \nwithdraw money.  The bank will also make loans to the people of the village.\nThe building itself is small and somewhat more modern-looking than the\nother main buildings in the village.\n",
+         "altitude" : null
+      },
+      "down2@newvillage" : {
+         "exits" : {
+            "e" : "cave",
+            "u" : "downfall"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "Beneath the Waterfall",
+         "id" : "down2",
+         "description" : "\n   You slowly work your way down to the bottom of the path.  You are\nstanding right next to the area where the water is cascading down, and\nhave a beautiful side view of the waterfall.  You notice that behind\nthe fall, nature has eroded out a cave.\n",
+         "altitude" : "500"
+      },
+      "stream@newvillage" : {
+         "exits" : {
+            "e" : "streameast",
+            "w" : "stwest1",
+            "s" : "road3n"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "By the Stream",
+         "id" : "stream",
+         "description" : "\n   The stream you are standing by could more likely be considered a small \nriver.  The water is moving quite fast, and you feel that it would probably\nbe unwise to attempt to cross it.  The stream seems to flow from the \nnorth-east and the water is cold.  The water carries on to the west, where\nit seems to pick up speed and get louder.\n",
+         "altitude" : "750"
+      },
+      "inn@newvillage" : {
+         "exits" : {
+            "e" : "bar",
+            "n" : "road1e"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The Village Inn",
+         "id" : "inn",
+         "description" : "\n   The lobby area of the inn is rather nice.  There are several plush chairs\nset up for people to sit in while they wait, or read the paper, or whatever\nthey wish to be doing.  The place is simple but tastefully decorated, and\nseems to be reputable.  In the back, a door leads up the stairs to what\nyou believe to be rentable rooms.  To the east is another doorway that leads\ninto the bar.\n",
+         "altitude" : null
+      },
+      "newwell@newvillage" : {
+         "exits" : {
+            "d" : "downnewwell",
+            "s" : "road1e"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Well",
+         "id" : "newwell",
+         "description" : "\n   The well you are standing next to seems to be much newer than the one\nwest of the town hall, and seems to still be in use.  This well is not\nblocked off and seems to go quite a distance into the ground.  You can\nhear the slight sounds of water moving below.  The well is covered which\nmakes it difficult to see down into it, but you can guess the depth.\nSomehow you think that climbing down into the well would be unwise.\n",
+         "altitude" : "800"
+      },
+      "road2e@newvillage" : {
+         "exits" : {
+            "e" : "road3e",
+            "w" : "road1e",
+            "n" : "road1n",
+            "s" : "bar"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Track",
+         "id" : "road2e",
+         "description" : "\n   This part of the path runs right by the steps to a local bar.  At this\npoint the east-west track through the village forks to the north, where\nseveral small shops seem to be set up.  The heart of the village is to \nthe west.\n",
+         "altitude" : "800"
+      },
+      "green@newvillage" : {
+         "exits" : {
+            "w" : "road1w",
+            "e" : "road1e",
+            "n" : "hall",
+            "s" : "smith"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Green",
+         "id" : "green",
+         "description" : "\n   You are standing on a large green just south of the Town Hall.  The\nbuildings of the town seem to kind of surround this green, which serves\nmany purposes among the people of the town.  To the south is the Blacksmith's\nshop.  There is a path running from east to west through the green that \nleads west to the sea and east to the rest of the village.\n",
+         "altitude" : "800"
+      },
+      "road2n@newvillage" : {
+         "exits" : {
+            "e" : "armor",
+            "w" : "weapons1",
+            "n" : "road3n",
+            "s" : "road1n"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Track",
+         "id" : "road2n",
+         "description" : "\n   You are standing just outside the weapon shop, which is to the west, and\nthe armor shop, which is to the east.  To the north the street continues to\nother shops and back to the south the street joins the rest of the village.\n",
+         "altitude" : "800"
+      },
+      "jetty@newvillage" : {
+         "exits" : {
+            "e" : "road2w",
+            "d" : "under",
+            "s" : "beachQQ01@nwbeaches"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Jetty",
+         "id" : "jetty",
+         "description" : "\n   You have reached the high point of the hill and are standing on a \ntype of wooden boardwalk, overlooking the sea.  There is a brisk, warm\nbreeze here that feels refreshing as it blows across your face.  Beneath\nyou, the hill drops out into the water, which beats against the dirt with\nan incredible rate.  There is a little path beside the boardwalk that leads\ndown to a dry patch of sand below the jetty.  Toward the south, a cliff\nface stands slightly higher than the boardwalk, with a set of stairs \ncarved into its side.\n",
+         "altitude" : "875"
+      },
+      "stwest1@newvillage" : {
+         "exits" : {
+            "w" : "stwest2",
+            "e" : "stream"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "By the River",
+         "id" : "stwest1",
+         "description" : "\n   The river is getting ever faster as you head down-stream.  The scenery\non the opposite side of the river is as breath-taking as ever.  The \nmountains you can barely make out are snow-capped; probably year-round.\nEvery once in a while, you think you hear a loud noise coming from that\ngeneral area, but you can't be sure.  The prairie grass on the other side\nis teeming with life of all kinds.  The sun above is shining bright and\nreflecting off of the river's water.  The noise you hear coming from the\nwest seems to be getting louder and louder.\n",
+         "altitude" : "730"
+      },
+      "road1w@newvillage" : {
+         "exits" : {
+            "w" : "road2w",
+            "e" : "green",
+            "n" : "oldwell",
+            "s" : "bank"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Path",
+         "id" : "road1w",
+         "description" : "\n   Here the path starts to climb to the west.  You can just barely make\nout the tops of the tall ships harboured at the shipyard.  The path climbs\nwest to the open sea, and slopes down to the village in the east.  To the\nsouthwest is a large mill and just to the north, a very old well that looks\nlike it hasn't been used in years.\n",
+         "altitude" : "825"
+      },
+      "cave@newvillage" : {
+         "exits" : {
+            "w" : "down2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "Behind the Waterfall",
+         "id" : "cave",
+         "description" : "\n   You step behind the water's flow and find yourself in an naturally\neroded cave.  There is not much here, save the trickle of a little stream\ncoming up from underground and entering the sea to join the waters of\nthe waterfall.\n",
+         "altitude" : "500"
+      },
+      "stwest2@newvillage" : {
+         "exits" : {
+            "w" : "waterfall",
+            "e" : "stwest1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "By the River",
+         "id" : "stwest2",
+         "description" : "\n   Here the river is so loud you can hardly hear yourself think about\nthe scenery.  The water is moving incredibly fast, and you believe\nthat you must be coming along a waterfall.\n",
+         "altitude" : "720"
+      },
+      "weapons1@newvillage" : {
+         "exits" : {
+            "e" : "road2n",
+            "w" : "weapons2"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The Weapon Shop",
+         "id" : "weapons1",
+         "description" : "\n   The waiting room you are standing in displays many kinds of weapons made\nby the weaponsmith who owns this shop.  He seems to be skilled in many\ntypes of weapons; even some you don't recognize.  You can hear him working\naway in the back room. \n   The little door that allows you to go behind the counter is open.\n",
+         "altitude" : null
+      },
+      "mill@newvillage" : {
+         "exits" : {
+            "n" : "road2w"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Lumber Mill",
+         "id" : "mill",
+         "description" : "\n   The operation that is set up here is a primitive sort of wood mill.  This\nis a place where the people of the village can come to buy wood to make houses,\nfurniture, and many other things that they might need.  The wood supplies are \nbrought into the harbor and cut to the customer's specifications at the mill.\nThe floor is very dusty and you sneeze a lot as you move around.  The floor\nbeneath you echoes to your footsteps.\n",
+         "altitude" : null
+      },
+      "genstore@newvillage" : {
+         "exits" : {
+            "w" : "road3n"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The General Store",
+         "id" : "genstore",
+         "description" : "\n   The store is small and quaint but seems to have just about anything a\nperson could need.  The store sells food supplies, containers, guns,\nfabric, and hundreds of other little necessities.  There are also several\nitems in the store that are not necessities but appear to be interesting\nimported little items such as dolls and toys. \n",
+         "altitude" : null
+      },
+      "road6e@newvillage" : {
+         "exits" : {
+            "e" : "road7e",
+            "w" : "road5e"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Prairie",
+         "id" : "road6e",
+         "description" : "\n   You are on a thin path through a field of tall grasses.  To the west, you\ncan just make out the homes and buildings which would point to a small\nvillage.  To the east, the grasses meet with a moor.\n",
+         "altitude" : "850"
+      },
+      "road1n@newvillage" : {
+         "exits" : {
+            "n" : "road2n",
+            "s" : "road2e"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Path",
+         "id" : "road1n",
+         "description" : "\n   You are on a north-south path that meets with an east-west path just to\nthe south.  On this street are many of the merchants of the village.  Here\nyou can find a weaponsmith, locksmith, a general store, and an armorer.\n",
+         "altitude" : "800"
+      },
+      "road2w@newvillage" : {
+         "exits" : {
+            "w" : "jetty",
+            "e" : "road1w",
+            "n" : "shipyard",
+            "s" : "mill"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Path",
+         "id" : "road2w",
+         "description" : "\n   You are on an incline just east of the village jetty.  The hill you are\non seems to grow right up to the water and then cut off in a cliff.  Thank\ngoodness the hill isn't much higher than sea level.  To the north is the \nshipyard, while to the south is a large lumber mill.\n",
+         "altitude" : "850"
+      },
+      "road1e@newvillage" : {
+         "exits" : {
+            "e" : "road2e",
+            "w" : "green",
+            "n" : "newwell",
+            "s" : "inn"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "Village Track",
+         "id" : "road1e",
+         "description" : "\n   You are to the east of the village green, off of which are the main\nadministrative buildings of the town.  The track you are on is of hard\npacked dirt and extends east and west from here.  To the east is another\npath leading to the north that seems to lead to the village shops.  Off\nto the west, the landscape rises and then cuts off sharply into the sea.\nJust to the south is the entrance to the Village Inn.  To the north is \na small village well; apparently still in use.\n",
+         "altitude" : "800"
+      },
+      "waterfall@newvillage" : {
+         "exits" : {
+            "e" : "stwest2",
+            "d" : "downfall"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "At the Waterfall",
+         "id" : "waterfall",
+         "description" : "\n   Beyond you to the west is one of the most breath-taking sights you have\never seen.  Here the river gets white and foamy as it cascades down a\nwaterfall.  Hitting the river below with tremendous force, the whole area\nis alive with the sound of flowing water.  Not too far away this rushing\nwater joins the open sea in an eroded inlet.  There is a rocky path leading\ndown dangerously close to the waterfall.\n",
+         "altitude" : "700"
+      },
+      "locksmith@newvillage" : {
+         "exits" : {
+            "e" : "road3n"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The Locksmith's",
+         "id" : "locksmith",
+         "description" : "\n   Here, the locksmith makes keys and locks for anyone who wants one.  The\nsmith himself seems to be at work on a particular key behind the counter.\nAll around you are examples of his work, including a huge key hanging on\none of the walls that seems a bit frivolous, but perhaps it serves some \npurpose of which you are not yet aware.\n",
+         "altitude" : null
+      },
+      "oldwell@newvillage" : {
+         "exits" : {
+            "w" : "shipyard",
+            "d" : "downoldwell",
+            "s" : "road1w"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Well",
+         "id" : "oldwell",
+         "description" : "\n   This well apparently hasn't been used in quite some time.  Looking down\nit you can see that the well is dry and about five feet down, someone has\nblocked the well off with a sturdy metal grate.  The old well cover is lying\nnearby; made of a wood that has bleached in the sun.\n",
+         "altitude" : null
+      },
+      "road3e@newvillage" : {
+         "exits" : {
+            "e" : "road4e",
+            "w" : "road2e",
+            "n" : "^rubble@opera"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Path",
+         "id" : "road3e",
+         "description" : "\n   The east-west path that you are coming into town on widens a bit here.\nThe path is more definite and you can see buildings in the west.  All around\nyou are homes of villagers.\n",
+         "altitude" : "800"
+      },
+      "road4e@newvillage" : {
+         "exits" : {
+            "e" : "road5e",
+            "w" : "road3e"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Path",
+         "id" : "road4e",
+         "description" : "\n   The path through the prairie that you are on seems to widen ahead to\nthe west.  On in the distance you can make out some buildings, while all\naround you, villagers' homes are scattered.\n",
+         "altitude" : "800"
+      },
+      "weapons2@newvillage" : {
+         "exits" : {
+            "e" : "weapons1"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The Weapon Shop",
+         "id" : "weapons2",
+         "description" : "\n   Now you are near the forge where the weaponmaster makes his items.  As\nyou watch the smith work, you are amazed at his skill.  The room you are in\nis rather dark and hot, but it is interesting to watch the smith work.\n",
+         "altitude" : null
+      },
+      "downnewwell@newvillage" : {
+         "exits" : {},
+         "flags" : [
+            "Dark",
+            "Nomobiles"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Well",
+         "id" : "downnewwell",
+         "description" : "\n   Ignoring all general rules of safety, you decide to be adventuresome \nand lower yourself into the well.  At first you keep your hands on the\ntop of the well for a good grip,but as the well seems to be fairly dry,\nyou press your hands and feet against opposite walls and work your way\ndown into the well about 7 feet.  You take your left foot one more step\ndown, and suddenly the well isn't so dry anymore.  You lose your footing\non some slime and fall into the well below.  \n\n\t\t\tAAAAAAAAAAAAAAAAAhhhhhhhhhhhhhhhhhhh!!!!\n\n\t\t\t\t\tSPLASH!!\n\n\nYou find yourself sitting on your butt in about a foot and a half of water.\nWhat do you do now?\n",
+         "altitude" : null
+      },
+      "hall@newvillage" : {
+         "exits" : {
+            "s" : "green"
+         },
+         "flags" : [
+            "Party",
+            "Peaceful"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Town Hall",
+         "id" : "hall",
+         "description" : "\n   You are in an older wooden building that serves as the Town Hall of\nMiller's Corners.  The floor underneath you is wood and creaks as you\nmove around.  The room you are in is not very large, and there are a few\ndoors that seem to lead to meeting rooms.  The building looks like the \ntype of place where a town council would hold its meetings.  Off to one\ncorner is a long wooden table where many people can sit.  The floor around\nit is well-worn and you guess that this building gets a lot of use.\n",
+         "altitude" : null
+      },
+      "armor@newvillage" : {
+         "exits" : {
+            "w" : "road2n"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The Armor Shop",
+         "id" : "armor",
+         "description" : "\n   In the waiting room you have entered, there are various pieces of armor\nhanging on the walls. standing on the floor, and resting on tables.  They\nall seem to be under the watchful eye of the armorer sitting in the back\nso you don't dare try to take any of them.  Behind a counter is the work\narea.\n",
+         "altitude" : null
+      },
+      "road5e@newvillage" : {
+         "exits" : {
+            "e" : "road6e",
+            "w" : "road4e"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Path",
+         "id" : "road5e",
+         "description" : "\n   The path that you are walking on through the prairie meets with a few\nscattered homes ahead, and seems to widen off to the west.  Way off in\nthe distance there are some buildings that seem to belong to some small town.\n",
+         "altitude" : "825"
+      },
+      "under@newvillage" : {
+         "exits" : {
+            "e" : "^outerdoor",
+            "u" : "jetty"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "Under the Jetty",
+         "id" : "under",
+         "description" : "\n   Under the wooden platform of the boardwalk above, you are standing on a\nsandy strip of beach that is rather hard and packed, as though it is\noften covered with water.  The wall under the jetty is made of stone to\nprevent dangerous erosion.  Holding up the sea side of the boardwalk are\nfive tall and stately wooden poles, each covered in sea slime up to about\nfour feet.\n",
+         "altitude" : null
+      },
+      "downfall@newvillage" : {
+         "exits" : {
+            "u" : "waterfall",
+            "d" : "down2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "On the Rocky Path",
+         "id" : "downfall",
+         "description" : "\n   Where you are standing on the path, you are so close to the water that\nyou can feel yourself being sprinkled upon by mist from the waterfall.\nThe noise around you is deafening.  Fortunately the water is far enough \naway that it is not drenching the path upon which you are walking.  Slowly\nyou can work your way down the path.\n",
+         "altitude" : "600"
+      },
+      "hidden@newvillage" : {
+         "exits" : {
+            "w" : "^innerdoor"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "Secret Storage Room",
+         "id" : "hidden",
+         "description" : "\n   Prying the metal sheet off of the stone wall that holds up the jetty, you\ngo into a rather dark and dank storage room underneath.  The room seems like\nit hasn't seen the light of day in a very long time.  There are spiders \ncrawling here and there, but they seem to be the only form of life that has\nseen this place in many many years.  There is nothing particularly special\nabout the room.  It is carved into the hillside and was probably used\nas a secret storage place long ago for pirated goods.  Way off to one corner\nare the remains to what used to be a wooden chest.\n",
+         "altitude" : null
+      },
+      "bar@newvillage" : {
+         "exits" : {
+            "w" : "inn",
+            "n" : "road2e"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The Village Bar",
+         "id" : "bar",
+         "description" : "\n   The bar is a dark and smokey place.  You take your place at a stool at\nthe bar, which is well-grooved from many years of use by passing sailors\nand travelers alike.  The bar seems to serve a wide variety of drinks,\nand you settle down with a beer.  Looking around the room, you see local\nmen drinking with their friends after a hard day's work, as well as a number\nof people who, from their shyness, you guess aren't from around here. \nYet another group of sailors is being rather rowdy at a table nearby.\n",
+         "altitude" : null
+      },
+      "road7e@newvillage" : {
+         "exits" : {
+            "e" : "Rocky@moor",
+            "w" : "road6e"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Field of Grass",
+         "id" : "road7e",
+         "description" : "\n   You are in a field of tall, blowing grass.  Leaving the area of the\nmoors, the ground becomes more solid, and there is even a thin path\nleading to the west. \n",
+         "altitude" : "875"
+      },
+      "streameast@newvillage" : {
+         "exits" : {
+            "w" : "stream"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "By the Stream",
+         "id" : "streameast",
+         "description" : "\nYou are moving upstream toward the east.  Here the river bends and seems to\nflow on, finding its source high in the majestic mountains to the north.\nEvery once in a while, you think you hear a loud noise coming from the\ndistant mountains.\n",
+         "altitude" : "750"
+      },
+      "shipyard@newvillage" : {
+         "exits" : {
+            "e" : "oldwell",
+            "s" : "road2w"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Shipyard",
+         "id" : "shipyard",
+         "description" : "\n   You are moving among many tall ships that are anchored in the harbour.\nThere seems to be a lot of shipping activity in the area.  Some of the ships\nare much larger than others, but they are all made of wood and very finely\ncrafted.  One of the particularly beautiful ships that catches your eye seems\nto be called \"Susan\".  Some of the boats closer to and on the shore seem to\nhave been there for quite a while.  There is a tiny boat on the shore that\nseems to have sailed its last voyage and is now bleaching in the sun.\n",
+         "altitude" : null
+      },
+      "smith@newvillage" : {
+         "exits" : {
+            "n" : "green"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The Blacksmith Shop",
+         "id" : "smith",
+         "description" : "\n   The room you are in is dark and hot and smells of steam, fire, and hot\niron.  There is a large forge in the center of the room that seems to put\noff quite a lot of heat.  There are tools that the Smith made for himself\nlying nearby.  The Smith seems to be making a set of horseshoes for a \nhorse that you can hear whinnying in an attached stable.  There is a large\ncollection of horseshoes hanging on a beam above the forge.\n",
+         "altitude" : null
+      },
+      "downoldwell@newvillage" : {
+         "exits" : {
+            "u" : "oldwell"
+         },
+         "flags" : [],
+         "zone" : "newvillage",
+         "title" : "The Village Well",
+         "id" : "downoldwell",
+         "description" : "\n   You decide to lower yourself into the well and down onto the metal grate.\nThe grate seems to be sturdy as you test it out with one foot and then the\nother.  You set both feet down on the grate and relax your grip on the well.\nYou study the make of the well, which seems to be made of large pieces of\nimpermeable rock.  The well itself looks deep, but you can't really guess\nits depth, as there is complete darkness below.\n",
+         "altitude" : null
+      },
+      "road3n@newvillage" : {
+         "exits" : {
+            "w" : "locksmith",
+            "e" : "genstore",
+            "n" : "stream",
+            "s" : "road2n"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "newvillage",
+         "title" : "The Village Road",
+         "id" : "road3n",
+         "description" : "\n   You have reached the northern end of this street.  Beyond, to the north,\nthere is a river bank, and beyond, a large prairie filled with nothing but\ntall grass.  On the other side, in the distance, you can see some incredibly\nlarge mountains.  They seem to be at their most impressive off to the \nnorth-east.  \n   To the west is the locksmith's and to the east is the General Store.\nThe main part of the village is back to the south.\n",
+         "altitude" : "775"
+      }
+   },
+   "mob" : {
+      "crab@newvillage" : {
+         "damage" : "12",
+         "location" : "under",
+         "speed" : "5",
+         "armor" : "30",
+         "pname" : "The Crab",
+         "name" : "crab",
+         "examine" : "He seems to be interested in taking a chunk out of your leg.",
+         "description" : "A fiesty-looking crab is walking about on the sand.",
+         "strength" : "100"
+      },
+      "owner@newvillage" : {
+         "damage" : "10",
+         "location" : "genstore",
+         "name" : "owner",
+         "examine" : "\nHe looks like a miserly fellow, and apparently doesn't want to be disturbed.",
+         "description" : "\nThe owner of the store is sorting goods in the back of the store.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "The Owner",
+         "pflags" : "{  }"
+      },
+      "drunk@newvillage" : {
+         "damage" : "10",
+         "location" : "road2e",
+         "speed" : "0",
+         "pname" : "The Drunk",
+         "name" : "drunk",
+         "examine" : "He is either sleeping or passed out.  You aren't sure which.",
+         "description" : "A drunk is passed out on the steps to the bar.",
+         "strength" : "50"
+      },
+      "blacksmith@newvillage" : {
+         "damage" : "20",
+         "location" : "smith",
+         "name" : "blacksmith",
+         "examine" : "\nThe man before you is burly and very sweaty.  He is covered in soot.",
+         "description" : "A burly and sweaty blacksmith is at work over the forge.",
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "The Blacksmith",
+         "pflags" : "{  }"
+      },
+      "locksmith@newvillage" : {
+         "damage" : "10",
+         "location" : "locksmith",
+         "name" : "locksmith",
+         "examine" : "\nThe Locksmith is a short, balding man with white hair.  He seems to be busy\nworking on a project.",
+         "description" : "The locksmith is hard at work behind the counter.",
+         "strength" : "110",
+         "speed" : "0",
+         "pname" : "The Locksmith",
+         "pflags" : "{  }"
+      },
+      "weaponsmith@newvillage" : {
+         "damage" : "20",
+         "location" : "weapons2",
+         "name" : "weaponsmith",
+         "examine" : "The Weaponsmith is a burly man of middle age.",
+         "description" : "The weaponsmith is forging a new sword for a customer.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Weaponsmith",
+         "pflags" : "{  }"
+      },
+      "sailor@newvillage" : {
+         "damage" : "10",
+         "location" : "shipyard",
+         "speed" : "0",
+         "pname" : "The Sailor",
+         "name" : "sailor",
+         "examine" : "The man before you is very tan and has great muscle tone.",
+         "description" : "A well-built sailor is doing minor repairs on his ship.",
+         "strength" : "150"
+      },
+      "armorer@newvillage" : {
+         "damage" : "10",
+         "location" : "armor",
+         "armor" : "15",
+         "name" : "armorer",
+         "examine" : "He also seems to be wearing a shirt of his best mail.",
+         "description" : "The Armorer is pounding out a new shirt of mail.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Armorer",
+         "pflags" : "{  }"
+      },
+      "bartender@newvillage" : {
+         "damage" : "20",
+         "location" : "bar",
+         "name" : "bartender",
+         "examine" : "\nThe Bartender is a no-nonsense kind of guy, and he doesn't seem to like you.",
+         "description" : "The bartender is serving drinks to his customers.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Bartender",
+         "pflags" : "{  }"
+      },
+      "teller@newvillage" : {
+         "damage" : "10",
+         "location" : "bank",
+         "name" : "teller",
+         "examine" : "He seems very wise in the ways of money, but not much else.",
+         "description" : "The bank teller is adding up figures at his desk.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "The Teller",
+         "pflags" : "{  }"
+      }
+   }
+}

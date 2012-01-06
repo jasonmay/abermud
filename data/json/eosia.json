@@ -34,7 +34,9 @@
          "location" : "WORN_BY:sephrenia",
          "armor" : "20",
          "oflags" : [
-            "wearable"
+            "wearable",
+            "armor",
+            "antimagic"
          ],
          "altname" : "white",
          "name" : "robe_eosia",
@@ -90,6 +92,9 @@
       "cross_eosia@eosia" : {
          "desc[1]" : "On the altar stands a beautiful Elene cross.",
          "location" : "IN_ROOM:eosia31",
+         "oflags" : [
+            "Cross"
+         ],
          "altname" : "elene",
          "name" : "cross_eosia",
          "state" : "1",
@@ -230,14 +235,30 @@
          "name" : "crown_rindor",
          "state" : "0",
          "size" : "4",
-         "weight" : "4",
          "pname" : "crown",
+         "weight" : "4",
          "maxstate" : "0",
          "bvalue" : "200",
-         "desc[0]" : "The Crown of Rindor shines brilliantly before you!",
-         "aflags" : [
-            "Head"
-         ]
+         "desc[0]" : "The Crown of Rindor shines brilliantly before you!"
+      },
+      "fountain_1d_eosia@eosia" : {
+         "desc[1]" : "A fountain stands here casting patterns on the builings.",
+         "location" : "IN_ROOM:eosia30",
+         "oflags" : [
+            "noget",
+            "pushable",
+            "PushToggle"
+         ],
+         "name" : "fountain_1D_eosia",
+         "examine" : "Hmm...there seems to be something underneath the fountain.",
+         "linked" : "fountain_1U_eosia",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "fountain",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The fountain has been pushed aside, allowing passage down."
       },
       "coffin_eosia@eosia" : {
          "desc[1]" : "The coffin of King Eryn stands closest to you.",
@@ -292,23 +313,6 @@
          "maxstate" : "2",
          "bvalue" : "0",
          "desc[0]" : "The door to the west has been opened."
-      },
-      "fountain_eosia@eosia" : {
-         "desc[1]" : "A fountain stands here casting patterns on the builings.",
-         "location" : "IN_ROOM:eosia30",
-         "oflags" : [
-            "noget",
-            "pushable"
-         ],
-         "name" : "fountain_eosia",
-         "examine" : "Hmm...there seems to be something underneath the fountain.",
-         "state" : "1",
-         "size" : "0",
-         "pname" : "fountain",
-         "weight" : "0",
-         "maxstate" : "1",
-         "bvalue" : "0",
-         "desc[0]" : "The fountain has been pushed aside, allowing passage down."
       },
       "armor_eosia@eosia" : {
          "desc[1]" : "Sparhawk's suit of armor lies here.",
@@ -478,7 +482,27 @@
          "bvalue" : "0",
          "desc[0]" : "A rockslide has been cleared allowing you access east."
       },
+      "fountain_1u_eosia@eosia" : {
+         "desc[1]" : "A fountain is blocking the passage up.",
+         "location" : "IN_ROOM:eosia33",
+         "oflags" : [
+            "noget",
+            "pushable",
+            "PushToggle"
+         ],
+         "name" : "fountain_1U_eosia",
+         "examine" : "Hmm...there seems to be something above the fountain.",
+         "linked" : "fountain_1D_eosia",
+         "state" : "1",
+         "size" : "0",
+         "pname" : "fountain",
+         "weight" : "0",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The fountain has been pushed aside, allowing passage up."
+      },
       "staff_iron_eosia@eosia" : {
+         "damage" : "3",
          "location" : "WIELDED_BY:kalor",
          "oflags" : [
             "weapon"
@@ -542,7 +566,8 @@
       },
       "eosia1@eosia" : {
          "exits" : {
-            "e" : "eosia2"
+            "e" : "eosia2",
+            "w" : "island15@island"
          },
          "flags" : [
             "outdoors",
@@ -557,7 +582,7 @@
       "eosia33@eosia" : {
          "exits" : {
             "e" : "eosia34",
-            "u" : "eosia30"
+            "u" : "^fountain_1U_eosia"
          },
          "flags" : [
             "outdoors"
@@ -585,11 +610,28 @@
          "description" : "\n        This is one of the more unsavory places to visit in Cimmura.  Known\nfor its fights, and wild times, this establishment has been on the royal\ncondemnation list for years.  However, thanks to the local Thieves, it has\nmaintained its own existance.  The Inn is closed right now, but perhaps\nif you came back later?\n",
          "altitude" : null
       },
+      "eosia54@eosia" : {
+         "exits" : {
+            "e" : "7@sea",
+            "w" : "7@sea",
+            "n" : "eosia48",
+            "s" : "eosia47"
+         },
+         "flags" : [
+            "onwater",
+            "outdoors"
+         ],
+         "zone" : "eosia",
+         "title" : "All At Sea",
+         "id" : "eosia54",
+         "description" : "\n   You are sailing in the Straits of Thalesia, located between Diera, which\nlies to your south, and Thalesia, which stands to your north. The waters here\nare calm, but to your east and west they are quite rough, preventing passage\nin either of those directions.\n",
+         "altitude" : null
+      },
       "eosia48@eosia" : {
          "exits" : {
             "w" : "eosia49",
             "n" : "eosia49",
-            "s" : "eosia47"
+            "s" : "eosia54"
          },
          "flags" : [
             "outdoors",
@@ -723,8 +765,8 @@
       },
       "eosia14@eosia" : {
          "exits" : {
-            "w" : "eosia15",
-            "n" : "eosia16",
+            "w" : "^door_1W_eosia",
+            "n" : "^door_1N_eosia",
             "d" : "eosia17",
             "s" : "eosia13"
          },
@@ -740,7 +782,7 @@
       },
       "eosia49@eosia" : {
          "exits" : {
-            "w" : "eosia50",
+            "w" : "^rocks_1W",
             "s" : "eosia48"
          },
          "flags" : [
@@ -863,7 +905,7 @@
       "eosia46@eosia" : {
          "exits" : {
             "u" : "eosia45",
-            "n" : "haven@haven"
+            "n" : "eosia1"
          },
          "flags" : [
             "dark",
@@ -881,7 +923,7 @@
          "exits" : {
             "w" : "eosia29",
             "e" : "eosia31",
-            "d" : "eosia33"
+            "d" : "^fountain_1D_eosia"
          },
          "flags" : [
             "peaceful",
@@ -1004,7 +1046,7 @@
       },
       "eosia15@eosia" : {
          "exits" : {
-            "e" : "eosia14"
+            "e" : "^door_1E_eosia"
          },
          "flags" : [
             "dark",
@@ -1028,22 +1070,6 @@
          "description" : "\n        You are somewhere above the temple maze.  An archway in front of you\nleads north.\n",
          "altitude" : null
       },
-      "eosia32@eosia" : {
-         "exits" : {
-            "d" : "eosia31"
-         },
-         "flags" : [
-            "noquit",
-            "nomagic",
-            "soundproof",
-            "private"
-         ],
-         "zone" : "eosia",
-         "title" : "The Secret Room",
-         "id" : "eosia32",
-         "description" : "\n        You are in a small secret room within one of the spires of the\nCitadel.  All that there is in this room is a table and a chair, and\nmaps on the wall that resemble Elenia.  You wonder what purpose this little\ncozy room serves.\n",
-         "altitude" : null
-      },
       "eosia5@eosia" : {
          "exits" : {
             "w" : "eosia6",
@@ -1061,9 +1087,25 @@
          "description" : "\n        This is the main square of Cimmura.  From this point roads head\noff in every direction into different parts of the city.  To the north lies\nthe Royal Castle.  From here you can see the flags of Elenia fluttering in the\nbreeze.  People pass you all around hurrying to get to their destinations.\nIf you're not careful, you could get run over by one of the horses.\n",
          "altitude" : null
       },
+      "eosia32@eosia" : {
+         "exits" : {
+            "d" : "eosia31"
+         },
+         "flags" : [
+            "noquit",
+            "nomagic",
+            "soundproof",
+            "private"
+         ],
+         "zone" : "eosia",
+         "title" : "The Secret Room",
+         "id" : "eosia32",
+         "description" : "\n        You are in a small secret room within one of the spires of the\nCitadel.  All that there is in this room is a table and a chair, and\nmaps on the wall that resemble Elenia.  You wonder what purpose this little\ncozy room serves.\n",
+         "altitude" : null
+      },
       "eosia50@eosia" : {
          "exits" : {
-            "e" : "eosia49",
+            "e" : "^rocks_1E",
             "n" : "eosia51"
          },
          "flags" : [
@@ -1080,7 +1122,7 @@
       },
       "eosia47@eosia" : {
          "exits" : {
-            "n" : "eosia48",
+            "n" : "eosia54",
             "s" : "eosia2"
          },
          "flags" : [
@@ -1281,7 +1323,6 @@
          },
          "flags" : [
             "cantsummon",
-            "noquit",
             "nomobiles",
             "nomagic",
             "peaceful",
@@ -1292,12 +1333,12 @@
          "zone" : "eosia",
          "title" : "The Council of 1,000",
          "id" : "eosia52",
-         "description" : "\n        Here is where the Styric Council of 1,000 meets.  There are over\n1,000 gods in the Styric faith, and the high priest (or priestess) of each\nhas a seat on this council.  Benches line the walls and provide seats for\nthe members.  The only exit is to the west.\n",
+         "description" : "\n        Here is where the Styric Council of 1,000 meets.  There are over\n1,000 gods in the Styric faith, and the high priest (or priestess) of each\nhas a seat on this council.  Benches line the walls and provide seats for\nthe members.  The only exit is to the east.\n",
          "altitude" : null
       },
       "eosia16@eosia" : {
          "exits" : {
-            "s" : "eosia14"
+            "s" : "^door_1S_eosia"
          },
          "flags" : [
             "soundproof"
@@ -1310,61 +1351,6 @@
       }
    },
    "mob" : {
-      "zemoch@eosia" : {
-         "damage" : "10",
-         "location" : "eosia37",
-         "speed" : "0",
-         "aggression" : "80",
-         "armor" : "3",
-         "pname" : "Zemoch",
-         "name" : "Zemoch",
-         "description" : "Emperor Zemoch of Zemoch knows you have the Bhelliom!",
-         "strength" : "200"
-      },
-      "ghwerig@eosia" : {
-         "eflags" : [
-            "Fireball",
-            "NegShock"
-         ],
-         "damage" : "10",
-         "location" : "eosia50",
-         "armor" : "0",
-         "name" : "Ghwerig",
-         "description" : "Ghwerig, the troll, thinks you want to steal Bhelliom!",
-         "strength" : "300",
-         "speed" : "0",
-         "aggression" : "95",
-         "pname" : "Ghwerig",
-         "pflags" : [
-            "nosummon"
-         ],
-         "mflags" : [
-            "BarNorth"
-         ]
-      },
-      "azash@eosia" : {
-         "eflags" : [
-            "Fireball",
-            "Shock",
-            "NegFireball",
-            "NegFrost"
-         ],
-         "damage" : "20",
-         "location" : "eosia46",
-         "armor" : "5",
-         "name" : "Azash",
-         "description" : "The Elder Dark God, Azash, wants the Bhelliom!",
-         "strength" : "1000",
-         "speed" : "0",
-         "aggression" : "10",
-         "pname" : "Azash",
-         "pflags" : [
-            "nosummon"
-         ],
-         "mflags" : [
-            "BarNorth"
-         ]
-      },
       "annias@eosia" : {
          "damage" : "10",
          "location" : "eosia32",
@@ -1375,17 +1361,6 @@
          "name" : "Annias",
          "description" : "\nPrimate Annias of Cimmura is plotting to take control of the Church!",
          "strength" : "175"
-      },
-      "dolmant@eosia" : {
-         "damage" : "5",
-         "location" : "eosia31",
-         "speed" : "0",
-         "aggression" : "0",
-         "armor" : "0",
-         "pname" : "Dolmant",
-         "name" : "Dolmant",
-         "description" : "Primate Dolmant is busy preparing the Citadel for mass.",
-         "strength" : "100"
       },
       "sparhawk@eosia" : {
          "eflags" : [
@@ -1422,38 +1397,11 @@
             "BarNorth"
          ]
       },
-      "sephrenia@eosia" : {
-         "eflags" : [
-            "Frost"
-         ],
-         "damage" : "9",
-         "location" : "eosia27",
-         "armor" : "0",
-         "name" : "Sephrenia",
-         "description" : "\nSephrenia, the Styric, is weighed down by the swords of the fallen.",
-         "sflags" : [
-            "female"
-         ],
-         "strength" : "160",
-         "speed" : "0",
-         "aggression" : "0",
-         "pname" : "Sephrenia"
-      },
-      "rindor@eosia" : {
-         "damage" : "8",
-         "location" : "eosia25",
-         "speed" : "0",
-         "aggression" : "30",
-         "armor" : "0",
-         "pname" : "Rindor",
-         "name" : "Rindor",
-         "description" : "King Rindor, of Rindor, thinks you are Elene trash.",
-         "strength" : "120"
-      },
       "rolak@eosia" : {
          "damage" : "9",
          "location" : "eosia13",
          "armor" : "0",
+         "pflag" : "{ }",
          "name" : "Rolak",
          "description" : "Rolak, the guard of the castle, will not let you pass.",
          "sflags" : "{ }",
@@ -1461,7 +1409,6 @@
          "speed" : "0",
          "aggression" : "5",
          "pname" : "Rolak",
-         "pflags" : "{ }",
          "mflags" : [
             "BarNorth"
          ]
@@ -1481,27 +1428,6 @@
          "aggression" : "0",
          "pname" : "Kurik",
          "pflags" : "{ }"
-      },
-      "platime@eosia" : {
-         "damage" : "5",
-         "location" : "eosia7",
-         "armor" : "0",
-         "name" : "Platime",
-         "description" : "Platime, the head of the Thief's Guild, wants your stuff!",
-         "sflags" : "{ }",
-         "strength" : "110",
-         "speed" : "10",
-         "aggression" : "5",
-         "pname" : "Platime",
-         "pflags" : [
-            "nosteal"
-         ],
-         "mflags" : [
-            "thief",
-            "stealweapon",
-            "stealworn",
-            "pickstuff"
-         ]
       },
       "madame@eosia" : {
          "damage" : "5",
@@ -1558,6 +1484,138 @@
             "NoHassle",
             "NoSummon"
          ]
+      },
+      "ghwerig@eosia" : {
+         "eflags" : [
+            "Fireball",
+            "NegShock"
+         ],
+         "damage" : "10",
+         "location" : "eosia50",
+         "armor" : "0",
+         "name" : "Ghwerig",
+         "description" : "Ghwerig, the troll, thinks you want to steal Bhelliom!",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "95",
+         "pname" : "Ghwerig",
+         "pflags" : [
+            "nosummon"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "ehlana@eosia" : {
+         "damage" : "10",
+         "location" : "limbo@limbo",
+         "armor" : "0",
+         "name" : "ehlana",
+         "description" : "Queen Ehlana of Elenia stands before you smiling.",
+         "sflags" : [
+            "female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Queen Ehlana",
+         "pflags" : [
+            "nohassle"
+         ]
+      },
+      "azash@eosia" : {
+         "eflags" : [
+            "Fireball",
+            "Shock",
+            "NegFireball",
+            "NegFrost"
+         ],
+         "damage" : "20",
+         "location" : "eosia46",
+         "armor" : "5",
+         "name" : "Azash",
+         "description" : "The Elder Dark God, Azash, wants the Bhelliom!",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "Azash",
+         "pflags" : [
+            "nosummon"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "dolmant@eosia" : {
+         "damage" : "5",
+         "location" : "eosia31",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Dolmant",
+         "name" : "Dolmant",
+         "description" : "Primate Dolmant is busy preparing the Citadel for mass.",
+         "strength" : "100"
+      },
+      "rindor@eosia" : {
+         "damage" : "8",
+         "location" : "eosia25",
+         "speed" : "0",
+         "aggression" : "30",
+         "armor" : "0",
+         "pname" : "Rindor",
+         "name" : "Rindor",
+         "description" : "King Rindor, of Rindor, thinks you are Elene trash.",
+         "strength" : "120"
+      },
+      "sephrenia@eosia" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "9",
+         "location" : "eosia27",
+         "armor" : "0",
+         "name" : "Sephrenia",
+         "description" : "\nSephrenia, the Styric, is weighed down by the swords of the fallen.",
+         "sflags" : [
+            "female"
+         ],
+         "strength" : "160",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Sephrenia"
+      },
+      "platime@eosia" : {
+         "damage" : "5",
+         "location" : "eosia7",
+         "armor" : "0",
+         "name" : "Platime",
+         "description" : "Platime, the head of the Thief's Guild, wants your stuff!",
+         "sflags" : "{ }",
+         "strength" : "110",
+         "speed" : "10",
+         "aggression" : "5",
+         "pname" : "Platime",
+         "pflags" : [
+            "nosteal"
+         ],
+         "mflags" : [
+            "thief",
+            "stealweapon",
+            "stealworn",
+            "pickstuff"
+         ]
+      },
+      "othos@eosia" : {
+         "damage" : "10",
+         "location" : "eosia37",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "3",
+         "pname" : "Zemoch",
+         "name" : "Othos",
+         "description" : "Emperor Othos of Zemoch knows you have the Bhelliom!",
+         "strength" : "200"
       }
    }
 }

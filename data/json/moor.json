@@ -25,9 +25,25 @@
          "name" : "RopeTopPit",
          "desc[2]" : "A knotted rope leads down into the pit.",
          "linked" : "RopeBotPit@ledge",
+         "state" : "1",
          "pname" : "rope",
          "maxstate" : "2",
          "desc[0]" : "A rope ladder leads down into the pit."
+      },
+      "bucket@moor" : {
+         "desc[1]" : "An overturned bucket lies in a corner.",
+         "location" : "IN_ROOM:Inside",
+         "oflags" : [
+            "Container",
+            "Getflips"
+         ],
+         "name" : "bucket",
+         "examine" : "The bucket is made of wood and very, very old. It could possibly be used as\na container although probably leaks like a sieve.\n",
+         "size" : "30",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "15",
+         "desc[0]" : "Someone has left an old wooden bucket here."
       },
       "altar@moor" : {
          "desc[1]" : "A chalice rests upon the altar.",
@@ -96,7 +112,7 @@
       },
       "pit@moor" : {
          "exits" : {
-            "n" : "Lost1",
+            "u" : "Lost1",
             "d" : "^RopeTopPit"
          },
          "flags" : [
@@ -130,7 +146,8 @@
             "s" : "Lost1"
          },
          "flags" : [
-            "Outdoors"
+            "Outdoors",
+            "Maze"
          ],
          "zone" : "moor",
          "title" : "Lost On The Moor",
@@ -141,7 +158,9 @@
       "misty2@moor" : {
          "exits" : {
             "w" : "Misty1",
-            "n" : "Circle"
+            "n" : "Circle",
+            "se" : "church@cathedral",
+            "d" : "descent10@oshul"
          },
          "flags" : [
             "Outdoors"
@@ -149,11 +168,12 @@
          "zone" : "moor",
          "title" : "Misty Moorland",
          "id" : "Misty2",
-         "description" : "\n   You are wandering amidst the thickets and stones far out upon the moor. Grey\nand barren they extend all around you.  Thick gorse and bushes prevent even the\nmost determined adventurer from doing anything but following the paths to the\nnorth and west.\n",
+         "description" : "\n   You are wandering amidst the thickets and stones far out upon the moor. Grey\nand barren they extend all around you.  Thick gorse and bushes prevent even the\nmost determined adventurer from doing anything but following the paths to the\nnorth and west.  You spot an opening between the bushes to the southeast\nhowever.  You also spot a cavern opening below you on the cliffside.\n",
          "altitude" : "900"
       },
       "rocky@moor" : {
          "exits" : {
+            "w" : "road7e@newvillage",
             "e" : "Lost2",
             "n" : "camelot@camelot",
             "s" : "Edge"
@@ -199,13 +219,14 @@
       },
       "lost1@moor" : {
          "exits" : {
-            "w" : "Edge",
-            "e" : "pit",
+            "e" : "Cottage",
+            "w" : "Circle",
             "n" : "Lost2",
-            "s" : "Misty2"
+            "d" : "pit"
          },
          "flags" : [
-            "Outdoors"
+            "Outdoors",
+            "Maze"
          ],
          "zone" : "moor",
          "title" : "Lost On The Moor",

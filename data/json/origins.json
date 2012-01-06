@@ -1,0 +1,1908 @@
+{
+   "obj" : {
+      "white_pass@origins" : {
+         "location" : "WORN_BY:Brown",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "white",
+         "name" : "white_pass",
+         "size" : "4",
+         "pname" : "pass",
+         "weight" : "4",
+         "bvalue" : "300",
+         "desc[0]" : "\nA &+Wwhite&n pass, allowing you into the Spaceport, has been carelessly left here!"
+      },
+      "magical_bass@origins" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:origins12",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "magical",
+         "name" : "magical_bass",
+         "examine" : "\nThis bass is worn, wooden, and beautiful, once having been of the highest \nquality.  You can feel that it has strange, magical properties.",
+         "size" : "13",
+         "pname" : "bass",
+         "weight" : "15",
+         "bvalue" : "-100",
+         "desc[0]" : "\nAn old, upright bass with mysterious carvings lies here, somehow lost \nby its owner."
+      },
+      "milky_potion@origins" : {
+         "location" : "CARRIED_BY:Spectre",
+         "oflags" : [
+            "Food",
+            "NoDrain"
+         ],
+         "altname" : "milky",
+         "name" : "milky_potion",
+         "examine" : "\nExamining the label closely, you see:\n\n          'Level drain will be no bane;\n           If you drink me away in the Necromancer's melee.'",
+         "size" : "5",
+         "pname" : "potion",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "This potion is a milky, white liquid with a foul odor."
+      },
+      "sunblade@origins" : {
+         "damage" : "28",
+         "location" : "WIELDED_BY:Brown",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "altname" : "sword",
+         "name" : "sunblade",
+         "examine" : "\nThis is a beautifully crafted weapon that shines as brightly as the sun.\nThe name '&+GBalladar&n' is written on its hilt.",
+         "size" : "11",
+         "pname" : "sunblade",
+         "weight" : "11",
+         "bvalue" : "1250",
+         "desc[0]" : "Balladar's &+Ysunblade&n is here, lighting up everything."
+      },
+      "drumsticks@origins" : {
+         "damage" : "11",
+         "location" : "WIELDED_BY:Peart",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sticks",
+         "name" : "drumsticks",
+         "size" : "9",
+         "pname" : "drumsticks",
+         "weight" : "9",
+         "bvalue" : "-100",
+         "desc[0]" : "\nNeil Peart's worn-out drumsticks sit here, waiting to be returned to the owner."
+      },
+      "cylinder_1@origins" : {
+         "desc[1]" : "The outline of a door appears in the northern wall of the cylinder.",
+         "location" : "IN_ROOM:origins67",
+         "oflags" : [
+            "Openable"
+         ],
+         "name" : "cylinder_1",
+         "examine" : "It seems openable and closeable from this side only.",
+         "linked" : "disc_1",
+         "state" : "0",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "There is an open door in the northern wall of the cylinder."
+      },
+      "note2@origins" : {
+         "location" : "IN_ROOM:origins40",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "letter",
+         "pname" : "note",
+         "name" : "note2",
+         "examine" : "\nThis note says:\n\n  'I had believed that you had dealt with the elves of\n   Rivendell sufficiently.  You have not taken care of their\n   new-found human hero Jon, however.  You must understand\n   that Jon is from my time, and is extremely dangerous.\n   Only by terminating these elves back in your time can I\n   hope to change the future and the fate of music!  All music\n   as we know it evolves from the music of these elves of\n   Rivendell!  They must be slain and their music slain with\n   them for the Red Star Federation to succeed!  Behind your\n   bookshelf, you will find a device which can take you to me\n   should the need arise.\n          --Father Brown, Head Priest of the Temples of Syrinx'",
+         "desc[0]" : "A neatly written note lies on a table."
+      },
+      "waterfall_1@origins" : {
+         "desc[1]" : "The waterfall's waters run down in a strange pattern.",
+         "location" : "IN_ROOM:origins45",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "waterfall_1",
+         "linked" : "waterfall",
+         "state" : "1",
+         "pname" : "waterfall",
+         "maxstate" : "1",
+         "desc[0]" : "The water seems to have been parted, revealing an exit."
+      },
+      "elven_staff@origins" : {
+         "desc[1]" : "There is a medium-sized staff under many leaves.",
+         "location" : "IN_ROOM:origins13",
+         "oflags" : [
+            "Destroyed",
+            "Glowing",
+            "GetFlips"
+         ],
+         "altname" : "elven",
+         "name" : "elven_staff",
+         "examine" : "\nIt is a slender wooden piece of art.  It has a crystal-faceted top that \ncaptures light easily and beautifully.",
+         "size" : "11",
+         "state" : "1",
+         "weight" : "10",
+         "pname" : "staff",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "This is an elven staff with a crystalline head."
+      },
+      "wisdom@origins" : {
+         "desc[1]" : "Your mind lies before you, closed.",
+         "location" : "WORN_BY:Apollo",
+         "oflags" : [
+            "Wearable",
+            "Container",
+            "Openable"
+         ],
+         "altname" : "mind",
+         "name" : "wisdom",
+         "examine" : "\nThe essence of all wisdom, your mind, rests within your hands.",
+         "state" : "1",
+         "size" : "20",
+         "pname" : "wisdom",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "Your mind lies before you, open."
+      },
+      "medium_shield@origins" : {
+         "location" : "CARRIED_BY:Spectre",
+         "armor" : "8",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Shield"
+         ],
+         "altname" : "medium",
+         "name" : "medium_shield",
+         "examine" : "The markings are faded, remember?! :)",
+         "size" : "8",
+         "pname" : "shield",
+         "weight" : "7",
+         "bvalue" : "20",
+         "desc[0]" : "A medium shield with old, faded markings lies here."
+      },
+      "temple_paper@origins" : {
+         "location" : "IN_ROOM:origins41",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "temple",
+         "pname" : "paper",
+         "name" : "temple_paper",
+         "examine" : "\nThe paper reads:\n \n               'TemplePaper, December 12, A.D. 2112\n\nREBEL LEADER JON KILLED TODAY IN FOREFRONT OF MUSICAL REVOLUTION!\n        Here, in Megadon, as well as under the atmospheric domes\nof the Outer Planets, we have had peace since the year 2062, when\nthe surviving planets were banded together under the &+rRed Star&n of\nthe Solar Federation.  The less fortunate gave us a few new\nmoons.  Today, this fragile peace comes to an end as Father Brown\nand his forces end Jon's life.  \n        It was said that Jon uncovered a plot by Brown and the \npriests of the Temples to ally with a being from the past to \nprevent the evolution of music.  This way, the Temples' music \nwould remain unchallenged.  Jon's best disciple, Alex Lifeson,\nhas vowed to avenge Jon's death...'",
+         "desc[0]" : "One Temple Paper floats down in front of you."
+      },
+      "disc_1@origins" : {
+         "location" : "IN_ROOM:origins40",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "name" : "disc_1",
+         "examine" : "\nThis is a large cylinder, of about 2 feet diameter and 8 feet height.  It has \nan open threshold leading into it, raised about 1.5 feet off the ground.",
+         "linked" : "cylinder_1",
+         "state" : "0",
+         "pname" : "cylinder",
+         "maxstate" : "1",
+         "desc[0]" : "\nA large cylinder with a door raised a foot off the ground stands here."
+      },
+      "dates@origins" : {
+         "location" : "IN_ROOM:origins28",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "dates",
+         "size" : "2",
+         "pname" : "dates",
+         "weight" : "2",
+         "desc[0]" : "Some fresh dates lie scattered about."
+      },
+      "door3@origins" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:origins39",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door3",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door4",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "waterfall@origins" : {
+         "desc[1]" : "The waterfall's waters run down in a strange pattern.",
+         "location" : "IN_ROOM:origins44",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "waterfall",
+         "maxstate" : "1",
+         "linked" : "waterfall_1",
+         "desc[0]" : "The water seems to have been parted, revealing a cavemouth.",
+         "state" : "1"
+      },
+      "bridge2@origins" : {
+         "desc[1]" : "\nThere is a raised bridge barring you from crossing and going down.",
+         "location" : "IN_ROOM:origins17",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bridge2",
+         "examine" : "\nIt appears that this bridge can be lowered by someone who knows how...",
+         "linked" : "bridge1",
+         "state" : "1",
+         "pname" : "bridge",
+         "maxstate" : "1",
+         "desc[0]" : "The bridge has been lowered, allowing access downwards."
+      },
+      "door4@origins" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:origins40",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door4",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door3",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "disc@origins" : {
+         "desc[1]" : "A large, metallic disc sits here.",
+         "location" : "IN_ROOM:origins40",
+         "oflags" : [
+            "Destroyed",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "cylinder",
+         "name" : "disc",
+         "examine" : "\nYou see a large metallic disc, of about 2 feet in diameter, which shines with\na lovely silver glow.  It appears that you can move it, with a little bit of \nwork.",
+         "state" : "1",
+         "size" : "100",
+         "pname" : "disc",
+         "weight" : "14",
+         "maxstate" : "1"
+      },
+      "note1@origins" : {
+         "location" : "IN_ROOM:origins12",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "letter",
+         "pname" : "note",
+         "name" : "note1",
+         "examine" : "\nThe note reads:\n\n  'Dear Jon,\n     I don't think we can continue on like this much longer.\n   The Necromancer has slain nearly the entire village, and\n   has destroyed our precious music.  He has powers the likes\n   of which even our sorcerers can't emulate.  Where does he\n   get such might?  Is it that mysterious place you come from\n   as well?  Please, help us!  You are the only hope we have.\n                                              --Saurantha'",
+         "desc[0]" : "\nA note handwritten in flowing Elvish lies on a desk in the far left corner."
+      },
+      "wooden_sign@origins" : {
+         "location" : "IN_ROOM:origins66",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wooden",
+         "pname" : "sign",
+         "name" : "wooden_sign",
+         "examine" : "\nThe sign reads:\n\n  'Origins Zone, a story of the origins of man and his music,\n   written by &+YBalladar the Bard&n in tribute to his art.\n\n   This zone is based in part on the lyrics by Neil Peart,\n   percussionist of Rush.\n\n   --Albums referenced:\n\n   Fly By Night        -- Rivendell (based on Tolkien)\n   Caress of Steel     -- The River Don, Willowdale,\n                          The Necromancer, Bacchus Plateau,\n                          The Fountain of Lamneth\n   2112                -- Megadon, The Temple of Syrinx,\n                          The Waterfall\n   A Farewell to Kings -- The Rocinante, constellations,\n                          Cygnus X-1\n   Hemispheres         -- entire Olympus area and origins\n                          concept'",
+         "desc[0]" : "A large, old wooden sign floats in the air with you."
+      },
+      "altar@origins" : {
+         "location" : "IN_ROOM:origins13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "altar",
+         "name" : "altar",
+         "desc[0]" : "A large altar dominates the view here."
+      },
+      "door2@origins" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:origins12",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door2",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "elfblade@origins" : {
+         "damage" : "20",
+         "location" : "WIELDED_BY:Sothurithidan",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "elfblade",
+         "size" : "8",
+         "pname" : "elfblade",
+         "weight" : "6",
+         "bvalue" : "500",
+         "desc[0]" : "A finely crafted sword of ancient elven make lies here."
+      },
+      "bridge1@origins" : {
+         "desc[1]" : "\nThere is a raised bridge barring you from crossing and going up.",
+         "location" : "IN_ROOM:origins16",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bridge1",
+         "examine" : "\nIt appears that this bridge can be lowered by someone who knows how...",
+         "linked" : "bridge2",
+         "state" : "1",
+         "pname" : "bridge",
+         "maxstate" : "1",
+         "desc[0]" : "The bridge has been lowered, allowing access upwards."
+      },
+      "key@origins" : {
+         "location" : "CARRIED_BY:Sothurithidan",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "key",
+         "size" : "2",
+         "pname" : "key",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "A small, slender key with elven markings sits here."
+      },
+      "fountain@origins" : {
+         "location" : "IN_ROOM:origins17",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "fountain",
+         "name" : "fountain",
+         "examine" : "You are compelled to drink from its inviting &+Cwaters.&n",
+         "desc[0]" : "\nThe crystal-clear &+Cwaters&n of the fountain possess a halcyon feel."
+      },
+      "love@origins" : {
+         "desc[1]" : "Your heart lies before you, closed.",
+         "location" : "WORN_BY:Dionysus",
+         "oflags" : [
+            "Wearable",
+            "Container",
+            "Openable"
+         ],
+         "altname" : "heart",
+         "name" : "love",
+         "examine" : "\nThe essence of all love, your heart, rests within your hands.",
+         "state" : "1",
+         "size" : "20",
+         "pname" : "love",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "Your heart lies before you, open."
+      },
+      "acoustic_guitar@origins" : {
+         "damage" : "9",
+         "location" : "IN_ROOM:origins46",
+         "armor" : "28",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "Weapon"
+         ],
+         "altname" : "acoustic",
+         "name" : "acoustic_guitar",
+         "examine" : "\nThis guitar is made of wood, and is meant to be placed on a stand.\nThe words 'The Omega Concern' are engraved on it.",
+         "size" : "11",
+         "weight" : "13",
+         "pname" : "guitar",
+         "bvalue" : "-100",
+         "desc[0]" : "\nA beautiful, ancient, acoustic guitar lies here waiting to be played.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "door1@origins" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:origins11",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door1",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door2",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "treebark@origins" : {
+         "location" : "WORN_BY:Skeletree",
+         "armor" : "20",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "bark",
+         "name" : "treebark",
+         "size" : "20",
+         "weight" : "18",
+         "pname" : "treebark",
+         "bvalue" : "500",
+         "desc[0]" : "\nA sheet of treebark that can easily accomodate you has been left here.",
+         "aflags" : [
+            "Chest"
+         ]
+      },
+      "bookshelf@origins" : {
+         "desc[1]" : "A bookshelf rests against the wall.",
+         "location" : "IN_ROOM:origins40",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "shelf",
+         "name" : "bookshelf",
+         "state" : "1",
+         "pname" : "bookshelf",
+         "maxstate" : "1",
+         "desc[0]" : "A bookshelf appears to have been slid against the wall."
+      }
+   },
+   "loc" : {
+      "origins47@origins" : {
+         "exits" : {
+            "s" : "origins41"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "&+BThe Temples of &+CSyrinx&n",
+         "id" : "origins47",
+         "description" : "\n        Upon first entering these buildings, the bleakness of the walls, all \nmetallic grey, seem monotonous and foreboding.  But upon further and closer \nexamination, you see that they pulse with life!!  Electronic signals and lights\nof origin unknown convey a deep sense of mystery.  In its own way, the\nmachinery of these rooms is alive; electronic impulses are its language and\nelectricity is its oxygen...\n        You get the feeling that the Temples and the things within them are\nas old as time itself, though nothing within has ever been seen before.  As\nyou approach the largest of the buildings, you realize that it is probably the\ncentral edifice of the group of Temples here -- a seat for the \"town's\"\ngovernment.  You enter the only room available, which seems to be the largest\nas well, and from its atmosphere, the most important.\n        Three elaborate thrones dominate the center of the room, raised on a\ndias.  On the lowest step of the dias is written \"&+GElder Race&n\".  On each of\nthe three thrones is a single word, beautifully rendered in flowing script. The\nleft throne says \"&+rRed Star&n\", the right one \"&+RSolar Federation&n\" and the \ncentral throne reads \"&+CSYRINX&n\".  There are a myriad of computers, monitors, \nand sound equipment all over the room, all in perfect order.  On the floor in \nthe very center, right below the dias, is a pentagram inscribed within a \ncircle, all in red.  The topmost point of the pentagram points directly to the \ncentral throne.\n",
+         "altitude" : null
+      },
+      "origins53@origins" : {
+         "exits" : {
+            "n" : "origins54"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "Constellation Pegasus",
+         "id" : "origins53",
+         "description" : "\n        ...and northwest of Pegasus...\n",
+         "altitude" : null
+      },
+      "origins40@origins" : {
+         "exits" : {
+            "n" : "^door4",
+            "s" : "^disc_1"
+         },
+         "flags" : [
+            "Dark",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "The Necromancer's Room",
+         "id" : "origins40",
+         "description" : "\n        You enter a small chamber, filled to the brim with test tubes, \ndistillation tubes, decanters, flasks, and various other equipment an evil, \ndark mage would have.  Numerous volumes of the \"Arcanum Magicana Disciplina,\" \npenned by the greatest Dark Mage, the legendary &+LSuraklin&n himself, rest on \nthe bookshelf.  You stare in abject horror; how could one live for so long in \nsuch a small room, with so little remaining space? But the answer to that is \npainfully obvious: the Necromancer stopped 'living' in days long since past...\n",
+         "altitude" : null
+      },
+      "origins46@origins" : {
+         "exits" : {
+            "u" : "origins45"
+         },
+         "flags" : [
+            "Dark",
+            "Peaceful",
+            "Party",
+            "Private",
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "Small Room",
+         "id" : "origins46",
+         "description" : "\n        You climb down the small steps, into an even smaller room.  However, \nthis room is carpeted, well-furnished, and very pleasant smelling.\n",
+         "altitude" : null
+      },
+      "origins31@origins" : {
+         "exits" : {
+            "w" : "origins32",
+            "n" : "origins30",
+            "s" : "origins33"
+         },
+         "flags" : [
+            "Dark",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Inside the Castle",
+         "id" : "origins31",
+         "description" : "\n        You continue southward, undaunted by the fear which grips your skin \nand chills you to the bone.  This room is a simple, square affair, void of \nitems or furniture, with exits to the south and west.  Optionally, you can \nexit the castle to the north of here.\n",
+         "altitude" : null
+      },
+      "origins43@origins" : {
+         "exits" : {
+            "e" : "origins41",
+            "n" : "origins44"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "The Only House in Sight",
+         "id" : "origins43",
+         "description" : "\n        You come upon a small, metallic, domed shelter, that appears as bleak \nas the entire area you are in.  There is no concept of a 'yard' here, it would \nseem.  However, though you cannot find any place to enter the house, you do \nhear the actual sounds of running water to your north!  It is also possible to\nreturn east to Megadon.\n",
+         "altitude" : null
+      },
+      "origins34@origins" : {
+         "exits" : {
+            "w" : "origins33",
+            "u" : "origins36"
+         },
+         "flags" : [
+            "Dark",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Base of the Tower",
+         "id" : "origins34",
+         "description" : "\n        You arrive at the base of one of the great towers which dominate the \ncastle's exterior.  The walls of the tower are covered with moss and and \ndecay, and a vile stench pervades the air.\n        You may climb the stairs to the top or return to the courtyard.\n",
+         "altitude" : null
+      },
+      "origins29@origins" : {
+         "exits" : {
+            "n" : "origins22",
+            "s" : "origins30"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "The Lands of the Necromancer",
+         "id" : "origins29",
+         "description" : "\n        As grey traces of dawn tinge the eastern sky, you emerge from the \nforest shadow, ford the River Don, and leave the trodden town of Willowdale.\n        You turn south, journeying into the dark and forbidding lands of the \nNecromancer.  Even now, the intensity of his dread power can be felt, \nweakening the body and saddening the heart.\n        You reflect upon the empty, mindless spectres, stripped of will and \nsoul.  Only your thirst to aid the elves of Rivendell gives you hunger for \nvengeance...\n",
+         "altitude" : null
+      },
+      "origins49@origins" : {
+         "exits" : {
+            "u" : "origins50",
+            "n" : "origins48"
+         },
+         "flags" : [
+            "Peaceful",
+            "NoMobiles",
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "The Spaceport",
+         "id" : "origins49",
+         "description" : "\n        You enter the heart of the great Spaceport, and come face to face with \nthe large flying objects, which you overhear the people refer to as \n'spaceships'.  Many people embark and disembark from these ships before your \neyes.\n        Most of the ships are huge, but one particularly small one dubbed \n\"The Rocinante\" catches your eye.  There is a man at that ship, who gestures \nfor you to go see him.  It would also be possible for you to head back up \nnorth toward Megadon.\n",
+         "altitude" : null
+      },
+      "origins41@origins" : {
+         "exits" : {
+            "w" : "origins43",
+            "e" : "origins42",
+            "n" : "origins47",
+            "s" : "origins48"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "Megadon",
+         "id" : "origins41",
+         "description" : "\n        You lie awake, staring out at the bleakness of Megadon.  City and sky \nbecome one, a vast sea of unbroken grey.  The Twin Moons, just two pale orbs \nas they trace their way across the sky.  You see various people 'plugging' \ninto their machines, and carrying Temple Papers.\n        From here, you may choose to walk in any direction.  To the north lie\nclearly the most important buildings here; huge, metallic structures which form\na small town of their own and easily dominates the view for miles.  To the\nsouth lies the spaceport, where large vehicles capable of flight arrive and\ndepart regularly.  To the east is another large edifice, and people are\nbustling in and out of there hurriedly.  Finally, to the west, is the single\nplace of residence you can recognize.  It reminds you of familiar houses at\nhome, except that it is made of metal.\n",
+         "altitude" : null
+      },
+      "origins56@origins" : {
+         "exits" : {
+            "d" : "origins57"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "The Heart of Cygnus",
+         "id" : "origins56",
+         "description" : "\n        ...headlong into mystery!  The x-ray is her siren song, your ship \ncannot resist her long, nearer to your deadly goal, until...\n",
+         "altitude" : null
+      },
+      "origins2@origins" : {
+         "exits" : {
+            "w" : "origins5",
+            "e" : "origins4",
+            "n" : "origins3",
+            "s" : "origins1"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal",
+            "NoMobiles"
+         ],
+         "zone" : "origins",
+         "title" : "Into Rivendell",
+         "id" : "origins2",
+         "description" : "\n        You walk deeper into the great forest, and your awe at the natural \nsplendor only increases.  It is obvious by now that sentient beings \ndefinitely guard and cherish these woods.\n        The path continues in all directions from here.\n",
+         "altitude" : null
+      },
+      "origins35@origins" : {
+         "exits" : {
+            "e" : "origins33",
+            "u" : "origins37"
+         },
+         "flags" : [
+            "Dark",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Base of the Tower",
+         "id" : "origins35",
+         "description" : "\n        You arrive at the base of one of the great towers which dominate the \ncastle's exterior.  The walls of the tower are covered with moss and and \ndecay, and a vile stench pervades the air.\n        You may climb the stairs to the top or return to the courtyard.\n",
+         "altitude" : null
+      },
+      "origins60@origins" : {
+         "exits" : {
+            "w" : "origins62",
+            "e" : "origins61",
+            "n" : "origins63",
+            "s" : "origins59"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "origins",
+         "title" : "The City of Immortals",
+         "id" : "origins60",
+         "description" : "\n        After many an hour of tiresome marching, you come upon a large, \nbeautiful city.  The road is indeed marble white, and the buildings are purest \ngold.  The mountain is closer than ever now, and its peak is hidden in wispy, \nfluffy, white clouds.\n        But what distracts your attention from all this beauty is the scores \nupon scores of dead bodies of all races, which line the road and the rest of \nthe City.\n        You may now turn left, to an area of the City marked as 'Apollo's \nHemisphere', turn right to another division marked 'Dionysus's Hemisphere,' \nor continue north to the base of the great mountain.\n",
+         "altitude" : null
+      },
+      "origins13@origins" : {
+         "exits" : {
+            "e" : "origins11"
+         },
+         "flags" : [
+            "Party",
+            "Peaceful"
+         ],
+         "zone" : "origins",
+         "title" : "Elven Temple",
+         "id" : "origins13",
+         "description" : "\n        You enter the primary worship center of the Rivendell elves.  In \ncontrast to the rest of the city, this place is peaceful and submissive.  It \nis not in disarray.  A single exit leads east back into the city.\n",
+         "altitude" : null
+      },
+      "origins36@origins" : {
+         "exits" : {
+            "d" : "origins34"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Top of the Tower",
+         "id" : "origins36",
+         "description" : "\n        You climb the stairs to the top of the tower.  From this vantage, you \ncan see the courtyard below, and most of the lands that the castle overlooks \noutdoors.  The one option is to return down the stairs.\n",
+         "altitude" : null
+      },
+      "origins8@origins" : {
+         "exits" : {
+            "e" : "origins3",
+            "n" : "origins5",
+            "s" : "origins9"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal"
+         ],
+         "zone" : "origins",
+         "title" : "Lost in the Forest",
+         "id" : "origins8",
+         "description" : "\n        You are lost among the giant firs, redwoods, and elms that surround \nyou on all fronts.  You can go in any direction.\n",
+         "altitude" : null
+      },
+      "origins39@origins" : {
+         "exits" : {
+            "d" : "origins38",
+            "s" : "^door3"
+         },
+         "flags" : [
+            "Dark",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "The Top of the Stairs",
+         "id" : "origins39",
+         "description" : "\n        You climb the long flight of steps, heading toward the zenith, and the \nclimb is a long and tedious one.  The stairs squeak loudly as you tread upon \nthem.  You pray that the fragile stairs don't crumble underneath your feet.  \nAs you reach the top, you see a door.  Optionally, you may head back down the \nstairs.\n",
+         "altitude" : null
+      },
+      "origins59@origins" : {
+         "exits" : {
+            "n" : "origins60"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "origins",
+         "title" : "Wide Marble Road",
+         "id" : "origins59",
+         "description" : "\n        You wake up, your bones feeling like jelly and your heart beating a \nmile a minute.  You look around for your brave captain Neil Peart, but he is \nnowhere to be found...\n        The road you stand on is very wide, and directly ahead of you, yet \nmiles away still, is a very, very large mountain.  You can follow this road \nnorth only, but for many miles.\n",
+         "altitude" : null
+      },
+      "origins28@origins" : {
+         "exits" : {
+            "d" : "origins27"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "origins",
+         "title" : "Bacchus Plateau",
+         "id" : "origins28",
+         "description" : "\n        After what feels like hours of climbing, you break through the foul \nmist.  Sunlight beams down upon you, then continues down to be swallowed by \nthe mist. From this vantage, you could have seen everything, were it not for \nthat mist, which functions as a jealous blanket for the ground below.\n        Here, however, it seems that the parasitic power of the Necromancer \nhas no effect...\n",
+         "altitude" : null
+      },
+      "origins27@origins" : {
+         "exits" : {
+            "u" : "origins28",
+            "d" : "origins26"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Uuuuh, uh-oh...",
+         "id" : "origins27",
+         "description" : "\n        The mist here is thicker and seems to be choking the very life out of \nyou!\n",
+         "altitude" : null
+      },
+      "origins7@origins" : {
+         "exits" : {
+            "w" : "origins4",
+            "e" : "origins8",
+            "n" : "origins4",
+            "s" : "origins5"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal"
+         ],
+         "zone" : "origins",
+         "title" : "Lost in the Forest",
+         "id" : "origins7",
+         "description" : "\n        You are lost among the giant firs, redwoods, and elms that surround \nyou on all fronts.  You can go in any direction.\n",
+         "altitude" : null
+      },
+      "origins18@origins" : {
+         "exits" : {
+            "n" : "origins19"
+         },
+         "flags" : [
+            "Outdoors",
+            "NegRegen",
+            "Soundproof"
+         ],
+         "zone" : "origins",
+         "title" : "The Road to Willowdale",
+         "id" : "origins18",
+         "description" : "\n        Fighting back to consciousness, coldness grips your skin.  It suddenly \nbecomes obvious to you that Panacea and Geddy Lee have sent you here for a \nreason.  All around you, trees hang somberly about you, much resembling the \nwillowy trees of swamps.  You can't help but feel that the trees are watching \nyour every move, with misshapen and contorted faces of agony.\n        The road leads on into darkness to the north.\n",
+         "altitude" : null
+      },
+      "origins54@origins" : {
+         "exits" : {
+            "e" : "origins55"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "Constellation Deneb",
+         "id" : "origins54",
+         "description" : "\n        ...Flew into the light of Deneb, sailed across the Milky Way...\n",
+         "altitude" : null
+      },
+      "origins24@origins" : {
+         "exits" : {
+            "w" : "origins22",
+            "u" : "origins25"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NegRegen",
+            "Soundproof"
+         ],
+         "zone" : "origins",
+         "title" : "Lands Stripped Bare",
+         "id" : "origins24",
+         "description" : "\n        This area east of Willowdale must once have been where the inhabitants \nof the city did their farming.  But now, the once rich and fertile earth has \nbeen violently stripped of all semblance of fertility.  It reminds you of \ndeliberately washing salt into soil to make it infertile, only this is far \nworse.\n        In front of you is a small mountain which appears to have some \ngreenery growing on it, and doesn't appear difficult to climb.  You may \nretreat back west to Willowdale, or climb the small mountain.\n        The very life essence of the area is gone, leaving a cold, hard, empty \nshell.  Clothes may warm the body, but they do not warm the soul...\n",
+         "altitude" : null
+      },
+      "origins61@origins" : {
+         "exits" : {
+            "w" : "origins60"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "origins",
+         "title" : "Dionysus's Hemisphere",
+         "id" : "origins61",
+         "description" : "\n        You enter a large, forested area of the City, where naked beings of \nall races frolick about, care-free and worry-free.  Many dead bodies lay \nabout, among them both naked ones and well-equipped ones.  The naked dead ones \nappear to have fallen victim to starvation, cold, and wolves, while a few \nhave apparently been killed by weapons from the well-equipped beings.  The \nwell-equipped bodies have obviously been slain by primitive tools and weapons.\n        A single path leads west back to the City.\n",
+         "altitude" : null
+      },
+      "origins10@origins" : {
+         "exits" : {
+            "e" : "origins3",
+            "n" : "origins11"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal"
+         ],
+         "zone" : "origins",
+         "title" : "Rivendell City Gates",
+         "id" : "origins10",
+         "description" : "\n        You come to the gates of the beautiful Elven city of Rivendell.  They \nare carved lovingly out of the wood that surrounds everything here.  Through \nthem, you can see the fabled elven town.  You doubt you've ever seen anything \nthis magnificent before.\n        The road leading north into the city has, however, fallen into severe \ndisrepair.\n",
+         "altitude" : null
+      },
+      "origins58@origins" : {
+         "exits" : {
+            "d" : "origins59"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "The Bridge of Death",
+         "id" : "origins58",
+         "description" : "\n        You feel as if your very life force has been torn from your body.\n\n&+B-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n\n&+C                  ...Death grips you painfully...\n\n&+B-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\nConnection closed by...wait!\n\nYou have memory, and awareness,\nBut you have no shape or form;\nAs a disembodied spirit,\nYou are dead, and yet unborn...\n\nYou have passed into Olympus,\nAs was told in tales of old;\nTo the City of Immortals,\nMarble &+wwhite,&n and purest &+Ygold...&n\n",
+         "altitude" : null
+      },
+      "origins4@origins" : {
+         "exits" : {
+            "w" : "origins3",
+            "e" : "origins4",
+            "n" : "origins5",
+            "s" : "origins4"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal"
+         ],
+         "zone" : "origins",
+         "title" : "Lost in the Forest",
+         "id" : "origins4",
+         "description" : "\n        You are lost among the giant firs, redwoods, and elms that surround \nyou on all fronts.  You can go in any direction.\n",
+         "altitude" : null
+      },
+      "origins55@origins" : {
+         "exits" : {
+            "s" : "origins56"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "Across the Milky Way",
+         "id" : "origins55",
+         "description" : "\n        ...On your ship, the Rocinante, spinning through the galaxies.  \nHeaded for...\n",
+         "altitude" : null
+      },
+      "origins64@origins" : {
+         "exits" : {
+            "s" : "origins63"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "origins",
+         "title" : "Inside Olympus",
+         "id" : "origins64",
+         "description" : "\n        You walk forward, entering the huge mountain.  It is but a small, \nhollowed-out area within the mountain, designed for the purpose of holding a \nbeast.\n",
+         "altitude" : null
+      },
+      "origins26@origins" : {
+         "exits" : {
+            "u" : "origins27",
+            "d" : "origins25"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "The Veil of Mist",
+         "id" : "origins26",
+         "description" : "\n        The mist surrounds you on all sides.\n",
+         "altitude" : null
+      },
+      "origins57@origins" : {
+         "exits" : {
+            "d" : "origins58"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "The Black Hole Gains Control!",
+         "id" : "origins57",
+         "description" : "\n        Spinning, whirling, still descending, like a spiral sea unending!  \nSound and fury drown your heart, \n     EVERY NERVE IS TORN APART!!!!.........................................\n",
+         "altitude" : null
+      },
+      "origins16@origins" : {
+         "exits" : {
+            "u" : "^bridge1"
+         },
+         "flags" : [
+            "Outdoors",
+            "CantSummon",
+            "NoSummon"
+         ],
+         "zone" : "origins",
+         "title" : "The Mountain in the East",
+         "id" : "origins16",
+         "description" : "\n        The light from the staff increases in magnitude until all you can see \nis a blinding white light and all you can hear in your head are the words \n'Draw towards the fountain'.\n        But soon the sound dies down and the light gives way to a most \nsoothing and pastoral scene.  You stand high atop a mountain, overlooking a \nvast ocean to the west and a beautiful sylvan forest in all other directions.  \nThe sheer natural beauty of this place, so pure and relaxing it is, has you \nin a total state of relaxation.  From here, you can see the whole world it \nseems, and you feel invincible, almost immortal...\n        Above you and slightly to the east, you hear the sounds of running \nwater, and a mysterious, sultry voice beckons to you.  \"Come up,\" the voice \nsoothes.\n",
+         "altitude" : null
+      },
+      "origins22@origins" : {
+         "exits" : {
+            "w" : "origins21",
+            "e" : "origins24",
+            "n" : "origins23",
+            "s" : "origins29"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NoMobiles",
+            "NegRegen",
+            "Soundproof"
+         ],
+         "zone" : "origins",
+         "title" : "Willowdale",
+         "id" : "origins22",
+         "description" : "\n        You reach the stricken village of Willowdale, and right away wish you \nhadn't.  Cries of anguish from stricken mothers and children pervade the heavy \ngloom.  Depression falls heavier than a thick mantle here.\n        There is not much to see, as all the homes and buildings have been \nshattered.  The dreary path turns south towards a large castle, north into \nhellish woods, east towards dead land, or offers passage to the west back \nacross the river.\n",
+         "altitude" : null
+      },
+      "origins12@origins" : {
+         "exits" : {
+            "w" : "^door2"
+         },
+         "flags" : [],
+         "zone" : "origins",
+         "title" : "An Elven Dwelling",
+         "id" : "origins12",
+         "description" : "\n        You enter a modestly furnished elven home.  There are signs of a \nrecent battle here.  Furniture lies scattered about, and more destroyed \nmusical instruments can be found.\n",
+         "altitude" : null
+      },
+      "origins42@origins" : {
+         "exits" : {
+            "w" : "origins41"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "TempleVision",
+         "id" : "origins42",
+         "description" : "\n        Upon entering this room, you feel like you are going to faint, due to \nthe plethora of bright lights and noise.  The source of most of the light is \nrow upon row upon row of large screens, to which many people are attached.  \nThe images seem quite amorphous to you, but the people using them probably see\na whole new world...\n        A single western exit heads back out to Megadon.\n",
+         "altitude" : null
+      },
+      "origins19@origins" : {
+         "exits" : {
+            "n" : "origins20",
+            "s" : "origins18"
+         },
+         "flags" : [
+            "Outdoors",
+            "NegRegen",
+            "Soundproof"
+         ],
+         "zone" : "origins",
+         "title" : "Narrowing Road",
+         "id" : "origins19",
+         "description" : "\n        The twisted road becomes more and more narrow here, and moving is \nincreasingly difficult.  The air is thicker still, and the comforting rays of \nthe sun are not to be found.\n        To the south is a slightly more comforting environment, and you dread \nto walk further north, into the empty dreariness.\n",
+         "altitude" : null
+      },
+      "origins62@origins" : {
+         "exits" : {
+            "e" : "origins60"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "origins",
+         "title" : "Apollo's Hemisphere",
+         "id" : "origins62",
+         "description" : "\n        This area of the city is bare of all trees.  On the contrary, the \nedifices here are well-built and offer excellent shelter.  Many dead bodies \nlay about, among them both naked ones and well-equipped ones.  The naked ones \nhave apparently been killed by weapons from the well-equipped beings.  \nThe well-equipped bodies have obviously been slain by primitive tools and \nweapons.  There is but a single living being here.\n        A lonely, blood-stricken road leads east into the City.\n",
+         "altitude" : null
+      },
+      "origins37@origins" : {
+         "exits" : {
+            "d" : "origins35"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Top of the Tower",
+         "id" : "origins37",
+         "description" : "\n        You climb the stairs to the top of the tower.  From this vantage, you \ncan see the courtyard below, and most of the lands that the castle overlooks \noutdoors.  The one option is to return down the stairs.\n",
+         "altitude" : null
+      },
+      "origins65@origins" : {
+         "exits" : {
+            "d" : "origins63"
+         },
+         "flags" : [
+            "Outdoors",
+            "CantSummon",
+            "NoSummon",
+            "Party",
+            "Peaceful"
+         ],
+         "zone" : "origins",
+         "title" : "Mount Olympus",
+         "id" : "origins65",
+         "description" : "\n        You have arrived at the home of the Gods themselves.  Here is the \nplace where the Immortals live, untouched by the petty, trivial grievances of \nmere mortals.  You can see the whole world from this awesome vantage. You are \nindeed invincible here.  All that you could ever hope for can be found, and \neven then there is some left over...\n        You look down from Olympus on a world of doubt and fear.  Its surface \nis splintered into sorry hemispheres.  But suddenly, the very elven music you \nhelped save issues forth from your love and wisdom.  The chaos below ceases, \nand the people stop fighting, somehow awestruck by its beauty.  \n        Apollo and Dionysus turn to you and say '&+WWe shall call you Cygnus, \n&+gthe Bringer of &+GBalance!&+W  We now see that only through a balance of both Truth \n&+Wand Love can the miracle of life succeed.  And this beautiful music is its \n&+Wbackbone...  Now, dear Bringer of Balance, if you wish to leave us, simply \n&+Wcast away your fears and jump.&n'\n",
+         "altitude" : null
+      },
+      "origins33@origins" : {
+         "exits" : {
+            "w" : "origins35",
+            "e" : "origins34",
+            "n" : "origins31",
+            "s" : "origins38"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Castle Courtyard",
+         "id" : "origins33",
+         "description" : "\n        You enter a large, open, square area, obviously the courtyard of the \ncastle.  The usual plant life that dominates the courtyards of most castles is \nnot to be found here.  A flight of stairs lies to the south, while towers lie \nto the east and west.\n",
+         "altitude" : null
+      },
+      "origins30@origins" : {
+         "exits" : {
+            "n" : "origins29",
+            "s" : "origins31"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Entrance to the Castle",
+         "id" : "origins30",
+         "description" : "\n        You reach the main gates of the castle.  Looking up, you see the tops \nof the towers reach high into the mist, like black spires twisting their way \nthrough your flesh.  The gates themselves seem deadly -- totally blackened and \nmisshapen.\n        You can continue on through the open threshold (there might have once \nbeen a door here), or you can wisely return north towards Willowdale.\n",
+         "altitude" : null
+      },
+      "origins25@origins" : {
+         "exits" : {
+            "u" : "origins26",
+            "d" : "origins24"
+         },
+         "flags" : [
+            "Outdoors",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Small Mountain",
+         "id" : "origins25",
+         "description" : "\n        You climb until you reach a thick veil of mist.  You can try to brave \nthe mist or head back down.\n",
+         "altitude" : null
+      },
+      "origins20@origins" : {
+         "exits" : {
+            "e" : "origins21",
+            "s" : "origins19"
+         },
+         "flags" : [
+            "Outdoors",
+            "NegRegen",
+            "Soundproof"
+         ],
+         "zone" : "origins",
+         "title" : "Nightmare Road",
+         "id" : "origins20",
+         "description" : "\n        The road you have been following ends abruptly here, but you might be \nable to ford a river to your east.  You can also retrace the road back south.\n        You feel as if you are walking right into the heart of something \nextremely evil.  You can't help but get that feeling of being watched.\n",
+         "altitude" : null
+      },
+      "origins67@origins" : {
+         "exits" : {
+            "n" : "^cylinder_1"
+         },
+         "flags" : [
+            "OnePerson"
+         ],
+         "zone" : "origins",
+         "title" : "Inside the Cylinder",
+         "id" : "origins67",
+         "description" : "\n        You step into the giant cylinder, which is just as metallic and plain\nhere on the inside as it appeared on the outside.  The glow here persists, but\nstrangely enough, it doesn't provide any illumination.\n",
+         "altitude" : null
+      },
+      "origins38@origins" : {
+         "exits" : {
+            "u" : "origins39",
+            "n" : "origins33"
+         },
+         "flags" : [
+            "Dark",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "The Foot of the Stairs",
+         "id" : "origins38",
+         "description" : "\n        You exit the courtyard and reach the foot of a long flight of steps \nthat seems to reach up forever.  You seem to perceive some movement at the top \nof the stairs, but cannot from this distance ascertain exactly what it is.\n        You may climb the steps or return north to the courtyard.\n",
+         "altitude" : null
+      },
+      "origins14@origins" : {
+         "exits" : {
+            "n" : "origins15",
+            "s" : "origins11"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal",
+            "NoMobiles"
+         ],
+         "zone" : "origins",
+         "title" : "The Center of the City",
+         "id" : "origins14",
+         "description" : "\n        You are standing directly beneath the beautiful arch.  The sunlight \nshines down directly upon you, granting a soothing, relaxing feeling.\n        Due north, you see that a great black chasm has ripped the earth \napart from the westernmost position of the city to its easternmost.  It \nappears to be very deep and dangerous to negotiate.\n",
+         "altitude" : null
+      },
+      "origins48@origins" : {
+         "exits" : {
+            "n" : "origins41",
+            "s" : "origins49"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "Entrance to the Spaceport",
+         "id" : "origins48",
+         "description" : "\n        You come to a large compound, almost as large as the Temple of Syrinx, \nfilled with large objects that fly without effort.  You have never seen such \nwonder.  You are still too far outside the Spaceport to see any more detail.\n        You may return north to Megadon or enter the Spaceport to the south.\n",
+         "altitude" : null
+      },
+      "origins66@origins" : {
+         "exits" : {
+            "d" : "temple@start"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal",
+            "Peaceful"
+         ],
+         "zone" : "origins",
+         "title" : "A Farewell to Things",
+         "id" : "origins66",
+         "description" : "\n        You jump off of the zenith, and suddenly find yourself floating down \ngently in midair.  You lose all sense of time or place, and enjoy the most \nwonderful feeling you have ever experienced.\n        As you feather-fall down to the Temple of Paradise, you see three \nfaces in front of you.  To the left is the stern and solid face of Apollo, \nBringer of Wisdom.  To the right is the beautiful and kind visage of the \nBringer of Love, Dionysus.  And in the center is Cygnus, God of Balance.  \nThey all sing beautifully in unison to you:\n\n\"&+WWe can walk our road together\n &+WIf our goals are all the same\n &+WWe can run alone and free\n &+WIf we pursue a different aim;\n &+WLet the truth of Love be lighted\n &+WLet the love of Truth shine clear\n &+WSensibilty\n &+WArmed with sense and liberty\n &+WWith the Heart and Mind united\n &+WIn a single, perfect Sphere...&n\"\n",
+         "altitude" : null
+      },
+      "origins21@origins" : {
+         "exits" : {
+            "e" : "origins22",
+            "w" : "origins20"
+         },
+         "flags" : [
+            "Outdoors",
+            "NegRegen",
+            "Soundproof"
+         ],
+         "zone" : "origins",
+         "title" : "The River Don",
+         "id" : "origins21",
+         "description" : "\n        You have reached the great River Don, the outermost boundary of the \nlands of the Necromancer.  It appears impassable, save for a bridge that does\nnot appear to be in very good condition.\n        You may retreat back west or ford the river to the east.\n",
+         "altitude" : null
+      },
+      "origins32@origins" : {
+         "exits" : {
+            "e" : "origins31"
+         },
+         "flags" : [
+            "Dark",
+            "Soundproof",
+            "NegRegen"
+         ],
+         "zone" : "origins",
+         "title" : "Castle Kitchens",
+         "id" : "origins32",
+         "description" : "\n        This large room was once the kitchen for the entire castle.  But due \nto the current horrific, undead state of its inhabitants, this room has fallen \ninto neglect.\n        There doesn't appear to be anything here but old kitchenware.  The \nsingle exit is back east.\n",
+         "altitude" : null
+      },
+      "origins11@origins" : {
+         "exits" : {
+            "w" : "origins13",
+            "e" : "^door1",
+            "n" : "origins14",
+            "s" : "origins10"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal",
+            "NoMobiles"
+         ],
+         "zone" : "origins",
+         "title" : "The City of Rivendell",
+         "id" : "origins11",
+         "description" : "\n        The marvel of this city's architecture only increases as your eyes \nget closer to it.  The homes all about you are shaped, not built from the \nwood of the trees, and are thus part of them.  Sunlight is captured \nbeautifully by a crystal arch spanning the entire city from your left to \nright, and it is focused miraculously into one spot in the center of the city.\n        All around you are numerous elven dwellings.  Yet the city seems \noddly quiet for so large an area, and so merry a people...\n        You see numerous destroyed musical instruments littering the streets; \nlyres with broken strings, recorders and flutes with shattered bodies, and \ndrums with broken heads.  There is a door to your right, leading to a large \nelven home, and a large threshold to your left.  The city continues on to the \nnorth.\n",
+         "altitude" : null
+      },
+      "origins1@origins" : {
+         "exits" : {
+            "w" : "sherwood2@sherwood",
+            "n" : "origins2"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal",
+            "NoMobiles"
+         ],
+         "zone" : "origins",
+         "title" : "The Entrance to Rivendell",
+         "id" : "origins1",
+         "description" : "\n        You stand at the beginning of a fantastic forest,  whose very trees \nseem to be as old as the earth they grow from.  Despite the density of the \nfoliage, the sunlight shines through nearly unobstructed.  The majesty of \nthese trees gives you a sense of smallness...\n        A well-worn path leads north into the forest.\n",
+         "altitude" : null
+      },
+      "origins50@origins" : {
+         "exits" : {
+            "u" : "origins51",
+            "d" : "origins49"
+         },
+         "flags" : [
+            "Peaceful",
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "Inside the Rocinante",
+         "id" : "origins50",
+         "description" : "\n        You follow the man, and climb up into the ship.  Before your eyes are \nhuge panels on all four walls, filled with buttons and lights you don't \nunderstand.\n        The entire interior of the ship humms slightly, and you can feel these \nsubtle vibrations.  They tickle you.\n        The man seems to understand your need to get home.  You have one last \nchance to go back down, or you may press forward and follow his lead.\n",
+         "altitude" : null
+      },
+      "origins17@origins" : {
+         "exits" : {
+            "d" : "^bridge2"
+         },
+         "flags" : [
+            "Outdoors",
+            "CantSummon",
+            "NoSummon",
+            "OnePerson"
+         ],
+         "zone" : "origins",
+         "title" : "&+bThe &+BFountain &+bof &+RLamneth&n",
+         "id" : "origins17",
+         "description" : "\n        You follow the voice and come to a beautiful waterfall, which cascades \ngently down the sides of the mountain.  The waterfall feeds a large, round \nfountain, made of stone forged out of the very bowels of the mountain itself.  \nThe water in the fountain is perfectly crystal clear, and seems to glow white.\n        The view here is even more spectacular than the one before, with the \nfountain and waterfall only enhancing its marvel.  You want to stay here \nforever...\n",
+         "altitude" : null
+      },
+      "origins51@origins" : {
+         "exits" : {
+            "u" : "origins52"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "Takeoff!",
+         "id" : "origins51",
+         "description" : "\n        The ship starts to move slightly, and the slight hum you heard \nincreases in intensity to nearly intolerable levels!  The ship suddenly \nlurches upward, and you feel like you are going to be sick.  Your ears pop, \nyour vision blurrs, and you feel faint.  But you know that there is no turning \nback now.\n        As soon as the dome of the planet is cleared, you begin to feel \naccustomed to the travel.  Through the windows, you can see the very stars you \nsaw at night back home.\n        Meanwhile, brave Neil Peart tells you a story:\n\"&+WIn the constellation of Cygnus, there lurks a mysterious,\n &+Winvisible force; the Black Hole of Cygnus X-1.  Six stars of the\n &+WNorthern Cross, in mourning for their sister's loss, in a final\n &+Wflash of glory, nevermore to grace the night...&n\"\n",
+         "altitude" : null
+      },
+      "origins52@origins" : {
+         "exits" : {
+            "e" : "origins53"
+         },
+         "flags" : [
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "Constellation Lyra",
+         "id" : "origins52",
+         "description" : "\n        You set a course just east of Lyra...\n",
+         "altitude" : null
+      },
+      "origins23@origins" : {
+         "exits" : {
+            "s" : "origins22"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors",
+            "Soundproof",
+            "NegRegen",
+            "Soundproof"
+         ],
+         "zone" : "origins",
+         "title" : "The Forest Shadow",
+         "id" : "origins23",
+         "description" : "\n        You enter perhaps the most tortured and vile woods you ever seen.  You \ncan see the trees literally weeping blood, and not even one bird can be found.\n        The forest gets too thick to negotiate any further.  Your one option \nis to return south whence you came.\n",
+         "altitude" : null
+      },
+      "origins63@origins" : {
+         "exits" : {
+            "u" : "origins65",
+            "n" : "origins64",
+            "s" : "origins60"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "origins",
+         "title" : "Base of Olympus",
+         "id" : "origins63",
+         "description" : "\n        You now stand at the base of the incredible mountain, and you realize \nthat a mere mortal like yourself could never effect such a climb without\nspecial aid.  You can instead head north into the mountain, or back south the \nway you came.\n",
+         "altitude" : null
+      },
+      "origins5@origins" : {
+         "exits" : {
+            "w" : "origins5",
+            "e" : "origins3",
+            "n" : "origins4",
+            "s" : "origins5"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal"
+         ],
+         "zone" : "origins",
+         "title" : "Lost in the Forest",
+         "id" : "origins5",
+         "description" : "\n        You are lost among the giant firs, redwoods, and elms that surround \nyou on all fronts.  You can go in any direction.\n",
+         "altitude" : null
+      },
+      "origins15@origins" : {
+         "exits" : {},
+         "flags" : [
+            "Outdoors",
+            "Death"
+         ],
+         "zone" : "origins",
+         "title" : "Inside the Chasm",
+         "id" : "origins15",
+         "description" : "\n        You enter the rough chasm and instantly lose your footing.  As you \nfall, you wonder whether you will die by impact or by impalement on the sharp \nrocks...\n",
+         "altitude" : null
+      },
+      "origins6@origins" : {
+         "exits" : {
+            "w" : "origins4",
+            "e" : "origins7",
+            "n" : "origins4",
+            "s" : "origins5"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal"
+         ],
+         "zone" : "origins",
+         "title" : "Lost in the Forest",
+         "id" : "origins6",
+         "description" : "\n        You are lost among the giant firs, redwoods, and elms that surround \nyou on all fronts.  You can go in any direction.\n",
+         "altitude" : null
+      },
+      "origins44@origins" : {
+         "exits" : {
+            "n" : "^waterfall",
+            "s" : "origins43"
+         },
+         "flags" : [
+            "Peaceful",
+            "Party",
+            "Private",
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "The Waterfall",
+         "id" : "origins44",
+         "description" : "\n        Lo and behold!  Despite the total lack of organic material in all of \nMegadon, you have arrived at a beautiful waterfall, which gently cascades down \nthe side of a tiny stone mountain into a small reservoir built for the purpose \nof holding the precious water.\n        The road leads back south towards the house.\n",
+         "altitude" : null
+      },
+      "origins3@origins" : {
+         "exits" : {
+            "w" : "origins3",
+            "e" : "origins4",
+            "n" : "origins6",
+            "s" : "origins2"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal"
+         ],
+         "zone" : "origins",
+         "title" : "Lost in the Forest",
+         "id" : "origins3",
+         "description" : "\n        You are lost among the giant firs, redwoods, and elms that surround \nyou on all fronts.  You can go in any direction.\n",
+         "altitude" : null
+      },
+      "origins9@origins" : {
+         "exits" : {
+            "w" : "origins10",
+            "e" : "origins3",
+            "n" : "origins3",
+            "s" : "origins3"
+         },
+         "flags" : [
+            "Outdoors",
+            "TempReal"
+         ],
+         "zone" : "origins",
+         "title" : "Lost in the Forest",
+         "id" : "origins9",
+         "description" : "\n        You are lost among the giant firs, redwoods, and elms that surround \nyou on all fronts.  You can go in any direction.\n",
+         "altitude" : null
+      },
+      "origins45@origins" : {
+         "exits" : {
+            "d" : "origins46",
+            "s" : "^waterfall_1"
+         },
+         "flags" : [
+            "Dark",
+            "Peaceful",
+            "Party",
+            "Private",
+            "NoMagic",
+            "Soundproof",
+            "Cantsummon",
+            "Nosummon"
+         ],
+         "zone" : "origins",
+         "title" : "The Cave",
+         "id" : "origins45",
+         "description" : "\n        You walk underneath the waterfall and enter a small cave.  The \ninterior of the cave contains a bed, a table, and other small living \nessentials.  It is otherwise void of anything else.  The walls here are actual \nstone, not metal.\n        The cave's exit is to the south, and at the far corner of the \ninterior, you spot a flight of steps.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "lee@origins" : {
+         "damage" : "5",
+         "location" : "origins16",
+         "armor" : "27",
+         "name" : "Lee",
+         "description" : "\nGeddy Lee, keeper of the magical Bridge of Lamneth, stands here looking worried.\n&+WGeddy Lee&n asks you '&+WHave you seen my &+Wmagical bass?&n'",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "Geddy Lee",
+         "aggression" : "0",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoAlias",
+            "NoSummon",
+            "NoMagic"
+         ]
+      },
+      "sothurithidan@origins" : {
+         "damage" : "7",
+         "location" : "origins10",
+         "armor" : "5",
+         "name" : "Sothurithidan",
+         "description" : "\nThe sword guard of Rivendell, Sothurithidan, will allow no passage!",
+         "strength" : "445",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Sothurithidan",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoSummon",
+            "NoSteal",
+            "NoAlias"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "imbalance@origins" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegFrost"
+         ],
+         "damage" : "8",
+         "location" : "origins64",
+         "armor" : "30",
+         "name" : "Imbalance",
+         "description" : "\nThe bestial personification of imbalance, bane of all orderly and productive \nlife, threatens you mockingly.",
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Imbalance",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoAlias",
+            "NoSummon"
+         ]
+      },
+      "spectre@origins" : {
+         "damage" : "12",
+         "location" : "origins21",
+         "armor" : "9",
+         "name" : "Spectre",
+         "description" : "A wispy, shadowy, form guards the location of its death fiercely!\n'&+WStay back or die,&n' the weary shade of the Traveler moans.  Its very voice\ndrains the courage out of you.",
+         "strength" : "299",
+         "speed" : "0",
+         "aggression" : "37",
+         "pname" : "The Spectre",
+         "pflags" : [
+            "NoSteal",
+            "NoAlias",
+            "NoSummon"
+         ],
+         "mflags" : [
+            "DrainScr",
+            "BarEast"
+         ]
+      },
+      "broonsie@origins" : {
+         "damage" : "1",
+         "location" : "origins48",
+         "armor" : "18",
+         "name" : "Broonsie",
+         "description" : "T.C. Broonsie asks for your spaceport pass.",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "TC Broonsie",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoAlias",
+            "NoSummon",
+            "NoHassle"
+         ],
+         "mflags" : [
+            "BarSouth",
+            "GrabHostile"
+         ]
+      },
+      "numbskull@origins" : {
+         "eflags" : [
+            "NegFrost"
+         ],
+         "damage" : "10",
+         "location" : "origins36",
+         "armor" : "6",
+         "name" : "Numbskull",
+         "description" : "Numbskull the mindless skeleton guard doesn't like intruders!",
+         "strength" : "188",
+         "speed" : "0",
+         "pname" : "Numbskull",
+         "aggression" : "88"
+      },
+      "apollo@origins" : {
+         "damage" : "10",
+         "location" : "origins62",
+         "armor" : "5",
+         "name" : "Apollo",
+         "description" : "\n&+WApollo, &+gBringer of &+BWisdom,&n says '&+WI bring Truth and Understanding, \n&+WI bring Wit and Wisdom fair; precious gifts beyond compare.&n'",
+         "strength" : "650",
+         "speed" : "0",
+         "pname" : "Apollo",
+         "aggression" : "0",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoAlias",
+            "NoSummon",
+            "NoSteal",
+            "NoHassle"
+         ]
+      },
+      "addict@origins" : {
+         "damage" : "3",
+         "location" : "origins42",
+         "armor" : "16",
+         "name" : "Addict",
+         "description" : "One guy has had a little too much TempleVision for one day!",
+         "strength" : "364",
+         "speed" : "20",
+         "pname" : "The Addict",
+         "aggression" : "50",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "koshee@origins" : {
+         "damage" : "8",
+         "location" : "origins3",
+         "speed" : "8",
+         "aggression" : "75",
+         "armor" : "6",
+         "pname" : "Koshee",
+         "name" : "Koshee",
+         "description" : "Koshee, the fabled elven dog, guards his woods zealously.",
+         "strength" : "200"
+      },
+      "lifeson@origins" : {
+         "damage" : "5",
+         "location" : "origins43",
+         "armor" : "27",
+         "name" : "Lifeson",
+         "description" : "&+WAlex Lifeson &nsays '&+WMy mentor Jon has been &+Wmurdered!  &+WLet's  discuss this\n&+Wgrave issue.&n'",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "Alex Lifeson",
+         "aggression" : "0",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoAlias",
+            "NoSummon",
+            "NoMagic"
+         ]
+      },
+      "necromancer@origins" : {
+         "eflags" : [
+            "Frost",
+            "NegFireball",
+            "NegMissile",
+            "NegFrost",
+            "NegShock"
+         ],
+         "damage" : "11",
+         "location" : "origins40",
+         "armor" : "25",
+         "name" : "Necromancer",
+         "description" : "Suddenly, a human-shaped wraith materializes in front of you!",
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "100",
+         "pname" : "The Necromancer",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoAlias",
+            "NoSummon",
+            "NoSteal"
+         ],
+         "mflags" : [
+            "DrainScr"
+         ]
+      },
+      "cooshee@origins" : {
+         "damage" : "8",
+         "location" : "origins3",
+         "speed" : "8",
+         "armor" : "6",
+         "aggression" : "75",
+         "name" : "Cooshee",
+         "description" : "Cooshee, legendary dog of the elves, defends Rivendell with his brother Koshee.",
+         "strength" : "200"
+      },
+      "skeletree@origins" : {
+         "eflags" : [
+            "NegMissile",
+            "NegFrost",
+            "NegShock"
+         ],
+         "damage" : "13",
+         "location" : "origins23",
+         "armor" : "18",
+         "name" : "Skeletree",
+         "description" : "\nA skeletal tree weeping blood sits rooted miserably to the ground here.",
+         "strength" : "350",
+         "speed" : "0",
+         "pname" : "SkeleTree",
+         "aggression" : "69"
+      },
+      "dumbskull@origins" : {
+         "eflags" : [
+            "NegFrost"
+         ],
+         "damage" : "10",
+         "location" : "origins37",
+         "armor" : "6",
+         "name" : "Dumbskull",
+         "description" : "The skeletal guard Dumbskull wants you off his post!",
+         "strength" : "188",
+         "speed" : "0",
+         "pname" : "Dumbskull",
+         "aggression" : "88"
+      },
+      "panacea@origins" : {
+         "damage" : "2",
+         "location" : "origins17",
+         "armor" : "0",
+         "name" : "Panacea",
+         "description" : "Panacea, liquid grace and passion pure, seductively beckons you.\n&+WPanacea &nwhispers '&+WI will soothe your primal fears...&n'",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Panacea",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap"
+         ]
+      },
+      "cathshee@origins" : {
+         "damage" : "6",
+         "location" : "origins3",
+         "armor" : "16",
+         "name" : "Cathshee",
+         "description" : "The mythical elven cat, Cath-shee, protects her sacred forest unto death.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "10",
+         "aggression" : "50"
+      },
+      "dionysus@origins" : {
+         "damage" : "5",
+         "location" : "origins61",
+         "armor" : "10",
+         "name" : "Dionysus",
+         "description" : "\n&+WDionysus, &+gBringer of &+RLove,&n says '&+WI bring Love to give you solace, \n&+Win the Darkness of the Night; only Love can steer you right.&n'",
+         "strength" : "600",
+         "speed" : "0",
+         "pname" : "Dionysus",
+         "aggression" : "0",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoAlias",
+            "NoSummon",
+            "NoSteal",
+            "NoHassle"
+         ]
+      },
+      "peart@origins" : {
+         "damage" : "5",
+         "location" : "origins50",
+         "armor" : "27",
+         "name" : "Peart",
+         "description" : "\nNeil Peart, the 'professor' of percussion, wields his drumsticks expertly.\n&+WNeil Peart &nsays '&+WI can take you home, on my &+Wship.&n'",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "Neil Peart",
+         "aggression" : "0",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoSummon",
+            "NoMagic"
+         ]
+      },
+      "snowdog@origins" : {
+         "eflags" : [
+            "NegFrost"
+         ],
+         "damage" : "15",
+         "location" : "origins39",
+         "armor" : "20",
+         "name" : "Snowdog",
+         "description" : "SnowDog, centurion of evil, nemesis of ByTor, and guardian of The Necromancer,\nattacks!",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "100",
+         "pname" : "SnowDog",
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "specter@origins" : {
+         "damage" : "10",
+         "location" : "origins18",
+         "speed" : "7",
+         "aggression" : "100",
+         "armor" : "9",
+         "pname" : "ByTors Specter",
+         "name" : "Specter",
+         "description" : "The slain body of the hero ByTor has been animated!",
+         "strength" : "180"
+      },
+      "brown@origins" : {
+         "damage" : "25",
+         "location" : "origins47",
+         "armor" : "50",
+         "name" : "Brown",
+         "description" : "Father Brown, Head Priest of the Temples of Syrinx, smiles warmly at you.",
+         "strength" : "10000",
+         "speed" : "0",
+         "pname" : "Father Brown",
+         "aggression" : "0",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoAlias",
+            "NoSteal",
+            "NoSummon",
+            "NoMagic"
+         ]
+      }
+   }
+}

@@ -35,7 +35,8 @@
       "beer@sherwood" : {
          "location" : "IN_ROOM:sherwood8",
          "oflags" : [
-            "Food"
+            "Food",
+            "Alcohol"
          ],
          "altname" : "keg",
          "name" : "beer",
@@ -107,6 +108,26 @@
          ],
          "desc[0]" : "A very well fashioned quiver lies here waiting for someone to pick it up."
       },
+      "ppipe@sherwood" : {
+         "location" : "IN_ROOM:LIMBO@LIMBO",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "Pipe",
+         "name" : "PPipe",
+         "examine" : "&+GWhat would you do with a full pipe?",
+         "bvalue" : "100",
+         "desc[0]" : "&+GA small full pipe has been dropped here.",
+         "size" : "0"
+      },
+      "pipe@sherwood" : {
+         "location" : "n_face@quarry",
+         "name" : "Pipe",
+         "examine" : "&+GWhat would you put in a pipe?",
+         "bvalue" : "100",
+         "desc[0]" : "&+GA small pipe has been dropped here.",
+         "size" : "0"
+      },
       "brush@sherwood" : {
          "location" : "IN_ROOM:sherwood34",
          "oflags" : [
@@ -148,6 +169,17 @@
          "bvalue" : "200",
          "desc[0]" : "Little John's parry staff sits here."
       },
+      "volume@sherwood" : {
+         "location" : "IN_ROOM:hut3",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_XV",
+         "name" : "volume",
+         "examine" : "\nBlind is an attack spell for tournaments.  If you are blind,\nthen you will not be able to cast magic spells, you will not\nsee anywhere that you move to, any damage you would inflict\nis reduced by 2/3, and any damage you would receive is \nincreased by 3/2. Blind takes 10 mana, and is certain for 8 knowledge.\nCure and dumb are possible defenses.",
+         "desc[0]" : "&+YVolume XV&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "15"
+      },
       "necklace@sherwood" : {
          "location" : "WORN_BY:marian",
          "oflags" : [
@@ -161,6 +193,16 @@
             "Neck"
          ],
          "desc[0]" : "A beautiful necklace lies at your feet."
+      },
+      "greenleaf@sherwood" : {
+         "location" : "IN_ROOM:hut1@sherwood",
+         "weight" : "7",
+         "pname" : "Leaf",
+         "name" : "GreenLeaf",
+         "examine" : "&+GIt's quite ripe, and gives off a very strong odor.",
+         "bvalue" : "10",
+         "desc[0]" : "&+GA large, funky smelling leaf is here.",
+         "size" : "10"
       }
    },
    "loc" : {
@@ -211,6 +253,7 @@
       },
       "sherwood31@sherwood" : {
          "exits" : {
+            "e" : "hut2",
             "n" : "sherwood32",
             "s" : "sherwood30"
          },
@@ -251,6 +294,20 @@
          "id" : "sherwood34",
          "description" : "\n        You have reached a clearing at the edge of the woods.  You are quite\ngreatful that you have exited the forest and can rest from your many battles.\nThick brush cirles around the clearing keeping out any stray animals that \nwander into this area.\n",
          "altitude" : "800"
+      },
+      "hut4@sherwood" : {
+         "exits" : {
+            "w" : "sherwood33"
+         },
+         "flags" : [
+            "Dark",
+            "Death"
+         ],
+         "zone" : "sherwood",
+         "title" : "Ramshackle Hut",
+         "id" : "hut4",
+         "description" : "\n     As you enter, the ceiling beam slips, turns, and falls on you.  It crushes\nyour chest and you die.\n",
+         "altitude" : null
       },
       "sherwood13@sherwood" : {
          "exits" : {
@@ -337,6 +394,7 @@
       },
       "sherwood33@sherwood" : {
          "exits" : {
+            "e" : "hut4",
             "n" : "sherwood34",
             "s" : "sherwood32"
          },
@@ -420,6 +478,7 @@
       },
       "sherwood30@sherwood" : {
          "exits" : {
+            "e" : "hut1",
             "n" : "sherwood31",
             "s" : "sherwood29"
          },
@@ -449,6 +508,7 @@
       },
       "sherwood32@sherwood" : {
          "exits" : {
+            "e" : "hut3",
             "n" : "sherwood33",
             "s" : "sherwood31"
          },
@@ -535,6 +595,19 @@
          "description" : "\n        You stand under many populuar trees that block out the sun.  The path\ncontinues to the north.\n",
          "altitude" : "800"
       },
+      "hut1@sherwood" : {
+         "exits" : {
+            "w" : "sherwood30"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Ramshackle Hut",
+         "id" : "hut1",
+         "description" : "\n     As you enter, the ceiling beam crashes down beside you.  Whew! You would\nhave died if it had hit you.\n",
+         "altitude" : null
+      },
       "sherwood17@sherwood" : {
          "exits" : {
             "n" : "sherwood18",
@@ -563,15 +636,43 @@
          "description" : "\n        You have reached yet another turn in the road.  The trees grow dense\nto the west.  They are ominous and block all sunlight from reaching the ground.\nYou stand here trying to muster up the courage to venture on.  You look toward\nthe trees and a shiver runs up your spine.  You know that if you continue.\nThere is no coming back.  It is all or nothing.  What are you a man or mouse?\n",
          "altitude" : "800"
       },
+      "hut3@sherwood" : {
+         "exits" : {
+            "w" : "sherwood32"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sherwood",
+         "title" : "Ramshackle Hut",
+         "id" : "hut3",
+         "description" : "\n     As you enter, the ceiling beam starts to fall, then catches on something.\nMaybe this will hold together for a little bit longer.\n",
+         "altitude" : null
+      },
       "sherwood3@sherwood" : {
          "exits" : {
-            "s" : "sherwood2"
+            "n" : "bullZZ01@bull",
+            "s" : "sherwood1"
          },
          "flags" : [],
          "zone" : "sherwood",
          "title" : "North Fork",
          "id" : "sherwood3",
          "description" : "\n        The road stretches wide and long.  The trees on the side of the road\nare ominous, but friendly enough.  The path is well worn, probably indicating\nthat it is not a rough one, but don't let that give you peace of mind.\n",
+         "altitude" : "800"
+      },
+      "hut2@sherwood" : {
+         "exits" : {
+            "w" : "sherwood31"
+         },
+         "flags" : [
+            "Dark",
+            "Death"
+         ],
+         "zone" : "sherwood",
+         "title" : "Ramshackle Hut",
+         "id" : "hut2",
+         "description" : "\n     As you enter, the ceiling beam crashes down on you.  It smashes your head.\nYou are dead.\n",
          "altitude" : null
       },
       "sherwood11@sherwood" : {
@@ -604,6 +705,7 @@
       },
       "sherwood2@sherwood" : {
          "exits" : {
+            "e" : "origins1@origins",
             "w" : "sherwood1"
          },
          "flags" : [],
@@ -611,7 +713,7 @@
          "title" : "East Fork",
          "id" : "sherwood2",
          "description" : "\n        This is the road to a great adventure full of surpises, monsters, \nand lots of adventure.  This is not for the 'weak of heart' or strength.  \nOn each side of the road are trees that seem to reach out for you trying to\npull you into their twisted webs of branches.\n",
-         "altitude" : null
+         "altitude" : "800"
       },
       "sherwood1@sherwood" : {
          "exits" : {
@@ -684,12 +786,12 @@
       "marian@sherwood" : {
          "damage" : "10",
          "location" : "sherwood13",
+         "sflag" : [
+            "Female"
+         ],
          "armor" : "0",
          "name" : "marian",
          "description" : "Maid Marian is here trying to catch of glimpse of your butt.",
-         "sflags" : [
-            "Female"
-         ],
          "strength" : "150",
          "speed" : "0",
          "pname" : "Maid Marian",
@@ -738,15 +840,19 @@
          "strength" : "100"
       },
       "lars@sherwood" : {
-         "damage" : "10",
+         "damage" : "20",
          "location" : "sherwood31",
-         "speed" : "0",
-         "aggression" : "100",
-         "armor" : "0",
-         "pname" : "Merryman Lars",
+         "armor" : "10",
          "name" : "lars",
          "description" : "Merryman Lars is here, puking after completing the Century Club.",
-         "strength" : "140"
+         "strength" : "140",
+         "speed" : "0",
+         "pname" : "Merryman Lars",
+         "aggression" : "100",
+         "mflags" : [
+            "BarN",
+            "BarE"
+         ]
       },
       "little@sherwood" : {
          "damage" : "10",
@@ -760,26 +866,34 @@
          "strength" : "150"
       },
       "scott@sherwood" : {
-         "damage" : "10",
+         "damage" : "20",
          "location" : "sherwood33",
-         "speed" : "0",
-         "aggression" : "100",
-         "armor" : "0",
-         "pname" : "Merryman Scott",
+         "armor" : "10",
          "name" : "scott",
          "description" : "Merryman Scott is here, spitting in his little sisters mouth.",
-         "strength" : "100"
+         "strength" : "180",
+         "speed" : "0",
+         "pname" : "Merryman Scott",
+         "aggression" : "100",
+         "mflags" : [
+            "BarE",
+            "BarN"
+         ]
       },
       "sil@sherwood" : {
-         "damage" : "10",
+         "damage" : "20",
          "location" : "sherwood30",
-         "speed" : "0",
-         "aggression" : "100",
-         "armor" : "0",
-         "pname" : "Merryman Sil",
+         "armor" : "10",
          "name" : "sil",
          "description" : "Merryman Sil is here awaiting Amy's next command.",
-         "strength" : "160"
+         "strength" : "160",
+         "speed" : "0",
+         "pname" : "Merryman Sil",
+         "aggression" : "100",
+         "mflags" : [
+            "BarE",
+            "BarN"
+         ]
       },
       "friar@sherwood" : {
          "damage" : "8",
@@ -793,11 +907,11 @@
          "strength" : "150"
       },
       "robin@sherwood" : {
-         "damage" : "10",
+         "damage" : "25",
          "location" : "sherwood34",
          "speed" : "0",
          "aggression" : "40",
-         "armor" : "0",
+         "armor" : "15",
          "pname" : "Robin Hood",
          "name" : "robin",
          "description" : "The famed Robin of Hood stands here, leading his merrymen.",
@@ -815,15 +929,19 @@
          "strength" : "140"
       },
       "dan@sherwood" : {
-         "damage" : "10",
+         "damage" : "20",
          "location" : "sherwood32",
-         "speed" : "0",
-         "aggression" : "100",
-         "armor" : "0",
-         "pname" : "Merryman Dan",
+         "armor" : "10",
          "name" : "dan",
          "description" : "Merryman Dan is saying, \"You just better give it back!\"",
-         "strength" : "160"
+         "strength" : "160",
+         "speed" : "0",
+         "pname" : "Merryman Dan",
+         "aggression" : "100",
+         "mflags" : [
+            "BarE",
+            "BarN"
+         ]
       },
       "butch@sherwood" : {
          "damage" : "10",

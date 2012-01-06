@@ -1,0 +1,3409 @@
+{
+   "obj" : {
+      "furniture@rome" : {
+         "location" : "IN_ROOM:rome28",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "furniture",
+         "examine" : "\nYou hope to eventually be able to own a piece of furniture just like these\nsomeday.  These are only dreams, of course."
+      },
+      "longswordh@rome" : {
+         "damage" : "19",
+         "location" : "WIELDED_BY:gateguard_4",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordh",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "19",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "vendors@rome" : {
+         "location" : "IN_ROOM:rome32",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "vendor",
+         "name" : "vendors",
+         "examine" : "\nThere are several sidewalk vendors here, selling fresh fruits and vegetables,\nhome baked goods, fine jewelry and other items.  Most of the items for sale are\nof very high quality."
+      },
+      "quencheda@rome" : {
+         "damage" : "25",
+         "location" : "WIELDED_BY:caesar",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "quencheda",
+         "size" : "25",
+         "pname" : "quenched",
+         "bvalue" : "150",
+         "desc[0]" : "Caesar's quenched sword has been left here."
+      },
+      "kodarta@rome" : {
+         "location" : "CARRIED_BY:doctor",
+         "oflags" : "{ }",
+         "altname" : "staff",
+         "name" : "kodarta",
+         "bvalue" : "250",
+         "desc[0]" : "The Kodarta staff has been carelessly left here.",
+         "size" : "25"
+      },
+      "peach@rome" : {
+         "location" : "CARRIED_BY:marcia",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "peach",
+         "examine" : "\nYou see nothing special.\n\nOr.. wait a minute.. what's that button doing there?\nOh.. you were mistaken. It's an ordinary peach. *sigh*",
+         "bvalue" : "80",
+         "desc[0]" : "A pink and yellow peach is just waiting to be picked up and eaten.",
+         "size" : "12"
+      },
+      "shielda@rome" : {
+         "location" : "WORN_BY:adjudicator",
+         "armor" : "25",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shielda",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "sandalsj@rome" : {
+         "location" : "WORN_BY:gateguard_2",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsj",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "stream@rome" : {
+         "location" : "IN_ROOM:rome58",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "brook",
+         "name" : "stream",
+         "examine" : "\nA stream of the clearest, cleanest water that you have ever seen winds its way\nthrough the valley."
+      },
+      "sandalsc@rome" : {
+         "location" : "WORN_BY:Lucretia",
+         "armor" : "5",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsc",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "hole@rome" : {
+         "location" : "IN_ROOM:rome20",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "toilet",
+         "name" : "hole",
+         "examine" : "\nYou walk over to the hole and see that there is a large turd floating in a\npool black water about 2 feet below the surface of the ground.  As you lean\ncloser to get a better look, your nose catches a concentrated dose of the\nfragrant aroma wafting upwards.  Your stomach decides that it has had enough\nof this shoddy treatment and you puke until it is empty."
+      },
+      "laundry@rome" : {
+         "location" : "IN_ROOM:rome14",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wash",
+         "name" : "laundry",
+         "examine" : "\nIt smells of sweat and is covered with mud."
+      },
+      "sandalsp@rome" : {
+         "location" : "WORN_BY:martius",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsp",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "stand@rome" : {
+         "location" : "IN_ROOM:rome50",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "bench",
+         "name" : "stand",
+         "examine" : "\nYou see large wooden structures that are designed to separate the judge, jury\nand witnesses from the rest of the courtroom.  They are made of polished\noak and are strictly functional."
+      },
+      "nroad@rome" : {
+         "location" : "IN_ROOM:rome29",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "road",
+         "name" : "nroad",
+         "examine" : "\nThe road is wide and very muddy."
+      },
+      "shieldd@rome" : {
+         "location" : "WORN_BY:gateguard_1",
+         "armor" : "25",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldd",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "shieldi@rome" : {
+         "location" : "WORN_BY:Marullus",
+         "armor" : "30",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldi",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "fish@rome" : {
+         "location" : "IN_ROOM:rome58",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "fish",
+         "examine" : "\nA variety of species swims peacefully in the cool, clear water."
+      },
+      "platform@rome" : {
+         "location" : "IN_ROOM:rome40",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "platform",
+         "examine" : "\n         ********************************************\n         *                                          *\n         *      The Roman Aqueduct and Mountain     *\n         *           Observation Platform           *\n         *                                          *\n         *       Designed and built by the Froboz   *\n         *            Magic Platform Company        *\n         *                                          *\n         ********************************************"
+      },
+      "pendant@rome" : {
+         "location" : "WORN_BY:plaintiff",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "jade",
+         "name" : "pendant",
+         "bvalue" : "300",
+         "desc[0]" : "A beautiful jade pendant has been left here.",
+         "size" : "17"
+      },
+      "mace@rome" : {
+         "damage" : "1",
+         "location" : "WIELDED_BY:executioner",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "mace",
+         "examine" : "\nA typical weapon for one who tortures people: you would die very slowly,\nindeed, if hit with this weapon.",
+         "bvalue" : "100",
+         "desc[0]" : "The executioner's mace is lying here.",
+         "size" : "23"
+      },
+      "pewter@rome" : {
+         "location" : "WORN_BY:nobleman",
+         "armor" : "30",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "ring",
+         "name" : "pewter",
+         "size" : "4",
+         "bvalue" : "450",
+         "desc[0]" : "There is a pewter ring lying here.",
+         "aflags" : [
+            "Hand"
+         ]
+      },
+      "wgate@rome" : {
+         "location" : "IN_ROOM:rome5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "gate",
+         "name" : "wgate",
+         "examine" : "\nThe gate has been permanently rusted shut and is further secured by a large\nchain and padlock.  Don't even bother THINKING about trying to open it."
+      },
+      "pencils@rome" : {
+         "location" : "IN_ROOM:rome1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "pencil",
+         "name" : "pencils",
+         "examine" : "\nAn ordinary number 2 lead pencil.  Judging by the teeth marks on the shaft, the\nuser should see a dentist very soon!"
+      },
+      "double@rome" : {
+         "location" : "CARRIED_BY:driver",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "double",
+         "bvalue" : "15",
+         "desc[0]" : "A double sided key has been left here.",
+         "size" : "15"
+      },
+      "sandalsl@rome" : {
+         "location" : "WORN_BY:gateguard_4",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsl",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "hairpin@rome" : {
+         "location" : "WORN_BY:nurse",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "hairpin",
+         "bvalue" : "4",
+         "desc[0]" : "A woman's hairpin is lying here.",
+         "size" : "4",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "dogb@rome" : {
+         "location" : "CARRIED_BY:sicinius",
+         "oflags" : [
+            "Food"
+         ],
+         "pname" : "hotdog",
+         "name" : "dogb",
+         "bvalue" : "40",
+         "desc[0]" : "A hotdog loaded with chili and onions has been left here.",
+         "size" : "12"
+      },
+      "sandalsd@rome" : {
+         "location" : "WORN_BY:junius",
+         "armor" : "5",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsd",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "banana@rome" : {
+         "location" : "CARRIED_BY:marcius",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "banana",
+         "examine" : "Aren't you going to eat it?",
+         "bvalue" : "39",
+         "desc[0]" : "A large banana lies on the ground.",
+         "size" : "9"
+      },
+      "seal@rome" : {
+         "location" : "IN_ROOM:rome50",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "seal",
+         "examine" : "\nThe seal of the emperor is mounted above the judge's stand."
+      },
+      "mountain@rome" : {
+         "location" : "IN_ROOM:rome46",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "mountain",
+         "examine" : "\nOff to the southwest, you can see  a huge mountain that is partially obscured\nby the haze.  It is rumored that the gods reside there and protect the city."
+      },
+      "cashbox@rome" : {
+         "location" : "IN_ROOM:rome25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "box",
+         "name" : "cashbox",
+         "examine" : "\nIt's a shame that the exchange rate for Roman money is so low.  What amounts\nto a fortune in Rome isn't even worth one gold coin.  The contents of the box\nadd up to about .... well forget it.  It isn't worth your time or trouble to\ncarry it around."
+      },
+      "orangea@rome" : {
+         "location" : "CARRIED_BY:marcius",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "orangea",
+         "size" : "10",
+         "pname" : "orange",
+         "bvalue" : "40",
+         "desc[0]" : "A sun-ripened orange has been left here."
+      },
+      "steel@rome" : {
+         "location" : "CARRIED_BY:judge",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "steel",
+         "bvalue" : "10",
+         "desc[0]" : "A steel key is lying on the ground.",
+         "size" : "10"
+      },
+      "shieldb@rome" : {
+         "location" : "WORN_BY:scorekeeper",
+         "armor" : "25",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldb",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "trail@rome" : {
+         "location" : "IN_ROOM:rome56",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "path",
+         "name" : "trail",
+         "examine" : "\nThe path is a little muddy, possibly due to a recent thundershower."
+      },
+      "aquamarine@rome" : {
+         "location" : "CARRIED_BY:scorekeeper",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "aquamarine",
+         "bvalue" : "12",
+         "desc[0]" : "There is an aquamarine colored key here.",
+         "size" : "12"
+      },
+      "strawberries@rome" : {
+         "location" : "CARRIED_BY:boetius",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "strawberries",
+         "bvalue" : "30",
+         "desc[0]" : "Ah, strawberries! You didn't see those in Boondocks before.",
+         "size" : "8"
+      },
+      "statue@rome" : {
+         "location" : "IN_ROOM:rome18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "caligula",
+         "name" : "statue",
+         "examine" : "\nA larger than life stone statue of Caligula, the Mad Emperor looks at you. It\nlooks like it is holding a phallus."
+      },
+      "sapphire@rome" : {
+         "location" : "WORN_BY:judge",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "ring",
+         "name" : "sapphire",
+         "bvalue" : "400",
+         "desc[0]" : "A sapphire ring has been left here.",
+         "size" : "6"
+      },
+      "longswordc@rome" : {
+         "damage" : "16",
+         "location" : "WIELDED_BY:driver",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordc",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "17",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "helmet@rome" : {
+         "location" : "WORN_BY:gladiator",
+         "armor" : "60",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "combat",
+         "name" : "helmet",
+         "size" : "20",
+         "bvalue" : "40",
+         "desc[0]" : "A Roman combat helmet has been left here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "aquaduct@rome" : {
+         "location" : "IN_ROOM:rome32",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "structure",
+         "name" : "aquaduct",
+         "examine" : "\nTo the southeast, off in the distance, stands a large stone structure that is\nused to channel water into the city."
+      },
+      "sandalsk@rome" : {
+         "location" : "WORN_BY:gateguard_3",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsk",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "longswordl@rome" : {
+         "damage" : "16",
+         "location" : "WIELDED_BY:sempronius",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordl",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "14",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "slimeb@rome" : {
+         "location" : "IN_ROOM:rome54",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "slime",
+         "pname" : "algae",
+         "name" : "slimeb",
+         "examine" : "\nDue to the availability of moisture and nutrients, a green, viscous slime has\ngrown and covered the everything with a slippery coating.  It seems to go out\nof its way to drip on you."
+      },
+      "longsworda@rome" : {
+         "damage" : "17",
+         "location" : "WIELDED_BY:adjudicator",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longsworda",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "17",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "tempered@rome" : {
+         "damage" : "16",
+         "location" : "WIELDED_BY:Tullus",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "tempered",
+         "size" : "16",
+         "bvalue" : "160",
+         "desc[0]" : "A nasty looking tempered sword is lying here."
+      },
+      "cinders@rome" : {
+         "location" : "IN_ROOM:rome49",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "ashes",
+         "name" : "cinders",
+         "examine" : "\nThe ashes are a very fine grayish white powder that seems to be the only\nworldly remains of Froboz's 'test specimens'."
+      },
+      "line@rome" : {
+         "location" : "IN_ROOM:rome18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "lines",
+         "name" : "line",
+         "examine" : "\nThe lines are very long and people look impatient."
+      },
+      "plywood@rome" : {
+         "location" : "IN_ROOM:rome35",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "sign",
+         "name" : "plywood",
+         "examine" : "\n   Rome was written by Onivel of JediMUD in the spring of 1992.  It was\noriginally debugged and tested on Renaissance DikuMUD and then ported to\nCircleMUD and finally JediMUD.  I would like to sincerely thank the following\npeople who gave invaluable help in the design and construction of this area:\n\n Rasmussen of CircleMUD  -- for idea to write Rome in the first place and for\n                            advice with coding Roman god routines.\n\n Destiny of Apocalypse   -- for encouragement, proofreading, help in refining\n                            the area concept and allowing me to put my first \n                            area on her MUD.\n\n Miranda, Romulus, Ikee, and all the others who assisted with balance, bugs\n and typo eradication, or just had a good time here.\n\n Thanks.\n   -Onivel\n\n ***  This zone was ported to DIRT 3.0 for Boondocks AberMUD  ***\n ***  by Zarniwoop (zarn@rugrcx.rug.nl), October 1993         ***",
+         "desc[0]" : "There is a plywood sign bolted to the wall here."
+      },
+      "wand@rome" : {
+         "location" : "CARRIED_BY:Froboz",
+         "oflags" : "{ }",
+         "name" : "wand",
+         "examine" : "\nYou can't figure out what its purpose is. You could ask Froboz, but he's\ndead now. Too bad.",
+         "bvalue" : "10",
+         "desc[0]" : "There is a prototype of a new magical wand lying here.",
+         "size" : "10"
+      },
+      "traila@rome" : {
+         "location" : "IN_ROOM:rome52",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "trail",
+         "name" : "traila",
+         "examine" : "\nThe mountain trail is a little muddy, due to the recent rains."
+      },
+      "swordsa@rome" : {
+         "location" : "IN_ROOM:rome6",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "weapons",
+         "pname" : "swords",
+         "name" : "swordsa",
+         "examine" : "\nTitus has enough hardware in here to outfit a large army.  Maybe that's why\nhe has a lucrative contract to sell weapons to the emperor's armies for\noutrageous prices."
+      },
+      "mustyx@rome" : {
+         "location" : "CARRIED_BY:caesar",
+         "altname" : "scroll",
+         "pname" : "musty",
+         "name" : "mustyx",
+         "examine" : " Memo to myself: Check out Brutus. He is behaving very strange lately.",
+         "bvalue" : "20",
+         "desc[0]" : "A musty scroll has been dropped here.",
+         "size" : "10"
+      },
+      "sandalsr@rome" : {
+         "location" : "WORN_BY:aemilius",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsr",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "shieldc@rome" : {
+         "location" : "WORN_BY:nobleman",
+         "armor" : "30",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldc",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "tomes@rome" : {
+         "location" : "IN_ROOM:rome55",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "books",
+         "name" : "tomes",
+         "examine" : "\nThe books are very large and filled with Roman legal precedent."
+      },
+      "potion@rome" : {
+         "location" : "CARRIED_BY:slimeball",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "orange",
+         "name" : "potion",
+         "bvalue" : "40",
+         "desc[0]" : "There is a flask, containing a blaze orange potion, resting here.",
+         "size" : "12"
+      },
+      "boots@rome" : {
+         "location" : "WORN_BY:velutus",
+         "armor" : "20",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "combat",
+         "name" : "boots",
+         "examine" : "\nYou'd look very cool in them. Whether they'd protect you from anything\nis another matter entirely.",
+         "size" : "10",
+         "bvalue" : "100",
+         "desc[0]" : "A pair of combat boots have been left here. They're very sturdy.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "statues@rome" : {
+         "location" : "IN_ROOM:rome45",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "statue",
+         "name" : "statues",
+         "examine" : "\nThere is really nothing noteworthy about them."
+      },
+      "sandalsa@rome" : {
+         "location" : "WORN_BY:valentine",
+         "armor" : "5",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsa",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "sandalsi@rome" : {
+         "location" : "WORN_BY:gateguard_1",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsi",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "diamond@rome" : {
+         "location" : "CARRIED_BY:Sicinius",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "diamond",
+         "bvalue" : "14",
+         "desc[0]" : "A diamond studded key is sitting on the ground.",
+         "size" : "14"
+      },
+      "loincloth@rome" : {
+         "location" : "WORN_BY:Mars",
+         "armor" : "10",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "red",
+         "name" : "loincloth",
+         "size" : "30",
+         "bvalue" : "500",
+         "desc[0]" : "Mar's red loincloth is resting here.",
+         "aflags" : [
+            "Legs"
+         ]
+      },
+      "sandalsh@rome" : {
+         "location" : "WORN_BY:marcia",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsh",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "sandalsb@rome" : {
+         "location" : "WORN_BY:Lavinia",
+         "armor" : "5",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsb",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "longswordg@rome" : {
+         "damage" : "18",
+         "location" : "WIELDED_BY:gateguard_3",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordg",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "17",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "sandalsq@rome" : {
+         "location" : "WORN_BY:sempronius",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsq",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here, but they look more like\ntennis shoes.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "cells@rome" : {
+         "location" : "IN_ROOM:rome60",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "cell",
+         "name" : "cells",
+         "examine" : "\nYou can see small and very cramped cells which are filthy.  You shiver and\nvow to never do anything that would cause you to become a resident."
+      },
+      "longswordk@rome" : {
+         "damage" : "17",
+         "location" : "WIELDED_BY:marullus",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordk",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "17",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "documents@rome" : {
+         "location" : "IN_ROOM:rome36",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "papers",
+         "name" : "documents",
+         "examine" : "\nThe documents are all written on reed scrolls made in Egypt and have been\nsealed with wax."
+      },
+      "structure@rome" : {
+         "location" : "IN_ROOM:rome26",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "structure",
+         "examine" : "\nThat would probably be the Coliseum.  There are a few good matches scheduled\nfor today."
+      },
+      "weaponsa@rome" : {
+         "location" : "IN_ROOM:rome7",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "swords",
+         "pname" : "weapons",
+         "name" : "weaponsa",
+         "examine" : "\nThere are literally thousands of each.  Take your pick."
+      },
+      "stethoscope@rome" : {
+         "location" : "WORN_BY:doctor",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "stethoscope",
+         "bvalue" : "60",
+         "desc[0]" : "A doctor has left his stethoscope here.",
+         "size" : "12",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "shieldf@rome" : {
+         "location" : "WORN_BY:gateguard_3",
+         "armor" : "18",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldf",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "shieldl@rome" : {
+         "location" : "WORN_BY:aemilius",
+         "armor" : "40",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldl",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "onyx@rome" : {
+         "location" : "WORN_BY:caesar",
+         "armor" : "50",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "ring",
+         "name" : "onyx",
+         "size" : "7",
+         "bvalue" : "500",
+         "desc[0]" : "An onyx ring has been left here.",
+         "aflags" : [
+            "Hand"
+         ]
+      },
+      "thunderbolt@rome" : {
+         "damage" : "35",
+         "location" : "WIELDED_BY:jupiter",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "thunderbolt",
+         "bvalue" : "1000",
+         "desc[0]" : "Jupiter's Thunderbolt has been left here.",
+         "size" : "40"
+      },
+      "bronze@rome" : {
+         "location" : "WORN_BY:nobleman",
+         "armor" : "20",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "belt",
+         "name" : "bronze",
+         "size" : "20",
+         "bvalue" : "300",
+         "desc[0]" : "There is a bronze belt sitting here.",
+         "aflags" : [
+            "Legs"
+         ]
+      },
+      "winged@rome" : {
+         "location" : "WORN_BY:Mercury",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "sandals",
+         "name" : "winged",
+         "bvalue" : "500",
+         "desc[0]" : "Mercury's winged sandals have been left here.",
+         "size" : "30"
+      },
+      "bracers@rome" : {
+         "location" : "WORN_BY:caesar",
+         "armor" : "40",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "moorish",
+         "name" : "bracers",
+         "size" : "14",
+         "bvalue" : "300",
+         "desc[0]" : "A pair of Moorish bracers has been dropped here.",
+         "aflags" : [
+            "Legs"
+         ]
+      },
+      "flowers@rome" : {
+         "location" : "IN_ROOM:rome36",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "plants",
+         "name" : "flowers",
+         "examine" : "\nThe plants contribute to a very relaxing atmosphere."
+      },
+      "stone@rome" : {
+         "location" : "IN_ROOM:rome46",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "structure",
+         "name" : "stone",
+         "examine" : "\nYou see a massive stone structure, built several centuries ago, that is used\nto channel water into the city."
+      },
+      "crystal@rome" : {
+         "location" : "WORN_BY:Venus",
+         "armor" : "50",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "necklace",
+         "name" : "crystal",
+         "size" : "30",
+         "bvalue" : "200",
+         "desc[0]" : "Someone has left the crystal Necklace of Knowledge here!",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "sandalsf@rome" : {
+         "location" : "WORN_BY:colonius",
+         "armor" : "1",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsf",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "shieldj@rome" : {
+         "location" : "WORN_BY:sempronius",
+         "armor" : "25",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldj",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "ornate@rome" : {
+         "location" : "CARRIED_BY:Froboz",
+         "oflags" : "{ }",
+         "altname" : "scroll",
+         "name" : "ornate",
+         "examine" : "\nIt's about a powerful spell, which would turn strawberries into camels.\nApparently Froboz made this spell for a Dutch friend of his, an excentric\nwizard with a bolar-hat.",
+         "bvalue" : "400",
+         "desc[0]" : "An ornate scroll has been left here.",
+         "size" : "20"
+      },
+      "sgate@rome" : {
+         "location" : "IN_ROOM:rome35",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "gate",
+         "name" : "sgate",
+         "examine" : "\nThe gate appears to be closed and locked against intruders."
+      },
+      "apple@rome" : {
+         "location" : "CARRIED_BY:junius",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "apple",
+         "bvalue" : "50",
+         "desc[0]" : "\nA delicious looking apple has been left here.",
+         "size" : "11"
+      },
+      "longswordn@rome" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:aemilius",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordn",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "14",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "plain@rome" : {
+         "location" : "CARRIED_BY:Froboz",
+         "oflags" : "{ }",
+         "altname" : "scroll",
+         "name" : "plain",
+         "examine" : "\nNothing is written on this scroll. Froboz kept it in his possession in case\nhe needed something to write on when inspiration hit him.",
+         "bvalue" : "80",
+         "desc[0]" : "A plain scroll is lying on the ground.",
+         "size" : "20"
+      },
+      "spires@rome" : {
+         "location" : "IN_ROOM:rome51",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "towers",
+         "name" : "spires",
+         "examine" : "\nThere are two tall spires on either side of the gate and are constantly manned\nby the city guards.  They are made of stone and stand about 40 feet tall."
+      },
+      "floor@rome" : {
+         "location" : "IN_ROOM:rome28",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "tile",
+         "name" : "floor",
+         "examine" : "\nVery expensive!  A lot of master craftsmen labored long and hard to produce\nsuch a work of art."
+      },
+      "longswordd@rome" : {
+         "damage" : "17",
+         "location" : "WIELDED_BY:gladiator",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordd",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "16",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "sandalsg@rome" : {
+         "location" : "WORN_BY:Boetius",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsg",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "walnut@rome" : {
+         "location" : "IN_ROOM:rome36",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "desk",
+         "name" : "walnut",
+         "examine" : "\nThe desk is made of solid walnut and gold inlay.  It is exquisitely carved\nwith superior craftsmanship, the likes of which has rarely been seen.  It was\nprobably brought to Rome from Gaul."
+      },
+      "shieldh@rome" : {
+         "location" : "WORN_BY:adrianus",
+         "armor" : "40",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldh",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "windows@rome" : {
+         "location" : "IN_ROOM:rome28",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "windows",
+         "examine" : "\nThey are intricate and the scenes that they depict cast honor on several of\nthe gods."
+      },
+      "stairs@rome" : {
+         "location" : "IN_ROOM:rome45",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stairway",
+         "name" : "stairs",
+         "examine" : "\nThe stairs are immaculately polished and made of white marble."
+      },
+      "silver@rome" : {
+         "location" : "WORN_BY:plaintiff",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "bracelet",
+         "name" : "silver",
+         "size" : "9",
+         "bvalue" : "400",
+         "desc[0]" : "A bracelet, made from silver and gold, has been carelessly left here.",
+         "aflags" : [
+            "Arm"
+         ]
+      },
+      "slimea@rome" : {
+         "location" : "IN_ROOM:rome41",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "algae",
+         "pname" : "slime",
+         "name" : "slimea",
+         "examine" : "\nDue to the availability of moisture and nutrients, a green, viscous slime has\ngrown and covered everything with a slippery coating.  It seems to go out of\nits way to drip on you."
+      },
+      "beakers@rome" : {
+         "location" : "IN_ROOM:rome49",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "dishes",
+         "name" : "beakers",
+         "examine" : "\nThese are all tools of great power.  You cannot even begin to understand what\nany of this stuff does."
+      },
+      "road@rome" : {
+         "location" : "IN_ROOM:rome5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "road",
+         "examine" : "\nYou can barely make out a storefront through the foliage."
+      },
+      "ramar@rome" : {
+         "location" : "IN_ROOM:rome36",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "altname" : "volume",
+         "name" : "ramar",
+         "examine" : "\nIt's hard to imagine the Romans speaking anything other than Latin, but this\nanicent book makes the language of Ramar relatively easy to learn.  Soon you\nfeel you know Ramar like the back of your hand.",
+         "desc[0]" : "The precursor to the modern Roman langauge of Ramar is here."
+      },
+      "whistle@rome" : {
+         "location" : "CARRIED_BY:coach",
+         "oflags" : "{ }",
+         "name" : "whistle",
+         "bvalue" : "40",
+         "desc[0]" : "A coach's whistle has been left here.",
+         "size" : "13"
+      },
+      "broadswordq@rome" : {
+         "damage" : "17",
+         "location" : "WIELDED_BY:velutus",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "broadswordq",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "17",
+         "pname" : "broadsword",
+         "bvalue" : "50",
+         "desc[0]" : "An sharp looking broadsword lies here."
+      },
+      "roll@rome" : {
+         "location" : "IN_ROOM:rome20",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "paper",
+         "name" : "roll",
+         "examine" : "\nHey!!  This is first-class stuff!! - White Cloud brand with lotion.  The roll\nis about half-used."
+      },
+      "robe@rome" : {
+         "location" : "WORN_BY:froboz",
+         "armor" : "50",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "AntiMagic"
+         ],
+         "name" : "robe",
+         "examine" : "\nThis is Froboz's magical robe it looks rather stronger and protecting,\nmaybe even from magic. ",
+         "size" : "6",
+         "bvalue" : "10",
+         "aflags" : [
+            "Back"
+         ],
+         "desc[0]" : "Froboz's robe has been dropped here."
+      },
+      "scorecards@rome" : {
+         "location" : "IN_ROOM:rome1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "cards",
+         "name" : "scorecards",
+         "examine" : "The cards all have been filled in with the judges evaluations of today's\ncombatants.  It seems that Sparticus is having a good day."
+      },
+      "vegetationc@rome" : {
+         "location" : "IN_ROOM:rome59",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "trees",
+         "pname" : "vegetation",
+         "name" : "vegetationc",
+         "examine" : "\nThe trees are old and tower hundreds of feet above the ground.  If you stand\nstill and listen carefully, you can hear the birds singing."
+      },
+      "crowds@rome" : {
+         "location" : "IN_ROOM:rome39",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "people",
+         "name" : "crowds",
+         "examine" : "\nIt looks like some kind of bizarre or festival is occurring to the west.  There\nare hundreds of people of all classes shopping, talking or eating."
+      },
+      "shieldm@rome" : {
+         "location" : "WORN_BY:velutus",
+         "armor" : "55",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldm",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "latumfus@rome" : {
+         "location" : "CARRIED_BY:nurse",
+         "oflags" : "{ }",
+         "altname" : "staff",
+         "name" : "latumfus",
+         "bvalue" : "100",
+         "desc[0]" : "There is a staff of Latumfus lying here on the ground.",
+         "size" : "25"
+      },
+      "fog@rome" : {
+         "location" : "IN_ROOM:rome42",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "mist",
+         "name" : "fog",
+         "examine" : "\nThis is some really strange stuff!  You have never seen anything this color\nbefore.  Your legs are totally obscured from the knee down."
+      },
+      "papers@rome" : {
+         "location" : "IN_ROOM:rome55",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "documents",
+         "name" : "papers",
+         "examine" : "\nThere are hundreds of pages of petitions, lawsuits and court orders sitting\non the desk.  One particularly interesting case involves a nobleman, a slave\nand a roll of toilet paper."
+      },
+      "fruit@rome" : {
+         "location" : "IN_ROOM:rome58",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "fruittrees",
+         "name" : "fruit",
+         "examine" : "\nThe fruit trees, nourished by the fertile ground at the edge of the stream and\nsustained by the brilliant sunshine, line the banks of the stream and are\nladen with fruit."
+      },
+      "workbench@rome" : {
+         "location" : "IN_ROOM:rome49",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "tubes",
+         "name" : "workbench",
+         "examine" : "\nThese are all tools of great power.  You cannot even begin to understand what\nany of this stuff does."
+      },
+      "furnishings@rome" : {
+         "location" : "IN_ROOM:rome13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "furniture",
+         "name" : "furnishings",
+         "examine" : "\nThe furniture that you see is very simple and plain.  It is made of rough hewn\nwood and fastened together with nails.  It looks very uncomfortable."
+      },
+      "ngate@rome" : {
+         "location" : "IN_ROOM:rome29",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "gate",
+         "name" : "ngate",
+         "examine" : "\nThe gate is made of solid iron and is well maintained."
+      },
+      "pearl@rome" : {
+         "location" : "CARRIED_BY:Tullus",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "pearl",
+         "bvalue" : "13",
+         "desc[0]" : "A key with a pearl handle is sitting on the ground.",
+         "size" : "13"
+      },
+      "opal@rome" : {
+         "location" : "CARRIED_BY:senator",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "opal",
+         "bvalue" : "11",
+         "desc[0]" : "An opal key has been left here.",
+         "size" : "11"
+      },
+      "longswordf@rome" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:gateguard_2",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordf",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "17",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "Another ordinary looking longsword lies here."
+      },
+      "longswordm@rome" : {
+         "damage" : "19",
+         "location" : "WIELDED_BY:martius",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordm",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "14",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "doga@rome" : {
+         "location" : "CARRIED_BY:aufidius",
+         "oflags" : [
+            "Food"
+         ],
+         "pname" : "hotdog",
+         "name" : "doga",
+         "bvalue" : "40",
+         "desc[0]" : "A hotdog loaded with chili and onions has been left here.",
+         "size" : "12"
+      },
+      "longsworde@rome" : {
+         "damage" : "18",
+         "location" : "WIELDED_BY:gateguard_1",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longsworde",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "17",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "landscape@rome" : {
+         "location" : "IN_ROOM:rome8",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "country",
+         "name" : "landscape",
+         "examine" : "\nYou can see the entire city of Rome from here.  The buildings housing the\nRoman government are to the east.  To the south east, off in the distance, is\nthe massive aquaduct and further in that direction lies the Mountain of the\nGods."
+      },
+      "longswordb@rome" : {
+         "damage" : "18",
+         "location" : "WIELDED_BY:nobleman",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordb",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "17",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "longswordj@rome" : {
+         "damage" : "17",
+         "location" : "WIELDED_BY:adrianus",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "longswordj",
+         "examine" : "\nIt may be ordinary looking, but it's sharp enough for its purpose.",
+         "size" : "17",
+         "pname" : "longsword",
+         "bvalue" : "50",
+         "desc[0]" : "An ordinary looking longsword lies here."
+      },
+      "pineapple@rome" : {
+         "location" : "CARRIED_BY:boetius",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "pineapple",
+         "bvalue" : "40",
+         "desc[0]" : "This pineapple will do just nicely for an afternoon snack.",
+         "size" : "10"
+      },
+      "shielde@rome" : {
+         "location" : "WORN_BY:gateguard_2",
+         "armor" : "40",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shielde",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "egate@rome" : {
+         "location" : "rome51",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "gate",
+         "name" : "egate",
+         "examine" : "\nThe gate is fabricated from iron and has been designed to keep intruders out\nof the city."
+      },
+      "mango@rome" : {
+         "location" : "CARRIED_BY:junius",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "mango",
+         "examine" : "Come on, eat it, if it's that delicious!",
+         "bvalue" : "39",
+         "desc[0]" : "A delicious mango lies on the ground.",
+         "size" : "9"
+      },
+      "shieldk@rome" : {
+         "location" : "WORN_BY:martius",
+         "armor" : "30",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldk",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "quenchedb@rome" : {
+         "damage" : "22",
+         "location" : "WIELDED_BY:menenius",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "quenchedb",
+         "size" : "22",
+         "pname" : "quenched",
+         "bvalue" : "150",
+         "desc[0]" : "A very bloody quenched sword has been left here."
+      },
+      "sandalsn@rome" : {
+         "location" : "WORN_BY:Marullus",
+         "armor" : "1",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsn",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "plate@rome" : {
+         "location" : "WORN_BY:velutus",
+         "armor" : "40",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "combat",
+         "name" : "plate",
+         "size" : "25",
+         "bvalue" : "200",
+         "desc[0]" : "A piece of military combat plate has been left here.",
+         "aflags" : [
+            "Chest"
+         ]
+      },
+      "tiberius@rome" : {
+         "location" : "IN_ROOM:rome24",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "statue",
+         "name" : "tiberius",
+         "examine" : "\nThe statue of Tiberius, made of iron, stands here."
+      },
+      "shieldg@rome" : {
+         "location" : "WORN_BY:gateguard_4",
+         "armor" : "25",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "pname" : "shield",
+         "name" : "shieldg",
+         "examine" : "You see nothing special. Absolutely nothing.",
+         "desc[0]" : "A small, iron shield is gathering dust."
+      },
+      "shrubs@rome" : {
+         "location" : "IN_ROOM:rome27",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "trees",
+         "name" : "shrubs",
+         "examine" : "\nAll of the plants, trees and shrubs are perfectly trimmed, without so much as\na dead leaf anywhere to be seen.  You welcome the shade that they give from\nthe harsh sun above."
+      },
+      "bookcase@rome" : {
+         "location" : "IN_ROOM:rome36",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "books",
+         "name" : "bookcase",
+         "examine" : "\nThe books are very old and contain the wisdom of wise men from throughout the\nentire Roman empire.  They appear to be collecting dust."
+      },
+      "sandalse@rome" : {
+         "location" : "WORN_BY:marcius",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalse",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "telescope@rome" : {
+         "location" : "IN_ROOM:rome40",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "viewer",
+         "name" : "telescope",
+         "examine" : "\nIf it were operational, it would offer a spectacular view of the Mountain of\nthe Gods.  Unfortunately, it appears to have been vandalized."
+      },
+      "vegetationa@rome" : {
+         "location" : "IN_ROOM:rome56",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "vegetation",
+         "pname" : "trees",
+         "name" : "vegetationa",
+         "examine" : "\nAll of the vegetation is lush, green and in full bloom.  You wish that you\ncould take the time to stop and enjoy it properly."
+      },
+      "sandalsm@rome" : {
+         "location" : "WORN_BY:adrianus",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "leather",
+         "name" : "sandalsm",
+         "size" : "30",
+         "pname" : "sandals",
+         "bvalue" : "20",
+         "desc[0]" : "A pair of leather sandals has been dropped here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "grapes@rome" : {
+         "location" : "CARRIED_BY:marcia",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "grapes",
+         "bvalue" : "70",
+         "desc[0]" : "A peddler forgot some grapes.",
+         "size" : "12"
+      },
+      "rusty@rome" : {
+         "location" : "CARRIED_BY:bailiff",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "rusty",
+         "bvalue" : "16",
+         "desc[0]" : "There is a rusty key here.",
+         "size" : "16"
+      },
+      "leech@rome" : {
+         "location" : "IN_ROOM:rome11",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "leeches",
+         "name" : "leech",
+         "examine" : "\nDISGUSTING!  Each is about the size of matchbox and very slimy.  You are VERY\nglad that you have access to a cleric!"
+      },
+      "signcourt@rome" : {
+         "location" : "IN_ROOM:rome43",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "signcourt",
+         "examine" : "\nThere is a sign on the door that says:  MUNICIPAL COURT OF ROME.  It appears\nto be open."
+      }
+   },
+   "loc" : {
+      "rome66@rome" : {
+         "exits" : {
+            "w" : "rome65",
+            "e" : "rome67"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Clay Road",
+         "id" : "rome66",
+         "description" : "\nYou travel upon an East-West road wide enough for 30 men to march abreast.\n",
+         "altitude" : "450"
+      },
+      "rome41@rome" : {
+         "exits" : {
+            "w" : "rome54",
+            "e" : "rome48",
+            "n" : "rome39",
+            "s" : "rome41"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "rome",
+         "title" : "The Aquaduct",
+         "id" : "rome41",
+         "description" : "\nYou are in a massive stone structure that has been designed to channel water\ninto the city of Rome.  Due to the recent drought, the water level is low,\nallowing passage without a boat.  The walls and floor are covered with algae\nand &+Gslime&* producing treacherous footing conditions.  There are exits to the\nnorth, south and east.\n",
+         "altitude" : null
+      },
+      "rome29@rome" : {
+         "exits" : {
+            "s" : "rome30"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The Great North Gate",
+         "id" : "rome29",
+         "description" : "\nThis is the northern gateway to the city of Rome.  The huge gate appears to be\nclosed and locked against intrusion.  A large muddy &+yroad&* runs through the\n&+Cgate&* and into the countryside.  Nero Drive runs south from here.\n",
+         "altitude" : "480"
+      },
+      "rome40@rome" : {
+         "exits" : {
+            "w" : "rome33"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Observation Lookout",
+         "id" : "rome40",
+         "description" : "\nYou are on a platform overlooking a massive aquaduct.  There is a &+ctelescope\nmounted to the railing that surrounds the area and you can hear the gurgle of\nwater as it is channeled into the city.  Off in the distance, you can see the\nMountain of the Gods.  There is a &+Csign&* mounted to the railing and a ramp leads\nwest.\n",
+         "altitude" : "550"
+      },
+      "rome4@rome" : {
+         "exits" : {
+            "e" : "rome11",
+            "n" : "rome3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Southern Commoner's Seats",
+         "id" : "rome4",
+         "description" : "\nThis is the southeastern part of the common seating areas.  The benches here\nare made of stone and are probably centuries old.  A few scratches on one of\nthe benches catch your eye.  An acrid smell is coming from the east and a\ntunnel leads off to the north.\n",
+         "altitude" : "500"
+      },
+      "rome20@rome" : {
+         "exits" : {
+            "w" : "rome13"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Outhouse",
+         "id" : "rome20",
+         "description" : "\nPEEEEEEEEEEEEEEEE-YEEEEEWWWWWWWW!!!!!  Boy does it stink in here!!!  You taste\nbile in your mouth and your eyes begin to water.  As you wipe away your tears,\nyou see that this is a small room, in the far corner of which a &+yhole&* is dug.\nThe odor intensifies as you move closer and there is a &+Croll of toilet paper\nsitting on the ground.  The only exit is to the west and your nose and stomach\nare strongly suggesting that you use it.\n",
+         "altitude" : null
+      },
+      "rome19@rome" : {
+         "exits" : {
+            "w" : "rome12",
+            "e" : "rome26",
+            "n" : "rome18"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The Main Highway",
+         "id" : "rome19",
+         "description" : "\nThis is a well built and heavily traveled road running from east to west, and\nthere is a large structure built entirely of stone to the north.\n",
+         "altitude" : "450"
+      },
+      "rome67@rome" : {
+         "exits" : {
+            "e" : "desertSD32@sdesert",
+            "w" : "rome66"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Peace",
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "End of the Clay Road",
+         "id" : "rome67",
+         "description" : "\nThe mighty clay road turns into lesser, but still well traveled roads\nhere.  You feel a surge run through your body as you look East into the\ndesert that Rome has conquered.  This looks like a safe place to rest \nbefore starting into one of the power and dangerous cities ever to exist.\n",
+         "altitude" : "460"
+      },
+      "rome27@rome" : {
+         "exits" : {
+            "w" : "rome21",
+            "e" : "rome34",
+            "n" : "rome26",
+            "s" : "rome28"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Noble Estate",
+         "id" : "rome27",
+         "description" : "\nYou are on the grounds of a nobleman's estate which is hundreds of times the\nsize and splendor of anything that a common citizen of Rome would ever hope\nto own.  Everything is lush and green.  The grass is perfectly manicured and\nthe &+Gtrees&* are all bearing fruit.  Ornamental plants are in perfectly situated\nto enhance and adorn the three statues of dedicated to gods Jupiter, Venus and\nNeptune.  A tranquil path leads east and west, there is a paved road to the\nnorth and an extravagant house lies to the south.\n",
+         "altitude" : "460"
+      },
+      "rome17@rome" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "rome",
+         "title" : "The Lion Pit",
+         "id" : "rome17",
+         "description" : "\nLet's just say that your demise was not pretty and that the lions had a tasty\nmid-day snack.....YOU.  I'm very sorry, but, you are really dead!!\n",
+         "altitude" : null
+      },
+      "rome64@rome" : {
+         "exits" : {
+            "w" : "rome51",
+            "e" : "rome65"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Before Rome",
+         "id" : "rome64",
+         "description" : "\nYou travel upon an East-West road wide enough for 30 men to march\nabreast.  It is packed hard through heavy use.  To the west stand the\nGates of Rome inviting you to enter and partake of all the glory and\nsplendor that is Rome.\n",
+         "altitude" : "430"
+      },
+      "rome15@rome" : {
+         "exits" : {
+            "e" : "rome22",
+            "u" : "rome8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The Nobleman's Box",
+         "id" : "rome15",
+         "description" : "\nThese are the 'better' seats used primarily by the upper class of Rome.  There\nis a large seating area to the east and a staircase leading up here.  The view\nof the chariot track is pretty good.\n",
+         "altitude" : "600"
+      },
+      "rome45@rome" : {
+         "exits" : {
+            "u" : "rome44",
+            "d" : "rome46"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Outside the Capitol",
+         "id" : "rome45",
+         "description" : "\nYou stand on white marble steps that lead up and into the Capitol Building.\nThere are several &+Cstatues&*, none of any real significance, at the entrance to\nthe building.  The main entrance to the building is at the top of the &+Cstairs.\n",
+         "altitude" : "600"
+      },
+      "rome6@rome" : {
+         "exits" : {
+            "n" : "rome5",
+            "s" : "rome7"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "Swords 'R  Us",
+         "id" : "rome6",
+         "description" : "\nWelcome to the weaponshop of Titus Andronicus!!  Rare halberds, whips, &+Cswords\nand other instruments of death are proudly displayed on the walls and in\ngleaming glass cases.  More common weapons are stacked like wood on the floor.\nTo the north you can barely make out a gate.  There is a very secure looking\ndoor to the south.\n",
+         "altitude" : null
+      },
+      "rome37@rome" : {
+         "exits" : {
+            "e" : "rome44",
+            "n" : "rome36",
+            "s" : "rome38"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Senate Chambers",
+         "id" : "rome37",
+         "description" : "\nThis is the working room where elected senators from all over the empire\ngather to advise the emperor.  An official seal of the emperor is hanging on\nthe far wall.  There is a wooden door to the north and a bronze door to the\neast and doublehung door to the south.\n",
+         "altitude" : null
+      },
+      "rome32@rome" : {
+         "exits" : {
+            "e" : "rome39",
+            "n" : "rome31",
+            "s" : "rome33"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Town Square",
+         "id" : "rome32",
+         "description" : "\nYou are standing in the middle of a large open area which is the common area\nof Rome.  During the day, this place is alive with the hustle and bustle of\nall of the citizens of Rome and everyone in the city is sure to stop by at\nsome time or another.  There are several street &+Yvendors&* peddling their wares\nand the overall atmosphere is carnival-like in nature.  To the southeast, off\nin the distance, you can see the &+Baquaduct&* and the buildings of the Roman\ngovernment lie to the northwest.  Nero Drive leads north and south from here\nand Clay Avenue runs east.\n",
+         "altitude" : "450"
+      },
+      "rome11@rome" : {
+         "exits" : {
+            "w" : "rome4",
+            "e" : "rome18"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The First-Aid Station",
+         "id" : "rome11",
+         "description" : "\nThis is the place to come to if one is overcome by the heat and gore.  (Or if\na lion gets loose.)  You see a jar of live &+Rleeches&* and other barbaric medical\napparatus lying about here.  From the west comes the roar of the crowd, and a\nhall leads east.  The doctor will be with you shortly.\n",
+         "altitude" : null
+      },
+      "rome3@rome" : {
+         "exits" : {
+            "u" : "rome2",
+            "d" : "rome10",
+            "s" : "rome4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "West Side Commoner's Seating Area",
+         "id" : "rome3",
+         "description" : "\nThis is the western side commoner's seating area.  There are row upon row \nof rough wooden benches bolted to the floor.  There is stadium garbage \neverywhere and the smell makes you want to puke.  Stairs lead up to \nCaesar's private box, a small ramp leads down to the playing field and a \nhallway leads south.\n",
+         "altitude" : "500"
+      },
+      "rome30@rome" : {
+         "exits" : {
+            "w" : "rome62",
+            "n" : "rome29",
+            "s" : "rome31"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Nero Drive",
+         "id" : "rome30",
+         "description" : "\nYou are walking on a paved road that runs south through the city of Rome.  A\ngreat gate is directly north of here.  The Roman citizens are very friendly\nand tip their hats or say hello as you pass.\n",
+         "altitude" : "450"
+      },
+      "rome63@rome" : {
+         "exits" : {
+            "s" : "rome46"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The General Store",
+         "id" : "rome63",
+         "description" : "\nYou are standing in the only general store of Rome.  The walls and shelves\nare covered with all of the various items required by Roman citizens and\nstalwart mudders.  Clay Avenue lies to the south.\n",
+         "altitude" : null
+      },
+      "rome7@rome" : {
+         "exits" : {
+            "n" : "rome6"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Back Room",
+         "id" : "rome7",
+         "description" : "\nIf you thought that there were a lot of &+Cweapons&* in the front of the store,\nyou haven't seen anything yet!!  There is barely enough room to walk amongst\nthe crates of armor and swords.  No wonder Rome will stand for a thousand\nyears.  The only exit is through a door to the north.\n",
+         "altitude" : null
+      },
+      "rome61@rome" : {
+         "exits" : {
+            "w" : "rome60"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Torture Chamber",
+         "id" : "rome61",
+         "description" : "\nYou are standing in a very small room in which there are many tools designed\nspecifically for inflicting pain and suffering.  Some of them are familiar,\nsuch as the rack and the iron maidens.  Others, you have never seen before\nand they make you wonder about the kind of sadistic mind that dreamt them up.\nThe only exit is to the west.\n",
+         "altitude" : null
+      },
+      "rome42@rome" : {
+         "exits" : {
+            "w" : "rome35",
+            "e" : "rome49"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Mage's Shop",
+         "id" : "rome42",
+         "description" : "\nYou are standing in the mage's shop.  Magical ointments, charms and potions\nare sitting on shelves and behind a glass counter.  There is a dense neon\n&+Bblue fog&* hugging the floor here, making it impossible to see below your knees.\nYou suddenly hear muttering coming from the back room, possibly from ....\nKKKKKAAAAAAAABBBBOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOMMMMMMMMMMMMMMMMMM!!!!!!\nYou are deafened by the noise from a tremendous explosion and the concussion\nfrom the blast staggers you!  The shopkeeper seems to pay no heed to this.\nThe door to the back room opens and an older man, wearing a pointed hat, whose\nface is smudged with soot, sticks his head out.  'Is everyone alright?  Sorry\nabout that.  I was testing a new mage's spell.  I'll try to give advance notice\nnext time,' he says.  The door then closes.\n",
+         "altitude" : null
+      },
+      "rome16@rome" : {
+         "exits" : {
+            "w" : "rome9",
+            "u" : "rome23",
+            "d" : "rome17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Race Track",
+         "id" : "rome16",
+         "description" : "\nThis is a hard dirt track about a quarter of a mile long.  There are hoof\nprints everywhere, and you see a large cloud of dust approaching.  You had\nbetter move before you get run over.  A small tunnel leads west, you can see\nthe crowd to the east.  You can hear loud snarls and roars coming from below.\n",
+         "altitude" : "400"
+      },
+      "rome54@rome" : {
+         "exits" : {
+            "w" : "rome48",
+            "e" : "rome53",
+            "n" : "rome41",
+            "s" : "rome58"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Aquaduct",
+         "id" : "rome54",
+         "description" : "\nYou are in a massive stone structure that has been designed to channel water\ninto the city of Rome.  Due to the recent drought, the water level is low,\nallowing passage without a boat.  The walls and floor are covered with algae\nand slime, producing treacherous footing conditions.  There are exits in all\nfour cardinal directions.\n",
+         "altitude" : null
+      },
+      "rome31@rome" : {
+         "exits" : {
+            "w" : "rome24",
+            "n" : "rome30",
+            "s" : "rome32"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Nero Drive",
+         "id" : "rome31",
+         "description" : "\nYou are walking on a great paved road that runs north and south through the\ncity.  People are hurrying from one place to another, but always stop to say\nhello.  Most of the people are either coming from or going to the town square.\nNero Drive continues to the north, and you can see a large open area to the\nsouth.\n",
+         "altitude" : "450"
+      },
+      "rome55@rome" : {
+         "exits" : {
+            "w" : "rome50"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "Judge's Chambers",
+         "id" : "rome55",
+         "description" : "\nYou are in a small room that is filled with legal &+Rtomes&*.  There is a small\ndesk here, literally buried under legal &+Cdocuments&*.  There is also a small\nwindow overlooking the northern part of the city.\n",
+         "altitude" : null
+      },
+      "rome53@rome" : {
+         "exits" : {
+            "e" : "rome54",
+            "n" : "rome41",
+            "s" : "rome58"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Aquaduct",
+         "id" : "rome53",
+         "description" : "\nYou are in a massive stone structure that has been designed to channel water\ninto the city of Rome.  Due to the recent drought, the water level is low,\nallowing passage without a boat.  The walls and floor are covered with algae\nand slime, producing treacherous footing conditions.  There are exits in all\nfour cardinal directions.\n",
+         "altitude" : null
+      },
+      "rome8@rome" : {
+         "exits" : {
+            "d" : "rome15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Peanut Heaven",
+         "id" : "rome8",
+         "description" : "\nYou are now so high up that you begin to feel lightheaded and your nose feels\nlike it is going to start bleeding.  There aren't even benches to sit on here;\njust bare dirty stone.  The view of the surrounding &+gcountry&* is spectacular.\nUnfortunately you can barely see the playing field.  There is a set of steps\nhere, leading down.\n",
+         "altitude" : "700"
+      },
+      "rome24@rome" : {
+         "exits" : {
+            "e" : "rome31",
+            "n" : "rome23",
+            "s" : "rome25"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "East Entrance to Coliseum",
+         "id" : "rome24",
+         "description" : "\nYou are standing at the east entrance to the Coliseum.  There are people\neverywhere, apparently in a mad rush to get in.  A &+Cstatue of Tiberius&*, an\nemperor of a time long since passed, stands here looking out over the crowd.\nThere is a passage to the north, the ticket booth is to the south and a gate\nopening to the city lies to the east.\n",
+         "altitude" : "450"
+      },
+      "rome58@rome" : {
+         "exits" : {
+            "u" : "rome59",
+            "n" : "rome54"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The Valley of the Gods",
+         "id" : "rome58",
+         "description" : "\nYou stand in a tranquil valley at the base of a large mountain.  A quiet\n&+Bstream&* full of &+Cfish&*, with &+Rfruit&* trees growing along its banks, winds its way \npeacefully through the valley and enters a large stone structure that lies \nto the west.  There are birds singing and every now and then a ripple breaks \nthe surface of the stream.  You can see a path leading up, through the trees.\nThere is a small hole, from which you can hear rushing water, to the north.\n",
+         "altitude" : "500"
+      },
+      "rome44@rome" : {
+         "exits" : {
+            "w" : "rome37",
+            "n" : "rome43",
+            "d" : "rome45"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Entrance Foyer",
+         "id" : "rome44",
+         "description" : "\nYou have just entered the main government building of the Roman Empire and are\nstanding in a massive room with an elaborately decorated domed roof.  There\nare many people here--messengers and senators being the most numerous.  There\nis a large, ornate door to the west, a hallway leads north and marble stairs\nthat lead out of the building are to the south.\n",
+         "altitude" : null
+      },
+      "rome59@rome" : {
+         "exits" : {
+            "u" : "rome56",
+            "d" : "rome58"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "A Mountain Path",
+         "id" : "rome59",
+         "description" : "\nYou are standing on a path that leads up through a stand of large &+Gtrees.\nEverything is green and it seems like eternal spring - this is Mother Nature\nat her finest.  It is possible to descend into a tranquil valley from here.\n",
+         "altitude" : "1000"
+      },
+      "rome52@rome" : {
+         "exits" : {
+            "u" : "rome47",
+            "d" : "rome56"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "A Mountain Path",
+         "id" : "rome52",
+         "description" : "\nYou stand on a small &+ytrail&* that leads up and down.  It has recently been\nraining and there are small puddles everywhere.  You are just below the\nclouds and the view of the surrounding countryside is breathtaking.\n",
+         "altitude" : "5000"
+      },
+      "rome60@rome" : {
+         "exits" : {
+            "e" : "rome61",
+            "n" : "rome50"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Holding Cells",
+         "id" : "rome60",
+         "description" : "\nYou are standing in the holding &+Bcell&* area, just off of the courtroom.  Those\nwho are recently convicted of serious crimes are brought here, pending torture\nand execution.  The courtroom lies to the north and another exit goes east.\n",
+         "altitude" : null
+      },
+      "rome46@rome" : {
+         "exits" : {
+            "w" : "rome39",
+            "e" : "rome51",
+            "u" : "rome45",
+            "n" : "rome63"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Clay Avenue",
+         "id" : "rome46",
+         "description" : "\nYou are standing on a wide, heavily traveled road that runs east and west\nthrough the heart of the city.  There are marble steps leading up.  To the\nsouth, off in the distance, you can see a large &+Cstone structure&* and a &+ymountain\nthat is partially obscured by the haze.  There is a general store to the north.\n",
+         "altitude" : "500"
+      },
+      "rome43@rome" : {
+         "exits" : {
+            "w" : "rome36",
+            "e" : "rome50",
+            "s" : "rome44"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Waiting Room",
+         "id" : "rome43",
+         "description" : "\nYou are standing in a very large room with a high ceiling and there are a few\npeople waiting here to see the emperor on urgent matters. The master scheduler\ntells you to have a seat and sends a page to inform his highness of your\narrival.  There are large doors to the east and a gold plated door to the west\nalong with an exit leads south to the foyer. There is a &+Csign&* here.\n",
+         "altitude" : null
+      },
+      "rome39@rome" : {
+         "exits" : {
+            "w" : "rome32",
+            "e" : "rome46",
+            "s" : "rome41"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Clay Avenue",
+         "id" : "rome39",
+         "description" : "\nYou are on a wide well traveled road running east and west through the heart\nof Rome.  There are large &+Rcrowds&* of people to the west and the road continues\nto the east.  The aquaduct is directly south of here.\n",
+         "altitude" : "450"
+      },
+      "rome47@rome" : {
+         "exits" : {
+            "d" : "rome52"
+         },
+         "flags" : [
+            "Private",
+            "NoMobiles"
+         ],
+         "zone" : "rome",
+         "title" : "The Summit of The Mountain of the Gods",
+         "id" : "rome47",
+         "description" : "\nYou are at the summit of a very high mountain and are standing above the\nclouds.  The sun is shining brilliantly here and the clouds below look like\nballs of cotton.  The path that you have been walking on is damp and the scent\nof lilac is in the air.\n",
+         "altitude" : "9000"
+      },
+      "rome9@rome" : {
+         "exits" : {
+            "e" : "rome16",
+            "s" : "rome10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The Practice and Warm-up Area",
+         "id" : "rome9",
+         "description" : "\nThere are many gladiators, chariot drivers and their coaches here, warming up\nin preparation for the games.  The dust rising from the parched earth makes\nyou want to sneeze.  A short tunnel leads east and the thunder of pounding\nhooves and the clash of weapons can be heard coming from the south.\n",
+         "altitude" : "400"
+      },
+      "rome38@rome" : {
+         "exits" : {
+            "n" : "rome37"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The House of Commons",
+         "id" : "rome38",
+         "description" : "\nThis is the lower house of the advising body to the emperor.  Common men from\nall parts of Rome work here to further assist the senators in advising the\nemperor on critical matters of state.  The seal of the emperor is painted on\nthe far wall.  The only exit is to the north.\n",
+         "altitude" : null
+      },
+      "rome22@rome" : {
+         "exits" : {
+            "w" : "rome15",
+            "s" : "rome23"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The Common Seating",
+         "id" : "rome22",
+         "description" : "\nThis is where many of the common Roman citizens are seated during the games.\nThese are the cheapest seats in the house, as glare from the sun is usually a\nproblem during the afternoon.  Like the other common seating areas, this place\ncould stand extensive renovation and a thorough cleaning.  This area extends\nto the south and a much more elegant seating area can be seen to the west.\n",
+         "altitude" : "500"
+      },
+      "rome57@rome" : {
+         "exits" : {
+            "w" : "rome41",
+            "e" : "rome54",
+            "n" : "rome54",
+            "s" : "rome58"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Aquaduct",
+         "id" : "rome57",
+         "description" : "\nYou are in a massive stone structure that has been designed to channel water\ninto the city of Rome.  Due to a recent drought, the water level is low,\nallowing passage without a boat.  The walls and floor are covered with algae\nand slime, producing treacherous footing conditions.  A valley lies to the\nsouth and the other cardinal directions lead further into the aqueduct.\n",
+         "altitude" : null
+      },
+      "rome34@rome" : {
+         "exits" : {
+            "w" : "rome27",
+            "n" : "rome33",
+            "s" : "rome35"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Nero Drive",
+         "id" : "rome34",
+         "description" : "\nThis is a busy paved road that runs north through the city.  The people of\nRome are very friendly and say hello as you pass.  A gate leading out of the\ncity lies to the south and a small path goes west towards a nobleman's estate.\nTo the east, off in the distance, lies the great mountain.  It is rumored that\nthe gods watch over and protect the empire from there.\n",
+         "altitude" : "450"
+      },
+      "rome68@rome" : {
+         "exits" : {
+            "s" : "rome65"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Rome Central Station",
+         "id" : "rome68",
+         "description" : "\nYou are standing on a hastily constructed train platform about 70 meters long\nand several meters wide.  There are train tracks to your east and west.  The\nstation exit is to the south.\n",
+         "altitude" : "500"
+      },
+      "rome26@rome" : {
+         "exits" : {
+            "w" : "rome19",
+            "e" : "rome33",
+            "s" : "rome27"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Paved Road",
+         "id" : "rome26",
+         "description" : "\nYou are on a paved road that runs east to west.  You can see an elaborate\nlooking estate to the south and to the north-west, off in the distance, you\ncan see a very large stone &+cstructure.\n",
+         "altitude" : "450"
+      },
+      "rome35@rome" : {
+         "exits" : {
+            "e" : "rome42",
+            "n" : "rome34"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The South Gate",
+         "id" : "rome35",
+         "description" : "\nThis is the southern gateway to the city of Rome.  The bronze &+ygate&* is closed\nand locked.  Looking through the bars, you see a heavily traveled road leading\nout of the city.  Nero Drive starts here and runs north and a wizard's shop\nlies to the east.\n",
+         "altitude" : "450"
+      },
+      "rome25@rome" : {
+         "exits" : {
+            "w" : "rome18",
+            "n" : "rome24"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "At the Ticket Booth",
+         "id" : "rome25",
+         "description" : "\nPeople are standing in long lines here, waiting to buy tickets.  There are\n3 vendors working furiously, but hopelessly backed up.  Ticket stubs litter\nthe ground and you can see that the people are getting very impatient.  There\nis a large, open &+Gcashbox&* here.  Main entrances to the Coliseum are to the north\nand west.\n",
+         "altitude" : "450"
+      },
+      "rome14@rome" : {
+         "exits" : {
+            "n" : "rome13"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Bedchamber",
+         "id" : "rome14",
+         "description" : "\nThis is the bedroom.  There is a hard and lumpy bed in the far corner.  It\nlooks like the commoner's wife has been shirking her duties lately, as there\nis a big pile of soiled &+ylaundry&* here.  The only way out is from where you\ncame.\n",
+         "altitude" : null
+      },
+      "rome12@rome" : {
+         "exits" : {
+            "w" : "rome5",
+            "e" : "rome19",
+            "s" : "rome13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "A Dirt Road",
+         "id" : "rome12",
+         "description" : "\nYou are on a parched and dusty rural road which runs east and west.  There is\na structure lying to the south.\n",
+         "altitude" : "450"
+      },
+      "rome48@rome" : {
+         "exits" : {
+            "w" : "rome54",
+            "e" : "rome57",
+            "s" : "rome41"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Aqueduct",
+         "id" : "rome48",
+         "description" : "\nYou are in a massive stone structure that has been designed to channel water\ninto the city of Rome.  Due to the recent drought, the water level is low,\nallowing passage without a boat.  The walls and floor are covered with algae\nand slime, producing treacherous footing conditions.  There are exits in all\nfour cardinal directions.\n",
+         "altitude" : null
+      },
+      "rome49@rome" : {
+         "exits" : {
+            "w" : "rome42"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "Froboz's Workshop",
+         "id" : "rome49",
+         "description" : "\nYou are standing in the workshop of Froboz the Great, the most powerful and\nfamous mage that Rome has ever known.  Workbenches line the walls and are\ncovered with various test &+Ctubes, beakers, petri dishes&* and crucibles and there\nis an odor in here that can best be described as a combination of old sweat\nsocks and burning tires.  The only exit is back through the door through which\nyou came.  In the middle of the room, you see a pile of ashes that looks like\nit once was a body and Froboz is busy making adjustments on a new type of\nmagic wand .... possibly the one responsible for the explosion a few minutes\nago.  He removes a jeweler's loupe from his eye as he turns around.  'How in\nthe name of Merlin did you get in here??!!' he asks.  'Oh, nevermind!  Since\nyou are here, you can serve as witnesses to the final test of the new mage's\nspell:  'ectowatt'.'  With this he makes a magical gesture and the Paladin\nKnight appears.  Crossing his fingers, Froboz waves the wand his direction and\nwhat happens next is incredible!  The Paladin is enveloped in what appears to\nbe a small, well contained, thermonuclear explosion.  When the smoke clears\nyou can see that the Paladin and all of equipment has been reduced to a large\npile of flaming &+Rcinders&*.  Froboz throws his head back and cackles with insane\nglee.  'Now, my young friends, what can I do for you?' he asks.\n",
+         "altitude" : null
+      },
+      "rome36@rome" : {
+         "exits" : {
+            "n" : "rome43",
+            "s" : "rome37"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Emperor's Private Office",
+         "id" : "rome36",
+         "description" : "\nYou are standing in the emperor's private office.  The room is richly\nfurnished with the finest of the loot brought back from conquests of far\naway lands.  There is a massive, intricately carved &+ydesk&* here, upon which\nare important &+Cdocuments&*, decrees and other paperwork involved in running the\nempire.  On the far wall, there is a marble &+ybookcase&* that is well stocked\nwith the works of Homer, Plato, Socrates and other wise men.  Further, it\nseems that the current emperor likes &+Yflowers&* as there are many potted and cut\nspecimens throughout the room.  There is a french door leading to the waiting\nroom and a wooden door to the south.\n",
+         "altitude" : null
+      },
+      "rome50@rome" : {
+         "exits" : {
+            "w" : "rome43",
+            "e" : "rome55",
+            "s" : "rome60"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Courtroom",
+         "id" : "rome50",
+         "description" : "\nYou stand inside of a large courtroom in which common civil disputes and\ncriminal matters are decided.  There is a judge's bench and a witness stand\non the far side of the room and a jury's box along side.  The emperor's &+Mseal\nis prominently displayed on the wall behind the judge's &+ystand&*, reminding all\nwho enter that he is an extension of his highness.  There is a door, possibly\nleading to the judge's chambers, to the east and the waiting room is to the\nwest.\n",
+         "altitude" : null
+      },
+      "rome18@rome" : {
+         "exits" : {
+            "w" : "rome10",
+            "e" : "rome25",
+            "s" : "rome19"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "South Entrance to the Coliseum",
+         "id" : "rome18",
+         "description" : "\nYou are standing at the south entrance to the Coliseum.  There are citizens of\nRome everywhere, apparently in a mad rush to get in.  A &+Cstatue of Caligula&* the\nMad Emperor overlooks the area.  There are long &+Ylines&* of people standing to the\neast, an acrid smell is coming from the west and a busy road lies to the south.\n",
+         "altitude" : "450"
+      },
+      "rome2@rome" : {
+         "exits" : {
+            "u" : "rome1",
+            "d" : "rome3"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "Caesar's Private Box",
+         "id" : "rome2",
+         "description" : "\nThis is the best view in the house!  You can see gladiators fighting or the\nchariot races with an unobstructed view.  The seats are upholstered in red\nvelvet and are in top-notch condition.  There is a rickety ladder leading\nup and a marble staircase leading down.\n",
+         "altitude" : null
+      },
+      "rome21@rome" : {
+         "exits" : {
+            "e" : "rome27"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Slave Quarters",
+         "id" : "rome21",
+         "description" : "\nThis is where the slaves sleep.  There are hard boards set out for use as beds\nand not much else.  The only exit is to the north.\n",
+         "altitude" : null
+      },
+      "rome65@rome" : {
+         "exits" : {
+            "w" : "rome64",
+            "e" : "rome66",
+            "n" : "rome68"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Clay Road",
+         "id" : "rome65",
+         "description" : "\nYou travel upon an East-West road wide enough for 30 men to march\nabreast.  It is packed hard through heavy use.  To the west, you eyes\ncatch the splendors of a mighty city.  North of here, there is a large \nconcrete landing pad.\n",
+         "altitude" : "440"
+      },
+      "rome1@rome" : {
+         "exits" : {
+            "d" : "rome2"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Judging Booth",
+         "id" : "rome1",
+         "description" : "\n  You stand in the midst of a small room with windows on the east and south \nwalls.  These windows provide a complete view of the competition fields. \nThere are several &+Cscorecards, pencils&* and other items that are used by the \njudges sitting on a table.  The only exit is a trapdoor leading down.\n",
+         "altitude" : null
+      },
+      "rome51@rome" : {
+         "exits" : {
+            "w" : "rome46",
+            "e" : "rome64"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The East Gate of Rome",
+         "id" : "rome51",
+         "description" : "\nYou are standing inside of the eastern gate of Rome.  There are two tall\n&+Mspires&* built into the city wall, from which the guards can see the whole\neastern side of the city.  The &+ygate&* is currently open and to the east,\nthere is a heavily used road, made of packed clay, that leads out of Rome.\nAnother road leads westward into the city.\n",
+         "altitude" : null
+      },
+      "rome13@rome" : {
+         "exits" : {
+            "e" : "rome20",
+            "n" : "rome12",
+            "s" : "rome14"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Commoner's House",
+         "id" : "rome13",
+         "description" : "\nYou are standing in the main living quarters of a common Roman citizen.  The\n&+Mfurnishings&* are sparse and it is warm here.  A putrid odor is coming from the\neast and passages lead north and south.\n",
+         "altitude" : null
+      },
+      "rome33@rome" : {
+         "exits" : {
+            "w" : "rome26",
+            "e" : "rome40",
+            "n" : "rome32",
+            "s" : "rome34"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "Nero Drive",
+         "id" : "rome33",
+         "description" : "\nYou are walking on a paved road that runs north and south through the city of\nRome.  There are many people here, as polite as always.  Most of them are\neither coming from or going to the town square which lies to the north.  Nero\nDrive continues to the south.  There is an observation area overlooking the\naqueduct to the east and a paved road leads west.\n",
+         "altitude" : "480"
+      },
+      "rome5@rome" : {
+         "exits" : {
+            "e" : "rome12",
+            "s" : "rome6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The Abandoned Gate",
+         "id" : "rome5",
+         "description" : "\nThis used to be a gateway to and from western Rome.  There is an iron &+ygate\nblocking your way.  Judging by the amount of rust and foliage growing on the\nbars, it hasn't been open for years.  Looking through the gate at the barren\nlandscape that lies beyond, you can see why.  A dirt &+yroad&* leads off to the\neast, and a store is directly south.\n",
+         "altitude" : "450"
+      },
+      "rome56@rome" : {
+         "exits" : {
+            "u" : "rome52",
+            "d" : "rome59"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "A Mountain Path",
+         "id" : "rome56",
+         "description" : "\nYou are standing on a small &+ytrail&* that leads through a grove of &+Gtrees&*.  Every\nthing is lush and green here and it appears to have been raining recently.\n'This would be an ideal place for a picnic,' you think to yourself.\n",
+         "altitude" : "3000"
+      },
+      "rome10@rome" : {
+         "exits" : {
+            "u" : "rome3",
+            "n" : "rome9",
+            "d" : "rome17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The Jousting Arena",
+         "id" : "rome10",
+         "description" : "\nThis is a wide open grassy plane....LOOK OUT!!!!  You are almost skewered by a\ngladiator's lance as he makes his charge.  A practicing area is due north and\nyou can hear loud snarls and roars from below.\n",
+         "altitude" : "400"
+      },
+      "rome28@rome" : {
+         "exits" : {
+            "n" : "rome27"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "An Opulent House",
+         "id" : "rome28",
+         "description" : "\nYou stand in a house, the size and splendor of which almost defies the\nimagination.  The &+Cfloor&* is done with hand crafted marble tile with silver\nand jeweled inlays.  The light coming through the exquisitely crafted stained\nglass &+Cwindows&* bathes the room in splendor and the &+Bfurniture&* looks as though it\nwas made by master craftsmen from all over the empire.  A path through the\nestate is north of here.\n",
+         "altitude" : null
+      },
+      "rome23@rome" : {
+         "exits" : {
+            "n" : "rome22",
+            "s" : "rome24"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "rome",
+         "title" : "The Common Seating",
+         "id" : "rome23",
+         "description" : "\nThis is where many of the common Roman citizens are seated during the games.\nLike the other commoners' areas in the coliseum, it could use extensive\nrenovation and cleaning.  This area extends to the north and lots of noise can\nbe heard coming from the south.\n",
+         "altitude" : "500"
+      },
+      "rome62@rome" : {
+         "exits" : {
+            "e" : "rome30"
+         },
+         "flags" : [],
+         "zone" : "rome",
+         "title" : "The Roman Bakery",
+         "id" : "rome62",
+         "description" : "\nYou are standing in the bakery of Rome and your mouth waters at the delicious\naromas wafting from the kitchen.  The only exit is to the east.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "venus@rome" : {
+         "eflags" : [
+            "Fireball",
+            "Frost",
+            "Shock"
+         ],
+         "damage" : "47",
+         "location" : "rome52",
+         "armor" : "27",
+         "name" : "Venus",
+         "sflags" : [
+            "Female"
+         ],
+         "description" : "Venus, the god of beauty and knowledge, is resting here.",
+         "strength" : "2300",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "BarUp"
+         ]
+      },
+      "cominius@rome" : {
+         "damage" : "5",
+         "location" : "rome23",
+         "speed" : "6",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Cominius",
+         "description" : "A citizen of Rome is standing here.",
+         "strength" : "90"
+      },
+      "junius@rome" : {
+         "damage" : "5",
+         "location" : "rome32",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Junius",
+         "examine" : "\nYou see a small, dirty man who doesn't look very healthy.",
+         "description" : "A poor peddler is standing here, trying to support his meager existence.",
+         "strength" : "40"
+      },
+      "bailiff@rome" : {
+         "damage" : "35",
+         "location" : "rome50",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "15",
+         "pname" : "The Bailiff",
+         "name" : "bailiff",
+         "description" : "The bailiff stands here, keeping order in the courtroom.",
+         "strength" : "200"
+      },
+      "senator@rome" : {
+         "damage" : "15",
+         "location" : "rome37",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "A senator",
+         "name" : "senator",
+         "description" : "The senator is here, waiting for debate to begin.",
+         "strength" : "130"
+      },
+      "slimeball@rome" : {
+         "damage" : "30",
+         "location" : "rome57",
+         "armor" : "20",
+         "name" : "slimeball",
+         "examine" : "\nThere is a green ball of slime oozing from the coating on the walls.",
+         "description" : "There is a slippery slimeball here.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "1000",
+         "speed" : "2",
+         "pname" : "A Slimeball",
+         "aggression" : "50"
+      },
+      "boetius@rome" : {
+         "damage" : "5",
+         "location" : "rome43",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Boetius",
+         "examine" : "\nYou see a small, dirty man who doesn't look very healthy.",
+         "description" : "A fat peddler is standing here, trying to support his meager(?) existence.",
+         "strength" : "40"
+      },
+      "quintus@rome" : {
+         "damage" : "10",
+         "location" : "rome23",
+         "speed" : "0",
+         "aggression" : "0",
+         "name" : "Quintus",
+         "examine" : "\nThe spectator is filthy, half drunk and screaming his head off.",
+         "description" : "A drunken spectator is screaming his head off.",
+         "strength" : "50"
+      },
+      "scheduler@rome" : {
+         "damage" : "25",
+         "location" : "rome43",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "15",
+         "pname" : "The Scheduler",
+         "name" : "scheduler",
+         "description" : "The master scheduler is here, writing in an appointment book.",
+         "strength" : "250"
+      },
+      "executioner@rome" : {
+         "damage" : "30",
+         "location" : "rome61",
+         "speed" : "0",
+         "aggression" : "30",
+         "armor" : "30",
+         "pname" : "The Executioner",
+         "name" : "executioner",
+         "examine" : "\nYou see a burly man who is wearin a black hood that obscures his face.  He\nhas a very sadistic attitude and clearly loves his work.",
+         "description" : "The executioner stands here, waiting to torture some sorry soul.",
+         "strength" : "300"
+      },
+      "marcia@rome" : {
+         "damage" : "10",
+         "location" : "rome6",
+         "armor" : "0",
+         "name" : "Marcia",
+         "examine" : "\nYou see a small, dirty woman who doesn't look very healthy.",
+         "description" : "A small peddler is standing here, trying to support her meager existence.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "40",
+         "speed" : "5",
+         "aggression" : "0"
+      },
+      "gateguard_4@rome" : {
+         "damage" : "20",
+         "location" : "rome5",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "20",
+         "pname" : "Decius",
+         "name" : "gateguard_4",
+         "examine" : "\nYou see a strong, loyal public defender.",
+         "description" : "A gateguard stands here, tending the gate.",
+         "strength" : "200"
+      },
+      "marcus@rome" : {
+         "damage" : "23",
+         "location" : "rome32",
+         "speed" : "10",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Marcus",
+         "description" : "Marcus Dupus is trying to find out how he can install Turbo Pascal.",
+         "strength" : "200"
+      },
+      "jupiter@rome" : {
+         "eflags" : [
+            "Fireball",
+            "Frost",
+            "Shock"
+         ],
+         "damage" : "15",
+         "location" : "rome47",
+         "armor" : "20",
+         "name" : "Jupiter",
+         "description" : "Jupiter, King of the Gods, is resting here.",
+         "strength" : "2500",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "NoSteal",
+            "NoGrab"
+         ]
+      },
+      "nobleman@rome" : {
+         "damage" : "10",
+         "location" : "rome2",
+         "speed" : "1",
+         "aggression" : "0",
+         "pname" : "The Nobleman",
+         "name" : "nobleman",
+         "examine" : "\nThe nobleman is dressed in fine clothes and jewelry and has a very snobbish\nattitude.  While he is getting old and his hair and beard are streaked with\ngray, he is by no means an easy target.",
+         "description" : "The nobleman stands here looking aloof.",
+         "strength" : "100"
+      },
+      "demetrius@rome" : {
+         "damage" : "8",
+         "location" : "rome3",
+         "speed" : "0",
+         "aggression" : "0",
+         "name" : "Demetrius",
+         "examine" : "\nThe spectator is filthy, half drunk and screaming his head off.",
+         "description" : "A filthy spectator is here watching the games.",
+         "strength" : "70"
+      },
+      "coach@rome" : {
+         "damage" : "15",
+         "location" : "rome9",
+         "armor" : "0",
+         "name" : "coach",
+         "description" : "There is a coach standing here, going over last minute strategy.",
+         "strength" : "100",
+         "speed" : "5",
+         "pname" : "The Coach",
+         "aggression" : "0"
+      },
+      "sicinius@rome" : {
+         "damage" : "12",
+         "location" : "rome8",
+         "speed" : "8",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Sicinius",
+         "examine" : "\nThe vendor is a scruffy looking man who isn't afraid of a fight and looks like\nhe's had just about enough of smart-mouthed spectators.",
+         "description" : "A stadium vendor is walking here, selling ice cream and candy bars.",
+         "strength" : "90"
+      },
+      "tonnus@rome" : {
+         "damage" : "25",
+         "location" : "rome31",
+         "speed" : "10",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Tonnus",
+         "description" : "Tonnus Rooverus, public enemy no. 1, is sneaking around, trying\nto take something away from you.",
+         "mflags" : [
+            "Thief"
+         ],
+         "strength" : "300"
+      },
+      "balorus@rome" : {
+         "damage" : "10",
+         "location" : "rome4",
+         "speed" : "0",
+         "aggression" : "0",
+         "name" : "Balorus",
+         "examine" : "\nThe spectator is filthy, half drunk and screaming his head off.",
+         "description" : "A spectator is here watching the games.",
+         "strength" : "50"
+      },
+      "bassianus@rome" : {
+         "damage" : "10",
+         "location" : "rome21",
+         "speed" : "0",
+         "aggression" : "0",
+         "name" : "Bassianus",
+         "examine" : "\nThe spectator is filthy, half drunk and screaming his head off.",
+         "description" : "A spectator is here watching the games.",
+         "strength" : "50"
+      },
+      "adrianus@rome" : {
+         "damage" : "20",
+         "location" : "rome6",
+         "speed" : "10",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Adrianus",
+         "examine" : "\nYou see a member of one of the emperor's elite legions.  He looks VERY strong.",
+         "description" : "A soldier on leave is walking around.",
+         "strength" : "250"
+      },
+      "nurse@rome" : {
+         "damage" : "12",
+         "location" : "rome11",
+         "armor" : "10",
+         "name" : "nurse",
+         "examine" : "\nThe nurse is a very beautiful young lady who is about 22 years old.  She has\ndeep brown eyes and shoulder-length chestnut hair.  Her body is perfectly \nproportioned and she stands about five feet tall.",
+         "sflags" : [
+            "Female"
+         ],
+         "description" : "There is a beautiful nurse standing here.",
+         "strength" : "80",
+         "speed" : "0",
+         "pname" : "A nurse",
+         "aggression" : "0"
+      },
+      "gateguard_2@rome" : {
+         "damage" : "20",
+         "location" : "rome29",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "20",
+         "pname" : "Octavius",
+         "name" : "gateguard_2",
+         "examine" : "\nYou see a strong, loyal public defender.",
+         "description" : "A gateguard stands here, tending the gate.",
+         "strength" : "200"
+      },
+      "defendant@rome" : {
+         "damage" : "20",
+         "location" : "rome50",
+         "armor" : "20",
+         "name" : "defendant",
+         "description" : "A defendant stands here, pleading her case.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The defendant",
+         "aggression" : "0"
+      },
+      "velutus@rome" : {
+         "damage" : "22",
+         "location" : "rome36",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "10",
+         "name" : "Velutus",
+         "examine" : "\nThe bodyguard is dressed in the finest of armor and wields only the\ndeadliest of weapons.  He is very strong and would put up one hell of a\nfight.",
+         "description" : "There is a royal bodyguard here, ready to die for the emperor, if necessary.",
+         "strength" : "500"
+      },
+      "lucius@rome" : {
+         "damage" : "24",
+         "location" : "rome63",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "24",
+         "name" : "Lucius",
+         "examine" : "\nA tall grocer, who moves two 200 pounds bag of flour around on his shoulders.",
+         "description" : "Lucius the Grocer stands at the counter, with a slightly impatient look\non his face.",
+         "strength" : "240"
+      },
+      "gateguard_1@rome" : {
+         "damage" : "20",
+         "location" : "rome51",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "20",
+         "pname" : "Popilius",
+         "name" : "gateguard_1",
+         "examine" : "\nYou see a strong, loyal public defender.",
+         "description" : "A gateguard stands here, tending the gate.",
+         "strength" : "200"
+      },
+      "gladiator@rome" : {
+         "damage" : "25",
+         "location" : "rome10",
+         "armor" : "10",
+         "name" : "gladiator",
+         "examine" : "\nA well muscled man who is very heavily armored and armed to the teeth.  He\nlives for combat.",
+         "description" : "There is a gladiator standing here.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "The Gladiator",
+         "aggression" : "1"
+      },
+      "driver@rome" : {
+         "damage" : "11",
+         "location" : "rome16",
+         "armor" : "5",
+         "name" : "driver",
+         "examine" : "\nYou see a very slight and small individual whose whole life is centered around\nnothing but horses and speed.",
+         "description" : "There is a chariot driver here.",
+         "strength" : "90",
+         "speed" : "0",
+         "pname" : "The Driver",
+         "aggression" : "0"
+      },
+      "gateguard_3@rome" : {
+         "damage" : "20",
+         "location" : "rome35",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "20",
+         "pname" : "Ligarius",
+         "name" : "gateguard_3",
+         "examine" : "\nYou see a strong, loyal public defender.",
+         "description" : "A gateguard stands here, tending the gate.",
+         "strength" : "200"
+      },
+      "lucretia@rome" : {
+         "damage" : "6",
+         "location" : "rome49",
+         "name" : "Lucretia",
+         "examine" : "\nA very pretty young woman who was captured instead of being killed when the\nRoman legions subjugated her land.",
+         "sflags" : [
+            "Female"
+         ],
+         "description" : "A slave stands here waiting for her master.",
+         "strength" : "60",
+         "speed" : "0",
+         "aggression" : "0"
+      },
+      "ventidius@rome" : {
+         "damage" : "23",
+         "location" : "rome62",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "23",
+         "name" : "Ventidius",
+         "examine" : "\nA fat, nice looking baker. But you can see that he has many scars on his\nbody.",
+         "description" : "The Baker looks at you calmly, wiping flour from his face with one hand.",
+         "strength" : "230"
+      },
+      "aemilius@rome" : {
+         "damage" : "15",
+         "location" : "rome30",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Aemilius",
+         "examine" : "\nYou see a member of one of the emperor's elite legions.  He looks VERY strong.",
+         "description" : "A soldier on leave is looking for a nice pub to spend his pay in.",
+         "strength" : "251"
+      },
+      "lucullus@rome" : {
+         "damage" : "5",
+         "location" : "rome21",
+         "speed" : "6",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Lucullus",
+         "description" : "A citizen of Rome is standing here.",
+         "strength" : "90"
+      },
+      "mars@rome" : {
+         "eflags" : [
+            "Fireball",
+            "Frost",
+            "Shock"
+         ],
+         "damage" : "43",
+         "location" : "rome56",
+         "armor" : "23",
+         "name" : "Mars",
+         "description" : "Mars, the god of war and state, is here.",
+         "strength" : "2100",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "BarUp"
+         ]
+      },
+      "froboz@rome" : {
+         "damage" : "30",
+         "location" : "rome49",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "20",
+         "name" : "Froboz",
+         "examine" : "\nYou see a middle-aged man who's knowledge of magic, both offensive and \ndefensive, is legendary.  He literally glows with a pink aura.",
+         "description" : "Froboz the wizard is standing here, working on a new spell.",
+         "strength" : "500"
+      },
+      "doctor@rome" : {
+         "damage" : "10",
+         "location" : "rome11",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "pname" : "The Doctor",
+         "name" : "doctor",
+         "examine" : "\nYou see a young man, just out of med school, wearing a white coat and using\na stethoscope.",
+         "description" : "A doctor is standing here.",
+         "strength" : "100"
+      },
+      "mercury@rome" : {
+         "eflags" : [
+            "Fireball",
+            "Frost",
+            "Shock"
+         ],
+         "damage" : "40",
+         "location" : "rome59",
+         "armor" : "20",
+         "name" : "Mercury",
+         "description" : "Mercury, the messenger of the gods, is standing here.",
+         "strength" : "1900",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "BarUp"
+         ]
+      },
+      "judge@rome" : {
+         "damage" : "25",
+         "location" : "rome55",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "25",
+         "pname" : "The Judge",
+         "name" : "judge",
+         "description" : "A judge is standing here, reading a case.",
+         "strength" : "250"
+      },
+      "plaintiff@rome" : {
+         "damage" : "14",
+         "location" : "rome50",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The Plaintiff",
+         "name" : "plaintiff",
+         "description" : "The plaintiff stands here, pleading his case.",
+         "strength" : "200"
+      },
+      "aufidius@rome" : {
+         "damage" : "13",
+         "location" : "rome4",
+         "speed" : "8",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Aufidius",
+         "examine" : "\nThe vendor is a scruffy looking man who isn't afraid of a fight and looks like\nhe's had just about enough of smart-mouthed spectators.",
+         "description" : "A stadium vendor is walking here, selling overpriced hotdogs and beer.",
+         "strength" : "80"
+      },
+      "sempronius@rome" : {
+         "damage" : "15",
+         "location" : "rome45",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Sempronius",
+         "examine" : "\nYou see a member of one of the emperor's elite legions.  He looks VERY strong.",
+         "description" : "A soldier on leave is walking around.",
+         "strength" : "251"
+      },
+      "tullus@rome" : {
+         "damage" : "11",
+         "location" : "rome25",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Tullus",
+         "description" : "A ticket master is here, looking at you expectantly.",
+         "strength" : "150"
+      },
+      "lavinia@rome" : {
+         "damage" : "5",
+         "location" : "rome6",
+         "name" : "Lavinia",
+         "examine" : "\nA very pretty young woman who was captured instead of being killed when the\nRoman legions subjugated her land.",
+         "sflags" : [
+            "Female"
+         ],
+         "description" : "A slave stands here, wishing that she was free.",
+         "strength" : "40",
+         "speed" : "0",
+         "aggression" : "0"
+      },
+      "slime@rome" : {
+         "damage" : "30",
+         "location" : "rome48",
+         "armor" : "20",
+         "name" : "slime",
+         "examine" : "\nThere is a green ball of slime oozing from the coating on the walls.",
+         "description" : "There is a slippery slimeball here.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "1000",
+         "speed" : "2",
+         "aggression" : "50"
+      },
+      "marcius@rome" : {
+         "damage" : "5",
+         "location" : "rome43",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Marcius",
+         "examine" : "\nYou see a small, dirty man who doesn't look very healthy.",
+         "description" : "A haggard peddler is standing here, trying to support his meager existence.",
+         "strength" : "50"
+      },
+      "page@rome" : {
+         "damage" : "7",
+         "location" : "rome43",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "A Page",
+         "name" : "page",
+         "examine" : "\nYou see a young boy who looks very strong and very fast.  He has the look of\na scholar about him.",
+         "description" : "A page stands here, waiting to run an errand.",
+         "strength" : "100"
+      },
+      "trebonius@rome" : {
+         "damage" : "5",
+         "location" : "rome32",
+         "speed" : "16",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Trebonius",
+         "description" : "A citizen of Rome is here.",
+         "strength" : "190"
+      },
+      "menenius@rome" : {
+         "damage" : "20",
+         "location" : "rome42",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "20",
+         "name" : "Menenius",
+         "examine" : "\nThe shopkeeper is an older man in his middle to late fifties and looks like\nhe enjoys the quiet life.  There is a long scar running from the edge of his\nmouth to his right ear, making it look like he is always smiling.",
+         "description" : "Menenius, Froboz's shopkeeper is here, minding the store.",
+         "strength" : "200"
+      },
+      "dominius@rome" : {
+         "damage" : "5",
+         "location" : "rome12",
+         "speed" : "16",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Dominius",
+         "description" : "A citizen of Rome is standing here.",
+         "strength" : "190"
+      },
+      "valentine@rome" : {
+         "damage" : "5",
+         "location" : "rome21",
+         "name" : "Valentine",
+         "examine" : "\nA very pretty young woman who was captured instead of being killed when the\nRoman legions subjugated her land.",
+         "sflags" : [
+            "Female"
+         ],
+         "description" : "A slave stands here, wishing that she was free.",
+         "strength" : "40",
+         "speed" : "0",
+         "aggression" : "0"
+      },
+      "adjudicator@rome" : {
+         "damage" : "19",
+         "location" : "rome1",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The adjudicator",
+         "name" : "adjudicator",
+         "examine" : "\nThe adjudicator is a retired gladiator and scars cover all exposed parts of his\nbody.  Although he is getting on in years, he remains healthy and fit.",
+         "description" : "The adjudicator is watching the games intently.",
+         "strength" : "200"
+      },
+      "ball@rome" : {
+         "damage" : "30",
+         "location" : "rome54",
+         "armor" : "20",
+         "name" : "ball",
+         "examine" : "\nThere is a green ball of slime oozing from the coating on the walls.",
+         "description" : "There is a slippery slimeball here.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "1000",
+         "speed" : "2",
+         "aggression" : "50"
+      },
+      "scorekeeper@rome" : {
+         "damage" : "15",
+         "location" : "rome1",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The Scorekeeper",
+         "name" : "scorekeeper",
+         "examine" : "\nThe scorekeeper is a young man of about 25 years of age and is very intently\nstudying his clipboard.",
+         "description" : "A scorekeeper has one eye on his stopwatch and the other on a clipboard.",
+         "strength" : "150"
+      },
+      "marullus@rome" : {
+         "damage" : "20",
+         "location" : "rome42",
+         "speed" : "10",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Marullus",
+         "examine" : "\nYou see a member of one of the emperor's elite legions.  He looks VERY strong.",
+         "description" : "A soldier on leave is walking around.",
+         "strength" : "250"
+      },
+      "caesar@rome" : {
+         "damage" : "20",
+         "location" : "rome36",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "20",
+         "name" : "Caesar",
+         "examine" : "\nYou see a man who is dressed in the finest of clothes, has eaten the best of\nfoods and lived in the most opulent palace that Rome has ever known.",
+         "description" : "Julius Caesar, the emperor of Rome is sitting here.",
+         "strength" : "300"
+      },
+      "colonius@rome" : {
+         "damage" : "5",
+         "location" : "rome40",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Colonius",
+         "examine" : "\nYou see a small, dirty man who doesn't look very healthy.",
+         "description" : "A poor peddler is standing here, trying to support his meager existence.",
+         "strength" : "50"
+      },
+      "saturninus@rome" : {
+         "damage" : "10",
+         "location" : "rome8",
+         "speed" : "0",
+         "aggression" : "0",
+         "name" : "Saturninus",
+         "examine" : "\nThe spectator is filthy, half drunk and screaming his head off.",
+         "description" : "A spectator is here watching the games.",
+         "strength" : "50"
+      },
+      "titus@rome" : {
+         "damage" : "35",
+         "location" : "rome7",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Titus",
+         "description" : "Titus Andronicus is standing here, polishing a few swords.",
+         "strength" : "400"
+      },
+      "martius@rome" : {
+         "damage" : "15",
+         "location" : "rome51",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Martius",
+         "examine" : "\nYou see a member of one of the emperor's elite legions.  He looks VERY strong.",
+         "description" : "A soldier on leave is wandering around.",
+         "strength" : "251"
+      },
+      "lartius@rome" : {
+         "damage" : "20",
+         "location" : "rome6",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "20",
+         "name" : "Lartius",
+         "examine" : "\nThe shopkeeper is an older man in his middle to late fifties and looks like\nhe enjoys the quiet life.  There is a long scar running from the edge of his\nmouth to his right ear, making it look like he is always smiling.",
+         "description" : "Lartius, Titus's shopkeeper, is here, minding the store.",
+         "strength" : "200"
+      }
+   }
+}

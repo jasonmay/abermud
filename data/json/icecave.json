@@ -17,7 +17,7 @@
          "desc[0]" : "The door is open."
       },
       "pillowcase@icecave" : {
-         "desc[1]" : "A soggy pillowcase has been dumped here.It is closed.",
+         "desc[1]" : "A soggy pillowcase has been dumped here. It is closed.",
          "location" : "IN_ROOM:bedroom",
          "oflags" : [
             "Container",
@@ -34,27 +34,19 @@
          "bvalue" : "10",
          "desc[0]" : "A soggy pillowcase has been dumped here."
       },
-      "hole_g_hall@icecave" : {
-         "location" : "IN_ROOM:G_hall",
-         "oflags" : [
-            "NoGet"
-         ],
-         "name" : "Hole_G_Hall",
-         "linked" : "Hole_Snow_Cave",
-         "state" : "1",
-         "pname" : "hole",
-         "maxstate" : "1",
-         "desc[0]" : "A hole has been dug north through the snow."
-      },
       "pendant@icecave" : {
          "location" : "IN_ROOM:magician",
          "oflags" : [
-            "Wearable"
+            "AidSpell",
+            "Wearable",
+            "NoPit",
+            "NoSummon"
          ],
          "name" : "pendant",
+         "examine" : "It has a small engraving which somehow changes as you watch,\nshowing alternately a haggard figure and a strong figure.",
          "size" : "1",
          "weight" : "1",
-         "bvalue" : "50",
+         "bvalue" : "0",
          "aflags" : [
             "Neck"
          ],
@@ -87,20 +79,6 @@
          "desc[0]" : "An old rusty iron key lies here.",
          "size" : "1"
       },
-      "coronet@icecave" : {
-         "location" : "IN_CONTAINER:chest",
-         "oflags" : [
-            "Wearable"
-         ],
-         "name" : "coronet",
-         "size" : "3",
-         "weight" : "3",
-         "bvalue" : "300",
-         "aflags" : [
-            "Head"
-         ],
-         "desc[0]" : "A jewelled coronet glitters before you."
-      },
       "hole_snow_cave@icecave" : {
          "location" : "IN_ROOM:S_Cave",
          "oflags" : [
@@ -111,13 +89,17 @@
          "linked" : "Hole_G_Hall",
          "desc[0]" : "A hole has been dug south through the snow."
       },
-      "fountain@icecave" : {
-         "location" : "IN_ROOM:palace",
+      "iceball@icecave" : {
+         "location" : "IN_ROOM:storage",
+         "weight" : "5",
          "oflags" : [
-            "NoGet"
+            "IStormSpell"
          ],
-         "name" : "fountain",
-         "desc[0]" : "A small icy fountain burbles gently in the centre of the room."
+         "name" : "iceball",
+         "examine" : "Strange that it doesn't melt.  Must be magic.",
+         "bvalue" : "300",
+         "desc[0]" : "A snowball lies here.",
+         "size" : "5"
       },
       "chest@icecave" : {
          "desc[1]" : "A huge iron bound chest lies before you.",
@@ -134,6 +116,55 @@
          "maxstate" : "2",
          "desc[0]" : "A huge iron bound chest lies open before you."
       },
+      "dagger@icecave" : {
+         "damage" : "18",
+         "location" : "IN_ROOM:palace",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "icy",
+         "name" : "dagger",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "100",
+         "desc[0]" : "A strange, thin icy dagger lies at your feet."
+      },
+      "hole_g_hall@icecave" : {
+         "desc[1]" : "\nThe entrance to the cave is blocked!  You need something to &+CDIG&* a hole\nthrough the thick ice and snow.",
+         "location" : "IN_ROOM:G_hall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Hole_G_Hall",
+         "linked" : "Hole_Snow_Cave",
+         "state" : "1",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "A hole has been dug north through the snow."
+      },
+      "coronet@icecave" : {
+         "location" : "IN_CONTAINER:chest",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "coronet",
+         "size" : "3",
+         "weight" : "3",
+         "bvalue" : "300",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A jewelled coronet glitters before you."
+      },
+      "fountain@icecave" : {
+         "location" : "IN_ROOM:palace",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "fountain",
+         "examine" : "Its water looks invigorating.",
+         "desc[0]" : "A small icy fountain burbles gently in the centre of the room."
+      },
       "westicethrone@icecave" : {
          "desc[1]" : "A huge crystal throne of pure ice dominates the east wall.",
          "location" : "IN_ROOM:throne",
@@ -148,31 +179,22 @@
          "maxstate" : "1",
          "desc[0]" : "\nIcy shards lie scattered here, around an opening leading eastwards."
       },
-      "dagger@icecave" : {
-         "damage" : "18",
-         "location" : "IN_ROOM:palace",
+      "cupboard_store@icecave" : {
+         "desc[1]" : "The cupboard is closed.",
+         "location" : "IN_ROOM:store",
          "oflags" : [
-            "Weapon"
-         ],
-         "altname" : "icy",
-         "name" : "dagger",
-         "size" : "2",
-         "weight" : "2",
-         "bvalue" : "100",
-         "desc[0]" : "A strange, thin icy dagger lies at your feet."
-      },
-      "easticethrone@icecave" : {
-         "desc[1]" : "\nThe western exit is blocked by what appears to be the back of a throne.",
-         "location" : "IN_ROOM:cave",
-         "oflags" : [
+            "Openable",
+            "Lockable",
             "NoGet"
          ],
-         "name" : "EastIceThrone",
-         "linked" : "WestIceThrone",
-         "state" : "1",
-         "pname" : "throne",
-         "maxstate" : "1",
-         "desc[0]" : "Slivers of ice twinkle in the light from the western exit."
+         "altname" : "door",
+         "name" : "Cupboard_Store",
+         "desc[2]" : "The cupboard is locked.",
+         "linked" : "cupboard_bedroom",
+         "state" : "2",
+         "pname" : "cupboard",
+         "maxstate" : "2",
+         "desc[0]" : "The cupboard is open."
       },
       "cupboard_bedroom@icecave" : {
          "desc[1]" : "The cupboard is closed.",
@@ -191,25 +213,36 @@
          "maxstate" : "2",
          "desc[0]" : "The cupboard is open."
       },
-      "cupboard_store@icecave" : {
-         "desc[1]" : "The cupboard is closed.",
-         "location" : "IN_ROOM:store",
+      "easticethrone@icecave" : {
+         "desc[1]" : "\nThe western exit is blocked by what appears to be the back of a throne.",
+         "location" : "IN_ROOM:cave",
          "oflags" : [
-            "Openable",
-            "Lockable",
             "NoGet"
          ],
-         "altname" : "door",
-         "name" : "Cupboard_Store",
-         "desc[2]" : "The cupboard is locked.",
-         "linked" : "cupboard_bedroom",
-         "state" : "2",
-         "pname" : "cupboard",
-         "maxstate" : "2",
-         "desc[0]" : "The cupboard is open."
+         "name" : "EastIceThrone",
+         "linked" : "WestIceThrone",
+         "state" : "1",
+         "pname" : "throne",
+         "maxstate" : "1",
+         "desc[0]" : "Slivers of ice twinkle in the light from the western exit."
       }
    },
    "loc" : {
+      "icelearn@icecave" : {
+         "exits" : {
+            "e" : "Magician",
+            "u" : "newbie13@newbie"
+         },
+         "flags" : [
+            "Peaceful",
+            "NoMobiles"
+         ],
+         "zone" : "icecave",
+         "title" : "Magician's Mana Tutoring",
+         "id" : "Icelearn",
+         "description" : "\n   The magician has made the streams of ether evident to advertise his skill,\nand they swirl around in many hues, knotting, unknotting, endlessly changing.\nThe magician sits in a corner knitting with the strands.\nTo find out what he charges for his lessons, type \"&+Clearn info&*\".\n",
+         "altitude" : null
+      },
       "bedroom@icecave" : {
          "exits" : {
             "n" : "Palace",
@@ -243,6 +276,18 @@
          "title" : "Storage Chamber",
          "id" : "Storage",
          "description" : "\n   This is just a small store room, filled with empty crates and boxes, some\nmarked 'Fragile' and others 'Feel Free to Shake and Break'.  There is a single\ndoorway in the south wall.\n",
+         "altitude" : null
+      },
+      "icestudy@icecave" : {
+         "exits" : {},
+         "flags" : [
+            "Peaceful",
+            "SoundProof"
+         ],
+         "zone" : "icecave",
+         "title" : "Magician's Mana Studying",
+         "id" : "Icestudy",
+         "description" : "\n  Here the ether streams that you must gather to build your mana are faint,\nand you must work hard to gather them.  Some people are learning how to\ngrab mana *now*, and others are learning exercises, that if kept up over\ntime will gradually increase their powers.\n",
          "altitude" : null
       },
       "passage@icecave" : {
@@ -307,6 +352,7 @@
       },
       "magician@icecave" : {
          "exits" : {
+            "w" : "Icelearn",
             "e" : "Palace"
          },
          "flags" : [],
@@ -401,7 +447,7 @@
          "zone" : "icecave",
          "title" : "The Cave of the Ice People",
          "id" : "Cave",
-         "description" : "\n   You are standing in a vast icy cave.  Ice covers the floor, making your\nbalance precarious at best.  Judging from the footprints, however, it seems\nothers have been here before you and safely traversed this slippery surface.\nA message carved into one wall reads \"We Always Bit Chips.\"\n   Passages lead in all directions, but the exit leading east is blocked by\na standard AberMUD construction sign.\n",
+         "description" : "\n   You are standing in a vast icy cave.  Ice covers the floor, making your\nbalance precarious at best.  Judging from the footprints, however, it seems\nothers have been here before you and safely traversed this slippery surface.\nA message carved into one wall reads \"We Always Bit Chips.\"\n   Passages lead in all directions.\n",
          "altitude" : null
       },
       "g_hall@icecave" : {
@@ -448,7 +494,8 @@
          "location" : "pool",
          "armor" : "0",
          "name" : "unicorn",
-         "description" : "\nA unicorn is standing here, gazing quietly at its reflection.",
+         "examine" : "\n         .\n        /'\n       //\n   .  //\n   |\\//7\n  /' \" \\ \n .   . .\n | (    \\     '._\n |  '._  '    '. '\n /    \\'-'_---. ) )\n.              :.'\n|               \\ \n| .    .   .     .\n' .    |  |      |\n \\'   /_-':     /\n / | |    '\\  .'\n/ /| |     \\\\  |\n\\ \\( )     // /\n \\ | |    // /\n  L! !   // /\n   [_]  L[_|\n",
+         "description" : "A unicorn is standing here, gazing quietly at its reflection.",
          "strength" : "2000",
          "speed" : "0",
          "pname" : "The Unicorn",

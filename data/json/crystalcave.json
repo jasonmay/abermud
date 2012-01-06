@@ -1,0 +1,469 @@
+{
+   "obj" : {
+      "earthstone@crystalcave" : {
+         "location" : "CARRIED_BY:willie",
+         "oflags" : "{ }",
+         "altname" : "brown",
+         "name" : "earthstone",
+         "examine" : "\nSoothing to the touch, this stone fits perfectly into the palm of your hand.",
+         "size" : "2",
+         "pname" : "Earth",
+         "weight" : "5",
+         "bvalue" : "500",
+         "desc[0]" : "A dull &+ybrown&N stone lies forgotten here."
+      },
+      "torn_papyrus@crystalcave" : {
+         "location" : "CARRIED_BY:moor",
+         "weight" : "5",
+         "pname" : "papyrus",
+         "name" : "torn_papyrus",
+         "examine" : "\nIt reads:\n        'No escape... the curse will follow... a stone forged from the earth...\nlong lost and hidden...  Lost in the swamp lurks the scurge of the seven seas \n... a ring made of a feather... beyond a great rock... off the river bank of\nStyx...'  \nIt is too torn and battered to make out the rest.",
+         "bvalue" : "30",
+         "desc[0]" : "A torn, tattered piece of &+Wpapyrus&N has been dropped here.",
+         "size" : "5"
+      },
+      "knapsack@crystalcave" : {
+         "location" : "IN_ROOM:crystalcave4",
+         "oflags" : [
+            "Wearable",
+            "Container"
+         ],
+         "altname" : "sack",
+         "name" : "knapsack",
+         "examine" : "\nMade of heavy, durable canvas, this knapsack should hold plenty of items \nduring your travels.",
+         "size" : "40",
+         "weight" : "0",
+         "bvalue" : "30",
+         "desc[0]" : "A battered, but serviceable knapsack lies here.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "windstone@crystalcave" : {
+         "location" : "CARRIED_BY:moor",
+         "oflags" : "{ }",
+         "altname" : "white",
+         "name" : "windstone",
+         "examine" : "\nCrackling with &+Renergy&N, this stone seems to be engulfed in magic.",
+         "size" : "2",
+         "pname" : "Wind",
+         "weight" : "5",
+         "bvalue" : "500",
+         "desc[0]" : "A glowing &+Wwhite&N stone has been dropped here."
+      },
+      "seastone@crystalcave" : {
+         "location" : "CARRIED_BY:sphinx",
+         "oflags" : [
+            "Hitchance"
+         ],
+         "altname" : "blue",
+         "name" : "seastone",
+         "examine" : "\nEndless waves can be seen in the center of the stone, deep, fierce and \nsoothing.",
+         "size" : "2",
+         "pname" : "Sea",
+         "weight" : "5",
+         "bvalue" : "500",
+         "desc[0]" : "A stone the color of the &+bsea&N has been carelessly dropped \nhere."
+      },
+      "journal@crystalcave" : {
+         "location" : "CARRIED_BY:archaeologist",
+         "weight" : "5",
+         "name" : "journal",
+         "examine" : "\nOpening the book, you realize that this is the private journal of the famed \narchaeologist, Dr Phinas Pilsner who disappeared log ago.  It reads:\n\n         'Finally, I've found the way to defeat the high priestess, Neferteri.\nThe secret lies in harnessing the four elements, Earth, Wind, Fire and Water.\nHidden vast distances apart in the land, I've discovered the possible \nlocations of two of the stones.  One is said to lie protected deep in the \nheart of the crystal caves.  The other is in the hands of a moor who traveled\nfar to the east in search of a great wizard to help unlock the power of the\nstone and is reported to be lost in the caves west of Camelot.\n     But alas, my search has ended in failure.  Neferteri's curse has finally\ncaught up with me.  Only now as my sight slowly fades, do I realize there \nmight be a fifth stone hidden that is the key to Neferteri's power.'\n",
+         "bvalue" : "25",
+         "desc[0]" : "A tattered-looking, leather bound journal lies here.",
+         "size" : "2"
+      },
+      "opalshield@crystalcave" : {
+         "location" : "IN_ROOM:crystalcave12",
+         "armor" : "80",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "altname" : "shield",
+         "name" : "opalshield",
+         "examine" : "\nPart of a set, a gift to a long-dead King, this shield will serve you well.",
+         "size" : "20",
+         "pname" : "opalshield",
+         "weight" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "A &+cshield&N decorated with semi-precious jewels lies here."
+      },
+      "bleached_papyrus@crystalcave" : {
+         "location" : "CARRIED_BY:chimera",
+         "weight" : "5",
+         "pname" : "papyrus",
+         "name" : "bleached_papyrus",
+         "examine" : "\nOnly by obtaining the Soul of Neferteri will one be able to break the curse.  \nYet always crafty, she has chosen the most powerful of servants to guard it.  \nIt is whispered that by gathering the four which hold the key to Neferteri's \npower, is it possible to defeat the invincible son of Isis.  Take care on the \njourney across the sea of sand for she had hidden her tomb well.\n",
+         "desc[0]" : "A bleached, brittle piece of &+Wpapyrus&N lies ignored here.",
+         "size" : "30"
+      },
+      "hiddenexit1@crystalcave" : {
+         "location" : "IN_ROOM:crystalcave11",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hiddenexit1",
+         "examine" : "",
+         "linked" : "hiddenexit2",
+         "size" : "0",
+         "pname" : "hiddenexit",
+         "weight" : "0",
+         "bvalue" : "0",
+         "desc[0]" : ""
+      },
+      "sunstone@crystalcave" : {
+         "location" : "CARRIED_BY:chimera",
+         "oflags" : [
+            "Lit",
+            "SpellChance"
+         ],
+         "altname" : "red",
+         "name" : "sunstone",
+         "examine" : "\nGlowing with a star burst pattern of red and orange, this stone seems to \nhave mystically captured the fire of the sun.",
+         "size" : "2",
+         "pname" : "Sun",
+         "weight" : "5",
+         "bvalue" : "500",
+         "desc[0]" : "A deep &+rred&N stone the color of &+rfire&N lies here."
+      },
+      "brandy@crystalcave" : {
+         "location" : "IN_CONTAINER:knapsack",
+         "weight" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "brandy",
+         "examine" : "\nA deep amber in color, this fine brandy is surely a drink for the gods.",
+         "bvalue" : "40",
+         "desc[0]" : "A dusty bottle of Napoleon brandy has been discarded here.",
+         "size" : "5"
+      },
+      "stained_papyrus@crystalcave" : {
+         "location" : "CARRIED_BY:willie",
+         "weight" : "5",
+         "pname" : "papyrus",
+         "name" : "stained_papyrus",
+         "examine" : "\nA stone that holds the power of the sun was carried by a reckless adventurer \nto a castle in the west.  Believing he had the courage to beat the evil under\nthe castle, the poor man lost his way in an abandoned town -- only to meet up \nwith the mythical fire-breathing creature.  Beware ...",
+         "bvalue" : "30",
+         "desc[0]" : "A scrap of &+Wpapyrus&N lies hidden in the corner.",
+         "size" : "5"
+      },
+      "hiddenexit2@crystalcave" : {
+         "location" : "IN_ROOM:crystalcave12",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hiddenexit2",
+         "examine" : "",
+         "linked" : "hiddenexit1",
+         "size" : "0",
+         "pname" : "hiddenexit",
+         "weight" : "0",
+         "bvalue" : "0",
+         "desc[0]" : ""
+      }
+   },
+   "loc" : {
+      "crystalcave11@crystalcave" : {
+         "exits" : {
+            "w" : "^hiddenexit1",
+            "e" : "crystalcave10",
+            "n" : "crystalcave9",
+            "s" : "crystalcave6"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Caves&N",
+         "id" : "crystalcave11",
+         "description" : "\n        &+BWater&N spills down the west wall reflecting the &+Wlight&N making\nit seem like liquid &+Wcrystal&N.  Mosses cling to the walls, giving off a \ndecidedly &+ggreen&N tint.  Steam rises from the &+Bpool&N of &+Bwater&N just \ninches from your feet.  You wish you could stand under the falls and wash all \nyour troubles away.  Looking over your shoulder, you heave a weary sigh, not \nwishing to find your way back through the seemingly endless &+Wcrystal&N \npassages.\n",
+         "altitude" : null
+      },
+      "crystalcave7@crystalcave" : {
+         "exits" : {
+            "w" : "crystalcave3",
+            "e" : "crystalcave8",
+            "n" : "crystalcave6",
+            "s" : "crystalcave5"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Caves&N",
+         "id" : "crystalcave7",
+         "description" : "\n        The glittering &+Wcrystals&N only serve to confuse you, making one \nbranch look like another.  Are you really getting anywhere?  Or are you \ntraveling around in circles?\n",
+         "altitude" : null
+      },
+      "crystalcave6@crystalcave" : {
+         "exits" : {
+            "w" : "crystalcave4",
+            "e" : "crystalcave5",
+            "n" : "crystalcave2",
+            "s" : "crystalcave7"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Caves&N",
+         "id" : "crystalcave6",
+         "description" : "\n        The glittering &+Wcrystals&N only serve to confuse you, making one \nbranch look like another.  Are you really getting anywhere?  Or are you \ntraveling around in circles?\n",
+         "altitude" : null
+      },
+      "crystalcave2@crystalcave" : {
+         "exits" : {
+            "e" : "crystalcave1",
+            "n" : "crystalcave3"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Caves&N",
+         "id" : "crystalcave2",
+         "description" : "\n        The glittering &+Wcrystals&N only serve to confuse you, making one \nbranch look like another.  Are you really getting anywhere?  Or are you \ntraveling around in circles?\n",
+         "altitude" : null
+      },
+      "crystalcave5@crystalcave" : {
+         "exits" : {
+            "w" : "crystalcave6",
+            "e" : "crystalcave1",
+            "n" : "crystalcave4",
+            "s" : "crystalcave3"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Caves&N",
+         "id" : "crystalcave5",
+         "description" : "\n        The glittering &+Wcrystals&N only serve to confuse you, making one \nbranch look like another.  Are you really getting anywhere?  Or are you \ntraveling around in circles?\n",
+         "altitude" : null
+      },
+      "crystalcave3@crystalcave" : {
+         "exits" : {
+            "w" : "crystalcave4",
+            "e" : "crystalcave2",
+            "n" : "crystalcave2",
+            "s" : "crystalcave2"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Caves&N",
+         "id" : "crystalcave3",
+         "description" : "     \n        The glittering &+Wcrystals&N only serve to confuse you, making one \nbranch look like another.  Are you really getting anywhere?  Or are you \ntraveling around in circles?\n",
+         "altitude" : null
+      },
+      "crystalcave4@crystalcave" : {
+         "exits" : {
+            "w" : "crystalcave2",
+            "e" : "crystalcave3",
+            "n" : "crystalcave1",
+            "s" : "crystalcave5"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Caves&N",
+         "id" : "crystalcave4",
+         "description" : "\n        The glittering &+Wcrystals&N only serve to confuse you, making one \nbranch look like another.  Are you really getting anywhere?  Or are you \ntraveling around in circles?\n",
+         "altitude" : null
+      },
+      "crystalcave8@crystalcave" : {
+         "exits" : {
+            "w" : "crystalcave7",
+            "e" : "crystalcave9",
+            "n" : "crystalcave6",
+            "s" : "crystalcave3"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Cave&N",
+         "id" : "crystalcave8",
+         "description" : "\n        The glittering &+Wcrystals&N only serve to confuse you, making one \nbranch look like another.  Are you really getting anywhere?  Or are you \ntraveling around in circles?\n",
+         "altitude" : null
+      },
+      "crystalcave10@crystalcave" : {
+         "exits" : {
+            "w" : "crystalcave11",
+            "e" : "crystalcave7",
+            "n" : "crystalcave9",
+            "s" : "crystalcave6"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Caves&N",
+         "id" : "crystalcave10",
+         "description" : "\n        The glittering &+Wcrystals&N only serve to confuse you, making one \nbranch look like another.  Are you really getting anywhere?  Or are you \ntraveling around in circles?\n",
+         "altitude" : null
+      },
+      "crystalcave1@crystalcave" : {
+         "exits" : {
+            "w" : "crystalcave2",
+            "u" : "Cragg@island"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "crystalcave",
+         "title" : "Entrance to the &+CCrystal Caves&N",
+         "id" : "crystalcave1",
+         "description" : "\n        Blinded by an &+Wintense&N light, it takes a few moments for your eyes\nto adjust.  You gasp in awe when you realize the cave walls are made up of \nhundreds of crystalline formations.  The floor is littered with glittering \nshards of &+Wcrystals&N that have somehow broken away from the walls.  Peering\nup at the ceiling, you can find no discernible light source that displays all\nthis natural beauty.\n",
+         "altitude" : null
+      },
+      "crystalcave12@crystalcave" : {
+         "exits" : {
+            "e" : "^hiddenexit2"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Grotto&N",
+         "id" : "crystalcave12",
+         "description" : "\n        Stepping inside, you see a large grotto formed entirely out of glowing\n&+Wcrystals&N. Light pouring in from an unseen source reflects off the \n&+Wcrystals&N, dazzling you with a &+Rbrilliant&N display of color.  Disturbed\nby your presence, dozens of multi-colored &+rfire lizards&N take flight.  The\nmusic of those delicate, gossamer wings sounds like the sighing of the wind, \ncan barely be heard over the sound of the rushing &+bwater&N. \n        On a low, narrow ledge, a statue of a sphinx rests.  The ageless eyes \nseem able to look straight into your very soul and see your secrets.  A rounded\nstone the color of the &+bsea&N rests between its claws.\n        Looking closer, you see the ripple of muscles and realize this is no \nstatue, but something quite alive.\n",
+         "altitude" : null
+      },
+      "crystalcave9@crystalcave" : {
+         "exits" : {
+            "w" : "crystalcave8",
+            "e" : "crystalcave4",
+            "n" : "crystalcave6",
+            "s" : "crystalcave10"
+         },
+         "flags" : [],
+         "zone" : "crystalcave",
+         "title" : "&+CCrystal Caves&N",
+         "id" : "crystalcave9",
+         "description" : "\n        The glittering &+Wcrystals&N only serve to confuse you, making one \nbranch look like another.  Are you really getting anywhere?  Or are you \ntraveling around in circles?\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "willie@crystalcave" : {
+         "eflags" : [
+            "ImmFireball",
+            "ImmShock"
+         ],
+         "damage" : "20",
+         "location" : "swamp5@abyss",
+         "armor" : "15",
+         "name" : "willie",
+         "examine" : "\nWith a patch over one eye and a death's head grin, do you really want to \ntangle with this fellow?",
+         "description" : "One Eyed Willie, the scourge of the seven seas lurks here.",
+         "strength" : "750",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "One Eyed Willie",
+         "mflags" : [
+            "PickStuff"
+         ]
+      },
+      "moor@crystalcave" : {
+         "damage" : "10",
+         "location" : "camelot104@camelot",
+         "armor" : "5",
+         "name" : "moor",
+         "examine" : "I hate mazes.",
+         "description" : "A moor searching for a great wizard eyes you suspiciously.",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoZap",
+            "NoExo"
+         ]
+      },
+      "sphinx@crystalcave" : {
+         "damage" : "1",
+         "location" : "crystalcave12",
+         "armor" : "0",
+         "name" : "sphinx",
+         "examine" : "\nNoble and proud, this sphinx posseses a secret smile and ageless eyes.\nYet with skin so smooth, you are tempted to pet him.",
+         "description" : "An intricately carved statue of a sphinx sits here.",
+         "strength" : "1",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoZap",
+            "NoExo"
+         ]
+      },
+      "archaeologist@crystalcave" : {
+         "damage" : "0",
+         "location" : "crystalcave5",
+         "armor" : "0",
+         "name" : "archaeologist",
+         "examine" : "\nGaunt and gray, not even a miracle worker could help this man.",
+         "description" : "A sight-less man in ragged clothes sits here, his face \nreflecting that all hope is lost.",
+         "strength" : "1",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoZap",
+            "NoExo"
+         ],
+         "mflags" : [
+            "NoSteal"
+         ]
+      },
+      "chimera@crystalcave" : {
+         "eflags" : [
+            "Fireball",
+            "Shock",
+            "ImmFireball",
+            "ImmShock"
+         ],
+         "damage" : "15",
+         "location" : "nibelung35@nibelung",
+         "armor" : "10",
+         "name" : "Chimera",
+         "examine" : "She wonders whether or not you taste like chicken.",
+         "description" : "A mighty Chimera eyes you hungrily.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "chimera",
+         "pflags" : [
+            "NoZap",
+            "NoExo"
+         ],
+         "mflags" : [
+            "NoSteal",
+            "BarE"
+         ]
+      },
+      "burrower@crystalcave" : {
+         "damage" : "15",
+         "location" : "crystalcave3",
+         "speed" : "50",
+         "aggression" : "50",
+         "armor" : "5",
+         "name" : "burrower",
+         "examine" : "Cute and furry, this animal is tempting to hold.",
+         "description" : "A cute, furry ball of &+Wfluff&N rolls aimlessly here.",
+         "strength" : "400"
+      },
+      "tunnelrat@crystalcave" : {
+         "damage" : "5",
+         "location" : "crystalcave8",
+         "speed" : "3",
+         "aggression" : "10",
+         "armor" : "0",
+         "name" : "tunnelrat",
+         "examine" : "It's a rat, what did you expect?",
+         "description" : "A large, ugly rat with &+Lblack&N, beady eyes is crouched here.",
+         "strength" : "150"
+      },
+      "asp@crystalcave" : {
+         "damage" : "10",
+         "location" : "crystalcave10",
+         "armor" : "5",
+         "name" : "asp",
+         "examine" : "Sometimes, it's not easy being green.",
+         "description" : "A hissing, &+gvenomous&N asp slithers here.",
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "250",
+         "speed" : "2",
+         "aggression" : "20"
+      }
+   }
+}

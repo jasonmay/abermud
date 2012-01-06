@@ -1,0 +1,2789 @@
+{
+   "obj" : {
+      "grapple@nexus" : {
+         "location" : "IN_ROOM:nexus53",
+         "pname" : "grapple",
+         "name" : "grapple",
+         "desc[0]" : "This mountain grapple can allow people to cover great heights and\nslopes easily.",
+         "size" : "7"
+      },
+      "alloy2@nexus" : {
+         "location" : "IN_ROOM:nexus32",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "alloy",
+         "name" : "alloy2",
+         "examine" : "What good is this unless you wish to make a polymer of some kind?",
+         "desc[0]" : "A carbon-colored alloy is here."
+      },
+      "cube@nexus" : {
+         "desc[1]" : "A cube juts out halfway from the rock.",
+         "location" : "IN_ROOM:nexus19",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "cube",
+         "examine" : "It's an ordinary, three-dimensional solid made of a type of granite.",
+         "state" : "1",
+         "pname" : "cube",
+         "maxstate" : "1",
+         "desc[0]" : "The cube is inset into the rock, having triggered an opening."
+      },
+      "platinum@nexus" : {
+         "location" : "IN_ROOM:nexus28",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "element",
+         "pname" : "platinum",
+         "name" : "platinum",
+         "examine" : "Platinum would be drooled over by sultans and kings everywhere.",
+         "desc[0]" : "A bright, shiny element is here."
+      },
+      "stump1@nexus" : {
+         "location" : "IN_ROOM:nexus23",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "stump",
+         "name" : "stump1",
+         "examine" : "Evidently, not of all this tree was cut down. Finish the job.",
+         "desc[0]" : "An ancient stump sits here, acting important."
+      },
+      "door1@nexus" : {
+         "desc[1]" : "The heavy metal door is closed.",
+         "location" : "IN_ROOM:nexus68",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door1",
+         "examine" : "Welcome to my humble house of torture.",
+         "linked" : "door2",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The heavy metal door is open."
+      },
+      "nexus@nexus" : {
+         "desc[1]" : "The nexus vibrates with a significant amount of positive potential energy.",
+         "damage" : "1",
+         "location" : "IN_ROOM:nexus72",
+         "desc[3]" : "The Nexus Staff has resumed its rightful place of holding in the\nThrone of Torture.",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "staff",
+         "name" : "nexus",
+         "examine" : "It is indeed a weapon not to be trusted in normal combat.",
+         "desc[2]" : "A staff here has committed the ultimate act of salvation demon containment.",
+         "state" : "0",
+         "pname" : "nexus",
+         "maxstate" : "3",
+         "desc[0]" : "The almost entirely usless Nexus Staff is propped by magical means here."
+      },
+      "hulk@nexus" : {
+         "location" : "IN_ROOM:nexus42",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "hulk",
+         "name" : "hulk",
+         "desc[0]" : "The shattered and burned-out hulk of a ship has been beached here."
+      },
+      "leaves7@nexus" : {
+         "location" : "IN_ROOM:nexus35",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "leaves",
+         "name" : "leaves7"
+      },
+      "clay@nexus" : {
+         "location" : "IN_ROOM:nexus36",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "clay",
+         "name" : "clay",
+         "examine" : "Get enough of this together and you could build a house!",
+         "desc[0]" : "A clump of mucky clay is here."
+      },
+      "pinecone@nexus" : {
+         "location" : "IN_ROOM:nexus22",
+         "oflags" : [
+            "Food"
+         ],
+         "pname" : "pinecone",
+         "name" : "pinecone",
+         "examine" : "This could hurt the throat on the way down.",
+         "desc[0]" : "An edible pinecone is here, trying to avoid such a fate."
+      },
+      "cot@nexus" : {
+         "location" : "IN_ROOM:bedroom@cave",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "cot",
+         "name" : "cot",
+         "examine" : "Sleep could be just what the dwarven doctor ordered.",
+         "desc[0]" : "A cozy cot is set up here for the weary paserby."
+      },
+      "bottle@nexus" : {
+         "desc[1]" : "A wine bottle is three-quarters covered by the sand.",
+         "location" : "IN_ROOM:nexus45",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bottle",
+         "examine" : "Classic Raspberry Vintage - 825 A.D.",
+         "state" : "1",
+         "size" : "3",
+         "pname" : "bottle",
+         "maxstate" : "1",
+         "desc[0]" : "This seaweed-green wine bottle has sailed the seven seas for generations."
+      },
+      "trout@nexus" : {
+         "location" : "IN_CONTAINER:pelican",
+         "pname" : "trout",
+         "name" : "trout",
+         "desc[0]" : "The catch of the day, a trout, flops around here.",
+         "size" : "5"
+      },
+      "acid@nexus" : {
+         "location" : "CARRIED_BY:rockqueen",
+         "pname" : "acid",
+         "name" : "acid",
+         "examine" : "It is an industrial-strength chemical solvent.",
+         "desc[0]" : "Noxious fumes emanate from this flask of acid."
+      },
+      "scissors@nexus" : {
+         "location" : "IN_ROOM:nexus37",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "scissors",
+         "name" : "scissors",
+         "examine" : "This pair is specially designed for a fisherman's tackle box.",
+         "desc[0]" : "A small, precise pair of scissors sticks blades-first into the ground."
+      },
+      "silver@nexus" : {
+         "location" : "IN_ROOM:nexus24",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "element",
+         "pname" : "silver",
+         "name" : "silver",
+         "examine" : "Silver would be accepted by sultans and kings in some dimensions.",
+         "desc[0]" : "A bright, shiny element is here."
+      },
+      "rock@nexus" : {
+         "location" : "IN_ROOM:nexus19",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "rock",
+         "name" : "rock",
+         "desc[0]" : "The rock appears to have some designs engraved in its surface."
+      },
+      "leaves2@nexus" : {
+         "location" : "IN_ROOM:nexus24",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "leaves",
+         "name" : "leaves2"
+      },
+      "overalls@nexus" : {
+         "location" : "WORN_BY:minion4",
+         "oflags" : [
+            "Wearable"
+         ],
+         "pname" : "overalls",
+         "name" : "overalls",
+         "examine" : "The word 'Hexnogon' is stamped on the lining.",
+         "desc[0]" : "A set of crumpled overalls lays in a pile of grease."
+      },
+      "aura@nexus" : {
+         "location" : "IN_ROOM:nexus65",
+         "armor" : "25",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "borealis",
+         "name" : "aura",
+         "examine" : "This mystical garment would fetch a hefty price in any marketplace.",
+         "pname" : "aurora",
+         "bvalue" : "500",
+         "desc[0]" : "Woven strands of the fluid dynamics of the borealis are here.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "leaves8@nexus" : {
+         "location" : "IN_ROOM:nexus36",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "leaves",
+         "name" : "leaves8"
+      },
+      "letter5@nexus" : {
+         "location" : "IN_ROOM:nexus48",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "letter",
+         "name" : "letter5",
+         "examine" : "You see the shape of an 't'.",
+         "desc[0]" : "An embroidered letter is here.",
+         "size" : "1"
+      },
+      "scales@nexus" : {
+         "location" : "WORN_BY:minion1",
+         "oflags" : [
+            "Wearable"
+         ],
+         "pname" : "scales",
+         "name" : "scales",
+         "examine" : "The word 'Skaraug' is stamped on the lining.",
+         "desc[0]" : "A set of orange scales lies encrusted with blood."
+      },
+      "chain@nexus" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:minion4",
+         "oflags" : [
+            "Weapon"
+         ],
+         "pname" : "chain",
+         "name" : "chain",
+         "examine" : "The word 'Hexnogon' is stamped on one link.",
+         "desc[0]" : "A heavily greased chain has caused many a welt."
+      },
+      "fuse@nexus" : {
+         "location" : "IN_ROOM:nexus72",
+         "pname" : "fuse",
+         "name" : "fuse",
+         "examine" : "Hell's Wire - a division of Cannonball Inc. Attach only after a\ncannonball has been loaded!",
+         "desc[0]" : "A length of fuse has been dropped here.",
+         "size" : "1"
+      },
+      "shell@nexus" : {
+         "location" : "WORN_BY:minion5",
+         "oflags" : [
+            "Wearable"
+         ],
+         "pname" : "shell",
+         "name" : "shell",
+         "examine" : "The word 'Riffraff' is stamped on the inside lip.",
+         "desc[0]" : "The cracked and broken shell of a fish is here."
+      },
+      "stump6@nexus" : {
+         "location" : "IN_ROOM:nexus32",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "stump",
+         "name" : "stump6",
+         "examine" : "Evidently, not of all this tree was cut down. Finish the job.",
+         "desc[0]" : "An ancient stump sits here, acting important."
+      },
+      "leaves5@nexus" : {
+         "location" : "IN_ROOM:nexus31",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "leaves",
+         "name" : "leaves5"
+      },
+      "ore5@nexus" : {
+         "desc[1]" : "The ore is black with the heavy oil on it.",
+         "location" : "IN_ROOM:nexus31",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "ore5",
+         "examine" : "It could either be made from an element or an alloy.",
+         "state" : "0",
+         "pname" : "ore",
+         "maxstate" : "1",
+         "desc[0]" : "A chunk of metallic ore is here, freshly dug up."
+      },
+      "stump4@nexus" : {
+         "location" : "IN_ROOM:nexus28",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "stump",
+         "name" : "stump4",
+         "examine" : "Evidently, not of all this tree was cut down. Finish the job.",
+         "desc[0]" : "An ancient stump sits here, acting important."
+      },
+      "block@nexus" : {
+         "location" : "IN_ROOM:nexus5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "block",
+         "name" : "block",
+         "examine" : "There is an irregular-shaped hole near the top.",
+         "desc[0]" : "A block of the same crystal as the plain stands here."
+      },
+      "copper@nexus" : {
+         "location" : "IN_ROOM:nexus23",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "element",
+         "pname" : "copper",
+         "name" : "copper",
+         "examine" : "Copper would not be welcomed by sultans or kings in any dimension.",
+         "desc[0]" : "A bright, shiny element is here."
+      },
+      "stump8@nexus" : {
+         "location" : "IN_ROOM:nexus36",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "stump",
+         "name" : "stump8",
+         "examine" : "Evidently, not of all this tree was cut down. Finish the job.",
+         "desc[0]" : "An ancient stump sits here, acting important."
+      },
+      "letter4@nexus" : {
+         "location" : "IN_ROOM:nexus45",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "letter",
+         "name" : "letter4",
+         "examine" : "You see the shape of an 'f'.",
+         "desc[0]" : "An embroidered letter is here.",
+         "size" : "1"
+      },
+      "brick@nexus" : {
+         "location" : "IN_ROOM:nexus48",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "brick",
+         "name" : "brick",
+         "desc[0]" : "One brick has come loose."
+      },
+      "desk@nexus" : {
+         "location" : "IN_ROOM:nexus14",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "desk",
+         "name" : "desk",
+         "desc[0]" : "A messy desk lies in front of you."
+      },
+      "baton@nexus" : {
+         "damage" : "3",
+         "location" : "WIELDED_BY:minion2",
+         "oflags" : [
+            "Weapon"
+         ],
+         "pname" : "baton",
+         "name" : "baton",
+         "examine" : "The word 'Maestro' is stamped on the side.",
+         "desc[0]" : "The baton of famous conductors is here."
+      },
+      "cake@nexus" : {
+         "location" : "IN_ROOM:nexus8",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "cake",
+         "pname" : "cheesecake",
+         "name" : "cake",
+         "examine" : "Eat me to return home.",
+         "bvalue" : "150",
+         "desc[0]" : "A slab of cheesecake is here."
+      },
+      "debris@nexus" : {
+         "location" : "IN_ROOM:nexus70",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "debris",
+         "name" : "debris",
+         "desc[0]" : "A small pile of debris from a once glorious cannon is neatly stacked here."
+      },
+      "net@nexus" : {
+         "location" : "IN_ROOM:nexus2",
+         "pname" : "net",
+         "name" : "net",
+         "examine" : "It's a new invention in this realm. Perhaps the old ways of fishing should\nbe replaced with this. Know anyone in need?",
+         "desc[0]" : "A large fishing net lays heaped up here.",
+         "size" : "10"
+      },
+      "oil@nexus" : {
+         "location" : "CARRIED_BY:ent",
+         "pname" : "oil",
+         "name" : "oil",
+         "examine" : "\nIt is an industrial fuel used often to burn away unwanted compounds from \nmined minerals, especailly those minerals that were previously encase in\nwood.",
+         "bvalue" : "50",
+         "desc[0]" : "A fresh can of oil stands here."
+      },
+      "leaves4@nexus" : {
+         "location" : "IN_ROOM:nexus28",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "leaves",
+         "name" : "leaves4"
+      },
+      "lock@nexus" : {
+         "location" : "IN_ROOM:nexus42",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "pname" : "lock",
+         "name" : "lock",
+         "examine" : "It is an industrial-strength lock."
+      },
+      "gate2@nexus" : {
+         "desc[1]" : "The rusty velvet gates are closed.",
+         "location" : "IN_ROOM:nexus13",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "gate2",
+         "desc[2]" : "The rusty velvet gates are locked.",
+         "linked" : "gate1",
+         "state" : "2",
+         "pname" : "gates",
+         "maxstate" : "2",
+         "desc[0]" : "The rusty velvet gates are open."
+      },
+      "berries@nexus" : {
+         "desc[1]" : "Here are berries ripe for the picking!",
+         "location" : "IN_ROOM:nexus30",
+         "oflags" : [
+            "Food",
+            "NoGet"
+         ],
+         "name" : "berries",
+         "examine" : "An odd assortment of blue and black.",
+         "state" : "1",
+         "size" : "4",
+         "pname" : "berries",
+         "maxstate" : "1",
+         "bvalue" : "40",
+         "desc[0]" : "Some berries have been dumped here."
+      },
+      "pelican@nexus" : {
+         "location" : "IN_ROOM:nexus38",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "pname" : "pelican",
+         "name" : "pelican",
+         "examine" : "The taxidermist left more than stuffing here.",
+         "desc[0]" : "A stately pelican with a pipe in its mouth stares sightlessly into the sea.",
+         "size" : "10"
+      },
+      "ore4@nexus" : {
+         "desc[1]" : "The ore is black with the heavy oil on it.",
+         "location" : "IN_ROOM:nexus28",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "ore4",
+         "examine" : "It could either be made from an element or an alloy.",
+         "state" : "0",
+         "pname" : "ore",
+         "maxstate" : "1",
+         "desc[0]" : "A chunk of metallic ore is here, freshly dug up."
+      },
+      "script@nexus" : {
+         "location" : "IN_ROOM:nexus48",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "script",
+         "name" : "script",
+         "desc[0]" : "This kind of writing puts all other script to shame.",
+         "size" : "2"
+      },
+      "mold@nexus" : {
+         "desc[1]" : "The mold has been haplessly scattered about so it can infect everything.",
+         "location" : "IN_ROOM:nexus18",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "mold",
+         "examine" : "A blistering green bubble of it grows more every year.",
+         "state" : "0",
+         "pname" : "mold",
+         "maxstate" : "1",
+         "desc[0]" : "A significant amount of mold grows here."
+      },
+      "disc@nexus" : {
+         "location" : "IN_ROOM:nexus18",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "disc",
+         "name" : "disc",
+         "examine" : "The Slicer - a division of Cannonball Inc.",
+         "desc[0]" : "A metallic disc resembling a frisbee stands free from rust here.",
+         "size" : "3"
+      },
+      "cannonball@nexus" : {
+         "desc[1]" : "There is an RNA strand attached to this cannonball.",
+         "location" : "IN_ROOM:nexus5",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "cannonball",
+         "examine" : "How uncool! This cannonball seems to have lost its helix and disc.",
+         "desc[2]" : "The disc on this cannonball makes it look like a flying saucer.",
+         "state" : "0",
+         "size" : "10",
+         "pname" : "cannonball",
+         "maxstate" : "2",
+         "desc[0]" : "A shiny cannonball lies on the ground."
+      },
+      "line@nexus" : {
+         "location" : "IN_ROOM:nexus72",
+         "pname" : "line",
+         "name" : "line",
+         "examine" : "Shorter lines would prove to be more efficient.",
+         "desc[0]" : "A mess of entangled fishing line lies here.",
+         "size" : "2"
+      },
+      "message@nexus" : {
+         "location" : "IN_ROOM:nexus72",
+         "pname" : "message",
+         "name" : "message",
+         "desc[0]" : "Some message sent by sea the old-fashioned way is here."
+      },
+      "torch@nexus" : {
+         "desc[1]" : "The torch flashes light everywhere.",
+         "location" : "IN_ROOM:nexus17",
+         "oflags" : [
+            "NoGet",
+            "Lightable",
+            "Extinguish"
+         ],
+         "name" : "torch",
+         "examine" : "Idiotic Torches - still wondering how to put them out!",
+         "state" : "0",
+         "pname" : "torch",
+         "maxstate" : "1",
+         "desc[0]" : "An ancient but servicable torch is strapped to the wall."
+      },
+      "door2@nexus" : {
+         "desc[1]" : "The heavy metal door is closed.",
+         "location" : "IN_ROOM:nexus69",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door2",
+         "examine" : "Welcome to my humble house of torture.",
+         "linked" : "door1",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The heavy metal door is open."
+      },
+      "letter2@nexus" : {
+         "location" : "CARRIED_BY:troutmonster",
+         "pname" : "letter",
+         "name" : "letter2",
+         "examine" : "You see the shape of an 'h'.",
+         "desc[0]" : "An embroidered letter is here.",
+         "size" : "1"
+      },
+      "stump2@nexus" : {
+         "location" : "IN_ROOM:nexus24",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "stump",
+         "name" : "stump2",
+         "examine" : "Evidently, not of all this tree was cut down. Finish the job.",
+         "desc[0]" : "An ancient stump sits here, acting important."
+      },
+      "sceptre@nexus" : {
+         "location" : "CARRIED_BY:rockqueen",
+         "pname" : "sceptre",
+         "name" : "sceptre",
+         "examine" : "I have the power to remove you from this domain if you treat me like a\nmagic wand.",
+         "bvalue" : "200",
+         "desc[0]" : "This regal sceptre, made almost entirely out of compressed granite, has been\nthe symbol of power for years for the locally-dwelling race of rocks.",
+         "size" : "5"
+      },
+      "cannon@nexus" : {
+         "desc[1]" : "A state-of-the-art and loaded cannon looks blankly toward a wall,\nfeeling a little defused.",
+         "location" : "IN_ROOM:nexus70",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "cannon",
+         "examine" : "Useless Junk Inc. - guaranteed to fail!",
+         "desc[2]" : "A state-of-the-art cannon is ready to kick some stately booty.",
+         "state" : "0",
+         "pname" : "cannon",
+         "maxstate" : "2",
+         "desc[0]" : "A state-of-the-art and unloaded cannon looks blankly toward a wall."
+      },
+      "elixir@nexus" : {
+         "location" : "IN_ROOM:nexus61",
+         "oflags" : [
+            "Food"
+         ],
+         "pname" : "elixir",
+         "name" : "elixir",
+         "examine" : "The small blue vial has an ethereal transluence swirling in it.",
+         "bvalue" : "150",
+         "desc[0]" : "An elixir of restorative-type properties is here.",
+         "size" : "3"
+      },
+      "stump5@nexus" : {
+         "location" : "IN_ROOM:nexus31",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "stump",
+         "name" : "stump5",
+         "examine" : "Evidently, not of all this tree was cut down. Finish the job.",
+         "desc[0]" : "An ancient stump sits here, acting important."
+      },
+      "stump3@nexus" : {
+         "location" : "IN_ROOM:nexus27",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "stump",
+         "name" : "stump3",
+         "examine" : "Evidently, not of all this tree was cut down. Finish the job.",
+         "desc[0]" : "An ancient stump sits here, acting important."
+      },
+      "mass@nexus" : {
+         "location" : "IN_ROOM:nexus70",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "mass",
+         "name" : "mass",
+         "examine" : "The perfect topping to any staff shaft.",
+         "desc[0]" : "A mass of an unknown material squats absently on the floor, humming\nto itself."
+      },
+      "sign@nexus" : {
+         "location" : "IN_ROOM:nexus69",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "sign",
+         "examine" : "\nFor all ye who would seek to enter the House of Quaron and confront Him, know\nye this:\n\n    &+WThe great master has no weaknesses, no secrets to hide, and no phobias,\n    &+Wwhether inherent or acquired.  He may only be contained by the charged\n    &+WNexus Staff.  Use a mystical cloth from the aurora borealis to increase\n    &+Wthe Nexus's power and capture his essence by using His favorite form of\n    &+Wtorture -  the emancipated and efficient &+rdraw, &+rquarter, and disembowel&*.\n    &+WTo save time, one must always abbreviate.  To escape from this realm, \n    &+Wone must possess the jewelrey of the master and successfully activate\n    &+Wthe power of His throne.\n\n&+wCory Deadhead - Assistant Back-up Waterghoul&*",
+         "desc[0]" : "A sign made of flowing human blood is here, its letters written in\nglowing red corpuscles."
+      },
+      "gold@nexus" : {
+         "location" : "IN_ROOM:nexus27",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "element",
+         "pname" : "gold",
+         "name" : "gold",
+         "examine" : "Gold would be gladly welcomed by sultans and kings in any dimension.",
+         "desc[0]" : "A bright, shiny element is here."
+      },
+      "rod@nexus" : {
+         "location" : "CARRIED_BY:fisherman",
+         "altname" : "pole",
+         "pname" : "rod",
+         "name" : "rod",
+         "examine" : "An inscription reads 'Perhaps you are hungry. Throw me out.'",
+         "desc[0]" : "A plain, wooden fishing pole lies here.",
+         "size" : "5"
+      },
+      "bed@nexus" : {
+         "location" : "IN_ROOM:nexus18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "bed",
+         "name" : "bed",
+         "desc[0]" : "A bed of rotting timbers is the furniture for one wall in this\ndecrepit chamber."
+      },
+      "leaves6@nexus" : {
+         "location" : "IN_ROOM:nexus32",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "leaves",
+         "name" : "leaves6"
+      },
+      "rake@nexus" : {
+         "damage" : "9",
+         "location" : "WIELDED_BY:minion5",
+         "oflags" : [
+            "Weapon"
+         ],
+         "pname" : "rake",
+         "name" : "rake",
+         "examine" : "The word 'Riffraff' is stamped on the side.",
+         "desc[0]" : "This garden rake has not been used on leaves before."
+      },
+      "nuts@nexus" : {
+         "desc[1]" : "Delectable nuts hang on nearby branches.",
+         "location" : "IN_ROOM:nexus34",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "nuts",
+         "state" : "1",
+         "size" : "4",
+         "pname" : "nuts",
+         "maxstate" : "1",
+         "bvalue" : "40",
+         "desc[0]" : "A pile of nuts is scattered here."
+      },
+      "throne@nexus" : {
+         "location" : "IN_ROOM:nexus71",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "pname" : "throne",
+         "name" : "throne",
+         "examine" : "\nFor dimensional travel, please submit one charged nexus while wearing\nappropriate attire.",
+         "desc[0]" : "A flaming throne made of bone well-dipped in adamantine is Quaron's\nfavorite chair. "
+      },
+      "mirror@nexus" : {
+         "location" : "IN_ROOM:nexus14",
+         "pname" : "mirror",
+         "name" : "mirror",
+         "examine" : "Nightmarish images of grues stare back at you as they brush their teeth.",
+         "bvalue" : "100",
+         "desc[0]" : "Partially broken, this mirror isn't worth much to a beautician.",
+         "size" : "5"
+      },
+      "leaves1@nexus" : {
+         "location" : "IN_ROOM:nexus23",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "leaves",
+         "name" : "leaves1"
+      },
+      "ore6@nexus" : {
+         "desc[1]" : "The ore is black with the heavy oil on it.",
+         "location" : "IN_ROOM:nexus32",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "ore6",
+         "examine" : "It could either be made from an element or an alloy.",
+         "state" : "0",
+         "pname" : "ore",
+         "maxstate" : "1",
+         "desc[0]" : "A chunk of metallic ore is here, freshly dug up."
+      },
+      "alloy3@nexus" : {
+         "location" : "IN_ROOM:nexus35",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "alloy",
+         "name" : "alloy3",
+         "examine" : "What good is this unless you wish to make a polymer of some kind?",
+         "desc[0]" : "A carbon-colored alloy is here."
+      },
+      "lnote@nexus" : {
+         "location" : "IN_CONTAINER:pelican",
+         "altname" : "paper",
+         "pname" : "note",
+         "name" : "lnote",
+         "examine" : "I have lost five letters from my new alphabet! HELP ME!\n  - Screwball\n",
+         "desc[0]" : "A piece of paper is here.",
+         "size" : "2"
+      },
+      "square@nexus" : {
+         "location" : "IN_ROOM:nexus19",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "square",
+         "name" : "square",
+         "examine" : "Find me four elements for my corners, from least to greatest value.",
+         "desc[0]" : "An intricately engraved square with perfect dimensions is in the rock."
+      },
+      "ore3@nexus" : {
+         "desc[1]" : "The ore is black with the heavy oil on it.",
+         "location" : "IN_ROOM:nexus27",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "ore3",
+         "examine" : "It could either be made from an element or an alloy.",
+         "state" : "0",
+         "pname" : "ore",
+         "maxstate" : "1",
+         "desc[0]" : "A chunk of metallic ore is here, freshly dug up."
+      },
+      "cairn@nexus" : {
+         "location" : "IN_ROOM:nexus48",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "cairn",
+         "name" : "cairn",
+         "size" : "15"
+      },
+      "letter1@nexus" : {
+         "location" : "IN_ROOM:nexus38",
+         "pname" : "letter",
+         "name" : "letter1",
+         "examine" : "You see the shape of an 's'.",
+         "desc[0]" : "An embroidered letter is here.",
+         "size" : "1"
+      },
+      "shaft@nexus" : {
+         "location" : "CARRIED_BY:screwball",
+         "pname" : "shaft",
+         "name" : "shaft",
+         "examine" : "The clamps on the top are designed to hold something.",
+         "bvalue" : "200",
+         "desc[0]" : "A glossy, serpentine shaft is here.",
+         "size" : "5"
+      },
+      "dustbunny@nexus" : {
+         "desc[1]" : "A dustbunny cooked to the proper temperature simmers here.",
+         "location" : "IN_ROOM:nexus17",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "dustbunny",
+         "examine" : "It seems outrageously tasty, but the castle law is that all wabbits must\nbe cooked thouroughly by an open flame.",
+         "state" : "0",
+         "size" : "3",
+         "pname" : "dustbunny",
+         "maxstate" : "1",
+         "desc[0]" : "A raw dustbunny of unusual size can cause major allergies."
+      },
+      "shard@nexus" : {
+         "location" : "IN_ROOM:nexus1",
+         "altname" : "piece",
+         "pname" : "shard",
+         "name" : "shard",
+         "examine" : "If you find the right hole, it might fit.",
+         "desc[0]" : "A piece of the plain has come loose.",
+         "size" : "4"
+      },
+      "stump7@nexus" : {
+         "location" : "IN_ROOM:nexus35",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "stump",
+         "name" : "stump7",
+         "examine" : "Evidently, not of all this tree was cut down. Finish the job.",
+         "desc[0]" : "An ancient stump sits here, acting important."
+      },
+      "fishhook@nexus" : {
+         "location" : "IN_ROOM:nexus38",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "hook",
+         "pname" : "fishhook",
+         "name" : "fishhook",
+         "examine" : "Yuck! Fish guts!",
+         "desc[0]" : "The stainless-steel, barbed hook is the lure of choice for many a fisher."
+      },
+      "ore8@nexus" : {
+         "desc[1]" : "The ore is black with the heavy oil on it.",
+         "location" : "IN_ROOM:nexus36",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "ore8",
+         "examine" : "It could either be made from an element or an alloy.",
+         "state" : "0",
+         "pname" : "ore",
+         "maxstate" : "1",
+         "desc[0]" : "A chunk of metallic ore is here, freshly dug up."
+      },
+      "ore1@nexus" : {
+         "desc[1]" : "The ore is black with the heavy oil on it.",
+         "location" : "IN_ROOM:nexus23",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "ore1",
+         "examine" : "It could either be made from an element or an alloy.",
+         "state" : "0",
+         "pname" : "ore",
+         "maxstate" : "1",
+         "desc[0]" : "A chunk of metallic ore is here, freshly dug up."
+      },
+      "ore2@nexus" : {
+         "desc[1]" : "The ore is black with the heavy oil on it.",
+         "location" : "IN_ROOM:nexus24",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "ore2",
+         "examine" : "It could either be made from an element or an alloy.",
+         "state" : "0",
+         "pname" : "ore",
+         "maxstate" : "1",
+         "desc[0]" : "A chunk of metallic ore is here, freshly dug up."
+      },
+      "buckle@nexus" : {
+         "location" : "WORN_BY:quaron",
+         "armor" : "5",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "buckle",
+         "examine" : "Even the leading banshees and ghouls of the underworld wouldn't touch \nthis thing.",
+         "pname" : "buckle",
+         "bvalue" : "500",
+         "aflags" : [
+            "Legs"
+         ],
+         "desc[0]" : "A symbol of ultimate torture has been rather violently removed from its\nprevious belt. The buckle is covered in drawings of souls."
+      },
+      "box@nexus" : {
+         "desc[1]" : "A valuable box here is tightly closed.",
+         "location" : "IN_ROOM:nexus42",
+         "desc[3]" : "A valuable box here is sealed with an immense lock.",
+         "oflags" : [
+            "NoGet",
+            "Destroyed",
+            "Container"
+         ],
+         "pname" : "box",
+         "name" : "box",
+         "maxstate" : "3",
+         "desc[0]" : "A valuable box here is open, exposing the velvet lining to the elements.",
+         "state" : "3"
+      },
+      "bones@nexus" : {
+         "desc[1]" : "Some bones from a thoroughly searched corpse lay scattered mindlessly.",
+         "location" : "IN_ROOM:nexus37",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "bones",
+         "name" : "bones",
+         "maxstate" : "1",
+         "desc[0]" : "A pile of bones with remnants of tattered flesh and clothing on it lies\nstuffed in a corner.",
+         "state" : "0"
+      },
+      "letter3@nexus" : {
+         "location" : "IN_CONTAINER:box",
+         "pname" : "letter",
+         "name" : "letter3",
+         "examine" : "You see the shape of an 'a'.",
+         "desc[0]" : "An embroidered letter is here.",
+         "size" : "1"
+      },
+      "ore7@nexus" : {
+         "desc[1]" : "The ore is black with the heavy oil on it.",
+         "location" : "IN_ROOM:nexus35",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "name" : "ore7",
+         "examine" : "It could either be made from an element or an alloy.",
+         "state" : "0",
+         "pname" : "ore",
+         "maxstate" : "1",
+         "desc[0]" : "A chunk of metallic ore is here, freshly dug up."
+      },
+      "alloy1@nexus" : {
+         "location" : "IN_ROOM:nexus31",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "alloy",
+         "name" : "alloy1",
+         "examine" : "What good is this unless you wish to make a polymer of some kind?",
+         "desc[0]" : "A carbon-colored alloy is here."
+      },
+      "helix@nexus" : {
+         "location" : "IN_ROOM:nexus14",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "helix",
+         "name" : "helix",
+         "examine" : "Cytometalloidic Life Thingies - a division of Cannonball Inc.",
+         "desc[0]" : "A helix reflects its golden, brassy light here.",
+         "size" : "4"
+      },
+      "gate1@nexus" : {
+         "desc[1]" : "The rusty velvet gates are closed.",
+         "location" : "IN_ROOM:nexus12",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "gate1",
+         "desc[2]" : "The rusty velvet gates are locked.",
+         "linked" : "gate2",
+         "state" : "2",
+         "pname" : "gates",
+         "maxstate" : "2",
+         "desc[0]" : "The rusty velvet gates are open."
+      },
+      "leaves3@nexus" : {
+         "location" : "IN_ROOM:nexus27",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "leaves",
+         "name" : "leaves3"
+      }
+   },
+   "loc" : {
+      "nexus32@nexus" : {
+         "exits" : {
+            "s" : "nexus30"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Alcove",
+         "id" : "nexus32",
+         "description" : "\n   A solid line of trunks around and branches above form a cozy shelter. \nAlthogh the solid wall of brown does not make a very attractive feature of \nthe forest, an enormous pile of &+Gleaves&* on the ground is bathed in the only \nlight which enters this area.\n",
+         "altitude" : null
+      },
+      "nexus53@nexus" : {
+         "exits" : {
+            "w" : "nexus52",
+            "s" : "nexus54"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Elbow of Lush Trail",
+         "id" : "nexus53",
+         "description" : "\n   Nestled in the outside corner of the trail is a broken tree, its trunk \ncrushed and splintered by a pounding force that once passed over this area. \nA small family of foxes, also multi-hued, now live inside the devastated \ntree. The trail leads to the beach to the west and comes to and end to the \nsouth. \n",
+         "altitude" : null
+      },
+      "nexus20@nexus" : {
+         "exits" : {
+            "w" : "nexus29",
+            "e" : "nexus21",
+            "u" : "nexus19",
+            "n" : "nexus33",
+            "s" : "nexus25"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Base of Some Rock",
+         "id" : "nexus20",
+         "description" : "\n   All around stand an inordinate amount of coniferous trees, their 'fruit' \nlining the ground from being blown off by recent storms. The undergrowth, \ncomposed of dry twigs and dead moss, crunches beneath the slightest pressure, \ngiving perhaps an unnecessary scare to the small animals scurrying around.\n",
+         "altitude" : null
+      },
+      "nexus44@nexus" : {
+         "exits" : {
+            "e" : "nexus45",
+            "w" : "nexus43"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Sandbar",
+         "id" : "nexus44",
+         "description" : "\n   The bar is more eroded here. Pits in the path fill up with and retain water\nas each wave passes. The beach lies a half mile to the west while an \nisland is eastward.\n",
+         "altitude" : null
+      },
+      "nexus36@nexus" : {
+         "exits" : {
+            "w" : "nexus34"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Alcove",
+         "id" : "nexus36",
+         "description" : "\n   A solid line of trunks around and branches above form a cozy shelter. \nAlthogh the solid wall of brown does not make a very attractive feature of\nthe forest, an enormous pile of &+Gleaves&* on the ground is bathed in the only \nlight which enters this area.\n",
+         "altitude" : null
+      },
+      "nexus68@nexus" : {
+         "exits" : {
+            "e" : "^door1",
+            "u" : "nexus67"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Magma Pond",
+         "id" : "nexus68",
+         "description" : "\n  The mad haze of red is all around with intermittent flashes of bright yellow\nflame. Magma swirls around in a slow circle, always kindling the destructive \npotential here as a sort of undeniable threat to surface dwellers. The bottom \nof the pond is made out of frozen and compressed adamantium, the one known \nmaterial which can resist any levels of heat save that of the sun itself. A \nstunning building made of the same material lies before one side of the pond,\nbooming ominously upwards into the redness of the pond.\n",
+         "altitude" : null
+      },
+      "nexus14@nexus" : {
+         "exits" : {
+            "w" : "nexus13"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Gatehouse",
+         "id" : "nexus14",
+         "description" : "\n   This is a small room set aside withing the castle walls for the resident \ngatekeeper of this castle. The room is well lit by verious floating globes \nat out-of-othe-way places. On a rack against one wall is displayed the \noccupant's personal armor and weapons. A small desk in one corner is covered \nin the daily reports and dispatches that constantly flow through this place, \nbut today, not one of the of the telegrams has even been opened and read.\n",
+         "altitude" : null
+      },
+      "nexus7@nexus" : {
+         "exits" : {
+            "n" : "nexus8",
+            "s" : "nexus6"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Crystal Plain",
+         "id" : "nexus7",
+         "description" : "\n   The mist closes in and around, obscuring vision to a few yards. It is a \nlow-lying, thick, purple fog in which streams of water vapor swirl in eddies \nand cause ghostly echoes off the crystalline rocks of the plain.\n",
+         "altitude" : null
+      },
+      "nexus21@nexus" : {
+         "exits" : {
+            "w" : "nexus20",
+            "n" : "nexus34",
+            "s" : "nexus22"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "The Silent Conifers",
+         "id" : "nexus21",
+         "description" : "\n   The trees form a full canopy, completely blocking out the sun. Only a few \ndim streams reflecting around allow the unaided eye to penetrate the  \notherwise darkened interior of this forest. Branches form at odd angles \nand threaten to poke the aforementioned eye out of an unsuspecting \ntraveler. There are numerous lichen lining the bark of the trees, eagerly \nbreathing in the natural essence of the forest. Tranquility is the order \nof the day as a quiet wind whistles through the tree tops. \n",
+         "altitude" : null
+      },
+      "nexus3@nexus" : {
+         "exits" : {
+            "e" : "nexus4",
+            "w" : "nexus2"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Crystal Plain",
+         "id" : "nexus3",
+         "description" : "\n   The mist closes in and around, obscuring vision to a few yards. It is a \nlow-lying, thick, purple fog in which streams of water vapor swirl in eddies \nand cause ghostly echoes off the crystalline rocks of the plain.\n",
+         "altitude" : null
+      },
+      "nexus15@nexus" : {
+         "exits" : {
+            "n" : "nexus16",
+            "s" : "nexus13"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Courtyard",
+         "id" : "nexus15",
+         "description" : "\n   A wide avenue of crystalline cobblestones leads down the heart of this \nplaza, circling a fountain of incredible artistic talent and branching at \nthat junction. Two small square edifices stand at the far corners of the \ncourtyard, made of solid crystal. There is a deep thrum coming from that \ndirection, vibrating the entire courtyard slightly.\n",
+         "altitude" : null
+      },
+      "nexus23@nexus" : {
+         "exits" : {
+            "w" : "nexus22"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Alcove",
+         "id" : "nexus23",
+         "description" : "\n   A solid line of trunks around and branches above form a cozy shelter. \nAlthogh the solid wall of brown does not make a very attractive feature of \nthe forest, an enormous pile of &+Gleaves&* on the ground is bathed in the only \nlight which enters this area.\n",
+         "altitude" : null
+      },
+      "nexus54@nexus" : {
+         "exits" : {
+            "n" : "nexus53"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Clearing",
+         "id" : "nexus54",
+         "description" : "\n   The trail has an endpoint here, stopping in a large, irregular-shaped \nclearing. The southern side, however, is blocked by a large wall. The wall \nis vertical and stretches far upwards, but is not sheer. Perhaps it could be \nscaled. \n",
+         "altitude" : null
+      },
+      "nexus1@nexus" : {
+         "exits" : {
+            "e" : "nexus2"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "The Crystal Plain",
+         "id" : "nexus1",
+         "description" : "\n   The swirling purple mist clears in this region of the plain, allowing \nvisibility to several hundred meters. Like the eyes of a hurricane, the sky \nabove is clear as well, giving view to the legions of cloud castles above,\neach floating on its own separate mounds of white fluffiness and ice \ncrystals. A soft wind rustles slivers of shattered and reflective crystal\nalong the ground and propels the clouds in the same direction. The sunlight\nthat does manage to pierce through the gloom is partly absorbed, partly \nreflected off the plain.\n",
+         "altitude" : null
+      },
+      "nexus34@nexus" : {
+         "exits" : {
+            "w" : "nexus33",
+            "e" : "nexus36",
+            "n" : "nexus35",
+            "s" : "nexus21"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "The Silent Conifers",
+         "id" : "nexus34",
+         "description" : "\n   The trees form a full canopy, completely blocking out the sun. Only a few \ndim streams reflecting around allow the unaided eye to penetrate the otherwise \ndarkened interior of this forest. Branches form at odd angles and threaten to \npoke the aforementioned eye out of an unsuspecting traveler. There are \nnumerous lichen lining the bark of the trees, eagerly breathing in the natural\nessence of the forest. Tranquility is the order of the day as a quiet wind \nwhistles through the tree tops.\n",
+         "altitude" : null
+      },
+      "nexus8@nexus" : {
+         "exits" : {
+            "n" : "nexus9",
+            "s" : "nexus7"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Crystal Plain",
+         "id" : "nexus8",
+         "description" : "\n   The fog is much less dense here than to the southwest and southeast. It \nallows more bright, yellow sunlight in, revealing the thin outlines of the \ncloud castles above. The wind has picked up considerably, driving the fog \nswirls faster and in tighter circles. To the north the plain continues as \nfar as the can see.\n",
+         "altitude" : null
+      },
+      "nexus9@nexus" : {
+         "exits" : {
+            "n" : "nexus10",
+            "s" : "nexus8"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Outdoors"
+         ],
+         "zone" : "nexus",
+         "title" : "Crystal Plain",
+         "id" : "nexus9",
+         "description" : "\n   Sunlight drives away the gloomy fog, showing the cloud castles in all their\nsplendid glory. They are quite close now, with the cloud bottoms a dark, \nfluffy white. A few birds native to the land, namely the Aqua Griffins, fly \nover the castles and land randomly on perches on the tops of towers. More of \ntheir kind zoom downwards to the ground to catch transparent fish from a \nstream which slices across the flat crystalline ground.\n",
+         "altitude" : null
+      },
+      "nexus67@nexus" : {
+         "exits" : {
+            "u" : "nexus66",
+            "d" : "nexus68"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Magma Pond",
+         "id" : "nexus67",
+         "description" : "\n  The mad haze of red is all around with intermittent flashes of bright yellow\nflame. Magma swirls around in a slow circle, always kindling the destructive \npotential here as a sort of undeniable threat to surface dwellers.\n",
+         "altitude" : null
+      },
+      "nexus69@nexus" : {
+         "exits" : {
+            "w" : "^door2",
+            "u" : "nexus70",
+            "d" : "nexus71"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "House of Minions",
+         "id" : "nexus69",
+         "description" : "\n   This is a place of residence without windows. The air is deathly still, and\neven the loudest scream from the tortured sous far above do not penetrate \nthese walls. Gargoyles are not lining the walls between the pictures of bad \nmoons rising, but rather portrayed on the floor running and being swallowed \nwhole by an army of nine-limbed horrors. Revulsion, insatiable hunger, and \ndisfigurement are the way of life here. \n",
+         "altitude" : null
+      },
+      "nexus41@nexus" : {
+         "exits" : {
+            "e" : "nexus40",
+            "w" : "nexus42"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Messy Beach",
+         "id" : "nexus41",
+         "description" : "\n  The shoreline is crammed full of foamy wtaer, which has brought and dumped \nover the aeons a rather tremendous amount of floatable debris. Empty shells of \ncrab, lobster, and mussel, rotting driftwood, and numerous species of seaweed \nlay strewn at irregular intervals. Not all is dead slowly petrifying, however, \nas twitchy movements in the shadows reveal the locations of some hidden nests \nof those who dwell in this intertidal zone. The usual sweet and salt smell of \nthe sea is coupled with the screeches of the gulls as they zoom overhead on \nthe sea breeze. \n",
+         "altitude" : null
+      },
+      "nexus63@nexus" : {
+         "exits" : {
+            "n" : "nexus64",
+            "s" : "nexus62"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark",
+            "Hot"
+         ],
+         "zone" : "nexus",
+         "title" : "Magma River",
+         "id" : "nexus63",
+         "description" : "\n   Pieces of ash and pumice buffet the bridge, which is quite transparent, \nallowing the image of one's feet dangling over a pit of death to become a \nreality. Deep-throated noises issue forth from the belching geysers far \nbelow, creating a hideous song. \n",
+         "altitude" : null
+      },
+      "nexus60@nexus" : {
+         "exits" : {
+            "n" : "nexus61",
+            "s" : "nexus59"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark",
+            "Hot"
+         ],
+         "zone" : "nexus",
+         "title" : "Magma River",
+         "id" : "nexus60",
+         "description" : "\n   Pieces of ash and pumice buffet the bridge, which is quite transparent, \nallowing the image of one's feet dangling over a pit of death to become a \nreality. Deep-throated noises issue forth from the belching geysers far  \nbelow, creating a hideous song. \n",
+         "altitude" : null
+      },
+      "nexus39@nexus" : {
+         "exits" : {
+            "n" : "nexus38",
+            "s" : "nexus40"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Messy Beach",
+         "id" : "nexus39",
+         "description" : "\n  The shoreline is crammed full of foamy wtaer, which has brought and dumped \nover the aeons a rather tremendous amount of floatable debris. Empty shells of\ncrab, lobster, and mussel, rotting driftwood, and numerous species of seaweed \nlay strewn at irregular intervals. Not all is dead slowly petrifying, however, \nas twitchy movements in the shadows reveal the locations of some hidden nests \nof those who dwell in this intertidal zone. The usual sweet and salt smell of \nthe sea is coupled with the screeches of the gulls as they zoom overhead on \nthe sea breeze. \n",
+         "altitude" : null
+      },
+      "nexus35@nexus" : {
+         "exits" : {
+            "s" : "nexus34"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Alcove",
+         "id" : "nexus35",
+         "description" : "\n   A solid line of trunks around and branches above form a cozy shelter. \nAlthogh the solid wall of brown does not make a very attractive feature of \nthe forest, an enormous pile of &+Gleaves&* on the ground is bathed in the only \nlight which enters this area.\n",
+         "altitude" : null
+      },
+      "nexus65@nexus" : {
+         "exits" : {
+            "d" : "nexus66",
+            "s" : "nexus64"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Molten Bank",
+         "id" : "nexus65",
+         "description" : "\n  The rocks closest to the river slowly melt into the river itself.  \nEventually, the river will encompass this whole area and beyond. Part of the \nbank has collapsed, allowing the flowing magma to fill in the resulting  \ncrater. It is now filled to the brim and maintained as a sort of bay.\n",
+         "altitude" : null
+      },
+      "nexus18@nexus" : {
+         "exits" : {
+            "w" : "nexus16"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Servants' Quarters",
+         "id" : "nexus18",
+         "description" : "\n   Three makeshift beds line separate walls of this drafty chamber, quite \nliterally rotting away to moldy splinters. A tattered knapsack on the ground \nprovides poorly-lit housing to a family of rats. Their squeaking matches the \nfrequency at which the incoming wind resonates a burnt-out lantern hanging on\na hook just inside the door. In one corner, a bucket with insides covered by \nbrown slime sits ensnared by a vine that snakes around the room. Behind it, an\nugly green lump of decay appears to be the capital of the mold civilization \nin here.\n",
+         "altitude" : null
+      },
+      "nexus62@nexus" : {
+         "exits" : {
+            "n" : "nexus63"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark",
+            "Hot"
+         ],
+         "zone" : "nexus",
+         "title" : "Magma River",
+         "id" : "nexus62",
+         "description" : "\n   One bank of the river is in sight at the limit of vision in this hellish \nplace, but a giant crack has occurred in the bridge. The crystal is warped \nand splintered, as if a giant, clawed hand had swept out. The distance is not \nso much that a running leap would fail.\n",
+         "altitude" : null
+      },
+      "nexus58@nexus" : {
+         "exits" : {
+            "n" : "nexus59"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Plane of Torture",
+         "id" : "nexus58",
+         "description" : "\n   Cries of anguish echo around as their sources writhe in unspeakable agony. \nSkin splits, muscles tear, and bones shatter and then dissolve as countless \nvictims of innumerable species are run through mercilessly again and again \nwith blades of boiling acid. They are manacled so that their backs suffer the \nburns of vertical columns of magma. Their attendants are hooded behemoths \nclad in flowing crimson robes, resembling only hulking masses silhouetted in \nthe red glaze of the molten rock. To the north lies a river of magma.\n",
+         "altitude" : null
+      },
+      "nexus51@nexus" : {
+         "exits" : {
+            "e" : "nexus52",
+            "s" : "nexus50"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Lush Trail",
+         "id" : "nexus51",
+         "description" : "\n   A flat trail leads up a slight slope towards the center of the island, \nlooking recently trailblazed. Shde is provided often from the gigantic fronds\nof the natural vegetation. On many leaves there are small holes where bugs \nhave eaten and empty cocoons where the rare tropical caterpillar has undergone\nits usual metamorphosis into a multi-hued butterfly. \n",
+         "altitude" : null
+      },
+      "nexus27@nexus" : {
+         "exits" : {
+            "n" : "nexus26"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Alcove",
+         "id" : "nexus27",
+         "description" : "\n   A solid line of trunks around and branches above form a cozy shelter. \nAlthogh the solid wall of brown does not make a very attractive feature of \nthe forest, an enormous pile of &+Gleaves&* on the ground is bathed in the only \nlight which enters this area.\n",
+         "altitude" : null
+      },
+      "nexus52@nexus" : {
+         "exits" : {
+            "w" : "nexus51",
+            "e" : "nexus53"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Lush Trail",
+         "id" : "nexus52",
+         "description" : "\n   A flat trail leads up a slight slope towards the center of the island, \nlooking recently trailblazed. Shde is provided often from the gigantic fronds \nof the natural vegetation. On many leaves there are small holes where bugs \nhave eaten and empty cocoons where the rare tropical caterpillar has \nundergone its usual metamorphosis into a multi-hued butterfly. \n",
+         "altitude" : null
+      },
+      "nexus47@nexus" : {
+         "exits" : {
+            "w" : "nexus46",
+            "n" : "nexus49",
+            "s" : "nexus48"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Island Beach",
+         "id" : "nexus47",
+         "description" : "\n   The southern portion of the beach approaches a plateau atop the cliffs. A \nhundred feet below, the sea is much more unforgiving than to the northwest. \nHigh, frothy waves smash with heavy impact against the jagged, volcanic rock \nbelow, forcing the sea anemonies and many critter to crawl into the porous \nrock surfaces for shelter. Survival in this evironment has been rather scarce \nsince the beginning of time due to the harsh conditions. \n",
+         "altitude" : null
+      },
+      "nexus49@nexus" : {
+         "exits" : {
+            "n" : "nexus50",
+            "s" : "nexus47"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Island Beach",
+         "id" : "nexus49",
+         "description" : "\n  A lushness of unsurpassed beauty, untouched by the hands of human progress, \ngreets the weay traveler. The fronds of ferns and palm trees blow gently in \nthe caressing wind. The beach here is devoid of debris except for small pieces\nof driftwood. \n",
+         "altitude" : null
+      },
+      "nexus70@nexus" : {
+         "exits" : {
+            "d" : "nexus69"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Attic",
+         "id" : "nexus70",
+         "description" : "\n   Someone has used this huge chamber as a junkyard for millenia, given the \namount of antique items in here. There is not much gold, silver, or jewelrey, \nbut one cabinet has a thousand small jars in it. The souls of all those \ncaptured by the demons of the Plane of Torture fly around endlessly in these \nencapsulated places, suffering as much astral agony as they do physical.\n",
+         "altitude" : null
+      },
+      "nexus19@nexus" : {
+         "exits" : {
+            "d" : "nexus20"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "NoMobiles"
+         ],
+         "zone" : "nexus",
+         "title" : "Top of Some Rock",
+         "id" : "nexus19",
+         "description" : "\n   The pores here pock-mark the sunny slopes of the rock down to its base. A \nfew white spots near the summit prove that some of the local birds have done \ntheir unwritten duty here. A set of stairs hand-carved into the side of the \nmassive stone provides a means of getting down.\n",
+         "altitude" : null
+      },
+      "nexus45@nexus" : {
+         "exits" : {
+            "e" : "nexus46",
+            "w" : "nexus44"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Sandbar",
+         "id" : "nexus45",
+         "description" : "\n   The crosswinds buffet the yard-wide strip of sand, pushing water over the \ntop of it as the waves crest. Bits of seaweed and other debris deposit \nthemselves nicely on the path. On either side, the sandy bottom slopes gently \ndownward, but the sea here islagoon-like and remains mainly under a fathom \ndeep. Manta rays turn their natural camoflauge on in an attempt to hide from \nthe sandbar travelers. \n",
+         "altitude" : null
+      },
+      "nexus38@nexus" : {
+         "exits" : {
+            "s" : "nexus39"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Messy Beach",
+         "id" : "nexus38",
+         "description" : "\n   The shoreline is crammed full of foamy water, which has brought and dumped \nover the aeons a rather tremendous amount of floatable debris. Empty shells of\ncrab, lobster, and mussel, rotting driftwood, and numerous species of seaweed\nlay strewn at ireegular intervals. Not all is dead slowly petrifying, however,\nas twitchy movements in the shadows reveal the locations of some hidden nests \nof those who dwell in this intertidal zone. The usual sweet and salt smell of \nthe sea is coupled with the screeches of the gulls as they zoom overhead on \nthe sea breeze. \n",
+         "altitude" : null
+      },
+      "nexus48@nexus" : {
+         "exits" : {
+            "n" : "nexus47"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Overlook",
+         "id" : "nexus48",
+         "description" : "\n   At 150 feet above the eroding rocks, the grassy tops of the cliffs rise to \na tapering point. Tropical birds fly at these lower altitudes, gliding on the \ncoastal breezes. Close to the edge, an ancinet &+Cbrick cairn&* stands for no \napparent useful reason. On its top tier lies a small, wooden idol - an \nartifact to some long-lost deity, perhaps. The grass around the cairn grows \nmore steadily compared to the rest of the plateau, where the weather \ncontinually gnaws away at the nutrients in the soil. \n",
+         "altitude" : null
+      },
+      "nexus61@nexus" : {
+         "exits" : {
+            "s" : "nexus60"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark",
+            "Hot"
+         ],
+         "zone" : "nexus",
+         "title" : "Magma River",
+         "id" : "nexus61",
+         "description" : "\n   One bank of the river is in sight at the limit of vision in this hellish \nplace, but a giant crack has occurred in the bridge. The crystal is warped \nand splintered, as if a giant, clawed hand had swept out. The distance is not \nso much that a running leap would fail.\n",
+         "altitude" : null
+      },
+      "nexus4@nexus" : {
+         "exits" : {
+            "e" : "nexus5",
+            "w" : "nexus3",
+            "n" : "nexus6"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Crystal Plain",
+         "id" : "nexus4",
+         "description" : "\n   The mist closes in and around, obscuring vision to a few yards. It is a \nlow-lying, thick, purple fog in which streams of water vapor swirl in eddies \nand cause ghostly echoes off the crystalline rocks of the plain.\n",
+         "altitude" : null
+      },
+      "nexus28@nexus" : {
+         "exits" : {
+            "e" : "nexus26"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Alcove",
+         "id" : "nexus28",
+         "description" : "\n   A solid line of trunks around and branches above form a cozy shelter. \nAlthogh the solid wall of brown does not make a very attractive feature of \nthe forest, an enormous pile of &+Gleaves&* on the ground is bathed in the only \nlight which enters this area.\n",
+         "altitude" : null
+      },
+      "nexus33@nexus" : {
+         "exits" : {
+            "e" : "nexus34",
+            "w" : "nexus30",
+            "s" : "nexus20"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "The Silent Conifers",
+         "id" : "nexus33",
+         "description" : "\n   The trees form a full canopy, completely blocking out the sun. Only a few \ndim streams reflecting around allow the unaided eye to penetrate the otherwise\ndarkened interior of this forest. Branches form at odd angles and threaten to \npoke the aforementioned eye out of an unsuspecting traveler. There are  \nnumerous lichen lining the bark of the trees, eagerly breathing in the natural\nessence of the forest. Tranquility is the order of the day as a quiet wind \nwhistles through the tree tops.\n",
+         "altitude" : null
+      },
+      "nexus29@nexus" : {
+         "exits" : {
+            "e" : "nexus20",
+            "n" : "nexus30",
+            "s" : "nexus26"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "The Silent Conifers",
+         "id" : "nexus29",
+         "description" : "\n   The trees form a full canopy, completely blocking out the sun. Only a few \ndim streams reflecting around allow the unaided eye to penetrate the otherwise\ndarkened interior of this forest. Branches form at odd angles and threaten to \npoke the aforementioned eye out of an unsuspecting traveler. There are \nnumerous lichen lining the bark of the trees, eagerly breathing in the \nnatural essence of the forest. Tranquility is the order of the day as a quiet\nwind whistles through the tree tops.\n",
+         "altitude" : null
+      },
+      "nexus11@nexus" : {
+         "exits" : {
+            "u" : "nexus12"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "On the Cloud",
+         "id" : "nexus11",
+         "description" : "\n   The rain producers provide a safe environment in which more about and \nalthough the altitude is great, there is no shortage of air. Tufts of white \nvapor swirl on all sides and bounce off the fate and walls of this particular \ncloud castle. From here, the edge of the clouds is visible as a frayed edge \nof ice crystals.\n",
+         "altitude" : null
+      },
+      "nexus13@nexus" : {
+         "exits" : {
+            "e" : "nexus14",
+            "n" : "nexus15",
+            "s" : "^gate2"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Portcullis",
+         "id" : "nexus13",
+         "description" : "\n   The wind creaks through the cross-hatches of the portcullis, flexing its \nrusty, moss-covered bars eerily back and forth. On the tips of the portcullis \nspikes is the blood of the mantle that were impaled in a decisive, but \nlong-forgotten battle. A gatehouse is to the east.\n",
+         "altitude" : null
+      },
+      "nexus64@nexus" : {
+         "exits" : {
+            "n" : "nexus65",
+            "s" : "nexus63"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark",
+            "Hot"
+         ],
+         "zone" : "nexus",
+         "title" : "Magma River",
+         "id" : "nexus64",
+         "description" : "\n   A narrow, crystalline bridge spans the river here, over a mile long in \nlength. Bubbles of methane and sulfur dioxide gas explode from the depths of \nit, occasionally splattering the bridge with bits of burning rock, fresh from\nthe mantle of this planet. \n",
+         "altitude" : null
+      },
+      "nexus71@nexus" : {
+         "exits" : {
+            "u" : "nexus69"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Basement of Flesh",
+         "id" : "nexus71",
+         "description" : "\n   The stench of death is comforting to this room. The walls are made out of \npulsing human flesh, slowly glowing and oozing with a fresh mixture of pus and\nblood. Standing next to each of these open sores is a giant black mosquito, \nits probiscus deeply embedded into the wound and body pulsing in sync with the\nwalls as it drinks its fill. At other spots, a shaggy-haired vampire rips away\nthe skin covering and pours grapefruit directly into the muscle, sloshing it \naround with its tongue before ramming the entire length of its six inch fangs \ninto the tear ecstatically. This room represents the heart of suffering, and \neach new wound means another victim added to the continuous torture. \n",
+         "altitude" : null
+      },
+      "nexus16@nexus" : {
+         "exits" : {
+            "e" : "nexus18",
+            "w" : "nexus17",
+            "s" : "nexus15"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Courtyard",
+         "id" : "nexus16",
+         "description" : "\n   The fountain gurgles with exceptionally clear water and provides some \nmeasure of life to this otherwise seemingly deserted castle. An intricate \nstructure of mermaids and fish are entwining around the central part of the \nfountain. From the mouths of the fish and the ears of the mermaids pour \nforth not only water, but a deep indigo effervesence which makes the water \nsizzle and explode into a thousand crystal sparks as it strikes the surface \nof the water. It then proceeds to cause the entire fountain to have hundreds \nof small streams of bubbles float from the the base of the fountain to the \ntop.\n",
+         "altitude" : null
+      },
+      "nexus6@nexus" : {
+         "exits" : {
+            "n" : "nexus7",
+            "s" : "nexus4"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Crystal Plain",
+         "id" : "nexus6",
+         "description" : "\n   The mist closes in and around, obscuring vision to a few yards. It is a \nlow-lying, thick, purple fog in which streams of water vapor swirl in eddies \nand cause ghostly echoes off the crystalline rocks of the plain.\n",
+         "altitude" : null
+      },
+      "nexus2@nexus" : {
+         "exits" : {
+            "e" : "nexus3",
+            "w" : "nexus1"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Crystal Plain",
+         "id" : "nexus2",
+         "description" : "\n   The mist closes in and around, obscuring vision to a few yards. It is a\nlow-lying, thick, purple fog in which streams of water vapor swirl in eddies\nand cause ghostly echoes off the crystalline rocks of the plain.\n",
+         "altitude" : null
+      },
+      "nexus56@nexus" : {
+         "exits" : {
+            "u" : "nexus57",
+            "d" : "nexus55"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "On the Wall",
+         "id" : "nexus56",
+         "description" : "\n  The ground lies far below, and the wall stretches on. The higher the  \naltitude, the more the crosswinds threaten. \n",
+         "altitude" : null
+      },
+      "nexus43@nexus" : {
+         "exits" : {
+            "e" : "nexus44",
+            "w" : "nexus40"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Sandbar",
+         "id" : "nexus43",
+         "description" : "\n   The crosswinds buffet the yard-wide strip of sand, pushing water over the \ntop of it as the waves crest. Bits of seaweed and other debris deposit \nthemselves nicely on the path. On either side, the sandy bottom slopes gently \ndownward, but the sea here is lagoon-like and remains mainly under a fathom \ndeep. Manta rays turn their natural camoflauge on in an attempt to hide from \nthe sandbar travelers. \n",
+         "altitude" : null
+      },
+      "nexus17@nexus" : {
+         "exits" : {
+            "e" : "nexus16"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Storage Room",
+         "id" : "nexus17",
+         "description" : "\n   This is a small square cell in which the inhabitants of this castle put \nsome of their junk in. The floor is coated with several inches of dust and \ndirt, and broken furniture is thrown into a large pile in the corner, \ndestined to mold for all time. A large wicker torch has been tightly strapped \nto one wall, like a punishment.\n",
+         "altitude" : null
+      },
+      "nexus25@nexus" : {
+         "exits" : {
+            "w" : "nexus26",
+            "e" : "nexus22",
+            "n" : "nexus20"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "The Silent Conifers",
+         "id" : "nexus25",
+         "description" : "\n   The trees form a full canopy, completely blocking out the sun. Only a few\ndim streams reflecting around allow the unaided eye to penetrate the otherwise\ndarkened interior of this forest. Branches form at odd angles and threaten to \npoke the aforementioned eye out of an unsuspecting traveler. There are \nnumerous lichen lining the bark of the trees, eagerly breathing in the \nnatural essence of the forest. Tranquility is the order of the day as a quiet \nwind whistles through the tree tops.\n",
+         "altitude" : null
+      },
+      "nexus66@nexus" : {
+         "exits" : {
+            "u" : "nexus65",
+            "d" : "nexus67"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Magma Pond",
+         "id" : "nexus66",
+         "description" : "\n  The mad haze of red is all around with intermittent flashes of bright yellow\nflame. Magma swirls around in a slow circle, always kindling the destructive \npotential here as a sort of undeniable threat to surface dwellers.\n",
+         "altitude" : null
+      },
+      "nexus12@nexus" : {
+         "exits" : {
+            "n" : "^gate1",
+            "d" : "nexus11"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Castle Gates",
+         "id" : "nexus12",
+         "description" : "\n   Frozen, white, crysalline statues of former rulers in bold poses cross \ntheir stern gazes at the staircase, daring any of those who wish entry to \nthe castle to prove their worth. The gates themselves are lines with a velvet \ncoating and adorned with brass buttons, where each button is forged under \ndeep heat and emblazoned with this castle's coat-of-arms. The walls of the \ncastle are extremely tall and sheer, appearing to be almpst made out of the \nsame material as that of the far-below pain. Any attempt by besiegers to \nscale the castle would end in hundreds of broken bones.\n",
+         "altitude" : null
+      },
+      "nexus59@nexus" : {
+         "exits" : {
+            "n" : "nexus60",
+            "s" : "nexus58"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark",
+            "Hot"
+         ],
+         "zone" : "nexus",
+         "title" : "Magma River",
+         "id" : "nexus59",
+         "description" : "\n   A narrow, crystalline bridge spans the river here, over a mile long in \nlength. Bubbles of methane and sulfur dioxide gas explode from the depths of \nit, occasionally splattering the bridge with bits of burning rock, fresh from \nthe mantle of this planet. \n",
+         "altitude" : null
+      },
+      "nexus5@nexus" : {
+         "exits" : {
+            "w" : "nexus4"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Crystal Plain",
+         "id" : "nexus5",
+         "description" : "\n   The swirling purple fog reveals a solid wall of crystal nearby, the \ndifferent angles of rocks reflecting images of other walls surrounding this\narea on three sides. This crystal canyon has no major special features save \nthat of a mount of white quartz near the back wall. It is of an odd color of \nwhite and being slowly eroded away by the fog and time. The wind picks up \nwithin this canyone as the air currents high up above force the air downwards.\n",
+         "altitude" : null
+      },
+      "nexus46@nexus" : {
+         "exits" : {
+            "e" : "nexus47",
+            "w" : "nexus45"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Island Beach",
+         "id" : "nexus46",
+         "description" : "\n   A lushness of unsurpassed beauty, untouched by the hands of human progress,\ngreets the weay traveler. The fronds of ferns and palm trees blow gently in \nthe caressing wind. The beach here is devoid of debris except for small pieces\nof driftwood. \n",
+         "altitude" : null
+      },
+      "nexus50@nexus" : {
+         "exits" : {
+            "n" : "nexus51",
+            "s" : "nexus49"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Island Beach",
+         "id" : "nexus50",
+         "description" : "\n   The beach narrows here; the sea coming close to the island's greenery. The \nsea bottom also begins to plunge down at a faster pace, and the waves are \nhigher. To the south the beach opens up into a wide expanse, while the north \ncardinal features the entrance to a trail.\n",
+         "altitude" : null
+      },
+      "nexus24@nexus" : {
+         "exits" : {
+            "n" : "nexus22"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Alcove",
+         "id" : "nexus24",
+         "description" : "\n   A solid line of trunks around and branches above form a cozy shelter. \nAlthogh the solid wall of brown does not make a very attractive feature of \nthe forest, an enormous pile of &+Gleaves&* on the ground is bathed in the only \nlight which enters this area.\n",
+         "altitude" : null
+      },
+      "nexus31@nexus" : {
+         "exits" : {
+            "e" : "nexus30"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Alcove",
+         "id" : "nexus31",
+         "description" : "\n   A solid line of trunks around and branches above form a cozy shelter. \nAlthogh the solid wall of brown does not make a very attractive feature of \nthe forest, an enormous pile of &+Gleaves&* on the ground is bathed in the only \nlight which enters this area.\n",
+         "altitude" : null
+      },
+      "nexus40@nexus" : {
+         "exits" : {
+            "e" : "nexus43",
+            "w" : "nexus41",
+            "n" : "nexus39"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Corner of the Beach",
+         "id" : "nexus40",
+         "description" : "\n   The beach extends to the west and north &*from here; the northern cliffs \nfading into the distance. The tide washes in a line to the south, but a \ncurious turn of nature has arisen to the east. There the water is extremely \nshallow, and the sea bottom rises up to form a long sandbar.\n",
+         "altitude" : null
+      },
+      "nexus26@nexus" : {
+         "exits" : {
+            "w" : "nexus28",
+            "e" : "nexus25",
+            "n" : "nexus29",
+            "s" : "nexus27"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "The Silent Conifers",
+         "id" : "nexus26",
+         "description" : "\n   The trees form a full canopy, completely blocking out the sun. Only a few \ndim streams reflecting around allow the unaided eye to penetrate the otherwise\ndarkened interior of this forest. Branches form at odd angles and threaten to \npoke the aforementioned eye out of an unsuspecting traveler. There are \nnumerous lichen lining the bark of the trees, eagerly breathing in the \nnatural essence of the forest. Tranquility is the order of the day as a quiet \nwind whistles through the tree tops.\n",
+         "altitude" : null
+      },
+      "nexus10@nexus" : {
+         "exits" : {
+            "s" : "nexus9"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Crystal Plain",
+         "id" : "nexus10",
+         "description" : "\n   The clouds now only allow sporadic sunbeams to strike the ground as the \nrays of ultraviolet radiation desperately attempt to weave through the maze \nof white fluffiness. However, slivers of crystal and small shards are whisked\naway from the plain and shot up into the atmosphere by mysterious forces. \nEffortlessly, the crystal fragments are inexorably drawn into the cloud \nbottoms, where they vanish from view. All around the plain seems to be \ndistorted slightly - the crystals warping, or maybe that is a trick of the \nsunlight.\n",
+         "altitude" : null
+      },
+      "nexus42@nexus" : {
+         "exits" : {
+            "e" : "nexus41"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Messy Beach",
+         "id" : "nexus42",
+         "description" : "\n  The shoreline is crammed full of foamy wtaer, which has brought and dumped \nover the aeons a rather tremendous amount of floatable debris. Empty shells of\ncrab, lobster, and mussel, rotting driftwood, and numerous species of seaweed \nlay strewn at irregular intervals. Not all is dead slowly petrifying, however,\nas twitchy movements in the shadows reveal the locations of some hidden nests \nof those who dwell in this intertidal zone. The usual sweet and salt smell of \nthe sea is coupled with the screeches of the gulls as they zoom overhead on \nthe sea breeze. \n",
+         "altitude" : null
+      },
+      "nexus55@nexus" : {
+         "exits" : {
+            "u" : "nexus56",
+            "d" : "nexus54"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "On the Wall",
+         "id" : "nexus55",
+         "description" : "\n   The ground lies far below, and the wall stretches on. The higher the \naltitude, the more the crosswinds threaten.\n",
+         "altitude" : null
+      },
+      "nexus72@nexus" : {
+         "exits" : {},
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Death"
+         ],
+         "zone" : "nexus",
+         "title" : "&+RMishappen Void",
+         "id" : "nexus72",
+         "description" : "\n   This is the holding place of some nexus zone material.\n",
+         "altitude" : null
+      },
+      "nexus57@nexus" : {
+         "exits" : {
+            "d" : "nexus56"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "Top of the Wall",
+         "id" : "nexus57",
+         "description" : "\n   Five hundred feet separate the ground and top of this wall. The wind speed \nresembles that of the jet stream itself, powerfully whipping across the flat \nwidth of the top of the wall. On one side there is a spectacular view of the \nisland, but on the other, a very dark abyss exists. Even the light of the \nnoontime sun cannot make a dent in this bottomless shadow. \n",
+         "altitude" : null
+      },
+      "nexus30@nexus" : {
+         "exits" : {
+            "w" : "nexus31",
+            "e" : "nexus33",
+            "n" : "nexus32",
+            "s" : "nexus29"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "The Silent Conifers",
+         "id" : "nexus30",
+         "description" : "\n   The trees form a full canopy, completely blocking out the sun. Only a few\ndim streams reflecting around allow the unaided eye to penetrate the otherwise\ndarkened interior of this forest. Branches form at odd angles and threaten to \npoke the aforementioned eye out of an unsuspecting traveler. There are \nnumerous lichen lining the bark of the trees, eagerly breathing in the \nnatural essence of the forest. Tranquility is the order of the day as a \nquiet wind whistles through the tree tops. \n",
+         "altitude" : null
+      },
+      "nexus22@nexus" : {
+         "exits" : {
+            "w" : "nexus25",
+            "e" : "nexus23",
+            "n" : "nexus21",
+            "s" : "nexus24"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon"
+         ],
+         "zone" : "nexus",
+         "title" : "The Silent Conifers",
+         "id" : "nexus22",
+         "description" : "\n   The trees form a full canopy, completely blocking out the sun. Only a few \ndim streams reflecting around allow the unaided eye to penetrate the otherwise\ndarkened interior of this forest. Branches form at odd angles and threaten to \npoke the aforementioned eye out of an unsuspecting traveler. There are \nnumerous lichen lining the bark of the trees, eagerly breathing in the natural\nessence of the forest. Tranquility is the order of the day as a quiet wind \nwhistles through the tree tops. \n",
+         "altitude" : null
+      },
+      "nexus37@nexus" : {
+         "exits" : {
+            "s" : "nexus19"
+         },
+         "flags" : [
+            "Soundproof",
+            "OnePerson",
+            "NoAt",
+            "CantSummon",
+            "Dark"
+         ],
+         "zone" : "nexus",
+         "title" : "Groove in Some Rock",
+         "id" : "nexus37",
+         "description" : "\n   This is a deep depression in the side of the rock, situated on the leeward \nside. The smoothness and cuvature of the groove suggests that the effects of \nerosion have occurred more slowly than usual, as there are no signs of cracks \nor water leakage. Some droppings and bones lay inside the fissure, awaiting \nthe old ally of decomposition - time. \n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "quaron@nexus" : {
+         "damage" : "99",
+         "location" : "nexus71",
+         "armor" : "99",
+         "name" : "quaron",
+         "description" : "The demon lord Quaron awaits his next slave.",
+         "strength" : "9999",
+         "speed" : "0",
+         "pname" : "Quaron",
+         "aggression" : "0",
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "swarm@nexus" : {
+         "damage" : "14",
+         "location" : "nexus20",
+         "armor" : "0",
+         "name" : "swarm",
+         "description" : "A swarm of gnats buzzes angrily around you.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "90",
+         "speed" : "75",
+         "aggression" : "100",
+         "pname" : "Swarm",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "minion4@nexus" : {
+         "damage" : "17",
+         "location" : "nexus72",
+         "armor" : "0",
+         "name" : "minion4",
+         "description" : "The maintainence man of torture is going to grease his machines with you. \nHexnogon adjusts his tool belt and sneers at you.",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "Hexnogon",
+         "aggression" : "100",
+         "mflags" : [
+            "BarDown",
+            "BarUp",
+            "BarWest"
+         ]
+      },
+      "fisherman@nexus" : {
+         "location" : "nexus16",
+         "name" : "fisherman",
+         "description" : "A fisherman tries out his new pole and curses his ill luck.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Fisherman",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoSteal",
+            "NoMagic"
+         ]
+      },
+      "bagofwind@nexus" : {
+         "location" : "nexus72",
+         "name" : "bagofwind",
+         "description" : "A large airhead floats before you, full of useless wisdom.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Bag O Wind",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoSteal",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "NoCorpse",
+            "Flyer"
+         ]
+      },
+      "deer@nexus" : {
+         "damage" : "12",
+         "location" : "nexus20",
+         "armor" : "1",
+         "name" : "deer",
+         "description" : "A well-muscled deer whips by you.",
+         "strength" : "300",
+         "speed" : "25",
+         "pname" : "Deer",
+         "aggression" : "10"
+      },
+      "fatbird@nexus" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "6",
+         "location" : "nexus20",
+         "armor" : "0",
+         "name" : "fatbird",
+         "description" : "A rather fat bird attempts to poke your eyes out!",
+         "strength" : "50",
+         "speed" : "40",
+         "aggression" : "80",
+         "pname" : "Fatbird",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "snake2@nexus" : {
+         "damage" : "11",
+         "location" : "nexus7",
+         "armor" : "7",
+         "name" : "snake2",
+         "description" : "A crystalline snake attempts to serrate you quite painfully.",
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Snake",
+         "aggression" : "100"
+      },
+      "mosquitoes@nexus" : {
+         "damage" : "7",
+         "location" : "nexus20",
+         "armor" : "0",
+         "name" : "mosquitoes",
+         "description" : "A swarm of mosquitoes quickly sink their shnozzes into you.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "130",
+         "speed" : "65",
+         "aggression" : "100",
+         "pname" : "The Mosquitoes",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "crab@nexus" : {
+         "damage" : "9",
+         "location" : "nexus45",
+         "armor" : "1",
+         "name" : "crab",
+         "description" : "A crab crawls across the ground, attemping to nab your toe!",
+         "strength" : "78",
+         "speed" : "15",
+         "pname" : "Crab",
+         "aggression" : "50"
+      },
+      "troutmonster@nexus" : {
+         "damage" : "15",
+         "location" : "nexus72",
+         "armor" : "5",
+         "name" : "troutmonster",
+         "description" : "Never fear! Troutmonster and all its teeth are here!",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "Troutmonster",
+         "aggression" : "100"
+      },
+      "fox@nexus" : {
+         "damage" : "8",
+         "location" : "nexus20",
+         "armor" : "0",
+         "name" : "fox",
+         "description" : "This quick &+Bblue &*fox couldn't jump if it wanted to.",
+         "strength" : "150",
+         "speed" : "30",
+         "pname" : "Fox",
+         "aggression" : "0"
+      },
+      "snake1@nexus" : {
+         "damage" : "10",
+         "location" : "nexus3",
+         "armor" : "10",
+         "name" : "snake1",
+         "description" : "A crystalline snake attempts to serrate you quite painfully.",
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "80",
+         "speed" : "0",
+         "pname" : "Snake",
+         "aggression" : "100"
+      },
+      "screwball@nexus" : {
+         "damage" : "0",
+         "location" : "nexus57",
+         "name" : "screwball",
+         "description" : "A lanky Screwball failing at life is here.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Screwball",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic",
+            "NoSteal"
+         ]
+      },
+      "minion2@nexus" : {
+         "damage" : "11",
+         "location" : "nexus72",
+         "armor" : "0",
+         "name" : "minion2",
+         "description" : "The decomposing conductor Maestro waves his baton at you.",
+         "strength" : "175",
+         "speed" : "0",
+         "pname" : "Maestro",
+         "aggression" : "100",
+         "mflags" : [
+            "BarDown",
+            "BarWest",
+            "BarUp",
+            "NoCorpse"
+         ]
+      },
+      "minion5@nexus" : {
+         "damage" : "20",
+         "location" : "nexus72",
+         "armor" : "0",
+         "name" : "minion5",
+         "description" : "\nAn aquamarine-skinned spawn of the deep, Riffraff, is here to defend\nits master.",
+         "strength" : "275",
+         "speed" : "0",
+         "pname" : "Riffraff",
+         "aggression" : "100",
+         "mflags" : [
+            "BarDown",
+            "BarUp",
+            "BarWest"
+         ]
+      },
+      "lobster@nexus" : {
+         "damage" : "10",
+         "location" : "nexus45",
+         "armor" : "3",
+         "name" : "lobster",
+         "description" : "A rather symmetrical lobster crawls across the ground.",
+         "strength" : "100",
+         "speed" : "5",
+         "pname" : "Lobster",
+         "aggression" : "20"
+      },
+      "minion3@nexus" : {
+         "damage" : "14",
+         "location" : "nexus72",
+         "armor" : "5",
+         "name" : "minion3",
+         "description" : "Alberto the wind spirit is going to huff and puff and blow you down!",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "100",
+         "pname" : "Alberto",
+         "mflags" : [
+            "BarDown",
+            "BarWest",
+            "BarUp",
+            "NoCorpse"
+         ]
+      },
+      "skeleton@nexus" : {
+         "damage" : "9",
+         "location" : "nexus14",
+         "armor" : "3",
+         "name" : "skeleton",
+         "description" : "Slurking about is a skeleton with a still-beating heart.",
+         "strength" : "135",
+         "speed" : "10",
+         "pname" : "Skeleton",
+         "aggression" : "10",
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "chipmunk2@nexus" : {
+         "damage" : "7",
+         "location" : "nexus20",
+         "armor" : "0",
+         "name" : "chipmunk2",
+         "description" : "Renwad the chipmunk somersaults down a nearby tree.",
+         "strength" : "70",
+         "speed" : "46",
+         "pname" : "Renwad",
+         "aggression" : "100"
+      },
+      "chipmunk1@nexus" : {
+         "damage" : "6",
+         "location" : "nexus20",
+         "armor" : "0",
+         "name" : "chipmunk1",
+         "description" : "Klathox the chipmunk has gone rabid in his senility.",
+         "strength" : "55",
+         "speed" : "50",
+         "pname" : "Klathox",
+         "aggression" : "100"
+      },
+      "minion1@nexus" : {
+         "damage" : "8",
+         "location" : "nexus69",
+         "armor" : "10",
+         "name" : "minion1",
+         "description" : "One of Quaron's minions, a scaly, orange reptile, has decided to pay \nyou a visit. Skaraug has determined your livingness is just plain wrong.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Skaraug",
+         "aggression" : "0"
+      },
+      "wizardess@nexus" : {
+         "eflags" : [
+            "Frost",
+            "Missile"
+         ],
+         "damage" : "10",
+         "location" : "nexus36",
+         "armor" : "0",
+         "name" : "wizardess",
+         "description" : "A wizardess of the earth tries to become one with nature.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Wizardess"
+      },
+      "whale@nexus" : {
+         "eflags" : [
+            "ImmBhands",
+            "ImmFireball",
+            "FearIceStorm"
+         ],
+         "damage" : "20",
+         "location" : "nexus67",
+         "armor" : "0",
+         "name" : "whale",
+         "description" : "The shadow of a bulky whale looms over you.",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "20",
+         "pname" : "Magma Whale",
+         "mflags" : [
+            "BarDown"
+         ]
+      },
+      "snake3@nexus" : {
+         "damage" : "15",
+         "location" : "nexus10",
+         "armor" : "10",
+         "name" : "snake3",
+         "description" : "A thick crystalline snake attempts to sleep soundly.",
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "800",
+         "speed" : "0",
+         "pname" : "Snake",
+         "aggression" : "0"
+      },
+      "slug@nexus" : {
+         "damage" : "14",
+         "location" : "nexus50",
+         "armor" : "0",
+         "name" : "slug",
+         "description" : "There is a slug of inordinate size here. It is immune to salt.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "300",
+         "speed" : "2",
+         "pname" : "Slug",
+         "aggression" : "70"
+      },
+      "minnow@nexus" : {
+         "eflags" : [
+            "ImmBhands",
+            "ImmFireball",
+            "FearIcestorm"
+         ],
+         "damage" : "10",
+         "location" : "nexus66",
+         "armor" : "0",
+         "name" : "minnow",
+         "description" : "A small minnow made out of pure molten rock swims toward you.",
+         "strength" : "110",
+         "speed" : "0",
+         "aggression" : "70",
+         "pname" : "Magma Minnow",
+         "mflags" : [
+            "BarDown"
+         ]
+      },
+      "moldy@nexus" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "8",
+         "location" : "nexus72",
+         "armor" : "0",
+         "name" : "moldy",
+         "description" : "The thick arms of Mold Monster attempt to rot your pristine throat.",
+         "strength" : "220",
+         "speed" : "0",
+         "pname" : "Mold Monster",
+         "aggression" : "95"
+      },
+      "ent@nexus" : {
+         "damage" : "15",
+         "location" : "nexus20",
+         "armor" : "9",
+         "name" : "ent",
+         "description" : "One tree is very out of place here. Redwood Ent stands defiantly.",
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Redwood Ent",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "rockqueen@nexus" : {
+         "damage" : "13",
+         "location" : "nexus37",
+         "armor" : "10",
+         "name" : "rockqueen",
+         "description" : "Grand Poomba Rockqueen of the rock stares sullenly at your mug.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "50",
+         "pname" : "Rockqueen",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "bee@nexus" : {
+         "damage" : "12",
+         "location" : "nexus20",
+         "armor" : "0",
+         "name" : "bee",
+         "description" : "Words fail as you spot a bloated bee.",
+         "strength" : "190",
+         "speed" : "75",
+         "pname" : "Bloated Bee",
+         "aggression" : "100",
+         "mflags" : [
+            "Flyer"
+         ]
+      }
+   }
+}

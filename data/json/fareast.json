@@ -52,6 +52,21 @@
          "bvalue" : "10",
          "desc[0]" : "A filetted fish is here, wrapped in rice paper."
       },
+      "sorca@fareast" : {
+         "location" : "IN_ROOM:temple3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "volume",
+         "name" : "sorca",
+         "examine" : "\nThis ancient language has been taught to the students initated into the\nmartial arts of combat.  After careful reading, you feel capable of speaking\nthis language as proficent as your native language.",
+         "size" : "0",
+         "state" : "0",
+         "pname" : "sign",
+         "weight" : "0",
+         "maxstate" : "0",
+         "desc[0]" : "A volume on the language of Sorca rests on the table."
+      },
       "splittoed@fareast" : {
          "location" : "IN_ROOM:curseisland2",
          "oflags" : [
@@ -76,7 +91,7 @@
       "piece@fareast" : {
          "location" : "IN_CONTAINER:goboard",
          "oflags" : [
-            "Lit",
+            "Glowing",
             "Key"
          ],
          "altname" : "token",
@@ -418,21 +433,6 @@
             "Arms"
          ],
          "desc[0]" : "A saffron priest's robe lies here."
-      },
-      "disclaimer@fareast" : {
-         "location" : "IN_ROOM:shoreline",
-         "oflags" : [
-            "NoGet"
-         ],
-         "altname" : "sign",
-         "name" : "disclaimer",
-         "examine" : "\nThe sign is a disclaimer:  This zone is intended entirely for entertainment\npurposes.  No disrespect of the cultures and peoples it borrows from is \nintended, and in fact, where possible, the names and places are intended to \nhonor mythologies and cultures I admire but do not have the time or space to \naccurately and fully represent.  Thank you.  _Egral N._",
-         "size" : "0",
-         "state" : "0",
-         "pname" : "sign",
-         "weight" : "0",
-         "maxstate" : "0",
-         "desc[0]" : "A carved stone sign rises from the waves, atop a pillar."
       },
       "taper@fareast" : {
          "desc[1]" : "\nA lit candle burns on the altar, casting shimmering light on your face.",
@@ -2211,6 +2211,21 @@
             "BarSouth"
          ]
       },
+      "ryu@fareast" : {
+         "eflags" : [
+            "Fireball"
+         ],
+         "damage" : "8",
+         "location" : "village3",
+         "armor" : "10",
+         "name" : "Ryu",
+         "examine" : "\nRyu was a contender in his younger days, but now could be defeated \n        even by you.",
+         "description" : "The aging street fighter, Ryu Haohmasa, is here.",
+         "strength" : "80",
+         "speed" : "5",
+         "pname" : "Ryu",
+         "aggression" : "33"
+      },
       "shaolin@fareast" : {
          "damage" : "8",
          "location" : "temple1",
@@ -2311,12 +2326,6 @@
          ]
       },
       "larva@fareast" : {
-         "eflags" : [
-            "ImmCripple",
-            "ImmBlind",
-            "ImmMute",
-            "ImmDeaf"
-         ],
          "damage" : "10",
          "location" : "cherorchcent",
          "armor" : "10",
@@ -2326,7 +2335,10 @@
          "strength" : "150",
          "speed" : "0",
          "pname" : "Larva",
-         "aggression" : "0"
+         "aggression" : "0",
+         "pflags" : [
+            "NoMagic"
+         ]
       },
       "aikuchi@fareast" : {
          "damage" : "15",
@@ -2436,12 +2448,6 @@
          "aggression" : "33"
       },
       "dummy@fareast" : {
-         "eflags" : [
-            "ImmCripple",
-            "ImmBlind",
-            "ImmMute",
-            "ImmDeaf"
-         ],
          "damage" : "0",
          "location" : "dojo3",
          "armor" : "0",
@@ -2451,7 +2457,10 @@
          "strength" : "1000",
          "speed" : "0",
          "pname" : "The training dummy",
-         "aggression" : "0"
+         "aggression" : "0",
+         "pflags" : [
+            "NoMagic"
+         ]
       },
       "scorpion@fareast" : {
          "eflags" : [
@@ -2492,13 +2501,9 @@
       },
       "raiden@fareast" : {
          "eflags" : [
-            "Shock",
-            "ImmShock",
             "Blind",
-            "ImmCripple",
-            "ImmBlind",
-            "ImmMute",
-            "ImmDeaf"
+            "Shock",
+            "ImmShock"
          ],
          "damage" : "50",
          "location" : "shoreline",
@@ -2512,7 +2517,8 @@
          "pname" : "Raiden",
          "pflags" : [
             "NoZap",
-            "NoExorcise"
+            "NoExorcise",
+            "NoMagic"
          ],
          "mflags" : [
             "DrainScr"
@@ -2550,11 +2556,7 @@
          "eflags" : [
             "Fireball",
             "Missile",
-            "ImmShock",
-            "ImmCripple",
-            "ImmBlind",
-            "ImmMute",
-            "ImmDeaf"
+            "ImmShock"
          ],
          "damage" : "10",
          "location" : "cursent2",
@@ -2564,8 +2566,11 @@
          "description" : "A wizard with glowing eyes is here.",
          "strength" : "130",
          "speed" : "0",
+         "aggression" : "75",
          "pname" : "ShangTsung",
-         "aggression" : "75"
+         "pflags" : [
+            "NoMagic"
+         ]
       }
    }
 }

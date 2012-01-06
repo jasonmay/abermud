@@ -1,0 +1,1576 @@
+{
+   "obj" : {
+      "secretdoorn@fire" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Fire39",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "SecretDoorN",
+         "desc[2]" : "The door is locked.",
+         "linked" : "SecretDoorS",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "water@fire" : {
+         "location" : "IN_CONTAINER:Basin",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Water",
+         "examine" : "Water.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "2",
+         "desc[0]" : ""
+      },
+      "sheet@fire" : {
+         "desc[1]" : "A sheet.",
+         "location" : "IN_ROOM:Fire10",
+         "oflags" : [
+            "GetFlips",
+            "Wearable",
+            "Destroyed"
+         ],
+         "name" : "Sheet",
+         "examine" : "A sheet from a very comfortable bed.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A sheet lays here."
+      },
+      "helmet@fire" : {
+         "location" : "IN_ROOM:Fire12",
+         "armor" : "40",
+         "oflags" : [
+            "Armor",
+            "Lit",
+            "Wearable"
+         ],
+         "altname" : "silver",
+         "name" : "Helmet",
+         "examine" : "Wonderful helmet lies here, looks very protective.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "100",
+         "desc[0]" : "A shiny silver helmet has been left here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "sdoore@fire" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Fire1",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "SDoorE",
+         "linked" : "SDoorW",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "letter@fire" : {
+         "desc[1]" : "",
+         "damage" : "38",
+         "location" : "IN_ROOM:Fire8",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "Letter",
+         "examine" : "The letter from Gruoch with his sign and a map of the land.",
+         "size" : "5",
+         "state" : "0",
+         "maxstate" : "2",
+         "bvalue" : "50",
+         "desc[0]" : "The letter from Gruoch."
+      },
+      "throne@fire" : {
+         "location" : "IN_ROOM:Fire37",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Throne",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "2",
+         "desc[0]" : ""
+      },
+      "door12@fire" : {
+         "desc[1]" : "The cell is closed.",
+         "location" : "IN_ROOM:Fire47",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Door12",
+         "desc[2]" : "The cell is locked.",
+         "linked" : "Door11",
+         "state" : "2",
+         "pname" : "cell",
+         "maxstate" : "2",
+         "desc[0]" : "The cell is open."
+      },
+      "ground@fire" : {
+         "location" : "IN_ROOM:Fire40",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Ground",
+         "examine" : "There is written: Just hope, your fear &+wENDS&* here.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "2"
+      },
+      "door7@fire" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Fire7",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "Door7",
+         "linked" : "Door8",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "door13@fire" : {
+         "desc[1]" : "The west cell is closed.",
+         "location" : "IN_ROOM:Fire46",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "west",
+         "name" : "Door13",
+         "examine" : "You can see a huge lock on it. The lock has very interesting shapes.",
+         "desc[2]" : "The west cell is locked.",
+         "linked" : "Door14",
+         "state" : "2",
+         "pname" : "cell",
+         "maxstate" : "2",
+         "desc[0]" : "The west cell is open."
+      },
+      "door10@fire" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Fire10",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Door10",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door9",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "lever@fire" : {
+         "location" : "IN_ROOM:Fire14",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "altname" : "Press",
+         "name" : "Lever",
+         "examine" : "A lever controling the press.",
+         "size" : "12",
+         "state" : "0",
+         "weight" : "12",
+         "maxstate" : "0",
+         "bvalue" : "24",
+         "desc[0]" : ""
+      },
+      "barrel@fire" : {
+         "desc[1]" : "A closed barrel is lying here.",
+         "location" : "IN_ROOM:Fire14",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Container"
+         ],
+         "name" : "Barrel",
+         "examine" : "A barrel with a green sign on it.",
+         "size" : "120",
+         "state" : "1",
+         "weight" : "200",
+         "maxstate" : "1",
+         "bvalue" : "60",
+         "desc[0]" : "An open barrel is lying here."
+      },
+      "gatein@fire" : {
+         "desc[1]" : "The gate is closed.",
+         "location" : "IN_ROOM:Fire26",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Gatein",
+         "desc[2]" : "The gate is locked.",
+         "linked" : "Gateout",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "The gate is open."
+      },
+      "seal@fire" : {
+         "location" : "IN_ROOM:FIRE14",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "Seal",
+         "examine" : "An &+Cairtight&+w* seal.",
+         "size" : "12",
+         "state" : "0",
+         "weight" : "12",
+         "maxstate" : "0",
+         "bvalue" : "24",
+         "desc[0]" : "An &+Cairtight&* seal."
+      },
+      "key@fire" : {
+         "desc[1]" : "A key has been dropped here.",
+         "location" : "CARRIED_BY:Rubber4",
+         "oflags" : [
+            "Key",
+            "GetFlips"
+         ],
+         "name" : "Key",
+         "examine" : "A key.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A key."
+      },
+      "door8@fire" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Fire9",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "Door8",
+         "linked" : "Door7",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "plastic@fire" : {
+         "location" : "IN_ROOM:Fire15",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "Plastic",
+         "examine" : "Looks quite airtight.",
+         "size" : "12",
+         "state" : "0",
+         "weight" : "12",
+         "maxstate" : "0",
+         "bvalue" : "24",
+         "desc[0]" : "Some plastic."
+      },
+      "basin@fire" : {
+         "location" : "IN_ROOM:Fire9",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "Water",
+         "name" : "Basin",
+         "examine" : "A basin full of water.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "2",
+         "desc[0]" : ""
+      },
+      "crap@fire" : {
+         "desc[1]" : "There is &+ggas&* coming out from a &+Rgap&*.",
+         "location" : "IN_ROOM:Fire2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Crap",
+         "size" : "12",
+         "state" : "1",
+         "examine[0]" : "The gap is now airtight.",
+         "weight" : "12",
+         "pname" : "gap",
+         "maxstate" : "1",
+         "bvalue" : "24",
+         "examine[1]" : "&+RDon't go nearer!",
+         "desc[0]" : "A &+Rgap&* is filled with a seal."
+      },
+      "coolbox@fire" : {
+         "location" : "IN_ROOM:Fire15",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Coolbox",
+         "examine" : "Hmm, they should buy a new one, this one has some plastic loosing.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "2",
+         "desc[0]" : "A typical coolbox is standing here."
+      },
+      "key2@fire" : {
+         "desc[1]" : "A keybundle of prison keys have been dropped here.",
+         "location" : "CARRIED_BY:Rubber8",
+         "oflags" : [
+            "GetFlips",
+            "Key"
+         ],
+         "altname" : "Keys",
+         "name" : "Key2",
+         "examine" : "A keybundle of prison keys.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "pname" : "Keybundle",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A keybundle of prison keys is here."
+      },
+      "cheese@fire" : {
+         "location" : "IN_ROOM:Fire15",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "slice",
+         "name" : "Cheese",
+         "examine" : "It sure looks tasty.",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A slice of cheese has been droped here."
+      },
+      "box@fire" : {
+         "desc[1]" : "A closed wooden box is lying here.",
+         "location" : "IN_ROOM:Fire14",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Container"
+         ],
+         "name" : "Box",
+         "examine" : "A wooden box with a red sign on it.",
+         "size" : "120",
+         "state" : "1",
+         "weight" : "200",
+         "maxstate" : "1",
+         "bvalue" : "60",
+         "desc[0]" : "An open wooden box is lying here."
+      },
+      "door11@fire" : {
+         "desc[1]" : "The east cell is closed.",
+         "location" : "IN_ROOM:Fire46",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "east",
+         "name" : "Door11",
+         "examine" : "You can see a huge lock on it. The lock has very interesting shapes.",
+         "desc[2]" : "The east cell is locked.",
+         "linked" : "Door12",
+         "state" : "2",
+         "pname" : "cell",
+         "maxstate" : "2",
+         "desc[0]" : "The east cell is open."
+      },
+      "slide@fire" : {
+         "location" : "IN_ROOM:Fire17",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Slide",
+         "examine" : "What do you think. Is it too high?",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "2",
+         "desc[0]" : ""
+      },
+      "sword@fire" : {
+         "damage" : "23",
+         "location" : "WIELDED_BY:Gruoch",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "mighty",
+         "name" : "Sword",
+         "size" : "50",
+         "bvalue" : "200",
+         "desc[0]" : "The mighty sword lies here."
+      },
+      "moonsign@fire" : {
+         "desc[1]" : "Someone made a big mistake to leave this moonsign behind.",
+         "location" : "IN_ROOM:Fire56",
+         "oflags" : [
+            "RegenHealth",
+            "RegenMana",
+            "GetFlips",
+            "Wearable"
+         ],
+         "altname" : "Sign",
+         "name" : "Moonsign",
+         "examine" : "\nIt says 'I was on the Moon.'\nZone created by Etrimon. Comments to etrimon@falcor.karlin.mff.cuni.cz",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "4",
+         "maxstate" : "1",
+         "bvalue" : "800",
+         "desc[0]" : "A wonderful moonsign lays here."
+      },
+      "bed@fire" : {
+         "location" : "IN_ROOM:Fire10",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Bed",
+         "examine" : "A very comfortable bed with a large silk sheet.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "2",
+         "desc[0]" : ""
+      },
+      "table@fire" : {
+         "desc[1]" : "A table with a press is standing here.",
+         "location" : "IN_ROOM:Fire14",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Table",
+         "size" : "1",
+         "state" : "1",
+         "examine[0]" : "\nYou see a plate with plastic fixed in the press of the table.",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "examine[1]" : "You see a table with a press.",
+         "desc[0]" : "Table with a plate in press is standing here."
+      },
+      "wetsheet@fire" : {
+         "desc[1]" : "A wet sheet.",
+         "location" : "IN_CONTAINER:Basin",
+         "oflags" : [
+            "GetFlips",
+            "Wearable",
+            "Destroyed"
+         ],
+         "name" : "Wetsheet",
+         "examine" : "A wet sheet.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "pname" : "Sheet",
+         "maxstate" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A wet sheet is laying here."
+      },
+      "gateout@fire" : {
+         "desc[1]" : "The gate is closed.",
+         "location" : "IN_ROOM:Fire33",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Gateout",
+         "desc[2]" : "The gate is locked.",
+         "linked" : "Gatein",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "The gate is open."
+      },
+      "secretdoors@fire" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Fire37",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable",
+            "Destroyed"
+         ],
+         "name" : "SecretDoorS",
+         "desc[2]" : "The door is locked.",
+         "linked" : "SecretDoorN",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door14@fire" : {
+         "desc[1]" : "The cell is closed.",
+         "location" : "IN_ROOM:Fire48",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Door14",
+         "desc[2]" : "The cell is locked.",
+         "linked" : "Door13",
+         "state" : "2",
+         "pname" : "cell",
+         "maxstate" : "2",
+         "desc[0]" : "The cell is open."
+      },
+      "door9@fire" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Fire9",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Door9",
+         "desc[2]" : "The door is locked.",
+         "linked" : "Door10",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "sdoorw@fire" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Fire3",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "SDoorW",
+         "linked" : "SDoorE",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "plate@fire" : {
+         "desc[1]" : "A plate made of hard metal.",
+         "location" : "IN_CONTAINER:Box",
+         "oflags" : "{ }",
+         "name" : "Plate",
+         "size" : "12",
+         "state" : "1",
+         "weight" : "12",
+         "maxstate" : "1",
+         "bvalue" : "24",
+         "desc[0]" : "A plate with loose plastic on it."
+      }
+   },
+   "loc" : {
+      "fire28@fire" : {
+         "exits" : {
+            "e" : "Fire26",
+            "s" : "Fire31"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Around the wall",
+         "id" : "Fire28",
+         "description" : "\n     You are following the wall. You see nothing special. The wall is reaching\nthe top of the cave. You can go east or south.\n",
+         "altitude" : null
+      },
+      "fire53@fire" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Moonways",
+         "id" : "Fire53",
+         "description" : "\n     You are gliding on moonbeams. You can't feel any gravitation here. You\nfeel free. You feel wonderful.\n",
+         "altitude" : null
+      },
+      "fire7@fire" : {
+         "exits" : {
+            "w" : "Fire5",
+            "e" : "^Door7",
+            "n" : "Fire8"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Hall",
+         "id" : "Fire7",
+         "description" : "\n    You are standing in the hall. This room should also impress visitors,\nbecause it is used as a picture gallery. Sir Gruoch is very proud of his\nold kith and kin. The famous person should be Lady Gruoch who married in\n1037 McBeth King of Scotland. There are many stories about this age and\nif you want, Sir Gruoch can talk hours about it. At the end of the long\nhall is the picture of his son. Sir Gruoch cares very much for the son, as\nhis wife died of an unknown illness. He would start a &+mwar&* for his son.\nYou can go the living room to north or west onto the staircase. There is\na door to the east.\n",
+         "altitude" : null
+      },
+      "fire21@fire" : {
+         "exits" : {
+            "e" : "Fire19"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Barracks",
+         "id" : "Fire21",
+         "description" : "\n     You are standing in the barracks of the robbers. It is a normal\naccomodation for about ten people. It isn't very comfortable here, just beds\nand one large table. The floor is made of wood, but on some places is it\nalready stepped through. The only way out is back to the arena.\n",
+         "altitude" : null
+      },
+      "fire5@fire" : {
+         "exits" : {
+            "e" : "Fire7",
+            "d" : "Fire4"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Staircase",
+         "id" : "Fire5",
+         "description" : "\n    You are standing on the staircase. All the stairs are made of &+ymahagony&*,\ncovered with carpets. The metal railing shall avoid a possible accident.\nYou can go back down or to east to the hall.\n",
+         "altitude" : null
+      },
+      "fire0@fire" : {
+         "exits" : {
+            "n" : "Fire1",
+            "s" : "sundforest6090@haondor"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Grand entrance",
+         "id" : "Fire0",
+         "description" : "\n     You are standing before the mighty house where Sir Gruoch is living.\nIt was build overlooking Sundhaven and Haon-dor. The entrance is made of\n&+Wwhite&* stones and all around is covered with &+Ggrass&*. Two lions statues are\nstanding on both sides of the entrance. How can someone create something\nso realistic looking? Exits lead to the north into Gruoch's house or\nsouth to the forest road.\n",
+         "altitude" : null
+      },
+      "fire10@fire" : {
+         "exits" : {
+            "w" : "Fire8",
+            "s" : "^Door10"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Playroom",
+         "id" : "Fire10",
+         "description" : "\n   You are standing in the Gerst's playroom. It is a quite large room with\n&+ywooden&* furniture. Also floor and walls are covered with &+ywood&*. There is a\ncomfortable &+Cbed&* in the northeast corner with white silk sheets. Pillows\nand covers are hidden during the day, so the small Sir can play on the bed.\nThere are many toys lying around the bed. Cupboards are full of toys too.\nThere is a table at the west wall. There is some school stuff on it. You\nnotice that there is a small bell above the door for calling servants.\nYou can go west to the living room or south into the bathroom.\n",
+         "altitude" : null
+      },
+      "fire13@fire" : {
+         "exits" : {
+            "w" : "Fire6",
+            "e" : "Fire15",
+            "n" : "Fire14"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Laundry",
+         "id" : "Fire13",
+         "description" : "\n   You are standing in the laundry. It stinks a bit here. Servants wash\ndirty clothes for Sir Gruoch. You can see different objects helping\nservants with washing. There is no special decoration.  Everything is made \nof &+ywood&*. A candlestick for eleven candles hanging on a rope tied to the\nceiling is the only source of light here. You can go north to the hardware \nstore, east to the food store and west onto the staircase.\n",
+         "altitude" : null
+      },
+      "fire32@fire" : {
+         "exits" : {
+            "n" : "Fire31"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "End of the west cave",
+         "id" : "Fire32",
+         "description" : "\n     You are standing at the end of the cave. The wall is diving in the cave\nlike it has been one piece forever. The wall isn't so straight like before.\nIt had to be a hard work. The only exit leads north.\n",
+         "altitude" : null
+      },
+      "fire42@fire" : {
+         "exits" : {
+            "w" : "Fire41",
+            "e" : "Fire41",
+            "u" : "Fire41",
+            "n" : "Fire43",
+            "d" : "Fire41",
+            "s" : "Fire41"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "fire",
+         "title" : "Prison",
+         "id" : "Fire42",
+         "description" : "\n      Your light isn't enough strong to see further. Exits leads in all\ndirections.\n",
+         "altitude" : null
+      },
+      "fire3@fire" : {
+         "exits" : {
+            "w" : "^SDoorW"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Kitchen",
+         "id" : "Fire3",
+         "description" : "\n    You are standing in the kitchen. It is very clean, because Sir Gruoch\nhas control over his cooks. It is equipped like any normal kitchen\nwith an oven, cupboards, cold store, and a sink for dishes. There is also\na small lift coming through the floor directly from the food store in\nthe cellar. The ceiling, floor, and walls are &+wwhite&*, there is no\nspecial decoration. The only exit is back to the entrance hall.\n",
+         "altitude" : null
+      },
+      "fire27@fire" : {
+         "exits" : {
+            "w" : "Fire26",
+            "s" : "Fire29"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Around the wall",
+         "id" : "Fire27",
+         "description" : "\n     You are following the wall. You see nothing special. The wall is reaching\nthe top of the cave. You can go south or west.\n",
+         "altitude" : null
+      },
+      "fire23@fire" : {
+         "exits" : {
+            "e" : "Fire49",
+            "w" : "Fire17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Eastern way",
+         "id" : "Fire23",
+         "description" : "\n     The way is following further east.\n",
+         "altitude" : null
+      },
+      "fire12@fire" : {
+         "exits" : {
+            "e" : "Fire14",
+            "s" : "Fire6"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "fire",
+         "title" : "Wine store",
+         "id" : "Fire12",
+         "description" : "\n   You are standing in the &+rwine&* store. You can see barrels full of &+rwine&*\nand shelves full of bottles. Some are over 50 years old. Sir Gruoch knows\nhow should a good glass of wine taste. He sometimes gets a letter from\nthe king to send him some bottles of wine or he visits Sir Gruoch to have\na glass &+rwine&* with him. It is quite cold here--because of the &+rwine&*, there\nis no special floor. You are standing on earth and your feet are visible\nin the ground. You can go east to the hardware store or south onto the\nstaircase.\n",
+         "altitude" : null
+      },
+      "fire41@fire" : {
+         "exits" : {
+            "w" : "Fire41",
+            "e" : "Fire42",
+            "u" : "Fire41",
+            "n" : "Fire40",
+            "d" : "Fire41",
+            "s" : "Fire41"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "fire",
+         "title" : "Prison",
+         "id" : "Fire41",
+         "description" : "\n      Your light isn't enough strong to see further. Exits leads in all \ndirections.\n",
+         "altitude" : null
+      },
+      "fire4@fire" : {
+         "exits" : {
+            "e" : "Fire1",
+            "u" : "Fire5",
+            "d" : "Fire6"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Staircase",
+         "id" : "Fire4",
+         "description" : "\n    You are standing on the staircase. All the stairs are made of &+ymahagony&*,\ncovered with carpets. The metal railing shall avoid a possible accident.\nYou can go up, down or to the entrance hall.\n",
+         "altitude" : null
+      },
+      "fire35@fire" : {
+         "exits" : {
+            "e" : "Fire33"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Low hut",
+         "id" : "Fire35",
+         "description" : "\n     You are standing in a low hut. It is used by guards for storing food.\nThere is nothing to be seen here. All the food is possibly in the greatest hut\nby a local party.\n",
+         "altitude" : null
+      },
+      "fire40@fire" : {
+         "exits" : {
+            "n" : "Fire39",
+            "s" : "Fire41"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "fire",
+         "title" : "Prison way",
+         "id" : "Fire40",
+         "description" : "\n      You are standing in a small dark room. There is only something lying\non the &+yground&*. You can go north and south.\n",
+         "altitude" : null
+      },
+      "fire30@fire" : {
+         "exits" : {
+            "n" : "Fire29"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "End of the east cave",
+         "id" : "Fire30",
+         "description" : "\n     You are standing at the end of the cave. The wall is diving in the cave\nlike it has been one piece forever. It had to be a hard work. The only exit\nleads north.\n",
+         "altitude" : null
+      },
+      "fire54@fire" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Moonways",
+         "id" : "Fire54",
+         "description" : "\n     You are gliding on moonbeams. You can't feel any gravitation here. You\nfeel free. You feel wonderful.\n",
+         "altitude" : null
+      },
+      "fire6@fire" : {
+         "exits" : {
+            "e" : "Fire13",
+            "u" : "Fire4",
+            "n" : "Fire12"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "fire",
+         "title" : "Staircase",
+         "id" : "Fire6",
+         "description" : "\n    You are standing on the staircase. All stairs are made of &+ymahagony&*,\ncovered with carpets. The metal railing shall avoid a possible accident.\nYou can go up, north to the vine store or east to the laundry.\n",
+         "altitude" : null
+      },
+      "fire25@fire" : {
+         "exits" : {
+            "e" : "Fire17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Western way",
+         "id" : "Fire25",
+         "description" : "\n     You are standing in a small cave. It is looking like it was dug by hand.\nThe digging was stopped maybe because of the very hard rocky walls. The only\nway leads back to east.\n",
+         "altitude" : null
+      },
+      "fire20@fire" : {
+         "exits" : {
+            "w" : "Fire19"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Barracks",
+         "id" : "Fire20",
+         "description" : "\n     You are standing in the barracks of the robbers. It is a normal \naccomodation for about ten people. It isn't very comfortable here, just beds \nand one large table. The floor is made of wood, but on some places is it \nalready stepped through. The only way out is back to the arena.\n",
+         "altitude" : null
+      },
+      "fire37@fire" : {
+         "exits" : {
+            "n" : "Fire36",
+            "s" : "^SecretDoorS"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Huge hut",
+         "id" : "Fire37",
+         "description" : "\n     You are standing in the huge hut. You see many robbers here. They are\ncelebrating a good trip. They have captured the son of one of the most\nrichest people in the land. You see many tables full with half eaten food\nand lot of empty bottles of vine and beer. There is a tall totaly drunk robber \nsitting (laying) on his some kind of &+ythrone&*. He is so drunk so he is not \nmentioning you. Also only some of other robbers mentioned you, but you don't\nthink that they will be able to do anything against you. Exit leads to north.\n",
+         "altitude" : null
+      },
+      "fire34@fire" : {
+         "exits" : {
+            "w" : "Fire33"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Wooden hut",
+         "id" : "Fire34",
+         "description" : "\n     You are standing in a small wooden hut. It is possibly owned by a guard.\nThere is only a bed, a table and a chair. The only source of light here is\na candlestick on the table.\n",
+         "altitude" : null
+      },
+      "fire50@fire" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Moonways",
+         "id" : "Fire50",
+         "description" : "\n     You are gliding on moonbeams. You can't feel any gravitation here. You\nfeel free. You feel wonderful.\n",
+         "altitude" : null
+      },
+      "fire55@fire" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Moonways",
+         "id" : "Fire55",
+         "description" : "\n     You are gliding on moonbeams. You can't feel any gravitation here. You\nfeel free. You feel wonderful.\n",
+         "altitude" : null
+      },
+      "fire11@fire" : {
+         "exits" : {
+            "e" : "Fire8"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Gruoch's workroom",
+         "id" : "Fire11",
+         "description" : "\n   You are standing in Gruoch's workroom. As you can see to be ranked as\na Knight is not only fun, but hard administrating work too. But in this\ntime it is looking very chaotic. Papers are laying all around, under a\nhill of papers you can see a desk and a &+Cbed&*. Sir Gruoch is totally\ndown of missing his son. He paid so much money already to everyone who\nsaid he will look for his son, but no responce untill now. You can go\nback to the living room.\n",
+         "altitude" : null
+      },
+      "fire57@fire" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "fire",
+         "title" : "Fallen from the moonways",
+         "id" : "Fire57",
+         "description" : "\n      You have chosen the wrong way and what do you think is around?\nNothing! So you fall deep, deep, deep down and SPLAT!!!\n",
+         "altitude" : null
+      },
+      "fire47@fire" : {
+         "exits" : {
+            "w" : "^Door12"
+         },
+         "flags" : [
+            "Dark",
+            "Cold",
+            "NegRegen"
+         ],
+         "zone" : "fire",
+         "title" : "Prison cell",
+         "id" : "Fire47",
+         "description" : "\n       You are standing in a horrible smelling dark room. You can't see much,\nbut you know you wouldn't choose this place for your holidays. \n",
+         "altitude" : null
+      },
+      "fire24@fire" : {
+         "exits" : {
+            "n" : "Fire17",
+            "s" : "Fire26"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Southern way",
+         "id" : "Fire24",
+         "description" : "\n     You are standing in the northern way, which is here only to connect the\ncenter of cave with other cave.\n",
+         "altitude" : null
+      },
+      "fire49@fire" : {
+         "exits" : {
+            "w" : "Fire23"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Moonways",
+         "id" : "Fire49",
+         "description" : "\n     You are gliding on moonbeams. You can't feel any gravitation here. You\nfeel free. You feel wonderful.\n",
+         "altitude" : null
+      },
+      "fire48@fire" : {
+         "exits" : {
+            "e" : "^Door14"
+         },
+         "flags" : [
+            "NegRegen"
+         ],
+         "zone" : "fire",
+         "title" : "Prison cell",
+         "id" : "Fire48",
+         "description" : "\n       You are standing in a horrible smelling dark room. You can't see much,\nbut you know you wouldn't choose this place for your holidays.\n",
+         "altitude" : null
+      },
+      "fire51@fire" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Moonways",
+         "id" : "Fire51",
+         "description" : "\n     You are gliding on moonbeams. You can't feel any gravitation here. You\nfeel free. You feel wonderful.\n",
+         "altitude" : null
+      },
+      "fire45@fire" : {
+         "exits" : {
+            "n" : "Fire41",
+            "s" : "Fire46"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "fire",
+         "title" : "Prison",
+         "id" : "Fire45",
+         "description" : "\n      Now you can see a bit further. Some branches are around here, so you\ncan orient yourself better now. Exits lead to the north and south.\n",
+         "altitude" : null
+      },
+      "fire9@fire" : {
+         "exits" : {
+            "w" : "^Door8",
+            "n" : "^Door9"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Bathroom",
+         "id" : "Fire9",
+         "description" : "\n    You are standing in the bathroom. Everything is made of &+wwhite&*\nmarble--the basin, mirrors, walls, ceiling and floor. The &+Bwater&* in the\nbasin is everytime clean, because a servant is responsible for the &+Bwater&*\nand is changing it after every wash of Sir Gruoch or his son. There is\nnothing more special in this room.\n",
+         "altitude" : null
+      },
+      "fire16@fire" : {
+         "exits" : {
+            "n" : "sundforest6022@haondor",
+            "s" : "Fire17"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "fire",
+         "title" : "Dark cave",
+         "id" : "Fire16",
+         "description" : "\n     You are standing in a dark cave. You can't see much here, everything\nyou see is only a possible way south, where it is much &+Ldarker&* or you can\ngo back.\n",
+         "altitude" : null
+      },
+      "fire33@fire" : {
+         "exits" : {
+            "w" : "Fire35",
+            "e" : "Fire34",
+            "n" : "^Gateout",
+            "s" : "Fire36"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Village circle",
+         "id" : "Fire33",
+         "description" : "\n     You are standing in the village, where robbers are living. All buildings\nare very simple built, mostly made of wood. There are fires burning everywhere,\nso it isn't so cold here. You can hear some music, loud voices coming from the\ngreatest hut to the south of the circle. Also you can try to look in other \nsmaller huts.\n",
+         "altitude" : null
+      },
+      "fire17@fire" : {
+         "exits" : {
+            "w" : "Fire25",
+            "e" : "Fire23",
+            "n" : "Fire18",
+            "s" : "Fire24"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Darker cave",
+         "id" : "Fire17",
+         "description" : "\n     As you step further in the dark cave, you trip and fall down a long\n&+Cslide&*. Now you are on the bottom of the cave. Exits are going in \nevery direction except the way up.\n",
+         "altitude" : null
+      },
+      "fire8@fire" : {
+         "exits" : {
+            "w" : "Fire11",
+            "e" : "Fire10",
+            "s" : "Fire7"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Living room",
+         "id" : "Fire8",
+         "description" : "\n    You are standing in the living room used for inviting visitors. There\nis a &+rfireplace&* opposite the entrance. There are two seats made of very valuable\nwood and wool, and a small &+yoak&* table between them for drink. The\nfloor is covered with bearskins. There are hunting trophies on walls. Sir\nGruoch should be a very good fighter. The ceiling is decorated with\nwonderful frescos showing antic history. There are two swords and a\nshield hanging above the &+rfireplace&*, seemingly not used very often, and\nare in perfect condition. \n",
+         "altitude" : null
+      },
+      "fire46@fire" : {
+         "exits" : {
+            "w" : "^Door13",
+            "e" : "^Door11",
+            "n" : "Fire45"
+         },
+         "flags" : [
+            "Cold"
+         ],
+         "zone" : "fire",
+         "title" : "Cross",
+         "id" : "Fire46",
+         "description" : "\n      You are standing between two prison cells. It is smelling here terribly.\nYou can see rats everywhere. It must be terrible to guard here and it has to \nbe much worse for the prisoners here. You can see bars to the east and west.\nAn exit leads north.\n",
+         "altitude" : null
+      },
+      "fire36@fire" : {
+         "exits" : {
+            "n" : "Fire33",
+            "s" : "Fire37"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Before the huge hut",
+         "id" : "Fire36",
+         "description" : "\n     You are standing before a huge hut. It is possibly the building of the \nleader of all robbers. You can hear loud drunk singing from the inside of\nthe hut. There are many other huts around, but you don't think you would \nfind anything or anyone interesting there.\n",
+         "altitude" : null
+      },
+      "fire1@fire" : {
+         "exits" : {
+            "w" : "Fire4",
+            "e" : "^SDoorE",
+            "n" : "Fire2",
+            "s" : "Fire0"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Entrance hall",
+         "id" : "Fire1",
+         "description" : "\n    You have entered through the old entrance gate into a great hall. Sir\nGruoch wants to impress everyone with his home, so the hall is built in\nthe old baroque style.  Walls are covered with thick woollen carpets and on\nthe ceiling is a suggestive fresco showing a fight of two mystic giants.\nThe floor is made of hard &+ymahagony&* to slow the aging. Near the gate is a\nsmall closet for robes. There is a mirror hanging next to the closet. It\nis mostly used by ladies to refresh their make-up. There is a living room\nto the north, a small door to the east or you can go west onto the\nstaircase.\n",
+         "altitude" : null
+      },
+      "fire19@fire" : {
+         "exits" : {
+            "w" : "Fire21",
+            "e" : "Fire20",
+            "n" : "Fire22",
+            "s" : "Fire18"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Arena",
+         "id" : "Fire19",
+         "description" : "\n     You are standing in the arena. It is normaly used for great lunches, but\nwhen two want to fight, they are going to this place, where noone disturbs\nthem. There have been many fights already, because the ground is filled with\nbones and skulls. Ways are leading in all directions.\n",
+         "altitude" : null
+      },
+      "fire39@fire" : {
+         "exits" : {
+            "n" : "^SecretDoorN",
+            "s" : "Fire40"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "fire",
+         "title" : "Prison way",
+         "id" : "Fire39",
+         "description" : "\n      You are standing behind the secret door. The way leads to the\nprison as you can see on the style of walls and cellars. You still can \nhear the loud singing from the party.\n",
+         "altitude" : null
+      },
+      "fire15@fire" : {
+         "exits" : {
+            "w" : "Fire13"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Food store",
+         "id" : "Fire15",
+         "description" : "\n     You are standing in the food store. You see lot of types of food\nlike flash, cheese, breads ...\n",
+         "altitude" : null
+      },
+      "fire44@fire" : {
+         "exits" : {
+            "w" : "Fire41",
+            "e" : "Fire41",
+            "u" : "Fire41",
+            "n" : "Fire41",
+            "d" : "Fire41",
+            "s" : "Fire45"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "fire",
+         "title" : "Prison",
+         "id" : "Fire44",
+         "description" : "\n      Your light isn't enough strong to see further. Exits leads in all\ndirections.\n",
+         "altitude" : null
+      },
+      "fire14@fire" : {
+         "exits" : {
+            "w" : "Fire12",
+            "s" : "Fire13"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Hardware store",
+         "id" : "Fire14",
+         "description" : "\n   You are standing in the hardware store. There are different objects\nlike spades, wheels, bars, candles, plates ... There is a large table in\nthe middle of the room for handling the wood and small metal objects.\nYou can also see clay, needels, hammers, and saws. There is a big cupboard \non the east wall. You can go west to the vine store or south to the laundry.\n",
+         "altitude" : null
+      },
+      "fire52@fire" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Moonways",
+         "id" : "Fire52",
+         "description" : "\n     You are gliding on moonbeams. You can't feel any gravitation here. You\nfeel free. You feel wonderful.\n",
+         "altitude" : null
+      },
+      "fire43@fire" : {
+         "exits" : {
+            "w" : "Fire41",
+            "e" : "Fire41",
+            "u" : "Fire41",
+            "n" : "Fire41",
+            "d" : "Fire44",
+            "s" : "Fire41"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "fire",
+         "title" : "Prison",
+         "id" : "Fire43",
+         "description" : "\n      Your light isn't enough strong to see further. Exits leads in all\ndirections.\n",
+         "altitude" : null
+      },
+      "fire2@fire" : {
+         "exits" : {
+            "s" : "Fire1"
+         },
+         "flags" : [
+            "Hot",
+            "NegRegen"
+         ],
+         "zone" : "fire",
+         "title" : "Living room",
+         "id" : "Fire2",
+         "description" : "\n    You are in the living room. It is terribly &+Rhot&* here, you shouldn't\nstay here for a long time. There are clouds of &+wsmoke&*, so you can't see much\nexcept the source of the heat. The fireplace is standing against the door,\nwhich was totally smashed by the explosion. The small camin door is crap.\nGas powered &+rflames&* are trying to come out and burn everything around. \nThe only way out is back to the entrance hall.\n",
+         "altitude" : null
+      },
+      "fire29@fire" : {
+         "exits" : {
+            "n" : "Fire27",
+            "s" : "Fire30"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Around the wall",
+         "id" : "Fire29",
+         "description" : "\n     You are following the wall. You see nothing special. The wall is reaching\nthe top of the cave. You can go north or south.\n",
+         "altitude" : null
+      },
+      "fire56@fire" : {
+         "exits" : {
+            "d" : "Fire49"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "On the Moon",
+         "id" : "Fire56",
+         "description" : "\n      You are standing on the Moon. It is not really a Moon, but it is looking\nlike a real Moon. You are floating above the ground lightly. You are feeling \nwonderful. Now you can take the award for your long trip.\n",
+         "altitude" : null
+      },
+      "fire18@fire" : {
+         "exits" : {
+            "n" : "Fire19",
+            "s" : "Fire17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Northern way",
+         "id" : "Fire18",
+         "description" : "\n     You are standing in the northern way, which is here only to connect the\ncenter of cave with the barracks.\n",
+         "altitude" : null
+      },
+      "fire22@fire" : {
+         "exits" : {
+            "s" : "Fire19"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Barracks",
+         "id" : "Fire22",
+         "description" : "\n     You are standing in the barracks of the robbers. It is a normal\naccomodation for about ten people. It isn't very comfortable here, just beds\nand one large table. The floor is made of wood, but on some places is it\nalready stepped through. The only way out is back to the arena.\n",
+         "altitude" : null
+      },
+      "fire31@fire" : {
+         "exits" : {
+            "n" : "Fire28",
+            "s" : "Fire32"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "fire",
+         "title" : "Around the wall",
+         "id" : "Fire31",
+         "description" : "\n     You are following the wall. You see nothing special. The wall is reaching\nthe top of the cave. You can go north or south.\n",
+         "altitude" : null
+      },
+      "fire26@fire" : {
+         "exits" : {
+            "w" : "Fire28",
+            "e" : "Fire27",
+            "n" : "Fire24",
+            "s" : "^Gatein"
+         },
+         "flags" : [],
+         "zone" : "fire",
+         "title" : "Guarded entrance",
+         "id" : "Fire26",
+         "description" : "\n     You are standing by a guarded entrance. It is a large gate made of wood \nand metal with a big lock. Walls around are very high, impossible for you to \nclimb up. Other possible exits are west or east around the wall or north to \nthe southern way.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "rubber3@fire" : {
+         "damage" : "8",
+         "location" : "Fire22",
+         "armor" : "0",
+         "name" : "Rubber3",
+         "description" : "One Arm is preparing himself to attack you.",
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "One Arm",
+         "aggression" : "80",
+         "mflags" : "{ }"
+      },
+      "rubber7@fire" : {
+         "damage" : "14",
+         "location" : "Fire37",
+         "armor" : "4",
+         "name" : "Rubber7",
+         "description" : "Drunk robber is laying on the ground.",
+         "strength" : "5",
+         "speed" : "0",
+         "pname" : "Drunk",
+         "aggression" : "80",
+         "mflags" : "{ }"
+      },
+      "gerst@fire" : {
+         "damage" : "8",
+         "location" : "Fire47",
+         "armor" : "0",
+         "name" : "Gerst",
+         "description" : "Gerst, Sir Gruoch's son is hiding here.",
+         "strength" : "10",
+         "speed" : "0",
+         "pname" : "Gerst",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "mflags" : "{ }"
+      },
+      "rubber4@fire" : {
+         "damage" : "14",
+         "location" : "Fire26",
+         "armor" : "4",
+         "name" : "Rubber4",
+         "description" : "Bredy is guarding the gate.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Bredy",
+         "aggression" : "80",
+         "mflags" : [
+            "NoSteal",
+            "Block"
+         ]
+      },
+      "gruoch@fire" : {
+         "damage" : "66",
+         "location" : "Fire8",
+         "armor" : "35",
+         "name" : "Gruoch",
+         "description" : "Sir Gruoch is here.",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "Gruoch",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "mflags" : "{ }"
+      },
+      "rubber6@fire" : {
+         "damage" : "14",
+         "location" : "Fire37",
+         "armor" : "4",
+         "name" : "Rubber6",
+         "description" : "Drunk robber is waving with his hands.",
+         "strength" : "5",
+         "speed" : "0",
+         "pname" : "Drunk",
+         "aggression" : "80",
+         "mflags" : "{ }"
+      },
+      "rubber5@fire" : {
+         "damage" : "14",
+         "location" : "Fire26",
+         "armor" : "4",
+         "name" : "Rubber5",
+         "description" : "Ardy is guarding the gate.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Ardy",
+         "aggression" : "80",
+         "mflags" : [
+            "NoSteal",
+            "Block"
+         ]
+      },
+      "rubber2@fire" : {
+         "damage" : "8",
+         "location" : "Fire21",
+         "armor" : "0",
+         "name" : "Rubber2",
+         "description" : "One Leg is preparing himself to attack you.",
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "One Leg",
+         "aggression" : "80",
+         "mflags" : "{ }"
+      },
+      "servant1@fire" : {
+         "damage" : "24",
+         "location" : "Fire8",
+         "armor" : "12",
+         "name" : "Servant1",
+         "description" : "&+GThe servant&* asks you: 'Did you come to help Sir Gruoch?'",
+         "strength" : "500",
+         "speed" : "0",
+         "pname" : "Servant",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "mflags" : [
+            "BarE"
+         ]
+      },
+      "rubber1@fire" : {
+         "damage" : "8",
+         "location" : "Fire20",
+         "armor" : "0",
+         "name" : "Rubber1",
+         "description" : "One Eye is preparing himself to attack you.",
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "One Eye",
+         "aggression" : "80",
+         "mflags" : "{ }"
+      },
+      "rubber8@fire" : {
+         "damage" : "24",
+         "location" : "Fire46",
+         "armor" : "4",
+         "name" : "Rubber8",
+         "description" : "Prisoner is guarding here.",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "Prisoner",
+         "aggression" : "80",
+         "mflags" : [
+            "NoSteal",
+            "Block"
+         ]
+      },
+      "servant2@fire" : {
+         "damage" : "24",
+         "location" : "dead@dead",
+         "armor" : "12",
+         "name" : "Servant2",
+         "description" : "The servant says 'Sir gruoch doesn't want to see anyone.'",
+         "strength" : "500",
+         "speed" : "0",
+         "pname" : "Servant",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "mflags" : [
+            "BarE",
+            "BarW",
+            "BarN"
+         ]
+      },
+      "rubber9@fire" : {
+         "damage" : "24",
+         "location" : "Fire37",
+         "armor" : "4",
+         "name" : "Rubber9",
+         "description" : "The leader of this whole group is laying totally drunk on his throne.",
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "Leader",
+         "aggression" : "0",
+         "mflags" : [
+            "BarS"
+         ]
+      },
+      "gerst1@fire" : {
+         "damage" : "8",
+         "location" : "dead@dead",
+         "armor" : "0",
+         "name" : "Gerst1",
+         "description" : "Gerst, Sir Gruoch's son is here.",
+         "strength" : "10",
+         "speed" : "0",
+         "pname" : "Gerst",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "mflags" : "{ }"
+      }
+   }
+}

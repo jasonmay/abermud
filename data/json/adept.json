@@ -1,0 +1,2008 @@
+{
+   "obj" : {
+      "twig@adept" : {
+         "location" : "IN_ROOM:adept4",
+         "pname" : "twig",
+         "name" : "twig",
+         "examine" : "It's an ordinary piece of wood.",
+         "bvalue" : "10",
+         "desc[0]" : "A twig wrongfully broken off a branch has been discarded here.",
+         "size" : "1"
+      },
+      "bung@adept" : {
+         "location" : "IN_CONTAINER:hcord",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "bung",
+         "name" : "bung",
+         "examine" : "Perfect for stopping slow leaks!",
+         "bvalue" : "78",
+         "desc[0]" : "A rather small bung has been dropped here.",
+         "size" : "2"
+      },
+      "plant2@adept" : {
+         "location" : "IN_ROOM:adept69",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "plant",
+         "name" : "plant2",
+         "examine" : "\nIt looks a little TOO healthy and in need of trimming.",
+         "desc[0]" : "A well-built plant snakes its way across the the ground."
+      },
+      "cross@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "oflags" : [
+            "Glowing",
+            "Cross"
+         ],
+         "pname" : "cross",
+         "name" : "cross",
+         "examine" : "It appears to be of no sentimental value whasoever.",
+         "bvalue" : "100",
+         "desc[0]" : "A luminescent cross is here.",
+         "size" : "3"
+      },
+      "decree@adept" : {
+         "location" : "CARRIED_BY:executioner",
+         "pname" : "decree",
+         "name" : "decree",
+         "examine" : "\n      ______________________________________________________\n     '                                                      `\n     |                                                      |\n     |    &+gAll elves are to be slaughtered&*              |\n     |    &+gunconditionally on sight!&*                    |\n     |                                                      |\n     |                       &+g-- King Joseph&*            |\n     |                                                      |\n     `------------------------------------------------------'",
+         "bvalue" : "500",
+         "desc[0]" : "\nThere is a royal decree blowing freely in the wind here."
+      },
+      "gadget@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "pname" : "gadget",
+         "name" : "gadget",
+         "examine" : "\n&+y   Many immobile things don't require a second glance,\n&+y   just those that resemble gigantic plants.\n\nWhat else do you expect of a confusing piece of junk that may have been lying\naround in someone's dusty basement for decades?",
+         "bvalue" : "100",
+         "desc[0]" : "\nAn old, clunkity gadget decaying in half-lives is here.",
+         "size" : "2"
+      },
+      "bauble@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "pname" : "bauble",
+         "name" : "bauble",
+         "examine" : "\n&+y   Piercing through those stormy winter clouds of gloom\n&+y   is for all other seasons a tender area of bloom.\n\nWhat else do you expect of a confusing piece of junk that may have been lying\naround in someone's dusty basement for decades?",
+         "bvalue" : "100",
+         "desc[0]" : "A worthless bauble is here rusting.",
+         "size" : "2"
+      },
+      "cap@adept" : {
+         "desc[1]" : "A dark green elven tricorne cap is here.",
+         "location" : "WORN_BY:adept",
+         "armor" : "1",
+         "oflags" : [
+            "Wearable",
+            "Hitchance"
+         ],
+         "altname" : "cap",
+         "name" : "cap",
+         "examine" : "\nThis velvet hat is considered a lucky charm among elves.",
+         "size" : "7",
+         "state" : "1",
+         "pname" : "elfcap",
+         "maxstate" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "A dark green elven tricorne cap is here."
+      },
+      "sign@adept" : {
+         "location" : "IN_ROOM:adept57",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "sign",
+         "examine" : "&+y\t\tTO ALL ADVENTURERS:\n\n&+yIn the event that you are unable to complete this quest, you may pray to\n&+ythe elvish deity Jenin for assistance. He will begin things anew and cast\n&+yyou clear of this area.",
+         "desc[0]" : "&+wA weather-beaten sign is here."
+      },
+      "bark2@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "altname" : "scroll",
+         "pname" : "bark",
+         "name" : "bark2",
+         "examine" : "\n\n&+yMany of the land are amazed by his magical tricks,\n&+yyet his chemical secrets are contained in glass, not bricks.",
+         "bvalue" : "10",
+         "desc[0]" : "An old bark scroll tries to avoid the termites.",
+         "size" : "3"
+      },
+      "hole@adept" : {
+         "desc[1]" : "An immensely gnarled vine shoots skyward out of the hole.",
+         "location" : "IN_ROOM:adept57",
+         "oflags" : [
+            "NoGet",
+            "Destroyed",
+            "Container"
+         ],
+         "name" : "hole",
+         "examine" : "\nIt could hold a seedling chunk and perhaps a few pieces of bark for mulch.",
+         "state" : "0",
+         "size" : "70",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "A hole has been dug rather rudely here."
+      },
+      "door1@adept" : {
+         "desc[1]" : "The door is rusted shut.",
+         "location" : "IN_ROOM:adept23",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door1",
+         "examine" : "\nIts a device for separating two rooms.",
+         "linked" : "door2",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door creaks in the wind."
+      },
+      "bark3@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "altname" : "scroll",
+         "pname" : "bark",
+         "name" : "bark3",
+         "examine" : "\n\n&+yBeing on top of the world is a highlight of one's life,\n&+ywhere water cuts trenches like a knife.",
+         "bvalue" : "10",
+         "desc[0]" : "An old bark scroll tries to avoid the termites.",
+         "size" : "3"
+      },
+      "swingblade@adept" : {
+         "damage" : "19",
+         "location" : "WIELDED_BY:yinkit",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "blade",
+         "pname" : "swingblade",
+         "name" : "swingblade",
+         "examine" : "\nThe swingblade is one of the innovations in weaponry by the Jenintog\nelves. Especially slick and flexible, it resonates on slashes at high\nfrequency, destroying the human auditory system. When a shipment of these\nwere captured in battle, the castle magician turned their incapacitating\nability back against the elves, making them fit for use by human troops.",
+         "bvalue" : "75",
+         "desc[0]" : "\nA swingblade sticks out of the ground at an oblique angle."
+      },
+      "rock1@adept" : {
+         "location" : "IN_ROOM:adept5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "rock1",
+         "examine" : "\nThe land is full of those who hunt merely for a lark,\nbut who can uncover the mysteries of the bark?\n\nA scratching on a lower section of the rock reads:\nPut 'confusing objects' here...\nThe rest cannot be made out.\n\n",
+         "linked" : "rock2",
+         "state" : "1",
+         "pname" : "rock",
+         "maxstate" : "1",
+         "desc[0]" : "An engraved rock sulks at being shoved from its central position."
+      },
+      "waistcoat@adept" : {
+         "location" : "IN_ROOM:adept18",
+         "armor" : "16",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "coat",
+         "name" : "waistcoat",
+         "examine" : "\nTrendy Breeches - Protecting those sensitive spots for centuries!",
+         "size" : "10",
+         "pname" : "waistcoat",
+         "desc[0]" : "A leather waistcoat has been left here.",
+         "aflags" : [
+            "Arms",
+            "Back",
+            "Chest",
+            "Legs"
+         ]
+      },
+      "bark4@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "scroll",
+         "name" : "bark4",
+         "examine" : "\n\n&+yThe rocking motion is of comfort to a sailor when he may sleep,\n&+ybut should he be awakened, he'll maim the invading creep.",
+         "size" : "3",
+         "pname" : "bark",
+         "bvalue" : "10",
+         "desc[0]" : "An old bark scroll tries to avoid the termites."
+      },
+      "trinket@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "pname" : "trinket",
+         "name" : "trinket",
+         "examine" : "\n&+y   No one knows how these trees ever grew so tall,\n&+y   but they live where time has yet to fall.\n\nWhat else do you expect of a confusing piece of junk that may have been \nlying around in the corner of someone's dusty basement for decades?",
+         "bvalue" : "100",
+         "desc[0]" : "A slightly magical trinket glistens here.",
+         "size" : "3"
+      },
+      "chunk@adept" : {
+         "location" : "IN_ROOM:adept69",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "vine",
+         "pname" : "chunk",
+         "name" : "chunk",
+         "examine" : "\nPoor vine was dragged from its homeland plateau! If only the gods had been\nkind enough to see it back there with its bark pieces, a wee bit of smoldering\ncarbolic acid would make things a-ok!",
+         "bvalue" : "25",
+         "desc[0]" : "A chunk of a thin viney plant with a single root is here."
+      },
+      "statue@adept" : {
+         "location" : "IN_ROOM:adept14",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "statue",
+         "name" : "statue",
+         "examine" : "The inscription reads '&+MThe Flame&*.'",
+         "desc[0]" : "The statue remains proud for all the pigeons to unload on."
+      },
+      "acid@adept" : {
+         "location" : "IN_ROOM:adept41",
+         "pname" : "acid",
+         "name" : "acid",
+         "examine" : "\nMedieval strength carbolic - perfect for growing vines!",
+         "bvalue" : "50",
+         "desc[0]" : "A translucent bottle of unappetizing acid is here, fuming.",
+         "size" : "3"
+      },
+      "gizmo@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "pname" : "gizmo",
+         "name" : "gizmo",
+         "examine" : "\n&+y   For most people, a home is their bread and butter,\n&+y   so how can one be so messy and live in such a clutter?\n\nWhat else do you expect of a confusing piece of junk that may have been lying\naround in someone's dusty basement for decades?",
+         "bvalue" : "100",
+         "desc[0]" : "Some kind of non-working gizmo is here.",
+         "size" : "3"
+      },
+      "knob@adept" : {
+         "desc[1]" : "A gnarly knob pokes above the gnarl.",
+         "location" : "IN_ROOM:adept45",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "knob",
+         "examine" : "\nIt looks very flexible, perhaps capable of bending 90 degrees.",
+         "linked" : "door3",
+         "state" : "1",
+         "pname" : "knob",
+         "maxstate" : "1",
+         "desc[0]" : "A knob has been turned."
+      },
+      "nightshade@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "altname" : "reagent",
+         "pname" : "nightshade",
+         "name" : "nightshade",
+         "examine" : "\nThis powerful poison is often of use to skilled adepts.",
+         "bvalue" : "50",
+         "desc[0]" : "A large-capped mushroom stands here in its immortality as a reagent.",
+         "size" : "2"
+      },
+      "puffle@adept" : {
+         "location" : "IN_ROOM:adept10",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "puffle",
+         "examine" : "\nThis rich delight would make the most ascetic adventurer salivate.",
+         "size" : "2",
+         "pname" : "puffle",
+         "bvalue" : "30",
+         "desc[0]" : "A cream and air filled puffle steams here."
+      },
+      "bed@adept" : {
+         "location" : "IN_ROOM:adept64",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "bed",
+         "name" : "bed",
+         "examine" : "\nThis bed is sturdy, functional, and reasonably comfortable looking."
+      },
+      "flask@adept" : {
+         "location" : "IN_ROOM:adept36",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "glass",
+         "pname" : "flask",
+         "name" : "flask",
+         "examine" : "\nIt's a heavy glass container secured in a wooden base.",
+         "desc[0]" : "The flask used to have junk boiling in it."
+      },
+      "door2@adept" : {
+         "desc[1]" : "The door is rusted shut.",
+         "location" : "IN_ROOM:adept24",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door2",
+         "examine" : "\nIts a device for separating two rooms.",
+         "linked" : "door1",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door creaks in the wind."
+      },
+      "bark1@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "altname" : "scroll",
+         "pname" : "bark",
+         "name" : "bark1",
+         "examine" : "\n\n&+ySouth of the statue of flame, black smoke pours into the sky\n&+yfrom a pounding block in a place where flesh can fry.",
+         "bvalue" : "10",
+         "desc[0]" : "An old bark scroll tries to avoid the termites.",
+         "size" : "3"
+      },
+      "gully@adept" : {
+         "location" : "IN_ROOM:adept50",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "pname" : "gully",
+         "name" : "gully",
+         "examine" : "\nThe elements sure have been at work here.",
+         "desc[0]" : "A deep gully runs along the side of a slope."
+      },
+      "hcord@adept" : {
+         "desc[1]" : "There is a beautifully polished harpsichord in the center of the cradle.",
+         "location" : "IN_ROOM:adept73",
+         "armor" : "0",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "harp",
+         "name" : "hcord",
+         "examine" : "\nThe harpsichord, mounted on small wheels, is both a musical tool to enjoy and\na deadly weapon.",
+         "state" : "1",
+         "pname" : "harpsichord",
+         "maxstate" : "1",
+         "desc[0]" : "A harpsichord lays in a broken pile here, keys flung everywhere."
+      },
+      "plant1@adept" : {
+         "location" : "IN_ROOM:adept68",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "plant",
+         "name" : "plant1",
+         "examine" : "\nIt looks a little TOO healthy and in need of trimming.",
+         "desc[0]" : "A well-built plant stands tall, dropping fungus on you."
+      },
+      "cape@adept" : {
+         "location" : "IN_ROOM:adept24",
+         "oflags" : [
+            "Wearable"
+         ],
+         "pname" : "cape",
+         "name" : "cape",
+         "examine" : "Please return to my troops if found.",
+         "bvalue" : "50",
+         "desc[0]" : "An outdated officer's cape is crumpled here.",
+         "size" : "9"
+      },
+      "anvil@adept" : {
+         "location" : "IN_ROOM:adept30",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "anvil",
+         "name" : "anvil",
+         "examine" : "\nCheck out the temperature on that mace!",
+         "desc[0]" : "Elements of hard work lay strewn on the anvil."
+      },
+      "clutter@adept" : {
+         "location" : "IN_ROOM:adept47",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "mess",
+         "pname" : "boards",
+         "name" : "clutter",
+         "examine" : "\nThe place has been thrashed, but not looted. One would almost need a shovel\nto dig through this mess.",
+         "desc[0]" : "A mess of putrefying nailed boards lies in one corner."
+      },
+      "bunghole@adept" : {
+         "desc[1]" : "The planks bend inward ever so slightly as water leaks through the bunghole.",
+         "location" : "IN_ROOM:adept65",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bunghole",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "bunghole",
+         "maxstate" : "1",
+         "desc[0]" : "The bunghole leak has been properly stuffed with a bung."
+      },
+      "branch@adept" : {
+         "location" : "IN_ROOM:adept3",
+         "altname" : "limb",
+         "pname" : "branch",
+         "name" : "branch",
+         "examine" : "It's an ordinary piece of wood, broken off thousands of years ago.",
+         "bvalue" : "10",
+         "desc[0]" : "&+yA petrified limb rests here.",
+         "size" : "2"
+      },
+      "rock2@adept" : {
+         "desc[1]" : "A mud-covered rock drops mud from above.",
+         "location" : "IN_ROOM:adept66",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "name" : "rock2",
+         "linked" : "rock1",
+         "state" : "1",
+         "pname" : "rock",
+         "maxstate" : "1",
+         "desc[0]" : "A rock has been shoved aside to reveal blue sky."
+      },
+      "ringmail@adept" : {
+         "location" : "WORN_BY:yinkit",
+         "armor" : "40",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "mail",
+         "name" : "ringmail",
+         "examine" : "\nThe last owner of this was not apparently in tune with his or her luck,\nbut it will block most thrusts still...hopefully.",
+         "size" : "19",
+         "pname" : "ringmail",
+         "bvalue" : "100",
+         "desc[0]" : "A blood-stained suit of ringmail has been rudely punctured.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms"
+         ]
+      },
+      "teeth@adept" : {
+         "damage" : "2",
+         "location" : "BOTH_BY:beaver",
+         "oflags" : [
+            "Weapon",
+            "Wearable"
+         ],
+         "name" : "teeth",
+         "examine" : "\nShattered expertly from the jawbone of an innocent woodland animal, \nthis set of pearly whites was brushed with sawdust and flossed with \nsplinters. The teeth are absolutely begging subconsciously in vain \nto you to be put on a chain, so that the two hormonally overgrown \nfront toothies will be displayed with all the proper respect their \nnarcisstic enamel demands!",
+         "size" : "20",
+         "pname" : "teeth",
+         "bvalue" : "200",
+         "desc[0]" : "\nA set of beaver's teeth sits here like a prized relic."
+      },
+      "sword@adept" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:adept20",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "sword",
+         "examine" : "A rusty sheath is the carrier for this sword.",
+         "size" : "10",
+         "pname" : "shortsword",
+         "bvalue" : "150",
+         "desc[0]" : "A slender, miniscule sword has been carefully placed here."
+      },
+      "shovel@adept" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:adept24",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "shovel",
+         "examine" : "This tool is especially designed for windswept plateaus.",
+         "size" : "10",
+         "pname" : "shovel",
+         "bvalue" : "100",
+         "desc[0]" : "A shovel covered in two inches of rust is here."
+      },
+      "kika@adept" : {
+         "location" : "IN_ROOM:adept65",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "kika",
+         "name" : "kika",
+         "examine" : "\nKika is the green heptagonal coinage used in the Darklands by the Giaks.\nSomeone in Jenintog obviously has traveled through the far southern land\nof Sommerlund.",
+         "bvalue" : "1500",
+         "desc[0]" : "A moneybag full of green kika is here.",
+         "size" : "8"
+      },
+      "door3@adept" : {
+         "location" : "IN_ROOM:adept47",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "door3",
+         "examine" : "\nIt opens, it closes, it separates locations.",
+         "linked" : "knob",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1"
+      },
+      "mandrake@adept" : {
+         "location" : "IN_ROOM:adept72",
+         "altname" : "reagent",
+         "pname" : "mandrake",
+         "name" : "mandrake",
+         "examine" : "\nThis bitter tuber is often of use to skilled adepts.",
+         "bvalue" : "50",
+         "desc[0]" : "A gnarled root used as a reagent having human shape is here.",
+         "size" : "2"
+      }
+   },
+   "loc" : {
+      "adept54@adept" : {
+         "exits" : {
+            "w" : "adept55",
+            "s" : "adept53"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Northwest Nareth",
+         "id" : "adept54",
+         "description" : "\n  The forest once extended to the distant coastline to the southwest and \nfar across to the eastern reaches of the land, but when humans came to \nthis country, they greatly deforested the north and northeastern \nsections. The Kengjun Elves, fearing the eventual destruction of their \nentire homeland, responded with diplomats and petitions to ease the \nhumans from the cutting of further trees. The diplomats were never heard \nfrom again and the petitions burned. When the humans begin to invade the \ncentral regions, the Elves launched a massive counteroffensive and drove \nback the humans halfway to the northern border of their land. The castle \nto the east is the humans' base of operations, and the area east of that \ncastle is where the decades-long fight continues even now.\n",
+         "altitude" : null
+      },
+      "adept57@adept" : {
+         "exits" : {
+            "d" : "adept56"
+         },
+         "flags" : [
+            "Cold"
+         ],
+         "zone" : "adept",
+         "title" : "Plateau",
+         "id" : "adept57",
+         "description" : "\n  You stand on the edge of the massive, windswept tabletop known to the \nKengjun Elves as The Gastabel Plateau and to the humans as simply another \naberrant lump on the face of the planet. Small particles of sandstone, \nclay, and shale fly through the open sky and skid off the edge. To the \nsouthwest, a thick fog hangs over the ocean, and the northeast contains a \nflurry of moving black objects barely recognizable as the human army \nmarching around to engage the elves once more.\n",
+         "altitude" : null
+      },
+      "adept47@adept" : {
+         "exits" : {
+            "s" : "^door3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "Overgrown House",
+         "id" : "adept47",
+         "description" : "\n  This appears to be a former two-room house, the back bedroom entrance \nnow completely blocked by the roots of a great tree. Old and cracked \nfurniture in the final stages of rotting is strewn throughout the room, \nsuggesting a major last stand by the occupants occurred here. A broken \nclock still hanging by a decaying wooden hook is forever stopped at 8pm.\nThe clutter in the room is such that the whole place should be burned.\n",
+         "altitude" : null
+      },
+      "adept5@adept" : {
+         "exits" : {
+            "w" : "adept51",
+            "e" : "adept42",
+            "n" : "adept31",
+            "d" : "^rock1",
+            "s" : "adept6"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "adept",
+         "title" : "Circular Grove",
+         "id" : "adept5",
+         "description" : "\n  A lush forest surrounds this clearing, allowing the sky access to this \nplace. Seven small shrubs form a circle in this clearing. A &+Cstrange rock \nin the very middle of the circle has four stony three-pronged holders \nextending from it, each covering a cardinal point. The rock is inscribed \nwith the markings of a forgotten language, but there is a picture of a \ncross on each holder. Within the clearing, no noise is present except for \nthe actions and footsteps of those who choose to enter the ring of shrubs.\n",
+         "altitude" : null
+      },
+      "adept17@adept" : {
+         "exits" : {
+            "e" : "adept19",
+            "w" : "adept16",
+            "n" : "adept18"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Main Street",
+         "id" : "adept17",
+         "description" : "\n  The road stretches away into the distance to the east and west. Here \nthe buildings are not as closely crowded as they are further west and \nalso begin to reduce in size, becoming more suburb-like. A large sign on \na pole shows a shield with the Whisper City coat-of-arms on it.\n",
+         "altitude" : null
+      },
+      "adept65@adept" : {
+         "exits" : {
+            "u" : "adept63"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "The Hold",
+         "id" : "adept65",
+         "description" : "\n  The ship's stores are quite full when the Seeker is en route to its \nlocal fishing route, but now only a few remote specks of dust fly through \nthe single sunbeam and scatter into the corners.\n",
+         "altitude" : null
+      },
+      "adept68@adept" : {
+         "exits" : {
+            "w" : "adept67"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "Underground Cavern",
+         "id" : "adept68",
+         "description" : "\n  The passageway in here can only be made by crawling on hands and knees, \nbut the roof shoots up as access to this chamber is gained. There are \nseveral unknown species of mushrooms growing in abundance here. Their \ngray and tan caps are rich with spores for producing future generations \nof fungi.\n",
+         "altitude" : null
+      },
+      "adept23@adept" : {
+         "exits" : {
+            "e" : "adept25",
+            "w" : "adept22",
+            "s" : "^door1"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Vergor Street",
+         "id" : "adept23",
+         "description" : "\n  The road deteriorates rapidly in this section, becoming spotted with \nwater-filled potholes. To the south is a decrepit structure marked \n'Safety and Sanitation.'\n",
+         "altitude" : null
+      },
+      "adept61@adept" : {
+         "exits" : {
+            "w" : "adept62",
+            "e" : "adept60"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Bow of a Ship",
+         "id" : "adept61",
+         "description" : "\n  The prow of this boat juts proudly toward the land she serves. Built \nonto the front is the wooden carving of a manifestation of a local elven \ngoddess, finished with a coat of Adept's special serum and sealed with \ntree sap. The sides extend back to the stern in a tight parabola of wave \ndesigns with the deckboards shining between them. The beginning of the \nboom rests to one side, the sails flapping loosely in the wind. To the \neast is the dock and beach, while the ship continues westward.\n",
+         "altitude" : null
+      },
+      "adept73@adept" : {
+         "exits" : {
+            "d" : "adept57"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "In the Cradle",
+         "id" : "adept73",
+         "description" : "\n   The vine top is the formation of a huge cradle supporting the\nreproductive organs of the vine. The smell of carbolic acid is still in\nthe air as the plant produces more of it to sustain its internal transport\nsystem. Close to the center of the cradle rests a flatop mound of plant\nflesh.\n",
+         "altitude" : null
+      },
+      "adept56@adept" : {
+         "exits" : {
+            "u" : "adept57",
+            "s" : "adept55"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Base of the Mesa",
+         "id" : "adept56",
+         "description" : "\n  A sheer, vertical wall of reddish-brown rock blocks all passage except \nto the south. The mesa appears to be over 2000 feet above the forest \nfloor and should provide excellent scouting terrain. The trees stop abruptly \nat the base of the wall, where there is a staircase winding up and around \nthe mesa.\n",
+         "altitude" : null
+      },
+      "adept36@adept" : {
+         "exits" : {
+            "s" : "adept35"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "Laboratory",
+         "id" : "adept36",
+         "description" : "\n  Some mad scientist's dream lab is in this room! On tables randomly \nspread about the chamber are many kinds of glass equipment connected to \neach other via corks and rubber tubing. Small flames heat a green liquid \nin one corner, transforming it into a pale gas, which flows through the \nentire apparatus and settles into a gigantic flask bolted to the floor.\n",
+         "altitude" : null
+      },
+      "adept13@adept" : {
+         "exits" : {
+            "e" : "adept14",
+            "w" : "adept12"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Whisper City",
+         "id" : "adept13",
+         "description" : "\n  On weekdays, the amount of business going on here must be enormous, for \nthere are many hundreds of merchants selling their wares streetside. Tens \nof wagons and scores of citizens move purposefully along the road, \noccasionally jostling one another out of the way for a better look at the \nmercantile bazaars. The city is alive with a certain music, too, heard as \nan overtone above the general hubbub. The exit out is to the west, while \na crossroads lies to the east.\n",
+         "altitude" : null
+      },
+      "adept41@adept" : {
+         "exits" : {
+            "e" : "adept40"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "Torture Chamber",
+         "id" : "adept41",
+         "description" : "\n  A great rack is the most notable instrument of pain in this room. \nSuction pumps and iron-hot pokers serve for frying off prisoners' \nnipples, while coiled whips, chains, and wooden sticks are thrown \nhaplessly in the corner designated for beating.\n",
+         "altitude" : null
+      },
+      "adept11@adept" : {
+         "exits" : {
+            "e" : "adept9"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "The Garden",
+         "id" : "adept11",
+         "description" : "\n  The archway that represents the passage in and out of the garden is \nmade of simple adobe blocks, as are the walls which surround the garden \nto a height of four feet. Guideposts along the various dug trenches tell \nwhat type of plant or vegetable is currently growing within that row. \nLeaning up against a stone dedication to the Axilator people are the \nusual gardening implements: shovel, hoe, rake, manure pile, and a dusty, \nrickety wheelbarrow. The entire area is well tended and thus provides \nsufficient produce every harvest for all the hungry souls.\n",
+         "altitude" : null
+      },
+      "adept26@adept" : {
+         "exits" : {
+            "w" : "adept25",
+            "e" : "adept27"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Factory Gates",
+         "id" : "adept26",
+         "description" : "\n  A picket-line fence surrounds this industrial complex, complete with a \nguardtower. A gray, three-story building stands ominously against the \nblue sky, its puffing tower of smoke deterring any birds from flying \noverhead. The walls seem to be three feet thick, and the fortess is \nheavily guarded.\n",
+         "altitude" : null
+      },
+      "adept16@adept" : {
+         "exits" : {
+            "e" : "adept17",
+            "w" : "adept14"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Main Street",
+         "id" : "adept16",
+         "description" : "\n  This is the widest and most heavily traveled section of the city, where \nmany millions of both legal and black market transactions have occurred. \nThe road widens into a circular four-way to the west and continues to \ncurve slightly to the east.\n",
+         "altitude" : null
+      },
+      "adept58@adept" : {
+         "exits" : {
+            "n" : "adept52",
+            "s" : "adept59"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Groomed Path",
+         "id" : "adept58",
+         "description" : "\n  The trail is well-kept along this section of it. Small rocks line the \nwidening dirt road as it passes along the axes of the global poles. The \nforest thins out to the south and west as one draws closer to the \ncoastline, while it strengthes to the north.\n",
+         "altitude" : null
+      },
+      "adept14@adept" : {
+         "exits" : {
+            "w" : "adept13",
+            "e" : "adept16",
+            "n" : "adept15",
+            "s" : "adept22"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Square of Statues",
+         "id" : "adept14",
+         "description" : "\n  This is a large cobblestoned plaza near the center of Whisper City. The \ngreat stony figures of past citizens - prominent politicians, war heroes, \nundefeated lawyers, and even one of a horse named Zogo - stand in no \nparticular arrangement around a larger sculpture in the middle. The \ncenterpiece is truly a work of art in its craftsmanship. Three slender \nstrips of a metal alloy not commonly used in the production of normal \nweapons and armor twine around each other elegantly in a triple helix. \nSquares of a contrasting metal have been soldered against the outside \nsurfaces of the helix at regular intervals. A block of the same metal \nforms the base on which the sculpture and an inscription rest.\n",
+         "altitude" : null
+      },
+      "adept18@adept" : {
+         "exits" : {
+            "s" : "adept17"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Peter's Armor",
+         "id" : "adept18",
+         "description" : "\n  All kinds of armor, shields, and helmets line the walls on shelves and \nracks. On a stand off to one side is a suit of silver mithrail - a rare \nform of magical armor. A bronze shield lays at the base of the counter, \nand a battered and dented helm badly in need of repair or scrapping has \nbeen tossed onto a pile of broken equipment.\n",
+         "altitude" : null
+      },
+      "adept62@adept" : {
+         "exits" : {
+            "w" : "adept63",
+            "e" : "adept61"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "The Seeker",
+         "id" : "adept62",
+         "description" : "\n  You stand upon the main deck of the elven fishing boat Seeker. She has \nled a long life in her journeys throughout the seas of the world, \nbattling the fierce storms and sea serpents. Usually, the Seeker is sent \nout to fetch deep-sea shellfish, bass, and salmon, but recently a huge \nexplosion of trout and swordfish have caught the attention of the elves \nand shoved the demand for fresh fish to record-high levels. When the ship \nis crewed, the first mate controls the nearby steering wheel and the \npetty officer is in the crow's nest. Several other people take hold of \nhandling the emblazoned sails and side oars to control the Seeker's speed.\n",
+         "altitude" : null
+      },
+      "adept3@adept" : {
+         "exits" : {
+            "e" : "adept2"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "On the Branch",
+         "id" : "adept3",
+         "description" : "\n  The wind glides through the trees at this height, brushing the \nremaining gray leaves and gently swaying the branches. Far below and \naround you lies the thick jungle, and you can also see the top of a \nlarge waterfall with a village and temple nearby.  Some tropical birds\nfly overhead, and their screeching leader orders the fine-feathered \nformation occupy the upper parts of the great tree.\n",
+         "altitude" : null
+      },
+      "adept53@adept" : {
+         "exits" : {
+            "e" : "adept52",
+            "n" : "adept54"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Glen of the Ancients",
+         "id" : "adept53",
+         "description" : "\n  This is one of the oldest sections of the Nareth Forest and has been \npreserved because of its history. Almost a thousand years since they were \nfirst planted, the hybrid hemlock-sequoia trees grow nearly 400 feet high \nin loose formation. They were blessed by many a priest and even the \nArchMage Adept himself to keep them prosperous for as many generations as \npossible, sort of a challenge to the clergy's abilities to influence \nnature. Despite the tender care that went into making this glen possible, \nthe trees have not escaped time unscathed. The glen was often spoken of \nin lore classes for those in the magic initiate classes, and many a \nmischievous couple have spent days within the isolation of the trees, \nwhispering sweet words of love to each other and lightly carving their \ninitials into the bark.\n",
+         "altitude" : null
+      },
+      "adept48@adept" : {
+         "exits" : {
+            "w" : "adept44",
+            "u" : "adept49"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Forest Gaps",
+         "id" : "adept48",
+         "description" : "\n  The trail passes between fallen trunks, slowing progress through the \nforest. Mosses grow where the sun manages to penetrate and nocturnal \nanimals live in the holes that the crossing trunks generate. The forest \nthickens to the west and thins as the trail approaches foothills in the east.\n",
+         "altitude" : null
+      },
+      "adept39@adept" : {
+         "exits" : {
+            "d" : "adept38"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Turret",
+         "id" : "adept39",
+         "description" : "\n  Scratches on the walls depict the thousands of prisoners of war who \nwere locked up in here and died from starvation. A small pile of hay that \nthe king calls a bed for prisoners has been permanently ground into the \ncold floor. Birds also inhabit this tower, as there are cracked eggshells \nand nest remains all over the floor.\n",
+         "altitude" : null
+      },
+      "adept50@adept" : {
+         "exits" : {
+            "d" : "adept49"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Dracwen Range",
+         "id" : "adept50",
+         "description" : "\n  From here, people attempt to scale the near-vertical faces of the \nDracwen Mountains. This has been the jump-off point for many of such \nexpeditions and rescue attempts. In the hopes of getting good luck with \ntheir mountain-climbing skills, travelers sometimes leave small gifts in \na sheltered alcove of one of the faces or in a nearby gully.\n",
+         "altitude" : null
+      },
+      "adept67@adept" : {
+         "exits" : {
+            "w" : "adept69",
+            "e" : "adept68",
+            "u" : "adept66",
+            "d" : "adept70"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "On the Ladder",
+         "id" : "adept67",
+         "description" : "\n  The shaft has been smoothened out over the years, allowing the ladder \nto firmly lean against the side. There are two holes alongside the ladder \nattainable by crawlboards.\n",
+         "altitude" : null
+      },
+      "adept46@adept" : {
+         "exits" : {
+            "w" : "adept45"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "adept",
+         "title" : "&+RSide Pit",
+         "id" : "adept46",
+         "description" : "\n  Not many people head into here, as it often contains unpleasant \nsurprises. Your footing slips and you hit the ground, rolling down a \nsmall ditch of thick branches. One gouges a furrow from your neck, but \nanother pierces your chest and lightly punctures the pericardium. Gasping \nfor breath as the blood flows from you, your eyes close on this world \nforever.\n",
+         "altitude" : null
+      },
+      "adept52@adept" : {
+         "exits" : {
+            "w" : "adept53",
+            "e" : "adept51",
+            "s" : "adept58"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Crossways",
+         "id" : "adept52",
+         "description" : "\n  The path splits into two here, one leading east and west along the forest \ntrack and the other to an ocean on the horizon to the southwest.\n",
+         "altitude" : null
+      },
+      "adept70@adept" : {
+         "exits" : {
+            "u" : "adept67",
+            "d" : "adept71"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "On the Ladder",
+         "id" : "adept70",
+         "description" : "\n  The ladder continues up and down.\n",
+         "altitude" : null
+      },
+      "adept64@adept" : {
+         "exits" : {
+            "e" : "adept63"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Skipper's Cabin",
+         "id" : "adept64",
+         "description" : "\n  This medium-sized room was made with respect. Although not overly \nfurnished and adorned with golden ropes, the captain's room serves to \nremind the crew that the captain is in charge. A small desk and an even \nsmaller barrel are the main items of furniture. The &+Cbed&* is just big \nenough to hold the captain.\n",
+         "altitude" : null
+      },
+      "adept34@adept" : {
+         "exits" : {
+            "s" : "adept33"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Throne Chamber",
+         "id" : "adept34",
+         "description" : "\n  Perhaps during peacetime this place would be sanctimonious. Today, the \nking is pressured with the latest reports from the battlefields northeast \nof the castle grounds and developing crises on other fronts. The council \nof advisors and highest military officers ar heavily debating plans of \nattack and the possible outcomes, while kitchen scullies attempt to \nplcate the appetites such discussion has worked up. Waiting in the \nbackground are the serving ladies who wonder which of the officers or \nadvisors they will be enjoying the night with.\n",
+         "altitude" : null
+      },
+      "adept22@adept" : {
+         "exits" : {
+            "e" : "adept23",
+            "n" : "adept14"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Vergor Street",
+         "id" : "adept22",
+         "description" : "\n  The number of merchants is less here in this quarter of the city. The \nindustrialized zones are to the east while commercial and residential \nzones are to the north. Toward the east, a huge column of black smoke \npours from a distant building.\n",
+         "altitude" : null
+      },
+      "adept10@adept" : {
+         "exits" : {
+            "s" : "adept9"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Ye Olde Pastries",
+         "id" : "adept10",
+         "description" : "\n  An enormous oven sits in a back corner behind a large glass counter \nstockes with freshly made bread. It emits tremendous amounts of heat and \nkeeps the shop warm even in mid-winter. On the counter in front of the \noven, white, wheat, rye, banana nut, and sourdough combine color and \ntexture to form an appetizing display. In another corner lay stacks of \ncrates and three barrels, which are marked 'FLOUR,' 'SUGAR,' and 'LARD.' \nTwo baking assistants and an apprentice attend to the complex \nbread-making process, sweating profusely from the intense heat. A price \nlist hanging from the ceiling contains every available item in colorful \nblock letters.\n",
+         "altitude" : null
+      },
+      "adept69@adept" : {
+         "exits" : {
+            "e" : "adept67"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "Underground Cavern",
+         "id" : "adept69",
+         "description" : "\n  The passageway in here can only be made crawling on all fours, but the \nceiling is much higher up inside the chamber. Every wall and the floor \nare covered in thick, gnarled roots. There is no place for bugs to even \nlive since the mass of roots is so thick.\n",
+         "altitude" : null
+      },
+      "adept20@adept" : {
+         "exits" : {
+            "n" : "adept19"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Kelvin's Goods",
+         "id" : "adept20",
+         "description" : "\n  This is a simple weapons store offering both new and used equipment as \nwell as the opportunity to receive money for weapons under a buyback \nplan. A man who looks big enough to be a human cousin of the legendary \nTitans finished purchasing a new boiled leather quiver full of \nhardened-tipped arrows. A lethal looking crossbow, dart system, brace of \nknives, and scabbard follow. Then the store's owner presents a repaired \nsword to his heavily paying customer. The man replaces his sword in the \nscabbard and leaves, stopping for a moment to pet a purring tabby that \nhas appeared from behing the counter. The cat then proceeds to jump on \nthe counter, walk to its owner, and clean itself. Kelvin the Swordmaster \nstrokes the tabby's furry back and smiles at you.\n",
+         "altitude" : null
+      },
+      "adept6@adept" : {
+         "exits" : {
+            "n" : "adept5",
+            "s" : "adept7"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Forest Path",
+         "id" : "adept6",
+         "description" : "\n  This heavily wooded path leads through many twists and turns as it \nmeanders along. The dense underbrush snaps and crackles with each echoing \nfootstep, scaring away all kinds of ground-dwelling critters.\n",
+         "altitude" : null
+      },
+      "adept7@adept" : {
+         "exits" : {
+            "e" : "adept12",
+            "w" : "adept8",
+            "n" : "adept6"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Junction",
+         "id" : "adept7",
+         "description" : "\n  A three-way fork presents itself about a hundred yards further down the \ntrail. The trail widens on the eastern and western branches and narrows \non the northern approach. A village lies to the west and a medium-sized \ncity is to the east.\n",
+         "altitude" : null
+      },
+      "adept43@adept" : {
+         "exits" : {
+            "e" : "adept44",
+            "w" : "adept42"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Nareth Forest",
+         "id" : "adept43",
+         "description" : "\n  The welcoming green of millions of leaves on thousands of trees of \nvarious colors of brown and tan flourishes before your eyes. Mainly a \ndeciduous, low-latitude area, the Nareth supports species of life \nrivalling that of the rain forests. Those who were the first ones here \nwere kind enough to trailblaze carefully to preserve the ecology. As it \nis, the sounds of life are never far. Low trees and bushes shake at \nrandom as the chase of the food chain is brought to them; an army of \ncrickets burst forth from up the path with a red fox in hot pursuit. A \ngarden snake slithers around your feet and disappears into the safety of \nits burrow. Besides the animal habitation sounds, the wind is doing its \nown fair share of whistling as it skims the tops of the trees.\n",
+         "altitude" : null
+      },
+      "adept1@adept" : {
+         "exits" : {
+            "u" : "adept2",
+            "d" : "greattree@balharbor"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Climbing the Great Tree",
+         "id" : "adept1",
+         "description" : "\n   You hang on tightly to the trunk of the great tree.  You think you see\nmovement in the dark recesses of the creepers and mosses around you.  It\nwould be easy to climb up or down from here.  On many limbs, clusters of \nround 'oak bombs' hang waiting to drop on an unsuspecting forest explorer \nand let loose their clouds of concentrated sneeze dust.  Above you the \ntree extends itself above you at incredible heights.\n",
+         "altitude" : null
+      },
+      "adept42@adept" : {
+         "exits" : {
+            "e" : "adept43",
+            "w" : "adept5"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Forest Path",
+         "id" : "adept42",
+         "description" : "\n  This heavily wooded path leads through many twists and turns as it \nmeanders along. The dense underbrush snaps and crackles with each echoing \nfootstep, scaring away all kinds of ground-dwelling critters.\n",
+         "altitude" : null
+      },
+      "adept28@adept" : {
+         "exits" : {
+            "u" : "adept29",
+            "d" : "adept27"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Second Floor",
+         "id" : "adept28",
+         "description" : "\n  The second story consists mainly of offices for the senior staff of the \nbuilding. Small, wooden cubicles with only minimum furnishings such as a \nsmall wood table for a desk, are crammed together like canned sardines.\n",
+         "altitude" : null
+      },
+      "adept38@adept" : {
+         "exits" : {
+            "w" : "adept33",
+            "u" : "adept39",
+            "d" : "adept40"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Stairwell",
+         "id" : "adept38",
+         "description" : "\n  A spiral stone staircase winds around this tower.\n",
+         "altitude" : null
+      },
+      "adept74@adept" : {
+         "exits" : {
+            "u" : "adept75",
+            "d" : "adept2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "adept",
+         "title" : "Higher on the Trunk",
+         "id" : "adept74",
+         "description" : "\n   Although you have reached a respectable height, the trunk continues\nupwards as far as you can see.  Another branch stretches off to the east\nhere.\n",
+         "altitude" : null
+      },
+      "adept19@adept" : {
+         "exits" : {
+            "e" : "adept21",
+            "w" : "adept17",
+            "s" : "adept20"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Main Street",
+         "id" : "adept19",
+         "description" : "\n  Here the suburbs brgin to change into sparser highway settlements as \nthe city's outskirts circle intersects this area. The road ends to the \neast in a turn-around, heads for the center of the city to the west, and \nto a shop to the south.\n",
+         "altitude" : null
+      },
+      "adept44@adept" : {
+         "exits" : {
+            "w" : "adept43",
+            "e" : "adept48",
+            "n" : "adept45"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Low Branches",
+         "id" : "adept44",
+         "description" : "\n  The branches here decide to visit the ground and force travelers to \nkneel and crawl their way through the dense forest. Clusters of branches \njoin ranks in many spots, seeking an eye to pop. To the east and west are \nclearer areas of forest matter, while the north holds a genuine wall of\nwood.\n",
+         "altitude" : null
+      },
+      "adept33@adept" : {
+         "exits" : {
+            "e" : "adept38",
+            "w" : "adept35",
+            "n" : "adept34",
+            "s" : "adept32"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Courtyard",
+         "id" : "adept33",
+         "description" : "\n  From the outside, this castle is seemingly huge, but its inner size \nsuggests something else. The cobblestoned plaza has a fountain in each \ncorner and tapestries tacked to the stone walls. The king of the land \nresides to the north, while the court jester and magician dwell to the \nwest. Those enormous walls stand to the south.\n",
+         "altitude" : null
+      },
+      "adept29@adept" : {
+         "exits" : {
+            "e" : "adept30",
+            "d" : "adept28"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Third Floor",
+         "id" : "adept29",
+         "description" : "\n  This floor is partially covered in soot and burnt pieces of scrap \nmetal. A red glow emanates from the east, as does the heavy, rythmic \npounding of a hammer.\n",
+         "altitude" : null
+      },
+      "adept60@adept" : {
+         "exits" : {
+            "w" : "adept61",
+            "e" : "adept59"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Sand Dunes",
+         "id" : "adept60",
+         "description" : "\n  The coastal breezes push the salt-tasting air up the coastline and \ninwards over the dunes. In some places, the wind is strong enough to push \na whole dune several inches past its point of origin. The dunes \nthemselves are composed of bright, yellowish-pink, grainy particles that \nblow through the air and deposit themselves in constantly new \narrangements. Seashells lay scattered haphazardly and half-buried, their \nowners having long ago abandoned them. A crab with an unknown level of \nhunger snaps wildly at the air and scrambles at a mad pace along the beach.\n",
+         "altitude" : null
+      },
+      "adept63@adept" : {
+         "exits" : {
+            "w" : "adept64",
+            "e" : "adept62",
+            "d" : "adept65"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Observation Room",
+         "id" : "adept63",
+         "description" : "\n  Junior officers are the main inhabitants of this room when on duty. \nThey generally have the keenest senses of sight among the crew, watching \npatiently and intently for land, storms, serpents, and other ships. There \nare many pairs of viewing glasses strapped to the walls to help better \nthe visual range. Maps on a nearby table and a gyroscope in the corner \nserve to help plot the ship's course, and an ancient sextant is rigged to \ngive the Seeker's current coordinates at any given time.\n",
+         "altitude" : null
+      },
+      "adept75@adept" : {
+         "exits" : {
+            "d" : "adept74"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "adept",
+         "title" : "High in the Great Tree",
+         "id" : "adept75",
+         "description" : "\n   You cling to sparser vines as you continue along the main trunk.  You\ncan clearly see small forms scuttling about in them!\n",
+         "altitude" : null
+      },
+      "adept21@adept" : {
+         "exits" : {
+            "w" : "adept19"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Cul de Sac",
+         "id" : "adept21",
+         "description" : "\n  The main street of Whisper City comes to and end here. A recreational \npark has been set off to the side of the circle in between two rural \nhomes. There is a large grate in the middle of the circle through which \npeople dump their garbage.\n",
+         "altitude" : null
+      },
+      "adept51@adept" : {
+         "exits" : {
+            "w" : "adept52",
+            "e" : "adept5"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Forest Path",
+         "id" : "adept51",
+         "description" : "\n  This heavily wooded path leads through many twists and turns as it \nmeanders along. The dense underbrush snaps and crackles with each echoing \nfootstep, scaring away all kinds of ground-dwelling critters.\n",
+         "altitude" : null
+      },
+      "adept72@adept" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "&+RPerturbations",
+         "id" : "adept72",
+         "description" : "\n   This is the disformed segment of Adept's memory which retains the\nobjects and other garbage necessary to complete the Jenintog quest.\n",
+         "altitude" : null
+      },
+      "adept45@adept" : {
+         "exits" : {
+            "e" : "adept46",
+            "n" : "^knob",
+            "s" : "adept44"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "Wall of Roots",
+         "id" : "adept45",
+         "description" : "\n  A thick mass of roots here blocks all normal travel except to the \nsouth, but there is a dark, uninviting hole to the east. Foul fumes from\nrotting and diseased bodies emanate from it, and the side of the pit is\nmarked by an intensely green, spiked mushroom. A collection of the roots\nmove down from high above and flow together, entwining to form a knob at\nabout two feet above the ground.\n",
+         "altitude" : null
+      },
+      "adept71@adept" : {
+         "exits" : {
+            "u" : "adept70"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Underground Habitat",
+         "id" : "adept71",
+         "description" : "\n  The room is massively huge and must have taken a year to completely dig \nout. Large numbers of flying insects hover near the roof and illuminate \nthe chamber, revealing a dais in the middle of the room. A mess of \nbottles and powedered ingredients lie cluttered on it and on the floor. \nLarge bookcases dominate each corner, their tomes covered in the \nletterings of a language unspoken for thousands of years.  The floor is \nkept free of dust, mold, and bugs by a heavy web of enchantments. There \nare two conflicting auras in the room - one good and the other confusion \n- which feed the power of the network of spells placed on the room.\n",
+         "altitude" : null
+      },
+      "adept25@adept" : {
+         "exits" : {
+            "e" : "adept26",
+            "w" : "adept23"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Vergor Street",
+         "id" : "adept25",
+         "description" : "\n  The street is extremely potholed here and is thus not recommended for \nhorses or animals of any sort. A gatetower to the east stands as the \nentrance for a factory while the road improves in condition to the west.\n",
+         "altitude" : null
+      },
+      "adept59@adept" : {
+         "exits" : {
+            "w" : "adept60",
+            "n" : "adept58"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Scrublands",
+         "id" : "adept59",
+         "description" : "\n  A beautiful field of multi-colored weeds and small plants decorate this \nplain for miles. Only a few trees from the Nareth ever made it this far \nto the ocean, the sea breezes having eroded away the minerals of life \nfrom the grainy soil. However, the wind doesn't bother the insects who \nfeed on the weeds here in great quantities. Their bodies also rejuvenate \nthe ground to make the vegetation even more healthy in years to come.\n",
+         "altitude" : null
+      },
+      "adept31@adept" : {
+         "exits" : {
+            "n" : "adept32",
+            "s" : "adept5"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Forest Path",
+         "id" : "adept31",
+         "description" : "\n  This heavily wooded path leads through many twists and turns as it \nmeanders along. The dense underbrush snaps and crackles with each echoing \nfootstep, scaring away all kinds of ground-dwelling critters. To the \nnorth, the forest open onto grasslands.\n",
+         "altitude" : null
+      },
+      "adept30@adept" : {
+         "exits" : {
+            "w" : "adept29"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Blacksmith Bob's Place",
+         "id" : "adept30",
+         "description" : "\n  The heat is sweltering within these stony walls. A large bucket of \nwater is beside the door; a hundred different-sized blades cooling in it \neven as the water boils and turns to steam. An anvil is on a stone \npedestal in the middle of the room, clanging loudly as each blow of the \nblacksmith's hammer pounds another dent in the steel of yet another sword \nor axe. On the wall beyond the anvil is a large wooden workbench. \nDetailed plans of war machine construction and wall fortifications and \nthe latest requests for weaponry and armor cover the table surface. \nHanging above the table are the tools of the trade - several lengths of \nfiles, strong-grip tongs, temperment clay, hammers, and spikes. Hanging \nabout the room are works in progress.\n",
+         "altitude" : null
+      },
+      "adept35@adept" : {
+         "exits" : {
+            "w" : "adept37",
+            "e" : "adept33",
+            "n" : "adept36"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Side Hallway",
+         "id" : "adept35",
+         "description" : "\n  This hallway is quiet compared to the business happening to the east. \nSmall groups of people, talking in low voices about the status of the war, \nhuddle by the few windows and under the torchlight. Two open oaken doors, \ncross-braced with steel, lead north and west.\n",
+         "altitude" : null
+      },
+      "adept12@adept" : {
+         "exits" : {
+            "e" : "adept13",
+            "w" : "adept7"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Gravel Road",
+         "id" : "adept12",
+         "description" : "\n  A non-descript radway leads due east and west. Horse and wagon travel \nleave billowing clouds of rocky dust int he air, which is to be carried \naway by the gentle breezes in this valley.\n",
+         "altitude" : null
+      },
+      "adept9@adept" : {
+         "exits" : {
+            "w" : "adept11",
+            "e" : "adept8",
+            "n" : "adept10"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Axilator Village",
+         "id" : "adept9",
+         "description" : "\n  A bakery lies to the north. Smoke pours from its short chimney stack \nwhile fresh-smelling steam works its way out the open front door and \nwindows. Pastries and various kinds of cakes and other cream-filled \ndelights line the shelves beyond the windows. Lining the road on both \nsides past the bakery are more of the simple cottages.\n",
+         "altitude" : null
+      },
+      "adept4@adept" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "A Dim Hole",
+         "id" : "adept4",
+         "description" : "\n  Light streaks in through the small opening at the top of this chamber, \nbut this hole is over twenty feet deep. The ground here is thickly \ncovered with a spongy brown lichen and thus absorbs most noise generated \nwithin this space. The walls of the pit taper upwards to the far-off disc \nof sunlight and are covered in mud, cobwebs, and gnarly roots. \nUnderground-dwelling bugs often choose this spot both for getting some \nfresh air and for a place to hide from predators. Water is a also a common \nvisitor - there are several small trickles dripping from various places \non the walls, providing nearly constant quenching of thirst for the lichen.\n",
+         "altitude" : null
+      },
+      "adept2@adept" : {
+         "exits" : {
+            "w" : "adept3",
+            "u" : "adept74",
+            "d" : "adept1"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Trunk by Lowest Branch",
+         "id" : "adept2",
+         "description" : "\n   You have reached the bottom branch of the tree, which extends off to the\nsouth.  A section of mottled yellow shelf fungus grows here, the largest\none you've ever seen.  It looks like it could easily support your weight.\nThe shelf circles the tree to the west.\n   You think you hear the chattering of monkeys coming from further out on\nthe branch.  Above you, more branches sprout from the tree, and the\ngreenery gets thicker.\n",
+         "altitude" : null
+      },
+      "adept66@adept" : {
+         "exits" : {
+            "u" : "^rock2",
+            "d" : "adept67"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "Below the Rock",
+         "id" : "adept66",
+         "description" : "\n  The sun shines down the central corridor of this shaft durin the midday \nhours. It is covered on all sides by the damp earth of the Nareth Forest. \nThe hole continues further into the earth by means of a ladder. The top \nrung just sticks out of the central shaft.\n",
+         "altitude" : null
+      },
+      "adept24@adept" : {
+         "exits" : {
+            "n" : "^door2"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Maintenance Shack",
+         "id" : "adept24",
+         "description" : "\n  This small chamber has jars of contaminated cleaning solutions covered in \ndust and spiderwebs. A coat rack on the back wall seems nearly entirely eaten\naway by mold, while the metal fittings on the pipes leading around the room \nhave all but rusted away. A check-out list on a hook by the door shows \nthis room last used over 10 years ago, when the caretaker of the building \nwas mauled to death by a local grizzly. The people of Whisper City never \nbothered to replace the poor old fool, so this place was left to rot away \nin time.\n",
+         "altitude" : null
+      },
+      "adept8@adept" : {
+         "exits" : {
+            "w" : "adept9",
+            "e" : "adept7"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Village Gates",
+         "id" : "adept8",
+         "description" : "\n  Horse-drawn carts cause very little traffic on the main road in this \nsmall hamlet, for it is the laughing and playing children who are causing \nmost of the ruckus. Off to one side is the village well, deep enough to \nreach well below the water table and supply enough fresh water for years \nwithout drying up. The most common type of residence is a single, \nthatch-roofed, two-story cottage with whitewashed walls and shuttered \nwindows. Clumps of hay and alfalfa or small arrangements of flowers \nfrequently hang from those windows that are open, letting those \nfragrances mingle with that of freshly-bakes pies in the local bakery. \nOther various shops are opening as the sun makes its way across the sky.\n",
+         "altitude" : null
+      },
+      "adept15@adept" : {
+         "exits" : {
+            "s" : "adept14"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Siddily Street",
+         "id" : "adept15",
+         "description" : "\n  The commerce of the city is much more muted in the residential areas of \nwhich these blocks encompass. Several brick houses of the same stature \nreveal what kinds of buildings the citizens live in.\n",
+         "altitude" : null
+      },
+      "adept40@adept" : {
+         "exits" : {
+            "w" : "adept41",
+            "u" : "adept38"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "Dungeon",
+         "id" : "adept40",
+         "description" : "\n  Well, here's where all the rainwater and scum of the land collect to \ncelebrate the rest of their natural lives in solitary confinement. \nShackles for legs and manacles for arms are connected by a lynchpin, from \nwhich a 500 pound cannon ball has been attached. For all those given an \nexecution sentence, an iron maiden is conveniently located near the east \nwall, complete with a basket for catching the body's organs as they fall out.\n",
+         "altitude" : null
+      },
+      "adept32@adept" : {
+         "exits" : {
+            "n" : "adept33",
+            "s" : "adept31"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "adept",
+         "title" : "Castle Walls",
+         "id" : "adept32",
+         "description" : "\n  A mighty fortress looms before you, surrounded by fifty foot walls and \nthe open, grassy plain. Only one entrance is visible - the portcullis. \nGuards stand on both sides of the massive gate and watch patiently as \ncarts travel in and out, no doubt keeping some level of suspicion on each \nsoul. Whenever an official-looking dignitary attempts to pass, the guards \ncross their spears and demand to see authorization papers. The activity \nhere is consistent with that of being nearby a war zone, as many of the \nland's arms merchants are making huge profits selling their wares.\n",
+         "altitude" : null
+      },
+      "adept55@adept" : {
+         "exits" : {
+            "e" : "adept54",
+            "n" : "adept56"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Hemlock Heaven",
+         "id" : "adept55",
+         "description" : "\n  A large number of hemlocks grow in this particular part of the Nareth \nForest. Here the soil provides an extreme abundance of the minerals \nnecessary to support hemlock growth.\n",
+         "altitude" : null
+      },
+      "adept49@adept" : {
+         "exits" : {
+            "u" : "adept50",
+            "d" : "adept48"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "Dracwen Range",
+         "id" : "adept49",
+         "description" : "\n  Yellow stalks of wheat, oats, and rye are the main type of vegetation in \nthese foothills, harvested by the people of the southern provinces to \nmake the grain necessary for survival. The hill is getting barren with \nthe ever-increasing demands of food for the fighting in the north.\n",
+         "altitude" : null
+      },
+      "adept37@adept" : {
+         "exits" : {
+            "e" : "adept35"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "adept",
+         "title" : "A Clown's Quarters",
+         "id" : "adept37",
+         "description" : "\n  This is where the court jester resides when he is off-duty. Books of \nlore and comedy have been neatly placed on a steel rack next to the bed. \nA fireplace has been shaped into a mouth, and crackling flames silhouette \nthe clown's face that has been drawn around the fireplace and the \njester's juggling equipment on the mantle.\n",
+         "altitude" : null
+      },
+      "adept27@adept" : {
+         "exits" : {
+            "w" : "adept26",
+            "u" : "adept28"
+         },
+         "flags" : [],
+         "zone" : "adept",
+         "title" : "First Floor",
+         "id" : "adept27",
+         "description" : "\n  This is the main production and shipping room, where crates, bags, \nboxes, and barrels stand in severe stacks, ready to move to their \ndestinations. Most of the equipment here is to be sent northward to fight \nin the king's war. A manually-cranked conveyor belt and a full staff \ncomprise the assembly line. Stone stairs lead upward while the exit to \nthe outside world is west.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "adept@adept" : {
+         "location" : "adept71",
+         "name" : "adept",
+         "examine" : "Who said confusion is not a disease?",
+         "description" : "This confused fossil of an elven cleric is an adept in many magical arts.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Adept",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic",
+            "NoSteal"
+         ]
+      },
+      "ramol@adept" : {
+         "damage" : "8",
+         "location" : "adept32",
+         "armor" : "0",
+         "name" : "ramol",
+         "examine" : "\nNo doubt about it - this guy should be put of his misery.",
+         "description" : "\nThe retarded archer Ramol has been retired to less demanding duties\nthan watching from the battlements. He looks up to Yinkit as a kind of\nbrother as he wipes the frothing foam from his mouth.",
+         "strength" : "225",
+         "speed" : "0",
+         "pname" : "Ramol",
+         "aggression" : "0",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "bear@adept" : {
+         "damage" : "12",
+         "location" : "adept5",
+         "armor" : "2",
+         "name" : "bear",
+         "examine" : "\nRemain calm. Don't let him smell fear. If you run up a tree, kiss you AND\nthat tree good-bye!",
+         "description" : "A cuddly-looking grizzly prepares to cuddle you.",
+         "strength" : "300",
+         "speed" : "20",
+         "pname" : "Grizzly",
+         "aggression" : "40"
+      },
+      "fleeci@adept" : {
+         "damage" : "20",
+         "location" : "adept34",
+         "armor" : "0",
+         "name" : "fleeci",
+         "examine" : "\nShe wonders if you are her next opponent.",
+         "description" : "\nWith her hubby away making an idiot himself on the field of battle, Queen\nFleeci is being less than ladylike as she works on her martial arts\nskills. More than one guard has gone to barracks speaking soprano.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Fleeci",
+         "aggression" : "0"
+      },
+      "chipmunk@adept" : {
+         "damage" : "5",
+         "location" : "adept5",
+         "armor" : "0",
+         "name" : "chipmunk",
+         "examine" : "He's cross-eyed and manic, but likeable.",
+         "description" : "A chipmunk chatterbox chitters crazily at the clouds.",
+         "strength" : "30",
+         "speed" : "4",
+         "pname" : "Chipmunk",
+         "aggression" : "20"
+      },
+      "robin@adept" : {
+         "damage" : "10",
+         "location" : "adept5",
+         "armor" : "0",
+         "name" : "robin",
+         "examine" : "\nDid you ever notice how robins bounce, rather than walk?",
+         "description" : "A pretty robin chirps happily.",
+         "strength" : "95",
+         "speed" : "10",
+         "pname" : "Robin",
+         "aggression" : "20",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "digger@adept" : {
+         "damage" : "11",
+         "location" : "adept11",
+         "armor" : "0",
+         "name" : "digger",
+         "examine" : "\nI'm going to add you to my fertilizer bin!",
+         "description" : "The spade-handling digger REALLY doesn't like you walking on his plants!",
+         "strength" : "145",
+         "speed" : "0",
+         "pname" : "Digger",
+         "aggression" : "20"
+      },
+      "cactus@adept" : {
+         "damage" : "10",
+         "location" : "adept59",
+         "armor" : "3",
+         "name" : "cactus",
+         "examine" : "Funny, it's a sagauro with no Gila monsters around...",
+         "description" : "The jaws of life on this elf-eating cactus gnash viciously!",
+         "sflags" : [
+            "NoLegs",
+            "NoHead"
+         ],
+         "strength" : "210",
+         "speed" : "0",
+         "pname" : "The Cactus",
+         "aggression" : "80"
+      },
+      "executioner@adept" : {
+         "damage" : "14",
+         "location" : "adept41",
+         "armor" : "7",
+         "name" : "executioner",
+         "examine" : "\nStanding nearly seven feet tall and weighing into your existence at nearly\n300 pounds, this unmoving statue of muscle takes orders when it suits him.",
+         "description" : "Wherever an elven soldier is found, the executioner's axe follows.",
+         "strength" : "550",
+         "speed" : "0",
+         "pname" : "Executioner",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "woodchuck@adept" : {
+         "location" : "adept5",
+         "speed" : "4",
+         "aggression" : "20",
+         "pname" : "Woodchuck",
+         "name" : "woodchuck",
+         "examine" : "\nHe looks at you with a goofy grin and saliva dripping from the\ncorner of his little mouth.",
+         "description" : "This woodchuck couldn't chuck wood even if it wanted to.",
+         "strength" : "50"
+      },
+      "baker@adept" : {
+         "damage" : "8",
+         "location" : "adept10",
+         "armor" : "0",
+         "name" : "baker",
+         "examine" : "Don't mess with this guy. He's MUCH bigger than you.",
+         "description" : "An enormously fat baker invites you in to his shop.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Baker",
+         "aggression" : "0"
+      },
+      "anwar@adept" : {
+         "damage" : "13",
+         "location" : "adept49",
+         "armor" : "3",
+         "name" : "anwar",
+         "examine" : "\nHe isn't letting anyone near his commandress, much less a human.",
+         "description" : "\nDraxenguine Anwar of the main elven battalion is here.",
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "Anwar",
+         "aggression" : "0",
+         "mflags" : [
+            "BarUp"
+         ]
+      },
+      "intendant@adept" : {
+         "eflags" : [
+            "Fireball",
+            "Bhands"
+         ],
+         "damage" : "15",
+         "location" : "adept50",
+         "armor" : "5",
+         "name" : "intendant",
+         "examine" : "\nIt's hard to believe the nature loving elves would do this to make a\ncommander!",
+         "description" : "She has been genetically altered. She is the Intendant.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "700",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Intendant"
+      },
+      "mudclot@adept" : {
+         "damage" : "7",
+         "location" : "adept66",
+         "armor" : "0",
+         "name" : "mudclot",
+         "examine" : "\nThe earth elementals have way too much time on their hands.",
+         "description" : "A blockage of mud clots the way down.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "285",
+         "speed" : "0",
+         "aggression" : "100",
+         "pname" : "Mudclot",
+         "mflags" : [
+            "BarDown",
+            "NoCorpse"
+         ]
+      },
+      "captain@adept" : {
+         "eflags" : [
+            "Vtouch"
+         ],
+         "damage" : "7",
+         "location" : "adept72",
+         "armor" : "0",
+         "name" : "captain",
+         "description" : "The phantasm of Le Capitan is a direct result of &+LDEATH &*by scurvy!",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "450",
+         "speed" : "0",
+         "aggression" : "100",
+         "pname" : "Le Capitan",
+         "mflags" : [
+            "DrainScr",
+            "NoCorpse"
+         ]
+      },
+      "bluejay@adept" : {
+         "damage" : "10",
+         "location" : "adept5",
+         "armor" : "0",
+         "name" : "bluejay",
+         "examine" : "\nThis intelligent bird is looking for a mate and failing quite miserably.",
+         "description" : "A pretty bluejay chirps happily.",
+         "strength" : "95",
+         "speed" : "10",
+         "pname" : "Bluejay",
+         "aggression" : "20",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "imp@adept" : {
+         "location" : "adept73",
+         "name" : "imp",
+         "examine" : "\nHe is wearing only a cummerbund and hiccoughing melodies to himself.",
+         "description" : "A thoroughly intoxicated imp is perched daintily on the harpsichord.",
+         "sflags" : [
+            "Drunk"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoSteal",
+            "NoMagic"
+         ]
+      },
+      "soldier@adept" : {
+         "damage" : "13",
+         "location" : "adept26",
+         "armor" : "10",
+         "name" : "soldier",
+         "examine" : "\nHe requests your identifying cape.",
+         "description" : "An insane soldier worries about his commander.",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Soldier",
+         "pflags" : [
+            "NoHassle",
+            "NoSteal",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "swabbie@adept" : {
+         "damage" : "12",
+         "location" : "adept62",
+         "armor" : "0",
+         "name" : "swabbie",
+         "examine" : "\nHis morale is really low as he is the scapegoat of the crew.",
+         "description" : "A lowly deck swabbie attempts to keep the ship clean.",
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "Swabbie",
+         "aggression" : "20"
+      },
+      "earthworm@adept" : {
+         "damage" : "2",
+         "location" : "adept4",
+         "armor" : "0",
+         "name" : "earthworm",
+         "examine" : "\nThe worm wriggles itself into impossible shapes and then proceeds to spell\nout 'With wood, put T into B' with its body, one letter at a time. After \nthat, it weaves its tail(?) into a cross and waves at you.",
+         "description" : "A slow-moving piece of bait wriggles its earthwormy self toward you.",
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "20",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Earthworm",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic",
+            "NoSteal"
+         ]
+      },
+      "cropley@adept" : {
+         "damage" : "10",
+         "location" : "adept37",
+         "armor" : "0",
+         "name" : "cropley",
+         "examine" : "\nThe pay sucks, but at least you get to meet people!",
+         "description" : "\nCropley is here in full bells and whistles, putting on a show for\nanyone who happens to be near and care even in the slightest.",
+         "strength" : "200",
+         "speed" : "15",
+         "pname" : "Cropley",
+         "aggression" : "0"
+      },
+      "oldfart@adept" : {
+         "damage" : "13",
+         "location" : "adept53",
+         "armor" : "10",
+         "name" : "oldfart",
+         "examine" : "\nThis ent has seen it all and no longer cares what happens.",
+         "description" : "\nOne of the oldfart trees leans over on a branch for support.",
+         "sflags" : [
+            "Female",
+            "NoLegs"
+         ],
+         "strength" : "190",
+         "speed" : "0",
+         "pname" : "Oldfart",
+         "aggression" : "0"
+      },
+      "hepquan@adept" : {
+         "damage" : "16",
+         "location" : "adept49",
+         "armor" : "10",
+         "name" : "hepquan",
+         "description" : "\nWhistling while he works (aka sitting on his behind). Hepquan the elven\nnorcor twirls his spear and generally makes a nuisance of himself.",
+         "strength" : "110",
+         "speed" : "0",
+         "pname" : "Hepquan",
+         "aggression" : "0",
+         "mflags" : [
+            "BarUp"
+         ]
+      },
+      "blob@adept" : {
+         "eflags" : [
+            "NegFireball",
+            "NegFrost",
+            "NegMissile",
+            "NegIcestorm"
+         ],
+         "damage" : "11",
+         "location" : "adept21",
+         "armor" : "0",
+         "name" : "blob",
+         "examine" : "\nYou can see a skeleton floating around within the clear innards.",
+         "description" : "Feasting on the garbage around the grate is a &+Rcytoplasmic blob&*.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "950",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "Cytoplasmic Blob",
+         "mflags" : [
+            "DrainScr",
+            "NoCorpse"
+         ]
+      },
+      "woodpecker@adept" : {
+         "damage" : "7",
+         "location" : "adept39",
+         "armor" : "0",
+         "name" : "woodpecker",
+         "examine" : "\nA flyswatter would merely annoy this bird.",
+         "description" : "A vicious woodpecker flies at you, claws extended!",
+         "strength" : "110",
+         "speed" : "0",
+         "pname" : "Woody",
+         "aggression" : "80",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "kelvin@adept" : {
+         "damage" : "12",
+         "location" : "adept20",
+         "armor" : "0",
+         "name" : "kelvin",
+         "examine" : "\nPractically born and bread by a forge.",
+         "description" : "Kelvin the arms dealer sells to all, human and elven alike.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Kelvin",
+         "aggression" : "0"
+      },
+      "creeper@adept" : {
+         "damage" : "16",
+         "location" : "adept67",
+         "armor" : "0",
+         "name" : "creeper",
+         "examine" : "\nThis particular species takes a healthy delight in relieving bipeds of\ntheir Achilles tendons. (At least they have a hobby!)",
+         "description" : "A long creeping underground vine snakes around your ankle.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Creeper",
+         "aggression" : "100"
+      },
+      "teenager@adept" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "14",
+         "location" : "adept14",
+         "armor" : "0",
+         "name" : "teenager",
+         "examine" : "\nHe has been waiting all day for the statue to talk back to him!",
+         "description" : "A really buff elven teenager is staring open-mouthed at the statue.",
+         "strength" : "260",
+         "speed" : "0",
+         "pname" : "Teenager",
+         "aggression" : "0"
+      },
+      "cricket@adept" : {
+         "damage" : "8",
+         "location" : "adept5",
+         "armor" : "0",
+         "name" : "cricket",
+         "examine" : "\nLike all crickets, he claims to be directly descended from Jiminy, but\nyou don't see the resemblance.",
+         "description" : "Crickets are known for their musical ability, especially when drunk.",
+         "strength" : "80",
+         "speed" : "6",
+         "pname" : "Cricket",
+         "aggression" : "20"
+      },
+      "beaver@adept" : {
+         "damage" : "15",
+         "location" : "adept5",
+         "armor" : "3",
+         "name" : "beaver",
+         "examine" : "\nOnce the Ipana poster beaver, he now skulks around the forest\nboring the other beavers with stories of the stars he knew.",
+         "description" : "A beaver scuttles around, looking for food.",
+         "strength" : "150",
+         "speed" : "5",
+         "pname" : "Beaver",
+         "aggression" : "20"
+      },
+      "termite@adept" : {
+         "damage" : "12",
+         "location" : "adept47",
+         "armor" : "0",
+         "name" : "termite",
+         "examine" : "\nIt would seem this bug is here for more than wood.",
+         "description" : "\nOh wow! Look at the size of that termite!",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Termite",
+         "aggression" : "60"
+      },
+      "westfall@adept" : {
+         "eflags" : [
+            "Icestorm",
+            "Frost",
+            "Shock"
+         ],
+         "damage" : "9",
+         "location" : "adept36",
+         "armor" : "0",
+         "name" : "westfall",
+         "examine" : "\nSparks fly from the rim of his cauldron.",
+         "description" : "\nThe wizard of the castle, Westfall, attempts to make poisons even more \ndeadly against the warring elves.",
+         "strength" : "180",
+         "speed" : "0",
+         "pname" : "Westfall",
+         "aggression" : "0"
+      },
+      "yinkit@adept" : {
+         "damage" : "11",
+         "location" : "adept32",
+         "armor" : "0",
+         "name" : "yinkit",
+         "examine" : "\nWhile growing up in the far northern village of Squamol, he was kicked in\nthe head several times a year by a horse. He'd just get back up and keep\ncoming, so guard duty fit his character profile after it was shown that he\nlacked aptitude to do anything but breathe and stare...",
+         "description" : "The royal guard Yinkit stands rigid and stares impassively forward.",
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Yinkit",
+         "pflags" : [
+            "NoZap"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "peter@adept" : {
+         "damage" : "9",
+         "location" : "adept18",
+         "armor" : "0",
+         "name" : "peter",
+         "examine" : "\nLooking for a good suit of armor? Don't come to me.",
+         "description" : "Peter drips sweat as he continuously pounds away at shoddy plate metal.",
+         "strength" : "170",
+         "speed" : "0",
+         "pname" : "Peter",
+         "aggression" : "0"
+      },
+      "dog@adept" : {
+         "damage" : "12",
+         "location" : "adept57",
+         "armor" : "0",
+         "name" : "dog",
+         "examine" : "\nThis hound is totally catatonic to peaceful travelers, but don't provoke\nhim. He doesn't beg for food, but to go out in a blaze of glory and heavy\nharpsichords.",
+         "description" : "The accursed hound of the plains, Conrad the Gummy, hops around.",
+         "sflags" : [
+            "Blind"
+         ],
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "Conrad",
+         "aggression" : "0"
+      }
+   }
+}

@@ -1,0 +1,668 @@
+{
+   "obj" : {
+      "beret@treadmill" : {
+         "location" : "WORN_BY:Serpentina",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "5",
+         "altname" : "black",
+         "name" : "beret",
+         "examine" : "\nAny woman that wears this will be irresistable to any man, especially \npeople in positions of power.",
+         "size" : "3",
+         "bvalue" : "-50",
+         "desc[0]" : "A seductive looking black beret has been left behind.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "briefcase@treadmill" : {
+         "location" : "CARRIED_BY:lawyer",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "briefcase",
+         "examine" : "It looks like it came from the pits of hell!",
+         "bvalue" : "-50",
+         "desc[0]" : "A briefcase has been left here, dropped by some lawyer.",
+         "size" : "20"
+      },
+      "donut@treadmill" : {
+         "location" : "CARRIED_BY:badcop",
+         "weight" : "1",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "donut",
+         "examine" : "Good for a snack.",
+         "bvalue" : "10",
+         "desc[0]" : "A uneaten tasty donut has been left behind.",
+         "size" : "1"
+      },
+      "blade@treadmill" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:Maniac",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "bloody",
+         "name" : "blade",
+         "examine" : "It thrists for more and more blood.  Please satisfy it.",
+         "size" : "8",
+         "weight" : "6",
+         "bvalue" : "-25",
+         "desc[0]" : "A &+rbloody blade&* has been left behind, wanting more blood."
+      },
+      "falchion@treadmill" : {
+         "damage" : "12",
+         "location" : "WIELDED_BY:Demwitt",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "falchion",
+         "examine" : "\nThe previous owner of this weapon has used it heavily.  The blade is pretty\ndull and there's plenty of dried blood on it.",
+         "size" : "10",
+         "weight" : "8",
+         "bvalue" : "-25",
+         "desc[0]" : "A well swung and hacked up falchion has been left here."
+      },
+      "papers@treadmill" : {
+         "location" : "IN_CONTAINER:briefcase",
+         "oflags" : "{ }",
+         "name" : "papers",
+         "examine" : "\nIt contains a litonity of reasons why the devil has earned great merit in \nthe world and he should be released immeadiately.  You hope no judge will \nbe stupid enough to grant such clemency.",
+         "bvalue" : "50",
+         "desc[0]" : "\nA pile of papers on why the devil should be released from hell have been \ndumped here.",
+         "size" : "10"
+      }
+   },
+   "loc" : {
+      "tread14@treadmill" : {
+         "exits" : {
+            "e" : "small@cave"
+         },
+         "flags" : [
+            "Peaceful",
+            "Outdoors"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Devil's Stairwell",
+         "id" : "tread14",
+         "description" : "\n\tWhat you see here is truly strange, a short set of stairs lead down \nfor a short distance and stop at a wall.  For those who are superstitious, \nthat wall phases in and out when something emerges from it, usually of a \ndemonic nature.  Thus it has earned its name of the devil's stairwell \naccording to this urban legend.  But there doesn't appear to be any good \nreason why this room is attached to the other.\n",
+         "altitude" : null
+      },
+      "tread1@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread6",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "The New Treadmills of Hell",
+         "id" : "tread1",
+         "description" : "\n\tYou have entered a place where there are hundreds and hundreds of\nlittle devils are hard at work digging and carving tunnels.  For them \nthey hope that one of their digs will result in a path to escape to the\nouterlands and bother people again.  Exits are everywhere.\n",
+         "altitude" : null
+      },
+      "tread5@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread6",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Lost Episode of the Treadmills of Hell",
+         "id" : "tread5",
+         "description" : "\n\tAre you lost yet?   Is going in circles too much for you?  Be \nglad you aren't one of these demons cursed to be lost here forever.\nExits are everywhere.\n",
+         "altitude" : null
+      },
+      "tread8@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread6",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "The New Treadmills of Hell, the Prequel",
+         "id" : "tread8",
+         "description" : "\n\tBefore the Treadmills of Hell, there was the Treadmills of Hell.\nIt is the same as it was before, the same it is now, and the same it\nwill be in the future.  If you don't find a way out of here you'll be\nstuck down below forever.\n",
+         "altitude" : null
+      },
+      "tread11@treadmill" : {
+         "exits" : {
+            "ne" : "pentacle@blizzard",
+            "e" : "tread14",
+            "w" : "tread13",
+            "n" : "tread12",
+            "sw" : "circle@moor",
+            "d" : "tread17",
+            "s" : "tread15",
+            "u" : "tread16",
+            "nw" : "tread18"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "On the Way to Bother You",
+         "id" : "tread11",
+         "description" : "\n\tYou have finally escaped the treadmills of hell.  Here you have\nyour choice of ten different portals, each leading to different parts\nof the world.  The demons, hellspawn, and all the little imps will \nsoon be following you out to bother everyone.\n",
+         "altitude" : null
+      },
+      "tread4@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread6",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "Return of the Treadmills of Hell",
+         "id" : "tread4",
+         "description" : "\n\tAfter they tried to escape and bother the world, they soon were \nreturned back to this underworld to try finding another way out.  Since\nyou're immortal, it's an easy task for you to get out of here.\n",
+         "altitude" : null
+      },
+      "tread16@treadmill" : {
+         "exits" : {
+            "w" : "Lagoon@eastcoast"
+         },
+         "flags" : [
+            "Peaceful",
+            "Outdoors"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Devil's Causeway",
+         "id" : "tread16",
+         "description" : "\n\tA vast land bridge has formed at this place in the coastline between\nthe seas and a smaller pool behind it.  Legend has it that a ship crashed\ninto the causeway many years ago in a dense fog and sank downward into a \nfissure beneath the water.  The deceased passed into Hades through an \nunseen portal while some supernatural beings left while it was opened.  It\nis also said that the sea life avoid this area because of this, fisherman\nwere driven off once they saw SOMETHING approach them from the water.  \nHere's to hoping all of this is not true.\n",
+         "altitude" : null
+      },
+      "tread10@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread11",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "The New Treadmills of Hell, the Final Chapter",
+         "id" : "tread10",
+         "description" : "\n\tCould this be the end?  One of the tunnels in this room looks\ndifferent.  If you were trying to transverse this maze yourself, you\nhave finally found the exit.  Well don't just stand there, get going!\n",
+         "altitude" : null
+      },
+      "tread2@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread6",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "The New Treadmills of Hell Part Two",
+         "id" : "tread2",
+         "description" : "\n\tYou should be pleased that no mortal can come to this place, else\nthey would be horrified at the sight of endless tunnels that lead no\nwhere.  Somehow they keep most of these demons occupied for a while.\nExits are everywhere.\n",
+         "altitude" : null
+      },
+      "tread3@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread6",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "Revenge of the Treadmills of Hell",
+         "id" : "tread3",
+         "description" : "\n\tDanger! The demons, hellspawn, and devilish figures are plotting\nto cause the downfall of man...once they get out of here.  You should\npray that they don't.  Exits are everywhere.\n",
+         "altitude" : null
+      },
+      "tread18@treadmill" : {
+         "exits" : {
+            "n" : "sundhaven6723@sundhaven"
+         },
+         "flags" : [
+            "Peaceful",
+            "Outdoors"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Devil's Triangle",
+         "id" : "tread18",
+         "description" : "\n\tAn unusual rock formation stands here where three tall wickedly sharp \npointed rocks reach toward the sky as if they were stabbing at it from the\ndepths of hades.  It is believed that this has been a portal for underworld\nbeings to enter the outer world and many that have walked into the middle \nof these three spiked rocks were never seen again.  Hopefully this fable is \njust a tale told around the campfire.\n",
+         "altitude" : null
+      },
+      "tread6@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread6",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Treadmills of Hell Revisited",
+         "id" : "tread6",
+         "description" : "\n\tYou really wanted to come back here?  Well now you're here and\nyou may be sticking around a very long time.  The many tunnels in this\nsection look exactly the same as all the others.\n",
+         "altitude" : null
+      },
+      "tread7@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread6",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Treadmills of Hell, the Sequel",
+         "id" : "tread7",
+         "description" : "\n\tThis is never ending story, and you have been caught up in it.\nHow many times will you have to relive the same tale before there is\na change?  The exits remain the same.\n",
+         "altitude" : null
+      },
+      "tread12@treadmill" : {
+         "exits" : {
+            "e" : "F2@forest"
+         },
+         "flags" : [
+            "Peaceful",
+            "Outdoors"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Devil's Foodcake",
+         "id" : "tread12",
+         "description" : "\n\tYou have come upon a very large cake...a cake of dirt and rock that \nformed over time that looks like some dessert on your dinner table.  This \ncake happens to be surrounded by a circle of trees, and it has been rumored \nthat from time to time, a demonic figure emerges from the center of the \ncake.  Hopefully it is nothing but just a rumor.\n",
+         "altitude" : null
+      },
+      "tread9@treadmill" : {
+         "exits" : {
+            "ne" : "tread8",
+            "e" : "tread3",
+            "w" : "tread2",
+            "n" : "tread1",
+            "sw" : "tread9",
+            "d" : "tread6",
+            "s" : "tread4",
+            "u" : "tread5",
+            "se" : "tread10",
+            "nw" : "tread7"
+         },
+         "flags" : [
+            "Maze"
+         ],
+         "zone" : "treadmill",
+         "title" : "The New Treadmills of Hell, A New Beginning",
+         "id" : "tread9",
+         "description" : "\n\tJust when you thought it was all over, the Treadmills of Hell\nbegins anew and holds its grip upon the evil beings that occupy this\nplace.  The exits still look no different than they have before.\n",
+         "altitude" : null
+      },
+      "tread17@treadmill" : {
+         "exits" : {
+            "e" : "Nibelung8@nibelung"
+         },
+         "flags" : [
+            "Peaceful",
+            "Outdoors"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Devil's Curve",
+         "id" : "tread17",
+         "description" : "\n\tYou have traveled to a blind curve in the cliffside.  It is a tight\ncurve, one that is safer for walkers but very dangerous to those riding on\nwheels.  It is said that many chariots, buggies, and carts have fallen off\nthe edge at the curves tightest turn into a mighty chasm that looks like\nit goes all the way to the gates of Hades.  Myths have been spread that \noccasionally something comes out of the chasm to haunt the nearby lands.\nMost people refuse to believe these myths however.\n",
+         "altitude" : null
+      },
+      "tread13@treadmill" : {
+         "exits" : {
+            "s" : "jungle16@balharbor"
+         },
+         "flags" : [
+            "Peaceful",
+            "Outdoors"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Devil's Punchbowl",
+         "id" : "tread13",
+         "description" : "\n\tHere resides a gaping hole in the ground as a result of a meteor \nstrike, smoothed and rounded out over thousands of years by rain and \nweathering.  It is held by legend that this meteor strike opened a hole to \nHades in which demons could leave their world and haunt nearby inhabitants.\nIt looks like it can hold a large amount of punch for a party--its bowl is \nmostly granite.\n",
+         "altitude" : null
+      },
+      "tread15@treadmill" : {
+         "exits" : {
+            "n" : "shore@village"
+         },
+         "flags" : [
+            "Peaceful",
+            "Outdoors"
+         ],
+         "zone" : "treadmill",
+         "title" : "The Devil's Archway",
+         "id" : "tread15",
+         "description" : "\n\tA large stone arch has formed over this location over thousands of \nyears amid the other rocks and boulders that have formed from earthquakes, \nwaves crashing against the shore and the occasional hurricane.  What's so\nspecial about this arch that it has been said that nearby inhabitants of\nthe land claim to have seen figures emerge from the arch from nowhere, a\nsteady stream of them in fact.  The locals hearby deemed it the devil's\narchway and kept their children from going near it fearing one may get \nsucked away to the 'other side'.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "goofball@treadmill" : {
+         "damage" : "8",
+         "location" : "tread5",
+         "name" : "Goofball",
+         "examine" : "'YOU WILL ALL DIE!  DEATH TO THE WORLD!!!' he screams.  Kill him.",
+         "description" : "A total goofball terrorist is here, looking for someone to terrorize.",
+         "strength" : "70",
+         "wimpy" : "25",
+         "speed" : "2",
+         "pname" : "Goofball",
+         "aggression" : "50"
+      },
+      "serpentina@treadmill" : {
+         "damage" : "6",
+         "location" : "tread2",
+         "speed" : "1",
+         "name" : "Serpentina",
+         "examine" : "\nSenators, congressmen, mayors, governors, presidents, it doesn't matter, \nthis demonic being wants to destroy leaders by making them adulters.\nYou happen to notice the lower half of her body looks like a snake.",
+         "description" : "A woman is here trying to find leaders to seduce.",
+         "strength" : "80"
+      },
+      "visitant@treadmill" : {
+         "damage" : "6",
+         "location" : "tread5",
+         "speed" : "2",
+         "name" : "Visitant",
+         "examine" : "\nYou detect a supernatural being looming near you, an unwelcome guest.",
+         "description" : "You feel there is a visitant lurking nearby.",
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "70"
+      },
+      "crashd@treadmill" : {
+         "damage" : "6",
+         "location" : "tread1",
+         "speed" : "1",
+         "name" : "Crashd",
+         "examine" : "\nHe causes too many wrecks, yet figured out how to crash his way out of hell.",
+         "description" : "Crashd the demon walks by with a large fender twisted around his neck.",
+         "strength" : "80"
+      },
+      "joe@treadmill" : {
+         "damage" : "7",
+         "location" : "tread1",
+         "speed" : "1",
+         "pname" : "Joe",
+         "name" : "Joe",
+         "examine" : "He used to be a popular spokescamel, now he's just a scapegoat.",
+         "description" : "An out of work camel trots by you, smoke emminating from its body.",
+         "strength" : "50"
+      },
+      "lawyer@treadmill" : {
+         "damage" : "6",
+         "location" : "tread1",
+         "speed" : "1",
+         "pname" : "Devil's Advocate",
+         "name" : "lawyer",
+         "examine" : "Yes the devil has an advocate, and he tries to use the courts to get his way.",
+         "description" : "A lawyer is here, trying to sue God for the devil's release from hell.",
+         "strength" : "80"
+      },
+      "kleptomaniac@treadmill" : {
+         "wimpy" : "25",
+         "damage" : "5",
+         "location" : "tread7",
+         "speed" : "1",
+         "name" : "Kleptomaniac",
+         "examine" : "\nHe's a rich man, yet despite his wealth, he has to fulfill his impulses to\nsteal.  Watch out, he's already digging in your pockets!",
+         "description" : "An obsessed thief tries to take everything not nailed down.",
+         "mflags" : [
+            "Thief",
+            "StealWorn",
+            "StealWeapon",
+            "Pickstuff",
+            "Smart"
+         ],
+         "strength" : "70"
+      },
+      "lagmonster@treadmill" : {
+         "damage" : "6",
+         "location" : "tread1",
+         "speed" : "1",
+         "name" : "Lagmonster",
+         "description" : "The hideous Lagmonster is here, trying to slow you down to a stop!",
+         "strength" : "80"
+      },
+      "bursar@treadmill" : {
+         "damage" : "6",
+         "location" : "tread8",
+         "speed" : "1",
+         "pname" : "The Bursar",
+         "name" : "bursar",
+         "examine" : "\nKids in school fear this man, he's like the tax collector for children.",
+         "description" : "\nThe Bursar is here demanding you pay up on all the debt you've racked up\nsince you've started college!",
+         "strength" : "70"
+      },
+      "badcop@treadmill" : {
+         "damage" : "7",
+         "location" : "tread8",
+         "speed" : "1",
+         "pname" : "The Bad Cop",
+         "name" : "badcop",
+         "examine" : "\nIf there's anything that a crimefighter hates more than a criminal, it is\na crooked cop.  This one just doesn't practice the laws he enforces.",
+         "description" : "One of your city's least finest stands here snacking on donuts.",
+         "strength" : "70"
+      },
+      "idiot@treadmill" : {
+         "wimpy" : "25",
+         "damage" : "8",
+         "location" : "tread7",
+         "speed" : "1",
+         "pname" : "The Babbling Idiot",
+         "name" : "idiot",
+         "examine" : "He looks like someone you wish you hadn't ever met.",
+         "description" : "The babbling idiot is here, babbling on and on...",
+         "strength" : "70"
+      },
+      "wacko@treadmill" : {
+         "damage" : "8",
+         "location" : "tread3",
+         "name" : "Wacko",
+         "examine" : "\nThe stupid man jumps around cackling loudly stabbing everyone in sight.  \nPLEASE PLEASE impale the punk!",
+         "description" : "The terrorist Wacko is here, acting like a complete wacko.",
+         "strength" : "70",
+         "wimpy" : "25",
+         "speed" : "2",
+         "pname" : "Wacko",
+         "aggression" : "99"
+      },
+      "speed@treadmill" : {
+         "eflags" : [
+            "ImmCripple"
+         ],
+         "damage" : "6",
+         "location" : "tread2",
+         "speed" : "99",
+         "name" : "Speed",
+         "examine" : "All you see is a blur.  He was condemned for getting too many speeding tickets.",
+         "description" : "A speed demon zooms by you.",
+         "strength" : "80"
+      },
+      "greek@treadmill" : {
+         "damage" : "7",
+         "location" : "tread8",
+         "speed" : "1",
+         "aggression" : "50",
+         "pname" : "The Greek",
+         "name" : "Greek",
+         "examine" : "\nAre you from Greece?  Yes?  Well you realize you're breaking the law by\nplaying this MUD.  And tourists...if you're playing this MUD in Greece,\nthey'll be coming to get you too!",
+         "description" : "A Greek man runs toward you shouting 'Stop playing that MUD NOW!!!'",
+         "strength" : "70"
+      },
+      "xiphoid@treadmill" : {
+         "damage" : "13",
+         "location" : "tread4",
+         "speed" : "2",
+         "name" : "Xiphoid",
+         "examine" : "\nEgad!  It's a living sword!  It's inconceivable such a thing could exist\nin this world, it must be truly demonic.",
+         "description" : "A figure having the shape of a sword approaches.",
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "80"
+      },
+      "linkdeath@treadmill" : {
+         "damage" : "8",
+         "location" : "tread1",
+         "speed" : "5",
+         "name" : "Linkdeath",
+         "description" : "The hideous Linkdeath is here, with a torn off cord in his hand.",
+         "strength" : "100"
+      },
+      "zerocks@treadmill" : {
+         "wimpy" : "25",
+         "damage" : "7",
+         "location" : "tread3",
+         "speed" : "2",
+         "name" : "Zerocks",
+         "examine" : "\nZerocks is nothing more than a copycat.  He mirrors all your activities,\nand doesn't come up with anything original.  Someone ought to name a\ncompany after him.\n",
+         "description" : "A little imp is here copying all that you do.",
+         "strength" : "70"
+      },
+      "horseman@treadmill" : {
+         "damage" : "10",
+         "location" : "tread3",
+         "name" : "Horseman",
+         "examine" : "It's headless all right!  Yours would fit nicely on his torso.",
+         "description" : "&+RGalloping toward you on horseback...someone with a pumpkin on his head\n&+Rdraws his sword to chop your head off!",
+         "sflags" : [
+            "NoHead"
+         ],
+         "strength" : "150",
+         "speed" : "4",
+         "pname" : "The Headless Horseman",
+         "aggression" : "50"
+      },
+      "lamebrain@treadmill" : {
+         "damage" : "8",
+         "location" : "tread4",
+         "name" : "Lamebrain",
+         "examine" : "\nHe yells at you to don a turbin or a full-body covering veil...or else!\nYou are an infadel...and you must die!",
+         "description" : "Another lamebrain terrorist is here, screaming his fanatical rhetoric.",
+         "strength" : "70",
+         "wimpy" : "25",
+         "speed" : "2",
+         "pname" : "Lamebrain",
+         "aggression" : "50"
+      },
+      "maniac@treadmill" : {
+         "damage" : "8",
+         "location" : "tread6",
+         "name" : "Maniac",
+         "examine" : "He dances in front of you with a blood stained blade laughing maniacially.\nHe's ready to stain it further with YOUR blood!  Terminate with extreme prejudice.",
+         "description" : "A maniacal cold-blooded killer has come to spread terror all over the world.",
+         "strength" : "70",
+         "wimpy" : "25",
+         "speed" : "2",
+         "pname" : "Maniac",
+         "aggression" : "50"
+      },
+      "demwitt@treadmill" : {
+         "damage" : "8",
+         "location" : "tread1",
+         "name" : "Demwitt",
+         "examine" : "\nThis evil man strives to keep you awake at night and cower in fear.\nMake him regret it.",
+         "description" : "Demwitt the terrorist is here, looking to skewer you with a sword.",
+         "strength" : "70",
+         "wimpy" : "25",
+         "speed" : "2",
+         "pname" : "Demwitt",
+         "aggression" : "50"
+      },
+      "madman@treadmill" : {
+         "damage" : "8",
+         "location" : "tread2",
+         "name" : "Madman",
+         "examine" : "\nHe's so angry at the world that he could just EXPLODE!  Instead he tries to \nblast you to smithereens!",
+         "description" : "Madman the terrorist is here, lighting bombs behind your shoes.",
+         "strength" : "70",
+         "wimpy" : "25",
+         "speed" : "2",
+         "pname" : "Madman",
+         "aggression" : "50"
+      }
+   }
+}

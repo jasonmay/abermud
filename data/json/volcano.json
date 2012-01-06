@@ -45,7 +45,7 @@
          "location" : "CARRIED_BY:dwarf",
          "oflags" : [
             "Weapon",
-            "Lit"
+            "Glowing"
          ],
          "armor" : "0",
          "altname" : "knife",
@@ -175,6 +175,17 @@
          "maxstate" : "0",
          "bvalue" : "0",
          "desc[0]" : "\nA grapefruit tree stands here, heavy with ripe fruit."
+      },
+      "volume@volcano" : {
+         "location" : "IN_ROOM:bandilbar32",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_XVI",
+         "name" : "volume",
+         "examine" : "\nShock is an attack spell.  It requires 6 mana and does 21 damage.\nA lodestone will enhance its effect.  It becomes certain for \nknowledge 16.",
+         "desc[0]" : "&+YVolume XVI&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "16"
       },
       "honeydew@volcano" : {
          "damage" : "0",
@@ -909,14 +920,17 @@
          "strength" : "65"
       },
       "gorrak@volcano" : {
-         "damage" : "8",
+         "damage" : "20",
          "location" : "bandilbar31",
-         "speed" : "2",
+         "speed" : "0",
          "aggression" : "0",
-         "armor" : "0",
+         "armor" : "25",
          "name" : "Gorrak",
-         "description" : "Gorrak, a young ant warrior, stomps around looking for a fight.",
-         "strength" : "50"
+         "description" : "Gorrak, a hero of the ants, stands guard warily.",
+         "strength" : "500",
+         "mflags" : [
+            "BarW"
+         ]
       },
       "jabberwock@volcano" : {
          "damage" : "12",
@@ -962,7 +976,7 @@
          "aggression" : "0",
          "armor" : "0",
          "name" : "Mayor",
-         "examine" : "\nHe says, 'If only someone would deliver us from the torment that besets us!'",
+         "examine" : "\nHe says, 'If only someone would deliver us from the torment that besets us!",
          "description" : "The town's mayor is here, pacing up and down, his face creased with worry.",
          "strength" : "50"
       },

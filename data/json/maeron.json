@@ -1,0 +1,1044 @@
+{
+   "obj" : {
+      "bottle@maeron" : {
+         "location" : "IN_CONTAINER:Corpse",
+         "oflags" : "{ }",
+         "name" : "Bottle",
+         "examine" : "\nThis is the bottle of an unknown liquid that Maeron's corpse was clutching.\nThe unnatural-looking orange liquid sloshes around inside. It appears that\nhalf of the liquid has been drunk.",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "state" : "1"
+      },
+      "corpse@maeron" : {
+         "location" : "IN_ROOM:Lab",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "Corpse",
+         "examine" : "\n&+lMaeron apparently died of &+Rpoisoning&+l. His body is almost completely\n&+ldecomposed. The final look of terror in his skull sends shivers&+Rup&* your\n&+lspine. Forcing yourself to look again at this dreadful scene you notice\n&+lhe is clutching a bottle of something next to him with clammy fingers.",
+         "size" : "100",
+         "state" : "0",
+         "pname" : "Corpse",
+         "maxstate" : "0",
+         "desc[0]" : "The corpse of of maeron lies here, almost completely decomposed."
+      },
+      "solarstone2@maeron" : {
+         "location" : "IN_ROOM:Limbo",
+         "oflags" : [
+            "Lit"
+         ],
+         "altname" : "Solar",
+         "name" : "solarstone2",
+         "examine" : "\nIt is much to bright to directly look at!\n&+RYou are blinded by its intense light!",
+         "state" : "0",
+         "size" : "5",
+         "pname" : "Solarstone",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "&+WA solarstone lies here, shining like the sun!"
+      },
+      "chargedwand@maeron" : {
+         "desc[1]" : "&+CA long, silvery, slender &+Wwand&+C lies here, glowing brightly&*.",
+         "damage" : "19",
+         "location" : "IN_ROOM:Limbo",
+         "oflags" : [
+            "Weapon",
+            "regenmana",
+            "Lit"
+         ],
+         "name" : "ChargedWand",
+         "examine" : "\nIt is about a half-inch wide, and two feet long. Yet it seems so slender\nthat it could snap with the slightest breeze. Its appearance is decieving,\nas it is nearly unbreakable. \n\nOne half of the wand is of a silvery blue color, the other a brilliant\nwhite. Occasionally sparks fly off of it.\n\n&+WThe wand appears to be charged",
+         "state" : "1",
+         "size" : "20",
+         "pname" : "Wand",
+         "maxstate" : "1",
+         "bvalue" : "200"
+      },
+      "orb@maeron" : {
+         "desc[1]" : "&+rA nasty &+Rorb&+r is mounted above the vault-door&*.",
+         "location" : "IN_ROOM:lab",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Orb",
+         "examine" : "\nIt seems to be vibrating with energy and moves to carefully watch you.\nEvery now and then a few sparks will fly off of it. It looks like\nsome sort of defense mechanism.",
+         "state" : "1",
+         "pname" : "Orb",
+         "maxstate" : "1",
+         "bvalue" : "0"
+      },
+      "furniture@maeron" : {
+         "desc[1]" : "Fine &+Gfurniture&* adds to the feeling of luxury here.",
+         "location" : "IN_ROOM:Leader",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Furn",
+         "name" : "Furniture",
+         "examine" : "\nVery nice... \n\nA large round table surrounded by chairs, all made of cherry. The table has\nthe following carved into the center...\n\n                       /  \\ \n                     /      \\ \n                   /          \\ \n                 /              \\ \n               /   //=========\\\\  \\ \n             /   //  |\\    /|   \\\\  \\ \n                ||   |  \\/  |    ||   \n             \\   \\\\  |      |   //  / \n               \\   \\\\=========//  /\n                 \\              /\n                   \\          /\n                     \\      /\n                       \\  /\n",
+         "state" : "1",
+         "pname" : "Furniture",
+         "maxstate" : "1"
+      },
+      "gargoyle@maeron" : {
+         "desc[1]" : "\nA large wrought-iron gargoyle is here, leering hideously at you.",
+         "location" : "IN_ROOM:entrance",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Iron",
+         "name" : "Gargoyle",
+         "examine" : "\nRust has imbued this old wrought-iron gargoyle with a fiendish &+Rred&*\nglow. It perches upon a long spike above the door and glowers down at you.",
+         "state" : "1",
+         "pname" : "Gargoyle",
+         "maxstate" : "1"
+      },
+      "ironkey@maeron" : {
+         "desc[1]" : "A &+Ckey&* of wrought iron is here.",
+         "location" : "IN_CONTAINER:Bedroll",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "Ironkey",
+         "examine" : "\nAlthough very old, the key is still shiny and covered with intricate\ndesigns.",
+         "state" : "1",
+         "size" : "10",
+         "pname" : "Ironkey",
+         "maxstate" : "1"
+      },
+      "vaultkey@maeron" : {
+         "desc[1]" : "Someone has left a shiny brass key here.",
+         "location" : "IN_CONTAINER:Dresser",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "Vaultkey",
+         "examine" : "\nIts made out of brass and is covered in intricate designs.",
+         "size" : "2",
+         "state" : "1",
+         "pname" : "Vaultkey",
+         "maxstate" : "1"
+      },
+      "desk@maeron" : {
+         "desc[1]" : "A closed oak &+Cdesk&* sits in the corner of the room.",
+         "location" : "IN_ROOM:Library",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "oak",
+         "name" : "Desk",
+         "examine" : "\nIt is in suprisingly good condition.",
+         "size" : "100",
+         "state" : "1",
+         "pname" : "Desk",
+         "maxstate" : "1",
+         "desc[0]" : "An open oak &+Cdesk&* sits in the corner of the room."
+      },
+      "coins@maeron" : {
+         "desc[1]" : "A large sack of coins have been left here.",
+         "location" : "IN_ROOM:Treasury",
+         "oflags" : "{ }",
+         "name" : "Coins",
+         "examine" : "\nThese are the coins the Kobolds have stolen from various places. Some are\nof worthless tin, many are silver, and there are even a few platinum coins.",
+         "state" : "1",
+         "size" : "40",
+         "maxstate" : "1",
+         "bvalue" : "500"
+      },
+      "centerpedestal@maeron" : {
+         "desc[1]" : "A strange, short &+Wpedestal&* dominates most of the room.",
+         "location" : "IN_ROOM:Center",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "CenterPedestal",
+         "examine" : "\nOn the&+Rwest&*half of the pedestal the marble is a bright white. On the other half\nthe marble is a silvery blue. A hole a half-inch wide, and two feet deep\nis carved into the exact center of the pedestal. Strangely, the Pedestal\nis set only 1 foot off of the ground.\n\nTwo powerful light enhancers are set along the &+Rwest&* and &+Reast&* half, \nas if to amplify incoming light.\n\nA carving on the&+Rwest&*side of the pedestal exhibits a beautiful carving\nin the image of the sun, while on the&+Reast&*side there is one of the moon.",
+         "size" : "20",
+         "state" : "0",
+         "pname" : "Pedestal",
+         "maxstate" : "0",
+         "bvalue" : "0"
+      },
+      "dresser@maeron" : {
+         "desc[1]" : "A closed oak dresser is here.",
+         "location" : "IN_ROOM:Bedroom",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "name" : "Dresser",
+         "examine" : "\nIt looks like a good place to stash things.",
+         "size" : "500",
+         "state" : "1",
+         "pname" : "dresser",
+         "maxstate" : "1",
+         "desc[0]" : "An open oaken dresser is here."
+      },
+      "outside_front_door@maeron" : {
+         "desc[1]" : "The great doors are closed.",
+         "location" : "IN_ROOM:entrance",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "great",
+         "name" : "outside_front_door",
+         "examine" : "\nThey are covered in ugly gargoyle designs and wet with the morning\ndew.",
+         "desc[2]" : "The great doors are locked.",
+         "linked" : "inside_front_door",
+         "state" : "2",
+         "pname" : "doors",
+         "maxstate" : "2",
+         "desc[0]" : "The great doors are open."
+      },
+      "forcefield@maeron" : {
+         "location" : "IN_ROOM:Foyer",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Field",
+         "name" : "ForceField",
+         "examine" : "\nThe force field shimmers and hums loudly at your approach. Surely, \nnonconventional weapons would fall short in breaking it.",
+         "state" : "0",
+         "pname" : "ForceField",
+         "maxstate" : "0",
+         "desc[0]" : "&+BA shimmering forcefield of mana blocks the &+Rsouth&* exit."
+      },
+      "garlic@maeron" : {
+         "location" : "IN_CONTAINER:Cabinet",
+         "oflags" : [
+            "food"
+         ],
+         "name" : "Garlic",
+         "examine" : "\nA single, rather old clove of garlic. Often useful in warding off vampires\nand such. ",
+         "size" : "25",
+         "state" : "0",
+         "pname" : "Garlic",
+         "maxstate" : "0",
+         "desc[0]" : "Some garlic has been left here"
+      },
+      "outside_vault_door@maeron" : {
+         "desc[1]" : "The vaultdoor is closed.",
+         "location" : "IN_ROOM:Lab",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "outside_vault_door",
+         "examine" : "\nIt is made out of iron and lucks VERY sturdy!",
+         "desc[2]" : "The vaultdoor is closed and locked securely.",
+         "linked" : "Inside_vault_door",
+         "state" : "2",
+         "pname" : "vaultdoor",
+         "maxstate" : "2",
+         "desc[0]" : "The vaultdoor is open."
+      },
+      "sunnook@maeron" : {
+         "location" : "IN_ROOM:Sun",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "SunNook",
+         "examine" : "\nIt is right below the largest carving of the Sun and is about one inch\nin diameter.",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "Nook",
+         "maxstate" : "0",
+         "desc[0]" : "A strange little nook sits five high in the &+Rwest&* wall."
+      },
+      "dischargedwand@maeron" : {
+         "desc[1]" : "A long, silvery, slender &+Cwand&* lies here, glowing faintly.",
+         "damage" : "20",
+         "location" : "IN_ROOM:Vault",
+         "oflags" : "{ }",
+         "name" : "DisChargedWand",
+         "examine" : "\nIt is about a half-inch wide, and two feet long. Yet it seems so slender\nthat it could snap with the slightest breeze. Its appearance is decieving,\nas it is nearly unbreakable. \n\nOne half of the wand is of a silvery blue color, the other a brilliant\nwhite.\n\n&+WThe wand appears to be discharged.",
+         "state" : "1",
+         "size" : "20",
+         "pname" : "Wand",
+         "maxstate" : "1",
+         "bvalue" : "0"
+      },
+      "inside_vault_door@maeron" : {
+         "desc[1]" : "The vaultdoor is closed.",
+         "location" : "IN_ROOM:vault",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "inside_vault_door",
+         "examine" : "\nIt is made out of iron and looks VERY sturdy!",
+         "desc[2]" : "The vaultdoor is closed and locked securely.",
+         "linked" : "outside_vault_door",
+         "state" : "2",
+         "pname" : "vaultdoor",
+         "maxstate" : "2",
+         "desc[0]" : "The vaultdoor is open."
+      },
+      "bedroll@maeron" : {
+         "desc[1]" : "The &+Yfilthy&* bedroll of &+RGhem&* catches your eye.",
+         "location" : "IN_ROOM:Dorm",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "Bed",
+         "name" : "Bedroll",
+         "examine" : "\nIt is covered in various yellow stains and stinks of urine.",
+         "state" : "1",
+         "size" : "100",
+         "pname" : "Bedroll",
+         "weight" : "30",
+         "maxstate" : "1"
+      },
+      "cabinet@maeron" : {
+         "desc[1]" : "A closed cabinet is sitting quietly in the corner.",
+         "location" : "IN_ROOM:Kitchen",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "name" : "Cabinet",
+         "examine" : "\nPerhaps it was used for storing food? It smells of garlic.",
+         "size" : "300",
+         "state" : "1",
+         "pname" : "Cabinet",
+         "maxstate" : "1",
+         "desc[0]" : "An open cabinet is sitting quietly in the corner."
+      },
+      "solarstone1@maeron" : {
+         "location" : "IN_CONTAINER:Corpse",
+         "oflags" : "{ }",
+         "altname" : "Solar",
+         "name" : "solarstone1",
+         "examine" : "\nIt is a dull yellow and glows faintly. The solar stone is about one\ninch in diameter.",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "Solarstone",
+         "maxstate" : "0",
+         "bvalue" : "-200",
+         "desc[0]" : "A dully glowing solarstone lies here."
+      },
+      "mirror@maeron" : {
+         "desc[1]" : "Someone has left a shiny mirror here.",
+         "location" : "IN_ROOM:Bedroom",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "Mirror",
+         "examine" : "\nIt appears to be shiny, even after all these years. It looks\nlike it would reflect anything.",
+         "size" : "30",
+         "state" : "0",
+         "pname" : "mirror",
+         "maxstate" : "1",
+         "desc[0]" : "A mirror sits on the dresser."
+      },
+      "armchair@maeron" : {
+         "location" : "IN_ROOM:livingroom",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Chair",
+         "name" : "Armchair",
+         "examine" : "\nMaeron probobly relaxed here after a long day of spell-weaving and \nexperiments.",
+         "state" : "0",
+         "pname" : "Armchair",
+         "maxstate" : "0",
+         "desc[0]" : "A comfortable-looking armchair sits by the fireplace."
+      },
+      "talisman@maeron" : {
+         "desc[1]" : "&+WA magical talisman is here, humming with power!",
+         "location" : "IN_ROOM:Vault",
+         "armor" : "5",
+         "oflags" : [
+            "Lit",
+            "Wearable",
+            "Armor",
+            "regenhealth",
+            "regenmana"
+         ],
+         "altname" : "Talis",
+         "name" : "Talisman",
+         "examine" : "\nIt is made of an unknown silvery material, with an eye-sized \n&+bmoonstone&+l set in the center which sparkles in the light.\nThe talisman hums with power, obviously full of mana. Whenever\nyou touch it, a warm tingling sensation fills your body.\nIt appears to be about 2 inches in diameter.\n\n&+bBeams of silvery moonlight gently flows out of the moonstone.",
+         "size" : "10",
+         "state" : "1",
+         "pname" : "Talisman",
+         "maxstate" : "1",
+         "bvalue" : "500",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "journal@maeron" : {
+         "desc[1]" : "Someone has dropped Maeron's Journal here.",
+         "location" : "IN_CONTAINER:Desk",
+         "oflags" : "{ }",
+         "altname" : "Diary",
+         "name" : "Journal",
+         "examine" : "\n&+Y------------------------------------------------------------------------\nThe talisman is found! And after all these years. It once belonged to \nthe Arch Mage Of Legions, before he was slain by Talon. It was \noriginally used by the Arch Mage Of Legions for aid in his spellcasting.\nThe Talisman made his wounds heal faster, and emitted mana which added to\nhis already amazing spellcasting ability. It shall prove just as useful to \nme. The talisman recieved its power by the large moonstone in the centre.\nPerhaps I can harness the moonstone's power in a more efficient way.\n&+Y------------------------------------------------------------------------\nI broke new ground by inventing another type of wand. This wand can be \nused quite successfully to keep my foes at bay. Unfortunatly, it is\nvery difficult to charge. Once it is charged, however I will make Shazareth\npay for his insolence. It relys&+Rup&*on both the power of the Sun and the Moon.\nUnfortunatly, in order to be charged it must be exposed to the light of both\nat the same time. \n&+Y------------------------------------------------------------------------\nToday I will begin my experiments with the healing potion. This potion\nshould require less hard-to-find ingredients as Shazareth's potion \nrequires. In fact, a mere drop will heal all wounds! If this succeeds, \nmortals everywhere will flock to pay me with treasures untold for a few\ndrops of this precious liquid. Unfortunatly, one of the essential \ningredients contains a deadly poison. If this works I should be able to\nneutralize the poison and my potion will be a success!\n&+Y------------------------------------------------------------------------",
+         "size" : "15",
+         "state" : "1",
+         "pname" : "Journal",
+         "maxstate" : "1",
+         "bvalue" : "200"
+      },
+      "telescope@maeron" : {
+         "location" : "IN_ROOM:Tower",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "scope",
+         "name" : "Telescope",
+         "examine" : "\nIt appears to have been used for Maeron's astronomy observations. It is\nmounted to the top of the tower and looks like it could do a good job of\ndrastically magnifying any light that comes in.\nA sharp beam of VERY intense sunlight comes out through the eyepiece.",
+         "state" : "0",
+         "pname" : "Telescope",
+         "maxstate" : "0",
+         "desc[0]" : "A large &+Btelescope&* is here, pointing directly to the sun."
+      },
+      "lever@maeron" : {
+         "desc[1]" : "A large silvery lever sits in the corner.",
+         "location" : "IN_ROOM:Center",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Lever",
+         "examine" : "A picture of the Sun and Moon is printed in the lever.",
+         "size" : "20",
+         "state" : "1",
+         "pname" : "Lever",
+         "maxstate" : "1",
+         "bvalue" : "0"
+      },
+      "moonnook@maeron" : {
+         "location" : "IN_ROOM:Moon",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "MoonNook",
+         "examine" : "\nIt is right below the largest carving of the moon and is about two \ninches in diameter.",
+         "size" : "10",
+         "state" : "0",
+         "pname" : "Nook",
+         "maxstate" : "0",
+         "desc[0]" : "A strange little nook sits five feet high in the &+Reast&* wall."
+      },
+      "inside_front_door@maeron" : {
+         "desc[1]" : "The great doors are closed.",
+         "location" : "IN_ROOM:foyer",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "great",
+         "name" : "inside_front_door",
+         "desc[2]" : "The great doors are locked.",
+         "linked" : "outside_front_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The great doors are open."
+      }
+   },
+   "loc" : {
+      "lab@maeron" : {
+         "exits" : {
+            "n" : "^outside_vault_door",
+            "s" : "foyer"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon"
+         ],
+         "zone" : "maeron",
+         "title" : "&+RThe Laboratory",
+         "id" : "lab",
+         "description" : "\n   This was the laboratory of the once great Mage Maeron. Strange\ndevices fill the room, probobly for creating potions and such. The \nfloor is made out of black marble, which only adds to the eerie aura\nthis chamber seems to posess. You may return to the &+Rsouth&*.\n",
+         "altitude" : null
+      },
+      "entrance@maeron" : {
+         "exits" : {
+            "n" : "^outside_front_door",
+            "s" : "outside"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+BBefore The Doors Of Maeron's Mansion",
+         "id" : "entrance",
+         "description" : "\n   Coming closer to the mansion makes you uneasy. It looks\neven more menacing as you come close. A somewhat leaky roof\nprotects you from most of the weather.\n",
+         "altitude" : null
+      },
+      "cave1@maeron" : {
+         "exits" : {
+            "w" : "cave2",
+            "e" : "path4"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "maeron",
+         "title" : "&+GOutside The Cave",
+         "id" : "cave1",
+         "description" : "\n  A small cave is set into a hill here. A foul odor seeps out. You may\ncontinue into the cave by heading &+Rwest&* or return to the path by\nheading &+Reast&*.\n",
+         "altitude" : null
+      },
+      "center@maeron" : {
+         "exits" : {
+            "w" : "sun",
+            "e" : "moon",
+            "s" : "basement"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "maeron",
+         "title" : "&+BBy the pedestal",
+         "id" : "center",
+         "description" : "\n   This room is dominated by a large platform standing in the center. To\nstrange marble rooms lead off to the &+Rwest&* and &+Reast&*. The &+Reast&* room seems \nto be made of a silvery blue marble and the &+Rwest&* room seems to be made out \nout white marble.\n",
+         "altitude" : null
+      },
+      "livingroom@maeron" : {
+         "exits" : {
+            "w" : "foyer"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+BMaeron's Living-Room",
+         "id" : "livingroom",
+         "description" : "\n   This room seem in better condition then the other chambers. The \nslightly-faded carpet is a dull crimson. The floor creaks a bit\nas you move around. \nTo the &+Rwest&* is the foyer.\n",
+         "altitude" : null
+      },
+      "rocks@maeron" : {
+         "exits" : {},
+         "flags" : [
+            "outdoors",
+            "death",
+            "nomobiles"
+         ],
+         "zone" : "maeron",
+         "title" : "&+RSharp Rocks...",
+         "id" : "rocks",
+         "description" : "\n   You tumble over the edge and pierce your heart on the sharp rocks... As\nyou glance around gasping for air and the last precious moments of life,\nyou notice a tall tower looming over you. You also notice the corpses\nof several adventurers lying beside you.\n",
+         "altitude" : null
+      },
+      "path1@maeron" : {
+         "exits" : {
+            "e" : "outside",
+            "w" : "path2",
+            "n" : "field",
+            "s" : "cliff"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "maeron",
+         "title" : "&+YSunny path",
+         "id" : "Path1",
+         "description" : "\n   The sun shines happily on this path of loose gravel. To the &+Rsouth&*\nlooms a massive cliff. Its sharp, looks like a long fall, that no mortal\ncould possibly survive. To the &+Rnorth&* lies a grassy field.\n",
+         "altitude" : null
+      },
+      "diningroom@maeron" : {
+         "exits" : {
+            "e" : "foyer",
+            "n" : "kitchen"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+BDining Room",
+         "id" : "diningroom",
+         "description" : "\n   Grand feasts of Mages were once hosted in this chamber, when mages\nwould come together to share secrets with each other. What was once\nfilled with the music of mages is now full of a dark oppressive \nsilence. Strangely, the table seems to be missing. You may return &+Reast&* \nto the foyer, or continue &+Rnorth&* to the Kitchen. \n",
+         "altitude" : null
+      },
+      "treasury@maeron" : {
+         "exits" : {
+            "n" : "cave3"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+RKobold Treasury&*",
+         "id" : "treasury",
+         "description" : "\n   You have stepped into the room that is most imporant to the Kobolds that\nlive here: the treasury. The only exit is &+Rnorth&* into the central \nchamber.\n",
+         "altitude" : null
+      },
+      "sun@maeron" : {
+         "exits" : {
+            "e" : "center"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "maeron",
+         "title" : "&+WWhite Chamber",
+         "id" : "sun",
+         "description" : "\n   This room is covered in pearly white marble which shimmers in the light.\nThe walls appear seamless, and are covered in desings depicting the sun. \nThe only exit is to the &+REast&*.\n",
+         "altitude" : null
+      },
+      "dorm@maeron" : {
+         "exits" : {
+            "e" : "cave3"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+YFetid Kobold Sleepingplace&*",
+         "id" : "dorm",
+         "description" : "\n   All about the room is strewn trinkets, bones, rotting food, and \ndisgusting Kobold bedrolls. You may (to the relief of your nose) leave\nthis place by heading &+Reast&*.\n",
+         "altitude" : null
+      },
+      "cliff@maeron" : {
+         "exits" : {},
+         "flags" : [
+            "outdoors",
+            "nomobiles",
+            "death"
+         ],
+         "zone" : "maeron",
+         "title" : "&+r-=-=-&+ROver The Cliff Edge&+r-=-=-",
+         "id" : "cliff",
+         "description" : "\n   You stumble off of the edge of the cliff and tumble &+Rdown&* the edge. Your\nbody bounces along the rocks, breaking rib after rib. Your lifeless corpse\nthuds on a rocky outcropping, much to the hapiness of the screeching vultures\noverhead. \n",
+         "altitude" : null
+      },
+      "upstairs@maeron" : {
+         "exits" : {
+            "e" : "towerbottom",
+            "w" : "library",
+            "n" : "bedroom",
+            "d" : "foyer"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "maeron",
+         "title" : "&+BUpstairs",
+         "id" : "upstairs",
+         "description" : "\n   This is a small room right above the staircase that leads off\nto several other rooms. Icy winds from blizzard pass blow from above, \nthrough where the roof used to be. To the &+Rnorth&* is Maeron's bedroom, \nto the &+Rwest&*is his library and to the &+Reast&* is another staircase, apparently leading off to \na tower. You may head &+Rdown&* the spiral staircase into the foyer.\n",
+         "altitude" : null
+      },
+      "kitchen@maeron" : {
+         "exits" : {
+            "s" : "diningroom"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+BThe Kitchen",
+         "id" : "kitchen",
+         "description" : "\n   Even though the Kitchen appears ordinary, there is something eerie\nabout it. Perhaps it is the large black cauldron in the corner, or the\nblack marble floor. Whatever it is, this room makes you feel uneasy. You\nmay return from whence you came to the &+RSouth&*.\n",
+         "altitude" : null
+      },
+      "path2@maeron" : {
+         "exits" : {
+            "e" : "path1",
+            "n" : "path3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "maeron",
+         "title" : "&+YSunny path",
+         "id" : "path2",
+         "description" : "\n   The sun beams &+Rdown&* happily upon the gravel road. You may head &+Rnorth&* or\neast along the path.\n",
+         "altitude" : null
+      },
+      "cave3@maeron" : {
+         "exits" : {
+            "w" : "dorm",
+            "e" : "cave2",
+            "n" : "leader",
+            "s" : "treasury"
+         },
+         "flags" : [
+            "nomobiles"
+         ],
+         "zone" : "maeron",
+         "title" : "&+YCentral Chamber",
+         "id" : "cave3",
+         "description" : "\n   The stench is almost unbearable here, causing you to nearly lose your \nlunch. All about the floor is strewn gnawed on bones, rotten food, and a\nfew things better left unmentioned. Torches light up the room even more\nbrightly here, giving the room a warmth, which encourages the cockroaches'\ngrowth.\n   To the &+Rnorth&* is an almost luxurious-looking room, to the &+Rwest&*\na fetid kobold sleepingplace. Off to the &+Rsouth&* you notice the glint\nof something shiny.\n",
+         "altitude" : null
+      },
+      "well@maeron" : {
+         "exits" : {},
+         "flags" : [
+            "death",
+            "nomobiles"
+         ],
+         "zone" : "maeron",
+         "title" : "&+RDown the well...",
+         "id" : "well",
+         "description" : "\n&+R--------------------------------------------------------------------\n&+WYou let out a scream as you plumet rapidly  down the well! Your arms\n&+Wand legs flail desperatly as you pick up speed. Suddenly you land in\n&+Wthick mud. The speed of your fall plunges you deep beneath the dark \n&+Wmud.\n              &+l+---------------------------------+\n              &+l|&+WYou slowly suffocate in the muck.&+l|\n              &+l+---------------------------------+\n--------------------------------------------------------------------\nSo long\n",
+         "altitude" : null
+      },
+      "edge@maeron" : {
+         "exits" : {},
+         "flags" : [
+            "death",
+            "nomobiles"
+         ],
+         "zone" : "maeron",
+         "title" : "&+RThe unstable edge",
+         "id" : "edge",
+         "description" : "\n   As you step over to the edge, it crumbles out from underneath you!\nYou try to grasp for something as you tumble &+Rdown&* to the rocks below\nthe tower, but to no avail.\n   With a loud thud, you hit the ground, piercing your lung on one\nof the sharp rocks, and breaking most of your ribs. You try to breathe, \nbut fail miserably as your lungs fill up with blood. As vultures gather\nfor their meal, you notice the corpses of several other adventurers who\nwere unfortunate like yourself.\n   Your heart beats its last...\n",
+         "altitude" : null
+      },
+      "path3@maeron" : {
+         "exits" : {
+            "e" : "field",
+            "n" : "path4",
+            "s" : "path2"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "maeron",
+         "title" : "&+YSunny path",
+         "id" : "path3",
+         "description" : "\n   The sun shines happily &+Rdown&* upon the gravel road. Obvious exits are \neast into a beutiful golden field, &+Rnorth&* along the path.\n",
+         "altitude" : null
+      },
+      "cave2@maeron" : {
+         "exits" : {
+            "w" : "cave3",
+            "e" : "cave1"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+YKobold's Den",
+         "id" : "cave2",
+         "description" : "\n   As you enter the cave, the scent becomes much stronger. This entire cavern\nreeks of the vermin. Flickering torches along the walls provide an eerie \nillumination. Myriads of rats and cockroaches scuttle along the floor.\nYou may proceed even deeper into the cave by heading &+Rwest&* or leave\ngoing &+Reast&*.\n",
+         "altitude" : null
+      },
+      "limbo@maeron" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+WMaeron Zone Limbo",
+         "id" : "limbo",
+         "description" : "\n&+R------------------------------------------------------------------------\nJust a nice little room that the zone can use in its internal proceedures.\nA would've used LIMBO1, but I prefer for the zone to have its own room.\n-Valur\n",
+         "altitude" : null
+      },
+      "leader@maeron" : {
+         "exits" : {
+            "s" : "cave3"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+CChamber Of Khighen.&*",
+         "id" : "leader",
+         "description" : "\n   The fur rug, fireplace, and good furniture give this place a luxurious\nfeel.\n",
+         "altitude" : null
+      },
+      "basement@maeron" : {
+         "exits" : {
+            "n" : "center",
+            "u" : "foyer",
+            "d" : "well"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "maeron",
+         "title" : "&+BIn the basement",
+         "id" : "basement",
+         "description" : "\n   This chamber has a very eerie aura about it. Shadows dance off the\nmasonry, mocking you. A spiral staircase leads back&+Rup&* to the relative\nsaftey of the foyer. To the &+Rnorth&* sits a small room with a large ornate\npedestal.\n   A small well is in the center of the room, and it doesn't look very\nsafe to go &+Rdown&* it.\n",
+         "altitude" : null
+      },
+      "field@maeron" : {
+         "exits" : {
+            "w" : "path3",
+            "s" : "path1"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "maeron",
+         "title" : "&+GGrassy field",
+         "id" : "Field",
+         "description" : "\n   You are standing in a field of beautiful lush tall mountain grass. As\nthe wind blows through the grass, it reminds you of a giant green sea.\nTo the &+Rwest&* is a sunny granite path.\n",
+         "altitude" : null
+      },
+      "foyer@maeron" : {
+         "exits" : {
+            "e" : "livingroom",
+            "w" : "diningroom",
+            "u" : "upstairs",
+            "n" : "lab",
+            "d" : "basement",
+            "s" : "^inside_front_door"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+BThe Foyer",
+         "id" : "foyer",
+         "description" : "\n   This chamber is the foyer of Maeron's mansion. Once beautiful, it \nhas now fallen into disrepair. A thick layer of dust seems to \ncover everything. The fine furniture, once of high quality is now \nalso covered in dust and rotting away. To the &+RNorth&* is what looks\nlike a laboratory. &+RWest&* is the dining hall. Off &+REast&* is the \nliving room.\nA wrought-iron spiral staircase leads &+Rdown&* into darkness and &+Rup&*\ninto fierce sounding icy winds.\n",
+         "altitude" : null
+      },
+      "towerbottom@maeron" : {
+         "exits" : {
+            "w" : "upstairs",
+            "u" : "tower"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "maeron",
+         "title" : "&+BThe Bottom Of The Tower",
+         "id" : "towerbottom",
+         "description" : "\n   A spiral staircase leading &+Rup&*wards dominates most of this chamber. \nThe masonry on the walls seems cracked and unstable. The stone stairs,\nhowever seem sturdy enough for you to continue &+Rup&*wards.\n",
+         "altitude" : null
+      },
+      "library@maeron" : {
+         "exits" : {
+            "e" : "upstairs"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "maeron",
+         "title" : "&+BThe Library",
+         "id" : "library",
+         "description" : "\nThe library seems rather ordinary. Although covered in dust the books\nare still intact. You may return to the hallway by heading &+Reast&*.\n",
+         "altitude" : null
+      },
+      "vault@maeron" : {
+         "exits" : {
+            "s" : "^inside_vault_door"
+         },
+         "flags" : [
+            "dark",
+            "nosummon",
+            "soundproof",
+            "cantsummon"
+         ],
+         "zone" : "maeron",
+         "title" : "&+WInside The Vault",
+         "id" : "vault",
+         "description" : "\n   This rather smallish room appears to have been untouched by the\npassing of time. Its reinforced iron walls and floor gleam under \nyour light. This room was obviously constructed with the highest\nsecurity in mind, as it appears nothing mortal could penetrate its \ndefenses. You may return to the laboratory by heading &+RSouth&*.\n",
+         "altitude" : null
+      },
+      "moon@maeron" : {
+         "exits" : {
+            "w" : "center"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "maeron",
+         "title" : "&+BBlue Chamber",
+         "id" : "moon",
+         "description" : "\n   As you step into this beautiful room, the silvery-blue walls reflect\nthe light in greeting. All around you there are designs and carvings \ndepicting the moon. The only exit is to the &+RWest&*.\n",
+         "altitude" : null
+      },
+      "tower@maeron" : {
+         "exits" : {
+            "e" : "edge",
+            "w" : "edge",
+            "n" : "edge",
+            "d" : "towerbottom",
+            "s" : "edge"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "maeron",
+         "title" : "&+BThe Tower Of Maeron",
+         "id" : "tower",
+         "description" : "\n   The tower offers you a magnificent view of the land. Off to the \nsoutheast you can see a plume of smoke, probobly from the crackling\nfire in the Warm Haven. You are held in awe at the majestic creation of \nthe gods. \n   As you reluctantly look down from the beautiful sight, you notice\nthat you can trudge to the edges of the towers. They look rather unstable.\nThey also appear to be above some nasty, and very sharp rocks.\n   Perhaps Maeron used this tower for his astronomy experiments, or\njust for the nice view. Anyway, the only safe exit appears to be downard.\n",
+         "altitude" : null
+      },
+      "outside@maeron" : {
+         "exits" : {
+            "w" : "path1",
+            "e" : "treravine@blizzard",
+            "n" : "entrance"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "maeron",
+         "title" : "&+BOutside Maeron's Mansion",
+         "id" : "outside",
+         "description" : "\n   Before you stands the mansion of Maeron. This mansion has\nbeen abandoned for years, after the lone Mage Maeron died\nin one of his daring experiments. Many an adventuror has\ntried to retrieve the treasures from his mansion and failed.\nThe mansion's spires twist menacingly skyward, daring you to\nenter...\nYou may boldly head &+Rnorth&* toward the mansion of Maeron or\nreturn &+Reast&* to the ravine above the cliff window. \nA sunny path lies to the &+Rwest&* invitingly.\n",
+         "altitude" : null
+      },
+      "path4@maeron" : {
+         "exits" : {
+            "w" : "cave1",
+            "e" : "rocks",
+            "s" : "path3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "maeron",
+         "title" : "&+YEnd of path",
+         "id" : "path4",
+         "description" : "\n   The gravel here becomes dispersed into the grass more, as the path \ndisappears. To the &+Reast&* there is a ten foot drop above some *very* sharp\nlooking rocks. \n",
+         "altitude" : null
+      },
+      "bedroom@maeron" : {
+         "exits" : {
+            "s" : "upstairs"
+         },
+         "flags" : [],
+         "zone" : "maeron",
+         "title" : "&+BMaeron's Bedroom",
+         "id" : "bedroom",
+         "description" : "\n   This chamber is what once as Maeron's bedroom. The furniture appears\nto have deteriorated over the years, and the once colorful carpet\nhas faded due to the rain that has come in from the &+Rsouth&*. \nThe bed, which was once made of cherry wood, has fallen apart. \n&+WIcy winds from blizzard pass blow in from the south.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "nhie@maeron" : {
+         "damage" : "10",
+         "location" : "Dorm",
+         "name" : "Nhie",
+         "examine" : "\nNhie eyes your possessions eagerly!",
+         "description" : "&+RNhie&* the Kobold is here.",
+         "strength" : "75",
+         "speed" : "5",
+         "pname" : "Nhie",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "PickStuff"
+         ]
+      },
+      "khighen@maeron" : {
+         "damage" : "10",
+         "location" : "leader",
+         "name" : "Khighen",
+         "examine" : "Khighen is in stark contrast to all the other Kobolds. He is dressed in the fine robes of a wealthy and skilled thief, and there is a gleam of intelligence in his eye.",
+         "description" : "&+RKhighen&*, the kobold-leader watches you casually.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Khighen",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "StealWorn",
+            "StealWeapon",
+            "PickStuff"
+         ]
+      },
+      "rats@maeron" : {
+         "damage" : "10",
+         "location" : "Basement",
+         "name" : "Rats",
+         "examine" : "\nThousands of beady little eyes stare &+Rup&* at you. The rats seem diseased\nand quite malnourished. They lick their lips at you hungrily!",
+         "description" : "&+LA horde of filthy black &+Rrats&+L scurries around the room!&*",
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "Rats",
+         "aggression" : "50",
+         "pflags" : [
+            "NoZap"
+         ],
+         "mflags" : [
+            "NoHeat"
+         ]
+      },
+      "golem@maeron" : {
+         "eflags" : [
+            "immfrost",
+            "immfireball",
+            "immshock"
+         ],
+         "damage" : "10",
+         "location" : "library",
+         "name" : "Golem",
+         "examine" : "\nThis strange creature was obviously created by magic. It looks like a \nlarge mound of rock. The Golem expressionless face turns toward you as \nhe slowly shambles after you.",
+         "description" : "\n&+W           Something is lurking in the shadows of the library&*",
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "Golem",
+         "pflags" : [
+            "NoMagic",
+            "NoSummon",
+            "NoPunt"
+         ],
+         "mflags" : "{ }"
+      },
+      "ghem@maeron" : {
+         "damage" : "10",
+         "location" : "Dorm",
+         "name" : "Ghem",
+         "examine" : "\nHe's probobly never seen a bar of soap in his life. PHEW!",
+         "description" : "Ghem is here.",
+         "strength" : "75",
+         "speed" : "5",
+         "pname" : "Ghem",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "PickStuff"
+         ]
+      },
+      "ookphishk@maeron" : {
+         "damage" : "10",
+         "location" : "Dorm",
+         "name" : "Ookphishk",
+         "examine" : "Ookphishk smiles at you smugly, as a cat would to a cornered mouse.",
+         "description" : "&+ROokphisk&* is here.",
+         "strength" : "75",
+         "speed" : "5",
+         "pname" : "Ookphisk",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "PickStuff"
+         ]
+      },
+      "vampire@maeron" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "100",
+         "location" : "foyer",
+         "name" : "Vampire",
+         "examine" : "\nHe smiles and bows deeply, introducing himself as Vlir of the house\nof Dracul. Vlir says,\n\n&+W'Hail, fine adventurer. I understand you wish to raid this\n&+Wmansion for its priceless treasures. I warn you, I intend to \n&+Wsolve the puzzles of this hideous place and gain access to\n&+Wits valuable treasures. Do not stand in my way or I will surely\n&+Wdestroy you in one swift stroke.'&*\n\n&+rVlir appears to be an extremely elite vampire warrior who could \n&+reasily defeat even the most skilled adventurer...&*",
+         "description" : "&+RAn evil vampire is here, guarding his domain.",
+         "sflags" : [
+            "Vampire"
+         ],
+         "strength" : "10000",
+         "speed" : "0",
+         "pname" : "Vlir",
+         "aggression" : "0",
+         "pflags" : [
+            "NoZap",
+            "NoSummon",
+            "NoMagic",
+            "NoPunt",
+            "NoAlias"
+         ]
+      },
+      "mhiery@maeron" : {
+         "damage" : "10",
+         "location" : "Dorm",
+         "name" : "Mhiery",
+         "examine" : "\nA large, furry kobold with a look of greed in his eyes.",
+         "description" : "&+RMhiery&* the kobold-thief is here.",
+         "strength" : "75",
+         "speed" : "5",
+         "pname" : "Mhiery",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "PickStuff"
+         ]
+      }
+   }
+}

@@ -1,11 +1,15 @@
 {
    "obj" : {},
    "loc" : {
-      "meetingroom@god" : {
+      "god2@god" : {
          "exits" : {
-            "w" : "Landshark1"
+            "w" : "god1"
          },
          "flags" : [
+            "NoSummon",
+            "CantSummon",
+            "NoAt",
+            "God",
             "Private",
             "Party",
             "Soundproof",
@@ -15,24 +19,26 @@
          ],
          "zone" : "god",
          "title" : "The Gods Meeting Room",
-         "id" : "Meetingroom",
+         "id" : "god2",
          "description" : "\n   This is a large dome shaped room, in the center of the room is a long table\nwith many comfortable looking chairs.\nThis is where the powers come for meetings and parties.\n",
          "altitude" : null
       },
-      "landshark1@god" : {
+      "god1@god" : {
          "exits" : {
-            "e" : "Meetingroom"
+            "e" : "god2"
          },
          "flags" : [
             "Party",
             "Private",
             "NoMobiles",
-            "NoSnoop"
+            "God",
+            "NoSnoop",
+            "NoAt"
          ],
          "zone" : "god",
-         "title" : "&+RLandshark's home&N",
-         "id" : "Landshark1",
-         "description" : "\nThis is where landshark eats, sleeps, and, well you suppose that is all\nhe does here...\nThere are a few dictionaries on the floor, here and you only wish\nthat he would use them more often.\nThis is a simple place, messy but simple.\nClothes line the floor, and there are plates with old food lying around here\nand there, you wonder who made this clown god.....\n",
+         "title" : "God's home&N",
+         "id" : "god1",
+         "description" : "\nDid you ever wondered what god's home would look like? We did too.\n",
          "altitude" : null
       }
    },

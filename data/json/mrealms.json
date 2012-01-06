@@ -1,9 +1,47 @@
 {
-   "obj" : {},
+   "obj" : {
+      "tape@mrealms" : {
+         "location" : "IN_ROOM:island",
+         "oflags" : [
+            "NoPit"
+         ],
+         "altname" : "cassette",
+         "pname" : "tape",
+         "name" : "Tape",
+         "examine" : "Mellon Collie and the Infinite Sadness.  Hm...well, at\nleast there's tape...Too bad you don't have a tape player.",
+         "desc[0]" : "An outdated cassette tape has been left here."
+      },
+      "monitor@mrealms" : {
+         "location" : "IN_ROOM:island",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "screen",
+         "pname" : "monitor",
+         "name" : "Monitor",
+         "examine" : "The screen displays a vibrant blue background with many\nhex codes dumped on it.  Just your luck, its got Windows.",
+         "desc[0]" : "A computer monitor sticks out of the sand."
+      },
+      "hamlet@mrealms" : {
+         "location" : "IN_ROOM:island",
+         "oflags" : [
+            "NoPit"
+         ],
+         "altname" : "book",
+         "name" : "Hamlet",
+         "examine" : "To be, or not to be...that is the question....",
+         "size" : "5",
+         "pname" : "hamlet",
+         "weight" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A copy of Shakespeare's &+GHamlet&* lies here."
+      }
+   },
    "loc" : {
       "lounge@mrealms" : {
          "exits" : {
-            "s" : "mrealms"
+            "se" : "mrealms",
+            "sw" : "mrealms"
          },
          "flags" : [
             "Peace",
@@ -13,23 +51,159 @@
          "zone" : "mrealms",
          "title" : "The Mortal Lounge",
          "id" : "lounge",
-         "description" : "\n  You step into the lounge and begin to feel relaxed right away. A large\nplush couch sits right in the middle of the room with a large coffee table\nin front of it. A refridgerator stocked with the finest ale's and various\ntypes of soda is built into the north wall. Set into the west wall is a big\nscreen TV with a Sony Playstation resting on the floor in front of it. Next\nto the TV is a stereo system playing dance mix music. Set into the east wall\nis a wetbar with a glowing neon sign that says 'Always Open'. So please, pour\nyourself a drink, sit back and relax.\n",
+         "description" : "\n  You step into the lounge and begin to feel relaxed right away. A large\nplush couch sits right in the middle of the room with a large coffee table\nin front of it. A refridgerator stocked with the finest ale's and various\ntypes of soda is built into the north wall. Set into the west wall is a big\nscreen TV with a Sony Playstation resting on the floor in front of it.  Next\nto the TV is a stereo system playing dance mix music. Set into the east wall\nis a wetbar with a glowing neon sign that says 'Always Open'.  So please,\npour yourself a drink, sit back and relax.\n",
+         "altitude" : null
+      },
+      "diner@mrealms" : {
+         "exits" : {
+            "d" : "second"
+         },
+         "flags" : [
+            "Peace",
+            "Party"
+         ],
+         "zone" : "mrealms",
+         "title" : "The All-Night Diner",
+         "id" : "diner",
+         "description" : "\nA burly waitress with a name tag which says Sally asks you what you'll have. \n  The stools around you are empty, and booths filled with lovers, teenagers \ncelebrating a victory, and truck drivers taking a break line the windows.  \nThe jukebox has all your favourite songs in it . . . only costs a quarter, \nso go ahead and give it a go.  I recommend the apple pie.\n",
          "altitude" : null
       },
       "mrealms@mrealms" : {
          "exits" : {
-            "n" : "lounge",
-            "d" : "temple@start"
+            "e" : "wildflowers",
+            "ne" : "lounge",
+            "u" : "second",
+            "d" : "temple@start",
+            "s" : "disco",
+            "nw" : "lounge"
          },
          "flags" : [
             "Peace",
             "FastMana",
-            "FastHeal"
+            "FastHeal",
+            "NoMobiles"
          ],
          "zone" : "mrealms",
          "title" : "The Mortal Realms",
          "id" : "mrealms",
          "description" : "\n  You have stepped into the mortal realms, a place for mortals to come to\njust to get away from the harsh world. It is very peaceful here and you\ndecide that you might as well take a little break from all the adventuring\nthat you have been doing. There are exits in all directions, or you can go\nto the Temple of Paradise to the south and continue on your quests.\n",
+         "altitude" : null
+      },
+      "disco@mrealms" : {
+         "exits" : {
+            "n" : "mrealms"
+         },
+         "flags" : [
+            "Peace",
+            "Party"
+         ],
+         "zone" : "mrealms",
+         "title" : "The Disco",
+         "id" : "disco",
+         "description" : "\nYou've not only traveled to the south room but also traveled back in time to \na place where Disco is still alive and King, drugs are bountiful, afros are \nstill cool, and bell-bottoms are a must.  Strobe lights flash against a huge \ndisco ball hanging from the ceiling, giving the entire room a dream-like \nlook.  People crowd the room, trying to stay alive, swearing as long as they \nknow how to love they know they'll be alright, screaming at the DJ to play \nthat funky music white boy, and other corny song allusions.\n",
+         "altitude" : null
+      },
+      "waterfall@mrealms" : {
+         "exits" : {
+            "w" : "mrealms"
+         },
+         "flags" : [
+            "Peace",
+            "Private"
+         ],
+         "zone" : "mrealms",
+         "title" : "Behind the Waterfall",
+         "id" : "waterfall",
+         "description" : "\nA sheet of water falls before you, glistening in all the colours of the \nrainbow.  You reach out your hand through the water and slivers bounce off \nonto the walls of the cave you found.  Looking back into the cave you see \nthe drawings of ancient peoples, although you don't believe this cave has \nbeen inhabited since they were drawn.  A cool breeze sends a light mist of \nwater toward you, for which you are thankful after the heat of the day.\n",
+         "altitude" : null
+      },
+      "beach@mrealms" : {
+         "exits" : {
+            "s" : "second"
+         },
+         "flags" : [
+            "Peace",
+            "Private"
+         ],
+         "zone" : "mrealms",
+         "title" : "The Beach",
+         "id" : "beach",
+         "description" : "\nCrystal clear blue waves break against an endless beach of white sand.  \nConch shells, palm trees, and sea stars dot the land as you walk barefoot at \nthe edge of the water while red and pink clouds chase a setting sun down the \nhorizon.  In the distance you see a group of dolphins leaping out of the \nwaves.  You could stay here forever.\n",
+         "altitude" : null
+      },
+      "island@mrealms" : {
+         "exits" : {
+            "n" : "second"
+         },
+         "flags" : [
+            "Peace",
+            "Private"
+         ],
+         "zone" : "mrealms",
+         "title" : "The Deserted Island",
+         "id" : "island",
+         "description" : "\nRemember when you were a kid and you'd ask your friends, \"If you were on a \ndesert island and could only have one book/tape/item/person/food, what would \nit be?\"  Well, I hope you chose wisely, because here you are.  Snuggle up \nwith your favourite book or favourite person, because it doesn't look like \nyou'll be rescued anytime soon.\n",
+         "altitude" : null
+      },
+      "sidewalk@mrealms" : {
+         "exits" : {
+            "e" : "second"
+         },
+         "flags" : [
+            "Peace",
+            "Private"
+         ],
+         "zone" : "mrealms",
+         "title" : "Where the Sidewalk Ends",
+         "id" : "sidewalk",
+         "description" : "\nThere is a place where the sidewalk ends\nAnd before the street begins,\nAnd there the grass grows soft and white,\nAnd there the sun burns crimson bright,\nAnd there the moon-bird rests from his flight\nTo cool in the pepermint wind.\n\tLet us leave this place where the smoke blows black\n\tAnd the dark street winds and bends.\n\tPast the pits where the asphalt flowers grow\n\tWe shall walk with a walk that is measured and slow,\n\tAnd watch where the chalk-white arrows go\n\tTo the place where the sidewalk ends.\nYes, we'll walk with a walk that is measured and slow,\nAnd we'll go where the chalk-white arrows go,\nFor the children, they mark, and the children, they know\nThe place where the sidewalk ends.\n\t\t\t\t--Shel Silverstein (1933-1999)\n",
+         "altitude" : null
+      },
+      "second@mrealms" : {
+         "exits" : {
+            "e" : "edge",
+            "w" : "sidewalk",
+            "u" : "diner",
+            "n" : "beach",
+            "d" : "mrealms",
+            "s" : "island"
+         },
+         "flags" : [
+            "Peace",
+            "Party"
+         ],
+         "zone" : "mrealms",
+         "title" : "The Second Level",
+         "id" : "second",
+         "description" : "\nHere you find more rooms.  To the north you hear waves crashing against a \nbeach.  Through the south exit you see trees and seashells but no people.  \nFrom above you wafts the smell of apple pie and coffee.  To the east you see \nblackness, while to the west you smell a breeze of pepermint wind.  You \ncould always go back down.\n",
+         "altitude" : null
+      },
+      "edge@mrealms" : {
+         "exits" : {
+            "w" : "second"
+         },
+         "flags" : [
+            "Peace",
+            "Private"
+         ],
+         "zone" : "mrealms",
+         "title" : "The Edge of the World",
+         "id" : "edge",
+         "description" : "\n   All your life you've been lied to.  Columbus was wrong.  The world is flat. \nYou know this now because you're standing at the edge of it.  You glance \nover the edge and see infinity below you.  Let your feet hang over the edge; \nno one's going to bother you for a while.\n",
+         "altitude" : null
+      },
+      "wildflowers@mrealms" : {
+         "exits" : {
+            "w" : "mrealms"
+         },
+         "flags" : [
+            "Peace",
+            "Private"
+         ],
+         "zone" : "mrealms",
+         "title" : "The Field of Wildflowers",
+         "id" : "wildflowers",
+         "description" : "\nA never-ending sea of green rolling hills stands before you, dotted with \nspecks of wild flowers of all colours.  You pick up a pink buttercup and put \nit in your hair while making a coronet of clover.  You cannot resist the \nurge to lie down in the thick green grass.  Maybe it's the poppies making \nyou sleepy.\n",
          "altitude" : null
       }
    },

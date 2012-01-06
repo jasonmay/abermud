@@ -1,0 +1,1558 @@
+{
+   "obj" : {
+      "cdoorin2@nrose" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Cell2",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "CDoorIn2",
+         "examine" : "\nWhat wise words wouldn't this door be able to tell you if it could talk?",
+         "desc[2]" : "The door is locked.",
+         "linked" : "CDoorOut2",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "cdoorout2@nrose" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:MidDorm",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "CDoorOut2",
+         "examine" : "\nAs you examine the door, you think you can hear the soft scratching of \nfeathered quills against parchment.",
+         "desc[2]" : "The door is locked.",
+         "linked" : "CDoorIn2",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "cleaver@nrose" : {
+         "damage" : "17",
+         "location" : "IN_ROOM:Kitchen",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "cleaver",
+         "examine" : "I wouldn't want to be on the receiving end of this thing!",
+         "size" : "18",
+         "weight" : "17",
+         "bvalue" : "-75",
+         "desc[0]" : "A bloody cleaver has been misplaced here."
+      },
+      "bdoorout@nrose" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Scriptorium",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "BDoorOut",
+         "examine" : "The door is made of thick planks. There is no keyhole at this side.",
+         "linked" : "BDoorIn",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door has been left open."
+      },
+      "book2@nrose" : {
+         "location" : "CARRIED_BY:Malachi",
+         "weight" : "7",
+         "pname" : "book",
+         "name" : "book2",
+         "bvalue" : "75",
+         "desc[0]" : "\nA valuable book in Greek has been carelessly left here.",
+         "size" : "10"
+      },
+      "towel@nrose" : {
+         "location" : "IN_ROOM:Balneary",
+         "armor" : "28",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "towel",
+         "examine" : "\nNever go anywhere in the universe without a towel.",
+         "size" : "5",
+         "weight" : "7",
+         "bvalue" : "10",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "A thirsty towel is sitting in a wad on the floor."
+      },
+      "whip@nrose" : {
+         "damage" : "5",
+         "location" : "WIELDED_BY:Beranger",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "whip",
+         "examine" : "\nYou should use this regularly to beat the devil out of your wicked\nand sinful flesh.",
+         "size" : "7",
+         "weight" : "5",
+         "bvalue" : "-20",
+         "desc[0]" : "A bloody leather whip has been left here."
+      },
+      "wine@nrose" : {
+         "location" : "IN_ROOM:StoreHouse",
+         "weight" : "4",
+         "oflags" : [
+            "Food",
+            "Alcohol"
+         ],
+         "name" : "wine",
+         "examine" : "It smells like vinegar.  Must be French wine.",
+         "bvalue" : "10",
+         "desc[0]" : "A sack of communion wine sits on the floor.",
+         "size" : "6"
+      },
+      "book3@nrose" : {
+         "location" : "CARRIED_BY:Jorge",
+         "name" : "book3",
+         "examine" : "\nIt is titled 'The Secrets of Abermud.'  It reads:\n'There are many secrets to aid a player in earning quick wizardom.\nKilling mobiles seems to be the fastest way to earn points.  But\nthere are other tricks like....'  The books ends here because\nsomeone has torn out the rest of the important pages.  The torn edges\nappear rather blackened like a lightning bolt tore them out.  However,\nthere is a treatise on the merits of having a one time only\ngrasshopper versus a multi-use one.  But it is very dry reading.",
+         "size" : "8",
+         "state" : "0",
+         "pname" : "book",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "350",
+         "desc[0]" : "A slim leather-bound book is sitting here."
+      },
+      "habit2@nrose" : {
+         "location" : "WORN_BY:Jorge",
+         "armor" : "70",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Antimagic"
+         ],
+         "name" : "habit2",
+         "examine" : "\nAs you examine it you notice that the fabric seems to be finely woven steel.",
+         "size" : "25",
+         "weight" : "20",
+         "pname" : "habit",
+         "bvalue" : "200",
+         "desc[0]" : "A very thick robe lies in a heap on the floor.",
+         "aflags" : [
+            "Arms",
+            "Head",
+            "Back"
+         ]
+      },
+      "jar1@nrose" : {
+         "desc[1]" : "A glass jar filled with a clear liquid stands on a shelf.",
+         "location" : "IN_ROOM:Infirmary",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "glass",
+         "name" : "jar1",
+         "examine" : "\nThe contents of the jar smell like some kind of hard liquor.",
+         "size" : "3",
+         "state" : "1",
+         "weight" : "3",
+         "pname" : "jar",
+         "maxstate" : "1",
+         "bvalue" : "60",
+         "desc[0]" : "A glass jar filled with a clear liquid lies here."
+      },
+      "book1@nrose" : {
+         "location" : "IN_ROOM:Infirmary",
+         "weight" : "12",
+         "pname" : "book",
+         "name" : "book1",
+         "examine" : "\nThe book is written in Latin and appears to describe many powerful herbal\npotions and magical spells...  How unfortunate that you never learned\nLatin, amice.",
+         "bvalue" : "100",
+         "desc[0]" : "\nA large, leather-bound book sit here waiting for you to read it.",
+         "size" : "12"
+      },
+      "spectacles@nrose" : {
+         "location" : "WORN_BY:William",
+         "weight" : "3",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "spectacles",
+         "examine" : "\nThey appear to be reading glasses.  Maybe you should wear them so you can\nsee where you're going.",
+         "bvalue" : "150",
+         "desc[0]" : "A pair of crudely made eye glasses have been dropped here.",
+         "size" : "5"
+      },
+      "rope@nrose" : {
+         "location" : "IN_ROOM:TowerBase",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "rope",
+         "examine" : "\nThe rope looks old and rotten.  Would you take a chance on it holding your\nweight?",
+         "desc[0]" : ""
+      },
+      "onion@nrose" : {
+         "location" : "IN_ROOM:Gardens",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "onion",
+         "examine" : "\nAn onion is a natural aphrodisiac.  Eat it with someone you love.",
+         "size" : "3",
+         "weight" : "2",
+         "bvalue" : "9",
+         "desc[0]" : "An onion is here, giving off a very pleasant oniony smell."
+      },
+      "incenser@nrose" : {
+         "location" : "CARRIED_BY:Abbot",
+         "weight" : "4",
+         "name" : "incenser",
+         "examine" : "\nIt is a little ball with a hole on its top which contains incense which\nis burned.  However, for some reason, it is not lit.",
+         "bvalue" : "400",
+         "desc[0]" : "A small incenser has been dropped here.",
+         "size" : "4"
+      },
+      "bdoorin@nrose" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:DampStair",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "BDoorIn",
+         "examine" : "This door is very sturdy.",
+         "linked" : "BDoorOut",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door has been left open."
+      },
+      "iron@nrose" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:Bernardo",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "name" : "iron",
+         "examine" : "It's a big branding iron.  And it's very hot on one end!",
+         "size" : "7",
+         "weight" : "6",
+         "bvalue" : "-10",
+         "desc[0]" : "A red-hot branding iron is glowing here."
+      },
+      "bar@nrose" : {
+         "desc[1]" : "The bar does not allow the door to be opened.",
+         "location" : "IN_ROOM:DampStair",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bar",
+         "examine" : "The bar appears to be used to lock and unlock the door.",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "\nThe bar has been moved aside allowing the door to be opened."
+      },
+      "portcullin@nrose" : {
+         "desc[1]" : "The portcullis is closed.",
+         "location" : "IN_ROOM:Portcullis",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "PortcullIn",
+         "examine" : "\nIt's a gate that can be raised and lowered.  I wouldn't want to be under it \nwhen it comes down.",
+         "linked" : "PortcullOut",
+         "state" : "0",
+         "pname" : "portcullis",
+         "maxstate" : "1",
+         "desc[0]" : "The portcullis is open."
+      },
+      "parchment@nrose" : {
+         "location" : "IN_ROOM:Cell2",
+         "weight" : "1",
+         "oflags" : "{}",
+         "name" : "parchment",
+         "bvalue" : "9",
+         "desc[0]" : "A neatly folded piece of parchment is sitting here.",
+         "size" : "4"
+      },
+      "chudoorsout@nrose" : {
+         "desc[1]" : "The large church doors are closed.",
+         "location" : "IN_ROOM:ChurchSteps",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "ChuDoorsOut",
+         "examine" : "\nThe doors have no handles or grips to allow you to open them.\nPerhaps there is another way?",
+         "linked" : "ChuDoorsIn",
+         "state" : "1",
+         "pname" : "doors",
+         "maxstate" : "1",
+         "desc[0]" : "The large doors to the church stand wide open."
+      },
+      "wheel@nrose" : {
+         "location" : "IN_ROOM:GuardHouse",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Wheel",
+         "examine" : "\nIt appears to let you open and close the portcullis.",
+         "desc[0]" : "A wheel with ropes tied around it is attached to the wall."
+      },
+      "portcullout@nrose" : {
+         "desc[1]" : "The portcullis is closed.",
+         "location" : "IN_ROOM:WindPath",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "PortcullOut",
+         "examine" : "\nIt's a gate that can be raised and lowered.  I wouldn't want to be under it \nwhen it comes down.",
+         "linked" : "PortcullIn",
+         "state" : "0",
+         "pname" : "portcullis",
+         "maxstate" : "1",
+         "desc[0]" : "The portcullis is open."
+      },
+      "cdoorout1@nrose" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:NorthDorm",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "CDoorOut1",
+         "examine" : "\nWonder what the monks do behind these doors when the light has gone out?",
+         "desc[2]" : "The door is locked.",
+         "linked" : "CDoorIn1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "cdoorin3@nrose" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Cell3",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "CDoorIn3",
+         "examine" : "\nThe door is thick and sturdy. It has been designed to keep the world outside.",
+         "desc[2]" : "The door is locked.",
+         "linked" : "CDoorOut3",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "axe@nrose" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:Smithy",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "axe",
+         "examine" : "You cut your finger as you examine its very sharp blade.",
+         "size" : "14",
+         "weight" : "15",
+         "bvalue" : "-60",
+         "desc[0]" : "A very sharp axe has been left here."
+      },
+      "manure@nrose" : {
+         "location" : "IN_ROOM:Pigsties",
+         "weight" : "1",
+         "name" : "manure",
+         "examine" : "\nOh, dear!  It's pretty potent smelling stuff.  But it appears to be\ndry enough to burn.",
+         "bvalue" : "5",
+         "desc[0]" : "Some smelly pig's manure has been trod upon.",
+         "size" : "1"
+      },
+      "cdoorin1@nrose" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:Cell1",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "CDoorIn1",
+         "examine" : "\nSmall drops of something that looks like blood spots this door.",
+         "desc[2]" : "The door is locked.",
+         "linked" : "CDoorOut1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "chudoorsin@nrose" : {
+         "desc[1]" : "The large church doors are closed.",
+         "location" : "IN_ROOM:Church",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "ChuDoorsIn",
+         "examine" : "\nThe doors have no handles or grips to allow you open them.",
+         "linked" : "ChuDoorsOut",
+         "state" : "1",
+         "pname" : "doors",
+         "maxstate" : "1",
+         "desc[0]" : "The large church doors stand wide open."
+      },
+      "grain@nrose" : {
+         "location" : "IN_ROOM:StoreHouse",
+         "weight" : "5",
+         "name" : "grain",
+         "examine" : "\nIt's a big burlap sack full of something that looks like some sort of grain.",
+         "bvalue" : "20",
+         "desc[0]" : "A bag of grain sits against the wall.",
+         "size" : "7"
+      },
+      "sign@nrose" : {
+         "location" : "IN_ROOM:WindPath",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sign",
+         "examine" : "\n                           ! ! ! WARNING ! ! !\nAhead of you is a monastery filled with mostly peaceful and good but some\neasily irritated and downright wicked monks.  The Gods recommend that you\ndo not attempt to enter this area until you have over 100 health points.",
+         "desc[0]" : "A large yellow sign is posted off to one side of the path."
+      },
+      "habit1@nrose" : {
+         "location" : "IN_ROOM:GuardHouse",
+         "armor" : "23",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "habit1",
+         "examine" : "\nIt looks like a monk's habit.  Maybe if you wore it you could sneak past\nthe monks and steal their goodies.",
+         "size" : "8",
+         "weight" : "6",
+         "pname" : "habit",
+         "bvalue" : "18",
+         "desc[0]" : "A gray, burlap monk's habit has been discarded here.",
+         "aflags" : [
+            "Head",
+            "Back",
+            "Arms"
+         ]
+      },
+      "shelf@nrose" : {
+         "location" : "IN_ROOM:Infirmary",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "shelves",
+         "name" : "shelf",
+         "examine" : "\nOn the shelves are row upon row of different jars.  Pity that the contents\nseems so uninteresting.",
+         "desc[0]" : ""
+      },
+      "beet@nrose" : {
+         "desc[1]" : "A sweet-looking sugar beet was missed by the gardener.",
+         "location" : "IN_ROOM:InGardens",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "food",
+         "name" : "beet",
+         "examine" : "It looks like a very tasty sugar beet to me.",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "3",
+         "maxstate" : "9",
+         "bvalue" : "1",
+         "desc[0]" : "Someone has left a sugar beet here!"
+      },
+      "alouth@nrose" : {
+         "location" : "IN_ROOM:Library18",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "volume",
+         "name" : "alouth",
+         "examine" : "\nInteresting, out of all the piles and piles of books, this one stood out from\nall of them like a sore thumb.  It seems this was spoken by the monks of this\nmonastery but over time, due to their vows of silence ceased speaking it.\nYou start reading through it, and find Alouth easy to learn.  Soon, you are\nable to converse in it fluently.",
+         "desc[0]" : "A volume stands out in this room, which depicts the language of Alouth."
+      },
+      "spear@nrose" : {
+         "damage" : "7",
+         "location" : "IN_ROOM:GuardHouse",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "spear",
+         "examine" : "\nI hope whoever you skewer with this spear has had his tetanus shots.",
+         "size" : "13",
+         "weight" : "12",
+         "bvalue" : "-30",
+         "desc[0]" : "A rusty spear has been left here."
+      },
+      "altar@nrose" : {
+         "location" : "IN_ROOM:ChurchAltar",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "name" : "altar",
+         "examine" : "\nIt's made of stone.  There appears to be some dirty hand prints on one end\nof the altar.",
+         "linked" : "passage",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "\nThe altar has been pushed aside opening a passage down."
+      },
+      "passage@nrose" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Ossarium2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "passage",
+         "linked" : "altar",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A passage leads up to an altar."
+      },
+      "rat@nrose" : {
+         "location" : "IN_CONTAINER:bag",
+         "weight" : "1",
+         "name" : "rat",
+         "examine" : "People have been known to eat rats.  Do you dare to?",
+         "bvalue" : "1",
+         "desc[0]" : "A freshly-killed rat has been dropped here.",
+         "size" : "2"
+      },
+      "cdoorout3@nrose" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:SouthDorm",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "CDoorOut3",
+         "examine" : "\nThis door is made of old and thick planks.  It has obviously been designed \nto keep the world outside.",
+         "desc[2]" : "The door is locked.",
+         "linked" : "CDoorIn3",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "jar2@nrose" : {
+         "desc[1]" : "On top of one of the shelves stands a small clay jar.",
+         "location" : "IN_ROOM:Infirmary",
+         "oflags" : [
+            "GetFlips",
+            "Food",
+            "Destroyed"
+         ],
+         "altname" : "clay",
+         "name" : "jar2",
+         "examine" : "\nThe contents of the jar smell like bitter almonds.",
+         "size" : "3",
+         "state" : "1",
+         "weight" : "3",
+         "pname" : "jar",
+         "maxstate" : "1",
+         "bvalue" : "60",
+         "desc[0]" : "\nA clay jar filled with a foul-smelling potion has been thrown aside."
+      },
+      "bag@nrose" : {
+         "location" : "CARRIED_BY:Salvatore",
+         "weight" : "4",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "bag",
+         "examine" : "\nIt smells like something dead has been carried in it recently.",
+         "bvalue" : "10",
+         "desc[0]" : "A small bag has been left in a corner.",
+         "size" : "35"
+      },
+      "lamp@nrose" : {
+         "desc[1]" : "A rather 'sweet' smelling black iron reading lamp is here.",
+         "location" : "IN_ROOM:Cell2",
+         "oflags" : [
+            "Extinguish",
+            "Lightable"
+         ],
+         "name" : "lamp",
+         "examine" : "\nIt appears to be an antique reading lamp.  However, it doesn't seem to have\nburned oil recently.  You see the residue of something more solid in it.",
+         "desc[2]" : "A black iron reading lamp is here.",
+         "state" : "2",
+         "size" : "8",
+         "weight" : "7",
+         "maxstate" : "2",
+         "bvalue" : "99",
+         "desc[0]" : "A lit iron reading lamp is giving off a horrible smell."
+      }
+   },
+   "loc" : {
+      "library6@nrose" : {
+         "exits" : {
+            "w" : "Library15",
+            "n" : "Library7"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library6",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "library14@nrose" : {
+         "exits" : {
+            "w" : "Library19",
+            "e" : "Library2",
+            "s" : "Library18"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library14",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "library17@nrose" : {
+         "exits" : {
+            "e" : "LibraryTrap",
+            "s" : "Library16"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library17",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "libsecretroom1@nrose" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "nrose",
+         "title" : "Library Secret Room",
+         "id" : "LibSecretRoom1",
+         "description" : "\nThe floorboards creak and groan unmercifully with your great\nweight and crack shifting the floor.  Struggle as you may, you\nlose your balance and fall on the floor.  The shock of your fall\ncauses the boards to break and you fall through the floor into\nthe Scriptorium below.  *splat*\n",
+         "altitude" : null
+      },
+      "pigsties@nrose" : {
+         "exits" : {
+            "s" : "WidePath2"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Pigsties",
+         "id" : "Pigsties",
+         "description" : "\nYou are in the monastery pigsties.  The smell in here is\natrocious and as you scan the room you see that you are standing\nin the source of the smell.\n",
+         "altitude" : null
+      },
+      "ossarium2@nrose" : {
+         "exits" : {
+            "u" : "^passage",
+            "n" : "Ossarium"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "nrose",
+         "title" : "Ossarium",
+         "id" : "Ossarium2",
+         "description" : "\nYou have entered the monastery ossarium.  The room has bones\nstacked up everywhere, some in niches dug into the damp walls,\nothers piled up on the ground.  As you walk around, your feet\nslosh through the mud on the floor.  There is a heavy, musty\nsmell here and you feel strange as if you are walking closer to\nyour own death.  As you look around you see a stairway up and to\nthe north is another part of the ossarium.\n",
+         "altitude" : null
+      },
+      "libsecretroom2@nrose" : {
+         "exits" : {
+            "n" : "Library9"
+         },
+         "flags" : [
+            "CantSummon",
+            "Dark",
+            "Soundproof",
+            "NoMagic"
+         ],
+         "zone" : "nrose",
+         "title" : "Library Secret Room",
+         "id" : "LibSecretRoom2",
+         "description" : "\nYou have entered a store room where the librarian keeps the\nforbidden and dangerous books.  You are indeed worthy of praise\nfor having made it to this room.  However, if the inquisition\never found out you were in here, you would surely die (after\nconfessing, of course).\n",
+         "altitude" : null
+      },
+      "cell3@nrose" : {
+         "exits" : {
+            "e" : "^CDoorIn3"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Cell",
+         "id" : "Cell3",
+         "description" : "\nYou have entered a monk's cell.  There is a plank bed along one\nwall and a table and chair along the opposite wall.  There is a\ndoor to the east.\n",
+         "altitude" : null
+      },
+      "scriptorium@nrose" : {
+         "exits" : {
+            "n" : "^BDoorOut",
+            "d" : "Aedificium"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Scriptorium",
+         "id" : "Scriptorium",
+         "description" : "\nYou have entered the monastery scriptorium.  Along one side of\nthe room are a set of stained-glass windows.  Next to these\nwindows in neat rows are wooden desks and book stands where the\nmonks laboriously copy and illuminate books.  Ah, the monastery\nmust have a library around here somewhere but where can it be?\n",
+         "altitude" : null
+      },
+      "library2@nrose" : {
+         "exits" : {
+            "w" : "Library14",
+            "e" : "Library6",
+            "n" : "Library3",
+            "s" : "Library1"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library2",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "kitchen@nrose" : {
+         "exits" : {
+            "w" : "Aedificium"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Kitchen",
+         "id" : "Kitchen",
+         "description" : "\nYou have entered the monastery kitchen.  On one wall is a brick\noven.  The coals in it are hot but nothing is cooking inside it.\nAlong another wall are some shelves.  As you make a cursory\nsearch of them you don't seem to find anything on them except\ndust.\n",
+         "altitude" : null
+      },
+      "widepath@nrose" : {
+         "exits" : {
+            "e" : "Cemetery",
+            "n" : "Aedificium",
+            "s" : "ChurchSteps"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "Wide Path",
+         "id" : "WidePath",
+         "description" : "\nYou are on a wide dirt path.  To the north is the tall tower of\nthe aedificium and to the south you see the smaller monastery\nbell tower.\n",
+         "altitude" : "600"
+      },
+      "towerbase@nrose" : {
+         "exits" : {
+            "u" : "BellTower",
+            "n" : "ChurchSteps"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Tower Base",
+         "id" : "TowerBase",
+         "description" : "\nYou are in the base of the monastery bell tower.  Above you are\nseveral very large bells.  A rope hangs down from the bells\nallowing you access up to the bells.  You might be able to climb\nup to the top of the tower but it would be a long way down if you\nlose your grip and fall.\n",
+         "altitude" : null
+      },
+      "library13@nrose" : {
+         "exits" : {
+            "w" : "Library18",
+            "n" : "Library14"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library13",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "library5@nrose" : {
+         "exits" : {
+            "e" : "Library7",
+            "n" : "Library6"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library5",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "churchaltar@nrose" : {
+         "exits" : {
+            "w" : "Church",
+            "d" : "^altar",
+            "s" : "NorthDorm"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Church Altar",
+         "id" : "ChurchAltar",
+         "description" : "\nYou are standing in front of the church altar.  The altar is made\nof stone and looks very heavy.  On its front are very frightening\nskulls that look so realistic you are afraid to even consider\ntouching the altar.  To the south is a small doorway.\n",
+         "altitude" : null
+      },
+      "infirmary@nrose" : {
+         "exits" : {
+            "e" : "Gardens"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Infirmary",
+         "id" : "Infirmary",
+         "description" : "\nYou are in the monastery infirmary.  On the walls are shelves filled\nwith unlabled clay jars that probably contain odd and exotic herbs,\nspices, and potions.  These potions might aid you in your adventures\nbut they could also be deadly poison.\n",
+         "altitude" : null
+      },
+      "storehouse@nrose" : {
+         "exits" : {
+            "n" : "TreePath"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Storehouse",
+         "id" : "StoreHouse",
+         "description" : "\nYou are in the monastery storehouse where the supplies for the\nmonks are stored.\n",
+         "altitude" : null
+      },
+      "library10@nrose" : {
+         "exits" : {
+            "n" : "Library12",
+            "s" : "Library9"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library10",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "library8@nrose" : {
+         "exits" : {
+            "e" : "Library11",
+            "n" : "LibSecretRoom1",
+            "s" : "Library7"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library8",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "librentr@nrose" : {
+         "exits" : {
+            "n" : "Library1",
+            "d" : "DampStair"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nrose",
+         "title" : "Library Entrance",
+         "id" : "LibrEntr",
+         "description" : "\nYou have found the fabled library of this monastery.  Inside it\nare thousands of hand-printed, leather-bound books and ancient\nsilk-encased scrolls.  In here is incredible knowledge:  the\nmagic and wisdom of the Arabs, the philosophy and science of the\nGreeks, the great histories and poetry of the Romans, and the\nforbidden theology of the great heretics.\n",
+         "altitude" : null
+      },
+      "churchsteps@nrose" : {
+         "exits" : {
+            "w" : "TreePath",
+            "e" : "^ChuDoorsOut",
+            "n" : "WidePath",
+            "s" : "TowerBase"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "Church Steps",
+         "id" : "ChurchSteps",
+         "description" : "\nYou are standing in front of a romanesque church that serves as\nthe place of worship for the monks.  The steps that lead up to\nthe doors are covered with dead leaves that are stirred about by\nthe gusts of the wind.  To the south is the monastery bell tower\nand to the north is a much larger tower.\n",
+         "altitude" : "600"
+      },
+      "library18@nrose" : {
+         "exits" : {
+            "n" : "Library14"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library18",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "cemetery@nrose" : {
+         "exits" : {
+            "w" : "WidePath",
+            "e" : "WidePath2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "Cemetery",
+         "id" : "Cemetery",
+         "description" : "\nYou are in the monastery cemetery.  There are many graves here,\nsome of which are quite old.  However, you notice an empty grave.\nIt seems that someone died recently or the monks are expecting a\ndeath, perhaps that of a visitor?\n",
+         "altitude" : "600"
+      },
+      "library20@nrose" : {
+         "exits" : {
+            "e" : "Library15",
+            "s" : "Library14"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library20",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "cell2@nrose" : {
+         "exits" : {
+            "e" : "^CDoorIn2"
+         },
+         "flags" : [
+            "NoMagic"
+         ],
+         "zone" : "nrose",
+         "title" : "Cell",
+         "id" : "Cell2",
+         "description" : "\nYou have entered a monk's cell.  There is a straw bed along one\nwall and a table and chair on the opposite wall.  Unlike the\nother cells in this dormitory this one seems to radiate truth,\ngoodness, and knowledge.  There are scraps of parchment neatly\nstacked on the table.  There are feather quills bundled neatly\nnext to them.  There is a door to the east.\n",
+         "altitude" : null
+      },
+      "southdorm@nrose" : {
+         "exits" : {
+            "w" : "^CDoorOut3",
+            "n" : "MidDorm"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Dormitory",
+         "id" : "SouthDorm",
+         "description" : "\nYou are at the southern end of the hallway of the monk's\ndormitory.  There is a door to the west.\n",
+         "altitude" : null
+      },
+      "widepath2@nrose" : {
+         "exits" : {
+            "w" : "Cemetery",
+            "e" : "Stables",
+            "n" : "Pigsties",
+            "s" : "Smithy"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "Wide Path",
+         "id" : "WidePath2",
+         "description" : "\nYou are on a wide dirt path which leads from the cemetery to\nother buildings in the monastery.  To the north are the pigsties,\nto the east are the stables, and to the south is the smithy.\n",
+         "altitude" : "600"
+      },
+      "library21@nrose" : {
+         "exits" : {
+            "n" : "LibSecretRoom3",
+            "s" : "Library20"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library21",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "church@nrose" : {
+         "exits" : {
+            "w" : "^ChuDoorsIn",
+            "e" : "ChurchAltar"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Church",
+         "id" : "Church",
+         "description" : "\nYou have passed through the nave and are now standing at the\ntransept crossing in the monk's church.  Although it's difficult\nto see because the windows don't allow very much light in, there\nis enough to see an altar beyond the chancel and inside the\nchoir.\n",
+         "altitude" : null
+      },
+      "stables@nrose" : {
+         "exits" : {
+            "w" : "WidePath2"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Stables",
+         "id" : "Stables",
+         "description" : "\nYou have entered the monastery stables.  The floor is covered\nwith filthy hay except in one stall which is very well kept.\n",
+         "altitude" : null
+      },
+      "smithy@nrose" : {
+         "exits" : {
+            "n" : "WidePath2"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Smithy",
+         "id" : "Smithy",
+         "description" : "\nThis is the monastery smithy.  You wonder why you entered this\nroom because there is very little here of any value except\nperhaps for some tools of limited usefulness.\n",
+         "altitude" : null
+      },
+      "dampstair@nrose" : {
+         "exits" : {
+            "u" : "LibrEntr",
+            "d" : "Ossarium",
+            "s" : "^BDoorIn"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "nrose",
+         "title" : "Damp Stairway",
+         "id" : "DampStair",
+         "description" : "\nYou are at the base of a very long stairway that leads up into\nthe aedificium tower.\n",
+         "altitude" : null
+      },
+      "middorm@nrose" : {
+         "exits" : {
+            "w" : "^CDoorOut2",
+            "n" : "NorthDorm",
+            "s" : "SouthDorm"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Dormitory",
+         "id" : "MidDorm",
+         "description" : "\nYou are in the hallway of the monk's dormitory which continues to\nthe north and south.  To the west is a door.\n",
+         "altitude" : null
+      },
+      "library15@nrose" : {
+         "exits" : {
+            "e" : "Library4",
+            "n" : "Library16",
+            "s" : "Library14"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library15",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "library1@nrose" : {
+         "exits" : {
+            "w" : "Library13",
+            "e" : "Library5",
+            "n" : "Library2",
+            "s" : "LibrEntr"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library1",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "aedificium@nrose" : {
+         "exits" : {
+            "e" : "Kitchen",
+            "u" : "Scriptorium",
+            "s" : "WidePath"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "Aedificium Steps",
+         "id" : "Aedificium",
+         "description" : "\nYou are standing in front of the large tower of the aedificium.\nIt is known that the scriptorium and the monastery kitchen are\ninside this tower but it seems that it is too large for just these\ntwo areas.  You notice a door in the base of the tower to the east.\n",
+         "altitude" : "600"
+      },
+      "balneary@nrose" : {
+         "exits" : {
+            "s" : "Gardens"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Balneary",
+         "id" : "Balneary",
+         "description" : "\nYou are in the monk's bath house.  Along one wall are many wooden\ntubs with curtains around them that afford the monk's some\nprivacy when they bathe.  The bath house appears to be clean and\ntidy, but you can't help notice a strong musty smell that only\nadds to the dreary feeling you get at this monastery.\n",
+         "altitude" : null
+      },
+      "ossarium@nrose" : {
+         "exits" : {
+            "w" : "DampStair",
+            "u" : "DampStair",
+            "s" : "Ossarium2"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "nrose",
+         "title" : "Ossarium",
+         "id" : "Ossarium",
+         "description" : "\nThis is the north part of the monastery ossarium. Deep niches\nhave been dug in the walls to store large piles of skulls and\nbones. Bones in neat piles fill the parts of the floor that\nisn't covered in mud. A sudden chilly draft makes you jump\nand you can feel your heart beat in a faster pace.\nA narrow passageway goes up towards the west, and to the south\nthe ossarium continues.\n",
+         "altitude" : null
+      },
+      "library12@nrose" : {
+         "exits" : {
+            "w" : "Library8",
+            "s" : "Library11"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library12",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "library16@nrose" : {
+         "exits" : {
+            "w" : "Library21",
+            "n" : "Library17",
+            "s" : "Library15"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library16",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "library11@nrose" : {
+         "exits" : {
+            "w" : "Library7",
+            "n" : "Library12",
+            "s" : "Library10"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library11",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "library3@nrose" : {
+         "exits" : {
+            "e" : "Library7",
+            "n" : "Library16"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library3",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "portcullis@nrose" : {
+         "exits" : {
+            "w" : "^PortcullIn",
+            "e" : "TreePath",
+            "s" : "GuardHouse"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "Portcullis",
+         "id" : "Portcullis",
+         "description" : "\nYou are beneath an archway which serves as the entrance to what\nnow appears to be a monastery built inside an old fortress.  A\nguard house appears to be built into the walls to the south.\n",
+         "altitude" : "600"
+      },
+      "library4@nrose" : {
+         "exits" : {
+            "e" : "Library8",
+            "n" : "LibraryTrap",
+            "s" : "Library3"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library4",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "gardens@nrose" : {
+         "exits" : {
+            "w" : "Infirmary",
+            "e" : "InGardens",
+            "n" : "Balneary",
+            "s" : "TreePath"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "Gardens",
+         "id" : "Gardens",
+         "description" : "\nThese are the monk's gardens where they grow some of their\nvegetables.  There are more gardens to the east.  To the north\nand west are some other buildings.\n",
+         "altitude" : "600"
+      },
+      "windpath@nrose" : {
+         "exits" : {
+            "e" : "^PortcullOut",
+            "n" : "r_land@blizzard"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "nrose",
+         "title" : "Winding Path",
+         "id" : "WindPath",
+         "description" : "\nYou are on a winding path which climbs up to what appears from\nyour position to be a fortress on top of a hill to the east.  To\nthe north is a small village.  As you approach the structure, you\nnotice an opening in the walls and move yourself toward it.  The\nopening now appears to be an archway with a portcullis.  Chiselled\ninto the arch are these words, \"NOMINE ROSAE\", evidently the name\nof this place.\n",
+         "altitude" : "500"
+      },
+      "library7@nrose" : {
+         "exits" : {
+            "e" : "Library10",
+            "n" : "Library8",
+            "s" : "Library6"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library7",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "ingardens@nrose" : {
+         "exits" : {
+            "w" : "Gardens"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "In the Gardens",
+         "id" : "InGardens",
+         "description" : "\nYou are in another part of the gardens.  There once were\nvegetables growing here at one time but there is very little left\nof use here now.\n",
+         "altitude" : "600"
+      },
+      "librarytrap@nrose" : {
+         "exits" : {},
+         "flags" : [
+            "Dark",
+            "Private"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "LibraryTrap",
+         "description" : "\nYou fall thru a trap door and find yourself trapped in a room of\nthe library.  I hope someone can summon you out.\n",
+         "altitude" : null
+      },
+      "northdorm@nrose" : {
+         "exits" : {
+            "w" : "^CDoorOut1",
+            "n" : "ChurchAltar",
+            "s" : "MidDorm"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Dormitory",
+         "id" : "NorthDorm",
+         "description" : "\nYou have just entered the northern end of the hallway of the\nmonk's dormitory.  There is a door to the west.\n",
+         "altitude" : null
+      },
+      "library19@nrose" : {
+         "exits" : {
+            "n" : "Library20",
+            "s" : "Library13"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library19",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      },
+      "guardhouse@nrose" : {
+         "exits" : {
+            "n" : "Portcullis"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Guard House",
+         "id" : "GuardHouse",
+         "description" : "\nYou are inside a small guard house attached to the archway.  From\nthe dust, cobwebs, and rotten wood in here you can guess that\nthis guard house has not been used in a long time.\n",
+         "altitude" : null
+      },
+      "treepath@nrose" : {
+         "exits" : {
+            "w" : "Portcullis",
+            "e" : "ChurchSteps",
+            "n" : "Gardens",
+            "s" : "StoreHouse"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "Tree-lined Path",
+         "id" : "TreePath",
+         "description" : "\nYou are walking down a dirt path lined with dead trees.  To the\nnorth are the monk's gardens and two buildings.  To the east is\nthe church and the tower of the aedificium.\n",
+         "altitude" : "600"
+      },
+      "belltower@nrose" : {
+         "exits" : {
+            "d" : "TowerBase"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nrose",
+         "title" : "Bell Tower",
+         "id" : "BellTower",
+         "description" : "\nYou are up in the monastery bell tower.  You see the large bronze\nbells up here and the rope to ring them hanging down.  As you\nlook around you notice that there is absolutely nothing of value\nup here.  You also notice that there is no other exit except the\nway you came.\n",
+         "altitude" : "700"
+      },
+      "libsecretroom3@nrose" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "nrose",
+         "title" : "Library Secret Room",
+         "id" : "LibSecretRoom3",
+         "description" : "\nYou fall thru a trap door and plunge head first to your untimely\ndeath.  AAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHH!\n",
+         "altitude" : null
+      },
+      "cell1@nrose" : {
+         "exits" : {
+            "e" : "^CDoorIn1"
+         },
+         "flags" : [],
+         "zone" : "nrose",
+         "title" : "Cell",
+         "id" : "Cell1",
+         "description" : "\nYou have entered a monk's cell.  There is a feather bed along one\nwall and a table and chair along the opposite wall.  There is a\ndoor to the east.\n",
+         "altitude" : null
+      },
+      "library9@nrose" : {
+         "exits" : {
+            "w" : "Library6",
+            "n" : "Library10",
+            "s" : "LibSecretRoom2"
+         },
+         "flags" : [
+            "Dark",
+            "CantSummon",
+            "Soundproof"
+         ],
+         "zone" : "nrose",
+         "title" : "Library",
+         "id" : "Library9",
+         "description" : "\nYou are in part of the monastery library.  Unfortunately, the\nlibrarian is not very competent and books and scrolls are\nstacked everywhere disorienting you.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "brunellus@nrose" : {
+         "damage" : "15",
+         "location" : "Stables",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "name" : "Brunellus",
+         "description" : "Brunellus, the Abbot's horse, is here trying to bite you.",
+         "strength" : "200"
+      },
+      "william@nrose" : {
+         "damage" : "15",
+         "location" : "Cell2",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "name" : "William",
+         "description" : "Brother William labors here endlessly in search of the truth.",
+         "strength" : "300"
+      },
+      "malachi@nrose" : {
+         "damage" : "10",
+         "location" : "Scriptorium",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "10",
+         "name" : "Malachi",
+         "description" : "Brother Malachi, the librarian, is here gathering books.",
+         "strength" : "150"
+      },
+      "remigio@nrose" : {
+         "damage" : "5",
+         "location" : "StoreHouse",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "10",
+         "name" : "Remigio",
+         "description" : "Brother Remigio, the cellarer, is here taking inventory.",
+         "strength" : "200"
+      },
+      "abbot@nrose" : {
+         "damage" : "8",
+         "location" : "ChurchSteps",
+         "armor" : "0",
+         "name" : "Abbot",
+         "description" : "The Abbot says to you, 'Pax Nobiscum.'",
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "whore@nrose" : {
+         "damage" : "10",
+         "location" : "Kitchen",
+         "armor" : "0",
+         "name" : "Whore",
+         "description" : "A dirty girl in rags offers you her favors in exchange for food.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Dirty Peasant Girl",
+         "aggression" : "0",
+         "pflags" : [
+            "NoAlias",
+            "NoZap",
+            "NoSummon",
+            "NoExorcise"
+         ]
+      },
+      "beranger@nrose" : {
+         "damage" : "5",
+         "location" : "Cell1",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "20",
+         "name" : "Beranger",
+         "description" : "Brother Beranger is here whipping his sinful flesh.",
+         "strength" : "100"
+      },
+      "salvatore@nrose" : {
+         "damage" : "15",
+         "location" : "Cemetery",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "10",
+         "name" : "Salvatore",
+         "description" : "Brother Salvatore, the hunchback, is here looking for rats to eat.",
+         "strength" : "120"
+      },
+      "jorge@nrose" : {
+         "damage" : "25",
+         "location" : "LibSecretRoom2",
+         "armor" : "10",
+         "name" : "Jorge",
+         "description" : "Brother Jorge, the blind old monk, guards the forbidden books.",
+         "sflags" : [
+            "Blind"
+         ],
+         "strength" : "400",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "severinus@nrose" : {
+         "damage" : "10",
+         "location" : "Infirmary",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "20",
+         "name" : "Severinus",
+         "description" : "Brother Severinus, the herbalist, is brewing a potion.",
+         "strength" : "120"
+      },
+      "bernardo@nrose" : {
+         "damage" : "10",
+         "location" : "LibrEntr",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "25",
+         "name" : "Bernardo",
+         "description" : "\nThe inquisitor Bernardo Gui prepares to torture you for entering the library.",
+         "strength" : "350"
+      }
+   }
+}

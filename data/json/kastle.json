@@ -1,0 +1,754 @@
+{
+   "obj" : {
+      "snow_ice@kastle" : {
+         "location" : "IN_ROOM:14",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "snow",
+         "name" : "snow_ice",
+         "linked" : "snow_iceb@blizzard",
+         "state" : "1",
+         "pname" : "ice",
+         "maxstate" : "1",
+         "desc[0]" : "A hole has been chipped through the ice."
+      },
+      "gold_chain@kastle" : {
+         "location" : "IN_ROOM:1",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "altname" : "gold",
+         "name" : "gold_chain",
+         "state" : "0",
+         "pname" : "chain",
+         "maxstate" : "1",
+         "desc[0]" : "\nA very valuable looking gold chain lies here half buried in the dirt."
+      },
+      "skis@kastle" : {
+         "desc[1]" : "A pair of wooden skis stand in the corner, gathering dust.",
+         "location" : "IN_ROOM:5",
+         "oflags" : [
+            "GetFlips",
+            "Wearable"
+         ],
+         "name" : "skis",
+         "size" : "20",
+         "state" : "1",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "A pair of wooden skis has been left here."
+      },
+      "fireplace@kastle" : {
+         "desc[1]" : "There is a cold draft coming from the stone cold fireplace.",
+         "location" : "IN_ROOM:4",
+         "oflags" : [
+            "Lit",
+            "Extinguish",
+            "Lightable",
+            "NoGet"
+         ],
+         "name" : "fireplace",
+         "examine" : "The flue is open leading up into a large chimney.",
+         "state" : "0",
+         "maxstate" : "1",
+         "desc[0]" : "\nA cheerful fire blazing in the fireplace makes the room feel quite toasty."
+      },
+      "check@kastle" : {
+         "location" : "IN_CONTAINER:chest",
+         "name" : "check",
+         "examine" : "It is made out to His Royal Highness for $50.",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "150",
+         "desc[0]" : "There is a check lying here."
+      },
+      "bar_stone@kastle" : {
+         "desc[1]" : "\nThe stairway is blocked by a large block of stone that is barred in place.",
+         "location" : "IN_ROOM:18",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "altname" : "bar",
+         "name" : "bar_stone",
+         "linked" : "WALL_STONE@CASTLE",
+         "state" : "1",
+         "pname" : "stone",
+         "maxstate" : "1",
+         "desc[0]" : "\nA block of stone is sitting on the stairs here beside an opening leading up."
+      },
+      "hole@kastle" : {
+         "location" : "IN_ROOM:12",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hole",
+         "linked" : "hole_1",
+         "maxstate" : "1",
+         "desc[0]" : "A hole has been dug through the snow leading down.",
+         "state" : "1"
+      },
+      "armor_suit@kastle" : {
+         "location" : "IN_ROOM:2",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "armor",
+         "pname" : "suit",
+         "name" : "armor_suit",
+         "desc[0]" : "\nA suit of armor bearing the royal seal is standing here beside the door."
+      },
+      "null_door@kastle" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:2",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "null_door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "heavy_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "chest@kastle" : {
+         "desc[1]" : "The chest is closed.",
+         "location" : "IN_ROOM:19",
+         "oflags" : [
+            "Container",
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "chest",
+         "desc[2]" : "The chest is locked.",
+         "state" : "2",
+         "maxstate" : "2",
+         "desc[0]" : "The chest is open."
+      },
+      "chamber_pot@kastle" : {
+         "location" : "IN_ROOM:6",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "chamber_pot",
+         "size" : "5",
+         "pname" : "pot",
+         "weight" : "5",
+         "bvalue" : "160",
+         "desc[0]" : "A splendid solid gold chamber pot is sitting here."
+      },
+      "chair_lazyboy@kastle" : {
+         "desc[1]" : "The lazyboy looks inviting.",
+         "location" : "IN_ROOM:4",
+         "oflags" : [
+            "Container",
+            "PushToggle",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "chair",
+         "name" : "chair_lazyboy",
+         "state" : "1",
+         "pname" : "lazyboy",
+         "maxstate" : "1",
+         "desc[0]" : "The lazyboy is reclining."
+      },
+      "bread@kastle" : {
+         "desc[1]" : "The only thing left on the shelves is some stale bread.",
+         "location" : "IN_ROOM:5",
+         "oflags" : [
+            "GetFlips",
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "bread",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "Some stale bread has been left here."
+      },
+      "hole_1@kastle" : {
+         "location" : "IN_ROOM:13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hole_1",
+         "linked" : "hole",
+         "state" : "1",
+         "pname" : "hole",
+         "maxstate" : "1",
+         "desc[0]" : "A hole has been dug through the thick crusty snow."
+      },
+      "tapestry@kastle" : {
+         "location" : "IN_ROOM:4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "tapestry",
+         "examine" : "Behind the tapestry you find a doorway."
+      },
+      "rock_wall@kastle" : {
+         "desc[1]" : "The passage ends to the north in a solid rock wall.",
+         "location" : "IN_ROOM:1",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "name" : "rock_wall",
+         "linked" : "ROCK_WALL@CASTLE",
+         "state" : "1",
+         "pname" : "wall",
+         "maxstate" : "1",
+         "desc[0]" : "\nAn open panel disguised as solid rock allows passage to the north."
+      },
+      "sword_cuthbert@kastle" : {
+         "desc[1]" : "\nA magnificent-looking sword is displayed above the fireplace.",
+         "damage" : "13",
+         "location" : "IN_ROOM:4",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "sword_cuthbert",
+         "examine" : "\nThe sword is finely engraved with the words 'Cuthbert the Scared'.",
+         "size" : "20",
+         "state" : "1",
+         "weight" : "10",
+         "pname" : "cuthbert",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "Cuthbert is lying here complaining about being left alone."
+      },
+      "oak_door_1@kastle" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:4",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "oak_door_1",
+         "linked" : "oak_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "oak_door@kastle" : {
+         "desc[1]" : "The oak door is closed.",
+         "location" : "IN_ROOM:3",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "oakdoor",
+         "name" : "oak_door",
+         "linked" : "oak_door_1",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The oak door is open."
+      },
+      "old_coins@kastle" : {
+         "location" : "IN_CONTAINER:chair_lazyboy",
+         "weight" : "3",
+         "pname" : "coins",
+         "name" : "old_coins",
+         "bvalue" : "60",
+         "desc[0]" : "A few old coins are scattered about here.",
+         "size" : "3"
+      },
+      "nest_egg@kastle" : {
+         "location" : "IN_ROOM:7",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "nest_egg",
+         "size" : "5",
+         "pname" : "egg",
+         "weight" : "5",
+         "bvalue" : "160",
+         "desc[0]" : "A silver egg has been left here."
+      },
+      "heavy_door@kastle" : {
+         "desc[1]" : "The heavy door is closed.",
+         "location" : "IN_ROOM:3",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "heavydoor",
+         "name" : "heavy_door",
+         "desc[2]" : "The heavy door is locked.",
+         "linked" : "null_door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The heavy door is open."
+      },
+      "ball@kastle" : {
+         "location" : "IN_ROOM:17",
+         "weight" : "10",
+         "name" : "ball",
+         "examine" : "\nThis is actually a very large black pearl with some holes drilled in it.",
+         "bvalue" : "160",
+         "desc[0]" : "Someone has left their bowling ball here.",
+         "size" : "20"
+      },
+      "ledge@kastle" : {
+         "location" : "IN_ROOM:7",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "ledge"
+      },
+      "door_1@kastle" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:21",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door_1",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "fancy_key@kastle" : {
+         "location" : "IN_CONTAINER:armor_suit",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "fancy_key",
+         "size" : "1",
+         "pname" : "key",
+         "weight" : "1",
+         "bvalue" : "60",
+         "desc[0]" : "A fancy-looking key has been left here."
+      },
+      "door@kastle" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:20",
+         "oflags" : [
+            "Lockable",
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_1",
+         "state" : "2",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      }
+   },
+   "loc" : {
+      "14@kastle" : {
+         "exits" : {
+            "u" : "^snow_ice",
+            "s" : "13"
+         },
+         "flags" : [
+            "Cold",
+            "NoMobiles"
+         ],
+         "zone" : "kastle",
+         "title" : "Snowy Stairs",
+         "id" : "14",
+         "description" : "\n   The stairs here are blocked by snow that has hardened into an icy crust.\nPerhaps you could dig through the ice if you had something to dig with.\n",
+         "altitude" : null
+      },
+      "13@kastle" : {
+         "exits" : {
+            "u" : "^hole_1",
+            "n" : "14"
+         },
+         "flags" : [
+            "Dark",
+            "Cold",
+            "Soundproof",
+            "NoMagic"
+         ],
+         "zone" : "kastle",
+         "title" : "Under the Snow Temple",
+         "id" : "13",
+         "description" : "\n   You are in a secret chamber beneath an old temple. It looks as though the\nplace is ready to fall in. The walls are leaning precariously and there are\ncracks in the ceiling. There are some stairs at the north end of the chamber.\n",
+         "altitude" : null
+      },
+      "18@kastle" : {
+         "exits" : {
+            "e" : "20",
+            "u" : "^bar_stone",
+            "n" : "19",
+            "s" : "15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "kastle",
+         "title" : "Damp Tunnel",
+         "id" : "18",
+         "description" : "\n   It is dank and musty here and slime coats the walls. To one side there is a\na set of stairs leading up. To the north the tunnel opens up and to the east\ncan be seen rows of cells.\n",
+         "altitude" : null
+      },
+      "10@kastle" : {
+         "exits" : {
+            "w" : "9",
+            "d" : "11",
+            "s" : "11"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "kastle",
+         "title" : "Top of the Glacier",
+         "id" : "10",
+         "description" : "\n   This is the top of a large glacier that extends down the steep mountainside.\nThe fresh snow here looks good for skiing. Of course you'd best be careful or\nyou might set of an avalanche. To the south you can barely make out the bottom\nof the glacier through the glare from the snow. West of here lies the fells.\n",
+         "altitude" : null
+      },
+      "3@kastle" : {
+         "exits" : {
+            "e" : "^heavy_door",
+            "s" : "^oak_door"
+         },
+         "flags" : [],
+         "zone" : "kastle",
+         "title" : "Side Hallway",
+         "id" : "3",
+         "description" : "\n   This is a small alcove off the main passageway. The walls are paneled with\nwood finely painted and inlaid with gold. This place looks fit for a king.\nThere is a heavy wooden door banded with iron on the eastern wall.\nThere is a stout oak door on the southern wall.\n",
+         "altitude" : null
+      },
+      "22@kastle" : {
+         "exits" : {
+            "d" : "17"
+         },
+         "flags" : [
+            "Dark",
+            "OnePerson",
+            "Soundproof",
+            "NoMobiles",
+            "NoSummon"
+         ],
+         "zone" : "kastle",
+         "title" : "On the Chain",
+         "id" : "22",
+         "description" : "\n   You are hanging from the chain over the sewage pit. You could climb down\nfrom here into the pit before it fills again or you could just hang here for\nthe rest of your mortal life. Well?.. get going.\n",
+         "altitude" : null
+      },
+      "17@kastle" : {
+         "exits" : {
+            "u" : "16"
+         },
+         "flags" : [
+            "Dark",
+            "OnePerson"
+         ],
+         "zone" : "kastle",
+         "title" : "Sewage Pit",
+         "id" : "17",
+         "description" : "\n   The walls of this pit are still coated with sewage and the stench here is\noverpowering. Sewage is still spilling in so you better not take too long.\n",
+         "altitude" : null
+      },
+      "21@kastle" : {
+         "exits" : {
+            "w" : "^door_1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "kastle",
+         "title" : "Solitary",
+         "id" : "21",
+         "description" : "\n   This must be where they put prisoners they didn't want to see anymore.\nThere are several skeletons here and the floor is covered with soiled straw.\n",
+         "altitude" : null
+      },
+      "16@kastle" : {
+         "exits" : {
+            "n" : "15",
+            "d" : "23"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "kastle",
+         "title" : "Smelly Room",
+         "id" : "16",
+         "description" : "\n   The sewer empties into a large pit here creating an unbearable odor. A chain\nhangs from the ceiling directly over the pit and just out of your reach.\n",
+         "altitude" : null
+      },
+      "15@kastle" : {
+         "exits" : {
+            "n" : "18",
+            "s" : "16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "kastle",
+         "title" : "Under the Trap Door",
+         "id" : "15",
+         "description" : "\n   You are in the lower reaches of the castle, directly beneath a trap door.\nAn open sewer runs to the south and a terrible odor is coming from that\ndirection. The tunnel continues to the north.\n",
+         "altitude" : null
+      },
+      "19@kastle" : {
+         "exits" : {
+            "s" : "18"
+         },
+         "flags" : [],
+         "zone" : "kastle",
+         "title" : "Tax Collectors",
+         "id" : "19",
+         "description" : "\n   This must be where the taxes are normally kept. However there is only one\nchest left and there is not much else to see.\n",
+         "altitude" : null
+      },
+      "7@kastle" : {
+         "exits" : {
+            "d" : "4"
+         },
+         "flags" : [
+            "Dark",
+            "OnePerson"
+         ],
+         "zone" : "kastle",
+         "title" : "Chimney",
+         "id" : "7",
+         "description" : "\n   Though this is a large chimney, it is still a tight squeeze. The bricks are\ncoated with soot that rubs off on you and makes you sneeze. You can't climb\nany higher than this because of a small ledge constricting the chimney.\n",
+         "altitude" : null
+      },
+      "23@kastle" : {
+         "exits" : {},
+         "flags" : [
+            "NoMobiles",
+            "NoSummon",
+            "Death"
+         ],
+         "zone" : "kastle",
+         "title" : "An Unpleasant Death",
+         "id" : "23",
+         "description" : "\n   You dive headlong into the sewage.\nOh dear, you seemed to have drowned in.. er, well you know.\n",
+         "altitude" : null
+      },
+      "1@kastle" : {
+         "exits" : {
+            "n" : "^rock_wall",
+            "s" : "2"
+         },
+         "flags" : [],
+         "zone" : "kastle",
+         "title" : "Escape Passage South",
+         "id" : "1",
+         "description" : "\n   The Passage opens up here allowing you to stand. There are lit torches\nspaced evenly along both walls providing plenty of light to see by. Much\nfurther to the south the torches end, and it appears that someone is standing\nthere by a door. The floor here is dirt, but oddly enough your footsteps sound\nhollow.\n",
+         "altitude" : null
+      },
+      "12@kastle" : {
+         "exits" : {
+            "n" : "11",
+            "d" : "^hole"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "kastle",
+         "title" : "Snow Drift",
+         "id" : "12",
+         "description" : "\n   The snow here is heaped up into a large drift, and the wind whips through\nhere on its way to parts unknown. The only way out would seem to be back the\nway you came.\n",
+         "altitude" : null
+      },
+      "2@kastle" : {
+         "exits" : {
+            "w" : "^null_door",
+            "n" : "1",
+            "s" : "8"
+         },
+         "flags" : [],
+         "zone" : "kastle",
+         "title" : "Entrance to the Royal Hideaway",
+         "id" : "2",
+         "description" : "\n   The tunnel continues south here into darkness and you feel a cold draft\ncoming from that direction. To the north you can feel the warmth of the\nmany torches lining the passageway. A heavy wooden door, banded with iron,\nis set in the west wall.\n",
+         "altitude" : null
+      },
+      "5@kastle" : {
+         "exits" : {
+            "e" : "4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "kastle",
+         "title" : "Store Room",
+         "id" : "5",
+         "description" : "\n   This room is where emergency stores were kept. It is larger than it appears\nand the walls are lined with tall shelves. The shelves are now virtually empty.\n",
+         "altitude" : null
+      },
+      "20@kastle" : {
+         "exits" : {
+            "w" : "18",
+            "e" : "^door"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "kastle",
+         "title" : "Castle Dungeons",
+         "id" : "20",
+         "description" : "\n   Rows of cells line the the walls of this place, however they are all empty\nnow. A heavy iron door has been set in the eastern wall.\n",
+         "altitude" : null
+      },
+      "24@kastle" : {
+         "exits" : {},
+         "flags" : [
+            "NoMobiles",
+            "NoSummon",
+            "Death"
+         ],
+         "zone" : "kastle",
+         "title" : "Buried Alive",
+         "id" : "24",
+         "description" : "\n   Your clumsy attempt to climb down the glacier has set off an avalanche\nburying you alive... well dead actually.\n",
+         "altitude" : null
+      },
+      "6@kastle" : {
+         "exits" : {
+            "n" : "4"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "kastle",
+         "title" : "Royal Bedroom",
+         "id" : "6",
+         "description" : "\n   A sense of awe briefly overcomes you at the splendor of the royal bedroom.\nGold seems to guild everything here. Even the ceiling is inlaid with gold\npatterns surrounding the splendid royal seal. The bed, perhaps the largest you\nhave ever seen, is covered with sheets of luxurious gold silk. You get the\nimpression that this king was a little obsessed with his gold.\n",
+         "altitude" : null
+      },
+      "8@kastle" : {
+         "exits" : {
+            "n" : "2",
+            "s" : "9"
+         },
+         "flags" : [
+            "Dark",
+            "Cold"
+         ],
+         "zone" : "kastle",
+         "title" : "Long Cold Passageway",
+         "id" : "8",
+         "description" : "\n   This passageway is filled with cold air that goes right through your clothes\nand makes you shiver uncomfortably. The heavy frost that has collected on the\nwalls reminds you of an icebox that hasn't been cleaned out in years.\nTo the north you can just make out the light of the many torches that line the\nwalls there, and to the south there is a small light at the end of the tunnel.\n",
+         "altitude" : null
+      },
+      "11@kastle" : {
+         "exits" : {
+            "s" : "12"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "kastle",
+         "title" : "Bottom of the Glacier",
+         "id" : "11",
+         "description" : "\n   You are at the bottom of the glacier. The top of the glacier is far above\nyou, impossible to reach from here. The only exit appears to be through a snow\nbank to the south.\n",
+         "altitude" : null
+      },
+      "4@kastle" : {
+         "exits" : {
+            "u" : "7",
+            "n" : "^oak_door_1",
+            "s" : "6"
+         },
+         "flags" : [],
+         "zone" : "kastle",
+         "title" : "Cozy Room",
+         "id" : "4",
+         "description" : "\n   You are in a cozy little room inside the royal hideout. The west wall is\nhung with a large colorful tapestry meant to depict the heroic deeds of the\nroyal family. Oddly enough, however, it is completely blank.\nThe east wall is occupied by a huge fireplace in front of which sits the\nroyal Lazy-boy, a chair fit for a king.\n",
+         "altitude" : null
+      },
+      "9@kastle" : {
+         "exits" : {
+            "u" : "10",
+            "n" : "8"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "kastle",
+         "title" : "The Fells",
+         "id" : "9",
+         "description" : "\n   The escape passage emerges here high on the side of a steep rocky fell.\nThe footing here is treacherous. Small avalanches of scree are set off by your\nfootsteps as you scramble along the fell. Any descent would be impossible.\nThe only other way out is up to the top of the fell which is covered in snow.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "flosi@kastle" : {
+         "damage" : "10",
+         "location" : "19",
+         "speed" : "0",
+         "aggression" : "80",
+         "name" : "flosi",
+         "examine" : "\nYou sense a future land known as the United States, and the word 'politician'\nfinds its way into your brain.  You have never heard the word before.",
+         "description" : "\nFlosi the Tax Collector wrings his hands at the prospect of new taxes.",
+         "strength" : "100"
+      },
+      "knight@kastle" : {
+         "damage" : "10",
+         "location" : "4",
+         "speed" : "0",
+         "aggression" : "30",
+         "pname" : "The Knight",
+         "name" : "knight",
+         "examine" : "According to him, your neck is just about the right size.",
+         "description" : "A Skeletal Knight is waiting here for someone to strangle.",
+         "strength" : "200"
+      },
+      "skapti@kastle" : {
+         "damage" : "10",
+         "location" : "19",
+         "speed" : "0",
+         "aggression" : "80",
+         "name" : "skapti",
+         "examine" : "\nYou sense a future land known as the United States, and the word 'politician'\nfinds its way into your brain.  You have never heard the word before.",
+         "description" : "\nSkapti the Tax Collector wrings his hands at the prospect of new taxes.",
+         "strength" : "100"
+      },
+      "crud@kastle" : {
+         "damage" : "10",
+         "location" : "16",
+         "name" : "crud",
+         "description" : "A Creeping Crud is slushing around, trying to get at you.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "120",
+         "speed" : "2",
+         "aggression" : "10"
+      },
+      "blix@kastle" : {
+         "damage" : "10",
+         "location" : "13",
+         "speed" : "2",
+         "name" : "blix",
+         "description" : "Blix the Goblin looks happy to see you.",
+         "strength" : "80"
+      }
+   }
+}

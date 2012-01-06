@@ -36,17 +36,19 @@
       },
       "necklace@blizzard" : {
          "location" : "IN_ROOM:treasure",
+         "armor" : "45",
          "oflags" : [
-            "Wearable"
+            "Wearable",
+            "Armor"
          ],
          "name" : "necklace",
          "size" : "5",
          "weight" : "1",
          "bvalue" : "200",
+         "desc[0]" : "A beautiful necklace has been left here.",
          "aflags" : [
             "Neck"
-         ],
-         "desc[0]" : "A beautiful necklace has been left here."
+         ]
       },
       "door_shadowy@blizzard" : {
          "desc[1]" : "The door is closed.",
@@ -75,6 +77,7 @@
          "linked" : "Bridge_Hall",
          "state" : "1",
          "pname" : "bridge",
+         "maxstate" : "1",
          "desc[0]" : "A huge iron drawbridge crosses the lava to the east."
       },
       "door_laboratory@blizzard" : {
@@ -177,6 +180,7 @@
          "linked" : "Bridge_Fire",
          "state" : "1",
          "pname" : "bridge",
+         "maxstate" : "1",
          "desc[0]" : "A huge iron drawbridge crosses the lava to the west."
       },
       "coins@blizzard" : {
@@ -190,6 +194,9 @@
       },
       "powerstone2@blizzard" : {
          "location" : "IN_ROOM:library",
+         "oflags" : [
+            "SpellChance"
+         ],
          "altname" : "stone",
          "name" : "powerstone2",
          "size" : "1",
@@ -232,7 +239,7 @@
          "altname" : "writing",
          "pname" : "runes",
          "name" : "RunesMagic",
-         "examine" : "\nThe runes are apparently part of an educational guide to spell casting and\nlist several basic pieces of magic.  These are:\n\n                DEAFEN, DUMB, CRIPPLE, BLIND and CURE\n\nThe runes also allude to a spell for summoning people, SUMMON, but\nnote that several amulets and talismans can protect the victim from\nits effects.\n        A spell for finding the exact locations of players, objects\nand mobiles, WHERE, is also mentioned."
+         "examine" : "\nThe runes are apparently part of an educational guide to spell casting and\nlist several basic pieces of magic.  These are:\n\n                DEAF, MUTE, CRIPPLE, BLIND and CURE\n\nThe runes also allude to a spell for summoning people, SUMMON, but\nnote that several amulets and talismans can protect the victim from\nits effects.\n        A spell for finding the exact locations of players, objects\nand mobiles, WHERE, is also mentioned."
       },
       "pumice@blizzard" : {
          "location" : "IN_ROOM:lava_path2",
@@ -249,14 +256,15 @@
          ],
          "pname" : "sign",
          "name" : "SignBridge",
-         "examine" : "\n\n                                ____\n        _______________________/____\\\n       /                       |    |\n      < WEST  Blizzard Pass 8m |    |\n       \\_______________________|    |__________________\n                               |    |                  \\\n              _________________|    | 5 m Village  EAST >\n             /                 |    |__________________/\n            < SOUTH  Forest 2m |    |\n             \\_________________|    |\n                               |    |\n                               |    |\n                               |    |\n                               |    |\n                               |    |\n                               |    |\n                        (*)    |    |   (*)\n________________________\\|/____|    |___\\|/__________________________________\n                               |____|\n",
+         "examine" : "\n\n                                ____ \n        _______________________/____\\ \n       /                       |    | \n      < WEST  Blizzard Pass 8m |    | \n       \\_______________________|    |__________________ \n                               |    |                  \\ \n              _________________|    | 5 m Village  EAST > \n             /                 |    |__________________/ \n            < SOUTH  Forest 2m |    | \n             \\_________________|    | \n                               |    | \n                               |    | \n                               |    | \n                               |    | \n                               |    | \n                               |    | \n                        (*)    |    |   (*)\n________________________\\|/____|    |___\\|/__________________________________\n                               |____|\n",
          "desc[0]" : "A sign has been posted by the bridge."
       },
       "scroll@blizzard" : {
          "location" : "IN_ROOM:rocky_can",
          "weight" : "1",
          "oflags" : [
-            "Destroyed"
+            "Destroyed",
+            "Recall"
          ],
          "name" : "scroll",
          "bvalue" : "100",
@@ -278,10 +286,11 @@
          "location" : "IN_ROOM:pillared",
          "armor" : "40",
          "oflags" : [
-            "Destroyed",
             "Armor",
+            "Destroyed",
             "Wearable",
-            "Shield"
+            "Shield",
+            "Pitreset"
          ],
          "altname" : "wooden",
          "name" : "shield2",
@@ -320,7 +329,7 @@
             "NoGet"
          ],
          "name" : "well",
-         "examine" : "\"Yes thanks, and you...?\""
+         "examine" : "Yes thanks, and you...?"
       },
       "broom@blizzard" : {
          "damage" : "8",
@@ -358,7 +367,7 @@
          "pname" : "coins",
          "weight" : "1",
          "bvalue" : "150",
-         "desc[0]" : "A few small platinum coins has been dropped here."
+         "desc[0]" : "A few small platinum coins have been dropped here."
       },
       "bookcase@blizzard" : {
          "location" : "IN_ROOM:library",
@@ -367,7 +376,20 @@
          ],
          "altname" : "case",
          "name" : "bookcase",
-         "examine" : "You see shelves of books.  What else did you expect, a secret\npassage?"
+         "examine" : "You see shelves of books.  What else did you expect, a secret passage?"
+      },
+      "snow_iceb@blizzard" : {
+         "desc[1]" : "Ice-encrusted snow is piled up against one ruined wall.",
+         "location" : "IN_ROOM:snow_temple",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "snow_iceb",
+         "linked" : "snow_ice@kastle",
+         "state" : "1",
+         "pname" : "snow",
+         "maxstate" : "1",
+         "desc[0]" : "\nA hole has been chipped through the ice that covered a stairway leading down."
       },
       "pillar_west@blizzard" : {
          "desc[1]" : "A huge stone pillar lies fallen on the floor.",
@@ -417,10 +439,11 @@
          "location" : "IN_ROOM:pillared",
          "armor" : "60",
          "oflags" : [
-            "Destroyed",
             "Armor",
+            "Destroyed",
             "Wearable",
-            "Shield"
+            "Shield",
+            "Pitreset"
          ],
          "altname" : "painted",
          "name" : "shield1",
@@ -558,17 +581,27 @@
       },
       "powerstone@blizzard" : {
          "location" : "IN_CONTAINER:coffin",
-         "weight" : "1",
+         "oflags" : [
+            "SpellChance"
+         ],
          "altname" : "stone",
          "name" : "powerstone",
+         "size" : "1",
+         "weight" : "1",
          "bvalue" : "100",
-         "desc[0]" : "A magical powerstone has been put here by someone.",
-         "size" : "1"
+         "desc[0]" : "A magical powerstone has been put here by someone."
       },
       "littablet@blizzard" : {
          "location" : "IN_ROOM:underruined",
+         "oflags" : [
+            "LightSpell"
+         ],
          "altname" : "tablet",
          "name" : "littablet",
+         "examine" : "\nThe tablet describes a light spell.\n\nThere's a note...it says learn basic spells cheap!  Inquire at the General\nStore in the village.",
+         "size" : "5",
+         "weight" : "5",
+         "bvalue" : "100",
          "desc[0]" : "An ancient tablet has been discarded here."
       },
       "rations@blizzard" : {
@@ -585,9 +618,7 @@
       },
       "shield@blizzard" : {
          "location" : "IN_ROOM:pillared",
-         "oflags" : [
-            "NoGet"
-         ],
+         "oflags" : "{  }",
          "name" : "shield"
       },
       "hole_gallery@blizzard" : {
@@ -606,7 +637,10 @@
       "talisman@blizzard" : {
          "location" : "IN_ROOM:elemental",
          "oflags" : [
-            "Wearable"
+            "MissileSpell",
+            "Wearable",
+            "Breathe",
+            "NoSummon"
          ],
          "altname" : "silver",
          "name" : "talisman",
@@ -631,7 +665,7 @@
          "desc[1]" : "Peeking out of the snow you spy some wintergreen.",
          "location" : "IN_ROOM:ravine",
          "oflags" : [
-            "Food",
+            "FrostSpell",
             "GetFlips"
          ],
          "altname" : "food",
@@ -790,6 +824,17 @@
          "maxstate" : "1",
          "desc[0]" : "A narrow passage leads north, through a gap in the curtains."
       },
+      "volume@blizzard" : {
+         "location" : "IN_ROOM:library",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "Volume_I",
+         "name" : "volume",
+         "examine" : "\nThe first secret of Knowledge is that 'where' regards the true name of\nall the volumes of the Book of Knowledge as 'volume'.\n\nThe second secret of Knowledge is that you will gain Knowledge by studying\nthe volumes of the Book of Knowledge.\n\nThe third secret of Knowledge is that by invoking the mighty name \n\"knowledge\" you can find which volumes you have studied, and \nwhich remain.",
+         "desc[0]" : "Here lies &+YVolume_I&N of the &+WBook of Knowledge&N",
+         "size" : "1"
+      },
       "coffin@blizzard" : {
          "desc[1]" : "An ornate coffin is set in the centre of the room.",
          "location" : "IN_ROOM:crypt",
@@ -897,6 +942,9 @@
       },
       "powerstone1@blizzard" : {
          "location" : "IN_ROOM:slime",
+         "oflags" : [
+            "SpellChance"
+         ],
          "altname" : "stone",
          "name" : "powerstone1",
          "size" : "1",
@@ -904,15 +952,6 @@
          "weight" : "1",
          "bvalue" : "100",
          "desc[0]" : "A magical powerstone has been placed here."
-      },
-      "book@blizzard" : {
-         "location" : "IN_ROOM:library",
-         "weight" : "12",
-         "name" : "book",
-         "examine" : "\nThe book details many arcane and powerful magics, mostly to cause\n severe pain to other beings.  In a flowing hand is written:\n\nFireball\n        A potent piece of magic much dependant upon the power of the caster\n        as to the damage it does, although sulphur enhances this.\nMissile\n        A similar magic, much popular amongst mages.  It is said that magical\n        talismans may be created to aid this spell.\nShock\n        A spell of touch, which can pass through metal armors with great ease.\n        A decent caster never uses this as a party trick.\n        Lodestones help with its casting.\nFrost\n        A spell similar to a fireball in power. A direct hit will slow\n        your opponent down and make his aim less sure.  It is said that\n        wintergreen will enhance this spell.\n\nAny mage should beware that casting magic, though potent, will drain the\nstrength of the caster.",
-         "bvalue" : "200",
-         "desc[0]" : "A heavy iron bound book has been left here.",
-         "size" : "10"
       },
       "hat@blizzard" : {
          "location" : "IN_ROOM:slime",
@@ -1003,7 +1042,9 @@
             "n" : "crypt",
             "s" : "library"
          },
-         "flags" : [],
+         "flags" : [
+            "peaceful"
+         ],
          "zone" : "blizzard",
          "title" : "Library Entrance",
          "id" : "entrance",
@@ -1013,7 +1054,7 @@
       "waterfall@blizzard" : {
          "exits" : {
             "w" : "woods",
-            "e" : "r_land",
+            "e" : "woods3",
             "s" : "grassy"
          },
          "flags" : [
@@ -1046,7 +1087,7 @@
          "zone" : "blizzard",
          "title" : "Elemental Temple",
          "id" : "elemental",
-         "description" : "\n   You are in the Temple Of The Elements, surrounded by decorations depicting\nEarth, Air, Fire and Water.  This strange icy place gives off a feeling of\nunbalance and growing evil.\nThere is a blinking construction sign here.\n",
+         "description" : "\n   You are in the Temple Of The Elements, surrounded by decorations depicting\nEarth, Air, Fire and Water.  This strange icy place gives off a feeling of\nunbalance and growing evil.\n",
          "altitude" : null
       },
       "slime@blizzard" : {
@@ -1099,6 +1140,18 @@
          "description" : "\n   You are in a small robing room which appears to have been unused for quite\nsome time.  To the south a dark corridor leads east and west into darkness.\n",
          "altitude" : null
       },
+      "void@blizzard" : {
+         "exits" : {},
+         "flags" : [
+            "NoSummon",
+            "CantSummon"
+         ],
+         "zone" : "blizzard",
+         "title" : "Void",
+         "id" : "void",
+         "description" : "\n   You have ceased to exist.\n",
+         "altitude" : null
+      },
       "pass@blizzard" : {
          "exits" : {
             "e" : "Mithdan1@mithdan",
@@ -1130,9 +1183,9 @@
       },
       "woods2@blizzard" : {
          "exits" : {
-            "e" : "woods3",
+            "e" : "r_land",
             "n" : "woods3",
-            "s" : "woods3"
+            "s" : "woods2"
          },
          "flags" : [
             "outdoors"
@@ -1162,10 +1215,10 @@
       },
       "woods3@blizzard" : {
          "exits" : {
-            "w" : "woods2",
+            "w" : "waterfall",
             "e" : "woods3",
-            "n" : "green@village",
-            "s" : "woods3"
+            "n" : "village45@village",
+            "s" : "woods2"
          },
          "flags" : [
             "outdoors"
@@ -1179,8 +1232,7 @@
       "bridge@blizzard" : {
          "exits" : {
             "w" : "valley",
-            "e" : "green@village",
-            "n" : "store",
+            "e" : "village45@village",
             "s" : "stream"
          },
          "flags" : [
@@ -1243,7 +1295,9 @@
       },
       "snow_temple@blizzard" : {
          "exits" : {
-            "w" : "ravine"
+            "w" : "ravine",
+            "e" : "f1@doom",
+            "d" : "^snow_iceb"
          },
          "flags" : [
             "cold",
@@ -1254,6 +1308,18 @@
          "id" : "snow_temple",
          "description" : "\n   You are in the snowy ruins of an ancient temple.  The view from here is\nstunning and very picturesque but the combination of slippery ground and some\nsteep drops close at hand is enough to dissuade you from sightseeing.\n",
          "altitude" : "5000"
+      },
+      "specsimpstudy@blizzard" : {
+         "exits" : {},
+         "flags" : [
+            "Peace",
+            "SoundProof"
+         ],
+         "zone" : "blizzard",
+         "title" : "Basic Practice Hall",
+         "id" : "specsimpstudy",
+         "description" : "\n  The man at the counter turns out to be a tireless teacher.  You and a few\nothers practice under his wizened eye.  After some time, you begin to get\nthe hang of it...\n",
+         "altitude" : null
       },
       "treasure@blizzard" : {
          "exits" : {},
@@ -1270,7 +1336,7 @@
          },
          "flags" : [],
          "zone" : "blizzard",
-         "title" : "Rune Cave",
+         "title" : "&+GRunes&* Cave",
          "id" : "rune_cave",
          "description" : "\n   You are in a large cave.  The rough rocky walls are inscribed with deep\nangular runic writings, which appear totally incomprehensible to you.  A\npillared hall stretches off to the west.\n",
          "altitude" : null
@@ -1343,8 +1409,25 @@
          "description" : "\n   You are in a dark cave with earth walls and a rather low ceiling.  The\nearth gives way to stone in the passages leading out of the cave to the east\nand west.\n",
          "altitude" : null
       },
+      "catacomb2@blizzard" : {
+         "exits" : {
+            "w" : "catacomb3",
+            "n" : "priests",
+            "s" : "catacomb1"
+         },
+         "flags" : [
+            "Soundproof",
+            "Maze"
+         ],
+         "zone" : "blizzard",
+         "title" : "Maze",
+         "id" : "catacomb2",
+         "description" : "\n    You are in a maze of catacombs. Passages lead in all directions.\n",
+         "altitude" : null
+      },
       "treravine@blizzard" : {
          "exits" : {
+            "w" : "outside@maeron",
             "e" : "pasture",
             "d" : "window"
          },
@@ -1494,6 +1577,20 @@
          "description" : "\n   You are in what appears to have been a large rest chamber of some sort.\nThere is a great deal of dried blood on the floor here, and several more marks\nthat seem to indicate the use of sorcery.  A narrow corridor leads north.\n",
          "altitude" : null
       },
+      "catacomb1@blizzard" : {
+         "exits" : {
+            "n" : "catacomb2"
+         },
+         "flags" : [
+            "Soundproof",
+            "Maze"
+         ],
+         "zone" : "blizzard",
+         "title" : "Maze",
+         "id" : "catacomb1",
+         "description" : "\n    You are in a maze of catacombs. Dark shadowy passages lead everywhere.\n",
+         "altitude" : null
+      },
       "hut@blizzard" : {
          "exits" : {
             "s" : "pasture"
@@ -1550,22 +1647,26 @@
       },
       "bottom@blizzard" : {
          "exits" : {
-            "e" : "elemental"
+            "e" : "elemental",
+            "w" : "ds1@dragonslueth",
+            "u" : "crevasse"
          },
          "flags" : [],
          "zone" : "blizzard",
          "title" : "Crevasse Bottom",
          "id" : "bottom",
-         "description" : "\n   You are at the bottom of the crevasse.  Daylight, and a great deal of snow,\ncomes through the top of the crevasse.  A single man-made passage leads east\ninto a strange temple.\n",
+         "description" : "\n   You are at the bottom of the crevasse.  Daylight, and a great deal of snow,\ncomes through the top of the crevasse.  A single man-made passage leads east\ninto a strange temple.  Another passage that doesn't exactly look man-made,\nmore like a melted tunnel disappearing into the depths, lies west.\n",
          "altitude" : null
       },
       "shady@blizzard" : {
          "exits" : {
+            "e" : "start@fantasy",
             "n" : "woods",
             "s" : "Mou1@Mountain"
          },
          "flags" : [
-            "outdoors"
+            "outdoors",
+            "nomobiles"
          ],
          "zone" : "blizzard",
          "title" : "Shady Clearing",
@@ -1594,7 +1695,7 @@
          "zone" : "blizzard",
          "title" : "The Library",
          "id" : "library",
-         "description" : "\n   You are in a dusty, bare library.  Hundreds of worm eaten bookcases stand\ndevoid of all books, their shelves laden only with dust.  An archway leads\nnorth.\n",
+         "description" : "\n   You are in a dusty, bare library.  Hundreds of worm eaten &+Bbookcases&* stand\ndevoid of all books, their shelves laden only with dust.  An archway leads\nnorth.\n",
          "altitude" : null
       },
       "ravine@blizzard" : {
@@ -1758,6 +1859,20 @@
          "description" : "\n   You are on a narrow sloping path running uncomfortably close to the lava.\nHuge explosions of lava send blasts of intense scorching heat across the path.\nThe path leads eastwards but the intense red glow and heat haze prevents you\nfrom seeing where to.  A steep climb heads up.\n",
          "altitude" : null
       },
+      "priests@blizzard" : {
+         "exits" : {
+            "s" : "catacomb2"
+         },
+         "flags" : [
+            "Soundproof",
+            "Maze"
+         ],
+         "zone" : "blizzard",
+         "title" : "Priests Room",
+         "id" : "priests",
+         "description" : "\n    You are in the priests room deep beneath the temple. The crumbling\nmasonry was once carved with hideous creatures whose incomplete carvings are\nstill enough to make you shudder and look away. A carved doorway leads\nsouth.\n",
+         "altitude" : null
+      },
       "fire_gate@blizzard" : {
          "exits" : {
             "e" : "^bridge_fire",
@@ -1811,7 +1926,7 @@
          "zone" : "blizzard",
          "title" : "Pillared Hall",
          "id" : "pillared",
-         "description" : "\n   You are in a massive pillared hall decorated with the shields of ancient and\nlong forgotten heroes.  Exits between the pillars lead into several different\ncaves.\n",
+         "description" : "\n   You are in a massive pillared hall decorated with the &+wshields&* of ancient and\nlong forgotten heroes.  Exits between the pillars lead into several different\ncaves.\n",
          "altitude" : null
       },
       "fis_bottom@blizzard" : {
@@ -1952,7 +2067,7 @@
          "zone" : "blizzard",
          "title" : "Large Cavern",
          "id" : "large_cav",
-         "description" : "\n   You are in a large cavern.  Huge stalagmites have grown up almost to the\nceiling, in places actually merging with the multicolored stalactites above.\nTo the south you perceive a great hall, and a fetid odor comes from the west.\nA small, low-walled well occupies the center of the cave.\n",
+         "description" : "\n   You are in a large cavern.  Huge stalagmites have grown up almost to the\nceiling, in places actually merging with the multicolored stalactites above.\nTo the south you perceive a great hall, and a fetid odor comes from the west.\nA small, low-walled &+Bwell&* occupies the center of the cave.\n",
          "altitude" : null
       },
       "messy@blizzard" : {
@@ -1979,6 +2094,19 @@
          "description" : "\n   You are in a large guardroom lit by a red glow to the east.  A set of stone\nsteps curve steeply up to a gallery above.  To the west is another guardroom,\nalthough the dim light reveals the presence of many zombie warriors.\n",
          "altitude" : null
       },
+      "specsimp@blizzard" : {
+         "exits" : {
+            "s" : "store"
+         },
+         "flags" : [
+            "Peace"
+         ],
+         "zone" : "blizzard",
+         "title" : "Basic Training Center",
+         "id" : "specsimp",
+         "description" : "\n  As you enter, you notice the wooden floor leading up to a small counter\nhas been worn smooth by the boot soles of countless adventurers.  A few\nleatherbound books, with covers in disrepair, line the strong high shelves on\neither side of you.  This must be a place of learning, and from the looks of\nit quite a few have been enlightened here. This would be a fine place to\nbegin putting some tricks up your sleeve...\n&+GType '&+Mlearn info&+G'.\n",
+         "altitude" : null
+      },
       "stone_cell@blizzard" : {
          "exits" : {
             "w" : "^door_cell",
@@ -1995,13 +2123,14 @@
          "exits" : {
             "w" : "corridor",
             "e" : "stonewalled",
+            "n" : "chessQQ00@chess",
             "d" : "landing"
          },
          "flags" : [],
          "zone" : "blizzard",
          "title" : "Dark Room",
          "id" : "dark",
-         "description" : "\n   You are in a large dark room, passages lead east and west.  A set of\ncrumbling stone steps leads steeply downwards plunging into the shadows\n",
+         "description" : "\n   You are in a large dark room, passages lead east and west.  A set of\ncrumbling stone steps leads steeply downwards plunging into the shadows\nbelow.  To the north is a circular looking room.\n",
          "altitude" : null
       },
       "secret@blizzard" : {
@@ -2014,6 +2143,20 @@
          "title" : "Low Secret Passage",
          "id" : "secret",
          "description" : "\n   You are in a low secret passage that leads southward to some kind of dark\npillared room.  The north wall has niches cut into it to allow you to climb\nthrough a hole in the roof above.\n",
+         "altitude" : null
+      },
+      "catacomb3@blizzard" : {
+         "exits" : {
+            "e" : "catacomb3"
+         },
+         "flags" : [
+            "Soundproof",
+            "Maze"
+         ],
+         "zone" : "blizzard",
+         "title" : "Maze",
+         "id" : "catacomb3",
+         "description" : "\n    You are at a dead end in the catacombs. A passage leads east.\n",
          "altitude" : null
       },
       "crack@blizzard" : {
@@ -2030,9 +2173,10 @@
       },
       "r_land@blizzard" : {
          "exits" : {
-            "w" : "waterfall",
+            "w" : "woods2",
             "e" : "drop@quarry",
-            "n" : "green@village"
+            "n" : "woods3",
+            "s" : "WindPath@nrose"
          },
          "flags" : [
             "outdoors"
@@ -2096,7 +2240,8 @@
       },
       "store@blizzard" : {
          "exits" : {
-            "s" : "bridge"
+            "n" : "specsimp",
+            "s" : "village44@village"
          },
          "flags" : [
             "Peace"
@@ -2104,7 +2249,7 @@
          "zone" : "blizzard",
          "title" : "The General Store",
          "id" : "store",
-         "description" : "\n   A shopkeeper behind the desk is peddling his wares.  Along the walls\nof this small room are grains, herbs, fruits, and many assorted\napparatuses of unknown use.  The shopkeeper smiles at you, and says:\n\n\"To buy my wares, use BUY TORCHES, BUY KEYS, BUY FOOD, and BUY STORAGE.\n Items that are part of quests will lose their usefulness, however....\"\n",
+         "description" : "\n   A shopkeeper behind the desk is peddling his wares.  Along the walls\nof this small room are grains, herbs, fruits, and many assorted\napparatuses of unknown use.  The shopkeeper smiles at you, and says:\n\n\"Feel free to browse here.  There are many things for sale, which\nyou can learn more about by typing 'buy'. Otherwise, type 'buy <item>'\"\n",
          "altitude" : null
       }
    },
@@ -2125,6 +2270,9 @@
          "armor" : "0",
          "name" : "ghoul",
          "description" : "An evil looking ghoul skulks in the shadows.",
+         "sflags" : [
+            "Nobody"
+         ],
          "strength" : "40",
          "pname" : "The Ghoul",
          "aggression" : "30",
@@ -2163,17 +2311,6 @@
          "pname" : "The Giant",
          "aggression" : "0"
       },
-      "willy@blizzard" : {
-         "damage" : "5",
-         "location" : "blizzard",
-         "speed" : "8",
-         "aggression" : "0",
-         "pname" : "Farmer Willy",
-         "name" : "willy",
-         "examine" : "\nBefore you stands Farmer Willy, the CEO of MacroSloth. He grins at you as\nhe points at a box containing Windblowsme in 2095 explaining to you how\ngreat and wonderful it is. He then points at a box containing MS-DOS and\ngloats about bringing you the 640k limit for the past decade.",
-         "description" : "Farmer Willy is here grinning at you.",
-         "strength" : "200"
-      },
       "yeti@blizzard" : {
          "eflags" : [
             "ImmFrost"
@@ -2211,6 +2348,17 @@
          "name" : "riatha",
          "description" : "Riatha The Acolyte stands arrogantly before you.",
          "strength" : "50"
+      },
+      "teacher@blizzard" : {
+         "damage" : "25",
+         "location" : "specsimp",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "25",
+         "pname" : "Mortimer",
+         "name" : "teacher",
+         "description" : "\nThe bespectacled headmaster, Mortimer, glances up as you approach.",
+         "strength" : "250"
       },
       "figure@blizzard" : {
          "damage" : "14",

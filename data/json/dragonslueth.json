@@ -1,0 +1,968 @@
+{
+   "obj" : {
+      "hyeel@dragonslueth" : {
+         "location" : "IN_ROOM:ds19",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "volume",
+         "name" : "hyeel",
+         "examine" : "\nFunny those dragons for all the fire they breathe, have their own spoken\nlanguage, that of Hyeel.  You decide to take the time to learn this language\nbefore confronting Dragonsluth, so you can beg for his mercy.  Soon, you \nfeel as if you can converse with Puff.",
+         "desc[0]" : "You spot a volume that has for a title, 'Hyeel Made Easy'."
+      },
+      "skull@dragonslueth" : {
+         "location" : "IN_ROOM:ds28",
+         "weight" : "2",
+         "pname" : "skull",
+         "name" : "skull",
+         "examine" : "I knew him well..",
+         "bvalue" : "50",
+         "desc[0]" : "A &+Bskull&* is lying here.",
+         "size" : "1"
+      },
+      "armor@dragonslueth" : {
+         "location" : "WORN_BY:armorer",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "53",
+         "name" : "armor",
+         "size" : "10",
+         "pname" : "armor",
+         "weight" : "12",
+         "bvalue" : "100",
+         "desc[0]" : "Here is the Armorer's &+BArmor&*.",
+         "aflags" : [
+            "Arms",
+            "Chest",
+            "Back"
+         ]
+      },
+      "throne@dragonslueth" : {
+         "location" : "IN_ROOM:ds39",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "throne",
+         "name" : "throne",
+         "examine" : "\nThe property of the court of DRAGONSLUTH.",
+         "desc[0]" : "A big gold &+Bthrone&* with all kinds of writings on it is here."
+      },
+      "sign2@dragonslueth" : {
+         "location" : "IN_ROOM:ds35",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "sign2",
+         "examine" : "\nWell, there is a fork in the path ahead, one way will be certain death\nand the other will help you find me.",
+         "desc[0]" : "Here is a very important &+Bsign&*."
+      },
+      "outside_door@dragonslueth" : {
+         "desc[1]" : "The &+Bdoor&* is closed.",
+         "location" : "IN_ROOM:ds32",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "outside_door",
+         "desc[2]" : "The &+Bdoor&* is locked.",
+         "linked" : "inside_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The &+Bdoor&* is open."
+      },
+      "diary@dragonslueth" : {
+         "location" : "IN_ROOM:ds39",
+         "weight" : "1",
+         "pname" : "diary",
+         "name" : "diary",
+         "examine" : "\n202 BC.\n    This is the last entry in the diary. 'Some evil force has entered my\ncastle and is taking my soul with joy. I has foundth that the king\nwho prays is the king who will join the deamon in the pits of hell...'",
+         "bvalue" : "500",
+         "desc[0]" : "A very old &+Bdiary&* has been dug up here.",
+         "size" : "1"
+      },
+      "key@dragonslueth" : {
+         "location" : "IN_ROOM:ds2",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "key",
+         "examine" : "A small key that should fit almost any lock.",
+         "size" : "1",
+         "pname" : "key",
+         "weight" : "2",
+         "bvalue" : "50",
+         "desc[0]" : "A small &+Bkey&* is here."
+      },
+      "chelmet@dragonslueth" : {
+         "location" : "IN_ROOM:ds24",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "70",
+         "name" : "CHelmet",
+         "examine" : "It has a few dents, but it should protect you some.",
+         "size" : "4",
+         "pname" : "helmet",
+         "weight" : "5",
+         "bvalue" : "500",
+         "desc[0]" : "A very old looking copper &+Bhelmet&* is lying here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "dragonblood@dragonslueth" : {
+         "location" : "IN_ROOM:ds29",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "blood",
+         "name" : "dragonblood",
+         "examine" : "I wonder what would happen if you drank it.",
+         "size" : "1",
+         "pname" : "dragonblood",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A small bottle of &+Bdragonblood&* has been placed here."
+      },
+      "crown@dragonslueth" : {
+         "location" : "IN_ROOM:ds39",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "crown",
+         "examine" : "Although made of pure gold it is also wafer thin.  The gods may\nstill like this as a sacrifice.",
+         "size" : "5",
+         "pname" : "crown",
+         "weight" : "8",
+         "bvalue" : "1000",
+         "desc[0]" : "A &+Bcrown&* made of pure gold is here."
+      },
+      "battleaxe@dragonslueth" : {
+         "damage" : "30",
+         "location" : "IN_ROOM:ds18",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "axe",
+         "name" : "battleaxe",
+         "examine" : "It has dried blood all over the blade.",
+         "size" : "8",
+         "pname" : "battleaxe",
+         "weight" : "10",
+         "bvalue" : "200",
+         "desc[0]" : "A huge &+BBattleAxe&* has been placed here."
+      },
+      "jewels@dragonslueth" : {
+         "location" : "IN_ROOM:ds18",
+         "name" : "jewels",
+         "examine" : "\nThe jewels look quite valuable to your untrained eye.",
+         "bvalue" : "700",
+         "desc[0]" : "A large pile of &+Bjewels&* sits here.",
+         "size" : "5"
+      },
+      "dragon_claw@dragonslueth" : {
+         "location" : "IN_ROOM:ds6",
+         "weight" : "2",
+         "pname" : "claw",
+         "name" : "dragon_claw",
+         "examine" : "\nIt gleams and glistens in the light but is much to small to be a weapon.",
+         "bvalue" : "500",
+         "desc[0]" : "A nice, shiny dragon &+Bclaw&* is here.",
+         "size" : "1"
+      },
+      "inside_door@dragonslueth" : {
+         "desc[1]" : "The &+Bdoor&* is closed.",
+         "location" : "IN_ROOM:ds31",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "inside_door",
+         "desc[2]" : "The &+Bdoor&* is locked.",
+         "linked" : "outside_door",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The &+Bdoor&* is open."
+      },
+      "dragonskin@dragonslueth" : {
+         "location" : "IN_ROOM:ds18",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "52",
+         "altname" : "armor",
+         "name" : "dragonskin",
+         "examine" : "It has the initals DS on the side of it.",
+         "size" : "8",
+         "pname" : "dragonskin",
+         "weight" : "9",
+         "bvalue" : "500",
+         "desc[0]" : "\nA very tough looking piece of &+BDragonskin Armor&* is here.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms",
+            "Legs"
+         ]
+      },
+      "sign1@dragonslueth" : {
+         "location" : "IN_ROOM:ds2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "sign1",
+         "examine" : "\nThis zone includes a number of tough mobiles that love to snack on poorly\nequipped humans.  This is your only warning, don't come crying to a wizard\nif you die here.",
+         "desc[0]" : "A &+Bsign&* is here."
+      }
+   },
+   "loc" : {
+      "ds24@dragonslueth" : {
+         "exits" : {
+            "n" : "ds21"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Armory",
+         "id" : "ds24",
+         "description" : "\n    This looks like one of those armories out of the old roman movies.\nIt has huge sets of platemail armor with weird symbols on it.  There\nis also a picture on the wall that looks like it has been there for\nyears. It shows a picture dragonsluth himself. \n",
+         "altitude" : null
+      },
+      "ds17@dragonslueth" : {
+         "exits" : {
+            "e" : "ds18",
+            "n" : "ds1",
+            "s" : "ds19"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Dragonsluth's Study",
+         "id" : "ds17",
+         "description" : "\n   As soon as you enter, you notice the craftmanship it must\nhave taken to make this room what it is.  There is a tree with gold\nleaves growing from it.  Porceline maidens dance around the base, placing\nfood everywhere they can think of. The exits are &+Cnorth&+C, &+Csouth&* and &+Ceast&*.\n",
+         "altitude" : null
+      },
+      "ds5@dragonslueth" : {
+         "exits" : {
+            "w" : "ds2"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "dragonslueth",
+         "title" : "&+RThe Pit of Hell...&*",
+         "id" : "ds5",
+         "description" : "\n    Oh good job now! you really took a wrong turn!! I am sorry, i can't\nlet you leave the pit of hell alive, it is a rule, so better luck next\ntime. Bye bye!!\n",
+         "altitude" : null
+      },
+      "ds18@dragonslueth" : {
+         "exits" : {
+            "w" : "ds17"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Treasure Room",
+         "id" : "ds18",
+         "description" : "\n    This is what you have been exploring for.. Dragonsluth's treasure.\nIt is the greatest single thing that you have seen in your life.  There is\nevery kind of precious rock imaginable including loads of diamonds and\nrubies.  You can be rich with a fortune like this. The exit is to\nthe &+Cwest&*.\n",
+         "altitude" : null
+      },
+      "ds9@dragonslueth" : {
+         "exits" : {
+            "n" : "ds6",
+            "s" : "ds10"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Hot Cave",
+         "id" : "ds9",
+         "description" : "\n    There is a big lava pit in the center of the cave with gigantic sparks\nand flames coming out of it.  The cave itself is square and certain spots on\nthe floor are made out of drying lava. There are exits to the &+Cnorth&* and \n&+Csouth&*.\n",
+         "altitude" : null
+      },
+      "ds4@dragonslueth" : {
+         "exits" : {
+            "e" : "ds3",
+            "n" : "ds7",
+            "s" : "ds6"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Snowy Field",
+         "id" : "ds4",
+         "description" : "\n    The ground of the cave begins to grow colder until it is completely \ncovered with yellow snow. You decide not to investigate this phenomena \nany further. The room is very big compared to any that you have previously \nseen and the stench in this room is unbearable.  You can't believe you can \nstand the smell. The cave continues to the north, south, and east.\n",
+         "altitude" : null
+      },
+      "ds14@dragonslueth" : {
+         "exits" : {
+            "n" : "ds20",
+            "s" : "ds13"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Laundry Room",
+         "id" : "ds14",
+         "description" : "\n    You have entered a very dusty laundry room.  There are about 3 old\nlaundry washers against the left wall and racks of old clothes on the\nright. You grab one of the articles of clothing and dust fills the air.\nThe exit is to the &+Csouth&* and &+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "ds36@dragonslueth" : {
+         "exits" : {
+            "w" : "ds39",
+            "e" : "ds35"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Grassy Path",
+         "id" : "ds36",
+         "description" : "\n    Hmm, what does this mean?? You are probably 20 feet below the\nsurface and you can see grass growing? Hmm, does that mean a good thing\nor bad? \n",
+         "altitude" : null
+      },
+      "ds12@dragonslueth" : {
+         "exits" : {
+            "s" : "ds8"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Hallway of Worship",
+         "id" : "ds12",
+         "description" : "\n    This cave is very beautiful and magnificiant.  The walls are\nlaced with pure gold that looks like it is worth a fortune.  The ground\nis made up of stone and small sapphires that sparkle when you move your\nbody. There a picture of an altar painted on the wall and a nice welcome\nmat for your knees to rest.\n",
+         "altitude" : null
+      },
+      "ds2@dragonslueth" : {
+         "exits" : {
+            "w" : "ds6",
+            "e" : "ds5",
+            "u" : "ds10",
+            "n" : "ds3",
+            "s" : "ds1"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Grand Hall",
+         "id" : "ds2",
+         "description" : "\n    You are in a large round room.  There is a huge upward shaft allowing\naccess to the top of the cave.  The room is cluttered with piles of useless\njunk you can safely ignore.  There are exits in all directions, including\na rather dark and foreboding pit to the east.\n",
+         "altitude" : null
+      },
+      "ds22@dragonslueth" : {
+         "exits" : {
+            "e" : "ds21",
+            "w" : "ds23",
+            "u" : "ds25"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Kitchen",
+         "id" : "ds22",
+         "description" : "\n    Looking around you realize that this room is a very old kitchen and\nit doesn't have very many of the modern conveniences of life.  No blenders\nor food processors. But, they have several sinks with dishes that have\nmold on them that look like they have been there for about 20 years.\nThere are rats running along the ground as you wander around.\nThe exits are &+Cup&*, &+Cwest&*, and &+Ceast&*.\n",
+         "altitude" : null
+      },
+      "ds31@dragonslueth" : {
+         "exits" : {
+            "e" : "^inside_door",
+            "w" : "ds33",
+            "u" : "ds26"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Basement",
+         "id" : "ds31",
+         "description" : "\n    This is the basement. Well, what can you expect?? It isn't anything\nspecial except for some blood trails leading from the holding cell. Hmm...\nMaybe you shouldn't go there. \n",
+         "altitude" : null
+      },
+      "ds13@dragonslueth" : {
+         "exits" : {
+            "e" : "ds6",
+            "w" : "ds15",
+            "n" : "ds14",
+            "s" : "ds16"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Courtyard",
+         "id" : "ds13",
+         "description" : "\n    Wow! you have enter a section of a cave that is magically lit\nand stretches on for miles. You see a big, empty courtyard of green grass \nand a castle off in the east.  The exits are &+Cnorth&*, &+Csouth&*, &+Ceast&*, and &+Cwest&*.\n",
+         "altitude" : null
+      },
+      "ds39@dragonslueth" : {
+         "exits" : {
+            "e" : "ds36"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Thieve's Room",
+         "id" : "ds39",
+         "description" : "\n    Ahh Ha!!! You found it! Here it all lies - the throne, his books and\nrecords, everything! The throne is gold with silver bands inlaid with rubies\nin the legs. The crown glitters and sparkles, catching your eye. The room \nitself is very small and looks like it has been dug very quickly. The exit\nis to the &+Ceast&* and that is the only one that you can find.  \n",
+         "altitude" : null
+      },
+      "ds35@dragonslueth" : {
+         "exits" : {
+            "w" : "ds36",
+            "n" : "ds34",
+            "s" : "ds37"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Fork in the Path",
+         "id" : "ds35",
+         "description" : "\n    There is a fork in the path.  The path leads to the &+Csouth&* and &+Cwest&*.\n",
+         "altitude" : null
+      },
+      "ds28@dragonslueth" : {
+         "exits" : {
+            "s" : "ds27"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Relaxation Room",
+         "id" : "ds28",
+         "description" : "\n    There are about 20 couches lined up along the floor and pictures of some\nof the greatest pyschologists in history on the walls.  There is Sigmand \nFroud (not Sigmund Freud), and other greats that you can't seem to think\nof right now. The exit is to the &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "ds6@dragonslueth" : {
+         "exits" : {
+            "w" : "ds13",
+            "n" : "ds4",
+            "s" : "ds9"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Lush Forest",
+         "id" : "ds6",
+         "description" : "\n    You have entered a large forest with trees and vines growing everywhere\nyou can see.  The ground squishes softly as you walk around. There are exits\nto the &+Cnorth&*, &+Cwest&* and &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "ds15@dragonslueth" : {
+         "exits" : {
+            "e" : "ds13",
+            "n" : "ds26",
+            "d" : "ds31",
+            "s" : "ds21"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Inside the Small Castle",
+         "id" : "ds15",
+         "description" : "\n    This castle is not in tip top shape. It has big cracks in the floor \nand the walls are filthy. There is a throne in the middle of the room with \nwith word \"DragonSluth\" written on it. The exits are to the &+Ceast&*, &+Cnorth&*, \n&+Csouth&* and &+Cdown&*.\n",
+         "altitude" : null
+      },
+      "ds10@dragonslueth" : {
+         "exits" : {
+            "n" : "ds9"
+         },
+         "flags" : [
+            "OnePerson"
+         ],
+         "zone" : "dragonslueth",
+         "title" : "Closet",
+         "id" : "ds10",
+         "description" : "\n    Well, it is pretty self explanatory.  You are sitting in a closet\nwith tons of crap laying around. The room is very small and looks like only\none person can fit in here. The only exit is &+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "ds25@dragonslueth" : {
+         "exits" : {
+            "u" : "ds30",
+            "d" : "ds22"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Dining Hall",
+         "id" : "ds25",
+         "description" : "\n    You have entered a big room with a huge table in the middle of it.  \nThe table is set for a big meal but it looks like it hasnt been touched in\n20 years.  There is large amounts of dust over everything and if you were to\nsneeze there would be dust everywhere.  \n",
+         "altitude" : null
+      },
+      "ds23@dragonslueth" : {
+         "exits" : {
+            "e" : "ds22"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Pantry",
+         "id" : "ds23",
+         "description" : "\n    If this was Mother Hubbard's pantry, it would be about as bare as\nthis one.  It has old crumbs of bread that represent where pieces of\nbread used to be.  There is one of those old buttermakers here.  Eww,\nas you look inside it you see rats eating the butter. The exit\nis to the &+Ceast&*.\n",
+         "altitude" : null
+      },
+      "ds37@dragonslueth" : {
+         "exits" : {
+            "n" : "ds35",
+            "s" : "ds38"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "dragonslueth",
+         "title" : "Path",
+         "id" : "ds37",
+         "description" : "\n    From here you keep walking and walking down the same path and it\nlooks all the same to you as you trudge on. To the &+Csouth&* you see the\nend of the path, but it doesn't look like you want to go there.\n",
+         "altitude" : null
+      },
+      "ds8@dragonslueth" : {
+         "exits" : {
+            "n" : "ds12",
+            "s" : "ds7"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Path",
+         "id" : "ds8",
+         "description" : "\n    The path continues on and on for what seems for a lifetime. The\nwalls have strange markings on them that says \"Worship to the dragon\nclaw will save your life.\"  Hmm, what a weird thing to be written on the\nwalls. There are exits &+Cnorth&* and &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "ds19@dragonslueth" : {
+         "exits" : {
+            "n" : "ds17"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Dragonsluth's Den",
+         "id" : "ds19",
+         "description" : "\n    You have entered a large library. There are a bunch of books on the\nwall that talk about everything from sex education to how to make an omlette.\nThe only exit it &+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "ds32@dragonslueth" : {
+         "exits" : {
+            "w" : "^outside_door"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Holding Cell",
+         "id" : "ds32",
+         "description" : "\n    This is the place where all the bad people in the castle go. There\nare various types of whips and chains hanging on the wall.  Some of them\nhave metal straps on them with little steel balls.  There is a torture \ndevice here that pulls a person's hands off from his body. Obviously it \nhasn't been cleaned because you see some bones still stuck in it.  \nThe exit is to the &+Cwest&*, and that's it.\n",
+         "altitude" : null
+      },
+      "ds3@dragonslueth" : {
+         "exits" : {
+            "w" : "ds4",
+            "n" : "ds11",
+            "s" : "ds2"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "&+BBlue Room&*",
+         "id" : "ds3",
+         "description" : "\n    You catch your breath as you enter this cave.  Sapphires set in \nthe wall shimmer with the light filtered in from the Grand Hall.  They\nsparkle in your face everytime you move into a different position.\nYou look up towards the ceiling but can not see one.  All you see is \nblackness never ending.\n",
+         "altitude" : null
+      },
+      "ds16@dragonslueth" : {
+         "exits" : {
+            "n" : "ds13"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Field of Dreams",
+         "id" : "ds16",
+         "description" : "\n    There is a big baseball field here with light and big bleachers that\ncould probably hold about a thousand people easily.  The only exit is \n&+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "ds34@dragonslueth" : {
+         "exits" : {
+            "u" : "ds33",
+            "s" : "ds35"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Path Below Throne",
+         "id" : "ds34",
+         "description" : "\n    This path is very new and fresh. It seems that it has just been dug\nrecently and it could be possible that there could be the throne up\nahead. There is large earthworms and maggots coming out of it.  The\nearth is very hot for some reason. \n",
+         "altitude" : null
+      },
+      "ds1@dragonslueth" : {
+         "exits" : {
+            "e" : "bottom@blizzard",
+            "n" : "ds2"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "In the Cave of DragonSluth",
+         "id" : "ds1",
+         "description" : "\n    As you look around carefully you notice the walls are painted in blood,\nthough its difficult to be sure in this dimly lit room.  You see the\nonly source of light coming from ahead of you.  The room appears to be\nround with some highly reflective objects set into the walls. You shield\nyour eyes from the glare to study the walls closer. It looks like diamonds\nbut they are set too firmly in the wall for you to pry out.\n",
+         "altitude" : null
+      },
+      "ds27@dragonslueth" : {
+         "exits" : {
+            "w" : "ds29",
+            "n" : "ds28",
+            "s" : "ds26"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Ballroom",
+         "id" : "ds27",
+         "description" : "\n    Upon your entry of this room you see a gigantic forty by forty\nsquare dance floor with rusty suits of armor placed everywhere on floor. \nThey keep their eyes on your as you move around. You walk over to one of \nthem and see if there is anyone inside of them, but you see nothing. The \nexits are to the &+Cnorth&* and &+Cwest&*.\n",
+         "altitude" : null
+      },
+      "ds7@dragonslueth" : {
+         "exits" : {
+            "n" : "ds8",
+            "s" : "ds4"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Path",
+         "id" : "ds7",
+         "description" : "\n    You have come to a dark path inside this gloomy cave. The path\ncontinues &+Cnorth&* and the Snowy Field is &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "ds38@dragonslueth" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "dragonslueth",
+         "title" : "The End...",
+         "id" : "ds38",
+         "description" : "\n    I wasn't Joking when I said certain death. Sorry there pal but I got\nto cut you off here.  Well, come back and try going the other way next\ntime.\n\n\t\t\t\t    Sincerely\n\t\t\t\t    Jojo\n\t\t\t\t    Zone Author\n",
+         "altitude" : null
+      },
+      "ds20@dragonslueth" : {
+         "exits" : {
+            "s" : "ds14"
+         },
+         "flags" : [
+            "OnePerson"
+         ],
+         "zone" : "dragonslueth",
+         "title" : "Small Room",
+         "id" : "ds20",
+         "description" : "\n    This room is very small and empty. It is big enough to fit one person \nand that is about it. The exit is to the &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "ds21@dragonslueth" : {
+         "exits" : {
+            "w" : "ds22",
+            "n" : "ds15",
+            "s" : "ds24"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Left Wing",
+         "id" : "ds21",
+         "description" : "\n    This wing is huge and is the intersection point for several\nother areas of the castle.  There are several footprints on the ground\nas you look around. \n",
+         "altitude" : null
+      },
+      "ds29@dragonslueth" : {
+         "exits" : {
+            "e" : "ds27"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Banquet Hall",
+         "id" : "ds29",
+         "description" : "\n    There is nothing in this room from what you can tell. It is empty;\nnothing but cans of empty paint and brushes that have no bristles on\nthem. How weird eh? \n",
+         "altitude" : null
+      },
+      "ds11@dragonslueth" : {
+         "exits" : {
+            "s" : "ds3"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Store Room",
+         "id" : "ds11",
+         "description" : "\n    This is a store room with all kinds of inedible rations and different\ntypes of grains laying about. As you take a bit you realize that this food\nis rotten and spit it out.  There are also many broken weapons laying on\nthe ground.\n",
+         "altitude" : null
+      },
+      "ds33@dragonslueth" : {
+         "exits" : {
+            "e" : "ds31",
+            "d" : "ds34"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Throne Room",
+         "id" : "ds33",
+         "description" : "\n    Wow! There has been someone here.  All of the gold and treasures in\nthis room have been looted and there isn't even a throne any more.\nThere is a passageway dug &+Cdown&*.\n",
+         "altitude" : null
+      },
+      "ds30@dragonslueth" : {
+         "exits" : {
+            "d" : "ds25"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Near the Top of the Castle",
+         "id" : "ds30",
+         "description" : "\n    The stairs were unbelievably hard to climb to get to the top of this\ncastle. Whew! Whoever said 'small castle' was prone to understatement!\nThis castle isn't small at all. But, from here you can see the whole\ncastle area. \n",
+         "altitude" : null
+      },
+      "ds26@dragonslueth" : {
+         "exits" : {
+            "n" : "ds27",
+            "s" : "ds15"
+         },
+         "flags" : [],
+         "zone" : "dragonslueth",
+         "title" : "Right Wing",
+         "id" : "ds26",
+         "description" : "\n    This wing is one of the intersections to some of the other rooms\ninside the castle. This room is old and looks as if it is used alot. \n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "mike@dragonslueth" : {
+         "damage" : "10",
+         "location" : "ds22",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "80",
+         "pname" : "Mike",
+         "name" : "mike",
+         "examine" : "Mike wears a blood-spattered apron and a crumpled white chef's hat.  He\nthinks you'd go nicely after the soup he's prepared for dinner tonight.\n",
+         "description" : "&+RMike the Cook&* is here and he's mad that you are too!",
+         "strength" : "120"
+      },
+      "assistant@dragonslueth" : {
+         "damage" : "18",
+         "location" : "ds23",
+         "speed" : "0",
+         "armor" : "10",
+         "aggression" : "20",
+         "pname" : "The Assistant",
+         "name" : "assistant",
+         "examine" : "He attacks you with the desperate deadliness of a cornered coward.\n",
+         "description" : "Here is the &+Rassistant&* cook.",
+         "strength" : "200"
+      },
+      "guildonstern@dragonslueth" : {
+         "damage" : "20",
+         "location" : "ds2",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "name" : "guildonstern",
+         "examine" : "He is tall and thin, and his bony knees below his green tunic strike you\nas ridiculous.\n",
+         "description" : "The Poetic &+RGuildonstern&* disagrees with Rosencrit.",
+         "strength" : "220"
+      },
+      "teenage@dragonslueth" : {
+         "eflags" : [
+            "fireball",
+            "shock",
+            "negfireball"
+         ],
+         "damage" : "20",
+         "location" : "ds21",
+         "armor" : "20",
+         "name" : "teenage",
+         "examine" : "His long, gangly body is dyed a brilliant chartreuse with a wide stripe\nof green down his back, and his tail is pierced in at least 25 places.\n",
+         "description" : "Here is the &+Rteenage dragon&* trying to avoid society.",
+         "strength" : "400",
+         "speed" : "0",
+         "pname" : "Teenage Dragon",
+         "aggression" : "100"
+      },
+      "black@dragonslueth" : {
+         "eflags" : [
+            "fireball",
+            "negfireball",
+            "negmissile"
+         ],
+         "damage" : "25",
+         "location" : "ds12",
+         "armor" : "30",
+         "name" : "black",
+         "examine" : "His scales shine like polished obsidian, and he moves with regal grace as\nhe slowly lifts his heavy head to regard you from intelligent, hooded eyes.\n",
+         "description" : "Here is the &+Rblack dragon&* who doesn't want to bother with you.",
+         "strength" : "400",
+         "speed" : "0",
+         "pname" : "Black Dragon",
+         "aggression" : "30"
+      },
+      "green@dragonslueth" : {
+         "eflags" : [
+            "missile",
+            "negmissile"
+         ],
+         "damage" : "24",
+         "location" : "ds6",
+         "armor" : "20",
+         "name" : "green",
+         "examine" : "A few gold scales are interspersed among scales of a hundred shades of\ngreen, as though he were clothed in sunlight seen through a pattern of\nleaves in a densely wooded forest.\n",
+         "description" : "The &+RGreen Dragon&* is here.",
+         "strength" : "320",
+         "speed" : "0",
+         "pname" : "Green Dragon",
+         "aggression" : "20"
+      },
+      "purple@dragonslueth" : {
+         "eflags" : [
+            "frost",
+            "negfrost",
+            "negmissile"
+         ],
+         "damage" : "25",
+         "location" : "ds13",
+         "armor" : "20",
+         "name" : "purple",
+         "examine" : "A fine looking dragon in his youth, his scales are now patchy and in need\nof repair.\n",
+         "description" : "A &+RPurple Dragon&* is sitting here.",
+         "strength" : "420",
+         "speed" : "0",
+         "pname" : "Purple Dragon",
+         "aggression" : "80"
+      },
+      "biff@dragonslueth" : {
+         "damage" : "22",
+         "location" : "ds32",
+         "speed" : "0",
+         "armor" : "10",
+         "aggression" : "99",
+         "name" : "biff",
+         "examine" : "Biff comes at you with the professional impersonality of a hired thug.\n",
+         "description" : "&+RBiff&* is here and he looks very upset.",
+         "strength" : "350"
+      },
+      "knight@dragonslueth" : {
+         "damage" : "30",
+         "location" : "ds27",
+         "speed" : "0",
+         "armor" : "20",
+         "aggression" : "0",
+         "name" : "knight",
+         "examine" : "He looks at you with a distracted, confused expression as though he has\nforgotten what it is he's supposed to do with an intruder.\n",
+         "description" : "An old style &+Rknight&* sits here.",
+         "strength" : "300"
+      },
+      "dragonsluth@dragonslueth" : {
+         "eflags" : [
+            "fireball",
+            "frost",
+            "icestorm"
+         ],
+         "damage" : "35",
+         "location" : "ds17",
+         "armor" : "0",
+         "name" : "dragonsluth",
+         "examine" : "His cheeks are raked with the deep scars of dragon's claws, and you know\nimmediately that he has survived enemies a hundred times more fearsome than\nyou feel right now.\n",
+         "description" : "\nThe legendary &+RDragonsluth&* himself is here, ready to kill you.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "100",
+         "mflags" : [
+            "BarNorth",
+            "BarSouth",
+            "BarEast"
+         ]
+      },
+      "white@dragonslueth" : {
+         "eflags" : [
+            "frost",
+            "negfrost",
+            "negfireball"
+         ],
+         "damage" : "18",
+         "location" : "ds4",
+         "armor" : "20",
+         "name" : "white",
+         "examine" : "You are momentarily dazzled by this majestic beast.  His snow white scales\nglisten and ripple like water as he raises himself up to his full, awesome\nheight and stares down at you with eyes of flaming pink.\n",
+         "description" : "The &+RWhite Dragon&* is about to make history of you.",
+         "strength" : "380",
+         "speed" : "0",
+         "pname" : "White Dragon",
+         "aggression" : "20"
+      },
+      "armorer@dragonslueth" : {
+         "damage" : "18",
+         "location" : "ds24",
+         "speed" : "0",
+         "armor" : "10",
+         "aggression" : "0",
+         "name" : "armorer",
+         "examine" : "He glances at you disinterestedly and goes back to his work.\n",
+         "description" : "A very old &+Rarmorer&* is here, working on his armor.",
+         "strength" : "220"
+      },
+      "baby@dragonslueth" : {
+         "eflags" : [
+            "missile",
+            "negmissile",
+            "negfrost"
+         ],
+         "damage" : "20",
+         "location" : "ds30",
+         "armor" : "10",
+         "name" : "baby",
+         "examine" : "His baby teeth gleam as he gurgles and waves his little claws at you\nplayfully.\n",
+         "description" : "Here is a &+Rbaby dragon&* looking for someone to eat.",
+         "strength" : "340",
+         "speed" : "0",
+         "pname" : "Baby Dragon",
+         "aggression" : "10"
+      },
+      "rosencrit@dragonslueth" : {
+         "damage" : "20",
+         "location" : "ds2",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "0",
+         "name" : "rosencrit",
+         "examine" : "Rosencrit wears thick, black glasses and has a sour, constipated expression.\n",
+         "description" : "The Artistic &+RRosencrit&* tries persuade you to leave.",
+         "strength" : "200"
+      },
+      "red@dragonslueth" : {
+         "eflags" : [
+            "frost",
+            "negfrost",
+            "negshock"
+         ],
+         "damage" : "20",
+         "location" : "ds9",
+         "armor" : "15",
+         "name" : "red",
+         "examine" : "You see only a flash of red as he streaks towards you, flames billowing\nfrom his open jaws.\n",
+         "description" : "The All famous &+RRed Dragon&* is here laughing at you.",
+         "strength" : "400",
+         "speed" : "0",
+         "pname" : "Red Dragon",
+         "aggression" : "99"
+      },
+      "blue@dragonslueth" : {
+         "eflags" : [
+            "fireball",
+            "negfireball",
+            "negfrost"
+         ],
+         "damage" : "25",
+         "location" : "ds3",
+         "armor" : "20",
+         "name" : "blue",
+         "examine" : "The blue dragon looks at you and belches up the remains of his last victim.\n",
+         "description" : "A huge &+Rblue dragon&* is lying around here.",
+         "strength" : "450",
+         "speed" : "0",
+         "pname" : "Blue Dragon",
+         "aggression" : "20"
+      },
+      "thief@dragonslueth" : {
+         "damage" : "20",
+         "location" : "ds39",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "80",
+         "name" : "thief",
+         "examine" : "His movements are too quick to track, as he slashes at you from all\ndirections at once.\n",
+         "description" : "The &+Rthief&* who took the throne is here.",
+         "strength" : "400",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "buff@dragonslueth" : {
+         "damage" : "10",
+         "location" : "ds32",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "99",
+         "name" : "buff",
+         "examine" : "He doesn't look like a rocket scientist, but he's big.\n",
+         "description" : "&+RBuff&* is here and very upset also.",
+         "strength" : "400"
+      }
+   }
+}

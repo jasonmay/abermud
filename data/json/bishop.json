@@ -1,0 +1,1391 @@
+{
+   "obj" : {
+      "exo_book@bishop" : {
+         "location" : "IN_ROOM:bishop17",
+         "oflags" : "{ }",
+         "pname" : "book",
+         "name" : "exo_book",
+         "examine" : "It seems to be a how-to book on performing exorcisms.\n\nAfter making the proper preparations, one has to EXORCISE [target] to\nremove the horrid presence from their body.",
+         "desc[0]" : "A book on exorcism has been left here.",
+         "state" : "0",
+         "size" : "3"
+      },
+      "vial1@bishop" : {
+         "location" : "IN_ROOM:bishop8",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "vial",
+         "name" : "vial1",
+         "examine" : "Flying is no hallucination once you are drunk.",
+         "desc[0]" : " A clear vial containing sparkling effervescence is here.",
+         "size" : "1"
+      },
+      "blessing@bishop" : {
+         "location" : "CARRIED_BY:packrat",
+         "pname" : "blessing",
+         "name" : "blessing",
+         "examine" : "It can definitely purify freshly made water.",
+         "desc[0]" : "A blessing from the heavens is here."
+      },
+      "safe@bishop" : {
+         "desc[1]" : "A heavily dented safe squats here.",
+         "location" : "IN_ROOM:bishop20",
+         "desc[3]" : "A cracked and dented safe squats here.",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "safe",
+         "examine" : "Guaranteed protection from falls at great heights.",
+         "desc[2]" : "A dented safe with one missing door hinge squats here.",
+         "state" : "0",
+         "size" : "80",
+         "pname" : "safe",
+         "maxstate" : "3",
+         "desc[0]" : "A heavy and thick-walled safe squats here."
+      },
+      "pawn@bishop" : {
+         "desc[1]" : "A black chess pawn is here.",
+         "location" : "IN_ROOM:bishop3",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "pawn",
+         "examine" : "\nThough equally worthless, black pawns are more annoying than white ones.",
+         "state" : "0",
+         "size" : "3",
+         "pname" : "pawn",
+         "maxstate" : "1",
+         "desc[0]" : "A white chess pawn is here."
+      },
+      "scrap@bishop" : {
+         "location" : "IN_ROOM:bishop3",
+         "pname" : "scrap",
+         "name" : "scrap",
+         "examine" : "Perhaps the debris clinging to it could be cut away.",
+         "desc[0]" : "A scrap of white metal lies discarded here.",
+         "size" : "2"
+      },
+      "vapor@bishop" : {
+         "location" : "IN_ROOM:bishop52",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "steam",
+         "pname" : "vapor",
+         "name" : "vapor",
+         "desc[0]" : "A large cloud of steam swirls gently."
+      },
+      "condenser@bishop" : {
+         "location" : "CARRIED_BY:packrat",
+         "pname" : "condenser",
+         "name" : "condenser",
+         "examine" : "Cool annoying vapors in seconds!",
+         "desc[0]" : "An all-purpose condenser is here.",
+         "size" : "70"
+      },
+      "hydrogen@bishop" : {
+         "location" : "IN_ROOM:bishop45",
+         "altname" : "bottle",
+         "pname" : "hydrogen",
+         "name" : "hydrogen",
+         "examine" : "\nWater is an element of life, but life will grow in a weedy circle\nwithin the confines of the wetlands. Only can you light me there.",
+         "desc[0]" : "A bottle of free-floating hydrogen gas is here.",
+         "size" : "4"
+      },
+      "bible2@bishop" : {
+         "location" : "IN_ROOM:bishop56",
+         "altname" : "flowery",
+         "pname" : "bible",
+         "name" : "bible2",
+         "examine" : "\nThe pink and red array of flowers on the cover shines bright in the sun.",
+         "bvalue" : "-300",
+         "desc[0]" : "A battered copy of the Korisla bible is here.",
+         "size" : "4"
+      },
+      "plaque@bishop" : {
+         "location" : "IN_ROOM:bishop20",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Destroyed"
+         ],
+         "pname" : "plaque",
+         "name" : "plaque",
+         "examine" : "Take thine mighty hands of doom and bash away!",
+         "desc[0]" : "An engraved plaque rests on the safe."
+      },
+      "bishop@bishop" : {
+         "location" : "IN_ROOM:bishop10",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "figurine",
+         "pname" : "bishop",
+         "name" : "bishop",
+         "examine" : "\nTwo things of note to whoever accepts this figurine and the responsibility\nthat goes with it...\n1) Monks are not very trusting. You will have to seek the proof shown by\n   the mouths of sacred animals at the gates of the monastery.\n2) At the altar put relics three, then this figurine of me.\n- Monsignour Crabapple",
+         "desc[0]" : "\nA chess bishop carved of white marble is here."
+      },
+      "paint@bishop" : {
+         "location" : "IN_ROOM:bishop5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "paint",
+         "name" : "paint",
+         "examine" : "Dyes R Us: Reliable coats for 40 years!",
+         "desc[0]" : "A wooden bucket of black paint stands here."
+      },
+      "sign@bishop" : {
+         "location" : "IN_ROOM:bishop5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "sign",
+         "examine" : "\nSome pieces of advice:\n1> If you get totally stuck and want to leave the zone without finishing the\n   quest, feel free to eat the cheesecake found in here. The vial and cake\n   will be set back to their starts to allow multiple entrances. The quest is\n   still designed for a single person, though.\n2> Remember, you may need to act like a priest, but do not abuse your\n   exorcising power.\n      -- Some unlucky schumck\n",
+         "desc[0]" : "A small sign is posted here."
+      },
+      "cake@bishop" : {
+         "location" : "IN_ROOM:bishop18",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "cake",
+         "name" : "cake",
+         "examine" : "Eat me to return home.",
+         "size" : "4",
+         "pname" : "cheesecake",
+         "bvalue" : "150",
+         "desc[0]" : "A slab of cheesecake is here."
+      },
+      "flagon@bishop" : {
+         "location" : "CARRIED_BY:crabapple",
+         "oflags" : [
+            "Food",
+            "Alcohol"
+         ],
+         "pname" : "flagon",
+         "name" : "flagon",
+         "examine" : "\nThe liquid inside totally reeks of its alcoholic contents.",
+         "bvalue" : "90",
+         "desc[0]" : "\nA flagon half-full of sasparilla lays here.",
+         "size" : "3"
+      },
+      "vial2@bishop" : {
+         "location" : "IN_ROOM:bishop56",
+         "oflags" : [
+            "Food",
+            "Alcohol"
+         ],
+         "pname" : "vial",
+         "name" : "vial2",
+         "examine" : "Flying will be no hallucination if you partake of me.",
+         "desc[0]" : "A clear vial containing a deep blue liquid is here.",
+         "size" : "1"
+      },
+      "safekey@bishop" : {
+         "location" : "IN_ROOM:bishop17",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "pname" : "safekey",
+         "name" : "safekey",
+         "examine" : "It will only fit one lock.",
+         "bvalue" : "100",
+         "desc[0]" : "A thick silver safekey lies here."
+      },
+      "stake@bishop" : {
+         "location" : "CARRIED_BY:ghoul",
+         "armor" : "1",
+         "pname" : "stake",
+         "name" : "stake",
+         "examine" : "This could tartare someone who tartares the innocent.",
+         "bvalue" : "50",
+         "desc[0]" : "A sharply pointed fence stake has been left here.",
+         "size" : "7"
+      },
+      "bible3@bishop" : {
+         "location" : "IN_ROOM:bishop56",
+         "altname" : "relic",
+         "pname" : "bible",
+         "name" : "bible3",
+         "examine" : "\nThe leaves capture the sunlight and convert it into food for the pages.",
+         "bvalue" : "-300",
+         "desc[0]" : "A battered copy of the Korisla bible is here.",
+         "size" : "4"
+      },
+      "rake@bishop" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:fred",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "rake",
+         "examine" : "\nThe caretaker obviously didn't part with this happily, as denoted by the \nblood stains on it.",
+         "size" : "9",
+         "pname" : "rake",
+         "bvalue" : "50",
+         "desc[0]" : "\nA sturdy metal rake has been left here."
+      },
+      "door2@bishop" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:bishop15",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door2",
+         "linked" : "door1",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "calcite@bishop" : {
+         "desc[1]" : "\nA chunk of calcite has broken off a tunnel wall.",
+         "location" : "IN_ROOM:bishop4",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "calcite",
+         "examine" : "\nAn elf would find this very valuable, but elves don't exist here.",
+         "state" : "1",
+         "pname" : "calcite",
+         "maxstate" : "1",
+         "bvalue" : "500",
+         "desc[0]" : "\nA calcite clod awaits a new master here."
+      },
+      "doll@bishop" : {
+         "location" : "IN_ROOM:bishop17",
+         "armor" : "0",
+         "pname" : "doll",
+         "name" : "doll",
+         "bvalue" : "50",
+         "desc[0]" : "\nA child's doll with a stitched smile and a missing nose is here.",
+         "size" : "7"
+      },
+      "water@bishop" : {
+         "desc[1]" : "\nA consecrated aquaglobe of water glistens with potent magical energy here.",
+         "location" : "IN_ROOM:bishop56",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "relic",
+         "name" : "water",
+         "state" : "0",
+         "size" : "5",
+         "pname" : "water",
+         "maxstate" : "1",
+         "desc[0]" : "\nA magical aquaglobe of water spins and sparkles through with sunlight."
+      },
+      "cross@bishop" : {
+         "desc[1]" : "A glowing cross is here.",
+         "location" : "IN_ROOM:bishop56",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "relic",
+         "name" : "cross",
+         "examine" : "Looks like a repair shop could help this thing.",
+         "state" : "0",
+         "size" : "6",
+         "pname" : "cross",
+         "maxstate" : "1",
+         "desc[0]" : "A broken cross is here."
+      },
+      "bible1@bishop" : {
+         "location" : "IN_ROOM:bishop56",
+         "altname" : "rooty",
+         "pname" : "bible",
+         "name" : "bible1",
+         "examine" : "\nThe fine and gnarly roots on the cover have perfectly matching earth tones.",
+         "bvalue" : "-300",
+         "desc[0]" : "A battered copy of the Korisla bible is here.",
+         "size" : "4"
+      },
+      "board@bishop" : {
+         "location" : "IN_ROOM:bishop10",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "board",
+         "pname" : "chessboard",
+         "name" : "board",
+         "examine" : "The game appears to be missing a black pawn.",
+         "desc[0]" : "\nA metallic chessboard with equally metallic pieces is here."
+      },
+      "door1@bishop" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:bishop14",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door1",
+         "linked" : "door2",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "altar@bishop" : {
+         "location" : "IN_ROOM:bishop30",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "altar",
+         "name" : "altar",
+         "examine" : "\nScrawled into the side of the altar is a plea for help from the bishops \nof this monastery. The Archbishop has been taken control of by a \nmalevolent force and has defiled this temple by scattering the relics \nacross the land. If they are returned to thier sacred places upon this\naltar, then a bishop figurine on the altar will allow one to confront the\nturncoat Archbishop.",
+         "desc[0]" : "\nA marble altar devoted to the immortal rulers of Korisla sits here."
+      },
+      "note@bishop" : {
+         "location" : "IN_ROOM:bishop20",
+         "oflags" : [
+            "Food",
+            "Destroyed"
+         ],
+         "pname" : "note",
+         "name" : "note",
+         "examine" : "\nSeek ye the holy book bound in the natural process of photosynthesis.",
+         "bvalue" : "30",
+         "desc[0]" : "A note inscribed on an edible leaf is here.",
+         "size" : "1"
+      }
+   },
+   "loc" : {
+      "bishop30@bishop" : {
+         "exits" : {
+            "s" : "bishop25"
+         },
+         "flags" : [
+            "Private",
+            "NoAt",
+            "Soundproof",
+            "NoSummon",
+            "NoMobiles"
+         ],
+         "zone" : "bishop",
+         "title" : "Garden Alcove",
+         "id" : "bishop30",
+         "description" : "\n   This is where the monks gather to pray on a daily basis. The wide \nsemicircle of the alcove allows them to pay homage to a minor deity, the \none which supports life in this area of the world. There is a marble \naltar as the centerpiece of this arrangement of stone pews with three \nindentations in it. However, the monastery's religious artifacts are not \npresent here. Normally, the Archbishop of the monks would be here \nhimself to protect to artifacts, but the bishop has gone missing for \ndays now. \n",
+         "altitude" : null
+      },
+      "bishop16@bishop" : {
+         "exits" : {
+            "n" : "bishop17",
+            "d" : "bishop15"
+         },
+         "flags" : [],
+         "zone" : "bishop",
+         "title" : "Bedroom",
+         "id" : "bishop16",
+         "description" : "\n   This is the private chamber of the caretaker, where his dreams take \nplace and start the process into real life. A full-length mirror is in \none corner, and a small dresser stands next to the bed. Stairs lead \ndown, while a doorway is to the north. \n",
+         "altitude" : null
+      },
+      "bishop7@bishop" : {
+         "exits" : {
+            "d" : "bishop1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Vortex",
+         "id" : "bishop7",
+         "description" : "\n   Learn to follow directions when all horizons look the same.\n",
+         "altitude" : null
+      },
+      "bishop23@bishop" : {
+         "exits" : {
+            "e" : "bishop24",
+            "w" : "bishop22"
+         },
+         "flags" : [
+            "Outdoors",
+            "Peaceful"
+         ],
+         "zone" : "bishop",
+         "title" : "Monastery Gates",
+         "id" : "bishop23",
+         "description" : "\n   The western archway of the Korisla Monastery has a three-headed dragon \nwith a bible in its mouth perched between the twin pairs of brick \nturrets. Long wicker torches freshly dipped in pitch and dried are set \nready to provide an eternal firelight when the last traces of evil are \npurged from the land. Perimeter guards from the more war-chivalrous \ncaste of the monastery are stationed in each turret to keep the order \nand tranquillity both within and without. Beyond the gatehouse is a \ngarden on the inside and a plethora of open acreage on the outside.\n",
+         "altitude" : null
+      },
+      "bishop33@bishop" : {
+         "exits" : {
+            "e" : "bishop34",
+            "w" : "bishop32"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Horizon Expanse Pathway",
+         "id" : "bishop33",
+         "description" : "\n   The fertile and rolling plains are broken by sporadic patches of \nthorny briars and seven foot tall thistles. The road becomes pitted with \nrocks and holes, turning the terrain into a weed-consumed landscape. \nDead tangles of ivy and poison oak grow in increasing quantities, their \nlong, brown-leafed vines winding around a pair of rusty iron gates to \nthe east. \n",
+         "altitude" : null
+      },
+      "bishop56@bishop" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "bishop",
+         "title" : "&+RChamber of the Damned",
+         "id" : "bishop56",
+         "description" : "\n  This particular void holds the bishop zone junk until needed!\n",
+         "altitude" : null
+      },
+      "bishop42@bishop" : {
+         "exits" : {
+            "s" : "bishop41"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Western Crypt",
+         "id" : "bishop42",
+         "description" : "\n   The body of a high druid priest was incarcerated here nearly 500 years \nago. His mummified remains occupy an engraved sarcophagus set atop a \nmarble pedestal in the pit of the crypt. The air is fresh as the crypt \nwas broken open and plundered many years back, but equally fresh rodent \nand snake droppings confirm that there are still visitors here. \n",
+         "altitude" : null
+      },
+      "bishop34@bishop" : {
+         "exits" : {
+            "e" : "bishop35",
+            "w" : "bishop33",
+            "n" : "bishop41"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "bishop",
+         "title" : "Cemetery Gates",
+         "id" : "bishop34",
+         "description" : "\n   Creaking and squeaking in the voluminous amount of wind which whips \nacross the cemetery barrier, a spiked iron gate with central hump spans \nthe distance between two cracked and chipped pillars of weathered stone. \nA rusted and broken lock on an equally rusty chain once held the two \nhalves of the gate together. Above this lock is fashioned the likeness \nof a scaly, one-eyed lizard, its extended tongue letting loose \nflickering green lightning. These high-voltage bolt of electricity shoot \ndiagonally upwards to the top of the pillars, where it is absorbed by \nmetal balls which glow weakly with each influx of energy. At the base of \nthe gate, not daring to venture into the unyielding goodness of the \nprairie, is a foot-thick layer of violently swirling gray fog. \n",
+         "altitude" : null
+      },
+      "bishop51@bishop" : {
+         "exits" : {
+            "w" : "bishop52",
+            "e" : "bishop50",
+            "n" : "bishop55"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Bog",
+         "id" : "bishop51",
+         "description" : "\n   The marsh grows much wetter here, where every footstep squishes in two \ninches of mud. The 'firm ground' consists of small mounds of stinking \nmire, located admist two-foot deep trenches of water. Vile methane swamp \ngas hisses forth from subterranean geysers of bubbling muck, and swamp \nmosquitoes buzz angrily around these explosions. Snakes and a few \nspiders are also resident here to breed within the warmth of the \ngeysers. As the many trenches of the river converge into a pool, the \nground suddenly drops into a pit, and no living thing has ever escaped \nfrom these quicksand-like holes. Vegetation is limited to tufts of \nsickly brown grass and decaying weeds. On a nearby hill of sludge, those \ntufts are arranged sporadically in a rhombus. \n",
+         "altitude" : null
+      },
+      "bishop45@bishop" : {
+         "exits" : {
+            "n" : "bishop44",
+            "s" : "bishop46"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Horizon Expanse Trail",
+         "id" : "bishop45",
+         "description" : "\n   Long, tall, thin grasses grow everywhere in this prairie, blowing in \nthe cross winds and shedding their pollen to the skies. Crickets chirp \nfrom deep within the grass, forever only to be heard. Among the grasses \nare also various types of grain. The wild herds of oxen and cows which \nroam these plains live in utter bliss with the sheer amount of food \npresent around them. Spread throughout the prairie are patches set aside \nby nature for extremely tall sunflowers. These circles of petals around \na darker core grow in unconcealed delight as they process the natural \nradiation tossed down at them. \n",
+         "altitude" : null
+      },
+      "bishop43@bishop" : {
+         "exits" : {
+            "n" : "bishop28",
+            "s" : "bishop44"
+         },
+         "flags" : [
+            "Outdoors",
+            "Peaceful"
+         ],
+         "zone" : "bishop",
+         "title" : "Monastery Gates",
+         "id" : "bishop43",
+         "description" : "\n   The southern archway of the Korisla Monastery has a prehistoric lion \nwith a potion of holy water in its mouth perched between the twin pairs \nof brick turrets. Long wicker torches freshly dipped in pitch and dried \nare set ready to provide an eternal firelight when the last traces of \nevil are purged from the land. Perimeter guards from the more \nwar-chivalrous caste of the monastery are stationed in each turret to \nkeep the order and tranquillity both within and without. Beyond the \ngatehouse is a garden on the inside and a plethora of open acreage on \nthe outside. \n",
+         "altitude" : null
+      },
+      "bishop18@bishop" : {
+         "exits" : {
+            "d" : "bishop19",
+            "s" : "bishop15"
+         },
+         "flags" : [],
+         "zone" : "bishop",
+         "title" : "Back Room",
+         "id" : "bishop18",
+         "description" : "\n   The kitchen and dining area is well-equipped with provisions, enough \nto feed an army and provide a taxidermist with a well-stuffed \nindividual. Some cookware and ladles hang from wall hooks around a \ncentral stove, which is connected directly to the ceiling. A long, black \npipe channels the smoke and steam of frying meals and boiling water to \nthe sky. A book of recipes stands on a podium for making extravagant and \ngourmet dishes. In one corner lays the open trapdoor to a cellar. \n",
+         "altitude" : null
+      },
+      "bishop47@bishop" : {
+         "exits" : {
+            "w" : "bishop54",
+            "e" : "bishop48",
+            "n" : "bishop46",
+            "s" : "bishop55"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Marshlands",
+         "id" : "bishop47",
+         "description" : "\n   Tall reeds and algae are the main forms of vegetation here, the latter \nsurrounding islands built out of the former. Dry land is not always easy \nto find, but neither is the network of river water very deep. The ground \nis remarkably flat and allows no shelter from the cross winds that blow \nin from the east. Crawdads and skitter bugs swim the stretches of dark \nblue between their spawning nests and favorite places to gather food. \nSome parts of the river break off into slowly stirring eddies and pull \nin bits of plant and dirt.\n",
+         "altitude" : null
+      },
+      "bishop4@bishop" : {
+         "exits" : {
+            "u" : "bishop5",
+            "d" : "bishop3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Tunnel Slope",
+         "id" : "bishop4",
+         "description" : "\n   The ground here is more treacherous on a hillside as it is now. Water \nflows in small streams at high speed down the slope, washing away the \nloose gravel and depositing calcium compounds. As a result, the ground \nloses considerable traction, and movement can only be made safe by a \ntricky dance of zigzagging and sidestepping. \n",
+         "altitude" : null
+      },
+      "bishop2@bishop" : {
+         "exits" : {
+            "e" : "bishop3",
+            "w" : "bishop1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Tunnel Passage",
+         "id" : "bishop2",
+         "description" : "\n   A hand-carved passage wide enough for three people walking abreast runs  \neast and west here. The stony walls are composed of nearly pure limestone, \nwith the few other trace components giving off an eerie blue glow and an \noccasional flash of green lightning as an unnatural source of underground \nelectricity travels through them. Along the floor by these sides, a line \nof spiders moves steadily away from the east exit, where the ground begins \nto slope upward. At various spots along the tunnel, a rocky crag will jut\nout and partially block the passageway like a person with a mild degree \nof arteriosclerosis. Water from underground springs and pools drains \ninto this place and gradually eats away at the crags. This passage is \nstill new, for there are no signs yet of the formation of stalactites or \nstalagmites. \n",
+         "altitude" : null
+      },
+      "bishop52@bishop" : {
+         "exits" : {
+            "e" : "bishop51",
+            "n" : "bishop53"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Bog",
+         "id" : "bishop52",
+         "description" : "\n   The marsh grows much wetter here, where every footstep squishes in two \ninches of mud. The 'firm ground' consists of small mounds of stinking \nmire, located admist two-foot deep trenches of water. Vile methane swamp \ngas hisses forth from subterranean geysers of bubbling muck, and swamp \nmosquitoes buzz angrily around these explosions. Snakes and a few \nspiders are also resident here to breed within the warmth of the \ngeysers. As the many trenches of the river converge into a pool, the \nground suddenly drops into a pit, and no living thing has ever escaped \nfrom these quicksand-like holes. Vegetation is limited to tufts of \nsickly brown grass and decaying weeds. On a nearby hill of sludge, an \nunusal tropical array of flowers are arranged sporadically in a circle. \n",
+         "altitude" : null
+      },
+      "bishop55@bishop" : {
+         "exits" : {
+            "w" : "bishop53",
+            "e" : "bishop49",
+            "n" : "bishop47",
+            "s" : "bishop51"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Bog",
+         "id" : "bishop55",
+         "description" : "\n   The marsh grows much wetter here, where every footstep squishes in two \ninches of mud. The 'firm ground' consists of small mounds of stinking \nmire, located admist two-foot deep trenches of water. Vile methane swamp \ngas hisses forth from subterranean geysers of bubbling muck, and swamp \nmosquitoes buzz angrily around these explosions. Snakes and a few \nspiders are also resident here to breed within the warmth of the \ngeysers. As the many trenches of the river converge into a pool, the \nground suddenly drops into a pit, and no living thing has ever escaped \nfrom these quicksand-like holes. Vegetation is limited to tufts of \nsickly brown grass and decaying weeds. On a nearby hill of sludge, those \ntufts are arranged sporadically in a rhombus. \n",
+         "altitude" : null
+      },
+      "bishop48@bishop" : {
+         "exits" : {
+            "w" : "bishop47",
+            "s" : "bishop49"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Marshlands",
+         "id" : "bishop48",
+         "description" : "\n   Tall reeds and algae are the main forms of vegetation here, the latter \nsurrounding islands built out of the former. Dry land is not always easy \nto find, but neither is the network of river water very deep. The ground \nis remarkably flat and allows no shelter from the cross winds that blow \nin from the east. Crawdads and skitter bugs swim the stretches of dark \nblue between their spawning nests and favorite places to gather food. \nSome parts of the river break off into slowly stirring eddies and pull \nin bits of plant and dirt.\n",
+         "altitude" : null
+      },
+      "bishop46@bishop" : {
+         "exits" : {
+            "n" : "bishop45",
+            "s" : "bishop47"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Muddy Trail",
+         "id" : "bishop46",
+         "description" : "\n   The southern edge of the prairie borders on a wide river going through \nthe plains and marks the boundary between dry fields and marshlands. \nThis section of the trail is a muddy mixture of dirt and clay. \nFootprints and pawprints give evidence of the small cats, rodents, and \nmarsupials who roam this land. \n",
+         "altitude" : null
+      },
+      "bishop10@bishop" : {
+         "exits" : {
+            "e" : "bishop11"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "bishop",
+         "title" : "Circle of Cropped Grass",
+         "id" : "bishop10",
+         "description" : "\n   A nearly perfect circle of cropped grass stands here in a remote area \nof this prairie. Eleven steel chairs stand in a ring around the outer \nedge, and on these chairs are bolted ankle, wrist, and neck shackles. In \nfront of each chair is a solid iron cup stained raspberry red from the \nblood of human sacrifices performed here. There are no people currently \nhere, but small rivers of blood flow from the cups to a block of \nhardened steel in the center of this circle. Eleven piles of bones \nbrittle with age and parched from the elements lay heaped individually, \nwhere the are placed in such a way as to ward off visitors. The blood \ntrails follow up from the sides of this sacrilegious altar and are drunk \nby the open mouths of the sightless skulls. \n",
+         "altitude" : null
+      },
+      "bishop37@bishop" : {
+         "exits" : {
+            "w" : "bishop39",
+            "n" : "bishop38"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Druid Cemetery",
+         "id" : "bishop37",
+         "description" : "\n   A broken and leaf-littered pathway of dried, cracked earth wends its \nway among a maze of crumbling tombstones and moldy ground. Damp moss \nhangs in tatters from bare, rotting, bug-infested tree branches and \nperiodically drops to be swallowed by the fog layer. Few are the musical \ntones generated by crickets when the cackling howls of banshees ride the \nwind. Due to a perpetual cloud of evil black smoke, the cemetery is kept \nin shrouded darkness. Green lightning pass through this cloak in sheets, \nflashing momentarily and letting the dozens of gore-stained poles \nstaggered throughout the graveyard shine in dismal glory. The poles \ncontain the bodies of Korisla monks slain in a decisive war, where each \nvictim has been magically reanimated, impaled once, then folded over \nbackwards and impaled again, forming human shish-ka-bobs. \n",
+         "altitude" : null
+      },
+      "bishop11@bishop" : {
+         "exits" : {
+            "e" : "bishop12",
+            "w" : "bishop10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Horizon Expanse",
+         "id" : "bishop11",
+         "description" : "\n   Long, tall, thin grasses grow everywhere in this prairie, blowing in \nthe cross winds and shedding their pollen to the skies. Crickets chirp \nfrom deep within the grass, forever only to be heard. Among the grasses \nare also various types of grain. The wild herds of oxen and cows which \nroam these plains live in utter bliss with the sheer amount of food \npresent around them. Spread throughout the prairie are patches set aside \nby nature for extremely tall sunflowers. These circles of petals around \na darker core grow in unconcealed delight as they process the natural \nradiation tossed down at them. \n",
+         "altitude" : null
+      },
+      "bishop19@bishop" : {
+         "exits" : {
+            "u" : "bishop18",
+            "s" : "bishop20"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Stocked Cellar",
+         "id" : "bishop19",
+         "description" : "\n   The dry goods of the house seem to manage themselves well in this dark \nshelter. Wooden shelves with metal rivets line the boarded walls and \nstruts in here, supporting the many raw ingredients, salts, and spices \nused by the caretaker. A large oaken door with elaborate cross-braces \nlies open, and light filters in from the upstairs trapdoor. \n",
+         "altitude" : null
+      },
+      "bishop50@bishop" : {
+         "exits" : {
+            "w" : "bishop51",
+            "n" : "bishop49"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Bog",
+         "id" : "bishop50",
+         "description" : "\n   The marsh grows much wetter here, where every footstep squishes in two \ninches of mud. The 'firm ground' consists of small mounds of stinking \nmire, located admist two-foot deep trenches of water. Vile methane swamp \ngas hisses forth from subterranean geysers of bubbling muck, and swamp \nmosquitoes buzz angrily around these explosions. Snakes and a few \nspiders are also resident here to breed within the warmth of the \ngeysers. As the many trenches of the river converge into a pool, the \nground suddenly drops into a pit, and no living thing has ever escaped \nfrom these quicksand-like holes. Vegetation is limited to tufts of \nsickly brown grass and decaying weeds. On a nearby hill of sludge, those \ntufts are arranged sporadically in a rhombus. \n",
+         "altitude" : null
+      },
+      "bishop44@bishop" : {
+         "exits" : {
+            "n" : "bishop43",
+            "s" : "bishop45"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "bishop",
+         "title" : "Horizon Expanse Trail",
+         "id" : "bishop44",
+         "description" : "\n   Long, tall, thin grasses grow everywhere in this prairie, blowing in \nthe cross winds and shedding their pollen to the skies. Crickets chirp \nfrom deep within the grass, forever only to be heard. Among the grasses \nare also various types of grain. The wild herds of oxen and cows which \nroam these plains live in utter bliss with the sheer amount of food \npresent around them. Spread throughout the prairie are patches set aside \nby nature for extremely tall sunflowers. These circles of petals around \na darker core grow in unconcealed delight as they process the natural \nradiation tossed down at them. \n",
+         "altitude" : null
+      },
+      "bishop6@bishop" : {
+         "exits" : {
+            "e" : "bishop8",
+            "w" : "bishop5",
+            "n" : "bishop7",
+            "s" : "bishop7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Vortex",
+         "id" : "bishop6",
+         "description" : "\n   Fierce winds pull at your clothes and hair as the vortex slowly whirls \nyou around in circles. Lines of bright light emanate from various \npoints, streaking past like sun rays or lasers, but none contain enough \npower to be threatening. One exit of this portal is to the west, leading \nto a dark tunnel, and the lines of light squiggle in arrow formations \nvectoring generally east and west. \n",
+         "altitude" : null
+      },
+      "bishop40@bishop" : {
+         "exits" : {
+            "s" : "bishop39"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Middle Crypt",
+         "id" : "bishop40",
+         "description" : "\n   The body of a high druid priest was incarcerated here nearly 500 years \nago. His mummified remains occupy an engraved sarcophagus set atop a \nmarble pedestal in the pit of the crypt. The air is fresh as the crypt \nwas broken open and plundered many years back, but equally fresh rodent \nand snake droppings confirm that there are still visitors here. \n",
+         "altitude" : null
+      },
+      "bishop32@bishop" : {
+         "exits" : {
+            "e" : "bishop33",
+            "w" : "bishop31"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "bishop",
+         "title" : "Horizon Expanse Pathway",
+         "id" : "bishop32",
+         "description" : "\n   Long, tall, thin grasses grow everywhere in this prairie, blowing in \nthe cross winds and shedding their pollen to the skies. Crickets chirp \nfrom deep within the grass, forever only to be heard. Among the grasses \nare also various types of grain. The wild herds of oxen and cows which \nroam these plains live in utter bliss with the sheer amount of food \npresent around them. Spread throughout the prairie are patches set aside \nby nature for extremely tall sunflowers. These circles of petals around\na darker core grow in unconcealed delight as they process the natural \nradiation tossed down at them. The raked roadway continues to the west \nand east. Here the roadway is unkempt, and the eastern skyline is as \nblack as night. \n",
+         "altitude" : null
+      },
+      "bishop41@bishop" : {
+         "exits" : {
+            "e" : "bishop39",
+            "n" : "bishop42",
+            "s" : "bishop34"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Druid Cemetery",
+         "id" : "bishop41",
+         "description" : "\n   A broken and leaf-littered pathway of dried, cracked earth wends its \nway among a maze of crumbling tombstones and moldy ground. Damp moss \nhangs in tatters from bare, rotting, bug-infested tree branches and \nperiodically drops to be swallowed by the fog layer. Few are the musical \ntones generated by crickets when the cackling howls of banshees ride the \nwind. Due to a perpetual cloud of evil black smoke, the cemetery is kept \nin shrouded darkness. Green lightning pass through this cloak in sheets, \nflashing momentarily and letting the dozens of gore-stained poles \nstaggered throughout the graveyard shine in dismal glory. The poles \ncontain the bodies of Korisla monks slain in a decisive war, where each \nvictim has been magically reanimated, impaled once, then folded over \nbackwards and impaled again, forming human shish-ka-bobs. \n",
+         "altitude" : null
+      },
+      "bishop36@bishop" : {
+         "exits" : {
+            "w" : "bishop35"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Cemetery Shop",
+         "id" : "bishop36",
+         "description" : "\n   This ramshackle shed was once the place where the tenders of the dark \ncemetery repaired their caskets, coffins, and tombstones. Other \nartifacts had been brought in to be fixed or detailed, but now lay in \ndiscarded piles of rusting garbage. \n",
+         "altitude" : null
+      },
+      "bishop15@bishop" : {
+         "exits" : {
+            "u" : "bishop16",
+            "n" : "bishop18",
+            "s" : "^door2"
+         },
+         "flags" : [],
+         "zone" : "bishop",
+         "title" : "Front Room",
+         "id" : "bishop15",
+         "description" : "\n  The spirit of 'home sweet home' and nostalgia are ever-present in \nhere. On a brick fireplace mantle lay the small heirlooms of the dirt \nroad's caretaker - a whittled duck, a brass pair of night goggles, an \nengraved necklace, and a leather coat-of-arms. Two rocking chairs, a \nsmall desk, and a well-sanded desk, all made of wood, represent the main \ncomplement of furniture. \n",
+         "altitude" : null
+      },
+      "bishop25@bishop" : {
+         "exits" : {
+            "w" : "bishop24",
+            "e" : "bishop26",
+            "n" : "bishop30",
+            "s" : "bishop28"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Crossways",
+         "id" : "bishop25",
+         "description" : "\n   The two main roads of the garden intersect here. The garden surrounds \neverywhere except to the north, where the monastery place of worship \nsits in a sheltered alcove. \n",
+         "altitude" : null
+      },
+      "bishop27@bishop" : {
+         "exits" : {
+            "w" : "bishop28",
+            "n" : "bishop26"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Gardens",
+         "id" : "bishop27",
+         "description" : "\n   Bugs have feasted on some of the gigantic ferns present in here. \nWinged insects hop from flower to flower, attracted by the petal color and \nscent of nectar. The monks have grown this garden from seedlings and lay \ndown fresh dirt and mulch every spring. Pruning takes place in the fall \nto allow the cycle of growth and rebirth to remain unbroken. Water is \nfed from tens of small, elegantly carved fountains in the shape of bison \nand dolphins. Paths lead in all directions from here, giving access to \nprivate nooks within the leafy garden. Where one of the perimeter walls \nstands, clumps of well-tended ivy provide a sense of background and \ncompletion to the garden as well as a quick means of scaling the wall in \nthe monastery is attacked. \n",
+         "altitude" : null
+      },
+      "bishop54@bishop" : {
+         "exits" : {
+            "e" : "bishop47",
+            "s" : "bishop53"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Marshlands",
+         "id" : "bishop54",
+         "description" : "\n   Tall reeds and algae are the main forms of vegetation here, the latter \nsurrounding islands built out of the former. Dry land is not always easy \nto find, but neither is the network of river water very deep. The ground \nis remarkably flat and allows no shelter from the cross winds that blow \nin from the east. Crawdads and skitter bugs swim the stretches of dark \nblue between their spawning nests and favorite places to gather food. \nSome parts of the river break off into slowly stirring eddies and pull \nin bits of plant and dirt.\n",
+         "altitude" : null
+      },
+      "bishop12@bishop" : {
+         "exits" : {
+            "e" : "bishop21",
+            "w" : "bishop11",
+            "n" : "bishop13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Three-Way Intersection",
+         "id" : "bishop12",
+         "description" : "\n   A wide dirt road leads along two of the cardinal directions. Small \nrocks line the road to prevent unwanted takeovers by the surrounding \ngrassy prairie. It is kept in seemingly good condition, as there are \nfresh rake marks within the road. Dustdevils, footprints, and wagons \ntend to leave the caretaker forever raking. \n",
+         "altitude" : null
+      },
+      "bishop26@bishop" : {
+         "exits" : {
+            "w" : "bishop25",
+            "e" : "bishop31",
+            "s" : "bishop27"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Gardens",
+         "id" : "bishop26",
+         "description" : "\n   Bugs have feasted on some of the gigantic ferns present in here. \nWinged insects hop from flower to flower, attracted by the petal color \nand scent of nectar. The monks have grown this garden from seedlings and \nlay down fresh dirt and mulch every spring. Pruning takes place in the \nfall to allow the cycle of growth and rebirth to remain unbroken. Water \nis fed from tens of small, elegantly carved fountains in the shape of \nbison and dolphins. Paths lead in all directions from here, giving \naccess to private nooks within the leafy garden. Where one of the \nperimeter walls stands, clumps of well-tended ivy provide a sense of \nbackground and completion to the garden as well as a quick means of \nscaling the wall in the monastery is attacked. \n",
+         "altitude" : null
+      },
+      "bishop20@bishop" : {
+         "exits" : {
+            "n" : "bishop19"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Wine Cellar",
+         "id" : "bishop20",
+         "description" : "\n   Vintages of many kinds of spirits, mainly comprised of the popular \nbrands of ale, brandy, and heavy sasprilla. Green, brown, and black \nbottles are laid carefully on the wire racks to avoid breakage and \nconfusion when choosing an ideal drink for a given setting.\n",
+         "altitude" : null
+      },
+      "bishop24@bishop" : {
+         "exits" : {
+            "e" : "bishop25",
+            "w" : "bishop23",
+            "s" : "bishop29"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Gardens",
+         "id" : "bishop24",
+         "description" : "\n   Bugs have feasted on some of the gigantic ferns present in here. \nWinged insects hop from flower to flower, attracted by the petal color \nand scent of nectar. The monks have grown this garden from seedlings and \nlay down fresh dirt and mulch every spring. Pruning takes place in the \nfall to allow the cycle of growth and rebirth to remain unbroken. Water \nis fed from tens of small, elegantly carved fountains in the shape of \nbison and dolphins. Paths lead in all directions from here, giving \naccess to private nooks within the leafy garden. Where one of the \nperimeter walls stands, clumps of well-tended ivy provide a sense of \nbackground and completion to the garden as well as a quick means of \nscaling the wall in the monastery is attacked. \n",
+         "altitude" : null
+      },
+      "bishop14@bishop" : {
+         "exits" : {
+            "n" : "^door1",
+            "s" : "bishop13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Front Porch",
+         "id" : "bishop14",
+         "description" : "\n   A set of stairs lead up to a rickety wooden porch. A wall cover of ivy \ndrapes the supports of the house, and potted plants line the far side, \ntheir leaves sprawled to receive the sunlight. Stained-glass windows \nfill in their squarish panes, and a circle of branded designs encompass \nthe doorway. \n",
+         "altitude" : null
+      },
+      "bishop39@bishop" : {
+         "exits" : {
+            "w" : "bishop41",
+            "e" : "bishop37",
+            "n" : "bishop40",
+            "s" : "bishop35"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Circle of Gravestones",
+         "id" : "bishop39",
+         "description" : "\n   A raised ring of graves is set in a clearing here, perfectly spaced \nfrom each other and having the same length. In the center of this circle \nstands a small plinth made of oozing blood. The flow of this liquid of \nlife is kept going by a dark blue fireball on the top of the plinth, \nwhich shoots out random arcs of green lightning. Surrounding the \ntombstone perimeter of the circles are offering bowls jammed with \nplatinum coins and pearl amulets, their lustrous qualities having long \nsince degraded. \n",
+         "altitude" : null
+      },
+      "bishop1@bishop" : {
+         "exits" : {
+            "e" : "bishop2",
+            "w" : "bottom@quarry"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Tunnel Passage",
+         "id" : "bishop1",
+         "description" : "\n   A hand-carved passage wide enough for three people walking abreast \nruns east and west here. The stony walls are composed of nearly pure limestone,\nwith the few other trace components giving off an eerie blue glow and an\noccasional flash of green lightning as an unnatural source of underground\nelectricity travels through them. Along the floor by these sides, a line\nof spiders moves steadily away from the east exit, where  the ground\nbegins to slope upward. At various spots along the tunnel, a rocky crag\nwill jut out and partially block the passageway like a person with a mild\ndegree of arteriosclerosis. Water from underground springs and pools\ndrains into this place and gradually eats away at the crags. This passage\nis still new, for there are no signs yet of the formation of stalactites\nor stalagmites. \n",
+         "altitude" : null
+      },
+      "bishop13@bishop" : {
+         "exits" : {
+            "n" : "bishop14",
+            "s" : "bishop12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Northern Road",
+         "id" : "bishop13",
+         "description" : "\n   Long, tall, thin grasses grow everywhere in this prairie, blowing in \nthe cross winds and shedding their pollen to the skies. Crickets chirp \nfrom deep within the grass, forever only to be heard. Among the grasses \nare also various types of grain. The wild herds of oxen and cows which \nroam these plains live in utter bliss with the sheer amount of food \npresent around them. Spread throughout the prairie are patches set aside \nby nature for extremely tall sunflowers. These circles of petals around \na darker core grow in unconcealed delight as they process the natural \nradiation tossed down at them. The fine dirt road leads south deeper \ninto the prairie and north to a cottage. \n",
+         "altitude" : null
+      },
+      "bishop21@bishop" : {
+         "exits" : {
+            "e" : "bishop22",
+            "w" : "bishop12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Horizon Expanse Pathway",
+         "id" : "bishop21",
+         "description" : "\n   Long, tall, thin grasses grow everywhere in this prairie, blowing in \nthe cross winds and shedding their pollen to the skies. Crickets chirp \nfrom deep within the grass, forever only to be heard. Among the grasses \nare also various types of grain. The wild herds of oxen and cows which \nroam these plains live in utter bliss with the sheer amount of food \npresent around them. Spread throughout the prairie are patches set aside \nby nature for extremely tall sunflowers. These circles of petals around \na darker core grow in unconcealed delight as they process the natural \nradiation tossed down at them. The raked roadway continues to the west \nand east.\n",
+         "altitude" : null
+      },
+      "bishop8@bishop" : {
+         "exits" : {
+            "w" : "bishop6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Vortex",
+         "id" : "bishop8",
+         "description" : "\n   Fierce winds pull at your clothes and hair as the vortex slowly whirls \nyou around in circles. Lines of bright light emanate from various \npoints, streaking past like sun rays or lasers, but none contain enough \npower to be threatening. Suddenly, the background drops away to reveal \nonly a single, supportive, rotating disc for the vortex travelers. The \nwind also dies out, exposing the full nature of this unnatural emptiness.\n",
+         "altitude" : null
+      },
+      "bishop28@bishop" : {
+         "exits" : {
+            "w" : "bishop29",
+            "e" : "bishop27",
+            "n" : "bishop25",
+            "s" : "bishop43"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Gardens",
+         "id" : "bishop28",
+         "description" : "\n   Bugs have feasted on some of the gigantic ferns present in here. \nWinged insects hop from flower to flower, attracted by the petal color \nand scent of nectar. The monks have grown this garden from seedlings and \nlay down fresh dirt and mulch every spring. Pruning takes place in the \nfall to allow the cycle of growth and rebirth to remain unbroken. Water \nis fed from tens of small, elegantly carved fountains in the shape of \nbison and dolphins. Paths lead in all directions from here, giving \naccess to private nooks within the leafy garden. Where one of the \nperimeter walls stands, clumps of well-tended ivy provide a sense of \nbackground and completion to the garden as well as a quick means of \nscaling the wall in the monastery is attacked. \n",
+         "altitude" : null
+      },
+      "bishop35@bishop" : {
+         "exits" : {
+            "e" : "bishop36",
+            "w" : "bishop34",
+            "n" : "bishop39"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Druid Cemetery",
+         "id" : "bishop35",
+         "description" : "\n   A broken and leaf-littered pathway of dried, cracked earth wends its \nway among a maze of crumbling tombstones and moldy ground. Damp moss \nhangs in tatters from bare, rotting, bug-infested tree branches and \nperiodically drops to be swallowed by the fog layer. Few are the musical \ntones generated by crickets when the cackling howls of banshees ride the \nwind. Due to a perpetual cloud of evil black smoke, the cemetery is kept \nin shrouded darkness. Green lightning pass through this cloak in sheets, \nflashing momentarily and letting the dozens of gore-stained poles \nstaggered throughout the graveyard shine in dismal glory. The poles \ncontain the bodies of Korisla monks slain in a decisive war, where each \nvictim has been magically reanimated, impaled once, then folded over \nbackwards and impaled again, forming human shish-ka-bobs. \n",
+         "altitude" : null
+      },
+      "bishop9@bishop" : {
+         "exits" : {},
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Bird's-Eye View",
+         "id" : "bishop9",
+         "description" : "\n   Clouds hang motionless in the bright blue sky which surrounds the \ntravelers disc. Also present among the softly-hued atmosphere are dark \ngreen organic bodies from which long tentacles droop. When a native bird \nor stray air current containing particles of plant matter brushes \nagainst these tendrils, the agile limbs waste no time in capturing and \nparalyzing. The bodies float on the air currents and vary enough in \naltitude to allow safe passage down to a flat land scape.\n",
+         "altitude" : null
+      },
+      "bishop53@bishop" : {
+         "exits" : {
+            "e" : "bishop55",
+            "n" : "bishop54",
+            "s" : "bishop52"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Bog",
+         "id" : "bishop53",
+         "description" : "\n   The marsh grows much wetter here, where every footstep squishes in two \ninches of mud. The 'firm ground' consists of small mounds of stinking \nmire, located admist two-foot deep trenches of water. Vile methane swamp \ngas hisses forth from subterranean geysers of bubbling muck, and swamp \nmosquitoes buzz angrily around these explosions. Snakes and a few \nspiders are also resident here to breed within the warmth of the \ngeysers. As the many trenches of the river converge into a pool, the \nground suddenly drops into a pit, and no living thing has ever escaped \nfrom these quicksand-like holes. Vegetation is limited to tufts of \nsickly brown grass and decaying weeds. On a nearby hill of sludge, those \ntufts are arranged sporadically in a rhombus. \n",
+         "altitude" : null
+      },
+      "bishop31@bishop" : {
+         "exits" : {
+            "e" : "bishop32",
+            "w" : "bishop26"
+         },
+         "flags" : [
+            "Outdoors",
+            "Peaceful"
+         ],
+         "zone" : "bishop",
+         "title" : "Monastery Gates",
+         "id" : "bishop31",
+         "description" : "\n   The eastern archway of the Korisla Monastery has a two-headed sea \nserpent with a glowing cross in its mouth perched between the twin \npairs of brick turrets. Long wicker torches freshly dipped in pitch and \ndried are set ready to provide an eternal firelight when the last traces \nof evil are purged from the land. Perimeter guards from the more \nwar-chivalrous caste of the monastery are stationed in each turret to \nkeep the order and tranquillity both within and without. Beyond the \ngatehouse is a garden on the inside and a plethora of open acreage on \nthe outside. \n",
+         "altitude" : null
+      },
+      "bishop5@bishop" : {
+         "exits" : {
+            "e" : "bishop6",
+            "d" : "bishop4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Tunnel Slope",
+         "id" : "bishop5",
+         "description" : " \n   The ground slopes sharply downward here, pouring the running water \nalmost in the style of a waterfall. The lightning on the walls flickers \nmadly as some of it is routed through the trickling rivers. Spots of \nunderground moss and lichen grow here, striped with earth tones and \nglowing weakly whenever a pulse of electricity reaches them. To the \ndownside, the tunnel is virtually black despite the vegetation and \nlightning. From the east a swirling vortex sucks remote, trace amounts \nof dust into its core and tugs at the lichen. \n",
+         "altitude" : null
+      },
+      "bishop49@bishop" : {
+         "exits" : {
+            "w" : "bishop55",
+            "n" : "bishop48",
+            "s" : "bishop50"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Bog",
+         "id" : "bishop49",
+         "description" : "\n   The marsh grows much wetter here, where every footstep squishes in two \ninches of mud. The 'firm ground' consists of small mounds of stinking \nmire, located admist two-foot deep trenches of water. Vile methane swamp \ngas hisses forth from subterranean geysers of bubbling muck, and swamp \nmosquitoes buzz angrily around these explosions. Snakes and a few \nspiders are also resident here to breed within the warmth of the \ngeysers. As the many trenches of the river converge into a pool, the \nground suddenly drops into a pit, and no living thing has ever escaped \nfrom these quicksand-like holes. Vegetation is limited to tufts of \nsickly brown grass and decaying weeds. On a nearby hill of sludge, those \ntufts are arranged sporadically in a rhombus. \n",
+         "altitude" : null
+      },
+      "bishop17@bishop" : {
+         "exits" : {
+            "s" : "bishop16"
+         },
+         "flags" : [],
+         "zone" : "bishop",
+         "title" : "Attic Space",
+         "id" : "bishop17",
+         "description" : "\n   Not many shafts of sunlight penetrate the only window in this \njunk-filled room - a few, small slats in a wooden circle. A footlocker \nof an approximate 45 years of age lies open to reveal old military \ndispatches, letters from long-gone people and their sweethearts, and \ncollectibles from faraway nations. Quilted pillow and embroidered linens \nare wrapped in protective tarps and stacked neatly to one side of the \nwindow. The air is slightly musty, but surprisingly dust free, as if the \nroom was swept on a daily basis.\n",
+         "altitude" : null
+      },
+      "bishop3@bishop" : {
+         "exits" : {
+            "w" : "bishop2",
+            "u" : "bishop4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Tunnel Slope",
+         "id" : "bishop3",
+         "description" : "\n   The ground here is more treacherous on a hillside as it is now. Water \nflows in small streams at high speed down the slope, washing away the \nloose gravel and depositing calcium compounds. As a result, the ground \nloses considerable traction, and movement can only be made safe by a \ntricky dance of zigzagging and sidestepping. \n",
+         "altitude" : null
+      },
+      "bishop38@bishop" : {
+         "exits" : {
+            "s" : "bishop37"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "bishop",
+         "title" : "Eastern Crypt",
+         "id" : "bishop38",
+         "description" : "\n   The body of a high druid priest was incarcerated here nearly 500 years \nago. His mummified remains occupy an engraved sarcophagus set atop a \nmarble pedestal in the pit of the crypt. The air is fresh as the crypt \nwas broken open and plundered many years back, but equally fresh rodent \nand snake droppings confirm that there are still visitors here. \n",
+         "altitude" : null
+      },
+      "bishop22@bishop" : {
+         "exits" : {
+            "e" : "bishop23",
+            "w" : "bishop21"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "bishop",
+         "title" : "Horizon Expanse Pathway",
+         "id" : "bishop22",
+         "description" : "\n   Long, tall, thin grasses grow everywhere in this prairie, blowing in \nthe cross winds and shedding their pollen to the skies. Crickets chirp \nfrom deep within the grass, forever only to be heard. Among the grasses \nare also various types of grain. The wild herds of oxen and cows which \nroam these plains live in utter bliss with the sheer amount of food \npresent around them. Spread throughout the prairie are patches set aside \nby nature for extremely tall sunflowers. These circles of petals around \na darker core grow in unconcealed delight as they process the natural \nradiation tossed down at them. The raked roadway continues to the west \nand east.\n",
+         "altitude" : null
+      },
+      "bishop29@bishop" : {
+         "exits" : {
+            "e" : "bishop28",
+            "n" : "bishop24"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "bishop",
+         "title" : "Korisla Gardens",
+         "id" : "bishop29",
+         "description" : "\n   Bugs have feasted on some of the gigantic ferns present in here. \nWinged insects hop from flower to flower, attracted by the petal color \nand scent of nectar. The monks have grown this garden from seedlings and \nlay down fresh dirt and mulch every spring. Pruning takes place in the \nfall to allow the cycle of growth and rebirth to remain unbroken. Water \nis fed from tens of small, elegantly carved fountains in the shape of \nbison and dolphins. Paths lead in all directions from here, giving\naccess to private nooks within the leafy garden. Where one of the\nperimeter walls stands, clumps of well-tended icy provide a sense of\nbackground and completion to the garden as well as a quick means of\nscaling the wall if the monastery is attacked.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "body@bishop" : {
+         "damage" : "15",
+         "location" : "bishop56",
+         "armor" : "0",
+         "name" : "body",
+         "description" : "\nThe possessed Archbishop waves his ankhed staff in preparation to \ndecapitate you.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Archbishop",
+         "aggression" : "100"
+      },
+      "corpse2@bishop" : {
+         "eflags" : [
+            "Mute"
+         ],
+         "damage" : "13",
+         "location" : "bishop40",
+         "armor" : "0",
+         "name" : "corpse2",
+         "description" : "A corpse skulks in the shadows.",
+         "strength" : "180",
+         "speed" : "0",
+         "aggression" : "50",
+         "pname" : "Corpse",
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "corpse3@bishop" : {
+         "damage" : "5",
+         "location" : "bishop38",
+         "armor" : "0",
+         "name" : "corpse3",
+         "description" : "The smell of a corpse lingers in the air.",
+         "strength" : "300",
+         "speed" : "30",
+         "pname" : "Corpse",
+         "aggression" : "80",
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "mosquito@bishop" : {
+         "damage" : "7",
+         "location" : "bishop50",
+         "armor" : "0",
+         "name" : "mosquito",
+         "description" : "\nA hovering mosquito divebombs at a pulsing artery.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "70",
+         "speed" : "50",
+         "pname" : "Marsh Mosquito",
+         "aggression" : "90"
+      },
+      "corpse1@bishop" : {
+         "damage" : "9",
+         "location" : "bishop42",
+         "armor" : "2",
+         "name" : "corpse1",
+         "description" : "A corpse launches itself at you!",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Corpse",
+         "aggression" : "100",
+         "mflags" : [
+            "Nocorpse"
+         ]
+      },
+      "spirit@bishop" : {
+         "damage" : "15",
+         "location" : "bishop56",
+         "armor" : "5",
+         "name" : "spirit",
+         "examine" : "\nOne mistake with me and you will forfeit your immortal soul!",
+         "description" : "\nA damned soul draws small bits of debris into its whirling core.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "750",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The Damned",
+         "mflags" : [
+            "BarSouth",
+            "NoCorpse"
+         ]
+      },
+      "monk2@bishop" : {
+         "location" : "bishop31",
+         "name" : "monk2",
+         "description" : "\nOne of the armor-clad brothers, Grizzdel, of the monastery is here.",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "Grizzdel",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarWest"
+         ]
+      },
+      "crabapple@bishop" : {
+         "damage" : "12",
+         "location" : "bishop30",
+         "armor" : "0",
+         "name" : "crabapple",
+         "description" : "\nThe head of domestic affairs, Crabapple, drinks to his demise.",
+         "strength" : "400",
+         "speed" : "25",
+         "pname" : "Crabapple",
+         "aggression" : "0"
+      },
+      "vampire@bishop" : {
+         "damage" : "20",
+         "location" : "bishop40",
+         "armor" : "0",
+         "name" : "vampire",
+         "examine" : "\nThis particular member of the undead struts around silently, proudly, and\ngracefully. His dark black hair is pulled back in an elegant pony tail,\nand mother-of-pearl cufflings are ruffled perfectly on his shirt sleeves.\nA crisp boutinerre rises from the left lapel of his immaculet jacket.\n\nA well-cooked stake could make a nice tartare out of this guy.",
+         "description" : "\nA vampire dressed to the hilt ponders where to get his next meal.",
+         "sflags" : [
+            "Vampire"
+         ],
+         "strength" : "700",
+         "speed" : "15",
+         "aggression" : "0",
+         "pname" : "Stately Vampire",
+         "mflags" : [
+            "NoCorpse",
+            "Cross"
+         ]
+      },
+      "ghoul@bishop" : {
+         "damage" : "15",
+         "location" : "bishop36",
+         "armor" : "5",
+         "name" : "ghoul",
+         "description" : "\nThe master mechanic, Handyghoul, mutters something about its stolen tool set.",
+         "strength" : "300",
+         "speed" : "15",
+         "aggression" : "0",
+         "pname" : "Handyghoul",
+         "pflags" : [
+            "NoSteal"
+         ],
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "monk3@bishop" : {
+         "location" : "bishop43",
+         "name" : "monk3",
+         "description" : "\nOne of the armor-clad brothers, Illkoy, of the monastery is here.",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "Illkoy",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "fatrat@bishop" : {
+         "damage" : "8",
+         "location" : "bishop10",
+         "armor" : "0",
+         "name" : "fatrat",
+         "description" : "\nFatrat squeaks in delight as he waddles through the plains.",
+         "strength" : "100",
+         "speed" : "25",
+         "pname" : "Fatrat",
+         "aggression" : "20"
+      },
+      "fred@bishop" : {
+         "damage" : "12",
+         "location" : "bishop15",
+         "armor" : "5",
+         "name" : "fred",
+         "description" : "\nFred is the head honcho of this house, and he is ordering you out!",
+         "strength" : "400",
+         "speed" : "0",
+         "pname" : "Fred",
+         "aggression" : "0",
+         "mflags" : [
+            "BarUp",
+            "BarNorth"
+         ]
+      },
+      "packrat@bishop" : {
+         "damage" : "10",
+         "location" : "bishop46",
+         "armor" : "0",
+         "name" : "packrat",
+         "description" : "\nA hulking packrat of the marshland is here.",
+         "strength" : "250",
+         "speed" : "20",
+         "pname" : "Packrat",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal"
+         ]
+      },
+      "monk1@bishop" : {
+         "location" : "bishop23",
+         "name" : "monk1",
+         "description" : "\nOne of the armor-clad brothers, Jon, of the monastery is here.",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "Jon",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "gator@bishop" : {
+         "damage" : "18",
+         "location" : "bishop54",
+         "armor" : "9",
+         "name" : "gator",
+         "description" : "\nThere is a red-scaled gator walking about.",
+         "strength" : "350",
+         "speed" : "10",
+         "pname" : "Gator",
+         "aggression" : "0"
+      }
+   }
+}

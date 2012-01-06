@@ -1,0 +1,2282 @@
+{
+   "obj" : {
+      "outerbrick@enchanter" : {
+         "desc[1]" : "A large brick in the wall seems loose.",
+         "location" : "IN_ROOM:enchanter58",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "outerbrick",
+         "examine" : "It's a crumbling stone brick.",
+         "linked" : "innerbrick",
+         "state" : "1",
+         "pname" : "brick",
+         "maxstate" : "1",
+         "desc[0]" : "The brick has been pushed through, revealing a tunnel leading west."
+      },
+      "new_map@enchanter" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "new_map",
+         "examine" : "\n         G\n        / \\\n     A H   F\n     |      \\\n     B---C   E\n      \\ / \\\n       D   P\n\nFrobozz Magic Map Company (c)",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "map",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "desc[0]" : "There's an old parchment map lying here."
+      },
+      "door1@enchanter" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:enchanter25",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door1",
+         "examine" : "Just an ordinary wooden door.",
+         "linked" : "door2",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open, allowing a glimpse of treasure beyond it."
+      },
+      "cutlery@enchanter" : {
+         "desc[1]" : "There's a set of shiny silver cutlery on the table.",
+         "location" : "IN_ROOM:enchanter53",
+         "oflags" : [
+            "Getflips"
+         ],
+         "name" : "cutlery",
+         "examine" : "They look valuable.  It's a wonder Krill hasn't stolen them.",
+         "state" : "1",
+         "size" : "5",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "There's a set of shiny silver cutlery here."
+      },
+      "candle@enchanter" : {
+         "location" : "IN_CONTAINER:niche",
+         "oflags" : [
+            "Lit",
+            "Extinguish"
+         ],
+         "name" : "candle",
+         "examine" : "It's an inky black candle.",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "There's an inky black candle here."
+      },
+      "chart@enchanter" : {
+         "location" : "IN_CONTAINER:niche",
+         "oflags" : "{ }",
+         "name" : "chart",
+         "examine" : "\nIt shows you what you have to erase and draw on the map to trap the Presence\nand get to Translucent Room P.",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "There's a parchment chart here."
+      },
+      "gate2@enchanter" : {
+         "location" : "IN_ROOM:enchanter21",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "gate2",
+         "examine" : "It's an enormous castle gate.  It's held open forever by a magic spell.",
+         "linked" : "gate1",
+         "state" : "1",
+         "pname" : "gate",
+         "maxstate" : "1"
+      },
+      "spoon@enchanter" : {
+         "damage" : "5",
+         "location" : "IN_ROOM:enchanter58",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "spoon",
+         "examine" : "It's been worn down, and is rather sharp now.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "50",
+         "desc[0]" : "There's a bent, worn silver spoon here."
+      },
+      "door7@enchanter" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:enchanter70",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door7",
+         "examine" : "It's a solid oak door.",
+         "linked" : "door8",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "globe@enchanter" : {
+         "location" : "IN_ROOM:enchanter35",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "globe",
+         "examine" : "\nIt's a magic globe.  It shows the world as we know it, with a large red area\nshowing the lands that Krill has conquered.  You can see that the globe\nkeeps current with real time, for along parts of the edge of the red zone,\nyou can see minute flashes of light showing skirmishes that Krill is\nwinning.  You are alarmed to see that Krill's lands are within striking\ndistance of your home."
+      },
+      "dungeon_map@enchanter" : {
+         "location" : "IN_CONTAINER:openegg",
+         "oflags" : "{ }",
+         "name" : "dungeon_map",
+         "examine" : "\n         G\n        / \\\n     A H   F\n     |      \\\n     B---C   E\n      \\ /\n       D   P\n\nFrobozz Magic Map Company (c)",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "map",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "desc[0]" : "\nThere's an old parchment map lying here."
+      },
+      "closedegg@enchanter" : {
+         "location" : "IN_ROOM:enchanter26",
+         "oflags" : "{ }",
+         "name" : "closedegg",
+         "examine" : "\nIt's the most beautiful treasure you've ever seen.  It's a mother-of-pearl\negg, with  a delicate gold clasp.  You  can't seem to open the clasp, it's\nsomehow connected to a  silver crank attached  to the egg.  There's also a\nlapis-lazuli  lever, a ruby button, a polished agate  slide, and a diamond\nswitch on the egg.  You scratch  your head in confusion as  you ponder the\negg.",
+         "size" : "10",
+         "state" : "1",
+         "pname" : "egg",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "There's a jewelled egg here."
+      },
+      "water@enchanter" : {
+         "location" : "IN_ROOM:enchanter9",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stream",
+         "name" : "water",
+         "examine" : "\nUpon closer examination, you see that the water is just an illusion.  Really,\nthere's nothing there.  Bummer.",
+         "state" : "0",
+         "pname" : "water",
+         "maxstate" : "0"
+      },
+      "gate1@enchanter" : {
+         "location" : "IN_ROOM:enchanter20",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "gate1",
+         "examine" : "It's an enormous castle gate.  It seems to be magically closed and locked.",
+         "linked" : "gate2",
+         "state" : "1",
+         "pname" : "gate",
+         "maxstate" : "1"
+      },
+      "dungeonkey@enchanter" : {
+         "location" : "IN_ROOM:enchanter33",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "dungeonkey",
+         "examine" : "It was sat on by a bullfrog.  Ewww!",
+         "size" : "3",
+         "state" : "0",
+         "weight" : "3",
+         "pname" : "dungeonkey",
+         "maxstate" : "0",
+         "bvalue" : "30",
+         "desc[0]" : "There's a rather slimy key here."
+      },
+      "cup@enchanter" : {
+         "location" : "IN_ROOM:enchanter26",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "cup",
+         "examine" : "As you try to touch it, your hand passes through it!",
+         "state" : "0",
+         "pname" : "cup",
+         "maxstate" : "0",
+         "desc[0]" : "A jewelled cup catches rays of sun and reflects them around the room."
+      },
+      "cloth@enchanter" : {
+         "desc[1]" : "There's a beautiful silk tablecloth on one of the tables.",
+         "location" : "IN_ROOM:enchanter53",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "silk",
+         "name" : "cloth",
+         "examine" : "It's a gorgeous red silk tablecloth.",
+         "state" : "1",
+         "size" : "10",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "There's a beautiful silk tablecloth here."
+      },
+      "door8@enchanter" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:enchanter71",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door8",
+         "examine" : "It's a solid oak door.",
+         "linked" : "door7",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "kulcad_scroll@enchanter" : {
+         "desc[1]" : "The turtle managed to drop the scroll in this room before getting squashed\nby the hammer.  Poor, brave turtle...",
+         "location" : "IN_ROOM:enchanter51",
+         "armor" : "3",
+         "oflags" : "{ }",
+         "altname" : "tattered",
+         "name" : "kulcad_scroll",
+         "examine" : "\nThe scroll is titled 'Kulcad'.  In ancient Zorkian script, it reads: 'Undoes\npowerful magic.  Use by saying: Kulcad'  You seem to remember hearing\nsomewhere that Zorkian spells can only be cast three times.",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "5",
+         "pname" : "scroll",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "There's a tattered scroll here."
+      },
+      "rezrov_scroll@enchanter" : {
+         "desc[1]" : "\nThe crone says, 'Well, you've finally come for help.  I've been waiting...\nHere.  Take this.  And don't come back!'  She holds out a slightly crumpled\nscroll, and beckons you to take it.",
+         "location" : "IN_ROOM:enchanter17",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "armor" : "3",
+         "altname" : "Crumpled",
+         "name" : "rezrov_scroll",
+         "examine" : "\nThe scroll is titled 'Rezrov'.  In ancient Zorkian script, it reads: 'Opens\nmagically locked items.  Use by saying: `rezrov <whatever>`'  You seem to\nremember hearing somewhere that Zorkian spells can only be cast three times.",
+         "size" : "5",
+         "state" : "1",
+         "pname" : "scroll",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A slightly crumpled scroll has been dropped here."
+      },
+      "bread@enchanter" : {
+         "desc[1]" : "There is a freshly baked loaf of bread inside the oven.",
+         "location" : "IN_CONTAINER:oven",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "food",
+         "name" : "bread",
+         "examine" : "\nThe smell of this fresh loaf of bread warms your heart.  Hope it's not poisoned.",
+         "state" : "1",
+         "pname" : "bread",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "Somebody has dropped a nice loaf of bread here.  Better get it before the\nanimals do."
+      },
+      "door6@enchanter" : {
+         "desc[1]" : "The cell door is closed.",
+         "location" : "IN_ROOM:enchanter57",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "Noget"
+         ],
+         "name" : "door6",
+         "examine" : "It's a solid steel cell door, with a barred window.",
+         "desc[2]" : "The cell door is locked.",
+         "linked" : "door5",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The cell door is open."
+      },
+      "pencil@enchanter" : {
+         "desc[1]" : "Lying on the table beside the empty frame is a short stubby pencil.",
+         "location" : "IN_ROOM:enchanter35",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "pencil",
+         "examine" : "There's not much left of it.  It's from the Frobozz Magic Pencil Company.",
+         "size" : "5",
+         "state" : "1",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "There's a pencil here."
+      },
+      "sack@enchanter" : {
+         "desc[1]" : "There's a small, closed sack here.",
+         "location" : "IN_ROOM:enchanter76",
+         "oflags" : [
+            "Container",
+            "Openable"
+         ],
+         "name" : "sack",
+         "examine" : "It sure looks small...",
+         "state" : "1",
+         "size" : "70",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "There's a tiny sack here."
+      },
+      "bedpost@enchanter" : {
+         "location" : "IN_ROOM:enchanter71",
+         "oflags" : [
+            "NoGet",
+            "Destroyed",
+            "Container"
+         ],
+         "altname" : "hole",
+         "name" : "bedpost",
+         "examine" : "It looks like there might be something in it.",
+         "state" : "0",
+         "maxstate" : "0",
+         "desc[0]" : "You see a hole in the bedpost.  You didn't see it until you dreamed about it."
+      },
+      "openegg@enchanter" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Destroyed",
+            "Container"
+         ],
+         "name" : "openegg",
+         "examine" : "\nThe egg seems to have been opened by magic.  You gaze in wonder at the\ncolorful reflections in the egg's opening mechanisms.  The Gods will love\nyou for this one...",
+         "size" : "10",
+         "state" : "0",
+         "pname" : "egg",
+         "weight" : "10",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "There's an opened jewelled egg here just waiting to be picked up."
+      },
+      "second_sign@enchanter" : {
+         "location" : "IN_ROOM:enchanter2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "second_sign",
+         "examine" : "Maybe it's part of a series... this one reads, 'Burma'."
+      },
+      "vaxum_scroll@enchanter" : {
+         "desc[1]" : "There's a scroll here, sweaty from the Statue's grip.",
+         "location" : "CARRIED_BY:Statue",
+         "armor" : "3",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "sweaty",
+         "name" : "vaxum_scroll",
+         "examine" : "\nThe scroll is titled 'Vaxum'.  In ancient Zorkian script, it reads:\n'Befriends somebody.  Use by saying: Vaxum <somebody>'  You seem to remember\nhearing somewhere that Zorkian spells can only be cast three times.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "scroll",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "There's a sweaty scroll here."
+      },
+      "bed@enchanter" : {
+         "location" : "IN_ROOM:enchanter71",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bed",
+         "examine" : "It looks really comfortable..."
+      },
+      "turtle_food@enchanter" : {
+         "location" : "IN_CONTAINER:bedpost",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "turtle_food",
+         "examine" : "It looks disgusting... but it might actually taste good.",
+         "size" : "5",
+         "pname" : "turtlechow",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "There's a box of Frobozz Magic TurtleChow here."
+      },
+      "scratches@enchanter" : {
+         "location" : "IN_ROOM:enchanter48",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "marks",
+         "name" : "scratches",
+         "examine" : "There are claw marks in the stone walls."
+      },
+      "marker@enchanter" : {
+         "location" : "IN_ROOM:enchanter9",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stone",
+         "name" : "marker",
+         "examine" : "\nIt reads, 'This zone was shamelessly cloned from Infocom's game, Enchanter.  If\nyou enjoy this zone, please don't tell anybody about it.  Thanks.. -Jonix.'",
+         "state" : "0",
+         "pname" : "marker",
+         "maxstate" : "0"
+      },
+      "door4@enchanter" : {
+         "location" : "IN_ROOM:enchanter35",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door4",
+         "examine" : "It's a sturdy wooden door.",
+         "linked" : "door3",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1"
+      },
+      "deadturtle@enchanter" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "pname" : "turtle",
+         "name" : "deadturtle",
+         "examine" : "Yup... it's dead, alright.",
+         "desc[0]" : "There's a dead turtle here, his shell crushed by a giant hammer."
+      },
+      "box@enchanter" : {
+         "location" : "IN_ROOM:enchanter26",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "box",
+         "examine" : "As you try to touch it, your hand passes through it!",
+         "state" : "0",
+         "pname" : "box",
+         "maxstate" : "0",
+         "desc[0]" : "There's a jewelled music box here."
+      },
+      "gate3@enchanter" : {
+         "desc[1]" : "The gate is rusted shut.",
+         "location" : "IN_ROOM:enchanter31",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "gate3",
+         "examine" : "Maybe you can use magic...",
+         "linked" : "gate4",
+         "state" : "1",
+         "pname" : "gate",
+         "maxstate" : "1",
+         "desc[0]" : "The gate is open."
+      },
+      "dwarvensword@enchanter" : {
+         "damage" : "30",
+         "location" : "IN_CONTAINER:sack",
+         "armor" : "15",
+         "oflags" : [
+            "Weapon",
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "sword",
+         "name" : "DwarvenSword",
+         "examine" : "The blade is wrought of the finest dwarven steel.  This is the Legendary\nSword of Zork.",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "600",
+         "desc[0]" : "The True Dwarven Sword of Zork is here.",
+         "aflags" : [
+            "Hands"
+         ]
+      },
+      "bomb@enchanter" : {
+         "location" : "IN_ROOM:camelot72@camelot",
+         "oflags" : [
+            "Noget",
+            "Destroyed"
+         ],
+         "name" : "bomb",
+         "desc[0]" : "\nA massive crater can be seen where a mountain used to be as if that were all\ndestroyed by a massive bomb.  A god-made force field kept it contained here.\nThe road east has been blocked off with barricades."
+      },
+      "gondar_scroll@enchanter" : {
+         "desc[1]" : "Partly hidden under some gravel is a stained scroll.",
+         "location" : "IN_ROOM:enchanter58",
+         "armor" : "3",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "stained",
+         "name" : "gondar_scroll",
+         "examine" : "\nThe scroll is titled 'Gondar'.  In ancient Zorkian script, it reads:\n'Splashes somebody with water.  Use by saying: Gondar <somebody>'  You seem\nto remember hearing somewhere that Zorkian spells can only be cast three\ntimes.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "scroll",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "There's a stained scroll here."
+      },
+      "gate4@enchanter" : {
+         "location" : "IN_ROOM:enchanter32",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "gate4",
+         "examine" : "It's a rusty iron gate.",
+         "linked" : "gate3",
+         "state" : "1",
+         "pname" : "gate",
+         "maxstate" : "1",
+         "desc[0]" : "The gate is held open forever by a spell."
+      },
+      "innerbrick@enchanter" : {
+         "desc[1]" : "A large brick in the wall seems loose.",
+         "location" : "IN_ROOM:enchanter57",
+         "oflags" : [
+            "Pushable",
+            "Noget"
+         ],
+         "name" : "innerbrick",
+         "examine" : "It's a crumbling stone brick.",
+         "linked" : "outerbrick",
+         "state" : "1",
+         "pname" : "brick",
+         "maxstate" : "1",
+         "desc[0]" : "The brick has been pushed through, revealing a tunnel leading east."
+      },
+      "bench@enchanter" : {
+         "location" : "IN_ROOM:enchanter6",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "benches",
+         "name" : "bench",
+         "examine" : "The bench is strangely burned at one end.  It has been knocked over.",
+         "maxstate" : "0",
+         "state" : "0"
+      },
+      "oven@enchanter" : {
+         "desc[1]" : "The oven is closed.",
+         "location" : "IN_ROOM:enchanter6",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "NoGet"
+         ],
+         "name" : "oven",
+         "examine" : "\nThis is an ancient, gas-powered oven.  The gas has long since been turned off,\nthough.  It's a bit rusty, but you still might be able to open it.",
+         "state" : "1",
+         "pname" : "oven",
+         "maxstate" : "1",
+         "desc[0]" : "The oven is open."
+      },
+      "door3@enchanter" : {
+         "location" : "IN_ROOM:enchanter34",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door3",
+         "examine" : "It's a plain oak door with a rather remarkable ornament on it.",
+         "linked" : "door4",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1"
+      },
+      "guncho_scroll@enchanter" : {
+         "location" : "IN_ROOM:enchanter67",
+         "armor" : "3",
+         "oflags" : "{ }",
+         "altname" : "black",
+         "name" : "guncho_scroll",
+         "examine" : "\nThe scroll is titled 'Guncho'.  In ancient Zorkian script, it reads:\n'Banishes somebody forever.  Use by saying: Guncho <somebody>'  You seem\nto remember hearing somewhere that Zorkian spells can only be cast three\ntimes.",
+         "size" : "5",
+         "pname" : "scroll",
+         "weight" : "5",
+         "bvalue" : "200",
+         "desc[0]" : "There's a black scroll here, exuding incredible power."
+      },
+      "pebbles@enchanter" : {
+         "location" : "IN_ROOM:enchanter23",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "rocks",
+         "name" : "pebbles",
+         "examine" : "They used to be part of the castle... now they make a nice crunching sound as\nyou walk over them.",
+         "state" : "0",
+         "pname" : "pebbles",
+         "maxstate" : "0"
+      },
+      "lantern@enchanter" : {
+         "desc[1]" : "Hidden behind the bench, you can see an old battered lantern.",
+         "location" : "IN_ROOM:enchanter6",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Lit",
+            "GetFlips"
+         ],
+         "altname" : "lamp",
+         "name" : "lantern",
+         "examine" : "The lantern looks strangely familiar...",
+         "state" : "1",
+         "pname" : "lantern",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "There is a battered lantern here."
+      },
+      "painting@enchanter" : {
+         "location" : "IN_ROOM:enchanter54",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "painting",
+         "examine" : "There's a soft glow coming from behind the painting.",
+         "maxstate" : "1",
+         "desc[0]" : "The painting has been pushed aside, revealing a small niche.",
+         "state" : "1"
+      },
+      "niche@enchanter" : {
+         "location" : "IN_ROOM:enchanter54",
+         "oflags" : [
+            "NoGet",
+            "Destroyed",
+            "Container"
+         ],
+         "name" : "niche",
+         "examine" : "It's a shallow niche, perfect for holding candles and charts.",
+         "maxstate" : "0",
+         "state" : "0"
+      },
+      "third_sign@enchanter" : {
+         "location" : "IN_ROOM:enchanter3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "third_sign",
+         "examine" : "Yep... this one says, 'Shave.'"
+      },
+      "first_sign@enchanter" : {
+         "location" : "IN_ROOM:enchanter1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "first_sign",
+         "examine" : "It seems strangely familiar.  It reads simply, 'Use'."
+      },
+      "door5@enchanter" : {
+         "desc[1]" : "The cell door is closed.",
+         "location" : "IN_ROOM:enchanter56",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "Noget"
+         ],
+         "name" : "door5",
+         "examine" : "It's a solid steel cell door, with a barred window.",
+         "desc[2]" : "The cell door is locked.",
+         "linked" : "door6",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The cell door is open."
+      },
+      "door2@enchanter" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:enchanter26",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "door2",
+         "examine" : "Just an ordinary wooden door.",
+         "linked" : "door1",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      }
+   },
+   "loc" : {
+      "enchanter40@enchanter" : {
+         "exits" : {
+            "u" : "enchanter38",
+            "d" : "enchanter40"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Going down...",
+         "id" : "enchanter40",
+         "description" : "\n   You go down... and down... and down... and down... Are you getting\nanywhere?\n",
+         "altitude" : null
+      },
+      "enchanter79@enchanter" : {
+         "exits" : {
+            "e" : "enchanter82",
+            "ne" : "enchanter80",
+            "n" : "enchanter77"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter79",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the northeast is a large\ntemple.  You can hear a low chanting from the temple.\n",
+         "altitude" : null
+      },
+      "enchanter88@enchanter" : {
+         "exits" : {
+            "w" : "enchanter85",
+            "n" : "enchanter87"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter88",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the northwest is a large\ntemple.  You can hear a low chanting from the temple.\n",
+         "altitude" : null
+      },
+      "enchanter67@enchanter" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Translucent Room 'P'",
+         "id" : "enchanter67",
+         "description" : "\n   You're an a room with not-quite-opaque cream colored walls.  Behind the\nwalls you can see slow, fluid movement, as if the rock was alive.  The room\nshows signs of an evil presence that was trapped here for millenia.  You can\nstill feel it's black residue brushing against your soul.  You can't wait to\nget out of here.\n",
+         "altitude" : null
+      },
+      "enchanter65@enchanter" : {
+         "exits" : {
+            "se" : "enchanter63",
+            "sw" : "enchanter66"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Translucent Room",
+         "id" : "enchanter65",
+         "description" : "\n   You're an a room with not-quite-opaque cream colored walls.  Behind the\nwalls you can see slow, fluid movement, as if the rock was alive.\n",
+         "altitude" : null
+      },
+      "enchanter10@enchanter" : {
+         "exits" : {
+            "n" : "enchanter7",
+            "u" : "enchanter11",
+            "d" : "enchanter7",
+            "s" : "enchanter11"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "The Foothills",
+         "id" : "enchanter10",
+         "description" : "\n   You are at the edge of the forested foothills of Signal Mountain.  The trail\ncontinues south.\n",
+         "altitude" : null
+      },
+      "enchanter78@enchanter" : {
+         "exits" : {
+            "e" : "enchanter80",
+            "se" : "enchanter81",
+            "s" : "enchanter77"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter78",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the southeast is a large\ntemple.  You can hear a low chanting from the temple.\n",
+         "altitude" : null
+      },
+      "enchanter83@enchanter" : {
+         "exits" : {
+            "e" : "enchanter86",
+            "w" : "enchanter80",
+            "se" : "enchanter87",
+            "sw" : "enchanter81"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter83",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the south is a large temple.\nYou can hear a low chanting from the temple.\n",
+         "altitude" : null
+      },
+      "enchanter27@enchanter" : {
+         "exits" : {
+            "e" : "enchanter28",
+            "w" : "enchanter24"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Long Dull Hallway",
+         "id" : "enchanter27",
+         "description" : "\n   You are in a long dull hallway.  You can't help but yawn...\n",
+         "altitude" : null
+      },
+      "enchanter56@enchanter" : {
+         "exits" : {
+            "n" : "^door5",
+            "u" : "enchanter55",
+            "s" : "enchanter59"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Dungeon",
+         "id" : "enchanter56",
+         "description" : "\n   This is the castle's dungeon.  The room is carved from stone.  In the\nnortheast corner of the room is a single cell door.  A staircase leads back\nup into the castle, and in the southern wall is a pitch black tunnel.\n",
+         "altitude" : null
+      },
+      "enchanter42@enchanter" : {
+         "exits" : {
+            "w" : "enchanter41"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Kitchen",
+         "id" : "enchanter42",
+         "description" : "\n   The castle's kitchen used to be a busy, noisy place.  It's quiet now...\nbut the room clearly has a story to tell.  Shortly after Krill came to this\nland, he enslaved the people of the castle.  Some of them, he set to work at\ndreary tasks, and others he simply tortured to death for the fun of it.  He\ntransformed the kitchen to a torture chamber, and clearly spent many hours\nhere watching the bodies twitch.  They aren't twitching now.  You turn your\nhead in disgust.\n",
+         "altitude" : null
+      },
+      "enchanter48@enchanter" : {
+         "exits" : {
+            "e" : "enchanter49",
+            "d" : "enchanter47"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Outside the Machine Room",
+         "id" : "enchanter48",
+         "description" : "\n   You're at the top of the tower, standing in the doorway of a really noisy\nroom.  Giant axe blades are swinging back and forth across the room.  If you\nwere nimble enough, you could probably dodge them and get through, except\nthere are also enormous saw-blades spinning around the room.  And if this\nweren't enough, a huge hammer crashes down on the floor every three or four\nseconds.  It probably wouldn't be a good idea to go through there.  On the\nother side of the mess, you can see some sort of control room.  You can\nbarely see a parchment scroll just inside the control room.  It must be\nimportant!\n",
+         "altitude" : null
+      },
+      "enchanter90@enchanter" : {
+         "exits" : {
+            "w" : "enchanter68"
+         },
+         "flags" : [
+            "Party"
+         ],
+         "zone" : "enchanter",
+         "title" : "The Hidden Bar",
+         "id" : "enchanter90",
+         "description" : "\n   Really, unless Krill's invited you here, you shouldn't be here.  The walls\nare painted with blood, and various implements of torture hang from the walls.\nNo different from any other place here in the castle.  But of note in this room\nis the bar.  At first glance, it seems to be a regular well stocked bar, with\neverything from cinnamon schnapps to a bottle of tequila with the worm.  You\nsit on a stool, and a ghostly bartender materializes before you (a la\nShining) to take your order.  Before you can mouth your wish, he nods, and\nturns his back to you, and begins mixing the marguerita you wanted.  The\nbartender turns around, and sets the glass on the bar before you.  You begin\nconversing with him, sipping your marguerita, and reminiscing about the days\nbefore Krill invaded the castle and murdered the local populace.  More\napparitions begin appearing around you, and you order another drink, and then\nanother.  Soon, you've forgotten who you are, and all you know is what these\nsimple villagers knew when Krill came and changed their world.  Before long,\nyou pass out, slumped over on the bar.\n   When you wake up, you are alone, shivering, afraid, and determined to undo\nthe damage that Krill did here.\n",
+         "altitude" : null
+      },
+      "enchanter58@enchanter" : {
+         "exits" : {
+            "w" : "^outerbrick"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Escape Tunnel",
+         "id" : "enchanter58",
+         "description" : "\n   The inhabitant of the cell was trying to escape through here.  He had dug\nsix feet of tunnel from his cell with a spoon, and was trying to dig upwards\nwhen he was caught.  He hadn't gotten far enough to escape.\n",
+         "altitude" : null
+      },
+      "enchanter86@enchanter" : {
+         "exits" : {
+            "w" : "enchanter83",
+            "s" : "enchanter87"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter86",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the southwest is a large\ntemple.  You can hear a low chanting from the temple.\n",
+         "altitude" : null
+      },
+      "enchanter5@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter7",
+            "sw" : "enchanter4",
+            "nw" : "enchanter6"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Outside the Shack",
+         "id" : "enchanter5",
+         "description" : "\n   You are standing outside a small shack.  The road continues to the\nnortheast, or you can enter the shack to the northwest.\n",
+         "altitude" : null
+      },
+      "enchanter16@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter15",
+            "nw" : "enchanter18",
+            "s" : "enchanter17"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Inside the Village",
+         "id" : "enchanter16",
+         "description" : "\n   There is an eerie silence here.  All of the houses are deserted, and several\nhave actually burned down.  One small hovel to the south, however, has smoke\nrising from the chimney.  The road here turns to the northwest.\n",
+         "altitude" : null
+      },
+      "enchanter17@enchanter" : {
+         "exits" : {
+            "n" : "enchanter16"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "enchanter",
+         "title" : "Small Hovel",
+         "id" : "enchanter17",
+         "description" : "\n   You look around in wonder at the inside of the hovel.  Shelves of strange\nand wonderful potions line the walls.  There is a bench in the middle of the\nroom, covered with smoking vials of all types.  An ancient crone stands behind\nthe bench, stirring a boiling pot.  She hears you enter, and looks up.\n",
+         "altitude" : null
+      },
+      "enchanter21@enchanter" : {
+         "exits" : {
+            "e" : "enchanter22",
+            "w" : "enchanter20"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Inside the Castle Gates",
+         "id" : "enchanter21",
+         "description" : "\n   Well, you're inside the castle.  Maybe you shouldn't be here.  The guards\ncertainly think so...\n",
+         "altitude" : null
+      },
+      "enchanter63@enchanter" : {
+         "exits" : {
+            "se" : "enchanter64",
+            "sw" : "enchanter62",
+            "nw" : "enchanter65"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Translucent Room",
+         "id" : "enchanter63",
+         "description" : "\n   You're an a room with not-quite-opaque cream colored walls.  Behind the\nwalls you can see slow, fluid movement, as if the rock was alive.\n",
+         "altitude" : null
+      },
+      "enchanter38@enchanter" : {
+         "exits" : {
+            "w" : "enchanter37",
+            "u" : "enchanter39",
+            "d" : "enchanter40"
+         },
+         "flags" : [
+            "OnePerson"
+         ],
+         "zone" : "enchanter",
+         "title" : "Tower Landing",
+         "id" : "enchanter38",
+         "description" : "\n   You can go up, or down.  It looks awfully far...\n   Or you can go back west.  It's up to you.\n",
+         "altitude" : null
+      },
+      "enchanter44@enchanter" : {
+         "exits" : {
+            "n" : "enchanter43",
+            "sw" : "enchanter45"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal",
+            "Peaceful",
+            "Party",
+            "NoMobiles"
+         ],
+         "zone" : "enchanter",
+         "title" : "Green Meadow",
+         "id" : "enchanter44",
+         "description" : "\n   You momentarily forget about the horror of the castle as you look around\nin awe.  The meadow is green, birds are singing, rabbits are hopping through\nthe grass, and all is peaceful.  You feel like taking off your shoes and\nrunning around barefoot, but you'd probably stub your toe on a hidden rock.\nThere's a path leading southwest, and the castle rises to the north.\n",
+         "altitude" : null
+      },
+      "enchanter33@enchanter" : {
+         "exits" : {
+            "e" : "enchanter32"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Dense Swamp",
+         "id" : "enchanter33",
+         "description" : "\n   The swamp is teeming with life... and most of it wants to kill you.\n",
+         "altitude" : null
+      },
+      "enchanter3@enchanter" : {
+         "exits" : {
+            "e" : "enchanter4",
+            "w" : "enchanter2"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Long and Winding Road",
+         "id" : "enchanter3",
+         "description" : "\n   This is a long, winding road.  Far off to the east, you can see Signal\nMountain.  There is a &+Csign&* here, by the road.\n",
+         "altitude" : null
+      },
+      "enchanter70@enchanter" : {
+         "exits" : {
+            "d" : "enchanter69",
+            "s" : "^door7"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Atop the Tower",
+         "id" : "enchanter70",
+         "description" : "\n   You're at the top of the southwestern tower.  There's a solid oak door\nhere.\n",
+         "altitude" : null
+      },
+      "enchanter34@enchanter" : {
+         "exits" : {
+            "w" : "enchanter31",
+            "u" : "^door3",
+            "n" : "^door3"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Guarded Door",
+         "id" : "enchanter34",
+         "description" : "\n   Other than the large oak door at the north end of the room, this room is\nbare.  But what a door it is -- On the center of it is some sort of ornament.\nIt looks like a wild boar's head.. with snakes for hair, and razor-sharp knives\nfor teeth.  It seems to be slobbering acid.\n",
+         "altitude" : null
+      },
+      "enchanter39@enchanter" : {
+         "exits" : {
+            "u" : "enchanter39",
+            "d" : "enchanter38"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Climbing up...",
+         "id" : "enchanter39",
+         "description" : "\n   You go up... and up... and up... and up... Are you getting anywhere?\n",
+         "altitude" : null
+      },
+      "enchanter85@enchanter" : {
+         "exits" : {
+            "e" : "enchanter88",
+            "ne" : "enchanter87",
+            "w" : "enchanter82",
+            "nw" : "enchanter81"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter85",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the north is a large temple.\nYou can hear a low chanting from the temple.\n",
+         "altitude" : null
+      },
+      "enchanter54@enchanter" : {
+         "exits" : {
+            "w" : "enchanter55",
+            "e" : "enchanter53"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Gallery",
+         "id" : "enchanter54",
+         "description" : "\n   You yawn in boredom as you walk through this art gallery.  As art goes,\nthis is definitely nothing to write home about.  Almost all of the paintings\nare still-life fruit bowls.  One, however, catches your eye... it's a\npainting of the castle as it was before Krill took it over.  It's hard to\nbelieve the castle was once beautiful.  You notice that in the &+Cpainting&*,\nthere are only four towers.  It seems that Krill added his fifth tower\nhimself.  You shiver in fear as you think about that inky black tower.  The\npainting seems to be glowing faintly.\n",
+         "altitude" : null
+      },
+      "enchanter23@enchanter" : {
+         "exits" : {
+            "n" : "enchanter24",
+            "s" : "enchanter22"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Pebbled Pathway",
+         "id" : "enchanter23",
+         "description" : "\n   The walls and roof of the corridor here have crumbled to dust long ago.\nThe floor of this hallway is littered with &+Cpebbles&*.  You can re-enter the\ncastle to the north, where you can see the base of the northwestern tower.\n",
+         "altitude" : null
+      },
+      "enchanter66@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter65"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Translucent Room",
+         "id" : "enchanter66",
+         "description" : "\n   You're an a room with not-quite-opaque cream colored walls.  Behind the\nwalls you can see slow, fluid movement, as if the rock was alive.\n",
+         "altitude" : null
+      },
+      "enchanter28@enchanter" : {
+         "exits" : {
+            "e" : "enchanter29",
+            "w" : "enchanter27"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "First Hall of Mirrors",
+         "id" : "enchanter28",
+         "description" : "\n   This is a long, mirrored hall.  You do a doubletake as you realize the\nmirrors aren't reflecting the hall... they seem to show some sort of maze of\ntwisting passages, all alike.\n",
+         "altitude" : null
+      },
+      "enchanter73@enchanter" : {
+         "exits" : {
+            "e" : "enchanter76",
+            "w" : "enchanter37",
+            "u" : "enchanter74",
+            "d" : "enchanter75"
+         },
+         "flags" : [
+            "OnePerson"
+         ],
+         "zone" : "enchanter",
+         "title" : "Tower Landing",
+         "id" : "enchanter73",
+         "description" : "\n   The stairs go up a long way, and down a long way.  But there's a tunnel\nleading east that you didn't see before.  Dark smoke billows out of the\ntunnel and rises up the tower.\n",
+         "altitude" : null
+      },
+      "enchanter4@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter5",
+            "w" : "enchanter3",
+            "se" : "enchanter18"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Fork in the Road",
+         "id" : "enchanter4",
+         "description" : "\n   The road forks here.  You can go southeast, or take the more well-travelled\npath to the northeast.  Signal Mountain looms before you.\n",
+         "altitude" : null
+      },
+      "enchanter72@enchanter" : {
+         "exits" : {
+            "n" : "enchanter22",
+            "s" : "enchanter69"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Featureless Hallway",
+         "id" : "enchanter72",
+         "description" : "\n   You're in a long north-south hallway.\n",
+         "altitude" : null
+      },
+      "enchanter24@enchanter" : {
+         "exits" : {
+            "e" : "enchanter27",
+            "u" : "enchanter25",
+            "s" : "enchanter23"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Northwestern Tower",
+         "id" : "enchanter24",
+         "description" : "\n   You are at the base of a short, squat tower.  The hallway turns to the west\nhere, and there is a short flight of stairs leading up the tower.\n",
+         "altitude" : null
+      },
+      "enchanter51@enchanter" : {
+         "exits" : {
+            "e" : "enchanter49",
+            "d" : "enchanter47"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Outside the Machine Room",
+         "id" : "enchanter51",
+         "description" : "\n   You're at the top of the tower, standing in the doorway of a really noisy\nroom.  Giant axe blades are swinging back and forth across the room.  If you\nwere nimble enough, you could probably dodge them and get through, except\nthere are also enormous saw-blades spinning around the room.  And if this\nweren't enough, a huge hammer crashes down on the floor every three or four\nseconds.  It probably wouldn't be a good idea to go through there.  On the\nother side of the mess, you can see some sort of control room.  Just inside\nthe machine room, you can see a squashed giant turtle.  The walls have lots\nof &+Cscratches&* on them.\n",
+         "altitude" : null
+      },
+      "enchanter64@enchanter" : {
+         "exits" : {
+            "nw" : "enchanter63"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Translucent Room",
+         "id" : "enchanter64",
+         "description" : "\n   You're an a room with not-quite-opaque cream colored walls.  Behind the\nwalls you can see slow, fluid movement, as if the rock was alive.\n",
+         "altitude" : null
+      },
+      "enchanter74@enchanter" : {
+         "exits" : {
+            "u" : "enchanter74",
+            "d" : "enchanter73"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Climbing up...",
+         "id" : "enchanter74",
+         "description" : "\n   You go up... and up... and up... and up... Are you getting anywhere?\nDark inky smoke rises from below you.\n",
+         "altitude" : null
+      },
+      "enchanter47@enchanter" : {
+         "exits" : {
+            "w" : "enchanter43",
+            "u" : "enchanter48"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Base of the Tower",
+         "id" : "enchanter47",
+         "description" : "\n   You're at the base of another tower.  You can hear the sound of heavy\nmachinery above you.\n",
+         "altitude" : null
+      },
+      "enchanter82@enchanter" : {
+         "exits" : {
+            "e" : "enchanter85",
+            "w" : "enchanter79",
+            "n" : "enchanter81",
+            "s" : "enchanter68",
+            "nw" : "enchanter77"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter82",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the northeast is a large\ntemple.  You can hear a low chanting from the temple.  You can re-enter the\ncastle to the south.\n",
+         "altitude" : null
+      },
+      "enchanter6@enchanter" : {
+         "exits" : {
+            "se" : "enchanter5"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Inside the Shack",
+         "id" : "enchanter6",
+         "description" : "\n   You are inside the small shack.  Broken &+Cbenches&*, chairs, and tables are\nstrewn about the room.  There is a broken &+Coven&* in the corner.\n",
+         "altitude" : null
+      },
+      "enchanter31@enchanter" : {
+         "exits" : {
+            "e" : "enchanter34",
+            "w" : "enchanter30",
+            "n" : "^gate3",
+            "s" : "enchanter36"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "North Gate",
+         "id" : "enchanter31",
+         "description" : "\n   You are at the northern gate of the castle.  Looking through the gate, you\ncan see a dense swamp.  There is a tower to the east, and the corridor turns\nback toward the south here.\n",
+         "altitude" : null
+      },
+      "enchanter22@enchanter" : {
+         "exits" : {
+            "e" : "enchanter77",
+            "w" : "enchanter21",
+            "n" : "enchanter23",
+            "s" : "enchanter72"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Junction",
+         "id" : "enchanter22",
+         "description" : "\n   The corridor splits up here, going north and south to towers, or continuing\neast into a large courtyard.  You hear the sound of chanting from the\ncourtyard.\n",
+         "altitude" : null
+      },
+      "enchanter50@enchanter" : {
+         "exits" : {
+            "w" : "enchanter49"
+         },
+         "flags" : [
+            "Party",
+            "Private"
+         ],
+         "zone" : "enchanter",
+         "title" : "The Control Room",
+         "id" : "enchanter50",
+         "description" : "\n   You must be immortal to have made it this far...  But actually, this\ncontrol room has no controls in it.  All the dials and levers and switches\nyou see here are illusions, meant to fool the poor mortals on the other side\nof the machine room.  Hee hee...\n",
+         "altitude" : null
+      },
+      "enchanter41@enchanter" : {
+         "exits" : {
+            "e" : "enchanter42",
+            "n" : "enchanter37",
+            "s" : "enchanter43"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Mess Hall",
+         "id" : "enchanter41",
+         "description" : "\n   The smell of rotting meat here makes you want to throw up.  This used to\nbe the castle's banquet hall.  Now, only the dogs feast here...\n",
+         "altitude" : null
+      },
+      "enchanter43@enchanter" : {
+         "exits" : {
+            "e" : "enchanter47",
+            "w" : "enchanter52",
+            "n" : "enchanter41",
+            "s" : "enchanter44"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Southern Gates",
+         "id" : "enchanter43",
+         "description" : "\n   The gates here seem shiny and new, in stark contrast to the rest of the\ncastle.  They're wide open, and through them you can see a wide green\nmeadow, and beyond it, the sea.  There's a tower to the east, and the hall\ncontinues to the west or the north.  You can hear the sound of heavy\nmachinery to the east.\n",
+         "altitude" : null
+      },
+      "enchanter36@enchanter" : {
+         "exits" : {
+            "n" : "enchanter31",
+            "s" : "enchanter37"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Library",
+         "id" : "enchanter36",
+         "description" : "\n   The bookshelves here are empty, and from the amount of dust on them, you\ncan see they've been empty for centuries.  Has Krill reallly been around\nthat long?\n   You can hear low chanting sounds from the south.\n",
+         "altitude" : null
+      },
+      "enchanter26@enchanter" : {
+         "exits" : {
+            "s" : "^door2"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Treasure Room",
+         "id" : "enchanter26",
+         "description" : "\n   The light streaming through the open window casts a million reflections in\nhere.  You gaze in awe at the mountains of treasure in here.  Greedily, you\ntake a step forward.\n",
+         "altitude" : null
+      },
+      "enchanter53@enchanter" : {
+         "exits" : {
+            "w" : "enchanter54",
+            "e" : "enchanter52"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Banquet Hall",
+         "id" : "enchanter53",
+         "description" : "\n   This is where the inhabitants and guests of the castle used to gather to\ndine.  The tables are still here, and some are even decked in resplendent\nscarlett tablecloths.  Apparently something kept Krill away from here.\n",
+         "altitude" : null
+      },
+      "enchanter2@enchanter" : {
+         "exits" : {
+            "e" : "enchanter3",
+            "w" : "enchanter1"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Long and Winding Road",
+         "id" : "enchanter2",
+         "description" : "\n   This is a long, winding road.  Far off to the east, you can see Signal\nMountain.  There is a &+Csign&* here, by the road.\n",
+         "altitude" : null
+      },
+      "enchanter15@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter14",
+            "sw" : "enchanter16"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Village Outskirts",
+         "id" : "enchanter15",
+         "description" : "\n   You are outside the village.  Most of the houses seem to be deserted, but\nyou can see smoke rising from one chimney.  Signal Mountain rises majestically\nto the north.\n",
+         "altitude" : null
+      },
+      "enchanter55@enchanter" : {
+         "exits" : {
+            "w" : "enchanter69",
+            "e" : "enchanter54",
+            "n" : "enchanter68",
+            "d" : "enchanter56"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Top of the Stairs",
+         "id" : "enchanter55",
+         "description" : "\n   You're at a featureless part of the hallway.  There's a walk-in closet to\nthe north, and south of you is a staircase leading down into the dungeon.\nThere's a dark room to the east, and a tower to the west.\n",
+         "altitude" : null
+      },
+      "enchanter69@enchanter" : {
+         "exits" : {
+            "e" : "enchanter55",
+            "u" : "enchanter70",
+            "n" : "enchanter72",
+            "s" : "enchanter70"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Southwestern Tower",
+         "id" : "enchanter69",
+         "description" : "\n   You're at the base of the southwestern tower.  A staircase leads up, and\nhallways go off to the north or east.\n",
+         "altitude" : null
+      },
+      "enchanter1@enchanter" : {
+         "exits" : {
+            "e" : "enchanter2",
+            "w" : "camelot72@camelot"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Long and Winding Road",
+         "id" : "enchanter1",
+         "description" : "\n   This is a long, winding road.  Far off to the east, you can see Signal\nMountain.  There is a &+Csign&* here, by the road.\n",
+         "altitude" : null
+      },
+      "enchanter29@enchanter" : {
+         "exits" : {
+            "e" : "enchanter30",
+            "w" : "enchanter28"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Second Hall of Mirrors",
+         "id" : "enchanter29",
+         "description" : "\n   This is a long, mirrored hall.  You do a doubletake as you realize the\nmirrors aren't reflecting the hall... they seem to show some sort of maze of\ntwisting passages, all alike.\n",
+         "altitude" : null
+      },
+      "enchanter81@enchanter" : {
+         "exits" : {
+            "e" : "enchanter84",
+            "ne" : "enchanter83",
+            "w" : "enchanter77",
+            "n" : "enchanter80",
+            "se" : "enchanter85",
+            "sw" : "enchanter79",
+            "s" : "enchanter82",
+            "nw" : "enchanter78"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter81",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the east is the front door of\na large temple.  You can hear a low chanting from the temple.\n",
+         "altitude" : null
+      },
+      "enchanter46@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter45"
+         },
+         "flags" : [
+            "Peaceful",
+            "Private",
+            "Party"
+         ],
+         "zone" : "enchanter",
+         "title" : "Warm Beach",
+         "id" : "enchanter46",
+         "description" : "\n   Waves crash on the shore here.  The water's incredibly warm, and you want\nto stay forever.  The sun is shining down on you, and you can feel your skin\ntanning already.  It's a beautiful day for a picnic.\n",
+         "altitude" : null
+      },
+      "enchanter37@enchanter" : {
+         "exits" : {
+            "e" : "enchanter38",
+            "w" : "enchanter87",
+            "n" : "enchanter36",
+            "s" : "enchanter41"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Main Junction",
+         "id" : "enchanter37",
+         "description" : "\n   You've come to another junction in the hall.  East of here, you can see a\nlanding and a dark staircase going both up and down.  You presume it's the\nfifth, dark, smoky tower.  To the west is a large courtyard, with some sort\nof temple in it.  The chanting sound seems to be coming from there.  The\nhall continues to the south.\n",
+         "altitude" : null
+      },
+      "enchanter87@enchanter" : {
+         "exits" : {
+            "e" : "enchanter37",
+            "n" : "enchanter86",
+            "s" : "enchanter88"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter87",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the west is a large temple.\nYou can hear a low chanting from the temple.  You can re-enter the castle to\nthe east.\n",
+         "altitude" : null
+      },
+      "enchanter13@enchanter" : {
+         "exits" : {
+            "se" : "enchanter14",
+            "nw" : "enchanter7"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Still on the Road",
+         "id" : "enchanter13",
+         "description" : "\n   The road continues on to the southeast, and back to the northwest.\n",
+         "altitude" : null
+      },
+      "enchanter8@enchanter" : {
+         "exits" : {
+            "sw" : "enchanter7",
+            "nw" : "enchanter9"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Overgrown Trail",
+         "id" : "enchanter8",
+         "description" : "\n   The trail turns northwest here.  It's almost impossible to hack your way\nthrough the bushes here.\n",
+         "altitude" : null
+      },
+      "enchanter20@enchanter" : {
+         "exits" : {
+            "e" : "^gate1",
+            "w" : "enchanter19"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "At the Castle Gates",
+         "id" : "enchanter20",
+         "description" : "\n   Everything around here is dead.  The castle gates loom before you.  The evil\ninside the castle is so strong, you can feel it.  You can still turn back...\nMaybe you should...\n",
+         "altitude" : null
+      },
+      "enchanter19@enchanter" : {
+         "exits" : {
+            "e" : "enchanter20",
+            "w" : "enchanter14"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Before the Castle",
+         "id" : "enchanter19",
+         "description" : "\n   The vegetation is beginning to thin here, as you approach the castle.  You\ncan still turn back... Maybe you should...\n",
+         "altitude" : null
+      },
+      "enchanter7@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter8",
+            "u" : "enchanter10",
+            "se" : "enchanter13",
+            "sw" : "enchanter5",
+            "s" : "enchanter10"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Bend in the Road",
+         "id" : "enchanter7",
+         "description" : "\n   The road bends towards the southeast here.  Small trails lead northeast into\nthe woods, and south up the mountain.\n",
+         "altitude" : null
+      },
+      "enchanter75@enchanter" : {
+         "exits" : {
+            "u" : "enchanter73",
+            "d" : "enchanter75"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Going down...",
+         "id" : "enchanter75",
+         "description" : "\n   You go down... and down... and down... and down... Are you getting\nanywhere?\n",
+         "altitude" : null
+      },
+      "enchanter9@enchanter" : {
+         "exits" : {
+            "se" : "enchanter8"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "End of the Trail",
+         "id" : "enchanter9",
+         "description" : "\n   The trail emerges into a small clearing.  A stream of sparkling clear &+Cwater&*\nruns by.  There is a stone &+Cmarker&* here.\n",
+         "altitude" : null
+      },
+      "enchanter45@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter44",
+            "sw" : "enchanter46"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal",
+            "Peaceful"
+         ],
+         "zone" : "enchanter",
+         "title" : "Edge of the Beach",
+         "id" : "enchanter45",
+         "description" : "\n   The path led you to a sandy beach on the Flathead ocean.  The sea is\nsouthwest, and the meadow lies back to the northeast.\n",
+         "altitude" : null
+      },
+      "enchanter35@enchanter" : {
+         "exits" : {
+            "d" : "^door4",
+            "s" : "^door4"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Map Room",
+         "id" : "enchanter35",
+         "description" : "\n   This room was once a library, but Krill's ransacked it.  Now, there's\nnothing left here but a large &+Cglobe&* and a table.  There's a frame on the\ntable that once held a map, but the map is missing.\n",
+         "altitude" : null
+      },
+      "enchanter59@enchanter" : {
+         "exits" : {
+            "n" : "enchanter56",
+            "s" : "enchanter60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Translucent Room",
+         "id" : "enchanter59",
+         "description" : "\n   You're an a room with not-quite-opaque cream colored walls.  Behind the\nwalls you can see slow, fluid movement, as if the rock was alive.\n",
+         "altitude" : null
+      },
+      "enchanter30@enchanter" : {
+         "exits" : {
+            "e" : "enchanter31",
+            "w" : "enchanter29"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Third Hall of Mirrors",
+         "id" : "enchanter30",
+         "description" : "\n   This is a long, mirrored hall.  You do a doubletake as you realize the\nmirrors aren't reflecting the hall... they seem to show some sort of maze of\ntwisting passages, all alike.\n",
+         "altitude" : null
+      },
+      "enchanter60@enchanter" : {
+         "exits" : {
+            "e" : "enchanter62",
+            "n" : "enchanter59",
+            "se" : "enchanter61"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Translucent Room",
+         "id" : "enchanter60",
+         "description" : "\n   You're an a room with not-quite-opaque cream colored walls.  Behind the\nwalls you can see slow, fluid movement, as if the rock was alive.\n",
+         "altitude" : null
+      },
+      "enchanter76@enchanter" : {
+         "exits" : {
+            "w" : "enchanter73"
+         },
+         "flags" : [
+            "Dark",
+            "NoSummon",
+            "NoQuit"
+         ],
+         "zone" : "enchanter",
+         "title" : "Krill's Laboratory",
+         "id" : "enchanter76",
+         "description" : "\n   You've stumbled into Krill's lab.  He looks up at you, with a shocked\nexpression on his face.  As you advance towards him, he begins mumbling the\nwords to some ancient, terrible spell.\n",
+         "altitude" : null
+      },
+      "enchanter77@enchanter" : {
+         "exits" : {
+            "e" : "enchanter81",
+            "ne" : "enchanter80",
+            "w" : "enchanter22",
+            "n" : "enchanter78",
+            "se" : "enchanter82",
+            "s" : "enchanter79"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter77",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the east is a large temple.\nYou can hear a low chanting from the temple.  You can re-enter the castle to\nthe west.\n",
+         "altitude" : null
+      },
+      "enchanter52@enchanter" : {
+         "exits" : {
+            "w" : "enchanter53",
+            "e" : "enchanter43"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Empty Hallway",
+         "id" : "enchanter52",
+         "description" : "\n   That's just it... it's an empty hallway.  You hear the crashing of a\ngiant hammer somewhere to the east.\n",
+         "altitude" : null
+      },
+      "enchanter25@enchanter" : {
+         "exits" : {
+            "n" : "^door1",
+            "d" : "enchanter24"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Atop the Tower",
+         "id" : "enchanter25",
+         "description" : "\n   You're at the top of the tower.  There is a wooden door to the north.\n",
+         "altitude" : null
+      },
+      "enchanter18@enchanter" : {
+         "exits" : {
+            "se" : "enchanter16",
+            "nw" : "enchanter4"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Hairpin Turn",
+         "id" : "enchanter18",
+         "description" : "\n   The road has turned sharply here.  The fork in the road is northwest, or\nyou can go to the village, southwest of here.\n",
+         "altitude" : null
+      },
+      "enchanter80@enchanter" : {
+         "exits" : {
+            "e" : "enchanter83",
+            "w" : "enchanter78",
+            "sw" : "enchanter77",
+            "s" : "enchanter81"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "enchanter",
+         "title" : "Courtyard",
+         "id" : "enchanter80",
+         "description" : "\n   You're in a barren, lifeless courtyard.  To the southeast is a large\ntemple.  You can hear a low chanting from the temple.\n",
+         "altitude" : null
+      },
+      "enchanter84@enchanter" : {
+         "exits" : {
+            "w" : "enchanter81",
+            "u" : "enchanter89"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Temple of Krill",
+         "id" : "enchanter84",
+         "description" : "\n   You've wandered into the Temple of Krill.  All of Krill's loyal followers\nare gathered here.  The floor is sticky with sacrificed blood here.  None of\nthe little hairy men have taken any notice of you... they're all\nconcentrating on the giant altar in the center of the room.  At the top,\nthere's a statue of Krill.\n",
+         "altitude" : null
+      },
+      "enchanter49@enchanter" : {
+         "exits" : {
+            "w" : "enchanter48",
+            "e" : "enchanter50"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "enchanter",
+         "title" : "The Machine Room",
+         "id" : "enchanter49",
+         "description" : "\n   You run into the room, and dodge the first few axe blades.  Then, a saw\nblade flies at your neck, and you don't duck fast enough to avoid\ndecapitation.  Your head rolls a few feet away from your body, then the\nhammer squashes it.\n",
+         "altitude" : null
+      },
+      "enchanter32@enchanter" : {
+         "exits" : {
+            "w" : "enchanter33",
+            "s" : "^gate4"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Edge of the Swamp",
+         "id" : "enchanter32",
+         "description" : "\n   Tall trees surround you as you leave the castle.  A muddy path leads west\ninto a murky swamp.\n",
+         "altitude" : null
+      },
+      "enchanter71@enchanter" : {
+         "exits" : {
+            "n" : "^door8"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "Bedroom",
+         "id" : "enchanter71",
+         "description" : "\n   You're in a large bedroom with a four-poster feather bed here.\n",
+         "altitude" : null
+      },
+      "enchanter61@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter62",
+            "nw" : "enchanter60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Translucent Room",
+         "id" : "enchanter61",
+         "description" : "\n   You're an a room with not-quite-opaque cream colored walls.  Behind the\nwalls you can see slow, fluid movement, as if the rock was alive.\n",
+         "altitude" : null
+      },
+      "enchanter62@enchanter" : {
+         "exits" : {
+            "ne" : "enchanter63",
+            "w" : "enchanter60",
+            "sw" : "enchanter61"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Translucent Room",
+         "id" : "enchanter62",
+         "description" : "\n   You're an a room with not-quite-opaque cream colored walls.  Behind the\nwalls you can see slow, fluid movement, as if the rock was alive.\n",
+         "altitude" : null
+      },
+      "enchanter14@enchanter" : {
+         "exits" : {
+            "e" : "enchanter19",
+            "sw" : "enchanter15",
+            "nw" : "enchanter13"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Another Fork in the Road",
+         "id" : "enchanter14",
+         "description" : "\n   You can keep going around the mountain to the southwest, or go east towards\nthe dark castle.  A quaint, Tyrolean village lies off to the southwest.\n",
+         "altitude" : null
+      },
+      "enchanter12@enchanter" : {
+         "exits" : {
+            "d" : "enchanter11"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal",
+            "Private",
+            "Party"
+         ],
+         "zone" : "enchanter",
+         "title" : "Signal Mountain",
+         "id" : "enchanter12",
+         "description" : "\n   Finally, you collapse in exhaustion at the peak of Signal Mountain, or\nLonely Mountain as it is also called.  The air is chilly, but amazingly fresh\nup here.  You look around in awe... Far off to the west, you can barely make\nout the Temple of Paradise, and a small village.  But your heart freezes in\nfear as you look to the east.  Rising out of the forest is a black castle, with\nfive towers.  One of the towers is larger than the others, and inky black smoke\nrises from the top.  From here, you can see that the road you were on encircles\nthe mountain.  There is a small village to the south.\n",
+         "altitude" : null
+      },
+      "enchanter11@enchanter" : {
+         "exits" : {
+            "n" : "enchanter10",
+            "u" : "enchanter12",
+            "d" : "enchanter10"
+         },
+         "flags" : [
+            "Outdoors",
+            "Real",
+            "TempReal"
+         ],
+         "zone" : "enchanter",
+         "title" : "Halfway to the Top of Signal Mountain",
+         "id" : "enchanter11",
+         "description" : "\n   The footing is treacherous here, but the view is worth it.  Just wait till\nyou get to the top.\n",
+         "altitude" : null
+      },
+      "enchanter57@enchanter" : {
+         "exits" : {
+            "e" : "^innerbrick",
+            "s" : "^door6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Dungeon Cell",
+         "id" : "enchanter57",
+         "description" : "\n   This is the only cell in the castle's dungeon.  In one corner there is a\ndeep hole, with an evil smell coming from it.  The cell door is south.\n",
+         "altitude" : null
+      },
+      "enchanter89@enchanter" : {
+         "exits" : {
+            "d" : "enchanter84"
+         },
+         "flags" : [],
+         "zone" : "enchanter",
+         "title" : "The Altar of Krill",
+         "id" : "enchanter89",
+         "description" : "\n   You're at the top of Krill's altar.  The sound of Krill's followers'\ngutteral chants curdle your blood.\n",
+         "altitude" : null
+      },
+      "enchanter68@enchanter" : {
+         "exits" : {
+            "e" : "enchanter90",
+            "n" : "enchanter82",
+            "s" : "enchanter55"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "enchanter",
+         "title" : "Closet",
+         "id" : "enchanter68",
+         "description" : "\n   This is a spacious closet.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "goat@enchanter" : {
+         "damage" : "5",
+         "location" : "enchanter11",
+         "speed" : "0",
+         "aggression" : "30",
+         "armor" : "5",
+         "name" : "Goat",
+         "examine" : "You're invading his territory, and he doesn't like that.",
+         "description" : "A mountain goat is here, defending his territory.",
+         "strength" : "200"
+      },
+      "krill@enchanter" : {
+         "damage" : "30",
+         "location" : "enchanter76",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "50",
+         "name" : "Krill",
+         "examine" : "He's cast a spell of immortality on himself.  There's only one way to defeat\nhim.",
+         "description" : "The evil Enchanter Krill stands before you, weaving a spell of destruction.",
+         "strength" : "5000",
+         "mflags" : [
+            "NoGrab"
+         ]
+      },
+      "turtle@enchanter" : {
+         "damage" : "5",
+         "location" : "enchanter46",
+         "name" : "turtle",
+         "examine" : "He looks awfully hungry...",
+         "description" : "A large turtle is sunning himself on the beach here.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The Turtle",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "mflags" : "{ }"
+      },
+      "fly@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter14",
+         "speed" : "10",
+         "aggression" : "100",
+         "armor" : "0",
+         "name" : "Fly",
+         "examine" : "Must be some kind of wasp...",
+         "description" : "A big yellow fly with a lethal looking stinger dive-bombs you.",
+         "strength" : "100"
+      },
+      "dido@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter41",
+         "speed" : "0",
+         "aggression" : "50",
+         "name" : "Dido",
+         "examine" : "He's looking greedily at your eyes.",
+         "description" : "Dido the faithful watchdog is here, looking for an eye to claw out.",
+         "strength" : "150"
+      },
+      "guardian@enchanter" : {
+         "damage" : "5",
+         "location" : "enchanter26",
+         "armor" : "10",
+         "name" : "Guardian",
+         "examine" : "Chills run down your spine as you look at the Guardian.  It's looking back at\nyou, and it seems as though it can see right into your soul.",
+         "description" : "A being made of pure evil is guarding the treasure.",
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "Guardian",
+         "aggression" : "0",
+         "mflags" : [
+            "NoGrab"
+         ]
+      },
+      "presence@enchanter" : {
+         "damage" : "15",
+         "location" : "enchanter67",
+         "name" : "Presence",
+         "examine" : "You can barely see it, but you can certainly feel it's evil presence.",
+         "description" : "You see a wavering form in the air before you... it's about to strike!",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "750",
+         "speed" : "15",
+         "pname" : "The Presence",
+         "aggression" : "100",
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "dog@enchanter" : {
+         "damage" : "15",
+         "location" : "enchanter14",
+         "armor" : "0",
+         "name" : "dog",
+         "examine" : "He looks like he hasn't eaten in weeks.  But he's been sharpening his teeth...",
+         "description" : "A mangy dog jumps at your throat!",
+         "strength" : "120",
+         "speed" : "10",
+         "pname" : "Mangy",
+         "aggression" : "70"
+      },
+      "fido@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter41",
+         "speed" : "0",
+         "aggression" : "50",
+         "name" : "Fido",
+         "examine" : "He really looks hungry... he thinks you'll do nicely.",
+         "description" : "Fido the faithful watchdog is here, looking for scraps.",
+         "strength" : "150"
+      },
+      "mutie@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter77",
+         "speed" : "10",
+         "aggression" : "100",
+         "name" : "Mutie",
+         "examine" : "It used to be human, but it's skin is green, slimy, and bubbly.",
+         "description" : "There's a really ugly mutant here.",
+         "strength" : "150"
+      },
+      "ogre3@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter21",
+         "armor" : "0",
+         "name" : "ogre3",
+         "examine" : "You really shouldn't be examining these ogres... they're going to kill you.",
+         "description" : "Yubba the Ogre is going to have you for breakfast.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Yubba",
+         "aggression" : "50",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "bullfrog@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter33",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Bullfrog",
+         "name" : "Bullfrog",
+         "examine" : "You can't get at the key unless the frog's out of the way... and he doesn't\nwant to get out of the way.",
+         "description" : "A rather large bullfrog is sitting on a key!",
+         "strength" : "200",
+         "mflags" : [
+            "NoGrab"
+         ]
+      },
+      "statue@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter89",
+         "name" : "Statue",
+         "examine" : "The statue looks fearsome... you hope the artist exaggerated Krill's\nfeatures.",
+         "description" : "The statue of Krill stands here.",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal"
+         ],
+         "mflags" : [
+            "BarDown",
+            "NoCorpse"
+         ]
+      },
+      "ogre1@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter21",
+         "armor" : "0",
+         "name" : "ogre1",
+         "examine" : "Jubba's your standard big, mean, ugly ogre.",
+         "description" : "Jubba the Ogre can't wait to bash your head in.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Jubba",
+         "aggression" : "50",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "ogre2@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter21",
+         "armor" : "0",
+         "name" : "ogre2",
+         "examine" : "Hubba's a bit overweight... probably from eating too many mortals.",
+         "description" : "Hubba the Ogre advances menacingly towards you.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Hubba",
+         "aggression" : "50",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "dragon@enchanter" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball",
+            "NegBHands"
+         ],
+         "damage" : "30",
+         "location" : "limbo@limbo",
+         "speed" : "0",
+         "aggression" : "0",
+         "name" : "Dragon",
+         "examine" : "Krill's creations cannot be defeated by ordinary weapons.  Maybe magic...",
+         "description" : "Krill's pet dragon is standing between you and Krill, ready to toast you.",
+         "strength" : "5000",
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "basilisk@enchanter" : {
+         "damage" : "30",
+         "location" : "enchanter76",
+         "name" : "Basilisk",
+         "examine" : "Krill's creations cannot be defeated by ordinary weapons.  Maybe magic...",
+         "description" : "Krill finishes his spell, and a very unfriendly basilisk appears hissing\nbefore you.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "5000",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "frog@enchanter" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "5",
+         "location" : "enchanter33",
+         "speed" : "0",
+         "aggression" : "80",
+         "pname" : "Frog",
+         "name" : "Frog",
+         "examine" : "Those claws look like they can take out an eye...  That's probably what they're\nfor.",
+         "description" : "Funny, there's a frog here with claws.",
+         "strength" : "100"
+      },
+      "ornament@enchanter" : {
+         "damage" : "10",
+         "location" : "enchanter34",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Ornament",
+         "name" : "Ornament",
+         "examine" : "As you move closer to the ornament, it comes to life and hisses loudly at you!",
+         "description" : "Looks like you're going to have to kill the ornament... it's alive.",
+         "strength" : "200",
+         "mflags" : [
+            "BarNorth",
+            "BarUp",
+            "NoCorpse"
+         ]
+      }
+   }
+}

@@ -1,0 +1,1201 @@
+{
+   "obj" : {
+      "door2_west@aladdin" : {
+         "desc[1]" : "There is a closed steel door.",
+         "location" : "IN_ROOM:palace8",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "steel",
+         "name" : "door2_west",
+         "desc[2]" : "The steel door to the west is locked.",
+         "linked" : "door2_east",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "There is an open steel door."
+      },
+      "ruby@aladdin" : {
+         "location" : "IN_ROOM:gold7",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "ruby",
+         "name" : "ruby",
+         "maxstate" : "0",
+         "desc[0]" : "The Sacred Treasure is sitting here in a golden hand."
+      },
+      "carpet@aladdin" : {
+         "desc[1]" : "A magic carpet stands here waving to you.",
+         "location" : "IN_ROOM:gold5",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "carpet",
+         "examine" : "The carpet beckons for you to sit on it.",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "pname" : "carpet",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A carpet has been tossed to the side here."
+      },
+      "block@aladdin" : {
+         "location" : "IN_ROOM:palace6",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stone",
+         "name" : "block",
+         "examine" : "\nThere is a nicely scetched picture of Big Bird and Oscar the Grouch on \nthe block.",
+         "maxstate" : "0"
+      },
+      "blockage_up@aladdin" : {
+         "location" : "IN_ROOM:cave",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "blockage_up",
+         "desc[2]" : "There is no longer an exit leading up.",
+         "linked" : "blockage_down",
+         "state" : "0",
+         "pname" : "blockage",
+         "maxstate" : "2"
+      },
+      "door1_west@aladdin" : {
+         "desc[1]" : "There is a closed oak door.",
+         "location" : "IN_ROOM:palace7",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "oak",
+         "name" : "door1_west",
+         "desc[2]" : "The oak door to the west is locked.",
+         "linked" : "door1_east",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "There is an open oak door."
+      },
+      "coins@aladdin" : {
+         "location" : "IN_ROOM:gold4",
+         "oflags" : "{}",
+         "name" : "coins",
+         "size" : "4",
+         "pname" : "coins",
+         "weight" : "6",
+         "maxstate" : "0",
+         "bvalue" : "75",
+         "desc[0]" : "You notice some scattered coins."
+      },
+      "cracker@aladdin" : {
+         "desc[1]" : "A cracker, Iago least favorite food item, lies untouched on the floor.",
+         "location" : "IN_ROOM:palace8",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "cracker",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "1",
+         "pname" : "cracker",
+         "maxstate" : "1",
+         "bvalue" : "15",
+         "desc[0]" : "A cracker has been left here."
+      },
+      "guardsword@aladdin" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:palace1",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "guardsword",
+         "size" : "15",
+         "pname" : "sword",
+         "weight" : "4",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "desc[0]" : "A castle guard has accidently left a sword lying around."
+      },
+      "flame@aladdin" : {
+         "location" : "IN_ROOM:gold3",
+         "oflags" : [
+            "NoGet",
+            "Lit"
+         ],
+         "pname" : "flame",
+         "name" : "flame",
+         "maxstate" : "0",
+         "desc[0]" : "In the room's center sits a flame in a ring of stones."
+      },
+      "orange@aladdin" : {
+         "location" : "IN_ROOM:oasis3",
+         "oflags" : [
+            "food"
+         ],
+         "name" : "orange",
+         "size" : "2",
+         "pname" : "orange",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "25",
+         "desc[0]" : "An orange lies here on the ground."
+      },
+      "key@aladdin" : {
+         "location" : "IN_CONTAINER:drawer",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "key",
+         "size" : "1",
+         "pname" : "key",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A key has been left here."
+      },
+      "banana@aladdin" : {
+         "location" : "IN_ROOM:oasis4",
+         "oflags" : [
+            "food"
+         ],
+         "name" : "banana",
+         "size" : "2",
+         "pname" : "banana",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "25",
+         "desc[0]" : "A banana lies here on the ground."
+      },
+      "hourglass@aladdin" : {
+         "desc[1]" : "Princess Jasmine is here, struggling to breathe in a quickly filling hourglass.",
+         "location" : "IN_ROOM:palace9",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "glass",
+         "name" : "hourglass",
+         "state" : "1",
+         "pname" : "hourglass",
+         "maxstate" : "1",
+         "desc[0]" : "Sand is spilled everywhere from a broken hourglass."
+      },
+      "sesame_north@aladdin" : {
+         "location" : "IN_ROOM:palace6",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "sesame_north",
+         "linked" : "sesame_south",
+         "state" : "1",
+         "pname" : "sesame",
+         "maxstate" : "1",
+         "desc[0]" : "A wall has been opened in the north wall allowing passage."
+      },
+      "snakestaff@aladdin" : {
+         "damage" : "23",
+         "location" : "WIELDED_BY:jafar",
+         "oflags" : [
+            "weapon",
+            "lit"
+         ],
+         "name" : "snakestaff",
+         "size" : "25",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "SnakeStaff",
+         "maxstate" : "0",
+         "bvalue" : "500",
+         "desc[0]" : "Jafer's Snake Staff lies here, eyes glowing."
+      },
+      "tree@aladdin" : {
+         "location" : "IN_ROOM:oasis5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "tree",
+         "maxstate" : "0"
+      },
+      "turban@aladdin" : {
+         "desc[1]" : "You found a turban hanging here.",
+         "location" : "IN_ROOM:oasis5",
+         "armor" : "3",
+         "oflags" : [
+            "Container",
+            "Armor",
+            "Destroyed",
+            "Wearable",
+            "GetFlips"
+         ],
+         "name" : "turban",
+         "examine" : "There seem to be many folds to put things in.",
+         "size" : "10",
+         "state" : "1",
+         "weight" : "3",
+         "pname" : "turban",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "An arab turban has been left here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "cracker1@aladdin" : {
+         "desc[1]" : "A cracker, Iago least favorite food item, lies untouched on the floor.",
+         "location" : "IN_ROOM:palace8",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "cracker1",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "1",
+         "pname" : "cracker",
+         "maxstate" : "1",
+         "bvalue" : "15",
+         "desc[0]" : "A cracker has been left here."
+      },
+      "lamp@aladdin" : {
+         "desc[1]" : "An old dirty lamp sits here on a lighted pedastal.",
+         "location" : "IN_ROOM:gold10",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "lamp",
+         "examine" : "There's some writing on it, but it's too dirty to read.",
+         "size" : "4",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "An old lamp has been dropped here."
+      },
+      "torch@aladdin" : {
+         "location" : "IN_ROOM:gold2",
+         "oflags" : [
+            "Lightable",
+            "Extinguish"
+         ],
+         "name" : "torch",
+         "size" : "4",
+         "pname" : "torch",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "5",
+         "desc[0]" : "A worn and used old torch has been left here."
+      },
+      "blockage_down@aladdin" : {
+         "location" : "IN_ROOM:entry",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "blockage_down",
+         "desc[2]" : "The lion's mouth has closed and sunk into the ground.",
+         "linked" : "blockage_up",
+         "state" : "0",
+         "pname" : "blockage",
+         "maxstate" : "2"
+      },
+      "door3_up@aladdin" : {
+         "desc[1]" : "There is a closed oak door.",
+         "location" : "IN_ROOM:palace9",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "oak",
+         "name" : "door3_up",
+         "desc[2]" : "The oak door to the east is locked.",
+         "linked" : "door3_down",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "There is an open oak door."
+      },
+      "door3_down@aladdin" : {
+         "desc[1]" : "There is a closed oak door.",
+         "location" : "IN_ROOM:tower",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "oak",
+         "name" : "door3_down",
+         "desc[2]" : "The oak door to the east is locked.",
+         "linked" : "door3_up",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "There is an open oak door."
+      },
+      "door1_east@aladdin" : {
+         "desc[1]" : "There is a closed oak door.",
+         "location" : "IN_ROOM:palace8",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "oak",
+         "name" : "door1_east",
+         "desc[2]" : "The oak door to the east is locked.",
+         "linked" : "door1_west",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "There is an open oak door."
+      },
+      "gems@aladdin" : {
+         "location" : "IN_ROOM:gold6",
+         "oflags" : "{}",
+         "name" : "gems",
+         "size" : "5",
+         "pname" : "gems",
+         "weight" : "6",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A bag of gems lies here."
+      },
+      "sesame_south@aladdin" : {
+         "location" : "IN_ROOM:palace7",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "sesame_south",
+         "linked" : "sesame_north",
+         "state" : "1",
+         "pname" : "sesame",
+         "maxstate" : "1",
+         "desc[0]" : "A wall has been opened in the south wall allowing passage."
+      },
+      "cape@aladdin" : {
+         "desc[1]" : "The genie has left you a princess's cape.",
+         "location" : "IN_ROOM:parade",
+         "armor" : "25",
+         "oflags" : [
+            "Wearable",
+            "GetFlips",
+            "Armor"
+         ],
+         "name" : "cape",
+         "size" : "6",
+         "state" : "1",
+         "weight" : "1",
+         "pname" : "cape",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A stunning cape lies at your feet.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "door2_east@aladdin" : {
+         "desc[1]" : "There is a closed steel door.",
+         "location" : "IN_ROOM:palace9",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "steel",
+         "name" : "door2_east",
+         "desc[2]" : "The steel door to the east is locked.",
+         "linked" : "door2_west",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "There is an open steel door."
+      },
+      "drawer@aladdin" : {
+         "location" : "IN_ROOM:palace12",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "name" : "drawer",
+         "examine" : "The drawer is partially open.  You may want to look inside.",
+         "size" : "100",
+         "pname" : "drawer",
+         "weight" : "100",
+         "maxstate" : "0",
+         "bvalue" : "0"
+      },
+      "apple@aladdin" : {
+         "location" : "IN_ROOM:oasis2",
+         "oflags" : [
+            "food"
+         ],
+         "name" : "apple",
+         "size" : "2",
+         "pname" : "apple",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "25",
+         "desc[0]" : "An apple lies here on the ground."
+      }
+   },
+   "loc" : {
+      "sdesert@aladdin" : {
+         "exits" : {
+            "e" : "desertSD48@sdesert",
+            "w" : "entry",
+            "d" : "entry"
+         },
+         "flags" : [
+            "Outdoors",
+            "Hot"
+         ],
+         "zone" : "aladdin",
+         "title" : "The Southern Desert",
+         "id" : "sdesert",
+         "description" : "\n    These desert sands seem endless, but in the distance you spot something\npoking out of the sand.  Is it another mirage?\n",
+         "altitude" : null
+      },
+      "oasis5@aladdin" : {
+         "exits" : {
+            "n" : "oasis1"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "aladdin",
+         "title" : "In an Oasis",
+         "id" : "oasis5",
+         "description" : "\n   You have entered a piece of the oasis with oddly shaped trees.  One tree\nin particular appears to have the shape of a stick figure doing an improve\nto \"Walk Like An Arab\" as the wind causes it to sway.  While yet another one\ntwists and turns high into the sky.\n",
+         "altitude" : null
+      },
+      "palace9@aladdin" : {
+         "exits" : {
+            "e" : "^door2_east",
+            "u" : "^door3_up"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Jafar's Throne Room",
+         "id" : "palace9",
+         "description" : "\n   Jafar has created himself quite a nice throne room since last you saw him.\nHe has evidentally wished for great riches, for they are piled everywhere.\n",
+         "altitude" : null
+      },
+      "oasis2@aladdin" : {
+         "exits" : {
+            "w" : "oasis1"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "aladdin",
+         "title" : "In an Oasis",
+         "id" : "oasis2",
+         "description" : "\n   There is an abundance of exotic trees, bushes, and even some grass.  In\nthe distance you see many cacti that deserts are known for.\n   You wish everyday in the desert were like this as you meander about\nlazily.\n",
+         "altitude" : null
+      },
+      "palace10@aladdin" : {
+         "exits" : {
+            "w" : "palace1",
+            "e" : "palace11"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Somewhere in the Palace",
+         "id" : "palace10",
+         "description" : "\n   You are in the palace.  Halls lead east and west.\n",
+         "altitude" : null
+      },
+      "slip@aladdin" : {
+         "exits" : {},
+         "flags" : [
+            "Death",
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "You Slipped",
+         "id" : "slip",
+         "description" : "\n   Didn't I say now would be a bad time to slip?  So why didn't you listen?\nYou fall endlessly forever and ever, but die sometime within that.  Sorry.\n",
+         "altitude" : null
+      },
+      "gold4@aladdin" : {
+         "exits" : {
+            "w" : "gold3"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Within the Mounds of Gold",
+         "id" : "gold4",
+         "description" : "\n   Piles and piles of riches and jewels everywhere.  The glitter is\noverwhelming, you've never seen such a large amount of riches in your life.\n",
+         "altitude" : null
+      },
+      "palace6@aladdin" : {
+         "exits" : {
+            "w" : "palace5",
+            "n" : "^sesame_north"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Dead End?",
+         "id" : "palace6",
+         "description" : "\n   It appears you have come to a dead end.  The hall leads back to the west.\nYou notice many foot prints in the dirt that appear to begin at the north\nwall.  Scanning over this north wall, one particular marble block catches\nyour eye.\n",
+         "altitude" : null
+      },
+      "tower@aladdin" : {
+         "exits" : {
+            "d" : "e_pass@blizzard",
+            "s" : "stairs"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Atop the Castle Tower",
+         "id" : "tower",
+         "description" : "\n   Well, you've saved Agrabah from sure destruction and the evil rule of\nJafar.  You will be held in high esteem forever and ever.\n   So 'Aladdin', you have but one wish left.  Choose wisely.\n",
+         "altitude" : null
+      },
+      "gold5@aladdin" : {
+         "exits" : {
+            "e" : "gold1",
+            "s" : "gold6"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Within the Mounds of Gold",
+         "id" : "gold5",
+         "description" : "\n   Piles and piles of riches and jewels everywhere.  There must millions and\nmillions of points worth of stuff here.  You take a quick break to dive into\none large pile of coins.  After swimming for awhile, you decide to move\nalong.\n",
+         "altitude" : null
+      },
+      "gold9@aladdin" : {
+         "exits" : {
+            "e" : "gold10",
+            "w" : "gold8",
+            "d" : "slip"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "On the Stairs",
+         "id" : "gold9",
+         "description" : "\n   You are on a long, stone stairway with many cracks and chips deteriorating\nfrom time alone.  You look to over the stairs on both sides of you and see\nnothing but pure blackness.  This would not be a good time to slip.\n",
+         "altitude" : null
+      },
+      "stairs@aladdin" : {
+         "exits" : {
+            "n" : "tower",
+            "d" : "^door3_down"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Stairway to Top of the Tower",
+         "id" : "stairs",
+         "description" : "\n   You are in a spiral stairway which appears to lead to the top of a tower.\nSoon remember how much you hate spiral stairways as you look down through the\nstairway's center.\n",
+         "altitude" : null
+      },
+      "gold2@aladdin" : {
+         "exits" : {
+            "w" : "gold1"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Within the Mounds of Gold",
+         "id" : "gold2",
+         "description" : "\n   Piles and piles of riches and jewels everywhere.  The glitter is\noverwhelming, you've never seen such great amounts of riches.\n",
+         "altitude" : null
+      },
+      "gold6@aladdin" : {
+         "exits" : {
+            "n" : "gold5",
+            "s" : "gold7"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Within the Mounds of Gold",
+         "id" : "gold6",
+         "description" : "\n   More gold and jewels.  How crazy is this?  If you could take all of this\nstuff you could probably wiz 1... 2... 3 thousand times!  But since you\ncan't, you might as well just go north or south.\n",
+         "altitude" : null
+      },
+      "palace@aladdin" : {
+         "exits" : {},
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Inside the Palace",
+         "id" : "palace",
+         "description" : "\n   As make your way and finally enter the palace, you bow down before the\nprincess and her father, the sultan.  Jafar, the evil sorceror of Agrabah,\nhas forseen your arrival and is ready for you.\n",
+         "altitude" : null
+      },
+      "gold10@aladdin" : {
+         "exits" : {
+            "w" : "gold9"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "At the Top",
+         "id" : "gold10",
+         "description" : "\n   You have reached the top of the stairs.  A mysterious and bright light\nfrom the ceiling is intensely focused onto this point.  Shielding your eyes,\nyou see a stone pedastal.\n",
+         "altitude" : null
+      },
+      "lamp1@aladdin" : {
+         "exits" : {},
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Genie's Dwelling",
+         "id" : "lamp1",
+         "description" : "\n   What are you doing inside the Genie's Lamp??\n",
+         "altitude" : null
+      },
+      "palace11@aladdin" : {
+         "exits" : {
+            "w" : "palace10",
+            "e" : "palace12"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Another Hallway",
+         "id" : "palace11",
+         "description" : "\n   You are in an east/west hallway.  Looking around, you notice nothing worth\ntaking note of.\n",
+         "altitude" : null
+      },
+      "gold8@aladdin" : {
+         "exits" : {
+            "w" : "gold7",
+            "e" : "gold9"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Base of the Stairs",
+         "id" : "gold8",
+         "description" : "\n   You stand before a stairway leading to a small stone pillar extending from\nwho-knows-where.  At the top, you can see a bright light shining down onto a\npedastal.\n",
+         "altitude" : null
+      },
+      "gold3@aladdin" : {
+         "exits" : {
+            "e" : "gold4",
+            "n" : "gold1"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Within the Mounds of Gold",
+         "id" : "gold3",
+         "description" : "\n   Jewels, jewels, and more jewels...  It does not seem to end.  You stop for\na second to pinch yourself, wondering if you are really awake.  A pile of\ngems block exit to the south while the largest golden urn you've ever seen\nblocks passage to the west.  This leaves north and east open.\n",
+         "altitude" : null
+      },
+      "entry@aladdin" : {
+         "exits" : {
+            "e" : "sdesert",
+            "u" : "sdesert",
+            "d" : "^blockage_down"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors",
+            "Hot"
+         ],
+         "zone" : "aladdin",
+         "title" : "Before the Cave of Wonders",
+         "id" : "entry",
+         "description" : "\n   As you walk closer, a large head and mouth forms up from the sands ahead.\nYou now stand before the entrance to the Cave of Wonders.  It doesn't look\nall that inviting.  But if you'd like to look a little closer, stairs lead\ndown.  Safety is back up.\n",
+         "altitude" : null
+      },
+      "oasis1@aladdin" : {
+         "exits" : {
+            "w" : "oasis4",
+            "e" : "oasis2",
+            "n" : "oasis3",
+            "s" : "oasis5"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "aladdin",
+         "title" : "In an Oasis",
+         "id" : "oasis1",
+         "description" : "\n   You are in a beautiful desert oasis.  There are trees surrounding you and\na nice cool breeze blows through your hair.   Paths lead to the north, south,\neast, and west.\n",
+         "altitude" : null
+      },
+      "palace2@aladdin" : {
+         "exits" : {
+            "n" : "palace1",
+            "s" : "palace3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Somewhere in the Palace",
+         "id" : "palace2",
+         "description" : "\n   This poor palace.  What Jafar has done to it.  Your heart swells with anger\nas you notice the slime covering the once polished marble castle walls.  You\nhear screams and moans of terror coming from far off areas of the castle.\n",
+         "altitude" : null
+      },
+      "trapped@aladdin" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Trapped in the Cave of Wonders",
+         "id" : "trapped",
+         "description" : "\n   You appear to be trapped in the Cave of Wonders.  Abu's greedy mistake has\ncaused the cave mouth to close down, leaving no obvious means of exiting\nthis now dark and dreary place... but hey - It happens to the best of us.\n",
+         "altitude" : null
+      },
+      "cliff@aladdin" : {
+         "exits" : {},
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "On an Icy Cliff",
+         "id" : "cliff",
+         "description" : "\n   It appears as though you have lost the help of the genie this time around.\nJafar has no lamp, and your doom is most likely sealed.  You are stuck\nmiles upon miles away and to make matters worse,  you seem you have lost your\ncarpet.  You better think quick.\n",
+         "altitude" : null
+      },
+      "palace12@aladdin" : {
+         "exits" : {
+            "w" : "palace11"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Ashkan's Room",
+         "id" : "palace12",
+         "description" : "\n   This is the head guardsman's room.  One thing's for sure...  If you save\nthis place, the sultan's gonna need some new help.  There is no more than\nlarge oak desk with an open drawer and one chair.  You wonder why this Ashkan\nguy even needs his own room.\n",
+         "altitude" : null
+      },
+      "palace5@aladdin" : {
+         "exits" : {
+            "e" : "palace6",
+            "w" : "palace4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Palace Hallway",
+         "id" : "palace5",
+         "description" : "\n   You are still in the palace.  The floor is covered with dirt and you\nnotice numerous footprints leading to the east.  The passage leads off to the\neast and west.\n",
+         "altitude" : null
+      },
+      "palace7@aladdin" : {
+         "exits" : {
+            "w" : "^door1_west",
+            "s" : "^sesame_south"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "The Hidden Guard Room",
+         "id" : "palace7",
+         "description" : "\n   It appears as though Jafar assumed you would make it this far.  There is\nnothing of particular interest in this room.\n",
+         "altitude" : null
+      },
+      "gold1@aladdin" : {
+         "exits" : {
+            "w" : "gold5",
+            "e" : "gold2",
+            "u" : "cave",
+            "s" : "gold3"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Surrounded by Mounds of Gold",
+         "id" : "gold1",
+         "description" : "\n   You finish your descent of the stairs to find yourself in the middle of\nunbelievable mounds of treasure.  You are too scared to touch any of it\nthough.\n",
+         "altitude" : null
+      },
+      "oasis4@aladdin" : {
+         "exits" : {
+            "e" : "oasis1"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "aladdin",
+         "title" : "In an Oasis",
+         "id" : "oasis4",
+         "description" : "\n   You wish everyday in the desert were like this as you meander about\nlazily.  There is a beautiful pool of clear sparkling water.  It reflects\nthe sun sending rays shooting off everywhere.\n",
+         "altitude" : null
+      },
+      "oasis3@aladdin" : {
+         "exits" : {
+            "s" : "oasis1"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "aladdin",
+         "title" : "In an Oasis",
+         "id" : "oasis3",
+         "description" : "\n   You wish everyday in the desert were like this as you meander about\nlazily.\n",
+         "altitude" : null
+      },
+      "palace4@aladdin" : {
+         "exits" : {
+            "e" : "palace5",
+            "w" : "palace3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Long Straight Hall",
+         "id" : "palace4",
+         "description" : "\n   You are in a long straight hall leading east and west.\n",
+         "altitude" : null
+      },
+      "palace8@aladdin" : {
+         "exits" : {
+            "e" : "^door1_east",
+            "w" : "^door2_west"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Iago's Room",
+         "id" : "palace8",
+         "description" : "\n   This room is filled with various perches, parrot toys, and gold coins.\nPictures of various birds line the walls.  A \"Playbird\" centerfold featuring\nRockin' Robin is posted to the ceiling.\n",
+         "altitude" : null
+      },
+      "gold7@aladdin" : {
+         "exits" : {
+            "e" : "gold8",
+            "n" : "gold6"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "Within the Mounds of Gold",
+         "id" : "gold7",
+         "description" : "\n   You are in a dark cave.  There are no fabulous mounds of gold and jewels\nhere.  There is but one large glaring gem calling to you.  There is an exit\nto the north which will bring you into the caves of riches.  To the east\nyou see a long stairway.\n",
+         "altitude" : null
+      },
+      "palace3@aladdin" : {
+         "exits" : {
+            "e" : "palace4",
+            "n" : "palace2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "aladdin",
+         "title" : "Corner Hallway",
+         "id" : "palace3",
+         "description" : "\n   You wander through the palace.  Looking above, you notice the bright\ncandle chandeliers that line the ceiling of these halls are no longer lit.\nCob webs cover the walls, stringing everywhere.  The halls lead off to the\nnorth and east.\n",
+         "altitude" : null
+      },
+      "palace1@aladdin" : {
+         "exits" : {
+            "e" : "palace10",
+            "s" : "palace2"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "aladdin",
+         "title" : "Back in the Palace",
+         "id" : "palace1",
+         "description" : "\n   The palace does not seem the same as it was the last time you were here.\nYou can feel Jafar's evil presence all around you.  He should know you have\nreturned.  You can expect a nice welcome party awaiting you throughout the\ncastle.  Halls lead to the east and south. There is a gate behind you, well,\nyou are stuck.\n",
+         "altitude" : null
+      },
+      "cave@aladdin" : {
+         "exits" : {
+            "u" : "^blockage_up",
+            "d" : "gold1"
+         },
+         "flags" : [
+            "Light",
+            "Hot",
+            "Nomobiles"
+         ],
+         "zone" : "aladdin",
+         "title" : "Cave of Wonders",
+         "id" : "cave",
+         "description" : "\n   You walk through a large open lion's mouth and find yourself in the Cave\nof Wonders.  As you move forward, a voice growls, \"Only those of purest heart\nmay enter.\"  There is a long stairway in front of you leading down into the\ndarkness of the lion's throat. You may also chicken out and go back up.\n",
+         "altitude" : null
+      },
+      "parade@aladdin" : {
+         "exits" : {
+            "s" : "palace"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "aladdin",
+         "title" : "The Parade for a Prince",
+         "id" : "parade",
+         "description" : "\n   Well, it looks like the Genie has granted your wish!  You are in a parade\nheading into Agrabah, home of the beautiful, and unmarried Princess Jasmine!\nCrowds line the streets just waiting to catch a single glimpse of you.  You\nbow and wave to your cheering fans as you are bombarded with an abundance\nof flowers.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "guard9@aladdin" : {
+         "damage" : "10",
+         "location" : "palace12",
+         "armor" : "0",
+         "name" : "guard9",
+         "description" : "Ashkan, the guard leader, is not pleased to see you.",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "75",
+         "pname" : "Ashkan",
+         "mflags" : [
+            "GrabHostile"
+         ]
+      },
+      "abu@aladdin" : {
+         "damage" : "5",
+         "location" : "cave",
+         "armor" : "100",
+         "name" : "abu",
+         "examine" : "Abu flips for you.",
+         "description" : "There is a playful monkey swinging around here.",
+         "strength" : "1000",
+         "speed" : "100",
+         "aggression" : "0",
+         "pname" : "Abu",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "princess@aladdin" : {
+         "damage" : "5",
+         "location" : "palace",
+         "armor" : "100",
+         "name" : "princess",
+         "description" : "Princess Jasmine stares deeply into your eyes.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Princess Jasmine",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "guard5@aladdin" : {
+         "damage" : "10",
+         "location" : "palace7",
+         "armor" : "0",
+         "name" : "guard5",
+         "description" : "Mammad has been awaiting your arrival.",
+         "strength" : "125",
+         "speed" : "0",
+         "pname" : "Mammad",
+         "aggression" : "100"
+      },
+      "guard2@aladdin" : {
+         "damage" : "10",
+         "location" : "palace3",
+         "armor" : "0",
+         "name" : "guard2",
+         "description" : "Ali, a castle guard, prepares to attack.",
+         "strength" : "100",
+         "speed" : "5",
+         "pname" : "Ali",
+         "aggression" : "50"
+      },
+      "guard6@aladdin" : {
+         "damage" : "10",
+         "location" : "palace7",
+         "armor" : "0",
+         "name" : "guard6",
+         "description" : "Omid smiles, showing off his golden tooth.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Omid",
+         "aggression" : "50"
+      },
+      "jafar@aladdin" : {
+         "damage" : "10",
+         "location" : "palace",
+         "armor" : "0",
+         "name" : "jafar",
+         "description" : "Jafar says, 'I dare you to challenge me...  You street rat!'",
+         "strength" : "700",
+         "speed" : "0",
+         "aggression" : "50",
+         "pname" : "Jafar",
+         "mflags" : [
+            "NoSteal",
+            "BarUp"
+         ]
+      },
+      "guard8@aladdin" : {
+         "damage" : "10",
+         "location" : "palace11",
+         "armor" : "0",
+         "name" : "guard8",
+         "description" : "\nBijan is really tired and really wants to kill you so he can take a nap.",
+         "strength" : "200",
+         "speed" : "5",
+         "pname" : "Bijan",
+         "aggression" : "75"
+      },
+      "genie2@aladdin" : {
+         "damage" : "5",
+         "location" : "tower",
+         "armor" : "100",
+         "name" : "genie2",
+         "description" : "\nAn all powerful, blue Genie floats here looking at you with hopeful eyes.\nHe longs to be free and all you have to do is say it.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Genie",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "beast@aladdin" : {
+         "damage" : "12",
+         "location" : "cliff",
+         "armor" : "5",
+         "name" : "beast",
+         "description" : "The Icy Beast roars at the sight of its new found dinner.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Icy Beast",
+         "aggression" : "40"
+      },
+      "sultan@aladdin" : {
+         "damage" : "5",
+         "location" : "palace",
+         "armor" : "100",
+         "name" : "sultan",
+         "description" : "The Sultan of Agrabah, Jasmine's father, is very pleased to see you.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Sultan",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "genie1@aladdin" : {
+         "damage" : "5",
+         "location" : "lamp1",
+         "armor" : "100",
+         "name" : "genie1",
+         "description" : "An allpowerful, blue Genie floats here.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Genie",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "guard3@aladdin" : {
+         "damage" : "10",
+         "location" : "palace4",
+         "armor" : "0",
+         "name" : "guard3",
+         "description" : "Mohammed, a castle guard, prepares to attack.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Mohammed",
+         "aggression" : "100"
+      },
+      "guard4@aladdin" : {
+         "damage" : "10",
+         "location" : "palace5",
+         "armor" : "0",
+         "name" : "guard4",
+         "description" : "\nHooman the guard sharpens his sword looking forward to killing you.",
+         "strength" : "200",
+         "speed" : "5",
+         "pname" : "Hooman",
+         "aggression" : "100"
+      },
+      "snake@aladdin" : {
+         "damage" : "10",
+         "location" : "oasis3",
+         "armor" : "0",
+         "name" : "snake",
+         "description" : "Slimey the Snake hung quietly from a tree... until you wandered in.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Slimey the Snake",
+         "aggression" : "100"
+      },
+      "guard1@aladdin" : {
+         "damage" : "10",
+         "location" : "palace2",
+         "armor" : "0",
+         "name" : "guard1",
+         "description" : "Abdul is one of the more fashionably dressed castle guards.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Abdul",
+         "aggression" : "100"
+      },
+      "guard7@aladdin" : {
+         "damage" : "10",
+         "location" : "palace4",
+         "armor" : "0",
+         "name" : "guard7",
+         "description" : "Amon, a castle guard, prepares to attack.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Amon",
+         "aggression" : "50"
+      },
+      "iago@aladdin" : {
+         "damage" : "12",
+         "location" : "palace8",
+         "armor" : "0",
+         "name" : "iago",
+         "description" : "Iago screechs 'I will kill you if you give me another cracker!'",
+         "strength" : "400",
+         "speed" : "0",
+         "pname" : "Iago",
+         "aggression" : "60"
+      }
+   }
+}

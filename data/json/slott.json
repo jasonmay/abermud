@@ -1,0 +1,1628 @@
+{
+   "obj" : {
+      "necklace@slott" : {
+         "location" : "IN_CONTAINER:Box",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "Necklace",
+         "examine" : "\nThe most beautiful peace of jewelry you ever have seen, and look at the size \nof that diamond that sits in the middle of it! This must be worth a fortune.",
+         "size" : "15",
+         "state" : "0",
+         "pname" : "Necklace",
+         "maxstate" : "0",
+         "bvalue" : "150",
+         "desc[0]" : "A diamond necklace lies here."
+      },
+      "shield@slott" : {
+         "desc[1]" : "You almost oversaw a dusty Shield in the corner, haven't it been for the \nlight from the window you would never spotted it.",
+         "location" : "IN_ROOM:slott24",
+         "oflags" : [
+            "Armor",
+            "GetFlips",
+            "wearable",
+            "Shield"
+         ],
+         "armor" : "25",
+         "name" : "Shield",
+         "examine" : "A metal shield, this would offer you some protection?",
+         "size" : "5",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A shield has been dropped here."
+      },
+      "sandwich@slott" : {
+         "location" : "CARRIED_BY:William",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "Sandwich",
+         "examine" : "\nYummie, a sandwich with all the good stuff on.  Ham, cheese, quecumbers, \ntomato and some sallad.",
+         "size" : "5",
+         "state" : "0",
+         "maxstate" : "0",
+         "desc[0]" : "A freshly made sandwich lies here."
+      },
+      "table3@slott" : {
+         "location" : "IN_ROOM:slott30",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Table3",
+         "examine" : "You look at the table and notice that it has been used as a makeup table.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Table",
+         "maxstate" : "0"
+      },
+      "insidedoor4@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott15",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "insidedoor4",
+         "desc[2]" : "The door is locked.",
+         "linked" : "outsidedoor4",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "whip@slott" : {
+         "desc[1]" : "A whip hangs on the northern wall.",
+         "damage" : "12",
+         "location" : "IN_ROOM:slott2",
+         "oflags" : [
+            "Weapon",
+            "GetFlips"
+         ],
+         "name" : "Whip",
+         "examine" : "\nA large whip made of oxskin, this looks like it could be used both as a \nweapon and a rope.",
+         "size" : "10",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A whip lies here."
+      },
+      "insidedoor6@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott44",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "insidedoor6",
+         "desc[2]" : "The door is locked.",
+         "linked" : "outsidedoor6",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "benches@slott" : {
+         "location" : "IN_ROOM:slott10",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Bench",
+         "name" : "Benches",
+         "examine" : "You look at the bench nearest the altar and you find a button.",
+         "size" : "1",
+         "state" : "0",
+         "maxstate" : "0"
+      },
+      "drawer@slott" : {
+         "desc[1]" : "There is a drawer in the cupboard, it is closed.",
+         "location" : "IN_ROOM:slott11",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "name" : "Drawer",
+         "examine" : "It's a drawer.",
+         "size" : "45",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The drawer has been opened."
+      },
+      "bed@slott" : {
+         "location" : "IN_ROOM:slott30",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Bed",
+         "examine" : "The largest oak bed you ever seen, looks really comfortable.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Bed",
+         "maxstate" : "0"
+      },
+      "bowl@slott" : {
+         "desc[1]" : "A bowl has been placed here.",
+         "location" : "IN_CONTAINER:Drawer",
+         "oflags" : [
+            "GetFlips",
+            "Armor",
+            "Wearable",
+            "Container"
+         ],
+         "armor" : "15",
+         "name" : "Bowl",
+         "examine" : "A sallads bowl, good to store things in.",
+         "size" : "30",
+         "state" : "1",
+         "maxstate" : "1",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A bowl has been left here."
+      },
+      "bag@slott" : {
+         "desc[1]" : "Something is sticking out of the manure!",
+         "location" : "IN_ROOM:slott49",
+         "oflags" : [
+            "GetFlips",
+            "Container"
+         ],
+         "name" : "Bag",
+         "examine" : "A bag, nice to store stuff in.",
+         "size" : "30",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A bag has been dropped here ."
+      },
+      "krusefix@slott" : {
+         "location" : "IN_ROOM:slott10",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Cross",
+         "name" : "Krusefix",
+         "examine" : "A standard Krusefix, with Jesus nailed to it.",
+         "size" : "1",
+         "state" : "0",
+         "maxstate" : "0"
+      },
+      "diary@slott" : {
+         "location" : "IN_CONTAINER:Cupboards2",
+         "oflags" : "{ }",
+         "name" : "Diary",
+         "examine" : "This is the diary of the butler Manfred.\n    The page you have look up is about what happened a dark night\n    for many years ago. The night when the castle was over taken\n    by the evil creature that you now is searching for.\n    The butler has written down the following:\n    'It was a dark and stormy autumn night when we first heard \n    an awful scream, it was the &+Rmrs&* of the house that had \n    Encountered the creature in the library. When I got there \n    she was gone. Then later that night the &+Rson&* and the \n    &+Rdoughter&* disappeared, now one has ever seen them again. \n    But every night when there is a fullmoon, the screams of the\n    missing family members are heard echoing through the castle. \n    I have hidden my &+Rmaster&* in the northeast tower hoping \n    that the creature will not find him there. I don't know why\n    the creature haven't taken me, couse I know it could have,\n    I woke up one night and saw it standing in the doorway to \n    my room but it backed away from me when I stood up and was to\n    jump it. I thought I could capture it and lock it inside the\n    closet. &+YBut it ran away, as if I would SMELL bad or something&*.\n    OH god if I was 30 years younger, I would have gone down into\n    the basement to kill this horrible monster, but ack I'm to old\n    and weakened to wield a sword nore less to hit with it. I'm \n    glad that I had the strength to destroy the stairs down to \n    the basement, preventing IT from coming up here again. Now \n    there is only &+Cone&* way left down there, but that way only \n    leads down &+bso the one who dares to go down might be stuck \n    &+bthere for ever&*! The way down is a &+Csecret passage&* that my \n    &+Rmaster&* only knows of and he won't reveal it to me, maybe \n    he's afraid that I would do something stupid.'",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Diary",
+         "maxstate" : "0",
+         "desc[0]" : "Someone has misplaced their diary here."
+      },
+      "hole3@slott" : {
+         "location" : "IN_ROOM:slott25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "toalett",
+         "name" : "Hole3",
+         "examine" : "&+WEEWWW&*, gross. This is used as a toalett, and no one as cleaned it in a while.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Hole",
+         "maxstate" : "0"
+      },
+      "altar@slott" : {
+         "location" : "IN_ROOM:slott10",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Altar",
+         "examine" : "\nThere is a small note attached saying:  'Beware of the monster below.'\nSometime ago the altar was shifted from its base and put back again!  You\njust can't figure out how someone could have moved this big chunk of stone!",
+         "size" : "50",
+         "state" : "0",
+         "maxstate" : "0",
+         "desc[0]" : "An altar stands at the southern end of the room."
+      },
+      "table@slott" : {
+         "location" : "IN_ROOM:slott5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Tables",
+         "name" : "Table",
+         "examine" : "A small round table of oak, once very polished but now full of dust.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Table",
+         "maxstate" : "0"
+      },
+      "footlinks@slott" : {
+         "desc[1]" : "The footlinks are unlocked.",
+         "location" : "IN_ROOM:slott43",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "Footlinks",
+         "examine" : "A footlinks, the kind you chain people with.",
+         "desc[2]" : "The footlinks are locked.",
+         "size" : "50",
+         "state" : "2",
+         "pname" : "Footlinks",
+         "maxstate" : "2",
+         "desc[0]" : "The footlinks have been opened."
+      },
+      "insidedoor5@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott35",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "insidedoor5",
+         "desc[2]" : "The door is locked.",
+         "linked" : "outsidedoor5",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "shelf@slott" : {
+         "location" : "IN_ROOM:slott4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "shelves",
+         "name" : "Shelf",
+         "examine" : "\nA shelf, probably where they stored the hats and gloves for the castle \nvisitors.  Empty now though.",
+         "size" : "1",
+         "state" : "0",
+         "maxstate" : "0"
+      },
+      "window2@slott" : {
+         "location" : "IN_ROOM:slott24",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Window2",
+         "examine" : "\nThis is huge, the window is facing the front yard. You see the stables, \nand you see there is a way leading off to the east behind the stables.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Window",
+         "maxstate" : "0"
+      },
+      "bathtub@slott" : {
+         "location" : "IN_ROOM:slott25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Tub",
+         "name" : "Bathtub",
+         "examine" : "Wow this is big, could easily get 4-5 persons down in it.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Bathtub",
+         "maxstate" : "0"
+      },
+      "candle@slott" : {
+         "desc[1]" : "A candle stands on one of the tables.",
+         "location" : "IN_ROOM:slott5",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "GetFlips"
+         ],
+         "name" : "Candle",
+         "examine" : "An old wax candle, this might come in good use.",
+         "size" : "5",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A candle has been dropped here."
+      },
+      "outsidedoor3@slott" : {
+         "desc[1]" : "There is a panel in the wall.",
+         "location" : "IN_ROOM:slott6",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "name" : "outsidedoor3",
+         "examine" : "Looks like it could be pushed!",
+         "linked" : "insidedoor3",
+         "state" : "1",
+         "pname" : "Panel",
+         "maxstate" : "1",
+         "desc[0]" : "The panel is open."
+      },
+      "windows@slott" : {
+         "location" : "IN_ROOM:slott12",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "window",
+         "name" : "Windows",
+         "examine" : "You look out through the windows and see a once beautiful garden.  \nNow it's overgrown with grass, what a pity!",
+         "size" : "1",
+         "state" : "0",
+         "maxstate" : "0"
+      },
+      "outsidedoor5@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott36",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "outsidedoor5",
+         "desc[2]" : "The door is locked.",
+         "linked" : "insidedoor5",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "note@slott" : {
+         "desc[1]" : "A small note lies on the table.",
+         "damage" : "0",
+         "location" : "IN_ROOM:slott3",
+         "oflags" : "{ }",
+         "name" : "Note",
+         "examine" : "\n&+CThe note seems to be written by the lord of the house, and it reads:\n\n'I fear for my familie lives, so I have barrikaded myself on the \nsecondfloor, waiting for some help from the outside. My dear family has \nbeen taken by the evil that haunts the house. Help me free my family and \nI will richly reward you. find a way to trapp the evil creatur that lives \nin the darkest holes! But beware, one mistake can trapp you down in the \ndark forever....\n\t\t    \nPs: The only one that don't seems to be affected is my butler, and he is \nto cowered to enter the dark place where the evil lurks. We don't know why \nhe's mot affected by this evil creature but maybe you can find out the \nsecret he carries on..'",
+         "size" : "2",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A small note lies here."
+      },
+      "hole2@slott" : {
+         "location" : "IN_ROOM:slott41",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Hole2",
+         "examine" : "\nAs you look up in the hole you see what is left of the stairs, high above \nyour head two metal &+Brods&* are sticking out of the walls.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Hole",
+         "maxstate" : "0"
+      },
+      "key@slott" : {
+         "desc[1]" : "A small key lies on a table.",
+         "location" : "IN_ROOM:slott15",
+         "oflags" : [
+            "Key",
+            "GetFlips"
+         ],
+         "name" : "Key",
+         "examine" : "Just a key, what did you suspect?",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A small key has been dropped here."
+      },
+      "woddenbowl@slott" : {
+         "location" : "IN_ROOM:slott14",
+         "oflags" : [
+            "Noget",
+            "Container"
+         ],
+         "altname" : "Bowl",
+         "name" : "Woddenbowl",
+         "examine" : "A woddenbowl to have fruits in.",
+         "size" : "20",
+         "state" : "0",
+         "maxstate" : "0",
+         "desc[0]" : "A woddenbowl stands on the table."
+      },
+      "sign@slott" : {
+         "location" : "IN_ROOM:slott1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "Sign",
+         "name" : "Sign",
+         "examine" : "\n                  _______________________________\n                 |   Beware of the being, that   |\n                 | lurks the dark underground!! _|\n   \t         | couse if you aren't cousius,/\n\t         |  you will be captured do.. /\n\t          \\__________________________/\n\t\t     The note has been torn apart\n\t\t     so the last part is missing...",
+         "desc[0]" : "A old worn sign is nailed to the front doors of the castle.",
+         "size" : "1"
+      },
+      "box@slott" : {
+         "desc[1]" : "There is a closed box on the table.",
+         "location" : "IN_ROOM:slott30",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "Jewlerybox",
+         "name" : "Box",
+         "examine" : "A red box with &+ygold&* painted roses on it.",
+         "size" : "45",
+         "state" : "1",
+         "pname" : "Box",
+         "maxstate" : "1",
+         "desc[0]" : "The jewlery box has been opened."
+      },
+      "hook@slott" : {
+         "location" : "IN_ROOM:slott4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Hooks",
+         "name" : "Hook",
+         "examine" : "A hook to hang up coats and rocks on!",
+         "size" : "1",
+         "state" : "0",
+         "maxstate" : "0"
+      },
+      "insidedoor@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott3",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "insidedoor",
+         "linked" : "outsidedoor",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "bench_bot@slott" : {
+         "location" : "IN_ROOM:slott40",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "basement",
+         "name" : "bench_bot",
+         "linked" : "bench_button"
+      },
+      "cupboards2@slott" : {
+         "desc[1]" : "The cupboard is closed.",
+         "location" : "IN_ROOM:slott26",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "name" : "Cupboards2",
+         "examine" : "A small cupboard stand beside the bed.",
+         "size" : "50",
+         "state" : "1",
+         "pname" : "Cupboard",
+         "maxstate" : "1",
+         "desc[0]" : "The cupboard has been opened."
+      },
+      "table2@slott" : {
+         "location" : "IN_ROOM:slott14",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Table2",
+         "examine" : "A large table made of oak, it is set for six persons.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Table",
+         "maxstate" : "0"
+      },
+      "outsidedoor6@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott43",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "outsidedoor6",
+         "desc[2]" : "The door is locked.",
+         "linked" : "insidedoor6",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "garlics@slott" : {
+         "location" : "IN_CONTAINER:Cupboards",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "Garlic",
+         "name" : "Garlics",
+         "examine" : "Just an ordanary garlic?",
+         "size" : "10",
+         "state" : "0",
+         "maxstate" : "0",
+         "desc[0]" : "A garlic has been dropped here."
+      },
+      "bench_button@slott" : {
+         "location" : "IN_ROOM:slott10",
+         "oflags" : [
+            "PushToggle",
+            "Noget"
+         ],
+         "pname" : "button",
+         "name" : "bench_button",
+         "linked" : "bench_bot",
+         "maxstate" : "1",
+         "desc[0]" : "The altar has shifted from its base exposing a secret passage!",
+         "state" : "1"
+      },
+      "books@slott" : {
+         "location" : "IN_ROOM:slott45",
+         "oflags" : "{ }",
+         "altname" : "Book",
+         "name" : "Books",
+         "examine" : "You open the book to the first page and read:\n\nTELL ME, O MUSE, of that ingenious hero who traveled far and wide after he \nhad sacked the famous town of Troy. Many cities did he visit, and many were \nthe nations with whose manners and customs he was acquainted; moreover he \nsuffered much by sea while trying to save his own life and bring his men \nsafely home; but do what he might he could not save his men, for they \nperished through their own sheer folly in eating the cattle of the Sun-god \nHyperion; so the god prevented them from ever reaching home. Tell me, too, \nabout all these things, O daughter of Jove, from what so ever source you \nmay know them.\n\t\t    \nHmm looks like the first book of Homer's Odyssey, wonder how that got here...",
+         "size" : "1",
+         "state" : "0",
+         "maxstate" : "0",
+         "bvalue" : "150"
+      },
+      "coat@slott" : {
+         "desc[1]" : "A coat hangs here on a hook.",
+         "location" : "IN_ROOM:slott4",
+         "oflags" : [
+            "Wearable",
+            "GetFlips"
+         ],
+         "armor" : "10",
+         "name" : "Coat",
+         "examine" : "A good thick coat!",
+         "size" : "5",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A coat lies on the ground."
+      },
+      "outsidedoor@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott1",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "outsidedoor",
+         "linked" : "insidedoor",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The door is open."
+      },
+      "stove@slott" : {
+         "location" : "IN_ROOM:slott11",
+         "oflags" : [
+            "Lit",
+            "NoGet"
+         ],
+         "armor" : "0",
+         "name" : "Stove",
+         "examine" : "The stove has been recently used and is still warm.",
+         "size" : "0",
+         "state" : "0",
+         "maxstate" : "0"
+      },
+      "insidedoor2@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott5",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "insidedoor2",
+         "desc[2]" : "The door is locked.",
+         "linked" : "outsidedoor2",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "hole@slott" : {
+         "location" : "IN_ROOM:slott19",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Hole",
+         "examine" : "\nLooking down the hole you see what is left of the stairs, the stone and \nwood rubble. Down below looks treacherous and you don't even want to know \nwhat would happen if you fell down there. It's too dark to see anything of \nthe rest of the room!",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "There is a rope tied here leading to the lower level."
+      },
+      "outsidedoor4@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott10",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "outsidedoor4",
+         "desc[2]" : "The door is locked.",
+         "linked" : "insidedoor4",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "knife@slott" : {
+         "desc[1]" : "There is an small knife on the table.",
+         "damage" : "7",
+         "location" : "IN_ROOM:slott14",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "Knife",
+         "examine" : "A small knife, it's sharp so watch your fingers.",
+         "size" : "5",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A small knife lies here."
+      },
+      "ring@slott" : {
+         "location" : "WORN_BY:HouseMaster",
+         "oflags" : [
+            "Wearable",
+            "Lit",
+            "SpellChance",
+            "RegenMana"
+         ],
+         "name" : "Ring",
+         "examine" : "This ring glows of an magic power, you never seen before!",
+         "size" : "15",
+         "state" : "0",
+         "pname" : "Ring",
+         "maxstate" : "0",
+         "bvalue" : "500",
+         "desc[0]" : "A diamond ring lies here."
+      },
+      "portraits@slott" : {
+         "location" : "IN_ROOM:slott12",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Portrait",
+         "name" : "Portraits",
+         "examine" : "\nThe family portraits have the oldest to the south and the youngest to \nthe north. The northern portrait catches your attention, it's portraying \na young man sitting in a chapel of some kind, in each hand he's got a big \ngarlic, wonder why?",
+         "size" : "1",
+         "state" : "0",
+         "maxstate" : "0"
+      },
+      "outsidedoor2@slott" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:slott7",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "outsidedoor2",
+         "desc[2]" : "The door is locked.",
+         "linked" : "insidedoor2",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "rods2@slott" : {
+         "location" : "IN_ROOM:slott19",
+         "oflags" : [
+            "Noget"
+         ],
+         "name" : "Rods2",
+         "linked" : "Rods",
+         "state" : "1",
+         "pname" : "rod",
+         "maxstate" : "1",
+         "desc[0]" : "You see a rope hanging downward, but its just out of reach."
+      },
+      "door@slott" : {
+         "location" : "IN_ROOM:slott23",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Door",
+         "examine" : "The door has not used in a long time.",
+         "maxstate" : "0",
+         "size" : "1",
+         "state" : "0"
+      },
+      "cupboards@slott" : {
+         "desc[1]" : "The cupboard is closed.",
+         "location" : "IN_ROOM:slott11",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "Cupboard",
+         "name" : "Cupboards",
+         "examine" : "A cupboard stands against the wall.",
+         "size" : "50",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The cupboard has been opened."
+      },
+      "insidedoor3@slott" : {
+         "desc[1]" : "A shelf stands against the wall.",
+         "location" : "IN_ROOM:slott8",
+         "oflags" : [
+            "Pushable",
+            "NoGet"
+         ],
+         "name" : "insidedoor3",
+         "examine" : "By the marks in the dust on the floor this shelf serves as a door!",
+         "linked" : "outsidedoor3",
+         "state" : "1",
+         "pname" : "shelf",
+         "maxstate" : "1",
+         "desc[0]" : "The shelf has been pushed aside."
+      },
+      "rods@slott" : {
+         "location" : "IN_ROOM:slott41",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "Rod",
+         "name" : "Rods",
+         "examine" : "\nLooks like it's should hold for a person to hang onto! Could be a good \nplace to fasten a rope or something! If you just could throw it up there, \nyou might just be able to climb up!!",
+         "linked" : "Rods2",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A rope is snagged on a metal rod, allowing you to climb up but just barely.\nClimbing back down however is too risky."
+      },
+      "woodpiece@slott" : {
+         "desc[1]" : "A piece of a wood door lies here.",
+         "location" : "IN_ROOM:slott5",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "GetFlips"
+         ],
+         "altname" : "stick",
+         "name" : "Woodpiece",
+         "examine" : "Looks like a piece of a closet door.",
+         "size" : "5",
+         "state" : "1",
+         "pname" : "Woodpiece",
+         "maxstate" : "1",
+         "desc[0]" : "A burning piece of wood is here."
+      },
+      "closet@slott" : {
+         "desc[1]" : "The closet is closed.",
+         "location" : "IN_ROOM:slott26",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "name" : "Closet",
+         "examine" : "A closet, not that big but still a closet.",
+         "size" : "50",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The closet has been opened."
+      },
+      "carpet@slott" : {
+         "location" : "IN_ROOM:slott32",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Carpet",
+         "examine" : "\nYou examine the pink carpet and finds some blood traces in one of the corner \nof the room, this must have been where the girl was when she was taken by \nthe creature.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "Carpet",
+         "maxstate" : "0"
+      },
+      "orange@slott" : {
+         "location" : "IN_CONTAINER:Woddenbowl",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "Orange",
+         "examine" : "Just an orange.",
+         "size" : "10",
+         "state" : "0",
+         "maxstate" : "0",
+         "desc[0]" : "A delicious orange has been dropped here."
+      }
+   },
+   "loc" : {
+      "slott49@slott" : {
+         "exits" : {
+            "e" : "slott48"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "slott",
+         "title" : "Behind the stable",
+         "id" : "slott49",
+         "description" : "\n    EEWW what a smell! This is where they have shoveled out the horse manure \nfrom the stable.  And it's not a pretty sight...\n",
+         "altitude" : null
+      },
+      "slott33@slott" : {
+         "exits" : {
+            "w" : "slott32",
+            "n" : "slott34",
+            "s" : "slott28"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Hallway",
+         "id" : "slott33",
+         "description" : "\n    This hallway is dark and dim, in a strange way. Course it should be more \nenlightened--the whole eastern wall is full with windows and the sun is shining \non the western wall. It looks like the wall soaks in all the light that hits it.\n",
+         "altitude" : null
+      },
+      "slott37@slott" : {
+         "exits" : {
+            "w" : "slott38",
+            "e" : "slott36",
+            "s" : "slott31"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Corridor",
+         "id" : "slott37",
+         "description" : "\n    This is a corridor that runs at the north side of the castle, connecting \nthe different bedrooms to gather. The corridor continues to the &+Cwest&* and \nthe &+Ceast&*.\n",
+         "altitude" : null
+      },
+      "slott11@slott" : {
+         "exits" : {
+            "w" : "slott12",
+            "n" : "slott14",
+            "s" : "slott5"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "The kitchen",
+         "id" : "slott11",
+         "description" : "\n    The kitchen is large, large enough for several cooks to work here at the \nsame time. There is a big &+Bstove&* placed in the middle of the room, the \nwalls are filled with &+Bcupboards&* and &+Bdrawers&*. You notice that this \nroom has been used recently, there is no dust or filth anywhere.\n",
+         "altitude" : null
+      },
+      "slott38@slott" : {
+         "exits" : {
+            "e" : "slott37",
+            "s" : "slott30"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "End of corridor",
+         "id" : "slott38",
+         "description" : "\n    This is one end of an corridor leading to the &+Ceast&*. The walls are clean, \nnot even a painting or a drape hangs here.\n",
+         "altitude" : null
+      },
+      "slott27@slott" : {
+         "exits" : {
+            "n" : "slott29",
+            "d" : "slott7"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "SW tower",
+         "id" : "slott27",
+         "description" : "\n    You have entered the southwest tower. There is not much to see in here \nexcept the stairs leading &+Cdown&* and the doorway to the &+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "slott13@slott" : {
+         "exits" : {
+            "e" : "slott14",
+            "n" : "slott19",
+            "s" : "slott12"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Hallway",
+         "id" : "slott13",
+         "description" : "\n    This is a hallway that reaches from north to the south.  The walls in \nthis room are clean, but you can see that there had been paintings hanging \nhere.  Wonder where they are now?  The hallway continues to the &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "slott22@slott" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Hallway",
+         "id" : "slott22",
+         "description" : "\n    The hallway ends abruptly, the ceiling has caved in blocking the doors \nto the east. As you examine what's left of the ceiling you see some marks \nas if someone has used a big sledgehammer on it. And you start to think that \nthe ceiling has been deliberately made to cave in, just as if someone wouldn't \nlet someone in or OUT.\n",
+         "altitude" : null
+      },
+      "slott39@slott" : {
+         "exits" : {
+            "d" : "slott19",
+            "s" : "slott29"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "NW tower",
+         "id" : "slott39",
+         "description" : "\n    This is the northwest tower, the only thing in here accept the dust is a \nstair leading &+Cdown&*.\n",
+         "altitude" : null
+      },
+      "slott8@slott" : {
+         "exits" : {
+            "w" : "slott9",
+            "s" : "^insidedoor3"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Storage room",
+         "id" : "slott8",
+         "description" : "\n   You are standing in a small room that once was used as a storage room, \nbut now there is only rubbage left. You can't see anything that could be \nuseful to you.\n",
+         "altitude" : null
+      },
+      "slott25@slott" : {
+         "exits" : {
+            "e" : "slott24",
+            "n" : "slott30"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Bathroom",
+         "id" : "slott25",
+         "description" : "\n    This is the castle bathroom, filled with the usual stuff you need for \npersonal hygiene...soap, toothpaste, etc. and of course a bucket of water. \nThere is a large &+Bbathtub&* at the southern wall and a strange &+Bhole&* in the \nfloor at the west wall.\n",
+         "altitude" : null
+      },
+      "slott24@slott" : {
+         "exits" : {
+            "w" : "slott25",
+            "e" : "slott26",
+            "n" : "slott31",
+            "d" : "slott3"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Upperhall",
+         "id" : "slott24",
+         "description" : "\n    As you enter this room the first thing you notice is the big &+Bwindow&* \nin the southern wall.  This used to be a peaceful room but someone tore the \nfurniture apart and left them on the floor. \n",
+         "altitude" : null
+      },
+      "slott3@slott" : {
+         "exits" : {
+            "e" : "slott4",
+            "w" : "slott5",
+            "u" : "slott24",
+            "s" : "^insidedoor"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "In the hall",
+         "id" : "slott3",
+         "description" : "\n   You stand in the hall of the castle. It is furnished with a small table \nand chairs. On the floor there lies a thick carpet. The ceilings were painted \nwhite a long time ago, but have turned yellow with age. There are grand stairs \nleading &+Cup&*, and doorways to the &+Cwest&* and &+Ceast&*\n",
+         "altitude" : null
+      },
+      "slott31@slott" : {
+         "exits" : {
+            "n" : "slott37",
+            "s" : "slott24"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "The Son's bedroom",
+         "id" : "slott31",
+         "description" : "\n   This used to be the Son's bedroom; now there is not much left in here. \nThere is a small bed and some closets but other than that it has been cleaned \nout for some reason. There would have been toys and things like that but there \nis not a trace of them.\n",
+         "altitude" : null
+      },
+      "slott15@slott" : {
+         "exits" : {
+            "e" : "slott16",
+            "n" : "slott21",
+            "s" : "^insidedoor4"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "slott",
+         "title" : "Library",
+         "id" : "slott15",
+         "description" : "\n    This is a large library with bookcases full of books.  There are small \ntables and chairs placed out tastefully so people should be able to sit and \nread in peace. On the western wall there is a large fireplace.\n",
+         "altitude" : null
+      },
+      "slott42@slott" : {
+         "exits" : {
+            "w" : "slott40",
+            "e" : "slott43"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "slott",
+         "title" : "Basement",
+         "id" : "slott42",
+         "description" : "\n    This is a small corridor leading to the &+Cwest&* and to the &+Ceast&*. The \nair is so thick in here that you almost could cut it with your knife.\n",
+         "altitude" : null
+      },
+      "slott16@slott" : {
+         "exits" : {
+            "w" : "slott15",
+            "e" : "slott17",
+            "s" : "slott9"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Innerhall",
+         "id" : "slott16",
+         "description" : "\n    This hall seperates the servants' area from the rest of the house. There \nare some small chairs and smaller tables here, this must been where the \nservants where sitting when they where on duty but didn't had anything to do \nfor the moment.\n",
+         "altitude" : null
+      },
+      "slott1@slott" : {
+         "exits" : {
+            "e" : "slott2",
+            "n" : "^outsidedoor",
+            "d" : "EscPath@eastcoast",
+            "s" : "EscPath@eastcoast"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "slott",
+         "title" : "The Yard",
+         "id" : "slott1",
+         "description" : "\n   You are standing in a large yard surrounded by high fences. To the &+Cnorth&* \nyou see the entry to a castle, and to the &+Ceast&* you see a small stable.  The\nmurky swampland can be seen below.\n",
+         "altitude" : null
+      },
+      "slott6@slott" : {
+         "exits" : {
+            "n" : "^outsidedoor3",
+            "u" : "slott28"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "slott",
+         "title" : "Southeast tower",
+         "id" : "slott6",
+         "description" : "\n   You find yourself in a round room, as you look around you can see by the \ndust and dirt that this room hasn't been in use for a long time. This is one \nof the corner towers of the castle. Spiral stairs head &+Cup&*.\n",
+         "altitude" : null
+      },
+      "slott48@slott" : {
+         "exits" : {
+            "w" : "slott49",
+            "n" : "slott47"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "slott",
+         "title" : "The path turns...",
+         "id" : "slott48",
+         "description" : "\n    Here the path does a turn around the tower.  And you smell something \nresembling horse manure.\n",
+         "altitude" : null
+      },
+      "slott20@slott" : {
+         "exits" : {
+            "e" : "slott21",
+            "s" : "slott14"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Hallway",
+         "id" : "slott20",
+         "description" : "\n    A hallway, leading off to the &+Ceast&* and &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "slott41@slott" : {
+         "exits" : {
+            "e" : "slott40",
+            "u" : "^Rods"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "slott",
+         "title" : "Basement",
+         "id" : "slott41",
+         "description" : "\n    You find yourself standing in a small room. This room had been bigger but \nnow the west wall has collapsed and taken the stairs with it, the only trace \nleft of the stairs is that &+Bhole&* in the ceiling.\n",
+         "altitude" : null
+      },
+      "slott36@slott" : {
+         "exits" : {
+            "e" : "slott34",
+            "w" : "slott37",
+            "n" : "^outsidedoor5",
+            "s" : "slott32"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "End of corridor",
+         "id" : "slott36",
+         "description" : "\n    This is one end of a corridor; there are doorways in all directions. This \nmust be the cleanest room in the castle, not as much as a trace of dust and \ndirt is to be found anywhere. Even the ceiling looks like it have been cleaned \nrecently!\n",
+         "altitude" : null
+      },
+      "slott28@slott" : {
+         "exits" : {
+            "w" : "slott26",
+            "n" : "slott33",
+            "d" : "slott6"
+         },
+         "flags" : [
+            "outdoor"
+         ],
+         "zone" : "slott",
+         "title" : "SE tower",
+         "id" : "slott28",
+         "description" : "\n    This is the southeast tower...or what's left of it. The eastern wall and \nparts of the roof are gone; it had been struck by lightning and crumbled to \nthe ground. As you look out where the wall once stood, you see a small garden \npath under the mess that the stones and wood from the tower has created.\n",
+         "altitude" : null
+      },
+      "slott44@slott" : {
+         "exits" : {
+            "s" : "^insidedoor6"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Coffin",
+         "id" : "slott44",
+         "description" : "\n    A coffin, bigger then the average coffin. But nonetheless just a wooden \ncoffin, the type you use to bury people in.\n",
+         "altitude" : null
+      },
+      "slott18@slott" : {
+         "exits" : {
+            "w" : "slott17",
+            "s" : "slott46"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "slott",
+         "title" : "Backyard",
+         "id" : "slott18",
+         "description" : "\n    The backyard is filled with garbage, piles of decomposed food, old \nclothes, broken furniture, and a lot of stuff that you can't recognize. \nThe smell is awful and you wonder why nobody has cleaned this mess up.\n",
+         "altitude" : null
+      },
+      "slott14@slott" : {
+         "exits" : {
+            "w" : "slott13",
+            "n" : "slott20",
+            "s" : "slott11"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Dinner Room",
+         "id" : "slott14",
+         "description" : "\n    This is where the family of the house eats their dinner. The room is big \nand in the middle there is a large &+Btable&* with six chairs around it.  \nAlong the walls there are a few cupboards and benches. The air smells of food, \nand your stomach starts to rumble.\n",
+         "altitude" : null
+      },
+      "slott23@slott" : {
+         "exits" : {
+            "u" : "slott35"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "slott",
+         "title" : "Northeast tower",
+         "id" : "slott23",
+         "description" : "\n    You find yourself in a dark moist tower room. There is a &+Bdoor&* in the \nwestern wall. Everything in here is covered with a thick layer of dust! And \nthe only thing in here besides the door is stairs leading &+Cup&*.\n",
+         "altitude" : null
+      },
+      "slott35@slott" : {
+         "exits" : {
+            "d" : "slott23",
+            "s" : "^insidedoor5"
+         },
+         "flags" : [
+            "Peaceful",
+            "Soundproof"
+         ],
+         "zone" : "slott",
+         "title" : "The masters hideout",
+         "id" : "slott35",
+         "description" : "\n    This room is comfortably furnished with a small bed, a table and some \nchairs. It almost looks like a prison cell, just more comfortable. This is \nthe room that the butler has prepared for his master, and a good job it is. \nThis is the kind of room you would like to have if you were locked away for \na long time.\n",
+         "altitude" : null
+      },
+      "slott9@slott" : {
+         "exits" : {
+            "e" : "slott8",
+            "n" : "slott16"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Servant quarters",
+         "id" : "slott9",
+         "description" : "\n   This is a rather large room with beds, shelves and cupboards. This is \nwhere the servants spend their time when they are off duty, now there \nhasn't been anyone in here for a long time. Dust covers everything and \nthe beds don't look especially inviting.\n",
+         "altitude" : null
+      },
+      "slott12@slott" : {
+         "exits" : {
+            "e" : "slott11",
+            "n" : "slott13"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Hallway",
+         "id" : "slott12",
+         "description" : "\n    This is a hallway that reaches from south to the north. The eastern walls \nare filled with &+Bportraits&* and on the western walls there are &+Bwindows&*. \nThe hallway continues to the &+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "slott21@slott" : {
+         "exits" : {
+            "w" : "slott20",
+            "e" : "slott22",
+            "s" : "slott15"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Hallway",
+         "id" : "slott21",
+         "description" : "\n    The walls are covered with old paintings of a beautiful garden. They \nare from different seasons; winter, summer, autumn but you can't find one \nwith a spring motive. You wonder why, isn't the spring one of the \nprettiest seasons?\n",
+         "altitude" : null
+      },
+      "slott30@slott" : {
+         "exits" : {
+            "w" : "slott29",
+            "n" : "slott38",
+            "s" : "slott25"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Mrs's bedroom",
+         "id" : "slott30",
+         "description" : "\n    This was once a beautiful bedroom with a big comfortable &+Bbed&* and a \nsmall &+Btable&* at the eastern wall. There are some closets in here but \nthey have been raided by someone...someone that didn't care much of doors \napparently, course a few of them have been torn apart or the doors have been \nsmashed to tiny pieces!\n",
+         "altitude" : null
+      },
+      "slott7@slott" : {
+         "exits" : {
+            "e" : "^outsidedoor2",
+            "u" : "slott27"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Southwest tower",
+         "id" : "slott7",
+         "description" : "\n   You find yourself on the bottom floor of an tower. This is one of the \ncorner towers of the castle. Spiral stairs head &+Cup&*.\n",
+         "altitude" : null
+      },
+      "slott46@slott" : {
+         "exits" : {
+            "n" : "slott18",
+            "s" : "slott47"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "slott",
+         "title" : "Garden path",
+         "id" : "slott46",
+         "description" : "\n    This is a garden path leading off to the &+Csouth&* and &+Cnorth&*. The sides \nof the path were once covered with flowers that were treated by loving and \ntendering hands, but now they have grown wild and spread themselves all over \nthe lawn and into the grovel path.\n",
+         "altitude" : null
+      },
+      "slott17@slott" : {
+         "exits" : {
+            "w" : "slott16",
+            "e" : "slott18"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Backhall",
+         "id" : "slott17",
+         "description" : "\n    This is the servants' entrance to the castle, this room is Spartan \nfurnished with small benches and hooks on the walls to hang up their outdoor \nclothes. The door in the eastern wall has been forced of it's hinges and \nlies outside on the stairs, looking out through the hole where the door's \nused to be you see a backyard!\n",
+         "altitude" : null
+      },
+      "slott50@slott" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "slott",
+         "title" : "&+RThe Hole...&*",
+         "id" : "slott50",
+         "description" : "\n\tYou jumped down into the hole but...\n\n<<<<<<< Splat! >>>>>>>\n\nOh my! Looks like you have died! \n",
+         "altitude" : null
+      },
+      "slott4@slott" : {
+         "exits" : {
+            "w" : "slott3"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "The closet",
+         "id" : "slott4",
+         "description" : "\n   This is apparently where the guests' rocks and hats were hung when they \narrived to the castle. There are several &+Bshelves&* and &+Bhooks&* in here.\n",
+         "altitude" : null
+      },
+      "slott10@slott" : {
+         "exits" : {
+            "n" : "slott15",
+            "d" : "^bench_button"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "slott",
+         "title" : "Family Sanctuary",
+         "id" : "slott10",
+         "description" : "\n    You have entered the sacred temple of the castle. Here the family of the \nhouse say their prayers. Now it hasn't been used for a long time and dust \ncovers everything! But you can still see the &+Bkrusefix&* on the wall, and \nthe paintings pretending the almighty God and his son Jesus. There are also \nsome church &+Bbenches&* here.\n",
+         "altitude" : null
+      },
+      "slott29@slott" : {
+         "exits" : {
+            "e" : "slott30",
+            "n" : "slott39",
+            "s" : "slott27"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Crossway",
+         "id" : "slott29",
+         "description" : "\n    This is a small corridor leading to the &+Cnorth, &+Csouth&* and to the &+Ceast&*.\n",
+         "altitude" : null
+      },
+      "slott26@slott" : {
+         "exits" : {
+            "w" : "slott24",
+            "e" : "slott28"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Manfreds bedroom",
+         "id" : "slott26",
+         "description" : "\n    This is a small bedroom, there is a small bed, a &+Bcupboard&*, and a small \n&+Bcloset&* in here. This is the bedroom of the butler; he must really be doing \nhis job well to have his own room.\n",
+         "altitude" : null
+      },
+      "slott43@slott" : {
+         "exits" : {
+            "w" : "slott42",
+            "n" : "^outsidedoor6"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "slott",
+         "title" : "Here be evil...",
+         "id" : "slott43",
+         "description" : "\n    This room is even darker then the rest of the basement, and in the dim \nlight you see a large coffin standing against the northern wall. At the \neastern end of the room you see some &+Bfootlinks&* that are fastened to the \nfloor. The western wall is filled with paintings, many of them are of \nlandscapes painted in the spring.\n",
+         "altitude" : null
+      },
+      "slott45@slott" : {
+         "exits" : {
+            "n" : "slott40"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Old storage room",
+         "id" : "slott45",
+         "description" : "\n    As you walk into this room, the first thing you notice are the big piles \nof stuff that lie in here. Someone has used this room to store everything \nin it. You see &+Bbooks&*, clothes, kitchen stuff like pots and pans, a sofa, \nchairs, tables and a lot of plain garbage.\n",
+         "altitude" : null
+      },
+      "slott19@slott" : {
+         "exits" : {
+            "u" : "slott39",
+            "d" : "slott50",
+            "s" : "slott13"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Northwest Tower",
+         "id" : "slott19",
+         "description" : "\n    You entered a round tower like room, and the first you notice is a \n&+Bhole&* in the floor, looks like the stairs down have caved in. But \nthe stairs leading &+Cup&* are still in good shape.\n",
+         "altitude" : null
+      },
+      "slott2@slott" : {
+         "exits" : {
+            "w" : "slott1"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "The Stable",
+         "id" : "slott2",
+         "description" : "\n   You find yourself in an old stable; there are no horses in here.  But the \nfloors are newly cleaned and the air vibrates with the smell of horses, so \nit seems like it is in full use. \n",
+         "altitude" : null
+      },
+      "slott40@slott" : {
+         "exits" : {
+            "e" : "slott42",
+            "w" : "slott41",
+            "s" : "slott45"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "slott",
+         "title" : "Basement",
+         "id" : "slott40",
+         "description" : "\n    The room is cold and dim, the walls absorbs the light almost completely. \nThe air could have been better, but at least it's breathable!\n",
+         "altitude" : null
+      },
+      "slott47@slott" : {
+         "exits" : {
+            "n" : "slott46",
+            "s" : "slott48"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "slott",
+         "title" : "Garden path",
+         "id" : "slott47",
+         "description" : "\n    The garden path continues the &+Csouth&* and to the &+Cnorth&*. Here big rocks \nand wood pieces fill the path, and as you look up at the castle tower you see \nwhy. The tower had been struck by lightning and the whole eastern wall and a \npretty big part of the roof have fallen down to where you stand now.\n",
+         "altitude" : null
+      },
+      "slott5@slott" : {
+         "exits" : {
+            "w" : "^insideDoor2",
+            "e" : "slott3",
+            "n" : "slott11"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Ballroom",
+         "id" : "slott5",
+         "description" : "\n   You have entered a huge ballroom with crystal chandeliers and small oak \n&+Btables&*. Chairs are placed at the sides leaving the floor in the middle open \nfor dancing. There are several paintings on the walls, one of which especially \ndraws your attention. It pretends a young man battling against a big man \nwith a blurred face only with his hands...as you look closer you see that \nhe's got a big &+wwhite&* union between his teeth! Wonder why?\n",
+         "altitude" : null
+      },
+      "slott34@slott" : {
+         "exits" : {
+            "w" : "slott36",
+            "s" : "slott33"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "slott",
+         "title" : "Hallway",
+         "id" : "slott34",
+         "description" : "\n    This room is pitch black. The only vague light is coming from the &+Cwest&* \nand &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "slott32@slott" : {
+         "exits" : {
+            "e" : "slott33",
+            "n" : "slott36"
+         },
+         "flags" : [],
+         "zone" : "slott",
+         "title" : "Daughter's bedroom",
+         "id" : "slott32",
+         "description" : "\n    You have entered a typical teenaged girls room, most things in here \nare pink, such as the blanket on the bed, the drapes on the walls and even the \nthick &+Bcarpet&* that lies on the floor.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "housemaster@slott" : {
+         "damage" : "5",
+         "location" : "slott35",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "5",
+         "pname" : "The Master",
+         "name" : "HouseMaster",
+         "examine" : "\nThis is the master of the castle! He is an old and weak man, it looks like \nhe hasn't seen the sun for a long time. His skin is white and long grey \nhair is in need for a bath and a trim. He looks to be a wise and kind man!",
+         "description" : "&+RThe Master&* is standing in the middle of the room!",
+         "strength" : "100"
+      },
+      "redcap3@slott" : {
+         "damage" : "10",
+         "location" : "slott13",
+         "speed" : "15",
+         "aggression" : "100",
+         "armor" : "5",
+         "pname" : "Red Cap",
+         "name" : "REDCAP3",
+         "examine" : "\nThis is a short, stocky old man with long gray hair and claws instead of \nhands! He loves to inhabit ancient ruins of castles, especially in those \nwith a bloody history of war or murder! He wears a red hat, which is colored \nby the &+rblood&* of his victims. He also moves with remarkable speed, despite \nthe fact that he wears iron boots!",
+         "description" : "&+RRed Cap&* is here, glowing of evil!",
+         "strength" : "75"
+      },
+      "stableboy@slott" : {
+         "damage" : "15",
+         "location" : "slott2",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The Stableboy",
+         "name" : "stableboy",
+         "examine" : "You see a very dirty young man, with a strange look in his eyes.",
+         "description" : "The &+RStableboy&* stands here, staring into nothing!",
+         "strength" : "100"
+      },
+      "redcap5@slott" : {
+         "damage" : "10",
+         "location" : "slott38",
+         "speed" : "15",
+         "aggression" : "75",
+         "armor" : "5",
+         "pname" : "Red Cap",
+         "name" : "REDCAP5",
+         "examine" : "\nThis is a short, stocky old man with long gray hair and claws instead of \nhands! He loves to inhabit ancient ruins of castles, especially in those \nwith a bloody history of war or murder! He wears a red hat, which is colored \nby the &+rblood&* of his victims. He also moves with remarkable speed, despite \nthe fact that he wears iron boots!",
+         "description" : "&+RRed Cap&* is here, glowing of evil!",
+         "strength" : "75"
+      },
+      "redcap2@slott" : {
+         "damage" : "10",
+         "location" : "slott8",
+         "speed" : "15",
+         "aggression" : "65",
+         "armor" : "5",
+         "pname" : "Red Cap",
+         "name" : "REDCAP2",
+         "examine" : "\nThis is a short, stocky old man with long gray hair and claws instead of \nhands! He loves to inhabit ancient ruins of castles, especially in those \nwith a bloody history of war or murder! He wears a red hat, which is colored \nby the &+rblood&* of his victims. He also moves with remarkable speed, despite \nthe fact that he wears iron boots!",
+         "description" : "&+RRed Cap&* is here, glowing of evil!",
+         "strength" : "75"
+      },
+      "redcap6@slott" : {
+         "damage" : "10",
+         "location" : "slott32",
+         "speed" : "15",
+         "aggression" : "75",
+         "armor" : "5",
+         "pname" : "Red Cap",
+         "name" : "REDCAP6",
+         "examine" : "\nThis is a short, stocky old man with long gray hair and claws instead of \nhands! He loves to inhabit ancient ruins of castles, especially in those \nwith a bloody history of war or murder! He wears a red hat, which is colored \nby the &+rblood&* of his victims. He also moves with remarkable speed, despite \nthe fact that he wears iron boots!",
+         "description" : "&+RRed Cap&* is here, glowing of evil!",
+         "strength" : "75"
+      },
+      "redcap1@slott" : {
+         "damage" : "10",
+         "location" : "slott22",
+         "speed" : "15",
+         "aggression" : "75",
+         "armor" : "5",
+         "pname" : "Red Cap",
+         "name" : "REDCAP1",
+         "examine" : "\nThis is a short, stocky old man with long gray hair and claws instead of \nhands! He loves to inhabit ancient ruins of castles, especially in those \nwith a bloody history of war or murder! He wears a red hat, which is colored \nby the &+rblood&* of his victims. He also moves with remarkable speed, despite \nthe fact that he wears iron boots!",
+         "description" : "&+RRed Cap&* is here, glowing of evil!",
+         "strength" : "75"
+      },
+      "redcap4@slott" : {
+         "damage" : "10",
+         "location" : "slott7",
+         "speed" : "15",
+         "aggression" : "80",
+         "armor" : "5",
+         "pname" : "Red Cap",
+         "name" : "REDCAP4",
+         "examine" : "\nThis is a short, stocky old man with long gray hair and claws instead of \nhands! He loves to inhabit ancient ruins of castles, especially in those \nwith a bloody history of war or murder! He wears a red hat, which is colored \nby the &+rblood&* of his victims. He also moves with remarkable speed, despite \nthe fact that he wears iron boots!",
+         "description" : "&+RRed Cap&* is here, glowing of evil!",
+         "strength" : "75"
+      },
+      "william@slott" : {
+         "damage" : "10",
+         "location" : "slott11",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "5",
+         "name" : "William",
+         "examine" : "William stares back at you, as if he would be afraid you wanted the sandwich.",
+         "description" : "&+RWilliam the cook&* is here, making a sandwich!",
+         "strength" : "75"
+      },
+      "family@slott" : {
+         "damage" : "0",
+         "location" : "slott43",
+         "armor" : "0",
+         "name" : "Family",
+         "examine" : "\nThis is the rest of the family of the castle! Standing from the left, \nmother, son and daughter.",
+         "description" : "The &+RFamily&* is here!",
+         "strength" : "20",
+         "speed" : "0",
+         "pname" : "The Family",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "manfred@slott" : {
+         "damage" : "10",
+         "location" : "slott3",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "5",
+         "pname" : "Manfred",
+         "name" : "Manfred",
+         "examine" : "As you look at Manfred you have to back away several steps.\nPHEEW, he stinks of garlic, he has to have eaten a dozen of them.",
+         "description" : "&+RManfred&* the butler stands here, wondering about who you are!",
+         "strength" : "75"
+      },
+      "muryan@slott" : {
+         "damage" : "20",
+         "location" : "slott43",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "15",
+         "name" : "Muryan",
+         "examine" : "\nYou are looking at a soul of an ancient heathen that has been captured \nbetween worlds.  Course he is too good for &+Rhell&* and too bad for &+Yheaven&*! \nSo he settled down in this castle instead, but got bored with the loneliness, \nso he kidnapped the Family to get some company, and he will not let them go, \nhe'd rather kill them first!",
+         "description" : "&+RMuryan stands here, giving you a chill down you spinalcord!",
+         "strength" : "250"
+      }
+   }
+}

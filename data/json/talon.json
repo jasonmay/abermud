@@ -21,6 +21,9 @@
       "claw@talon" : {
          "location" : "IN_ROOM:talon51",
          "weight" : "4",
+         "oflags" : [
+            "DamageSpell"
+         ],
          "name" : "claw",
          "examine" : "Its sharp talons glint off the light.",
          "bvalue" : "750",
@@ -53,13 +56,25 @@
          "bvalue" : "500",
          "desc[0]" : "A golden staff lies here, a ruby fixed to it making it glow with a violent red\nfire."
       },
+      "volume@talon" : {
+         "location" : "IN_ROOM:talon37",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_X",
+         "name" : "volume",
+         "examine" : "\nBlur is a defensive spell which may be cast on yourself or other\nplayers.  It requires 25 mana to cast it.  While its effects last,\nblur acts as a strong shield, lowering the damage from any hit\nby 5 points after accounting for all other armor, including \narmor from the protect spell.  Its duration is enhanced by an\nobject which gives a blurry image. Blur becomes certain with\nknowledge 12.",
+         "desc[0]" : "&+YVolume X&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "10"
+      },
       "talonshield@talon" : {
-         "location" : "IN_ROOM:talon26",
+         "location" : "IN_ROOM:innercave",
          "armor" : "78",
          "oflags" : [
             "Wearable",
             "Armor",
-            "Shield"
+            "Shield",
+            "Antimagic"
          ],
          "altname" : "shield",
          "name" : "talonshield",
@@ -87,10 +102,10 @@
          "size" : "30"
       },
       "potion@talon" : {
-         "location" : "IN_ROOM:talon26",
+         "location" : "IN_ROOM:innercave",
          "weight" : "3",
          "oflags" : [
-            "Food"
+            "Potion"
          ],
          "name" : "potion",
          "examine" : "It will certainly revitalize you.",
@@ -202,7 +217,7 @@
          "location" : "IN_ROOM:talon64",
          "weight" : "10",
          "oflags" : [
-            "Lit"
+            "Glowing"
          ],
          "name" : "staff",
          "examine" : "It has a hole in the end, possibly meant for some sort of gem that was lost.",
@@ -242,12 +257,12 @@
          "damage" : "30",
          "location" : "IN_ROOM:talon51",
          "oflags" : [
-            "Lit",
+            "Glowing",
             "Weapon"
          ],
          "altname" : "sword",
          "name" : "talonsword",
-         "examine" : "It must have been crafted by a mighty hand.",
+         "examine" : "\n&+Y                __\n&+Y               \\  /\n&+Y                 \\\\\n&+Y                   \\\\\n&+r ___________________&+Y||&+C/\\_\n&+r(___________________&+R()&+C| _&+W||||||||||||||||||||||||||||||||||||||||||>\n&+Y                    ||&+C\\/\n&+Y                   //\n&+Y                 //\n&+Y               /__\\\n\nIt must have been crafted by a mighty hand.",
          "size" : "15",
          "weight" : "15",
          "bvalue" : "1000",
@@ -471,6 +486,19 @@
          "description" : "\n   This room appears to be an area used to keep belongings which the\ninhabitant of this cave may wish to store. The only exit from this room is to\nthe south.\n",
          "altitude" : null
       },
+      "innercave@talon" : {
+         "exits" : {
+            "s" : "talon26"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "talon",
+         "title" : "Inside the Peak",
+         "id" : "innercave",
+         "description" : "\n   This is an even smaller cave, but just as still and quiet as the one to\nsouth.\n",
+         "altitude" : null
+      },
       "talon57@talon" : {
          "exits" : {
             "w" : "talon56",
@@ -539,6 +567,7 @@
       },
       "talon26@talon" : {
          "exits" : {
+            "n" : "innercave",
             "s" : "^door3"
          },
          "flags" : [],
@@ -936,18 +965,6 @@
          "description" : "\n   This is a small cave with a dirt floor.  The walls are made of red clay,\nand the entire place looks as if it were dug by hand, like someone was\nsearching for something.\n",
          "altitude" : null
       },
-      "talon28@talon" : {
-         "exits" : {
-            "w" : "talon11",
-            "e" : "talon29"
-         },
-         "flags" : [],
-         "zone" : "talon",
-         "title" : "Gateway into Darkness",
-         "id" : "talon28",
-         "description" : "\n   You enter a small room which appears to end to the east in a mirror-like\nporthole. White light travels across the porthole in the area, like lightning\non a dark, stormy summer's sky. Beyond the brilliant white light on the surface\nof the gateway, a strange evil darkness seems to emanate. It is hard to\ndistinguish if it is a physical, or spiritual darkness which you seem to sense.\nBack to the west lies the safety of the known world.\n",
-         "altitude" : null
-      },
       "talon66@talon" : {
          "exits" : {
             "w" : "talon29",
@@ -959,6 +976,18 @@
          "title" : "The Mist",
          "id" : "talon66",
          "description" : "\n   You are lost in a blinding white mist which blocks your every sense and\nmakes it impossible to tell where you are.\n   This mist stretches in all directions.\n",
+         "altitude" : null
+      },
+      "talon28@talon" : {
+         "exits" : {
+            "w" : "talon11",
+            "e" : "talon29"
+         },
+         "flags" : [],
+         "zone" : "talon",
+         "title" : "Gateway into Darkness",
+         "id" : "talon28",
+         "description" : "\n   You enter a small room which appears to end to the east in a mirror-like\nporthole. White light travels across the porthole in the area, like lightning\non a dark, stormy summer's sky. Beyond the brilliant white light on the surface\nof the gateway, a strange evil darkness seems to emanate. It is hard to\ndistinguish if it is a physical, or spiritual darkness which you seem to sense.\nBack to the west lies the safety of the known world.\n",
          "altitude" : null
       },
       "talon33@talon" : {
@@ -1066,7 +1095,7 @@
          "zone" : "talon",
          "title" : "Dead Landscape",
          "id" : "talon30",
-         "description" : "\n   You stand upon a small foothill looking upon a charred, black valley. The\nentire valley looks as if a tremendous fire decended from the sky and\nconsumed all life in its path. Blackened stumps lie here and there, where\nmighty trees once stood. A blood red haze encompasses the sky as the sun\nretreats behind the dark mantains, to no more shine its face upon the\nhorrifying sight, for yet another starless night.\n   To the east lies passage down into the valley. To the west lies a blanket of\nfog twisting and turning as if it were alive.\n",
+         "description" : "\n   You stand upon a small foothill looking upon a charred, black valley. The\nentire valley looks as if a tremendous fire decended from the sky and\nconsumed all life in its path. Blackened stumps lie here and there, where\nmighty trees once stood. A blood red haze encompasses the sky as the sun\nretreats behind the dark mountains, to no more shine its face upon the\nhorrifying sight, for yet another starless night.\n   To the east lies passage down into the valley. To the west lies a blanket of\nfog twisting and turning as if it were alive.\n",
          "altitude" : null
       },
       "talon39@talon" : {
@@ -1183,13 +1212,19 @@
       "fog@talon" : {
          "damage" : "20",
          "location" : "talon29",
-         "speed" : "0",
-         "aggression" : "0",
          "armor" : "0",
-         "pname" : "The Fog",
          "name" : "fog",
          "description" : "All around, the fog enshrouds... as if it were choking the very life out of you.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The Fog",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "talgur@talon" : {
          "damage" : "10",
@@ -1205,20 +1240,19 @@
          "eflags" : [
             "Fireball",
             "Shock",
-            "Frost",
-            "ImmCripple",
-            "ImmBlind",
-            "ImmMute",
-            "ImmDeaf"
+            "Frost"
          ],
          "damage" : "15",
          "location" : "talon46",
-         "speed" : "0",
-         "aggression" : "100",
          "armor" : "0",
          "name" : "morrum",
          "description" : "Morrum, the evil dragonmaster, grins wickedly as he steps towards you.",
-         "strength" : "400"
+         "strength" : "400",
+         "speed" : "0",
+         "aggression" : "100",
+         "pflags" : [
+            "NoMagic"
+         ]
       },
       "lirad@talon" : {
          "damage" : "10",
@@ -1265,14 +1299,24 @@
          ]
       },
       "cyrlan@talon" : {
+         "eflags" : [
+            "Fireball",
+            "Bhands",
+            "NegFireball",
+            "NegBHands"
+         ],
          "damage" : "15",
          "location" : "talon18",
-         "speed" : "0",
-         "aggression" : "20",
          "armor" : "0",
          "name" : "cyrlan",
+         "examine" : "\n&+Y    )     (\n&+Y    )     (\n&+Y   /(_   _)\\ \n&+w)/'\\_\\-=-/_/`\\( \n&+w/o &+R(@)&+w/.\\&+R(@)&+w o\\ \n&+w\\/ \"__ \" __\" \\/ \n&+w   \\|&+Y\\VVV/&+w|/ \n&+w    \\\\&+YAAA&+w// \n&+w     \\~~~/ \n&+w     ))|(( \n",
          "description" : "Cyrlan, the silver dragon towers ominously above you.",
-         "strength" : "350"
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "20",
+         "mflags" : [
+            "BarWest"
+         ]
       },
       "sarac@talon" : {
          "damage" : "20",
@@ -1289,12 +1333,19 @@
          ]
       },
       "balak@talon" : {
+         "eflags" : [
+            "Fireball",
+            "Bhands",
+            "NegFireball",
+            "NegBhands"
+         ],
          "damage" : "15",
          "location" : "talon21",
          "speed" : "0",
          "aggression" : "20",
          "armor" : "0",
          "name" : "balak",
+         "examine" : "\n&+y         __        _ \n&+y       _/  \\    _(\\(o \n&+y      /     \\  /  _  ~~~o \n&+y     /   !   \\/  ! '!!!v' \n&+y    !  !  \\ _' ( \\____ \n&+y    ! . \\ _!\\   \\==='\\) \n&+y     \\ \\_!  / __! \n&+y      \\!   /    \\ \n&+y(\\_      _/   _\\ ) \n&+y \\ ``--'' __-' /(__ \n&+y  ``----''    ''--v' \n",
          "description" : "Balak, the bronze dragon, sits solemnly here.",
          "strength" : "300"
       },
@@ -1312,24 +1363,37 @@
          "strength" : "150"
       },
       "alnor@talon" : {
-         "damage" : "10",
-         "location" : "talon37",
+         "damage" : "25",
+         "location" : "talon36",
          "speed" : "0",
-         "aggression" : "50",
-         "armor" : "0",
+         "aggression" : "0",
+         "armor" : "20",
          "name" : "alnor",
          "description" : "Alnor, the watchman, stands on guard here.",
-         "strength" : "300"
+         "strength" : "500",
+         "mflags" : [
+            "BarUp"
+         ]
       },
       "makir@talon" : {
+         "eflags" : [
+            "Fireball",
+            "Bhands",
+            "NegFireball",
+            "NegBHands"
+         ],
          "damage" : "15",
          "location" : "talon19",
-         "speed" : "0",
-         "aggression" : "20",
          "armor" : "0",
          "name" : "makir",
+         "examine" : "\n&+Y  \\    \\\\  )\\ \n&+Y    )   __\\\\ ||\n&+Y   /      //_/        |\n&+Y_/     __||_|(__      |\n&+Y  \\       \\\\_)  ~-\\   |      / \n&+Y   )       /'  /~~~  ___   / \n&+Y  /__     /   \\'    /   \\ \n&+Y /   `\\  |  \\  |-- |     | --- \n&+Y       |/\\   \\  \\___\\,_,/ \n&+Y       |   \\   \\-------/'  \\ \n&+Y             \\   \\    |      \\ \n&+Y           )  )  |    |\n&+Y            \\/  /     |\n&+Y            / /\\ \n&+Y           | (_)|\n&+Y            \\___/ \n",
          "description" : "Makir, the golden dragon, decends from the sky, glittering in the sunlight.",
-         "strength" : "400"
+         "strength" : "400",
+         "speed" : "0",
+         "aggression" : "20",
+         "mflags" : [
+            "BarWest"
+         ]
       },
       "grum@talon" : {
          "damage" : "10",
@@ -1345,7 +1409,7 @@
          "damage" : "10",
          "location" : "talon10",
          "speed" : "0",
-         "aggression" : "0",
+         "aggression" : "50",
          "armor" : "0",
          "name" : "sentul",
          "description" : "Sentul, the Talon elite soldier, glares at you.",
@@ -1362,9 +1426,10 @@
          ],
          "damage" : "50",
          "location" : "talon50",
-         "armor" : "0",
+         "armor" : "20",
          "name" : "talon",
-         "description" : "The evil black dragon, Talon, glares darkly at you.",
+         "examine" : "\n&+w  .:'                                  &+w`:.\n&+w ::'                                    &+w`::\n&+w:: :.                                  &+w.: ::\n&+w `:. `:.             &+L.             &+w.:'  .:'\n&+w  `::. `::           &+L!           &+w::' .::'\n&+w      `::.`::.    &+L.' ! `.    &+w.::'.::'\n&+w        `:.  `:&+L:::'':!:``:::&+w:'   ::'\n&+L        :'*:::.  .:' ! `:.  .:::*`:\n&+L       :: &+rHHH&+L::.   ` ! '   .::&+rHHH&+L ::\n&+L      ::: &+r`H TH&+L::.  `!'  .::&+rHT H'&+L :::\n&+L      ::..  &+r`THHH&+L:`:   :':&+rHHHT'&+L  ..::\n&+L      `::      &+r`T:&+L `. .' &+r:T'&+L      ::'\n&+L        `:. .   :         :   . .:'\n&+L          `::'               `::'\n&+L            :'  .`.  .  .'.  `:\n&+L            :' ::.       .:: `:\n&+L            :' `:::     :::' `:\n&+L             `.  ``     ''  .'\n&+L              :`...........':\n&+L              ` :`.     .': '\n&+L               `:  `~~~'  :'\nYou notice well developed horns on the dragon.\n",
+         "description" : "The Black Dragon, Talon, glares darkly at you.",
          "strength" : "2500",
          "speed" : "0",
          "aggression" : "0",
@@ -1375,13 +1440,18 @@
       "reptile@talon" : {
          "damage" : "15",
          "location" : "talon13",
-         "speed" : "0",
-         "aggression" : "20",
          "armor" : "0",
-         "pname" : "Sea Reptile",
          "name" : "reptile",
+         "examine" : "\n&+y::          .:::.            &+R,  ,&+y        .:.     .:::.       .:\n&+y:::.    ..::::::::.       &+R, &+g(,,(,&+R  ,&+y   .::::. ..:::::::    .:::\n&+y::::. .::::::::::::.    &+G(,'     `(  &+y.::.:::.:::::::::::.:.::::\n&+y::::..:::::::::::::::.  &+G(,'  ,--.  `(&+y  .:::.::::::.:::.::::::::\n&+y::::::::::::::::::::::. &+G{c' )&+y.::.&+G\\  ;(&+y.::::.::::::::.::::::::::\n&+B:~~~~~~~~~~~~~~~~~~~~~~ &+g{/7/ &+B~~~~&+g/  ,(&+B~~~~~~~~~~~~~~~~~~~~~~~~~\n&+B      ~         ~         ~     &+g/  ,(   ,(-/_,    ,(-/_, &+B..&+g /~>\n&+B ~      ~~   ~~~~      ~~    ~ &+g/  ,( &+b..&+g/  _  ( &+b.&+g /  _  (   / /\n&+b   ~\"~   ~~~~~    ~~~~    ~~~  ~~~~    ~~~ ~~~   ~~~ ~~~   ~~\n&+b  `:::::::'  `::::::'   `::::..`:::    `::.::'   `::.::'   `::\n&+y~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n",
          "description" : "A massive sea reptile emerges from the depths.",
-         "strength" : "300"
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "Sea Reptile",
+         "aggression" : "20",
+         "mflags" : [
+            "BarSouth",
+            "BarWest"
+         ]
       },
       "almerus@talon" : {
          "damage" : "10",

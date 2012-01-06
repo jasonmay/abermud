@@ -49,7 +49,7 @@
          "location" : "IN_ROOM:fairytale63",
          "altname" : "top",
          "name" : "top_lid",
-         "examine" : "The lid is secured to the top of the coffin.\n",
+         "examine" : "The lid is securable to the top of the coffin.\n",
          "size" : "20",
          "pname" : "lid",
          "weight" : "10",
@@ -70,6 +70,16 @@
          "weight" : "10",
          "bvalue" : "50",
          "desc[0]" : "A rug lies under your feet."
+      },
+      "xara@fairytale" : {
+         "location" : "IN_ROOM:fairytale21",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "volume",
+         "name" : "xara",
+         "examine" : "\nStrange, it seems though in fairy tale land spoke a different language than\nthe real world, and you have found the text that explains their speech.  In\ntime you start figuring out what it all means and become fluent rather\nquickly.  Sadly it may not help you settle the tension and violence here.",
+         "desc[0]" : "In the center of the fun house sits a volume that teaches the Xara language."
       },
       "magic_wand@fairytale" : {
          "location" : "IN_ROOM:fairytale90",
@@ -302,7 +312,7 @@
          "desc[0]" : "A large, jeweled egg lies here."
       },
       "porcelain_pig@fairytale" : {
-         "location" : "IN_ROOM:fairytale91",
+         "location" : "IN_CONTAINER:display_case",
          "altname" : "porcelain",
          "name" : "porcelain_pig",
          "examine" : "The pig turns up his nose at you.\n",
@@ -458,7 +468,7 @@
          "bvalue" : "100",
          "desc[0]" : "A diamond ring gleams from among the cushions of the seat.",
          "aflags" : [
-            "Hands"
+            "Hand"
          ]
       },
       "tiny_door_1@fairytale" : {
@@ -677,12 +687,13 @@
          "examine" : "The tapestry has been woven by expert weavers.\n",
          "bvalue" : "20",
          "desc[0]" : "A tapestry hangs in front of you, depicting giants throughout history.",
-         "state" : "1"
+         "state" : "0"
       },
       "wine_flagon@fairytale" : {
          "location" : "IN_ROOM:fairytale59",
          "oflags" : [
-            "Food"
+            "Food",
+            "Alcohol"
          ],
          "altname" : "wine",
          "name" : "wine_flagon",
@@ -806,8 +817,27 @@
          "bvalue" : "100",
          "desc[0]" : "A puce egg lies in the nest."
       },
+      "king_chest@fairytale" : {
+         "desc[1]" : "A chest is in the corner, padlock dangling.",
+         "location" : "IN_ROOM:fairytale100",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "king_chest",
+         "examine" : "An engraved plate attached to the top of the chest reads:\nNecessaries for Ruling the Kingdom.\n",
+         "desc[2]" : "A dusty chest with a large padlock is in the corner.",
+         "state" : "2",
+         "size" : "40",
+         "pname" : "chest",
+         "weight" : "10",
+         "maxstate" : "2",
+         "desc[0]" : "An open chest is in the corner."
+      },
       "beauty_crown@fairytale" : {
-         "location" : "IN_CONTAINER:beauty_coffin",
+         "location" : "IN_CONTAINER:king_chest",
          "oflags" : [
             "Wearable"
          ],
@@ -870,7 +900,7 @@
          "desc[0]" : "The door is open."
       },
       "beauty_robe@fairytale" : {
-         "location" : "IN_CONTAINER:beauty_coffin",
+         "location" : "IN_CONTAINER:king_chest",
          "oflags" : [
             "Wearable"
          ],
@@ -962,7 +992,7 @@
       "fairytale75@fairytale" : {
          "exits" : {
             "e" : "fairytale76",
-            "d" : "fairytale70"
+            "u" : "fairytale70"
          },
          "flags" : [],
          "zone" : "fairytale",
@@ -1099,7 +1129,7 @@
          "zone" : "fairytale",
          "title" : "Spinning Room",
          "id" : "fairytale131",
-         "description" : "\n  You have entered a large spinning room. Four spinning wheels are\narranged in a square, at the center of which is a large pile of\nspindles, all fully threaded. To the east is \nwest is another room.\n",
+         "description" : "\n  You have entered a large spinning room. Four spinning wheels are\narranged in a square, at the center of which is a large pile of\nspindles, all fully threaded. To the east is the wooden portal\nwest is another room.\n",
          "altitude" : null
       },
       "fairytale117@fairytale" : {
@@ -1147,7 +1177,7 @@
          "zone" : "fairytale",
          "title" : "In the Vine",
          "id" : "fairytale4",
-         "description" : "\n  You stand inside a small room, decorated with pictures of great\nmusicians: The Beatles, Buddy Holly and the Crickets, the Roches,\nand others. A few copies of Playbug are scattered around the room;\none is open to the centerfold.\nThe room looks like a basic bachelor's pad.\n",
+         "description" : "\n  You stand inside a small rooms. A few copies of Playbug are \nscattered around the room; one is open to the centerfold.\nThe room looks like a basic bachelor's pad.\n",
          "altitude" : null
       },
       "fairytale59@fairytale" : {
@@ -1284,9 +1314,12 @@
       },
       "fairytale40@fairytale" : {
          "exits" : {
-            "u" : "fairytale41"
+            "u" : "fairytale41",
+            "d" : "Heaven1@heaven"
          },
-         "flags" : [],
+         "flags" : [
+            "NoMobiles"
+         ],
          "zone" : "fairytale",
          "title" : "Padded Room",
          "id" : "fairytale40",
@@ -1353,7 +1386,7 @@
       "fairytale64@fairytale" : {
          "exits" : {
             "n" : "fairytale65",
-            "s" : "fairytale42"
+            "s" : "fairytale60"
          },
          "flags" : [],
          "zone" : "fairytale",
@@ -1388,8 +1421,20 @@
          "description" : "\n  A flight of stairs rises above you, and as you follow the spiral\nwith your eyes, you find your gaze straying to the decorations on the\nwalls. Swords, shields, and various multi-colored banners hang in\ncolorful displays, and are interspersed with arched windows and oil\nlamps. Your head begins to spin as your blood drains from it, and you\ntear your gaze away from the walls to focus on the floor. There you\nsee a rug which looks like a psychedelic snake. The rug continues up\nthe stairs.\n",
          "altitude" : null
       },
+      "fairytale100@fairytale" : {
+         "exits" : {
+            "d" : "fairytale137"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Kingdom Overlook",
+         "id" : "fairytale100",
+         "description" : "\n   This large, circular room has windows on all sides and offers a\nperfect view of the kingdom below. The air is a bit stale and dusty,\nand it seems like this room has not been used much in recent times.\n",
+         "altitude" : null
+      },
       "fairytale137@fairytale" : {
          "exits" : {
+            "u" : "fairytale100",
             "d" : "fairytale136"
          },
          "flags" : [
@@ -1430,7 +1475,7 @@
       },
       "fairytale77@fairytale" : {
          "exits" : {
-            "d" : "fairytale76"
+            "u" : "fairytale76"
          },
          "flags" : [
             "NoMobiles"
@@ -1686,6 +1731,18 @@
          "description" : "\n You climb on the monkey bars. Many bars are missing, and some are loose.\n",
          "altitude" : null
       },
+      "fairytale81@fairytale" : {
+         "exits" : {},
+         "flags" : [
+            "Wizard",
+            "Party"
+         ],
+         "zone" : "fairytale",
+         "title" : "A Secret Room",
+         "id" : "fairytale81",
+         "description" : "\n  What's a fairytale without a few secrets?  Here is a hidden room, known\nonly to immortals.  \n",
+         "altitude" : null
+      },
       "fairytale7@fairytale" : {
          "exits" : {
             "e" : "fairytale6",
@@ -1850,9 +1907,9 @@
          "exits" : {
             "w" : "fairytale74",
             "e" : "fairytale72",
-            "u" : "fairytale75",
+            "u" : "fairytale69",
             "n" : "fairytale71",
-            "d" : "fairytale69",
+            "d" : "fairytale75",
             "s" : "fairytale73"
          },
          "flags" : [],
@@ -1987,13 +2044,13 @@
          "zone" : "fairytale",
          "title" : "Library",
          "id" : "fairytale99",
-         "description" : "\nBooks line the walls of this large room, filling you with awe of\nanyone who could have read them all. Classics such as \"Moby Dick\",\n\"Pride and Prejudice\", \"Treasure Island\", and the \"C Programming\nLanguage Handbook\" are prevalent, mixed with lesser-known works such\nas \"The Dark is Rising\" and the \"Books of Blood\". Four doors lead\nfrom this room: one returning to the north, one to the east marked\n'Alice', one to the west marked 'Peter', and one to the south marked\n'Dorothy.' Through each is a different scene, all of which look\nsomehow familiar. . . .\n",
+         "description" : "\n  Books line the walls of this large room, filling you with awe of\nanyone who could have read them all.  Classics such as \"Moby Dick\",\n\"Pride and Prejudice\" and \"Treasure Island\" are prevalent, mixed \nwith lesser-known works such as \"The Dark is Rising\" and the \n\"Books of Blood\".  Four doors lead from this room: one returning \nto the north, one to the east marked 'Alice', one to the west\nmarked 'Peter', and one to the south marked 'Dorothy.'  Through each \nis a different scene, all of which look somehow familiar. . . .\n",
          "altitude" : null
       },
       "fairytale76@fairytale" : {
          "exits" : {
             "w" : "fairytale75",
-            "u" : "fairytale77"
+            "d" : "fairytale77"
          },
          "flags" : [],
          "zone" : "fairytale",
@@ -2198,7 +2255,7 @@
       },
       "fairytale60@fairytale" : {
          "exits" : {
-            "w" : "fairytale42",
+            "w" : "fairytale54",
             "e" : "fairytale61",
             "n" : "fairytale64"
          },
@@ -2265,20 +2322,6 @@
          "description" : "\n  Children play here, giggling and laughing. They push each other\nand mock-fight on the swing-set. To the north is a sand-box, to the\nsouth is a country lane, to the west is the music room, and to the\neast is a river. A set of monkey bars climbs up into the sky.\n",
          "altitude" : null
       },
-      "fairytale17@fairytale" : {
-         "exits" : {
-            "w" : "fairytale16",
-            "e" : "fairytale18",
-            "n" : "fairytale17",
-            "s" : "fairytale17"
-         },
-         "flags" : [],
-         "zone" : "fairytale",
-         "title" : "Lost in the Fun House",
-         "id" : "fairytale17",
-         "description" : "\n  You are lost in the Fun House. Mirrors surround you.\n",
-         "altitude" : null
-      },
       "fairytale129@fairytale" : {
          "exits" : {
             "u" : "fairytale130",
@@ -2291,6 +2334,20 @@
          "title" : "Portal",
          "id" : "fairytale129",
          "description" : "\n You are inside a large, wooden portal. Along the north wall are a\nseries of levers marked 'up', 'down', and 'open'. The lighting in this\nbox is provided by tubes which glow softly above you.\n",
+         "altitude" : null
+      },
+      "fairytale17@fairytale" : {
+         "exits" : {
+            "w" : "fairytale16",
+            "e" : "fairytale18",
+            "n" : "fairytale17",
+            "s" : "fairytale17"
+         },
+         "flags" : [],
+         "zone" : "fairytale",
+         "title" : "Lost in the Fun House",
+         "id" : "fairytale17",
+         "description" : "\n  You are lost in the Fun House. Mirrors surround you.\n",
          "altitude" : null
       },
       "fairytale65@fairytale" : {
@@ -2308,7 +2365,8 @@
       "fairytale33@fairytale" : {
          "exits" : {
             "w" : "fairytale29",
-            "e" : "fairytale37"
+            "e" : "fairytale37",
+            "s" : "^door_window"
          },
          "flags" : [],
          "zone" : "fairytale",
@@ -2594,8 +2652,7 @@
       },
       "fairytale34@fairytale" : {
          "exits" : {
-            "e" : "fairytale54",
-            "s" : "^door_window"
+            "e" : "fairytale54"
          },
          "flags" : [],
          "zone" : "fairytale",
@@ -2643,7 +2700,7 @@
       },
       "fairytale78@fairytale" : {
          "exits" : {
-            "e" : "fairytale42",
+            "w" : "fairytale42",
             "d" : "fairytale80"
          },
          "flags" : [
@@ -2726,13 +2783,16 @@
       "porridge@fairytale" : {
          "damage" : "10",
          "location" : "fairytale4",
-         "speed" : "0",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Porridge",
          "name" : "porridge",
          "description" : "A bowl of porridge rests on the table.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Porridge",
+         "aggression" : "25"
       },
       "golden@fairytale" : {
          "damage" : "10",
@@ -2745,19 +2805,26 @@
          ],
          "strength" : "150",
          "speed" : "2",
+         "aggression" : "25",
          "pname" : "Golden",
-         "aggression" : "25"
+         "mflags" : [
+            "flyer"
+         ]
       },
       "big@fairytale" : {
          "damage" : "10",
          "location" : "fairytale38",
-         "speed" : "0",
-         "aggression" : "18",
          "armor" : "0",
-         "pname" : "Big",
          "name" : "big",
+         "examine" : "Fight him?!?  Are you nuts?",
          "description" : "The biggest giant you have ever seen sits at the foot of the table and laughs.",
-         "strength" : "350"
+         "strength" : "350",
+         "speed" : "0",
+         "pname" : "Big",
+         "aggression" : "0",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "fatman@fairytale" : {
          "damage" : "10",
@@ -2862,13 +2929,20 @@
       "reflection@fairytale" : {
          "damage" : "10",
          "location" : "fairytale21",
+         "armor" : "0",
+         "name" : "reflection",
+         "examine" : "Uh oh, that looks like a demonic version of yourself!",
+         "description" : "Your reflection looks at you from the mirror.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
          "speed" : "0",
          "aggression" : "25",
-         "armor" : "0",
          "pname" : "Reflection",
-         "name" : "reflection",
-         "description" : "Your reflection looks at you from the mirror.",
-         "strength" : "150"
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "monkey@fairytale" : {
          "damage" : "10",
@@ -2969,19 +3043,22 @@
          "armor" : "0",
          "pname" : "Hawker",
          "name" : "hawker",
-         "description" : "The hawker stands in his booth, calling \"Buy a ticket!\"",
+         "description" : "The hawker stands in his booth, calling 'Buy a ticket!'",
          "strength" : "150"
       },
       "fish@fairytale" : {
          "damage" : "10",
-         "location" : "fairytale64",
-         "speed" : "2",
-         "aggression" : "25",
+         "location" : "fairytale61",
          "armor" : "0",
-         "pname" : "Fish",
          "name" : "fish",
          "description" : "A fish rises out of the water and spits at you!",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "1",
+         "pname" : "Fish",
+         "aggression" : "25",
+         "mflags" : [
+            "Aquatic"
+         ]
       },
       "ladybug@fairytale" : {
          "damage" : "10",
@@ -3009,6 +3086,7 @@
          "strength" : "150"
       },
       "sleeping_beauty@fairytale" : {
+         "visibility" : "22",
          "damage" : "10",
          "location" : "limbo@limbo",
          "armor" : "0",
@@ -3047,13 +3125,16 @@
       "horsefly@fairytale" : {
          "damage" : "10",
          "location" : "fairytale7",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Horsefly",
          "name" : "horsefly",
          "description" : "A horsefly buzzes around your head, looking for a place to land.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Horsefly",
+         "aggression" : "25",
+         "mflags" : [
+            "flyer"
+         ]
       },
       "baby@fairytale" : {
          "damage" : "10",
@@ -3124,13 +3205,16 @@
       "bumblebee@fairytale" : {
          "damage" : "10",
          "location" : "fairytale8",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Bumblebee",
          "name" : "bumblebee",
          "description" : "A bee buzzes gently here, poison dripping from its stinger.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "2",
+         "pname" : "Bumblebee",
+         "aggression" : "25",
+         "mflags" : [
+            "flyer"
+         ]
       },
       "sprite@fairytale" : {
          "damage" : "10",
@@ -3143,19 +3227,28 @@
          ],
          "strength" : "150",
          "speed" : "2",
+         "aggression" : "25",
          "pname" : "Sprite",
-         "aggression" : "25"
+         "mflags" : [
+            "flyer"
+         ]
       },
       "rug@fairytale" : {
          "damage" : "10",
          "location" : "fairytale85",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Rug",
          "name" : "rug",
          "description" : "Suddenly, the rug comes to life!",
-         "strength" : "300"
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "Rug",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "clown@fairytale" : {
          "damage" : "10",
@@ -3203,6 +3296,18 @@
          "name" : "pig",
          "description" : "This little piggy thumbs his nose at you.",
          "strength" : "150"
+      },
+      "philip@fairytale" : {
+         "damage" : "10",
+         "location" : "fairytale63",
+         "pname" : "Prince Philip",
+         "name" : "Philip",
+         "examine" : "\nHis state of grief appears to have overcome the rage that has taken\nover the rest of Fairyville. He looks charming, if he weren't in sadness.\n",
+         "description" : "Prince Philip stands here beside the coffin.",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "strength" : "100"
       },
       "dog@fairytale" : {
          "damage" : "10",

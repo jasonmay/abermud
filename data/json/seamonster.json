@@ -1,0 +1,396 @@
+{
+   "obj" : {
+      "water@seamonster" : {
+         "location" : "IN_ROOM:smon10",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "water",
+         "examine" : "The water looks wonderfully clear and blue."
+      },
+      "axe@seamonster" : {
+         "damage" : "8",
+         "location" : "IN_ROOM:smon10",
+         "weight" : "2",
+         "oflags" : [
+            "Destroyed",
+            "Weapon"
+         ],
+         "name" : "axe",
+         "examine" : "Good for cutting wood.",
+         "desc[0]" : "A clean axe is laying here.",
+         "size" : "12"
+      },
+      "trees_1@seamonster" : {
+         "location" : "IN_ROOM:smon17",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "tree",
+         "name" : "trees_1",
+         "linked" : "trees"
+      },
+      "trees@seamonster" : {
+         "location" : "IN_ROOM:smon14",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "trees",
+         "examine" : "Those sharp branches won't allow you to go through.",
+         "linked" : "trees_1",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A free way has been cut through the trees."
+      },
+      "inscription@seamonster" : {
+         "location" : "IN_ROOM:smon16",
+         "weight" : "2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "inscription",
+         "examine" : "\nThere is written:\nIt's big, it's huge!\nBetter you flee before it kills you!",
+         "size" : "1"
+      },
+      "banana@seamonster" : {
+         "location" : "IN_ROOM:smon12",
+         "weight" : "2",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "banana",
+         "examine" : "It's a banana.",
+         "bvalue" : "20",
+         "desc[0]" : "A banana is hanging here.",
+         "size" : "1"
+      },
+      "boat@seamonster" : {
+         "location" : "IN_ROOM:smon21",
+         "oflags" : [
+            "NoGet",
+            "Boat"
+         ],
+         "name" : "boat",
+         "examine" : "It looks stable.",
+         "desc[0]" : "He stands here waiting in a boat."
+      },
+      "dirt@seamonster" : {
+         "desc[1]" : "Some dirt is laying here.",
+         "location" : "IN_ROOM:smon23",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "dirt",
+         "examine" : "\nThere is an object in it, but you can't clear it enough with your hands.",
+         "state" : "1",
+         "size" : "12",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "Someone dropped some dirt here."
+      },
+      "energit@seamonster" : {
+         "location" : "IN_ROOM:smon16",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "pill",
+         "name" : "energit",
+         "examine" : "Energit Excel.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "Someone left here a pill of Energit."
+      }
+   },
+   "loc" : {
+      "smon20@seamonster" : {
+         "exits" : {
+            "w" : "smon19",
+            "e" : "smon21"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "Island shore",
+         "id" : "smon20",
+         "description" : "\n   You are standing on another island shore. How many islands are here?\nThis island used to be is very special.  Now it's very wasted.  Everything\nis smashed apart into nothing. Total devastation.\n",
+         "altitude" : null
+      },
+      "smon19@seamonster" : {
+         "exits" : {
+            "w" : "smon18",
+            "e" : "smon20",
+            "n" : "smon22",
+            "s" : "smon22"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "seamonster",
+         "title" : "Calm sea",
+         "id" : "smon19",
+         "description" : "\n   You are swimming in wonderful warm water. The high waves aren't\ndisturbing you in any way.  When you look in the north and south directions,\nthey don't look so horrible, but many turbulences and sharp rocks are there.\nAs you see further to the east, you see something huge lying on an island.\nYou can't imagine what it could be.\n",
+         "altitude" : null
+      },
+      "smon1@seamonster" : {
+         "exits" : {
+            "w" : "7@sea",
+            "e" : "7@sea",
+            "n" : "5@sea",
+            "s" : "smon2"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "seamonster",
+         "title" : "All At Sea",
+         "id" : "smon1",
+         "description" : "\n   Strange, the water has become calmer here. Maybe some magical force\nmade it so. As you look around the seas north and south seem to be safe.\n",
+         "altitude" : null
+      },
+      "smon17@seamonster" : {
+         "exits" : {
+            "w" : "^trees_1",
+            "e" : "smon18"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "Way to sea",
+         "id" : "smon17",
+         "description" : "\n   You are at the end of the amazing way. The way is simply getting lost\nin the sea. The water is very calm, but it looks like a tunnel of calm water.\nOnly the way that is travelled gives safe possibility to swim.\n",
+         "altitude" : null
+      },
+      "smon2@seamonster" : {
+         "exits" : {
+            "w" : "7@sea",
+            "e" : "smon3",
+            "n" : "smon1",
+            "s" : "7@sea"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "seamonster",
+         "title" : "All At Sea",
+         "id" : "smon2",
+         "description" : "\n   The water is very calm and warm here. You could very well relax by\nswimming in it. But when you look around it doesn't seem to be the same \npicture. To the south and west are high waves and huge turbulence. To the \nnorth it is calm.\n",
+         "altitude" : null
+      },
+      "smon12@seamonster" : {
+         "exits" : {
+            "d" : "smon11"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "On the palm",
+         "id" : "smon12",
+         "description" : "\n   You have shimmied up the palm. You can see the whole island with a cave\nto the south, the beach to the west and open water to the east. The only way \nfrom here leads back down.\n",
+         "altitude" : null
+      },
+      "smon23@seamonster" : {
+         "exits" : {
+            "s" : "smon11"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "Sunny place",
+         "id" : "smon23",
+         "description" : "\n\tYou are standing on a sunny place. You can feel the warm sun on your\nbody. You can't believe your eyes, there are so many trees, but not one of\nthem is gives any shade. You can go only back to south.\n",
+         "altitude" : null
+      },
+      "smon18@seamonster" : {
+         "exits" : {
+            "w" : "smon17",
+            "e" : "smon19",
+            "n" : "7@sea",
+            "s" : "7@sea"
+         },
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "seamonster",
+         "title" : "Calm sea",
+         "id" : "smon18",
+         "description" : "\n   You are swimming in wonderful warm water.  High waves aren't \ndisturbing you but don't look in the north and south directions.\n",
+         "altitude" : null
+      },
+      "smon3@seamonster" : {
+         "exits" : {
+            "w" : "smon2"
+         },
+         "flags" : [],
+         "zone" : "seamonster",
+         "title" : "Small island",
+         "id" : "smon3",
+         "description" : "\n   You are standing on a small island. It is merely a huge rock poking out\nfrom the sea with no trees, no sand, nothing.  As you look around, the waves\npound the north and south sides.  To the east the water is a bit streamy, but \nthe rocks are very sharp on that side and you could hurt yourself.\nIt seems so that the only way out here is the way back.\n",
+         "altitude" : null
+      },
+      "smon22@seamonster" : {
+         "exits" : {},
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "seamonster",
+         "title" : "All at sea",
+         "id" : "smon22",
+         "description" : "\n\tYou had really lot of luck that you could escape those huge waves\nand turbulences. Maybe you won't have so much luck again. You prompty swim\nback to an another safer place.\n",
+         "altitude" : null
+      },
+      "smon21@seamonster" : {
+         "exits" : {
+            "w" : "smon20"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "Island shore",
+         "id" : "smon21",
+         "description" : "\n\tYou are following the devastated island shore. Really unbelievable\nwhat the creature was able to do. All trees are broken, there are no animals,\nnot even a ghost is here. That was a trip.\n",
+         "altitude" : null
+      },
+      "smon14@seamonster" : {
+         "exits" : {
+            "e" : "^trees",
+            "w" : "smon11"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "Shiny way",
+         "id" : "smon14",
+         "description" : "\n   You are following the shiny way that leads to the sea.  You can see \nwonderful &+gtrees&* and flowers around.  It is very silent and a really \nnice place.  You don't have to look for something special, it's\nspecial already.\n",
+         "altitude" : null
+      },
+      "smon10@seamonster" : {
+         "exits" : {
+            "e" : "smon11"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "Sandy shore",
+         "id" : "smon10",
+         "description" : "\n   The &+Bwater&* spat you onto another island's sandy shore.  It\nisn't looking so inviting like before. The whole shore is covered \nwith decaying fish, but you can see some human bodies too.\n",
+         "altitude" : null
+      },
+      "smon15@seamonster" : {
+         "exits" : {
+            "n" : "smon13",
+            "s" : "smon16"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "Before a cave",
+         "id" : "smon15",
+         "description" : "\n   You are standing before a small cave.  It seems to be a good place \nfor hiding from something big.  You can see around the entrance many deep\ngouges.  They look like they were made by huge claws. \n",
+         "altitude" : null
+      },
+      "smon13@seamonster" : {
+         "exits" : {
+            "n" : "smon11",
+            "s" : "smon15"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "Muddy Way",
+         "id" : "smon13",
+         "description" : "\n   You are standing on a very muddy way. You can't imagine where the way\nleads. Around you are high palms, impossible to see or go through. \n",
+         "altitude" : null
+      },
+      "smon4@seamonster" : {
+         "exits" : {},
+         "flags" : [
+            "OnWater"
+         ],
+         "zone" : "seamonster",
+         "title" : "Turbulent Waters",
+         "id" : "smon4",
+         "description" : "\n\tThe water swallows you down and takes you with.  You narrowly miss\nmany sharp rocks along the way as you are sucked into the undertow.  After\nnearly giving up hope of ever surviving the seas mercifully spit you out\nonto another island.\n",
+         "altitude" : null
+      },
+      "smon11@seamonster" : {
+         "exits" : {
+            "w" : "smon10",
+            "e" : "smon14",
+            "u" : "smon12",
+            "n" : "smon23",
+            "s" : "smon13"
+         },
+         "flags" : [
+            "OutDoors"
+         ],
+         "zone" : "seamonster",
+         "title" : "Under the palm",
+         "id" : "smon11",
+         "description" : "\n   You are standing under a huge palm. Its palm leaves are giving you a nice \nplace to rest if you want to join the party with the skeleton lying here.\nYou can choose to go any direction or try to climbing the palm.\n",
+         "altitude" : null
+      },
+      "smon16@seamonster" : {
+         "exits" : {
+            "n" : "smon15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "seamonster",
+         "title" : "In the cave",
+         "id" : "smon16",
+         "description" : "\n   You are now standing in the cave. It's very dark and you can't see\nmuch.  The walls aren't very stable.  It looks like something that was built\nto hide from something. You can see an &+Cinscription&* on the south wall.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "boatsman@seamonster" : {
+         "damage" : "8",
+         "location" : "smon21",
+         "armor" : "0",
+         "name" : "Boatsman",
+         "examine" : "The boatsman says 'Sit down, I will take you to the village.'",
+         "description" : "\nAs the village people heard the last scream of the seamonster, they sent\na brave man to look for the possibly alive hero who slaughtered it.",
+         "strength" : "10",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ]
+      },
+      "seamonster@seamonster" : {
+         "eflags" : [
+            "ImmShock",
+            "ImmFireball",
+            "ImmFrost",
+            "ImmMissile"
+         ],
+         "damage" : "38",
+         "location" : "smon20",
+         "armor" : "12",
+         "name" : "Seamonster",
+         "examine" : "He will be very mad if you wake him!",
+         "description" : "The huge seamonster is sleeping here.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "5500",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "BarEast"
+         ]
+      }
+   }
+}

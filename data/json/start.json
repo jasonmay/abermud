@@ -11,13 +11,48 @@
          "examine" : "\nIn the fire you see faint images of the ghosts of dead players.  The sparkles\nfly up and away, disappearing amongst the pillars of the temple.",
          "desc[0]" : "\nA roaring fire burns here.  Its flames make the temple sparkle and glitter."
       },
-      "pit@start" : {
-         "location" : "IN_ROOM:temple",
+      "newbiecloak@start" : {
+         "location" : "IN_ROOM:donate_bal",
+         "armor" : "30",
+         "oflags" : [
+            "armor",
+            "wearable",
+            "newbie"
+         ],
+         "altname" : "cloak",
+         "name" : "newbiecloak",
+         "examine" : "It has been especially designed for new players.",
+         "desc[0]" : "A long &+mcloak&* for new players is here.",
+         "aflags" : [
+            "arms",
+            "back",
+            "head"
+         ]
+      },
+      "newbieboots@start" : {
+         "location" : "IN_ROOM:donate_sun",
+         "armor" : "25",
+         "oflags" : [
+            "armor",
+            "wearable",
+            "newbie"
+         ],
+         "altname" : "boots",
+         "name" : "newbieboots",
+         "examine" : "It has been specially designed for new players.",
+         "desc[0]" : "A pair of new hiking &+mboots&* for new players is here.",
+         "aflags" : [
+            "feet"
+         ]
+      },
+      "donation_pit@start" : {
+         "location" : "IN_ROOM:donation",
          "oflags" : [
             "NoGet"
          ],
-         "name" : "pit",
-         "desc[0]" : "\n   At your feet a huge sacrificial pit allows you to give valuables to the gods\nin the hope of being rewarded."
+         "pname" : "pit",
+         "name" : "Donation_Pit",
+         "desc[0]" : "\n   At your feet a huge sacrifical pit allows you to give valuables\nto the gods in the hope of being rewarded."
       },
       "church_pit@start" : {
          "location" : "IN_ROOM:church",
@@ -43,18 +78,122 @@
          "maxstate" : "1",
          "bvalue" : "30",
          "desc[0]" : "An unfurled umbrella lies here."
+      },
+      "newbiemace@start" : {
+         "damage" : "16",
+         "location" : "IN_ROOM:donate_bal",
+         "oflags" : [
+            "newbie",
+            "weapon"
+         ],
+         "altname" : "mace",
+         "name" : "newbiemace",
+         "examine" : "It has been specially designed for new players.",
+         "desc[0]" : "A large &+mmace&* for new players is here."
+      },
+      "newbiesword@start" : {
+         "damage" : "20",
+         "location" : "IN_ROOM:donation",
+         "oflags" : [
+            "weapon",
+            "newbie"
+         ],
+         "altname" : "sword",
+         "name" : "newbiesword",
+         "examine" : "Is has been specially designed for new players.",
+         "desc[0]" : "A &+msword&* for new players is here."
+      },
+      "pit@start" : {
+         "location" : "IN_ROOM:temple",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "pit",
+         "desc[0]" : "\n   At your feet a huge sacrificial pit allows you to give valuables to the gods\nin the hope of being rewarded."
+      },
+      "donate_pit_sun@start" : {
+         "location" : "IN_ROOM:donate_sun",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "pit",
+         "name" : "Donate_Pit_Sun",
+         "desc[0]" : "\n   At your feet a huge sacrifical pit allows you to give valuables\nto the gods in the hope of being rewarded."
+      },
+      "newbieaxe@start" : {
+         "damage" : "16",
+         "location" : "IN_ROOM:donate_sun",
+         "oflags" : [
+            "newbie",
+            "weapon"
+         ],
+         "altname" : "axe",
+         "name" : "newbieaxe",
+         "examine" : "It has been specially designed for new players.",
+         "desc[0]" : "A large battle &+maxe&* for new players is here."
+      },
+      "newbieshield@start" : {
+         "location" : "IN_ROOM:donation",
+         "armor" : "26",
+         "oflags" : [
+            "armor",
+            "wearable",
+            "shield",
+            "newbie"
+         ],
+         "altname" : "shield",
+         "name" : "newbieshield",
+         "examine" : "It has been especially designed for new players.",
+         "desc[0]" : "A &+mshield&* for new players is here."
       }
    },
    "loc" : {
+      "between@start" : {
+         "exits" : {
+            "e" : "balhar48@balharbor",
+            "u" : "sundhaven6602@sundhaven",
+            "n" : "temple",
+            "d" : "newbie1@newbie",
+            "s" : "church"
+         },
+         "flags" : [
+            "Peaceful",
+            "Party"
+         ],
+         "zone" : "start",
+         "title" : "Between Worlds",
+         "id" : "between",
+         "description" : "\n        You stand in a void, between several different worlds of the Promised\nLand.  Here you decide, which part of the world you wish to visit first...you\nsee portals to the always familiar Temple of Paradise and Village Church. \nYou also see portals to a council chamber, an inn, and an altar.  There is \nalso a portal to the Promised Land Welcome Center.\n",
+         "altitude" : null
+      },
+      "donation@start" : {
+         "exits" : {
+            "w" : "temple",
+            "u" : "newbie1@newbie",
+            "s" : "church"
+         },
+         "flags" : [
+            "Peaceful",
+            "Party",
+            "NoMobiles"
+         ],
+         "zone" : "start",
+         "title" : "The Donations Room",
+         "id" : "donation",
+         "description" : "\n   This room is full of things that players before you were thoughtful\nenough to donate.  Items found in this room are as good as they\nnormally are, and have the same properties, but they aren't worth any\npoints.  There are exits west and south from here.  Upstairs is the\nentrance to the Welcome Centre.\n",
+         "altitude" : null
+      },
       "church@start" : {
          "exits" : {
             "u" : "mrealms@mrealms",
+            "n" : "donation",
             "s" : "Green@Village"
          },
          "flags" : [
             "Peace",
             "FastMana",
-            "FastHeal"
+            "FastHeal",
+            "Party"
          ],
          "zone" : "start",
          "title" : "The Village Church",
@@ -62,8 +201,24 @@
          "description" : "\n   You are in the village's small wooden church.  A gentle breeze blows into\nthe church disturbing the dust which dances in the sunbeams that shine faintly\nthrough the windows.  A doorway leads south.\n",
          "altitude" : null
       },
+      "donate_sun@start" : {
+         "exits" : {
+            "s" : "sundhaven6602@sundhaven"
+         },
+         "flags" : [
+            "Peaceful",
+            "Party",
+            "Nomobiles"
+         ],
+         "zone" : "start",
+         "title" : "Chamber of Charity",
+         "id" : "donate_sun",
+         "description" : "\n   This room is full of things that players before you were thoughtful\nenough to donate.  Items found in this room are as good as they\nnormally are, and have the same properties, but they aren't worth any\npoints.  Players can change their personnas here.\n",
+         "altitude" : null
+      },
       "temple@start" : {
          "exits" : {
+            "e" : "donation",
             "u" : "mrealms@mrealms",
             "d" : "Ftrack@Valley",
             "s" : "Ftrack@Valley"
@@ -71,12 +226,28 @@
          "flags" : [
             "Peace",
             "FastMana",
-            "FastHeal"
+            "FastHeal",
+            "Party"
          ],
          "zone" : "start",
          "title" : "The Temple Of Paradise",
          "id" : "temple",
          "description" : "\n   You stand in the Temple of Paradise, a huge stone structure whose walls are\ndecorated with ancient carvings and runes, some so old that even the priests no\nlonger know their meanings.\n   A single set of steps lead south, descending the huge mound upon which the\ntemple is built and ending in the forests below.\n",
+         "altitude" : null
+      },
+      "donate_bal@start" : {
+         "exits" : {
+            "d" : "balhar48@balharbor"
+         },
+         "flags" : [
+            "Peaceful",
+            "Party",
+            "NoMobiles"
+         ],
+         "zone" : "start",
+         "title" : "The Store Room",
+         "id" : "donate_bal",
+         "description" : "\n   This room is full of things that players before you were thoughtful\nenough to donate.  Items found in this room are as good as they\nnormally are, and have the same properties, but they aren't worth any\npoints.  Players can change their personnas here.\n",
          "altitude" : null
       }
    },
@@ -102,6 +273,7 @@
          "location" : "church",
          "armor" : "0",
          "name" : "puff",
+         "examine" : "",
          "description" : "\nPuff The Fractal Dragon is here with a faraway look in her eyes.",
          "sflags" : [
             "Female"

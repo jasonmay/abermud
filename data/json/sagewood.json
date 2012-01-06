@@ -1,0 +1,1467 @@
+{
+   "obj" : {
+      "outside_vines@sagewood" : {
+         "location" : "IN_ROOM:Woods1",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "Outside_vines",
+         "examine" : "\nBehind the vines you notice a small passage leading to another part of the\nwoods. The vines appear to be loose enough to be pushed aside.",
+         "linked" : "Inside_vines",
+         "state" : "1",
+         "pname" : "vines",
+         "maxstate" : "1",
+         "desc[0]" : "The &+Bvines&* have been pushed aside, allowing passage &+CWest&*."
+      },
+      "medicine@sagewood" : {
+         "location" : "IN_ROOM:daerius",
+         "oflags" : [
+            "Container",
+            "WearAble",
+            "RegenHealth"
+         ],
+         "altname" : "Bag",
+         "name" : "Medicine",
+         "examine" : "\nMade out of soft and supple leather. It has a strap to go around\nyour neck. Wafting from the medicine bag is the wild scent of\nherbs. Obviously not made by the dark druids.",
+         "size" : "30",
+         "state" : "0",
+         "pname" : "Medicine",
+         "maxstate" : "0",
+         "desc[0]" : "Someone has left a druid's &+Bmedicine&* bag here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "force@sagewood" : {
+         "location" : "IN_ROOM:Altar",
+         "oflags" : [
+            "noget"
+         ],
+         "name" : "Force",
+         "examine" : "",
+         "state" : "0",
+         "pname" : "Force",
+         "maxstate" : "0",
+         "desc[0]" : ""
+      },
+      "oldtree@sagewood" : {
+         "location" : "IN_ROOM:Woods4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "OldTree",
+         "examine" : "\nThe tree looks old and dry, yet very powerful. Its black branches stretch\nout above you, casting an ominous shadow.",
+         "state" : "0",
+         "pname" : "Tree",
+         "maxstate" : "0",
+         "desc[0]" : "An evil-looking old &+Btree&* stand here."
+      },
+      "frostsceptre@sagewood" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:Daerius",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "Frost",
+         "name" : "FrostSceptre",
+         "examine" : "\nThe frost sceptre has a bluish hazy aura about it. Just coming close to it\nmakes you shiver uncontrollably. The surface of the sceptre is transluscent,\nalmost like colored glass. At the top of the sceptre is a sapphire, obviously\nenchanted by a powerful magic. With this, you could perhaps enter the hottest\nregions of the land and remain unscathed.\n\nUnfortunately, this sceptre won't make much of a weapon unless the victim is\nparticularly sensitive to cold.",
+         "size" : "40",
+         "state" : "0",
+         "pname" : "Sceptre",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "An icy frost &+Bsceptre&* is here, radiating an icy aura."
+      },
+      "passage2_e@sagewood" : {
+         "location" : "IN_ROOM:cavern1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "passage",
+         "name" : "passage2_e",
+         "linked" : "passage2_w",
+         "state" : "1"
+      },
+      "herb4@sagewood" : {
+         "location" : "IN_CONTAINER:Medicine",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "Herb4",
+         "examine" : "\nThe herb appears to be one of the rare species. Although it is slightly \nwilted, its curative properies are probobly not affected.",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "Herb",
+         "maxstate" : "0",
+         "desc[0]" : "Someone has left a small &+Bherb&* here."
+      },
+      "ashes@sagewood" : {
+         "location" : "IN_ROOM:limbo",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "ashes",
+         "examine" : "\nThey remind you of the embers of burnt wood. Among them you find a golden\n&+BSickle&*.",
+         "state" : "0",
+         "pname" : "ashes",
+         "maxstate" : "0",
+         "desc[0]" : "All that remains of the dryad are &+Bashes&*."
+      },
+      "herb3@sagewood" : {
+         "location" : "IN_CONTAINER:Medicine",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "Herb3",
+         "examine" : "\nThe herb appears to be one of the rare species. Although it is slightly \nwilted, its curative properies are probobly not affected.",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "Herb",
+         "maxstate" : "0",
+         "desc[0]" : "Someone has left a small &+Bherb&* here."
+      },
+      "candle@sagewood" : {
+         "desc[1]" : "An evil-looking black &+Bcandle&* lies here.",
+         "location" : "IN_CONTAINER:Hole",
+         "oflags" : [
+            "Lit",
+            "Extinguish"
+         ],
+         "altname" : "dark",
+         "name" : "Candle",
+         "examine" : "\nThe candle looks as if it is used for some evil ritual. It glows malvolently\nand you feel a strong urge to extinguish its sinister flame.",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "candle",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "An evil-looking black &+Bcandle&* burns away."
+      },
+      "altar@sagewood" : {
+         "location" : "IN_ROOM:Altar",
+         "oflags" : [
+            "noget"
+         ],
+         "name" : "Altar",
+         "examine" : "\nYou notice beside the grostique altar, a passage leading &+Cdown&*.",
+         "state" : "0",
+         "pname" : "Altar",
+         "maxstate" : "0",
+         "desc[0]" : "A hideous black &+BAltar&* stands proudly here."
+      },
+      "herb1@sagewood" : {
+         "location" : "IN_CONTAINER:Medicine",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "Herb1",
+         "examine" : "\nThe herb appears to be one of the rare species. Although it is slightly \nwilted, its curative properies are probobly not affected.",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "Herb",
+         "maxstate" : "0",
+         "desc[0]" : "Someone has left a small &+Bherb&* here."
+      },
+      "hole@sagewood" : {
+         "location" : "IN_ROOM:Alcove",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "Hole",
+         "examine" : "A hole in the center of the room about 1 foot deep.",
+         "size" : "50",
+         "state" : "0",
+         "pname" : "hole",
+         "maxstate" : "0",
+         "desc[0]" : ""
+      },
+      "passage_u@sagewood" : {
+         "location" : "IN_ROOM:Gloom",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "passage",
+         "name" : "passage_u",
+         "linked" : "passage_d",
+         "state" : "1"
+      },
+      "carvings@sagewood" : {
+         "location" : "IN_ROOM:cavern1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "engravings",
+         "name" : "Carvings",
+         "examine" : "\nThe carvings do a rather poor job of depicting various demons and\nother creatures you would expect to find in the underworld. However, you do\nnotice a small hole in the &+CEast&* wall that you just might be\nable to squeeze through. To your suprise you discover yet another hole among\nthe carvings which allows you to pass &+CWest&*!",
+         "size" : "20",
+         "state" : "0",
+         "pname" : "carvings",
+         "maxstate" : "0",
+         "desc[0]" : ""
+      },
+      "ruby@sagewood" : {
+         "location" : "IN_CONTAINER:Chest",
+         "name" : "Ruby",
+         "examine" : "\nThis ruby looks like it is quite valuable. The dark druids probobly looted\nit off of a wealthy traveler.",
+         "size" : "10",
+         "state" : "0",
+         "pname" : "ruby",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "1000",
+         "desc[0]" : "A precious, eye-sized &+Bruby&* has been dropped here."
+      },
+      "amethyst@sagewood" : {
+         "location" : "IN_CONTAINER:Chest",
+         "name" : "Amethyst",
+         "examine" : "\nThis fist-sized amethyst reflects the light back through its many facets.",
+         "size" : "40",
+         "state" : "0",
+         "pname" : "Amethyst",
+         "weight" : "20",
+         "maxstate" : "0",
+         "bvalue" : "500",
+         "desc[0]" : "A beautiful &+Bamethyst&* has been left here."
+      },
+      "willow@sagewood" : {
+         "location" : "IN_ROOM:Hill",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Willow",
+         "examine" : "\nThe Willow tree stands proudly here, in stark defiance at what the dark\ndruids have done. If you weren't so distrubed by the destruction around the\nhill, you would feel strongly motivated to sit under the willow tree, rest,\nand contemplate.",
+         "state" : "0",
+         "pname" : "Willow",
+         "maxstate" : "0",
+         "desc[0]" : "A slender &+Bwillow&* stands here, giving shade."
+      },
+      "inside_vines@sagewood" : {
+         "location" : "IN_ROOM:Woods2",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "name" : "Inside_vines",
+         "examine" : "\nBehind the vines you notice a small passage leading to another part of the\nwoods. The vines appear to be loose enough to be pushed aside.",
+         "linked" : "Outside_vines",
+         "state" : "1",
+         "pname" : "vines",
+         "maxstate" : "1",
+         "desc[0]" : "The &+Bvines&* have been pushed aside, allowing passage &+CEast&*."
+      },
+      "chains@sagewood" : {
+         "location" : "IN_ROOM:Gloom",
+         "oflags" : [
+            "noget"
+         ],
+         "name" : "Chains",
+         "examine" : "\nThe chains hold the earth-magic fast...",
+         "state" : "0",
+         "pname" : "Chains",
+         "maxstate" : "0",
+         "desc[0]" : ""
+      },
+      "chest@sagewood" : {
+         "desc[1]" : "An closed &+Cchest&* has been dropped here.",
+         "location" : "IN_ROOM:woods5",
+         "oflags" : [
+            "Container",
+            "Lockable",
+            "Openable"
+         ],
+         "name" : "Chest",
+         "desc[2]" : "A locked &+Cchest&* has been dropped here.",
+         "size" : "200",
+         "state" : "2",
+         "pname" : "chest",
+         "weight" : "100",
+         "maxstate" : "2",
+         "bvalue" : "100",
+         "desc[0]" : "An open &+Cchest&* has been dropped here."
+      },
+      "passage1_w@sagewood" : {
+         "location" : "IN_ROOM:cavern1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "passage",
+         "name" : "passage1_w",
+         "linked" : "passage1_e",
+         "state" : "1"
+      },
+      "herb2@sagewood" : {
+         "location" : "IN_CONTAINER:Medicine",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "Herb2",
+         "examine" : "\nThe herb appears to be one of the rare species. Although it is slightly \nwilted, its curative properies are probobly not affected.",
+         "size" : "5",
+         "state" : "0",
+         "pname" : "Herb",
+         "maxstate" : "0",
+         "desc[0]" : "Someone has left a small &+Bherb&* here."
+      },
+      "jharnstaff@sagewood" : {
+         "damage" : "19",
+         "location" : "WIELDED_BY:Jharn",
+         "oflags" : [
+            "Weapon",
+            "NegHealth"
+         ],
+         "altname" : "Obsidian",
+         "name" : "JharnStaff",
+         "examine" : "\nThe staff is made of a stout volcanic rock known as obsidian. Its glassy\nsurface shimmers softly. The obsidian staff is as cold as ice and posesses \na definate aura of powerful evil.",
+         "size" : "40",
+         "state" : "0",
+         "pname" : "DarkStaff",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A dark &+Bstaff&* of obsidian lies here."
+      },
+      "passage2_w@sagewood" : {
+         "location" : "IN_ROOM:Alcove",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "passage",
+         "name" : "passage2_w",
+         "linked" : "passage2_e",
+         "state" : "1"
+      },
+      "goldensickle2@sagewood" : {
+         "damage" : "40",
+         "location" : "IN_ROOM:Limbo",
+         "oflags" : [
+            "Weapon",
+            "Glowing"
+         ],
+         "altname" : "sickle",
+         "name" : "GoldenSickle2",
+         "examine" : "\nThe sickle's long curved blade is razor sharp and glowing brightly. The\nhandle is of extremely hard ash wood... Something about holding this\nancient weapon in your hands make you feel safe and protected...\n\nIt is extremely light and seems to move with a will of its own.",
+         "state" : "0",
+         "pname" : "GoldenSickle",
+         "maxstate" : "0",
+         "desc[0]" : "A golden &+Bsickle&* lies here, its blade glowing with a holy aura!"
+      },
+      "brasskey@sagewood" : {
+         "location" : "IN_ROOM:Jharn",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "Key",
+         "name" : "BrassKey",
+         "examine" : "\nThe key looks too small to be to a door. Perhaps its to a chest.",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "BrassKey",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A shiny brass &+Bkey&* has been left here."
+      },
+      "darkgem@sagewood" : {
+         "desc[1]" : "A dark &+BGemstone&* has been abandoned here.",
+         "location" : "IN_ROOM:Altar",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "Gem",
+         "name" : "DarkGem",
+         "examine" : "\nThe Gemstone glows menacingly and seems to siphon the very life from you...",
+         "size" : "40",
+         "state" : "0",
+         "pname" : "Gemstone",
+         "weight" : "20",
+         "maxstate" : "1",
+         "bvalue" : "-2000",
+         "desc[0]" : "A dark &+BGemstone&* sits upon the altar."
+      },
+      "passage1_e@sagewood" : {
+         "location" : "IN_ROOM:Jharn",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "passage",
+         "name" : "passage1_e",
+         "linked" : "passage1_w",
+         "state" : "1"
+      },
+      "goldensickle1@sagewood" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:Dryad",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sickle",
+         "name" : "GoldenSickle1",
+         "examine" : "\nThe sickle's long curved blade is razor sharp, and its handle is of an\nextremely hard wood. \n\n&+RSomething seems very wrong with this weapon, however. It glows evilly\n&+Rand feels extordinarily heavy in your hands. It appears to be cursed.",
+         "state" : "0",
+         "pname" : "GoldenSickle",
+         "maxstate" : "1",
+         "desc[0]" : "A Golden &+BSickle&* lies here, its blade glowing evilly."
+      },
+      "coins@sagewood" : {
+         "location" : "IN_CONTAINER:Chest",
+         "altname" : "coin",
+         "name" : "Coins",
+         "examine" : "\nThe coins look like they'd make a gift quite pleasing to the gods.",
+         "size" : "50",
+         "state" : "0",
+         "weight" : "50",
+         "maxstate" : "0",
+         "bvalue" : "400",
+         "desc[0]" : "Thousands of priceless platinum &+Bcoins&* are here."
+      },
+      "passage_d@sagewood" : {
+         "location" : "IN_ROOM:Altar",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "passage",
+         "name" : "passage_d",
+         "linked" : "passage_u",
+         "state" : "1"
+      }
+   },
+   "loc" : {
+      "swamp2@sagewood" : {
+         "exits" : {
+            "w" : "mud",
+            "e" : "swamp1",
+            "n" : "swamp4",
+            "s" : "mud"
+         },
+         "flags" : [
+            "outdoors",
+            "negregen",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Foul Swamp",
+         "id" : "swamp2",
+         "description" : "\n   All around you are evil-looking plants, choking each other out in hopeless\nattempts to get sunlight. Those who loose the battle sooner than others die,\nand fall into the brown water up which is up to your knees. Sometimes you\nfeel something slimy swim by, ready at any moment to pull you under. Exits\nlead &+CNorth&* and &+CEast&*, neither look inviting. To the &+CWest&*\nand &+CSouth&* the mud seems to get dangerously deeper...\n",
+         "altitude" : null
+      },
+      "lava@sagewood" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "sagewood",
+         "title" : "Boiling Lava",
+         "id" : "lava",
+         "description" : "\n   As you step into the lava, the the tissue is scoured from your bones\nwithin seconds. Soon after your bones are melted and all that is left of\nthe foolish adventurer is a few ashes that float along the lava river\nto an unknown destination.\n",
+         "altitude" : null
+      },
+      "swamp3@sagewood" : {
+         "exits" : {
+            "e" : "mud",
+            "w" : "swamp1",
+            "n" : "swamp6",
+            "s" : "mud"
+         },
+         "flags" : [
+            "outdoors",
+            "negregen",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Foul Swamp",
+         "id" : "swamp3",
+         "description" : "\n   All around you are evil-looking plants, choking each other out in hopeless\nattempts to get sunlight. Those who loose the battle sooner than others die,\nand fall into the brown water up which is up to your knees. Sometimes you\nfeel something slimy swim by, ready at any moment to pull you under. Exits\nlead &+CWest&* and &+CNorth&*, and neither look inviting. To the &+CEast&*\nand &+CSouth&* the mud seems to get dangerously deeper...\n",
+         "altitude" : null
+      },
+      "plain8@sagewood" : {
+         "exits" : {
+            "e" : "sagewood1",
+            "w" : "hill",
+            "n" : "plain6",
+            "s" : "plain7"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Gloomy Plains",
+         "id" : "plain8",
+         "description" : "\n   As you enter the plains, you feel a surge of gloom fill your body.\nAll around you are dry, dying grasses, flowers, and trees. You sense\nthat this was once a beautiful place, ravaged by some dark magic.\nThe plain leads both &+CSouth&* and &+CNorth&*. A hill lies to the &+CWest&*.\nTo the &+CEast&* is a ravaged clearing.\n",
+         "altitude" : null
+      },
+      "cavern3@sagewood" : {
+         "exits" : {
+            "n" : "cavern2",
+            "s" : "cavern4"
+         },
+         "flags" : [
+            "NegRegen"
+         ],
+         "zone" : "sagewood",
+         "title" : "Near The Edge",
+         "id" : "cavern3",
+         "description" : "\n   Your vision is shimmery from the steam seeping from the rocks around\nyou. It seems just a bit cooler to the &+CNorth&*. To the &+CSouth&* you\ncan see an immense river of lava on a ledge. You might be able to survive\nthe heat if you take something to protect yourself.\n",
+         "altitude" : null
+      },
+      "plain7@sagewood" : {
+         "exits" : {
+            "w" : "plain5",
+            "n" : "plain8"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Gloomy Plains",
+         "id" : "plain7",
+         "description" : "\n   As you enter the plains, you feel a surge of gloom fill your body.\nAll around you are dry, dying grasses, flowers, and trees. You sense\nthat this was once a beautiful place, ravaged by some dark magic.\nThe plain extends &+CNorth&* and &+CWest&*.\n",
+         "altitude" : null
+      },
+      "jharn@sagewood" : {
+         "exits" : {
+            "e" : "^passage1_e"
+         },
+         "flags" : [
+            "nomobiles"
+         ],
+         "zone" : "sagewood",
+         "title" : "Jharn's Dwelling",
+         "id" : "jharn",
+         "description" : "\n   This place appears to be Jharn's dwelling. A small &+Bbed&* of dry\nleaves is the only object in the small room. A small tunnel leads &+CEast&*\ninto the cave's main chamber. Small, and simple. All a dark-druid sentry\nneeds.\n",
+         "altitude" : null
+      },
+      "limbo@sagewood" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "sagewood",
+         "title" : "Somewhere",
+         "id" : "limbo",
+         "description" : "\n   You are lost in a formless void.\n",
+         "altitude" : null
+      },
+      "swamp5@sagewood" : {
+         "exits" : {
+            "e" : "swamp6",
+            "w" : "swamp4",
+            "n" : "swamp8",
+            "s" : "swamp1"
+         },
+         "flags" : [
+            "outdoors",
+            "negregen",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Foul Swamp",
+         "id" : "swamp5",
+         "description" : "\n   All around you are evil-looking plants, choking each other out in hopeless\nattempts to get sunlight. Those who loose the battle sooner than others die,\nand fall into the brown water up which is up to your knees. Sometimes you\nfeel something slimy swim by, ready at any moment to pull you under. Exits\nlead in all directions.\n",
+         "altitude" : null
+      },
+      "plain6@sagewood" : {
+         "exits" : {
+            "w" : "plain4",
+            "s" : "plain8"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Gloomy Plains",
+         "id" : "plain6",
+         "description" : "\n   As you enter the plains, you feel a surge of gloom fill your body.\nAll around you are dry, dying grasses, flowers, and trees. You sense\nthat this was once a beautiful place, ravaged by some dark magic.\nThe plain extends to the &+CSouth&* and the &+CWest&*.\n",
+         "altitude" : null
+      },
+      "altar@sagewood" : {
+         "exits" : {
+            "e" : "portal1",
+            "w" : "sagewood2",
+            "d" : "^passage_d"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Near The Sinister Altar",
+         "id" : "Altar",
+         "description" : "\n   The whole area seems to be a large hole carved into the earth. At the\nbottom of the hole you notice a terrible-looking black &+Baltar&*. A\nhellish portal is to the &+CEast&* and it looks anything but safe. The only\nsafe-looking way out is &+CWest&*.\n",
+         "altitude" : null
+      },
+      "cavern4@sagewood" : {
+         "exits" : {
+            "e" : "lava",
+            "w" : "lava",
+            "n" : "cavern3",
+            "d" : "lava",
+            "s" : "lava"
+         },
+         "flags" : [
+            "NegRegen"
+         ],
+         "zone" : "sagewood",
+         "title" : "The Edge Of The Lava Flow",
+         "id" : "cavern4",
+         "description" : "\n   All around you is a vast river of boiling lava which is more fluid\nthan water and extremely hot. Occasionally a wave of the lava washes\nashore, taking some of the rock with it. Any wise adventurer would leave\nsoon! Anything thrown into the lava would surely be destroyed...\n",
+         "altitude" : null
+      },
+      "woods1@sagewood" : {
+         "exits" : {
+            "w" : "^outside_vines",
+            "n" : "sagewood2"
+         },
+         "flags" : [
+            "outdoors",
+            "nomobiles"
+         ],
+         "zone" : "sagewood",
+         "title" : "Ravaged Woods",
+         "id" : "woods1",
+         "description" : "\n   The trees here become more and more dense until they form a seemlingly\nimpassable wall in all directions, save &+CNorth&*. A peculiar mass of &+Bvines&*\ngrows on a small tree to the West.\n",
+         "altitude" : null
+      },
+      "gloom@sagewood" : {
+         "exits" : {
+            "u" : "^passage_u"
+         },
+         "flags" : [],
+         "zone" : "sagewood",
+         "title" : "Gloomy Chamber",
+         "id" : "gloom",
+         "description" : "\n   This small chamber is carved even deeper into the ground. The only way\nout appears to be a poorly made ladder going &+CUp&*.\n",
+         "altitude" : null
+      },
+      "plain2@sagewood" : {
+         "exits" : {
+            "e" : "plain4",
+            "s" : "plain1"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Gloomy Plains",
+         "id" : "plain2",
+         "description" : "\n   As you enter the plains, you feel a surge of gloom fill your body.\nAll around you are dry, dying grasses, flowers, and trees. You sense\nthat this was once a beautiful place, ravaged by some dark magic.\nThe plain extends to the &+CSouth&* and to the &+CEast&*.\n",
+         "altitude" : null
+      },
+      "plain4@sagewood" : {
+         "exits" : {
+            "e" : "plain6",
+            "w" : "plain2",
+            "s" : "hill"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Gloomy Plains",
+         "id" : "plain4",
+         "description" : "\n   As you enter the plains, you feel a surge of gloom fill your body.\nAll around you are dry, dying grasses, flowers, and trees. You sense\nthat this was once a beautiful place, ravaged by some dark magic.\nThe plain extends both to the &+CWest&* and &+CEast&*. To the &+CSouth&* is\na hill which seems to stand out from everything else.\n",
+         "altitude" : null
+      },
+      "cavern2@sagewood" : {
+         "exits" : {
+            "n" : "cavern1",
+            "s" : "cavern3"
+         },
+         "flags" : [
+            "NegRegen"
+         ],
+         "zone" : "sagewood",
+         "title" : "Boiling Cavern",
+         "id" : "cavern2",
+         "description" : "\n   You are bombared by waves of searing heat which accompany the foul\nblack clouds of smoke eminating from the &+CSouth&*. To the &+CNorth&*\nthings seem to clear up. Little trickles of lava flow along the walls,\nlending aid to the overall sense of danger here.\n",
+         "altitude" : null
+      },
+      "cleft@sagewood" : {
+         "exits" : {
+            "s" : "swamp8"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "sagewood",
+         "title" : "Cleft in the rocks",
+         "id" : "cleft",
+         "description" : "\n   This place seems dry and safe, in stark contrast of the swamp around you.\nCarved in the walls are runes of healing. This place must've had a special\nuse before the dark druids came in and corrupted. A few weak rays of sunlight\nshine in from the small entrace to the &+CSouth&*.\n",
+         "altitude" : null
+      },
+      "woods4@sagewood" : {
+         "exits" : {
+            "w" : "woods5",
+            "n" : "woods3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Old Clearing",
+         "id" : "woods4",
+         "description" : "\n   The chaos of the trees clamoring for the light seems to have disappeared\nhere. In the center of this clearing is a single, gigantic black &+Boak&*.\nThe other plants grow away from it as if afraid of coming too close. &+CNorth&*\nand &+CWest&* lead off into the ravaged woods.\n",
+         "altitude" : null
+      },
+      "plain3@sagewood" : {
+         "exits" : {
+            "e" : "plain5",
+            "n" : "plain1"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Gloomy Plains",
+         "id" : "plain3",
+         "description" : "\n   As you enter the plains, you feel a surge of gloom fill your body.\nAll around you are dry, dying grasses, flowers, and trees. You sense\nthat this was once a beautiful place, ravaged by some dark magic.\nThe plain continues &+CNorth&* and &+CEast&*.\n",
+         "altitude" : null
+      },
+      "swamp7@sagewood" : {
+         "exits" : {
+            "w" : "mud",
+            "e" : "swamp8",
+            "n" : "mud",
+            "s" : "swamp4"
+         },
+         "flags" : [
+            "outdoors",
+            "negregen",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Foul Swamp",
+         "id" : "swamp7",
+         "description" : "\n   All around you are evil-looking plants, choking each other out in hopeless\nattempts to get sunlight. Those who loose the battle sooner than others die,\nand fall into the brown water up which is up to your knees. Sometimes you\nfeel something slimy swim by, ready at any moment to pull you under. Exits\nlead &+CSouth&* and &+CEast&*. To the &+CNorth&* and &+CWest&* the mud\nseems to get dangerously deeper...\n",
+         "altitude" : null
+      },
+      "woods3@sagewood" : {
+         "exits" : {
+            "n" : "woods2",
+            "s" : "woods4"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Ravaged Woods",
+         "id" : "woods3",
+         "description" : "\n   The trees and plants here fight in a never-ending battle for light. All\naround are trees choked by parasitic vines and creepers. West and East are\ntotally blocked by impassible walls of gigantic trees. &+CSouth&* is a\nclearing&* and to the &+CNorth&* is more dense woods.\n",
+         "altitude" : null
+      },
+      "mud@sagewood" : {
+         "exits" : {},
+         "flags" : [
+            "nomobiles",
+            "negregen",
+            "outdoors",
+            "nosummon",
+            "cantsummon",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Deep Mud...",
+         "id" : "mud",
+         "description" : "\n   As you step into this area, you feel yourself sinking deeper and deeper\nunder into the mud. It is all you can do to keep your head above the surface\nof the brown water. Despite your best efforts, you are unable to get back\nto the dry land...\n",
+         "altitude" : null
+      },
+      "sagewood1@sagewood" : {
+         "exits" : {
+            "e" : "sagewood2",
+            "w" : "plain8",
+            "n" : "daerius",
+            "s" : "cavern1"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Ravaged Clearing",
+         "id" : "sagewood1",
+         "description" : "\n   You are overcome by a feeling of tremendous grief for the land\naround you. It is almost as if someone came here and ripped the\nlife away from the land. The bare cracked soil beneath is light\nbrown and dry.\nTo the &+CWest&* is a shimmering haze, while an ominous cavern lies\nto the &+CSouth&*. The wasteland continues &+CEast&* and a small mud-hut\nis &+CNorth&*.\n",
+         "altitude" : null
+      },
+      "daerius@sagewood" : {
+         "exits" : {
+            "s" : "sagewood1"
+         },
+         "flags" : [],
+         "zone" : "sagewood",
+         "title" : "Daerius' Hut",
+         "id" : "daerius",
+         "description" : "\n   This hut is roughly made of mud and appears to be hastily constructed.\nThe only exit is &+CSouth&*.\n",
+         "altitude" : null
+      },
+      "swamp6@sagewood" : {
+         "exits" : {
+            "e" : "mud",
+            "w" : "swamp5",
+            "n" : "swamp9",
+            "s" : "swamp3"
+         },
+         "flags" : [
+            "outdoors",
+            "negregen",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Foul Swamp",
+         "id" : "swamp6",
+         "description" : "\n   All around you are evil-looking plants, choking each other out in hopeless\nattempts to get sunlight. Those who loose the battle sooner than others die,\nand fall into the brown water up which is up to your knees. Sometimes you\nfeel something slimy swim by, ready at any moment to pull you under. Exits\nlead &+CNorth&*, &+CSouth&*, and &+CWest&*. To the &+CEast&* the mud seems\nseems to get dangerously deeper.\n",
+         "altitude" : null
+      },
+      "sagewood2@sagewood" : {
+         "exits" : {
+            "e" : "altar",
+            "w" : "sagewood1",
+            "n" : "swamp1",
+            "s" : "woods1"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Ravaged Woods",
+         "id" : "Sagewood2",
+         "description" : "\n   The Sun's light is blocked by the dense evil-looking trees which seem\nto be in competion to reach the light. Many trees here are dead, on the\nbrink of falling over, starved out by the other trees. The ground is a\nhorrendous maze of tripping roots. A clearing is &+CWest&*, and a sinister\naltar is &+CEast&*. Even more trees stand like dark sentries to the &+CSouth&*.\nThe fetid stench of an old bog wafts in from the &+CNorth&*. \n",
+         "altitude" : null
+      },
+      "portal1@sagewood" : {
+         "exits" : {},
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "sagewood",
+         "title" : "Hellish Portal",
+         "id" : "portal1",
+         "description" : "\n   This appears to be the means Sauroth travels between this world and the\nnext. Unfortunatly, not everything here is friendly towards mortals ...\n",
+         "altitude" : null
+      },
+      "woods5@sagewood" : {
+         "exits" : {
+            "e" : "woods4",
+            "s" : "woods6"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Ravaged Woods",
+         "id" : "woods5",
+         "description" : "\n   The trees and plants here fight in a never-ending battle for light. All\naround are trees chocked by parasitic vines and creepers. North and West are\ntotally blocked by impassable walls of gigantic trees. &+CEast&* is a clearing\nand the woods seem to get darker &+CSouth&*.\n",
+         "altitude" : null
+      },
+      "path@sagewood" : {
+         "exits" : {
+            "w" : "Path@valley",
+            "e" : "plain1"
+         },
+         "flags" : [
+            "outdoors",
+            "nomobiles"
+         ],
+         "zone" : "sagewood",
+         "title" : "Tarchannen Forest Path",
+         "id" : "path",
+         "description" : "\n   The bird's singing is gone, and all about you there is an unnatural\nsilence. The forest lacks its natural health and vibrance and it seems\nas if some dark magic has drained it. The branches form a canopy above so\nthat you cannot see the sky.  The forest edges out &+CWest&* and some\nsickly-looking plains are to the &+CEast&*.\n",
+         "altitude" : null
+      },
+      "swamp1@sagewood" : {
+         "exits" : {
+            "e" : "swamp3",
+            "w" : "swamp2",
+            "n" : "swamp5",
+            "s" : "sagewood2"
+         },
+         "flags" : [
+            "nomobiles",
+            "outdoors",
+            "negregen",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Foul Swamp",
+         "id" : "swamp1",
+         "description" : "\n   All around you are evil-looking plants, choking each other out in hopeless\nattempts to get the sunlight. Those who loose the battle sooner than others\ndie, and fall into the brown water which is now up to your knees. Sometimes\nyou feel something slimy swim by, ready any moment to pull you under. The\nswamp leads off in all directions, &+CSouth&* looking most inviting, as it\nis upon dry land.\n",
+         "altitude" : null
+      },
+      "plain5@sagewood" : {
+         "exits" : {
+            "w" : "plain3",
+            "e" : "plain7",
+            "n" : "hill"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Gloomy Plains",
+         "id" : "plain5",
+         "description" : "\n   As you enter the plains, you feel a surge of gloom fill your body.\nAll around you are dry, dying grasses, flowers, and trees. You sense\nthat this was once a beautiful place, ravaged by some dark magic.\nA tall hill lies to the &+CNorth&* and to the &+CWest&* and &+CEast&* is more\nof this vast plane.\n",
+         "altitude" : null
+      },
+      "swamp4@sagewood" : {
+         "exits" : {
+            "w" : "mud",
+            "e" : "swamp5",
+            "n" : "swamp7",
+            "s" : "swamp2"
+         },
+         "flags" : [
+            "outdoors",
+            "negregen",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Foul Swamp",
+         "id" : "swamp4",
+         "description" : "\n   All around you are evil-looking plants, choking each other out in hopeless\nattempts to get sunlight. Those who loose the battle sooner than others die,\nand fall into the brown water up which is up to your knees. Sometimes you\nfeel something slimy swim by, ready at any moment to pull you under. Exits\nlead &+CSouth&*, &+CEast&*, and &+CNorth&*. To the &+CWest&* the mud seems\nto get dangerously deeper...\n",
+         "altitude" : null
+      },
+      "hill@sagewood" : {
+         "exits" : {
+            "w" : "plain1",
+            "e" : "plain8",
+            "n" : "plain4",
+            "s" : "plain5"
+         },
+         "flags" : [
+            "outdoors",
+            "peaceful",
+            "fastheal"
+         ],
+         "zone" : "sagewood",
+         "title" : "On Top Of The Hill",
+         "id" : "hill",
+         "description" : "\n   The hill seams to be an oasis among the sad lands. All around you \nflowers bloom and birds sing. You sense the presense of good magic.\nIn all directions the sad plains extend. \n",
+         "altitude" : null
+      },
+      "woods2@sagewood" : {
+         "exits" : {
+            "e" : "^inside_vines",
+            "s" : "woods3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Ravaged Woods",
+         "id" : "woods2",
+         "description" : "\n   The trees and plants here fight a never-ending battle for the light. All\naround you are trees choked by parasitic vines and creepers. The North,\nWest, and East exits are blocked out by seemingly impassible walls of\nancient trees. A peculiar mass of &+Bvines&* grow on a small tree to the\nEast. The woods continue &+CSouth&*.\n",
+         "altitude" : null
+      },
+      "swamp8@sagewood" : {
+         "exits" : {
+            "e" : "swamp9",
+            "w" : "swamp7",
+            "n" : "cleft",
+            "s" : "swamp5"
+         },
+         "flags" : [
+            "outdoors",
+            "negregen",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Foul Swamp",
+         "id" : "swamp8",
+         "description" : "\n   All around you are evil-looking plants, choking each other out in hopeless\nattempts to get sunlight. Those who loose the battle sooner than others die,\nand fall into the brown water up which is up to your knees. Sometimes you\nfeel something slimy swim by, ready at any moment to pull you under. Exits\nlead &+CSouth&*, &+CEast&*, and &+CWest&*. A mess of rocks is off to the\n&+CNorth&*, inside of which you notice a small cave.\n",
+         "altitude" : null
+      },
+      "cavern1@sagewood" : {
+         "exits" : {
+            "e" : "^passage2_e",
+            "w" : "^passage1_w",
+            "n" : "sagewood1",
+            "s" : "cavern2"
+         },
+         "flags" : [
+            "nomobiles"
+         ],
+         "zone" : "sagewood",
+         "title" : "Entrace To Ominous Cavern",
+         "id" : "cavern1",
+         "description" : "\n   This gigantic hall appears to only lead &+CNorth&* and &+CSouth&*. \nWaves of blinding heat eminate from the south, while reasurring light\ncomes out of the hole in the north. Evil-looking &+Bcarvings&* are \nengraved in the East and West walls.\n",
+         "altitude" : null
+      },
+      "plain1@sagewood" : {
+         "exits" : {
+            "w" : "path",
+            "e" : "hill",
+            "n" : "plain2",
+            "s" : "plain3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "sagewood",
+         "title" : "Gloomy Plains",
+         "id" : "plain1",
+         "description" : "\n   As you enter the plains, you feel a surge of gloom fill your body. \nAll around you are dry, dying grasses, flowers, and trees. You sense\nthat this was once a beautiful place, ravaged by some dark magic.\nTo the &+CWest&* is some sort of forest. To the &+CEast&* you see\na small hill.\n",
+         "altitude" : null
+      },
+      "woods6@sagewood" : {
+         "exits" : {
+            "n" : "woods5"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "sagewood",
+         "title" : "Dark Clearing",
+         "id" : "woods6",
+         "description" : "\n   The dead and dying trees and vines here form a solid ceiling overhead,\ntheir branches, leaves, and vines meshed together so that you cannot see the\nsunlight. In all directions, save &+CNorth&* things get too dense to travel\nthrough...\n",
+         "altitude" : null
+      },
+      "swamp9@sagewood" : {
+         "exits" : {
+            "e" : "mud",
+            "w" : "swamp8",
+            "n" : "mud",
+            "s" : "swamp6"
+         },
+         "flags" : [
+            "outdoors",
+            "negregen",
+            "maze"
+         ],
+         "zone" : "sagewood",
+         "title" : "Foul Swamp",
+         "id" : "swamp9",
+         "description" : "\n   All around you are evil-looking plants, choking each other out in hopeless\nattempts to get sunlight. Those who loose the battle sooner than others die,\nand fall into the brown water up which is up to your knees. Sometimes you\nfeel something slimy swim by, ready at any moment to pull you under. Exits\nlead &+CWest&*, and &+CSouth&*. To the &+CNorth&* and &+CEast&* the mud\nseems to get dangerously deeper...\n",
+         "altitude" : null
+      },
+      "alcove@sagewood" : {
+         "exits" : {
+            "w" : "^passage2_w"
+         },
+         "flags" : [
+            "oneperson",
+            "dark"
+         ],
+         "zone" : "sagewood",
+         "title" : "Dark Alcove",
+         "id" : "alcove",
+         "description" : "\n   The room seems to be centered around a small &+Bhole&* in the center \nof the stone floor. You have to crouch down to avoid hitting your head on\nthe ceiling in this claustrophobic chamber.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "daerius@sagewood" : {
+         "eflags" : [
+            "Frost",
+            "IceStorm"
+         ],
+         "damage" : "20",
+         "location" : "Sagewood1",
+         "speed" : "1",
+         "aggression" : "10",
+         "armor" : "10",
+         "name" : "Daerius",
+         "examine" : "\nDaerius towers over you, glaring at your intrusion. His demeanor seems more\nlike that of a sorceror than that of a dark druid. In his hand is a peculiar\nicy staff.",
+         "description" : "&+RDaerius&* the dark druid glares at you from under his blue hood.",
+         "strength" : "300"
+      },
+      "leech1@sagewood" : {
+         "damage" : "5",
+         "location" : "Swamp2",
+         "name" : "Leech1",
+         "examine" : "\nThe leech attaches its self to you, gorging on your rich, warm blood...",
+         "description" : "A horrid &+RLeech&* is here.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "50",
+         "speed" : "5",
+         "pname" : "The Leech",
+         "aggression" : "50"
+      },
+      "dhelvar@sagewood" : {
+         "eflags" : [
+            "Fireball"
+         ],
+         "damage" : "14",
+         "location" : "Swamp3",
+         "name" : "Dhelvar",
+         "examine" : "\nDhelvar is covered in black mud-soaked robes. His shifty eyes worry you as\nhe walks about, taking in the evil magic that permeates through this horrible\nplace.",
+         "description" : "&+RDhelvar&*, the dark druid of the swamp wanders about.",
+         "strength" : "300",
+         "pname" : "Dhelvar",
+         "aggression" : "10",
+         "mflags" : [
+            "Pickstuff"
+         ]
+      },
+      "leech4@sagewood" : {
+         "damage" : "5",
+         "location" : "Swamp4",
+         "name" : "Leech4",
+         "examine" : "\nThe leech attaches its self to you, gorging on your rich, warm blood...",
+         "description" : "A horrid &+RLeech&* is here.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "50",
+         "speed" : "5",
+         "pname" : "The Leech",
+         "aggression" : "50"
+      },
+      "leech3@sagewood" : {
+         "damage" : "5",
+         "location" : "Swamp3",
+         "name" : "Leech3",
+         "examine" : "\nThe leech attaches its self to you, gorging on your rich, warm blood...",
+         "description" : "A horrid &+RLeech&* is here.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "50",
+         "speed" : "5",
+         "pname" : "The Leech",
+         "aggression" : "50"
+      },
+      "leech7@sagewood" : {
+         "damage" : "5",
+         "location" : "Swamp7",
+         "name" : "Leech7",
+         "examine" : "\nThe leech attaches its self to you, gorging on your rich, warm blood...",
+         "description" : "A horrid &+RLeech&* is here.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "50",
+         "speed" : "5",
+         "pname" : "The Leech",
+         "aggression" : "50"
+      },
+      "leech6@sagewood" : {
+         "damage" : "5",
+         "location" : "Swamp6",
+         "name" : "Leech6",
+         "examine" : "\nThe leech attaches its self to you, gorging on your rich, warm blood...",
+         "description" : "A horrid &+RLeech&* is here.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "50",
+         "speed" : "5",
+         "pname" : "The Leech",
+         "aggression" : "50"
+      },
+      "sauroth2@sagewood" : {
+         "visibility" : "45000",
+         "damage" : "100",
+         "location" : "Limbo",
+         "name" : "Sauroth2",
+         "examine" : "\nHis claws are a blur as he fights against the Spirit Of The Earth-Magic. He\nseems quite distracted with the task at hand...",
+         "description" : "The demon &+RSauroth&* is here, locked in mortal combat with a strange Spirit.",
+         "strength" : "15000",
+         "speed" : "0",
+         "pname" : "Sauroth",
+         "aggression" : "0",
+         "pflags" : [
+            "NoPunt",
+            "NoSteal"
+         ]
+      },
+      "jharn@sagewood" : {
+         "eflags" : [
+            "Fireball",
+            "BHands"
+         ],
+         "damage" : "5",
+         "location" : "plain8",
+         "armor" : "10",
+         "name" : "Jharn",
+         "examine" : "\nBefore you stands an ominous dark-druid brandishing a staff of obsidian. He\nsneers down his nose at you and says,\n\n&+c'&+CYou will make a fine sacrifice to Sauroth!&+c'&*.",
+         "description" : "&+RJharn&* the dark-druid sentry stands here.",
+         "sflags" : "{  }",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "1",
+         "pname" : "Jharn",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "eagle1@sagewood" : {
+         "damage" : "2",
+         "location" : "cleft",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The Eagle",
+         "name" : "Eagle1",
+         "examine" : "\nThe eagle appears to be severely wounded. Several long poisoned wounds\nwhich look like they were done by a horrible tentacled beast cover the\neagles body.\n\nAlthough the runes of healing are glowing brightly to help the eagles's\nwounds, it appears that while the poison is still active, the runes can't\nhelp.",
+         "description" : "A wounded &+REagle&* lies here.",
+         "strength" : "5"
+      },
+      "sauroth1@sagewood" : {
+         "damage" : "1000",
+         "location" : "Altar",
+         "name" : "Sauroth1",
+         "examine" : "\nTowering over you, the foul demon sauroth laughs haughtily and says to you,\n\n'Go away, little one. I am undefeatable. Leave while you still can.'\n\nHis razor-sharp claws are over a foot long and he moves with unsettling\nagility. Bits of his last victim still stick on his glimmering claws.",
+         "description" : "The foul demon &+RSauroth&* smirks at you.",
+         "strength" : "15000",
+         "speed" : "0",
+         "pname" : "Sauroth",
+         "aggression" : "0",
+         "pflags" : [
+            "NoPunt",
+            "NoSteal"
+         ]
+      },
+      "leech2@sagewood" : {
+         "damage" : "5",
+         "location" : "Swamp2",
+         "name" : "Leech2",
+         "examine" : "\nThe leech attaches its self to you, gorging on your rich, warm blood...",
+         "description" : "A horrid &+RLeech&* is here.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "50",
+         "speed" : "5",
+         "pname" : "The Leech",
+         "aggression" : "50"
+      },
+      "leech5@sagewood" : {
+         "damage" : "5",
+         "location" : "Swamp5",
+         "name" : "Leech5",
+         "examine" : "\nThe leech attaches its self to you, gorging on your rich, warm blood...",
+         "description" : "A horrid &+RLeech&* is here.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "50",
+         "speed" : "5",
+         "pname" : "The Leech",
+         "aggression" : "50"
+      },
+      "druid@sagewood" : {
+         "damage" : "100",
+         "location" : "Hill",
+         "armor" : "100",
+         "name" : "Druid",
+         "examine" : "\nYou see an old man with tired eyes that look as if they have spent many \nnights without sleep. His face is scarred by what were once terrible \nwounds. Yet all through this, he seems gentle and kindly.\n\nAt your approach he smiles weakly and says,\n\n&+c'&+CHail adventurer. As you can see around you, the lands have been\n&+Cdestroyed by a great evil known as the dark druids. They serve Sauroth,\n&+Ca demon who seeks to destroy the land and use its lifeblood for his own\n&+Cvile purposes. Sauroth's only connection to this world is a dark gemstone.\n&+CDestroy it and you destroy him.\n\n&+CA true druid's duty is to use the land's magic to protect it. Sauroth's  \n&+Cfollowers have abandoned this. They move from land to land, draining the \n&+Cvery life until all that is left is a wasteland.\n\n&+CI suggest you find my weapon, the golden sickle. They polluted it, but\n&+CI may be able to make it useable for good once again if you bring it to me.&+c'",
+         "description" : "An old &+Rdruid&* stands here, looking over the land wistfully.",
+         "sflags" : "{ }",
+         "strength" : "6000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoMagic",
+            "NoPunt",
+            "NoZap",
+            "NoExorcise"
+         ]
+      },
+      "tree1@sagewood" : {
+         "eflags" : [
+            "VTouch"
+         ],
+         "damage" : "20",
+         "location" : "woods3",
+         "armor" : "5",
+         "name" : "Tree1",
+         "examine" : "The animated tree seems to be an old yet strong oak tree animated by some\ndark magic. It moves slowly, but its branches seem to posess unnatural\nstrength.",
+         "description" : "An animated &+RTree&* thunders toward you.",
+         "sflags" : [
+            "NoLegs",
+            "NoHead"
+         ],
+         "strength" : "500",
+         "speed" : "1",
+         "pname" : "The Animated Tree",
+         "aggression" : "30"
+      },
+      "asp@sagewood" : {
+         "damage" : "50",
+         "location" : "Swamp5",
+         "name" : "Asp",
+         "examine" : "\nThe water asp is a serpent known for its lethal poison...",
+         "description" : "An &+Rasp&* is here.",
+         "sflags" : [
+            "NoLegs",
+            "NoArms"
+         ],
+         "strength" : "15",
+         "speed" : "0",
+         "pname" : "The Water Asp",
+         "aggression" : "1",
+         "mflags" : [
+            "Venom"
+         ]
+      },
+      "dryad@sagewood" : {
+         "eflags" : [
+            "VTouch"
+         ],
+         "damage" : "100",
+         "location" : "woods4",
+         "armor" : "40",
+         "name" : "Dryad",
+         "examine" : "\nCloaked in the stolen power of this forest, the dark forest-dryad seems\ninvincible. She laughs at you and tells you to leave before she dismembers\nyou.\n\nIn her wood-like hands is a long, golden, and very sharp blade. She reminds\nyou of a certain tree you saw in the clearing...",
+         "description" : "The Dark Forest-&+RDryad&* sneers at you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "10000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "The Dark Dryad",
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "earthmagic1@sagewood" : {
+         "damage" : "50",
+         "location" : "Gloom",
+         "armor" : "0",
+         "name" : "EarthMagic1",
+         "examine" : "\nThe Earth Magic is a strange brown spirit that struggles against the chains\naround her, trying to get free. The &+Bchains&* appear to be draining her of \npower, probobly for Sauroth's own evil purposes.",
+         "description" : "The &+RSpirit Of The Earth-Magic&* is here, locked in Ethereal &+BChains.&*",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "1500",
+         "speed" : "0",
+         "pname" : "Spirit",
+         "aggression" : "0"
+      },
+      "abombination@sagewood" : {
+         "damage" : "20",
+         "location" : "swamp9",
+         "aggression" : "100",
+         "pname" : "The Tentacled Abomination",
+         "name" : "Abombination",
+         "examine" : "\nThe tentacled abomination is a strange beast, dark green in colour. His\npale gelatinous eyes watch you cooly as he prepares to strike you with his\ndeadly poison and pull you into his beak-like mouth.",
+         "description" : "&+gThe deadly Tentacled &+RAbomination&* is here.",
+         "mflags" : [
+            "Venom"
+         ],
+         "strength" : "300"
+      },
+      "demon@sagewood" : {
+         "eflags" : [
+            "Shock",
+            "Cripple"
+         ],
+         "damage" : "30",
+         "location" : "portal1",
+         "speed" : "0",
+         "aggression" : "5",
+         "pname" : "demon",
+         "name" : "Demon",
+         "examine" : "The last thing you'll ever see.",
+         "description" : "\n&+R------------------------------------------------------------------------\n&+YCackling in delight, a foul demon stalks after you... You try to run\n&+Yaway, but there is no way out. The demon walks closer and closer toward\n&+Yyou, razor-sharp claws shimmering mavolently in the hellish light...\n&+R------------------------------------------------------------------------",
+         "strength" : "15000"
+      },
+      "salamander@sagewood" : {
+         "eflags" : [
+            "NegFireball",
+            "FearFrost",
+            "NegBHands",
+            "BHands",
+            "Fireball"
+         ],
+         "damage" : "35",
+         "location" : "Cavern3",
+         "armor" : "10",
+         "name" : "Salamander",
+         "examine" : "\nSitting in a puddle of molten lava, the salamander jealously guards his\ndomain. It looks up at you and hisses loudly, showing its sharp teeth.",
+         "description" : "&+rThe &+Rsalamander&+r is here, boiling and hissing.",
+         "strength" : "3000",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "NoSteal",
+            "BarSouth"
+         ]
+      },
+      "alligator@sagewood" : {
+         "damage" : "15",
+         "location" : "mud",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "The Alligator",
+         "name" : "Alligator",
+         "examine" : "\nProbobly the last thing you'll ever see.",
+         "description" : "\n&+r--------------------------------------------------------------------------\n&+R--------------------------------------------------------------------------\n&+WBreaking the surface of the brown water, an &+Yalligator&+W slinks toward\n&+Wyou, its powerful tail swishing two and frow as it stalks its prey. There\n&+Wis no escape, as the reptile moves in to kill you in your moment of\n&+Wweakness...\n&+R--------------------------------------------------------------------------\n&+r--------------------------------------------------------------------------",
+         "strength" : "280"
+      },
+      "tree2@sagewood" : {
+         "eflags" : [
+            "VTouch"
+         ],
+         "damage" : "20",
+         "location" : "woods4",
+         "armor" : "5",
+         "name" : "Tree2",
+         "examine" : "The animated tree seems to be an old yet strong oak tree animated by some\ndark magic. It moves slowly, but its branches seem to posess unnatural\nstrength.",
+         "description" : "An animated &+RTree&* thunders toward you.",
+         "sflags" : [
+            "NoLegs",
+            "NoHead"
+         ],
+         "strength" : "500",
+         "speed" : "1",
+         "pname" : "The Animated Tree",
+         "aggression" : "30"
+      },
+      "eagle2@sagewood" : {
+         "damage" : "30",
+         "location" : "limbo",
+         "armor" : "10",
+         "name" : "Eagle2",
+         "examine" : "\nThe Eagle is a magnificent beast. His feathers are golden, and he watches\nabout with his keen black eyes. You feel safe under his protective gaze.\nHis claws are razor sharp, and he appears to posess incredible agility.",
+         "description" : "An &+REagle&* perches nearby, watching and waiting.",
+         "strength" : "4000",
+         "speed" : "0",
+         "pname" : "The Eagle",
+         "aggression" : "0"
+      },
+      "earthmagic2@sagewood" : {
+         "visibility" : "45000",
+         "damage" : "50",
+         "location" : "Limbo",
+         "armor" : "0",
+         "name" : "EarthMagic2",
+         "examine" : "\nThe Spirit Of The Earth-Magic strikes out hard against Sauroth, but it\nappears that she is fighting a losing battle.",
+         "description" : "The &+REarth-Magic&* is fighting with Sauroth.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "1500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Spirit"
+      },
+      "asphinx@sagewood" : {
+         "damage" : "10",
+         "location" : "Alcove",
+         "armor" : "50",
+         "name" : "Asphinx",
+         "examine" : "\nThe asphinx is a creature known to be able to petrify mortals with its deadly \npoison. However, since its cold blooded, it is particularly vunerable to \nchanges in temperature. The asphinx pokes its head up and hisses at you. \nAnything (including your arm!) stuck in the hole would probobly be bit.",
+         "description" : "Poking its head out of the hole, the &+RAsphinx&* glares up at you.",
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "mflags" : [
+            "NoCorpse"
+         ]
+      }
+   }
+}

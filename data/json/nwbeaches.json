@@ -1,0 +1,1248 @@
+{
+   "obj" : {
+      "bunk_beachqq28@nwbeaches" : {
+         "location" : "IN_ROOM:beachQQ28",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "bunk",
+         "name" : "bunk_beachQQ28",
+         "examine" : "\nThey look a bit hard, but you could sleep in them.\n"
+      },
+      "cell_beachqq26n@nwbeaches" : {
+         "desc[1]" : "The cell is closed.",
+         "location" : "IN_ROOM:beachQQ27",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "cell_beachQQ26n",
+         "desc[2]" : "The cell is locked.",
+         "linked" : "cell_beachQQ27",
+         "state" : "2",
+         "pname" : "cell",
+         "maxstate" : "2",
+         "desc[0]" : "The cell is open."
+      },
+      "secret_beachqq22@nwbeaches" : {
+         "desc[1]" : "The secret door is closed.",
+         "location" : "IN_ROOM:beachQQ25",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "secret_beachQQ22",
+         "examine" : "\nThe spiral stair leads up to a trap door.\n",
+         "desc[2]" : "The secret door is locked.",
+         "linked" : "secret_beachQQ25",
+         "state" : "3",
+         "pname" : "secret",
+         "maxstate" : "3",
+         "desc[0]" : "The secret door is open."
+      },
+      "east_beachqq11@nwbeaches" : {
+         "location" : "IN_ROOM:beachQQ11",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "east",
+         "name" : "east_beachQQ11",
+         "examine" : "\nYou see more of the beach.\n"
+      },
+      "bed_secret@nwbeaches" : {
+         "location" : "IN_ROOM:beachQQ22",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "bed",
+         "name" : "bed_secret",
+         "examine" : "\nHmmm...there's a secret door underneath the bed.  Wonder what's under it?\n"
+      },
+      "objqq01@nwbeaches" : {
+         "e" : "-",
+         "n" : "IN_CONTAINER:objQQ00",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "figur",
+         "name" : "objQQ01",
+         "size" : "0",
+         "state" : "0",
+         "weight" : "0",
+         "pname" : "key",
+         "maxstate" : "0",
+         "eight" : "Locatio",
+         "bvalue" : "0",
+         "desc[0]" : "A key in the shape of a figure-eight is here."
+      },
+      "roof_beachqq21@nwbeaches" : {
+         "location" : "IN_ROOM:beachQQ21",
+         "oflags" : [
+            "Noget"
+         ],
+         "altname" : "paint",
+         "pname" : "paintings",
+         "name" : "roof_beachQQ21",
+         "examine" : "\nThe paintings on the walls depict the great heroes and gods.  One of\nthe gods is fairly heavy-bellied and incredibly hairy, with a massive\nbeard.  Also among them are the great enemies and wrongdoers, such as\nthe evil Goddess Yochlol and the powerful evil Wizard Tharoecon.\n",
+         "desc[0]" : "There's some paintings hung on the walls."
+      },
+      "cell_beachqq26w@nwbeaches" : {
+         "desc[1]" : "The cell is closed.",
+         "location" : "IN_ROOM:beachQQ30",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "cell_beachQQ26w",
+         "desc[2]" : "The cell is locked.",
+         "linked" : "cell_beachQQ30",
+         "state" : "2",
+         "pname" : "cell",
+         "maxstate" : "2",
+         "desc[0]" : "The cell is open."
+      },
+      "secret_beachqq25@nwbeaches" : {
+         "desc[1]" : "The secret door is closed.",
+         "location" : "IN_ROOM:beachQQ22",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "secret_beachQQ25",
+         "desc[2]" : "The secret door is locked.",
+         "linked" : "secret_beachQQ22",
+         "state" : "3",
+         "pname" : "secret",
+         "maxstate" : "3",
+         "desc[0]" : "The secret door is open."
+      },
+      "objqq00@nwbeaches" : {
+         "desc[1]" : "There is a mahogney desk here, up against the east wall.",
+         "location" : "IN_ROOM:beachQQ22",
+         "oflags" : [
+            "Container",
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "mahoganey",
+         "name" : "objQQ00",
+         "examine" : "\nIt looks as if any business the Lighthouse Keeper may need to do\nis done here, at this desk.  It has a drawer in it and implements\nfor writing.\nLooks like any other drawer you've seen before - knob and all.\n",
+         "size" : "2000",
+         "state" : "1",
+         "pname" : "desk",
+         "weight" : "10000",
+         "maxstate" : "1",
+         "desc[0]" : "There is a mahogney desk here, with an open drawer."
+      },
+      "cell_beachqq27@nwbeaches" : {
+         "desc[1]" : "The northcell is closed.",
+         "location" : "IN_ROOM:beachQQ26",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "northdoor",
+         "name" : "cell_beachQQ27",
+         "desc[2]" : "The northcell is locked.",
+         "linked" : "cell_beachQQ26n",
+         "state" : "2",
+         "pname" : "northcell",
+         "maxstate" : "2",
+         "desc[0]" : "The northcell is open."
+      },
+      "cell_beachqq30@nwbeaches" : {
+         "desc[1]" : "The westcell is closed.",
+         "location" : "IN_ROOM:beachQQ26",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "westdoor",
+         "name" : "cell_beachQQ30",
+         "desc[2]" : "The westcell is locked.",
+         "linked" : "cell_beachQQ26w",
+         "state" : "2",
+         "pname" : "westcell",
+         "maxstate" : "2",
+         "desc[0]" : "The westcell is open."
+      },
+      "bed_beachqq26@nwbeaches" : {
+         "location" : "IN_ROOM:beachQQ26",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "bed",
+         "name" : "bed_beachQQ26",
+         "examine" : "\nThe beds all look comfortable, despite the fact that this is just\nthe servants' place.\n"
+      },
+      "door_beachqq20@nwbeaches" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:beachQQ19",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "door_beachQQ20",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_beachQQ19",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "cell_beachqq26s@nwbeaches" : {
+         "desc[1]" : "The cell is closed.",
+         "location" : "IN_ROOM:beachQQ29",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "cell_beachQQ26s",
+         "desc[2]" : "The cell is locked.",
+         "linked" : "cell_beachQQ29",
+         "state" : "2",
+         "pname" : "cell",
+         "maxstate" : "2",
+         "desc[0]" : "The cell is open."
+      },
+      "bed_beachqq27@nwbeaches" : {
+         "location" : "IN_ROOM:beachQQ27",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "bed",
+         "name" : "bed_beachQQ27",
+         "examine" : "\nLooks very comfortable indeed.\n"
+      },
+      "cell_beachqq28@nwbeaches" : {
+         "desc[1]" : "The eastcell is closed.",
+         "location" : "IN_ROOM:beachQQ26",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "eastdoor",
+         "name" : "cell_beachQQ28",
+         "desc[2]" : "The eastcell is locked.",
+         "linked" : "cell_beachQQ26e",
+         "state" : "2",
+         "pname" : "eastcell",
+         "maxstate" : "2",
+         "desc[0]" : "The eastcell is open."
+      },
+      "throne_beachqq24@nwbeaches" : {
+         "location" : "IN_ROOM:beachQQ24",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "throne",
+         "name" : "throne_beachQQ24",
+         "examine" : "\nIt is large and very beautiful.  The carvings are mainly of animals and\nmagic beasts.\n",
+         "desc[0]" : "A child's throne sits in the corner."
+      },
+      "cell_beachqq26e@nwbeaches" : {
+         "desc[1]" : "The cell is closed.",
+         "location" : "IN_ROOM:beachQQ28",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "cell_beachQQ26e",
+         "desc[2]" : "The cell is locked.",
+         "linked" : "cell_beachQQ28",
+         "state" : "2",
+         "pname" : "cell",
+         "maxstate" : "2",
+         "desc[0]" : "The cell is open."
+      },
+      "door_beachqq19@nwbeaches" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:beachQQ20",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "door_beachQQ19",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_beachQQ20",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "stairs_beachqq25@nwbeaches" : {
+         "location" : "IN_ROOM:beachQQ25",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "stairs",
+         "name" : "stairs_beachQQ25",
+         "examine" : "\nMade out of marble, and as all the rest of the lighthouse made primarily\nfor beauty and with great skill.\n"
+      },
+      "cell_beachqq29@nwbeaches" : {
+         "desc[1]" : "The southcell is closed.",
+         "location" : "IN_ROOM:beachQQ26",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "altname" : "southdoor",
+         "name" : "cell_beachQQ29",
+         "desc[2]" : "The southcell is locked.",
+         "linked" : "cell_beachQQ26s",
+         "state" : "2",
+         "pname" : "southcell",
+         "maxstate" : "2",
+         "desc[0]" : "The southcell is open."
+      },
+      "objqq02@nwbeaches" : {
+         "location" : "CARRIED_BY:mobQQ03",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "cell",
+         "name" : "objQQ02",
+         "size" : "1",
+         "state" : "0",
+         "weight" : "1",
+         "pname" : "key",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A cell key lies here in the dirt."
+      }
+   },
+   "loc" : {
+      "beachqq20@nwbeaches" : {
+         "exits" : {
+            "n" : "beachQQ21",
+            "s" : "^door_beachQQ19"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Entryway - Lighthouse",
+         "id" : "beachQQ20",
+         "description" : "\nYou stand in a small chamber just inside the front door of the lighthouse.\nJust south of these cramped stucco walls is the main living room of the\nlighthouse.  You can hear and smell a crackling, warm fire in the fireplace,\na dog's contented panting, and the sound of a young lady's laughter from\nthe next room.\n",
+         "altitude" : null
+      },
+      "beachqq19@nwbeaches" : {
+         "exits" : {
+            "n" : "^door_beachQQ20",
+            "s" : "beachQQ18"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Takker's Jetty at the Lighthouse",
+         "id" : "beachQQ19",
+         "description" : "\nYou stand at the entrance to the lighthouse, a solid oak door set\nback into the rounded wall.  To your north, the jetty leads you\nback to dry land.\n",
+         "altitude" : "5"
+      },
+      "beachqq08@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ09",
+            "w" : "beachQQ07",
+            "n" : "yllythad5146@yllythad"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Sandy Beach",
+         "id" : "beachQQ08",
+         "description" : "\nThe beach continues it's way east toward what appears to be a coastal\ntown.  A large pier juts out into the sea, ships dot the horizon as far\nout to sea as you can see from the town.  To your west you may continue\nalong the beach.\n",
+         "altitude" : "5"
+      },
+      "beachqq35@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ32"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "End of the Rocky Path",
+         "id" : "beachQQ35",
+         "description" : "\nYou have come to the end of the rocky path you've been following\nalong the sea.  South of you is the start of the beach, west is a moss-\ncovered rock face, and to the north the way is impassable.\n",
+         "altitude" : "5"
+      },
+      "beachqq28@nwbeaches" : {
+         "exits" : {
+            "w" : "^cell_beachQQ26e"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Cell",
+         "id" : "beachQQ28",
+         "description" : "\nThis bleak cell hosts only an uncomfortable looking cot and small hole\nin one corner for necessary functions.\n",
+         "altitude" : null
+      },
+      "beachqq32@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ31",
+            "w" : "beachQQ35",
+            "s" : "beachQQ33"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Rocky Path",
+         "id" : "beachQQ32",
+         "description" : "\n   You stand on a rocky beach path near the mouth of a cave.\nThe entrance to the cave must be at least thirty feet high and\njust as wide.  It doesn't look as if anything could live there,\nas the water from the sea laps right inside the cave, but then,\nyou never know.\n",
+         "altitude" : "5"
+      },
+      "beachqq10@nwbeaches" : {
+         "exits" : {
+            "w" : "beachQQ09",
+            "n" : "beachQQ36"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "The Base of the Village",
+         "id" : "beachQQ10",
+         "description" : "\n   You stand at the edge of the sea shore staring at a huge rock formation\nwhich could be described (sort of) as a plateau rising up out if the ocean\nfloor and holding a sizable village atop it.  To the north is the cliff\nface you have been following, which happens to put an end to this path just a\nlittle ways northeast from your current position.  West the path heads along\nthe beach for quite a long distance.    \n",
+         "altitude" : "5"
+      },
+      "beachqq00@nwbeaches" : {
+         "exits" : {
+            "n" : "jetty@newvillage",
+            "d" : "beachQQ01"
+         },
+         "flags" : [
+            "Outdoors",
+            "Nomobiles"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Steps Leading Down to the Sea",
+         "id" : "beachQQ00",
+         "description" : "\n   You are on a long flight of steps cut into a cliff face.\nJust ahead of you, the boardwalk looms, while below you,\nthe steps continue for what seems an eternity.\n",
+         "altitude" : "100"
+      },
+      "beachqq06@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ05",
+            "w" : "beachQQ11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Along the Beach",
+         "id" : "beachQQ06",
+         "description" : "\n   You stand on a beach which stretches east to west for as far as\nyour eyes can see.  Jumbles of rock and scree litter the way here,\nmaking it so you must watch your step.  You notice a bit of wood,\npartially buried in the sand of the beach here.\n   West is more rocky beach, while east the way gets a bit more flat.\n",
+         "altitude" : "5"
+      },
+      "beachqq04@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ07",
+            "w" : "beachQQ05",
+            "u" : "beachQQ03"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "The Base of the Steps",
+         "id" : "beachQQ04",
+         "description" : "\n   You stand at the bottom of a set of steps cut into the face\nof the cliff here.  The beach runs along east to west here as far\nas you can see.\n",
+         "altitude" : "100"
+      },
+      "beachqq05@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ04",
+            "w" : "beachQQ06"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Along the Beach",
+         "id" : "beachQQ05",
+         "description" : "\n   You stand on a beach which stretches east and west from here.\nThe waves, not very large at this time, lap gently near your, making\npatterns in the fine sand.  To the west you see a few rocks jutting\nfrom the sand and sea.  East is flat beach to the horizon.\n",
+         "altitude" : null
+      },
+      "beachqq02@nwbeaches" : {
+         "exits" : {
+            "u" : "beachQQ01",
+            "d" : "beachQQ03"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "On the Cliff Face",
+         "id" : "beachQQ02",
+         "description" : "\n   The stairs continue, however you are much closer to the\nbottom than the top now.  There appears to be an opening in\nthe rock to your east.  Inside you can only see darkness,\nso it is possible that it is simply a natural fissure, but\nthen again, who knows?\n",
+         "altitude" : "100"
+      },
+      "beachqq16@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ15",
+            "w" : "beachQQ31"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Rocky Path",
+         "id" : "beachQQ16",
+         "description" : "\nThe path, still rocky and hard to navigate, continues along to the\neast and west.  Directly east of you begins a jetty which hosts a\nlighthouse at it's end.  West seems only to host more rocks and possibly\na cave or two.\n",
+         "altitude" : null
+      },
+      "beachqq01@nwbeaches" : {
+         "exits" : {
+            "u" : "beachQQ00",
+            "d" : "beachQQ02"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Down the Cliff-Face",
+         "id" : "beachQQ01",
+         "description" : "\n   The steps continue down toward the sea, or up to the crest\nof the cliff, depending on the way you're heading.  It looks\nas if there may be some sort of cave down from here.\n",
+         "altitude" : "100"
+      },
+      "beachqq25@nwbeaches" : {
+         "exits" : {
+            "u" : "^secret_beachQQ22",
+            "d" : "beachQQ26"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "On the Spiral Staircase",
+         "id" : "beachQQ25",
+         "description" : "\nYou have begun a descent down into the Lower Reaches of the Lighthouse.\nYou wonder why the basement of this happy home would not only be called\nthe 'Lower Reaches', but also capitalized for a moment - and then you see\nwhat lies below you.\nLooking almost like a medieval torture chamber, you see a room all in stone,\na deep cavernous hole in the center of it.  What looks to be an operating\ntable is set to one side with tables covered in instruments of dissection\nand bubbling vials close by.\nDo you really wish to descend into that room and visit with the 'good'\nLighthouse Keeper?\n",
+         "altitude" : null
+      },
+      "beachqq09@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ10",
+            "w" : "beachQQ08",
+            "n" : "yllythad5001@yllythad"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Sandy Beach",
+         "id" : "beachQQ09",
+         "description" : "\nThe beach slopes upwards, slowly, gently toward the town to your east\nwhich sits on a huge plateau.  You can now hear the sounds of a great many\nvoices coming from that direction, however traffic along this beach is \nat a bare minimum, which is to say not at all.  There must be another\nentrance into the town somewhere.  To your west, the beach continues into\nthe western horizon.\n",
+         "altitude" : "5"
+      },
+      "beachqq11@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ06",
+            "w" : "beachQQ12"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Along a Rocky Beach",
+         "id" : "beachQQ11",
+         "description" : "\nThe way gets much too rocky here for you to continue along the water any\nfurther.  You do however, notice a trail through the rocks which heads\nsouthwest.\n",
+         "altitude" : null
+      },
+      "beachqq13@nwbeaches" : {
+         "exits" : {
+            "w" : "beachQQ14",
+            "n" : "beachQQ12"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Rocky Path",
+         "id" : "beachQQ13",
+         "description" : "\nThe path continues it's way in a southwesterly direction toward the\nlighthouse, or you may head northeast toward a less cluttered-looking\nbeach.\n",
+         "altitude" : null
+      },
+      "beachqq17@nwbeaches" : {
+         "exits" : {
+            "n" : "beachQQ18",
+            "s" : "beachQQ15"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Takker's Jetty",
+         "id" : "beachQQ17",
+         "description" : "\nThe jetty heads south into the sea ending at a lighthouse.  All\nalong the way, fishermen try their luck.\n",
+         "altitude" : null
+      },
+      "beachqq21@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ22",
+            "w" : "beachQQ24",
+            "u" : "beachQQ23",
+            "s" : "beachQQ20"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Main Living Area - Lighthouse",
+         "id" : "beachQQ21",
+         "description" : "\nThis large room looks as if it has spent many happy times in the\ncompany of the Lighthouse Keeper and his family.  The dinner table\nlooks as if it always would have room for one more, the fire always\nwarm and comforting, and of course, Max would always be around to\nplay catch or get his ears scratched.\nTo the east, you see what looks to be one of the family's bedrooms,\nthe same to the west.  Both have doors, but both doors are wide open.\nA spiral stairway leads up into the lighthouse top, where the Keeper\nmust spend a great deal of his time.\n",
+         "altitude" : null
+      },
+      "beachqq12@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ11",
+            "s" : "beachQQ13"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Rocky Path",
+         "id" : "beachQQ12",
+         "description" : "\nThe path meanders it's way through the rocks on this littered beach.\nIn the distance, you can see a lighthouse out at the end of a jetty,\nit's gentle light guiding sailors safely past this rocky area.\n",
+         "altitude" : null
+      },
+      "beachqq15@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ14",
+            "w" : "beachQQ16",
+            "n" : "beachQQ17"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Rocky Path at Takker's Jetty",
+         "id" : "beachQQ15",
+         "description" : "\nThe path continues east or west from you, depending which way you are\nheading.  A jetty runs out into the sea to your south, a strong, bold\nlighthouse at it's end.\n",
+         "altitude" : null
+      },
+      "beachqq14@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ13",
+            "w" : "beachQQ15"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Rocky Path",
+         "id" : "beachQQ14",
+         "description" : "\nThe path runs east to west over jumbled rock and fine beach sand.  Just to\nyour west, you see a jetty running out into the ocean, a lighthouse at it's\nend.  To the east the path curves it's way along the beach.\n",
+         "altitude" : null
+      },
+      "beachqq18@nwbeaches" : {
+         "exits" : {
+            "n" : "beachQQ19",
+            "s" : "beachQQ17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Takker's Jetty",
+         "id" : "beachQQ18",
+         "description" : "\nAll along the jetty, men relax in the sun, sitting in comfortable niches\nin the rocks where they can wile away their time telling tall tales\nabout 'the ones that got away', discussing politics, or every now and\nthen, doing some fishing.\n",
+         "altitude" : "5"
+      },
+      "beachqq24@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ21"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Lighthouse Keeper's Daughter's Bedroom",
+         "id" : "beachQQ24",
+         "description" : "\nWhat a cute little room!  Twin bed with a pink down comforter, a\ndoll collection which even impresses you, and many other assorted\ntoys sit on shelves, all neatly stacked and color-coordinated.\n",
+         "altitude" : null
+      },
+      "beachqq36@nwbeaches" : {
+         "exits" : {
+            "s" : "beachQQ10"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "End of the Path",
+         "id" : "beachQQ36",
+         "description" : "\n   The path can go no farther.  The cliff face runs directly into the sea from\nhere, no longer leaving the little bit of beach that you have been enjoying\njust west and south and here.  Strange that a path would end so abruptly at a\ncliff without leading anywhere...  Oh well!    \n",
+         "altitude" : null
+      },
+      "beachqq07@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ08",
+            "w" : "beachQQ04",
+            "n" : "yllythad5141@yllythad"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Sandy Beach",
+         "id" : "beachQQ07",
+         "description" : "\n   You stand on a sandy beach which runs along the shore east to west.\nTo the east you can just barely make out the rooftops of a large city\nwhich sits nestled in a cove on the shore of the ocean.  To your west\nyou see that the beach gets a bit rockier than where you currently stand.  \nA set of steps lead up the cliff face just to the west of you.\n",
+         "altitude" : "5"
+      },
+      "beachqq30@nwbeaches" : {
+         "exits" : {
+            "e" : "^cell_beachQQ26w"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Cell",
+         "id" : "beachQQ30",
+         "description" : "\nThis bleak cell hosts only an uncomfortable looking cot and small hole\nin one corner for necessary functions.\n",
+         "altitude" : null
+      },
+      "beachqq34@nwbeaches" : {
+         "exits" : {
+            "n" : "beachQQ33"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "In the Kracken's Den",
+         "id" : "beachQQ34",
+         "description" : "\n   Something seems wrong here, very wrong.  Something makes the\nwater move and not just in a small spot, ALL of the water is\nmoving from some kind of monstrous movement under the water.\n",
+         "altitude" : null
+      },
+      "beachqq22@nwbeaches" : {
+         "exits" : {
+            "w" : "beachQQ21",
+            "d" : "^secret_beachQQ25"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Lighthouse Keeper's Bedroom",
+         "id" : "beachQQ22",
+         "description" : "\nA huge plush king size bed, four posted with satin drapes.  A mahoganey\ndresser with a matching vanity desk and mirror.\nThis lighthouse keeper must be one heck of a guy!\n",
+         "altitude" : null
+      },
+      "beachqq03@nwbeaches" : {
+         "exits" : {
+            "u" : "beachQQ02",
+            "d" : "beachQQ04"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "On the Steps",
+         "id" : "beachQQ03",
+         "description" : "\n   Nearing the bottom, you really begin to get a good whiff\nof the clean sea air as a breeze ruffles your clothing.  You\nbegin to feel a bit better about your day - the sea can do\nthat to a person.\n",
+         "altitude" : "100"
+      },
+      "beachqq31@nwbeaches" : {
+         "exits" : {
+            "e" : "beachQQ16",
+            "w" : "beachQQ32"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Rocky Path",
+         "id" : "beachQQ31",
+         "description" : "\n   The path continues along the beach, over rocks and scree.\nYour options are east or west.\n",
+         "altitude" : "5"
+      },
+      "beachqq33@nwbeaches" : {
+         "exits" : {
+            "n" : "beachQQ32",
+            "s" : "beachQQ34"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "nwbeaches",
+         "title" : "Cave Entrance",
+         "id" : "beachQQ33",
+         "description" : "\n   You realize that if you wish to explore the confines of this\ncave, you will have to get wet.  As you stand looking into the\ncold, wet, darkness of the cave, the idea of jumping into that\nwater just for the sake of exploring does seem a bit nutty.\n",
+         "altitude" : "5"
+      },
+      "beachqq23@nwbeaches" : {
+         "exits" : {
+            "d" : "beachQQ21"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Light Room",
+         "id" : "beachQQ23",
+         "description" : "\nThis small room is more or less just the roof top of the lighthouse\nwhich houses the light.  A narrow walkway encircles the light, so\nthat regular maintenance can be performed.  Some shelves on the\nwalls hold tools and oils which keep the machinery in fine tune so\nthat no ships run afoul of the many rocks in this part of the ocean.\n",
+         "altitude" : null
+      },
+      "beachqq27@nwbeaches" : {
+         "exits" : {
+            "s" : "^cell_beachQQ26n"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Keeper's Playroom",
+         "id" : "beachQQ27",
+         "description" : "\nThis small ten by ten room once was a simple like the others which\nconnect to the Operating Room, however because of the nature of the\nspecimen which abides in this space, it has been spruced up just a\nbit.  A huge bed dominates the ENTIRE room, pillows strewn everywhere\nwith lace and frills and all.\n",
+         "altitude" : null
+      },
+      "beachqq29@nwbeaches" : {
+         "exits" : {
+            "n" : "^cell_beachQQ26s"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Cell",
+         "id" : "beachQQ29",
+         "description" : "\nThis bleak cell hosts only an uncomfortable looking cot and small hole\nin one corner for necessary functions.\n",
+         "altitude" : null
+      },
+      "beachqq26@nwbeaches" : {
+         "exits" : {
+            "e" : "^cell_beachQQ28",
+            "w" : "^cell_beachQQ30",
+            "u" : "beachQQ25",
+            "n" : "^cell_beachQQ27",
+            "s" : "^cell_beachQQ29"
+         },
+         "flags" : [],
+         "zone" : "nwbeaches",
+         "title" : "Lighthouse Keeper's Operating Room",
+         "id" : "beachQQ26",
+         "description" : "\nYou see all and more of what you saw from the staircase.  Four cells lie\nin all cardinal directions, each with a whimpering human subject in it!\nDiagrams cover the walls, notes jotted on many of them, all dealing with\none goal in mind - the creation of the perfect sexual companion!  It seems\nthe 'good Lighthouse Keeper' may be a bit more than everyone believes him\nto be...\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "mobqq02@nwbeaches" : {
+         "damage" : "13",
+         "location" : "beachQQ08",
+         "armor" : "4",
+         "name" : "mobQQ02",
+         "examine" : "\nDirty little bird, you wish you had a wrist-cannon (more fun).\n",
+         "description" : "A seagull pokes about, looking for scraps.",
+         "sflags" : "{}",
+         "strength" : "59",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "a seagull",
+         "pflags" : "{}",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "mobqq06@nwbeaches" : {
+         "damage" : "16",
+         "location" : "beachQQ29",
+         "armor" : "16",
+         "name" : "mobQQ06",
+         "examine" : "\nYou're not sure what he is, how he came to be what he is now, and you're\nnot sure you want to know.\n",
+         "description" : "A naked man stands, shockingly deformed.",
+         "sflags" : "{}",
+         "strength" : "148",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "Deformed Man",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq02_1@nwbeaches" : {
+         "damage" : "13",
+         "location" : "beachQQ08",
+         "armor" : "4",
+         "name" : "mobQQ02_1",
+         "examine" : "\nDirty little bird, you wish you had a wrist-cannon (more fun).\n",
+         "description" : "A seagull pokes about, looking for scraps.",
+         "sflags" : "{}",
+         "strength" : "59",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "a seagull",
+         "pflags" : "{}",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "mobqq13@nwbeaches" : {
+         "damage" : "55",
+         "location" : "beachQQ34",
+         "armor" : "24",
+         "name" : "mobQQ13",
+         "examine" : "\nThis creature is larger than a city block and older than the Gods themselves.\n",
+         "description" : "With a tremendous blast of force, the Kracken lunges up from the water! ",
+         "sflags" : "{}",
+         "strength" : "1520",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "the Kracken",
+         "pflags" : [
+            "NoSummon",
+            "NoTrace"
+         ]
+      },
+      "mobqq12_3@nwbeaches" : {
+         "damage" : "21",
+         "location" : "beachQQ18",
+         "armor" : "22",
+         "name" : "mobQQ12_3",
+         "examine" : "\nMan this guy smells bad!\n",
+         "description" : "A fisherman sits here, trying to imitate Takker as best he can.",
+         "sflags" : "{}",
+         "strength" : "258",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "Takker's Disciple",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq00@nwbeaches" : {
+         "damage" : "9",
+         "location" : "beachQQ04",
+         "armor" : "4",
+         "name" : "mobQQ00",
+         "examine" : "\nLooks like every other pelican you've seen....\n",
+         "description" : "A pelican is here, taking a break in the sun.",
+         "sflags" : "{}",
+         "strength" : "33",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "a pelican",
+         "pflags" : "{}",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "mobqq03@nwbeaches" : {
+         "damage" : "51",
+         "location" : "beachQQ26",
+         "armor" : "18",
+         "name" : "mobQQ03",
+         "examine" : "\n'&+RAll I ever wanted was sexual fulfillment', &+Wthe Lighthouse Keeper\nexplains, '&+RI never intended to hurt anyone, it seems that this all\n&+Rjust got a bit out of hand....'&+W\n",
+         "description" : "The Lighthouse Keeper is here, looking unsure of what he should do about you being here.",
+         "sflags" : "{}",
+         "strength" : "518",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "the Lighthouse Keeper",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq02_3@nwbeaches" : {
+         "damage" : "13",
+         "location" : "beachQQ05",
+         "armor" : "4",
+         "name" : "mobQQ02_3",
+         "examine" : "\nDirty little bird, you wish you had a wrist-cannon (more fun).\n",
+         "description" : "A seagull pokes about, looking for scraps.",
+         "sflags" : "{}",
+         "strength" : "59",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "a seagull",
+         "pflags" : "{}",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "mobqq09@nwbeaches" : {
+         "damage" : "16",
+         "location" : "beachQQ21",
+         "armor" : "16",
+         "name" : "mobQQ09",
+         "examine" : "\nMostly mutt, but very friendly, this black dog looks like the stereo-\ntypical house-dog.\n",
+         "description" : "Max, the Lighthouse Keeper's dog rests before the fire.",
+         "sflags" : "{}",
+         "strength" : "168",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Max",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq02_2@nwbeaches" : {
+         "damage" : "13",
+         "location" : "beachQQ06",
+         "armor" : "4",
+         "name" : "mobQQ02_2",
+         "examine" : "\nDirty little bird, you wish you had a wrist-cannon (more fun).\n",
+         "description" : "A seagull pokes about, looking for scraps.",
+         "sflags" : "{}",
+         "strength" : "59",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "a seagull",
+         "pflags" : "{}",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "mobqq12_2@nwbeaches" : {
+         "damage" : "21",
+         "location" : "beachQQ18",
+         "armor" : "22",
+         "name" : "mobQQ12_2",
+         "examine" : "\nMan this guy smells bad!\n",
+         "description" : "A fisherman sits here, trying to imitate Takker as best he can.",
+         "sflags" : "{}",
+         "strength" : "258",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "Takker's Disciple",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq11@nwbeaches" : {
+         "damage" : "42",
+         "location" : "beachQQ18",
+         "armor" : "18",
+         "name" : "mobQQ11",
+         "examine" : "\nIt is said by many that Old Man Takker hasn't left this spot for over\ntwenty.  His disciples bring him any food he needs, and they say he\nnever sleeps - just fishes.\n",
+         "description" : "Old man Takker sits here, fishing away his life.",
+         "sflags" : "{}",
+         "strength" : "618",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Takker",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq04@nwbeaches" : {
+         "damage" : "16",
+         "location" : "beachQQ28",
+         "armor" : "16",
+         "name" : "mobQQ04",
+         "examine" : "\nIt looks as it it may be a man, but then, being that it is naked, you\ncan see that it is just a bit of both.\n",
+         "description" : "A strange looking.. thing(?) is standing here, no expression on it's face at all.",
+         "sflags" : "{}",
+         "strength" : "148",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "the hermaphrodite",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq07@nwbeaches" : {
+         "damage" : "16",
+         "location" : "beachQQ27",
+         "armor" : "16",
+         "name" : "mobQQ07",
+         "examine" : "\nIt is not describable, simply not describable.\n",
+         "description" : "The Perfect Companion lies stretched out on the bed, waiting to give pleasure.",
+         "sflags" : "{}",
+         "strength" : "168",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "the Perfect Companion",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq12@nwbeaches" : {
+         "damage" : "21",
+         "location" : "beachQQ19",
+         "armor" : "22",
+         "name" : "mobQQ12",
+         "examine" : "\nMan this guy smells bad!\n",
+         "description" : "A fisherman sits here, trying to imitate Takker as best he can.",
+         "sflags" : "{}",
+         "strength" : "258",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Takker's Disciple",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq01@nwbeaches" : {
+         "damage" : "11",
+         "location" : "beachQQ17",
+         "armor" : "4",
+         "name" : "mobQQ01",
+         "examine" : "\nCute little guy, even though he looks a bit slimy.\n",
+         "description" : "A sea otter is here, basking in the warmth of the sun.",
+         "sflags" : "{}",
+         "strength" : "40",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "a sea otter",
+         "pflags" : "{}",
+         "mflags" : [
+            "PickStuff"
+         ]
+      },
+      "mobqq10@nwbeaches" : {
+         "damage" : "16",
+         "location" : "beachQQ24",
+         "armor" : "18",
+         "name" : "mobQQ10",
+         "examine" : "\nAlthough she looks as if she must be at least fifteen or sixteen years\nold, she still seems quite content with her dolls.  What a nice girl!\n",
+         "description" : "The Lighthouse Keeper's Daughter is here, playing house.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "193",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "the Lighthouse Keeper's Daughter",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq05@nwbeaches" : {
+         "damage" : "16",
+         "location" : "beachQQ30",
+         "armor" : "16",
+         "name" : "mobQQ05",
+         "examine" : "\nIt looks as if she may have been a very beautiful woman at one time,\nhowever she is now so covered in dirt and grime, it is hard to tell.\n",
+         "description" : "A woman lies here on her cot, bruised, naked, and bleeding.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "148",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "the battered woman",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq00_2@nwbeaches" : {
+         "damage" : "9",
+         "location" : "beachQQ06",
+         "armor" : "4",
+         "name" : "mobQQ00_2",
+         "examine" : "\nLooks like every other pelican you've seen....\n",
+         "description" : "A pelican is here, taking a break in the sun.",
+         "sflags" : "{}",
+         "strength" : "33",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "a pelican",
+         "pflags" : "{}",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "mobqq01_1@nwbeaches" : {
+         "damage" : "11",
+         "location" : "beachQQ04",
+         "armor" : "4",
+         "name" : "mobQQ01_1",
+         "examine" : "\nCute little guy, even though he looks a bit slimy.\n",
+         "description" : "A sea otter is here, basking in the warmth of the sun.",
+         "sflags" : "{}",
+         "strength" : "40",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "a sea otter",
+         "pflags" : "{}",
+         "mflags" : [
+            "PickStuff"
+         ]
+      },
+      "mobqq00_1@nwbeaches" : {
+         "damage" : "9",
+         "location" : "beachQQ07",
+         "armor" : "4",
+         "name" : "mobQQ00_1",
+         "examine" : "\nLooks like every other pelican you've seen....\n",
+         "description" : "A pelican is here, taking a break in the sun.",
+         "sflags" : "{}",
+         "strength" : "33",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "a pelican",
+         "pflags" : "{}",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "mobqq01_2@nwbeaches" : {
+         "damage" : "11",
+         "location" : "beachQQ05",
+         "armor" : "4",
+         "name" : "mobQQ01_2",
+         "examine" : "\nCute little guy, even though he looks a bit slimy.\n",
+         "description" : "A sea otter is here, basking in the warmth of the sun.",
+         "sflags" : "{}",
+         "strength" : "40",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "a sea otter",
+         "pflags" : "{}",
+         "mflags" : [
+            "PickStuff"
+         ]
+      },
+      "mobqq08@nwbeaches" : {
+         "damage" : "16",
+         "location" : "beachQQ21",
+         "armor" : "16",
+         "name" : "mobQQ08",
+         "examine" : "\nSuch a kind looking lady, I'm sure she'd let you stay to dinner\nif you had the urge.\n",
+         "description" : "The Lighthouse Keeper's wife is here, sewing and humming a happy song.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "418",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "the Lighthouse Keeper's Wife",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq12_1@nwbeaches" : {
+         "damage" : "21",
+         "location" : "beachQQ19",
+         "armor" : "22",
+         "name" : "mobQQ12_1",
+         "examine" : "\nMan this guy smells bad!\n",
+         "description" : "A fisherman sits here, trying to imitate Takker as best he can.",
+         "sflags" : "{}",
+         "strength" : "258",
+         "wimpy" : "0",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "Takker's Disciple",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      },
+      "mobqq12_4@nwbeaches" : {
+         "damage" : "21",
+         "location" : "beachQQ17",
+         "armor" : "22",
+         "name" : "mobQQ12_4",
+         "examine" : "\nMan this guy smells bad!\n",
+         "description" : "A fisherman sits here, trying to imitate Takker as best he can.",
+         "sflags" : "{}",
+         "strength" : "258",
+         "wimpy" : "0",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Takker's Disciple",
+         "pflags" : "{}",
+         "mflags" : "{}"
+      }
+   }
+}

@@ -10,7 +10,7 @@
          "state" : "0",
          "weight" : "0",
          "maxstate" : "0",
-         "bvalue" : "1500",
+         "bvalue" : "1000",
          "desc[0]" : "An exquisite golden statuette is lying here, untouched by the ravages of time."
       },
       "branches@rainforest" : {
@@ -93,7 +93,7 @@
          "state" : "0",
          "weight" : "0",
          "maxstate" : "0",
-         "bvalue" : "1500",
+         "bvalue" : "500",
          "aflags" : [
             "Neck"
          ],
@@ -130,7 +130,7 @@
          "state" : "0",
          "weight" : "0",
          "maxstate" : "0",
-         "bvalue" : "1500",
+         "bvalue" : "500",
          "aflags" : [
             "Head"
          ],
@@ -146,7 +146,7 @@
          "state" : "0",
          "weight" : "0",
          "maxstate" : "0",
-         "bvalue" : "1500",
+         "bvalue" : "500",
          "desc[0]" : "A perfect golden model of a human skull is lying here."
       },
       "bananas@rainforest" : {
@@ -197,7 +197,7 @@
          "state" : "0",
          "weight" : "0",
          "maxstate" : "0",
-         "bvalue" : "1500",
+         "bvalue" : "500",
          "desc[0]" : "A sacrificial dagger, made of gold and set with sparkling jewels, lies here."
       },
       "gloves@rainforest" : {
@@ -277,7 +277,7 @@
          "state" : "0",
          "weight" : "0",
          "maxstate" : "0",
-         "bvalue" : "1100",
+         "bvalue" : "300",
          "desc[0]" : "A condor's feather has been shed here."
       },
       "diary@rainforest" : {
@@ -316,10 +316,10 @@
       "raft@rainforest" : {
          "damage" : "0",
          "location" : "IN_ROOM:forest18",
+         "armor" : "0",
          "oflags" : [
             "Boat"
          ],
-         "armor" : "0",
          "altname" : "boat",
          "name" : "raft",
          "examine" : "It would be well able to take your weight on the water.",
@@ -2159,6 +2159,7 @@
       },
       "mount17@rainforest" : {
          "exits" : {
+            "u" : "windy29@windy",
             "d" : "mount16"
          },
          "flags" : [
@@ -2169,7 +2170,7 @@
          "zone" : "rainforest",
          "title" : "Atop Mount Doragua",
          "id" : "mount17",
-         "description" : "\n    You are not actually on the summit here, for the final haul up to the top\nis almost sheer.  The topmost fifty feet is scored by a series of vertical\ngrooves, and it is in one of these that you are now sheltering, for in the more\nexposed areas the temperature is just too bitter to endure.  The only way you\ncan go from here is back down to the shoulder.\n",
+         "description" : "\n    You are not actually on the summit here, for the final haul up to the top\nis almost sheer.  The topmost fifty feet is scored by a series of vertical\ngrooves, and it is in one of these that you are now sheltering, for in the more\nexposed areas the temperature is just too bitter to endure.  The only way you\nsee going from here is back down to the shoulder.  The clouds seem awfully \nthick around here, enough to climb on.\n",
          "altitude" : "7500"
       },
       "mount9@rainforest" : {
@@ -3788,6 +3789,20 @@
          "speed" : "0",
          "aggression" : "0"
       },
+      "scarlet@rainforest" : {
+         "damage" : "8",
+         "location" : "forest45",
+         "armor" : "0",
+         "name" : "Scarlet",
+         "description" : "A scarlet macaw flies to and from his nest in the cliff.",
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "Scarlet Macaw",
+         "aggression" : "10",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
       "kinkajou@rainforest" : {
          "damage" : "10",
          "location" : "forest75",
@@ -3801,13 +3816,17 @@
       "leech7@rainforest" : {
          "damage" : "7",
          "location" : "forest67",
-         "speed" : "0",
-         "aggression" : "40",
          "armor" : "0",
-         "pname" : "Leech",
          "name" : "Leech7",
          "description" : "A big hungry leech eagerly begins to feast on your blood.",
-         "strength" : "30"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "30",
+         "speed" : "0",
+         "pname" : "Leech",
+         "aggression" : "40"
       },
       "swordbill@rainforest" : {
          "damage" : "3",
@@ -3817,18 +3836,25 @@
          "armor" : "0",
          "name" : "Swordbill",
          "description" : "A swordbill hummingbird flits from flower to flower.",
-         "strength" : "30"
+         "strength" : "30",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "leech2@rainforest" : {
          "damage" : "7",
          "location" : "forest67",
-         "speed" : "0",
-         "aggression" : "40",
          "armor" : "0",
-         "pname" : "Leech",
          "name" : "Leech2",
          "description" : "A big hungry leech eagerly begins to feast on your blood.",
-         "strength" : "30"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "30",
+         "speed" : "0",
+         "pname" : "Leech",
+         "aggression" : "40"
       },
       "jaguar@rainforest" : {
          "damage" : "15",
@@ -3854,13 +3880,17 @@
       "leech5@rainforest" : {
          "damage" : "7",
          "location" : "forest67",
-         "speed" : "0",
-         "aggression" : "40",
          "armor" : "0",
-         "pname" : "Leech",
          "name" : "Leech5",
          "description" : "A big hungry leech eagerly begins to feast on your blood.",
-         "strength" : "30"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "30",
+         "speed" : "0",
+         "pname" : "Leech",
+         "aggression" : "40"
       },
       "tricops@rainforest" : {
          "damage" : "8",
@@ -3885,12 +3915,16 @@
       "anaconda@rainforest" : {
          "damage" : "9",
          "location" : "forest79",
-         "speed" : "2",
-         "aggression" : "30",
          "armor" : "0",
          "name" : "Anaconda",
          "description" : "A giant anaconda glides towards you over the wet ground.",
-         "strength" : "530"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "530",
+         "speed" : "2",
+         "aggression" : "30"
       },
       "howler@rainforest" : {
          "damage" : "8",
@@ -3936,13 +3970,17 @@
       "piranha2@rainforest" : {
          "damage" : "12",
          "location" : "forest87",
-         "speed" : "0",
-         "aggression" : "80",
          "armor" : "0",
-         "pname" : "Piranha",
          "name" : "Piranha2",
          "description" : "A vicious piranha attacks your legs.",
-         "strength" : "40"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "pname" : "Piranha",
+         "aggression" : "80"
       },
       "tanacu@rainforest" : {
          "damage" : "10",
@@ -4025,13 +4063,17 @@
       "piranha7@rainforest" : {
          "damage" : "12",
          "location" : "forest91",
-         "speed" : "0",
-         "aggression" : "80",
          "armor" : "0",
-         "pname" : "Piranha",
          "name" : "Piranha7",
          "description" : "A vicious piranha attacks your legs.",
-         "strength" : "40"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "pname" : "Piranha",
+         "aggression" : "80"
       },
       "ants@rainforest" : {
          "damage" : "5",
@@ -4042,29 +4084,35 @@
          "pname" : "Army Ants",
          "name" : "Ants",
          "examine" : "One or two have noticed your presence and are coming to investigate.",
-         "description" : "",
+         "description" : "There are ants all over here!",
          "strength" : "250"
       },
       "manatee@rainforest" : {
          "damage" : "8",
          "location" : "river18",
-         "speed" : "1",
-         "aggression" : "0",
          "armor" : "0",
          "name" : "Manatee",
          "description" : "A mournful-looking manatee surfaces just next to you.",
-         "strength" : "320"
+         "strength" : "320",
+         "speed" : "1",
+         "aggression" : "0",
+         "mflags" : [
+            "Aquatic"
+         ]
       },
       "duck@rainforest" : {
          "damage" : "7",
          "location" : "forest5",
-         "speed" : "5",
-         "aggression" : "0",
          "armor" : "0",
-         "pname" : "Torrent Duck",
          "name" : "Duck",
          "description" : "A torrent duck is plucking stonefly larvae from one of the rocks here.",
-         "strength" : "50"
+         "strength" : "50",
+         "speed" : "5",
+         "pname" : "Torrent Duck",
+         "aggression" : "0",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "hoatzin@rainforest" : {
          "damage" : "10",
@@ -4074,6 +4122,9 @@
          "armor" : "0",
          "name" : "Hoatzin",
          "description" : "A hoatzin, an evil-smelling and primitive bird, is clinging to the branches by  means of claws on its wings.",
+         "mflags" : [
+            "Flyer"
+         ],
          "strength" : "90"
       },
       "peccary@rainforest" : {
@@ -4090,12 +4141,16 @@
       "leech@rainforest" : {
          "damage" : "10",
          "location" : "forest64",
-         "speed" : "0",
-         "aggression" : "100",
          "armor" : "0",
          "name" : "Leech",
          "description" : "A truly elephantine leech fastens itself securely to your leg.",
-         "strength" : "50"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "100"
       },
       "egret@rainforest" : {
          "damage" : "10",
@@ -4111,12 +4166,15 @@
       "parakeet@rainforest" : {
          "damage" : "8",
          "location" : "forest17",
-         "speed" : "3",
-         "aggression" : "0",
          "armor" : "0",
          "name" : "Parakeet",
          "description" : "A beautiful but noisy parakeet flaps about your head annoyingly.",
-         "strength" : "60"
+         "strength" : "60",
+         "speed" : "3",
+         "aggression" : "0",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "bear@rainforest" : {
          "damage" : "15",
@@ -4132,13 +4190,17 @@
       "piranha5@rainforest" : {
          "damage" : "12",
          "location" : "forest91",
-         "speed" : "0",
-         "aggression" : "80",
          "armor" : "0",
-         "pname" : "Piranha",
          "name" : "Piranha5",
          "description" : "A vicious piranha attacks your legs.",
-         "strength" : "40"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "pname" : "Piranha",
+         "aggression" : "80"
       },
       "condor@rainforest" : {
          "damage" : "15",
@@ -4166,13 +4228,16 @@
       "owl@rainforest" : {
          "damage" : "8",
          "location" : "forest10",
-         "speed" : "0",
-         "aggression" : "0",
          "armor" : "0",
-         "pname" : "Horned Owl",
          "name" : "Owl",
          "description" : "A horned owl scans the ground for mouse oppossums.",
-         "strength" : "50"
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "Horned Owl",
+         "aggression" : "0",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "ocelot@rainforest" : {
          "damage" : "11",
@@ -4198,24 +4263,31 @@
       "harpy@rainforest" : {
          "damage" : "15",
          "location" : "forest41",
-         "speed" : "0",
-         "aggression" : "90",
          "armor" : "0",
-         "pname" : "Harpy Eagle",
          "name" : "Harpy",
          "description" : "A harpy eagle reaches for you with massive talons.",
-         "strength" : "200"
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Harpy Eagle",
+         "aggression" : "90",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "piranha3@rainforest" : {
          "damage" : "12",
          "location" : "forest87",
-         "speed" : "0",
-         "aggression" : "80",
          "armor" : "0",
-         "pname" : "Piranha",
          "name" : "Piranha3",
          "description" : "A vicious piranha attacks your legs.",
-         "strength" : "40"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "pname" : "Piranha",
+         "aggression" : "80"
       },
       "spider@rainforest" : {
          "damage" : "8",
@@ -4224,9 +4296,10 @@
          "name" : "Spider",
          "description" : "A spider monkey chatters at you from an adjacent branch.",
          "strength" : "50",
+         "wimpy" : "25",
          "speed" : "10",
-         "pname" : "Spider Monkey",
          "aggression" : "0",
+         "pname" : "Spider Monkey",
          "mflags" : [
             "Thief"
          ]
@@ -4244,13 +4317,16 @@
       "green@rainforest" : {
          "damage" : "8",
          "location" : "forest45",
-         "speed" : "0",
-         "aggression" : "10",
          "armor" : "0",
-         "pname" : "Green Macaw",
          "name" : "Green",
          "description" : "A green macaw mobs you, agitated by your presence.",
-         "strength" : "50"
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "Green Macaw",
+         "aggression" : "10",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "latuka@rainforest" : {
          "damage" : "10",
@@ -4268,13 +4344,16 @@
       "bat@rainforest" : {
          "damage" : "10",
          "location" : "forest16",
-         "speed" : "8",
-         "aggression" : "30",
          "armor" : "0",
-         "pname" : "vampirebat",
          "name" : "Bat",
          "description" : "An evil blackbat vampire wants to taste your blood!",
-         "strength" : "70"
+         "strength" : "70",
+         "speed" : "8",
+         "pname" : "vampirebat",
+         "aggression" : "30",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "chinchilla@rainforest" : {
          "damage" : "5",
@@ -4283,7 +4362,7 @@
          "aggression" : "0",
          "armor" : "0",
          "name" : "Chinchilla",
-         "examine" : "\nHe is very small but his thick fur gives him ample protection against the cold.",
+         "examine" : "\nHe is very small but his thick fur gives him ample protection against the cold.",
          "description" : "A chinchilla scurries about on the rocks by your feet.",
          "strength" : "30"
       },
@@ -4311,22 +4390,31 @@
       "pirarucu@rainforest" : {
          "damage" : "10",
          "location" : "river7",
-         "speed" : "0",
-         "aggression" : "0",
          "armor" : "0",
          "name" : "Pirarucu",
          "description" : "A pirarucu, an enormous freshwater fish, is swimming by the side of the raft.",
-         "strength" : "160"
+         "sflags" : [
+            "NoArms"
+         ],
+         "strength" : "160",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "Aquatic"
+         ]
       },
       "caracara@rainforest" : {
          "damage" : "10",
          "location" : "mount23",
-         "speed" : "6",
-         "aggression" : "35",
          "armor" : "0",
          "name" : "Caracara",
          "description" : "A caracara flies close by you, mobbing you.  Maybe you are near his nest.",
-         "strength" : "120"
+         "strength" : "120",
+         "speed" : "6",
+         "aggression" : "35",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "biguli@rainforest" : {
          "damage" : "10",
@@ -4351,13 +4439,16 @@
       "vulture@rainforest" : {
          "damage" : "12",
          "location" : "forest43",
-         "speed" : "0",
-         "aggression" : "50",
          "armor" : "0",
-         "pname" : "Yellowheaded Vulture",
          "name" : "Vulture",
          "description" : "A yellow-headed vulture swoops down on you from above.",
-         "strength" : "220"
+         "strength" : "220",
+         "speed" : "0",
+         "pname" : "Yellowheaded Vulture",
+         "aggression" : "50",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "potona@rainforest" : {
          "damage" : "10",
@@ -4383,13 +4474,17 @@
       "piranha6@rainforest" : {
          "damage" : "12",
          "location" : "forest91",
-         "speed" : "0",
-         "aggression" : "80",
          "armor" : "0",
-         "pname" : "Piranha",
          "name" : "Piranha6",
          "description" : "A vicious piranha attacks your legs.",
-         "strength" : "40"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "pname" : "Piranha",
+         "aggression" : "80"
       },
       "guanaco@rainforest" : {
          "damage" : "12",
@@ -4405,13 +4500,17 @@
       "leech4@rainforest" : {
          "damage" : "7",
          "location" : "forest67",
-         "speed" : "0",
-         "aggression" : "40",
          "armor" : "0",
-         "pname" : "Leech",
          "name" : "Leech4",
          "description" : "A big hungry leech eagerly begins to feast on your blood.",
-         "strength" : "30"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "30",
+         "speed" : "0",
+         "pname" : "Leech",
+         "aggression" : "40"
       },
       "puma@rainforest" : {
          "damage" : "17",
@@ -4426,24 +4525,31 @@
       "leech3@rainforest" : {
          "damage" : "7",
          "location" : "forest67",
-         "speed" : "0",
-         "aggression" : "40",
          "armor" : "0",
-         "pname" : "Leech",
          "name" : "Leech3",
          "description" : "A big hungry leech eagerly begins to feast on your blood.",
-         "strength" : "30"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "30",
+         "speed" : "0",
+         "pname" : "Leech",
+         "aggression" : "40"
       },
       "umbrellabird@rainforest" : {
          "damage" : "8",
          "location" : "forest7",
-         "speed" : "8",
-         "aggression" : "0",
          "armor" : "0",
-         "pname" : "Umbrella Bird",
          "name" : "Umbrellabird",
          "description" : "The umbrella bird is the ugliest bird you have ever seen.",
-         "strength" : "70"
+         "strength" : "70",
+         "speed" : "8",
+         "pname" : "Umbrella Bird",
+         "aggression" : "0",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "pudu@rainforest" : {
          "damage" : "8",
@@ -4458,34 +4564,45 @@
       "piranha1@rainforest" : {
          "damage" : "12",
          "location" : "forest87",
-         "speed" : "0",
-         "aggression" : "80",
          "armor" : "0",
-         "pname" : "Piranha",
          "name" : "Piranha1",
          "description" : "A vicious piranha attacks your legs.",
-         "strength" : "40"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "pname" : "Piranha",
+         "aggression" : "80"
       },
       "toucan@rainforest" : {
          "damage" : "5",
          "location" : "forest133",
-         "speed" : "1",
-         "aggression" : "0",
          "armor" : "0",
          "name" : "Toucan",
          "description" : "A huge-beaked toucan squawks at you unattractively.",
-         "strength" : "40"
+         "strength" : "40",
+         "speed" : "1",
+         "aggression" : "0",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "leech1@rainforest" : {
          "damage" : "7",
          "location" : "forest67",
-         "speed" : "0",
-         "aggression" : "40",
          "armor" : "0",
-         "pname" : "Leech",
          "name" : "Leech1",
          "description" : "A big hungry leech eagerly begins to feast on your blood.",
-         "strength" : "30"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "30",
+         "speed" : "0",
+         "pname" : "Leech",
+         "aggression" : "40"
       },
       "corixi@rainforest" : {
          "damage" : "10",
@@ -4534,34 +4651,44 @@
       "king@rainforest" : {
          "damage" : "15",
          "location" : "river12",
-         "speed" : "7",
-         "aggression" : "90",
          "armor" : "0",
-         "pname" : "King Vulture",
          "name" : "King",
          "description" : "A brightly-coloured king vulture swoops down on you from above!",
-         "strength" : "240"
+         "strength" : "240",
+         "speed" : "7",
+         "pname" : "King Vulture",
+         "aggression" : "90",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "piranha4@rainforest" : {
          "damage" : "12",
          "location" : "forest87",
-         "speed" : "0",
-         "aggression" : "80",
          "armor" : "0",
-         "pname" : "Piranha",
          "name" : "Piranha4",
          "description" : "A vicious piranha attacks your legs.",
-         "strength" : "40"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "pname" : "Piranha",
+         "aggression" : "80"
       },
       "dolphin@rainforest" : {
          "damage" : "10",
          "location" : "river15",
-         "speed" : "3",
-         "aggression" : "0",
          "armor" : "0",
          "name" : "Dolphin",
          "description" : "A freshwater dolphin leaps playfully in the water beside your raft.",
-         "strength" : "260"
+         "strength" : "260",
+         "speed" : "3",
+         "aggression" : "0",
+         "mflags" : [
+            "Aquatic"
+         ]
       },
       "squirrel@rainforest" : {
          "damage" : "8",
@@ -4570,9 +4697,10 @@
          "name" : "Squirrel",
          "description" : "A squirrel monkey dangles from the branches using its prehensile tail.",
          "strength" : "50",
+         "wimpy" : "25",
          "speed" : "15",
-         "pname" : "Squirrel Monkey",
          "aggression" : "0",
+         "pname" : "Squirrel Monkey",
          "mflags" : [
             "Thief"
          ]
@@ -4601,13 +4729,17 @@
       "leech6@rainforest" : {
          "damage" : "7",
          "location" : "forest67",
-         "speed" : "0",
-         "aggression" : "40",
          "armor" : "0",
-         "pname" : "Leech",
          "name" : "Leech6",
          "description" : "A big hungry leech eagerly begins to feast on your blood.",
-         "strength" : "30"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "30",
+         "speed" : "0",
+         "pname" : "Leech",
+         "aggression" : "40"
       }
    }
 }

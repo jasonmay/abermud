@@ -1,0 +1,2889 @@
+{
+   "obj" : {
+      "vaultdoor2@sommerlund" : {
+         "damage" : "0",
+         "examine" : "\nWhoever tries to break-in is going to have a problem with this vault.",
+         "state" : "3",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "3",
+         "bvalue" : "0",
+         "desc[1]" : "The vault is solidly slammed shut.",
+         "location" : "IN_ROOM:sommerlund36",
+         "desc[3]" : "The vault is sealed with wax.",
+         "name" : "vaultdoor2",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "armor" : "0",
+         "linked" : "vaultdoor1",
+         "desc[2]" : "The vault is bolted and chained.",
+         "pname" : "vault",
+         "desc[0]" : "The vault is open, letting a draft in."
+      },
+      "kaidoor2@sommerlund" : {
+         "desc[1]" : "The door is solidly slammed shut.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund23",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "kaidoor2",
+         "examine" : "Yup, definitely a door!",
+         "linked" : "kaidoor1",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "door",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open, letting a draft in."
+      },
+      "dagger@sommerlund" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:vashna",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "dagger",
+         "examine" : "A blue flame runs along its twisted blade.",
+         "state" : "0",
+         "size" : "3",
+         "pname" : "dagger",
+         "weight" : "4",
+         "maxstate" : "0",
+         "bvalue" : "125",
+         "desc[0]" : "An entirely black dagger sits here."
+      },
+      "mortar@sommerlund" : {
+         "desc[1]" : "A medium-sized clay bowl lies on a table here.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund84",
+         "armor" : "0",
+         "oflags" : [
+            "Container",
+            "GetFlips"
+         ],
+         "altname" : "bowl",
+         "name" : "mortar",
+         "examine" : "It would withstand quite a bit of heat.",
+         "state" : "1",
+         "size" : "7",
+         "pname" : "mortar",
+         "weight" : "4",
+         "maxstate" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "A mortar filled with decayed remains is here."
+      },
+      "wheeldoor1@sommerlund" : {
+         "desc[1]" : "A rapidly spinning wheel with a person on it stands here.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund24",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "name" : "wheeldoor1",
+         "examine" : "It appears to be a door of some kind.",
+         "linked" : "wheeldoor2",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "wheel",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A wheel has been shoved to the side, revealing an exit to the west."
+      },
+      "orange@sommerlund" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:fruitcake",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "orange",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "orange",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A tasty-looking orange has been dropped here by Mother Nature."
+      },
+      "rocksign@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund89",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "rocksign",
+         "examine" : "\nNought but a sword of the sun may block a stab from the grave.",
+         "state" : "0",
+         "size" : "1",
+         "pname" : "rock",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "An engraved rock squats helplessly here."
+      },
+      "cavedoor1@sommerlund" : {
+         "desc[1]" : "The door is solidly slammed shut.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund53",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "cavedoor1",
+         "linked" : "cavedoor2",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "door",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open, letting a draft in."
+      },
+      "flippers@sommerlund" : {
+         "desc[1]" : "The seals envy a pair of flippers hich lie on a table here.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund38",
+         "armor" : "18",
+         "oflags" : [
+            "Wearable",
+            "GetFlips",
+            "Armor"
+         ],
+         "name" : "flippers",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "flippers",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "A pair of worn flippers are here.",
+         "aflags" : [
+            "Feet"
+         ]
+      },
+      "mask@sommerlund" : {
+         "desc[1]" : "A simple, wooden swimmask hangs on a hook.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund38",
+         "armor" : "4",
+         "oflags" : [
+            "Wearable",
+            "GetFlips",
+            "Armor"
+         ],
+         "altname" : "mask",
+         "name" : "mask",
+         "state" : "1",
+         "size" : "4",
+         "weight" : "3",
+         "pname" : "swimmask",
+         "maxstate" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "A wooden mask has been left here.",
+         "aflags" : [
+            "Face"
+         ]
+      },
+      "broadsword@sommerlund" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:qinefer",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "broadsword",
+         "state" : "0",
+         "size" : "10",
+         "pname" : "broadsword",
+         "weight" : "12",
+         "maxstate" : "0",
+         "bvalue" : "75",
+         "desc[0]" : "A weapon of choice for many warriors is the broadsword."
+      },
+      "moonstone@sommerlund" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:shianti",
+         "armor" : "0",
+         "altname" : "stone",
+         "name" : "moonstone",
+         "examine" : "Its glossy surface is smooth and polished.",
+         "state" : "0",
+         "size" : "3",
+         "pname" : "moonstone",
+         "weight" : "3",
+         "maxstate" : "0",
+         "bvalue" : "150",
+         "desc[0]" : "A strange oval moonstone sparkles here."
+      },
+      "egg@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:nest",
+         "armor" : "0",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "egg",
+         "examine" : "I wouldn't eat it if I were you.",
+         "state" : "0",
+         "size" : "4",
+         "pname" : "egg",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "A speckled dragon's egg rolls slightly here."
+      },
+      "trapdoor2@sommerlund" : {
+         "damage" : "0",
+         "examine" : "Be glad this doesn't lead to a pit of alligators.",
+         "state" : "2",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[1]" : "The trapdoor is closed.",
+         "location" : "IN_ROOM:sommerlund30",
+         "name" : "trapdoor2",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "armor" : "0",
+         "linked" : "trapdoor1",
+         "desc[2]" : "The trapdoor is locked.",
+         "pname" : "trapdoor",
+         "desc[0]" : "The trapdoor is open."
+      },
+      "book@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund84",
+         "armor" : "0",
+         "altname" : "book",
+         "name" : "book",
+         "examine" : "It is a tome of unusual size.",
+         "state" : "0",
+         "size" : "5",
+         "pname" : "cookbook",
+         "weight" : "9",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A mighty cookbook lies before you."
+      },
+      "fire@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund86",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Lit"
+         ],
+         "name" : "fire",
+         "examine" : "There is a bowl-shaped opening in the middle of the fire.",
+         "state" : "0",
+         "size" : "10",
+         "pname" : "fire",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A fire burns madly here."
+      },
+      "cake@sommerlund" : {
+         "location" : "IN_ROOM:sommerlund59",
+         "oflags" : [
+            "Food"
+         ],
+         "pname" : "cheesecake",
+         "name" : "cake",
+         "examine" : "Eat me to return home.",
+         "desc[0]" : "A slice of cheesecake has been left here."
+      },
+      "aqualung@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund38",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Breathe"
+         ],
+         "name" : "aqualung",
+         "state" : "0",
+         "size" : "8",
+         "pname" : "aqualung",
+         "weight" : "10",
+         "maxstate" : "0",
+         "bvalue" : "75",
+         "desc[0]" : "An aqualung here looks like it would fit you nicely.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "trapdoor1@sommerlund" : {
+         "damage" : "0",
+         "examine" : "Be glad this doesn't lead to a pit of alligators.",
+         "state" : "2",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[1]" : "The trapdoor is closed.",
+         "location" : "IN_ROOM:sommerlund29",
+         "name" : "trapdoor1",
+         "altname" : "door",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "armor" : "0",
+         "linked" : "trapdoor2",
+         "desc[2]" : "The trapdoor is locked.",
+         "pname" : "trapdoor",
+         "desc[0]" : "The trapdoor is open."
+      },
+      "chandelier@sommerlund" : {
+         "desc[1]" : "A fragile chandelier catches the sun rays and turns them into rainbows.",
+         "location" : "IN_ROOM:sommerlund30",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "chandelier",
+         "examine" : "\nA special wire suspends the chandelier, its only weakness being that of\nred boomerangs unusual velocity.",
+         "state" : "1",
+         "pname" : "chandelier",
+         "maxstate" : "1",
+         "desc[0]" : "The fragments of a shattered chandelier litter the floor."
+      },
+      "kaidoor1@sommerlund" : {
+         "desc[1]" : "The door is solidly slammed shut.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund22",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "kaidoor1",
+         "examine" : "Yup, definitely a door!",
+         "linked" : "kaidoor2",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "door",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open, letting a draft in."
+      },
+      "banana@sommerlund" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:fruitcake",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "banana",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "banana",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A tasty-looking banana has been dropped here by Mother Nature."
+      },
+      "shirt@sommerlund" : {
+         "location" : "CARRIED_BY:slavemaster",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable"
+         ],
+         "pname" : "shirt",
+         "name" : "shirt",
+         "examine" : "\nIt bears the woven message 'Always follow the NEWly SEWN ENDS!'",
+         "bvalue" : "10",
+         "desc[0]" : "A nicely folded shirt is here."
+      },
+      "lorestone@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund36",
+         "armor" : "0",
+         "altname" : "stone",
+         "name" : "lorestone",
+         "examine" : "It resembles the giant ball of flaming gas in the sky.",
+         "state" : "0",
+         "size" : "3",
+         "pname" : "lorestone",
+         "weight" : "3",
+         "maxstate" : "0",
+         "bvalue" : "150",
+         "desc[0]" : "A many-faceted lorestone glows with incredible energy."
+      },
+      "grape@sommerlund" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:fruitcake",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "grape",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "grape",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A tasty-looking grape has been dropped here by Mother Nature."
+      },
+      "sign@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund87",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sign",
+         "examine" : "\nThe author of this zone gives thanks to the authors of the Lone Wolf \nrole-playing series, Joe Dever, Ian Page, and Gary Chalk for their ideas, \nwhich form the foundation of the zone. Further acknowledgements go to \nthe Magic Card Game, and my friends Dave Cockerham, Jason Trowbridge, and \nJason Marino. :)",
+         "state" : "0",
+         "size" : "13",
+         "pname" : "sign",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A jewel-encrusted sign is here."
+      },
+      "page@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund90",
+         "armor" : "0",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "parchment",
+         "name" : "page",
+         "examine" : "\nHomemade Discipline\n\n1 speckled egg\n1 gold crown\nthis page\n\nPut the ingredients into a mortar and heat well.",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "page",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "30",
+         "desc[0]" : "A piece of parchment, yellow with age, lies here."
+      },
+      "vaultdoor1@sommerlund" : {
+         "damage" : "0",
+         "examine" : "\nWhoever tries to break-in is going to have a problem with this vault.",
+         "state" : "3",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "3",
+         "bvalue" : "0",
+         "desc[1]" : "The vault is solidly slammed shut.",
+         "location" : "IN_ROOM:sommerlund35",
+         "desc[3]" : "The vault is sealed with wax.",
+         "name" : "vaultdoor1",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "armor" : "0",
+         "linked" : "vaultdoor2",
+         "desc[2]" : "The vault is bolted and chained.",
+         "pname" : "vault",
+         "desc[0]" : "The vault is open, letting a draft in."
+      },
+      "apple@sommerlund" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:fruitcake",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "apple",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "apple",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A tasty-looking apple has been dropped here by Mother Nature."
+      },
+      "sommershield@sommerlund" : {
+         "damage" : "0",
+         "location" : "WORN_BY:lonewolf",
+         "armor" : "35",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "altname" : "shield",
+         "name" : "sommershield",
+         "examine" : "It should serve to protect your non-weapon arm.",
+         "state" : "0",
+         "size" : "9",
+         "pname" : "sommershield",
+         "weight" : "10",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "A white shield with a burning sun logo lies facedown in the dirt here."
+      },
+      "wetsuit@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund38",
+         "armor" : "10",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "suit",
+         "name" : "wetsuit",
+         "state" : "0",
+         "size" : "10",
+         "weight" : "6",
+         "pname" : "wetsuit",
+         "maxstate" : "0",
+         "bvalue" : "55",
+         "desc[0]" : "A warm-looking suit protects its user from cold.",
+         "aflags" : [
+            "Chest",
+            "Arms",
+            "Legs",
+            "Head"
+         ]
+      },
+      "plaque@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund35",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "plaque",
+         "examine" : "\nIn order to remove the wax, say your answer to the following riddle: A colony \nof virulent bacteria doubles in size every 24 hours. It takes forty-three days\nto fill up a standard culture petri dish. How many days would it take for the\npetri dish to be half-full?",
+         "state" : "0",
+         "size" : "1",
+         "pname" : "plaque",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "There is a plaque firmly attached to the wall here."
+      },
+      "kiwi@sommerlund" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:fruitcake",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "kiwi",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "kiwi",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A tasty-looking kiwi has been dropped here by Mother Nature."
+      },
+      "coachdoor2@sommerlund" : {
+         "desc[1]" : "The door is solidly slammed shut.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund26",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "coachdoor2",
+         "desc[2]" : "The door is bolted and chained.",
+         "linked" : "coachdoor1",
+         "state" : "2",
+         "size" : "1",
+         "pname" : "door",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open, letting a draft in."
+      },
+      "sommerswerd@sommerlund" : {
+         "damage" : "30",
+         "location" : "WIELDED_BY:lonewolf",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon",
+            "Reflect"
+         ],
+         "altname" : "blade",
+         "name" : "sommerswerd",
+         "examine" : "\nThis is a weapon forged by the Sun God Kai. No runes cover its silver-plated \nhilt, but power drawn directly from the Plane of Light courses through\nits slim, white blade.",
+         "size" : "15",
+         "pname" : "Sommerswerd",
+         "weight" : "15",
+         "bvalue" : "2000",
+         "desc[0]" : "The blade of some sun hovers proudly here."
+      },
+      "sommermail@sommerlund" : {
+         "damage" : "0",
+         "location" : "WORN_BY:lonewolf",
+         "armor" : "35",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "mail",
+         "name" : "sommermail",
+         "examine" : "It is one nifty piece of craftswork.",
+         "state" : "0",
+         "size" : "12",
+         "weight" : "7",
+         "pname" : "sommermail",
+         "maxstate" : "0",
+         "bvalue" : "400",
+         "desc[0]" : "A suit of white platinum mail, engraved with golden runes, is here.",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ]
+      },
+      "goldcrown@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:tunic",
+         "armor" : "0",
+         "altname" : "coin",
+         "name" : "goldcrown",
+         "examine" : "The face of Baron Vanalund of Ruanon stares back at you.",
+         "state" : "0",
+         "size" : "1",
+         "pname" : "goldcrown",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "250",
+         "desc[0]" : "A shiny, yellow coin lies here for the taking."
+      },
+      "kai@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund31",
+         "armor" : "0",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "box",
+         "name" : "kai",
+         "examine" : "It is designed to hold seven objects decreed by a goddess.",
+         "state" : "0",
+         "size" : "21",
+         "pname" : "kai",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "desc[0]" : "A strange, wooden box lays open here."
+      },
+      "chest@sommerlund" : {
+         "desc[1]" : "The chest is closed. Is there a bomb inside?",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund26",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable",
+            "Container"
+         ],
+         "name" : "chest",
+         "desc[2]" : "The chest is locked. Got a key?",
+         "state" : "2",
+         "size" : "50",
+         "pname" : "chest",
+         "weight" : "3",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The chest is open. Is there treasure inside?"
+      },
+      "blueberry@sommerlund" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:fruitcake",
+         "armor" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "fruit",
+         "name" : "blueberry",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "blueberry",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A tasty-looking blueberry has been dropped here by Mother Nature."
+      },
+      "star@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:chest",
+         "armor" : "7",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "pendant",
+         "name" : "star",
+         "examine" : "The mark of the magicians of Sommerlund.",
+         "state" : "0",
+         "size" : "1",
+         "weight" : "2",
+         "pname" : "star",
+         "maxstate" : "0",
+         "bvalue" : "75",
+         "desc[0]" : "A crystal pendant in the shape of a star sparkles brightly here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "yacht@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund38",
+         "armor" : "0",
+         "oflags" : [
+            "Boat"
+         ],
+         "altname" : "duckie",
+         "name" : "yacht",
+         "examine" : "Quack!",
+         "state" : "0",
+         "size" : "15",
+         "pname" : "yacht",
+         "weight" : "15",
+         "maxstate" : "0",
+         "bvalue" : "80",
+         "desc[0]" : "A rubber-duckie yacht awaits to take someone to high adventure on the \nseven seas."
+      },
+      "labdoor1@sommerlund" : {
+         "desc[1]" : "The door is solidly slammed shut.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund83",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "labdoor1",
+         "desc[2]" : "The door is bolted and chained.",
+         "linked" : "labdoor2",
+         "state" : "2",
+         "size" : "1",
+         "pname" : "door",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open, letting a draft in."
+      },
+      "tunic@sommerlund" : {
+         "damage" : "0",
+         "location" : "WORN_BY:barraka",
+         "armor" : "0",
+         "oflags" : [
+            "Wearable",
+            "Container"
+         ],
+         "name" : "tunic",
+         "examine" : "It will keep you from shivering on cold night.",
+         "state" : "0",
+         "size" : "10",
+         "pname" : "tunic",
+         "weight" : "4",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "desc[0]" : "An old, dust-covered tunic lies on the ground here."
+      },
+      "labdoor2@sommerlund" : {
+         "desc[1]" : "The door is solidly slammed shut.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund84",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "labdoor2",
+         "desc[2]" : "The door is bolted and chained.",
+         "linked" : "labdoor1",
+         "state" : "2",
+         "size" : "1",
+         "pname" : "door",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open, letting a draft in."
+      },
+      "nest@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund79",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "nest",
+         "examine" : "",
+         "state" : "1",
+         "size" : "15",
+         "pname" : "nest",
+         "weight" : "20",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A beautiful, well-made dragon nest is here."
+      },
+      "doomstone@sommerlund" : {
+         "desc[1]" : "A lump of sand protrudes here.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund45",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "stone",
+         "name" : "doomstone",
+         "examine" : "High-energy radiation pours from all surfaces points.",
+         "state" : "1",
+         "size" : "3",
+         "pname" : "doomstone",
+         "weight" : "3",
+         "maxstate" : "1",
+         "bvalue" : "150",
+         "desc[0]" : "A dark sphere of doomstone sits here, burning black on the inside."
+      },
+      "coachdoor1@sommerlund" : {
+         "desc[1]" : "The door is solidly slammed shut.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund25",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "coachdoor1",
+         "desc[2]" : "The door is bolted and chained.",
+         "linked" : "coachdoor2",
+         "state" : "2",
+         "size" : "1",
+         "pname" : "door",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open, letting a draft in."
+      },
+      "wheeldoor2@sommerlund" : {
+         "desc[1]" : "The round back of a wheel blocks the passage.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund25",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "name" : "wheeldoor2",
+         "examine" : "It appears to be a door of some kind.",
+         "linked" : "wheeldoor1",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "wheel",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A wheel has been shoved open, revealing an exit to the east."
+      },
+      "deathstaff@sommerlund" : {
+         "damage" : "14",
+         "location" : "WIELDED_BY:ixian",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "staff",
+         "name" : "deathstaff",
+         "examine" : "It was made by evil and can destroy certain lords of evil.",
+         "state" : "0",
+         "size" : "8",
+         "pname" : "Deathstaff",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "350",
+         "desc[0]" : "A three-foot black staff covered with runes of power has clattered to\nthe floor here."
+      },
+      "sommerhelm@sommerlund" : {
+         "damage" : "0",
+         "location" : "WORN_BY:lonewolf",
+         "armor" : "21",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "helm",
+         "name" : "sommerhelm",
+         "examine" : "It almost matches the white of a skull.",
+         "state" : "0",
+         "size" : "5",
+         "weight" : "5",
+         "pname" : "sommerhelm",
+         "maxstate" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "An ancient helm of lore is here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "discipline@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund90",
+         "armor" : "0",
+         "altname" : "mind",
+         "name" : "discipline",
+         "examine" : "It seems it could cure the foolishness of any child.",
+         "state" : "0",
+         "size" : "1",
+         "pname" : "discipline",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "500",
+         "desc[0]" : "A state of mind has manifested itself here."
+      },
+      "signpost@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund18",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "sign",
+         "name" : "signpost",
+         "examine" : "\nWelcome to fruitdom! It was 4000 years ago when the orignal settlers came to \nthis part of the Great Forest. The land was plentiful with scrumptuous fruits,\ntoo plentiful, really. The fruits mutated when a meteor devastated a nearby \nvolcano and leaked posionous gases. Heavy concentrations of these gases \npromoted extreme growth in the fruits and led to the ascendence of their \ncivilization. The locals were horrified by the changes, but allowed \nco-existence. However, the Fruits would not tolerate being eaten. They \nregarded present-day apples and oranges as future kin, even though they had \nnot undergone any mutation. As expected, confined riots and minor skirmishes \ndissolved into an all-out war. Ultimately, the Fruits outnumbered the humans, \nand all of them were eradicated except for a few prisoners. The Fruit \nsorcerors unveiled their long-dormant magic and created human-Fruit hybrids. \nBut almost immediately following their creation, they were shunned by their \ncreators and became outcasts in the forest. Hurt and angry at the Fruits, the \nhybrids revolted. Again, the Fruits suceeded in decimating their enemy, but \none escaped. This hybrid, still retaining 50 percent of her humanity, had a \nplan for revenge. She developed a chemical formula which made all the Fruits \nsterile. The effect was immediate; the Fruits panicked when they learned \ntheir fate. Given the Fruits long life of a thousand years, she knew she \nwould have to wait. During this time period, she would periodically visit \nnearby towns and then quickly vanish. The surrounding neighborhoods picked up\nevidence of a being who they thought possessed immortality. After all, no \nmere mortal surely could live more than a century. Thus, they enshrined and \nconsecrated the Tor Forest to protect the secret of 'immortality.' Raised to \nthe status of a legend, the hybrid drew back to the safety of the forest and \ninwardly smiled as the last of the Fruits fell to the ground, becoming an \nextinct species. By this time, she was drawing close to the time of her \nown death. She was looking forward to it, and one day, stumbled onto this \nclearing. After planting the fruit trees to remind her of what the original \nforest looked like, she settled back and considered her life's work over.\n                        - As recorded by Fruitcake",
+         "state" : "0",
+         "size" : "10",
+         "pname" : "signpost",
+         "weight" : "12",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A large signpost stands firmly rooted into the ground."
+      },
+      "triangle@sommerlund" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:qinefer",
+         "armor" : "0",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "triangle",
+         "examine" : "Its equilateral sides are perfectly smooth.",
+         "state" : "0",
+         "size" : "2",
+         "pname" : "triangle",
+         "weight" : "3",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A sleek blue stone triangle lies half-buried in the dirt."
+      },
+      "boomer@sommerlund" : {
+         "damage" : "1",
+         "location" : "WIELDED_BY:zakhan",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "red",
+         "name" : "boomer",
+         "examine" : "Not quite as useful as its silver counterparts.",
+         "state" : "0",
+         "size" : "3",
+         "pname" : "boomerang",
+         "weight" : "3",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A pure red boomerang here is sheathed in itsown energy cloak."
+      },
+      "statue@sommerlund" : {
+         "desc[1]" : "A nice-sized statue of Naar rests on a circular dais here.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund53",
+         "armor" : "0",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "bust",
+         "name" : "statue",
+         "examine" : "A faint aura of evil radiates from it.",
+         "state" : "1",
+         "size" : "7",
+         "pname" : "statue",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A statue of Naar broods silently on how to destroy the world."
+      },
+      "stonehands@sommerlund" : {
+         "damage" : "0",
+         "location" : "BOTH_BY:organodeath",
+         "armor" : "0",
+         "oflags" : [
+            "Weapon",
+            "Wearable"
+         ],
+         "altname" : "hands",
+         "name" : "stonehands",
+         "examine" : "You might look cool with these, but not actually do anything.",
+         "state" : "0",
+         "size" : "0",
+         "pname" : "stonehands",
+         "weight" : "0",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A pair of inflatable granite hands lies here, ready to enchant you."
+      },
+      "cavedoor2@sommerlund" : {
+         "desc[1]" : "The door is solidly slammed shut.",
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund55",
+         "armor" : "0",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "name" : "cavedoor2",
+         "linked" : "cavedoor1",
+         "state" : "1",
+         "size" : "1",
+         "pname" : "door",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "The door is open, letting a draft in."
+      },
+      "banner@sommerlund" : {
+         "damage" : "0",
+         "location" : "CARRIED_BY:organodeath",
+         "armor" : "0",
+         "name" : "banner",
+         "examine" : "Wave me and we both shall fly.",
+         "state" : "1",
+         "size" : "8",
+         "pname" : "banner",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "A banner of the sun lies discarded here."
+      },
+      "seal@sommerlund" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:sommerlund7",
+         "armor" : "0",
+         "name" : "seal",
+         "examine" : "It has a small topaz set in the top and is engraved with silver initials \naround it.",
+         "state" : "0",
+         "size" : "1",
+         "pname" : "seal",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A signet seal ring rusts here, probably lost by a messanger."
+      }
+   },
+   "loc" : {
+      "sommerlund55@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund57",
+            "e" : "sommerlund56",
+            "n" : "^cavedoor2",
+            "s" : "sommerlund58"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Center Cave",
+         "id" : "sommerlund55",
+         "description" : "\n  This cave of the Durncrags has been made entirely by nature, with the\nusual elements of caves hanging overhead.\n",
+         "altitude" : null
+      },
+      "sommerlund22@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund21",
+            "s" : "^kaidoor1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Before the Monastery",
+         "id" : "sommerlund22",
+         "description" : "\n  You stand straight before the massive doors at the entrance to the Monastery.\nThe doors are easily ten feet tall and surrounded on either side by two-meter \nthick whitewashed walls. At the top of the walls are several turrets, towers, \nand cannon implementations. From the great height of the walls, it seems the \nresidents of this fortress could easily shrug off any possible attacker. \nHowever, the Monastery does not seem to be a place of violence, but of \nlearning. Engraved on the doors from top to bottom are pictures of books,\nlearning scrolls, and mortarboards. There are also vertical lines, topped by a\nfive-way pointed star, running along the hinge sides of the doors.\n",
+         "altitude" : null
+      },
+      "sommerlund37@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund9",
+            "e" : "sommerlund38"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Farmland Outskirts",
+         "id" : "sommerlund37",
+         "description" : "\n  The pastures out here need very little irrigation as the waters of the \nHolmgulf are close at hand. The land slopes down gently to the east\ntowards a boathouse, while it begins a steeper climb to the west. The \nnumber of cattle increase dramatically in that direction.\n",
+         "altitude" : null
+      },
+      "sommerlund29@sommerlund" : {
+         "exits" : {
+            "u" : "^trapdoor1",
+            "d" : "sommerlund28"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Tower Stairs",
+         "id" : "sommerlund29",
+         "description" : "\n  The staircase comes to an abrupt halt at a series of floorboards.\n",
+         "altitude" : null
+      },
+      "sommerlund81@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund80",
+            "e" : "sommerlund82"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Argazad Avenue",
+         "id" : "sommerlund81",
+         "description" : "\n  Featureless blocks of steel are piled up on each other to form a small \npyramid here. It is an altar of worship and sacrifice to the rulers of this \ndread city and the heat-plastered wastelands outside - the Darklords. Several \ncreatures surround the shrine, some shedding their own blood into crystalline \nchalices at specific points along the altar.\n",
+         "altitude" : null
+      },
+      "sommerlund69@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund60",
+            "e" : "sommerlund60",
+            "n" : "sommerlund60",
+            "s" : "sommerlund70"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund69",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective. \nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund86@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund85",
+            "s" : "sommerlund87"
+         },
+         "flags" : [
+            "Hot"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Fire Room",
+         "id" : "sommerlund86",
+         "description" : "\n  The entire room is red, and the curtains on the windows are made of a yellow \nblaze.\n",
+         "altitude" : null
+      },
+      "sommerlund17@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund11",
+            "s" : "sommerlund18"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Forest Tor",
+         "id" : "sommerlund17",
+         "description" : "\n  The forest continues with no change in animal life, but it seems to have an\naura of goodness here. Everything seems to have more energy.\n",
+         "altitude" : null
+      },
+      "sommerlund6@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund5",
+            "e" : "sommerlund7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Ragadorn",
+         "id" : "sommerlund6",
+         "description" : "\n  This is the central bazaar for all the people on and around the desert. \nPeople come to trade their wares and talk about the latest gossip from the \nruler of the city, who lives in a giant, pearly palace on the northern side. \nYou pass stand after stand of merchants, all who try to get your attention and\nyour money. There is the occasional shop set on the sides of the wide, \ncobblestoned streets. The mutton you smelled earlier emanates from a smokehouse\nin the center of the city. A roaring fire belches ungainly amounts of heavy \nblack smoke upwards and threatens to blockade the sun. Stay for a while and \nenjoy the daily life of Ragadorn!\n",
+         "altitude" : null
+      },
+      "sommerlund15@sommerlund" : {
+         "exits" : {
+            "d" : "sommerlund14",
+            "s" : "sommerlund16"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Platform Landing",
+         "id" : "sommerlund15",
+         "description" : "\n  Who would have thought that someone lived way up here in this treehouse! You \nstand on the deck of a one-room treehouse, taking in a breathtaking view of the\nsurrounding countryside. There are now clouds below as well as above you, and \ndoves flitter among the tops of the shorter trees. Whoever resides here \ncertainly doesn't want company.\n",
+         "altitude" : null
+      },
+      "sommerlund11@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund12",
+            "e" : "sommerlund10",
+            "s" : "sommerlund17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Forest Tor",
+         "id" : "sommerlund11",
+         "description" : "\n  Tall trees surround you, but the sun still penetrates. Your feet crackle the\ntwigs and underbrush, sending jittery chipmunks and squirrels back to their \nrespective homes. Birds sing out sweet choruses of seemingly random chirping \nas they quaintly build their nests. A fox dashes out of the ground and runs \npast you, in search of a friendly anteater. Its red tail brushes your leg and \nsmacks a tree in its haste. The forest grows deeper to the west, where the \nstart of a rocky cave looms proudly from the ground. Towards the sea in the\neast, the forest grows lighter and emerges onto plains of grass.\n",
+         "altitude" : null
+      },
+      "sommerlund72@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund70",
+            "s" : "sommerlund73"
+         },
+         "flags" : [
+            "Hot",
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Path to the Fallen Plains",
+         "id" : "sommerlund72",
+         "description" : "\n  A little, dusty trail divides the great, ash-soaked wasteland which lies \nhere. The only cool breeze out here emanates from a pitch-black portal to \nthe north. \n",
+         "altitude" : null
+      },
+      "sommerlund1@sommerlund" : {
+         "exits" : {
+            "n" : "desertSD61@sdesert",
+            "s" : "sommerlund2"
+         },
+         "flags" : [
+            "Outdoors",
+            "Hot"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Wildlands",
+         "id" : "sommerlund1",
+         "description" : "\n  The desert remains ever so parched further to the south. Mile after mile \nyou plod on, your thirst increasing as the sun beats down relentlessly. \nMirages of water wink in and out of existence before you, tempting your dry \nmouth to gobble some sand. The desert plains seem to contain almost no \nlife, only a few yellowish-white handfuls of dehydrated scrub grass.\n",
+         "altitude" : null
+      },
+      "sommerlund56@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund55"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "East Cave",
+         "id" : "sommerlund56",
+         "description" : "\n  The cave is decorated with all sorts of burning oil lamps. A large vat of \nlard stands at the far end of the room, churning with great 'floops.'\n",
+         "altitude" : null
+      },
+      "sommerlund59@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund60"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Guildhall",
+         "id" : "sommerlund59",
+         "description" : "\n  You are below the Brotherhood of the Crystal Star in the city of Toran. \nTorches line the walls of the stone block chamber, but no light penetrates the \nnorthern archway. Within the arch, the space is truly space - a deep black. A\nlarge star is tacked on the southern wall in honor of the Brotherhood's \ncenturies of service. It is fashioned from several thousand layers of kagonite \nand bronze metal alloys, allowing it to sparkle when the least amount of light \nshed on it.\n",
+         "altitude" : null
+      },
+      "sommerlund18@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund19",
+            "n" : "sommerlund17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Fruity Clearing",
+         "id" : "sommerlund18",
+         "description" : "\n  You have entered a large clearing in the Tor Forest. The trees enclose you \nin a perfect circle, like the eye of a hurricane. There is fruit on every \nbranch of every tree which immediately surrounds this clearing. Mainly, you \nsee common ones such as pears and apricots, but there are also other wierdly \nshaped fruits. They could be tasty or poisonous, but you could spend your \nentire life gorging yourself silly on them and never be able to eat all of the\nfruit here.\n",
+         "altitude" : null
+      },
+      "sommerlund36@sommerlund" : {
+         "exits" : {
+            "n" : "^vaultdoor2"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Tower Vault",
+         "id" : "sommerlund36",
+         "description" : "\n  The excavation task here must have been enormous. A circular chamber stands \ntwenty feet high with pillars depicting the sun. A life-size statue of the sun \ngod Kai stands in one area of the circle. Kai Lords come here on 'pilgrimages' \nto further study their disciplines by meditating in the prescene of Kai. A \nbronze pedestal in the middle of the chamber supports a velveted cushion on \nwhich several spherical, many-faceted, crystal gems lay in as many indentation \ninside a glass box. These polished rocks are the reknowned lorestones which \nwere reclaimed by Lone Wolf during his quest for the 'Magnakai' - the greater \ndisciplines. However, there is a good size crack in the box, and one of the \nstones seems to have fallen out of it.\n",
+         "altitude" : null
+      },
+      "sommerlund9@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund10",
+            "e" : "sommerlund37",
+            "n" : "sommerlund8",
+            "s" : "sommerlund46"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Crossroads",
+         "id" : "sommerlund9",
+         "description" : "\n  The trail becomes a road, and vice versa, at this point. Another road \nintersects it perpendicularly. To the west, the road slips out of the \nfarmlands and enters a forest. To the east, it dips toward a sea. A \nscarecrow hangs on a signpost here, probably a warning to those crows who \nchoose to visit this area.\n",
+         "altitude" : null
+      },
+      "sommerlund54@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund47"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Dwelling of Ishir",
+         "id" : "sommerlund54",
+         "description" : "\n  A magnificent cottage surrounds you. Fountains of crystal-clear water and \npictures of the moon decorate the four corners of the room. A platinum table\ninlaid with a full moon takes up center stage, while a glass chandelier hangs\nsuspended above it. The unmistakable aura of magic is present here in great\nquantities, as permeating and as refreshing as a new breeze. Off to one side, \na stained-glass aquarium holds fluorescent fish which change their hues every \nfew seconds.\n",
+         "altitude" : null
+      },
+      "sommerlund13@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund14",
+            "d" : "sommerlund12"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Tree Stairs",
+         "id" : "sommerlund13",
+         "description" : "\n  The stairs continue to wind 'round and 'round the tree, but you can see the \nlower branches from here.\n",
+         "altitude" : null
+      },
+      "sommerlund43@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund44",
+            "n" : "sommerlund41"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Holmgulf",
+         "id" : "sommerlund43",
+         "description" : "\n  The rocking motion of the waves is endless.\n",
+         "altitude" : null
+      },
+      "sommerlund4@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund3"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Raiders' Hut",
+         "id" : "sommerlund4",
+         "description" : "\n  As you push open the decaying straw door of the hut, the door hinges creak \nand groan. At first glance, the hut appears to be nearly empty. There is still\nthe impressions in the dirt left by countless bags of silver or gold. A chest \nin the back of the hut lies filled with old mining equipment, broken and \nuseless. Dust lines the shelves on one wall, with a single, empty jar perched\ndefiantly on one. However, you see some bedding material in the corner. It is \nin a state of disarray and slightly coated with dirt, but bears every sign of \nhaving been recently used.\n",
+         "altitude" : null
+      },
+      "sommerlund7@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Alleyway",
+         "id" : "sommerlund7",
+         "description" : "\n  Set away from the prying eyes of the Ragadorn townguard, this filthy drainage\nstreet could be an ideal place for merchants of the black market to conduct \ntheir business. Other denizens would include beggars, thieves, and sewer rats.\n",
+         "altitude" : null
+      },
+      "sommerlund5@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund8",
+            "e" : "sommerlund6",
+            "n" : "sommerlund3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Fork in the Trail",
+         "id" : "sommerlund5",
+         "description" : "\n  Only a few traces of the nearby desert are here. Those seeking a dry climate\nand numerous reptilian creatures should keep the morning sun on their right.\nBuilt out on the edge of the desert lies a small city. The faint aroma of \nbarbecued mutton floats on a slight breeze. To the west, the trail\ncontinues towards farmlands.\n",
+         "altitude" : null
+      },
+      "sommerlund8@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund5",
+            "s" : "sommerlund9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Farmland Outskirts",
+         "id" : "sommerlund8",
+         "description" : "\n  Nearby are several barns, sheds, and houses, all of which serve to run the \ncommunity here and feed this region of the countryside. It is a place of \ngreenery and abundant animals. To the south, acre upon acre of pasture and \nfield awaits grazing and annual harvesting. Plowshares and hoes line segments \nof fencing along the trail.\n",
+         "altitude" : null
+      },
+      "sommerlund26@sommerlund" : {
+         "exits" : {
+            "e" : "^coachdoor2"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "The Speedster",
+         "id" : "sommerlund26",
+         "description" : "\n  This is the coach of a magician. It has books abound in dealing with lore and\narcane incantations. There is also a wide variety of alchemy reagents lying in\njars on the shelves, as well as a long, silver, sleek staff propped against the\nbed. The walls are lined with runes themselves, perhaps warding off something. \nThere is neither an aura of good nor one of evil, but a crystal wand on the \ntable has the word 'kai' on it.\n",
+         "altitude" : null
+      },
+      "sommerlund68@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund60",
+            "e" : "sommerlund60",
+            "u" : "sommerlund71",
+            "n" : "sommerlund60",
+            "d" : "sommerlund69",
+            "s" : "sommerlund60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund68",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund82@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund81",
+            "s" : "sommerlund83"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Kaag Apartments",
+         "id" : "sommerlund82",
+         "description" : "\n  This is the Helgedad ghetto area, where thousands of horrors dwell in ebony\nblack cages. They are \"pets\" of the inhabitants of the city. Pleas for mercy, \nfood, and an end to torment and pain echo forth from these city blocks. A \ncross between a monkey, hippo, and a tree moans loudly in one corner cage, \nits useless eyes staring out of an empty head.\n",
+         "altitude" : null
+      },
+      "sommerlund58@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund55"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "South Cave",
+         "id" : "sommerlund58",
+         "description" : "\n  This cave would make a child's heart flutter with excitement. An endless \nsupply of rock candy hangs down from the ceiling. A table stands nearby, full \nof rock candy.\n",
+         "altitude" : null
+      },
+      "sommerlund33@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund32",
+            "d" : "sommerlund34"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Tower Stairs",
+         "id" : "sommerlund33",
+         "description" : "\n  The staircase continues in either direction.\n",
+         "altitude" : null
+      },
+      "sommerlund20@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund19",
+            "s" : "sommerlund21"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "River Bank",
+         "id" : "sommerlund20",
+         "description" : "\n  You stand on the muddy bank of the Tor River. Mud squishes beneath your feet \nas you step, forming its own kind of musical beat. It's not wet enough to be \nquicksand, but the mud still restricts travel.\n",
+         "altitude" : null
+      },
+      "sommerlund30@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund31",
+            "d" : "^trapdoor2"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Tower Top",
+         "id" : "sommerlund30",
+         "description" : "\n  This room has a large, yellow globe as a representation of the sun, hanging \nby a thin, silver strand in the middle of the circular chamber. The entire \nchamber is bathed in sunlight, making the place even more brilliant. An exit \non the tower's western side leads to a balcony.\n",
+         "altitude" : null
+      },
+      "sommerlund79@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund78"
+         },
+         "flags" : [
+            "Hot",
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Nest",
+         "id" : "sommerlund79",
+         "description" : "\n  This is the home of the leader of a dragon herd. The herd has been sent \nforth by Naar, the King of Darkness, to destroy the fertile lands of \nSommerlund. The nest itself is made of super-strong fibers, interlaced to \ngive it a nice, weaving appearance and strength when being moved. The plateau \non which it rests is formed of heavily scorched black glassy lava and under \nhigh enough heat and pressure to transform it into a crystal with a clarity \nrivalling that of a diamond.\n",
+         "altitude" : null
+      },
+      "sommerlund14@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund15",
+            "d" : "sommerlund13"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Tree Stairs",
+         "id" : "sommerlund14",
+         "description" : "\n  The stairs continue to wind 'round and 'round the tree, but you can see the \nupper branches from here.\n",
+         "altitude" : null
+      },
+      "sommerlund78@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund77",
+            "d" : "sommerlund79",
+            "s" : "sommerlund80"
+         },
+         "flags" : [
+            "Hot",
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Steel Bridge",
+         "id" : "sommerlund78",
+         "description" : "\n  A vast bridge of pure black metal spans the chasm here. Despite the extreme\nheat, the bridge does not melt. The ends of it are festooned with metal spikes,\npreventing unauthorized transport vehicles from crossing. At the bottom of the \nchasm is a nest for a VERY large creature. It lies on a mound jutting up above \nthe lava bed.\n",
+         "altitude" : null
+      },
+      "sommerlund28@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund29",
+            "d" : "sommerlund27"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Tower Stairs",
+         "id" : "sommerlund28",
+         "description" : "\n  The staircase continues in either direction.\n",
+         "altitude" : null
+      },
+      "sommerlund52@sommerlund" : {
+         "exits" : {
+            "d" : "sommerlund51"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Stratosphere",
+         "id" : "sommerlund52",
+         "description" : "\n  The clouds lie below you now. Only the highest-flying birds come to rest on \nthe peaks. The sun glistens eve more brightly than usual due to the reduced \natmosphere.\n",
+         "altitude" : null
+      },
+      "sommerlund62@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund60",
+            "e" : "sommerlund60",
+            "n" : "sommerlund60",
+            "s" : "sommerlund63"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund62",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide. \n",
+         "altitude" : null
+      },
+      "sommerlund35@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund34",
+            "s" : "^vaultdoor1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Tower Base",
+         "id" : "sommerlund35",
+         "description" : "\n  The cold, dark basement is rather well-kept. The floor is practically \ndust-free, and no cobwebs decorate the ceiling or walls. A musty odor is \nslightly evident in the atmosphere, due to the fact that air circulation isn't\nexactly tip-top in this tower. However, there is an impressive engineering feat\nset on the southern wall.\n",
+         "altitude" : null
+      },
+      "sommerlund39@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund38",
+            "n" : "sommerlund40"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Holmgulf",
+         "id" : "sommerlund39",
+         "description" : "\n  The coastline stretches away to the west and south. Birds fly overhead on \ntheir approach to land, squawking gleefully with their breakfasts caught firmly\nin their mouths. The open sea continues to the north.\n",
+         "altitude" : null
+      },
+      "sommerlund48@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund49",
+            "n" : "sommerlund47"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Gravel Trail",
+         "id" : "sommerlund48",
+         "description" : "\n  The mountain peaks are truly a sight at this height. A goat scrambles past\nyou in an attempt to reach a higher ledge. It's loud bleating echoes \nthroughout the mountains.\n",
+         "altitude" : null
+      },
+      "sommerlund85@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund84",
+            "s" : "sommerlund86"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund85",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective. \nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund51@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund52",
+            "d" : "sommerlund50",
+            "s" : "sommerlund53"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Cloud Layer",
+         "id" : "sommerlund51",
+         "description" : "\n  The clouds envelop the mountains at this altitude. Visibility is severely\nrestricted, so watch your step. Humidity is up to maximum, and precipitation is\nnon-stop, but there is an escape from the weather to the south.\n",
+         "altitude" : null
+      },
+      "sommerlund49@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund50",
+            "e" : "sommerlund48"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Mountain Slope",
+         "id" : "sommerlund49",
+         "description" : "\n  This is the lower range of the Durncrags. Here there be meadows, some being \nremnants of extinct volcanoes. The willowgrass pokes some three feet up out of\nthese calderas, giving a fertile medium between the valleys and the starkness \nof the mountains.\n",
+         "altitude" : null
+      },
+      "sommerlund2@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund1",
+            "s" : "sommerlund3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Hot"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Wildlands",
+         "id" : "sommerlund2",
+         "description" : "\n  Here the desert begins to give way to taller grasses and even a few small \ntrees. The dirt itself seems to be getting more fertile. You can pick up a \nhandful of the soil and not choke on the dust you displace. To the south lies\nwhat appears to be an abandoned hut. To the north lies the unforgiving desert.\n",
+         "altitude" : null
+      },
+      "sommerlund87@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund86",
+            "s" : "sommerlund88"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund87",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective. \nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund10@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund11",
+            "e" : "sommerlund9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Farmlands",
+         "id" : "sommerlund10",
+         "description" : " \n  The fields are somewhat sparse here, but further to the east, they\nflourish. Past one last tumbledown house, the road snakes into a forest.\n",
+         "altitude" : null
+      },
+      "sommerlund12@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund11",
+            "u" : "sommerlund13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Tree Cave",
+         "id" : "sommerlund12",
+         "description" : "\n  The forest enfolds and towers above and beyond you. As if to prove this, an \nenormous tree juts out through a hole in the roof of the cave, complete with \nits roots buried in the mossy ground here. A spiral staircase has been carved \ninto the side of the tree.\n",
+         "altitude" : null
+      },
+      "sommerlund24@sommerlund" : {
+         "exits" : {
+            "w" : "^wheeldoor1",
+            "n" : "sommerlund23",
+            "s" : "sommerlund27"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Grand Courtyard",
+         "id" : "sommerlund24",
+         "description" : "\n  Festivities are abundant today! Flyers announcing this year's week-long \nFehmarn festival and celebration decorate the walls of the courtyard, along \nwith streamers and strung balloons. Flowers are worn by many ladies here, and \nthe men take part in drinking, wrestling, and dancing contests. A large wheel \nhas been hung on one booth, where the person strapped on the wheel attempts to \nendure constant circular motion. The test, of course, is how long the person \ncan spin without getting completely sick. There are also side bets on what \ncolor the person's face will be when he or she does get sick.\n",
+         "altitude" : null
+      },
+      "sommerlund32@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund27",
+            "d" : "sommerlund33"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Tower Stairs",
+         "id" : "sommerlund32",
+         "description" : "\n  The staircase continues in either direction.\n",
+         "altitude" : null
+      },
+      "sommerlund40@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund41",
+            "s" : "sommerlund39"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Holmgulf",
+         "id" : "sommerlund40",
+         "description" : "\n  The rocking motion of the waves is endless.\n",
+         "altitude" : null
+      },
+      "sommerlund50@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund51",
+            "d" : "sommerlund49"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Treeline",
+         "id" : "sommerlund50",
+         "description" : "\n  A mist precludes some of the mountain tops. Also, the trees thin out and \neventually stop altogether. Nearby, a campsite looks as if it was recently \nused. The fire's embers still glow, and wisps of smoke still puff out. The \nonly residents in this part of the Durncrags are Mountain Giaks, a weak and \ncowardly breed of evil thugs.\n",
+         "altitude" : null
+      },
+      "sommerlund74@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund73",
+            "s" : "sommerlund76"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Fallen Plains",
+         "id" : "sommerlund74",
+         "description" : "\n  The corpses of several animals surround you on all sides. Bones of various \nshapes and sizes color the colorless landscape. Craters and volcanoes litter\nthe area like lesions of the skin, the former collecting the fallout of the \ngreat pluming clouds of the latter. A lava flow zigs and zags its way across\nthe reaches of the wastelands until it intercepts a wide chasm in the \ndistance. Ungodly amounts of noxious fumes pour from this wide crack in the \nearth. Across the chasm, a city composed entirely of black steel points \njaggedly into the scarlet sky.\n",
+         "altitude" : null
+      },
+      "sommerlund71@sommerlund" : {
+         "exits" : {
+            "d" : "sommerlund68"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Where Life Ends",
+         "id" : "sommerlund71",
+         "description" : "\n  You have walked right into the mouth of a Grue! As its jaws close \nmechanically on you, your bones break and turn your insides into a very red \njelly. You fall down the Grue's throat - a long, black well of which the sides\nare lined with what resembles whipped cream. Welcome to oblivion!\n",
+         "altitude" : null
+      },
+      "sommerlund89@sommerlund" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "The Hidden Aon",
+         "id" : "sommerlund89",
+         "description" : "\n  You stand on the flat top of a highrise mesa overlooking a misty, snow\ncovered swamp. It stretches to the horizon and beyond in all directions. \nNumerous islands rise above the icy bog, and lone trees occupy the very \ncenter of each. Every single tree has been torched by the constant rain\nof lightning issuing from the raging storm above you. The stench of death\nand barbecued bark invades your nose.\n",
+         "altitude" : null
+      },
+      "sommerlund42@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund41",
+            "s" : "sommerlund44"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Holmgulf",
+         "id" : "sommerlund42",
+         "description" : "\n  The rocking motion of the waves is endless.\n",
+         "altitude" : null
+      },
+      "sommerlund88@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund87"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Village of Dage",
+         "id" : "sommerlund88",
+         "description" : "\n  On the southern reaches of Sommerlund stands the village of Dage, one of the \nmany such hamlets which send its young to the Kai Monastery for training. This \nvillage is not exceptionally poor, but it could be doing better. It would be \nif not for the war with the Darklords. A large community well is in the middle\nof the main street, and horse-driven merchant carts head clippity-clop in and\nout of town. Off to one side of the street, a group of children are engrossed \nin a game of freeze tag.\n",
+         "altitude" : null
+      },
+      "sommerlund3@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund4",
+            "n" : "sommerlund2",
+            "s" : "sommerlund5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Pass of Moytura",
+         "id" : "sommerlund3",
+         "description" : "\n  This is a small pass between low foothills. It is a connection between the \ndesert and the distant fertile farmlands. There is a hut off to one side of \nthe pass, looking like it has been derelict for centuries. This pass was often\na place for thieves and cutthroats to gain riches by ambushing merchants who \ntravel to the village to sell their wares. It is possible that this hut was \nused as a storage facility for such purposes.\n",
+         "altitude" : null
+      },
+      "sommerlund66@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund60",
+            "e" : "sommerlund67",
+            "n" : "sommerlund60",
+            "s" : "sommerlund60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund66",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund53@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund51",
+            "s" : "^cavedoor1"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Cave Mouth",
+         "id" : "sommerlund53",
+         "description" : "\n  This appears to be where an animal lives and to take shelter from the \nconstant wetness outside, but the animal is gone. On the cave wall are \nstrange drawings of DNA and other genetics-related topics. There is also \nthe remains of another unlucky explorer....\n",
+         "altitude" : null
+      },
+      "sommerlund76@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund75",
+            "n" : "sommerlund74",
+            "s" : "sommerlund77"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Fallen Plains",
+         "id" : "sommerlund76",
+         "description" : "\n  The corpses of several animals surround you on all sides. Bones of various \nshapes and sizes color the colorless landscape. Craters and volcanoes litter \nthe area like lesions of the skin, the former collecting the fallout of the \ngreat pluming clouds of the latter. A lava flow zigs and zags its way across \nthe reaches of the wastelands until it intercepts a wide chasm in the \ndistance. Ungodly amounts of noxious fumes pour from this wide crack in the \nearth. Across the chasm, a city composed entirely of black steel points \njaggedly into the scarlet sky.\n",
+         "altitude" : null
+      },
+      "sommerlund84@sommerlund" : {
+         "exits" : {
+            "n" : "^labdoor2",
+            "s" : "sommerlund85"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Mozgoar Laboratory",
+         "id" : "sommerlund84",
+         "description" : "\n  All sorts of chemical apprati greet you as you stroll through the Nadziranim \nlab. This is where all the horrors outside are created. Also, the Darklords' \nfierce armies of Giaks are produced here. Huge breeding vats line the walls, \npumping nerve gas as a by-product into the sky.\n",
+         "altitude" : null
+      },
+      "sommerlund61@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund62",
+            "e" : "sommerlund60",
+            "n" : "sommerlund60",
+            "s" : "sommerlund60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund61",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide. \n",
+         "altitude" : null
+      },
+      "sommerlund70@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund60",
+            "e" : "sommerlund60",
+            "n" : "sommerlund60",
+            "s" : "sommerlund72"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund70",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund77@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund76",
+            "s" : "sommerlund78"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Fallen Plains",
+         "id" : "sommerlund77",
+         "description" : "\n  The fiery chasm lies just to the south, and a hundred miles of open, pocked\nwasteland is to the north. The constant scarlet glow in the sky is produced by \nthe endless volcanic eruptions within the chasm and the lava flow which snakes \nits way into the chasm. Great clouds of poison gas and intense heat pour forth\nfrom it.\n",
+         "altitude" : null
+      },
+      "sommerlund23@sommerlund" : {
+         "exits" : {
+            "n" : "^kaidoor2",
+            "s" : "sommerlund24"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Kai Monastery",
+         "id" : "sommerlund23",
+         "description" : "\n  This is the foyer for the school of the warriors who attend classes here. \nThe Kai Lords are the elite warriors of the land, protecting their country\nfrom the scourge of the Darklords. Here, the young warriors learn battle \nprowess, history, alchemy, and lore. These tutelages have been broken down \ninto thirty parts called 'disciplines.' According to the scenes displayed on \nthe walls here, the warriors enter as very young children and emerge as \nknowing adults. They appear ready to take on the world. The northern arch \nleads to broad daylight while a large group of people have gathered to the \nsouth. \n",
+         "altitude" : null
+      },
+      "sommerlund41@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund40",
+            "e" : "sommerlund42",
+            "s" : "sommerlund43"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Holmgulf",
+         "id" : "sommerlund41",
+         "description" : "\n  The rocking motion of the waves is endless.\n",
+         "altitude" : null
+      },
+      "sommerlund90@sommerlund" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Somewhere",
+         "id" : "sommerlund90",
+         "description" : "\n  Unless you're immortal, you REALLY should not be in here!\n",
+         "altitude" : null
+      },
+      "sommerlund46@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund9",
+            "s" : "sommerlund47"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Farmlands",
+         "id" : "sommerlund46",
+         "description" : "\n  The greenery and lush grasses still absurd in a plentiful nature. A road \nintersection stands to the north, while the tip of the Durncrag Range is the \nsouth.\n",
+         "altitude" : null
+      },
+      "sommerlund67@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund60",
+            "e" : "sommerlund60",
+            "n" : "sommerlund68",
+            "s" : "sommerlund60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund67",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund57@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund55"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "West Cave",
+         "id" : "sommerlund57",
+         "description" : "\n  This part of the cavern has small structures in it which seem to form a small\ncity. Sidewalks provide the means of walking around.\n",
+         "altitude" : null
+      },
+      "sommerlund65@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund60",
+            "e" : "sommerlund60",
+            "n" : "sommerlund66",
+            "s" : "sommerlund60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund65",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund80@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund81",
+            "n" : "sommerlund78"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Helgedad",
+         "id" : "sommerlund80",
+         "description" : "\n  Every road and every building is made out of black steel and/or similar \nalloys. Thousands of exploding fireballs and gargoyle torches that produce \nblue flames are the main sources of light in this dark city. The avenues are \nwide and long, forming an endless chain of sharply cut squares when seen from \nan aerial perspective. Skulls and deadly-looking racks of weaponry line most \ndoorways and windows. There is a massive, cloying stench of sulphur and carbon\ndioxide, and these two compounds account for the heavy amounts of acid-rain in\nthe oxygen-killing atmosphere. Slow-moving transports are pulled rythymically \nand mechanically by thick-furred beasts of burden. The drivers of these huge, \nmetal carts wear cloaks, capes, and hoods to hide their hideous, orcish \nfeatures. The pace of the this city is disturbing and foreboding - it is \ntruly a place of decay.\n",
+         "altitude" : null
+      },
+      "sommerlund75@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund76",
+            "n" : "sommerlund73"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Guard Tower",
+         "id" : "sommerlund75",
+         "description" : "\n  Standing up from the wasteland is a ramshack watchtower. Its steel surface is\nseverely weathered from both rust and the elements of this hellish atmosphere. \nThe tower leans at a five-degree angle and appears to be the first checkpoint \nfor the black city beyond.\n",
+         "altitude" : null
+      },
+      "sommerlund19@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund18",
+            "s" : "sommerlund20"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "River Tor",
+         "id" : "sommerlund19",
+         "description" : "\n  The forest ground dips toward a narrow, snaking gully. The fast-flowing \nwaters which gust through it come from the Durncrag Mountains to the southwest \nbefore dumping themselves in the Holmgulf to the east. The river is sparkling \nclear, but interestingly devoid of fish. The forest trees dip their roots into \nthe water and eagerly drink from its freshness. This is one spot where swimming\nis most definitely allowed.\n",
+         "altitude" : null
+      },
+      "sommerlund60@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund60",
+            "e" : "sommerlund61",
+            "n" : "sommerlund60",
+            "s" : "sommerlund59"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund60",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund44@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund43",
+            "n" : "sommerlund42",
+            "d" : "sommerlund45"
+         },
+         "flags" : [
+            "OnWater",
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Holmgulf",
+         "id" : "sommerlund44",
+         "description" : "\n  The rocking motion of the waves is not endless. An enormous whirlpool heads \nstraight down through the water to the bottom. A patch of dry sand is visible \nthrough the swirling vortex.\n",
+         "altitude" : null
+      },
+      "sommerlund21@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund20",
+            "s" : "sommerlund22"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Forest Tor",
+         "id" : "sommerlund21",
+         "description" : "\n  The forest begins and ends here. The cool, leafy greenness of the forest \nbeckons to those travelers it can enchant into exploring its depths. Toward \nthe opposite pole of the earth, a structure of unknown design looms in \nthe distance.\n",
+         "altitude" : null
+      },
+      "sommerlund83@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund82",
+            "s" : "^labdoor1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Nadgazad Plaza",
+         "id" : "sommerlund83",
+         "description" : "\n  A fountain stands in the middle of this wide, open square. Instead of \nrunning water, a lava flow courses through thr elegantly decorated piece of \narchitecture. A congregation of green and purple robed creatures meditate in \none corner of the plaza, using chants which send rats fleeing in all \ndirections. To the south lies a solid black wall.\n",
+         "altitude" : null
+      },
+      "sommerlund27@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund28",
+            "n" : "sommerlund24",
+            "d" : "sommerlund32"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Tower Landing",
+         "id" : "sommerlund27",
+         "description" : "\n  You are at the level floor of the Tower of the Sun. A staircase leads both\nways. The rook of the tower is visible, but the bottom of the staircase is\ndown further than your eyes can see.\n",
+         "altitude" : null
+      },
+      "sommerlund38@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund37",
+            "e" : "sommerlund39"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Boathouse",
+         "id" : "sommerlund38",
+         "description" : "\n  All sorts of boating gear and diving equipment line the walls of this \ntumbledown shack. The wooden walls are dank, musty, and somewhat rotted. \nFishing rods and large, empty boat racks are stationed in one corner of \nthe room. At one time, this place might have been a shop, but now it lies \nempty and forgotten.\n",
+         "altitude" : null
+      },
+      "sommerlund16@sommerlund" : {
+         "exits" : {
+            "n" : "sommerlund15"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Tree Shack",
+         "id" : "sommerlund16",
+         "description" : "\n  In a small room, you might not expect many things. But in here, there is a \nhuge bed in one corner. A dining table for two sits as the centerpiece, and \nshelves and cabinets line two walls. A sink lies in one corner, with the pipe \ngoing only god-knows-where. This is not the home of a hermit, but that of a \nwell-paid, professional businessman or politician.\n",
+         "altitude" : null
+      },
+      "sommerlund47@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund54",
+            "n" : "sommerlund46",
+            "s" : "sommerlund48"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Foothills",
+         "id" : "sommerlund47",
+         "description" : "\n  These are the lower hills of the Durncrags. Herds of deer, rams, and elk are\nthe inhabintants here. They roam the yellow-brown oats and grasses for food and\nexercise, knowing that they have no predators here. Their brethren, the \nmountain goats, face dangers, however, further up into the mountains.\n",
+         "altitude" : null
+      },
+      "sommerlund73@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund74",
+            "n" : "sommerlund72",
+            "s" : "sommerlund75"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Fallen Plains",
+         "id" : "sommerlund73",
+         "description" : "\n  The corpses of several animals surround you on all sides. Bones of various \nshapes and sizes color the colorless landscape. Craters and volcanoes litter \nthe area like lesions of the skin, the former collecting the fallout of the \ngreat pluming clouds of the latter. A lava flow zigs and zags its way across \nthe reaches of the wastelands until it intercepts a wide chasm in the \ndistance. Ungodly amounts of noxious fumes pour from this wide crack in the \nearth. Across the chasm, a city composed entirely of black steel points \njaggedly into the scarlet sky.\n",
+         "altitude" : null
+      },
+      "sommerlund63@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund60",
+            "e" : "sommerlund64",
+            "n" : "sommerlund60",
+            "s" : "sommerlund60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund63",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide.\n",
+         "altitude" : null
+      },
+      "sommerlund64@sommerlund" : {
+         "exits" : {
+            "w" : "sommerlund65",
+            "e" : "sommerlund60",
+            "n" : "sommerlund60",
+            "s" : "sommerlund60"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Shadow Gate",
+         "id" : "sommerlund64",
+         "description" : "\n  This is the void of unconsciousness which doesn't exist in your perspective.\nBetween the realms of sunlight and utter twilight lies this empty abyss. The \nfive senses of which you are so accustomed to crackle and distort. In here, \ntime has no place while space is infinite, and where the power of thought \nis your only guide. \n",
+         "altitude" : null
+      },
+      "sommerlund34@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund33",
+            "d" : "sommerlund35"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Tower Stairs",
+         "id" : "sommerlund34",
+         "description" : "\n  The staircase continues in either direction.\n",
+         "altitude" : null
+      },
+      "sommerlund31@sommerlund" : {
+         "exits" : {
+            "e" : "sommerlund30"
+         },
+         "flags" : [],
+         "zone" : "sommerlund",
+         "title" : "Tower Balcony",
+         "id" : "sommerlund31",
+         "description" : "\n  The sun shines down brightly from across the western horizon as it slowly \nsinks towards the Durncrags. It blares right into your eyes and illuminates the\ntower. The Kai Masters lead their troops of trained warriors into the defense \nof the country from this spot. It offers a breathtaking view of the surrounding\narea and an overview of the festival in the courtyard below.\n",
+         "altitude" : null
+      },
+      "sommerlund25@sommerlund" : {
+         "exits" : {
+            "w" : "^coachdoor1",
+            "e" : "^wheeldoor2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "sommerlund",
+         "title" : "Dark Passage",
+         "id" : "sommerlund25",
+         "description" : "\n  A long passage extends from the courtyard to a window of light. There is a \nnobleman's coach here.\n",
+         "altitude" : null
+      },
+      "sommerlund45@sommerlund" : {
+         "exits" : {
+            "u" : "sommerlund44"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "sommerlund",
+         "title" : "The Holmgulf Oasis",
+         "id" : "sommerlund45",
+         "description" : "\n  This is the one spot of the Holmgulf which is dry. A whirlpool above you \ntumbles water, and you can see the sky through it like the eye of a hurricane.\nYou stand on a small area of sand which is completely protected from the water.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "wolfbane@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund52",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Copycat",
+         "name" : "wolfbane",
+         "description" : "An almost-exact copy of Lone Wolf sneers at you.",
+         "strength" : "250"
+      },
+      "zagarna@sommerlund" : {
+         "damage" : "16",
+         "location" : "sommerlund82",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Zagarna",
+         "name" : "zagarna",
+         "description" : "Zagarna really stinks with B. and  O. Railroad.",
+         "strength" : "375"
+      },
+      "fruitcake@sommerlund" : {
+         "damage" : "12",
+         "location" : "sommerlund18",
+         "armor" : "5",
+         "name" : "fruitcake",
+         "description" : "The legendary Fruitcake of lore is juggling fruit here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Fruitcake",
+         "mflags" : [
+            "BarWest",
+            "BarNorth"
+         ]
+      },
+      "giak2@sommerlund" : {
+         "damage" : "8",
+         "location" : "sommerlund50",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Eggy",
+         "name" : "giak2",
+         "description" : "Eggy wants your juicy red heart.",
+         "strength" : "50"
+      },
+      "alyss@sommerlund" : {
+         "damage" : "12",
+         "location" : "sommerlund1",
+         "armor" : "0",
+         "name" : "alyss",
+         "description" : "Sarcastic Alyss flounces teasingly at you and howls at the sky.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "80",
+         "aggression" : "0",
+         "pname" : "Alyss",
+         "mflags" : [
+            "PickStuff"
+         ]
+      },
+      "rimoah@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund16",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "pname" : "Rimoah",
+         "name" : "rimoah",
+         "description" : "Lord Rimoah ponders about the state of affairs in the kingdom.",
+         "strength" : "100"
+      },
+      "gnaag@sommerlund" : {
+         "damage" : "16",
+         "location" : "sommerlund83",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Gnaag",
+         "name" : "gnaag",
+         "description" : "Gnaag has a 12-streak as he zips past you again and again.",
+         "strength" : "475"
+      },
+      "vaxagore@sommerlund" : {
+         "damage" : "12",
+         "location" : "sommerlund79",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "7",
+         "pname" : "Vaxagore",
+         "name" : "vaxagore",
+         "description" : "Didn't anyone teach Vaxagore the Dragon not to play with his food?",
+         "strength" : "250"
+      },
+      "dakomyd@sommerlund" : {
+         "eflags" : [
+            "NegFireball",
+            "NegFrost"
+         ],
+         "damage" : "15",
+         "location" : "sommerlund53",
+         "armor" : "0",
+         "name" : "dakomyd",
+         "description" : "The great shadow of the Dakomyd's bulk falls upon you.",
+         "strength" : "400",
+         "speed" : "0",
+         "aggression" : "20",
+         "pname" : "Dakomyd",
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "organodeath@sommerlund" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "25",
+         "location" : "sommerlund89",
+         "armor" : "45",
+         "name" : "organodeath",
+         "description" : "\nA flying tree with inflatable hands of death bursts forth from the earth and \nfixes you with an icy glare...\nIn a deep, stentorian voice, OrganoDeath grumbles,\n'My masters are dead?! Then, so shall be you! Vashna's revenge shall be \nfulfilled!'\nWith a unholy shriek of rage, OrganoDeath charges toward you, branches \nready to peel you like papier mache.",
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "5000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "OrganoDeath",
+         "pflags" : [
+            "NoZap",
+            "NoAlias",
+            "NoExo",
+            "NoMagic",
+            "NoSteal"
+         ]
+      },
+      "drakkar1@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund75",
+         "speed" : "0",
+         "aggression" : "70",
+         "armor" : "5",
+         "pname" : "Patza",
+         "name" : "drakkar1",
+         "description" : "Patza glares at you for interrupting his dinner.",
+         "strength" : "100"
+      },
+      "slutar@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund81",
+         "armor" : "0",
+         "name" : "slutar",
+         "description" : "Slutar asks if you want to play a game of Monopoly.",
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "Slutar",
+         "aggression" : "0",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "protean@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund57",
+         "armor" : "0",
+         "name" : "protean",
+         "description" : "One of the ring builders of the shape shifting god Protean is here.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "50",
+         "pname" : "Protean",
+         "aggression" : "100"
+      },
+      "ixian@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund52",
+         "armor" : "0",
+         "name" : "ixian",
+         "description" : "The Deathlord of Ixia hasn't had his morning coffee and is, therefore,\nquite cranky!",
+         "strength" : "550",
+         "speed" : "0",
+         "pname" : "The Deathlord",
+         "aggression" : "0",
+         "pflags" : [
+            "NoAlias"
+         ]
+      },
+      "zakhan@sommerlund" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "15",
+         "location" : "sommerlund12",
+         "armor" : "5",
+         "name" : "zakhan",
+         "description" : "Zakhan Kimah is far away from his empire, but still thinks you should\nbow to him.",
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "Zakhan",
+         "aggression" : "50"
+      },
+      "shianti@sommerlund" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "10",
+         "location" : "sommerlund45",
+         "armor" : "0",
+         "name" : "shianti",
+         "description" : "Grey Star the Shianti wizard is ready to go medieval on you!",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Shianti",
+         "aggression" : "60"
+      },
+      "cadak@sommerlund" : {
+         "eflags" : [
+            "FireBall"
+         ],
+         "damage" : "10",
+         "location" : "sommerlund74",
+         "armor" : "0",
+         "name" : "cadak",
+         "description" : "Arch-druid Cadak needs a new guinea pig. How about you?",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Cadak",
+         "aggression" : "100"
+      },
+      "taktaal@sommerlund" : {
+         "damage" : "14",
+         "location" : "sommerlund83",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Taktaal",
+         "name" : "taktaal",
+         "description" : "Taktaal puts on his sunglasses as he cruises to Boardwalk.",
+         "strength" : "450"
+      },
+      "giak4@sommerlund" : {
+         "damage" : "8",
+         "location" : "sommerlund50",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Oggy",
+         "name" : "giak4",
+         "description" : "Oggy wants to take your health.",
+         "strength" : "50"
+      },
+      "drakkar2@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund75",
+         "speed" : "0",
+         "aggression" : "70",
+         "armor" : "5",
+         "pname" : "Pitza",
+         "name" : "drakkar2",
+         "description" : "A ferociously-eating Pitza wants to permanently stop your heart for that \ninterruption.",
+         "strength" : "100"
+      },
+      "barraka@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund4",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "pname" : "Barraka",
+         "name" : "barraka",
+         "description" : "The rogue bandit leader Barraka leaps at you with a rusty shovel.",
+         "strength" : "150"
+      },
+      "giak1@sommerlund" : {
+         "damage" : "8",
+         "location" : "sommerlund50",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Aggy",
+         "name" : "giak1",
+         "description" : "Aggy wants your hot-air head.",
+         "strength" : "50"
+      },
+      "vashna@sommerlund" : {
+         "damage" : "18",
+         "location" : "sommerlund83",
+         "armor" : "0",
+         "name" : "vashna",
+         "description" : "Vashna hates Monopoly and is interested only in sinking his weapon \nhilt-deep into your fleshy abdomen.",
+         "strength" : "500",
+         "speed" : "0",
+         "pname" : "Vashna",
+         "aggression" : "0",
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "drakkar3@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund75",
+         "speed" : "0",
+         "aggression" : "70",
+         "armor" : "5",
+         "pname" : "Putza",
+         "name" : "drakkar3",
+         "description" : "The runt Putza agrees with his comrade.",
+         "strength" : "100"
+      },
+      "ishir@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund54",
+         "armor" : "0",
+         "name" : "ishir",
+         "description" : "Ishir, High Priestess of the Moon, smiles at your approach.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Ishir",
+         "pflags" : [
+            "NoZap",
+            "NoAlias",
+            "NoSteal",
+            "NoHassle",
+            "NoPunt"
+         ]
+      },
+      "giak3@sommerlund" : {
+         "damage" : "8",
+         "location" : "sommerlund50",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Iggy",
+         "name" : "giak3",
+         "description" : "Iggy wants to chop off your hands.",
+         "strength" : "50"
+      },
+      "muddle@sommerlund" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "10",
+         "location" : "sommerlund20",
+         "armor" : "10",
+         "name" : "muddle",
+         "description" : "A muck-covered monstrosity, Muddle, moshes from the muddy mire, ready\nto maul your middle!",
+         "sflags" : [
+            "Blind",
+            "NoBody"
+         ],
+         "strength" : "155",
+         "speed" : "0",
+         "aggression" : "100",
+         "pname" : "Muddle"
+      },
+      "banedon@sommerlund" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "10",
+         "location" : "sommerlund24",
+         "armor" : "0",
+         "name" : "banedon",
+         "description" : "The Guildmaster of the Brotherhood of the Crystal Star, Banedon, is\nputting on a magic show.",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Banedon",
+         "pflags" : [
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarWest"
+         ]
+      },
+      "haakon@sommerlund" : {
+         "damage" : "12",
+         "location" : "sommerlund82",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Haakon",
+         "name" : "haakon",
+         "description" : "Haakon claps his claws together wildly as you go directly to jail!",
+         "strength" : "425"
+      },
+      "kraggenskul@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund82",
+         "armor" : "0",
+         "name" : "kraggenskul",
+         "description" : "Kraggenskul, a 'community pest', can get out of jail free now.",
+         "strength" : "400",
+         "speed" : "0",
+         "pname" : "Kraggenskul",
+         "aggression" : "0",
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "vordak1@sommerlund" : {
+         "damage" : "12",
+         "location" : "sommerlund63",
+         "armor" : "0",
+         "name" : "vordak1",
+         "description" : "A red-clad ghoul of the Vordak clan stares defiantly at you.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Vordak",
+         "aggression" : "100"
+      },
+      "vordak2@sommerlund" : {
+         "damage" : "12",
+         "location" : "sommerlund63",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "Vordak",
+         "name" : "vordak2",
+         "description" : "Another Vordak waves its staff at you.",
+         "strength" : "150"
+      },
+      "lucille@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund56",
+         "armor" : "0",
+         "name" : "lucille",
+         "description" : "Though only eight herself, Lucille chose to join the undead.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "400",
+         "speed" : "50",
+         "pname" : "Lucille",
+         "aggression" : "0"
+      },
+      "qinefer@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund15",
+         "armor" : "5",
+         "name" : "qinefer",
+         "description" : "Lone Wolf's love, Qinefer, stands here guarding her advisor.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Qinefer",
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "ghanesh@sommerlund" : {
+         "damage" : "12",
+         "location" : "sommerlund81",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Ghanesh",
+         "name" : "ghanesh",
+         "description" : "Darklord Ghanesh rolls doubles and buys Electric Company.",
+         "strength" : "325"
+      },
+      "carboid@sommerlund" : {
+         "damage" : "10",
+         "location" : "sommerlund58",
+         "armor" : "0",
+         "name" : "carboid",
+         "description" : "A shapeless mass of carboid goo attempts to smother you.",
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "100",
+         "speed" : "50",
+         "pname" : "Carboid",
+         "aggression" : "100"
+      },
+      "xog@sommerlund" : {
+         "damage" : "14",
+         "location" : "sommerlund81",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Xog",
+         "name" : "xog",
+         "description" : "Xog lands on Free Parking and collects the income tax you just paid.",
+         "strength" : "350"
+      },
+      "slavemaster@sommerlund" : {
+         "damage" : "17",
+         "location" : "sommerlund59",
+         "armor" : "5",
+         "name" : "slavemaster",
+         "description" : "The famed Slavemaster of Aarnak looks over the latest T-shirt\nshipment requests.",
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "Slavemaster",
+         "aggression" : "0",
+         "pflags" : [
+            "NoZap",
+            "NoSteal"
+         ]
+      },
+      "lonewolf@sommerlund" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "7",
+         "location" : "sommerlund88",
+         "armor" : "0",
+         "name" : "lonewolf",
+         "description" : "Young Lone Wolf is here acting childishly.",
+         "strength" : "700",
+         "speed" : "0",
+         "pname" : "Lone Wolf",
+         "aggression" : "0"
+      }
+   }
+}

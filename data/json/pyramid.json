@@ -1,0 +1,1083 @@
+{
+   "obj" : {
+      "hieroglyphics@pyramid" : {
+         "location" : "pyramid17",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "markings",
+         "name" : "hieroglyphics",
+         "examine" : "Death to all who enter.",
+         "desc[0]" : "There are some strange markings on the wall."
+      },
+      "doorfromnef@pyramid" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pyramid21",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doorFromNef",
+         "desc[2]" : "This locked door has intricate carvings bearing the cartouche \nof Neferteri.",
+         "linked" : "door2Nef",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "scarab_necklace@pyramid" : {
+         "location" : "IN_ROOM:pyramid33",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "scarab_necklace",
+         "examine" : "\nThis jeweled Necklace of the Rising &+YSun&N will make a fine offering to the\ngods.",
+         "size" : "10",
+         "pname" : "necklace",
+         "weight" : "5",
+         "bvalue" : "250",
+         "desc[0]" : "A &+Gjeweled&N necklace lies here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "door2nef@pyramid" : {
+         "desc[1]" : "The door is magically sealed.",
+         "location" : "IN_ROOM:pyramid17",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door2Nef",
+         "desc[2]" : "This locked door has intricate carvings bearing the cartouche\nof Neferteri.",
+         "linked" : "doorFromNef",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "silver_casket@pyramid" : {
+         "location" : "IN_ROOM:pyramid33",
+         "weight" : "5",
+         "pname" : "casket",
+         "name" : "silver_casket",
+         "examine" : "This casket must contain a King's ransom.",
+         "bvalue" : "350",
+         "desc[0]" : "A silver casket filled with &+Ygold&N coins lies here.",
+         "size" : "15"
+      },
+      "sarcophagus@pyramid" : {
+         "desc[1]" : "The lid is closed.",
+         "location" : "IN_ROOM:pyramid25",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet",
+            "Container"
+         ],
+         "name" : "sarcophagus",
+         "desc[2]" : "The image of this tragic queen is carved on the lid of the sarcophagus.",
+         "state" : "2",
+         "maxstate" : "2",
+         "desc[0]" : "The lid is open."
+      },
+      "elixir@pyramid" : {
+         "location" : "CARRIED_BY:physician",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "potion",
+         "name" : "elixir",
+         "examine" : "\nA potent brew of magical herbs, this elixir may save your life.",
+         "size" : "5",
+         "weight" : "0",
+         "bvalue" : "25",
+         "desc[0]" : "A small vial containing a &+cglowing&N elixir lies here."
+      },
+      "rosetta@pyramid" : {
+         "location" : "IN_ROOM:pyramid13",
+         "altname" : "stone",
+         "name" : "Rosetta",
+         "examine" : "\nUpon closer inspection, you find the markings on the stone hold the key to \nreading Egyptian hieroglyphics.",
+         "size" : "4",
+         "pname" : "rosetta",
+         "weight" : "0",
+         "bvalue" : "80",
+         "desc[0]" : "A dull stone covered with strange makings lurks in the corner."
+      },
+      "doorfromtreas@pyramid" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pyramid33",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doorFromTreas",
+         "desc[2]" : "This gilded bears the image of Isis.",
+         "linked" : "door2Treas",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door2horus@pyramid" : {
+         "desc[1]" : "The solid black door is closed.",
+         "location" : "IN_ROOM:pyramid31",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door2Horus",
+         "desc[2]" : "This solid door is chiseled from one block of black stone.",
+         "linked" : "doorfromHorus",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The solid black door is open"
+      },
+      "death_mask@pyramid" : {
+         "location" : "IN_ROOM:pyramid33",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "mask",
+         "name" : "death_mask",
+         "examine" : "\nThis funeral mask of Sitman is made from solid gold-inlay and semi-precious \nstones.",
+         "size" : "15",
+         "weight" : "10",
+         "pname" : "deathmask",
+         "bvalue" : "250",
+         "desc[0]" : "The deathmask of Sitman lies here.",
+         "aflags" : [
+            "Face",
+            "Head"
+         ]
+      },
+      "doorfromhorus@pyramid" : {
+         "desc[1]" : "The solid black door is closed.",
+         "location" : "IN_ROOM:pyramid32",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doorFromHorus",
+         "desc[2]" : "This solid door is chiseled from one block of black stone.",
+         "linked" : "door2Horus",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The solid black door is open."
+      },
+      "waterbag@pyramid" : {
+         "location" : "IN_ROOM:pyramid9",
+         "oflags" : [
+            "Wearable",
+            "Container"
+         ],
+         "altname" : "bag",
+         "name" : "waterbag",
+         "examine" : "\nSmelling faintly of goat, this bag should hold enough water to see you through\nyour travels.",
+         "size" : "10",
+         "weight" : "0",
+         "bvalue" : "15",
+         "desc[0]" : "A waterbag made of a goat bladder has been lost here.",
+         "aflags" : [
+            "Back"
+         ]
+      },
+      "door2treas@pyramid" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pyramid25",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door2Treas",
+         "desc[2]" : "The door is locked.",
+         "linked" : "doorFromTreas",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "soulstone@pyramid" : {
+         "location" : "CARRIED_BY:Horus",
+         "oflags" : [
+            "Antimagic"
+         ],
+         "altname" : "green",
+         "name" : "soulstone",
+         "examine" : "\nMovement ripples through the heart of this stone, making it almost seem alive.",
+         "size" : "2",
+         "pname" : "Soul",
+         "weight" : "5",
+         "bvalue" : "500",
+         "desc[0]" : "A translucent &+ggreen&N stone lies here."
+      },
+      "opalsword@pyramid" : {
+         "damage" : "35",
+         "location" : "IN_CONTAINER:sarcophagus",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "opalsword",
+         "examine" : "\nGlowing with the inner &+Rfire&N of opals, this is a gift to a long-dead King\nthat could cleave it's way through armies.",
+         "size" : "20",
+         "pname" : "Opalsword",
+         "weight" : "0",
+         "bvalue" : "300",
+         "desc[0]" : "A &+csword&N with a jewel-encrusted hilt lies here."
+      },
+      "golden_throne@pyramid" : {
+         "location" : "IN_ROOM:pyramid33",
+         "weight" : "30",
+         "pname" : "throne",
+         "name" : "golden_throne",
+         "examine" : "\nMade of solid &+Ygold&N, this throne was made for a mighty king.",
+         "bvalue" : "300",
+         "desc[0]" : "The throne of Amphet sits here.",
+         "size" : "30"
+      },
+      "lambstew@pyramid" : {
+         "location" : "IN_ROOM:pyramid8",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "lambstew",
+         "examine" : "\nA bit cold and slightly greasy, this stew should ease the hunger pains.",
+         "size" : "0",
+         "pname" : "stew",
+         "weight" : "0",
+         "bvalue" : "5",
+         "desc[0]" : "A cold bowl of lamb stew sits here."
+      },
+      "pool@pyramid" : {
+         "location" : "pyramid9",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "pool",
+         "examine" : "You are hot, tired, and thirsty.  You hope this is not a mirage.",
+         "desc[0]" : "A deep &+Bpool&N of &+Lmurky&N water lies here."
+      },
+      "couscous@pyramid" : {
+         "location" : "IN_ROOM:pyramid3",
+         "weight" : "0",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "couscous",
+         "examine" : "\nIf the smell doesn't turn your stomach, this old couscous should make a tidy \nmeal once there are no more ants to eat.",
+         "bvalue" : "10",
+         "desc[0]" : "Some unappetizing couscous lies discarded here.",
+         "size" : "10"
+      },
+      "palm_dates@pyramid" : {
+         "location" : "CARRIED_BY:slave",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "palm_dates",
+         "examine" : "\nA bit wrinkled around the edges, these dates are sunsweet and chewy.",
+         "size" : "4",
+         "pname" : "dates",
+         "weight" : "0",
+         "bvalue" : "8",
+         "desc[0]" : "Some dried palm dates are lying on the ground."
+      }
+   },
+   "loc" : {
+      "pyramid30@pyramid" : {
+         "exits" : {
+            "e" : "pyramid31",
+            "s" : "pyramid28"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Shrine to Isis",
+         "id" : "pyramid30",
+         "description" : "\n        The glint of &+Ygold&N greets you as you move into the room.  The\ncarvings on the &+Yglided&N walls depict Isis, the Earth Goddess, mourning the\ndeath of her husband Osiris.  Seeing the exquisitely lovely features of the\nsmall &+Ygolden&N statue sitting atop a low, long altar, you realize why she \nis also the Goddess of Magic and Guile.  A small movement brings your attention\nto a young woman of breath-taking beauty by the altar.  You look again in\namazement for she so closely resembles the statue, making you wonder if you\nare seeing a living representation of the Earth Goddess -- or just a mirage.\n        A pile of coins lies on the altar -- perhaps an offering, or a\ntemptation?\n",
+         "altitude" : null
+      },
+      "pyramid15@pyramid" : {
+         "exits" : {
+            "n" : "pyramid16",
+            "s" : "pyramid14"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Sepulchral Hall",
+         "id" : "pyramid15",
+         "description" : "\n        The walls of this long hall are also filled with bright, colorful \npaintings depicting the rites of worship to the gods.  Your excitement grows as\nyou see several pictures of a falcon, rumored to be the chosen symbol of the \nhigh priestess Neferteri.\n        Visions of the treasure she reportedly stole from the people dance in\nyour head, urging you to explore and move deeper into the pyramid.  Again, you\nwonder if the &+mhieroglyphs&N on the wall hold the secret of defeating \nNeferteri and the way to obtaining her treasure.\n",
+         "altitude" : null
+      },
+      "pyramid8@pyramid" : {
+         "exits" : {
+            "e" : "pyramid7",
+            "n" : "pyramid9",
+            "s" : "pyramid12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pyramid",
+         "title" : "Desert Path",
+         "id" : "pyramid8",
+         "description" : "\n        Stumbling out of the storm, you breath a sigh of relief to find \nyourself on a fairly stable path.  After wiping the &+ysand&N from your eyes,\nyou again see those strange, tiny &+Ctracks&N leading off to the north.  \nShould you follow those odd tracks or try your luck climbing the large &+ydune\n&N that lies to the south which looks quite dangerous?\n",
+         "altitude" : "700"
+      },
+      "pyramid1@pyramid" : {
+         "exits" : {
+            "e" : "Anc19@ancient",
+            "s" : "pyramid2"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "pyramid",
+         "title" : "Path Ends",
+         "id" : "pyramid1",
+         "description" : "\n        The path abruptly ends in a field of large rocks.  Boulders, some \nnearly as tall as a man, bar your way.  An unrelenting &+Ysun&N beats down \nupon you and you can taste the dust in the air.  Pausing to catch your breath,\nyou spy a small trail to the south imprinted with some tiny tracks.  Would it \nbe possible, you wonder, to squeeze between the rocks and continue your \njourney?\n",
+         "altitude" : "700"
+      },
+      "pyramid16@pyramid" : {
+         "exits" : {
+            "w" : "pyramid17",
+            "s" : "pyramid15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Annex",
+         "id" : "pyramid16",
+         "description" : "\n        This small annex with its plain walls is disappointing.  From the \nimprints left in the dust covering the floor, you believe that several items \nhad once been stored here.  Yet according to legend, the greatest treasures \nare stored in a magically sealed chamber that will only be accessible upon \nNeferteri's final death.\n",
+         "altitude" : null
+      },
+      "pyramid27@pyramid" : {
+         "exits" : {
+            "e" : "pyramid22",
+            "n" : "pyramid26",
+            "d" : "pyramid19"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Antechamber",
+         "id" : "pyramid27",
+         "description" : "\n        Stacked in this room are many wondrous things.  Strange carvings of \nanimals, statues, boxes, everything it would appear to aid the king and queen\nthrough their journey through the afterlife.  Closer inspection reveals caskets\nof mummified cats and birds, obviously the beloved pets of the royal couple.\nSearching through the jumble of objects, you realize anything of significant\nvalue has already been plundered by tomb robbers.\n",
+         "altitude" : null
+      },
+      "pyramid26@pyramid" : {
+         "exits" : {
+            "e" : "pyramid25",
+            "u" : "pyramid28",
+            "s" : "pyramid27"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Mummification Room",
+         "id" : "pyramid26",
+         "description" : "\n        An eerie feeling along with an overwhelming odor assaults you as you \nstep inside this room.  On tables lie metal implements that looked to be \ninstruments of torture.  Jars holding palm wine, cedar oil and other \nastringents sit underneath.  Stacks of &+Wwhite&N linen rest in an open chest.\nIt isn't hard to discern the purpose of this room when you spy the body of \nfreshly wrapped mummy lying on a high granite slab.  Though the stone appears\nto be clean, you can see traces of a &+rrust&N-colored substance.  Shivering\nat the thought of coming to such and end, you feel the need to hurry from this\nplace.\n",
+         "altitude" : null
+      },
+      "pyramid14@pyramid" : {
+         "exits" : {
+            "w" : "pyramid13",
+            "n" : "pyramid15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Storage Chamber",
+         "id" : "pyramid14",
+         "description" : "\n        This room appears to be little more than an empty storage chamber that\nhas already been looted by tomb robbers.  The walls are stark, completely \nunadorned, and the chiseled stone floor is covered by a thick layer of dust.\nBefore you can leave, you see movement and spy a shifty-eyed character hiding\nin the &+Lshadows&N.\n",
+         "altitude" : null
+      },
+      "pyramid9@pyramid" : {
+         "exits" : {
+            "s" : "pyramid8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pyramid",
+         "title" : "&+bWadi&N",
+         "id" : "pyramid9",
+         "description" : "\n        You enter a wadi that contains a small pool of &+Lmurky water&N. Wisps\nof stunted &+ggrasses&N along with low, scrubby &+gbushes&N struggle to survive\nin the thin soil and intense &+rheat&N.  Disappointed your long trek has come\nto such an abrupt end, you pause to rest.\n        Sitting by the &+Bpool&N is a weary-looking nomad, who has also stopped to \nrest before attempting the hazardous journey back through the dune sea.  The \nbulging water bag by his side makes you think it might be wise to carry along \nsome extra water on the return trip.\n",
+         "altitude" : "700"
+      },
+      "pyramid3@pyramid" : {
+         "exits" : {
+            "e" : "pyramid2",
+            "n" : "pyramid4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pyramid",
+         "title" : "In the &+yDune Sea&N",
+         "id" : "pyramid3",
+         "description" : "\n        As you wander through a sea of buff-colored &+ysand&N, waves of &+rheat\n&Nshimmer above the ground making it appear as if the dunes are alive.  With \neach step you take, the weight of your equipment drives your feet deeper \nbeneath the top layer.\n        Just how far can you go before you are swallowed whole by a sea of &+ysand&N?\n",
+         "altitude" : "700"
+      },
+      "pyramid20@pyramid" : {
+         "exits" : {
+            "e" : "pyramid13",
+            "n" : "pyramid19"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Tomb of Slaves",
+         "id" : "pyramid20",
+         "description" : "\n        An unpleasant odor hangs in the air.  Piles of moldy garbage are \nstrewn around the floor.  Before you can back out of this place and continue\nyour explorations, you spy something that looks like a hand.  A chill skips \ndown your spine as you notice other human remains, a toe, a part of an arm, a\nshriveled skull.  Abruptly, you become aware you have stumbled across the \nburial chambers of mummified slaves, those killed to serve the dead king and\nqueen in the afterlife.  Obviously, they weren't given the same care as their\nmore important counterparts.\n",
+         "altitude" : null
+      },
+      "pyramid18@pyramid" : {
+         "exits" : {},
+         "flags" : [
+            "Death",
+            "NoMobiles"
+         ],
+         "zone" : "pyramid",
+         "title" : "Neferteri's Curse",
+         "id" : "pyramid18",
+         "description" : "\n        The sound of light, feminine laughter floats in the air as you are \nsuddenly unable to draw any air into your lungs.  Belatedly you realize you \nhave stumbled onto Neferteri's curse.\n",
+         "altitude" : null
+      },
+      "pyramid7@pyramid" : {
+         "exits" : {
+            "w" : "pyramid8",
+            "n" : "pyramid6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pyramid",
+         "title" : "Into the &+LStorm&N",
+         "id" : "pyramid7",
+         "description" : "\n        Immediately, you are engulfed in a swirling cloud of dust.  Tiny grains\nof blowing &+ysand&N scour your skin, fill your lungs and obscure your vision.\nNo longer can you see that tantalizing vision of a pyramid, and much to your \ndismay, you can not see to find a way out of this raging storm.  Bitterly, you\nwonder if this is the &+Lcurse&N whispered about for centuries that would \nbefall those who dared to try and find the hidden tomb of Neferteri.\n",
+         "altitude" : "700"
+      },
+      "pyramid11@pyramid" : {
+         "exits" : {
+            "s" : "pyramid4"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "pyramid",
+         "title" : "Up the &+yDune&N",
+         "id" : "pyramid11",
+         "description" : "\n        The sand is too loose, too unstable to allow you to climb and you \nslide back toward the sea of sand.\n",
+         "altitude" : "700"
+      },
+      "pyramid4@pyramid" : {
+         "exits" : {
+            "w" : "pyramid5",
+            "n" : "pyramid11",
+            "s" : "pyramid3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pyramid",
+         "title" : "&+yDune Sea&N",
+         "id" : "pyramid4",
+         "description" : "\n        Completely surrounded by those rippling wave of &+ysand&N, something \nurges you to turn back.  The desert &+Ysun&N mercilessly beats down on you, \nmaking your eyes water, your skin burn and your mouth to go dry. Far to the \nwest, you see light shimmering off what appears to be the tip of a pyramid.  \nExcitement causes your heart to race in your chest.  Could it be that you are \nclose to finding the hidden tomb of Neferteri, high priestess to the goddess \nIsis?\n        A large, multi-segmented &+ysandworm&N lies across the path to the \nwest.  Can you go around it or should you try to scramble up the high dune \nthat lies to the north?\n",
+         "altitude" : "700"
+      },
+      "pyramid6@pyramid" : {
+         "exits" : {
+            "n" : "pyramid4",
+            "s" : "pyramid7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pyramid",
+         "title" : "&+ySand Sea&N",
+         "id" : "pyramid6",
+         "description" : "\n        Clouds of dust billow around your legs as you wade through the &+ysand\n&N.  A hot wind blows around you, drying what little moisture is left in your \nbody.  Licking your parched, cracked lips, you suddenly get this sinking \nfeeling that all is not what it seems.\n",
+         "altitude" : "700"
+      },
+      "pyramid24@pyramid" : {
+         "exits" : {
+            "w" : "pyramid25",
+            "s" : "pyramid23"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Queen's Chamber",
+         "id" : "pyramid24",
+         "description" : "\n        There is a similar shrine here to the one in the King's Chamber, yet\nthere are far more chests pushed against the opposite wall.  Jars holding \nherbs, spices and oils to annoint the long-dead Queen are capped with fine \n&+Walabastar&N stoppers and sit waiting for Sitman's attendants to arise to \nthe afterlife and minister to their mistresses.  Through the open door, you\nsee a smaller sarcophagus holding the body of the young queen.\n",
+         "altitude" : null
+      },
+      "pyramid22@pyramid" : {
+         "exits" : {
+            "w" : "pyramid27",
+            "e" : "pyramid23"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "King's Chamber",
+         "id" : "pyramid22",
+         "description" : "\n        A &+Yglided&N shrine decorates one wall, while a &+Ygolden&N statue of \nthe goddess Selkis guards the four canopic jars holding the viscera of the \nKing Amphet.  At the four corners of this shrine stand the statues of the \ngoddesses, Isis, Nephthys, Neith and Selkis to protect these jars from the \nclaws of the greedy.  Chests containing some of King Amphet's personal \nbelongings rest against the opposite wall.  Through the open door to the east\nyou catch sight of a magnificent &+cquartizite&N sarcophagus, carved from a\nsingle block of stone.\n",
+         "altitude" : null
+      },
+      "pyramid21@pyramid" : {
+         "exits" : {
+            "n" : "^doorFromNef",
+            "s" : "temple@start"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Neferteri's Altar",
+         "id" : "pyramid21",
+         "description" : "\n        Your breath lodges in your throat as the &+Gglow&N from your torch \nreflects off the four &+Yglided&N shrines covering the walls.  The air crackles\nwith your excitement and with a hint of fear, knowing you must now face a \ncreature of such monumental evil -- and power.\n        An altar, cast in solid &+Ygold&N, rests in the center of the room.  \nOn it lies a &+Lblack&N-haired woman of such incredible beauty, you can not but\nwonder if she could possibly be real or just a mirage sent by the gods to\ntaunt you.  The sight of such indescribable loveliness lures you closer, as you\nignore the faint warnings sounding in your mind.\n",
+         "altitude" : null
+      },
+      "pyramid31@pyramid" : {
+         "exits" : {
+            "w" : "pyramid30",
+            "u" : "^door2Horus",
+            "s" : "pyramid29"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Into the Soul",
+         "id" : "pyramid31",
+         "description" : "\n        The glow of &+Wlight&N at the top of the dusty staircase beckons to\nyou.  These walls are dingy and unadorned.  There are no tracks in the light\ncovering of dust upon the steps, indicating no one has passed this way in a\nvery long time.  An eerie silence has pervaded this place until all you can\nhear is your shallow breathing and the swift beating of your heart.  A small\noval cartouche is carved deeply in the corner of one wall.\n",
+         "altitude" : null
+      },
+      "pyramid2@pyramid" : {
+         "exits" : {
+            "w" : "pyramid3",
+            "n" : "pyramid1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pyramid",
+         "title" : "Off the Path",
+         "id" : "pyramid2",
+         "description" : "\n        Though it was a tight fit, you managed to push between the rocks and \nnow find yourself on a narrow, hard-packed trail covered with a thin layer of \ngritty &+ysand&N.  Clearly marked in the &+ysand&N are dozens of tiny &+Ctracks\n&N made by some unknown animal.  Looking off to the west, your breath lodges \nin your throat as you see endless waves of &+ysand&N that stretch clear to the\nhorizon and beyond.\n",
+         "altitude" : "700"
+      },
+      "pyramid29@pyramid" : {
+         "exits" : {
+            "w" : "pyramid28",
+            "n" : "pyramid31"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Shrine to Osiris",
+         "id" : "pyramid29",
+         "description" : "\n        A sense of awe comes over you as you step inside the shrine.  The\npaintings covering the walls tell the tragic story of Osiris, once an early\nking who was betrayed and murdered by his brother, Set.  A huge statue atop a\nlong &+cquartz&N altar representing  the God of the &+LDead&N, is cast of pure\n&+Ygold&N.  Kneeling beneath the altar is a very large, robed Sultan come to\npay homage to the powerful god.\n",
+         "altitude" : null
+      },
+      "pyramid25@pyramid" : {
+         "exits" : {
+            "w" : "pyramid26",
+            "e" : "pyramid24",
+            "s" : "^door2Treas"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Queen's Tomb",
+         "id" : "pyramid25",
+         "description" : "\n        Though much smaller than the king's, this sarcophagus is as intricately\ncarved.  The royal emblems of Isis are inlaid with semi-precious stones.  The\nface carved in the stone wears a look of suffering, holds the sadness of death\nin youth.  Another set of &+mhieroglpyhs&N have been carved into the side.\nTempted not to disturb the final rest of this tragic woman, you feel the need\nto tip-toe quietly away.  Yet curiosity to gaze upon the funeral mask makes\nyou pause.\n",
+         "altitude" : null
+      },
+      "pyramid12@pyramid" : {
+         "exits" : {},
+         "flags" : [
+            "Death",
+            "NoMobiles"
+         ],
+         "zone" : "pyramid",
+         "title" : "Atop the &+yDune&N",
+         "id" : "pyramid12",
+         "description" : "\n        The &+ysand&N opens up swallowing you and all your equipment.  The last\nsound you hear is the &+revil&N tone of soft feminine laughter.\n",
+         "altitude" : null
+      },
+      "pyramid33@pyramid" : {
+         "exits" : {
+            "n" : "^doorFromTreas"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Treasure Room",
+         "id" : "pyramid33",
+         "description" : "\n        &+YGold&N!  The glint of it is everywhere as you gaze around the room.\nThe walls have been &+Yglided&N and scenes carved into them displaying \nNeferteri and her journey to glory and infamy.  &+YGolden&N statues bearing \nthe likeness of the high priestess sit upon bound chests far too large for one\nperson to carry.  The seal on one chest has been broken, the lid tossed back\nrevealing the wealth inside of it.  Yet something makes you pause before\nscooping up the vast treasures that seem yours for the taking.\n",
+         "altitude" : null
+      },
+      "pyramid13@pyramid" : {
+         "exits" : {
+            "w" : "pyramid20",
+            "e" : "pyramid14",
+            "s" : "pyramid10"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Passage",
+         "id" : "pyramid13",
+         "description" : "\n        Pausing for a moment to allow your eyes to become accustomed to the \nlack of light in this passageway, you are amazed to find the walls are covered\nwith brightly colored paintings that have not faded with the passage of time.\nMany of the gods are depicted in these wall paintings, Osiris, Annibus, Set \nand the goddess, Isis.  A sense of unease fills your soul as you recall the \n&+Lcurse&N of Neferteri and you wish you could read the &+mhieroglyphs&N that \naccompany the paintings.  To the east and west of you are &+Ldark&N rooms that\nlook &+Ccold&N and &+Cuninviting&N.\n",
+         "altitude" : null
+      },
+      "pyramid23@pyramid" : {
+         "exits" : {
+            "w" : "pyramid22",
+            "n" : "pyramid24"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "King's Tomb",
+         "id" : "pyramid23",
+         "description" : "\n        The huge sarcophagus dominates the room.  The rose granite lid looks\nheavy, almost impossible to move.  At each corner the guardian goddess Isis,\nNephtys, Neith and Selkis are beautifully carved in high relief, their arms\nand wings clasping the sarcophagus in a protective embrace.\n        &+mHieroglyphs&N have been carved into the side of the tomb.  Thoughts\nof the wealth that might lie with the king make you wonder if you should go to\nthe trouble of opening the tomb.\n",
+         "altitude" : null
+      },
+      "pyramid19@pyramid" : {
+         "exits" : {
+            "u" : "pyramid27",
+            "n" : "pyramid18",
+            "s" : "pyramid20"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Sepulchral Hall",
+         "id" : "pyramid19",
+         "description" : "\n        The walls of this long hall are also filled with bright colorful \npaintings depicting the rites of worship to the gods.  Your excitement grows \nas you see several pictures of a falcon, rumored to be the chosen symbol of \nthe high priestess Neferteri.\n        Visions of the treasure she reportedly stole from the people dance in\nyour head urging you to explore and move deeper into the pyramid.  Again you \nwonder if the &+mhieroglyphs&N on the wall hold the secret to defeating \nNeferteri and the way to obtaining her treasure.\n",
+         "altitude" : null
+      },
+      "pyramid10@pyramid" : {
+         "exits" : {
+            "u" : "pyramid13",
+            "d" : "pyramid9"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "pyramid",
+         "title" : "Temple Steps",
+         "id" : "pyramid10",
+         "description" : "\n        Blinking your eyes, you are amazed to find that you're on the steps of\na large, &+ysand&N scoured pyramid.  Carved out of rock and made smooth by the\nconstantly blowing wind, they lead up to a small, &+Ldark&N, opening.  \nExcitment courses through you.  You have traveled far, endured much and have \nfinally found the tomb of Neferteri.  Visions of the wealth she stripped from \nthe people dance in your head, overshadowing all thoughts of the &+Lcurse&N.\n",
+         "altitude" : "700"
+      },
+      "pyramid17@pyramid" : {
+         "exits" : {
+            "w" : "pyramid18",
+            "e" : "pyramid16",
+            "s" : "^door2Nef"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Shrine of Neferteri",
+         "id" : "pyramid17",
+         "description" : "\n        The glint of &+Ygold&N greets you as you step into the room.  &+YGlided\n&N wood surrounds the door to the south, while pictures depicting the history\nof Neferteri and her rise to power are painted on the walls.  All is there to \nsee, her enslavement of the King and Queen, the pillaging of the royal treasure,\nthe gathering and harnessing the powers of the &+yEarth&N, &+rSun&N, &+WWind\n&N and &+bWater&N. And the final abomination, her use of the &+Lblack&N arts \nto ensure her immortality.  One scene in particular catches your eye, \nNeferteri's presentation of a small &+ggreen&N stone to Horus, the son of the\ngods, Isis and Osiris.\n        Upon closer inspection of the door, you see a faint &+cglow&N emanating\nfrom the seals and realize it would take some powerful magic to break this \nseal.  Off to the west is a &+Ldark&N you saw in the passageway.  To the north\nlies stone steps leading to another level in the pyramid.\n",
+         "altitude" : null
+      },
+      "pyramid32@pyramid" : {
+         "exits" : {
+            "d" : "^doorFromHorus"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Enlightment",
+         "id" : "pyramid32",
+         "description" : "\n        &+WLight&N pours in from two long slitted windows at the sides of the\ntip of this pyramid.  Unlike the rest of the pyramid, not a trace of dust can\nbe found on the floor.  You can hear the sighing of the hot desert wind as it \nrustles around the top of this magnificent tomb.  The room is dominated by a\ntall figure with the body of a man and the head of a falcon.  Large rounded\neyes carefully observe you, making you shudder and wonder if this creature can\npeer into your very soul.  You believe you have finally found Horus, son of \nIsis and Osiris, the fierce guardian of Neferteri's vast power.\n",
+         "altitude" : null
+      },
+      "pyramid28@pyramid" : {
+         "exits" : {
+            "e" : "pyramid29",
+            "n" : "pyramid30",
+            "d" : "pyramid26"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pyramid",
+         "title" : "Dark Stairway",
+         "id" : "pyramid28",
+         "description" : "\n        A thick layer of dust covers the stone steps to this stairway.  A chill\ndescends over you as you peer up and see only &+Ldarkness&N.  A small nagging\nvoice inside your head warns you to go back, leave this place of death and\nforget your dreams of wealth and glory.\n",
+         "altitude" : null
+      },
+      "pyramid5@pyramid" : {
+         "exits" : {
+            "e" : "pyramid4",
+            "s" : "pyramid6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pyramid",
+         "title" : "&+yDrifting Dunes&N",
+         "id" : "pyramid5",
+         "description" : "\n        Thoughts of the treasure you might be able to plunder in the pyramid \nlures you farther into this sea of dunes.  Off to the south, an ominous cloud \nof brown dust can be seen on the horizon.  Caution urges you to retrace your \nsteps before you are engulfed by a &+ysandstorm&N.  Yet the enticing notion of\nthe riches you might discover urges you to brace the weather ahead.\n",
+         "altitude" : "700"
+      }
+   },
+   "mob" : {
+      "assistant@pyramid" : {
+         "damage" : "5",
+         "location" : "pyramid26",
+         "speed" : "5",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "assistant",
+         "examine" : "Don't ask me, I only work here.",
+         "description" : "A harried physician's assistant hurries by you.",
+         "strength" : "175"
+      },
+      "sandant2@pyramid" : {
+         "damage" : "5",
+         "location" : "pyramid8",
+         "armor" : "0",
+         "name" : "sandant2",
+         "examine" : "You wouldn't want this ant at your picnic.",
+         "description" : "A little brown ant scurries here.",
+         "strength" : "100",
+         "speed" : "50",
+         "pname" : "Sandant",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "NoSteal"
+         ]
+      },
+      "horus@pyramid" : {
+         "damage" : "25",
+         "location" : "pyramid32",
+         "armor" : "0",
+         "name" : "Horus",
+         "examine" : "\nStanding over seven feet tall, this man with his falcon's head looks like he \ncould beat the crap out of you.",
+         "description" : "Horus, the son of Isis and Osiris, stands guard here.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "50",
+         "pflags" : [
+            "NoZap",
+            "NoExo",
+            "NoSummon"
+         ]
+      },
+      "haremdancer@pyramid" : {
+         "damage" : "5",
+         "location" : "pyramid16",
+         "armor" : "0",
+         "name" : "haremdancer",
+         "examine" : "With her hand in your pocket, Yasmine winks at you slyly.",
+         "description" : "A svelte, sloe-eyed dancer sways before you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "25",
+         "pname" : "Yasmine",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "ocelot@pyramid" : {
+         "damage" : "12",
+         "location" : "pyramid31",
+         "speed" : "0",
+         "aggression" : "80",
+         "armor" : "0",
+         "name" : "ocelot",
+         "examine" : "\nSleek, spotted with sharp claws, this isn't a pet you would want scratching \nat your pants leg.",
+         "description" : "A sleek, spotted ocelot is stretched out here.",
+         "strength" : "300"
+      },
+      "physician@pyramid" : {
+         "damage" : "5",
+         "location" : "pyramid27",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "physician",
+         "examine" : "\nWith brown eyes that shine with a maniacal light light, this man is constantly \nmumbling, '&+WI'm a doctor, not an embalmer!&N'",
+         "description" : "A worried-looking, white-haired physician stands here.",
+         "strength" : "215"
+      },
+      "hawker@pyramid" : {
+         "damage" : "5",
+         "location" : "pyramid15",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Monte",
+         "name" : "hawker",
+         "examine" : "\nWith a name like Monte, why else would he be standing in a hall looking to \nmake a deal?",
+         "description" : "A bazaar hawker looking to make a deal stands here.",
+         "strength" : "125"
+      },
+      "dustdevil@pyramid" : {
+         "eflags" : [
+            "ImmFireball",
+            "ImmFrost"
+         ],
+         "damage" : "15",
+         "location" : "pyramid7",
+         "armor" : "0",
+         "name" : "dustdevil",
+         "description" : "A whirling mass of &+ysand&N howls here.",
+         "strength" : "750",
+         "speed" : "0",
+         "pname" : "Dust Devil",
+         "aggression" : "20"
+      },
+      "slave@pyramid" : {
+         "damage" : "10",
+         "location" : "pyramid20",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "slave",
+         "description" : "A terrified slave, hiding from his master cowers here.",
+         "strength" : "100"
+      },
+      "tombrobber@pyramid" : {
+         "damage" : "10",
+         "location" : "pyramid22",
+         "speed" : "10",
+         "aggression" : "20",
+         "armor" : "0",
+         "pname" : "Tomb Robber",
+         "name" : "tombrobber",
+         "examine" : "\nA dreadful, nose-twitching odor causes you to back away from this man.",
+         "description" : "A yellow-toothed, leather skinned Tomb Robber is waiting here.",
+         "strength" : "200"
+      },
+      "mummy@pyramid" : {
+         "damage" : "10",
+         "location" : "pyramid26",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "pname" : "The Mummy",
+         "name" : "mummy",
+         "examine" : "Maybe in a thousand years he might be worth something.",
+         "description" : "A linen-wrapped mummy lies here.",
+         "strength" : "200"
+      },
+      "sandant4@pyramid" : {
+         "damage" : "5",
+         "location" : "pyramid9",
+         "armor" : "0",
+         "name" : "sandant4",
+         "examine" : "You wouldn't want this ant at your picnic.",
+         "description" : "A little brown ant scurries here.",
+         "strength" : "100",
+         "speed" : "50",
+         "pname" : "Sandant",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "NoSteal"
+         ]
+      },
+      "nomad@pyramid" : {
+         "damage" : "12",
+         "location" : "pyramid9",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "nomad",
+         "examine" : "No, he hasn't fallen so don't help him up.",
+         "description" : "A thirsty-looking, travel-weary nomad rests here.",
+         "strength" : "150"
+      },
+      "sandant3@pyramid" : {
+         "damage" : "5",
+         "location" : "pyramid7",
+         "armor" : "0",
+         "name" : "sandant3",
+         "examine" : "You wouldn't want this ant at your picnic.",
+         "description" : "A little brown ant scurries here.",
+         "strength" : "100",
+         "speed" : "50",
+         "pname" : "Sandant",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "NoSteal"
+         ]
+      },
+      "sandworm@pyramid" : {
+         "eflags" : [
+            "ImmFireball",
+            "ImmShock"
+         ],
+         "damage" : "20",
+         "location" : "pyramid4",
+         "armor" : "10",
+         "name" : "sandworm",
+         "examine" : "\nThis large, slug-like thing is ugly and possesses no intelligence.  Remind \nyou of anyone you know?",
+         "description" : "A long, large dun-colored worm lies here.",
+         "sflags" : [
+            "Noarms",
+            "NoLegs"
+         ],
+         "strength" : "400",
+         "speed" : "0",
+         "aggression" : "65",
+         "mflags" : [
+            "BarWest"
+         ]
+      },
+      "streetthief@pyramid" : {
+         "damage" : "5",
+         "location" : "pyramid14",
+         "armor" : "0",
+         "name" : "streetthief",
+         "examine" : "\nThe twinkle in his eyes and his engaging grin prompts you to check for your \nwallet.",
+         "description" : "A thin-faced, narrow-eyed thief lurks here.",
+         "strength" : "125",
+         "speed" : "0",
+         "pname" : "Street Thief",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "NoSteal"
+         ]
+      },
+      "sultan@pyramid" : {
+         "damage" : "15",
+         "location" : "pyramid29",
+         "speed" : "0",
+         "aggression" : "5",
+         "armor" : "0",
+         "name" : "sultan",
+         "examine" : "\nA large brocade turban is perched precariously on his head as he holds a small\ncard to his brow.  You hear him murmur, '&+WI wish I had thought of that.&N' \nOn the card are printed the words, 'DL's Top Ten List.'",
+         "description" : "A rather large, bejeweled Sultan prays here.",
+         "strength" : "300"
+      },
+      "neferteri@pyramid" : {
+         "eflags" : [
+            "ImmFireball",
+            "ImmShock",
+            "Shock"
+         ],
+         "damage" : "15",
+         "location" : "pyramid21",
+         "armor" : "0",
+         "name" : "Neferteri",
+         "examine" : "\nLovely to look at, perhaps delightful to hold, her sly smile warns you not to\nbe so bold.",
+         "description" : "Neferteri, the high priestess of Isis, awaits you here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "2000",
+         "speed" : "0",
+         "aggression" : "99",
+         "pflags" : [
+            "NoZap",
+            "NoExo",
+            "NoSummon",
+            "NoAlias"
+         ],
+         "mflags" : [
+            "BarNorth",
+            "BarSouth"
+         ]
+      },
+      "camel@pyramid" : {
+         "damage" : "10",
+         "location" : "pyramid5",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "camel",
+         "examine" : "\nThis scruffy-looking, wheezing beast looks as if he's already walked a mile.",
+         "description" : "A shaggy, bad tempered camel wanders here.",
+         "strength" : "200"
+      },
+      "trader@pyramid" : {
+         "damage" : "10",
+         "location" : "pyramid2",
+         "speed" : "3",
+         "aggression" : "0",
+         "armor" : "5",
+         "name" : "trader",
+         "examine" : "\nShort with narrow eyes and a slick smile.  Would you buy a used lamp from this\nfellow?",
+         "description" : "A sharp-eyed trader looking for his lost camel stands here.",
+         "strength" : "100"
+      },
+      "sandant1@pyramid" : {
+         "damage" : "5",
+         "location" : "pyramid3",
+         "armor" : "0",
+         "name" : "sandant1",
+         "examine" : "You wouldn't want this ant at your picnic.",
+         "description" : "A little brown ant scurries here.",
+         "strength" : "100",
+         "speed" : "50",
+         "pname" : "Sandant",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief",
+            "NoSteal"
+         ]
+      },
+      "handmaiden@pyramid" : {
+         "damage" : "7",
+         "location" : "pyramid30",
+         "armor" : "0",
+         "name" : "handmaiden",
+         "examine" : "Though lovely, your gaze is drawn to her ripe melons.",
+         "description" : "A shy hand maiden carrying a tray of fruit stands here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "200",
+         "aggression" : "0"
+      }
+   }
+}

@@ -7,18 +7,10 @@
             "NoGet"
          ],
          "name" : "gates",
-         "examine" : "A sign on the gates reads \"Pete's Pearly Hire Co.\"",
-         "linked" : "gates@cave",
          "maxstate" : "1",
+         "linked" : "gates@cave",
+         "examine" : "A sign on the gates reads \"Pete's Pearly Hire Co.\"",
          "desc[0]" : "The dwarven gates are open."
-      },
-      "spring@valley" : {
-         "location" : "IN_ROOM:spring",
-         "oflags" : [
-            "NoGet"
-         ],
-         "name" : "spring",
-         "examine" : "\nIts waters are clear and inviting.  A pity you never learned to swim."
       },
       "ladder2elf@valley" : {
          "desc[1]" : "A rope leads up the tree.",
@@ -79,25 +71,19 @@
       "apple@valley" : {
          "desc[1]" : "A large apple hangs from a tree branch.",
          "location" : "IN_ROOM:tforest",
+         "altname" : "food",
          "oflags" : [
             "Food",
             "GetFlips"
          ],
-         "altname" : "food",
          "name" : "apple",
          "examine" : "\nThis is a big juicy red apple, not the type that would be poisoned at all...",
          "size" : "1",
          "state" : "1",
          "weight" : "1",
+         "maxstate" : "1",
          "bvalue" : "40",
          "desc[0]" : "A large juicy apple lies temptingly before you."
-      },
-      "bed@valley" : {
-         "location" : "IN_ROOM:hut",
-         "oflags" : [
-            "NoGet"
-         ],
-         "name" : "bed"
       },
       "ropeeast@valley" : {
          "desc[1]" : "A rope hangs east across to the ledge.",
@@ -143,13 +129,16 @@
       },
       "lodestone@valley" : {
          "location" : "IN_ROOM:RBank",
-         "weight" : "5",
+         "oflags" : [
+            "ShockSpell"
+         ],
          "altname" : "rock",
          "name" : "lodestone",
          "examine" : "On closer examination you identify this rock as a lodestone.",
+         "size" : "5",
+         "weight" : "5",
          "bvalue" : "100",
-         "desc[0]" : "A dull red rock has been tossed aside.",
-         "size" : "5"
+         "desc[0]" : "A dull red rock has been tossed aside."
       },
       "rose@valley" : {
          "desc[1]" : "A beautiful rose grows amongst the trees.",
@@ -160,7 +149,7 @@
          ],
          "altname" : "flower",
          "name" : "rose",
-         "examine" : "It has the words \"For Her\" written on the stalk.",
+         "examine" : "It has the words For Her written on the stalk.",
          "desc[2]" : "A flaccid rose has been left here by someone.",
          "size" : "2",
          "state" : "1",
@@ -193,16 +182,19 @@
       },
       "falls@valley" : {
          "exits" : {
+            "w" : "trail4@aephir",
             "e" : "Mpath",
-            "d" : "pool@frobozz"
+            "d" : "pool@frobozz",
+            "s" : "batcave1@batcave"
          },
          "flags" : [
-            "Outdoors"
+            "Outdoors",
+            "NoMobiles"
          ],
          "zone" : "valley",
          "title" : "The Hidden Falls",
          "id" : "Falls",
-         "description" : "\n   You stand in an alcove carved by wind and water into the side of a mountain.\nHigh above the ground, water rushes over a ledge.  In a spectacular array of\ncolors and sounds, the airborn water falls to the rocks below.  A path leads\neast along the ridge rocks.  There is a small pool of water among the rocks\nbelow you.  It appears you can climb down to the pool if you're unencumbered.\nThere is a blinking construction sign here.\n",
+         "description" : "\n   You stand in an alcove carved by wind and water into the side of a mountain.\nHigh above the ground, water rushes over a ledge.  In a spectacular array of\ncolors and sounds, the airborn water falls to the rocks below.  A path leads\neast along the ridge rocks.  There is a small pool of water among the rocks\nbelow you.  It appears you can climb down to the pool if you're unencumbered.\nA natural cave echos the sound of bats inside to the south.\n",
          "altitude" : "550"
       },
       "beside@valley" : {
@@ -280,7 +272,7 @@
          "zone" : "valley",
          "title" : "Rocky Clearing",
          "id" : "Rclearing",
-         "description" : "\n   You are standing in a rocky clearing, strewn with the debris of the many\nlandslides, which have cascaded down the cliffs to the south and west.  To the\neast and north paths plunge back in amongst the trees that fill most of the\nvalley.  A precarious path leads over the mountain to the West\n",
+         "description" : "\n   You are standing in a rocky clearing, strewn with the debris of the many\nlandslides, which have cascaded down the cliffs to the south and west.  To the\neast and north paths plunge back in amongst the trees that fill most of the\nvalley. A precarious path leads over the mountain to the West.\n",
          "altitude" : "750"
       },
       "nwcorner@valley" : {
@@ -311,7 +303,7 @@
          "zone" : "valley",
          "title" : "Tree Tops",
          "id" : "Tops",
-         "description" : "\n   You are almost at the bottom of the cliff path, which leads south into thick\nforest.  The steps wind up and up the cliff dwindling to a mere speck.  The\nTalon quest would normally be north, but thanks to the kindness of Iguana,\nwe nolonger have this zone.\n",
+         "description" : "\n   You are almost at the bottom of the cliff path, which leads south into thick\nforest.  The steps wind up and up the cliff dwindling to a mere speck.  The\nevil Talon lies north of here. Beware.\n",
          "altitude" : "750"
       },
       "hut@valley" : {
@@ -497,6 +489,7 @@
       },
       "steps@valley" : {
          "exits" : {
+            "e" : "^RopeEast",
             "u" : "Moorpath",
             "d" : "Steps2"
          },
@@ -685,6 +678,7 @@
       },
       "path@valley" : {
          "exits" : {
+            "e" : "path@sagewood",
             "n" : "C_Yard@Church",
             "d" : "FSedge",
             "s" : "FSedge"
@@ -847,10 +841,26 @@
          "damage" : "10",
          "location" : "send",
          "armor" : "0",
-         "aggression" : "0",
          "name" : "chicken",
-         "description" : "Chicken Licken is here, with a worried look on his face.",
-         "strength" : "50"
+         "description" : "Chicken Little is here, with a worried look on his face.",
+         "strength" : "50",
+         "aggression" : "0",
+         "pflags" : [
+            "NoMagic"
+         ],
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "fox@valley" : {
+         "damage" : "7",
+         "location" : "Edge",
+         "speed" : "2",
+         "aggression" : "0",
+         "pname" : "The Red Fox",
+         "name" : "fox",
+         "description" : "A red fox forages for food nearby.",
+         "strength" : "70"
       },
       "piper@valley" : {
          "damage" : "10",
@@ -861,7 +871,10 @@
          "strength" : "50",
          "speed" : "1",
          "pname" : "The Piper",
-         "aggression" : "0"
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal"
+         ]
       },
       "mindy@valley" : {
          "damage" : "5",
@@ -879,9 +892,20 @@
             "NoHassle",
             "NoZap",
             "NoExorcise",
+            "NoMagic",
             "NoAlias",
             "NoPunt"
          ]
+      },
+      "deer@valley" : {
+         "damage" : "8",
+         "location" : "Bank",
+         "speed" : "1",
+         "aggression" : "0",
+         "pname" : "The White-tailed Deer",
+         "name" : "deer",
+         "description" : "A majestic white-tailed deer grazes here.",
+         "strength" : "80"
       }
    }
 }

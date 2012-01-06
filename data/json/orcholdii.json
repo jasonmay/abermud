@@ -1,0 +1,1128 @@
+{
+   "obj" : {
+      "doorn2b@orcholdii" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:neroom1",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doorn2b",
+         "desc[2]" : "The door is locked.",
+         "linked" : "doorn2a",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "clothes@orcholdii" : {
+         "location" : "IN_ROOM:neroom1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "pigsty",
+         "name" : "clothes"
+      },
+      "jewels@orcholdii" : {
+         "location" : "IN_ROOM:neroom2",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "altname" : "gems",
+         "name" : "jewels",
+         "size" : "20",
+         "pname" : "jewelry",
+         "bvalue" : "500",
+         "desc[0]" : "A mass of jewelery lies here."
+      },
+      "coin@orcholdii" : {
+         "location" : "IN_ROOM:nwroom1",
+         "oflags" : [
+            "Destroyed"
+         ],
+         "name" : "coin",
+         "bvalue" : "90",
+         "desc[0]" : "A gold coin has been dropped here."
+      },
+      "doors1a@orcholdii" : {
+         "desc[1]" : "The west door is closed.",
+         "location" : "IN_ROOM:arch2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "westdoor",
+         "name" : "doors1a",
+         "desc[2]" : "The west door is locked.",
+         "linked" : "doors1b",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The west door is open."
+      },
+      "suit@orcholdii" : {
+         "desc[1]" : "A well starched suit lies on the bed.",
+         "location" : "IN_ROOM:neroom2",
+         "oflags" : [
+            "GetFlips",
+            "Wearable"
+         ],
+         "name" : "suit",
+         "size" : "10",
+         "state" : "1",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "A crumpled suit lies discarded here."
+      },
+      "cloak@orcholdii" : {
+         "location" : "IN_ROOM:nwroom1",
+         "armor" : "14",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Destroyed"
+         ],
+         "name" : "cloak",
+         "examine" : "It looks like it will offer good protection.",
+         "size" : "5",
+         "bvalue" : "25",
+         "aflags" : [
+            "Back",
+            "Arms"
+         ],
+         "desc[0]" : "A study looking cloak lies here."
+      },
+      "flask@orcholdii" : {
+         "location" : "IN_ROOM:dining",
+         "oflags" : [
+            "Food",
+            "Alcohol"
+         ],
+         "altname" : "ale",
+         "name" : "flask",
+         "bvalue" : "20",
+         "desc[0]" : "A small flask of ale lies here.",
+         "size" : "2"
+      },
+      "doors1b@orcholdii" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:swroom1",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doors1b",
+         "desc[2]" : "The door is locked.",
+         "linked" : "doors1a",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "doorn1a@orcholdii" : {
+         "desc[1]" : "The west door is closed.",
+         "location" : "IN_ROOM:arch3",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "westdoor",
+         "name" : "doorn1a",
+         "desc[2]" : "The west door is locked.",
+         "linked" : "doorn1b",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The west door is open."
+      },
+      "doorn4b@orcholdii" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:neroom2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doorn4b",
+         "desc[2]" : "The door is locked.",
+         "linked" : "doorn4a",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "cushions@orcholdii" : {
+         "location" : "IN_ROOM:dining",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "cushion",
+         "name" : "cushions"
+      },
+      "wall1@orcholdii" : {
+         "location" : "IN_ROOM:guardroom",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "wall1",
+         "linked" : "wall2",
+         "state" : "1",
+         "pname" : "wall",
+         "maxstate" : "1",
+         "desc[0]" : "The north wall has swung back to reveal another room."
+      },
+      "chocolate@orcholdii" : {
+         "location" : "IN_ROOM:dining",
+         "oflags" : [
+            "Destroyed",
+            "Food"
+         ],
+         "altname" : "candy",
+         "name" : "chocolate",
+         "bvalue" : "50",
+         "desc[0]" : "A large piece of chocolate lies here.",
+         "size" : "2"
+      },
+      "statue@orcholdii" : {
+         "desc[1]" : "A half-done statue has been placed on the workbench.",
+         "location" : "IN_ROOM:cell3",
+         "oflags" : [
+            "GetFlips",
+            "Destroyed"
+         ],
+         "altname" : "figurine",
+         "name" : "statue",
+         "size" : "5",
+         "state" : "1",
+         "maxstate" : "0",
+         "bvalue" : "50",
+         "desc[0]" : "A statue lies here, discarded."
+      },
+      "lamb@orcholdii" : {
+         "location" : "IN_ROOM:dining",
+         "oflags" : [
+            "Destroyed",
+            "Food"
+         ],
+         "altname" : "leg",
+         "name" : "lamb",
+         "bvalue" : "15",
+         "desc[0]" : "A huge leg of lamb lies here.  It only looks partially eaten.",
+         "size" : "3"
+      },
+      "katana@orcholdii" : {
+         "damage" : "18",
+         "location" : "WIELDED_BY:Barthalamu",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "katana",
+         "bvalue" : "250",
+         "desc[0]" : "A gleaming katana lies here.",
+         "size" : "25"
+      },
+      "blankets@orcholdii" : {
+         "location" : "IN_ROOM:nwroom1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "straw",
+         "name" : "blankets"
+      },
+      "workbench@orcholdii" : {
+         "location" : "IN_ROOM:cell3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "bench",
+         "name" : "workbench"
+      },
+      "doors3a@orcholdii" : {
+         "desc[1]" : "The west door is closed.",
+         "location" : "IN_ROOM:arch2p2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "westdoor",
+         "name" : "doors3a",
+         "desc[2]" : "The west door is locked.",
+         "linked" : "doors3b",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The west door is open."
+      },
+      "doorn4a@orcholdii" : {
+         "desc[1]" : "The east door is closed.",
+         "location" : "IN_ROOM:arch3p2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "eastdoor",
+         "name" : "doorn4a",
+         "desc[2]" : "The east door is locked.",
+         "linked" : "doorn4b",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The east door is open."
+      },
+      "boots@orcholdii" : {
+         "location" : "IN_ROOM:neroom1",
+         "armor" : "20",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Destroyed"
+         ],
+         "name" : "boots",
+         "examine" : "They're orcish, need I say more?",
+         "size" : "3",
+         "bvalue" : "20",
+         "aflags" : [
+            "Feet"
+         ],
+         "desc[0]" : "A well-used pair of orcish boots lie here."
+      },
+      "doors3b@orcholdii" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:swroom2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doors3b",
+         "desc[2]" : "The door is locked.",
+         "linked" : "doors3a",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "dinblankets@orcholdii" : {
+         "location" : "IN_ROOM:dining",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "blanket",
+         "name" : "dinblankets"
+      },
+      "vault_key@orcholdii" : {
+         "location" : "IN_ROOM:chambers",
+         "oflags" : [
+            "Key",
+            "Destroyed"
+         ],
+         "name" : "vault_key",
+         "size" : "1",
+         "pname" : "key",
+         "weight" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "The key to the Orc Hold Vault has been left lying around."
+      },
+      "doors2a@orcholdii" : {
+         "desc[1]" : "The east door is closed and covered with yellow tape.",
+         "location" : "IN_ROOM:arch2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "eastdoor",
+         "name" : "doors2a",
+         "desc[2]" : "The east door is locked and covered with yellow tape.",
+         "linked" : "doors2b",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "You can enter through the open east door, past the tattered tape."
+      },
+      "doorn2a@orcholdii" : {
+         "desc[1]" : "The east door is closed.",
+         "location" : "IN_ROOM:arch3",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "eastdoor",
+         "name" : "doorn2a",
+         "desc[2]" : "The east door is locked.",
+         "linked" : "doorn2b",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The east door is open."
+      },
+      "pick@orcholdii" : {
+         "damage" : "11",
+         "location" : "IN_ROOM:seroom2",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "pick",
+         "bvalue" : "20",
+         "desc[0]" : "A well-used pick lies here.",
+         "size" : "5"
+      },
+      "bed@orcholdii" : {
+         "location" : "IN_ROOM:nwroom2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "bed",
+         "examine" : "It looks very comfy, but you don't think you'll find anything in it."
+      },
+      "rug@orcholdii" : {
+         "location" : "IN_ROOM:neroom2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "rug",
+         "examine" : "It looks like it was made from... um well.... you probably don't want to know."
+      },
+      "globe@orcholdii" : {
+         "location" : "IN_ROOM:arch1",
+         "oflags" : [
+            "Destroyed",
+            "Lightable",
+            "Lit"
+         ],
+         "name" : "globe",
+         "bvalue" : "25",
+         "desc[0]" : "A small globe of light floats here.",
+         "size" : "1"
+      },
+      "chisel@orcholdii" : {
+         "desc[1]" : "A chisel has been placed on the workbench.",
+         "damage" : "3",
+         "location" : "IN_ROOM:cell3",
+         "oflags" : [
+            "GetFlips",
+            "Destroyed",
+            "Weapon"
+         ],
+         "name" : "chisel",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "A chisel lies here."
+      },
+      "stand@orcholdii" : {
+         "location" : "IN_ROOM:chambers",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "desk",
+         "name" : "stand"
+      },
+      "doors2b@orcholdii" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:seroom1",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doors2b",
+         "desc[2]" : "The door is locked.",
+         "linked" : "doors2a",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "wall2@orcholdii" : {
+         "location" : "IN_ROOM:sitting",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "wall2",
+         "linked" : "wall1",
+         "state" : "1",
+         "pname" : "wall",
+         "maxstate" : "1",
+         "desc[0]" : "The South wall has swung back to reveal another room."
+      },
+      "doorn1b@orcholdii" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:nwroom1",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doorn1b",
+         "desc[2]" : "The door is locked.",
+         "linked" : "doorn1a",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "tape@orcholdii" : {
+         "location" : "IN_ROOM:arch2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "tape",
+         "examine" : "Some bright yellow tape with 'Do Not Enter' written all over the place."
+      },
+      "queenwardrobe@orcholdii" : {
+         "location" : "IN_ROOM:chambers",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "wardrobe",
+         "name" : "queenwardrobe",
+         "examine" : "You barely contain your lunch when you peek inside the wardrobe.  In it\nis the largest collection of langerie you have ever seen and you really\nwish you could have passed on having to imagine the queen in them.\n"
+      },
+      "doors4a@orcholdii" : {
+         "desc[1]" : "The east door is closed.",
+         "location" : "IN_ROOM:arch2p2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "eastdoor",
+         "name" : "doors4a",
+         "desc[2]" : "The east door is locked.",
+         "linked" : "doors4b",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The east door is open."
+      },
+      "doorn3a@orcholdii" : {
+         "desc[1]" : "The west door is closed.",
+         "location" : "IN_ROOM:arch3p2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "westdoor",
+         "name" : "doorn3a",
+         "desc[2]" : "The west door is locked.",
+         "linked" : "doorn3b",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The west door is open."
+      },
+      "sconce@orcholdii" : {
+         "location" : "IN_ROOM:arch1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sconce"
+      },
+      "keg@orcholdii" : {
+         "location" : "IN_ROOM:dining",
+         "oflags" : [
+            "Food",
+            "Alcohol"
+         ],
+         "altname" : "barrel",
+         "name" : "keg",
+         "bvalue" : "200",
+         "desc[0]" : "A huge barrel of ale sits here.",
+         "size" : "20"
+      },
+      "breastplate@orcholdii" : {
+         "location" : "WORN_BY:Barthalamu",
+         "armor" : "35",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "armor",
+         "name" : "breastplate",
+         "size" : "25",
+         "bvalue" : "250",
+         "desc[0]" : "A finely made breastplate lies here.",
+         "aflags" : [
+            "Chest"
+         ]
+      },
+      "doors4b@orcholdii" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:seroom2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doors4b",
+         "desc[2]" : "The door is locked.",
+         "linked" : "doors4a",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "doorn3b@orcholdii" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:nwroom2",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "doorn3b",
+         "desc[2]" : "The door is locked.",
+         "linked" : "doorn3a",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "cigars@orcholdii" : {
+         "location" : "IN_ROOM:swroom2",
+         "oflags" : [
+            "Lightable"
+         ],
+         "name" : "cigars",
+         "bvalue" : "20",
+         "desc[0]" : "A rumpled pack of cigars lies here.",
+         "size" : "1"
+      },
+      "button@orcholdii" : {
+         "location" : "IN_ROOM:chambers",
+         "oflags" : [
+            "Destroyed",
+            "NoGet",
+            "Pushable"
+         ],
+         "name" : "button",
+         "maxstate" : "0",
+         "desc[0]" : "There's a button on the night stand.",
+         "state" : "0"
+      },
+      "pie@orcholdii" : {
+         "location" : "IN_ROOM:kitchen",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "pie",
+         "bvalue" : "20",
+         "desc[0]" : "A yummy looking cherry pie.",
+         "size" : "2"
+      },
+      "wardrobe@orcholdii" : {
+         "location" : "IN_ROOM:nwroom1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "dresses",
+         "name" : "wardrobe"
+      },
+      "roomdesk@orcholdii" : {
+         "location" : "IN_ROOM:neroom2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "table",
+         "pname" : "desk",
+         "name" : "roomdesk"
+      },
+      "mattress@orcholdii" : {
+         "location" : "IN_ROOM:cell1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "straw",
+         "name" : "mattress",
+         "examine" : "What, are you crazy?  How would a prisoner have something to hide in a\nmattress?  You should go get your head examined! "
+      }
+   },
+   "loc" : {
+      "cell2@orcholdii" : {
+         "exits" : {
+            "e" : "guardroom"
+         },
+         "flags" : [
+            "DARK"
+         ],
+         "zone" : "orcholdii",
+         "title" : "Prison Cell",
+         "id" : "cell2",
+         "description" : "\n   A small cell with none of the comforts of home.  The most that can be said\nfor it is that it is dry.  A bed of straw does little to inspire comfort and\nyou hope that the chamber pot is emptied frequently.\n",
+         "altitude" : null
+      },
+      "nwroom2@orcholdii" : {
+         "exits" : {
+            "e" : "^doorn3b"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Fine Bedroom",
+         "id" : "nwroom2",
+         "description" : "\n   This room appears to be a bit more finished then the others.  The walls are\nsmooth, though still just the rock of which they were carved.  There is a real\n&+Cbed&* sitting in the middle of the room properly made.  The room itself is\nimmaculate in its cleanliness and you wonder that an orc lives here at all.\n",
+         "altitude" : null
+      },
+      "arch3@orcholdii" : {
+         "exits" : {
+            "e" : "^doorn2a",
+            "w" : "^doorn1a",
+            "n" : "arch3p2",
+            "s" : "entry"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Through the Arch",
+         "id" : "arch3",
+         "description" : "\n   This is a grand hallway that archs well over your head.  The floor is a\nsoothing white marble and the light is provided by what seem to be smokeless\ntorches set in pure gold sconces. You are almost positive that dwarves were \nbehind such magnificent craftmanship.  There are doors east and west and \nthe hallway continues to the north.\n",
+         "altitude" : null
+      },
+      "arch3p2@orcholdii" : {
+         "exits" : {
+            "e" : "^doorn4a",
+            "w" : "^doorn3a",
+            "s" : "arch3"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Grand Hallway",
+         "id" : "arch3p2",
+         "description" : "\n   You are standing at the end of the northern hallway.  The hall continues to\nbe grandiose.  There is a painting at the end of the hallway that would give\neven the coldest person nightmares.  From the regalia it appears to be the\nqueen of the orcs, Blanche.  She must surely be ugly, even by orcish standards\nand to you her visage is downright frightening.  There are doorways to the east\nand west, you should probably choose one fast.  \n",
+         "altitude" : null
+      },
+      "cell1@orcholdii" : {
+         "exits" : {
+            "w" : "guardroom"
+         },
+         "flags" : [
+            "DARK"
+         ],
+         "zone" : "orcholdii",
+         "title" : "Prison Cell",
+         "id" : "cell1",
+         "description" : "\n   This is a plain little prison cell.  There is a straw mattress in the\ncorner and a chamber pot in the other.  On the wall next to the bed there are\na number of hatch marks.  You would guess that the inmate is counting the\ndays of his imprisonment.  It looks like he has been here awhile.\n",
+         "altitude" : null
+      },
+      "dining@orcholdii" : {
+         "exits" : {
+            "n" : "arch1",
+            "s" : "kitchen"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Dining Hall",
+         "id" : "dining",
+         "description" : "\n   You have entered what can only be termed a dining hall, though you are\nshocked that orcs would even bother with one.  There is a massive chandalier\nabove the dining room table.  The table though is only large enough for 6 to\neat at and there are &+Ccushions and blankets&* piled all over this large room. \nFrom the scraps of food lying about you would guess that the orcs just eat\nanywhere they choose in here.  A set of swinging doors leads south into the\nkitchen and the hallway is to the north.\n",
+         "altitude" : null
+      },
+      "nwroom1@orcholdii" : {
+         "exits" : {
+            "e" : "^doorn1b"
+         },
+         "flags" : [
+            "DARK"
+         ],
+         "zone" : "orcholdii",
+         "title" : "Bedroom",
+         "id" : "nwroom1",
+         "description" : "\n   You are amazed at the poor quality of the bedroom.  It looks to be of the\nfinest orcish make, that is to say the walls are somewhat rough and hewn out\nof the stone.  They must not have gotten to this room in their remodeling yet. \nThere is a pile of &+Cblankets&* and &+Cstraw&* on the floor that you take is the bed\nand an open &+Cwardrobe&* filled with &+Cdresses&* that look very un-orcish.\n",
+         "altitude" : null
+      },
+      "kitchen@orcholdii" : {
+         "exits" : {
+            "n" : "dining"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Kitchen",
+         "id" : "kitchen",
+         "description" : "\n   Just considering what an orcish diet consists off should make you ill. \nFortunately it looks like you caught them between meals.  Surprisingly enough\nthere are a few things that almost look edible to you.\n",
+         "altitude" : null
+      },
+      "arch2@orcholdii" : {
+         "exits" : {
+            "e" : "^doors2a",
+            "w" : "^doors1a",
+            "n" : "entry",
+            "s" : "arch2p2"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Through the Arch",
+         "id" : "arch2",
+         "description" : "\n   This is a grand hallway that archs well over your head.  The floor is a\ndeep blue quartz and the lights are what seem to be magical balls of continual\nlight held in place by silver lanterns.  As you look around you become certain\nthat this was not constructed by orcish hands.  The doorway to the east is\nblocked by yellow tape.  On the tape is written, \"Do Not Enter.\"  There is a\ndoor to the west and the grand entry is to the north.\n",
+         "altitude" : null
+      },
+      "audience@orcholdii" : {
+         "exits" : {
+            "e" : "entry",
+            "s" : "sitting"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "The Queen's Audience Chamber",
+         "id" : "audience",
+         "description" : "\n   It appears no expense was spared in preparing this room.  The entire room\nis done in black marble and there are tapestries looted from some of the\nfinest castles adorning the walls.  There is a chandalier hanging from the\nceiling and there are more of those magical balls of light about the room.  On\nthe west wall is a massive dias with two thrones on it.  One is large, twice\nthe size of the orc and obviously intended for the Queen.  The other is just a\nglorified chair intended for the King, though from the coat of dust on it, he\nrarely uses it prefering his old audience chamber.  There is a door to the\nsouth and the hallway leads back to the east.\n",
+         "altitude" : null
+      },
+      "balcony@orcholdii" : {
+         "exits" : {
+            "d" : "entry"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "On the Balcony",
+         "id" : "balcony",
+         "description" : "\n   From up here you have a good view of the action down below.  The Orcs look\nno less silly all dressed up like that though.  You are amazed to notice\nhowever that there is absolutely no dust on the chandalier.\n",
+         "altitude" : null
+      },
+      "arch1@orcholdii" : {
+         "exits" : {
+            "w" : "audience",
+            "e" : "entry",
+            "s" : "dining"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Grand Hallway",
+         "id" : "arch1",
+         "description" : "\n   This is perhaps the grandest of the three hallways exiting the hall.  The\nfloor is done in a beautiful black marble and there are mithril &+Csconces\nholding globes of continual light.  The most amazing object in the room is the\nceiling.  It is a mosiac of the history of the orcs done by a masterful\nartist.  It is almost enough to bring you to tears.  There are a pair of\nmassive double doors standing open to the south and the hallway leads to an\naudience chamber to the west.\n",
+         "altitude" : null
+      },
+      "seroom1@orcholdii" : {
+         "exits" : {
+            "w" : "^doors2b"
+         },
+         "flags" : [
+            "DEATH",
+            "DARK"
+         ],
+         "zone" : "orcholdii",
+         "title" : "Bedroom",
+         "id" : "seroom1",
+         "description" : "\n   You step blindly into the room and discover they dug a bit too deep in\nhere.  You seem to fall forever before rejoining the body to the earth.\n",
+         "altitude" : null
+      },
+      "entry@orcholdii" : {
+         "exits" : {
+            "w" : "arch1",
+            "e" : "hallway",
+            "u" : "balcony",
+            "n" : "arch3",
+            "s" : "arch2"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Grand Entry",
+         "id" : "entry",
+         "description" : "\n   You have entered what appears to be a grand palace at first look.  There\nare stairs leading up to a balcony.  There is a rosy marble floor and what\nappears to be a genuine crystal chandalier.  There are grand archways leading\nnorth, south, and east.  Then you notice that the nobility are actually orcs\nin human finery and begin to wonder if perhaps you're in the wrong place!\n",
+         "altitude" : null
+      },
+      "sitting@orcholdii" : {
+         "exits" : {
+            "w" : "chambers",
+            "n" : "audience",
+            "s" : "^wall2"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "The Queen's Sitting Room",
+         "id" : "sitting",
+         "description" : "\n    This is a somber chamber, cosy with comfy looking chairs.  There is a loom\nin a corner and a stool and stand for a musician, though you imagine those are\nfew and far between here.  There are a set of double doors standing open to\nthe west leading into the Queen's bedroom.\n",
+         "altitude" : null
+      },
+      "neroom2@orcholdii" : {
+         "exits" : {
+            "w" : "^doorn4b"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Fine Bedroom",
+         "id" : "neroom2",
+         "description" : "\n   This room is a bit more finished then the others closer to the entryway. \nThe walls have been smoothed and the floor is covered in a lush &+Cfur rug&*. \nThere is a fine suit on the bed, perfectly pressed.  The &+Cdesk&* however has a\nfine coating of dust, as if this room hasn't been used recently.\n",
+         "altitude" : null
+      },
+      "cell3@orcholdii" : {
+         "exits" : {
+            "n" : "guardroom"
+         },
+         "flags" : [
+            "DARK"
+         ],
+         "zone" : "orcholdii",
+         "title" : "Prison Cell",
+         "id" : "cell3",
+         "description" : "\n   It appears this prisoner has received a few concessions.  There is a\n&+Cworkbench&* in one corner covered with stoneworking tools.  There is a recesed\nalcove for the chamber pot and a real cot is set up on the west wall.\n",
+         "altitude" : null
+      },
+      "guardroom@orcholdii" : {
+         "exits" : {
+            "w" : "cell2",
+            "e" : "cell1",
+            "n" : "^wall1",
+            "s" : "cell3"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Guard Room",
+         "id" : "guardroom",
+         "description" : "\n   This chamber is very plain, having just a chair and a small table.  There\nare cell doors east, west, and south.  \n",
+         "altitude" : null
+      },
+      "swroom2@orcholdii" : {
+         "exits" : {
+            "e" : "^doors3b"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Fine Bedroom",
+         "id" : "swroom2",
+         "description" : "\n   This room appears to be a bit more finished then the others.  The walls are\nsmooth, though still just the rock of which they were carved.  There is a real\nbed sitting in the middle of the room, it's sheets rumpled.  From the stench\nof stale Orc sweat and cigars you have a pretty good idea what occured here.\nYou are somewhat thankful you missed it.\n",
+         "altitude" : null
+      },
+      "arch2p2@orcholdii" : {
+         "exits" : {
+            "e" : "^doors4a",
+            "w" : "^doors3a",
+            "n" : "arch2"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Grand Hallway",
+         "id" : "arch2p2",
+         "description" : "\n   You are standing at the end of the southern hallway.  The hall continues to\nbe grandiose.  There is a painting at the end of the hallway.  It appears to be \nof the King, Harold, looking majestic in some silly looking purple robes and \nholding a bejeweled sceptre of office.     \n",
+         "altitude" : null
+      },
+      "hallway@orcholdii" : {
+         "exits" : {
+            "e" : "Hallway3@orchold",
+            "w" : "entry"
+         },
+         "flags" : [
+            "DARK",
+            "NoMobiles"
+         ],
+         "zone" : "orcholdii",
+         "title" : "Rough-Hewn Hallway",
+         "id" : "hallway",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nIt looks as if there is a crowded open area to the west. You wonder what the\ncommotion is.  The hallway also leads back to the east.\n",
+         "altitude" : null
+      },
+      "swroom1@orcholdii" : {
+         "exits" : {
+            "e" : "^doors1b"
+         },
+         "flags" : [
+            "DARK"
+         ],
+         "zone" : "orcholdii",
+         "title" : "Bedroom",
+         "id" : "swroom1",
+         "description" : "\n   You are amazed at the poor quality of the bedroom.  It looks to be of the\nfinest orcish make, that is to say the walls are somewhat rough and hewn out\nof the stone.  They must not have gotten to this room in their remodeling yet.\nThis room is completely empty and doesn't look used.\n",
+         "altitude" : null
+      },
+      "neroom1@orcholdii" : {
+         "exits" : {
+            "w" : "^doorn2b"
+         },
+         "flags" : [
+            "DARK"
+         ],
+         "zone" : "orcholdii",
+         "title" : "Bedroom",
+         "id" : "neroom1",
+         "description" : "\n   You are amazed at the poor quality of the bedroom.  It looks to be of the\nfinest orcish make, that is to say the walls are somewhat rough and hewn out\nof the stone.  They must not have gotten to this room in their remodeling yet.\nThere is a pile of blankets and straw on the floor that you take is the bed\nand in a surprisingly human manner all manner of &+Cclothes&* are strewn about the \nroom.  You have no idea which are clean and which not.  \n",
+         "altitude" : null
+      },
+      "chambers@orcholdii" : {
+         "exits" : {
+            "e" : "sitting"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "The Queen's Bedroom",
+         "id" : "chambers",
+         "description" : "\n   Compared to the other rooms you have passed through, this chamber seems\nalmost modest.  There is a four-poster queen sized canopy bed along the west \nwall.  Next to the bed is a small &+Cnight stand&* and along the north wall is a\nlarge &+Cwardrobe&*.  It looks like the only exit is back the way you came.\n",
+         "altitude" : null
+      },
+      "seroom2@orcholdii" : {
+         "exits" : {
+            "w" : "^doors4b"
+         },
+         "flags" : [],
+         "zone" : "orcholdii",
+         "title" : "Unfinished Bedroom",
+         "id" : "seroom2",
+         "description" : "\n   This bedroom seems to still be in its incipient stages.  The walls are only\nvaguely defined and there is loose stone all over the room.  \n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "jason@orcholdii" : {
+         "damage" : "10",
+         "location" : "entry",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "95",
+         "name" : "jason",
+         "description" : "Jason Orc in a tux moves to the attack.",
+         "strength" : "84"
+      },
+      "larry@orcholdii" : {
+         "damage" : "10",
+         "location" : "cell1",
+         "armor" : "0",
+         "name" : "larry",
+         "description" : "A dwarf in tattered clothes stands here.",
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "Larry the Dwarf",
+         "aggression" : "0"
+      },
+      "spot@orcholdii" : {
+         "damage" : "15",
+         "location" : "arch3",
+         "speed" : "5",
+         "armor" : "0",
+         "aggression" : "96",
+         "name" : "spot",
+         "description" : "Spot the Orc guardsman in formal livery informs you that you don't belong here.",
+         "strength" : "150"
+      },
+      "rover@orcholdii" : {
+         "damage" : "15",
+         "location" : "arch2",
+         "speed" : "5",
+         "armor" : "0",
+         "aggression" : "96",
+         "name" : "rover",
+         "description" : "Rover the Orc guardsman in formal livery leaps to the attack.",
+         "strength" : "150"
+      },
+      "brad@orcholdii" : {
+         "damage" : "10",
+         "location" : "entry",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "95",
+         "name" : "Brad",
+         "description" : "Brad Orc in a tux charges you.",
+         "strength" : "84"
+      },
+      "blanch@orcholdii" : {
+         "eflags" : [
+            "Fireball",
+            "Frost",
+            "Missile",
+            "Shock",
+            "NegFrost"
+         ],
+         "damage" : "32",
+         "location" : "chambers",
+         "armor" : "0",
+         "name" : "blanch",
+         "examine" : "She hungers, and would rather eat than fight with infidels.",
+         "sflags" : [
+            "female"
+         ],
+         "description" : "Blanche, Queen of the Orcs, frightens you with her visage.",
+         "strength" : "500",
+         "speed" : "0",
+         "pname" : "Blanche",
+         "aggression" : "10",
+         "mflags" : [
+            "QFood"
+         ]
+      },
+      "hilda@orcholdii" : {
+         "damage" : "10",
+         "location" : "arch1",
+         "armor" : "0",
+         "name" : "hilda",
+         "description" : "Hilda the Orcish maid charges you with her feather duster drawn.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50",
+         "speed" : "5",
+         "aggression" : "80"
+      },
+      "curly@orcholdii" : {
+         "damage" : "10",
+         "location" : "cell2",
+         "armor" : "0",
+         "name" : "curly",
+         "description" : "A dwarf in worn clothes stands here.",
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "Curly the Dwarf",
+         "aggression" : "0"
+      },
+      "art@orcholdii" : {
+         "damage" : "7",
+         "location" : "entry",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "10",
+         "name" : "art",
+         "description" : "Art the foppish Orc attempts to play a violin.",
+         "strength" : "50"
+      },
+      "barthalamu@orcholdii" : {
+         "damage" : "8",
+         "location" : "guardroom",
+         "speed" : "0",
+         "armor" : "0",
+         "aggression" : "80",
+         "name" : "barthalamu",
+         "description" : "Barthalamu, consort of the Queen, stands here guarding his charges.",
+         "strength" : "200"
+      },
+      "veronica@orcholdii" : {
+         "damage" : "10",
+         "location" : "entry",
+         "armor" : "0",
+         "name" : "veronica",
+         "description" : "Veronica Orc in a ballroom dress rushes towards you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "84",
+         "speed" : "0",
+         "aggression" : "98"
+      },
+      "moe@orcholdii" : {
+         "damage" : "10",
+         "location" : "cell3",
+         "armor" : "0",
+         "name" : "moe",
+         "description" : "A dwarf in clean clothes stands here.",
+         "strength" : "75",
+         "speed" : "0",
+         "pname" : "Moe the Dwarf",
+         "aggression" : "0"
+      },
+      "buffy@orcholdii" : {
+         "damage" : "10",
+         "location" : "entry",
+         "armor" : "0",
+         "name" : "Buffy",
+         "description" : "Buffy Orc in a ballroom dress rushes towards you menacingly.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "84",
+         "speed" : "0",
+         "aggression" : "98"
+      }
+   }
+}

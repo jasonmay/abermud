@@ -1,0 +1,1367 @@
+{
+   "obj" : {
+      "sinkhandle@playhouse" : {
+         "desc[1]" : "The sink handle is turned off.",
+         "location" : "IN_ROOM:house13",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "altname" : "handle",
+         "name" : "sinkhandle",
+         "examine" : "Yep, it's a sink handle and you can turn it.",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The sink handle has been turned on."
+      },
+      "cracker@playhouse" : {
+         "location" : "CARRIED_BY:Cody",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "cracker",
+         "bvalue" : "5",
+         "desc[0]" : "A nummy looking graham cracker has been left here.",
+         "size" : "1"
+      },
+      "playpen@playhouse" : {
+         "location" : "IN_ROOM:house22",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "playpen",
+         "examine" : "Wow! Choo-Choo trains and teddy bears are in it!",
+         "desc[0]" : "A playpen sets here."
+      },
+      "pacifier@playhouse" : {
+         "location" : "CARRIED_BY:Maggie",
+         "altname" : "nuk",
+         "name" : "pacifier",
+         "examine" : "Wow! That's real &+YGOLD&+W!!&*",
+         "bvalue" : "170",
+         "desc[0]" : "A solid &+Ygold &*pacifier has been left here.",
+         "size" : "2"
+      },
+      "rattle@playhouse" : {
+         "damage" : "5",
+         "location" : "WIELDED_BY:Tot",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "rattle",
+         "examine" : "Makes a real neat rattle.",
+         "bvalue" : "60",
+         "desc[0]" : "A baby rattle has been left here.",
+         "size" : "3"
+      },
+      "basket@playhouse" : {
+         "desc[1]" : "A picnic basket rests on the grass.",
+         "location" : "IN_ROOM:yard7",
+         "oflags" : [
+            "Container",
+            "GetFlips"
+         ],
+         "name" : "basket",
+         "state" : "1",
+         "size" : "8",
+         "maxstate" : "1",
+         "bvalue" : "30",
+         "desc[0]" : "A little picnic basket has been left here."
+      },
+      "halo@playhouse" : {
+         "location" : "WORN_BY:Peter",
+         "armor" : "35",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Glowing"
+         ],
+         "name" : "halo",
+         "examine" : "Looks a little tarnished, but still shines.",
+         "size" : "2",
+         "bvalue" : "120",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A tarnished glowing halo is floating here."
+      },
+      "pillow@playhouse" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:Grandie",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "pillow",
+         "examine" : "Hrmm, good for whopping perhaps?",
+         "bvalue" : "110",
+         "desc[0]" : "A deadly looking baby pillow rests here.",
+         "size" : "2"
+      },
+      "toilet@playhouse" : {
+         "location" : "IN_ROOM:house4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "toilet",
+         "examine" : "It is the Porcelain God. You know, you can use it.",
+         "maxstate" : "1",
+         "state" : "0"
+      },
+      "blankie@playhouse" : {
+         "location" : "CARRIED_BY:Sweetie",
+         "name" : "blankie",
+         "examine" : "It's a cute little blankie.",
+         "bvalue" : "150",
+         "desc[0]" : "Sweetie's precious blankie has been dropped here.",
+         "size" : "3"
+      },
+      "pepsi@playhouse" : {
+         "desc[1]" : "An ice-cold can of Pepsi rests on the shelf.",
+         "location" : "IN_CONTAINER:refridgerator",
+         "oflags" : [
+            "GetFlips",
+            "Food"
+         ],
+         "name" : "pepsi",
+         "examine" : "Remember: It is the choice of a new generation!",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A can of Pepsi has been left here."
+      },
+      "dirtydiaper@playhouse" : {
+         "location" : "WORN_BY:Tony",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "diaper",
+         "name" : "dirtydiaper",
+         "examine" : "Boy, this stinks. Maybe it'll keep enemies away?",
+         "bvalue" : "60",
+         "desc[0]" : "A rather dirty diaper has been left here. A strange odor eminates from it.",
+         "size" : "2"
+      },
+      "coke@playhouse" : {
+         "desc[1]" : "An ice-cold can of Coca-Cola Classic rests on the shelf.",
+         "location" : "IN_CONTAINER:refridgerator",
+         "oflags" : [
+            "GetFlips",
+            "Food"
+         ],
+         "name" : "coke",
+         "examine" : "Remember: Coke is it! (TM)",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A can of Coke (yes the cola!) has been left here."
+      },
+      "house26door@playhouse" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:house26",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "house26door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "house27edoor",
+         "state" : "2",
+         "pname" : "Door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "house27edoor@playhouse" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:house27",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "house27edoor",
+         "desc[2]" : "The door is locked.",
+         "linked" : "house26door",
+         "state" : "2",
+         "pname" : "Door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "key@playhouse" : {
+         "desc[1]" : "A shiny key lies on the bottom of the drawer.",
+         "location" : "IN_CONTAINER:drawer",
+         "oflags" : [
+            "Key",
+            "GetFlips"
+         ],
+         "name" : "key",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A shiny key has been dropped here."
+      },
+      "babyfood@playhouse" : {
+         "location" : "IN_CONTAINER:jar",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "babyfood",
+         "examine" : "Well.. it IS edible.. ..yeah.. ..looks nummy..",
+         "bvalue" : "5",
+         "desc[0]" : "A pile of strained turkey baby food has been left here.",
+         "size" : "4"
+      },
+      "closetindoor@playhouse" : {
+         "desc[1]" : "The closet door is closed.",
+         "location" : "IN_ROOM:house25",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "closetindoor",
+         "desc[2]" : "The closet door is locked.",
+         "linked" : "closetoutdoor",
+         "state" : "2",
+         "pname" : "Door",
+         "maxstate" : "2",
+         "desc[0]" : "The closet door is open."
+      },
+      "jar@playhouse" : {
+         "desc[1]" : "A baby food jar rests on a shelf.",
+         "location" : "IN_CONTAINER:refridgerator",
+         "oflags" : [
+            "Container",
+            "Openable"
+         ],
+         "name" : "jar",
+         "examine" : "A keen little jar with a Gerber label on it.",
+         "size" : "4",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A baby food jar has been left behind here."
+      },
+      "piano@playhouse" : {
+         "location" : "IN_ROOM:house28",
+         "name" : "piano",
+         "examine" : "Wow! It even plays music!",
+         "bvalue" : "120",
+         "desc[0]" : "A golden minature piano has been left here.",
+         "size" : "3"
+      },
+      "babydoll@playhouse" : {
+         "location" : "CARRIED_BY:Angelica",
+         "altname" : "doll",
+         "name" : "babydoll",
+         "examine" : "It's a Cabbage Patch Doll!",
+         "bvalue" : "60",
+         "desc[0]" : "A cute little baby doll has been lost here.",
+         "size" : "3"
+      },
+      "drawer@playhouse" : {
+         "desc[1]" : "The dresser drawer is closed.",
+         "location" : "IN_ROOM:house7",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Container"
+         ],
+         "name" : "drawer",
+         "examine" : "The drawer looks like it could be opened and closed.",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The dresser drawer is open."
+      },
+      "puddle@playhouse" : {
+         "location" : "IN_ROOM:house17",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "name" : "puddle",
+         "examine" : "Something could be in the puddle.",
+         "desc[0]" : "A yellow puddle covers the center of the floor.",
+         "size" : "1"
+      },
+      "pitchfork@playhouse" : {
+         "damage" : "8",
+         "location" : "WIELDED_BY:Mikey",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "pitchfork",
+         "examine" : "It's red! And wow, that's mighty hard plastic!",
+         "bvalue" : "90",
+         "desc[0]" : "A killer looking plastic pitchfork has been dropped here.",
+         "size" : "3"
+      },
+      "house27wdoor@playhouse" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:house27",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "house27wdoor",
+         "desc[2]" : "The door is locked.",
+         "linked" : "house28door",
+         "state" : "2",
+         "pname" : "Door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "pinkyring@playhouse" : {
+         "desc[1]" : "A ring floats in the puddle.",
+         "location" : "IN_CONTAINER:puddle",
+         "oflags" : [
+            "Wearable",
+            "GetFlips"
+         ],
+         "altname" : "ring",
+         "name" : "pinkyring",
+         "examine" : "It's a keen little pinkyring with a bright red birthstone.",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A small child's pinkyring has been lost here."
+      },
+      "gun@playhouse" : {
+         "damage" : "5",
+         "location" : "WIELDED_BY:Soldier",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "gun",
+         "examine" : "It would shoot, but it's out of bullets.",
+         "bvalue" : "20",
+         "desc[0]" : "A toy soldier's gun has been left here.",
+         "size" : "3"
+      },
+      "closetoutdoor@playhouse" : {
+         "desc[1]" : "The closet door is closed.",
+         "location" : "IN_ROOM:house24",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "closetoutdoor",
+         "desc[2]" : "The closet door is locked.",
+         "linked" : "closetindoor",
+         "state" : "2",
+         "pname" : "Door",
+         "maxstate" : "2",
+         "desc[0]" : "The closet door is open."
+      },
+      "refridgerator@playhouse" : {
+         "desc[1]" : "The large refridgerator door is closed.",
+         "location" : "IN_ROOM:house10",
+         "oflags" : [
+            "Openable",
+            "Container",
+            "NoGet"
+         ],
+         "altname" : "fridge",
+         "name" : "refridgerator",
+         "examine" : "\nYou wonder how fridges keep the food cold, considering there's no such \nthing as electricity.  Probably someone comes daily to cast the icestorm\nspell in it.",
+         "size" : "15",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "The large refridgerator door has been left open."
+      },
+      "toy@playhouse" : {
+         "damage" : "6",
+         "location" : "WIELDED_BY:Buffy",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "toy",
+         "examine" : "Neat little 'toy' it hums when you press a switch. Looks pretty deadly though.",
+         "bvalue" : "150",
+         "desc[0]" : "A 'toy' has been discarded here.",
+         "size" : "4"
+      },
+      "tiara@playhouse" : {
+         "location" : "WORN_BY:Prissy",
+         "armor" : "35",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "tiara",
+         "examine" : "It's really shiny!",
+         "size" : "2",
+         "bvalue" : "100",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A shiny tiara has been dropped here."
+      },
+      "budweiser@playhouse" : {
+         "desc[1]" : "An ice-cold can of Budweiser rests on the shelf.",
+         "location" : "IN_CONTAINER:refridgerator",
+         "oflags" : [
+            "GetFlips",
+            "Food"
+         ],
+         "altname" : "bud",
+         "name" : "budweiser",
+         "examine" : "Bud-why-zer.. (Must be at least 21!)",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "15",
+         "desc[0]" : "A can of Budweiser has been left by the frogs here."
+      },
+      "teethingring@playhouse" : {
+         "location" : "CARRIED_BY:Andrea",
+         "altname" : "teether",
+         "name" : "teethingring",
+         "examine" : "It's blue! And it's cold! Go figure!",
+         "bvalue" : "80",
+         "desc[0]" : "A teething ring has been dropped here. It's still cold.",
+         "size" : "1"
+      },
+      "backpack@playhouse" : {
+         "desc[1]" : "A child's backpack rests against the fence.",
+         "location" : "IN_ROOM:yard5",
+         "oflags" : [
+            "Container",
+            "GetFlips"
+         ],
+         "name" : "backpack",
+         "examine" : "It's a rather roomy backpack.",
+         "state" : "1",
+         "size" : "10",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "A child's backpack has been left here."
+      },
+      "mountaindew@playhouse" : {
+         "desc[1]" : "An ice-cold can of Mountain Dew rests on the shelf.",
+         "location" : "IN_CONTAINER:refridgerator",
+         "oflags" : [
+            "GetFlips",
+            "Food"
+         ],
+         "altname" : "dew",
+         "name" : "mountaindew",
+         "examine" : "Remember: Just Dew It!",
+         "size" : "1",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A can of Mountain Dew has been left here."
+      },
+      "hotwheel@playhouse" : {
+         "location" : "IN_ROOM:yard2",
+         "altname" : "car",
+         "name" : "hotwheel",
+         "examine" : "It's a hot-red chariot! And the doors really open!",
+         "bvalue" : "30",
+         "desc[0]" : "A cool little hot wheels car has been left here.",
+         "size" : "1"
+      },
+      "milk@playhouse" : {
+         "desc[1]" : "A cold bottle of milk rests on the shelf.",
+         "location" : "IN_CONTAINER:refridgerator",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "name" : "milk",
+         "examine" : "Nummy! Baby milk! Fresh from mommie! (Just Kidding!)",
+         "size" : "2",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A bottle of milk is waiting here."
+      },
+      "house28door@playhouse" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:house28",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "house28door",
+         "desc[2]" : "The door is locked.",
+         "linked" : "house27wdoor",
+         "state" : "2",
+         "pname" : "Door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "sink@playhouse" : {
+         "location" : "IN_ROOM:house13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sink",
+         "examine" : "It is a really neat sink."
+      },
+      "dresser@playhouse" : {
+         "location" : "IN_ROOM:house7",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "dresser",
+         "desc[0]" : "A fine oak dresser sits here with a loose drawer."
+      },
+      "toiletlid@playhouse" : {
+         "location" : "IN_ROOM:house4",
+         "oflags" : [
+            "NoGet",
+            "Openable"
+         ],
+         "altname" : "lid",
+         "name" : "toiletlid",
+         "examine" : "It's a typical toilet lid, you can open and close it.",
+         "maxstate" : "1",
+         "state" : "1"
+      },
+      "plasticsack@playhouse" : {
+         "desc[1]" : "A plastic sack has been left on the counter.",
+         "location" : "IN_ROOM:house10",
+         "oflags" : [
+            "GetFlips",
+            "Container"
+         ],
+         "altname" : "sack",
+         "name" : "plasticsack",
+         "examine" : "Seems to have a strange 'S' logo on the side..",
+         "size" : "6",
+         "state" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A small plastic sack has been discarded here."
+      }
+   },
+   "loc" : {
+      "house6@playhouse" : {
+         "exits" : {
+            "w" : "house5",
+            "s" : "house3"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Playroom",
+         "id" : "house6",
+         "description" : "\n  I suppose this room was designed for rainy days when children couldn't \ngo out. There are various toys littering the floor. Children run \nscreaming from room to room throughout the house. You see a room to the \nsouth. There is also a room to the west.\n",
+         "altitude" : null
+      },
+      "house25@playhouse" : {
+         "exits" : {
+            "u" : "house26",
+            "s" : "^closetindoor"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Kids Closet",
+         "id" : "house25",
+         "description" : "\n  At first look this appears to be a simple kids closet. Yet upon closer \nlook you see there is a way up to the attic here. There are clothes \nblocking you from seeing too much in this messy place. It is definately \nowned by a child. All of the clutter proves it.\n",
+         "altitude" : null
+      },
+      "house3@playhouse" : {
+         "exits" : {
+            "w" : "house2",
+            "e" : "house10",
+            "n" : "house6",
+            "s" : "house9"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Nap Room",
+         "id" : "house3",
+         "description" : "\n  There are little matpads scattered around the room with huge pillows \nset at the head of each of them. A thin, but warm looking blanket also \ncovers the soft matpads. There is a clock on the wall for the children\nto stare at to pray that their naptime goes by quickly so that they can\ngo back outside and play. This room actually makes you long for a nice\nrelaxing nap. There are exits in all directions.\n",
+         "altitude" : null
+      },
+      "house4@playhouse" : {
+         "exits" : {
+            "e" : "house5"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Bathroom",
+         "id" : "house4",
+         "description" : "\n  Ahhhhh, the ever needed Bathroom. The floor is black and white \nlinolium. The walls are covered with pretty flowered wall paper. The \nsink has a bottle of pump hand soap sitting next to it. Pretty &+Yyellow \nflowers&* sit in a vase while the sun shines in from the windows. The \ncurtains are made of &+Yyellow cloth&* and has beautiful &+Wwhite&* lace on the\nedges. The bathroom just wouldn't be a bathroom without a &+Ctoilet&*. The \ntoilet is made of fine porcelain. The only exit from this room is back east.\n",
+         "altitude" : null
+      },
+      "house26@playhouse" : {
+         "exits" : {
+            "w" : "^house26door",
+            "d" : "house25"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "playhouse",
+         "title" : "Child's Nightmare: The Attic",
+         "id" : "house26",
+         "description" : "\n  What could possibly be going through your head to venture up into the \nattic? It is cold and dreary up here and very little light is up here. \nYou hear scratching yet see nothing that causes it. There are boxes upon \nboxes of junk cluttering the rooms up here. Where could all of this stuff \ncome from? The attic continues to the west, or you can return to the house \nby going down.\n",
+         "altitude" : null
+      },
+      "yard5@playhouse" : {
+         "exits" : {
+            "w" : "yard4",
+            "s" : "yard2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "playhouse",
+         "title" : "Teeter-Totters",
+         "id" : "yard5",
+         "description" : "\n  This is where the teeter-totters reside in the playyard. The teeter-\ntotters are painted a bright &+Ylemon-yellow&*. They remind you of all the \nfun you used to have on these contraptions when you were just a wee one. \nThe chainlink fence blocks your passage to the north and east. To the south \nyou can go play in the sandbox. Of course you could always decide to go \nto the west and play on the swings.\n",
+         "altitude" : null
+      },
+      "house8@playhouse" : {
+         "exits" : {
+            "w" : "house7",
+            "e" : "house9",
+            "n" : "house2"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Sitting Room",
+         "id" : "house8",
+         "description" : "\n  There is a HUGE couch sitting against one wall. A chair has been placed \nin an ideal position for chating with anyone sitting on the couch. There \nis another chair positioned opposite the first so that it makes a cosy \nlittle area for sitting a talking. There is writing on the wall in \n&+Rred&* crayon. You wonder who could have done such a thing. Upon closer \nexamination you notice the letter &+R'P' &*and a letter &+R'E' &*written in a little \nchilds barely discernable handwriting. The exits are west, east and north.\n",
+         "altitude" : null
+      },
+      "house12@playhouse" : {
+         "exits" : {
+            "w" : "house11",
+            "s" : "house13"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Grandie and Sweetie's Room",
+         "id" : "house12",
+         "description" : "\n  This is Grandie and Sweetie's room as the title says. There are model \nplanes hanging from the ceiling and a few dollies laying around. There is \na Sega system sitting in a place of honor on a shelf. I wonder who likes \nthat so much that it gets such a special place for just it and it's \ncartridges? There is a computer running over in the corner on a desk put \nthere just for it. The keys are rather worn -- someone must use it alot. \nThere are two exits leading from this room, one leading west to the landing \nand one leading south to the washroom. The curtains hanging from the rooms \nonly window flaps in the breeze.\n",
+         "altitude" : null
+      },
+      "house28@playhouse" : {
+         "exits" : {
+            "e" : "^house28door"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Child's Nightmare: End of the Attic",
+         "id" : "house28",
+         "description" : "\n  There is a little round window letting in just enough light for you to \nsee your way arround here. This somehow reminds you of what you always \nthought the attic would be like when you were a little kid. Aren't you \nhappy you conqured your fear? The attic leads to the east.\n",
+         "altitude" : null
+      },
+      "house5@playhouse" : {
+         "exits" : {
+            "w" : "house4",
+            "e" : "house6",
+            "s" : "house2"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Hallway",
+         "id" : "house5",
+         "description" : "\n  This is a hallway, it has white walls covered with a red tinge that most\nlikely came from a wonderful child with a wonderful &+Rred&* crayon. There\nis a bathroom to the west. A playroom to the east and the main room is to \nthe south.\n",
+         "altitude" : null
+      },
+      "house17@playhouse" : {
+         "exits" : {
+            "w" : "house18",
+            "e" : "house11"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Hallway",
+         "id" : "house17",
+         "description" : "\n  You are inside of a hallway. A few pictures hang from the walls and a\nsingle light on the ceiling casts enough light to let you see. There are\nblue markings on the wall, and you wonder what angel could have done this.\nThe hallway continues to the west and the landing is to the east.\n",
+         "altitude" : null
+      },
+      "house13@playhouse" : {
+         "exits" : {
+            "w" : "house14",
+            "n" : "house12"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Washroom",
+         "id" : "house13",
+         "description" : "\n  Well according to housing regulations a house this big must have at least \ntwo bathrooms. So this is another bathroom just has a spiffed up name for it. \nThere is a plaque on the wall saying &+C'Please wash your hands before leaving.'\nAnd on that note, you look at the fine porcelain sink before you.\n",
+         "altitude" : null
+      },
+      "house15@playhouse" : {
+         "exits" : {
+            "w" : "house16",
+            "e" : "house14"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Master Bedroom",
+         "id" : "house15",
+         "description" : "\n  You are in the master bedroom of this house. A large, luxurious bed\ntakes up the northern wall along with the nightstands that are to the \nleft and right of it. There is a large fireplace set into the southern\nwall with several pictures placed on top of the mantle. There is also\na small fish tank on top of the mantle and a beautiful Beta fish swims\naround showing off his glourious floating fins. To the east is a baby \nroom or you can leave to the west.\n",
+         "altitude" : null
+      },
+      "house18@playhouse" : {
+         "exits" : {
+            "e" : "house17",
+            "n" : "house19"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Hallway",
+         "id" : "house18",
+         "description" : "\n  You are inside of a hallway. There are yet more pictures hanging from\nthe walls and pretty blue markings on the wall. To the north is a toyroom\nor you can go back to the east.\n",
+         "altitude" : null
+      },
+      "house22@playhouse" : {
+         "exits" : {
+            "w" : "house21",
+            "s" : "house23"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Playpen",
+         "id" : "house22",
+         "description" : "\n  This is a rather messy playpen! Whoever owns this room really keeps it\na mess! You can't stand to be in this pigsty of a playpen much longer!\nYou can go back to the bedroom to the west or to the closet to the south.\n",
+         "altitude" : null
+      },
+      "yard8@playhouse" : {
+         "exits" : {
+            "w" : "yard7",
+            "n" : "yard2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "playhouse",
+         "title" : "Kiddy Motors",
+         "id" : "yard8",
+         "description" : "\n  This is the area set aside souly for the ridable toys to be played on. \nChildren here are riding on three wheelers and tricycles and even a \nlittle bitty bike made just for their size. The chainlink fence blocks \nyour exit to the east and to the south. To the north is the sandbox and \nwest is the picnic area.\n",
+         "altitude" : null
+      },
+      "house2@playhouse" : {
+         "exits" : {
+            "w" : "house1",
+            "e" : "house3",
+            "u" : "house11",
+            "n" : "house5",
+            "s" : "house8"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Main Room",
+         "id" : "house2",
+         "description" : "\n  You drag your feet along the plush rug until you feel your feet goosh\ninto someone's accident. You wipe off your shoe on a dry part of the\ncarpet and continue on your way. There are exits in all directions and\na staircase leads up to the second floor.\n",
+         "altitude" : null
+      },
+      "yard4@playhouse" : {
+         "exits" : {
+            "w" : "yard3",
+            "e" : "yard5",
+            "s" : "yard1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "playhouse",
+         "title" : "Swings",
+         "id" : "yard4",
+         "description" : "\n  Here we have a huge set of swings. The a-frame pipes are painted \n&+Rred&* and &+Wwhite&* like a &+Rc&+Wa&+Rn&+Wd&+Ry &+Wc&+Ra&+Wn&+Re&*. The swing seats are &+Bblue&* \nand the empty ones are swaying gently in the breeze. There are even a few \nbaby seats that are &+Ggreen&* in color. The north is blocked off by a \nchainlink fence that surrounds the entire yard keeping the children in. To\nthe west is the jungle gym. To the east is the teeter-totters. To the south\nis the middle of the yard. \n",
+         "altitude" : null
+      },
+      "house19@playhouse" : {
+         "exits" : {
+            "n" : "house20",
+            "s" : "house18"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Toy Room",
+         "id" : "house19",
+         "description" : "\n  This is a rather nice toyroom with all the coolest toys available on\nthe market. These people must keep Toys 'R Us in business! This room \ntruly does make you long to be a child again. Before you devulge in \nthis fantasy, however, you think it best to leave.\n",
+         "altitude" : null
+      },
+      "house1@playhouse" : {
+         "exits" : {
+            "w" : "Road3@village",
+            "e" : "house2"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "playhouse",
+         "title" : "Foyer",
+         "id" : "house1",
+         "description" : "\n  The glass windows next to the huge oak door let in a good amount of \nlight that allows the ferns hung in front of them to flourish. You look\ndown and smile as you wipe your feet off on the welcome mat (manners!).\nThe coatrack to the left of the door has several children's jackets \nhanging from it along with an adult one. The house is to the east or\nyou can leave to the west.\n",
+         "altitude" : null
+      },
+      "yard2@playhouse" : {
+         "exits" : {
+            "w" : "yard1",
+            "n" : "yard5",
+            "s" : "yard8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "playhouse",
+         "title" : "Sandbox",
+         "id" : "yard2",
+         "description" : "\n  You stand in the middle of what appears to be a sandbox. The sand is a \nbeautiful &+Wwhite&* color. Teeter-totters are to the north. To the south \nis where the kids are playing on all the ridable toys. West leads you \nback into the middle of the playground.\n",
+         "altitude" : null
+      },
+      "house24@playhouse" : {
+         "exits" : {
+            "w" : "house23",
+            "n" : "^closetoutdoor"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "On Your Way to the Closet",
+         "id" : "house24",
+         "description" : "\n  You were told this way lead you to the children's closet. Children are \nrunning around bumping into you and everyone else. Upon the walls are \nmore pictures of kids who have been here before. There is writing on the \nwall in crayon. You are sure whoever did this has been punished appropriately.\nYour journey into what you are sure must resemble a madhouse on the bad days \ncontinues north into a closet. It also leads west into the house.\n",
+         "altitude" : null
+      },
+      "yard6@playhouse" : {
+         "exits" : {
+            "e" : "yard7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "playhouse",
+         "title" : "Outdoor Playpen",
+         "id" : "yard6",
+         "description" : "\n  This is a nice large playpen with a fine layer of sand covering most of\nthe grass within the plastic mesh walls. You look down to see that the \nground is littered with toy fire engines, toy ambulances, hot wheel cars,\ntransformers, and many other favorite children's toys. To the east is the \nchildren's picnic area.\n",
+         "altitude" : null
+      },
+      "yard1@playhouse" : {
+         "exits" : {
+            "w" : "house10",
+            "e" : "yard2",
+            "n" : "yard4",
+            "s" : "yard7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "playhouse",
+         "title" : "Middle of the Yard",
+         "id" : "yard1",
+         "description" : "\n  You stand in the middle of what looks to be a bustling little playground. \nKids run from one toy to another. To the west is the entrance to the house \nkitchen. To the east you see a pretty sandbox. To the north you notice kids \nplaying on a swingset. To the south there is a children's picnic area.\n",
+         "altitude" : null
+      },
+      "yard7@playhouse" : {
+         "exits" : {
+            "w" : "yard6",
+            "e" : "yard8",
+            "n" : "yard1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "playhouse",
+         "title" : "Kiddy Picnic Table",
+         "id" : "yard7",
+         "description" : "\n  It looks to be a mini-picnic table. You get a picture of the seven \ndwarfs gone to dinner in your head. (If you can actually picture this \nyou're certifiable!) The table looks perfect for the children to sit at\nand have a tea party or something at. The yard continues to the west into \nthe playpen area. To the north is the middle of the yard. To the east is \nwhere the kids ride on the kiddy bikes, tricycles and things.\n",
+         "altitude" : null
+      },
+      "house16@playhouse" : {
+         "exits" : {
+            "e" : "house15"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Baby Room",
+         "id" : "house16",
+         "description" : "\n  This room looks designed with a purpose in mind, and that was to be \nused by a baby. There are spit-up rags cleaned and folded on shelves along \nwith blankets and various other baby items. You look closer and see a \nbeautiful little dress waiting for a child here. You know whoever ends up \nwith this room is going to be one lucky little baby. The only exit from\nthis room is to the east back into the master bedroom.\n",
+         "altitude" : null
+      },
+      "house9@playhouse" : {
+         "exits" : {
+            "w" : "house8",
+            "n" : "house3"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Quiet Room",
+         "id" : "house9",
+         "description" : "\n  This is the room the children are sent to for punishment. There are \nlittle chairs positioned all throughout the room. You figure a child must be \nsent here and made to sit here till quiet time is up. How could someone \npossibly make a child sitdown for that long of a time you ponder. Up on \nthe wall is a very long piece of wood that resembles a pingpong paddle \nonly bigger. Wrote on the board it says &=lw'Board of Education' &*in bold black \nletters. Now you know how the children are kept sitting down. The exits \nlead north and west\n",
+         "altitude" : null
+      },
+      "house20@playhouse" : {
+         "exits" : {
+            "e" : "house21",
+            "s" : "house19"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Costume Room",
+         "id" : "house20",
+         "description" : "\n  This room looks to be designed souly to hold the various costumes the \nchildren use on the holiday Halloween. Hanging in rows after rows are \nvarious costumes of all sorts. From the all important &+RDevil &*outfit, to \nthe &+Wwedding gown&*. All made in childrens sizes, some cute, some ugly, some \nsmall, some fat. It makes you wish that you were a child again just so that \nyou could put one on. The pathway leads to the east and south from here.\n",
+         "altitude" : null
+      },
+      "house7@playhouse" : {
+         "exits" : {
+            "e" : "house8"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Changing Room",
+         "id" : "house7",
+         "description" : "\n  Hrrrrrmmmmmmm, Do you really need to have this room described to you? \nThere is a little baby changing table folded up against one wall. There \nseems to be a bucket full of lemony smelling soapy water sitting on the \nfloor next to the changing table. On shelves rest clean &+Wwhite&* diapers \nfolded neatly and stacked in stacks. Clean baby outfits are folded up and \nstacked on other shelves. The exit to this room is east into the sitting \nroom.\n",
+         "altitude" : null
+      },
+      "house10@playhouse" : {
+         "exits" : {
+            "w" : "house3",
+            "e" : "yard1"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "playhouse",
+         "title" : "Kitchen",
+         "id" : "house10",
+         "description" : "\n  The walls are clean and spotless. Everything seems to &B&+Wsparkle &*and \nshine. There is a refridgerator over in the corner. All of the appliances \nand pots and pans are all out of the children's reach. The cupboards all \nhave child proofing items hooked on them.\n",
+         "altitude" : null
+      },
+      "house23@playhouse" : {
+         "exits" : {
+            "e" : "house24",
+            "n" : "house22"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Hallway to the Closet",
+         "id" : "house23",
+         "description" : "\n  This is a hallway much like the other hallways in the house. It's white,\nhas blue markings, has some pictures hanging on the wall. Extremely boring.\nYou can go north into the playpen or to the east to continue your way to \nthe closet.\n",
+         "altitude" : null
+      },
+      "house14@playhouse" : {
+         "exits" : {
+            "w" : "house15",
+            "e" : "house13",
+            "n" : "house11"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Hallway",
+         "id" : "house14",
+         "description" : "\n  This hallway leads in several different directions. Hanging on the \nwalls are various pictures of children and adults alike. You think it is \npretty safe to wander around up here. The hallway leads north, west and east.\n",
+         "altitude" : null
+      },
+      "house27@playhouse" : {
+         "exits" : {
+            "w" : "^house27wdoor",
+            "e" : "^house27edoor"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "playhouse",
+         "title" : "Child's Nightmare: Middle of the Attic",
+         "id" : "house27",
+         "description" : "\n  This is TERRIBLE!! Reminding you of what you used to think of the attic \nwhen you were barely knee-high to a grasshopper. The rooms have a very \nominous quality to them. The hair on the nape of your neck stands on end \njust thinking there is still more left to look at. The attic continues to \nthe west and east from here.\n",
+         "altitude" : null
+      },
+      "house11@playhouse" : {
+         "exits" : {
+            "w" : "house17",
+            "e" : "house12",
+            "d" : "house2",
+            "s" : "house14"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Upstairs Landing",
+         "id" : "house11",
+         "description" : "\n  This is the second floor landing. There are stairs leading down to the \nfirst floor. Rooms branch off in various directions from here. To the \nwest is a hallway. To the south is a three-way hallway. Of course to the \neast is Grandie and Sweetie's room.\n",
+         "altitude" : null
+      },
+      "yard3@playhouse" : {
+         "exits" : {
+            "e" : "yard4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "playhouse",
+         "title" : "Jungle Gym",
+         "id" : "yard3",
+         "description" : "\n  You see before you what appears to be an incomplete dome. Made of pipes \nand metal discs it looks stable enough to hold a hundred kids. It must be \nfun to climb because kids are all over it, swinging from the pipes and \njumping from the sides of it. To the east are the swings.\n",
+         "altitude" : null
+      },
+      "house21@playhouse" : {
+         "exits" : {
+            "w" : "house20",
+            "e" : "house22"
+         },
+         "flags" : [],
+         "zone" : "playhouse",
+         "title" : "Bedroom",
+         "id" : "house21",
+         "description" : "\n  This is a small bedroom with a bunkbed set built into the north wall. \nA dresser lines the south wall and a large clock that resembles a cat\nhangs above it. To the east is a playpen or you can leave to the west.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "tot@playhouse" : {
+         "damage" : "5",
+         "location" : "house3",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "Tot",
+         "description" : "A little Tot is here waving his rattle at you.",
+         "strength" : "60"
+      },
+      "john@playhouse" : {
+         "damage" : "8",
+         "location" : "house6",
+         "speed" : "2",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "John",
+         "description" : "Little boy John is here, and he has to GO!",
+         "strength" : "70"
+      },
+      "biff@playhouse" : {
+         "damage" : "6",
+         "location" : "house9",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Biff",
+         "description" : "Biff is here making out with Buffy.",
+         "strength" : "80"
+      },
+      "mikey@playhouse" : {
+         "damage" : "5",
+         "location" : "house20",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "Mikey",
+         "description" : "Mikey is here acting like a little devil.",
+         "strength" : "60"
+      },
+      "chester@playhouse" : {
+         "damage" : "6",
+         "location" : "house5",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "Chester",
+         "description" : "Chester is here boasting about how he 'knows-it-all.'",
+         "strength" : "70"
+      },
+      "kara@playhouse" : {
+         "damage" : "5",
+         "location" : "yard1",
+         "armor" : "0",
+         "name" : "Kara",
+         "description" : "Kara is here screaming for her mommy.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "68",
+         "speed" : "4",
+         "aggression" : "20"
+      },
+      "dinosaur@playhouse" : {
+         "damage" : "14",
+         "location" : "house26",
+         "speed" : "0",
+         "aggression" : "45",
+         "armor" : "10",
+         "name" : "Dinosaur",
+         "description" : "A toy Dinosaur, T. Rex, is here looking for a snack.",
+         "strength" : "140"
+      },
+      "grandie@playhouse" : {
+         "damage" : "8",
+         "location" : "house12",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "0",
+         "name" : "Grandie",
+         "description" : "Grandie is here, and he wants to grow up to be just like Grandar!",
+         "strength" : "70"
+      },
+      "robot@playhouse" : {
+         "damage" : "14",
+         "location" : "house28",
+         "speed" : "0",
+         "aggression" : "45",
+         "armor" : "10",
+         "name" : "Robot",
+         "description" : "A toy Robot is here clinking around.",
+         "strength" : "140"
+      },
+      "teddy@playhouse" : {
+         "damage" : "14",
+         "location" : "house27",
+         "speed" : "0",
+         "aggression" : "45",
+         "armor" : "10",
+         "name" : "Teddy",
+         "description" : "A big Teddy bear is here looking for someone to bearhug.",
+         "strength" : "140"
+      },
+      "nanny@playhouse" : {
+         "damage" : "12",
+         "location" : "house15",
+         "armor" : "0",
+         "name" : "Nanny",
+         "description" : "The Nanny is here watching the babies.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "40"
+      },
+      "peter@playhouse" : {
+         "damage" : "5",
+         "location" : "house8",
+         "speed" : "1",
+         "aggression" : "15",
+         "armor" : "0",
+         "name" : "Peter",
+         "description" : "Peter is here trying to look innocent about something.",
+         "strength" : "60"
+      },
+      "darla@playhouse" : {
+         "damage" : "4",
+         "location" : "house2",
+         "armor" : "0",
+         "name" : "Darla",
+         "description" : "Darla is here waiting to chat.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "70",
+         "speed" : "0",
+         "aggression" : "20"
+      },
+      "bully@playhouse" : {
+         "damage" : "8",
+         "location" : "yard2",
+         "speed" : "0",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Bully",
+         "description" : "Bully is here throwing sand at you.",
+         "strength" : "100"
+      },
+      "buffy@playhouse" : {
+         "damage" : "6",
+         "location" : "house9",
+         "armor" : "0",
+         "name" : "Buffy",
+         "description" : "Buffy is here making out with Biff.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "80",
+         "speed" : "0",
+         "aggression" : "40"
+      },
+      "prissy@playhouse" : {
+         "damage" : "5",
+         "location" : "house20",
+         "armor" : "0",
+         "name" : "Prissy",
+         "description" : "Prissy is here acting like a little princess.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "60",
+         "speed" : "0",
+         "aggression" : "20"
+      },
+      "soldier@playhouse" : {
+         "damage" : "14",
+         "location" : "house26",
+         "speed" : "0",
+         "aggression" : "45",
+         "armor" : "10",
+         "name" : "Soldier",
+         "description" : "A toy Soldier is here yelling out orders.",
+         "strength" : "140"
+      },
+      "coatrack@playhouse" : {
+         "damage" : "14",
+         "location" : "house28",
+         "armor" : "10",
+         "name" : "Coatrack",
+         "description" : "A Coat Rack is here, waiting to attack.",
+         "strength" : "140",
+         "speed" : "0",
+         "pname" : "Coat Rack",
+         "aggression" : "45"
+      },
+      "angelica@playhouse" : {
+         "damage" : "5",
+         "location" : "house1",
+         "armor" : "0",
+         "name" : "Angelica",
+         "description" : "Everyone's little Angelica is here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "60",
+         "speed" : "0",
+         "aggression" : "20"
+      },
+      "patrick@playhouse" : {
+         "damage" : "8",
+         "location" : "house11",
+         "speed" : "0",
+         "aggression" : "60",
+         "armor" : "0",
+         "name" : "Patrick",
+         "description" : "Patrick is here bossing you around.",
+         "strength" : "70"
+      },
+      "stretch@playhouse" : {
+         "damage" : "14",
+         "location" : "house28",
+         "armor" : "10",
+         "name" : "Stretch",
+         "description" : "Stretch Armstrong is here waiting to reach out and touch someone.",
+         "strength" : "140",
+         "speed" : "0",
+         "pname" : "Stretch Armstrong",
+         "aggression" : "45"
+      },
+      "snotty@playhouse" : {
+         "damage" : "5",
+         "location" : "house25",
+         "armor" : "0",
+         "name" : "Snotty",
+         "description" : "Snotty is here, and his nose looks like it needs to be wiped.",
+         "strength" : "60",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle"
+         ],
+         "mflags" : [
+            "BarUp"
+         ]
+      },
+      "cody@playhouse" : {
+         "damage" : "5",
+         "location" : "house10",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "Cody",
+         "description" : "Cody is here munching happily on a graham cracker.",
+         "strength" : "70"
+      },
+      "sweetie@playhouse" : {
+         "damage" : "8",
+         "location" : "house12",
+         "armor" : "0",
+         "name" : "Sweetie",
+         "description" : "Sweetie is here, and she wants to grow up to be just like Sweetums.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "70",
+         "speed" : "0",
+         "aggression" : "0"
+      },
+      "nellie@playhouse" : {
+         "damage" : "5",
+         "location" : "house17",
+         "armor" : "0",
+         "name" : "Nellie",
+         "examine" : "I think she had an accident.",
+         "description" : "Baby Nellie is here in a puddle, whimpering.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "60",
+         "speed" : "0",
+         "aggression" : "40"
+      },
+      "elephant@playhouse" : {
+         "damage" : "14",
+         "location" : "house27",
+         "speed" : "0",
+         "aggression" : "45",
+         "armor" : "10",
+         "name" : "Elephant",
+         "description" : "A toy Elephant is here stomping around.",
+         "strength" : "140"
+      },
+      "jack@playhouse" : {
+         "damage" : "14",
+         "location" : "house19",
+         "speed" : "0",
+         "aggression" : "45",
+         "armor" : "0",
+         "name" : "Jack",
+         "description" : "A Jack in the Box is here, and he looks mean.",
+         "strength" : "140"
+      },
+      "maggie@playhouse" : {
+         "damage" : "2",
+         "location" : "house22",
+         "armor" : "0",
+         "name" : "Maggie",
+         "description" : "Maggie is here sucking on a shiny pacifier.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "40",
+         "speed" : "0",
+         "aggression" : "20"
+      },
+      "andrea@playhouse" : {
+         "damage" : "5",
+         "location" : "house16",
+         "armor" : "0",
+         "name" : "Andrea",
+         "description" : "Baby Andrea is here chewing on a teething ring.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "60",
+         "speed" : "0",
+         "aggression" : "20"
+      },
+      "brat@playhouse" : {
+         "damage" : "8",
+         "location" : "yard3",
+         "speed" : "4",
+         "aggression" : "40",
+         "armor" : "0",
+         "name" : "Brat",
+         "description" : "Brat is here, well, being a brat.",
+         "strength" : "100"
+      },
+      "tony@playhouse" : {
+         "damage" : "5",
+         "location" : "house21",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "Tony",
+         "description" : "Tony is here, and he stinks from a dirty diaper.",
+         "strength" : "75"
+      }
+   }
+}

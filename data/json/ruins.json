@@ -30,6 +30,7 @@
       "talisman@ruins" : {
          "location" : "CARRIED_BY:cube",
          "oflags" : [
+            "MissileSpell",
             "Wearable"
          ],
          "name" : "talisman",
@@ -202,12 +203,13 @@
          "armor" : "25",
          "oflags" : [
             "Armor",
-            "Wearable"
+            "Wearable",
+            "Nopit"
          ],
          "name" : "jerkin",
          "size" : "2",
          "weight" : "2",
-         "bvalue" : "80",
+         "bvalue" : "0",
          "aflags" : [
             "Chest",
             "Back",
@@ -221,14 +223,15 @@
          "oflags" : [
             "Armor",
             "Wearable",
-            "Lightable"
+            "Lightable",
+            "Nopit"
          ],
          "altname" : "cloak",
          "name" : "mantle",
          "examine" : "\nThis is a very nice mantle that you wear over your shoulders like a cloak.\nYou notice that the edges look a little brown, as if it was lit at one time.",
          "size" : "2",
          "weight" : "2",
-         "bvalue" : "80",
+         "bvalue" : "0",
          "desc[0]" : "A fine magical feather mantle has been left here.",
          "aflags" : [
             "Back",
@@ -243,7 +246,8 @@
          "oflags" : [
             "Armor",
             "Wearable",
-            "GetFlips"
+            "GetFlips",
+            "Nopit"
          ],
          "name" : "gauntlets",
          "examine" : "\nEven though the gauntlets are a little rusty, they still look quite \nprotective.",
@@ -252,7 +256,7 @@
          "weight" : "4",
          "pname" : "gauntlets",
          "maxstate" : "1",
-         "bvalue" : "40",
+         "bvalue" : "0",
          "desc[0]" : "A pair of old, slightly rusted gauntlets has been left here.",
          "aflags" : [
             "Hands"
@@ -356,6 +360,17 @@
          ],
          "desc[0]" : "A pair of leather leggings lays crumpled in a heap."
       },
+      "volume@ruins" : {
+         "location" : "IN_ROOM:ceast",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_XIV",
+         "name" : "volume",
+         "examine" : "\nDamage may be cast on yourself or other players.  It requires\n20 mana to cast it.  While its effects last, damage acts as\n10 permanent damage.  There is an arrow which increases its \nduration.  Damage becomes certain with knowledge 8.",
+         "desc[0]" : "&+YVolume XIV&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "14"
+      },
       "swordskelone@ruins" : {
          "damage" : "15",
          "location" : "WIELDED_BY:skelone",
@@ -436,10 +451,11 @@
          "desc[1]" : "A scroll rests on the oak table.",
          "location" : "IN_ROOM:sittingroom",
          "name" : "scroll",
+         "examine" : "\nIt's a note...it says you can learn valuable attack spells at a shop\ndown by the Rio San Juan river.",
          "desc[2]" : "A scroll rests on the oak table under the crown.",
+         "state" : "2",
          "maxstate" : "2",
-         "desc[0]" : "A scroll has been discarded here.",
-         "state" : "2"
+         "desc[0]" : "A scroll has been discarded here."
       },
       "amulet@ruins" : {
          "location" : "IN_ROOM:storeroom",
@@ -462,7 +478,18 @@
             "NoGet"
          ],
          "pname" : "runes",
-         "name" : "damagerunes"
+         "name" : "damagerunes",
+         "examine" : "\nScrawled on the wall is a note from Mirlyn, asking for a visit in\nCamelot village."
+      },
+      "xizart@ruins" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "volume",
+         "name" : "xizart",
+         "examine" : "\nZephere has become so wise because he uses the language of what magical words\nare made of.  Learning this language will make it easier for you to create\nnew spells...but first, you learn the basics of conversation.  After a while,\nyou feel as if you speak xizart as your first language.",
+         "desc[0]" : "The magical language of Xizart has been left on the desk for you."
       },
       "outsidetorch@ruins" : {
          "location" : "IN_ROOM:gnorth2",
@@ -501,7 +528,8 @@
          "oflags" : [
             "NoGet"
          ],
-         "name" : "runes"
+         "name" : "runes",
+         "examine" : "\nScrawled on the wall is a note from Moog, who wants to teach you\nmutulation tricks at the ruined church and graveyard."
       },
       "scalemail@ruins" : {
          "location" : "IN_ROOM:storeroom2",
@@ -631,7 +659,7 @@
       "deathroom@ruins" : {
          "exits" : {},
          "flags" : [
-            "Dark",
+            "death",
             "NoMobiles"
          ],
          "zone" : "ruins",
@@ -1168,7 +1196,8 @@
       "sinkhole@ruins" : {
          "exits" : {},
          "flags" : [
-            "Dark"
+            "Dark",
+            "NoMobiles"
          ],
          "zone" : "ruins",
          "title" : "A Very Mossy, Gooey Room",
@@ -1392,8 +1421,7 @@
       },
       "ceast@ruins" : {
          "exits" : {
-            "w" : "csouth",
-            "n" : "levelthree"
+            "w" : "csouth"
          },
          "flags" : [
             "Dark"
@@ -1401,7 +1429,7 @@
          "zone" : "ruins",
          "title" : "Eastern Catacomb",
          "id" : "ceast",
-         "description" : "\n  You have entered the eastern catacombs. Your foot sinks into a large \npool of goo, or so you think is goo until you look down and see it's dark \nred tinge and a large shiver of fear runs up your spine. There is also a \nfoul odor of rotting meat and you feel your stomach begin to turn. Looking \naround quickly you find that there are exits to the north and to the west.\n",
+         "description" : "\n  You have entered the eastern catacombs. Your foot sinks into a large \npool of goo, or so you think is goo until you look down and see it's dark \nred tinge and a large shiver of fear runs up your spine. There is also a \nfoul odor of rotting meat and you feel your stomach begin to turn. Looking \naround quickly you find that there is only an exit to the west.\n",
          "altitude" : null
       },
       "geast6@ruins" : {
@@ -1421,8 +1449,7 @@
       "levelthree@ruins" : {
          "exits" : {
             "w" : "cwest",
-            "u" : "gooey",
-            "s" : "ceast"
+            "u" : "gooey"
          },
          "flags" : [
             "Dark"
@@ -1556,27 +1583,40 @@
          "armor" : "10",
          "name" : "Mummy",
          "description" : "An ancient mummy is here, and he isn't happy that you disturbed his rest.",
+         "mflags" : [
+            "Soulless"
+         ],
          "strength" : "150"
       },
       "jeeves@ruins" : {
          "damage" : "8",
          "location" : "closet1",
-         "speed" : "3",
          "armor" : "0",
          "name" : "Jeeves",
          "description" : "The ghost of Jeeves is here, cleaning away.",
-         "strength" : "110"
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "110",
+         "speed" : "3",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "skelfive@ruins" : {
          "damage" : "16",
          "location" : "geast18",
-         "speed" : "5",
-         "aggression" : "90",
          "armor" : "10",
-         "pname" : "Skeleton Warrior",
          "name" : "skelfive",
          "description" : "A very strong looking skeleton warrior in a black cloak is here.",
-         "strength" : "170"
+         "strength" : "170",
+         "speed" : "5",
+         "pname" : "Skeleton Warrior",
+         "aggression" : "90",
+         "mflags" : [
+            "NoCorpse",
+            "Soulless"
+         ]
       },
       "ant@ruins" : {
          "damage" : "10",
@@ -1600,23 +1640,33 @@
       "skelfour@ruins" : {
          "damage" : "8",
          "location" : "geast15",
-         "speed" : "4",
-         "aggression" : "90",
          "armor" : "5",
-         "pname" : "Skeleton Warrior",
          "name" : "skelfour",
          "description" : "A very weak, bony skeleton warrior is here.",
-         "strength" : "100"
+         "strength" : "100",
+         "speed" : "4",
+         "pname" : "Skeleton Warrior",
+         "aggression" : "90",
+         "mflags" : [
+            "NoCorpse",
+            "Soulless"
+         ]
       },
       "richard@ruins" : {
          "damage" : "10",
          "location" : "bedroom2",
-         "speed" : "4",
          "armor" : "0",
-         "pname" : "Prince Richard",
          "name" : "Richard",
          "description" : "The ghost of Prince Richard is here looking for Princess Diaphere.",
-         "strength" : "150"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "speed" : "4",
+         "pname" : "Prince Richard",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "cube@ruins" : {
          "eflags" : [
@@ -1630,6 +1680,9 @@
          "armor" : "0",
          "name" : "cube",
          "description" : "A gelatinous cube is here, leaving a slimy trail in it's path.",
+         "sflags" : [
+            "NoBody"
+         ],
          "strength" : "80",
          "speed" : "5",
          "aggression" : "90",
@@ -1638,18 +1691,26 @@
             "NoSteal"
          ],
          "mflags" : [
-            "Thief"
+            "Thief",
+            "NoCorpse",
+            "Soulless"
          ]
       },
       "john@ruins" : {
          "damage" : "5",
          "location" : "bathroom",
-         "speed" : "0",
          "armor" : "0",
-         "pname" : "Sir John",
          "name" : "John",
          "description" : "Sir John is here.",
-         "strength" : "80"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "80",
+         "speed" : "0",
+         "pname" : "Sir John",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "zephere@ruins" : {
          "eflags" : [
@@ -1685,35 +1746,47 @@
       "skelone@ruins" : {
          "damage" : "12",
          "location" : "geast7",
-         "speed" : "4",
-         "aggression" : "90",
          "armor" : "6",
-         "pname" : "Skeleton Warrior",
          "name" : "skelone",
          "description" : "A grave looking skeleton warrior is here.",
-         "strength" : "150"
+         "strength" : "150",
+         "speed" : "4",
+         "pname" : "Skeleton Warrior",
+         "aggression" : "90",
+         "mflags" : [
+            "NoCorpse",
+            "Soulless"
+         ]
       },
       "skelthree@ruins" : {
          "damage" : "14",
          "location" : "geast12",
-         "speed" : "6",
-         "aggression" : "85",
          "armor" : "8",
-         "pname" : "Skeleton Warrior",
          "name" : "skelthree",
          "description" : "A powerful blue cloaked skeleton warrior is here.",
-         "strength" : "160"
+         "strength" : "160",
+         "speed" : "6",
+         "pname" : "Skeleton Warrior",
+         "aggression" : "85",
+         "mflags" : [
+            "NoCorpse",
+            "Soulless"
+         ]
       },
       "skeltwo@ruins" : {
          "damage" : "12",
          "location" : "geast10",
-         "speed" : "4",
-         "aggression" : "95",
          "armor" : "5",
-         "pname" : "Skeleton Warrior",
          "name" : "skeltwo",
          "description" : "A skeleton warrior adorned in a red cloak is here.",
-         "strength" : "140"
+         "strength" : "140",
+         "speed" : "4",
+         "pname" : "Skeleton Warrior",
+         "aggression" : "95",
+         "mflags" : [
+            "NoCorpse",
+            "Soulless"
+         ]
       },
       "mouse@ruins" : {
          "damage" : "8",
@@ -1746,25 +1819,32 @@
          ],
          "damage" : "18",
          "location" : "csouth",
-         "speed" : "6",
-         "aggression" : "90",
          "armor" : "15",
          "name" : "Beholder",
          "description" : "A large, mean looking Beholder is here, hovering in front of you.",
-         "strength" : "250"
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "BarE"
+         ]
       },
       "diafear@ruins" : {
          "damage" : "8",
          "location" : "bedroom1",
          "armor" : "0",
          "name" : "Diafear",
-         "description" : "The ghost of Princess Diafear is here moaning and groaning.",
+         "description" : "The ghost of Princess Diaphere is here moaning and groaning.",
          "sflags" : [
-            "Female"
+            "Female",
+            "NoBody"
          ],
          "strength" : "100",
          "speed" : "0",
-         "pname" : "Princess Diafear"
+         "pname" : "Princess Diaphere",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "spider@ruins" : {
          "damage" : "12",
@@ -1789,23 +1869,35 @@
       "dilbert@ruins" : {
          "damage" : "8",
          "location" : "closet2",
-         "speed" : "2",
          "armor" : "0",
-         "pname" : "Sir Dilbert",
          "name" : "Dilbert",
          "description" : "The ghost of Sir Dilbert is here walking around.",
-         "strength" : "120"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "120",
+         "speed" : "2",
+         "pname" : "Sir Dilbert",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "tom@ruins" : {
          "damage" : "10",
          "location" : "westhall6",
-         "speed" : "2",
          "armor" : "0",
-         "pname" : "Sir Tom",
          "name" : "Tom",
          "examine" : "In case you didn't know, that's Sir Tom of Peep..",
          "description" : "The ghost of Sir Tom is here looking at you and grinning.",
-         "strength" : "120"
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "120",
+         "speed" : "2",
+         "pname" : "Sir Tom",
+         "mflags" : [
+            "NoCorpse"
+         ]
       }
    }
 }

@@ -38,7 +38,7 @@
       },
       "shield@treehouse" : {
          "location" : "IN_ROOM:north",
-         "armor" : "20",
+         "armor" : "26",
          "oflags" : [
             "Armor",
             "Wearable",
@@ -68,8 +68,11 @@
       "amulet@treehouse" : {
          "location" : "IN_ROOM:south",
          "oflags" : [
+            "MissileSpell",
             "Destroyed",
-            "Wearable"
+            "Wearable",
+            "Breathe",
+            "NoSummon"
          ],
          "altname" : "gold",
          "name" : "amulet",
@@ -117,7 +120,7 @@
          "zone" : "treehouse",
          "title" : "Treehouse South",
          "id" : "South",
-         "description" : "\n   You are at the southern end of the treehouse, which appears to be used by\nits occupant for a sleeping area.  Large amounts of thick bedding insure that\nits occupant will be comfortable even in bad weather.  A single way leads north\nbetween the branches.\n",
+         "description" : "\n   You are at the southern end of the treehouse, which appears to be used by\nits occupant for a sleeping area.  Large amounts of thick &+Cbedding&* insure that\nits occupant will be comfortable even in bad weather.  A single way leads north\nbetween the branches.\n",
          "altitude" : null
       },
       "north@treehouse" : {

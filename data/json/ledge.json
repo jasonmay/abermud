@@ -1,23 +1,8 @@
 {
    "obj" : {
-      "ropewest@ledge" : {
-         "desc[1]" : "A rope hangs west across to the steps.",
-         "location" : "IN_ROOM:On",
-         "oflags" : [
-            "Destroyed",
-            "NoGet"
-         ],
-         "altname" : "ladder",
-         "name" : "RopeWest",
-         "desc[2]" : "A knotted rope hangs west across to the steps.",
-         "linked" : "RopeEast@Valley",
-         "pname" : "rope",
-         "maxstate" : "2",
-         "desc[0]" : "A rope ladder leads west across to the steps."
-      },
       "tunneast@ledge" : {
          "desc[1]" : "\nA huge rockfall to the west has sealed off the only exit to this chamber.",
-         "location" : "IN_ROOM:forgotten",
+         "location" : "IN_ROOM:ledge9",
          "oflags" : [
             "NoGet"
          ],
@@ -28,12 +13,241 @@
          "pname" : "tunnel",
          "maxstate" : "1"
       },
-      "orb@ledge" : {
+      "earplugs@ledge" : {
+         "location" : "IN_CONTAINER:minecart",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "plugs",
+         "name" : "earplugs",
+         "examine" : "\nThese apparently were used to protect a miner's ears from the noise\ngenerated from explosions or drilling equipment.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A set of earplugs got discarded here."
+      },
+      "gag@ledge" : {
+         "location" : "IN_ROOM:ledge18",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "gag",
+         "examine" : "It obviously was used to gag someone so they'd keep quiet.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A gag lies crumpled in a heap.",
+         "aflags" : [
+            "Face"
+         ]
+      },
+      "sign@ledge" : {
+         "location" : "IN_ROOM:ledge50",
+         "oflags" : [
+            "Noget"
+         ],
+         "name" : "sign",
+         "examine" : "Danger:  Hazardous to swim during high wind or stormy weather.",
+         "desc[0]" : "A large warning sign is stuck here in the sand."
+      },
+      "cooler@ledge" : {
+         "location" : "IN_ROOM:ledge52",
+         "oflags" : [
+            "Container",
+            "Noget"
+         ],
+         "name" : "cooler",
+         "desc[0]" : "A cooler filled with bottles of beer has been placed here for the guests."
+      },
+      "vswitch@ledge" : {
+         "desc[1]" : "A switch on the wall is in the NO VANCANY position.",
+         "location" : "IN_ROOM:ledge52",
+         "oflags" : [
+            "Noget",
+            "Pushtoggle"
+         ],
+         "name" : "vswitch",
+         "examine" : "This switch will allow in or keep out visitors.",
+         "linked" : "vancany",
+         "state" : "0",
+         "pname" : "switch",
+         "maxstate" : "1",
+         "desc[0]" : "A switch on the wall is in the VANCANY position."
+      },
+      "snorkeltwo@ledge" : {
+         "desc[1]" : "There's a snorkel lying inside the dinghy!",
+         "location" : "limbo@limbo",
+         "oflags" : [
+            "Wearable",
+            "Breathe"
+         ],
+         "name" : "snorkeltwo",
+         "examine" : "This item will permit you to go underwater without drowning.",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "snorkel",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "Someone left a snorkel here, wanna go swimming?"
+      },
+      "vancany@ledge" : {
+         "desc[1]" : "The sign on the front reads NO VANCANY, come back later.",
+         "location" : "IN_ROOM:ledge50",
+         "oflags" : [
+            "Noget"
+         ],
+         "altname" : "sign",
+         "name" : "vancany",
+         "examine" : "It obviously tells you if you can go in and use the shack.",
+         "linked" : "vswitch",
+         "state" : "0",
+         "maxstate" : "1",
+         "desc[0]" : "The sign on the front reads VANCANY."
+      },
+      "lovepotion@ledge" : {
+         "location" : "IN_ROOM:ledge52",
+         "oflags" : [
+            "Alcohol",
+            "Food"
+         ],
+         "altname" : "potion",
+         "name" : "lovepotion",
+         "examine" : "The label reads:  Love Potion Number Nine.  Watch out, this stuff will\ndrive you to hug and kiss the first person you see.",
+         "size" : "2",
+         "pname" : "lovepotion",
+         "weight" : "2",
+         "bvalue" : "25",
+         "desc[0]" : "A bottle of a pink liquid has been placed here."
+      },
+      "inscription@ledge" : {
+         "location" : "IN_ROOM:ledge23",
+         "oflags" : [
+            "Noget"
+         ],
+         "altname" : "wall",
+         "pname" : "inscription",
+         "name" : "inscription",
+         "examine" : "\nLooks like it was written with a chunk of coal.  It reads:  'Disability does\nnot make disadvantage.'  Who and why was that written there?  (Those not\ngood at puzzles ought to think of the possible meanings of this phrase.)",
+         "desc[0]" : "There appears to be an inscription on the wall."
+      },
+      "koboldkey@ledge" : {
+         "desc[1]" : "The kobold's keychain remains from the vanished kobold.",
+         "location" : "WORN_BY:kobold",
+         "oflags" : [
+            "Key",
+            "Wearable"
+         ],
+         "altname" : "key",
+         "name" : "koboldkey",
+         "examine" : "This key unlocks something, perhaps the chains on that bear.",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "keychain",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "aflags" : [
+            "Neck"
+         ],
+         "desc[0]" : "A key on a chain lies here."
+      },
+      "pushcart@ledge" : {
+         "location" : "IN_ROOM:ledge19",
+         "oflags" : [
+            "Container",
+            "Noget"
+         ],
+         "weight" : "100",
+         "pname" : "cart",
+         "name" : "pushcart",
+         "examine" : "\nNow this cart looks like it's in good condition.  The wheels are all in \nplace and you could probably push it over to the tracks.",
+         "desc[0]" : "Another old mining cart sits here, wheels intact.",
+         "size" : "30"
+      },
+      "minecart@ledge" : {
+         "location" : "IN_ROOM:ledge15",
+         "oflags" : [
+            "Container",
+            "Noget"
+         ],
+         "weight" : "100",
+         "pname" : "cart",
+         "name" : "minecart",
+         "examine" : "\nTaking a ride in this cart is not possible, as a couple of wheels seem to\nhave broken off.  Carrying this thing around won't do much for your back.",
+         "desc[0]" : "An old mining cart sits here against the wall.",
+         "size" : "30"
+      },
+      "hardhat@ledge" : {
+         "location" : "IN_CONTAINER:minecart",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "30",
+         "altname" : "hat",
+         "name" : "hardhat",
+         "examine" : "It's an old one, but it's in good condition.",
+         "size" : "3",
+         "pname" : "hardhat",
+         "weight" : "1",
+         "bvalue" : "25",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "An old miner's hardhat got left here."
+      },
+      "budice@ledge" : {
+         "location" : "IN_CONTAINER:cooler",
+         "oflags" : [
+            "Alcohol",
+            "Food"
+         ],
+         "altname" : "ice",
+         "pname" : "beer",
+         "name" : "budice",
+         "examine" : "Beware of penguins!",
+         "desc[0]" : "A cold bottle of Bud Ice has been left around to be drank."
+      },
+      "snorkelone@ledge" : {
+         "desc[1]" : "A snorkel has been left here, apparently by an underwater cave explorer.",
+         "location" : "IN_ROOM:ledge37",
+         "oflags" : [
+            "Wearable",
+            "Breathe"
+         ],
+         "name" : "snorkelone",
+         "examine" : "This item will permit you to go underwater without drowning.",
+         "size" : "1",
+         "state" : "1",
+         "pname" : "snorkel",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "Someone left a snorkel here, wanna go swimming?"
+      },
+      "chain@ledge" : {
+         "location" : "IN_ROOM:ledge38",
+         "oflags" : [
+            "Openable",
+            "Noget"
+         ],
+         "altname" : "chains",
+         "name" : "chain",
+         "examine" : "\nIt's your standard set of chains with cuffs on them bolted in the floor\ndesigned to hold prisoners by the legs as forced labor for mining.",
+         "maxstate" : "2",
+         "state" : "2"
+      },
+      "volume@ledge" : {
          "location" : "IN_ROOM:forgotten",
-         "altname" : "platinum",
-         "name" : "orb",
-         "bvalue" : "400",
-         "desc[0]" : "\nA huge glittering platinum orb sparkles in the light, sending rainbows of\nglittering fire twinkling around you."
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_IV",
+         "name" : "volume",
+         "examine" : "\nReveal is a spell which will show hidden properties of objects,\nincluding whether they enhance any particular spell.  Reveal is \nalways certain, but costs 20 mana. To use reveal, hold the object\nand incant \"reveal <object>\".",
+         "desc[0]" : "&+YVolume IV&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "4"
       },
       "tunnwest@ledge" : {
          "desc[1]" : "A large rockfall blocks the passage to the east.",
@@ -59,12 +273,98 @@
          "name" : "RopeBotPit",
          "desc[2]" : "A knotted rope leads up out of the pit.",
          "linked" : "RopeTopPit@moor",
+         "state" : "1",
          "pname" : "rope",
          "maxstate" : "2",
          "desc[0]" : "A rope ladder leads up out of the pit."
+      },
+      "ropewest@ledge" : {
+         "desc[1]" : "A rope hangs west across to the steps.",
+         "location" : "IN_ROOM:On",
+         "oflags" : [
+            "Destroyed",
+            "NoGet"
+         ],
+         "altname" : "ladder",
+         "name" : "RopeWest",
+         "desc[2]" : "A knotted rope hangs west across to the steps.",
+         "linked" : "RopeEast@Valley",
+         "state" : "1",
+         "pname" : "rope",
+         "maxstate" : "2",
+         "desc[0]" : "A rope ladder leads west across to the steps."
+      },
+      "pickaxe@ledge" : {
+         "desc[1]" : "A pickaxe stands against the side of the cavern.",
+         "damage" : "12",
+         "location" : "IN_CONTAINER:minecart",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "axe",
+         "name" : "pickaxe",
+         "size" : "7",
+         "state" : "1",
+         "weight" : "10",
+         "maxstate" : "1",
+         "bvalue" : "-25",
+         "desc[0]" : "A miner's pickaxe lies flat on the ground."
+      },
+      "blindfold@ledge" : {
+         "location" : "IN_ROOM:ledge18",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "blindfold",
+         "examine" : "\nObviously something to prevent someone from seeing where they're going.\nIt's likely that this was put on someone during transport.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A blindfold lies dumped in a corner.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "orb@ledge" : {
+         "location" : "IN_ROOM:forgotten",
+         "altname" : "platinum",
+         "name" : "orb",
+         "bvalue" : "400",
+         "desc[0]" : "\nA huge glittering platinum orb sparkles in the light, sending rainbows of\nglittering fire twinkling around you."
+      },
+      "coal@ledge" : {
+         "desc[1]" : "A lump of coal burns on the ground, too hot to pick up.",
+         "location" : "IN_ROOM:ledge10",
+         "oflags" : [
+            "Extinguish",
+            "Lightable"
+         ],
+         "altname" : "lump",
+         "name" : "coal",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "coal",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A lump of coal sits on the ground."
       }
    },
    "loc" : {
+      "ledge25@ledge" : {
+         "exits" : {
+            "n" : "ledge26",
+            "s" : "ledge24"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Silent Tunnel",
+         "id" : "ledge25",
+         "description" : "\n        A relatively quiet tunnel leads itself away from the rest of the \ncavern, yet it seems to be a bit warmer than elsewhere.  It continues to\nthe north while the main cavern lies south.\n",
+         "altitude" : null
+      },
       "ledge@ledge" : {
          "exits" : {
             "w" : "Cavemouth",
@@ -79,32 +379,66 @@
          "description" : "\n   The ledge narrows here, become only a couple of inches wide as it leads\nfurther eastwards.  To the west the ledge widens out.\n",
          "altitude" : "850"
       },
-      "death@ledge" : {
-         "exits" : {},
-         "flags" : [
-            "Outdoors",
-            "Death"
-         ],
-         "zone" : "ledge",
-         "title" : "Ledge",
-         "id" : "Death",
-         "description" : "\n   Your feet slip on the dangerously thin ledge, and you plunge rapidly\ndownwards to your death...\n",
-         "altitude" : "850"
-      },
-      "cavemouth@ledge" : {
+      "ledge53@ledge" : {
          "exits" : {
-            "w" : "On",
-            "e" : "Ledge",
-            "n" : "Cave"
+            "e" : "ledge54",
+            "w" : "ledge51",
+            "n" : "WaistDeep@eastcoast",
+            "s" : "ledge53"
          },
          "flags" : [
             "Outdoors"
          ],
          "zone" : "ledge",
-         "title" : "Cavemouth",
-         "id" : "Cavemouth",
-         "description" : "\n   You are standing on a narrow precipitous ledge.  The ledge runs east-west,\nand to the north a narrow cavemouth leads into semi-darkness.  Braving vertigo,\nyou gaze over the lip of the ledge across the vast expanse of trees far below.\n",
-         "altitude" : "850"
+         "title" : "Shallow Water",
+         "id" : "ledge53",
+         "description" : "\n        You start running out into the water, it's shallow enough that you\ndon't need to get in a boat yet.  The water strecthes for as far as the eye\ncan see to the east.\n",
+         "altitude" : null
+      },
+      "ledge10@ledge" : {
+         "exits" : {
+            "e" : "ledge11",
+            "w" : "ledge9",
+            "u" : "ledge9",
+            "d" : "ledge11"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Old Mining Tunnel",
+         "id" : "ledge10",
+         "description" : "\n        The smell of minerals begins to permeate your nose as you progress.\nThe walls of this tunnel appear to have been chipped into with pickaxes in\nsearch for gold or diamonds.  Alas, all that could be found were coal \ndeposits.  Some chunks of it litter the sides of the tunnel, which continues\ndownward.  Those afraid of exploring may exit upward to the west.\n",
+         "altitude" : null
+      },
+      "ledge35@ledge" : {
+         "exits" : {
+            "e" : "ledge36",
+            "n" : "ledge24"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Natural Cavern",
+         "id" : "ledge35",
+         "description" : "\n        Hundreds of years ago the level of the sea was much higher and this\ncavern was not much more than a large hole in the side of a submerged \nsection of cliff.  The wave action of the saltwater cut away at the rock on\nthe inside until one underwater cavern joined up with another unsubmerged\ncavern, effectively flooding it also, and greatly enlarging its size.  Now,\nthe sea level has dropped since, draining the water from the higher sections\nbut still keeping the lower sections underwater.  The cavern extends itself\nto the north and east.\n",
+         "altitude" : null
+      },
+      "ledge15@ledge" : {
+         "exits" : {
+            "n" : "ledge18",
+            "d" : "ledge18",
+            "s" : "ledge13"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Old Mining Tunnel",
+         "id" : "ledge15",
+         "description" : "\n        The northern tunnel you are now treking through appears to have been\ndug where a large portion of the coal deposit was located.  The width of the\ntunnel appears to indicate that the miners did a little too much digging \nalong the sides making it easier for a ceiling collapse.  The tunnel \ncontinues a little further downward while you can return back south.\n",
+         "altitude" : null
       },
       "cave@ledge" : {
          "exits" : {
@@ -117,6 +451,237 @@
          "title" : "Narrow Cave",
          "id" : "Cave",
          "description" : "\n   You are standing in a long narrow cave.  Dim and pallid light shines in from\nthe cavemouth to the south, illuminating passageways north and east.\n",
+         "altitude" : null
+      },
+      "ledge51@ledge" : {
+         "exits" : {
+            "e" : "ledge53",
+            "w" : "ledge52",
+            "n" : "SandyBeach@eastcoast",
+            "s" : "beach4@beach"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "Shoreline",
+         "id" : "ledge51",
+         "description" : "\n          Water and kelp laps at the edge of the sand and looks to be safe \nfor swimming and scuba-diving.  Some children have built some sand castles, \none resembles the Dwarfen Citidel.  A small beach front shack lies nearby \nfor rent and privacy for those wanting to watch the water.\n",
+         "altitude" : null
+      },
+      "ledge32@ledge" : {
+         "exits" : {
+            "w" : "ledge31",
+            "u" : "ledge34",
+            "n" : "ledge34",
+            "s" : "ledge37"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Short Wall",
+         "id" : "ledge32",
+         "description" : "\n        The rather level floor of the cavern comes to a short climbable wall\nlooking to be about four feet high which appears to be another tunnel going\nto the north.  Some track can be seen going to and from this tunnel, along\nwith a few droppings of some animal.  Perhaps someone or something is living\ndown here after all.  You can follow the tracks to the north, or else go to\nother parts of the cavern west and south.\n",
+         "altitude" : null
+      },
+      "ledge57@ledge" : {
+         "exits" : {
+            "e" : "ledge58",
+            "w" : "ledge56",
+            "d" : "ledge45",
+            "s" : "ledge57"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "Not so Shallow Water",
+         "id" : "ledge57",
+         "description" : "\n        It's up to your neck now, and you feel the edge of something \nunderneath you...looks like the floor drops off quite a good distance.\nYou will either have to now climb up on a boat, dive underwater, or turn\nback.  Check the skies and the wind, cause there's been many divers killed\nwhile swimming here in bad weather.\n",
+         "altitude" : null
+      },
+      "ledge20@ledge" : {
+         "exits" : {
+            "e" : "ledge21",
+            "w" : "ledge17",
+            "u" : "ledge17",
+            "d" : "ledge21"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Sloping Tunnel",
+         "id" : "ledge20",
+         "description" : "\n        The steepness of this tunnel gets to be a little tricky to walk on.\nIf the floor was a little more steeper you could have been climbing down the\ntracks like a ladder.  Man, if only you had a cart to travel down the track\ninstead!  You can continue moving downward or else start climbing back up.\n",
+         "altitude" : null
+      },
+      "ledge11@ledge" : {
+         "exits" : {
+            "e" : "ledge12",
+            "w" : "ledge10",
+            "u" : "ledge10",
+            "d" : "ledge12"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Old Mining Tunnel",
+         "id" : "ledge11",
+         "description" : "\n        A few broken beams make the ceiling look like it could collapse with\nthe next tremor.  You can hear drops of water drip from the cracks along with\nsome other noises echoing from further down.  Hmmm...looks like an adventure\nis waiting for you down there!  Those who fear closed in spaces can run back\noutside up the tunnel.\n",
+         "altitude" : null
+      },
+      "ledge56@ledge" : {
+         "exits" : {
+            "e" : "ledge57",
+            "w" : "ledge55",
+            "s" : "ledge56"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "Shallow Water",
+         "id" : "ledge56",
+         "description" : "\n        The ocean now comes up to your chest, and you're having to jump the\ncoming waves to avoid being pushed back too far.  You wonder how much \nfurther you can go without a boat...or a life jacket.\n",
+         "altitude" : null
+      },
+      "ledge46@ledge" : {
+         "exits" : {
+            "e" : "ledge47",
+            "u" : "ledge57",
+            "n" : "ledge45",
+            "s" : "ledge46"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Under the Sea",
+         "id" : "ledge46",
+         "description" : "\n        The undersea clifflines streches for some unknown distance to the\nsouth, yet the ocean current pushes you toward the side of the rock.  \nBetter hope a storm isn't coming up while you're down here.  You can swim\naway from the cliff east, swim toward on opening north, follow the cliff\nsome more south, or climb out of the water upward.\n",
+         "altitude" : null
+      },
+      "ledge23@ledge" : {
+         "exits" : {
+            "e" : "ledge24"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "End of the Ride",
+         "id" : "ledge23",
+         "description" : "\n        A set of railroad tracks designed for mine carts comes to an abrupt\nend at a large pile of gravel, mainly to stop runaway carts from barreling\ninto working miners.  The walls and ceiling of this part of the mine seems\nless susceptable to quakes, with some formations of stalactites to hold\nthings together.  A tunnel going upwards in what looks to have been hand \ndrilled is completely out of reach due to the rather large gaps in the \nfloor and the recent collapsing of sections of track going over those gaps.\nA more natural looking cavern can be entered to the east.\n",
+         "altitude" : null
+      },
+      "death@ledge" : {
+         "exits" : {},
+         "flags" : [
+            "Outdoors",
+            "Death"
+         ],
+         "zone" : "ledge",
+         "title" : "Ledge",
+         "id" : "Death",
+         "description" : "\n   Your feet slip on the dangerously thin ledge, and you plunge rapidly\ndownwards to your death...\n",
+         "altitude" : "850"
+      },
+      "ledge49@ledge" : {
+         "exits" : {
+            "e" : "ledge49",
+            "w" : "ledge48",
+            "u" : "ledge58",
+            "n" : "ledge49",
+            "s" : "ledge50"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Under the Sea",
+         "id" : "ledge49",
+         "description" : "\n        Deep sea scuba diving, just the thing for relaxation.  Schools of\nfish swim past you along the coral-lined seafloor as you admire the beauty\nof the ocean life.  You can swim in any direction or climb up on a boat\n(if you have one.)\n",
+         "altitude" : null
+      },
+      "ledge14@ledge" : {
+         "exits" : {
+            "e" : "ledge17",
+            "w" : "ledge13",
+            "d" : "ledge17"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Old Mining Tunnel",
+         "id" : "ledge14",
+         "description" : "\n        As you stroll down the eastern tunnel, the sounds from further down\nseem to be more auidible as with the echos from your footsteps.  Treading\nmore stealthy would be a good idea as you might be walking into something\nthat would make you wish you hadn't gone cave exploring.\n",
+         "altitude" : null
+      },
+      "ledge17@ledge" : {
+         "exits" : {
+            "e" : "ledge20",
+            "w" : "ledge14",
+            "u" : "ledge14",
+            "d" : "ledge20"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Sloping Tunnel",
+         "id" : "ledge17",
+         "description" : "\n        From this point in the tunnel it begins to head downward at about a\nforty-five degree angle.  If it weren't for the mine cart tracks you might\nhave slipped on a loose rock and fallen down the mine by now.  Wouldn't it\nhave been more fun riding in a mine cart instead of walking?  The tracks\ncontinues downward for some unknown distance.  With some effort you can\nmake your way back up.\n",
+         "altitude" : null
+      },
+      "ledge12@ledge" : {
+         "exits" : {
+            "e" : "ledge13",
+            "w" : "ledge11",
+            "u" : "ledge11",
+            "d" : "ledge13"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Old Mining Tunnel",
+         "id" : "ledge12",
+         "description" : "\n        The tunnel continues deeper into the rock and seems to widen a little\nbit as there appears to an area ahead where miners load the minerals onto the\ncarts to roll out.  The wooden beams appear to be holding althought they look\nlike they could collapse with a good jolt.  Further progress can be made \ndownward or else return upward.\n",
+         "altitude" : null
+      },
+      "ledge58@ledge" : {
+         "exits" : {
+            "e" : "beach11@beach",
+            "w" : "ledge57",
+            "d" : "ledge50"
+         },
+         "flags" : [
+            "Outdoors",
+            "Onwater"
+         ],
+         "zone" : "ledge",
+         "title" : "On the Ocean Surface",
+         "id" : "ledge58",
+         "description" : "\n        You climb up on your boat, happy to have gotten out of the water.\nYou have your choice of heading back to shore to the west or head toward\nan island far to the east.  You can dive back down if you wish.\n",
+         "altitude" : null
+      },
+      "ledge31@ledge" : {
+         "exits" : {
+            "e" : "ledge32",
+            "w" : "ledge24",
+            "s" : "ledge36"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Natural Cavern",
+         "id" : "ledge31",
+         "description" : "\n        Hundreds of years ago the level of the sea was much higher and this\ncavern was not much more than a large hole in the side of a submerged \nsection of cliff.  The wave action of the saltwater cut away at the rock on\nthe inside until one underwater cavern joined up with another unsubmerged\ncavern, effectively flooding it also, and greatly enlarging its size.  Now,\nthe sea level has dropped since, draining the water from the higher sections\nbut still keeping the lower sections underwater.  The cavern extends itself\nto the west and south with some sort of wall to the east.\n",
          "altitude" : null
       },
       "tunnel@ledge" : {
@@ -145,6 +710,246 @@
          "description" : "\n   You are standing on a narrow ledge high up the side of some steep cliffs.\nThe ledge continues west beside a narrow cavemouth.  To the east the ledge ends\nsome twenty feet short of a set of steps, which climb up the cliff side from\nthe valley below.\n",
          "altitude" : "850"
       },
+      "ledge43@ledge" : {
+         "exits" : {
+            "e" : "ledge44",
+            "w" : "ledge42"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Underwater Cavern",
+         "id" : "ledge43",
+         "description" : "\n        It's gotten a bit brighter, as the cave appears to open up to the\nwide ocean to the east.  Looking to the west the cavern looks to go back a\nways and gets narrower.  Seems to be an excellent place for underwater \ntunnel exploration.  Several kinds of sea animals seem to be living in this\ncave.\n",
+         "altitude" : null
+      },
+      "ledge38@ledge" : {
+         "exits" : {
+            "n" : "ledge39",
+            "s" : "ledge34"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Bear Cave",
+         "id" : "ledge38",
+         "description" : "\n        You seem to have stumbled into the home of a large bear.  The fact\nthat this bear hasn't attacked you yet is that this bear seems to be chained\ndown.  There seems to be another room behind the bear, but it appears the\nway is blocked unless you can figure out a way to get past him.  You can get\naway from this bear to the south.\n",
+         "altitude" : null
+      },
+      "ledge26@ledge" : {
+         "exits" : {
+            "w" : "ledge27",
+            "s" : "ledge25"
+         },
+         "flags" : [],
+         "zone" : "ledge",
+         "title" : "Humming Tunnel",
+         "id" : "ledge26",
+         "description" : "\n        An eeire hum seems to emanate from the walls of this tunnel,\nsomething that doesn't seem so natural.  A bit of a glow seems to come from\nthe west also, wonder what's causing it?  Escape is back south.\n",
+         "altitude" : null
+      },
+      "ledge39@ledge" : {
+         "exits" : {
+            "s" : "ledge38"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Kobold Cave",
+         "id" : "ledge39",
+         "description" : "\n        A bit of a musty section of cave is the home of some kobold, which\nis a kind of miner tribe of humanoid people that pretty much love dark places\nand hate sunlight.  There's not too much to speak of in here, except for a\nfew not-so-valuable trinkets.  The kobold that lives here doesn't even sleep\non anything more than a boulder!  You can exit back out to the south.\n",
+         "altitude" : null
+      },
+      "ledge33@ledge" : {
+         "exits" : {
+            "n" : "ledge27"
+         },
+         "flags" : [],
+         "zone" : "ledge",
+         "title" : "Small Pool",
+         "id" : "ledge33",
+         "description" : "\n        You come to a small pool of water, cold to the touch and not very\ndeep, meaning it can't be the source of this warmth.  The glow from the \nnorth side of this section of cave lights this room up, without it there\nwouldn't be anything unique around here.\n",
+         "altitude" : null
+      },
+      "forgotten@ledge" : {
+         "exits" : {
+            "e" : "ledge27"
+         },
+         "flags" : [],
+         "zone" : "ledge",
+         "title" : "Forgotten Place",
+         "id" : "Forgotten",
+         "description" : "\n   You are standing in a dim forgotten place, deep underground.  The rocks\naround you seem placid and silent, as if in silent contemplation of some deeper\nmore ancient power of the earth.\n",
+         "altitude" : null
+      },
+      "ledge50@ledge" : {
+         "exits" : {
+            "e" : "ledge50",
+            "w" : "ledge45",
+            "u" : "ledge58",
+            "n" : "ledge49",
+            "s" : "ledge47"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Under the Sea",
+         "id" : "ledge50",
+         "description" : "\n        Deep sea scuba diving, just the thing for relaxation.  Schools of\nfish swim past you along the coral-lined seafloor as you admire the beauty\nof the ocean life.  You can swim in any direction.\n",
+         "altitude" : null
+      },
+      "ledge41@ledge" : {
+         "exits" : {
+            "e" : "ledge42",
+            "w" : "ledge40"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Underwater Cavern",
+         "id" : "ledge41",
+         "description" : "\n        The water inside the cave is gentle, no current, no undertow.  There\nis no telling how far this cave goes back inside the cliff, but hopefully it\nisn't too long.  Smaller fish can be seen swimming by who have been hiding\nin here from the bigger fish.  The tunnel continues west and east.\n",
+         "altitude" : null
+      },
+      "ledge27@ledge" : {
+         "exits" : {
+            "e" : "ledge26",
+            "n" : "ledge28",
+            "s" : "ledge33"
+         },
+         "flags" : [],
+         "zone" : "ledge",
+         "title" : "Glowing Tunnel",
+         "id" : "ledge27",
+         "description" : "\n        Something seems odd here.  Unlike the rest of the tunnels, the walls\ngive off a bit of a glow.  Also it is quite a bit warmer and humid.  Almost\nlike a steam bath.  There looks to be a pool to the south, and something\nthat appears to be the source of the heat lies to the north.\n",
+         "altitude" : null
+      },
+      "ledge24@ledge" : {
+         "exits" : {
+            "e" : "ledge31",
+            "w" : "ledge23",
+            "n" : "ledge25",
+            "s" : "ledge35"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Natural Cavern",
+         "id" : "ledge24",
+         "description" : "\n        Hundreds of years ago the level of the sea was much higher and this\ncavern was not much more than a large hole in the side of a submerged \nsection of cliff.  The wave action of the saltwater cut away at the rock on\nthe inside until one underwater cavern joined up with another unsubmerged\ncavern, effectively flooding it also, and greatly enlarging its size.  Now,\nthe sea level has dropped since, draining the water from the higher sections\nbut still keeping the lower sections underwater.  The cavern extends itself\nto the east and south while another tunnel can be found to the north.  A\ntrail of rocks line a tunnel to the west.\n",
+         "altitude" : null
+      },
+      "ledge28@ledge" : {
+         "exits" : {
+            "e" : "ledge29",
+            "w" : "forgotten",
+            "s" : "ledge27"
+         },
+         "flags" : [],
+         "zone" : "ledge",
+         "title" : "Manifestation of Evil",
+         "id" : "ledge28",
+         "description" : "\n        Whoa!  You seem to have some upon some sort of demon's cave!  And as\nyou can see, it's very warm and bright in here!  On top of that, a rather\nnoisy bunch of blabber echos in here, yet doesn't leave this room.  What's\nworse, a battle seems to have erupted in your head.  You begin to express\nthe darkest feelings and emotions from your heart.  The sight and the sound\nof dark emotion have infected your mind, so much so that you have become\nparalyzed and are slowly being consumed by it.  Better do something to get\naway from this manifestation, or you're done for.  If you were able to move,\nyou can head west, east or south.\n",
+         "altitude" : null
+      },
+      "ledge52@ledge" : {
+         "exits" : {
+            "e" : "ledge51"
+         },
+         "flags" : [
+            "Party",
+            "CantSummon",
+            "Nomobiles",
+            "Nomagic"
+         ],
+         "zone" : "ledge",
+         "title" : "Beachfront Shack",
+         "id" : "ledge52",
+         "description" : "\n        It's simple-looking shack built along the beach shore as a place to\nescape the daily barrages of adventuring.  A large window faces the ocean,\nwhere you can watch the waves and the sunrise.  A rather comfortable-looking\nbed has been set up for wedded couples for overnight stay.  The beach can be\nset out upon to the south.\n",
+         "altitude" : null
+      },
+      "ledge44@ledge" : {
+         "exits" : {
+            "e" : "ledge45",
+            "w" : "ledge43"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Opening in the Cliff Face",
+         "id" : "ledge44",
+         "description" : "\n        You're swimming in the entryway of the underwater cliff face.  It\ngoes in pretty deep, and the light isn't bright enough to tell how far it\ngoes.  You can go cave exploring to the west or swim out to the open water\nto the east.\n",
+         "altitude" : null
+      },
+      "ledge37@ledge" : {
+         "exits" : {
+            "e" : "ledge40",
+            "w" : "ledge36",
+            "n" : "ledge32",
+            "d" : "ledge40"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Lagoon in the Cavern",
+         "id" : "ledge37",
+         "description" : "\n        An opening in the floor filled with water can be seen here.  Dipping\nyour hand and tasting it tells you that it's salty and that means that\nlagoon connects itself with the sea!  Underwater cave explorers must have\nbeen here in the past as some of their instruments seem to have been left\nbehind.  For those who just came up into this cavern, well take a tour to\nthe north and west or else jump back into the water and head east.\n",
+         "altitude" : null
+      },
+      "ledge48@ledge" : {
+         "exits" : {
+            "e" : "ledge49",
+            "u" : "ledge57",
+            "s" : "ledge45"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Under the Sea",
+         "id" : "ledge48",
+         "description" : "\n        The underwater current of the ocean pushes against the side of the \nunderwater cliff, making scuba diving a dangerous activity in calm weather,       \ndeadly in stormy weather.  The cliff curves to the east here following the\nedge of the klint.  Exploring the sea can be done south and east.\n",
+         "altitude" : null
+      },
+      "ledge47@ledge" : {
+         "exits" : {
+            "e" : "ledge47",
+            "w" : "ledge46",
+            "u" : "ledge58",
+            "n" : "ledge50",
+            "s" : "ledge47"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Under the Sea",
+         "id" : "ledge47",
+         "description" : "\n        Deep sea scuba diving, just the thing for relaxation.  Schools of\nfish swim past you along the coral-lined seafloor as you admire the beauty\nof the ocean life.  You can swim in any direction or climb up on a boat\n(if you have one.)\n",
+         "altitude" : null
+      },
+      "ledge18@ledge" : {
+         "exits" : {
+            "u" : "ledge15",
+            "s" : "ledge15"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Old Mining Tunnel",
+         "id" : "ledge18",
+         "description" : "\n        The tunnel seems to end at a rockfall where the walls collasped some\ntime ago...hope no one was in there.  Clearing the rockfall would do no good,\nas there are just too many rocks to clear and no telling how far it goes.\nThere also appears to have been a lot of activity here recently.  Some\nstrands of rope, blindfolds, and gags remain indicating that someone was\ntied up and held hostage.  It also indicates that whoever was tied up managed\nto break free.  Just who that was or if that person got out of the mine isn't\nclear just yet.  You can head back upward.\n",
+         "altitude" : null
+      },
       "pit@ledge" : {
          "exits" : {
             "u" : "^RopeBotPit",
@@ -159,17 +964,442 @@
          "description" : "\n   You are standing at the bottom of a huge open pit.  The pit walls are almost\nsheer, and well beyond climbing.  A narrow tunnel leads south into shadow.\n",
          "altitude" : "850"
       },
-      "forgotten@ledge" : {
+      "ledge36@ledge" : {
          "exits" : {
-            "w" : "^TunnEast"
+            "e" : "ledge37",
+            "w" : "ledge35",
+            "n" : "ledge31"
          },
-         "flags" : [],
+         "flags" : [
+            "Dark"
+         ],
          "zone" : "ledge",
-         "title" : "Forgotten Place",
-         "id" : "Forgotten",
-         "description" : "\n   You are standing in a dim forgotten place, deep underground.  The rocks\naround you seem placid and silent, as if in silent contemplation of some deeper\nmore ancient power of the earth.\n",
+         "title" : "Natural Cavern",
+         "id" : "ledge36",
+         "description" : "\n        Hundreds of years ago the level of the sea was much higher and this\ncavern was not much more than a large hole in the side of a submerged \nsection of cliff.  The wave action of the saltwater cut away at the rock on\nthe inside until one underwater cavern joined up with another unsubmerged\ncavern, effectively flooding it also, and greatly enlarging its size.  Now,\nthe sea level has dropped since, draining the water from the higher sections\nbut still keeping the lower sections underwater.  The cavern extends itself\nto the north, east and west.\n",
+         "altitude" : null
+      },
+      "ledge29@ledge" : {
+         "exits" : {
+            "e" : "ledge30",
+            "w" : "ledge28"
+         },
+         "flags" : [
+            "Hot"
+         ],
+         "zone" : "ledge",
+         "title" : "Underground Geyser",
+         "id" : "ledge29",
+         "description" : "\n        A sizeable crack in the floor in this section of the cave spews hot\nwater and steam effectively heating up a good part of the whole cavern.  The \ntunnel seems to go back a lot further, but getting by the geyser is too\ndifficult.  It's a bit too uncomfortable in this suana and best to head away \nto the west.\n",
+         "altitude" : null
+      },
+      "ledge54@ledge" : {
+         "exits" : {
+            "e" : "ledge55",
+            "w" : "ledge53",
+            "s" : "ledge54"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "Shallow Water",
+         "id" : "ledge54",
+         "description" : "\n        The water starts to go above the knees, but you can continue wading\na lot further without a boat.  Use caution, check the weather conditions\nfor your safety.\n",
+         "altitude" : null
+      },
+      "ledge13@ledge" : {
+         "exits" : {
+            "e" : "ledge14",
+            "w" : "ledge12",
+            "u" : "ledge12",
+            "n" : "ledge15",
+            "s" : "ledge16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Widened Mining Area",
+         "id" : "ledge13",
+         "description" : "\n        This area appears to be a staging zone for drilling tunnels in all        \ndifferent directions and central meeting place for all the miners.  Old \nmining equipment lie abandoned and scattered about, most of it broken and\nuseless.  A couple of tunnels lead in different directions, one of which\nappears to be the source of some noises--the eastern tunnel.  Other tunnels\ngo north, south, and west.\n",
+         "altitude" : null
+      },
+      "ledge45@ledge" : {
+         "exits" : {
+            "e" : "ledge50",
+            "w" : "ledge44",
+            "u" : "ledge57",
+            "n" : "ledge48",
+            "s" : "ledge46"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Under the Sea",
+         "id" : "ledge45",
+         "description" : "\n        An underwater opening can be seen in the side of the cliff which\nseems to lead to an submerged cave.  Since that scuba gear won't run out\nanytime soon, exploration isn't out of the question.  The cave can be\nentered to the west, while swimming about the water can be done in any\ndirection.\n",
+         "altitude" : null
+      },
+      "ledge40@ledge" : {
+         "exits" : {
+            "e" : "ledge41",
+            "w" : "ledge37",
+            "u" : "ledge37"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Underwater Cavern",
+         "id" : "ledge40",
+         "description" : "\n        This underwater cavern comes to an end with an opening above you \nwhich seems to be a large air pocket or perhaps an hidden cavern.  The \nlight from the outside barely allows you to see where you're going in here,\nbut the air pocket or cavern will be completely pitch black.  A couple of\nsea creatures which stay in here during the daytime dart away from you.\nEscape for those who've been trying to get out of the cavern lies east.\n",
+         "altitude" : null
+      },
+      "ledge34@ledge" : {
+         "exits" : {
+            "n" : "ledge38",
+            "s" : "ledge32"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Odor in the Cave",
+         "id" : "ledge34",
+         "description" : "\n        A rather unpleasant smell seems to have taken over the scent of \nseawater common throughout this part of the cavern.  More droppings along\nwith a few carcasses can be found along the sides, and some growling can be\nheard also!  If this sounds a bit unnerving to you, escape can be had to the\nsouth or else have an encounter with whatever it is to the north.\n",
+         "altitude" : null
+      },
+      "ledge55@ledge" : {
+         "exits" : {
+            "e" : "ledge56",
+            "w" : "ledge54",
+            "s" : "ledge55"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "Shallow Water",
+         "id" : "ledge55",
+         "description" : "\n        The water now comes up to your waistline, and the waves start to push\nyou around a little bit.  The saftey of the beach is pretty far back now, and\nwhat looks to be an island far in the distance looks a little clearer.\n",
+         "altitude" : null
+      },
+      "cavemouth@ledge" : {
+         "exits" : {
+            "w" : "On",
+            "e" : "Ledge",
+            "n" : "Cave"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "ledge",
+         "title" : "Cavemouth",
+         "id" : "Cavemouth",
+         "description" : "\n   You are standing on a narrow precipitous ledge.  The ledge runs east-west,\nand to the north a narrow cavemouth leads into semi-darkness.  Braving vertigo,\nyou gaze over the lip of the ledge across the vast expanse of trees far below.\n",
+         "altitude" : "850"
+      },
+      "ledge19@ledge" : {
+         "exits" : {
+            "w" : "Death",
+            "u" : "ledge16",
+            "n" : "ledge16"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "The (Formerly) Sealed Cave",
+         "id" : "ledge19",
+         "description" : "\n        A nice cavern formed over thousands of years inside the side of the\ncliff, undiscovered until miners broke into it by chance.  It had yet to \nform an outside opening along the outside wall, but it looks as if it was\nmaking its opening downward in the form of a chasm.  You can't see the\nbottom, but it looks like it goes pretty deep.  A rapidly narrowing ledge\nappears to jut from the wall to the west, but moving along that is pretty\nrisky, considering the fact that a wrong step could mean taking a bad fall.\n",
+         "altitude" : null
+      },
+      "ledge30@ledge" : {
+         "exits" : {
+            "w" : "ledge29"
+         },
+         "flags" : [
+            "Hot",
+            "Death"
+         ],
+         "zone" : "ledge",
+         "title" : "In the Geyser",
+         "id" : "ledge30",
+         "description" : "\n        You foolishly try getting by the geyser but fall into it and become\nboiled out of existance.  What in the world were you thinking?\n",
+         "altitude" : null
+      },
+      "ledge16@ledge" : {
+         "exits" : {
+            "n" : "ledge13",
+            "d" : "ledge19",
+            "s" : "ledge19"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Old Mining Tunnel",
+         "id" : "ledge16",
+         "description" : "\n        The southern tunnel you are now treking through seems to have to been\ndug for a short distance until they broke into an sealed cave.  No coal\ndeposits were found, neither were any other kind of mineral except limestone\nand granite.  You can step in this cave to the south or head back to the\nintersection north.\n",
+         "altitude" : null
+      },
+      "ledge22@ledge" : {
+         "exits" : {
+            "w" : "ledge21",
+            "u" : "ledge21"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "ledge",
+         "title" : "Broken Track Ties",
+         "id" : "ledge22",
+         "description" : "\n        You take a chance and continue stepping across the gap, but a quick\nhop over one broken tie onto another tie causes it to snap!  What's worse, \nthe supports holding up the tracks collaspe along with it!  You take the fall\nand don't survive.  Next time, take a cart...\n",
+         "altitude" : null
+      },
+      "ledge21@ledge" : {
+         "exits" : {
+            "e" : "ledge22",
+            "w" : "ledge20",
+            "u" : "ledge20",
+            "d" : "ledge22"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Tracks Over the Gaps",
+         "id" : "ledge21",
+         "description" : "\n        It appears the miners had to contend with mini-caves during their\ndrilling.  However, they still had to lay the tracks, so they just laid the\ntracks right over the gaps for make-shift bridges.  Unfortunately the weight\nof the carts have left some of the railroad ties broken in the middle.  You\nstep over a couple of them, but there's some more ahead if you decide to \ncontinue on risking a nasty fall if you step wrongly.  You can always \nstarting climbing back out.\n",
+         "altitude" : null
+      },
+      "ledge42@ledge" : {
+         "exits" : {
+            "e" : "ledge43",
+            "w" : "ledge41"
+         },
+         "flags" : [
+            "Underwater"
+         ],
+         "zone" : "ledge",
+         "title" : "Underwater Cavern",
+         "id" : "ledge42",
+         "description" : "\n        Small pockets of air can be seen above where the ceiling has a few\ncracks but your mouth can't get to them to breathe.  Hopefully that gear\nyou're wearing won't run out of air soon.  Some clams seem to have taken up\nresidence in this section of tunnel, which continues west and east.\n",
+         "altitude" : null
+      },
+      "ledge9@ledge" : {
+         "exits" : {
+            "e" : "ledge10",
+            "w" : "^TunnEast",
+            "d" : "ledge10"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "ledge",
+         "title" : "Old Mining Tunnel",
+         "id" : "ledge9",
+         "description" : "\n        You have seemingly uncovered an enterance to an old coal mining \ntunnel that was buried by a rockfall caused by an earthquake some time ago.\nLarge wooden beams seem to hold up the ceiling further down despite the\nsplintering and cracking over time with each quake.  The tunnel decends\nfurther downward to the east.\n",
          "altitude" : null
       }
    },
-   "mob" : {}
+   "mob" : {
+      "weaponsmith@ledge" : {
+         "damage" : "8",
+         "location" : "limbo@limbo",
+         "armor" : "5",
+         "name" : "weaponsmith",
+         "examine" : "\nHe was just recently rescued from where he was being held after walking\ninto a bad part of the neighborhood.  He's trying to fix up the place \nbefore he resumes his practice of weapon making.",
+         "description" : "\nThe weapon smith's apprentice is here cleaning up the shop for reopening.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The Apprentice",
+         "pflags" : [
+            "Nosteal"
+         ]
+      },
+      "evil@ledge" : {
+         "damage" : "10",
+         "location" : "ledge28",
+         "speed" : "0",
+         "name" : "Evil",
+         "examine" : "\nYou want to get by him?  You have to totally block him out of your mind!\nPicking a fight with him is totally out of the question--unless you have\na death wish...or you're a battletank!",
+         "description" : "The personification of Evil is here to consume you!",
+         "pflags" : [
+            "NoHassle",
+            "NoExorcise",
+            "Nozap"
+         ],
+         "strength" : "5000"
+      },
+      "pike@ledge" : {
+         "damage" : "9",
+         "location" : "ledge45",
+         "name" : "pike",
+         "examine" : "These are great game fish, but can really whip someone with its fins.",
+         "description" : "A northern pike fish swims by your head looking for minnows.",
+         "sflags" : [
+            "Nolegs"
+         ],
+         "strength" : "80",
+         "speed" : "2",
+         "pname" : "Northern Pike",
+         "aggression" : "2",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "bear@ledge" : {
+         "damage" : "20",
+         "location" : "ledge38",
+         "name" : "bear",
+         "examine" : "\nObviously this bear is being held against its will, but someone is using\nhim to keep intruders out.  Still, picking a fight with him would not be\nwise as the noise could alert whoever lives here.",
+         "description" : "A large bear sits across the cavern bound by chains.",
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "Chained Bear",
+         "pflags" : [
+            "NoExorcise",
+            "Nozap"
+         ]
+      },
+      "flounder@ledge" : {
+         "damage" : "5",
+         "location" : "ledge44",
+         "name" : "flounder",
+         "description" : "An eatin' size flounder skirts by.",
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "50",
+         "speed" : "2",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "jellyfish@ledge" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "5",
+         "location" : "ledge49",
+         "name" : "Jellyfish",
+         "examine" : "These things have been known to paralyze swimmers that bump into them.\nThis variety is the only kind that can live along this coastline.",
+         "description" : "A jellyfish floats in the water.",
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "25",
+         "speed" : "1",
+         "aggression" : "10",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "grayshark@ledge" : {
+         "damage" : "10",
+         "location" : "ledge49",
+         "armor" : "0",
+         "name" : "grayshark",
+         "examine" : "Sharks aren't known for coming around this part of the coastline, but this\none has been searching for warmer waters for days.  He looks weak and tired.",
+         "description" : "A very lost grey shark swims by you.",
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "120",
+         "speed" : "4",
+         "pname" : "Grey Shark",
+         "aggression" : "5",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "salmon@ledge" : {
+         "damage" : "5",
+         "location" : "ledge42",
+         "name" : "salmon",
+         "description" : "An ocean salmon swims by your head.",
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "40",
+         "speed" : "1",
+         "pname" : "The Salmon",
+         "aggression" : "0",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "penguin@ledge" : {
+         "damage" : "6",
+         "location" : "limbo@limbo",
+         "speed" : "0",
+         "aggression" : "75",
+         "name" : "penguin",
+         "examine" : "\nWhy are people so afraid of this little guy?  He doesn't look like much\nof a threat, much less a fighter.  It must be that chant of his...",
+         "description" : "A ferocious penguin stands here chanting 'Do be...do be do!'",
+         "mflags" : [
+            "Nocorpse"
+         ],
+         "strength" : "60"
+      },
+      "dummy@ledge" : {
+         "location" : "ledge51",
+         "name" : "Dummy",
+         "examine" : "\nIt's a dummy variable, used by programmers to show something hasn't \nbeen implemented.",
+         "description" : "A dummy mobile wanders around, having escaped from the testing area.",
+         "strength" : "10"
+      },
+      "cod@ledge" : {
+         "damage" : "6",
+         "location" : "ledge47",
+         "name" : "cod",
+         "description" : "A swedish cod fish swims along the ocean floor.",
+         "sflags" : [
+            "Nolegs"
+         ],
+         "strength" : "60",
+         "speed" : "4",
+         "pname" : "Swedish Cod",
+         "aggression" : "0",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "cavebat@ledge" : {
+         "damage" : "5",
+         "location" : "ledge19",
+         "speed" : "1",
+         "aggression" : "20",
+         "pname" : "A cave bat",
+         "name" : "cavebat",
+         "examine" : "Being sealed in this tunnel for so long, it'll try to eat anything.",
+         "description" : "A bat is here flying around inside the cave.",
+         "strength" : "40"
+      },
+      "kobold@ledge" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "10",
+         "location" : "ledge39",
+         "name" : "kobold",
+         "examine" : "\nHe apparently is the one who lives here, and doesn't like visitors.  That\nkey around his neck looks mighty interesting.",
+         "description" : "A kobold sits on a boulder asleep.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The Kobold",
+         "pflags" : [
+            "NoExorcise",
+            "Nozap"
+         ],
+         "mflags" : [
+            "GrabHostile",
+            "Nosteal",
+            "Nocorpse"
+         ]
+      }
+   }
 }

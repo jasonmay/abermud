@@ -10,12 +10,14 @@
          "name" : "headdress",
          "examine" : "It appears to belong to a chieftain.",
          "size" : "1",
+         "state" : "1",
          "pname" : "headdress",
+         "maxstate" : "1",
          "bvalue" : "50",
-         "desc[0]" : "A headdress has been left here.",
          "aflags" : [
             "Head"
-         ]
+         ],
+         "desc[0]" : "A headdress has been left here."
       },
       "ark@heaven" : {
          "desc[1]" : "The Ark of the Covenant is here.",
@@ -32,7 +34,7 @@
          "pname" : "ark",
          "maxstate" : "1",
          "bvalue" : "1000",
-         "desc[0]" : "The Ark of the Covenant\tis open."
+         "desc[0]" : "The Ark of the Covenant is open."
       },
       "tablet@heaven" : {
          "location" : "IN_CONTAINER:ark",
@@ -55,7 +57,7 @@
          "name" : "mjolnir",
          "size" : "100",
          "pname" : "mjolnir",
-         "bvalue" : "1600",
+         "bvalue" : "600",
          "desc[0]" : "Mjolnir, the sacred hammer of Thor, has been left here."
       },
       "vase@heaven" : {
@@ -73,6 +75,19 @@
          "maxstate" : "1",
          "bvalue" : "100",
          "desc[0]" : "A vase made of ice has been set on a pedestal."
+      },
+      "axe@heaven" : {
+         "damage" : "23",
+         "location" : "WIELDED_BY:Olaf",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "battle-axe",
+         "name" : "axe",
+         "size" : "100",
+         "pname" : "axe",
+         "bvalue" : "100",
+         "desc[0]" : "A bloodied battle-axe has been left here."
       },
       "watermelon@heaven" : {
          "desc[1]" : "A watermelon hangs temptingly from the Tree of Knowledge.",
@@ -114,25 +129,15 @@
          "bvalue" : "50",
          "desc[0]" : "A medicine bag has been dropped here."
       },
-      "staff2@heaven" : {
-         "location" : "IN_ROOM:Heaven11",
-         "armor" : "15",
-         "oflags" : [
-            "Armor"
-         ],
-         "altname" : "staff",
-         "name" : "staff2",
-         "size" : "1",
-         "pname" : "staff",
-         "bvalue" : "90",
-         "desc[0]" : "A shepherd's staff leans against the wall."
-      },
       "arrow@heaven" : {
          "desc[1]" : "A silver arrow sticks up out of the ground.",
          "location" : "IN_ROOM:Heaven31",
-         "oflags" : "{ }",
+         "oflags" : [
+            "DamageSpell"
+         ],
          "altname" : "arrow",
          "name" : "arrow",
+         "examine" : "\nSilver is soft, so this cannot really damage anyone, can it?",
          "size" : "1",
          "pname" : "arrow",
          "bvalue" : "100",
@@ -149,17 +154,37 @@
          "desc[0]" : "A rainbow wraps around the room.",
          "size" : "0"
       },
-      "staff1@heaven" : {
-         "desc[1]" : "The Staff of Moses rests againt the wall.",
-         "location" : "IN_ROOM:Heaven4",
-         "oflags" : "{ }",
+      "horned_helm@heaven" : {
+         "location" : "WORN_BY:Olaf",
+         "armor" : "56",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "altname" : "horned",
+         "name" : "horned_helm",
+         "size" : "2",
+         "weight" : "1",
+         "pname" : "helmet",
+         "bvalue" : "80",
+         "desc[0]" : "A great golden helm lies here.",
+         "aflags" : [
+            "Head",
+            "Face"
+         ]
+      },
+      "volume@heaven" : {
+         "location" : "IN_ROOM:heaven26",
+         "oflags" : [
+            "Noget"
+         ],
          "altname" : "staff",
-         "name" : "staff1",
-         "examine" : "You notice that the staff feels faintly like a snake.",
-         "size" : "1",
-         "pname" : "staff",
-         "bvalue" : "100",
-         "desc[0]" : "The Staff of Moses rests againt the wall."
+         "name" : "volume",
+         "examine" : "\nMute is an attack spell for tournaments.  If you are mute, you cannot cast \nspells.  There is no known use for deafen.  If you think of one, do make a \nsuggestion.",
+         "size" : "11",
+         "pname" : "Volume_XI",
+         "bvalue" : "90",
+         "desc[0]" : "&+YVolume XI&N of the &+WBook of Knowledge&N lies here."
       },
       "eagle@heaven" : {
          "desc[1]" : "An eagle feather is drifting down from the sky.",
@@ -553,6 +578,28 @@
          "description" : "\n   You are standing within a large tent.  To the east is a plain, while to\nthe west you can see the gates of pearl.\n",
          "altitude" : null
       },
+      "heaven37@heaven" : {
+         "exits" : {
+            "w" : "Heaven38",
+            "e" : "Heaven38",
+            "u" : "Heaven38",
+            "n" : "Heaven38",
+            "d" : "Heaven38",
+            "s" : "Heaven38"
+         },
+         "flags" : [
+            "OnePerson",
+            "NoSnoop",
+            "CantSummon",
+            "NoSummon",
+            "Soundproof"
+         ],
+         "zone" : "heaven",
+         "title" : "&+WThe White Light",
+         "id" : "Heaven37",
+         "description" : "\n  &+W This is a vast expanse of searingly bright white light.  A feeling of\n&+Wpeace and serentity overwhelmes you as you gaze in awe into this endless\n&+Wexpansion.  Time and space seem to stand still here, and you get the sense\n&+Wthat this room is not of this world.\n",
+         "altitude" : null
+      },
       "heaven2@heaven" : {
          "exits" : {
             "w" : "Heaven1",
@@ -595,6 +642,21 @@
          "description" : "\n   Strewn about this room are discarded crosses, gibbets, and stakes.\n",
          "altitude" : null
       },
+      "heaven39@heaven" : {
+         "exits" : {},
+         "flags" : [
+            "OnePerson",
+            "NoSnoop",
+            "CantSummon",
+            "NoSummon",
+            "Soundproof"
+         ],
+         "zone" : "heaven",
+         "title" : "&+WThe White Light",
+         "id" : "Heaven39",
+         "description" : "\n  &+W This is a vast expanse of searingly bright white light.  A feeling of\n&+Wpeace and serentity overwhelmes you as you gaze in awe into this endless\n&+Wexpansion.  Time and space seem to stand still here, and you get the sense\n&+Wthat this room is not of this world.\n",
+         "altitude" : null
+      },
       "heaven26@heaven" : {
          "exits" : {
             "e" : "Heaven25",
@@ -621,6 +683,28 @@
          "title" : "Northwestern Rainforest",
          "id" : "Heaven31",
          "description" : "\n   Far to the west you can spy the blue of the ocean.  The abundant\nvegetation causes you to believe that you are standing in a rainforest.\nDark clouds gather to the west.\n",
+         "altitude" : null
+      },
+      "heaven38@heaven" : {
+         "exits" : {
+            "w" : "Heaven39",
+            "e" : "Heaven39",
+            "u" : "Heaven39",
+            "n" : "Heaven39",
+            "d" : "Heaven39",
+            "s" : "Heaven39"
+         },
+         "flags" : [
+            "OnePerson",
+            "NoSnoop",
+            "CantSummon",
+            "NoSummon",
+            "Soundproof"
+         ],
+         "zone" : "heaven",
+         "title" : "&+WThe White Light",
+         "id" : "Heaven38",
+         "description" : "\n  &+W This is a vast expanse of searingly bright white light.  A feeling of\n&+Wpeace and serentity overwhelmes you as you gaze in awe into this endless\n&+Wexpansion.  Time and space seem to stand still here, and you get the sense\n&+Wthat this room is not of this world.\n",
          "altitude" : null
       },
       "heaven35@heaven" : {
@@ -688,6 +772,24 @@
       }
    },
    "mob" : {
+      "olaf@heaven" : {
+         "damage" : "15",
+         "location" : "Heaven7",
+         "armor" : "0",
+         "name" : "Olaf",
+         "description" : "Saint Olaf shouts 'CONVERT!'",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Saint Olaf",
+         "pflags" : [
+            "NoSummon"
+         ],
+         "mflags" : [
+            "PickStuff",
+            "NoCorpse"
+         ]
+      },
       "peter@heaven" : {
          "damage" : "8",
          "location" : "Heaven1",
@@ -716,7 +818,8 @@
             "NoSummon"
          ],
          "mflags" : [
-            "PickStuff"
+            "PickStuff",
+            "BarW"
          ]
       },
       "bison@heaven" : {
@@ -766,13 +869,17 @@
       "snake@heaven" : {
          "damage" : "10",
          "location" : "limbo@limbo",
-         "speed" : "5",
-         "aggression" : "3",
          "armor" : "0",
-         "pname" : "Snake",
          "name" : "Snake",
          "description" : "\nAn snake with very narrow slits for eyes swishes around on the ground.",
-         "strength" : "60"
+         "sflags" : [
+            "Noarms",
+            "NoLegs"
+         ],
+         "strength" : "60",
+         "speed" : "5",
+         "pname" : "Snake",
+         "aggression" : "3"
       },
       "giant@heaven" : {
          "damage" : "14",
@@ -786,23 +893,26 @@
          "strength" : "150"
       },
       "valkyrie@heaven" : {
-         "damage" : "18",
-         "location" : "Heaven20",
-         "armor" : "0",
+         "damage" : "35",
+         "location" : "Heaven22",
+         "armor" : "30",
          "name" : "Valkyrie",
-         "description" : "Valkyrie glances around for a rabbit.",
+         "description" : "Valkyrie watches you carefully.",
          "sflags" : [
             "Female"
          ],
-         "strength" : "175",
+         "strength" : "300",
          "speed" : "0",
+         "aggression" : "0",
          "pname" : "Valkyrie",
-         "aggression" : "0"
+         "mflags" : [
+            "BarN"
+         ]
       },
       "odin@heaven" : {
          "damage" : "22",
          "location" : "Heaven25",
-         "armor" : "0",
+         "armor" : "20",
          "name" : "Odin",
          "description" : "Odin glares at you with his one eye.",
          "strength" : "380",
@@ -810,7 +920,8 @@
          "pname" : "Odin",
          "aggression" : "0",
          "mflags" : [
-            "PickStuff"
+            "PickStuff",
+            "BarW"
          ]
       },
       "agnes@heaven" : {
@@ -827,7 +938,25 @@
          "aggression" : "0",
          "pname" : "Agnes",
          "mflags" : [
-            "PickStuff"
+            "PickStuff",
+            "BarW"
+         ]
+      },
+      "petitioner@heaven" : {
+         "damage" : "1",
+         "location" : "Heaven18",
+         "armor" : "0",
+         "name" : "Petitioner",
+         "description" : "A newly arrived petitioner floats calmly by.",
+         "strength" : "10",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Petitioner",
+         "pflags" : [
+            "NoSummon"
+         ],
+         "mflags" : [
+            "NoCorpse"
          ]
       }
    }

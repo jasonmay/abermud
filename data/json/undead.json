@@ -1,0 +1,4664 @@
+{
+   "obj" : {
+      "manacles1@undead" : {
+         "desc[1]" : "A set of heavy iron &+Bmanacles&* lie here attached to the floor.",
+         "damage" : "1",
+         "location" : "IN_ROOM:Dungeon5",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Manacles1",
+         "examine" : "\nThese are strong iron &+Bmanacles&* ideal for keeping prisoners under control.....",
+         "desc[2]" : "A set of heavy iron &+Bmanacles&* lie here locked and attached to the floor.",
+         "size" : "1",
+         "state" : "2",
+         "pname" : "manacles",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "1",
+         "desc[0]" : "A set of heavy iron &+Bmanacles&* lie here open."
+      },
+      "wheat4@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder4",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Wheat4",
+         "examine" : "A very good source of fibre, although not very filling.",
+         "size" : "1",
+         "pname" : "wheat",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A few grains of &+Bwheat&* lie scattered here."
+      },
+      "s_dagger@undead" : {
+         "damage" : "4",
+         "location" : "WIELDED_BY:Mercenary4",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "S_dagger",
+         "examine" : "\nIt is a SMALL inadequate &+Bdagger...&*. Feel sorry for yourself if this\nis your only weapon!",
+         "size" : "3",
+         "pname" : "dagger",
+         "weight" : "1",
+         "bvalue" : "25",
+         "desc[0]" : "A small inadequate &+Bdagger&* lies here."
+      },
+      "g_tooth7@undead" : {
+         "location" : "IN_CONTAINER:A_corpse",
+         "oflags" : "{ }",
+         "name" : "G_tooth7",
+         "examine" : "A bleached white alligator's &+Btooth&*.",
+         "size" : "1",
+         "pname" : "tooth",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A gator's &+Btooth&* lies here."
+      },
+      "book3@undead" : {
+         "damage" : "1",
+         "location" : "IN_CONTAINER:BCase",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "Book3",
+         "examine" : "\nThis &+Bbook&* seems somewhat convoluted and confused.  What you can make\nout of it, it seems to be talking about beasts that possess magical\nabilities, it makes little sense to you, but you see the words UNICORN and\nNIMBUS underlined. ",
+         "size" : "5",
+         "pname" : "book",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "A large leather &+Bbook&* has been left here."
+      },
+      "u_candle2@undead" : {
+         "damage" : "3",
+         "location" : "IN_ROOM:BanquetHall",
+         "oflags" : [
+            "GetFlips",
+            "Weapon"
+         ],
+         "name" : "U_Candle2",
+         "examine" : "A large solid silver &+Bcandlestick&*, looks quite valuable.",
+         "size" : "10",
+         "state" : "1",
+         "pname" : "candlestick",
+         "weight" : "50",
+         "bvalue" : "200",
+         "desc[0]" : "A large valuable &+Bcandlestick&* has been left here."
+      },
+      "mulberries1@undead" : {
+         "location" : "IN_ROOM:stony_path3",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "food",
+         "name" : "Mulberries1",
+         "examine" : "They are &+Bmulberries&*... Tiny berries packed with nutrition.",
+         "size" : "2",
+         "state" : "1",
+         "pname" : "berries",
+         "weight" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "Someone dropped some good looking &+Bberries&* here."
+      },
+      "b_armor@undead" : {
+         "damage" : "0",
+         "location" : "WORN_BY:Mercenary3",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "30",
+         "name" : "B_armor",
+         "examine" : "\nThis &+Bbodyarmor&* looks like while it may offer considerable protection,\nit must be horrible to wear when it's hot.  But what some people would\nwear to look good eh?.... It has the bumps and curves that suggest it is\nonly meant for fighting women.  You could wear it if you were a man but\nyour friends probably would (no make that DEFINITELY would) laugh at you.",
+         "size" : "6",
+         "pname" : "bodyarmor",
+         "weight" : "1",
+         "bvalue" : "100",
+         "aflags" : [
+            "Arms",
+            "Legs",
+            "Chest",
+            "Back"
+         ],
+         "desc[0]" : "Skin tight leather &+Bbodyarmor&* lies here."
+      },
+      "g_halberd@undead" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:Mercenary3",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "name" : "G_halberd",
+         "examine" : "\nThis is one BIG weapon.  Be careful turning around while carrying this -\nyou never know who is standing next to you.  Its blade is made of\npure platinum, and its stem is laced with gold and precious stones.",
+         "size" : "20",
+         "pname" : "halberd",
+         "weight" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "A beautiful jewelled &+Bhalberd&* lies here."
+      },
+      "udiamond@undead" : {
+         "location" : "IN_ROOM:PR_Room",
+         "weight" : "100",
+         "pname" : "diamond",
+         "name" : "uDiamond",
+         "examine" : "\nThere is something very odd about this &+Bdiamond&*. While it only appears\nsmall, when it is picked up it seems incredibly cumbersome. What is worse\nit feels far far too heavy.",
+         "bvalue" : "1000",
+         "desc[0]" : "A large very valuable &+Bgem&* has just been left here.",
+         "size" : "25"
+      },
+      "iot1@undead" : {
+         "damage" : "1",
+         "location" : "IN_CONTAINER:U_Brazier",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "name" : "IOT1",
+         "examine" : "A smoldering piece of carbon.",
+         "size" : "1",
+         "pname" : "coal",
+         "weight" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A burning &+Bcoal&* has been left here."
+      },
+      "beef3@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder6",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Beef3",
+         "examine" : "A huge side of &+Bbeef&*, looks fantastic.",
+         "size" : "2",
+         "pname" : "beef",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "A large side of &+Bbeef&* has been left here."
+      },
+      "g_tooth6@undead" : {
+         "location" : "IN_CONTAINER:A_corpse",
+         "oflags" : "{ }",
+         "name" : "G_tooth6",
+         "examine" : "\nWOW!.... Although this looks like a &+Btooth&* it is in fact a large diamond, \nI have heard of eating richly but this gator takes the biscuit.",
+         "size" : "1",
+         "pname" : "tooth",
+         "weight" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A sparkling diamond gator's &+Btooth&* lies here."
+      },
+      "l_statue@undead" : {
+         "location" : "IN_ROOM:mountain_path6",
+         "oflags" : [
+            "NoGet"
+         ],
+         "weight" : "50",
+         "pname" : "statue",
+         "name" : "L_statue",
+         "examine" : "\nThis beautiful marble statue stands upon a small marble pedestal.  The\nattention to detail is incredible and manages to give life to the\ncold marble.  The statue sits here for all eternity watching over the\nworld.  On the pedestal is the inscription.....\n\n&+wIn memory of &+WLynne,\n   &+wIt has often been said that only the good may suffer.  The\n   &+wcliche offers little comfort to those whose lives it so\n   &+wprofoundly effects.  We all draw strength from the example\n   &+wof your life, and take joy in the courage you show us.\n   &+wWe wish you well in the adventures ahead of you, whatever\n   &+wthey may be.  We all will miss you terribly, however briefly\n   &+wour paths have crossed.",
+         "desc[0]" : "\nA smooth marble &+Bstatue&* looks wistfully out over the world.",
+         "size" : "50"
+      },
+      "bcase_b@undead" : {
+         "desc[1]" : "The doorway out is blocked by the back of a bookcase.",
+         "location" : "IN_ROOM:SecretPassage1",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "bookcase",
+         "name" : "BCase_b",
+         "linked" : "BCase",
+         "maxstate" : "1",
+         "state" : "1"
+      },
+      "wheat@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder4",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Wheat",
+         "examine" : "A very good source of fibre, although not very filling.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A few grains of &+Bwheat&* lie scattered here."
+      },
+      "beef2@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder6",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Beef2",
+         "examine" : "A huge side of &+Bbeef&*, looks fantastic.",
+         "size" : "2",
+         "pname" : "beef",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "A large side of &+Bbeef&* has been left here."
+      },
+      "bread2@undead" : {
+         "location" : "IN_ROOM:Larder1",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "Bread2",
+         "examine" : "\nTraditional loaf of white &+Bbread&*, although a little stale.",
+         "size" : "5",
+         "pname" : "bread",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "A stale loaf of &+Bbread&* lies here."
+      },
+      "bread1@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder1",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Bread1",
+         "examine" : "\nTraditional loaf of white &+Bbread,&* although a little stale.",
+         "size" : "5",
+         "pname" : "bread",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "A stale loaf of &+Bbread&* lies here."
+      },
+      "mulberry_tree@undead" : {
+         "location" : "IN_ROOM:stony_path3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "tree",
+         "name" : "Mulberry_tree",
+         "examine" : "\nThis is the only magnificent mulberry &+Btree&* you will ever see.  It\nstands very tall and appears to have dropped many ripe &+Bmulberries&*.",
+         "desc[0]" : "A tall magnificent mulberry &+Btree&* stands here."
+      },
+      "bread3@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder1",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "Bread3",
+         "examine" : "\nTraditional loaf of white &+Bbread&*, although a little stale.",
+         "size" : "5",
+         "pname" : "bread",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "A stale loaf of &+Bbread&* lies here."
+      },
+      "a_corpse@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:stony_path10",
+         "oflags" : [
+            "Container",
+            "Openable",
+            "NoGet"
+         ],
+         "armor" : "0",
+         "name" : "A_corpse",
+         "examine" : "\nA brave adventurer lays slain here.  Whatever he fought seems to have\ngotten the better of him.  His wounds are extensive.  It appears that\nseveral &+Bteeth&* are embedded in his chest.  As you turn to offer a\nprayer you glimpse something sparkle from within his chest.",
+         "size" : "101",
+         "pname" : "corpse",
+         "weight" : "500",
+         "bvalue" : "0",
+         "desc[0]" : "The &+Bcorpse&* of a brave adventurer lies here."
+      },
+      "button@undead" : {
+         "location" : "IN_ROOM:Library",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "pname" : "button",
+         "name" : "Button",
+         "examine" : "You know what to do!",
+         "maxstate" : "1",
+         "state" : "1"
+      },
+      "g_rose@undead" : {
+         "damage" : "4",
+         "location" : "IN_ROOM:Swamp_Land6",
+         "oflags" : [
+            "Food",
+            "Weapon",
+            "RegenHealth"
+         ],
+         "name" : "G_rose",
+         "examine" : "\nThis is a wondrous golden rose.  The stem is pure gold with petals of\ndeep ruby and thorns as sharp as diamond.   It seems able to grow anywhere.\nEven when picked it remains perfectly healthy.  You bask in its beauty.",
+         "size" : "2",
+         "pname" : "rose",
+         "weight" : "1",
+         "bvalue" : "400",
+         "desc[0]" : "A wondrous Golden &+BRose&* seems to have taken root here."
+      },
+      "u_candle4@undead" : {
+         "damage" : "3",
+         "location" : "IN_ROOM:BanquetHall",
+         "oflags" : [
+            "GetFlips",
+            "Weapon"
+         ],
+         "name" : "U_Candle4",
+         "examine" : "A large solid silver &+Bcandlestick&*, looks quite valuable.",
+         "size" : "10",
+         "state" : "1",
+         "pname" : "candlestick",
+         "weight" : "50",
+         "bvalue" : "200",
+         "desc[0]" : "A large valuable &+Bcandlestick&* has been left here."
+      },
+      "u_candle3@undead" : {
+         "damage" : "3",
+         "location" : "IN_ROOM:BanquetHall",
+         "oflags" : [
+            "GetFlips",
+            "Weapon"
+         ],
+         "name" : "U_Candle3",
+         "examine" : "A large solid silver &+Bcandlestick&*, looks quite valuable.",
+         "size" : "10",
+         "state" : "1",
+         "pname" : "candlestick",
+         "weight" : "50",
+         "bvalue" : "200",
+         "desc[0]" : "A large valuable &+Bcandlestick&* has been left here."
+      },
+      "g_tooth1@undead" : {
+         "damage" : "2",
+         "location" : "IN_CONTAINER:A_corpse",
+         "oflags" : [
+            "Weapon"
+         ],
+         "armor" : "0",
+         "name" : "G_tooth1",
+         "examine" : "\nThis &+Btooth&* seems a little sharper then the rest, it looks as though it \ncould do a considerable amount of damage.",
+         "size" : "1",
+         "pname" : "tooth",
+         "weight" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "A sharp &+Btooth&* lies here."
+      },
+      "cupboards@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Kitchen",
+         "oflags" : [
+            "Container",
+            "Openable",
+            "NoGet"
+         ],
+         "armor" : "0",
+         "name" : "Cupboards",
+         "examine" : "\nA large set of oak &+Bcupboards&* line the walls.  Dust seems to have\nsettled here as elsewhere.  The &+Bcupboards&* have not been opened in a\nlong time.",
+         "size" : "200",
+         "pname" : "cupboards",
+         "weight" : "1",
+         "bvalue" : "1",
+         "desc[0]" : ""
+      },
+      "book2@undead" : {
+         "damage" : "1",
+         "location" : "IN_CONTAINER:BCase",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "Book2",
+         "examine" : "\nThis &+Bbook&* seems somewhat convoluted and confused.  What you can make\nout of it, it seems to be talking about a great sorcerer, who many years\nago isolated himself in a dark tower, relying on a magical ring in order\nto sustain his life.  It does on to ramble something about an all seeing\ndoor, whose sight may be good, but certainly not good enough to see what\nother mortal eyes cannot see. ",
+         "size" : "5",
+         "pname" : "book",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "A large leather &+Bbook&* has been left here."
+      },
+      "manacles3@undead" : {
+         "desc[1]" : "A set of heavy iron &+Bmanacles&* lie here attached to the floor.",
+         "damage" : "1",
+         "location" : "IN_ROOM:Dungeon8",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Manacles3",
+         "examine" : "\nThese are strong iron &+Bmanacles&* ideal for keeping prisoners under control.....",
+         "desc[2]" : "\nA set of heavy iron &+Bmanacles&* lie here locked and attached to the floor.",
+         "size" : "1",
+         "state" : "2",
+         "pname" : "manacles",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "1",
+         "desc[0]" : "A set of heavy iron &+Bmanacles&* lie here open."
+      },
+      "hole@undead" : {
+         "location" : "IN_ROOM:ThroneRoom",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "Hole",
+         "examine" : "\nThis is a small &+Bhole&*, no larger than your hand, you peer inside and\ncan just make out some form of cantilever system...it appears it may\ntrigger something if you can find anything heavy enough....",
+         "size" : "100",
+         "pname" : "hole",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : ""
+      },
+      "beam@undead" : {
+         "desc[1]" : "",
+         "location" : "IN_ROOM:Battlements5",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "Beam",
+         "examine" : "\nA large wooden &+Bbeam&* that seems to be firmly embedded in the wall.",
+         "size" : "5",
+         "state" : "1",
+         "pname" : "beam",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "\nA large wooden &+Bbeam&* is here, it seems to have been pushed into the wall."
+      },
+      "a_heart@undead" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:A_corpse",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "A_heart",
+         "examine" : "\nYou hold in your hands the bloodied &+Bheart&* of a brave adventurer,\ntorn from his chest.",
+         "size" : "2",
+         "pname" : "heart",
+         "weight" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "Some poor souls &+Bheart&* has been left here."
+      },
+      "librarydust@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Library",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "LibraryDust",
+         "examine" : "\nAs you examine the &+Bdust&*, you can just make out footprints heading\nstraight through the eastern wall....odd.",
+         "size" : "1",
+         "pname" : "dust",
+         "weight" : "1",
+         "bvalue" : "0"
+      },
+      "moss_tree4@undead" : {
+         "location" : "IN_ROOM:moss_maze5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "tree",
+         "name" : "Moss_Tree4",
+         "examine" : "\nAs you look at the &+Btree&* you see that the &+Cnorth&* side is covered in moss."
+      },
+      "wheat3@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder4",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Wheat3",
+         "examine" : "A very good source of fibre, although not very filling.",
+         "size" : "1",
+         "pname" : "wheat",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A few grains of &+Bwheat&* lie scattered here."
+      },
+      "corkscrew@undead" : {
+         "damage" : "8",
+         "location" : "IN_CONTAINER:Cupboards",
+         "oflags" : [
+            "Weapon",
+            "Wearable"
+         ],
+         "armor" : "0",
+         "name" : "corkscrew",
+         "examine" : "\nWell it's a long sharp &+Bcorkscrew&* on a piece of string.  You could use \nit to open bottles with, or wear it around your neck as a pretty ornament.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "1",
+         "desc[0]" : "\nA long sharp &+Bcorkscrew&* has been left here."
+      },
+      "w_axe@undead" : {
+         "damage" : "21",
+         "location" : "WIELDED_BY:Mercenary2",
+         "oflags" : [
+            "Weapon",
+            "Glowing",
+            "RegenHealth"
+         ],
+         "name" : "W_axe",
+         "examine" : "\nThe personal &+Baxe&* of Khaos does not look like it should be played with \nlightly.  This is a serious weapon for a serious individual.",
+         "size" : "9",
+         "pname" : "axe",
+         "weight" : "1",
+         "bvalue" : "400",
+         "desc[0]" : "A vicious two handed &+Baxe&* lies here."
+      },
+      "ham2@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder2",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Ham2",
+         "examine" : "\nA Large chunk of &+Bham&*, a little dusty but looks delicious.",
+         "size" : "10",
+         "pname" : "ham",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "A large chunk of boned &+Bham&* lies here."
+      },
+      "g_skin@undead" : {
+         "damage" : "0",
+         "location" : "WORN_BY:U_gator1",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "36",
+         "altname" : "skin",
+         "name" : "G_skin",
+         "examine" : "\nA large set of gator scales, it looks as though it may offer a little\nprotection if worn.",
+         "size" : "20",
+         "pname" : "scales",
+         "weight" : "10",
+         "bvalue" : "300",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ],
+         "desc[0]" : "A large piece of gator &+Bskin&* lies here."
+      },
+      "moss_tree1@undead" : {
+         "location" : "IN_ROOM:moss_maze2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "tree",
+         "name" : "Moss_Tree1",
+         "examine" : "\nAs you look at the &+Btree&* you see that the &+Cwest&* side is covered in moss."
+      },
+      "moss_tree3@undead" : {
+         "location" : "IN_ROOM:moss_maze4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "tree",
+         "name" : "Moss_Tree3",
+         "examine" : "\nAs you look at the &+Btree&* you see that the &+Ceast&* side is covered in moss."
+      },
+      "g_tooth2@undead" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:A_corpse",
+         "oflags" : "{ }",
+         "armor" : "0",
+         "name" : "G_tooth2",
+         "examine" : "A bleached white alligator's &+Btooth&*.",
+         "size" : "1",
+         "pname" : "tooth",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A gator's &+Btooth&* lies here."
+      },
+      "s_book@undead" : {
+         "location" : "CARRIED_BY:Mercenary4",
+         "weight" : "1",
+         "pname" : "book",
+         "name" : "S_book",
+         "examine" : "\nAs you read this &+Bbook,&* the ancient script moves before your eyes.\nYou make out something about great quests and journeys.  If it's\npossible to read anymore of this &+Bbook&* you require far more knowledge.",
+         "bvalue" : "500",
+         "desc[0]" : "An ancient leather bond &+Bbook&* lies here.",
+         "size" : "3"
+      },
+      "ucrown@undead" : {
+         "damage" : "2",
+         "location" : "WORN_BY:Undead_King",
+         "oflags" : [
+            "Weapon",
+            "Wearable"
+         ],
+         "name" : "UCrown",
+         "examine" : "\nA large &+Bcrown&* made of solid gold, it beauty lies in the simplicity of\nits design, you are not sure of its uses, but the fact that it is solid\ngold makes it VERY valuable.",
+         "size" : "10",
+         "pname" : "crown",
+         "weight" : "20",
+         "bvalue" : "1000",
+         "desc[0]" : "A large solid gold &+Bcrown&* has been left here."
+      },
+      "book4@undead" : {
+         "damage" : "1",
+         "location" : "IN_CONTAINER:BCase",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "Book4",
+         "examine" : "\nThis &+Bbook&* seems somewhat convoluted and confused.  What you can make\nout of it, it seems to be talking about progression and tactics for\nbecoming more skilled in combat.  It mentions about the most important\nthing for becoming a more accomplished fighter being the ability to kill\nwithout remorse, it sights example of mighty warriors who would go to\nplaces known as Camelot, the Rainforest and the Orchold and while they \nwould leave covered in blood, nothing would be left alive........ ",
+         "size" : "5",
+         "pname" : "book",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "A large leather &+Bbook&* has been left here."
+      },
+      "manacles2@undead" : {
+         "desc[1]" : "A set of heavy iron &+Bmanacles&* lie here attached to the floor.",
+         "damage" : "1",
+         "location" : "IN_ROOM:Dungeon7",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "Manacles2",
+         "examine" : "\nThese are strong iron &+bmanacles&* ideal for keeping prisoners under control.....",
+         "desc[2]" : "A set of heavy iron &+Bmanacles&* lie here locked and attached to the floor.",
+         "size" : "1",
+         "state" : "2",
+         "pname" : "manacles",
+         "weight" : "1",
+         "maxstate" : "2",
+         "bvalue" : "1",
+         "desc[0]" : "A set of heavy iron &+Bmanacles&* lie here open."
+      },
+      "s_horn@undead" : {
+         "location" : "IN_ROOM:mountain_path6",
+         "weight" : "5",
+         "pname" : "horn",
+         "name" : "S_horn",
+         "examine" : "\nHorn as in musical horn, not as in horn from a beast.  It's long and looks \nas though you can blow it.",
+         "bvalue" : "500",
+         "desc[0]" : "A long silver &+Bhorn&* lies here.",
+         "size" : "10"
+      },
+      "moss_sign@undead" : {
+         "location" : "IN_ROOM:moss_maze1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sign",
+         "name" : "Moss_sign",
+         "examine" : "\n&+RWARNING!!!&* \nAll who enter here WILL die.  Do NOT take this warning lightly.  Many have \nentered, NONE have ever left.  I sit beyond this forest, you may know me as \nthe &+RUndead King&*, or you may not know me; it is of little consequence.  \nThere may be much treasure beyond this forest, but it is mine and what is \nmine remains mine.\n\nYou should know I am THOUSANDS of years old and have killed many far more \npowerful than you.  DO NOT EVEN &+RCONSIDER&* ENTERING HERE ALONE, bring\nyour friends, your family or anyone you can persuade to come along; at least\nmake it worth my while killing you.  \n&+RYou&* &+Rhave&* &+Rbeen&* &+Rwarned....&*\n---------- The Undead King",
+         "desc[0]" : "An old &+Bsign &*is nailed to a tree."
+      },
+      "stool@undead" : {
+         "damage" : "1",
+         "location" : "IN_ROOM:PR_Room",
+         "oflags" : [
+            "Weapon",
+            "GetFlips"
+         ],
+         "name" : "Stool",
+         "examine" : "\nA simple three legged wooden &+Bstool&*, quite unremarkable, ideal for\nsitting on.",
+         "size" : "10",
+         "state" : "1",
+         "pname" : "stool",
+         "weight" : "10",
+         "bvalue" : "5",
+         "desc[0]" : "A simple wooden &+Bstool&* has been left here."
+      },
+      "g_tooth3@undead" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:A_corpse",
+         "oflags" : "{ }",
+         "armor" : "0",
+         "name" : "G_tooth3",
+         "examine" : "A bleached white alligator's &+Btooth&*.",
+         "size" : "1",
+         "pname" : "tooth",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A gator's &+Btooth&* lies here."
+      },
+      "undeadkingssoul@undead" : {
+         "desc[1]" : "A dark &+Bshadow&* has been left here.",
+         "damage" : "1",
+         "location" : "IN_ROOM:PersonalHellA",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "altname" : "shadow",
+         "name" : "UndeadKingsSoul",
+         "examine" : "\nIt's shape is dark and evil. The sight of it sends shivers down your spine.",
+         "size" : "1",
+         "state" : "0",
+         "pname" : "soul",
+         "weight" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "The dark &+Bsoul&* of the Undead King lies here undisturbed for aeons."
+      },
+      "u_candle1@undead" : {
+         "damage" : "3",
+         "location" : "IN_ROOM:BanquetHall",
+         "oflags" : [
+            "GetFlips",
+            "Weapon"
+         ],
+         "name" : "U_Candle1",
+         "examine" : "A large solid silver &+Bcandlestick&*, looks quite valuable.",
+         "size" : "10",
+         "state" : "1",
+         "pname" : "candlestick",
+         "weight" : "50",
+         "bvalue" : "200",
+         "desc[0]" : "A large valuable &+Bcandlestick&* has been left here."
+      },
+      "sack@undead" : {
+         "location" : "IN_ROOM:forest_path4",
+         "oflags" : [
+            "Container"
+         ],
+         "name" : "Sack",
+         "examine" : "\nLarge, leather and &+Bsack&* shaped... what do you want, Shakespeare?....\n'A sack, a sack, my kingdom for a sack.' Is that better?",
+         "size" : "50",
+         "pname" : "sack",
+         "weight" : "0",
+         "bvalue" : "5",
+         "desc[0]" : "A large leather &+Bsack&* lies here."
+      },
+      "uk_desk@undead" : {
+         "damage" : "1",
+         "location" : "IN_ROOM:Library",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "UK_Desk",
+         "examine" : "\nThis is a large mahogany desk.  It is very neat and tidy.  Drawing on\nexperience you quickly search the desk........ and yes you find a &+Bbutton&*.",
+         "size" : "5",
+         "pname" : "desk",
+         "weight" : "5",
+         "bvalue" : "0"
+      },
+      "bcase@undead" : {
+         "location" : "IN_ROOM:Library",
+         "oflags" : [
+            "NoGet",
+            "container"
+         ],
+         "name" : "BCase",
+         "examine" : "\nThis &+Bbookcase&* seems to contain much of the knowledge that the Undead\nKing has acquired over the decades.  Row upon row of meaningless script on\nlong forgotten arcane arts, there are also a few more interesting journals.",
+         "linked" : "BCase_b",
+         "state" : "1",
+         "size" : "1000",
+         "pname" : "bookcase",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "1",
+         "desc[0]" : "\nThe &+Bbookcase&* on the eastern wall has opened revealing a hidden passage."
+      },
+      "rice2@undead" : {
+         "location" : "IN_ROOM:paddy_field1",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "Rice2",
+         "examine" : "It looks like plain ordinary &+Brice&*.",
+         "size" : "3",
+         "pname" : "rice",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "You see a pile of freshly picked &+Brice&* laying here."
+      },
+      "b_table@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:BanquetHall",
+         "oflags" : [
+            "NoGet"
+         ],
+         "armor" : "0",
+         "name" : "B_Table",
+         "examine" : "\nIt is a Large oak &+Btable&*, the sort of thing at which you would eat a\nbanquet.  This &+Btable&* is sadly very dusty and has not seen a banquet\nin many years.  Scattered around the &+Btable&* are several silver\n&+Bcandlesticks.",
+         "size" : "1",
+         "pname" : "table",
+         "weight" : "1",
+         "bvalue" : "1",
+         "desc[0]" : " "
+      },
+      "m_boulder@undead" : {
+         "desc[1]" : " A large &+Bboulder&* is balanced precariously on the ledge.",
+         "location" : "IN_ROOM:mountain_path3",
+         "oflags" : [
+            "Pushable",
+            "noget"
+         ],
+         "name" : "M_boulder",
+         "examine" : "\nYou wouldn't want this big rock to fall on your head.",
+         "size" : "50",
+         "state" : "1",
+         "pname" : "boulder",
+         "weight" : "50",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A shattered &+Bboulder&* lies here."
+      },
+      "g_tooth4@undead" : {
+         "damage" : "0",
+         "location" : "IN_CONTAINER:A_corpse",
+         "oflags" : "{ }",
+         "armor" : "0",
+         "name" : "G_tooth4",
+         "examine" : "A bleached white alligator's &+Btooth&*.",
+         "size" : "1",
+         "pname" : "tooth",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A gator's &+Btooth&* lies here."
+      },
+      "diary@undead" : {
+         "desc[1]" : "Shrouded in darkness sits a &+Bdiary&*.",
+         "damage" : "1",
+         "location" : "IN_ROOM:PR_Room",
+         "oflags" : [
+            "Weapon",
+            "GetFlips"
+         ],
+         "name" : "Diary",
+         "examine" : "\nThis seems to be the &+Bdiary&* of the Undead King. The Undead King may\nhave lived thousands of years, and he may be an all-powerful magician,\nbut he really needs to work on his handwriting.  You can not make head \nnor tail of what is written here, however there are a few words underlined, \nwhich may say..\n\n&+W'post mortis ego libhae immortalis'&*\n",
+         "size" : "5",
+         "state" : "1",
+         "pname" : "diary",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "A large leather book has been left here."
+      },
+      "g_dagger@undead" : {
+         "damage" : "6",
+         "location" : "WIELDED_BY:Mercenary1",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "G_dagger",
+         "examine" : "It is a plain old &+Bdagger&*, worn down through excessive use.",
+         "size" : "3",
+         "pname" : "dagger",
+         "weight" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A bloodied &+Bdagger&* lies here."
+      },
+      "book1@undead" : {
+         "damage" : "1",
+         "location" : "IN_CONTAINER:BCase",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "Book1",
+         "examine" : "\nThis &+Bbook&* seems somewhat convoluted and confused. What you can make\nout of it, it seems to be talking about heaven and the absence of Charon\nfrom the river Styx.  It would appear that despite his absence he will\nstill accept payment for transportation to heaven, however it goes on to\nsay that the great spider demon Lolth has ensured that this payment can\nnever be made...... ",
+         "size" : "5",
+         "pname" : "book",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "A large leather &+Bbook&* has been left here."
+      },
+      "g_robe@undead" : {
+         "damage" : "0",
+         "location" : "WORN_BY:Mercenary1",
+         "oflags" : [
+            "Wearable",
+            "armor"
+         ],
+         "armor" : "10",
+         "name" : "G_robe",
+         "examine" : "\nThis &+Brobe&* seems to crackle with the remnants of magical fire, the\nmagic has long ago expired.",
+         "size" : "3",
+         "pname" : "robe",
+         "weight" : "1",
+         "bvalue" : "20",
+         "aflags" : [
+            "Back"
+         ],
+         "desc[0]" : "\nSomeone has just tossed aside a black silk &+Brobe&* here."
+      },
+      "wheat2@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder4",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Wheat2",
+         "examine" : "A very good source of fibre, although not very filling.",
+         "size" : "1",
+         "pname" : "wheat",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A few grains of &+Bwheat&* lie scattered here."
+      },
+      "throne@undead" : {
+         "location" : "IN_ROOM:ThroneRoom",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Throne",
+         "examine" : "\nA large &+Bthrone&* fit for a king.  Not very well padded, but comfortable\nenough if you were say made of bone.  Drawing on experience, you search\naround for switches. Finding none,  you quickly sit in it...nothing\nhappens. You give it a good solid push, still nothing.   Finally in\nfrustration you give it a kick - nothing.  Guess it must just be a\nthrone. You sit down in frustration.  Out of the corner of your eye you\ncan just make out a small &+Bhole&* in the eastern wall, which was not\nvisible before.",
+         "size" : "5",
+         "pname" : "throne",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : ""
+      },
+      "iot2@undead" : {
+         "damage" : "15",
+         "location" : "IN_CONTAINER:U_Brazier",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "name" : "IOT2",
+         "examine" : "\nIt is a large iron &+Bpoker&*, could do someone a serious injury in the\nright hands.",
+         "size" : "4",
+         "pname" : "poker",
+         "weight" : "2",
+         "bvalue" : "5",
+         "desc[0]" : "A large iron &+Bpoker&* has been left here."
+      },
+      "iot3@undead" : {
+         "damage" : "15",
+         "location" : "IN_CONTAINER:U_Brazier",
+         "oflags" : [
+            "Lit",
+            "Weapon"
+         ],
+         "name" : "IOT3",
+         "examine" : "\nThis beautiful flower is a wonder to behold, it looks as\nthough it could grow anywhere, and glows with an unearthly magic.",
+         "size" : "1",
+         "pname" : "poker",
+         "weight" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "A beautiful red hot &+Bpoker&* has taken root here."
+      },
+      "elfsoul@undead" : {
+         "damage" : "1",
+         "location" : "IN_ROOM:Dungeon5",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "ElfSoul",
+         "examine" : "The &+Bsoul&* of an elven maiden.",
+         "size" : "5",
+         "state" : "1",
+         "pname" : "soul",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "The shining innocent &+Bsoul&* of Amanda has been left here."
+      },
+      "mist_sword@undead" : {
+         "damage" : "20",
+         "location" : "WIELDED_BY:Mist_Leader",
+         "oflags" : [
+            "Weapon",
+            "Glowing",
+            "Key"
+         ],
+         "armor" : "0",
+         "name" : "Mist_sword",
+         "examine" : "\nYou look at it closely and notice it's a very valuable &+Bsword&*.  Made\nof pure platinum lined with diamonds and rubies.  You notice also that\nit gives off a very bright glow.",
+         "size" : "51",
+         "pname" : "sword",
+         "weight" : "4",
+         "bvalue" : "600",
+         "desc[0]" : "A large valuable &+Bsword&* lies here glowing brightly."
+      },
+      "drawbridge@undead" : {
+         "desc[1]" : "A raised &+Bdrawbridge&* blocks your passage &+Cnorth&*.",
+         "location" : "IN_ROOM:before_castle",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "Drawbridge",
+         "examine" : "The &+Bdrawbridge&* is ancient.  You wonder if it even works.",
+         "state" : "1",
+         "pname" : "drawbridge",
+         "maxstate" : "1",
+         "desc[0]" : "A lowered &+Bdrawbridge&* leads north."
+      },
+      "moss_tree2@undead" : {
+         "location" : "IN_ROOM:moss_maze3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "tree",
+         "name" : "Moss_Tree2",
+         "examine" : "\nAs you look at the &+Btree&* you see that the &+Cnorth&* side is covered in moss."
+      },
+      "beef1@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder6",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Beef1",
+         "examine" : "A huge side of &+Bbeef&*, looks fantastic.",
+         "size" : "2",
+         "pname" : "beef",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "A large side of &+Bbeef&* has been left here."
+      },
+      "u_brazier@undead" : {
+         "damage" : "2",
+         "location" : "IN_ROOM:Dungeon8",
+         "oflags" : [
+            "NoGet",
+            "Lit",
+            "Container"
+         ],
+         "name" : "U_Brazier",
+         "examine" : "\nThe &+Bbrazier&* burns brightly, hot coals scorch implements of torture....it \nfits in just perfectly with its surroundings.",
+         "size" : "10",
+         "pname" : "brazier",
+         "weight" : "20",
+         "bvalue" : "0",
+         "desc[0]" : " "
+      },
+      "g_tooth5@undead" : {
+         "location" : "IN_CONTAINER:A_corpse",
+         "oflags" : "{ }",
+         "name" : "G_tooth5",
+         "examine" : "A bleached white alligator's &+Btooth&*.",
+         "size" : "1",
+         "pname" : "tooth",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A gator's &+Btooth&* lies here."
+      },
+      "book5@undead" : {
+         "damage" : "1",
+         "location" : "IN_CONTAINER:BCase",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "Book5",
+         "examine" : "\nThis &+Bbook&* seems somewhat less convoluted than the others and it speak\nof mages and their power to rule in the kingdom.  The author seems amused\nthat many mages do carry weapons, and notes that a dagger forged in hell\nif perfectly acceptable to a mage and is more powerful than any weapon\nthan anything a warrior may choose to use.  It points out that this evil\ndagger may not look very powerful, but in facts feeds of the souls of its\nvictims......The &+Bbook&* goes onto mention combinations of magic and the\nbenefits of protecting oneself with an automatic magic generator, and\npoints out while the effects may be draining additional magic can be used\nsimultaneously to devastating effect....It finishes off mentioning the \nvirtues of powerful stones that decrease the drain on a mage's resources\nwhile increasing there ability to concentrate and get their spells correct\non the first attempt....it mentions that these combined with a magical\nhat.  It describes a mage armed with these items and adopting these\nstrategies as undefeatable in combat.\n",
+         "size" : "5",
+         "pname" : "book",
+         "weight" : "5",
+         "bvalue" : "50",
+         "desc[0]" : "\nA large leather &+Bbook&* has been left here."
+      },
+      "rice1@undead" : {
+         "location" : "IN_ROOM:paddy_field1",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "Rice1",
+         "examine" : "\nIt looks like plain ordinary &+Brice,&* good to eat, not so great for armor.",
+         "size" : "3",
+         "pname" : "rice",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "You see a pile of freshly picked &+Brice&* laying here."
+      },
+      "nothing@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Purgatory",
+         "oflags" : [
+            "Container"
+         ],
+         "armor" : "0",
+         "name" : "Nothing",
+         "examine" : "\nDarkness, silence.....what you are looking seems to be a small pocket in\nthe universe, a tear in reality if you like.  It is light as a feather,\nbut looks as though it could carry almost anything.",
+         "size" : "100",
+         "pname" : "nothing",
+         "weight" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "&+BNothing&* is here."
+      },
+      "ham1@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder2",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Ham1",
+         "examine" : "\nA Large chunk of &+Bham&*, a little dusty but looks delicious.",
+         "size" : "10",
+         "pname" : "ham",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "\nA large chunk of boned &+Bham&* lies here."
+      },
+      "sandals@undead" : {
+         "location" : "WORN_BY:Mercenary1",
+         "oflags" : [
+            "Wearable"
+         ],
+         "name" : "Sandals",
+         "examine" : "\nThese &+Bsandals&* have no laces. Maybe that is why they were left here.",
+         "size" : "4",
+         "pname" : "sandals",
+         "weight" : "1",
+         "bvalue" : "5",
+         "aflags" : [
+            "Feet"
+         ],
+         "desc[0]" : "A pair of leather &+Bsandals&* lie here."
+      },
+      "d_stump@undead" : {
+         "location" : "IN_ROOM:stony_path18",
+         "oflags" : [
+            "Container",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "D_stump",
+         "examine" : "\nThis dead tree &+Bstump&* looks rather hollow... maybe there is something inside?",
+         "size" : "50",
+         "pname" : "stump",
+         "weight" : "500",
+         "bvalue" : "10",
+         "desc[0]" : "You see a dead tree &+Bstump&* still rooted to the ground."
+      },
+      "wheat5@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder4",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "Wheat5",
+         "examine" : "A very good source of fibre, although not very filling.",
+         "size" : "1",
+         "pname" : "wheat",
+         "weight" : "1",
+         "bvalue" : "2",
+         "desc[0]" : "A few grains of &+Bwheat&* lie scattered here."
+      },
+      "m_hat@undead" : {
+         "damage" : "0",
+         "location" : "WORN_BY:Mercenary1",
+         "oflags" : [
+            "wearable",
+            "armor",
+            "RegenMana"
+         ],
+         "armor" : "5",
+         "name" : "M_hat",
+         "examine" : "\nMK1 traditional wizards &+Bhat. &* It is black, it's pointed, it has a\nwide brim and people would laugh at you if you wore it.",
+         "size" : "3",
+         "pname" : "hat",
+         "weight" : "1",
+         "bvalue" : "300",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "A pointed wizards &+Bhat&* has been left here."
+      },
+      "s_boots@undead" : {
+         "damage" : "4",
+         "location" : "WORN_BY:Mercenary4",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "20",
+         "name" : "S_boots",
+         "examine" : "A pair of leather &+Bboots,&* well worn and with laces!",
+         "size" : "3",
+         "pname" : "Boots",
+         "weight" : "1",
+         "bvalue" : "10",
+         "aflags" : [
+            "Feet"
+         ],
+         "desc[0]" : "A pair of leather &+Bboots&* lies here."
+      },
+      "bullheart@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder6",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "BullHeart",
+         "examine" : "\nIt is fairly disgusting, but in times of need, I suppose it is edible.",
+         "size" : "2",
+         "pname" : "heart",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "The bloody &+Bheart&* of a bull has been left here."
+      },
+      "k_platemail@undead" : {
+         "damage" : "0",
+         "location" : "WORN_BY:Mercenary2",
+         "oflags" : [
+            "Wearable",
+            "armor"
+         ],
+         "armor" : "40",
+         "name" : "K_platemail",
+         "examine" : "\nThis &+Bplatemail&* is highly crafted and of exceptional quality.  It\nwill offer you EXCELLENT protection in times of need.",
+         "size" : "8",
+         "pname" : "platemail",
+         "weight" : "1",
+         "bvalue" : "400",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms",
+            "Legs"
+         ],
+         "desc[0]" : "A well crafted set of shiny &+Bplatemail&* lies here."
+      },
+      "pigheart@undead" : {
+         "damage" : "0",
+         "location" : "IN_ROOM:Larder3",
+         "oflags" : [
+            "Food"
+         ],
+         "armor" : "0",
+         "altname" : "food",
+         "name" : "PigHeart",
+         "examine" : "\nIt is fairly disgusting, but in times of need, I suppose it is edible.",
+         "size" : "2",
+         "pname" : "heart",
+         "weight" : "2",
+         "bvalue" : "2",
+         "desc[0]" : "The bloody &+Bheart&* of a boar has been left here."
+      },
+      "mulberries2@undead" : {
+         "location" : "IN_ROOM:stony_path3",
+         "oflags" : [
+            "food",
+            "getflips"
+         ],
+         "altname" : "food",
+         "name" : "Mulberries2",
+         "examine" : "They are &+Bmulberries&*... Tiny berries packed with nutrition.",
+         "size" : "2",
+         "state" : "1",
+         "pname" : "berries",
+         "weight" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "Someone dropped some good looking &+Bberries&* here."
+      },
+      "moss_tree@undead" : {
+         "location" : "IN_ROOM:moss_maze1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "tree",
+         "name" : "Moss_Tree",
+         "examine" : "\nAs you look at the &+Btree&* you see that the &+Cnorth&* side is covered in moss."
+      },
+      "k_shield@undead" : {
+         "damage" : "0",
+         "location" : "WORN_BY:Mercenary2",
+         "oflags" : [
+            "Wearable",
+            "Shield",
+            "Armor"
+         ],
+         "armor" : "30",
+         "name" : "K_shield",
+         "examine" : "\nThis is a plate &+Bshield,&* that offers good protection.  It looks as\nthough it may be part of a set.",
+         "size" : "6",
+         "pname" : "shield",
+         "weight" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "A bright shiny &+Bshield&* has been left here."
+      },
+      "v_cross@undead" : {
+         "location" : "IN_CONTAINER:D_stump",
+         "oflags" : [
+            "Wearable",
+            "Glowing",
+            "Cross"
+         ],
+         "name" : "V_cross",
+         "examine" : "Made of pure gold, this &+Bcross&* glows with a holy light.",
+         "size" : "2",
+         "pname" : "cross",
+         "weight" : "2",
+         "bvalue" : "200",
+         "desc[0]" : "Someone has carelessly tossed aside a valuable &+Bcross&*."
+      }
+   },
+   "loc" : {
+      "larder6@undead" : {
+         "exits" : {
+            "w" : "Larder5",
+            "n" : "Larder1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Larder",
+         "id" : "Larder6",
+         "description" : "\n    You stand in a corner of the larder, it is dank and dark, not the\nideal place to keep food.  &+BDust&* has settled over everything, and from\nthe walls come the sounds of tiny bony feet.  To the &+Cnorth&* lies the\nlarder entrance, to the &+Cwest&* you can also continue into the larder. \n",
+         "altitude" : null
+      },
+      "courtyard9@undead" : {
+         "exits" : {
+            "w" : "Courtyard8",
+            "s" : "Courtyard6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Northeastern courtyard",
+         "id" : "Courtyard9",
+         "description" : "\n    You stand at the northeastern corner of the courtyard.\nAbove you the battlements continue to the &+Csouth&*, as the cobblestones\ncontinue in the same direction.  The silence is total. Even the sound of\nyour own footsteps ring hollow as though they have had the life bled out\nof them.  The courtyard continues to both the &+Csouth&* and the &+Cwest&*.\n",
+         "altitude" : null
+      },
+      "stony_path12@undead" : {
+         "exits" : {
+            "e" : "stony_path11",
+            "w" : "stony_path13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path12",
+         "description" : "\n     You are now behind the castle.  The moat still looks impassable,\nEven if it were passable there would be no where to go, as all that is\nvisible is a large granite wall.  The path continues both &+Ceast&* and\n&+Cwest&*.\n",
+         "altitude" : null
+      },
+      "moss_maze1@undead" : {
+         "exits" : {
+            "e" : "moss_maze1",
+            "w" : "moss_maze1",
+            "n" : "moss_maze2",
+            "s" : "camelot90@camelot"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "undead",
+         "title" : "Moss Maze",
+         "id" : "moss_maze1",
+         "description" : "\n     You have wandered too far from known territories.  Mist rolls around the\nbase of the trees disorienting you terribly.  One particularly large &+Btree&* \ncatches your eye.  What could be on the other side of this forest?  Who knows? \nWhy has no one been this way in years?\n",
+         "altitude" : null
+      },
+      "larder2@undead" : {
+         "exits" : {
+            "w" : "Larder3",
+            "s" : "Larder4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Larder",
+         "id" : "Larder2",
+         "description" : "\n    You stand in a corner of the larder, it is dank and dark, not the\nideal place to keep food.  &+BDust&* has settled over everything, and from\nthe walls come the sounds of tiny bony feet.  To the &+Csouth&* lies the\nlarder entrance, to the &+Cwest&* you can also continue into the larder. \n",
+         "altitude" : null
+      },
+      "dungeon5@undead" : {
+         "exits" : {
+            "s" : "Dungeon4"
+         },
+         "flags" : [
+            "Hot"
+         ],
+         "zone" : "undead",
+         "title" : "Holding Pen",
+         "id" : "Dungeon5",
+         "description" : "\n    It would appear the Undead King has a particular passion for\ninflicting both emotional and physical damage to his prisoners.  This\nholding cell sits on the very edge of the lava.  The sound of spitting\nlava is constant, hot cinders scorch you constantly and the heat is\nunbearable.  There is no other way off this holding pen other than to\nthe &+Csouth&* as thousands of the faceless victims have found out to their\nown cost.\n",
+         "altitude" : null
+      },
+      "stony_path4@undead" : {
+         "exits" : {
+            "w" : "stony_path3",
+            "n" : "stony_path5",
+            "s" : "paddy_field1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path4",
+         "description" : "\n     The path turns here, with the moat leading &+Cnorth&* and &+Cwest&*. There \nstill seems little hope in being able to cross.  However maybe if you\ncontinue.... well, who knows.  A large paddy field is visible to the\n&+Csouth&*.\n",
+         "altitude" : null
+      },
+      "dungeon2@undead" : {
+         "exits" : {
+            "w" : "Dungeon1",
+            "d" : "dungeon3"
+         },
+         "flags" : [],
+         "zone" : "undead",
+         "title" : "Dungeon",
+         "id" : "Dungeon2",
+         "description" : "\n    You stand deep in the dungeon. All around you is quiet.  The corridor\nends here in a long set of marble steps that lead down into the bowels of\nthe earth.  Several brass lanterns, built into the walls, light a path to\nyour &+Cwest&*.\n",
+         "altitude" : null
+      },
+      "pr_room@undead" : {
+         "exits" : {
+            "s" : "SecretPassage3"
+         },
+         "flags" : [
+            "Dark",
+            "Cold",
+            "Soundproof",
+            "OnePerson"
+         ],
+         "zone" : "undead",
+         "title" : "Dark Reading Room",
+         "id" : "PR_Room",
+         "description" : "\n    Within this room the unearthly silence is total, the darkness is\nengulfing and welcomes you, holding you like a long lost friend.  The\ncold instantly starts to chill you to the bone.  Your light struggles to\nlight the grim granite walls and hard stone floor.  In the centre of the room\nappears a small unremarkable wooden &+Bstool&*.  It would appear as\nuncomfortable and cold this room is it may actually be a private reading\nroom, it would appear the Undead King has little use for home comforts. \n",
+         "altitude" : null
+      },
+      "stony_path16@undead" : {
+         "exits" : {
+            "n" : "stony_path15",
+            "s" : "stony_path17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path16",
+         "description" : "\n     Continuing along the moat you still see no sign of how to cross.\nTo the &+Cwest&* thick forest continues to prevent progress. The only exits\nappear to be &+Cnorth&* and &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "forest_path3@undead" : {
+         "exits" : {
+            "w" : "forest_path4",
+            "s" : "forest_path2"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Forest Path",
+         "id" : "forest_path3",
+         "description" : "\n     You stand at a turn in the forest path.  You are working up a grudging\nrespect for whoever cut this path.  To the &+Cwest&* you can make out the\nflickering lights of a campfire along with what could be voices.  Then again,\nmaybe it is just the wind.\n",
+         "altitude" : null
+      },
+      "moss_maze5@undead" : {
+         "exits" : {
+            "e" : "moss_maze1",
+            "w" : "moss_maze1",
+            "n" : "moss_maze6",
+            "s" : "moss_maze1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Moss Maze",
+         "id" : "moss_maze5",
+         "description" : "\n     You wade blindly through the mist.  Mist rolls around the base of the\ntrees disorienting you terribly.  One particularly large &+Btree&* catches your\neye.\n",
+         "altitude" : null
+      },
+      "stony_path20@undead" : {
+         "exits" : {
+            "e" : "before_castle",
+            "w" : "stony_path19"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path20",
+         "description" : "\n     You stand to the &+Ceast&* of an enormous drawbridge.  The moat in front\nof you is utterly impassable. From it emerge bloodchilling roars of an\nunholy nature.  To the &+Cwest&* the moat continues - maybe you will have more\nluck that direction.\n",
+         "altitude" : null
+      },
+      "stony_path9@undead" : {
+         "exits" : {
+            "e" : "stony_path8",
+            "w" : "stony_path10",
+            "n" : "mountain_path"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path9",
+         "description" : "\n     You are now behind the castle.  The moat still looks impassable.\nEven if it were passable there would be nowhere to go, as all that is\nvisible is a large granite wall.  The path continues both &+Ceast&* and\n&+Cwest&*. There appears to be a narrow path leading &+Cnorth&* into the\nmountains.\n",
+         "altitude" : null
+      },
+      "library@undead" : {
+         "exits" : {
+            "e" : "^BCase",
+            "w" : "BanquetHall"
+         },
+         "flags" : [
+            "Fastheal",
+            "Peaceful",
+            "NoMobiles"
+         ],
+         "zone" : "undead",
+         "title" : "The Grand Library",
+         "id" : "Library",
+         "description" : "\n    This once grand library is a sight to behold.  It has one single\n&+Bbookcase&* the entire length of the &+Ceastern&* wall, which must\nhold literally thousands of books in various languages.  If you had time\n(which you don't!) it would take you thousands of years to digest all the\ninformation stored in this room.  Scattered around the room are several\nsmall reading tables, but it appears from the dust everywhere that they\nhave not been used in many a year.  Above you a arched glass ceiling\nlights the room with brilliant sunlight, a refreshing change from the\nrest of the castle. A handsome mahogony &+Bdesk&* catches your eye.\n",
+         "altitude" : null
+      },
+      "courtyard2@undead" : {
+         "exits" : {
+            "w" : "Courtyard1",
+            "e" : "Courtyard3",
+            "n" : "Courtyard5",
+            "s" : "Portcullis"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Entrance To Courtyard",
+         "id" : "Courtyard2",
+         "description" : "\n    You stand just inside castle courtyard, the only sound the ghostly\nremnants of your footsteps as they disappear into time.  This is a wide\nopen cobbled courtyard. The moss growing from between the cobbles is the\nonly living thing you see.  The courtyard continues in all directions. There\nseems little sign of life even within the castle walls. \n",
+         "altitude" : null
+      },
+      "swamp_land5@undead" : {
+         "exits" : {
+            "w" : "swamp_land6",
+            "e" : "swamp_land1",
+            "n" : "swamp_land3"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NegRegen"
+         ],
+         "zone" : "undead",
+         "title" : "In The Swamp",
+         "id" : "swamp_land5",
+         "description" : "\n     You float through a noxious empty swamp.  You are sure nothing could\nlive here, of if it could you sure would not want to meet it.  You start to\nchoke on the noxious fumes.  Time to get going I think.  \n",
+         "altitude" : null
+      },
+      "personalhell6@undead" : {
+         "exits" : {
+            "w" : "PersonalHell7",
+            "s" : "PersonalHellA"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Your own personal hell",
+         "id" : "PersonalHell6",
+         "description" : "\n\n    &+RYou walk through the crimson void, disjointed and misplaced, your mind\n&+Rworks frantically to explain what you see.  You look in on yourself as if\n&+Rfrom a long way away,  you watch as you admire them from afar, so in love;\n&+Rif you just had the chance.  You are not sure maybe they will like you,\n&+Rmaybe they wont.  Your heart misses a beat, it is in your past; you will\n&+Rnever know now.\n",
+         "altitude" : null
+      },
+      "kitchen@undead" : {
+         "exits" : {
+            "e" : "BanquetHall",
+            "w" : "larder1"
+         },
+         "flags" : [
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "undead",
+         "title" : "Kitchen",
+         "id" : "Kitchen",
+         "description" : "\n    You stand in what remains of a once great kitchen. &+BCupboards&* run\naround all the walls, and large stone ovens sit at the end of this huge\nroom.  At the very edges of your senses you can hear the hustle and bustle\nof a large kitchen staff running around trying to get food prepared for\nthe banquets that were held in the banquet hall.  Momentarily the smell of\nfreshly baked &+Bbread&* wafts under your nostrils, then suddenly back to\nreality.  You stand in the dark deserted kitchen, and wonder wistfully how\nit came to be in such a state.  To your &+Ceast&* and &+Cwest&* lie small \narched doorways.\n",
+         "altitude" : null
+      },
+      "moss_maze6@undead" : {
+         "exits" : {
+            "e" : "moss_maze1",
+            "w" : "moss_maze1",
+            "n" : "before_castle",
+            "s" : "moss_maze1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Moss Maze",
+         "id" : "moss_maze6",
+         "description" : "\n     You wade blindly through the mist.  Mist rolls around the base of the\ntrees disorienting you terribly.  \n",
+         "altitude" : null
+      },
+      "courtyard8@undead" : {
+         "exits" : {
+            "e" : "courtyard9",
+            "w" : "Courtyard7",
+            "s" : "Courtyard5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Entrance to castle",
+         "id" : "Courtyard8",
+         "description" : "\n   You stand at the entrance to the castle proper, shrouded in total\nsilence.  You wonder if this is really worth the effort. Through another\nlarge portcullis you see a dark foreboding corridor.  Around you the\nworld seems to wait quietly watching for your next move.  The courtyard\ncontinues to the &+Ceast&*, &+Cwest&* and &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "dungeon9@undead" : {
+         "exits" : {
+            "w" : "Dungeon6"
+         },
+         "flags" : [
+            "Hot"
+         ],
+         "zone" : "undead",
+         "title" : "Island of sacrifice",
+         "id" : "Dungeon9",
+         "description" : "\n    This island sits right in the centre of the molten lava.  All round\nyou the lava spits and hisses demanding a sacrifice.  Over many thousands\nof years words of great power have been spoken here,  as the Undead King\nthrew his victims into the endless sea of lava.  As you stand wondering\nwhat could posses anyone to such evil deeds, countless numbers of piteous\nsouls swarm around you screaming at you, through the endless corridors\nof time, demanding you provide their redemption.\n",
+         "altitude" : null
+      },
+      "larder7@undead" : {
+         "exits" : {
+            "u" : "Larder5"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Larder",
+         "id" : "Larder7",
+         "description" : "\n    You stand at the bottom of a set of stone steps.  The darkness\nembraces you, as your light flickers weakly against the walls.  This\nappears to have once been a wine cellar, there is little here now. Maybe\nthe long gone kitchen staff came here for their severance pay.  Row upon\nrow of empty wine racks stretch for as far as the eye can see.\n",
+         "altitude" : null
+      },
+      "personalhell7@undead" : {
+         "exits" : {
+            "e" : "PersonalHell6",
+            "s" : "PersonalHell8"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Your own personal hell",
+         "id" : "PersonalHell7",
+         "description" : "\n\n    &+RYou walk through the crimson void, disjointed and misplaced, your mind\n&+Rworks frantically to explain what you see.  You sit in a dark and empty\n&+Rroom. You seem to be waiting for someone you are not sure who.  All around\n&+Ryou the sounds of revelry fill your ears.  But it is fine, you are\n&+Rstronger than them. Some people are meant to be this way.....aren't they?\n",
+         "altitude" : null
+      },
+      "courtyard6@undead" : {
+         "exits" : {
+            "w" : "Courtyard5",
+            "n" : "Courtyard9",
+            "s" : "Courtyard3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Eastern Courtyard",
+         "id" : "Courtyard6",
+         "description" : "\n    You stand at the eastern side of the courtyard. Above you the\nbattlements runs &+Cnorth&* and &+Csouth&*, as the cobblestones continue\nin the same direction. The silence is becoming deafening.  Even the\nmoss between the cobblestones seems to be turning black and giving\nup its struggle for life. A strange sense of foreboding over comes you\nas you wonder if this is really worth it.\n",
+         "altitude" : null
+      },
+      "secretpassage1@undead" : {
+         "exits" : {
+            "w" : "^BCase_b",
+            "n" : "SecretPassage2"
+         },
+         "flags" : [],
+         "zone" : "undead",
+         "title" : "Dark Passageway",
+         "id" : "SecretPassage1",
+         "description" : "\n    You stand in a large damp passageway that heads off &+Cnorth&* into\ndarkness. To the &+Cwest&* lies the Grand Library.  Somewhat damp, the\nonly remarkable feature of this passageway is just how big it is, it is\nalmost as though it has been designed to ensure something BIG fits in it.\n",
+         "altitude" : null
+      },
+      "battlements2@undead" : {
+         "exits" : {
+            "w" : "Battlements1",
+            "n" : "battlements3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements2",
+         "description" : "\n    You stand at a turn in the battlements.  To your &+Cnorth&* the battlements \ncontinue while to your &+Cwest&* seems to be a way to descend back to the\ncourtyard.  Despite their hollow drawn out sound, you are grateful for the\nsound of your own footsteps here.  You also notice that it is starting to\nget incredibly cold here despite the gentle wind in your face.\n",
+         "altitude" : null
+      },
+      "courtyard3@undead" : {
+         "exits" : {
+            "w" : "Courtyard2",
+            "u" : "Battlements1",
+            "n" : "Courtyard6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Southeastern Courtyard",
+         "id" : "Courtyard3",
+         "description" : "\n    You stand at the southeastern corner of the courtyard. The\nsilence is becoming deafening and you pray for the clash of metal against\nbone, to at least relieve the silence.  A large set of stone steps rises\nfrom the floor up onto the battlements, although they are too high to \nsee what may be at their summit.  To your &+Cnorth&* and &+Cwest&* the\nrelentless cobbles of the courtyard continue.\n",
+         "altitude" : null
+      },
+      "stony_path17@undead" : {
+         "exits" : {
+            "e" : "stony_path18",
+            "w" : "forest_path1",
+            "n" : "stony_path16"
+         },
+         "flags" : [
+            "Outdoor"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path17",
+         "description" : "\n     You stand at the southwestern corner of the moat.  The moat continues\n&+Cnorth&* as far as the eye can see. You can just make out a drawbridge\nto the &+Ceast. &* The moat still looks impassable and the forest is just\ngetting annoying.  However, you think you can make out a path through the\ntrees to the &+Cwest&*.\n",
+         "altitude" : null
+      },
+      "mountain_path3@undead" : {
+         "exits" : {
+            "d" : "mountain_path2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Mountain Ledge",
+         "id" : "mountain_path3",
+         "description" : "\n     Well, it was quite a climb, but it seems to have ended here.  You can no\nlonger climb any further up, but at least the view is nice.  The ledge upon\nwhich you stand is only about ten feet wide and utterly lifeless. \n",
+         "altitude" : null
+      },
+      "stony_path6@undead" : {
+         "exits" : {
+            "n" : "stony_path7",
+            "s" : "stony_path5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path6",
+         "description" : "\n     The path runs along side the moat both &+Cnorth&* and &+Csouth&*. \nStrange sounds emanate from the moat, you decide it may be wise not to\nstick around here too long.\n",
+         "altitude" : null
+      },
+      "moss_maze7@undead" : {
+         "exits" : {
+            "e" : "moss_maze4",
+            "w" : "moss_maze1",
+            "n" : "moss_maze1",
+            "s" : "moss_maze1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Moss Maze",
+         "id" : "moss_maze7",
+         "description" : "\n     You wade blindly through the mist.  You break through the mist and\nbreathe a sigh of relief.  The mist seems to end.  You are in a sunny \nclearing, walls of mist surround you.  As you start to get your bearings \na hideous scream is heard and shapes charge at you from the mist.\n",
+         "altitude" : null
+      },
+      "mountain_path5@undead" : {
+         "exits" : {
+            "u" : "mountain_path6",
+            "d" : "mountain_path4"
+         },
+         "flags" : [
+            "Outdoors",
+            "fastheal"
+         ],
+         "zone" : "undead",
+         "title" : "On the Mountain Path",
+         "id" : "mountain_path5",
+         "description" : "\n     The sun shines brightly, the birds sing joyfully, little squirrels run\naround doing what little squirrels do.  It is very beautiful here.  You feel\nrelaxed as you bask in the eternal evening &+Ysunshine&*.  You watch as the\nodd bumblebee flits amongst the flowers.  When you finally manage to tear\nyour eyes away from the wonders around you, you notice the path goes both\n&+Cup&* and &+Cdown&* from here.\n",
+         "altitude" : null
+      },
+      "mountain_path2@undead" : {
+         "exits" : {
+            "u" : "mountain_path3",
+            "n" : "mountain_path4",
+            "s" : "mountain_path"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Mountain Path",
+         "id" : "mountain_path2",
+         "description" : "\n     This area of the &+Wmountain&* &+Wpath&* is thankfully a great deal\nwider than that to the &+Csouth&*.  The mountains tower above you, casting\nshadows that make you keep your sword at the ready.  You are not sure, but\nit looks as though it may be possible to climb &+Cup&* the side of the\nmountain if you're not carrying too much.\n",
+         "altitude" : null
+      },
+      "moss_maze4@undead" : {
+         "exits" : {
+            "e" : "moss_maze5",
+            "w" : "moss_maze7",
+            "n" : "moss_maze1",
+            "s" : "moss_maze1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Moss Maze",
+         "id" : "moss_maze4",
+         "description" : "\n     You wade blindly through the mist.  Mist rolls around the base of the\ntrees disorienting you terribly.  One particularly large &+Btree&* catches\nyour eye.\n",
+         "altitude" : null
+      },
+      "stony_path10@undead" : {
+         "exits" : {
+            "e" : "stony_path9",
+            "w" : "stony_path11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path10",
+         "description" : "\n     You continue behind the castle.  This moat is starting to get a tad\nannoying.  The mountains still bar your way &+Cnorth&*. It looks as\nthough you are never going to get into this castle.  The path continues\nboth &+Ceast&* and &+Cwest&* (is this annoying yet?).  \n",
+         "altitude" : null
+      },
+      "dungeon7@undead" : {
+         "exits" : {
+            "s" : "Dungeon6"
+         },
+         "flags" : [
+            "Hot"
+         ],
+         "zone" : "undead",
+         "title" : "Holding Pen",
+         "id" : "Dungeon7",
+         "description" : "\n    This holding cell sits on the very edge of the lava.  The sound of\nspitting lava is constant, hot cinders scorch you constantly and the heat \nis unbearable.  There is no other way off this holding pen than to the\n&+Csouth&* as thousands of the faceless victims have found out to their\nown cost.\n",
+         "altitude" : null
+      },
+      "stony_path1@undead" : {
+         "exits" : {
+            "e" : "stony_path2",
+            "w" : "before_castle"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path1",
+         "description" : "\n     You stand east of the drawbridge.  Small stones crunch under your feet. \nThe path continues along side the moat both &+Ceast&* and &+Cwest&*.  Thick forest \nbars the way &+Csouth&*, and the moat still looks utterly impassable to the \n&+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "personalhell9@undead" : {
+         "exits" : {
+            "e" : "PersonalHell2",
+            "n" : "PersonalHell8"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Your own personal hell",
+         "id" : "PersonalHell9",
+         "description" : "\n\n    &+RYou walk through the crimson void, disjointed and misplaced, your mind\n&+Rworks frantically to explain what you see.  You seem to remember a face, a\n&+Rvague and distant memory of someone, someone you knew.  Maybe they were a\n&+Rfriend, you cannot quite remember.  The image blurs slightly as your\n&+Rmemory slips.  You were friends you remember,  whatever did happen to\n&+Rthem?\n",
+         "altitude" : null
+      },
+      "personalhell3@undead" : {
+         "exits" : {
+            "w" : "PersonalHell2",
+            "n" : "PersonalHell4"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Your own personal hell",
+         "id" : "PersonalHell3",
+         "description" : "\n\n    &+RYou walk through the crimson void, disjointed and misplaced, your mind\n&+Rworks frantically to explain what you see.  You seem heavier here, and you\n&+Rexamine yourself to see that you have gained several hundred pounds in\n&+Rweight.  You know there is no need to worry, you just should have not\n&+Reaten that last meal, it will be all right.\n",
+         "altitude" : null
+      },
+      "larder1@undead" : {
+         "exits" : {
+            "e" : "Kitchen",
+            "w" : "Larder4",
+            "n" : "Larder2",
+            "s" : "Larder6"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Larder",
+         "id" : "Larder1",
+         "description" : "\n    You stand in the entrance to the larder. It is dank and dark, not the\nideal place to keep food.  &+BDust&* has settled over everything. From\nthe walls come the sounds of tiny bony feet.  The larder continues to the \n&+Cnorth&*, &+Csouth&* and &+Cwest&*.\n",
+         "altitude" : null
+      },
+      "battlements10@undead" : {
+         "exits" : {},
+         "flags" : [
+            "Outdoors",
+            "Cold",
+            "OnePerson",
+            "NegRegen"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements10",
+         "description" : "\n    You stand upon the ice covered battlements.  It is incredibly cold\nhere.  Solid ice has formed everywhere.  You slide around precariously\nholding onto the castle wall to prevent you sliding off.  An ice covered\nwall in front of you bars any further progress.  Your skin is freezing\nas the cold chills you to the bone, and ice starts to form on your armor.\nThe battlements continue to your &+Csouth&*, however there appears no\nway to get your footing.  You desperately lunge and slide around, but there\nappears no way to move..............\n",
+         "altitude" : null
+      },
+      "corridor1@undead" : {
+         "exits" : {
+            "n" : "BanquetHall",
+            "s" : "Courtyard8"
+         },
+         "flags" : [
+            "Cold",
+            "Dark",
+            "NoMobiles"
+         ],
+         "zone" : "undead",
+         "title" : "Frozen Entrance",
+         "id" : "Corridor1",
+         "description" : "\n    The hairs on the back of your neck stand on end as you enter this\nroom. Surely once it was a grand sight. Suits of armor and richly\ndecorated paintings line the walls, but they are all frozen over and of\nlittle worth. Stalactites hang from the ceiling and ice encrusts\neverything.  There is something unnatural about this sight, as from the\n&+Cnorth&* a great heat emanates, yet still here you are cold.  To the\n&+Csouth&* lies the courtyard.\n",
+         "altitude" : null
+      },
+      "stony_path2@undead" : {
+         "exits" : {
+            "e" : "stony_path3",
+            "w" : "stony_path1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path2",
+         "description" : "\n     The path continues along side the moat both &+Ceast&* and &+Cwest&*. Thick \nforest bars the way &+Csouth&*, and the moat still looks utterly impassable to \nthe &+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "stony_path14@undead" : {
+         "exits" : {
+            "n" : "stony_path13",
+            "s" : "stony_path15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path14",
+         "description" : "\n     As you continue along the moat, you wonder whether you will ever\nfind a way into this castle.  The moat continues both &+Cnorth&* and\n&+Csouth&*.\n",
+         "altitude" : null
+      },
+      "personalhell1@undead" : {
+         "exits" : {
+            "n" : "PersonalHell2"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Your own personal hell",
+         "id" : "PersonalHell1",
+         "description" : "\n\n        &+Y.&*  &+C+&*          &+M.&*                   &+w.&*\n&+W.&*      &+R.&*    &+G.&*                     &+W.&*\n                               &+W.&*\n      &+Y.&*                               &+Y*&*         &+G*&*\n    &+W+&*     &+C.&*      &+B.&*                &+M.&*\n                                      &+R+&*                &+W.&*\n   &+RFed through your unconscious you struggle to comprehend what you\n&+Rbehold. Your senses are stretched to their very limit until your mind is\n&+Rable to rationalize where you are.  You are engulfed in crimson.  All\n&+Raround you tiny claret stars sparkle in the crimson void.  Silence clings\n&+Rto you as you look beneath your feet to see the endless void continue.\n&+RYou seem suspended in time as your mind desperately tries to cling to the\n&+Rlast shreds of your sanity.\n                &+C.&*                &+G*&*        &+W.&*\n                           &+M.&*\n&+W.&*\n         &+B.&*       &+W.&*          &+R.&*                 &+W+&*\n   &+W.&*    &+W.&*                       &+G.&*\n                               &+Y.&*               &+W.&*\n&+G.&*\n  &+W.&*              &+R.&*            &+B.&*        &+Y.&*     &+G.&*\n",
+         "altitude" : null
+      },
+      "forest_path4@undead" : {
+         "exits" : {
+            "e" : "forest_path3",
+            "s" : "forest_path5"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "&+GForest&* &+GClearing&*",
+         "id" : "forest_path4",
+         "description" : "\n    You emerge from the hacked path of the forest, into some form of\nclearing.  Scattered around an open fire there are several large logs good\nfor sitting on or chopping bits of wood for the fire.  You have the strange\nfeeling you really don't want to be here.  As you consider sitting by the\nfire you hear voices in the wind.  To the &+Csouth&* appears to be a\nshimmering portal, definitely magical.  The only other exit is back to the\n&+Ceast&*.\n",
+         "altitude" : null
+      },
+      "courtyard4@undead" : {
+         "exits" : {
+            "e" : "Courtyard5",
+            "n" : "Courtyard7",
+            "s" : "Courtyard1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Western Courtyard",
+         "id" : "Courtyard4",
+         "description" : "\n    You stand at the western side of the courtyard. Above you the\nbattlements runs &+Cnorth&* and &+Csouth&*, as the cobblestones continue\nin the same direction the silence is becoming deafening.  Even the\nmoss between the cobblestones seems to be turning black and giving\nup its struggle for life. You are starting to feel a little\nuncomfortable here, and decide to get moving...\n",
+         "altitude" : null
+      },
+      "larder4@undead" : {
+         "exits" : {
+            "e" : "Larder1",
+            "n" : "Larder3",
+            "s" : "Larder5"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Larder",
+         "id" : "Larder4",
+         "description" : "\n    You a the far end of the larder, it is dank and dark, not the ideal\nplace to keep food.  &+BDust&* has settled over everything, and from the\nwalls come the sounds of tiny bony feet.  To the &+Cnorth&* and &+Csouth&*\nthe larder continues, to the &+Ceast&* you can return to the larder\nentrance. \n",
+         "altitude" : null
+      },
+      "personalhell8@undead" : {
+         "exits" : {
+            "n" : "PersonalHell7",
+            "s" : "PersonalHell9"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Your own personal hell",
+         "id" : "PersonalHell8",
+         "description" : "\n\n    &+RYou walk through the crimson void, disjointed and misplaced, your mind\n&+Rworks frantically to explain what you see.  You watch yourself a younger\n&+Ryou, a wiser you out to conquer the world with all the you knew.  But then\n&+Ryou remember they were there weren't they?  They were just so perfect,\n&+Rthey kept getting everything that by right you knew should have been\n&+Ryours.  You know they did not deserve what was yours, even if others\n&+Rdon't.  That is all that matters.\n",
+         "altitude" : null
+      },
+      "corn_field1@undead" : {
+         "exits" : {
+            "w" : "stony_path8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Corn Field",
+         "id" : "corn_field1",
+         "description" : "\n     You stand in a field of thigh high corn, which unfortunately for you\nlooks not quite ripe yet.  The wind makes rustling noises as it moves through\nthe corn husks.  The field of golden corn continues as far as the eye can\nsee.  The only obvious exit is back the way you came.  \n",
+         "altitude" : null
+      },
+      "battlements1@undead" : {
+         "exits" : {
+            "e" : "Battlements2",
+            "d" : "Courtyard3"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements1",
+         "description" : "\n    You stand upon the battlements.  From here you can overlook both the\ndesolate courtyards, and look out over the surrounding land.  It takes you\njust a moment to realize that something is very wrong here...no sound.\nThere should be wind at this height, but despite feeling the wind gently\ncaressing your face there is no sound but your own shallow footsteps. The\nbattlements continue to the &+Ceast&*, and a large set of stone steps \nlead down.\n",
+         "altitude" : null
+      },
+      "dungeon8@undead" : {
+         "exits" : {
+            "n" : "Dungeon6"
+         },
+         "flags" : [
+            "Hot"
+         ],
+         "zone" : "undead",
+         "title" : "Holding Pen",
+         "id" : "Dungeon8",
+         "description" : "\n    This holding cell sits on the very edge of the lava.  The sound of\nspitting lava is constant, hot cinders scorch your skin constantly and the\nheat is unbearable.  There is no other way off this holding pen than to\nthe &+Cnorth&* as thousands of the faceless victims have found out to\ntheir own cost.\n",
+         "altitude" : null
+      },
+      "personalhella@undead" : {
+         "exits" : {},
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "id",
+         "id" : "PersonalHellA",
+         "description" : "\n\n    &+RAll that you are is here, your very soul laid bare, your jealousy,\n&+Rvanity, sloth, cowardice are all here and more...everything that holds you\n&+Rback, all you fight against and pretend does not exist.  All your \n&+Rinsecurity and weakness are here for you to see,  all you have lost, all\n&+Rthe dreams of what you may possess all clamour for attention, for they are\n&+Rall the centre of your own personal hell.\n",
+         "altitude" : null
+      },
+      "forest_path5@undead" : {
+         "exits" : {
+            "d" : "heaven1@heaven"
+         },
+         "flags" : [],
+         "zone" : "undead",
+         "title" : "&+cPortal&*",
+         "id" : "forest_path5",
+         "description" : "\n    As you step into the room you are rushed into void of what seems to be\nBILLIONS of stars shooting straight at you but realize they are not striking\nyou, just flying by.  You shake your head realizing you've stepped into a\nmagical portal and are floating above what seems to be nothing.  This looks\nlike a safe place to rest before your brave adventure continues, for you do not\nknow what might be on the other side of this strange magical portal.  The\nonly exit you see is &+Cdown&*.   \n",
+         "altitude" : null
+      },
+      "swamp_land4@undead" : {
+         "exits" : {
+            "w" : "swamp_land1",
+            "n" : "swamp_land2"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NegRegen"
+         ],
+         "zone" : "undead",
+         "title" : "In The Swamp",
+         "id" : "swamp_land4",
+         "description" : "\n     You float through a noxious empty swamp.  You are sure nothing could\nlive here, of if it could you sure would not want to meet it.  You start to\nchoke on the noxious fumes.  Time to get going I think.  \n",
+         "altitude" : null
+      },
+      "before_castle@undead" : {
+         "exits" : {
+            "e" : "stony_path1",
+            "w" : "stony_path20",
+            "s" : "moss_maze6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Before The Castle",
+         "id" : "before_castle",
+         "description" : "\n     You finally emerge from the mist and find yourself staring at a\nmagnificent castle.  The sun glints brightly off gold coloured tiles on the\ntowers.  Whoever lives here obviously has way too much money - maybe you \nshould relieve them of some of it.  The only problem is a moat surrounding\nthe entire castle.  \n",
+         "altitude" : null
+      },
+      "dungeon6@undead" : {
+         "exits" : {
+            "w" : "dungeon4",
+            "e" : "dungeon9",
+            "n" : "dungeon7",
+            "s" : "Dungeon8"
+         },
+         "flags" : [
+            "Peaceful",
+            "Hot"
+         ],
+         "zone" : "undead",
+         "title" : "Edge of the Island",
+         "id" : "Dungeon6",
+         "description" : "\n    The temperature has dropped slightly to uncomfortably hot.  You feel a\nstrange sense of peace here amongst all the spitting lava.  The burning\ncinders that float around do not seem to affect you.  To your &+Cnorth&*\nand &+Csouth&* you and see more holding pens, to your &+Cwest&* is the\nedge of the island to the &+Ceast&* a long outcrop of rock meanders\ntowards a second smaller island in the lava.\n",
+         "altitude" : null
+      },
+      "swamp_land1@undead" : {
+         "exits" : {
+            "w" : "swamp_land5",
+            "e" : "swamp_land4",
+            "n" : "paddy_field1"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NegRegen"
+         ],
+         "zone" : "undead",
+         "title" : "In The Swamp",
+         "id" : "swamp_land1",
+         "description" : "\n     You float through a noxious empty swamp.  You are sure nothing could\nlive here - if it could you sure would not want to meet it.  You start to\nchoke on the noxious fumes.  Time to get going I think.  \n",
+         "altitude" : null
+      },
+      "moss_maze3@undead" : {
+         "exits" : {
+            "e" : "moss_maze1",
+            "w" : "moss_maze1",
+            "n" : "moss_maze4",
+            "s" : "moss_maze1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Moss Maze",
+         "id" : "moss_maze3",
+         "description" : "\n     You wade blindly through the mist.  Mist rolls around the base of the\ntrees disorienting you terribly.  One particularly large &+Btree&* catches\nyour eye.\n",
+         "altitude" : null
+      },
+      "moat@undead" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "undead",
+         "title" : "In The Moat",
+         "id" : "Moat",
+         "description" : "  \n     So is your name Carl Lewis?... I think not! Not even he could have made\nthat jump, I mean 500 feet? Get real.  Well there is good news and there\nis bad news.  The good news is you didn't drown.  Bad news is you've been\neaten by hundreds of undead ALLIGATORS!  The last thing to go through your\nmind is alligator's mouth.\n",
+         "altitude" : null
+      },
+      "personalhell4@undead" : {
+         "exits" : {
+            "n" : "PersonalHell5",
+            "s" : "PersonalHell3"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Your own personal hell",
+         "id" : "PersonalHell4",
+         "description" : "\n\n    &+RYou walk through the crimson void, disjointed and misplaced, your mind\n&+Rworks frantically to explain what you see.  Before you stands a vision of\n&+Rperfection, everything you wish your partner was and will be.  They are a\n&+Rperfect physical specimen, everything you could ever want or hope to\n&+Rpossess.  They watch you impassively, silent, ever distant.  You know one\n&+Rday they shall be yours.\n",
+         "altitude" : null
+      },
+      "battlements8@undead" : {
+         "exits" : {
+            "n" : "battlements9",
+            "s" : "Battlements7"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements8",
+         "description" : "\n    You stand upon the battlements.  It has suddenly become very cold\nhere.  Ice has formed beneath your feet, and you have to be very careful\nnot to slip.  The wind still blows quietly into your face, and yet there\nis no sound.  Your skin is chilled as the cold quickly penetrates your\narmor.  The battlements continue to both the &+Cnorth&* and the\n&+Csouth&*.\n",
+         "altitude" : null
+      },
+      "forest_path2@undead" : {
+         "exits" : {
+            "n" : "forest_path3",
+            "s" : "forest_path1"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Forest Path",
+         "id" : "forest_path2",
+         "description" : "\n     The hacked path continues to the &+Csouth&* and &+Cnorth&*. A\nconsiderable amount of effort has been put into creating this path.  The only\nunusual feature of this path is a large muddy pool right in the middle of\nwhat is normally forest floor.\n",
+         "altitude" : null
+      },
+      "throneroom@undead" : {
+         "exits" : {
+            "s" : "WaitingRoom"
+         },
+         "flags" : [],
+         "zone" : "undead",
+         "title" : "Throne Room",
+         "id" : "ThroneRoom",
+         "description" : "\n    This once opulent throne room is just what you expect from a throne\nroom, just a little more run down.  Suits of armor run along the walls\nguarding as they have for millenia.  Paintings of the royal lineage are\nscattered throughout the room, somewhat dusty, but obviously of remarkable\nquality.  A plush burgundy carpet runs the length of the room, and ends\nat the feet of a huge &+Bthrone&*.\n",
+         "altitude" : null
+      },
+      "dungeon1@undead" : {
+         "exits" : {
+            "e" : "Dungeon2",
+            "w" : "ThroneRoom"
+         },
+         "flags" : [],
+         "zone" : "undead",
+         "title" : "Entrance to Dungeon",
+         "id" : "Dungeon1",
+         "description" : "\n    You stand at the entrance to the Undead King dungeon. Unlike the rest\nof the castle there is a remarkable lack of damp,  it is not cold and it is\nwell lit and remarkably clean.  Several lanterns built into the wall light\nyour way.  This stark contrast to what you expected is somewhat perplexing.\nThe walls appear to be made of a smooth hard rock, slightly cold to the\ntouch. To the &+Cwest&* is an opened wall that seems to lead to the throne\nroom.  To your &+Ceast&* the dungeon continues.\n",
+         "altitude" : null
+      },
+      "secretpassage2@undead" : {
+         "exits" : {
+            "n" : "SecretPassage3",
+            "s" : "SecretPassage1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Dark Passageway",
+         "id" : "SecretPassage2",
+         "description" : "\n    You stand in a dark wide passage way, which continues to the\n&+Cnorth&* and &+Csouth&*.  The darkness is total as your light flickers\noff the grim stone walls.\n",
+         "altitude" : null
+      },
+      "stony_path5@undead" : {
+         "exits" : {
+            "n" : "stony_path6",
+            "s" : "stony_path4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path5",
+         "description" : "\n     The path runs along side the moat both &+Cnorth&* and &+Cwest&*. \nChances of crossing.... minimal (unless you can learn how to fly quickly). \nThe obligatory stones crunch under your feet.\n",
+         "altitude" : null
+      },
+      "stony_path18@undead" : {
+         "exits" : {
+            "e" : "stony_path19",
+            "w" : "stony_path17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path18",
+         "description" : "\n     The path continues alongside the moat both &+Ceast&* and &+Cwest&*. \nThick forest bars the way &+Csouth&*, and the moat still looks utterly\nimpassable to the &+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "swamp_land6@undead" : {
+         "exits" : {
+            "e" : "swamp_land5"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NegRegen"
+         ],
+         "zone" : "undead",
+         "title" : "In The Swamp",
+         "id" : "swamp_land6",
+         "description" : "\n     You float through a noxious empty swamp.  You are sure nothing could\nlive here, of if it could you sure would not want to meet it.  You start to\nchoke on the noxious fumes.  Time to get going I think.  \n",
+         "altitude" : null
+      },
+      "swamp_land3@undead" : {
+         "exits" : {
+            "e" : "paddy_field1",
+            "s" : "swamp_land5"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NegRegen"
+         ],
+         "zone" : "undead",
+         "title" : "In The Swamp",
+         "id" : "swamp_land3",
+         "description" : "\n     You float through a noxious empty swamp.  You are sure nothing could\nlive here, of if it could you sure would not want to meet it.  You start to\nchoke on the noxious fumes.  Time to get going I think.  \n",
+         "altitude" : null
+      },
+      "battlements9@undead" : {
+         "exits" : {
+            "n" : "battlements10",
+            "s" : "Battlements8"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements9",
+         "description" : "\n    You stand upon the battlements, it is very cold here, solid ice has\nformed beneath your feet, and you slide around precariously holding onto\nthe castle wall to prevent you sliding off.   Your skin starts to freeze as\nthe cold quickly penetrates your armor.  The battlements continue to the\n&+Csouth&*. You could head &+Cnorth&*, but the ice looks a little over powering, and\nyou may not make it back. \n",
+         "altitude" : null
+      },
+      "larder5@undead" : {
+         "exits" : {
+            "e" : "Larder6",
+            "n" : "Larder4",
+            "d" : "Larder7"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Larder",
+         "id" : "Larder5",
+         "description" : "\n    You stand in a corner of the larder, it is dank and dark, not the\nideal place to keep food.  &+BDust&* has settled over everything, and from\nthe walls come the sounds of tiny bony feet.  To &+Cnorth&* the larder\ncontinues, to the &+Ceast&* you can also continue into the larder, a set\nof small stone steps lead down into the darkness. \n",
+         "altitude" : null
+      },
+      "dungeon4@undead" : {
+         "exits" : {
+            "w" : "Dungeon3",
+            "e" : "Dungeon6",
+            "n" : "Dungeon5"
+         },
+         "flags" : [
+            "Hot"
+         ],
+         "zone" : "undead",
+         "title" : "Rocky Outcrop",
+         "id" : "Dungeon4",
+         "description" : "\n   All around you the heat clings.  You stand upon a small island of rock\nin the centre of a lake of molten lava.  The shore of the island bubbles\nand hisses and the lava desperately tries to claim it as its own.  Large\nrocks of fiery rock are spat up and deposited on the shore, where they\nburn with an unearthly incandescence.  To the &+Cnorth&* the island\ncontinues into some form of holding pen, also to the &+Ceast&* you can\nsee the island continues.\n",
+         "altitude" : null
+      },
+      "secretpassage3@undead" : {
+         "exits" : {
+            "n" : "PR_Room",
+            "s" : "SecretPassage2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Dark Passageway",
+         "id" : "SecretPassage3",
+         "description" : "\n   You pause momentarily as to your &+Cnorth&* appears a large very dark\nroom, to your &+Csouth&* the passage continues.  It is very quiet here and\nyou can hear you own heart beat as you contemplate what lies ahead of\nyou.......\n",
+         "altitude" : null
+      },
+      "battlements3@undead" : {
+         "exits" : {
+            "n" : "battlements4",
+            "s" : "Battlements2"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements3",
+         "description" : "\n    You stand upon the battlements. It has suddenly become very cold here.\nIce has formed beneath your feet, and you have to be very careful not to\nslip.  The wind still blows quietly into your face, and yet there is no\nsound.  Your skin is chilled as the cold quickly penetrates your armor.  \nThe battlements continue to both the &+Cnorth&* and the &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "stony_path7@undead" : {
+         "exits" : {
+            "n" : "stony_path8",
+            "s" : "stony_path6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path7",
+         "description" : "\n     The path continues along side the moat both &+Cnorth&* and &+Csouth&*.\nAnnoyingly the forest still prevents you from moving &+Ceast&*, and there is\nstill no sign of away across the moat.\n",
+         "altitude" : null
+      },
+      "battlements7@undead" : {
+         "exits" : {
+            "e" : "Battlements6",
+            "n" : "battlements8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements7",
+         "description" : "\n    You stand at a turn in the battlements, to your &+Cnorth&* the\nbattlements continue while to your east seems to be a way to descend\nback to the courtyard.  Despite their hollow drawn out sound, you are\ngrateful for the sound of your own footsteps here.  You also notice that \nit is starting to get incredibly cold here despite the gentle wind in your\nface......strange.\n",
+         "altitude" : null
+      },
+      "forest_path1@undead" : {
+         "exits" : {
+            "e" : "stony_path17",
+            "n" : "forest_path2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Forest Path",
+         "id" : "forest_path1",
+         "description" : "\n     You struggle through a hacked path in the forest.  Whoever made this\npath must have spent considerable energy in the task.  Lying on the floor are\nthe remains of an undead skeleton.  Anything he was carrying was long ago\ntaken.\n",
+         "altitude" : null
+      },
+      "personalhell2@undead" : {
+         "exits" : {
+            "w" : "PersonalHell9",
+            "e" : "PersonalHell3",
+            "s" : "PersonalHell1"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Your own personal hell",
+         "id" : "PersonalHell2",
+         "description" : "\n\n   &+RYou walk through the crimson void, disjointed and misplaced, your mind\n&+Rworks frantically to explain what you see.  Suddenly you realize it is you\n&+Rat your prime, and what fine specimen.  You watch as you groom yourself in\n&+Ra large mirror taking time to make sure you look you best.  You watch as\n&+Ryou slowly age, wrinkles appear on your beautiful face, you stoop with age\n&+Rand the passion dies from your eyes.  This is not you, you will never get old.\n",
+         "altitude" : null
+      },
+      "mountain_path4@undead" : {
+         "exits" : {
+            "u" : "mountain_path5",
+            "s" : "mountain_path2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "End of Moutain Path",
+         "id" : "mountain_path4",
+         "description" : "\n     You stand at the base of a steep mountain path which meanders &+Cup&*\nthe side of the mountain.  There is little else of interest here other than\nthe path to the &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "stony_path8@undead" : {
+         "exits" : {
+            "e" : "corn_field1",
+            "w" : "stony_path9",
+            "s" : "stony_path7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path8",
+         "description" : "\n     You stand at the northeastern corner of the moat.  To your &+Cnorth&*\nyou see a vast mountain range, which even Hannibal would have had second\nthoughts about crossing (and you have no elephants to help).  To your\n&+Ceast&* lies a corn field that looks like it might be ready to harvest. \nThe path continues to the &+Cwest&* and &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "moss_maze2@undead" : {
+         "exits" : {
+            "e" : "moss_maze1",
+            "w" : "moss_maze3",
+            "n" : "moss_maze1",
+            "s" : "moss_maze1"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Moss Maze",
+         "id" : "moss_maze2",
+         "description" : "\n     You wade blindly through the mist.  Mist rolls around the base of the\ntrees disorienting you terribly.  One particularly large &+Btree&* catches\nyour eye.\n",
+         "altitude" : null
+      },
+      "dungeon3@undead" : {
+         "exits" : {
+            "e" : "Dungeon4",
+            "u" : "Dungeon2"
+         },
+         "flags" : [],
+         "zone" : "undead",
+         "title" : "Flaming Cavern",
+         "id" : "Dungeon3",
+         "description" : "\n    At the base of the stairs you pause...momentarily taken aback by the\nsight that confronts you.  You stand on the precipice of a sea of molten\nlava.  This huge cavern stretches for as far as the eye can see.  From the\nceiling of the cavern, hundreds of feet above, huge stalactites hang as\nthey have for aeons threatening to crush the unwary adventurer.  Lava\nspits and bubbles from all around, desperate to share with you its warm\nembrace.  To your &+Ceast&* a rickety wooden bridge spans the lava,\nalthough it sways alarmingly if you hold on tight and move quickly you\nshould be safe.\n",
+         "altitude" : null
+      },
+      "stony_path3@undead" : {
+         "exits" : {
+            "e" : "stony_path4",
+            "w" : "stony_path2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path3",
+         "description" : "\n     The path continues along side the moat both &+Ceast&* and &+Cwest&*. Thick \nforest bars the way &+Csouth&*, one tree in particular catches your eye.  The moat \nstill looks utterly impassable to the &+Cnorth&*.\n",
+         "altitude" : null
+      },
+      "drawbridge@undead" : {
+         "exits" : {
+            "s" : "before_castle"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobile"
+         ],
+         "zone" : "undead",
+         "title" : "Drawbridge",
+         "id" : "Drawbridge",
+         "description" : "\n     You stand upon a large wooden drawbridge.  Beneath you snap the undead\njaws of a hundred alligators.  Fortunately the drawbridge is very solid\nso there is no danger of falling off.  To your &+Cnorth&* lies a guarded\nportcullis and to the &+Csouth&* lies safe dry land.\n",
+         "altitude" : null
+      },
+      "courtyard5@undead" : {
+         "exits" : {
+            "w" : "Courtyard4",
+            "e" : "Courtyard6",
+            "n" : "Courtyard8",
+            "s" : "Courtyard2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Central Courtyard",
+         "id" : "Courtyard5",
+         "description" : "\n    You arrive at the very centre of the courtyard. The silence here is\ndeafening.  Everything is dead. There is no sound from above and even\nthe moss in the cobble stones has withered and died.  There stands a once\ngrand fountain in the very centre of the courtyard, from which water must \nonce have flown.  Now centuries of neglect have reduced it to little more\nthan a pile of rubble. \n",
+         "altitude" : null
+      },
+      "battlements6@undead" : {
+         "exits" : {
+            "w" : "Battlements7",
+            "d" : "Courtyard1"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements6",
+         "description" : "\n    You stand upon the battlements, from here you can overlook both the\ndesolate courtyard, and look out over the surrounding land.  It takes you\njust a moment to realize that something is very wrong here.....no sound.\nThere should be wind at this height, but despite feeling the wind gently\ncaressing your face there is no sound but your own shallow footsteps.\nThe battlements continue to the &+Cwest&*, and a large set of stone steps\nlead down.\n",
+         "altitude" : null
+      },
+      "larder3@undead" : {
+         "exits" : {
+            "e" : "Larder2",
+            "s" : "Larder4"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Larder",
+         "id" : "Larder3",
+         "description" : "\n    You stand in a corner of the larder, it is dank and dark, not the\nideal place to keep food.  &+BDust&* has settled over everything, and from\nthe walls come the sounds of tiny bony feet.  To the &+Csouth&* the larder\ncontinues, to the &+Ceast&* you can also continue into the larder. \n",
+         "altitude" : null
+      },
+      "courtyard7@undead" : {
+         "exits" : {
+            "e" : "Courtyard8",
+            "s" : "Courtyard4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Northwestern courtyard",
+         "id" : "Courtyard7",
+         "description" : "\n    You stand at the northwestern corner of the courtyard.\nAbove you the battlements continue to the &+Csouth&*, as the cobblestones\ncontinue in the same direction.  The silence is total, even the sound of\nyour own footsteps ring hollow as though they have had the life bled out\nof them.  The courtyard continues to both the &+Csouth&* and the &+Ceast&*.\n",
+         "altitude" : null
+      },
+      "battlements5@undead" : {
+         "exits" : {
+            "s" : "Battlements4"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements5",
+         "description" : "\n    You stand upon the ice covered battlements. It is incredibly cold\nhere. Solid ice has formed everywhere. You slide around precariously\nholding onto the castle wall to prevent you sliding off.  An ice covered\nwall in front of you bars any further progress.  A &+Bbeam&* protrudes \nfrom the wall that you grab hold of as you slide around.  Your skin is \nfreezing as the cold chills you to the bone, and ice starts to form on \nyour armor.  The battlements continue to the &+Csouth&*, where it looks \nat least a little warmer.\n",
+         "altitude" : null
+      },
+      "stony_path19@undead" : {
+         "exits" : {
+            "e" : "stony_path20",
+            "w" : "stony_path18"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path19",
+         "description" : "\n     Stones crunch under your feet as you continue your way alongside the\nmoat.  I could say that it looks more promising to cross the moat here but\nI'd be lying. To the &+Ceast&* you can clearly make out the drawbridge.\n",
+         "altitude" : null
+      },
+      "courtyard1@undead" : {
+         "exits" : {
+            "e" : "Courtyard2",
+            "u" : "Battlements6",
+            "n" : "Courtyard4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Southwestern Courtyard",
+         "id" : "Courtyard1",
+         "description" : "\n    You stand at the southwestern corner of the courtyard.  The\nsilence is becoming deafening and you pray for the clash of metal against\nbone, to at least relieve the silence.  A large set of stone steps rises\nfrom the floor up onto the battlements, although they are too high to\nsee what may be at their summit.  To your &+Cnorth&* and &+Ceast&* the\nrelentless cobbles of the courtyard continue.\n",
+         "altitude" : null
+      },
+      "purgatory@undead" : {
+         "exits" : {},
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Void",
+         "id" : "Purgatory",
+         "description" : "\n\n\n     &+RAll is peaceful, a deep crimson caresses you and offers you gifts\n     &+Rof untold wealth, power beyond your wildest imaginings, all that\n     &+Ris, all that was and all shall be is yours for the taking.\n     &+RYou need but reach out ...\n \n \n",
+         "altitude" : null
+      },
+      "stony_path13@undead" : {
+         "exits" : {
+            "e" : "stony_path12",
+            "n" : "green_field1",
+            "s" : "stony_path14"
+         },
+         "flags" : [
+            "Outdoor"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path13",
+         "description" : "\n     You are standing at the northwestern corner of the moat.  The moat\ncontinues as far as the eye can see to the &+Ceast&* and &+Csouth&*...this\nis a BIG moat.  To the &+Cnorth&* you can see the open expanse of a green\nfield.\n",
+         "altitude" : null
+      },
+      "stony_path11@undead" : {
+         "exits" : {
+            "e" : "stony_path10",
+            "w" : "stony_path12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path11",
+         "description" : "\n     You continue walking behind the castle.  Mountains loom ominously to the\n&+Cnorth&* and the granite wall beyond the moat looks just as impassable as\never.  You may be able to cross the moat here if you could jump a mere 500\nfeet.  The path continues &+Ceast&* and &+Cwest&* from here.\n",
+         "altitude" : null
+      },
+      "banquethall@undead" : {
+         "exits" : {
+            "w" : "kitchen",
+            "e" : "library",
+            "n" : "waitingroom",
+            "s" : "corridor1"
+         },
+         "flags" : [
+            "Hot",
+            "Dark"
+         ],
+         "zone" : "undead",
+         "title" : "Banquet Hall",
+         "id" : "BanquetHall",
+         "description" : "\n    As you enter the banquet hall you can almost hear the ghostly remnants\nof laughter from happier times.  There must have been fine banquets here.\nAlthough the decoration is somewhat sparse, the hall is huge and must measure\nsome 500 foot square.  A large oak &+Btable&* runs in a square around the\nhall, enough to sit at least 200 people with room to spare.  To your &+Cnorth&*\nthere emanates incredible heat, and you think you may be able to hear\nmovement.  To your &+Ceast&* and &+Cwest&* are small arched doorways\nwhich lead of further into the castle.  To your &+Csouth&* lies the\nentrance to the castle. \n",
+         "altitude" : null
+      },
+      "mountain_path6@undead" : {
+         "exits" : {
+            "d" : "mountain_path5"
+         },
+         "flags" : [
+            "Outdoors",
+            "fastheal",
+            "Peaceful"
+         ],
+         "zone" : "undead",
+         "title" : "&+MAt&* &+Mthe&* &+MTop&* &+Mof&* &+Mthe&* &+MWorld&*",
+         "id" : "mountain_path6",
+         "description" : "\n     You stand at the zenith of the mountain.  You look out and can see the\nwhole world laid out in miniature.  The wind wanders gently through the grass\nand whispers of past heros.  Several large trees grow tall and there seems \nlittle trouble in supporting life here.  At the top of the world, as\nyou may expect, the only way is &+Cdown&*.\n",
+         "altitude" : null
+      },
+      "portcullis@undead" : {
+         "exits" : {
+            "n" : "Courtyard2",
+            "s" : "drawbridge@undead"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Portcullis",
+         "id" : "Portcullis",
+         "description" : "\n    Well it looks as though your journey may be coming to an end. Within\nthese walls is the &+RUndead King&*.  Not as tough as he made out really.\nBefore you stands a large open portcullis, and to your &+Csouth&* is the\nopen drawbridge.  You look around nervously wondering why anyone would\nhave a portcullis and leave it open?  Oh well enough of contemplation...\ntime to move on.\n",
+         "altitude" : null
+      },
+      "swamp_land2@undead" : {
+         "exits" : {
+            "w" : "paddy_field1",
+            "s" : "swamp_land4"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NegRegen"
+         ],
+         "zone" : "undead",
+         "title" : "In The Swamp",
+         "id" : "swamp_land2",
+         "description" : "\n     You float through a noxious empty swamp.  You are sure nothing could\nlive here,  if it could you sure would not want to meet it.  You start to\nchoke on the noxious fumes.  Time to get going I think.  \n",
+         "altitude" : null
+      },
+      "waitingroom@undead" : {
+         "exits" : {
+            "n" : "ThroneRoom",
+            "s" : "BanquetHall"
+         },
+         "flags" : [
+            "Cold"
+         ],
+         "zone" : "undead",
+         "title" : "Waiting Room",
+         "id" : "WaitingRoom",
+         "description" : "\n    You pause only momentarily upon entering this room. Something is very\nvery wrong here.  You stand it what once may have been a large open\nwaiting room some 100 feet across.  However now everything seems to have\nboth caught fire and be covered in ice!  The whole room looks as though it\nhas been torn asunder as the tattered remains of its once opulent\nfurnishing lie scattered around.  To the &+Csouth&* the banquet hall\nsuddenly seems very inviting.  To the &+Cnorth&* a large arched door\nleads to what looks like a throne room.\n",
+         "altitude" : null
+      },
+      "stony_path15@undead" : {
+         "exits" : {
+            "n" : "stony_path14",
+            "s" : "stony_path16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Stony Path",
+         "id" : "stony_path15",
+         "description" : "\n     The path runs alongside the moat both &+Cnorth&* and &+Csouth&*.\nStrange sounds emanate from the moat. You decide it may be wise not to\nstick around here too long.\n",
+         "altitude" : null
+      },
+      "mountain_path@undead" : {
+         "exits" : {
+            "n" : "mountain_path2",
+            "s" : "stony_path9"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnePerson"
+         ],
+         "zone" : "undead",
+         "title" : "Mountain Path",
+         "id" : "mountain_path",
+         "description" : "\n     You squeeze through a narrow gap in the mountainside.  You wish you had\nnot eaten that extra portion of rations as you scrape against the rocks. To\nyour &+Cnorth&* you see thankfully that the path widens, to the &+Csouth&*\nyou can just make out the stone path.\n",
+         "altitude" : null
+      },
+      "paddy_field1@undead" : {
+         "exits" : {
+            "w" : "swamp_land3",
+            "e" : "swamp_land2",
+            "n" : "stony_path4",
+            "s" : "swamp_land1"
+         },
+         "flags" : [
+            "Outdoors",
+            "OnWater",
+            "NoMobiles",
+            "Fastheal"
+         ],
+         "zone" : "undead",
+         "title" : "Paddy Field",
+         "id" : "paddy_field1",
+         "description" : "\n     You float peacefully amongst the rice.  Not much of it seems suitable for\neating, but it is nice and peaceful anyway.  This is a great place for\npeaceful meditation as you float sleepily.  All directions but &+Cnorth&* seem\nto head into less promising swampland. \n",
+         "altitude" : null
+      },
+      "personalhell5@undead" : {
+         "exits" : {
+            "w" : "PersonalHell6",
+            "s" : "PersonalHell4"
+         },
+         "flags" : [
+            "Soundproof"
+         ],
+         "zone" : "undead",
+         "title" : "Your own personal hell",
+         "id" : "PersonalHell5",
+         "description" : "\n\n    &+RYou walk through the crimson void, disjointed and misplaced, your mind\n&+Rworks frantically to explain what you see.  You watch yourself trying to\n&+Rwork out what you are doing.  You seem to be examining yourself carefully\n&+Rin a mirror, it seems there is a blemish that has somehow upset you. If\n&+Ronly it were different, things would all be better if it was not for that\n&+Rblemish. If only.\n",
+         "altitude" : null
+      },
+      "battlements4@undead" : {
+         "exits" : {
+            "n" : "battlements5",
+            "s" : "Battlements3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "undead",
+         "title" : "Upon the battlements",
+         "id" : "Battlements4",
+         "description" : "\n    You stand upon the battlements. It is very cold here. Solid ice has\nformed beneath your feet, and you slide around precariously holding onto\nthe castle wall to prevent you sliding off.   Your skin starts to freeze\nas the cold quickly penetrates your armor.  The battlements continue to\nboth the &+Cnorth&* and the &+Csouth&*.\n",
+         "altitude" : null
+      },
+      "green_field1@undead" : {
+         "exits" : {
+            "s" : "stony_path13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "undead",
+         "title" : "Grassy Field",
+         "id" : "green_field1",
+         "description" : "\n     This field is prime farmland. It would appear that the proximity of all\nthe undead creatures has scared off any prospective buyers.  Should the\n&+RUndead King&* be vanquished  this spot might be a nice place to retire to \nfrom stress of adventuring.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "s_rat6@undead" : {
+         "damage" : "6",
+         "location" : "swamp_land1",
+         "armor" : "0",
+         "name" : "S_rat6",
+         "examine" : "\nIt's small, furry and &+Rrat&* shaped. Ideal shape and size for a rat it\nwould appear.",
+         "description" : "A vicious, diseased swamp &+Rrat&* attacks you.",
+         "sflags" : "{ }",
+         "strength" : "50",
+         "speed" : "9",
+         "aggression" : "99",
+         "pname" : "Swamp Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Venom"
+         ]
+      },
+      "hydra10@undead" : {
+         "eflags" : [
+            "VTouch"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra10",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "s_warriorg3@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "15",
+         "location" : "CourtYard1",
+         "armor" : "10",
+         "name" : "S_warriorg3",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle creature.\nWhatever evil produced the corruption of nature needs to be stopped. You \nstare into the undead eye sockets of this beast for some small flicker\nof life, all you get in return is the darkness of the void.",
+         "description" : "\nYou see the hideous &+Rskeletal&* remains of a lion charge at you.",
+         "sflags" : "{ }",
+         "strength" : "300",
+         "speed" : "10",
+         "aggression" : "99",
+         "pname" : "Skeletal Lion",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "PickStuff",
+            "NoCorpse"
+         ]
+      },
+      "corn_field_crow@undead" : {
+         "damage" : "6",
+         "location" : "corn_field1",
+         "armor" : "0",
+         "name" : "Corn_field_crow",
+         "examine" : "\nThis &+Rcrow&* looks like all it is doing is sadly waiting for either its \nfriends to return or the corn ripen.",
+         "description" : "\nA lonely little &+Rcrow&* sits here looking at you with sad, pathetic eyes.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Crow",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : "{ }"
+      },
+      "u_gator1@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "20",
+         "location" : "stony_path6",
+         "armor" : "8",
+         "name" : "U_gator1",
+         "examine" : "\nYou notice that this &+Rgator&* is WAY to thin to be alive.  Rotting\nskin hangs limply from the bleached white bones.",
+         "description" : "A grotesque rotting &+Ralligator&* roars at you from the moat.",
+         "sflags" : "{ }",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Alligator",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse"
+         ]
+      },
+      "s_rat10b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat10b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "\nThe &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Nocorpse",
+            "Soulless"
+         ]
+      },
+      "s_warrior4@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "10",
+         "location" : "stony_path8",
+         "armor" : "10",
+         "name" : "S_warrior4",
+         "examine" : "\nYou stare into the empty eye sockets of this hideous deformation.  Whatever \nevil created this monstrosity certainly should not be taken lightly.",
+         "description" : "\nYou see a hideous &+Rskeletal&* warrior who seems in no mood for conversation.",
+         "sflags" : "{ }",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeletal Warrior",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarEast",
+            "PickStuff",
+            "Soulless"
+         ]
+      },
+      "hydra2@undead" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra2",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "s_rat2b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat2b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "The &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse"
+         ]
+      },
+      "mercenary2@undead" : {
+         "damage" : "8",
+         "location" : "forest_path4",
+         "armor" : "2",
+         "name" : "Mercenary2",
+         "examine" : "\nAs you look at &+RKhaos&* he turns and fixes you with an impassive \nglare that chills you to very core of your being.  He considers you\nas one might consider an insect,  moments later he turns his attention\nback to more pressing matters, obviously unimpressed.  You breathe a \nsigh of relief, with the knowledge that he considers you too \ninsignificant to waste any time or effort on.",
+         "description" : "&+RKhaos&*, the &+Yledgendary&* warrior stands here.",
+         "sflags" : "{ }",
+         "strength" : "700",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Khaos",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarEast",
+            "NoSteal",
+            "GrabHostile"
+         ]
+      },
+      "mercenary3@undead" : {
+         "damage" : "8",
+         "location" : "forest_path4",
+         "armor" : "2",
+         "name" : "Mercenary3",
+         "examine" : "\n&+RGiovanna&* looks at you with a sparkle in her eye. She looks you over \nand gets a look on her face that somehow says 'poor, weak little thing'.",
+         "description" : "&+RGiovanna,&* the &+Yelven&* princess stands here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Giovanna",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarEast",
+            "GrabHostile",
+            "NoSteal"
+         ]
+      },
+      "mist_lion2@undead" : {
+         "damage" : "15",
+         "location" : "moss_maze6",
+         "speed" : "0",
+         "aggression" : "99",
+         "armor" : "10",
+         "pname" : "Lion",
+         "name" : "Mist_lion2",
+         "examine" : "You see a large powerful &+RLion&* as it leaps at you.",
+         "description" : "The &+RLion&* pounces at you from the mist.",
+         "strength" : "200"
+      },
+      "s_rat1@undead" : {
+         "damage" : "6",
+         "location" : "swamp_land6",
+         "armor" : "0",
+         "name" : "S_rat1",
+         "examine" : "\nIt's small, furry and &+Rrat&* shaped. Ideal shape and size for a rat it\nwould appear.",
+         "description" : "A vicious, diseased swamp &+Rrat&* attacks you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50",
+         "speed" : "9",
+         "aggression" : "99",
+         "pname" : "Swamp Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Venom"
+         ]
+      },
+      "s_rat9b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat9b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "\nThe &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "50",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse"
+         ]
+      },
+      "s_rat3b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat3b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "The &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse"
+         ]
+      },
+      "nightmare2@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHell2",
+         "armor" : "0",
+         "name" : "Nightmare2",
+         "examine" : "\nAs you examine this creature of the void, its shape alters as it slowly\ntransforms into your worst &+Rnightmare&*.",
+         "description" : "\n&+YDarkness and shadow swirls as it slowly transforms to your worst &+Rnightmare&*.",
+         "sflags" : "{ }",
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Nightmare",
+         "pflags" : "{ }",
+         "mflags" : "{ }"
+      },
+      "s_rat2@undead" : {
+         "damage" : "6",
+         "location" : "swamp_land5",
+         "armor" : "0",
+         "name" : "S_rat2",
+         "examine" : "\nIt's small, furry and &+Rrat&* shaped. Ideal shape and size for a rat it\nwould appear.",
+         "description" : "A vicious, diseased swamp &+Rrat&* attacks you.",
+         "sflags" : "{ }",
+         "strength" : "50",
+         "speed" : "9",
+         "aggression" : "99",
+         "pname" : "Swamp Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Venom"
+         ]
+      },
+      "hydra7@undead" : {
+         "eflags" : [
+            "Cripple"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra7",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "hydra9@undead" : {
+         "eflags" : [
+            "Mute"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra9",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "hellhound667@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHellA",
+         "armor" : "0",
+         "name" : "HellHound667",
+         "examine" : "\nThis large fiery dog looks you over as though waiting for something.",
+         "description" : "\nA large hell &+Rhound&* all muscle and sinew watches you carefully.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hound",
+         "pflags" : [
+            "NoMagic"
+         ],
+         "mflags" : [
+            "NoSteal"
+         ]
+      },
+      "undead_king@undead" : {
+         "eflags" : [
+            "NegFireBall",
+            "NegShock"
+         ],
+         "damage" : "30",
+         "location" : "ThroneRoom",
+         "armor" : "50",
+         "name" : "Undead_King",
+         "examine" : "\n&+RThe Undead King&* &+rlooks at you contemptuously through empty eye sockets,\n&+rand speaks....\n  &+w'You have done well to reach me my friend, and I congratulate you on\n&+wbeing far more powerful than I gave you credit for.  In return for your\n&+wgreat success, I will offer you in return your life.  You may leave now;\n&+wit is your last chance.  You see you forgot one thing, while my minions\n&+wmay be susceptible to you, I am truly undead,  I have lived for many\n&+wthousands of years.  The simple reason being I cannot be killed.  You\n&+wcannot kill the undead, this is something you seem to have over looked.'\n&+RThe Undead king&* &+rthen turns and looks you squarely in the face, sighs,\n&+rand puts his hand on your shoulder.\n\n&+rHe continues ...\n     &+w'I was once as you are now, we are very much alike you and I. You\n&+wknow I have seen few with such a passion for killing, I think we would\n&+wmake a good team no?'",
+         "description" : "&+RThe Undead King&* is here.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "2000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "King",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise",
+            "NoAlias"
+         ],
+         "mflags" : [
+            "StealWorn",
+            "NoSteal",
+            "Soulless"
+         ]
+      },
+      "nightmare9@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHell9",
+         "armor" : "0",
+         "name" : "Nightmare9",
+         "examine" : "\nAs you examine this creature of the void, its shape alters as it slowly\ntransforms into your worst &+Rnightmare&*.",
+         "description" : "\n&+RDarkness and shadow swirls as it slowly transforms to your worst &+Rnightmare&*.",
+         "sflags" : "{ }",
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Nightmare",
+         "pflags" : "{ }",
+         "mflags" : "{ }"
+      },
+      "s_rat11b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat11b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "\nThe &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse"
+         ]
+      },
+      "s_rat4@undead" : {
+         "damage" : "6",
+         "location" : "swamp_land3",
+         "armor" : "0",
+         "name" : "S_rat4",
+         "examine" : "\nIt's small, furry and &+Rrat&* shaped. Ideal shape and size for a rat it\nwould appear.",
+         "description" : "A vicious, diseased swamp &+Rrat&* attacks you.",
+         "sflags" : "{ }",
+         "strength" : "50",
+         "speed" : "9",
+         "aggression" : "99",
+         "pname" : "Swamp Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Venom"
+         ]
+      },
+      "s_warrior5@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "10",
+         "location" : "stony_path13",
+         "armor" : "10",
+         "name" : "S_warrior5",
+         "examine" : "\nYou stare into the empty eye sockets of this hideous deformation.  Whatever \nevil created this monstrosity certainly should not be taken lightly.",
+         "description" : "You see a hideous &+Rskeletal&* warrior who seems in no mood for conversation.",
+         "sflags" : "{ }",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeleton",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "BarNorth",
+            "PickStuff"
+         ]
+      },
+      "s_warrior6@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "10",
+         "location" : "stony_path17",
+         "armor" : "10",
+         "name" : "S_warrior6",
+         "examine" : "\nYou stare into the empty eye sockets of this hideous deformation.  Whatever \nevil created this monstrosity certainly should not be taken lightly.",
+         "description" : "You see a hideous &+Rskeletal&* warrior who seems in no mood for conversation.",
+         "sflags" : "{ }",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeleton",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "BarWest",
+            "PickStuff"
+         ]
+      },
+      "prisonguard@undead" : {
+         "damage" : "20",
+         "location" : "Dungeon4",
+         "armor" : "0",
+         "name" : "PrisonGuard",
+         "examine" : "\nYou look Tinkerbell up and down and think, her name really does not fit.  \nAt 6 foot 2 and with a physique Conan would be proud of you think that \nJumbo may be a more appropriate name, but you are in no mood to tell her \nthat.  On her left well muscled arm is a tattoo reading 'I luv mum'.",
+         "description" : "A large muscular woman eyes you hungrily.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Tinkerbell",
+         "pflags" : "{ }",
+         "mflags" : [
+            "BarNorth",
+            "BarSouth",
+            "BarEast",
+            "BarWest"
+         ]
+      },
+      "s_rat5b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat5b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "The &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse"
+         ]
+      },
+      "s_rat8b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat8b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "The &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Nocorpse",
+            "Soulless"
+         ]
+      },
+      "s_warriorg1@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "10",
+         "location" : "Portcullis",
+         "armor" : "10",
+         "name" : "S_warriorg1",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle creature.\nWhatever evil produced the corruption of nature needs to be stopped.  You \nstare into the undead eye sockets of this beast for some small flicker of \nlife, all you get in return is the darkness of the void.",
+         "description" : "You see the hideous &+Rskeletal&* remains of a gorilla here.",
+         "sflags" : "{ }",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeletal Gorilla",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth",
+            "PickStuff",
+            "NoCorpse",
+            "Soulless"
+         ]
+      },
+      "hydra5@undead" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra5",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "nightmare5@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHell5",
+         "armor" : "0",
+         "name" : "Nightmare5",
+         "examine" : "\nAs you examine this creature of the void, its shape alters as it slowly\ntransforms into your worst &+Rnightmare&*.",
+         "description" : "\n&+YDarkness and shadow swirls as it slowly transforms to your worst &+Rnightmare&*.",
+         "sflags" : "{ }",
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Nightmare",
+         "pflags" : "{ }",
+         "mflags" : "{ }"
+      },
+      "hydra8@undead" : {
+         "eflags" : [
+            "Deaf"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra8",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "hydra1@undead" : {
+         "eflags" : [
+            "Fireball"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra1",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "s_rat3@undead" : {
+         "damage" : "6",
+         "location" : "swamp_land4",
+         "armor" : "0",
+         "name" : "S_rat3",
+         "examine" : "\nIt's small, furry and &+Rrat&* shaped. Ideal shape and size for a rat it\nwould appear.",
+         "description" : "A vicious, diseased swamp &+Rrat&* attacks you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50",
+         "speed" : "9",
+         "aggression" : "99",
+         "pname" : "Swamp Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Venom"
+         ]
+      },
+      "s_rat1b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat1b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle creature.\nYou wonder,  'Is there no end to the undead creatures here?'",
+         "description" : "The &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "Nocorpse"
+         ]
+      },
+      "s_warrior2@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "10",
+         "location" : "stony_path20",
+         "armor" : "10",
+         "name" : "S_warrior2",
+         "examine" : "\nYou stare into the empty eye sockets of this hideous deformation.  Whatever \nevil created this monstrosity certainly should not be taken lightly.",
+         "description" : "\nYou see a hideous &+Rskeletal&* warrior who seems in no mood for conversation.",
+         "sflags" : "{ }",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeletal Warrior",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarEast",
+            "PickStuff",
+            "Soulless"
+         ]
+      },
+      "hydra3@undead" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra3",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "amanda@undead" : {
+         "damage" : "0",
+         "location" : "Dungeon5",
+         "armor" : "0",
+         "name" : "Amanda",
+         "examine" : "\nThis girl was surely once very beautiful - even with her blood soaked\nhair, and badly broken and twisted limbs this is obvious.  There is\nsomething strange about this place. You can see her very &+Bsoul&* clutching \nonto her, fighting for every precious moment of life it may possess. You\ntry to talk to her, but she is incoherent.  Momentarily her eyes clear.\nShe looks you straight in the eyes and pleads 'help me...' in a low weak\nvoice. She then lapses into unconsciousness...\n",
+         "description" : "A beautiful young &+Relven girl&* lies here in a pool of blood.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "1",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Amanda",
+         "pflags" : "{ }",
+         "mflags" : "{ }"
+      },
+      "nightmare4@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHell4",
+         "armor" : "0",
+         "name" : "Nightmare4",
+         "examine" : "\nAs you examine this creature of the void, its shape alters as it slowly\ntransforms into your worst &+Rnightmare&*.",
+         "description" : "\n&+YDarkness and shadow swirls as it slowly transforms to your worst &+Rnightmare&*.",
+         "sflags" : "{ }",
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Nightmare",
+         "pflags" : "{ }",
+         "mflags" : "{ }"
+      },
+      "s_rat12b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat12b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle creature.\nYou wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "\nThe &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Nocorpse",
+            "Soulless"
+         ]
+      },
+      "mist_lion1@undead" : {
+         "damage" : "15",
+         "location" : "moss_maze7",
+         "armor" : "10",
+         "name" : "Mist_lion1",
+         "examine" : "You see a large powerful &+RLion&* as it leaps at you.",
+         "description" : "The &+RLion&* pounces at you from the mist.",
+         "sflags" : "{ }",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Lion",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : "{ }"
+      },
+      "s_warriorg4@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "20",
+         "location" : "CourtYard3",
+         "armor" : "10",
+         "name" : "S_warriorg4",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle creature.\nWhatever evil produced the corruption of nature needs to be stopped.  You \nstare into the undead eye sockets of this beast for some small flicker\nof life, all you get in return is the darkness of the void.",
+         "description" : "\nYou see the hideous &+Rskeletal&* remains of a young tiger charge at you.",
+         "sflags" : "{ }",
+         "strength" : "150",
+         "speed" : "10",
+         "aggression" : "99",
+         "pname" : "Skeletal Tiger",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "NoCorpse",
+            "Soulless",
+            "PickStuff"
+         ]
+      },
+      "akoo@undead" : {
+         "damage" : "10",
+         "location" : "ThroneRoom",
+         "armor" : "0",
+         "name" : "Akoo",
+         "examine" : "\nAs you examine the mighty &+RAkoo&* she crackles with magical fire. Her eyes \nblaze with hatred as she prepares to guard her master to the last.  She rises \nto twice her height producing a very impressive vision of power and might. \nShe says,  'I am &+RAkoo P Mai&*; eater of worlds.  Do not trifle with me\nlightly for my power is unsurpassed.'",
+         "description" : "The mighty &+RAkoo P Mai&* stands here guarding her master.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Akoo",
+         "pflags" : "{ }",
+         "mflags" : "{ }"
+      },
+      "nightmare7@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHell7",
+         "armor" : "0",
+         "name" : "Nightmare7",
+         "examine" : "\nAs you examine this creature of the void, its shape alters as it slowly\ntransforms into your worst &+Rnightmare&*.",
+         "description" : "\n&+RDarkness and shadow swirls as it slowly transforms to your worst &+Rnightmare&*.",
+         "sflags" : "{ }",
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Nightmare",
+         "pflags" : "{ }",
+         "mflags" : "{ }"
+      },
+      "u_gator2@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "10",
+         "location" : "stony_path11",
+         "armor" : "0",
+         "name" : "U_gator2",
+         "examine" : "\nThis &+Ralligator&* looks as though it has been through a tremendous\nbattle.  It may have escaped but it is mortally wounded.  It looks\nat you with empty eye sockets.  Maybe this monstrosity wishes for\nmercy....",
+         "description" : "A grotesque rotting &+Ralligator&* whimpers pathetically at you.",
+         "sflags" : "{ }",
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Alligator",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ]
+      },
+      "hellhound1@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHellA",
+         "armor" : "0",
+         "name" : "HellHound1",
+         "examine" : "\nThis large fiery dog has guarded these regions for thousands of years, she\ndoes not seem impressed by your intrusion.",
+         "description" : "\nA large &+Rhellhound&* all muscle and sinew sits here, alert and waiting.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Hound",
+         "pflags" : "{ }",
+         "mflags" : [
+            "GrabHostile"
+         ]
+      },
+      "m_golem@undead" : {
+         "damage" : "6",
+         "location" : "forest_path2",
+         "armor" : "0",
+         "name" : "M_golem",
+         "examine" : "\nThis thing is huge.  It has been constructed using arcane powers beyond your \ncomprehension.  It's massive bulk provides an effective barrier.",
+         "description" : "\nA huge &+Rgolem&*, dripping mud, stands here barring all further progress.",
+         "sflags" : "{ }",
+         "strength" : "900",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Golem",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "mist_lion4@undead" : {
+         "damage" : "15",
+         "location" : "moss_maze7",
+         "armor" : "10",
+         "name" : "Mist_lion4",
+         "examine" : "You see a large powerful &+RLion&* as it leaps at you.",
+         "description" : "The &+RLion&* pounces at you from the mist.",
+         "sflags" : "{ }",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Lion",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : "{ }"
+      },
+      "s_warrior3@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "10",
+         "location" : "stony_path4",
+         "armor" : "10",
+         "name" : "S_warrior3",
+         "examine" : "\nYou stare into the empty eye sockets of this hideous deformation.  Whatever \nevil created this monstrosity certainly should not be taken lightly.",
+         "description" : "\nYou see a hideous &+Rskeletal&* warrior who seems in no mood for conversation.",
+         "sflags" : "{ }",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeletal Warrior",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarEast",
+            "PickStuff",
+            "Soulless"
+         ]
+      },
+      "s_guard@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegFrost",
+            "NegShock"
+         ],
+         "damage" : "25",
+         "location" : "SecretPassage1",
+         "armor" : "30",
+         "name" : "S_Guard",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty creature.  You\nwonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "The &+Rskeletal&* remains of a huge ogre patrol here.",
+         "sflags" : "{ }",
+         "strength" : "700",
+         "speed" : "10",
+         "aggression" : "0",
+         "pname" : "Skeletal Ogre",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse",
+            "BarNorth"
+         ]
+      },
+      "u_gator3@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "20",
+         "location" : "stony_path15",
+         "armor" : "8",
+         "name" : "U_gator3",
+         "examine" : "\nYou notice that this &+Ralligator&* is WAY to thin to actually be alive.\nRotting skin hangs limply from the bleached white bones.",
+         "description" : "A grotesque rotting &+Ralligator&* roars at you from the moat.",
+         "sflags" : "{ }",
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Alligator",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "NoCorpse",
+            "Soulless"
+         ]
+      },
+      "s_warriorg7@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "15",
+         "location" : "Battlements8",
+         "armor" : "10",
+         "name" : "S_warriorg7",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle creature.\nYou wonder, is there no end to the undead creatures here.",
+         "description" : "You see the hideous &+Rskeletal&* remains of a cheetah patrolling here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "300",
+         "speed" : "9",
+         "aggression" : "99",
+         "pname" : "Skeletal Cheetah",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse",
+            "PickStuff",
+            "BarNorth"
+         ]
+      },
+      "m_giant@undead" : {
+         "damage" : "20",
+         "location" : "mountain_path2",
+         "armor" : "0",
+         "name" : "M_giant",
+         "examine" : "\nThis guy is truly HUGE.  His muscles bulge as he looks at you\ncontemptuously.  You can see on his belt the head of his various\ntrophies such as harpies, unicorns, fractal dragons. This is \ncertainly not a giant to be taken lightly.  Do you feel lucky?",
+         "description" : "A thirty foot tall &+Rgiant&* looms above you.",
+         "sflags" : "{ }",
+         "strength" : "3000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Giant",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth",
+            "PickStuff"
+         ]
+      },
+      "hydra6@undead" : {
+         "eflags" : [
+            "IceStorm"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra6",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "s_warriorg2@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "40",
+         "location" : "Portcullis",
+         "armor" : "10",
+         "name" : "S_warriorg2",
+         "examine" : "\nYou stare at the bleached white bones of this once beautiful creature.\nWhatever evil produced the corruption of nature needs to be stopped. You \nstare into the undead eye sockets of this beast for some small flicker\nof life, all you get in return is the darkness of the void.",
+         "description" : "\nYou see the hideous &+Rskeletal&* remains of a baby unicorn here.",
+         "sflags" : "{ }",
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeletal Unicorn",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth",
+            "PickStuff",
+            "Soulless",
+            "NoCorpse"
+         ]
+      },
+      "mercenary4@undead" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "8",
+         "location" : "forest_path4",
+         "armor" : "2",
+         "name" : "Mercenary4",
+         "examine" : "\nYou look from &+RSpooky&* to his compatriots and wonder WHY is this guy here?  \nHe tries to fix you with an icy glare but fails miserably which makes you \nchuckle slightly under your breath.",
+         "description" : "\n&+RSpooky&* the scribe, stands here casting an eye around nervously.",
+         "sflags" : "{ }",
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Spooky",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarEast",
+            "GrabHostile"
+         ]
+      },
+      "mist_lion3@undead" : {
+         "damage" : "15",
+         "location" : "moss_maze7",
+         "armor" : "10",
+         "name" : "Mist_lion3",
+         "examine" : "You see a large powerful &+RLion&* as it leaps at you.",
+         "description" : "The &+RLion&* pounces at you from the mist.",
+         "sflags" : "{ }",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Lion",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : "{ }"
+      },
+      "nightmare3@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHell3",
+         "armor" : "0",
+         "name" : "Nightmare3",
+         "examine" : "\nAs you examine this creature of the void, its shape alters as it slowly\ntransforms into your worst &+Rnightmare&*.",
+         "description" : "\n&+RDarkness and shadow swirls as it slowly transforms to your worst &+Rnightmare&*.",
+         "sflags" : "{ }",
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Nightmare",
+         "pflags" : "{ }",
+         "mflags" : "{ }"
+      },
+      "s_rat6b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat6b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "\nThe &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse"
+         ]
+      },
+      "mercenary1@undead" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "8",
+         "location" : "forest_path4",
+         "armor" : "2",
+         "name" : "Mercenary1",
+         "examine" : "\n&+RGrenfield&* stares coldly at you crackling with magical fire.  He is very \ngood at what he does.  What he does is not very nice.  You just KNOW you don't \nwant to mess with this guy.",
+         "description" : "&+RGrenfield&*, master necromancer, stands here.",
+         "sflags" : "{ }",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Grenfield",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarEast",
+            "GrabHostile",
+            "NoSteal"
+         ]
+      },
+      "s_rat7b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat7b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "\nThe &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse"
+         ]
+      },
+      "nightmare8@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHell8",
+         "armor" : "0",
+         "name" : "Nightmare8",
+         "examine" : "\nAs you examine this creature of the void, its shape alters as it slowly\ntransforms into your worst &+Rnightmare&*.",
+         "description" : "\n&+RDarkness and shadow swirls as it slowly transforms to your worst &+Rnightmare&*.",
+         "sflags" : "{ }",
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Nightmare",
+         "pflags" : "{ }",
+         "mflags" : "{ }"
+      },
+      "lucifer@undead" : {
+         "eflags" : [
+            "NegFireBall"
+         ],
+         "damage" : "666",
+         "location" : "PersonalHell6",
+         "armor" : "666",
+         "name" : "LUCIFER",
+         "examine" : "\nAs you look into the sparkling blue eyes of this handsome young man you\nsense a power the likes of which you have NEVER before experienced.  You\nfeel your very soul freeze as you finally realize - &+RLUCIFER&*.\nHe smiles at you warmly, knowingly. After what seems like an eternity he\nspeaks.\n\n&+w'We have no quarrel my friend. I understand you wish to destroy one of\n&+wmy servants. I have no problem with that, he has served his purpose.\n&+wBut I am a business man, it would be unworthy of me to simply break a\n&+wbargain...'\n\nSmiling warmly he leans over and rests his arm across your shoulders. He\ncontinues, &+w'You know we are both grown ups maybe we can come to some\n&+wsort of...arrangement? '\n",
+         "description" : "A handsome young man wearing a smart red suit, smiles at you quizzically.",
+         "sflags" : "{ }",
+         "strength" : "99999",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Lucifer",
+         "pflags" : [
+            "NoExorcise",
+            "NoZap",
+            "NoAlias"
+         ],
+         "mflags" : [
+            "BarSouth"
+         ]
+      },
+      "s_rat5@undead" : {
+         "damage" : "6",
+         "location" : "swamp_land2",
+         "armor" : "0",
+         "name" : "S_rat5",
+         "examine" : "\nIt's small, furry and &+Rrat&* shaped. Ideal shape and size for a rat it\nwould appear.",
+         "description" : "A vicious, diseased swamp &+Rrat&* attacks you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "50",
+         "speed" : "9",
+         "aggression" : "99",
+         "pname" : "Swamp Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Venom"
+         ]
+      },
+      "s_warriorg8@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "15",
+         "location" : "Battlements3",
+         "armor" : "10",
+         "name" : "S_warriorg8",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder, is there no end to the undead creatures here.",
+         "description" : "\nYou see the hideous &+Rskeletal&* remains of a cheetah patrolling here.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "300",
+         "speed" : "9",
+         "aggression" : "99",
+         "pname" : "Skeletal Cheetah",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse",
+            "PickStuff",
+            "BarNorth"
+         ]
+      },
+      "hydra4@undead" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra4",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you'.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "hellhound666@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHellA",
+         "armor" : "0",
+         "name" : "HellHound666",
+         "examine" : "\nThis large fiery dog looks you over as though waiting for something.",
+         "description" : "\nA large hell &+Rhound&* all muscle and sinew watches you carefully.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hound",
+         "pflags" : [
+            "NoMagic"
+         ],
+         "mflags" : [
+            "NoSteal"
+         ]
+      },
+      "s_warrior1@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "10",
+         "location" : "stony_path1",
+         "armor" : "10",
+         "name" : "S_warrior1",
+         "examine" : "\nYou stare into the empty eye sockets of this hideous deformation.  Whatever \nevil created this monstrosity certainly should not be taken lightly.",
+         "description" : "You see a hideous &+Rskeletal&* warrior who seems in no mood for conversation.",
+         "sflags" : "{ }",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeletal Warrior",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarWest",
+            "PickStuff",
+            "Soulless"
+         ]
+      },
+      "s_rat4b@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "5",
+         "location" : "Larder1",
+         "armor" : "10",
+         "name" : "S_Rat4b",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle\ncreature. You wonder,  'Is there no end to the undead creatures here?' ",
+         "description" : "The &+Rskeletal&* remains of a large rat attack you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "15",
+         "speed" : "5",
+         "aggression" : "99",
+         "pname" : "Skeletal Rat",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "NoCorpse",
+            "Soulless"
+         ]
+      },
+      "hydra11@undead" : {
+         "eflags" : [
+            "Bhands"
+         ],
+         "damage" : "10",
+         "location" : "WaitingRoom",
+         "armor" : "10",
+         "name" : "Hydra11",
+         "examine" : "The Mighty eleven headed &+Rhydra&*, Destroyer of Worlds attacks you.",
+         "description" : "The head of the &+Rhydra&* snaps at you viciously.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Hydra",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "s_warriorg5@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "15",
+         "location" : "CourtYard8",
+         "armor" : "0",
+         "name" : "S_warriorg5",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle creature.\nThis female and her mate conscientiously guard the way north as they \nhave for decades.  She stares at you with empty dead eye sockets, not\ncomprehending, simply guarding the entrance.",
+         "description" : "\nYou see the hideous &+Rskeletal&* remains of a mature female Bengal tiger.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeletal Tiger",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse",
+            "PickStuff",
+            "BarNorth"
+         ]
+      },
+      "mist_leader@undead" : {
+         "eflags" : [
+            "Fireball",
+            "Frost"
+         ],
+         "damage" : "8",
+         "location" : "moss_maze7",
+         "armor" : "10",
+         "name" : "Mist_Leader",
+         "examine" : "\nYou manage to glimpse a brief look at her before she attacks you, enough\nto tell she looks very powerful.",
+         "description" : "\n&+RNatashia&* charges at you from the mist, her pride of mist lions hard \non her heels.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "99",
+         "pname" : "Natashia",
+         "pflags" : [
+            "NoZap",
+            "NoSummon",
+            "NoMagic",
+            "NoExorcise"
+         ]
+      },
+      "hellhound2@undead" : {
+         "damage" : "15",
+         "location" : "PersonalHellA",
+         "armor" : "0",
+         "name" : "HellHound2",
+         "examine" : "\nThis large fiery dog has guarded these regions for thousands of years, she\ndoes not seem impressed by your intrusion.",
+         "description" : "\nA large &+Rhellhound&* all muscle and sinew sits here, alert and waiting.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "666",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Hound",
+         "pflags" : "{ }",
+         "mflags" : [
+            "grabhostile"
+         ]
+      },
+      "s_warriorg6@undead" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile",
+            "NegShock"
+         ],
+         "damage" : "10",
+         "location" : "CourtYard8",
+         "armor" : "10",
+         "name" : "S_warriorg6",
+         "examine" : "\nYou stare at the bleached white bones of this once mighty jungle creature.\nThis male and his mate conscientiously guard the way north as they have\nfor decades.  He stares at you with empty dead eye sockets, not\ncomprehending, simply guarding the entrance.",
+         "description" : "\nYou see the hideous &+Rskeletal&* remains of a mature male Bengal tiger.",
+         "sflags" : "{  }",
+         "strength" : "600",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Skeletal Tiger",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise"
+         ],
+         "mflags" : [
+            "Soulless",
+            "NoCorpse",
+            "PickStuff",
+            "BarNorth"
+         ]
+      }
+   }
+}

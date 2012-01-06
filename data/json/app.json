@@ -1,0 +1,1051 @@
+{
+   "obj" : {
+      "crystal@app" : {
+         "desc[1]" : "A crystal ball sits upon a pedestal.",
+         "location" : "IN_ROOM:app32",
+         "oflags" : [
+            "lit",
+            "getflips"
+         ],
+         "altname" : "ball",
+         "name" : "crystal",
+         "examine" : "This crystal ball swirls with magical lightning.",
+         "size" : "7",
+         "state" : "1",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "A crystal ball has been left here on the ground."
+      },
+      "ring@app" : {
+         "location" : "IN_CONTAINER:sack",
+         "armor" : "20",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "ring",
+         "examine" : "Engraved on the ring are the words RUB ME.",
+         "state" : "0",
+         "size" : "2",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "An emerald ring has been carelessly left here.",
+         "aflags" : [
+            "Hand"
+         ]
+      },
+      "nail@app" : {
+         "location" : "IN_CONTAINER:sack",
+         "name" : "nail",
+         "state" : "0",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A nail lies here."
+      },
+      "sack@app" : {
+         "desc[1]" : "A small, closed sack has been left here.",
+         "location" : "CARRIED_BY:hermit",
+         "oflags" : [
+            "Container",
+            "Openable"
+         ],
+         "name" : "sack",
+         "examine" : "Looks like it could hold some junk.",
+         "state" : "1",
+         "size" : "50",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "50",
+         "desc[0]" : "Someone left an open sack here."
+      },
+      "sign@app" : {
+         "location" : "IN_ROOM:app2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sign",
+         "examine" : "\nIf you are here to help us with our problem, please go north.\nIf you are not, please leave immediately.\n",
+         "desc[0]" : "A flashing sign seems to be trying to get your attention."
+      },
+      "body@app" : {
+         "location" : "IN_ROOM:app30",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "body",
+         "examine" : "\nThis body sure looks dead. Maybe he was trying to kill the\ndark mage, just like you.",
+         "maxstate" : "0",
+         "state" : "0",
+         "size" : "25"
+      },
+      "staff@app" : {
+         "damage" : "30",
+         "location" : "WIELDED_BY:Almin",
+         "oflags" : [
+            "weapon",
+            "lit"
+         ],
+         "name" : "staff",
+         "examine" : "\nThis staff has been magically enhanced to do more damage.",
+         "size" : "10",
+         "state" : "0",
+         "weight" : "10",
+         "pname" : "Staff",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A smooth black staff has been left here."
+      },
+      "prison_in@app" : {
+         "desc[1]" : "The southern door is closed.",
+         "location" : "IN_ROOM:app28",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "prison_in",
+         "examine" : "It is a sturdy oak door.",
+         "desc[2]" : "The southern door is locked.",
+         "linked" : "prison_out",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The southern door is open."
+      },
+      "glass@app" : {
+         "location" : "IN_CONTAINER:sack",
+         "name" : "glass",
+         "state" : "0",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A piece of glass lies here."
+      },
+      "wand@app" : {
+         "desc[1]" : "A somewhat invisible wand lies hidden here.",
+         "location" : "IN_ROOM:app34",
+         "oflags" : "{ }",
+         "name" : "wand",
+         "examine" : "\nThough this wand looks magical, you can't seem to figure\nout how it works.",
+         "size" : "2",
+         "state" : "1",
+         "pname" : "Wand",
+         "weight" : "2",
+         "maxstate" : "1",
+         "bvalue" : "300"
+      },
+      "hold_in@app" : {
+         "desc[1]" : "The western door is closed.",
+         "location" : "IN_ROOM:app28",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "hold_in",
+         "examine" : "It is a sturdy oak door.",
+         "desc[2]" : "The western door is locked.",
+         "linked" : "hold_out",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The western door is open."
+      },
+      "portal_in@app" : {
+         "desc[1]" : "What once was a portal is now nothing, it is sealed up.",
+         "location" : "IN_ROOM:app2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "portal_in",
+         "examine" : "All you see through the portal is a swirling mist.",
+         "linked" : "portal_out",
+         "state" : "0",
+         "pname" : "portal",
+         "maxstate" : "1",
+         "desc[0]" : "A portal lies to the north."
+      },
+      "cork@app" : {
+         "location" : "IN_CONTAINER:sack",
+         "name" : "cork",
+         "state" : "0",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A cork lies here."
+      },
+      "tower_in@app" : {
+         "desc[1]" : "The gate is closed.",
+         "location" : "IN_ROOM:app2",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "tower_in",
+         "examine" : "The large gate seems strong enough to stop an army.",
+         "linked" : "tower_out",
+         "state" : "1",
+         "pname" : "gate",
+         "maxstate" : "1",
+         "desc[0]" : "The gate to the outside is open."
+      },
+      "diamond@app" : {
+         "location" : "IN_ROOM:app34",
+         "oflags" : "{ }",
+         "name" : "diamond",
+         "examine" : "This diamond is probably worth some money.",
+         "size" : "2",
+         "pname" : "Diamond",
+         "weight" : "2",
+         "bvalue" : "400",
+         "desc[0]" : "A rather large diamond has been left here."
+      },
+      "prison_out@app" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:app30",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "prison_out",
+         "examine" : "It is a sturdy oak door.",
+         "desc[2]" : "The door is locked.",
+         "linked" : "prison_in",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "robe@app" : {
+         "location" : "WORN_BY:Almin",
+         "armor" : "40",
+         "oflags" : [
+            "wearable",
+            "armor",
+            "armorspell",
+            "blurspell",
+            "lit"
+         ],
+         "name" : "robe",
+         "examine" : " This robe has been enchanted to protect the wearer better.",
+         "size" : "5",
+         "state" : "0",
+         "weight" : "5",
+         "pname" : "Robe",
+         "maxstate" : "0",
+         "bvalue" : "100",
+         "desc[0]" : "A crumpled black robe has been tossed here.",
+         "aflags" : [
+            "back",
+            "arms",
+            "chest"
+         ]
+      },
+      "spellbook@app" : {
+         "location" : "IN_CONTAINER:body",
+         "altname" : "book",
+         "name" : "spellbook",
+         "examine" : "\nThis is a spell book from the Tower of Sorcery. Looks valuable\nto any mage. Too bad you don't have time to study the spells.",
+         "state" : "0",
+         "size" : "10",
+         "maxstate" : "0",
+         "bvalue" : "200",
+         "desc[0]" : "Some apprentice must have lost their spell book."
+      },
+      "wood@app" : {
+         "location" : "IN_CONTAINER:sack",
+         "name" : "wood",
+         "state" : "0",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A piece of wood lies here."
+      },
+      "metal@app" : {
+         "location" : "IN_CONTAINER:sack",
+         "name" : "metal",
+         "state" : "0",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A piece of metal lies here."
+      },
+      "napkin@app" : {
+         "location" : "IN_CONTAINER:sack",
+         "name" : "napkin",
+         "state" : "0",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A folded napkin lies here."
+      },
+      "bulletin@app" : {
+         "location" : "IN_ROOM:app1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "notice",
+         "name" : "bulletin",
+         "examine" : " \nA notice on the board catches your eye. It reads:\n     We are looking to hire an adventurer to help us neutralize\na large problem that has been brewing for the last couple of\nmonths. Please inquire within.",
+         "desc[0]" : "A small bulletin board is nailed to the wall with a notice."
+      },
+      "bone@app" : {
+         "damage" : "10",
+         "location" : "IN_ROOM:app15",
+         "oflags" : [
+            "weapon"
+         ],
+         "name" : "bone",
+         "examine" : "You feel like a caveperson wielding this bone.",
+         "size" : "6",
+         "state" : "0",
+         "weight" : "6",
+         "pname" : "Femur",
+         "maxstate" : "0",
+         "bvalue" : "5",
+         "desc[0]" : "Looks like someone lost their femur."
+      },
+      "portal_out@app" : {
+         "location" : "IN_ROOM:app5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "portal_out",
+         "examine" : "All you see is a blank wall.",
+         "linked" : "portal_in",
+         "state" : "0",
+         "pname" : "portal",
+         "maxstate" : "1"
+      },
+      "tower_out@app" : {
+         "desc[1]" : "The gate into the tower is closed.",
+         "location" : "IN_ROOM:app1",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "tower_out",
+         "examine" : "The large gate seems strong enough to stop an army.",
+         "linked" : "tower_in",
+         "state" : "1",
+         "pname" : "gate",
+         "maxstate" : "1",
+         "desc[0]" : "The gate to the north is open."
+      },
+      "fork@app" : {
+         "location" : "IN_CONTAINER:sack",
+         "name" : "fork",
+         "state" : "0",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "A broken fork lies here."
+      },
+      "hold_out@app" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:app31",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable"
+         ],
+         "name" : "hold_out",
+         "examine" : "It is a sturdy oak door.",
+         "desc[2]" : "The door is locked.",
+         "linked" : "hold_in",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "stonekey@app" : {
+         "location" : "IN_ROOM:app28",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "stonekey",
+         "examine" : "This key is rather large and cumbersome.",
+         "state" : "0",
+         "size" : "3",
+         "weight" : "5",
+         "maxstate" : "0",
+         "bvalue" : "5",
+         "desc[0]" : "A large stone key lies here."
+      },
+      "can@app" : {
+         "location" : "IN_CONTAINER:sack",
+         "name" : "can",
+         "state" : "0",
+         "size" : "1",
+         "weight" : "1",
+         "maxstate" : "0",
+         "bvalue" : "0",
+         "desc[0]" : "An empty can lies here."
+      }
+   },
+   "loc" : {
+      "app24@app" : {
+         "exits" : {
+            "w" : "app22",
+            "u" : "app25",
+            "d" : "app27"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Stairwell",
+         "id" : "app24",
+         "description" : "\n      A spiral staircase leads both up and down.\n",
+         "altitude" : null
+      },
+      "app17@app" : {
+         "exits" : {
+            "w" : "app11",
+            "e" : "app9",
+            "n" : "app12",
+            "s" : "app13"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app17",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app7@app" : {
+         "exits" : {
+            "e" : "app6"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Inside the Shack",
+         "id" : "app7",
+         "description" : "\n      The shack doesn't look any better inside than it did from the\noutside. Old furniture lie scattered around the room. Otherwise there\nare no items of import in this shack.\n",
+         "altitude" : null
+      },
+      "app21@app" : {
+         "exits" : {
+            "n" : "app20",
+            "s" : "app22"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Almin's Fortress",
+         "id" : "app21",
+         "description" : "\n       You have finally reached the dark mage's fortress. The entrance\ndoes not appear to be guarded. It looks like you'll have an easy time\ngetting in.\n",
+         "altitude" : null
+      },
+      "app16@app" : {
+         "exits" : {
+            "w" : "app18",
+            "e" : "app12",
+            "n" : "app9",
+            "s" : "app11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app16",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app5@app" : {
+         "exits" : {
+            "s" : "^portal_out"
+         },
+         "flags" : [
+            "NoMagic"
+         ],
+         "zone" : "app",
+         "title" : "Meeting Room",
+         "id" : "app5",
+         "description" : "\n      You find yourself in some sort of meeting room. A large table\ndominates the center of the room. Papers and other objects as covering\nalmost every inch of the table. Around the table are numerous sage like\nmages, almost all of them with gray beards. One mage at the head of the\ntable appears to be the leader.\n",
+         "altitude" : null
+      },
+      "app8@app" : {
+         "exits" : {
+            "w" : "app12",
+            "e" : "app9",
+            "n" : "app6",
+            "s" : "app10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app8",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app22@app" : {
+         "exits" : {
+            "e" : "app24",
+            "n" : "app21",
+            "s" : "app23"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Dark Hallway",
+         "id" : "app22",
+         "description" : "\n       You stand in a dimly lit hallway. To the west is a stairwell.\nWhile to the south is a large room.\n",
+         "altitude" : null
+      },
+      "app11@app" : {
+         "exits" : {
+            "w" : "app19",
+            "e" : "app14",
+            "n" : "app17",
+            "s" : "app17"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app11",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app32@app" : {
+         "exits" : {
+            "w" : "app35",
+            "e" : "app26",
+            "n" : "app33",
+            "s" : "app34"
+         },
+         "flags" : [
+            "NoMagic",
+            "CantSummon",
+            "NoSummon",
+            "NoQuit",
+            "NoSnoop",
+            "Soundproof"
+         ],
+         "zone" : "app",
+         "title" : "Almim's Private Chamber",
+         "id" : "app32",
+         "description" : "\n       You have entered the dark mage Almin's chamber. Unlike most evil\nmasterminds, Almin does not mind visitors. One reason being that he\nbelieves himself to be one of the most powerful mages. The mages at the\nTower of Sorcery believes so as well. Another reason for Almin's \ncare freeness, is that this chamber is enchanted with numerous spells of\nprotection.\n       To the north you see a small fountain bubbling. To the south is\nAlmin's treasure room. To the west is a balcony.\n",
+         "altitude" : null
+      },
+      "app27@app" : {
+         "exits" : {
+            "w" : "app28",
+            "u" : "app24"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Bottom of Stairs",
+         "id" : "app27",
+         "description" : "\n       You have reached the bottom of the stairs. To the west is what\nappears to be a dungeon. You can now hear the screams of pain that come\nfrom one of the rooms.\n",
+         "altitude" : null
+      },
+      "app23@app" : {
+         "exits" : {
+            "n" : "app22"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Main Hall",
+         "id" : "app23",
+         "description" : "\n       You are in what appears to be the main hall of this fortress. \nNumerous apprentices are scattered at tables, studying the art of magic.\nOther apprentices are in groups talking with each other.\n       As you try to look through the exits, guards block your view,\nstating, \"No apprentices allowed through here.\" Guess you have nowhere\nelse to go here.\n",
+         "altitude" : null
+      },
+      "app6@app" : {
+         "exits" : {
+            "w" : "app7",
+            "s" : "app8"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "app",
+         "title" : "Before the Dead Woods",
+         "id" : "app6",
+         "description" : "\n      Before you lies the Dead Woods. From rumors you have heard, very\nfew have entered and have exited without being changed in some way. Those\nwho have exited are so frightened by what they have seen, they cannot\ndescribe it to others.\n      To the west lies a small shack. While to the south, you may enter\nthe woods.\n",
+         "altitude" : null
+      },
+      "app14@app" : {
+         "exits" : {
+            "w" : "app15",
+            "e" : "app13",
+            "n" : "app9",
+            "s" : "app16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app14",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app19@app" : {
+         "exits" : {
+            "w" : "app8",
+            "e" : "app10",
+            "n" : "app15",
+            "s" : "app15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app19",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app1@app" : {
+         "exits" : {
+            "e" : "town43@town",
+            "n" : "^tower_out"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Before the Tower",
+         "id" : "app1",
+         "description" : "\n      You have arrived at the Tower of Sorcery. It looks rather small to be\nthe home of hundreds of mages, but with magic almost anything is possible. \n",
+         "altitude" : null
+      },
+      "app4@app" : {
+         "exits" : {
+            "e" : "app2"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "app",
+         "title" : "Laboratory",
+         "id" : "app4",
+         "description" : "\n      The mages laboratory is filled with glass beakers and flasks. Some\nfilled with mysterious liquids. To one side of the wall, cages are stacked\non top of each other, containing various small animals.\n      As you take your second step, a voice in your head screams, \"We\ndid not invite you in this tower to explore! We have warned you, now you\nmust face the consequences!\"\n      A bolt of lightning appears out of nowhere and strikes you. Though\nyou are sure it hit you, you felt no jolt of pain. As you take a look at\nyourself to make sure, you notice a long elongated nose with whiskers, and\nfurry paws. You seem to have been turned into a mouse. As you take a look\nat your surroundings, you are picked up by the tail and put into one of \nthe cages. Here you wait for whatever horrible fate awaits you.\n",
+         "altitude" : null
+      },
+      "app13@app" : {
+         "exits" : {
+            "w" : "app13",
+            "e" : "app19",
+            "n" : "app17",
+            "s" : "app20"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app13",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app2@app" : {
+         "exits" : {
+            "w" : "app4",
+            "e" : "app3",
+            "n" : "^portal_in",
+            "s" : "^tower_in"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Foyer",
+         "id" : "app2",
+         "description" : " \n      You stand in a rather empty foyer. Exits lead in all directions. \nLarge bright X's are over the doors leading east and west. You could\nalways go south, back outside.\n",
+         "altitude" : null
+      },
+      "app35@app" : {
+         "exits" : {
+            "e" : "app32"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Balcony",
+         "id" : "app35",
+         "description" : "\n       This balcony overlooks the Dead Woods. Though not much of a site,\nyou can understand that it is better than staying inside all day.\n",
+         "altitude" : null
+      },
+      "app34@app" : {
+         "exits" : {
+            "n" : "app32"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Treasure Chamber",
+         "id" : "app34",
+         "description" : "\n       A king's ransom of gold and treasure lie in this room. Knowing\nyou won't be able to take it all with you, you selectively pick what you\nthink are best.\n",
+         "altitude" : null
+      },
+      "app30@app" : {
+         "exits" : {
+            "n" : "^prison_out"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Prison Cell",
+         "id" : "app30",
+         "description" : "\n       The prisoners within this room look like they haven't been fed for\na long time. Many of them barely move when you enter. From the looks of\nit, you won't be able to save them right now. You can only hope to save \nthem by killing the dark mage.\n       In the corner of the room, bodies of the dead prisoners have been\npiled up and left there to rot. The most recent body looks like one of\nthe mages from the Tower of Sorcery.\n",
+         "altitude" : null
+      },
+      "app20@app" : {
+         "exits" : {
+            "w" : "app19",
+            "e" : "app8",
+            "n" : "app17",
+            "s" : "app21"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app20",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghost and \nother horrors drift through the woods, giving you an eerie feeling. \nYou are about to give up hope, when you notice a tower spire to the\nsouth.\n",
+         "altitude" : null
+      },
+      "app26@app" : {
+         "exits" : {
+            "w" : "app32",
+            "e" : "app25"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Upper Hallway",
+         "id" : "app26",
+         "description" : "\n       Like the hallway below, it is dimly lit. Doors line the walls, but\nthey all seem to be magically locked. At the end of the hallway is a door\nmarked with the word \"Master.\" This door appears to be slightly ajar.\n",
+         "altitude" : null
+      },
+      "app29@app" : {
+         "exits" : {
+            "s" : "app28"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Lab",
+         "id" : "app29",
+         "description" : "\n      You have entered the dark mage's experiment lab. Large glass tanks\ncontain prisoners under transformations from the dark mage's spells. Some\nof the tanks contain creature that might have been human before, but now\nare indescribable terrors.\n",
+         "altitude" : null
+      },
+      "app25@app" : {
+         "exits" : {
+            "w" : "app26",
+            "d" : "app24"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Top of Stairs",
+         "id" : "app25",
+         "description" : "\n       You are at the top of the stairs. Good thing there are guardrails.\nIt doesn't look like a pleasant fall.\n",
+         "altitude" : null
+      },
+      "app28@app" : {
+         "exits" : {
+            "w" : "^hold_in",
+            "e" : "app27",
+            "n" : "app29",
+            "s" : "^prison_in"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Dungeon",
+         "id" : "app28",
+         "description" : "\n       As you step into the room, the stench that quickly enters your nose\nmakes you cringe. When you have adjusted to the smell as best you can, you\ntake a look at your surroundings.\n       To the north appears to be some sort of laboratory or torture\nchamber, you're not quite sure. To the south and west are closed doors,\npossibly locked. From behind the door to the west you hear some sort of \nscratching.\n",
+         "altitude" : null
+      },
+      "app9@app" : {
+         "exits" : {
+            "w" : "app12",
+            "e" : "app9",
+            "n" : "app16",
+            "s" : "app8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app9",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app15@app" : {
+         "exits" : {
+            "w" : "app13",
+            "e" : "app12",
+            "n" : "app16",
+            "s" : "app16"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app15",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app12@app" : {
+         "exits" : {
+            "w" : "app17",
+            "e" : "app9",
+            "n" : "app12",
+            "s" : "app15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app12",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app10@app" : {
+         "exits" : {
+            "w" : "app8",
+            "e" : "app9",
+            "n" : "app10",
+            "s" : "app8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app10",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app3@app" : {
+         "exits" : {
+            "w" : "app2"
+         },
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "app",
+         "title" : "Library",
+         "id" : "app3",
+         "description" : "\n      You enter the main library, where many mages and apprentice mages are\nworking. \n      As you take your second step, a voice in your head screams, \"We\ndid not invite you in this tower to explore! We have warned you, now you\nmust face the consequences!\" \n      A bolt of lightning appears out of nowhere and strikes you. You feel\nno jolt of pain. You take a look at yourself and see that you have turned\ninto a cricket. A very dead cricket stuck to the bottom of a shoe. \n",
+         "altitude" : null
+      },
+      "app33@app" : {
+         "exits" : {
+            "s" : "app32"
+         },
+         "flags" : [
+            "FastHeal",
+            "FastMana",
+            "Peaceful"
+         ],
+         "zone" : "app",
+         "title" : "Fountain",
+         "id" : "app33",
+         "description" : "\n       This room is Almin's resting chamber. Here he can rejuvenate\nhimself from a hard days work of trying to take over the world. Tasting\nthe water from the fountain, finds the water slightly magical tasting, \nbut nothing else.\n",
+         "altitude" : null
+      },
+      "app18@app" : {
+         "exits" : {
+            "w" : "app12",
+            "e" : "app19",
+            "n" : "app16",
+            "s" : "app15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "app",
+         "title" : "Dead Woods",
+         "id" : "app18",
+         "description" : "\n       You are inside the Dead Woods. Strange sounds of ghosts and other \nhorrors drift through the woods, giving you an eerie feeling.\n",
+         "altitude" : null
+      },
+      "app31@app" : {
+         "exits" : {
+            "e" : "^hold_out"
+         },
+         "flags" : [],
+         "zone" : "app",
+         "title" : "Holding Cell",
+         "id" : "app31",
+         "description" : "\n       You have entered what appears to be the holding cell for the dark\nmage's experiments. The walls and floors in this room are covered with\nblood and pieces of carcass.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "wolf_3@app" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "15",
+         "location" : "app13",
+         "armor" : "10",
+         "name" : "wolf_3",
+         "examine" : "\nFrost wolves are known for their icy breath, better be careful.",
+         "description" : "An icy frost wolf gets ready to pounce you.",
+         "strength" : "100",
+         "speed" : "3",
+         "pname" : "Frost Wolf",
+         "aggression" : "95"
+      },
+      "utgar@app" : {
+         "eflags" : [
+            "Fireball",
+            "Frost",
+            "Missile"
+         ],
+         "damage" : "15",
+         "location" : "app22",
+         "armor" : "15",
+         "name" : "Utgar",
+         "examine" : "\nI must congratulate you. You have proven yourself worthy to join\nthe dark master's rank of apprentices. By passing through the Dead\nWoods, you are more than ready to help take what is rightfully ours!",
+         "description" : "Utgar stares at you intently.",
+         "strength" : "500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : "{ }"
+      },
+      "elaine@app" : {
+         "eflags" : [
+            "Vtouch",
+            "Icestorm",
+            "Blind",
+            "Protect"
+         ],
+         "damage" : "20",
+         "location" : "app5",
+         "armor" : "35",
+         "name" : "Elaine",
+         "description" : "Elaine looks up and says, 'Are you here to help us?'.",
+         "strength" : "1000",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "NoCorpse"
+         ]
+      },
+      "wolf_2@app" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "15",
+         "location" : "app13",
+         "armor" : "10",
+         "name" : "wolf_2",
+         "examine" : "\nFrost wolves are known for their icy breath, better be careful.",
+         "description" : "An icy frost wolf gets ready to pounce you.",
+         "strength" : "100",
+         "speed" : "3",
+         "pname" : "Frost Wolf",
+         "aggression" : "95"
+      },
+      "wolf_1@app" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "15",
+         "location" : "app13",
+         "armor" : "10",
+         "name" : "wolf_1",
+         "examine" : "\nFrost wolves are known for their icy breath, better be careful.",
+         "description" : "An icy frost wolf gets ready to pounce you.",
+         "strength" : "100",
+         "speed" : "3",
+         "pname" : "Frost Wolf",
+         "aggression" : "95"
+      },
+      "wolf@app" : {
+         "eflags" : [
+            "Frost"
+         ],
+         "damage" : "15",
+         "location" : "app11",
+         "armor" : "10",
+         "name" : "wolf",
+         "examine" : "\nFrost wolves are known for their icy breath, better be careful.",
+         "description" : "An icy frost wolf gets ready to pounce you.",
+         "strength" : "200",
+         "speed" : "3",
+         "pname" : "Frost Wolf",
+         "aggression" : "95"
+      },
+      "creation@app" : {
+         "damage" : "30",
+         "location" : "app31",
+         "speed" : "1",
+         "aggression" : "50",
+         "armor" : "35",
+         "name" : "creation",
+         "examine" : "\nHopefully you won't get in a fight with it. Though not known for it's mental\nabilities, it was created to be one tough opponent.",
+         "description" : "One of Almin's horrible creations lumbers around.",
+         "strength" : "300"
+      },
+      "hermit@app" : {
+         "eflags" : "{ }",
+         "damage" : "8",
+         "location" : "app7",
+         "armor" : "0",
+         "name" : "hermit",
+         "description" : "An old hermit stares at you from the corner of the room.",
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoHassle",
+            "NoZap"
+         ]
+      },
+      "almin@app" : {
+         "eflags" : [
+            "Blind",
+            "Fireball",
+            "Frost",
+            "Shock",
+            "Vtouch",
+            "Icestorm",
+            "Missile",
+            "Damage",
+            "Protect"
+         ],
+         "damage" : "8",
+         "location" : "app32",
+         "armor" : "0",
+         "name" : "Almin",
+         "examine" : "\nYou see the target of your mission. He looks scrawny to you, but most mages \ndo. One lesson you've learned over the years is to never underestimate a mage.",
+         "description" : "Master Almin, the dark master mage stands before you.",
+         "strength" : "1500",
+         "speed" : "0",
+         "aggression" : "0",
+         "pname" : "Master Almin",
+         "pflags" : [
+            "NoZap"
+         ],
+         "mflags" : [
+            "Barsouth",
+            "GrabHostile",
+            "NoSteal"
+         ]
+      }
+   }
+}

@@ -1,5 +1,39 @@
 {
    "obj" : {
+      "vault_b@orchold" : {
+         "desc[1]" : "The vault is closed.",
+         "location" : "IN_ROOM:treasury",
+         "oflags" : [
+            "NoGet",
+            "Lockable",
+            "Openable"
+         ],
+         "altname" : "door",
+         "name" : "vault_b",
+         "desc[2]" : "The vault is locked.",
+         "linked" : "vault",
+         "state" : "2",
+         "pname" : "vault",
+         "maxstate" : "2",
+         "desc[0]" : "The vault is open."
+      },
+      "vault@orchold" : {
+         "desc[1]" : "The valut is closed.",
+         "location" : "IN_ROOM:tunnel",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "vault",
+         "examine" : "Someone installed this door after the Orcs got looted once too often.",
+         "desc[2]" : "Hmmmm....seems they installed a vault door to prevent rampant looting of their\nprecious treasure chamber.",
+         "linked" : "vault_b",
+         "state" : "2",
+         "maxstate" : "2",
+         "desc[0]" : "The vault is open."
+      },
       "orcgold@orchold" : {
          "location" : "IN_ROOM:central",
          "oflags" : [
@@ -293,7 +327,7 @@
       },
       "tunnel@orchold" : {
          "exits" : {
-            "w" : "Treasury",
+            "w" : "^vault",
             "n" : "Mountainside",
             "s" : "^HoleOrcs"
          },
@@ -336,7 +370,7 @@
       },
       "treasury@orchold" : {
          "exits" : {
-            "e" : "Tunnel"
+            "e" : "^vault_b"
          },
          "flags" : [
             "Dark"
@@ -463,6 +497,7 @@
       },
       "hallway3@orchold" : {
          "exits" : {
+            "w" : "Hallway@orcholdii",
             "e" : "Hallway2",
             "n" : "Hallway4"
          },
@@ -472,7 +507,7 @@
          "zone" : "orchold",
          "title" : "Rough-hewn Hallway",
          "id" : "Hallway3",
-         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads north and east.\n",
+         "description" : "\n   Like most orc-built hallways, this one is crooked, rough, and damp.\nThe hallway leads north, west and east.\n",
          "altitude" : null
       },
       "hallway16@orchold" : {
@@ -573,7 +608,7 @@
          "zone" : "orchold",
          "title" : "Damp Hallway",
          "id" : "Damp",
-         "description" : "\n   This hallway shows the same poor craftsmanship as the rest of the compound.\nWater drips from a large stalactite near the eastern wall, making the whole\nroom damp and uncomfortable.  The hallway continues north and south.\n",
+         "description" : "\n   This hallway shows the same poor craftsmanship as the rest of the compound.\nWater drips from a large &+Cstalactite&* near the eastern wall, making the whole\nroom damp and uncomfortable.  The hallway continues north and south.\n",
          "altitude" : null
       },
       "hallway14@orchold" : {
@@ -624,6 +659,10 @@
          "armor" : "0",
          "name" : "maggot",
          "description" : "\nA giant maggot slithers around, leaving a slimy trail behind him.",
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
          "strength" : "135",
          "speed" : "0",
          "pname" : "The Maggot",
@@ -648,10 +687,10 @@
          "location" : "trap",
          "armor" : "4",
          "name" : "randy",
-         "description" : "An Orc looks at you viciously.",
+         "description" : "Randy Orc looks at you viciously.",
          "strength" : "42",
          "speed" : "0",
-         "pname" : "The Orc",
+         "pname" : "Randy",
          "aggression" : "97"
       },
       "brandy@orchold" : {
@@ -659,13 +698,13 @@
          "location" : "trap",
          "armor" : "0",
          "name" : "brandy",
-         "description" : "An Orc looks at you viciously.",
+         "description" : "Brandy Orc looks at you viciously.",
          "sflags" : [
             "Female"
          ],
          "strength" : "42",
          "speed" : "0",
-         "pname" : "The Orc",
+         "pname" : "Brandy",
          "aggression" : "97"
       },
       "andy@orchold" : {
@@ -673,10 +712,10 @@
          "location" : "trap",
          "armor" : "0",
          "name" : "andy",
-         "description" : "An Orc looks at you viciously.",
+         "description" : "Andy Orc looks at you viciously.",
          "strength" : "42",
          "speed" : "0",
-         "pname" : "The Orc",
+         "pname" : "Andy",
          "aggression" : "97"
       },
       "sandy@orchold" : {
@@ -684,13 +723,13 @@
          "location" : "trap",
          "armor" : "0",
          "name" : "Sandy",
-         "description" : "An Orc looks at you viciously.",
+         "description" : "Sandy Orc looks at you viciously.",
          "sflags" : [
             "Female"
          ],
          "strength" : "42",
          "speed" : "0",
-         "pname" : "The Orc",
+         "pname" : "Sandy",
          "aggression" : "97"
       },
       "king@orchold" : {
@@ -698,21 +737,24 @@
          "location" : "throne",
          "armor" : "0",
          "name" : "king",
-         "description" : "\nThe King Orc glares at you with a look of royal intolerance.",
+         "description" : "\nHarold the King Orc glares at you with a look of royal intolerance.",
          "strength" : "225",
          "speed" : "0",
          "pname" : "The King",
-         "aggression" : "97"
+         "aggression" : "97",
+         "mflags" : [
+            "BarNorth"
+         ]
       },
       "mandy@orchold" : {
          "damage" : "10",
          "location" : "trap",
          "armor" : "0",
          "name" : "mandy",
-         "description" : "An Orc looks at you viciously.",
+         "description" : "Mandy Orc looks at you viciously.",
          "strength" : "42",
          "speed" : "0",
-         "pname" : "The Orc",
+         "pname" : "Mandy",
          "aggression" : "97"
       }
    }

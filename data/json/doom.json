@@ -1,0 +1,580 @@
+{
+   "obj" : {
+      "shelf@doom" : {
+         "location" : "IN_ROOM:14",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "shelf",
+         "examine" : "There seem to be a few interesting books here."
+      },
+      "heavy@doom" : {
+         "location" : "WORN_BY:huge",
+         "oflags" : [
+            "Wearable",
+            "Armor",
+            "Shield"
+         ],
+         "armor" : "35",
+         "name" : "heavy",
+         "examine" : "It's a heavy shield that should be useful in battle if\nyou know how to use it, of course.",
+         "size" : "7",
+         "pname" : "shield",
+         "weight" : "5",
+         "bvalue" : "100",
+         "desc[0]" : "There is a heavy shield lying here."
+      },
+      "door2@doom" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:14",
+         "oflags" : [
+            "NoGet",
+            "Lockable",
+            "Openable"
+         ],
+         "name" : "door2",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "gate1@doom" : {
+         "desc[1]" : "The gate is closed.",
+         "location" : "IN_ROOM:1",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "gate1",
+         "examine" : "The gate is made of hefty materials and looks old and rusty.",
+         "desc[2]" : "The gate is locked.",
+         "linked" : "gate2",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "The gate is open."
+      },
+      "doomblade@doom" : {
+         "damage" : "20",
+         "location" : "IN_CONTAINER:chest",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "sword",
+         "name" : "doomblade",
+         "examine" : "The blade is very sharp, and not to be toyed with.",
+         "size" : "8",
+         "weight" : "10",
+         "bvalue" : "200",
+         "desc[0]" : "The Doomblade lies before your feet."
+      },
+      "book@doom" : {
+         "location" : "IN_CONTAINER:shelf",
+         "weight" : "5",
+         "name" : "book",
+         "examine" : "\nThe cover is dusty.  Wiping it off you can barely make out the word 'Death'.",
+         "bvalue" : "100",
+         "desc[0]" : "There is a massive book lying here.",
+         "size" : "3"
+      },
+      "pie@doom" : {
+         "desc[1]" : "There is an apple pie resting beside the window.",
+         "location" : "IN_ROOM:5",
+         "oflags" : [
+            "Food",
+            "GetFlips"
+         ],
+         "altname" : "food",
+         "name" : "pie",
+         "examine" : "It is freshly baked and looks delicious.",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "5",
+         "maxstate" : "1",
+         "bvalue" : "5",
+         "desc[0]" : "An apple pie has been left here."
+      },
+      "door1@doom" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:13",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door1",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door2",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "lairkey@doom" : {
+         "location" : "WORN_BY:doom",
+         "oflags" : [
+            "Key",
+            "Wearable"
+         ],
+         "name" : "lairkey",
+         "examine" : "\nThe key looks like it belongs to a chest, but it is a skeleton key and can \nprobably open most anything.",
+         "size" : "1",
+         "pname" : "key",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "There is a large key on the ground before you.",
+         "aflags" : [
+            "hand"
+         ]
+      },
+      "gate2@doom" : {
+         "desc[1]" : "The gate is closed.",
+         "location" : "IN_ROOM:2",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "gate2",
+         "examine" : "The gate is made of hefty materials and looks old and rusty.",
+         "desc[2]" : "The gate is locked.",
+         "linked" : "gate1",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "The gate is open."
+      },
+      "gatekey@doom" : {
+         "location" : "WORN_BY:doomguard",
+         "oflags" : [
+            "Key",
+            "Wearable"
+         ],
+         "name" : "gatekey",
+         "examine" : "\nIt looks as though it were meant for opening drawbridges or very large gates.",
+         "size" : "1",
+         "pname" : "key",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "A huge iron key is lying here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "carvings@doom" : {
+         "location" : "IN_ROOM:13",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "carvings",
+         "examine" : "\nLooking at the carvings closely, you make out the word REDRUM.",
+         "desc[0]" : "There are some strange carvings in the ground here."
+      },
+      "knife@doom" : {
+         "damage" : "10",
+         "location" : "WIELDED_BY:rudy",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "knife",
+         "examine" : "The blade is long, thick and sharp; a nasty weapon.",
+         "size" : "5",
+         "weight" : "3",
+         "bvalue" : "100",
+         "desc[0]" : "A sharp butcher's knife is lying here."
+      },
+      "chest@doom" : {
+         "desc[1]" : "The chest is closed.",
+         "location" : "IN_ROOM:15",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet",
+            "Container"
+         ],
+         "name" : "chest",
+         "examine" : "\nThe chest is very old and falling apart.  It has an almost evil feel to it.",
+         "desc[2]" : "The chest is locked.",
+         "state" : "2",
+         "maxstate" : "2",
+         "desc[0]" : "There is an open chest here."
+      }
+   },
+   "loc" : {
+      "11@doom" : {
+         "exits" : {
+            "w" : "13",
+            "n" : "12",
+            "s" : "10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cPath",
+         "id" : "11",
+         "description" : "\n   You are standing on a path in front of a large shack to your north. There \nare very loud screams coming from the west. The path here is well lit due to\nthe light that is spilling out through the open doorway of the shack. The \npath also continues to the west and south.\n",
+         "altitude" : null
+      },
+      "4@doom" : {
+         "exits" : {
+            "w" : "5",
+            "n" : "7",
+            "s" : "2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cTown Road",
+         "id" : "4",
+         "description" : "\n   You are standing at the entrance to a small town.  There are a lot of old \nshacks around you, although many of them are not standing anymore.  You \nnotice a pleasant-looking shack to the west; is doesn't look as dirty as the\nrest of the shacks that are still standing.  To the north you see that the\nforest closes back in on the town, while to the south you can see a gate in\nthe distance.\n",
+         "altitude" : null
+      },
+      "3@doom" : {
+         "exits" : {
+            "w" : "2"
+         },
+         "flags" : [],
+         "zone" : "doom",
+         "title" : "&+cA Wooden Shack",
+         "id" : "3",
+         "description" : "\n   This shack appears to have not been used in a long time. You notice that \nit is very messy and has a strong musty smell to it. There is a table in the \nmiddle of the room that has scraps of old cut up fish on it. On the east \nwall is an old rocking chair, the chair looks unused and has collected a lot \nof dust. There are a lot of cracks in the ceiling and walls, letting dim,\ndiffuse light into the room.\n",
+         "altitude" : null
+      },
+      "16@doom" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "doom",
+         "title" : "&+cThe Old Stairs",
+         "id" : "16",
+         "description" : "\n   You make it about half way down the stairs, when suddenly a step breaks from \nunder you.  The rotted foundation of the shack breaks and splinters under \nyour weight, impaling you through the abdomen.  \n\n   Suddenly you don't feel very well...\n",
+         "altitude" : null
+      },
+      "f1@doom" : {
+         "exits" : {
+            "w" : "SNOW_TEMPLE@BLIZZARD",
+            "e" : "f2",
+            "u" : "SNOW_TEMPLE@BLIZZARD",
+            "d" : "f2"
+         },
+         "flags" : [
+            "Cold",
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cPath Down The Mountain",
+         "id" : "f1",
+         "description" : "\n   You are on a steep path that leads up and down the mountain, with snow\nlashing you from all sides. Above you you can make out some sort of stone\nstructure, while below you see the beginnings of a large forest. To the\nnortheast you see what may be smoke rising above the trees.\n",
+         "altitude" : null
+      },
+      "13@doom" : {
+         "exits" : {
+            "w" : "^door1",
+            "e" : "11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cPath",
+         "id" : "13",
+         "description" : "\n   You are at the end of a long road standing before a large brick house.  \nYou notice a strange light and can hear the death cries from children and \nadults coming from inside this place. You can go east back down the road, \nor to your west is a door leading into the house. There are carvings on the \nground in front of you.\n",
+         "altitude" : null
+      },
+      "15@doom" : {
+         "exits" : {},
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "doom",
+         "title" : "&+cLair of DOOM",
+         "id" : "15",
+         "description" : "\n   You are in the cold damp basement of the house.  There are corpses \nlittering the floor and the smell down here is horrible.  You would not want \nto stay down here for too long. You notice there are bats roosting in the \nrafters above you. A set of heavy stone stairs lead up to the main floor.\n",
+         "altitude" : null
+      },
+      "14@doom" : {
+         "exits" : {
+            "e" : "^door2"
+         },
+         "flags" : [],
+         "zone" : "doom",
+         "title" : "&+cBrick House",
+         "id" : "14",
+         "description" : "\n   You are in a large brick house. The main feature of this room is book-\nshelves; a lot of shelves and a lot of books. You can hear death cries much\nmore loudly here coming from beneath you. Through an opening you can see\nstairs that lead down into darkness. \n",
+         "altitude" : null
+      },
+      "10@doom" : {
+         "exits" : {
+            "w" : "9",
+            "n" : "11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cForest Path",
+         "id" : "10",
+         "description" : "\n   You are deep in the forest.  You notice a house to the north of you which\nappears to be the source of light for this area. You can hear something \nechoing in the background.  It sounds almost like the screams of children in \npain.\n",
+         "altitude" : null
+      },
+      "f3@doom" : {
+         "exits" : {
+            "n" : "1",
+            "s" : "f2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cThe Silent Forest",
+         "id" : "f3",
+         "description" : "\n   This forest definitely needs some life. The trees on either side of the\npath block passage to the east and west, and to the south the forest path \ncontinues. To the north you see a small clearing.\n",
+         "altitude" : null
+      },
+      "1@doom" : {
+         "exits" : {
+            "n" : "^gate1",
+            "s" : "f3"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cThe Gates to Doom",
+         "id" : "1",
+         "description" : "\n   You are in a small clearing. To your south is a path through the forest\nsurrounded by trees. To the north of you is a giant iron gate, and on each \nside of the gate is a wall stretching out for miles.  Looking through the gate \nyou can kind of make out a small town.  The gates look very large and heavy.\n",
+         "altitude" : null
+      },
+      "2@doom" : {
+         "exits" : {
+            "e" : "3",
+            "n" : "4",
+            "s" : "^gate2"
+         },
+         "flags" : [
+            "NoMobiles",
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cRoad to Town",
+         "id" : "2",
+         "description" : "\n   You are on a road that leads to the north and south through a lifeless\nforest. You notice the flowers on the side of the road are dead and seem to \nhave been trampled on. To the north you can see a town and notice that there \nare no houses, but little huts instead.  You can see that a lot of the huts \nhave been burned down or are damaged as if there had been a fire here.  The \nroad leads north to the town, or south to a large and heavy set of gates that \nlead through a long wall. To the east you see a small wooden shack through \nthe trees.\n",
+         "altitude" : null
+      },
+      "5@doom" : {
+         "exits" : {
+            "w" : "6",
+            "e" : "4"
+         },
+         "flags" : [],
+         "zone" : "doom",
+         "title" : "&+cShack",
+         "id" : "5",
+         "description" : "\n   You are in a large, tidy, and nice-smelling one room shack. There is a \nnice sized dinner table in the middle of the room with a white cloth over \nthe it.  An old iron stove sits against the north wall.  The shack is nicely \ndecorated with paintings hanging from walls and resting on shelves around the \nroom. There is a door to the east that leads out to the town road, and to the \nwest a door goes out to a large yard.\n",
+         "altitude" : null
+      },
+      "f2@doom" : {
+         "exits" : {
+            "w" : "f1",
+            "n" : "f3",
+            "u" : "f1"
+         },
+         "flags" : [
+            "Cold",
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cThe Silent Forest",
+         "id" : "f2",
+         "description" : "\n   The trees around you are silent and lifeless. The only thing you hear is\nthe sound of snowflakes falling to the ground. To your west is a path \nleading up a snowy mountain, and to the north the forest continues.\n",
+         "altitude" : null
+      },
+      "6@doom" : {
+         "exits" : {
+            "e" : "5"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cThe Backyard",
+         "id" : "6",
+         "description" : "\n   You are in a large and nicely maintained yard which appears to be the\nnicest place in town that you have seen. There is a small pond set in the \nmiddle of the yard, with arranged groupings of flowers and bushes that \nsurround giant trees. You hear the sounds of birds and other animals here\nthat you have noticed to be absent elsewhere in the forest. This is the only \nnice place in town that you have seen so far. To the east you can enter the\nshack.\n",
+         "altitude" : null
+      },
+      "12@doom" : {
+         "exits" : {
+            "d" : "16",
+            "s" : "11"
+         },
+         "flags" : [],
+         "zone" : "doom",
+         "title" : "&+cHouse",
+         "id" : "12",
+         "description" : "\n   You walk into the shack and notice that it is quite large.  There isn't \nmuch in here though.  A large dinner table sits in the middle of the room \nwith broken plates and scraps of food on it.  Whoever was eating here was a \nslob.  There is a stairwell leading down a flight of VERY old looking stairs.\n",
+         "altitude" : null
+      },
+      "9@doom" : {
+         "exits" : {
+            "e" : "10",
+            "s" : "7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cForest Path",
+         "id" : "9",
+         "description" : "\n   You enter a path in the woods. It is dark and very creepy. You can barely \nsee the path, only enough to know where to put your feet. You feel like \nyou're being watched and looking around you realize the trees have horrible \nfaces carved on them.  The path leads to the east where there is a little \nmore light, and to the south where it passes a large shack.\n",
+         "altitude" : null
+      },
+      "8@doom" : {
+         "exits" : {
+            "w" : "7"
+         },
+         "flags" : [],
+         "zone" : "doom",
+         "title" : "&+cThe Bar",
+         "id" : "8",
+         "description" : "\n   You walk into a large bar. This seems to be where most of the people are,\nfor the bar is very crowded. There are people sitting at tables having \ndrinks, talking, and people dancing on the dance floor. There are a bunch of \ndrunks on the stage trying to dance, but they are stumbling and laughing too \nhard to do so. You notice one guy sitting at the bar by himself with a \nstrange look on his face, maybe you should talk to him.\n",
+         "altitude" : null
+      },
+      "7@doom" : {
+         "exits" : {
+            "e" : "8",
+            "n" : "9",
+            "s" : "4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "doom",
+         "title" : "&+cTown Road",
+         "id" : "7",
+         "description" : "\n   The forest to the north looks very thick and dark.  The road you are \nstanding on is narrower here than to the south, and it gets even narrower to\nthe north. The dirt here looks like ashes, and there is a smell in the air\nof rotting flesh. There is a large shack to the east or you can go north \nor south on the town road.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "jeffery@doom" : {
+         "damage" : "15",
+         "location" : "6",
+         "speed" : "0",
+         "armor" : "0",
+         "pname" : "Jeffery",
+         "name" : "jeffery",
+         "examine" : "Jeffery seems very busy...",
+         "description" : "Jeffery the gardener is here.",
+         "strength" : "90"
+      },
+      "rudy@doom" : {
+         "damage" : "20",
+         "location" : "7",
+         "name" : "rudy",
+         "examine" : "She is a huge fat and ugly cook with a big knife.",
+         "description" : "Rudy the Cook is here brandishing her knives at you.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "120",
+         "speed" : "2",
+         "pname" : "Rudy"
+      },
+      "skeleton@doom" : {
+         "damage" : "10",
+         "location" : "11",
+         "speed" : "0",
+         "aggression" : "1",
+         "pname" : "The Skeleton",
+         "name" : "skeleton",
+         "description" : "There is a Skeleton warrior here.",
+         "strength" : "150",
+         "mflags" : [
+            "NoCorpse",
+            "Soulless"
+         ]
+      },
+      "drunk@doom" : {
+         "damage" : "10",
+         "location" : "8",
+         "name" : "drunk",
+         "examine" : "Yuck! He is talking to his own vomit!",
+         "description" : "There is a drunk here.",
+         "sflags" : [
+            "Drunk"
+         ],
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "The Drunk"
+      },
+      "doomguard@doom" : {
+         "damage" : "10",
+         "location" : "1",
+         "armor" : "2",
+         "name" : "doomguard",
+         "description" : "There is a guard standing here looking down on you.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The Guard",
+         "mflags" : [
+            "BarNorth"
+         ]
+      },
+      "huge@doom" : {
+         "damage" : "10",
+         "location" : "14",
+         "speed" : "0",
+         "aggression" : "60",
+         "pname" : "Huge",
+         "name" : "huge",
+         "description" : "There is a huge guard standing here.",
+         "strength" : "200"
+      },
+      "nathan@doom" : {
+         "damage" : "12",
+         "location" : "12",
+         "speed" : "0",
+         "aggression" : "60",
+         "pname" : "Nathan",
+         "name" : "nathan",
+         "examine" : "What happens when an ogre is angry?",
+         "description" : "Nathan the angry ogre is here.",
+         "strength" : "150"
+      },
+      "doom@doom" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "30",
+         "location" : "15",
+         "name" : "doom",
+         "examine" : "He is a tall and muscled man that doesn't seem to care\nabout personnal hygien. He looks quite mean, you should be careful.",
+         "description" : "Doom, the town Lord is standing here laughing at you.",
+         "strength" : "300",
+         "speed" : "0",
+         "pname" : "Doom",
+         "aggression" : "90",
+         "pflags" : [
+            "NoSummon"
+         ]
+      },
+      "oldman@doom" : {
+         "damage" : "10",
+         "location" : "3",
+         "speed" : "0",
+         "aggression" : "70",
+         "pname" : "The Man",
+         "name" : "oldman",
+         "examine" : "You pass in front of him, but he keeps staring at the \nwall facing him.. He is muttering something saying that he is a wizard\nthat a magic word could revive... hehe meaningless old persons.",
+         "description" : "A smelly old man is standing in front of you.",
+         "strength" : "100"
+      }
+   }
+}

@@ -218,11 +218,12 @@
       },
       "drakeshield@cave" : {
          "location" : "IN_ROOM:342",
-         "armor" : "15",
+         "armor" : "52",
          "oflags" : [
             "Armor",
             "Wearable",
-            "Shield"
+            "Shield",
+            "Antimagic"
          ],
          "altname" : "shield",
          "name" : "drakeshield",
@@ -390,11 +391,11 @@
             "Weapon"
          ],
          "name" : "axe",
-         "examine" : "\nThe words \"If found, please return to thrower\" are written on the handle.\nThis, taken with the fact that the axe is the dwarves' favorite weapon, would\nindicate something of it's origins...",
+         "examine" : "\nThe words 'If found, please return to thrower' are written on the handle.\nThis, taken with the fact that the axe is the dwarves' favorite weapon, would\nindicate something of it's origins...",
          "size" : "10",
          "weight" : "10",
          "bvalue" : "50",
-         "desc[0]" : "\nA small axe, marked with the words \"If found, please return to thrower\" lies\nbefore you."
+         "desc[0]" : "\nA small axe, marked with the words 'If found, please return to thrower' lies\nbefore you."
       },
       "gates1@cave" : {
          "desc[1]" : "Large gates block any further passage.",
@@ -434,6 +435,17 @@
          "desc[0]" : "A hard biscuit has been dropped here.",
          "size" : "1"
       },
+      "volume@cave" : {
+         "location" : "IN_ROOM:cavevol",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_VII",
+         "name" : "volume",
+         "examine" : "\nEnhancers work only if you hold them directly.  They will not\nwork if they are in a backpack you are wearing.\n\nFor spells that change strength, mostly attack spells, but also\nAid, an enhancer will double the effect.  For spells which have\na duration,  such as Lit and Protect, an enhancer will triple\nthe duration of the spell.\n\nThere may be enhancers for spells besides those described in\nthe Volumes of the Book of Knowledge.  These can be determined\nby use of Reveal.",
+         "desc[0]" : "&+YVolume VII&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "7"
+      },
       "whistle@cave" : {
          "location" : "WORN_BY:diamar",
          "oflags" : [
@@ -453,13 +465,16 @@
       },
       "dwarfcrystal@cave" : {
          "location" : "IN_ROOM:side_hall",
-         "weight" : "2",
-         "pname" : "crystal",
+         "oflags" : [
+            "BlurSpell"
+         ],
          "name" : "DwarfCrystal",
          "examine" : "\nYou peer into the crystal...\nYou see an image of a panther about to strike!\nCuriously, the panther is pink.",
+         "size" : "12",
+         "pname" : "crystal",
+         "weight" : "2",
          "bvalue" : "100",
-         "desc[0]" : "A beautiful, well cut crystal glints in front of you.",
-         "size" : "12"
+         "desc[0]" : "A beautiful, well cut crystal glints in front of you."
       },
       "hole@cave" : {
          "location" : "IN_ROOM:armory",
@@ -478,7 +493,8 @@
       "dwarfale@cave" : {
          "location" : "IN_ROOM:side",
          "oflags" : [
-            "Food"
+            "Food",
+            "Alcohol"
          ],
          "altname" : "bottle",
          "name" : "DwarfAle",
@@ -562,6 +578,7 @@
       },
       "342@cave" : {
          "exits" : {
+            "e" : "cavevol",
             "w" : "341"
          },
          "flags" : [
@@ -718,7 +735,7 @@
       },
       "small@cave" : {
          "exits" : {
-            "w" : "library@blizzard",
+            "w" : "tread14@treadmill",
             "d" : "n_stairs"
          },
          "flags" : [
@@ -951,6 +968,19 @@
          "description" : "\n   The passage gradually begins to widen as you head to the east.  The passage\ncontinues on to the west.\n",
          "altitude" : null
       },
+      "cavevol@cave" : {
+         "exits" : {
+            "w" : "342"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "cave",
+         "title" : "Eternal Treasure Room",
+         "id" : "cavevol",
+         "description" : "\n  Here is a simple room, but polished as well as can be expected of a\nlazy dragon.  He seems to recognise the eternal value of knowledge.\n",
+         "altitude" : null
+      },
       "339@cave" : {
          "exits" : {},
          "flags" : [
@@ -1166,15 +1196,19 @@
          "eflags" : [
             "Fireball"
          ],
-         "damage" : "10",
+         "damage" : "20",
          "location" : "342",
-         "armor" : "0",
+         "armor" : "25",
          "name" : "firedrake",
          "description" : "The Firedrake of Thorbadin rests lazily on a pile of treasure.",
          "strength" : "300",
          "speed" : "0",
          "pname" : "The Firedrake",
-         "aggression" : "99"
+         "aggression" : "0",
+         "mflags" : [
+            "BarE",
+            "GrabHostile"
+         ]
       },
       "keeper@cave" : {
          "damage" : "10",
@@ -1214,7 +1248,7 @@
          "location" : "w_tower",
          "armor" : "0",
          "name" : "diamar",
-         "description" : "Diamar rambles on incoherently for no reason at all.",
+         "description" : "Diamar says 'Have you seen my axe?  I wrote on it to return it to me.'",
          "strength" : "150",
          "speed" : "0",
          "pname" : "Diamar",

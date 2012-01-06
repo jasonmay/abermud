@@ -1,0 +1,3464 @@
+{
+   "obj" : {
+      "door_foyer@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:foyer",
+         "oflags" : [
+            "Openable",
+            "lockable",
+            "noget"
+         ],
+         "name" : "door_foyer",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_front",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "ruby@jbs" : {
+         "location" : "IN_ROOM:glade",
+         "weight" : "2",
+         "name" : "ruby",
+         "examine" : "Looks like a ruby.",
+         "bvalue" : "250",
+         "desc[0]" : "A glistening ruby rests on the ground here.",
+         "size" : "4"
+      },
+      "door_treasury@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:treasury",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_treasury",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_side",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_hall@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:hall",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_hall",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_bathroom",
+         "state" : "0",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "gate_farmpath@jbs" : {
+         "desc[1]" : "The gate is closed.",
+         "location" : "IN_ROOM:farmpath",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "gate_farmpath",
+         "desc[2]" : "The gate is locked.",
+         "linked" : "gate_gate",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "The gate is open."
+      },
+      "door_cell4@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:cell4",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_cell4",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_corridor3",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "brick_storage@jbs" : {
+         "desc[1]" : "There is a loose brick in the south wall.",
+         "location" : "IN_ROOM:storage",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "name" : "brick_storage",
+         "linked" : "hole_secret3",
+         "state" : "1",
+         "pname" : "brick",
+         "maxstate" : "1",
+         "desc[0]" : "A loose brick has been pushed aside revealing a hole leading south."
+      },
+      "peas@jbs" : {
+         "location" : "IN_ROOM:pantry",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "food",
+         "name" : "peas",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "22",
+         "desc[0]" : "Some blackeyed peas are here waiting to be eaten."
+      },
+      "hatch_head@jbs" : {
+         "desc[1]" : "The hatch is closed.",
+         "location" : "IN_ROOM:head",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "hatch_head",
+         "desc[2]" : "The hatch is locked.",
+         "linked" : "hatch_nose",
+         "state" : "2",
+         "pname" : "hatch",
+         "maxstate" : "2",
+         "desc[0]" : "The hatch is open."
+      },
+      "hole_secret7@jbs" : {
+         "desc[1]" : "There is a lever here that looks like it might open a secret door.",
+         "location" : "IN_ROOM:secret7",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "hole_secret7",
+         "linked" : "bookcase",
+         "state" : "1",
+         "pname" : "lever",
+         "maxstate" : "0",
+         "desc[0]" : "A lever has been pulled revealing a hole in the south wall."
+      },
+      "steaknife@jbs" : {
+         "damage" : "22",
+         "location" : "IN_ROOM:banquet",
+         "oflags" : [
+            "destroyed",
+            "weapon"
+         ],
+         "altname" : "knife",
+         "name" : "steaknife",
+         "examine" : "\nThis steaknife is as large as a broadsword.  It would probably make a mighty\nfine weapon.",
+         "size" : "20",
+         "weight" : "14",
+         "bvalue" : "200",
+         "desc[0]" : "There is a huge steaknife lying here."
+      },
+      "fireplace@jbs" : {
+         "location" : "IN_ROOM:parlor",
+         "oflags" : [
+            "Lit",
+            "NoGet"
+         ],
+         "altname" : "fire",
+         "name" : "fireplace",
+         "examine" : "Looks hot in there!",
+         "desc[0]" : "\nA huge fireplace is set in the north wall with a fire blazing fiercely in it."
+      },
+      "coffee@jbs" : {
+         "location" : "IN_ROOM:green",
+         "oflags" : [
+            "food"
+         ],
+         "altname" : "food",
+         "name" : "coffee",
+         "examine" : "This looks like a great cup of coffee.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "22",
+         "desc[0]" : "There is a fragrant cup of coffee sitting here."
+      },
+      "panel_bed@jbs" : {
+         "location" : "under",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "panel_bed",
+         "linked" : "panel_secret",
+         "state" : "1",
+         "pname" : "panel",
+         "maxstate" : "1",
+         "desc[0]" : "There is an open panel in the floor."
+      },
+      "throne@jbs" : {
+         "location" : "IN_ROOM:throne",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "throne",
+         "examine" : "If only you could haul this treasure off!"
+      },
+      "mugwump@jbs" : {
+         "location" : "IN_ROOM:mugwumps",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "mugwump",
+         "examine" : "Looks like a mugwump.",
+         "desc[0]" : "\nThere's a mugwump right in front of you oozing plenty of goo to keep you here\nforever if you want it."
+      },
+      "peephole@jbs" : {
+         "location" : "IN_ROOM:secret4",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "hole",
+         "name" : "peephole",
+         "examine" : "\nLooking in this peephole offers you a great view of a giant making use of this\ncastles' facilities.",
+         "desc[0]" : "There's a peephole in the wall."
+      },
+      "hole_secret3@jbs" : {
+         "desc[1]" : "There is a lever here that looks like it might open a secret door.",
+         "location" : "IN_ROOM:secret3",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "hole_secret3",
+         "linked" : "brick_storage",
+         "state" : "1",
+         "pname" : "lever",
+         "maxstate" : "1",
+         "desc[0]" : "A lever has been pulled revealing a hole in the north wall."
+      },
+      "giant@jbs" : {
+         "location" : "IN_ROOM:giants_bed",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "giant",
+         "examine" : "Looks bloody big from here."
+      },
+      "egg@jbs" : {
+         "location" : "IN_ROOM:secret_treasury",
+         "weight" : "20",
+         "altname" : "gold",
+         "name" : "egg",
+         "examine" : "This is a big hunk of gold.",
+         "bvalue" : "800",
+         "desc[0]" : "The Goose's golden egg is here gleaming in the light.",
+         "size" : "20"
+      },
+      "flop_glade@jbs" : {
+         "desc[1]" : "\nThere is a large, nasty pile of flop here blocking the way west.",
+         "location" : "IN_ROOM:glade",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "flop_glade",
+         "linked" : "flop_pasture",
+         "state" : "1",
+         "pname" : "flop",
+         "maxstate" : "0",
+         "desc[0]" : "\nA path has been dug through a large pile of flop to the west."
+      },
+      "plunger@jbs" : {
+         "damage" : "8",
+         "location" : "IN_ROOM:storage",
+         "oflags" : [
+            "weapon"
+         ],
+         "altname" : "helper",
+         "name" : "plunger",
+         "examine" : "\nJust think of what it would take to stop up a toilet big enough to need this!",
+         "size" : "10",
+         "weight" : "5",
+         "bvalue" : "100",
+         "desc[0]" : "A huge toilet plunger is standing in the corner."
+      },
+      "stalk_top@jbs" : {
+         "location" : "beanstalk",
+         "oflags" : [
+            "noget"
+         ],
+         "pname" : "beanstalk",
+         "name" : "stalk_top",
+         "maxstate" : "1",
+         "linked" : "stalk_bottom",
+         "state" : "1"
+      },
+      "helmet@jbs" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "armor" : "24",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "name" : "helmet",
+         "size" : "5",
+         "weight" : "5",
+         "bvalue" : "120",
+         "desc[0]" : "\nA shiny tin helmet has been dropped on the ground here.",
+         "aflags" : [
+            "Head"
+         ]
+      },
+      "fish@jbs" : {
+         "location" : "IN_ROOM:fish",
+         "weight" : "2",
+         "oflags" : [
+            "Food",
+            "Destroyed"
+         ],
+         "name" : "fish",
+         "examine" : "Looks like a fish.",
+         "bvalue" : "10",
+         "desc[0]" : "A delicious looking fish has been left here.",
+         "size" : "2"
+      },
+      "necklace@jbs" : {
+         "location" : "IN_ROOM:treasury",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "pearls",
+         "name" : "necklace",
+         "examine" : "You'd need a big neck to wear this comfortably.",
+         "size" : "7",
+         "weight" : "4",
+         "bvalue" : "250",
+         "desc[0]" : "There is a giant pearl necklace here.",
+         "aflags" : [
+            "Neck"
+         ]
+      },
+      "toilet@jbs" : {
+         "location" : "IN_ROOM:bathroom",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "altname" : "john",
+         "name" : "toilet",
+         "examine" : "\nUpon closer examination you find that the toilet hasn't been flushed.",
+         "size" : "500"
+      },
+      "book2@jbs" : {
+         "location" : "IN_ROOM:library",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "book",
+         "name" : "book2",
+         "examine" : "\nYou climb up on the book and begin to read...\n\n\nThe book tells of a great hero of this giant race and how he was brutally fooled\nand murdered by one of an impish race of little people while he was heading down\nto their world on a mission of friendship and peace.  It goes on to say that,\never since this brutal murder, these giants have been at war with all of those\nof the same race as this evil villain:  Jack.",
+         "desc[0]" : "There is a huge book that has been left open in the corner."
+      },
+      "pitchfork@jbs" : {
+         "damage" : "13",
+         "location" : "WIELDED_BY:bob",
+         "oflags" : [
+            "weapon"
+         ],
+         "altname" : "fork",
+         "name" : "pitchfork",
+         "examine" : "\nLooks like this pitchfork has been used to impale more than hay!",
+         "size" : "6",
+         "weight" : "3",
+         "bvalue" : "50",
+         "desc[0]" : "There is a pitchfork lying here."
+      },
+      "gate_gate@jbs" : {
+         "desc[1]" : "The gate is closed.",
+         "location" : "IN_ROOM:gate",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "altname" : "door",
+         "name" : "gate_gate",
+         "desc[2]" : "The gate is locked.",
+         "linked" : "gate_farmpath",
+         "state" : "2",
+         "pname" : "gate",
+         "maxstate" : "2",
+         "desc[0]" : "The gate is open."
+      },
+      "door_top@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:top",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_top",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_sbedroom",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "lodestone@jbs" : {
+         "location" : "IN_ROOM:glade",
+         "oflags" : [
+            "Shockspell"
+         ],
+         "altname" : "rock",
+         "name" : "lodestone",
+         "examine" : "Upon closer examination it appears to be a lodestone.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "220",
+         "desc[0]" : "A dull red rock is lying here."
+      },
+      "book@jbs" : {
+         "desc[1]" : "There is an old book lying open on the desk.",
+         "location" : "IN_ROOM:study",
+         "oflags" : [
+            "GetFlips"
+         ],
+         "name" : "book",
+         "examine" : "The book tells the heroic tale of Jack and the Beanstalk.",
+         "state" : "1",
+         "size" : "5",
+         "weight" : "3",
+         "maxstate" : "1",
+         "bvalue" : "220",
+         "desc[0]" : "There is an old book lying here."
+      },
+      "hole_secret@jbs" : {
+         "desc[1]" : "There is a lever here that looks like it might open a secret door.",
+         "location" : "IN_ROOM:secret",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "hole_secret",
+         "linked" : "brick",
+         "state" : "1",
+         "pname" : "lever",
+         "maxstate" : "1",
+         "desc[0]" : "A lever has been pulled revealing a hole in the north wall."
+      },
+      "shrooms@jbs" : {
+         "desc[1]" : "\nThere are three nice looking mushrooms growing in a pile of flop here.",
+         "location" : "IN_ROOM:sepasture",
+         "oflags" : [
+            "food",
+            "getflips"
+         ],
+         "altname" : "mushrooms",
+         "name" : "shrooms",
+         "examine" : "They look slightly magical.",
+         "size" : "2",
+         "state" : "1",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "15",
+         "desc[0]" : "Three fragrant mushrooms have been left on the ground here."
+      },
+      "panel_secret@jbs" : {
+         "location" : "secret_treasury",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "panel_secret",
+         "linked" : "panel_bed",
+         "state" : "1",
+         "pname" : "panel",
+         "maxstate" : "1",
+         "desc[0]" : "There is an open panel in the floor."
+      },
+      "hatch_nose@jbs" : {
+         "desc[1]" : "The hatch is closed.",
+         "location" : "IN_ROOM:nose_chamber",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "altname" : "door",
+         "name" : "hatch_nose",
+         "desc[2]" : "The hatch is locked.",
+         "linked" : "hatch_head",
+         "state" : "2",
+         "pname" : "hatch",
+         "maxstate" : "2",
+         "desc[0]" : "The hatch is open."
+      },
+      "door_entry@jbs" : {
+         "location" : "IN_ROOM:entry",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "door_entry",
+         "examine" : "\nThis is a really big door.  You couldn't shift it if you tried.",
+         "linked" : "door_courtyard",
+         "state" : "0",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : "The door is open just enough for you to squeeze through."
+      },
+      "window@jbs" : {
+         "location" : "IN_ROOM:eyes",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "glass",
+         "name" : "window",
+         "examine" : "You get a birdseye view of the giants bedroom."
+      },
+      "brick@jbs" : {
+         "desc[1]" : "There is a loose brick in the south wall.",
+         "location" : "IN_ROOM:torture",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "name" : "brick",
+         "examine" : "Looks like a brick.",
+         "linked" : "hole_secret",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "A loose brick has been pushed aside revealing a hole in the south wall."
+      },
+      "stick@jbs" : {
+         "desc[1]" : "An old stick lies on the ground.",
+         "damage" : "5",
+         "location" : "IN_ROOM:pond",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "name" : "stick",
+         "examine" : "Looks like a stick.",
+         "size" : "1",
+         "state" : "1",
+         "weight" : "1",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "A burning stick lies on the ground."
+      },
+      "bookcase@jbs" : {
+         "desc[1]" : "There is a large bookcase against the north wall.",
+         "location" : "IN_ROOM:sitting",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "altname" : "case",
+         "name" : "bookcase",
+         "examine" : "Looks like a bookcase.",
+         "linked" : "hole_secret7",
+         "state" : "1",
+         "maxstate" : "0",
+         "desc[0]" : "\nThe bookcase has been pushed aside leading to secret passage to the north."
+      },
+      "staff@jbs" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:jesse",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "staff",
+         "examine" : "\nThis staff is old, and strong.  It looks as if it has been twisted and\ncorrupted, though by the one who used it.  The bottom of the staff has been\nsmoothed around the edges.",
+         "size" : "7",
+         "weight" : "4",
+         "bvalue" : "300",
+         "desc[0]" : "A strange twisted staff has been left here."
+      },
+      "flop_pasture@jbs" : {
+         "desc[1]" : "A large, nasty pile of flop blocks the way east.",
+         "location" : "IN_ROOM:pasture",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "flop_pasture",
+         "linked" : "flop_glade",
+         "state" : "1",
+         "pname" : "flop",
+         "maxstate" : "0",
+         "desc[0]" : "\nA path has been dug through a large pile of flop to the east."
+      },
+      "door_sbedroom@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:sbedroom",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_sbedroom",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_top",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "seeds@jbs" : {
+         "location" : "IN_ROOM:green",
+         "oflags" : [
+            "food"
+         ],
+         "altname" : "pile",
+         "name" : "seeds",
+         "examine" : "\nAs you hold them, you feel these seeds vibrating with magical energy.",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "22",
+         "desc[0]" : "There are some seeds sitting here in a small pile."
+      },
+      "hole_ground@jbs" : {
+         "location" : "IN_ROOM:fallow3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "hole",
+         "name" : "hole_ground",
+         "examine" : "Looks like a great place to plant some seeds.",
+         "desc[0]" : "There is a hole in the ground here.",
+         "size" : "30"
+      },
+      "stalk_bottom@jbs" : {
+         "location" : "fallow3",
+         "oflags" : [
+            "noget"
+         ],
+         "name" : "stalk_bottom",
+         "linked" : "stalk_top",
+         "state" : "1",
+         "pname" : "beanstalk",
+         "maxstate" : "1",
+         "desc[0]" : "\nThe base of a giant beanstalk is here, reaching to the clouds."
+      },
+      "door_corridor3@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:corridor3",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_corridor3",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_cell4",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_corridor1@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:corridor1",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_corridor1",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_corridor2",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_front@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:front",
+         "oflags" : [
+            "openable",
+            "noget",
+            "lockable"
+         ],
+         "name" : "door_front",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_foyer",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_pantry@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pantry",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_pantry",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_backdoor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "line@jbs" : {
+         "location" : "IN_ROOM:pond",
+         "weight" : "1",
+         "altname" : "fishing",
+         "name" : "line",
+         "bvalue" : "20",
+         "desc[0]" : "\nThere is a roll of fishing line here with a small hook on the end.",
+         "size" : "1"
+      },
+      "can@jbs" : {
+         "desc[1]" : "There is an old tin can lying on the ground here.",
+         "location" : "IN_ROOM:path4",
+         "altname" : "tin",
+         "name" : "can",
+         "state" : "1",
+         "size" : "3",
+         "weight" : "2",
+         "maxstate" : "0",
+         "bvalue" : "10",
+         "desc[0]" : "There is an old tin can lying on the ground here."
+      },
+      "door_bathroom@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:bathroom",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_bathroom",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_hall",
+         "state" : "0",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_side@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:side",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_side",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_treasury",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_courtyard@jbs" : {
+         "location" : "IN_ROOM:courtyard",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "door_courtyard",
+         "examine" : "\nThis is a really big door.  You couldn't shift it if you tried.",
+         "linked" : "door_entry",
+         "state" : "0",
+         "pname" : "door",
+         "maxstate" : "0",
+         "desc[0]" : "The door is open just enough for you to squeeze through."
+      },
+      "table@jbs" : {
+         "location" : "IN_ROOM:banquet",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "tables",
+         "name" : "table"
+      },
+      "bail@jbs" : {
+         "location" : "IN_ROOM:sloft",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "hay",
+         "name" : "bail",
+         "desc[0]" : "There is a bail of hay sitting by the wall."
+      },
+      "pond@jbs" : {
+         "location" : "IN_ROOM:fish",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "pond",
+         "examine" : "\nYou see many silvery fish flitting to and fro under the water.",
+         "maxstate" : "0",
+         "state" : "1"
+      },
+      "fountain_coins@jbs" : {
+         "location" : "IN_ROOM:fountain5",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "coins",
+         "name" : "fountain_coins",
+         "bvalue" : "0",
+         "desc[0]" : "\nThere are several huge coins here that have been tossed into the fountain."
+      },
+      "shovel@jbs" : {
+         "desc[1]" : "There is a shovel leaning against the wall here.",
+         "damage" : "6",
+         "location" : "IN_ROOM:nbarn",
+         "oflags" : [
+            "weapon",
+            "getflips"
+         ],
+         "name" : "shovel",
+         "examine" : "Looks like a shovel.",
+         "size" : "4",
+         "state" : "1",
+         "weight" : "3",
+         "maxstate" : "1",
+         "bvalue" : "10",
+         "desc[0]" : "Someone has left an old shovel here."
+      },
+      "hole@jbs" : {
+         "location" : "IN_ROOM:garden3",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "hole",
+         "examine" : "\nAround the edges of the hole, you see many large claw marks."
+      },
+      "gems@jbs" : {
+         "location" : "IN_ROOM:glade",
+         "weight" : "3",
+         "name" : "gems",
+         "examine" : "\nThe gems seem to glow with an inner beauty that could only have been inspired by\nnature itself.",
+         "bvalue" : "350",
+         "desc[0]" : "\nYou see tiny gems that seem to have popped out the ground itself.",
+         "size" : "3"
+      },
+      "clock@jbs" : {
+         "location" : "IN_ROOM:clock",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "clock",
+         "examine" : "\nThis mammoth clock takes up the entire south wall and has its pendulum swinging\ntirelessly in front of it.  Although it has never stopped ticking its hands\nnever seem to leave 8:46."
+      },
+      "door_corridor2@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:corridor2",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_corridor2",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_corridor1",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "key@jbs" : {
+         "location" : "IN_ROOM:sloft",
+         "weight" : "1",
+         "oflags" : [
+            "Destroyed",
+            "Key"
+         ],
+         "name" : "key",
+         "bvalue" : "50",
+         "desc[0]" : "A key has been dropped here.",
+         "size" : "1"
+      },
+      "sign@jbs" : {
+         "location" : "IN_ROOM:barn",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "sign",
+         "examine" : "The sign reads: Recycle tin, feed it to the goats.",
+         "desc[0]" : "There is a small sign hanging over the barn door"
+      },
+      "hole_bed@jbs" : {
+         "location" : "under",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "hole",
+         "name" : "hole_bed",
+         "examine" : "As you look at the hole, you find a small panel cut in the floor.",
+         "desc[0]" : "There is a small hole in the floor here."
+      },
+      "coins@jbs" : {
+         "location" : "IN_ROOM:treasury",
+         "weight" : "9",
+         "name" : "coins",
+         "examine" : "Look like coins.",
+         "bvalue" : "600",
+         "desc[0]" : "There are several large coins scattered about.",
+         "size" : "7"
+      },
+      "emerald@jbs" : {
+         "location" : "IN_ROOM:treasury",
+         "weight" : "5",
+         "name" : "emerald",
+         "examine" : "Looks like an emerald.",
+         "bvalue" : "400",
+         "desc[0]" : "A giant emerald is lying here on the floor.",
+         "size" : "6"
+      },
+      "okra@jbs" : {
+         "location" : "IN_ROOM:pantry",
+         "oflags" : [
+            "food"
+         ],
+         "altname" : "food",
+         "name" : "okra",
+         "size" : "2",
+         "weight" : "2",
+         "bvalue" : "22",
+         "desc[0]" : "Some fried okra is here."
+      },
+      "coin@jbs" : {
+         "location" : "IN_ROOM:fountain5",
+         "weight" : "15",
+         "altname" : "gold",
+         "name" : "coin",
+         "examine" : "There is a head engraved on it that you don't recognize.",
+         "bvalue" : "300",
+         "desc[0]" : "\nThere is a gigantic gold coin lying here that you just might be able to lift.",
+         "size" : "15"
+      },
+      "door_backdoor@jbs" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:backdoor",
+         "oflags" : [
+            "NoGet",
+            "Openable",
+            "Lockable"
+         ],
+         "name" : "door_backdoor",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_pantry",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      }
+   },
+   "loc" : {
+      "garden2@jbs" : {
+         "exits" : {
+            "e" : "garden"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Garden",
+         "id" : "garden2",
+         "description" : "\n    You have reached the end of the path. As you look around, though, you can't\nhelp but marvel at the enormity of the plants here.  What must only be small\nshrubs here look like the mightiest redwoods you have ever encountered. You can\nonly imagine the size of the beings that must care for this place.\n",
+         "altitude" : null
+      },
+      "loft@jbs" : {
+         "exits" : {
+            "d" : "nbarn",
+            "s" : "sloft"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Loft",
+         "id" : "loft",
+         "description" : "\n     You are now in the hayloft of this terrific barn!  There are hay bails\nstacked up all over the place and the smell is making your nose itch.  To the\nsouth you see more hay and you can go back down the ladder to the barn if you\ndon't want to see the rest of this wonderful hayloft.\n",
+         "altitude" : null
+      },
+      "lhall2@jbs" : {
+         "exits" : {
+            "w" : "lhall1",
+            "u" : "first_step",
+            "n" : "banquet",
+            "d" : "half_way_d",
+            "s" : "lhall3"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Large Hallway",
+         "id" : "lhall2",
+         "description" : "\n     The hallway turns to either the south or the west here depending on which\nway you are going.  To the east is a huge staircase that goes up and down, but\nthe stairs are almost as tall as you are and you would have to struggle to get\nall the way up or down them.  There is a large hall to the north.\n",
+         "altitude" : null
+      },
+      "lhall8@jbs" : {
+         "exits" : {
+            "e" : "guest2",
+            "n" : "entry",
+            "s" : "lhall7"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Large Hallway",
+         "id" : "lhall8",
+         "description" : "\n     You are in a large north south hallway that is lined with magnificent\npillars and draperies.  There is a large room that opens to the east.\n",
+         "altitude" : null
+      },
+      "barn@jbs" : {
+         "exits" : {
+            "n" : "path4",
+            "s" : "nbarn"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Before the Barn",
+         "id" : "barn",
+         "description" : "\n     You are standing in front of the fading red barn where the farmer who owns\nthis place keeps his hay and other farming necessities that need to stay out of\nthe rain.  You can enter the barn to the south.\n",
+         "altitude" : null
+      },
+      "lhall1@jbs" : {
+         "exits" : {
+            "e" : "lhall2",
+            "w" : "entry",
+            "n" : "library"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Large Hallway",
+         "id" : "lhall1",
+         "description" : "\n    You are in a large east west hallway that is lined with magnificent pillars\nand draperies.  There is a large room off to the north.\n",
+         "altitude" : null
+      },
+      "corridor3@jbs" : {
+         "exits" : {
+            "e" : "corridor2",
+            "w" : "torture",
+            "n" : "cell3",
+            "s" : "^door_corridor3"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Dungeon Corridor",
+         "id" : "corridor3",
+         "description" : "\n     This is a sooty east west corridor that runs through the dungeon.  There\nare cells to the north and south.\n",
+         "altitude" : null
+      },
+      "fountain2@jbs" : {
+         "exits" : {
+            "u" : "fountain4",
+            "n" : "fountain3",
+            "s" : "fountain"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Western Side of the Fountain",
+         "id" : "fountain2",
+         "description" : "\n     Looks about the same as where you just came from except you have to face\neast to see the fountain.\n",
+         "altitude" : null
+      },
+      "fountain@jbs" : {
+         "exits" : {
+            "w" : "fountain2",
+            "e" : "fountain1",
+            "u" : "fountain4",
+            "s" : "courtyard"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "By the Fountain",
+         "id" : "fountain",
+         "description" : "\n     You are standing next to a huge fountain.  The noise from the water is\nnearly deafening there is so much of it.  The mist that comes off from the\nsplashing water feels almost like rain, even though, here above the clouds, the\nsun is always out.  If you stand on your tippie-toes you can just reach the top\nedge of the side to climb up if you want to.\n",
+         "altitude" : null
+      },
+      "lhall3@jbs" : {
+         "exits" : {
+            "w" : "lhall4",
+            "n" : "lhall2"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Large Hallway",
+         "id" : "lhall3",
+         "description" : "\n     This is a long stretch of north south hallway that turns to the west at\nsouthernmost end.\n",
+         "altitude" : null
+      },
+      "beanstalk@jbs" : {
+         "exits" : {
+            "u" : "beanstalk1",
+            "d" : "^stalk_top"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Up the Beanstalk",
+         "id" : "beanstalk",
+         "description" : "\n     You are about half way up this huge beanstalk.  Small vines and branches\ngrow out everywhere making it an easy climb to get the rest of the way up, or\nyou can go back down to the field below you.  As you look around from here you\nsee a small village off to the south and the vast expanse of the sea to the\neast.  To both the north and the west you see a magnificent chain of mountains\nrunning in the distance.\n",
+         "altitude" : null
+      },
+      "top@jbs" : {
+         "exits" : {
+            "e" : "master",
+            "n" : "hall",
+            "d" : "foyer",
+            "s" : "^door_top"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Top of the stairs",
+         "id" : "top",
+         "description" : "\n     This is the top of the stairs.  You can go north or east, and there is a\ndoor to the south.\n",
+         "altitude" : null
+      },
+      "secret_stairs@jbs" : {
+         "exits" : {
+            "u" : "secret6",
+            "d" : "secret5"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Stairs",
+         "id" : "secret_stairs",
+         "description" : "\n     You are on a flight of stairs. They go up and down.  The only thing\nremarkable about these stairs is how easy it is going up and down them compared\nwith the other stairs in this place.\n",
+         "altitude" : null
+      },
+      "fwood6@jbs" : {
+         "exits" : {
+            "e" : "fwood",
+            "w" : "fwood3",
+            "u" : "fwood6",
+            "n" : "fwood2",
+            "s" : "vines"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fairy Wood",
+         "id" : "fwood6",
+         "description" : "\n     These woods seem to continue almost to forever and back.  Every where you\nturn it looks almost exactly the same.  Large old trees everywhere, mist\ncovering the ground, no end in sight...\n",
+         "altitude" : null
+      },
+      "beanstalk1@jbs" : {
+         "exits" : {
+            "u" : "top_beanstalk",
+            "d" : "beanstalk"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "On the Beanstalk",
+         "id" : "beanstalk1",
+         "description" : "\n     You have climbed so far up the beanstalk that you are totally immersed in\nclouds.  The air is very thin up here and you are running out of breath fairly\noften. luckily there are plenty of branches you can stop and rest on.  You can\ncontinue up the beanstalk or go back down from here.\n",
+         "altitude" : null
+      },
+      "front@jbs" : {
+         "exits" : {
+            "e" : "^door_front",
+            "w" : "farmpath"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "In Front of the House",
+         "id" : "front",
+         "description" : "\n     You are standing in front of a well kept two story farmhouse.  The door to\nthe house is to the east, or you can go back down the path to the west.\n",
+         "altitude" : null
+      },
+      "path4@jbs" : {
+         "exits" : {
+            "e" : "field",
+            "w" : "epond",
+            "s" : "barn"
+         },
+         "flags" : [
+            "outdoors",
+            "nomobiles"
+         ],
+         "zone" : "jbs",
+         "title" : "Long Path",
+         "id" : "path4",
+         "description" : "\n     This is a long east, west path that runs between a small pond to the west\nand a fairly large field to the east.  South of here you see a quaint little\nbarn.\n",
+         "altitude" : null
+      },
+      "quarters@jbs" : {
+         "exits" : {
+            "n" : "seargent"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Seargent's Quarters",
+         "id" : "quarters",
+         "description" : "\n     This is the seargent's bedroom.  He sleeps here. There is a bed. There is\na closet.  There is a dresser with a mirror on it.  You can leave to the north.\n",
+         "altitude" : null
+      },
+      "fallow@jbs" : {
+         "exits" : {
+            "e" : "fallow1",
+            "s" : "field"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fallow Field",
+         "id" : "fallow",
+         "description" : "\n     The field here is still fallow, and you notice small animal footprints in\nthe soft ground beneath your feet.  The soil in this field looks very fertile\nand you wonder why the farmer hasn't planted here is so long.  The field here\nextends to the south and east.\n",
+         "altitude" : null
+      },
+      "nbarn@jbs" : {
+         "exits" : {
+            "w" : "nwstall",
+            "e" : "nestall",
+            "u" : "loft",
+            "n" : "barn",
+            "s" : "sbarn"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Northern End of the Barn",
+         "id" : "nbarn",
+         "description" : "\n     From here the barn looks about like any other barn that you've ever seen.\nThe floor is covered with a thin layer of hay, and there are tools of various\ndescriptions lining the walls.  There is a leather saddle on the ground next to\nan old, horse-pulled plow against the east wall that doesn't seem to have moved\nfor a while.  The barn continues to the south, to the east and west are small\nstalls, and there is a ladder leading up to the hayloft against the west wall.\n",
+         "altitude" : null
+      },
+      "hall@jbs" : {
+         "exits" : {
+            "e" : "^door_hall",
+            "n" : "nbedroom",
+            "s" : "top"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Hall",
+         "id" : "hall",
+         "description" : "\n     The stairs are south, the bathroom is east, and there is a bedroom to the\nnorth.\n",
+         "altitude" : null
+      },
+      "gopher_den@jbs" : {
+         "exits" : {
+            "u" : "end"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "The Gopher's Den",
+         "id" : "gopher_den",
+         "description" : "\n     This is a large room that has been dug out for the gopher who dug all of\nthese tunnels to live in.  It doesn't look like the most comfortable place in\nthe world to live, but to a gopher.. who knows?  It might be paradise.\n",
+         "altitude" : null
+      },
+      "dreams@jbs" : {
+         "exits" : {
+            "w" : "bears",
+            "n" : "campfire",
+            "u" : "mugwumps",
+            "d" : "brown"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Bad Dreams",
+         "id" : "dreams",
+         "description" : "\n     All of existence has turned on its head and started spiraling around you.\nYou don't know where you are or how you got here or how to get out or even what\nyour name is for that matter.  All you can manage to make out are myriads of\ncolors spinning everywhere off into nowhere....\n",
+         "altitude" : null
+      },
+      "storage@jbs" : {
+         "exits" : {
+            "n" : "lhall5",
+            "s" : "^brick_storage"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Storage Room",
+         "id" : "storage",
+         "description" : "\n     This is a large storage room that contains mostly cleaning supplies. There\nare a lot of big brooms and mops and other things like that.\n",
+         "altitude" : null
+      },
+      "throne@jbs" : {
+         "exits" : {
+            "e" : "balcony",
+            "w" : "waiting",
+            "n" : "sitting",
+            "s" : "side"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Throne Room",
+         "id" : "throne",
+         "description" : "\n    As you enter this room you are immediately struck by a gigantic &+Ythrone&* made\nof pure gold!  Once you manage to tear your eyes away from that huge treasure,\nyou notice many finely woven tapestries and banners hung tastefully about the\nroom.  There are exit's leading in all directions, and to the east you can go\nout onto the balcony.\n",
+         "altitude" : null
+      },
+      "den@jbs" : {
+         "exits" : {
+            "e" : "dining",
+            "n" : "foyer"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Den",
+         "id" : "den",
+         "description" : "\n     This is a fairly small sitting room with a couch against the south wall \nand recliner by a quaint little fireplace against the west wall.  The room is \nneat, but looks as if it is used often.  You can exit to the north or east.\n",
+         "altitude" : null
+      },
+      "garden@jbs" : {
+         "exits" : {
+            "w" : "garden2",
+            "e" : "garden1",
+            "n" : "courtyard"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Garden",
+         "id" : "garden",
+         "description" : "\n     You have entered a vast garden filled with all kinds of huge plants.  \nUnfortunately, though,  you can't go and wander among them because apparently \nthey have enough of a rodent problem up here to have a fence with holes just \nbarely too small for you to squeeze through.\n",
+         "altitude" : null
+      },
+      "farmpath@jbs" : {
+         "exits" : {
+            "w" : "^gate_farmpath",
+            "e" : "front"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Path to the Farmhouse",
+         "id" : "farmpath",
+         "description" : "\n     This path runs east to the farmhouse and west back into the pasture.\n",
+         "altitude" : null
+      },
+      "fountain4@jbs" : {
+         "exits" : {
+            "w" : "fountain2",
+            "e" : "fountain1",
+            "n" : "fountain3",
+            "d" : "fountain5",
+            "s" : "fountain"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Rim of the Fountian",
+         "id" : "fountain4",
+         "description" : "\n     You are standing on the rim of this huge fountain.\nThe water splashing out from around the fountain feels like a gentle spring\nrain. As you look into the fountain you see a few VERY BIG fish swimming around\nand on the bottom what must be some of the currency of this land.\n",
+         "altitude" : null
+      },
+      "nestall@jbs" : {
+         "exits" : {
+            "w" : "nbarn"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Stall",
+         "id" : "nestall",
+         "description" : "\n     This is a small animal stall.\n",
+         "altitude" : null
+      },
+      "green@jbs" : {
+         "exits" : {
+            "w" : "bears",
+            "e" : "dreams",
+            "u" : "mugwumps",
+            "n" : "clock",
+            "d" : "fgate",
+            "s" : "fsun"
+         },
+         "flags" : [
+            "outdoors",
+            "peaceful"
+         ],
+         "zone" : "jbs",
+         "title" : "Green",
+         "id" : "green",
+         "description" : "\n     Green is a good color.  In fact, it's such a good color that it's making\nyou very relaxed and even a bit tired.  You had better wake up a bit before you\nfall asleep right here.\n",
+         "altitude" : null
+      },
+      "secret4@jbs" : {
+         "exits" : {
+            "n" : "secret5",
+            "s" : "intersection"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Passage",
+         "id" : "secret4",
+         "description" : "\n     You are in a north south passageway that runs through the walls of Cloud\nCastle.\n",
+         "altitude" : null
+      },
+      "treasury@jbs" : {
+         "exits" : {
+            "e" : "^door_treasury"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Treasury",
+         "id" : "treasury",
+         "description" : "\n     This is the treasury of this mighty castle.  You see mountains of gold and\njewels all over the place.  Pity that most of it is too big and heavy for to\neven shift much less carry home with you.\n",
+         "altitude" : null
+      },
+      "cloudy1@jbs" : {
+         "exits" : {
+            "e" : "cloud_gate",
+            "w" : "cloudy"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Cloudy Path",
+         "id" : "cloudy1",
+         "description" : "\n    This is an east west path through a magical realm above the clouds. To the\neast you see a huge palace with a thin mist clinging to it's gigantic \nstructure, while to the west you see the path continue into the clouds.\n",
+         "altitude" : null
+      },
+      "fgate@jbs" : {
+         "exits" : {
+            "w" : "fwood",
+            "e" : "fwood",
+            "u" : "fwood",
+            "n" : "fwood",
+            "d" : "fwood",
+            "s" : "fwood"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "The Gates to Fairyland",
+         "id" : "fgate",
+         "description" : "\n     As you float through eternity you feel your existence coming once again\ninto a loose, but solid, sense of twisting realities.  Before you, above you,\nbelow you, or somewhere like that you see the gates to a strange, mystical \nland.\n",
+         "altitude" : null
+      },
+      "torture@jbs" : {
+         "exits" : {
+            "e" : "corridor3",
+            "s" : "^brick"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Torture Chamber",
+         "id" : "torture",
+         "description" : "\n     As you enter the torture chamber, you are almost overwhelmed by the sheer\nsize of the equipment here. Luckily for you, though, none of it is small enough\nfor you to fit on it.  This brings you little relief, though, when you think\nthat all these people have to do is step on you.\n",
+         "altitude" : null
+      },
+      "bridge@jbs" : {
+         "exits" : {
+            "e" : "courtyard",
+            "w" : "cloud_gate"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Drawbridge",
+         "id" : "bridge",
+         "description" : "\n    Every good castle has a drawbridge. The thing about this one that jump out\nat you immediately though is that under it there isn't a moat, as a matter of\nfact, there isn't anything. Looking down all you see are mountain tops. Better\nnot fall off of this one.\n",
+         "altitude" : null
+      },
+      "study@jbs" : {
+         "exits" : {
+            "s" : "foyer"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Study",
+         "id" : "study",
+         "description" : "\n     This is a small, neatly kept study with a a few bookshelves against the\nnorth wall.\n",
+         "altitude" : null
+      },
+      "seargent@jbs" : {
+         "exits" : {
+            "n" : "corridor1",
+            "s" : "quarters"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Seargent's Office",
+         "id" : "seargent",
+         "description" : "\n     This is a small office with a desk and a chair.  That's about all there is\nin here.  You can leave to the north or south.\n",
+         "altitude" : null
+      },
+      "corridor1@jbs" : {
+         "exits" : {
+            "w" : "^door_corridor1",
+            "e" : "bottom_stairs",
+            "n" : "guard",
+            "s" : "seargent"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Dungeon Corridor",
+         "id" : "corridor1",
+         "description" : "\n     This is a large, dim, smoky corridor that is lit by sparsely separated\ntorches that are giving of sputtery light and lots of smoke.  So much smoke has\ncome from these torches that all of the walls and ceilings have been stained\nblack with soot from them.  The corridor leads west back to the stairs or east\nthrough a door deeper into the dungeon.  There are also rooms to the north and\nsouth.\n",
+         "altitude" : null
+      },
+      "entry@jbs" : {
+         "exits" : {
+            "e" : "lhall1",
+            "w" : "^door_entry",
+            "n" : "parlor",
+            "s" : "lhall8"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Entry Hall",
+         "id" : "entry",
+         "description" : "\n     You are in the gigantic entryway to Cloud Castle.  The walls are covered\nwith huge tapestries depicting grand scenes and the walls are lined with\nmagnificent suits of armor that tower above you so that you almost have to get \na crick in your neck to see the tops of them.  There are grand archways that \nlead to the north and south into other rooms and east down a huge hall.\nof the castle is to the west.\n",
+         "altitude" : null
+      },
+      "pasture@jbs" : {
+         "exits" : {
+            "e" : "^flop_pasture",
+            "w" : "path2",
+            "n" : "nwpasture",
+            "s" : "swpasture"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "In the Pasture",
+         "id" : "pasture",
+         "description" : "\n    You are in a large, fragrant cow pasture. The field continues to the north\nand south and you can enter the path to the west.\n",
+         "altitude" : null
+      },
+      "top_beanstalk@jbs" : {
+         "exits" : {
+            "n" : "cloudy",
+            "d" : "beanstalk"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Top of the Beanstalk",
+         "id" : "top_beanstalk",
+         "description" : "\n     You have reached the top of the beanstalk and to your great surprise the\ntops of the clouds are solid!  As you look around you notice that the sun is\nreally bright this far up and you realize that the weather up here must always\nbe great without any clouds above you to block out the sun.  There is a path\nthat leads off to the north over the cloudy terrain and you can climb back down\nthe beanstalk if you want to.\n",
+         "altitude" : null
+      },
+      "bathroom@jbs" : {
+         "exits" : {
+            "w" : "^door_bathroom"
+         },
+         "flags" : [
+            "soundproof",
+            "private"
+         ],
+         "zone" : "jbs",
+         "title" : "The Bathroom",
+         "id" : "bathroom",
+         "description" : "\n     This is the bathroom that serves the family that lives here.  It looks \nlike any other ordinary bathroom.  It has a sink and a &+Btoilet&* and a bathtub.  \nYou can even close and lock the door while you use it.  When you're done, you \ncan leave to the west.\n",
+         "altitude" : null
+      },
+      "giants_bed@jbs" : {
+         "exits" : {
+            "w" : "under",
+            "e" : "sitting",
+            "u" : "bed",
+            "s" : "chambers"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Giants Bedroom",
+         "id" : "giants_bed",
+         "description" : "\n     This is the giants bedroom.  You know this from the mammoth figure who is\nasleep on the bed about ten feet above you and to the west. You can easily walk\nunder it if you want to, or you could even climb up the bedpost onto the bed if\nyou want you risk getting that close to the &+ygiant&*.  There are also exits to the\neast and south.\n",
+         "altitude" : null
+      },
+      "path2@jbs" : {
+         "exits" : {
+            "e" : "pasture",
+            "w" : "path1",
+            "n" : "path3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Farm Path",
+         "id" : "path2",
+         "description" : "\n    The path here turns towards the north, but further to the east you can see\na large field.\n",
+         "altitude" : null
+      },
+      "nwpasture@jbs" : {
+         "exits" : {
+            "e" : "deeppasture",
+            "s" : "pasture"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Northwest Corner of the Pasture",
+         "id" : "nwpasture",
+         "description" : "\n    As you walk through the pasture you notice that, although the grass is \npatchy in some places, it is generally quite lush from the large amounts of \nfertilizer left on the ground.\n",
+         "altitude" : null
+      },
+      "garden3@jbs" : {
+         "exits" : {
+            "n" : "garden1",
+            "d" : "hole"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "In the Monkeygrass",
+         "id" : "garden3",
+         "description" : "\n     You have entered a small clearing in the midst of several large clumps of\nmonkey grass that block all exits into the garden.  There is, however, a gaping\n&+yhole&* in the ground here that you can venture down if you want to.\n",
+         "altitude" : null
+      },
+      "end@jbs" : {
+         "exits" : {
+            "n" : "damp",
+            "d" : "gopher_den"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "End of the Tunnel",
+         "id" : "end",
+         "description" : "\n     The tunnel runs into a dirt wall here.  Obviously whatever dug this tunnel\ndecided that this was far enough to go.  There is, however, a hole leading down\ninto some sort of chamber.\n",
+         "altitude" : null
+      },
+      "path1@jbs" : {
+         "exits" : {
+            "w" : "path0",
+            "e" : "path2"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Path to the Farm",
+         "id" : "path1",
+         "description" : "\n     You are on a path that leads from east to west.\n",
+         "altitude" : null
+      },
+      "gate@jbs" : {
+         "exits" : {
+            "e" : "^gate_gate",
+            "w" : "deeppasture",
+            "s" : "sepasture"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "By the Gate",
+         "id" : "gate",
+         "description" : "\n    You are now in the northeast corner of the pasture.  through the gate to\nthe east you see a short path up to a quaint little farmhouse. The pasture\ncontinues to the south and west.\n",
+         "altitude" : null
+      },
+      "glade@jbs" : {
+         "exits" : {
+            "w" : "^flop_glade"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Hidden Glade",
+         "id" : "glade",
+         "description" : "\n     You are in the deepest inner reaches of this cow pasture.  The thick Grass\ngrows almost up to your waist, and, to your surprise, there aren't even any\nflies in here!  The grass is soft and gentle and seems to be caressing you as\nyou walk through this mystical place.  As you look down at your feet you make\nout millions of tiny pinpoints sparkling in myriads of different colors. As you\nlook closer you realize that this is just the light sparkling off of the rich\nsoil on the ground.\n",
+         "altitude" : null
+      },
+      "lavatory@jbs" : {
+         "exits" : {
+            "s" : "lhall4"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Lavatory",
+         "id" : "lavatory",
+         "description" : "\n     This must be where the inhabitants of Cloud Castle come when they have to\nsatisfy that natural urge that holds sway over all of nature's creations.  This\nis rather reassuring considering that now you can stop wondering if rain was\nactually these people satisfying their natural yearnings, though you may still\nnot be so sure about thunder.\n",
+         "altitude" : null
+      },
+      "cliff@jbs" : {
+         "exits" : {
+            "e" : "fwood6",
+            "s" : "fwood5"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Side of a Cliff",
+         "id" : "cliff",
+         "description" : "\n     OUCH!!!  You just rammed your nose into the side of a cliff that was\nconcealed by the mist.\n",
+         "altitude" : null
+      },
+      "nose_chamber@jbs" : {
+         "exits" : {
+            "e" : "nose",
+            "u" : "^hatch_nose",
+            "d" : "nose"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Small Chamber in the Nose",
+         "id" : "nose_chamber",
+         "description" : "\n     You have reached a small somewhat square chamber deep in the giants nose\nand to your great amazement there's a steel hatch in the ceiling here and a\n12-runged ladder leading up to it.\n",
+         "altitude" : null
+      },
+      "eyes@jbs" : {
+         "exits" : {
+            "w" : "head"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Behind the Eyes",
+         "id" : "eyes",
+         "description" : "\n     You suddenly find yourself in a spacious hollow room with all kinds of\nstrange panels with buttons and switches and lights all over them. In the front\nof the room you see two huge glass &+Cwindows.\n",
+         "altitude" : null
+      },
+      "swpasture@jbs" : {
+         "exits" : {
+            "e" : "sepasture",
+            "n" : "pasture"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Southwest Corner of the Pasture",
+         "id" : "swpasture",
+         "description" : "\n     Looks about like any other cow pasture from here.\n",
+         "altitude" : null
+      },
+      "secret6@jbs" : {
+         "exits" : {
+            "e" : "secret7",
+            "d" : "secret_stairs"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Passage",
+         "id" : "secret6",
+         "description" : "\n     You are at the west end of a small east west passage. From here you can go\ndown the passage to the east or climb down a small flight of stairs that starts\nhere.\n",
+         "altitude" : null
+      },
+      "tunnel1@jbs" : {
+         "exits" : {
+            "w" : "blocked",
+            "e" : "bottom"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "In the Tunnel",
+         "id" : "tunnel1",
+         "description" : "\n     You are in a freshly dug east west tunnel.\n",
+         "altitude" : null
+      },
+      "steep@jbs" : {
+         "exits" : {
+            "w" : "sloping",
+            "e" : "damp",
+            "u" : "damp",
+            "d" : "sloping"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Steep Tunnel",
+         "id" : "steep",
+         "description" : "\n    This tunnel slopes sharply down to the west or up to the east, depending on\nwhich way you're going.\n",
+         "altitude" : null
+      },
+      "tunnel@jbs" : {
+         "exits" : {
+            "w" : "bottom",
+            "s" : "damp"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "In the Tunnel",
+         "id" : "tunnel",
+         "description" : "\n     The tunnel turns to south up ahead and continues into darkness.  As you\nlook at the floor you see some very large footprints that seem to indicate that\nthis is a fairly well traveled route, although by looking at the prints you\ncan't really tell what it is that travels here.\n",
+         "altitude" : null
+      },
+      "under@jbs" : {
+         "exits" : {
+            "e" : "giants_bed",
+            "d" : "^panel_bed"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Under the Bed",
+         "id" : "under",
+         "description" : "\n     You are under the giants bed.  You have to stoop just a little because the\nbed sagging pretty badly under the giant's weight, but the bed looks like it\ncan hold...for the time being at least.\n",
+         "altitude" : null
+      },
+      "secret5@jbs" : {
+         "exits" : {
+            "u" : "secret_stairs",
+            "s" : "secret4"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Passage",
+         "id" : "secret5",
+         "description" : "\n     The passage here goes off into darkness to the south and up a flight of\nstairs to the north.\n",
+         "altitude" : null
+      },
+      "cell2@jbs" : {
+         "exits" : {
+            "n" : "corridor2"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Cell",
+         "id" : "cell2",
+         "description" : "\n     This is a small, uncomfortable looking cell.  There is a wooden bed\nsuspended from the wall and no pillow.  You wonder where these prisoners go to\nthe bathroom.\n",
+         "altitude" : null
+      },
+      "antechamber@jbs" : {
+         "exits" : {
+            "e" : "waiting",
+            "s" : "archway"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Vast Antechamber",
+         "id" : "antechamber",
+         "description" : "\n     This a big room that doesn't seem to have much purpose.  The only reason\nyou see for anyone wanting to sit in it is if they wanted an empty room to heal\nin.\n",
+         "altitude" : null
+      },
+      "dining@jbs" : {
+         "exits" : {
+            "w" : "den",
+            "n" : "kitchen"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Dining Room",
+         "id" : "dining",
+         "description" : "\n     This is the place where the people who live here gather to eat.  You can\nleave this room to the north or west.\n",
+         "altitude" : null
+      },
+      "hole@jbs" : {
+         "exits" : {
+            "u" : "garden3",
+            "d" : "bottom"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "In the Hole",
+         "id" : "hole",
+         "description" : "\n     You are scrambling down the side of a huge tunnel that goes straight down\nfor about fifty yards and then continues off into darkness.  Fortunately, the\nwalls are rough enough to allow you to climb back out if you need to.\n",
+         "altitude" : null
+      },
+      "jbs163@jbs" : {
+         "exits" : {
+            "n" : "fjord1@fjord",
+            "s" : "jbs162"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Abandoned Pasture",
+         "id" : "jbs163",
+         "description" : "\n   The path continues it ways through what is left of an old horse pasture.\nMounds of earth cover the remains of horses and other cattle that once\ngrazed here years ago.  To the north the pasture ends at an old cattle gate.\n",
+         "altitude" : null
+      },
+      "fsun@jbs" : {
+         "exits" : {
+            "w" : "campfire",
+            "n" : "dreams",
+            "u" : "mugwumps",
+            "d" : "mugwumps",
+            "s" : "bears"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "The Sun",
+         "id" : "fsun",
+         "description" : "\n     You find yourself suddenly walking on the surface of the sun.  You are\nsurrounded by a vast expanse of incredibly bright surface upon which through\nmuch squinting and shading you can vaguely make out the shapes of strange\ncreatures floating around you in all directions. As you look down at your feet,\nyou notice that they are on fire, but it seems ok because you can't feel any\npain right now.\n",
+         "altitude" : null
+      },
+      "bottom_stairs@jbs" : {
+         "exits" : {
+            "w" : "corridor1",
+            "u" : "half_way_d"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Bottom of the Stairs",
+         "id" : "bottom_stairs",
+         "description" : "\n     You are at the bottom of the stairs.  Looking up to the east, you see the\nhuge staircase that you're going to have to struggle back up, and from the west\nyou hear many anguished screams and groans coming from the dungeon of this\ncastle.\n",
+         "altitude" : null
+      },
+      "space@jbs" : {
+         "exits" : {
+            "w" : "fsun",
+            "u" : "dreams",
+            "d" : "other_side"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Space",
+         "id" : "space",
+         "description" : "\n     You find yourself in an infinite void.  You seem to have forgotten where\nyou made the wrong turn that brought you here, but you have to deal with it\nanyway. Off in the distances all around you you can make out millions of stars,\nbut you can't seem to focus on any of them long enough to get your bearings\nbecause every time you move your head your field of vision is filled with\nmillions of brightly colored trails coming from each star.\n",
+         "altitude" : null
+      },
+      "jbs162@jbs" : {
+         "exits" : {
+            "n" : "jbs163",
+            "s" : "path0"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Abandoned Pasture",
+         "id" : "jbs162",
+         "description" : "\n   The path winds it way through what is left of a horse pasture.  At one\ntime, numerous horses roamed here, but eventually, they died off.  Most of\nthe fencing that enclosed the area has rusted away leaving rotting fence\nposts for the termites.  The path continues toward an old cattle gate to\nthe north.\n",
+         "altitude" : null
+      },
+      "lhall7@jbs" : {
+         "exits" : {
+            "e" : "lhall6",
+            "n" : "lhall8"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Large Hallway",
+         "id" : "lhall7",
+         "description" : "\n     The hall turns here so that you can continue down it to the north or east.\n",
+         "altitude" : null
+      },
+      "clock@jbs" : {
+         "exits" : {
+            "s" : "green"
+         },
+         "flags" : [
+            "Peaceful",
+            "Party"
+         ],
+         "zone" : "jbs",
+         "title" : "The Clock Room",
+         "id" : "clock",
+         "description" : "\n   As you enter you are nearly knocked to the floor by a giant pendulum\nswinging in front of the door.  After regaining your balance you look around \nthe room and realize that the whole wall behind you is a &+Ygiant clock&*!  As you\nsurvey the rest of the room you find that it is completely HUNG with clocks of\nall shapes and sizes, and to your surprise they are all set on different times!\nEvery few minutes you hear a different clock chime out a different hour.\n",
+         "altitude" : null
+      },
+      "bed@jbs" : {
+         "exits" : {
+            "u" : "giant",
+            "d" : "giants_bed"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "On the Bed",
+         "id" : "bed",
+         "description" : "\n     You are now on the giants bed standing very close to a very big thing.  If\nyou're feeling REALLY brave you can climb up onto this guys mammoth chest, or\nyou can scramble back down the bedpost and hide under the bed in case this guy\nawakens.\n",
+         "altitude" : null
+      },
+      "fallow2@jbs" : {
+         "exits" : {
+            "e" : "fallow4",
+            "w" : "field",
+            "n" : "fallow1",
+            "s" : "backdoor"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fallow Field",
+         "id" : "fallow2",
+         "description" : "\n    This is the southern part of a fairly large, fertile field.  The field here\ncontinues in all directions except to the south where there is a path to the\nbackdoor of the farmhouse.\n",
+         "altitude" : null
+      },
+      "sepasture@jbs" : {
+         "exits" : {
+            "w" : "swpasture",
+            "n" : "gate"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Southeastern Corner of the Pasture",
+         "id" : "sepasture",
+         "description" : "\n    The grass here is much thicker than in the rest of the field.  The pasture\ncontinues to the north and west, and to the northeast you see the farmhouse\nwhere the proprietors of this fine pasture must live.  In the corner by the\nfence you see a pile of flop.\n",
+         "altitude" : null
+      },
+      "corridor2@jbs" : {
+         "exits" : {
+            "e" : "^door_corridor2",
+            "w" : "corridor3",
+            "n" : "cell1",
+            "s" : "cell2"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Dungeon Corridor",
+         "id" : "corridor2",
+         "description" : "\n     This is a sooty east west corridor that runs through the dungeon.  There\nare open cells to the north and south.\n",
+         "altitude" : null
+      },
+      "guard@jbs" : {
+         "exits" : {
+            "s" : "corridor1"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Guard Room",
+         "id" : "guard",
+         "description" : "\n     This is a small guardroom. There are three chairs scattered loosely around\na comparatively small table. That's about all there is to see in here.  You can\nleave to the south.\n",
+         "altitude" : null
+      },
+      "field@jbs" : {
+         "exits" : {
+            "e" : "fallow2",
+            "w" : "path4",
+            "n" : "fallow"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fallow Field",
+         "id" : "field",
+         "description" : "\n     This is a large field that looks like it has been fallow for much longer\nthan is usually recommended in the Farmer's Almanac.  The field continues to \nthe north and east, and you can head down the path to the pond to the west.\n",
+         "altitude" : null
+      },
+      "secret7@jbs" : {
+         "exits" : {
+            "w" : "secret6",
+            "s" : "^hole_secret7"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Passage",
+         "id" : "secret7",
+         "description" : "\n     To your amazement you are standing in a secret passageway built into the\nwalls of the castle that is only big enough for someone the size of an ordinary\nhuman.  The passage here leads west and south.\n",
+         "altitude" : null
+      },
+      "balcony@jbs" : {
+         "exits" : {
+            "w" : "throne"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "The Balcony",
+         "id" : "balcony",
+         "description" : "\n     You have emerged onto a large balcony about 25 yards across.  You realize\nthat this is where the ruler of this realm must stand to deliver public \nspeeches and other stuff like that.\n",
+         "altitude" : null
+      },
+      "large@jbs" : {
+         "exits" : {
+            "s" : "smelly"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Large Chamber",
+         "id" : "large",
+         "description" : "\n     You discover rather quickly that this large chamber is the lair of the\nlegendary One-Eyed-One-Horned-Flying-Purple-People-Eater.  This creature is\nreputed to be a very nasty thing and you would be well advised to depart before\nit gets home.\n",
+         "altitude" : null
+      },
+      "fallow1@jbs" : {
+         "exits" : {
+            "e" : "fallow3",
+            "w" : "fallow",
+            "s" : "fallow2"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fallow Field",
+         "id" : "fallow1",
+         "description" : "\n     The field here continues in all directions from here except north, where\nthere is a small wooden fence.\n",
+         "altitude" : null
+      },
+      "secret_treasury@jbs" : {
+         "exits" : {
+            "u" : "^panel_secret"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Treasury",
+         "id" : "secret_treasury",
+         "description" : "\n    This is a small, secret treasury where the giant keeps only his most valued\npossession.\n",
+         "altitude" : null
+      },
+      "first_step@jbs" : {
+         "exits" : {
+            "u" : "top_step",
+            "d" : "lhall2"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The First Step",
+         "id" : "first_step",
+         "description" : "\n     After much heaving, groaning, and pulling you finally make it onto the\nfirst step of this mammoth staircase.  As you look up you begin to feel\ndisheartened at the prospect of climbing the rest of this thing.\n",
+         "altitude" : null
+      },
+      "fallow4@jbs" : {
+         "exits" : {
+            "w" : "fallow2",
+            "n" : "fallow3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fallow Field",
+         "id" : "fallow4",
+         "description" : "\n     The field here continues to the north and west, and there is a small fence\nto the east.\n",
+         "altitude" : null
+      },
+      "cell4@jbs" : {
+         "exits" : {
+            "n" : "^door_cell4"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Cell",
+         "id" : "cell4",
+         "description" : "\n     This is a small, uncomfortable looking cell.  there is a wooden bed\nsuspended from the wall and no pillow.  You wonder where these prisoners go to\nthe bathroom.\n",
+         "altitude" : null
+      },
+      "sloping@jbs" : {
+         "exits" : {
+            "e" : "steep",
+            "u" : "steep",
+            "d" : "landing",
+            "s" : "landing"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Sloping Tunnel",
+         "id" : "sloping",
+         "description" : "\n     The tunnel begins to level out here and turns to the south.  As you\ncontinue you begin to wonder how far down this tunnel can go as you remember\nthat you are still up among the clouds.\n",
+         "altitude" : null
+      },
+      "banquet@jbs" : {
+         "exits" : {
+            "n" : "lkitchen",
+            "s" : "lhall2"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Banquet Hall",
+         "id" : "banquet",
+         "description" : "\n    You have entered a gargantuan banquet hall, and as you look around you find\nthat the place is a total mess! There are old bits of food lying on the &+ytables,\nand all over the floor.  There are bits of dirty silverware lying haphazardly\naround as well.  From the north you hear the loud banging and crashing of\nutensils that tells you it must be the kitchen.\n",
+         "altitude" : null
+      },
+      "kitchen@jbs" : {
+         "exits" : {
+            "w" : "foyer",
+            "n" : "pantry",
+            "s" : "dining"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Kitchen",
+         "id" : "kitchen",
+         "description" : "\n     As you enter the kitchen you are overwhelmed by the incredible aroma of\nfresh country cooking.  The walls in here are covered with beige, flowery\nwallpaper, and there are all kinds of pots and pans hanging from a rack above a\ncounter in the center of the room.  Exits lead north, south and east.\n",
+         "altitude" : null
+      },
+      "fwood5@jbs" : {
+         "exits" : {
+            "w" : "fwood",
+            "e" : "fwood3",
+            "u" : "fwood5",
+            "n" : "fwood2",
+            "d" : "fwood1",
+            "s" : "fwood2"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fairy Wood",
+         "id" : "fwood5",
+         "description" : "\n     You are following a twisty path through the fairy wood.  Small paths lead\noff from here in several directions and there is a thick layer of mist covering\nthe ground all around you.\n",
+         "altitude" : null
+      },
+      "cell3@jbs" : {
+         "exits" : {
+            "s" : "corridor3"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Cell",
+         "id" : "cell3",
+         "description" : "\n     This is a small, uncomfortable looking cell.  There is a wooden bed\nsuspended from the wall and no pillow.  You wonder where these prisoners go to\nthe bathroom.\n",
+         "altitude" : null
+      },
+      "cloud_gate@jbs" : {
+         "exits" : {
+            "e" : "bridge",
+            "w" : "cloudy1"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Gates of the Cloud Castle",
+         "id" : "cloud_gate",
+         "description" : "\n     You are standing in front of a gigantic gateway that leads to a drawbridge\nthat leads into the courtyard of what has to be the largest structure you've\never laid eyes on.  You can go onto the bridge to the east or head back west,\nwhichever you think is wiser.\n",
+         "altitude" : null
+      },
+      "mugwumps@jbs" : {
+         "exits" : {
+            "e" : "space",
+            "w" : "bears",
+            "u" : "campfire",
+            "d" : "brown",
+            "s" : "dreams"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Mugwump Central",
+         "id" : "mugwumps",
+         "description" : "\n     You stand in the center of a large rectangular room with exits in all\ndirections.  As you look around this place you see several rows of disgusting,\nlizard-like creatures that could only have come out of a horrible nightmare.\nAll of them are strung upside down from the ceiling and most have a person or\ntwo kneeling on the floor beneath them sucking thick fluids from erect, hollow\ntubes growing from the heads of the creatures.  As you look at the people here,\nyou notice that they seem to be enjoying themselves, but you also get the\nfeeling that many of them have been here for years.\n",
+         "altitude" : null
+      },
+      "cell1@jbs" : {
+         "exits" : {
+            "s" : "corridor2"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Cell",
+         "id" : "cell1",
+         "description" : "\n     This is a small, uncomfortable looking cell.  There is a wooden bed\nsuspended from the wall and no pillow.  You wonder where these prisoners go to\nthe bathroom.\n",
+         "altitude" : null
+      },
+      "path3@jbs" : {
+         "exits" : {
+            "n" : "pond",
+            "s" : "path2"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Farm Path",
+         "id" : "path3",
+         "description" : "\n    This path runs north and south along the fence of the pasture. To the north\nyou see a small pond and to the south the path continues.\n",
+         "altitude" : null
+      },
+      "lpantry@jbs" : {
+         "exits" : {
+            "w" : "lkitchen"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Pantry",
+         "id" : "lpantry",
+         "description" : "\n     This is a large pantry with lots and lots of food that is on shelves way\ntoo high for you to reach.  You can leave to the west when you finish drooling.\n",
+         "altitude" : null
+      },
+      "sbarn@jbs" : {
+         "exits" : {
+            "w" : "swstall",
+            "e" : "sestall",
+            "n" : "nbarn"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Southern End of the Barn",
+         "id" : "sbarn",
+         "description" : "\n     Looks just like the northern end of the barn here.  To the east and west\nare more stalls.\n",
+         "altitude" : null
+      },
+      "guest1@jbs" : {
+         "exits" : {
+            "n" : "lhall6"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Guest Room",
+         "id" : "guest1",
+         "description" : "\n     This is an enormous bedroom. Other than that it looks about like any other\nbedroom.  It has a bed, a dresser, a night table, and all the other stuff that\nbedrooms usually have.  It's all just really big.\n",
+         "altitude" : null
+      },
+      "epond@jbs" : {
+         "exits" : {
+            "e" : "path4",
+            "n" : "npond",
+            "s" : "pond"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Eastern End of the Pond",
+         "id" : "epond",
+         "description" : "\n     You are next to a small pond in the middle of a small peaceful wood.  The\nsounds of birds singing and of the water lapping gently up against the shore\nmake you feel very at ease here.  The small path around the pond continues to\nthe north and south, while another path heads east past a medium sized barn.\n",
+         "altitude" : null
+      },
+      "path0@jbs" : {
+         "exits" : {
+            "e" : "path1",
+            "n" : "jbs162",
+            "s" : "jungle33@balharbor"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Small Path",
+         "id" : "path0",
+         "description" : "\n  You are on a small stretch of path that takes a split here.  To the north\nis what's left of an old horse pasture.  Another path goes east towards a\nfarm.  Southward lies the village of Bal Harbor.\n",
+         "altitude" : null
+      },
+      "nwstall@jbs" : {
+         "exits" : {
+            "e" : "nbarn"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Stall",
+         "id" : "nwstall",
+         "description" : "\n     This is a small animal stall.\n",
+         "altitude" : null
+      },
+      "master@jbs" : {
+         "exits" : {
+            "w" : "top"
+         },
+         "flags" : [
+            "private",
+            "party"
+         ],
+         "zone" : "jbs",
+         "title" : "Master Bedroom",
+         "id" : "master",
+         "description" : "\n     This is the master bedroom.  It is slightly larger than the other rooms\nupstairs, and it has a king sized bed in the center of the east wall.  You can\nleave to the west.\n",
+         "altitude" : null
+      },
+      "giant@jbs" : {
+         "exits" : {
+            "w" : "nose",
+            "d" : "bed"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "On the Giant",
+         "id" : "giant",
+         "description" : "\n     You are standing on the giant's chest. As you look to the west you can see\nup his cavernous nose!  Looks like a nice place to go spelunking.\n",
+         "altitude" : null
+      },
+      "lhall4@jbs" : {
+         "exits" : {
+            "w" : "lhall5",
+            "e" : "lhall3",
+            "n" : "lavatory"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Large Hallway",
+         "id" : "lhall4",
+         "description" : "\n     You are in a large east west hallway.  There is a large room off to the\nnorth.\n",
+         "altitude" : null
+      },
+      "fallow3@jbs" : {
+         "exits" : {
+            "w" : "fallow1",
+            "u" : "^stalk_bottom",
+            "s" : "fallow4"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "North Eastern Corner of the Field",
+         "id" : "fallow3",
+         "description" : "\n     This is the north east corner of the field.  Ordinarily you can only go\nSouth or East form here.\n",
+         "altitude" : null
+      },
+      "damp@jbs" : {
+         "exits" : {
+            "w" : "steep",
+            "n" : "tunnel",
+            "d" : "steep",
+            "s" : "end"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Damp Intersection",
+         "id" : "damp",
+         "description" : "\n    The tunnel is intersected here by another tunnel that is coming up from the\nwest.  The dirt is fairly wet here and there are small drop of water dripping\nslowly from the ceiling in some places.  Someone must be watering the garden\nabove you.\n",
+         "altitude" : null
+      },
+      "lhall6@jbs" : {
+         "exits" : {
+            "w" : "lhall7",
+            "e" : "lhall5",
+            "s" : "guest1"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Large Hallway",
+         "id" : "lhall6",
+         "description" : "\n     This is a large east west hallway.  There is also an exit into a room to\nthe south.\n",
+         "altitude" : null
+      },
+      "fish@jbs" : {
+         "exits" : {
+            "n" : "npond",
+            "s" : "pond"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "The Fishin' Hole",
+         "id" : "fish",
+         "description" : "\n     The path here runs very close to the &+Bpond&* along a small overhang that goes\nover a fairly deep area of water for this close to the shore.  This looks like \na great spot to sit down, cast in a line, and relax for a little while.\n",
+         "altitude" : null
+      },
+      "sloft@jbs" : {
+         "exits" : {
+            "n" : "loft"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Loft",
+         "id" : "sloft",
+         "description" : "\n     You have now entered the southern end of the hayloft, and, to your great\nsurprise, you find more hay.  You can exit to the north.\n",
+         "altitude" : null
+      },
+      "courtyard@jbs" : {
+         "exits" : {
+            "e" : "^door_courtyard",
+            "w" : "bridge",
+            "n" : "fountain",
+            "s" : "garden"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Courtyard",
+         "id" : "courtyard",
+         "description" : "\n     This is a gigantic courtyard.  Not only is the place almost a mile across,\nbut everything is HUGE! The path you are standing on is paved with cobblestones\nalmost the size of things that you seem to remember being called Cadillacs, and\nthe flowers that fringe the edges are as large as small trees.  From the north\nyou hear a loud roar that sounds like a waterfall and to the south you see what\nmust be the garden, but it looks like a rain forest to you.  The drawbridge is\nback to the west and the door to this gigantic castle is to the east.\n",
+         "altitude" : null
+      },
+      "top_step@jbs" : {
+         "exits" : {
+            "u" : "landing1",
+            "d" : "first_step"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Top Step",
+         "id" : "top_step",
+         "description" : "\n     In the interest of time you have now reached the top step.  Only one more\nto go and you'll be at the top  :).\n",
+         "altitude" : null
+      },
+      "fountain1@jbs" : {
+         "exits" : {
+            "u" : "fountain4",
+            "n" : "fountain3",
+            "s" : "fountain"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Eastern Side of the Fountain",
+         "id" : "fountain1",
+         "description" : "\n     Looks about the same as where you just came from except you have to face\nwest to see the fountain.\n",
+         "altitude" : null
+      },
+      "parlor@jbs" : {
+         "exits" : {
+            "w" : "library",
+            "s" : "entry"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Parlor",
+         "id" : "parlor",
+         "description" : "\n     This is a vast room with several colossal sofas and chairs scattered\nstrategically through the room.  Large archways lead south and west.\n",
+         "altitude" : null
+      },
+      "sitting@jbs" : {
+         "exits" : {
+            "w" : "giants_bed",
+            "n" : "^bookcase",
+            "s" : "throne"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Sitting Room",
+         "id" : "sitting",
+         "description" : "\n     This is the kings private sitting room.  A kind of cozy looking place even\nthough it is pretty huge.  exits lead south and west.\n",
+         "altitude" : null
+      },
+      "intersection@jbs" : {
+         "exits" : {
+            "w" : "secret3",
+            "n" : "secret4",
+            "d" : "secret2"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Dark Intersection",
+         "id" : "intersection",
+         "description" : "\n     You have come to a three way intersection. You can go to the north or west\ndown the passage, or you can go down a flight of stairs that leads into\ndarkness.\n",
+         "altitude" : null
+      },
+      "fountain3@jbs" : {
+         "exits" : {
+            "w" : "fountain2",
+            "e" : "fountain1",
+            "u" : "fountain4"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Northern Side of the Fountain",
+         "id" : "fountain3",
+         "description" : "\n     Looks about the same as where you just came from except you have to face\nsouth to see the fountain.\n",
+         "altitude" : null
+      },
+      "fwood1@jbs" : {
+         "exits" : {
+            "w" : "fwood4",
+            "e" : "fwood5",
+            "u" : "fwood3",
+            "n" : "fwood",
+            "d" : "fgate",
+            "s" : "fwood"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fairy Wood",
+         "id" : "fwood1",
+         "description" : "\n     You are lost in a large wood.  There is thick mist covering the ground in\nall directions and you think you see small animals moving around underneath it,\nbut you can't make out what they might be.\n",
+         "altitude" : null
+      },
+      "other_side@jbs" : {
+         "exits" : {
+            "w" : "space",
+            "s" : "green"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "The Other Side",
+         "id" : "other_side",
+         "description" : "\n     You have broken through to the other side... of a big black sheet with a\nbunch of little holes in it.  It is bright on this side of the sheet and you\nseem to have vague recollections of coming this way once before and then \ngetting lost and not being able to figure out where you were.\n",
+         "altitude" : null
+      },
+      "landing1@jbs" : {
+         "exits" : {
+            "e" : "archway",
+            "d" : "top_step"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Landing",
+         "id" : "landing1",
+         "description" : "\n     You are now at the landing at the top of the stairs. As you look back down\nyou heave a sigh of relief that you don't have to climb those things again, and\nyou think that going back down will be much easier. There is a giant archway to\nthe east.\n",
+         "altitude" : null
+      },
+      "secret3@jbs" : {
+         "exits" : {
+            "e" : "intersection",
+            "n" : "^hole_secret3"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Passage",
+         "id" : "secret3",
+         "description" : "\n     To your amazement you are standing in a secret passageway built into the\nwalls of the castle that is only big enough for someone the size of an ordinary\nhuman.  The passage here leads east and north.\n",
+         "altitude" : null
+      },
+      "backdoor@jbs" : {
+         "exits" : {
+            "n" : "fallow2",
+            "s" : "^door_backdoor"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "The Back Porch",
+         "id" : "backdoor",
+         "description" : "\n     You are right outside the backdoor of a small, somewhat quaint farmhouse.\nTo the north there is a short path that leads to a large fallow field and to \nthe south you can enter the farmhouse.\n",
+         "altitude" : null
+      },
+      "fountain5@jbs" : {
+         "exits" : {
+            "u" : "fountain4"
+         },
+         "flags" : [
+            "underwater",
+            "soundproof"
+         ],
+         "zone" : "jbs",
+         "title" : "In the Fountain",
+         "id" : "fountain5",
+         "description" : "\n     You are walking along the bottom of the fountain now.  The noise from the\nwater crashing over your head is so loud that you can't hear a thing.\n",
+         "altitude" : null
+      },
+      "secret1@jbs" : {
+         "exits" : {
+            "w" : "secret",
+            "u" : "secret2"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Passage",
+         "id" : "secret1",
+         "description" : "\n     You are in a small secret passage that runs from east to west. To the east\nis a flight of stairs that is cut the size of normal feet.\n",
+         "altitude" : null
+      },
+      "npond@jbs" : {
+         "exits" : {
+            "e" : "epond",
+            "w" : "fish"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Northern End of the Pond",
+         "id" : "npond",
+         "description" : "\n     The small wood is very peaceful here, and the air smells fresh and sweet.\nThe path continues around to the east and west.\n",
+         "altitude" : null
+      },
+      "lkitchen@jbs" : {
+         "exits" : {
+            "e" : "lpantry",
+            "s" : "banquet"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Kitchen",
+         "id" : "lkitchen",
+         "description" : "\n     This a really big kitchen.  There pots and pans here that are easily big\nenough to cook you in.  To the south is the banquet hall and there is a pantry\nto the east.\n",
+         "altitude" : null
+      },
+      "bottom@jbs" : {
+         "exits" : {
+            "w" : "tunnel1",
+            "e" : "tunnel",
+            "u" : "hole"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Bottom of the Hole",
+         "id" : "bottom",
+         "description" : "\n     You are standing in a dirt tunnel that looks as if it was dug rather\nrecently.  The tunnel is large enough for you to stand easily upright and still\nhave plenty of room to spare.  The tunnel runs east and west into darkness.\n",
+         "altitude" : null
+      },
+      "bears@jbs" : {
+         "exits" : {
+            "e" : "dreams",
+            "n" : "campfire",
+            "u" : "fsun"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Dancing Bears",
+         "id" : "bears",
+         "description" : "\n     You have reached a small clearing in the middle of somewhere, and to your\nsurprise you find a group of five or six small bears, all different colors\nranging from blue to red and green, dancing around and grooving to a really\ntripped out version of what sounds like Dark Star... You have no idea where the\nmusic might be coming from.\n",
+         "altitude" : null
+      },
+      "chambers@jbs" : {
+         "exits" : {
+            "n" : "giants_bed",
+            "s" : "waiting"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Kings Chambers",
+         "id" : "chambers",
+         "description" : "\n     This is the reception area to the king's private chambers.  The waiting\nroom is just north of here, and the chambers continue to the  south.\n",
+         "altitude" : null
+      },
+      "brown@jbs" : {
+         "exits" : {
+            "s" : "mugwumps"
+         },
+         "flags" : [
+            "death"
+         ],
+         "zone" : "jbs",
+         "title" : "Brown",
+         "id" : "brown",
+         "description" : "\n    Brown is not a good color.  This was a very bad room to try.  Sorry you had\na bad trip.. better luck next time *wave*\n",
+         "altitude" : null
+      },
+      "foyer@jbs" : {
+         "exits" : {
+            "w" : "^door_foyer",
+            "e" : "kitchen",
+            "n" : "study",
+            "u" : "top",
+            "s" : "den"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Foyer",
+         "id" : "foyer",
+         "description" : "\n     This is just a small entry room.  Not much here to describe.  Go to the\nkitchen to the east, the den to the south, the study to the north, or upstairs\nto the up.\n",
+         "altitude" : null
+      },
+      "fwood4@jbs" : {
+         "exits" : {
+            "e" : "fwood4",
+            "w" : "fwood5",
+            "u" : "fwood",
+            "n" : "fwood1",
+            "d" : "fwood4",
+            "s" : "fwood"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fairy Wood",
+         "id" : "fwood4",
+         "description" : "\n     You are still in the fairy wood.  The mist here is thinner than in other\nplaces, but still thick enough to make you feel as eerie as everywhere else in\nthis place.  There is a small brook here that looks like it would be a rather\nnice place to hang about for a while, if only the water wasn't lime green.\n",
+         "altitude" : null
+      },
+      "cloudy@jbs" : {
+         "exits" : {
+            "e" : "cloudy1",
+            "s" : "top_beanstalk"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Cloudy Path",
+         "id" : "cloudy",
+         "description" : "\n     The ground is solid under your feet, but there is a haze of cloud over\neverything.  The path here turns to the east up ahead and goes south back\ntowards the beanstalk.\n",
+         "altitude" : null
+      },
+      "fwood2@jbs" : {
+         "exits" : {
+            "e" : "fwood4",
+            "w" : "fwood1",
+            "u" : "fwood",
+            "n" : "fwood3",
+            "d" : "fwood5",
+            "s" : "fwood"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fairy Wood",
+         "id" : "fwood2",
+         "description" : "\n     This is one of those spots that looks incredibly familiar, but you know\nyou've probably never been here before.  The mist is thick here and wrapped\naround your feet and ankles so that whenever you take a step it creates swirls\nand eddies in surface of the mist.\n",
+         "altitude" : null
+      },
+      "smelly@jbs" : {
+         "exits" : {
+            "w" : "landing",
+            "n" : "large",
+            "s" : "slippery"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Smelly Chamber",
+         "id" : "smelly",
+         "description" : "\n     You have entered a fair sized chamber that stinks of rotting flesh.  There\nis light coming in from the landing bay to the south, and there are other rooms\nto the north and south.  The smell seems to be coming from the south.\n",
+         "altitude" : null
+      },
+      "nose@jbs" : {
+         "exits" : {
+            "w" : "nose_chamber",
+            "e" : "giant",
+            "u" : "nose_chamber"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "In the Nose",
+         "id" : "nose",
+         "description" : "\n     You are standing inside of the giant's nose, and you find yourself\nfervently hoping that your walking around in here won't make him sneeze.  You\ncan go back out onto his chest to the east or continue exploring up to the \nwest.\n",
+         "altitude" : null
+      },
+      "half_way_d@jbs" : {
+         "exits" : {
+            "u" : "lhall2",
+            "d" : "bottom_stairs"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Half Way Down",
+         "id" : "half_way_d",
+         "description" : "\n     You have stopped to rest half way down the giant staircase.  It's easier\ngoing while you are trying to go down them than it will be trying to get back\nup, but if you're on your way back up you know that by now.\n",
+         "altitude" : null
+      },
+      "side@jbs" : {
+         "exits" : {
+            "w" : "^door_side",
+            "n" : "throne"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Side Room",
+         "id" : "side",
+         "description" : "\n     This is a small side room just south of the throne room.\n",
+         "altitude" : null
+      },
+      "landing@jbs" : {
+         "exits" : {
+            "e" : "smelly",
+            "n" : "sloping",
+            "s" : "mountains"
+         },
+         "flags" : [
+            "nomobiles"
+         ],
+         "zone" : "jbs",
+         "title" : "Landing Bay",
+         "id" : "landing",
+         "description" : "\n     You have reached the lowest possible point of the tunnel.  Directly to the\nsouth you see an opening that is letting in small tufts of cloud.  You see many\ndeep claw markings around the edge of the drop off and you wonder what could\npossibly have made them.  There is a chamber to the east, or you can go back up\nthe tunnel to the north.\n",
+         "altitude" : null
+      },
+      "swstall@jbs" : {
+         "exits" : {
+            "e" : "sbarn"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Stall",
+         "id" : "swstall",
+         "description" : "\n     This is a small animal stall.\n",
+         "altitude" : null
+      },
+      "fwood3@jbs" : {
+         "exits" : {
+            "w" : "fwood5",
+            "e" : "fwood1",
+            "u" : "fwood3",
+            "n" : "cliff",
+            "d" : "fgate",
+            "s" : "fwood4"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fairy Wood",
+         "id" : "fwood3",
+         "description" : "\n    The mist is thickening here and almost obscuring your entire view.  You can\nbarely see your hand in front of your face, and the mist is so thick you can\nfeel it against your skin.\n",
+         "altitude" : null
+      },
+      "archway@jbs" : {
+         "exits" : {
+            "w" : "landing1",
+            "n" : "antechamber"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Giant Archway",
+         "id" : "archway",
+         "description" : "\n     This is giant archway. It goes west back to the stairs and turns north and\nleads into a vast antechamber.\n",
+         "altitude" : null
+      },
+      "nbedroom@jbs" : {
+         "exits" : {
+            "s" : "hall"
+         },
+         "flags" : [
+            "private",
+            "party"
+         ],
+         "zone" : "jbs",
+         "title" : "Bedroom",
+         "id" : "nbedroom",
+         "description" : "\n     This is just a bedroom.  You can leave to the south or hang out for a\nwhile.  It's really kinda up to you.\n",
+         "altitude" : null
+      },
+      "sbedroom@jbs" : {
+         "exits" : {
+            "n" : "^door_sbedroom"
+         },
+         "flags" : [
+            "soundproof",
+            "private",
+            "party"
+         ],
+         "zone" : "jbs",
+         "title" : "Bedroom",
+         "id" : "sbedroom",
+         "description" : "\n     This is a bedroom.  You can leave to the north.\n",
+         "altitude" : null
+      },
+      "lhall5@jbs" : {
+         "exits" : {
+            "w" : "lhall6",
+            "e" : "lhall4",
+            "s" : "storage"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Large Hallyway",
+         "id" : "lhall5",
+         "description" : "\n     This is also a large east west hallway.  There is another exit to the\nsouth.\n",
+         "altitude" : null
+      },
+      "sestall@jbs" : {
+         "exits" : {
+            "w" : "sbarn"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Stall",
+         "id" : "sestall",
+         "description" : "\n     This is a small animal stall.\n",
+         "altitude" : null
+      },
+      "slippery@jbs" : {
+         "exits" : {
+            "n" : "smelly"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Feeding Chamber",
+         "id" : "slippery",
+         "description" : "\n     As you enter this room, you step on a pile of intestines and fall to the\nfloor where you are covered with blood and guts.  After a few tries you manage\nto scramble to your feet and maintain your balance.  The stench of rotten flesh\nin here is almost overwhelming, and as you examine the many entrails and bones\nlying around the room you notice that they are exclusively human.\n",
+         "altitude" : null
+      },
+      "library@jbs" : {
+         "exits" : {
+            "e" : "parlor",
+            "s" : "lhall1"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Library",
+         "id" : "library",
+         "description" : "\n     This is a fairly small library for being in a place of this size.  There\ncould scarcely be many more than a hundred volumes in here, making you think\nthat this would definitely not be a good place to start work on a research\npaper.  The books that there are, however, are so big that you would have to\nstand on them to read them.\n",
+         "altitude" : null
+      },
+      "secret2@jbs" : {
+         "exits" : {
+            "u" : "intersection",
+            "d" : "secret1"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Stairs",
+         "id" : "secret2",
+         "description" : "\n     You are on a flight of stairs. They go up and down.  The only thing\nremarkable about these stairs is how easy it is going up and down them compared\nwith the other stairs in this place.\n",
+         "altitude" : null
+      },
+      "waiting@jbs" : {
+         "exits" : {
+            "e" : "throne",
+            "w" : "antechamber",
+            "n" : "chambers"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Waiting Room",
+         "id" : "waiting",
+         "description" : "\n     This is where those who seek audience with the king of this castle wait.\nThere are several very fine, plush chairs in here waiting to accommodate\nvisitors.  Unfortunately for you, though, they are all way to high off the\nground for you to sit in one.\n",
+         "altitude" : null
+      },
+      "head@jbs" : {
+         "exits" : {
+            "e" : "eyes",
+            "d" : "^hatch_head"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Inside the Head",
+         "id" : "head",
+         "description" : "\n     You are deep inside this giants head now and things are starting to look\nreally fishy. There is a steel walkway here leading to the east where you think\nyou might make out a vague light.\n",
+         "altitude" : null
+      },
+      "campfire@jbs" : {
+         "exits" : {
+            "e" : "fsun",
+            "w" : "vines",
+            "n" : "bears"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Around the Campfire",
+         "id" : "campfire",
+         "description" : "\n     As you come to your senses for another burst of something that looks as \nif it could vaguely approach reality, you find yourself sitting by a small \ncampfire in the middle of nowhere discussing the finer qualities of \ncrossbreeding earthworms with racehorses with several people you have never \nseen before in your life.  This, however, doesn't strike you as very \ninconvenient or unusual because your having a good time anyway.\n",
+         "altitude" : null
+      },
+      "pond@jbs" : {
+         "exits" : {
+            "w" : "fish",
+            "e" : "epond",
+            "s" : "path3"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "By the Pond",
+         "id" : "pond",
+         "description" : "\n     The path forks here to run east and west around a small, clear fish pond.\nThe trees here have not been cleared like they have on the rest of the farm so\nyou cannot see very far along the path in either direction, but the sounds of\nthe birds and other small woodland animals living here make you feel at ease.\n",
+         "altitude" : null
+      },
+      "blocked@jbs" : {
+         "exits" : {
+            "e" : "tunnel1"
+         },
+         "flags" : [
+            "dark"
+         ],
+         "zone" : "jbs",
+         "title" : "Blocked Tunnel",
+         "id" : "blocked",
+         "description" : "\n     The tunnel is blocked off here by a recent cave-in.  The only exit is back\nto the east.\n",
+         "altitude" : null
+      },
+      "garden1@jbs" : {
+         "exits" : {
+            "w" : "garden",
+            "s" : "garden3"
+         },
+         "flags" : [
+            "nomobiles"
+         ],
+         "zone" : "jbs",
+         "title" : "The Garden",
+         "id" : "garden1",
+         "description" : "\n     You are at the end of a what must be a small path for the proprietor of\nthis garden.  The path is surrounded on all sides by fencing.  To the south,\nhowever, it looks like one of the links has been bent just enough for you to\nsqueeze through.\n",
+         "altitude" : null
+      },
+      "secret@jbs" : {
+         "exits" : {
+            "e" : "secret1",
+            "n" : "^hole_secret"
+         },
+         "flags" : [
+            "dark",
+            "nomobiles"
+         ],
+         "zone" : "jbs",
+         "title" : "Secret Passage",
+         "id" : "secret",
+         "description" : "\n     To your amazement you are standing in a secret passageway built into the\nwalls of the castle that is only big enough for someone the size of an ordinary\nhuman.  The passage here turns from east to north.\n",
+         "altitude" : null
+      },
+      "mountains@jbs" : {
+         "exits" : {},
+         "flags" : [
+            "death",
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Mountain Tops",
+         "id" : "mountains",
+         "description" : "\n     You have fallen to your death and now you can't get any of your stuff back\nuntil after a reset..or if you are lucky enough to have robdeath. I hope you're \npleased....  Oh yeah.. you are also splattered all over the peak of a really \nbig mountain.\n",
+         "altitude" : null
+      },
+      "deeppasture@jbs" : {
+         "exits" : {
+            "e" : "gate",
+            "w" : "nwpasture"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Deep in the Pasture",
+         "id" : "deeppasture",
+         "description" : "\n    As you enter this part of the pasture you notice that the grass is a little\nmore sparse than in other areas.  You look around and see a fence to the north\nand more pasture to the east and west.\n",
+         "altitude" : null
+      },
+      "vines@jbs" : {
+         "exits" : {
+            "e" : "campfire",
+            "w" : "fwood4",
+            "n" : "fwood2",
+            "s" : "fwood5"
+         },
+         "flags" : [
+            "outdoors",
+            "nomobiles"
+         ],
+         "zone" : "jbs",
+         "title" : "Gripping Vines",
+         "id" : "vines",
+         "description" : "\n     All around you the woods seem to have come to life!  You find yourself\nstruggling through the branches of mighty trees and thick ivy vines that are\ntrying their best not to let you past.  The mist is very thick here too making\nit quite difficult for you to know which way you came from and which way might\nlead out of here.\n",
+         "altitude" : null
+      },
+      "fwood@jbs" : {
+         "exits" : {
+            "e" : "fwood5",
+            "w" : "fgate",
+            "u" : "fwood3",
+            "n" : "fwood2",
+            "s" : "fwood1"
+         },
+         "flags" : [
+            "outdoors"
+         ],
+         "zone" : "jbs",
+         "title" : "Fairy Wood",
+         "id" : "fwood",
+         "description" : "\n     Lost.... You find yourself stumbling through a large, misty wood that \nseems to extend in all directions to infinity.  The trees seem to be moving \naround you opening paths through the thickest brush and closing before \nallowing you to go down the clearest path.  The sky above you is fairly \nvisible through the tree tops, but as you look up all you see are incredible \nvortices of swirling color.\n",
+         "altitude" : null
+      },
+      "pantry@jbs" : {
+         "exits" : {
+            "n" : "^door_pantry",
+            "s" : "kitchen"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "The Pantry",
+         "id" : "pantry",
+         "description" : "\n     This is the small pantry that holds the food for this small farmhouse.  \nThe backdoor is to the north allowing you to leave this wonderful place if \nyou would like to or you can go into the kitchen to the south.\n",
+         "altitude" : null
+      },
+      "guest2@jbs" : {
+         "exits" : {
+            "w" : "lhall8"
+         },
+         "flags" : [],
+         "zone" : "jbs",
+         "title" : "Guest Room",
+         "id" : "guest2",
+         "description" : "\n     This is an enormous bedroom. Other than that it looks about like any other\nbedroom.  It has a bed, a dresser, a night table, and all the other stuff that\nbedrooms usually have.  It's all just really big.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "chef@jbs" : {
+         "damage" : "25",
+         "location" : "lkitchen",
+         "armor" : "0",
+         "name" : "chef",
+         "description" : "\nThe Swedish Chef is here throwing things at you!  Bork Bork Bork!",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The Swedish Chef",
+         "aggression" : "90"
+      },
+      "john@jbs" : {
+         "damage" : "12",
+         "location" : "guard",
+         "armor" : "0",
+         "name" : "john",
+         "description" : "John the guard is here, and he doesn't look happy to see you.",
+         "strength" : "125",
+         "speed" : "0",
+         "pname" : "John",
+         "aggression" : "90"
+      },
+      "jesse@jbs" : {
+         "damage" : "10",
+         "location" : "eyes",
+         "armor" : "0",
+         "name" : "jesse",
+         "examine" : "\nWell, this gentleman thought he could rule the land of the giants by being\na giant...but he didn't count on you foiling his plan to eventually take\nover the 'normal-sized' world with an army of giants.",
+         "description" : "Jesse, the man inside the giant, is here, and he isn't happy to see you.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "Jesse",
+         "aggression" : "90",
+         "mflags" : [
+            "barwest"
+         ]
+      },
+      "jane@jbs" : {
+         "damage" : "13",
+         "location" : "fwood6",
+         "armor" : "0",
+         "name" : "jane",
+         "description" : "Mary Jane is here wondering where up is.",
+         "sflags" : [
+            "female"
+         ],
+         "strength" : "120",
+         "pname" : "Mary Jane",
+         "aggression" : "20"
+      },
+      "hedgehog@jbs" : {
+         "damage" : "10",
+         "location" : "fwood1",
+         "armor" : "0",
+         "name" : "hedgehog",
+         "description" : "A viscious little hedgehog leaps out of the mist at you!",
+         "strength" : "60",
+         "speed" : "0",
+         "pname" : "The hedgehog",
+         "aggression" : "100"
+      },
+      "belinda@jbs" : {
+         "damage" : "10",
+         "location" : "sbedroom",
+         "armor" : "0",
+         "name" : "belinda",
+         "description" : "The farmer's daughter Belinda is here with her boyfriend.",
+         "sflags" : [
+            "female"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Belinda",
+         "aggression" : "40"
+      },
+      "goat@jbs" : {
+         "damage" : "15",
+         "location" : "sestall",
+         "armor" : "0",
+         "name" : "goat",
+         "description" : "There's a goat here with it's belly rumbling.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The goat",
+         "aggression" : "0"
+      },
+      "fish@jbs" : {
+         "damage" : "13",
+         "location" : "fountain5",
+         "armor" : "0",
+         "name" : "fish",
+         "description" : "\nA huge fish is here making you finally realize what fish-food must feel like.",
+         "strength" : "120",
+         "speed" : "0",
+         "aggression" : "70",
+         "pname" : "The fish",
+         "mflags" : [
+            "Aquatic"
+         ]
+      },
+      "goose@jbs" : {
+         "damage" : "10",
+         "location" : "secret_treasury",
+         "armor" : "0",
+         "name" : "goose",
+         "sflags" : [
+            "Female"
+         ],
+         "description" : "The goose that lays golden eggs is sitting here.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "The goose",
+         "aggression" : "0"
+      },
+      "mac@jbs" : {
+         "damage" : "15",
+         "location" : "fwood6",
+         "aggression" : "40",
+         "armor" : "0",
+         "pname" : "Seargent Big Mac",
+         "name" : "mac",
+         "description" : "Seargent Big Mac is here waiting to arrest you for eating one too many \nhamburgers.",
+         "strength" : "200"
+      },
+      "people_eater@jbs" : {
+         "damage" : "20",
+         "location" : "large",
+         "armor" : "0",
+         "name" : "people_eater",
+         "description" : "The One-eyed-one-horned-flying-purple-people-eater is here\nand he's hungry!",
+         "strength" : "320",
+         "speed" : "0",
+         "pname" : "The People Eater",
+         "aggression" : "90"
+      },
+      "hector@jbs" : {
+         "damage" : "13",
+         "location" : "campfire",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Hector",
+         "name" : "hector",
+         "description" : "Hector the happy-go-lucky hippie is wandering absent mindedly by.",
+         "strength" : "150"
+      },
+      "gatekeeper@jbs" : {
+         "damage" : "15",
+         "location" : "cloud_gate",
+         "armor" : "0",
+         "name" : "gatekeeper",
+         "description" : "There is a giant gatekeeper here keeping you out.",
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Gatekeeper",
+         "aggression" : "60",
+         "mflags" : [
+            "bareast"
+         ]
+      },
+      "sheep@jbs" : {
+         "damage" : "10",
+         "location" : "fallow1",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The sheep",
+         "name" : "sheep",
+         "description" : "A sheep is here bleating softly.",
+         "strength" : "80"
+      },
+      "ruffles@jbs" : {
+         "damage" : "13",
+         "location" : "fallow2",
+         "aggression" : "60",
+         "armor" : "0",
+         "pname" : "Ruffles",
+         "name" : "ruffles",
+         "description" : "Ruffles the sheepdog is here guarding his flock.",
+         "strength" : "100"
+      },
+      "tree@jbs" : {
+         "damage" : "11",
+         "location" : "vines",
+         "armor" : "0",
+         "name" : "tree",
+         "description" : "A large tree is looming over you preparing to do you in",
+         "sflags" : [
+            "NoLegs"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "The Tree",
+         "aggression" : "70",
+         "mflags" : [
+            "bareast"
+         ]
+      },
+      "eugene@jbs" : {
+         "damage" : "10",
+         "location" : "npond",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "Eugene",
+         "name" : "eugene",
+         "description" : "Eugene the duck is here quacking softly to himself.",
+         "strength" : "50"
+      },
+      "jack@jbs" : {
+         "damage" : "15",
+         "location" : "sbedroom",
+         "armor" : "0",
+         "name" : "jack",
+         "description" : "Belinda's boyfriend Jack is here fondling his girlfriend.",
+         "strength" : "100",
+         "speed" : "0",
+         "pname" : "Jack",
+         "aggression" : "60"
+      },
+      "rosebud@jbs" : {
+         "damage" : "13",
+         "location" : "gate",
+         "armor" : "0",
+         "name" : "rosebud",
+         "description" : "Rosebud the killer attack cow is here guarding the gate.",
+         "sflags" : [
+            "female"
+         ],
+         "strength" : "90",
+         "speed" : "0",
+         "pname" : "Rosebud",
+         "aggression" : "10",
+         "mflags" : [
+            "bareast"
+         ]
+      },
+      "bob@jbs" : {
+         "damage" : "10",
+         "location" : "foyer",
+         "armor" : "0",
+         "name" : "bob",
+         "description" : "\nFarmer Bob is here, and he wants you to stay away from his daughter.",
+         "strength" : "120",
+         "speed" : "0",
+         "pname" : "The farmer",
+         "aggression" : "90"
+      },
+      "crier@jbs" : {
+         "damage" : "17",
+         "location" : "waiting",
+         "armor" : "0",
+         "name" : "crier",
+         "description" : "The king's crier is here waiting to announce the guests of\nthe king.  He knows that you are not a guest.",
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "The Crier",
+         "aggression" : "70"
+      },
+      "gopherr@jbs" : {
+         "damage" : "13",
+         "location" : "gopher_den",
+         "aggression" : "60",
+         "armor" : "0",
+         "pname" : "The Gopher",
+         "name" : "gopherr",
+         "description" : "A giant gopher is here busily scurrying around",
+         "strength" : "120"
+      },
+      "guest@jbs" : {
+         "damage" : "15",
+         "location" : "guest1",
+         "armor" : "0",
+         "name" : "guest",
+         "description" : "There is a giant dinnerguest sitting in this giant room.",
+         "strength" : "150",
+         "speed" : "0",
+         "pname" : "The Giant Dinnerguest",
+         "aggression" : "60"
+      },
+      "mugwump@jbs" : {
+         "damage" : "17",
+         "location" : "mugwumps",
+         "aggression" : "0",
+         "armor" : "0",
+         "pname" : "The mugwump",
+         "name" : "mugwump",
+         "description" : "A tall, skinny, ugly, slimy mugwump is here sneering greedily at you.",
+         "strength" : "250"
+      }
+   }
+}

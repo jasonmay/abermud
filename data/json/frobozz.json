@@ -32,7 +32,7 @@
       },
       "shield_attic@frobozz" : {
          "desc[1]" : "\nA shield made of steel has been dropped here for some reason.",
-         "location" : "IN_ROOM:attic",
+         "location" : "attic",
          "armor" : "40",
          "oflags" : [
             "Armor",
@@ -120,12 +120,12 @@
       },
       "jewel_egg@frobozz" : {
          "location" : "IN_CONTAINER:Nest_tree",
-         "oflags" : [
-            "GetFlips"
-         ],
          "altname" : "egg",
          "name" : "Jewel_egg",
          "size" : "5",
+         "oflag" : [
+            "GetFlips"
+         ],
          "pname" : "jewelegg",
          "weight" : "15",
          "bvalue" : "500",
@@ -322,7 +322,7 @@
          ],
          "pname" : "chimney",
          "name" : "Chimney_cellar",
-         "examine" : "\nThe chimney is terribly dirty and black inside, but it provides an easy climb\nup into the kitchen above you if you open the grating that is sits halfway up\ninside the chimney"
+         "examine" : "\nThe chimney is terribly dirty and black inside, but it provides an easy climb\nup into the kitchen above you if you open the &+ygrating&* that is sits halfway up\ninside the chimney."
       },
       "blackboard_behind@frobozz" : {
          "desc[1]" : "The blackboard bars your way to the north.",
@@ -432,6 +432,17 @@
          "altname" : "door",
          "pname" : "oakdoor",
          "name" : "Door_main"
+      },
+      "volume@frobozz" : {
+         "location" : "IN_ROOM:work",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_VIII",
+         "name" : "volume",
+         "examine" : "\nCure is a spell which you can cast on yourself or another player.\nIt will remove the curses of being blind, deaf, crippled, and mute.\nIt is only requires hand gestures, so dumb does not stop it.\nIt costs 10 mana, and is certain at 4 knowledge.",
+         "desc[0]" : "&+YVolume VIII&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "8"
       },
       "trapdoor_living@frobozz" : {
          "location" : "IN_ROOM:living",
@@ -604,6 +615,7 @@
          ],
          "pname" : "chimney",
          "name" : "Chimney_kitchen",
+         "examine" : "There is a &+ygrating&* set in the middle of it.",
          "desc[0]" : "\nLooking up inside the chimney you see blue sky, looking down you see nothing\nbecause it is dark down there in what must be a cellar.  Climbing down the\nchimney is only allowed if your name is Santa Claus."
       },
       "original_vault@frobozz" : {
@@ -671,7 +683,7 @@
          "zone" : "frobozz",
          "title" : "Outside the Vault",
          "id" : "outside",
-         "description" : "\nYou are in what must be the entrance to the vault of the bank because written\non top of the southern wall are the letters \"V A U L T\".  But you can't seem\nto find the vaultdoor.  Is it simply a walk-through-wall or is the vaultdoor\nfitted so nicely into the wall that you can't find it ?\nThe room is lit by some kind of light which comes through a thickglassed \nwindow measuring 1 foot in square set into the northern wall.\nThe tellers' room lies to the west.\n",
+         "description" : "\nYou are in what must be the entrance to the vault of the bank because written\non top of the southern wall are the letters \"V A U L T\".  But you can't seem\nto find the vaultdoor.  Is it simply a walk-through-wall or is the vaultdoor\nfitted so nicely into the wall that you can't find it ?\nThe room is lit by some kind of light which comes through a thickglassed \n&+Cwindow&* measuring 1 foot in square set into the northern wall.\nThe tellers' room lies to the west.\n",
          "altitude" : null
       },
       "dam@frobozz" : {
@@ -706,7 +718,7 @@
          "zone" : "frobozz",
          "title" : "Cellar",
          "id" : "cellar_chimney",
-         "description" : "\nThis part of the cellar is not that damp due to a faint, but fresh\nand warm wind that blows out of a chimney.  The chimney leads up to the\nkitchen making this a chance for you to climb up safer parts of the world.\nThere is also an exit to the south.\n",
+         "description" : "\nThis part of the cellar is not that damp due to a faint, but fresh\nand warm wind that blows out of a &+Cchimney&*.  The chimney leads up to the\nkitchen making this a chance for you to climb up safer parts of the world.\nThere is also an exit to the south.\n",
          "altitude" : null
       },
       "kitchen@frobozz" : {
@@ -732,7 +744,7 @@
          "zone" : "frobozz",
          "title" : "Ending Tunnel",
          "id" : "ending",
-         "description" : "\nYou are in at a dead end of a small cave.  Right there in front of you on the\nfloor is a hole, somewhat 2 feet in diameter.  Peering down into the hole you\nsee nothing but darkness.  \nThere is an exit leading west into a pitch dark chamber.\n",
+         "description" : "\nYou are in at a dead end of a small cave.  Right there in front of you on the\nfloor is a &+yhole&*, somewhat 2 feet in diameter.  Peering down into the hole you\nsee nothing but darkness.  \nThere is an exit leading west into a pitch dark chamber.\n",
          "altitude" : null
       },
       "boulder@frobozz" : {
@@ -788,7 +800,7 @@
          "zone" : "frobozz",
          "title" : "The Living-Room",
          "id" : "living",
-         "description" : "\nThis is the livingroom of the small white house, and in earlier days it must\nhave been at least a bit comfortable, but now it offers nothing.  The windows\nare boarded shut with nailed pieces of planks and the remaining parts of\nfurniture and a large oriental rug are badly ravaged.  \nThere is a single exit north into the kitchen.\n",
+         "description" : "\nThis is the livingroom of the small white house, and in earlier days it must\nhave been at least a bit comfortable, but now it offers nothing.  The windows\nare boarded shut with nailed pieces of planks and the remaining parts of\nfurniture and a large oriental &+yrug&* are badly ravaged.  \nThere is a single exit north into the kitchen.\n",
          "altitude" : null
       },
       "office@frobozz" : {
@@ -915,7 +927,7 @@
          "zone" : "frobozz",
          "title" : "In the Forest",
          "id" : "forest4",
-         "description" : "\nThis is a path winding through a dimly lit forest.  The path heads\nnorth south here, but there is also a small and overgrown path comming\nin from the east and continuing west from here.\nOne particular large tree with some low branches stands at the edge\nof the path.\n",
+         "description" : "\nThis is a path winding through a dimly lit forest.  The path heads\nnorth south here, but there is also a small and overgrown path coming\nin from the east and continuing west from here.\nOne particular large tree with some low branches stands at the edge\nof the path.\n",
          "altitude" : "450"
       },
       "connecting@frobozz" : {
@@ -1086,7 +1098,7 @@
          "zone" : "frobozz",
          "title" : "Up in the Tree",
          "id" : "tree",
-         "description" : "\nYou are about 10 feet above the ground nestled among some large\nbranches.  The nearest branch above you is above your reach.\nBeside you on the branch is a small bird's nest.\n",
+         "description" : "\nYou are about 10 feet above the ground nestled among some large\nbranches.  The nearest branch above you is above your reach.\nBeside you on the branch is a small bird's &+ynest.\n",
          "altitude" : "450"
       },
       "bottom@frobozz" : {
@@ -1323,7 +1335,7 @@
          "armor" : "0",
          "pname" : "The Maintainer",
          "name" : "maintainer",
-         "description" : "A very old maintainer walks slowly around mumbling to\n himself  'Why has my shift down here lasted for 70 years ?'",
+         "description" : "\nA very old maintainer walks slowly around mumbling to himself, 'Why has my \nshift down here lasted for 70 years ?'",
          "strength" : "70"
       },
       "cyclops@frobozz" : {
@@ -1372,6 +1384,20 @@
          "mflags" : [
             "Thief",
             "PickStuff"
+         ]
+      },
+      "sentinal@frobozz" : {
+         "damage" : "15",
+         "location" : "connecting",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "15",
+         "name" : "sentinal",
+         "examine" : "The Wizard Frobozz seems to have left a guard on his workshop.",
+         "description" : "The Sentinal watches you carefully but doesn't move.",
+         "strength" : "200",
+         "mflags" : [
+            "BarN"
          ]
       }
    }

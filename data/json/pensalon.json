@@ -1,0 +1,994 @@
+{
+   "obj" : {
+      "door_crawlspace@pensalon" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pensalon25",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door_crawlspace",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_room",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "draken@pensalon" : {
+         "location" : "IN_ROOM:pensalon28",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "volume",
+         "name" : "draken",
+         "examine" : "\nThe people of Pensalon in their methods of worship spoke the language of\nDraken to their dieties.  After careful study, you feel you can converse\nin this language as well, though maybe not to your own diety.",
+         "desc[0]" : "A volume that teaches the tongue of the Draken sits on the altar."
+      },
+      "rockfall_cavern@pensalon" : {
+         "desc[1]" : "A large rockfall covers the northern wall.",
+         "location" : "IN_ROOM:pensalon24",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "rockfall",
+         "name" : "rockfall_cavern",
+         "maxstate" : "1",
+         "linked" : "rockfall_crawlspace",
+         "state" : "1"
+      },
+      "door_room@pensalon" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:pensalon26",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "door_room",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_crawlspace",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "flail@pensalon" : {
+         "damage" : "8",
+         "location" : "IN_ROOM:pensalon37",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "broken",
+         "name" : "flail",
+         "size" : "15",
+         "bvalue" : "35",
+         "desc[0]" : "A broken footmans flail lies thrown to one side of the room."
+      },
+      "dias_throne@pensalon" : {
+         "desc[1]" : "A large golden throne sits on top a Dias.",
+         "location" : "IN_ROOM:pensalon21",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "dias_throne",
+         "linked" : "throne_throne",
+         "state" : "1",
+         "pname" : "throne",
+         "maxstate" : "1",
+         "desc[0]" : "The King's golden throne is sitting here pushed to one side."
+      },
+      "door_storeroom@pensalon" : {
+         "desc[1]" : "A wooden door bars your forward progress.",
+         "location" : "IN_ROOM:pensalon52",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "wooden",
+         "name" : "door_storeroom",
+         "desc[2]" : "A locked wooden door bars your progress.",
+         "linked" : "door_passage",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "An open wooden door allows you to pass."
+      },
+      "plank@pensalon" : {
+         "damage" : "6",
+         "location" : "IN_ROOM:pensalon9",
+         "oflags" : [
+            "Lightable",
+            "Extinguish",
+            "Weapon"
+         ],
+         "name" : "plank",
+         "bvalue" : "5",
+         "desc[0]" : "A large piece of wood lies here.",
+         "size" : "20"
+      },
+      "forge_workshop@pensalon" : {
+         "desc[1]" : "A large forge sits in the center of the room.",
+         "location" : "IN_ROOM:pensalon38",
+         "oflags" : [
+            "Pushtoggle",
+            "NoGet"
+         ],
+         "altname" : "forge",
+         "name" : "forge_workshop",
+         "examine" : "The mastersmith works on his weapons and armor here.",
+         "linked" : "forge_passage",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "A large forge seems to be pushed to one side allowing access to a secret\npassage behind it."
+      },
+      "door_passage@pensalon" : {
+         "desc[1]" : "A wooden door bars your forward progress.",
+         "location" : "IN_ROOM:pensalon51",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "wooden",
+         "name" : "door_passage",
+         "desc[2]" : "A locked wooden door bars your progress.",
+         "linked" : "door_storeroom",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "An open wooden door allows you to pass."
+      },
+      "throne_throne@pensalon" : {
+         "desc[1]" : "The back of the King's throne is here, blocking the passage.",
+         "location" : "IN_ROOM:pensalon22",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "throne_throne",
+         "linked" : "dias_throne",
+         "state" : "1",
+         "pname" : "throne",
+         "maxstate" : "1",
+         "desc[0]" : "The back of the King's throne is shifted to the side, allowing you through."
+      },
+      "knife@pensalon" : {
+         "damage" : "5",
+         "location" : "WIELDED_BY:chef",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "knife",
+         "bvalue" : "20",
+         "desc[0]" : "A large and wicked looking steak knife lies discarded to one side.",
+         "size" : "8"
+      },
+      "forge_passage@pensalon" : {
+         "location" : "IN_ROOM:pensalon51",
+         "oflags" : [
+            "Pushtoggle",
+            "NoGet"
+         ],
+         "altname" : "forge",
+         "name" : "forge_passage",
+         "linked" : "forge_workshop",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "The wall is pushed aside, revealing a passage."
+      },
+      "bread@pensalon" : {
+         "location" : "IN_ROOM:pensalon33",
+         "oflags" : [
+            "Food"
+         ],
+         "altname" : "loaf",
+         "name" : "bread",
+         "bvalue" : "15",
+         "desc[0]" : "A large loaf of freshly baked bread draws your attention to it.",
+         "size" : "2"
+      },
+      "dragonslayer@pensalon" : {
+         "desc[1]" : "A huge two handed sword stands straight up, stuck tip first into the ground.",
+         "damage" : "25",
+         "location" : "WIELDED_BY:crazed",
+         "armor" : "70",
+         "oflags" : [
+            "Weapon",
+            "Lit"
+         ],
+         "altname" : "sword",
+         "name" : "dragonslayer",
+         "state" : "1",
+         "size" : "95",
+         "maxstate" : "1",
+         "bvalue" : "300",
+         "desc[0]" : "A huge two handed sword glowing bright stands straight up, stuck tip first into the ground.",
+         "aflags" : [
+            "Hands"
+         ]
+      },
+      "helm@pensalon" : {
+         "location" : "WORN_BY:Symber",
+         "armor" : "62",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "name" : "helm",
+         "size" : "5",
+         "bvalue" : "100",
+         "aflags" : [
+            "Face",
+            "Head"
+         ],
+         "desc[0]" : "A silver helm lies carelessly discarded on the ground."
+      },
+      "chest@pensalon" : {
+         "desc[1]" : "A large chest sits closed against the far wall.",
+         "location" : "IN_ROOM:pensalon52",
+         "oflags" : [
+            "Container",
+            "Openable",
+            "NoGet"
+         ],
+         "name" : "chest",
+         "maxstate" : "1",
+         "desc[0]" : "A large chest sits open against the far wall.",
+         "state" : "1"
+      },
+      "rockfall_crawlspace@pensalon" : {
+         "desc[1]" : "A large rockfall covers the southern wall.",
+         "location" : "IN_ROOM:pensalon25",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "rockfall",
+         "name" : "rockfall_crawlspace",
+         "maxstate" : "1",
+         "linked" : "rockfall_cavern",
+         "state" : "1"
+      },
+      "chainmail@pensalon" : {
+         "location" : "WORN_BY:jinx",
+         "armor" : "42",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "elven",
+         "name" : "chainmail",
+         "size" : "25",
+         "weight" : "10",
+         "bvalue" : "100",
+         "desc[0]" : "Beautifully hand crafted Elven chain lies in a pile on the floor.",
+         "aflags" : [
+            "Arms",
+            "Chest",
+            "Back"
+         ]
+      },
+      "ball@pensalon" : {
+         "location" : "IN_ROOM:pensalon50",
+         "oflags" : [
+            "NoGet",
+            "Lit"
+         ],
+         "altname" : "light",
+         "name" : "ball",
+         "desc[0]" : "A brilliant white ball floats in the middle of the room."
+      }
+   },
+   "loc" : {
+      "pensalon37@pensalon" : {
+         "exits" : {
+            "e" : "pensalon38",
+            "s" : "pensalon10"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Practice Yard",
+         "id" : "pensalon37",
+         "description" : "\n    The fenced in yard spreads out in front of you.  There are many items of war\nspread out across this area. To the south is a small quiet spot along the wall,\nand to the east is the Armorer's Workshop.\n",
+         "altitude" : null
+      },
+      "pensalon22@pensalon" : {
+         "exits" : {
+            "w" : "pensalon23",
+            "u" : "^throne_throne"
+         },
+         "flags" : [
+            "Dark",
+            "OnePerson"
+         ],
+         "zone" : "pensalon",
+         "title" : "Under the Throne",
+         "id" : "pensalon22",
+         "description" : "\n    You are crawling through a very small hole under the throne.  This is the\nKing's escape passage for times of war when there is no hope left for this\ncastle and he must flee.  You notice that the passage seems to have been\nused heavily but you don't remember any wars in the area for centuries.  To\nthe west the passage widens.\n",
+         "altitude" : null
+      },
+      "pensalon33@pensalon" : {
+         "exits" : {
+            "w" : "pensalon34",
+            "s" : "pensalon29"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Castle's Kitchens",
+         "id" : "pensalon33",
+         "description" : "\n    Extravagant meals are spread out all over this room in preparation for the\nKing's nightly feast. To the south is a small hall, and to the west you can see\ncrates piled up.\n",
+         "altitude" : null
+      },
+      "pensalon21@pensalon" : {
+         "exits" : {
+            "d" : "^dias_throne",
+            "s" : "pensalon20"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Dias",
+         "id" : "pensalon21",
+         "description" : "\n    You stand on the king's dias where he makes his daily ruling over the good\npeople of this land.  There is a nice view of the throne room from.  Now you\nknow why the king likes to sit up so high in this room.  You can go south, down\ninto the throne room.\n",
+         "altitude" : null
+      },
+      "pensalon35@pensalon" : {
+         "exits" : {
+            "n" : "pensalon34"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Chef's Living Quarters",
+         "id" : "pensalon35",
+         "description" : "\n    This is a small room that is very messy with recipes for various extravagant\ndishes scattered everywhere. The only exit from this room is to the north.\n",
+         "altitude" : null
+      },
+      "pensalon30@pensalon" : {
+         "exits" : {
+            "e" : "pensalon31",
+            "u" : "pensalon29"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Stairwell",
+         "id" : "pensalon30",
+         "description" : "\n    A small stairwell leads up to a small hall and to the east is the castle's\ndungeon guardroom.\n",
+         "altitude" : null
+      },
+      "pensalon45@pensalon" : {
+         "exits" : {
+            "w" : "pensalon42",
+            "e" : "pensalon42",
+            "n" : "pensalon42",
+            "s" : "pensalon46"
+         },
+         "flags" : [
+            "dark",
+            "OnWater"
+         ],
+         "zone" : "pensalon",
+         "title" : "On the Lake",
+         "id" : "pensalon45",
+         "description" : "\n    You're lost on the lake.  Every direction is the same.  No way seems\ncorrect.  Your mind is spinning as you try to figure your way out.  A deep\nthick mist hangs all about causing even more confusion.\n",
+         "altitude" : null
+      },
+      "pensalon31@pensalon" : {
+         "exits" : {
+            "w" : "pensalon30",
+            "e" : "pensalon32"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Dungeon Guardroom",
+         "id" : "pensalon31",
+         "description" : "\n    You are standing in a large circular room with cells all around it.  To the\nwest is a stairwell that leads up to castle proper, and to the east is a small\ncell that has no door on it.  A sign above reads \"White collar criminals\ninside\".\n",
+         "altitude" : null
+      },
+      "pensalon18@pensalon" : {
+         "exits" : {
+            "e" : "pensalon16"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Murder Holes",
+         "id" : "pensalon18",
+         "description" : "\n    Looking through the many slots through the wall you can spy a long\ntunnel below you.  As you examine the room you get a feeling of what this room\nis used for in a time of war.  The only exit is back to the east.\n",
+         "altitude" : null
+      },
+      "pensalon34@pensalon" : {
+         "exits" : {
+            "e" : "pensalon33",
+            "s" : "pensalon35"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Storage Chamber",
+         "id" : "pensalon34",
+         "description" : "\n    Piles of foodstuffs are scattered all over the room in no order.  The\nsouthern door leads into a small living quarters, and to the east is the\nkitchens.\n",
+         "altitude" : null
+      },
+      "pensalon47@pensalon" : {
+         "exits" : {
+            "w" : "pensalon42",
+            "e" : "pensalon42",
+            "n" : "pensalon48",
+            "s" : "pensalon42"
+         },
+         "flags" : [
+            "dark",
+            "OnWater"
+         ],
+         "zone" : "pensalon",
+         "title" : "On the Lake",
+         "id" : "pensalon47",
+         "description" : "\n    You're lost on the lake.  Every direction is the same.  No way seems\ncorrect.  Your mind is spinning as you try to figure your way out.  A deep\nthick mist hangs all about causing even more confusion.\n",
+         "altitude" : null
+      },
+      "pensalon7@pensalon" : {
+         "exits" : {
+            "n" : "pensalon8",
+            "s" : "pensalon6"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pensalon",
+         "title" : "The Gates",
+         "id" : "pensalon7",
+         "description" : "\n    Large Gates made out of metal, wood, and stone are swung aside allowing\nentrance into the splendid interior of this gigantic castle.  Northward a \ntunnel continues into the castle, and to the south is a drawbridge.\n",
+         "altitude" : null
+      },
+      "pensalon52@pensalon" : {
+         "exits" : {
+            "w" : "^door_storeroom"
+         },
+         "flags" : [
+            "Dark",
+            "NoMagic"
+         ],
+         "zone" : "pensalon",
+         "title" : "Armorer's Prize Possession Store Room",
+         "id" : "pensalon52",
+         "description" : "\n    This is a small circular room with many pegs and hooks on the wall.  Unlike\nthe secret passage you just entered from this place is immaculate.  Not a speck\nof dust lingers anywhere, you get the feeling that magic is being used in this\nroom.\n",
+         "altitude" : null
+      },
+      "pensalon46@pensalon" : {
+         "exits" : {
+            "w" : "pensalon42",
+            "e" : "pensalon47",
+            "n" : "pensalon42",
+            "s" : "pensalon42"
+         },
+         "flags" : [
+            "dark",
+            "OnWater"
+         ],
+         "zone" : "pensalon",
+         "title" : "On the Lake",
+         "id" : "pensalon46",
+         "description" : "\n    You're lost on the lake.  Every direction is the same.  No way seems\ncorrect.  Your mind is spinning as you try to figure your way out.  A deep\nthick mist hangs all about causing even more confusion.\n",
+         "altitude" : null
+      },
+      "pensalon36@pensalon" : {
+         "exits" : {
+            "w" : "pensalon41",
+            "e" : "pensalon24"
+         },
+         "flags" : [
+            "NoMobiles"
+         ],
+         "zone" : "pensalon",
+         "title" : "Shoreline",
+         "id" : "pensalon36",
+         "description" : "\n    You stand on the shore of a very peaceful and tranquil lake.  The darkness\nengulfs the water off in the distance and you can hear a rumbling of some\nunknown source faintly coming to your ears.  To the west is the lake and back\nto the east is a large cave.\n",
+         "altitude" : null
+      },
+      "pensalon10@pensalon" : {
+         "exits" : {
+            "w" : "pensalon9",
+            "e" : "pensalon12",
+            "n" : "pensalon37"
+         },
+         "flags" : [
+            "Outdoors",
+            "NoMobiles"
+         ],
+         "zone" : "pensalon",
+         "title" : "Along the Wall",
+         "id" : "pensalon10",
+         "description" : "\n    Scampering along the wall you can feel just how strong the walls defending\nthis castle are.  You have a feeling of how much energy was expended just to\nbuild this castle.  To the north is a small practice yard for the soldiers of \nthis keep, and to the east is the base of a tower.\n",
+         "altitude" : null
+      },
+      "pensalon28@pensalon" : {
+         "exits" : {
+            "w" : "pensalon27"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Castle's Church",
+         "id" : "pensalon28",
+         "description" : "\n    A extravagant church filled with the wealth of the lands spreads out before\nyour eyes keeping you enthralled with its beauty.  Through the western arch is\nthe Hall of Worship.\n",
+         "altitude" : null
+      },
+      "pensalon41@pensalon" : {
+         "exits" : {
+            "w" : "pensalon42",
+            "e" : "pensalon36",
+            "n" : "pensalon41",
+            "s" : "pensalon41"
+         },
+         "flags" : [
+            "Dark",
+            "OnWater"
+         ],
+         "zone" : "pensalon",
+         "title" : "On the Lake",
+         "id" : "pensalon41",
+         "description" : "\n    You're lost on the lake.  Every direction is the same.  No way seems\ncorrect.  Your mind is spinning as you try to figure your way out.  A deep\nthick mist hangs all about causing even more confusion.\n",
+         "altitude" : null
+      },
+      "pensalon25@pensalon" : {
+         "exits" : {
+            "n" : "^door_crawlspace",
+            "s" : "^rockfall_crawlspace"
+         },
+         "flags" : [
+            "Dark",
+            "OnePerson"
+         ],
+         "zone" : "pensalon",
+         "title" : "Crawlspace",
+         "id" : "pensalon25",
+         "description" : "\n    The Hole you have crawled into is very cramped and there is room for only\none person here.  This little passageway seems to have been created for no\nreason at all.\n",
+         "altitude" : null
+      },
+      "pensalon48@pensalon" : {
+         "exits" : {
+            "w" : "pensalon42",
+            "e" : "pensalon49",
+            "n" : "pensalon42",
+            "s" : "pensalon42"
+         },
+         "flags" : [
+            "dark",
+            "NoMobiles",
+            "OnWater"
+         ],
+         "zone" : "pensalon",
+         "title" : "On the Lake",
+         "id" : "pensalon48",
+         "description" : "\n    You're lost on the lake.  Every direction is the same.  No way seems\ncorrect.  Your mind is spinning as you try to figure your way out.  A deep\nthick mist hangs all about causing even more confusion.\n",
+         "altitude" : null
+      },
+      "pensalon51@pensalon" : {
+         "exits" : {
+            "w" : "^forge_passage",
+            "e" : "^door_passage"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pensalon",
+         "title" : "Secret Passage",
+         "id" : "pensalon51",
+         "description" : "\n    You enter a low dark tunnel that is covered with many cobwebs, and the dust\nis very thick on the floor.\n",
+         "altitude" : null
+      },
+      "pensalon13@pensalon" : {
+         "exits" : {
+            "u" : "pensalon14",
+            "d" : "pensalon12"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Spiraling Staircase",
+         "id" : "pensalon13",
+         "description" : "\n    The stairs lazily spiral about the inside of this tower.  At the top of the\nstairs you can see a light that shows the shadows  of a small room, and down\nbelow you can see the exit out into the castle's interior.\n",
+         "altitude" : null
+      },
+      "pensalon11@pensalon" : {
+         "exits" : {
+            "n" : "pensalon19",
+            "d" : "pensalon9"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pensalon",
+         "title" : "Grand Staircase",
+         "id" : "pensalon11",
+         "description" : "\n    You stand on a gold staircase that lead northward into the castle proper,\nand lead down into the main courtyard.\n",
+         "altitude" : null
+      },
+      "pensalon49@pensalon" : {
+         "exits" : {
+            "n" : "pensalon50",
+            "s" : "pensalon48"
+         },
+         "flags" : [
+            "dark",
+            "NoMobiles"
+         ],
+         "zone" : "pensalon",
+         "title" : "Dark Passage",
+         "id" : "pensalon49",
+         "description" : "\n    The passage continues to lead north.  To the south is a large lake.\n",
+         "altitude" : null
+      },
+      "pensalon12@pensalon" : {
+         "exits" : {
+            "w" : "pensalon10",
+            "u" : "pensalon13"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Base of the Tower",
+         "id" : "pensalon12",
+         "description" : "\n    You stand at the base of a large tower which reaches high into the sky.\nYou may enter the tower at the spiral staircase, or you may go west to a spot\nalong the wall.\n",
+         "altitude" : null
+      },
+      "pensalon17@pensalon" : {
+         "exits" : {
+            "d" : "pensalon15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pensalon",
+         "title" : "Top of the Tower",
+         "id" : "pensalon17",
+         "description" : "\n    On top of the tower you find a small flat area where you may stand. You seem\nto be at the highest point of the castle except for a similar tower farther to\nthe west.  You may climb down from here.\n",
+         "altitude" : null
+      },
+      "pensalon42@pensalon" : {
+         "exits" : {
+            "w" : "pensalon43",
+            "e" : "pensalon41",
+            "n" : "pensalon42",
+            "s" : "pensalon42"
+         },
+         "flags" : [
+            "Dark",
+            "OnWater"
+         ],
+         "zone" : "pensalon",
+         "title" : "On the Lake",
+         "id" : "pensalon42",
+         "description" : "\n    You're lost on the lake.  Every direction is the same.  No way seems\ncorrect.  Your mind is spinning as you try to figure your way out.  A deep\nthick mist hangs all about causing even more confusion.\n",
+         "altitude" : null
+      },
+      "pensalon20@pensalon" : {
+         "exits" : {
+            "n" : "pensalon21",
+            "s" : "pensalon19"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Throne Room",
+         "id" : "pensalon20",
+         "description" : "\n    You are standing in a large audience chamber where the King presides over\nhis faithful subjects.  To the south is a large reception hall where faithful subjects are now lining up to hear the king speak.\n",
+         "altitude" : null
+      },
+      "pensalon29@pensalon" : {
+         "exits" : {
+            "e" : "pensalon19",
+            "n" : "pensalon33",
+            "d" : "pensalon30"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Side Hall",
+         "id" : "pensalon29",
+         "description" : "\n    This is a small non-descript room with an exit to the north where you can\nsmell the aroma of food, and you may go down to the stairs from here.\n",
+         "altitude" : null
+      },
+      "pensalon9@pensalon" : {
+         "exits" : {
+            "e" : "pensalon10",
+            "u" : "pensalon11",
+            "s" : "pensalon8"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pensalon",
+         "title" : "Courtyard",
+         "id" : "pensalon9",
+         "description" : "\n    The courtyard opens up into a large square where many people are gathering\ntogether to perhaps catch a glimpse of this lands merciful ruler.  From here\nstairs climb up to the entrance of castle proper, to the south is the opening\nto a tunnel.\n",
+         "altitude" : null
+      },
+      "pensalon16@pensalon" : {
+         "exits" : {
+            "w" : "pensalon18",
+            "e" : "pensalon15"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pensalon",
+         "title" : "Catapult Area",
+         "id" : "pensalon16",
+         "description" : "\n    You see many piles of rocks and other items large enough to be loaded onto\na catapult for firing at enemies.  Through the western arch you may enter a\nsmall room, and to the east is a small area on the wall where you may admire\nthe view.\n",
+         "altitude" : null
+      },
+      "pensalon38@pensalon" : {
+         "exits" : {
+            "w" : "pensalon37",
+            "e" : "^forge_workshop"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Armorer's Workshop",
+         "id" : "pensalon38",
+         "description" : "\n    This large room is heated to near fatal temperature as many smiths go\naround the room shaping metal in the high heats of the Armorer's forge. To the\nwest is the practice yard where it looks very cool and relaxing.\n",
+         "altitude" : null
+      },
+      "pensalon26@pensalon" : {
+         "exits" : {
+            "s" : "^door_room"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pensalon",
+         "title" : "Kings Treasure Room",
+         "id" : "pensalon26",
+         "description" : "\n    You stand in a small room.  The room is plain and there is nothing at all\nthat makes the room worth looking at.  It has four walls, a floor, and a\nceiling.\n",
+         "altitude" : null
+      },
+      "pensalon27@pensalon" : {
+         "exits" : {
+            "w" : "pensalon19",
+            "e" : "pensalon28"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Hall of Worship",
+         "id" : "pensalon27",
+         "description" : "\n    This is a splendid hall adorned with many paintings showing the many feats\nthat the Church of Pensalon has performed.  To the east is the castle's main\nchurch, and to the west is the main reception hall.\n",
+         "altitude" : null
+      },
+      "pensalon32@pensalon" : {
+         "exits" : {
+            "w" : "pensalon31"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Small Cell",
+         "id" : "pensalon32",
+         "description" : "\n    This is a small cell without a door.  This is where white collar criminals\nare kept.  To the west is a large round room, and in the floor is a large hole\nthat leads off into the darkness.\n",
+         "altitude" : null
+      },
+      "pensalon43@pensalon" : {
+         "exits" : {
+            "w" : "pensalon42",
+            "e" : "pensalon42",
+            "n" : "pensalon42",
+            "s" : "pensalon44"
+         },
+         "flags" : [
+            "dark",
+            "OnWater"
+         ],
+         "zone" : "pensalon",
+         "title" : "On the Lake",
+         "id" : "pensalon43",
+         "description" : "\n    You're lost on the lake.  Every direction is the same.  No way seems\ncorrect.  Your mind is spinning as you try to figure your way out.  A deep\nthick mist hangs all about causing even more confusion.\n",
+         "altitude" : null
+      },
+      "pensalon15@pensalon" : {
+         "exits" : {
+            "w" : "pensalon16",
+            "u" : "pensalon17",
+            "n" : "pensalon14"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pensalon",
+         "title" : "On the Wall",
+         "id" : "pensalon15",
+         "description" : "\n    The view from the top of the wall holds you in awe, as you watch the\nbeautiful lands of Pensalon unfold around you.  It looks like you may be able\nto climb to the roof of the tower.  There is a large cleared area to the west\nwhere there is a catapult, and to the north is a small guard room.\n",
+         "altitude" : null
+      },
+      "pensalon6@pensalon" : {
+         "exits" : {
+            "n" : "pensalon7",
+            "s" : "town55@town"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pensalon",
+         "title" : "Drawbridge",
+         "id" : "pensalon6",
+         "description" : "\n    Standing on the drawbridge you notice the size of the castle and the \nsplendor of your surroundings.  To the north you may enter the castle and to\nthe south a beautiful road winds away into the distance.\n",
+         "altitude" : null
+      },
+      "pensalon19@pensalon" : {
+         "exits" : {
+            "w" : "pensalon29",
+            "e" : "pensalon27",
+            "n" : "pensalon20",
+            "s" : "pensalon11"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Reception Hall",
+         "id" : "pensalon19",
+         "description" : "\n    Large tapestries hang from walls depicting events in the history of these\nlands.  The walls are adorned with gold designs.  Through the eastern arch you\ncan see a hallway, to the west you see a small side hall and to the north you\ncan just make out the King's throne.\n",
+         "altitude" : null
+      },
+      "pensalon44@pensalon" : {
+         "exits" : {
+            "w" : "pensalon45",
+            "e" : "pensalon42",
+            "n" : "pensalon42",
+            "s" : "pensalon42"
+         },
+         "flags" : [
+            "dark",
+            "OnWater"
+         ],
+         "zone" : "pensalon",
+         "title" : "On the Lake",
+         "id" : "pensalon44",
+         "description" : "\n    You're lost on the lake.  Every direction is the same.  No way seems\ncorrect.  Your mind is spinning as you try to figure your way out.  A deep\nthick mist hangs all about causing even more confusion.\n",
+         "altitude" : null
+      },
+      "pensalon50@pensalon" : {
+         "exits" : {
+            "s" : "pensalon49"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "The Charging Room",
+         "id" : "pensalon50",
+         "description" : "\n    This large round room is plain and hows no distinguishing marks in it.\n",
+         "altitude" : null
+      },
+      "pensalon24@pensalon" : {
+         "exits" : {
+            "w" : "pensalon36",
+            "e" : "pensalon23",
+            "n" : "^rockfall_cavern"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pensalon",
+         "title" : "Large Cavern",
+         "id" : "pensalon24",
+         "description" : "\n    You stand in a Large Cavern that expand beyond the light of your torch.\nTo the west is a shore line along some unknown underground lake.  To the east\nis a small tunnel leading off into the darkness.\n",
+         "altitude" : null
+      },
+      "pensalon23@pensalon" : {
+         "exits" : {
+            "w" : "pensalon24",
+            "e" : "pensalon22"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "pensalon",
+         "title" : "Damp Passage",
+         "id" : "pensalon23",
+         "description" : "\n    A small damp passage way leads further on West into the never ending\ndarkness.  To the east is a small hole that seems only big enough for one\nperson to be in.\n",
+         "altitude" : null
+      },
+      "pensalon14@pensalon" : {
+         "exits" : {
+            "d" : "pensalon13",
+            "s" : "pensalon15"
+         },
+         "flags" : [],
+         "zone" : "pensalon",
+         "title" : "Guard House",
+         "id" : "pensalon14",
+         "description" : "\n    This is a small room at the top of the tower where the guard who is on watch\nmay escape from the elements on a horrible day.  Through the southern arch you\nsee the edge of the wall, and below you the staircase lazily head back down to\nthe ground level.\n",
+         "altitude" : null
+      },
+      "pensalon8@pensalon" : {
+         "exits" : {
+            "n" : "pensalon9",
+            "s" : "pensalon7"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "pensalon",
+         "title" : "Long Tunnel",
+         "id" : "pensalon8",
+         "description" : "\n    You are enshrouded by shadows as you enter a long and wide tunnel.  High on\nthe walls you notice little slits cut into the stone and above you can see\nlarge holes.  To the north the tunnel opens up into a large courtyard and to\nthe south you can just make out the structure of the castle's huge main gates.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "tinglera@pensalon" : {
+         "damage" : "10",
+         "location" : "pensalon13",
+         "speed" : "5",
+         "aggression" : "35",
+         "pname" : "Tinglera",
+         "name" : "Tinglera",
+         "description" : "Tinglera leans back against the wall resting.",
+         "strength" : "100"
+      },
+      "chef@pensalon" : {
+         "damage" : "10",
+         "location" : "pensalon33",
+         "aggression" : "25",
+         "pname" : "Chef",
+         "name" : "Chef",
+         "description" : "The King's personal Chef looks around for his favorite knife.",
+         "strength" : "75"
+      },
+      "smuggler@pensalon" : {
+         "damage" : "10",
+         "location" : "pensalon32",
+         "aggression" : "8",
+         "pname" : "Smuggler",
+         "name" : "Smuggler",
+         "description" : "A haggard Smuggler looks a little annoyed at the disturbance of his sleep.",
+         "strength" : "70"
+      },
+      "crazed@pensalon" : {
+         "damage" : "10",
+         "location" : "pensalon26",
+         "aggression" : "9",
+         "pname" : "Crazed",
+         "name" : "Crazed",
+         "description" : "The Crazed King's Guard runs about in fits of madness.",
+         "strength" : "250"
+      },
+      "serpeant@pensalon" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "pensalon42",
+         "name" : "Serpeant",
+         "description" : "A large Serpeant swims around the lake.",
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "200",
+         "speed" : "5",
+         "pname" : "Serpeant",
+         "aggression" : "9"
+      },
+      "symber@pensalon" : {
+         "damage" : "10",
+         "location" : "pensalon18",
+         "name" : "Symber",
+         "description" : "Symber the skeleton guard rambles around the room.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "80",
+         "speed" : "5",
+         "pname" : "Symber",
+         "aggression" : "4"
+      },
+      "jinx@pensalon" : {
+         "eflags" : [
+            "Shock"
+         ],
+         "damage" : "10",
+         "location" : "limbo@limbo",
+         "name" : "jinx",
+         "description" : "The shadowy form of the Jinx blinks in and out of existence.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "150",
+         "pname" : "Jinx",
+         "aggression" : "10"
+      }
+   }
+}

@@ -1,0 +1,132 @@
+{
+   "obj" : {
+      "demonblade@blackknight" : {
+         "damage" : "60",
+         "location" : "WIELDED_BY:knight",
+         "oflags" : [
+            "unlocatable",
+            "weapon",
+            "lit",
+            "negmana",
+            "neghealth",
+            "Fireballspell",
+            "frostspell",
+            "shockspell",
+            "missilespell",
+            "aidspell",
+            "VTouchspell",
+            "lightspell",
+            "damagespell",
+            "armorspell",
+            "BHandsSpell",
+            "BlurSpell",
+            "IStormSpell",
+            "Cursed",
+            "MissChance",
+            "SpellMiss"
+         ],
+         "altname" : "blade",
+         "name" : "demonblade",
+         "examine" : "\nThe blade is glowing with a bloody-red light.  The handle is made of human \nbone.  You wonder how many people this sword killed.  You feel it's evil \npower surrounding you.  You believe this blade is made of pure evil.",
+         "size" : "100",
+         "bvalue" : "-1000",
+         "desc[0]" : "&+rThe most evil and powerful weapon is here.&*"
+      },
+      "sign@blackknight" : {
+         "location" : "IN_ROOM:way",
+         "oflags" : [
+            "noget"
+         ],
+         "name" : "sign",
+         "examine" : "Ahead reside one of the toughest monsters of the Promised Land.\nyou should not continue unless you're at a very high level and adequately \nequipped. You have been warned.",
+         "desc[0]" : "&+RA VERY IMPORTANT WARNING SIGN IS HERE.&*"
+      }
+   },
+   "loc" : {
+      "death@blackknight" : {
+         "exits" : {},
+         "flags" : [
+            "negregen",
+            "Dark",
+            "Hot",
+            "Cantsummon",
+            "Nosummon",
+            "NoQuit",
+            "Nosnoop",
+            "Nomobiles",
+            "NoAt",
+            "SoundProof"
+         ],
+         "zone" : "blackknight",
+         "title" : "Darkest room",
+         "id" : "death",
+         "description" : "\nYou are standing in the darkest room. Pure evil inhabits\nthis land. The walls are painted with blood. Human bodies are \nlying everywhere. Obviously, an evil monster must reside here.\n",
+         "altitude" : null
+      },
+      "way@blackknight" : {
+         "exits" : {
+            "n" : "death",
+            "s" : "Church1@church"
+         },
+         "flags" : [
+            "negregen",
+            "Dark",
+            "Hot",
+            "SoundProof"
+         ],
+         "zone" : "blackknight",
+         "title" : "On your way to Evil",
+         "id" : "way",
+         "description" : "\nYou are walking on a strange way leading into darkness. A\npowerful evil seems to reside further. You must absolutely not\ncontinue forward. You will probably get slayed.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "knight@blackknight" : {
+         "eflags" : [
+            "Blind",
+            "Deaf",
+            "Mute",
+            "fireball",
+            "frost",
+            "shock",
+            "NegFireball",
+            "NegMissile",
+            "NegFrost",
+            "Negshock",
+            "NegBhands",
+            "NegVtouch",
+            "NegIceStorm"
+         ],
+         "damage" : "80",
+         "location" : "death",
+         "armor" : "40",
+         "name" : "knight",
+         "examine" : "This is the mighty black knight.  He is about 7 feet all.\nHe is wielding a sword that is twice as long as you.  He is wearing\nan armor as black as the night.  He looks like a demon in an armor\nsuit.  The black knight is a very powerful opponent.  You should not\nattack him unless a whole army is assisting you.",
+         "description" : "The evil Black Knight is here.",
+         "strength" : "10000",
+         "speed" : "50",
+         "aggression" : "0",
+         "pname" : "Black knight",
+         "pflags" : [
+            "nopunt",
+            "nozap",
+            "noexorcise",
+            "noalias",
+            "nosummon",
+            "nosteal",
+            "noforce",
+            "noburn",
+            "nosic"
+         ],
+         "mflags" : [
+            "NoSteal",
+            "Block",
+            "NoGrab",
+            "PickStuff",
+            "BarSouth",
+            "Thief"
+         ]
+      }
+   }
+}

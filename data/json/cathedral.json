@@ -1,0 +1,1884 @@
+{
+   "obj" : {
+      "holy_robes@cathedral" : {
+         "location" : "WORN_BY:Priest",
+         "armor" : "5",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "holy",
+         "name" : "Holy_Robes",
+         "size" : "5",
+         "weight" : "5",
+         "pname" : "robes",
+         "bvalue" : "500",
+         "desc[0]" : "\nThe robes of the Holy Defender of the Cathedral shine with a &+Cm&+ca&+Cg&+ci&+Cc&+ca&+Cl &+Wlight&*.",
+         "aflags" : [
+            "chest",
+            "back",
+            "arms"
+         ]
+      },
+      "portal_c@cathedral" : {
+         "location" : "IN_ROOM:c_portal",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "pname" : "portal",
+         "name" : "portal_c",
+         "examine" : "As you peer intently at the &+ywoodgrain&* of the boards covering the door, \nnothing happens."
+      },
+      "door_sside@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:side1",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_sside",
+         "desc[2]" : "The door is secured by a lock of unusual design.",
+         "linked" : "door_saisle",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "plate@cathedral" : {
+         "location" : "IN_ROOM:inchurch",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "plate",
+         "name" : "plate",
+         "desc[0]" : "There is a plate here for offerings to the church. \nYour contribution will be very appreciated."
+      },
+      "platemail@cathedral" : {
+         "location" : "IN_ROOM:armhall",
+         "pname" : "Platemail",
+         "name" : "Platemail",
+         "desc[0]" : "A beautiful set of Platemail is displayed to your right."
+      },
+      "window@cathedral" : {
+         "location" : "IN_ROOM:n_top",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "glass",
+         "name" : "window",
+         "examine" : "The window is bolted shut securely, yet it looks pretty fragile.",
+         "state" : "1",
+         "pname" : "window",
+         "maxstate" : "1",
+         "desc[0]" : "The window has been shattered, &+Ylight&* streams into the room."
+      },
+      "note@cathedral" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "pname" : "note",
+         "name" : "note",
+         "examine" : "    \n    The note reads:\n   \n    __________________________________________________________________________\n   |                                                                          \\\n   | You are indeed a generous soul! From the looks of you I'd say a fine     |\n   | warrior as well, a rare combination. We apologize for the shabbiness     |\n   | of this little church, but a terrible tragedy has overcome us. Many      |\n   | years ago, a terrible vampire invaded our little village. Our protector, |\n   | Saint Suorac, tried to fight him, but to no avail. The Vampire easily    |\n   | defeated our valiant hero, and plunged the Cathedral into &+Ldarkness&*,   \n  |\n   | transforming it into his &+rdemonic lair&*, a malignant blot against the   \n  |\n   | &+Cskyline&*. It may be beyond salvation, for it houses many &+Levil&*\ncreatures,  |\n   | But hidden deep within are our precious holy relics. There are five of   |\n   | them. We urgently need for someone to brave the evils of the cathedral   |\n   | and return our relics to us. Four of the relics are material things of   |\n   | great spiritual value... The fifth is the very bones of Saint Suorac     |\n   | himself. It is our custom to save the bones of our holy defender, as a   |\n   | symbol of faith. If you are up to it, we would be most grateful if you   |\n   | would take up this quest, kill the vampire, and return our relics to     |\n   | this humble church. Perhaps when all this is over, we can return and     |\n   | rebuild our Cathedral into the holy place it once was. The &+RVampire&*    \n  |\n   | cannot be defeated easily. Find a way to use his powers against him.     |\n   | Take this key, it is old and &+yrusty&*, but it should open at least one of\n  |\n   | the doors.                                                               |\n   |__________________________________________________________________________|\n    \\-------------------------------------------------------------------------\\\n",
+         "desc[0]" : "A note has been left here."
+      },
+      "bushes_s@cathedral" : {
+         "desc[1]" : "Thick &+Gbushes&* form a wall to the north.",
+         "location" : "IN_ROOM:path2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "bush",
+         "name" : "bushes_s",
+         "examine" : "Looks like every other &+Gbush&* you've ever seen.",
+         "linked" : "bushes_n",
+         "state" : "1",
+         "pname" : "bushes",
+         "maxstate" : "1",
+         "desc[0]" : "The &+Gbushes&* to the north have been shredded."
+      },
+      "mural@cathedral" : {
+         "location" : "IN_ROOM:se_chap",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "mural",
+         "name" : "mural",
+         "examine" : "Judging from these paintings, the life of a virgin is mighty dull!",
+         "desc[0]" : "There is a mural hanging here."
+      },
+      "door_crypt@cathedral" : {
+         "desc[1]" : "The door is shut tightly.",
+         "location" : "IN_ROOM:cryptent",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "door_crypt",
+         "linked" : "door_reliq",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "Through some clever mechanism, the door has been opened."
+      },
+      "churchkey@cathedral" : {
+         "location" : "CARRIED_BY:Priest",
+         "oflags" : [
+            "Key"
+         ],
+         "altname" : "key",
+         "name" : "ChurchKey",
+         "examine" : "The Key is large and badly &+yworn.&* It appears to have been made several\nhundred years ago.",
+         "size" : "1",
+         "pname" : "ChurchKey",
+         "weight" : "1",
+         "bvalue" : "200",
+         "desc[0]" : "A old Church Key has been left here."
+      },
+      "door_reliq@cathedral" : {
+         "desc[1]" : "The door is shut tightly.",
+         "location" : "IN_ROOM:reliq",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "door_reliq",
+         "linked" : "door_crypt",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "Through some clever mechanism, the door has been opened."
+      },
+      "fountain_pure@cathedral" : {
+         "desc[1]" : "The fountain here runs with &+Ccool &+Bwater&*.",
+         "location" : "IN_ROOM:reliq",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "fountain_pure",
+         "examine" : "The fountain flows with &+Ccool &+Wclear&* liquid. Your thirst for &+rblood&* subsides as you look at it.",
+         "state" : "1",
+         "pname" : "fountain",
+         "maxstate" : "1",
+         "desc[0]" : "The fountain is temporarily out of service."
+      },
+      "sliver@cathedral" : {
+         "location" : "IN_CONTAINER:coffin_tower",
+         "altname" : "piece",
+         "name" : "sliver",
+         "examine" : "Why look! It's a piece of the crucifix! (Yeah right..)",
+         "size" : "5",
+         "pname" : "sliver",
+         "weight" : "5",
+         "bvalue" : "200",
+         "desc[0]" : "A small sliver of &+ywood&* is here."
+      },
+      "fountain_up@cathedral" : {
+         "desc[1]" : "A &+Cmagnificent&* fountain of &+rblood&* dominates the room.",
+         "location" : "IN_ROOM:crossbay",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "name" : "fountain_up",
+         "examine" : "&+rBlood&* jets from the mouths of twisting and writhing creatures, their bodies\nrival the work of great masters, yet their faces are those of gargoyles. The\n&+rblood&* looks warm and inviting. Its smell wafts toward your nose\nenticingly.",
+         "linked" : "fountain_down",
+         "state" : "1",
+         "pname" : "fountain",
+         "maxstate" : "1",
+         "desc[0]" : "The &+rfountain&* has been moved, revealing a dark passage downward."
+      },
+      "door_vambed@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:vambed",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_vambed",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_library",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "bones@cathedral" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "altname" : "bone",
+         "name" : "bones",
+         "examine" : "&+GS&+gl&+Gi&+gm&+Gy&*, &+Cg&+co&+Co&+ce&+Cy &+Wbones!&*",
+         "size" : "5",
+         "pname" : "bones",
+         "weight" : "5",
+         "bvalue" : "200",
+         "desc[0]" : "The &+WBones&* of St. Suorac lie scattered across the floor."
+      },
+      "bushes_n@cathedral" : {
+         "desc[1]" : "Thick &+Gbushes&* form a wall to the south.",
+         "location" : "IN_ROOM:path1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "bush",
+         "name" : "bushes_n",
+         "examine" : "The &+Gbushes&* have a small &+Lblack&* vertical dotted line on them. As you\nfollow the line toward the ground, you see a tiny picture of a pair of scissors.\nIn tiny letters you are instructed to '&+Wcut here&*'.",
+         "linked" : "bushes_s",
+         "state" : "1",
+         "pname" : "bushes",
+         "maxstate" : "1",
+         "desc[0]" : "The &+Gbushes&* have been hacked away, allowing passage south."
+      },
+      "door_trap@cathedral" : {
+         "desc[1]" : "The door is closed, and no amount of fiddling will open it.",
+         "location" : "IN_ROOM:side2",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "door_trap",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_nside",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "grail@cathedral" : {
+         "location" : "IN_ROOM:reliq",
+         "altname" : "cup",
+         "pname" : "grail",
+         "name" : "grail",
+         "examine" : "The &+YHoly Grail&+W!&* (A small oval sticker on the cup displays the words MADE IN CHINA).",
+         "bvalue" : "200",
+         "desc[0]" : "There is some sort of cup on a pedestal in the fountain."
+      },
+      "door_secroom@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:secroom",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_secroom",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_armor",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "portal_n@cathedral" : {
+         "location" : "IN_ROOM:n_portal",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "pname" : "portal",
+         "name" : "portal_n",
+         "examine" : "The portal is open, but as you look through you cant see much of anything."
+      },
+      "ironmail@cathedral" : {
+         "location" : "IN_ROOM:armhall",
+         "pname" : "Ironmail",
+         "name" : "Ironmail",
+         "desc[0]" : "The &+LIronmail&* stands proudly at your left.  It looks to be finely\ncrafted."
+      },
+      "wolfarmor@cathedral" : {
+         "location" : "IN_ROOM:armhall",
+         "pname" : "WolfArmor",
+         "name" : "WolfArmor",
+         "desc[0]" : "A tastefully sculpted suit of &+yWolfArmor&* stands here &+Cmagestically&*."
+      },
+      "picture@cathedral" : {
+         "location" : "IN_ROOM:s_portal",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "fish",
+         "pname" : "picture",
+         "name" : "picture",
+         "examine" : "It's a &+RRed&* Herring.  &+W(Get moving there's nothing useful here.)&*"
+      },
+      "mantle@cathedral" : {
+         "location" : "WORN_BY:Astasia",
+         "oflags" : [
+            "Wearable",
+            "Glowing"
+         ],
+         "name" : "mantle",
+         "examine" : "Just your everyday holy religious simple cloth shroud.",
+         "size" : "1",
+         "pname" : "mantle",
+         "weight" : "1",
+         "bvalue" : "100",
+         "desc[0]" : "The mantle of the virgin lies here.. what the seductress was doing wearing it\nyou have no idea..."
+      },
+      "door_library@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:library",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_library",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_vambed",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_astbed@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:astbed",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_astbed",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_lowhall",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "coffin_tower@cathedral" : {
+         "desc[1]" : "The sacred &+ycoffin&* of Vladimir is here.",
+         "location" : "IN_ROOM:n_top",
+         "oflags" : [
+            "Container",
+            "NoGet"
+         ],
+         "name" : "coffin_tower",
+         "examine" : "Do I come in your house and snoop around &+WYOUR&* bed?",
+         "state" : "1",
+         "pname" : "coffin",
+         "maxstate" : "1",
+         "desc[0]" : "The &+ycoffin&* has been ripped open."
+      },
+      "darkarmor@cathedral" : {
+         "location" : "WORN_BY:ashram",
+         "armor" : "25",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "altname" : "armor",
+         "name" : "DarkArmor",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "100",
+         "desc[0]" : "The &+LDark &+BArmor&* of the dreaded knight Ashram lies here gleaming.",
+         "aflags" : [
+            "Chest",
+            "Back",
+            "Arms"
+         ]
+      },
+      "portal_s@cathedral" : {
+         "location" : "IN_ROOM:s_portal",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "door",
+         "pname" : "portal",
+         "name" : "portal_s",
+         "examine" : "There is a crude picture of a fish painted on the door, it may warrant closer\nexamination..."
+      },
+      "door_armor@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:armhall",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_armor",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_secroom",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "coin@cathedral" : {
+         "location" : "IN_ROOM:library",
+         "weight" : "5",
+         "pname" : "coin",
+         "name" : "coin",
+         "examine" : "It was probably discarded by some poor guy who couldn't use it in that copy\nmachine.",
+         "bvalue" : "400",
+         "desc[0]" : "A small shiny &+Ycoin&* lies on the ground here",
+         "size" : "5"
+      },
+      "door_catacomb@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:catacomb",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_catacomb",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_sorbtomb",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_saisle@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:s_aisle1",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_saisle",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_sside",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_sorbtomb@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:sorbtomb",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_sorbtomb",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_catacomb",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_nside@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:n_aisle1",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_nside",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_trap",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "door_lowhall@cathedral" : {
+         "desc[1]" : "The door is closed.",
+         "location" : "IN_ROOM:lowhall",
+         "oflags" : [
+            "Openable",
+            "Lockable",
+            "NoGet"
+         ],
+         "name" : "door_lowhall",
+         "desc[2]" : "The door is locked.",
+         "linked" : "door_astbed",
+         "state" : "2",
+         "pname" : "door",
+         "maxstate" : "2",
+         "desc[0]" : "The door is open."
+      },
+      "china@cathedral" : {
+         "location" : "IN_ROOM:milbed",
+         "weight" : "5",
+         "pname" : "china",
+         "name" : "china",
+         "examine" : "Ohhh!! The holy china set!",
+         "bvalue" : "100",
+         "desc[0]" : "A set of &+Wfine china&* sits on the table.",
+         "size" : "5"
+      },
+      "sarcophagus@cathedral" : {
+         "location" : "IN_ROOM:vamcrypt",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "sarcophagus",
+         "name" : "sarcophagus",
+         "examine" : "The sarcophagus is covered with expertly sculpted &+Rf&+Yl&+Ra&+Ym&+Re&+Ys&*\nlicking up from the ground.\nStrange to see flame carved from &+ywood&*..."
+      },
+      "fountain_down@cathedral" : {
+         "desc[1]" : "The hole in the roof is covered by the bottom of the fountain.",
+         "location" : "IN_ROOM:vaulcham",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "fountain_down",
+         "linked" : "fountain_up",
+         "state" : "1",
+         "pname" : "fountain",
+         "maxstate" : "1",
+         "desc[0]" : "A hole in the ceiling leads up into the cathedral's crossing bay."
+      }
+   },
+   "loc" : {
+      "e_amb@cathedral" : {
+         "exits" : {
+            "e" : "e_chap",
+            "n" : "ne_amb",
+            "s" : "se_amb"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Eastern Ambulatory",
+         "id" : "e_amb",
+         "description" : "\n   The aisle continues here around the apse. A chapel lies to the east.\n",
+         "altitude" : null
+      },
+      "n_porch@cathedral" : {
+         "exits" : {
+            "s" : "n_tran"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Northern Porch",
+         "id" : "n_porch",
+         "description" : "\n   As you emerge from the cathedral, you see a tall spiked &+Lfence&* of\n&+ggothic&* design. You could climb it... if you were into impalement. \nBeyond the fence lie desolate mountains, and above you &+Lstorm clouds&* \nroll, and &+Wlightning&* arcs down in the distance.\n",
+         "altitude" : null
+      },
+      "milbed@cathedral" : {
+         "exits" : {
+            "e" : "cobwebs"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+GMillarca's Bedchamber",
+         "id" : "milbed",
+         "description" : "\n   This room is decked out in fine victorian style, with elegant baseboards\nand trim. A large mirror adorns the wall, and a king-sized canopy bed is\nperched in the center of the room. Plush carpeting cushions your feet as you\nwalk. A table sits in the corner, filled with nicknacks.\n",
+         "altitude" : null
+      },
+      "path1@cathedral" : {
+         "exits" : {
+            "w" : "church",
+            "e" : "royal",
+            "s" : "^bushes_n"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Path to the &+RCathedral&*",
+         "id" : "path1",
+         "description" : "   \n   As you step onto the path, you see a towering giant to the east. \nThe cathedral rises high into the air, its twin towers soaring above even the \n&+Lstorm&* clouds which brew overhead, and add an air of &+ggloom&* to the\nplace. Strong winds lash at your flesh, urging you away. A wall of &+Gbushes&*\nlooms to the south.\n",
+         "altitude" : null
+      },
+      "wolven@cathedral" : {
+         "exits" : {
+            "e" : "weaphall",
+            "w" : "armhall",
+            "n" : "westcat"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+yWolven Hall",
+         "id" : "wolven",
+         "description" : "\n   You are surrounded by low-relief sculptures of wolves. However, in these\nworks the wolves are displayed heroically, rather than as wicked cowardly\nbeasts.\n",
+         "altitude" : null
+      },
+      "s_chap@cathedral" : {
+         "exits" : {
+            "n" : "s_amb"
+         },
+         "flags" : [
+            "Dark",
+            "Oneperson"
+         ],
+         "zone" : "cathedral",
+         "title" : "South Chapel",
+         "id" : "s_chap",
+         "description" : "\n   This reliquary is meant to house the &+Yholy grail&*, fabled to have been\nused by Jesus himself at the last supper. The case is empty, and you see no \ntrace of the &+Ygrail&*. You find it odd that so many churches claim to have \nthe &+Yholy &+Ygrail&*, but you assume that as long as these people think \ntheir grail is THE grail, thats all that matters.\n",
+         "altitude" : null
+      },
+      "e_chap@cathedral" : {
+         "exits" : {
+            "w" : "e_amb"
+         },
+         "flags" : [
+            "Dark",
+            "Oneperson"
+         ],
+         "zone" : "cathedral",
+         "title" : "East Chapel",
+         "id" : "e_chap",
+         "description" : "\n   This chapel is the largest of the five. The walls here are decorated with\nfine paintings of St. Suorac. Against the wall is a large reliquary, in\nwhich the bones of St. Suorac were supposed to be stored. Unfortunately they\nnever made it here since according to the Priest he was killed by the vampire,\nand the cathedral turned into a &+rdemonic &+blair&*.\n",
+         "altitude" : null
+      },
+      "armhall@cathedral" : {
+         "exits" : {
+            "e" : "wolven",
+            "s" : "^door_armor"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "cathedral",
+         "title" : "&*Hall of &+LArmor",
+         "id" : "armhall",
+         "description" : "\n   The walls of this room are made up of cubicles, each containing a suit\nof armor and a small plaque describing it. It looks much like a museum \nexhibit.\n",
+         "altitude" : null
+      },
+      "s_portal@cathedral" : {
+         "exits" : {
+            "w" : "royal"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "The South Portal",
+         "id" : "s_portal",
+         "description" : "\n   As you step forward into the &+Ldarkness&* of the portal, you realize it\nhasbeen boarded over with &+ywood&*. You try to budge the old and &+Lrotting\n&+yboards&*,\nbut to no avail. You will have to try another way in.\n",
+         "altitude" : null
+      },
+      "royal@cathedral" : {
+         "exits" : {
+            "e" : "c_portal",
+            "w" : "path1",
+            "n" : "n_portal",
+            "s" : "s_portal"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "The &+YRoyal&+c Portals",
+         "id" : "royal",
+         "description" : "\n   The Western Facade of the Cathedral looms up before you into the &+Wmisty\n&+Csky&*. A triad of grand portals lie before you. Each is flanked by \nmonolithic jamb statues, sculptured figures which stand flat against the\narchitecture, and watch over the portals to this mighty cathedral. You are\nstruck by the malign expressions on their faces, for they look much more\nlike grinning &+Rdevils&* than the holy figures one would expect to find at\nthe doors of a mighty church.\n",
+         "altitude" : null
+      },
+      "n_portal@cathedral" : {
+         "exits" : {
+            "e" : "eterdark",
+            "w" : "royal"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "The North Portal",
+         "id" : "n_portal",
+         "description" : "\n   You step into the &+Ldarkness&* of the portal, and to your surprise the \nway to the east appears clear, though it leads into complete &+Ldarkness&*.\nThe jamb statues here are the most hideous of all. Their heads are mere \nskulls, some of which display gaping cracks, thier feet rest upon what\nappear to be the artists rendition of bodies &+ydecaying&*.\n",
+         "altitude" : null
+      },
+      "eastcat@cathedral" : {
+         "exits" : {
+            "w" : "catacomb",
+            "s" : "vaulhall"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Eastern Catacombs",
+         "id" : "eastcat",
+         "description" : "\n   Here is where the dead were buried in compartments in the walls, so many\ncenturies ago. &+yDust&* covers everything, and you cant see far, having stirred\nup the &+ydust&* upon entering.\n",
+         "altitude" : null
+      },
+      "lowpass@cathedral" : {
+         "exits" : {
+            "n" : "lowhall",
+            "s" : "cobwebs"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Low Passage",
+         "id" : "lowpass",
+         "description" : "\n   The vaulting of the ceilings has abruptly ceased here. This passage looks   \nas if it were carved out of the &+Lrock&* with a shovel, more than anything\nelse. To the north lies a vaulted hall. Your view south is blocked by \n&+Lcobwebs&*.\n",
+         "altitude" : null
+      },
+      "ne_amb@cathedral" : {
+         "exits" : {
+            "w" : "n_amb",
+            "n" : "ne_chap",
+            "s" : "e_amb"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Northeastern Ambulatory",
+         "id" : "ne_amb",
+         "description" : "\n   The aisle continues here around the apse. A chapel lies to the north.\n",
+         "altitude" : null
+      },
+      "s_amb@cathedral" : {
+         "exits" : {
+            "e" : "se_amb",
+            "w" : "s_aisle3",
+            "s" : "s_chap"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+gSouthern Ambulatory",
+         "id" : "s_amb",
+         "description" : "\n   The aisle continues here around the apse. A chapel lies to the south.\n",
+         "altitude" : null
+      },
+      "vaulcham@cathedral" : {
+         "exits" : {
+            "e" : "lowhall",
+            "n" : "vaulhall",
+            "u" : "^fountain_down"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Vaulted Chamber",
+         "id" : "vaulcham",
+         "description" : "\n   The ceiling here is of crude concrete vaulting, with no decorative aspect.\nThe hall branches off to the north and east. It is utterly dark and still\nhere, and the floor is covered with a thick layer of &+ydust&*.\n",
+         "altitude" : null
+      },
+      "carnage2@cathedral" : {
+         "exits" : {
+            "w" : "cryptent",
+            "n" : "carnage1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+RCarnage &+LHall",
+         "id" : "carnage2",
+         "description" : "\n   Row upon row of chairs stretch out around you, and a tiny faraway stage\ncommands your attent...  Oh.. thats Carnagie Hall.. My mistake...\n   You stand among more of the same decaying mess as you see to the north.\nAn exit to the west looks slightly more inviting.\n",
+         "altitude" : null
+      },
+      "s_tower@cathedral" : {
+         "exits" : {
+            "u" : "s_stairs",
+            "n" : "nave1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "The South Tower",
+         "id" : "s_tower",
+         "description" : "\n   This room is bare, except for the staircase spiralling upward into\n&+Ldarkness&*. \n",
+         "altitude" : null
+      },
+      "n_tran@cathedral" : {
+         "exits" : {
+            "e" : "n_aisle3",
+            "w" : "n_aisle2",
+            "n" : "n_porch",
+            "s" : "crossbay"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Northern End of the Transept",
+         "id" : "n_tran",
+         "description" : "\n   The aisles branch off to the east and west. The crossing bay is to the \nsouth, and to the north an Open portal leads out into the &+cmist&*.\n",
+         "altitude" : null
+      },
+      "s_aisle1@cathedral" : {
+         "exits" : {
+            "e" : "s_aisle2",
+            "n" : "nave2",
+            "s" : "^door_saisle"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "South Aisle",
+         "id" : "s_aisle1",
+         "description" : "\n   To the west the wall of the tower rises up, and tattered drapery of a deep\n&+Mpurple&* hue hangs down from high above your head. To the south is a rather\nlarge doorway. The aisle continues to the east, or you may enter the nave to\nthe north.\n",
+         "altitude" : null
+      },
+      "s_aisle3@cathedral" : {
+         "exits" : {
+            "e" : "s_amb",
+            "w" : "s_tran",
+            "n" : "choir"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "South Aisle",
+         "id" : "s_aisle3",
+         "description" : "\n   As you reach yet another mind-numbingly dull aisle... your thoughts begin\nto drift. Is it really worth it? Should i continue with this quest? Perhaps\nits better to remain a mortal forever?\n",
+         "altitude" : null
+      },
+      "cryptent@cathedral" : {
+         "exits" : {
+            "e" : "carnage2",
+            "w" : "^door_crypt",
+            "n" : "vamcrypt",
+            "s" : "vambed"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+LCrypt Entrance",
+         "id" : "cryptent",
+         "description" : "\n   The walls here are made up entirely of hideous snarling gargoyles. The\ndark &+Lgrey&* stone is damp and &+Bcold&* to the touch. You feel a &+Cchill&*\nset in that \ngoes straight to your bones. Exits lead north and south, but you wonder if \nit isn't better to turn tail and run back to the east. The outline of a door\nmarks the wall to the west. No handles or other markings appear on the wall.\n",
+         "altitude" : null
+      },
+      "path5@cathedral" : {
+         "exits" : {
+            "e" : "side1",
+            "w" : "path4"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Beside the &+rCathedral&*",
+         "id" : "path5",
+         "description" : "\n   The &+Gleaves&* hang low here, and your head brushes against them as you\npass. \nThe path continues into deep &+gfoliage&* to the west, but to the east it clears\nup somewhat, and what little &+Ylight&* there is streams in as the leaves part.\n",
+         "altitude" : null
+      },
+      "ne_chap@cathedral" : {
+         "exits" : {
+            "s" : "ne_amb"
+         },
+         "flags" : [
+            "Dark",
+            "Oneperson"
+         ],
+         "zone" : "cathedral",
+         "title" : "Northeast Chapel",
+         "id" : "ne_chap",
+         "description" : "\n   Sculpted in low relief in the wall is a crucifix, and at the bottom of the\nwall is an open case made of pure &+Ygold&*. On the inside of its lid it\ndescribes the contents as a piece of the Crucifix. But you can see no such \nthing here. The case looks empty.\n",
+         "altitude" : null
+      },
+      "n_tower@cathedral" : {
+         "exits" : {
+            "u" : "n_stairs",
+            "s" : "nave1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "The North Tower",
+         "id" : "n_tower",
+         "description" : "\n   The Walls of the tower are covered with countless years of &+gmold&* and\n&+ydust&*.\nAbove you the stairs continue upwards.\n",
+         "altitude" : null
+      },
+      "sorbtomb@cathedral" : {
+         "exits" : {
+            "s" : "^door_sorbtomb"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+MThe &+GTomb &+Bof &+YSorbet&*",
+         "id" : "sorbtomb",
+         "description" : "\n   The place looks like some &+CP&+Rs&+Yy&+Wc&+Bh&+Go&+Md&+Ce&+Rl&+Yi&+Wc\n&+BNightmare&+W! &+RC&+Go&+Yl&+Bo&+Mr&+Cs&* swirl about you,\nengulfing you in illusory images and strange sensations.\n",
+         "altitude" : null
+      },
+      "n_aisle3@cathedral" : {
+         "exits" : {
+            "e" : "n_amb",
+            "w" : "n_tran",
+            "s" : "choir"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "North Aisle",
+         "id" : "n_aisle3",
+         "description" : "\n   Just another action packed, thrilling hallway... the monotony is almost\ntoo much to bear.\n",
+         "altitude" : null
+      },
+      "apse@cathedral" : {
+         "exits" : {
+            "w" : "crossbay"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+WThe Apse&*",
+         "id" : "apse",
+         "description" : "\n   You finally reach the apse of this once mighty church. Here above the\nchoir, and at the end of the long nave, you see the altar where patrons used\nto pray. It stands before you in shameful condition. Huge chunks of shaped \nmarble litter the floor, remnants of a grand sculptured altarpiece, now in \nruin. Behind the altar lies a monstrous wallpainting. Seering &+Rred &+Beyes&*\ngaze down upon you hatefully, and wide grinning mouths show pointed teeth \nand drip &+rblood&*, under a &+Rreddish&*-&+Mpurple &+Csky&*. \n",
+         "altitude" : null
+      },
+      "inchurch@cathedral" : {
+         "exits" : {
+            "n" : "church"
+         },
+         "flags" : [
+            "Light",
+            "Peaceful"
+         ],
+         "zone" : "cathedral",
+         "title" : "Small Church",
+         "id" : "inchurch",
+         "description" : "\n   Inside the church, you look down a short aisle at the simple altar, its\naltarpiece &+Cilluminated &+Wbrilliantly&* by the &+Ylight&* from its small\nclerestory windows above your head. Though tiny, this church has a \nspiritual quality to it that is quite refreshing. By the altar sits a plate\nfor donations.\n",
+         "altitude" : null
+      },
+      "se_amb@cathedral" : {
+         "exits" : {
+            "w" : "s_amb",
+            "n" : "e_amb",
+            "s" : "se_chap"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Southeastern Ambulatory",
+         "id" : "se_amb",
+         "description" : "\n   The aisle continues here around the apse. A chapel lies to the south.\n",
+         "altitude" : null
+      },
+      "cobwebs@cathedral" : {
+         "exits" : {
+            "w" : "milbed",
+            "n" : "lowpass"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+LCobwebs",
+         "id" : "cobwebs",
+         "description" : "\n   The dimensions of this room seem to be made out by the thicker portions of\nwebbing, rather than by walls. you can vaguely make out exits to the north and\nwest. In the center of the room is a small bed. Its &+Ybrass&* head and base\nrise \na few feet into the air. You feel fear in the gathering gloom, and there's \nsuddenly a movement in the corner of the room. There's nothing you can do, as \nyou realize with &+Rfright&*...\n",
+         "altitude" : null
+      },
+      "path4@cathedral" : {
+         "exits" : {
+            "e" : "path5",
+            "w" : "path3"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Beside The &+LTower&*",
+         "id" : "path4",
+         "description" : "\n   The tower wall rises up to the north, and as you look up you cannot see\nto the top of it. The path goes on both east and west, through the thick \ncanopy of &+gfoliage&*.\n",
+         "altitude" : null
+      },
+      "nave1@cathedral" : {
+         "exits" : {
+            "e" : "nave2",
+            "n" : "n_tower",
+            "s" : "s_tower"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "The Nave",
+         "id" : "nave1",
+         "description" : "\n   You stand at the beginning of the long nave of the cathedral, which\nstretches out a great distance to the east. The triforiums run along the\nnorthern and southern sides, with great columns of polished &+Wwhite&* marble \nsoaring upward into &+Ldarkness&* to support the vaulted ceiling, which is\nonlybarely visible. The clerestory windows are blocked off by the &+Lstorm&*\nragingoutside, and no light passes through. To your north, through a high arch,\nlies the northern tower. Likewise, to the south, there is another tower.\nTo the west the royal portals appear to be boarded up, but the nave continues\nto the east.\n",
+         "altitude" : null
+      },
+      "lowhall@cathedral" : {
+         "exits" : {
+            "e" : "^door_lowhall",
+            "w" : "vaulcham",
+            "s" : "lowpass"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Low Vaulted Hall",
+         "id" : "lowhall",
+         "description" : "\n   The ceiling in this room is lower, and even more crudely constructed. Bits\nof concrete lie about the floor. To the east is an elegantly crafted door,\nlooking very out of place. The low passage continues to the south.\n",
+         "altitude" : null
+      },
+      "catacomb@cathedral" : {
+         "exits" : {
+            "w" : "westcat",
+            "e" : "eastcat",
+            "n" : "^door_catacomb"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Catacombs",
+         "id" : "catacomb",
+         "description" : "\n   The catacombs continue here and to the east and west. To your north there\nappears to be an opening in the wall large enough for you to squeeze into.\n",
+         "altitude" : null
+      },
+      "choir@cathedral" : {
+         "exits" : {
+            "e" : "apse",
+            "w" : "crossbay",
+            "n" : "n_aisle3",
+            "s" : "s_aisle3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+BThe Choir&*",
+         "id" : "choir",
+         "description" : "\n   This part of the nave was designed as a convenient place to house the\nchoir, in front of and below the altar. It is nothing but a large empty\nchamber now, and the only singing you hear is the cry of &+Lbats&* above \nwhich your footsteps have awakened.\n",
+         "altitude" : null
+      },
+      "vaulhall@cathedral" : {
+         "exits" : {
+            "n" : "eastcat",
+            "s" : "vaulcham"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Vaulted Hall",
+         "id" : "vaulhall",
+         "description" : "\n   The walls here are bare, as is the floor. Heavy &+ydust&* rises to the north.\n",
+         "altitude" : null
+      },
+      "s_top@cathedral" : {
+         "exits" : {
+            "d" : "s_stairs"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "The Top of the South Tower",
+         "id" : "s_top",
+         "description" : "\n   In the center of this room is a large &+Liron &+blantern&*, mounted solidly\non the floor. The windows which used to bring &+Ylight&* in by day, and allow\nthe lantern to shine out by &+Lnight&*, have been &+yboarded&* over. &+LCobwebs&*\nare strewn over everything, and a &+gmusty&* smell fills your nostrils.\n",
+         "altitude" : null
+      },
+      "westcat@cathedral" : {
+         "exits" : {
+            "e" : "catacomb",
+            "s" : "wolven"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Western Catacombs",
+         "id" : "westcat",
+         "description" : "\n   The &+ydust&* here is chokingly thick, and obscures your vision. You hear\nscraping and panting to the south.\n",
+         "altitude" : null
+      },
+      "church@cathedral" : {
+         "exits" : {
+            "e" : "path1",
+            "w" : "Misty2@moor",
+            "s" : "inchurch"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Path To Church",
+         "id" : "church",
+         "description" : "   \n   You are walking on a narrow dirt path bordered on each side by tall\n&+Gbushes&* which block out the &+Csky&*. A &+Wcool&* wind blows across \nyour face, and to the south you see the open doors of a tiny, broken \ndown old church welcoming you.\n",
+         "altitude" : null
+      },
+      "n_aisle2@cathedral" : {
+         "exits" : {
+            "e" : "n_tran",
+            "w" : "n_aisle1",
+            "s" : "nave3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "North Aisle",
+         "id" : "n_aisle2",
+         "description" : "\n   Long ago crowds lined up along this aisle, waiting to see the holy relics\nhoused in the east end of the cathedral. Now the mosaic paintings they once\nappreciated while they waited are in disrepair. Tiles litter the floor, and\nwhat is left of the wall mosaics is covered in a thick coat of &+Lgrunge&*.\n",
+         "altitude" : null
+      },
+      "secroom@cathedral" : {
+         "exits" : {
+            "n" : "^door_secroom"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Secret Room",
+         "id" : "secroom",
+         "description" : "\n   I can't tell you what this room looks like. Its a secret. If you grope\naround in the void long enough, perhaps you'll find something.\n",
+         "altitude" : null
+      },
+      "nave2@cathedral" : {
+         "exits" : {
+            "e" : "nave3",
+            "w" : "nave1",
+            "n" : "n_aisle1",
+            "s" : "s_aisle1"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "The Nave",
+         "id" : "nave2",
+         "description" : "\n   You are partway down the nave. The wall of columns continues to your north \nand south. Thick, &+Ldark &+rred&* stains mar the columns. You can make your \nway to the side aisles through any of the archways between the columns. To \nthe west the nave continues toward the royal portals. To the east it leads \ntoward the choir and the apse. Several chairs, broken and battered, are \nstrewn about the floor.\n",
+         "altitude" : null
+      },
+      "n_top@cathedral" : {
+         "exits" : {
+            "d" : "n_stairs"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Top of the North Tower",
+         "id" : "n_top",
+         "description" : "\n   The room you have entered is &+Wbrightly &+Yilluminated&* by magnificent\nstained glass windows, which filter the &+Ylight&* and give everything an\notherworldly &+Gglow&*. In the middle of the room sits an open casket, of\nfine &+ymahogany&* with &+Wwhite silk&* interior. A vase of &+Rroses&* sits\nupon the windowsill.\n",
+         "altitude" : null
+      },
+      "s_tran@cathedral" : {
+         "exits" : {
+            "e" : "s_aisle3",
+            "w" : "s_aisle2",
+            "n" : "crossbay",
+            "s" : "s_porch"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Southern End of the Transept",
+         "id" : "s_tran",
+         "description" : "\n   To your north lies the crossing bay, and the nave. South of here is an\nopen portal onto the southern porch. The Aisle stretches out to the east and\nwest, parallel to the nave.\n",
+         "altitude" : null
+      },
+      "astbed@cathedral" : {
+         "exits" : {
+            "w" : "^door_astbed"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+MAstasia's BedChamber",
+         "id" : "astbed",
+         "description" : "\n   As you enter the room, you marvel at the huge posterbed before you. The\nroom has a rather ethereal quality, and a faint light shines from the\nchandolier hanging from the marble tiled ceiling. In one corner is a \nmagnificently crafted armoire, trimmed with &+Ygold&*. \n",
+         "altitude" : null
+      },
+      "se_chap@cathedral" : {
+         "exits" : {
+            "n" : "se_amb"
+         },
+         "flags" : [
+            "Dark",
+            "Oneperson"
+         ],
+         "zone" : "cathedral",
+         "title" : "Southeast Chapel",
+         "id" : "se_chap",
+         "description" : "\n   Here you see murals illustrating the life of the Virgin. There is also a \n&+Cglass&* case in which once was housed the Mantle of The Virgin, but the \nlid is smashed in.\n",
+         "altitude" : null
+      },
+      "reliq@cathedral" : {
+         "exits" : {
+            "e" : "^door_reliq"
+         },
+         "flags" : [
+            "Dark",
+            "Oneperson"
+         ],
+         "zone" : "cathedral",
+         "title" : "The Secret Reliquary",
+         "id" : "reliq",
+         "description" : "\n   There is little to see here in this tiny round chamber. The whole thing is\ncrudely built of blocks of &+Lstone&*, and you have to duck down just to stand.",
+         "altitude" : null
+      },
+      "path2@cathedral" : {
+         "exits" : {
+            "n" : "^bushes_s",
+            "s" : "path3"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Hidden Path",
+         "id" : "path2",
+         "description" : "\n   The &+Gbushes&* to the north are cut away, allowing your safe passage, to the\nsouth this path continues around the tower. The &+Gbushes&* around you protect\nyou from the buffeting winds of the &+Lstorm&* above.\n",
+         "altitude" : null
+      },
+      "nave3@cathedral" : {
+         "exits" : {
+            "e" : "crossbay",
+            "w" : "nave2",
+            "n" : "n_aisle2",
+            "s" : "s_aisle2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+LThe Nave&*",
+         "id" : "nave3",
+         "description" : "\n   Where once this Nave inspired awe, now only &+Ldarkness&* reigns, the\n&+Wlight&* of &+Yheaven&* can no longer shine in, and the place takes on \nan air of &+bgloom&* matched by few places you have ever been in. The\ncolumns to the north and south seem to tower menacingly over you. \nThrough these columns lie the side aisle which runs along the nave. To \nthe east is the crossing bay, and to the west the nave continues toward \nthe portals.\n",
+         "altitude" : null
+      },
+      "path3@cathedral" : {
+         "exits" : {
+            "e" : "path4",
+            "n" : "path2"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Path",
+         "id" : "path3",
+         "description" : "\n   The &+gshrubbery&* here is so thick it slows down your progress considerably,\nbut at least the weather is unlikely to affect you. The continuing path is \nbarely visible to the east.\n",
+         "altitude" : null
+      },
+      "vambed@cathedral" : {
+         "exits" : {
+            "w" : "^door_vambed",
+            "n" : "cryptent"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "cathedral",
+         "title" : "The &+rVampire's &+gBedchamber",
+         "id" : "vambed",
+         "description" : "\n   As you step in, you nearly trip, as the floor is not too solid. You notice\nthat the floor here is one big mattress. The room itself is dome-shaped.\nPiles and piles of pillows of all shapes and sizes line the walls. There is\na small door in the west wall.\n",
+         "altitude" : null
+      },
+      "crossbay@cathedral" : {
+         "exits" : {
+            "e" : "choir",
+            "w" : "nave3",
+            "n" : "n_tran",
+            "d" : "^fountain_up",
+            "s" : "s_tran"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "The Crossing Bay",
+         "id" : "crossbay",
+         "description" : "\n   This is the crossing bay, where the nave and the transept cross. The\ntransept hall lies to the north and south. To the east the nave continues\nthrough the choir and toward the apse. A fountain sits here, burbling. As\nyou peer down into the fountain, you notice it runs &+Rred&* with &+rblood&*,\nrather than &+Wclear &+Bwater&*, and yet it looks strangely tantalizing.\n",
+         "altitude" : null
+      },
+      "eterdark@cathedral" : {
+         "exits" : {},
+         "flags" : [
+            "Death"
+         ],
+         "zone" : "cathedral",
+         "title" : "&+BEternal &+LDarkness&*",
+         "id" : "eterdark",
+         "description" : "\n   You plunge face first into &+Beternal &+Ldarkness&*, never to be heard from\nagain.\nPerhaps you will appreciate the messages in sculpture more in the afterlife.\nAs you look on from above, the figures on the portal pack themselves more \ntightly together, and another figure, shaped like you, with a split skull\nfor a head, emerges from the marble wall to join them.\n",
+         "altitude" : null
+      },
+      "s_porch@cathedral" : {
+         "exits" : {
+            "n" : "s_tran"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Southern Porch",
+         "id" : "s_porch",
+         "description" : "\n   A tall spiked &+Lfence&* bars all directions but the way you came. \nAttempting to get over it would only result in multiple nasty wounds. \nA heavy &+Wfog&* obscures your vision beyond the &+Lfence&*.\n",
+         "altitude" : null
+      },
+      "s_aisle2@cathedral" : {
+         "exits" : {
+            "e" : "s_tran",
+            "w" : "s_aisle1",
+            "n" : "nave3"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "South Aisle",
+         "id" : "s_aisle2",
+         "description" : "\n   This is where you would wait to see the holy relics, but now the cathedral\nis deserted and the reliquaries desecrated. the pictorial illustrations on\nthe wall here are marred irrepairably by time.\n",
+         "altitude" : null
+      },
+      "c_portal@cathedral" : {
+         "exits" : {
+            "w" : "royal"
+         },
+         "flags" : [
+            "Light",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "The Central Portal",
+         "id" : "c_portal",
+         "description" : "\n   This is the grandest of the three portals. Overhead you can barely make\nout the details of its bizarre tympanum sculpture. Above the door, in a half\nmoon shaped area enclosed by a pointed arch, is a sculpture of an enthroned\nman, hooded and wearing a flowing cape which is tattered at the ends. His\narms are outstretched and underneath them, smaller figures writhe in agony, \nas tiny swirling demons whip around their heads and torment them mercilessly.\nThe Door itself is heavily boarded, and though it looks worn and battered,\nthe &+ywood&* holds firm at any attempt to force your way through.\n",
+         "altitude" : null
+      },
+      "vamcrypt@cathedral" : {
+         "exits" : {
+            "s" : "cryptent"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "cathedral",
+         "title" : "The &+rVampire's &+LCrypt",
+         "id" : "vamcrypt",
+         "description" : "\n   The walls here alternate between towering engaged corinthian columns and\nflat surfaces of marble brickwork. Flowing red velvet drapery falls between \nthe columns. High above, shrouded in mist, is the single groin-vault that\nforms the ceiling of this crypt. Your breath echoes off the walls, disturbing \nthe solitude that this chamber provides. The space is dominated by a platform\nupon which rests a lone sarcophagus.\n",
+         "altitude" : null
+      },
+      "carnage1@cathedral" : {
+         "exits" : {
+            "n" : "weaphall",
+            "s" : "carnage2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Hall of &+RCarnage&*",
+         "id" : "carnage1",
+         "description" : "\n   You nearly lose your lunch as you enter this place. Stinking &+yrotting&*\nflesh lines the floor, ceiling, and walls. bodies in various stages of \n&+Ldecay&* line the place. The floor is covered in a thick layer of \n&+Rreddish &+rooze&*, which must\nbe the same stuff which is dripping slowly onto you from above.\n",
+         "altitude" : null
+      },
+      "n_aisle1@cathedral" : {
+         "exits" : {
+            "e" : "n_aisle2",
+            "n" : "^door_nside",
+            "s" : "nave2"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "North Aisle",
+         "id" : "n_aisle1",
+         "description" : "\n   The walls to the west and north are made of huge blocks of marble, stained\nby centuries of &+bgrime&* and &+gfungi&*. The wall to the north is interrupted\nby a large &+ywooden&* door, with metal handles. The door is swung back, and \nbeyond it you can make out only &+Ldarkness&*. Howling sounds reach your ears\nfrom beyondthe doorway. To the east the aisle continues.\n",
+         "altitude" : null
+      },
+      "n_stairs@cathedral" : {
+         "exits" : {
+            "u" : "n_top",
+            "d" : "n_tower"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "The Spiral Stairs",
+         "id" : "n_stairs",
+         "description" : "\n   These stairs seem to spiral up endlessly, and you wonder if you have gone\nso high as to rise above even the &+Lstorm&* which is brewing above the\ncathedral.\nAs finally approach the top, a great &+Ylight&* shines down upon you which \nseems to answer your question, that in fact you have climbed a very long way.\n",
+         "altitude" : null
+      },
+      "s_stairs@cathedral" : {
+         "exits" : {
+            "u" : "s_top",
+            "d" : "s_tower"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "The Stairs",
+         "id" : "s_stairs",
+         "description" : "\n   The stairs are rickety and worn with age, but they seem secure enough to\nsupport your weight. There appear to be no windows in this tower, as you\ncannot make out any &+Ylight&* from above. At the top the stairs emerge into\na small unlit room.\n",
+         "altitude" : null
+      },
+      "n_amb@cathedral" : {
+         "exits" : {
+            "e" : "ne_amb",
+            "w" : "n_aisle3",
+            "n" : "n_chap"
+         },
+         "flags" : [
+            "Dark"
+         ],
+         "zone" : "cathedral",
+         "title" : "Northern Ambulatory",
+         "id" : "n_amb",
+         "description" : "\n   The aisle continues here around the apse. A chapel lies to the north.\n",
+         "altitude" : null
+      },
+      "library@cathedral" : {
+         "exits" : {
+            "e" : "^door_library"
+         },
+         "flags" : [
+            "Light",
+            "Soundproof",
+            "Private"
+         ],
+         "zone" : "cathedral",
+         "title" : "The Library",
+         "id" : "library",
+         "description" : "\n   This is LeSuorac's private library. Here you see shelf upon shelf of fine \nvolumes. As you browse you notice the works of Anne Rice have a prominent\nplace in this library. In the corner is a copy machine, but it doesn't\naccept change, only those silly little copy cards.\n",
+         "altitude" : null
+      },
+      "side2@cathedral" : {
+         "exits" : {
+            "s" : "^door_trap"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Trap Door",
+         "id" : "side2",
+         "description" : "\n   As you exit the cathedral, the door slams shut, and its heavy bolts fall\ninto place. You can hardly see a thing through the thick &+Wfog&*. Wraithlike\nforms swoop down at your head making you duck in terror.  You can fight them,\nbut it is unlikely you can budge the door, should you survive the battle.\n",
+         "altitude" : null
+      },
+      "side1@cathedral" : {
+         "exits" : {
+            "w" : "path5",
+            "n" : "^door_sside"
+         },
+         "flags" : [
+            "Dark",
+            "Outdoors"
+         ],
+         "zone" : "cathedral",
+         "title" : "Side Door",
+         "id" : "side1",
+         "description" : "\n   The &+Csky&* above seems lighter here, and the winds fade. you are \nsurrounded by walls of &+Ggreen&* on all sides but north. In that \ndirection, surrounded bythe &+givy&* that crawls all about the sides \nof the cathedral, is a heavy &+ywooden&* door, with a quite substantial\nlock of a type you've never seen the likes of.\n",
+         "altitude" : null
+      },
+      "weaphall@cathedral" : {
+         "exits" : {
+            "w" : "wolven",
+            "s" : "carnage1"
+         },
+         "flags" : [
+            "Light"
+         ],
+         "zone" : "cathedral",
+         "title" : "Hall of Weapons",
+         "id" : "weaphall",
+         "description" : "\n   The floor here is smoothly tiled, as is the high ceiling. Racks line the\nwalls, and upon the racks sit weapons of all types from all places and times.\nWhomever built this place seems to have a fascination for collecting fine\nthings, or perhaps he just gets bored living for all eternity, and collecting \ngives him a purpose. A piercing stench rises from the south.\n",
+         "altitude" : null
+      },
+      "n_chap@cathedral" : {
+         "exits" : {
+            "s" : "n_amb"
+         },
+         "flags" : [
+            "Dark",
+            "Oneperson"
+         ],
+         "zone" : "cathedral",
+         "title" : "North Chapel",
+         "id" : "n_chap",
+         "description" : "\n   Inscribed in the marble walls you read:\n       \tHerein lies the Holy China Set, used by our lord at his last supper.\n   Despite the inscription, you see that the box in the center of the room is\n   most clearly empty. \n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "wolfarmor@cathedral" : {
+         "damage" : "20",
+         "location" : "limbo@limbo",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "The WolfArmor",
+         "name" : "WolfArmor",
+         "description" : "\nThe WolfArmor seems to have come alive, and is attacking you!",
+         "strength" : "300"
+      },
+      "priest@cathedral" : {
+         "damage" : "10",
+         "location" : "inchurch",
+         "armor" : "0",
+         "name" : "Priest",
+         "description" : "The Priest stands here, looking upon you solemnly.",
+         "strength" : "50",
+         "speed" : "0",
+         "pname" : "The Priest",
+         "aggression" : "0",
+         "pflags" : [
+            "NoSteal",
+            "NoHassle"
+         ]
+      },
+      "astasia@cathedral" : {
+         "damage" : "15",
+         "location" : "astbed",
+         "armor" : "0",
+         "name" : "Astasia",
+         "description" : "\nYou have disturbed Astasia the Seductress's well deserved beauty sleep!",
+         "sflags" : [
+            "Female",
+            "Vampire"
+         ],
+         "strength" : "300",
+         "speed" : "1",
+         "pname" : "Seductress",
+         "aggression" : "80"
+      },
+      "platemail@cathedral" : {
+         "damage" : "20",
+         "location" : "limbo@limbo",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "The Platemail",
+         "name" : "Platemail",
+         "description" : "\nThe Platemail seems to have come alive, and is attacking you!",
+         "strength" : "300"
+      },
+      "gwendolyn@cathedral" : {
+         "damage" : "14",
+         "location" : "vambed",
+         "armor" : "0",
+         "name" : "Gwendolyn",
+         "description" : "Gwendolyn smiles coyly and beckons you closer.",
+         "sflags" : [
+            "Female",
+            "Vampire"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "30"
+      },
+      "vladimir@cathedral" : {
+         "damage" : "20",
+         "location" : "n_top",
+         "armor" : "10",
+         "name" : "Vladimir",
+         "examine" : "It appears as if he is about to take a bite out of you!.",
+         "description" : "Vladimir the &+rVampire&* stands here in the &+Ylight&* of the stained\n&+Cglass&* window.",
+         "sflags" : [
+            "Vampire"
+         ],
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "0",
+         "mflags" : [
+            "Thief"
+         ]
+      },
+      "stinkie@cathedral" : {
+         "damage" : "10",
+         "location" : "side2",
+         "armor" : "0",
+         "name" : "Stinkie",
+         "description" : "\n&+yStinky&* the &+WApparition&* hovers above your head menacingly.",
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "30",
+         "mflags" : [
+            "Nocorpse"
+         ]
+      },
+      "inky@cathedral" : {
+         "damage" : "10",
+         "location" : "side2",
+         "armor" : "0",
+         "name" : "Inky",
+         "description" : "\n&+BInky&* the &+WApparition&* hovers above your head menacingly.",
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "30",
+         "mflags" : [
+            "Nocorpse"
+         ]
+      },
+      "countess@cathedral" : {
+         "damage" : "18",
+         "location" : "s_top",
+         "armor" : "0",
+         "name" : "Countess",
+         "description" : "Countess Bathory &+Rscreams&* as you walk in on her bath!",
+         "sflags" : [
+            "Female",
+            "Vampire"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "pname" : "Bathory",
+         "aggression" : "60"
+      },
+      "lasher@cathedral" : {
+         "eflags" : [
+            "NegFireball",
+            "NegFrost",
+            "NegMissile"
+         ],
+         "damage" : "20",
+         "location" : "s_porch",
+         "armor" : "0",
+         "name" : "Lasher",
+         "description" : "\nLasher, spirit of the &+cwinds&*, rips through your path savagely!",
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "300",
+         "speed" : "3",
+         "aggression" : "100",
+         "mflags" : [
+            "Nocorpse"
+         ]
+      },
+      "millarca@cathedral" : {
+         "damage" : "20",
+         "location" : "milbed",
+         "armor" : "0",
+         "name" : "Millarca",
+         "description" : "Countess Millarca, the Vampiress invites you in for a bite.",
+         "sflags" : [
+            "Female",
+            "Vampire"
+         ],
+         "strength" : "300",
+         "speed" : "0",
+         "aggression" : "50"
+      },
+      "ashram@cathedral" : {
+         "damage" : "15",
+         "location" : "secroom",
+         "armor" : "0",
+         "name" : "Ashram",
+         "description" : "Ashram the &+RDemon &+LKnight&* peers at you &+bcoldly&*, calculating your\nweaknesses.",
+         "strength" : "200",
+         "speed" : "2",
+         "aggression" : "100",
+         "pflags" : [
+            "NoSteal",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "Cross"
+         ]
+      },
+      "spit@cathedral" : {
+         "damage" : "15",
+         "location" : "royal",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "Spit",
+         "description" : "Spit the Wolf bounds about, slobbering stupidly.",
+         "strength" : "100",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "benji@cathedral" : {
+         "damage" : "8",
+         "location" : "wolven",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "Benji",
+         "description" : "\nBenji the &+RHellhound&* licks his lips at the sight of you!",
+         "strength" : "60",
+         "mflags" : [
+            "BarEast",
+            "BarWest"
+         ]
+      },
+      "lesuorac@cathedral" : {
+         "eflags" : [
+            "Fireball",
+            "Missile",
+            "Frost",
+            "Shock"
+         ],
+         "damage" : "40",
+         "location" : "vamcrypt",
+         "armor" : "20",
+         "name" : "LeSuorac",
+         "description" : "\nLeSuorac the &+RVampire&* grins as he prepares to &+Rslaughter&* you\n&+Wmercilessly!",
+         "sflags" : [
+            "Vampire"
+         ],
+         "strength" : "3000",
+         "speed" : "0",
+         "aggression" : "0",
+         "pflags" : [
+            "NoExorcise",
+            "NoSummon",
+            "NoZap",
+            "NoSteal",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "Thief",
+            "NoCorpse"
+         ]
+      },
+      "sorbet@cathedral" : {
+         "damage" : "20",
+         "location" : "sorbtomb",
+         "armor" : "0",
+         "name" : "Sorbet",
+         "description" : "\nYou have awakened Sorbet the &+LDark&* from his (almost) eternal slumber.",
+         "sflags" : [
+            "Vampire"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "50"
+      },
+      "blinky@cathedral" : {
+         "damage" : "10",
+         "location" : "side2",
+         "armor" : "0",
+         "name" : "Blinky",
+         "description" : "\n&+MBlinky&* the &+WApparition&* hovers above your head menacingly.",
+         "sflags" : [
+            "Nobody"
+         ],
+         "strength" : "150",
+         "speed" : "0",
+         "aggression" : "30",
+         "mflags" : [
+            "Nocorpse"
+         ]
+      },
+      "elisabeth@cathedral" : {
+         "damage" : "16",
+         "location" : "vambed",
+         "armor" : "0",
+         "name" : "Elisabeth",
+         "description" : "Elisabeth stares at you with &+Rlust&* in her eyes.",
+         "sflags" : [
+            "Female",
+            "Vampire"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "30"
+      },
+      "drool@cathedral" : {
+         "damage" : "15",
+         "location" : "royal",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "Drool",
+         "description" : "\nDrool the Wolf is here, panting and drooling, hungry for his next meal, YOU!",
+         "strength" : "100",
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "spiderman@cathedral" : {
+         "eflags" : [
+            "Missile"
+         ],
+         "damage" : "15",
+         "location" : "cobwebs",
+         "armor" : "0",
+         "name" : "Spiderman",
+         "description" : "The Spider Man is having you for dinner tonight!",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "50",
+         "mflags" : [
+            "BarWest"
+         ]
+      },
+      "spot@cathedral" : {
+         "damage" : "8",
+         "location" : "wolven",
+         "speed" : "0",
+         "aggression" : "50",
+         "armor" : "0",
+         "name" : "Spot",
+         "description" : "Spot the &+RHellhound&* guards the east hall visciously.",
+         "strength" : "60",
+         "mflags" : [
+            "BarEast",
+            "BarWest"
+         ]
+      },
+      "rintintin@cathedral" : {
+         "damage" : "8",
+         "location" : "wolven",
+         "speed" : "0",
+         "aggression" : "20",
+         "armor" : "0",
+         "name" : "RinTinTin",
+         "examine" : "\nHe seems not to notice you, as he plays with the remains of a snake.",
+         "description" : "\nRinTinTin the &+RHellhound&* is playing with a snake in the west corner.",
+         "strength" : "60",
+         "mflags" : [
+            "BarWest",
+            "BarEast"
+         ]
+      },
+      "drolza@cathedral" : {
+         "damage" : "12",
+         "location" : "vambed",
+         "armor" : "0",
+         "name" : "Drolza",
+         "description" : "\nDrolza longs to suck out your &+rblood&* as slowly as possible!",
+         "sflags" : [
+            "Female",
+            "Vampire"
+         ],
+         "strength" : "100",
+         "speed" : "0",
+         "aggression" : "30"
+      },
+      "ironmail@cathedral" : {
+         "damage" : "20",
+         "location" : "limbo@limbo",
+         "speed" : "0",
+         "aggression" : "100",
+         "armor" : "0",
+         "pname" : "The Ironmail",
+         "name" : "Ironmail",
+         "description" : "\nThe Ironmail seems to have come alive, and is attacking you!",
+         "strength" : "300"
+      }
+   }
+}

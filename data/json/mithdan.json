@@ -8,7 +8,7 @@
             "armor",
             "getflips"
          ],
-         "armor" : "12",
+         "armor" : "24",
          "altname" : "armor",
          "name" : "FireArmor",
          "examine" : "\nThe fire seems to burn hot, but as you reach for it, it is cool to the touch.",
@@ -148,8 +148,7 @@
          "damage" : "0",
          "location" : "IN_ROOM:Mithdan40",
          "oflags" : [
-            "noget",
-            "food"
+            "noget"
          ],
          "armor" : "0",
          "altname" : "Fountain",
@@ -183,9 +182,7 @@
          "desc[0]" : "\nA short and broad sword of ice has been dropped here."
       },
       "prettystone@mithdan" : {
-         "e" : "400",
          "desc[1]" : "\nA shiny stone sits on the edge of the pool, the waves gently rocking it.",
-         "damage" : "bvalu",
          "location" : "IN_ROOM:Mithdan75",
          "oflags" : [
             "getflips"
@@ -199,19 +196,18 @@
          "weight" : "10",
          "pname" : "Shiny",
          "maxstate" : "1",
+         "bvalue" : "400",
          "desc[0]" : "\nA sparkling shiny stone has been dropped here."
       },
       "ivyarmor@mithdan" : {
-         "e" : "250",
          "desc[1]" : "\nA vest made of ivy hangs on a hook, strands of ivy slightly clinging to\nthe walls of the hut.",
-         "damage" : "bvalu",
          "location" : "IN_ROOM:Mithdan65",
          "oflags" : [
             "wearable",
             "armor",
             "getflips"
          ],
-         "armor" : "10",
+         "armor" : "20",
          "altname" : "Armor",
          "name" : "IvyArmor",
          "examine" : "\nA fine example of Elven work, the armor is crafted out of living ivy that\nconforms itself to the wearers body, ensuring a perfect fit.",
@@ -220,6 +216,7 @@
          "weight" : "29",
          "pname" : "Ivy",
          "maxstate" : "1",
+         "bvalue" : "250",
          "aflags" : [
             "arms",
             "chest",
@@ -323,6 +320,18 @@
          "description" : "\n    Large rocks have been placed in the center of a large strech of pure\nwhite sand, which has been carefully raked into curving lines that swirl\naround the stones like eddies in water. A wooden bench has been provided\nto sit upon and contemplate the garden. The soft burble of the fountain\nto the west adds a pleasant undertone.\n",
          "altitude" : null
       },
+      "mithstudy@mithdan" : {
+         "exits" : {},
+         "flags" : [
+            "Peaceful",
+            "SoundProof"
+         ],
+         "zone" : "mithdan",
+         "title" : "Dragon's Study",
+         "id" : "MithStudy",
+         "description" : "\n  The dragon really likes to teach about fire it appears.  The walls are\ncharred wood.  How many times were they replaced?  But some people seem to\nbe studying other things.  Be of good patience, this may take a while.\n",
+         "altitude" : null
+      },
       "mithdan38@mithdan" : {
          "exits" : {
             "w" : "Mithdan37",
@@ -332,7 +341,7 @@
          "zone" : "mithdan",
          "title" : "Stone Corner",
          "id" : "Mithdan38",
-         "description" : "\n    The stone tiles join each other is complex patters that strech the entire\nhallway. The hall turns the corner to the south with a perfect right angle,\nand with further inspection you see that the hall itself is perfectly\nstraight.\n",
+         "description" : "\n    The stone tiles join each other in complex patterns that strech the entire\nhallway. The hall turns the corner to the south with a perfect right angle,\nand with further inspection you see that the hall itself is perfectly\nstraight.\n",
          "altitude" : null
       },
       "mithdan36@mithdan" : {
@@ -355,7 +364,7 @@
          "zone" : "mithdan",
          "title" : "Elemental Chamber",
          "id" : "Mithdan40",
-         "description" : "\n    The center of the chamber is dominated by a crystalline fountain that\nis carved with intricate runes. The air is sweet, and it is ahrd to remember\nthat you are in a closed chamber. The fountain itself hums with immense\nmagical power.\n",
+         "description" : "\n    The center of the chamber is dominated by a crystalline fountain that\nis carved with intricate runes. The air is sweet, and it is hard to remember\nthat you are in a closed chamber. The fountain itself hums with immense\nmagical power.\n",
          "altitude" : null
       },
       "mithdan63@mithdan" : {
@@ -448,7 +457,7 @@
          "zone" : "mithdan",
          "title" : "Hallway",
          "id" : "Mithdan44",
-         "description" : "\n    The floor tiles shift in hypnotic patterns, possibly following the\nforms of nature. The hall becomes much hotter and itermitent bursts of flame\njet from the floor and walls to the south. The hall continues normally to\nthe east and north.\n",
+         "description" : "\n    The floor tiles shift in hypnotic patterns, possibly following the\nforms of nature. The hall becomes much hotter and itermitent bursts of flame\njet from the floor and walls to the south. The hall continues normally to\nthe west and north.\n",
          "altitude" : null
       },
       "mithdan3@mithdan" : {
@@ -711,7 +720,7 @@
          "zone" : "mithdan",
          "title" : "Thick Forest",
          "id" : "Mithdan9",
-         "description" : "\n    The forest turns you around, leading you along on false trails. You wish\nyou had a compassm but with these woods it might not do much good. The forest\nleads to the north, south, and east. As is much of the forest, the western\nway is blocked by thick and heavy forests.\n",
+         "description" : "\n    The forest turns you around, leading you along on false trails. You wish\nyou had a compass but with these woods it might not do much good. The forest\nleads to the north, south, and west. As is much of the forest, the eastern\nway is blocked by thick and heavy forests.\n",
          "altitude" : null
       },
       "mithdan53@mithdan" : {
@@ -744,6 +753,7 @@
       },
       "mithdan69@mithdan" : {
          "exits" : {
+            "e" : "MithLearn",
             "w" : "Mithdan68"
          },
          "flags" : [
@@ -1008,6 +1018,19 @@
          "title" : "Tiny Hut",
          "id" : "Mithdan65",
          "description" : "\n    You stand within a tiny hut that appears to be woven of living branches\nand vines, probably by an elf for temporary shelter. The roof of the hut\nstands open to the weather, the magic that allowed air to pass through but\nnot rain having since worn off. The only exit from the hut is back to the\nnorth.\n",
+         "altitude" : null
+      },
+      "mithlearn@mithdan" : {
+         "exits" : {
+            "w" : "Mithdan69"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "mithdan",
+         "title" : "Dragon Demonstrations",
+         "id" : "MithLearn",
+         "description" : "\n   The wall is ceramic, which is good, because it still shows scorch marks.\nA dragon sits in one corner.  Well, a small dragon.  Very intelligent\nlooking eyes.  It licks a forked tongue in and out.  Wonder if it's\nenchanted?  Well, try \"learn info\" to see what it offers.\n",
          "altitude" : null
       },
       "mithdan30@mithdan" : {
@@ -1323,7 +1346,7 @@
       "red_dragon@mithdan" : {
          "damage" : "100",
          "location" : "Mithdan40",
-         "armor" : "100",
+         "armor" : "50",
          "name" : "Red_Dragon",
          "examine" : "\nThe dragon's scales glitter in the magical light, and it keeps one eye\nhalf open to gaze back at you.",
          "description" : "\nA huge red dragon settles down and wraps itself around the fountain. Although\nit looks very calm, you remember the old addage 'Let Sleeping Dragons Lie'\nand decide that it is a good idea not to irratate it.",
@@ -1331,7 +1354,7 @@
          "strength" : "9999",
          "speed" : "0",
          "aggression" : "0",
-         "pname" : "Dragon",
+         "pname" : "Red Dragon",
          "pflags" : "{}",
          "mflags" : "{}"
       },

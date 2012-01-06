@@ -1,9 +1,23 @@
 {
    "obj" : {
+      "busheswest@camelot" : {
+         "location" : "IN_ROOM:camelot304",
+         "oflags" : [
+            "noget"
+         ],
+         "altname" : "tree",
+         "name" : "busheswest",
+         "linked" : "bushes",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "Some bushes have been burned away."
+      },
       "cuffs_handcuffs@camelot" : {
          "location" : "IN_CONTAINER:Footlocker_Chest",
          "oflags" : [
-            "Wearable"
+            "Wearable",
+            "MissChance",
+            "SpellMiss"
          ],
          "altname" : "cuffs",
          "name" : "cuffs_Handcuffs",
@@ -31,6 +45,25 @@
          "bvalue" : "75",
          "desc[0]" : "A large heavy club lies here. It looks very stout."
       },
+      "door2@camelot" : {
+         "desc[1]" : "The flap on this tent seems to have been moved recently...",
+         "location" : "IN_ROOM:camelot35",
+         "desc[3]" : "Looks like you can open a flap here on the tent.",
+         "oflags" : [
+            "Openable",
+            "NoGet",
+            "Lockable",
+            "UNLOCATABLE"
+         ],
+         "altname" : "flap",
+         "name" : "door2",
+         "desc[2]" : "The flap on the tent looked locked up.",
+         "linked" : "door3",
+         "state" : "3",
+         "pname" : "tent",
+         "maxstate" : "3",
+         "desc[0]" : "The flap on the tent has been opened."
+      },
       "arthurs_crown@camelot" : {
          "location" : "IN_CONTAINER:arthurs_throne",
          "oflags" : [
@@ -42,7 +75,7 @@
          "size" : "15",
          "weight" : "10",
          "pname" : "crown",
-         "bvalue" : "1000",
+         "bvalue" : "500",
          "desc[0]" : "The Crown of Britany is here!",
          "aflags" : [
             "Head"
@@ -57,7 +90,7 @@
          ],
          "altname" : "displacement",
          "name" : "displacement_cloak",
-         "examine" : "Your eyes have a hard time focusing on it. For some reason, it always\nseems that the thing is a couple of feet further away from you then\nyou know it to be.\n",
+         "examine" : "Your eyes have a hard time focusing on it. For some reason, it always\nseems that the thing is a couple of feet further away from you than\nyou know it to be.\n",
          "size" : "25",
          "weight" : "10",
          "pname" : "cloak",
@@ -112,6 +145,39 @@
          "desc[0]" : "A voice says 'OK, don't say you weren't warned....'",
          "size" : "10"
       },
+      "door7@camelot" : {
+         "location" : "IN_ROOM:camelot307",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet",
+            "UNLOCATABLE"
+         ],
+         "name" : "door7",
+         "linked" : "door6",
+         "state" : "3",
+         "pname" : "hatch",
+         "maxstate" : "3",
+         "desc[0]" : "The hatch is open."
+      },
+      "door6@camelot" : {
+         "desc[1]" : "A closed hatch is here with light seeping through.",
+         "location" : "IN_ROOM:camelot135",
+         "desc[3]" : "Light seeps through some slits in the floor.",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet",
+            "UNLOCATABLE"
+         ],
+         "name" : "door6",
+         "desc[2]" : "There's a locked hatch here with light seeping through.",
+         "linked" : "door7",
+         "state" : "3",
+         "pname" : "hatch",
+         "maxstate" : "3",
+         "desc[0]" : "The hatch is open."
+      },
       "arthurs_throne@camelot" : {
          "desc[1]" : "The throne is carved in the shape of a dragon about to take wing.",
          "location" : "IN_ROOM:camelot6",
@@ -130,17 +196,6 @@
          "maxstate" : "1",
          "desc[0]" : "The is an open panel in the base of the throne."
       },
-      "cat@camelot" : {
-         "location" : "IN_CONTAINER:Footlocker_Chest",
-         "altname" : "nine",
-         "name" : "cat",
-         "examine" : "Beat me, whip me, make me write bad checks!\n",
-         "linked" : "tickler_Feather",
-         "size" : "10",
-         "pname" : "whip",
-         "weight" : "10",
-         "desc[0]" : "There is a long black leather whip here."
-      },
       "map_camelot@camelot" : {
          "location" : "IN_ROOM:camelot284",
          "oflags" : [
@@ -154,6 +209,31 @@
          "weight" : "10",
          "desc[0]" : "The map of the zone CAMELOT is pinned to the table."
       },
+      "bushes@camelot" : {
+         "location" : "IN_ROOM:camelot231",
+         "oflags" : [
+            "noget",
+            "lightable"
+         ],
+         "altname" : "tree",
+         "name" : "bushes",
+         "examine" : "They are green but seem quite dry.",
+         "linked" : "busheswest",
+         "state" : "1",
+         "maxstate" : "1",
+         "desc[0]" : "Some bushes have been burned away."
+      },
+      "corpse@camelot" : {
+         "location" : "IN_ROOM:camelot139",
+         "weight" : "10",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "corpse",
+         "examine" : "Your scavenger instincts overcoming your revultion, you search the\nbody. Other then a few maggots, you find nothing of interest hidden\non it.\nNow go wash your hands.\n",
+         "desc[0]" : "There is a half rotten corpse lying here.",
+         "size" : "10"
+      },
       "warning_sign3@camelot" : {
          "location" : "IN_ROOM:camelot291",
          "oflags" : [
@@ -166,6 +246,17 @@
          "pname" : "sign",
          "weight" : "10",
          "desc[0]" : "There is a large sign on the wall, with a flashing red light on it."
+      },
+      "volume@camelot" : {
+         "location" : "IN_ROOM:camelot257",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_XX",
+         "name" : "volume",
+         "examine" : "\nIcestorm is the fiercest of the attack spells.  It requires 7\nmana to cast, but does 28 damage.  There is an iceball,\ncunningly mislabled as a snow ball, which enhances its effect.\nConsider carefully, however, for it does not become certain\nunless you have studied all 20 of the volumes of the Book of\nKnowledge.",
+         "desc[0]" : "&+YVolume XX&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "20"
       },
       "red_rose@camelot" : {
          "location" : "IN_ROOM:camelot280",
@@ -250,6 +341,20 @@
          "desc[0]" : "A haunch of beef has been left here.",
          "size" : "10"
       },
+      "door5@camelot" : {
+         "location" : "IN_ROOM:camelot306",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet",
+            "UNLOCATABLE"
+         ],
+         "pname" : "door",
+         "name" : "door5",
+         "maxstate" : "3",
+         "linked" : "door4",
+         "state" : "3"
+      },
       "guestbed_bed@camelot" : {
          "desc[1]" : "The bed clothes are a shambles! Somebody must have had a good time!",
          "location" : "IN_ROOM:camelot273",
@@ -268,6 +373,20 @@
          "maxstate" : "1",
          "desc[0]" : "The bed is neatly made."
       },
+      "cat_o_nine_whip@camelot" : {
+         "damage" : "7",
+         "location" : "IN_CONTAINER:Footlocker_Chest",
+         "oflags" : [
+            "Weapon"
+         ],
+         "altname" : "cat_o_nine",
+         "name" : "cat_o_nine_Whip",
+         "examine" : "Beat me, whip me, make me write bad checks!\n",
+         "size" : "10",
+         "pname" : "whip",
+         "weight" : "10",
+         "desc[0]" : "There is a long black leather whip here."
+      },
       "gold_bullion@camelot" : {
          "location" : "IN_ROOM:camelot23",
          "altname" : "gold",
@@ -275,8 +394,23 @@
          "size" : "10",
          "pname" : "bullion",
          "weight" : "10",
-         "bvalue" : "1000",
+         "bvalue" : "500",
          "desc[0]" : "A bar of gold bullion is just sitting there, waiting to be taken."
+      },
+      "door3@camelot" : {
+         "location" : "IN_ROOM:camelot305",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet",
+            "UNLOCATABLE"
+         ],
+         "altname" : "flap",
+         "name" : "door3",
+         "linked" : "door2",
+         "state" : "3",
+         "pname" : "tent",
+         "maxstate" : "3"
       },
       "compass@camelot" : {
          "location" : "IN_ROOM:camelot135",
@@ -286,6 +420,25 @@
          "bvalue" : "50",
          "desc[0]" : "Look! An official Cowboy Bob Compass!",
          "size" : "5"
+      },
+      "door4@camelot" : {
+         "desc[1]" : "A sparkling trap door sits here closed.",
+         "location" : "IN_ROOM:camelot105",
+         "desc[3]" : "Something sparkles on the floor.",
+         "oflags" : [
+            "Lockable",
+            "Openable",
+            "NoGet",
+            "UNLOCATABLE"
+         ],
+         "altname" : "door",
+         "name" : "door4",
+         "desc[2]" : "A sparkling trap door sits here locked.",
+         "linked" : "door5",
+         "state" : "3",
+         "pname" : "trapdoor",
+         "maxstate" : "3",
+         "desc[0]" : "An open trap door emits sparkles."
       },
       "shield@camelot" : {
          "location" : "WORN_BY:mordred",
@@ -301,6 +454,27 @@
          "weight" : "10",
          "bvalue" : "50",
          "desc[0]" : "A dark shield, painted with Mordreds coat of arms, lies here."
+      },
+      "soulstone@camelot" : {
+         "desc[1]" : "     \nA blue glittering ball is here.",
+         "location" : "CARRIED_BY:buddy",
+         "weight" : "60",
+         "oflags" : [
+            "fireballspell",
+            "missilespell",
+            "frostspell",
+            "shockspell",
+            "aidspell",
+            "damagespell",
+            "armorspell",
+            "bhandsspell",
+            "blurspell",
+            "istormspell",
+            "lit"
+         ],
+         "name" : "soulstone",
+         "examine" : "     \nYou feel incredible magic powers coming from that stone. It is a perfect\nglittering blue sphere as light as air. It has a priceless value.",
+         "size" : "60"
       },
       "coins_1@camelot" : {
          "location" : "IN_CONTAINER:pack",
@@ -324,18 +498,6 @@
          "weight" : "10",
          "desc[0]" : "The map of the zone MERLIN is hung on the wall."
       },
-      "sofa_couch@camelot" : {
-         "location" : "IN_ROOM:camelot302",
-         "oflags" : [
-            "NoGet"
-         ],
-         "altname" : "sofa",
-         "name" : "Sofa_Couch",
-         "size" : "30",
-         "pname" : "couch",
-         "weight" : "10",
-         "desc[0]" : "There is a soft couch here, inviting you to rest a while."
-      },
       "rope_rope@camelot" : {
          "location" : "IN_CONTAINER:Footlocker_Chest",
          "oflags" : [
@@ -350,20 +512,6 @@
          "aflags" : [
             "Back"
          ]
-      },
-      "merlinbed@camelot" : {
-         "desc[1]" : "The bed is a mess! Somebody must have had a wild time in here!",
-         "location" : "IN_ROOM:camelot303",
-         "oflags" : [
-            "NoGet"
-         ],
-         "name" : "merlinbed",
-         "examine" : "The bed is large, and covered with silken sheets of a deep crimson.\nIt looks inviting and comfortable.\n",
-         "size" : "50",
-         "pname" : "bed",
-         "weight" : "10",
-         "maxstate" : "1",
-         "desc[0]" : "There is a large silk covered bed here."
       },
       "book_tome@camelot" : {
          "location" : "IN_ROOM:camelot285",
@@ -388,6 +536,21 @@
          "pname" : "sign",
          "weight" : "10",
          "desc[0]" : "There is a large sign hanging on the wall."
+      },
+      "merli@camelot" : {
+         "e" : "Sofa_Couch",
+         "n" : "s_Bed\nPName            = bed\nLocation         = IN_ROOM:camelot303\nOflags             { NoGet }\nSize             = 50\nWeight           = 10\nMaxState         = 1\nDesc[0]          = \"There is a large silk covered bed here.\"\nDesc[1]          = \"The bed is a mess! Somebody must have had a wild time in here!\"\nExamine          = \"The bed is large, and covered with silken sheets of a deep crimson.\nIt looks inviting and comfortable.\n\"\nEnd              = Merlin",
+         "location" : "IN_ROOM:camelot302",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "sofa",
+         "name" : "Merli",
+         "s_bed" : "Nam",
+         "size" : "30",
+         "weight" : "10",
+         "pname" : "couch",
+         "desc[0]" : "There is a soft couch here, inviting you to rest a while."
       },
       "armor_platemail@camelot" : {
          "location" : "WORN_BY:launcelot",
@@ -434,7 +597,7 @@
          "size" : "10",
          "pname" : "grail",
          "weight" : "10",
-         "bvalue" : "2000",
+         "bvalue" : "10",
          "desc[0]" : "You've found the Holy Grail! Now if only you can give it to Arthur!"
       },
       "bread@camelot" : {
@@ -502,7 +665,9 @@
       },
       "gauntlets_gloves@camelot" : {
          "location" : "IN_ROOM:camelot5",
+         "armor" : "49",
          "oflags" : [
+            "Armor",
             "Wearable"
          ],
          "altname" : "gauntlets",
@@ -521,7 +686,8 @@
          "location" : "IN_ROOM:camelot5",
          "weight" : "10",
          "oflags" : [
-            "Food"
+            "Food",
+            "Alcohol"
          ],
          "name" : "wine",
          "examine" : "Well, it's not Dom Perignon, but it'll do!\n",
@@ -555,17 +721,6 @@
          "weight" : "10",
          "desc[0]" : "An overstuffed chair in the corner looks very inviting."
       },
-      "warning_voice_1@camelot" : {
-         "location" : "IN_ROOM:camelot22",
-         "weight" : "10",
-         "oflags" : [
-            "NoGet"
-         ],
-         "pname" : "voice",
-         "name" : "warning_voice_1",
-         "desc[0]" : "A voice says 'This is not a good idea....'",
-         "size" : "10"
-      },
       "pack@camelot" : {
          "location" : "IN_ROOM:camelot143",
          "oflags" : [
@@ -581,6 +736,17 @@
             "Back"
          ],
          "desc[0]" : "There is a small but well made pack here."
+      },
+      "warning_voice_1@camelot" : {
+         "location" : "IN_ROOM:camelot22",
+         "weight" : "10",
+         "oflags" : [
+            "NoGet"
+         ],
+         "pname" : "voice",
+         "name" : "warning_voice_1",
+         "desc[0]" : "A voice says 'This is not a good idea....'",
+         "size" : "10"
       },
       "cheese@camelot" : {
          "location" : "IN_ROOM:camelot114",
@@ -617,22 +783,12 @@
          "desc[0]" : "A matched pair of gems have been left here.",
          "size" : "5"
       },
-      "rotten@camelot" : {
-         "location" : "IN_ROOM:camelot139",
-         "weight" : "10",
-         "oflags" : [
-            "NoGet"
-         ],
-         "name" : "rotten",
-         "examine" : "Your scavenger instincts overcoming your revultion, you search the\nbody. Other then a few maggots, you find nothing of interest hidden\non it.\nNow go wash your hands.\n",
-         "desc[0]" : "There is a half rotten corpse lying here.",
-         "size" : "10"
-      },
       "wighthammer_hammer@camelot" : {
          "damage" : "12",
          "location" : "WIELDED_BY:corledge",
          "oflags" : [
-            "Weapon"
+            "Weapon",
+            "MissChance"
          ],
          "altname" : "wighthammer",
          "name" : "wighthammer_hammer",
@@ -672,6 +828,12 @@
          "desc[0]" : "The voice says 'Some people just won't listen to good advice!'",
          "size" : "10"
       },
+      "note@camelot" : {
+         "location" : "IN_ROOM:camelot266",
+         "name" : "note",
+         "examine" : "\nThe note talks about king arthur. It says:King Arthur was so \nclose to his people that he wanted everyone to call him buddy.\nHe was a very stange person. He always liked to hide in \nbizzare places like a garden, a forest or a grotte. He always\nsaid: 'The best place to hide is death.' Was a strange man he was.",
+         "desc[0]" : "A note is here."
+      },
       "journal_diary@camelot" : {
          "desc[1]" : "There is a small diary next to the corpse.",
          "location" : "IN_ROOM:camelot139",
@@ -693,7 +855,7 @@
          "location" : "IN_ROOM:camelot22",
          "weight" : "10",
          "name" : "gems",
-         "bvalue" : "1000",
+         "bvalue" : "500",
          "desc[0]" : "A sack of gems has been carelessly dropped here.",
          "size" : "10"
       },
@@ -728,14 +890,13 @@
       },
       "tickler_feather@camelot" : {
          "location" : "IN_CONTAINER:Footlocker_Chest",
+         "weight" : "10",
          "altname" : "tickler",
+         "pname" : "feather",
          "name" : "tickler_Feather",
          "examine" : "Don't look too close! It'll tickle your nose!\n",
-         "linked" : "cat",
-         "size" : "10",
-         "pname" : "feather",
-         "weight" : "10",
-         "desc[0]" : "There is a large feather here."
+         "desc[0]" : "There is a large feather here.",
+         "size" : "10"
       }
    },
    "loc" : {
@@ -985,6 +1146,22 @@
          "description" : "\nThe woods are quiet, dark and deep, and you have miles to go before\nyou sleep.\n",
          "altitude" : "850"
       },
+      "camelot154@camelot" : {
+         "exits" : {
+            "w" : "camelot154",
+            "e" : "camelot33",
+            "n" : "camelot154",
+            "s" : "camelot154"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "camelot",
+         "title" : "Deep in the forest",
+         "id" : "camelot154",
+         "description" : "\nThe woods are quiet, dark and deep, and you have miles to go before\nyou sleep.\n",
+         "altitude" : "850"
+      },
       "camelot151@camelot" : {
          "exits" : {
             "e" : "camelot149"
@@ -1038,6 +1215,7 @@
       },
       "camelot65@camelot" : {
          "exits" : {
+            "e" : "CamLearn",
             "w" : "camelot63"
          },
          "flags" : [],
@@ -1050,17 +1228,18 @@
       "camelot90@camelot" : {
          "exits" : {
             "w" : "camelot90",
-            "e" : "camelot90",
-            "n" : "camelot90",
+            "e" : "camelot89",
+            "n" : "moss_maze1@undead",
             "s" : "camelot90"
          },
          "flags" : [
-            "Outdoors"
+            "Outdoors",
+            "NoMobiles"
          ],
          "zone" : "camelot",
          "title" : "Lost in the Wilds",
          "id" : "camelot90",
-         "description" : "\nYou have wandered too far from known territories, and are\ncompletely lost. It will be a miracle if you find your way out of\nhere.\n",
+         "description" : "\nYou have wandered too far from known territories, and are completely lost. \nIt will be a miracle if you find your way out of here.  Wait...there's moss\non the trees, maybe the moss can help you find your way out.\n",
          "altitude" : "1700"
       },
       "camelot252@camelot" : {
@@ -1087,6 +1266,22 @@
          "title" : "The Base of the Southeast Tower",
          "id" : "camelot226",
          "description" : "\nThe guardroom you are in looks out over the moat to the south and\neast, while corridors run off through the walls to the north and\nwest.\n",
+         "altitude" : null
+      },
+      "camelot306@camelot" : {
+         "exits" : {
+            "u" : "^door5"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon",
+            "soundproof",
+            "noat"
+         ],
+         "zone" : "camelot",
+         "title" : "&+cHidden Somewhere",
+         "id" : "camelot306",
+         "description" : "\nGuess where you are. Hidden somewhere. It is a very small clearing.\nYou think you see something moving in there...\n",
          "altitude" : null
       },
       "camelot286@camelot" : {
@@ -1421,7 +1616,7 @@
          "zone" : "camelot",
          "title" : "King Arthur's Chambers",
          "id" : "camelot25",
-         "description" : "\nArthur's chambers are somewhat larger then those of his knights, but\nthey still show a lack of concern for the mearly material wealth of\nthis world.\n",
+         "description" : "\nArthur's chambers are somewhat larger then those of his knights, but\nthey still show a lack of concern for the merely material wealth of\nthis world.\n",
          "altitude" : null
       },
       "camelot71@camelot" : {
@@ -1911,15 +2106,16 @@
             "w" : "camelot34",
             "e" : "camelot35",
             "n" : "camelot35",
+            "d" : "^door2",
             "s" : "camelot35"
          },
          "flags" : [
             "Outdoors"
          ],
          "zone" : "camelot",
-         "title" : "Deep in the forest",
+         "title" : "The campsite deep in the forest",
          "id" : "camelot35",
-         "description" : "\nThe woods are quiet, dark and deep, and you have miles to go before\nyou sleep.\n",
+         "description" : "\nThe woods are quiet, dark and deep, which perfectly camouflages a little\ngreen tent that was set up here.  There's a small campfire next to it, but\nit's just hot coals now.  Maybe someone's here?\n",
          "altitude" : "850"
       },
       "camelot260@camelot" : {
@@ -2033,7 +2229,7 @@
          "zone" : "camelot",
          "title" : "Hot Cave",
          "id" : "camelot141",
-         "description" : "\nAt first, you thik that the reason for the heat in this room is the\nhot spring to the eat, but you change your mind as soon as you look\naround.\nThe entire western wall is covered with flames.\n",
+         "description" : "\nAt first, you thik that the reason for the heat in this room is the\nhot spring to the east, but you change your mind as soon as you look\naround.\nThe entire western wall is covered with flames.\n",
          "altitude" : null
       },
       "camelot122@camelot" : {
@@ -2143,6 +2339,7 @@
       },
       "camelot85@camelot" : {
          "exits" : {
+            "n" : "1@cyrus",
             "s" : "camelot84"
          },
          "flags" : [
@@ -2151,7 +2348,7 @@
          "zone" : "camelot",
          "title" : "The Rivers Shore",
          "id" : "camelot85",
-         "description" : "\nYou have climbed down from the foothills to the banks of a river.\nThe rapids before you are obviously impassable. The only exit is\nback into the foothills.\n",
+         "description" : "\n   You have climbed down from the foothills to the banks of a river.\nThe rapids before you are obviously impassable, if it weren't for an old\nbridge built here back when the river level was low.  It leads across to\nanother small village to the north.  You can climb back up the foothill to\nthe south.\n",
          "altitude" : "850"
       },
       "camelot218@camelot" : {
@@ -2245,9 +2442,9 @@
       },
       "camelot56@camelot" : {
          "exits" : {
-            "w" : "camelot32",
+            "w" : "camelot56",
             "e" : "camelot56",
-            "n" : "camelot56",
+            "n" : "camelot152",
             "s" : "camelot56"
          },
          "flags" : [
@@ -2329,7 +2526,8 @@
       },
       "camelot105@camelot" : {
          "exits" : {
-            "w" : "camelot104"
+            "w" : "camelot104",
+            "d" : "^door4"
          },
          "flags" : [
             "Dark"
@@ -2370,6 +2568,22 @@
          "description" : "\nThe woods are quiet, dark and deep, and you have miles to go before\nyou sleep.\n",
          "altitude" : "850"
       },
+      "camelot307@camelot" : {
+         "exits" : {
+            "u" : "^door7"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon",
+            "soundproof",
+            "noat"
+         ],
+         "zone" : "camelot",
+         "title" : "&+cHidden Somewhere",
+         "id" : "camelot307",
+         "description" : "\nGuess where you are. Hidden somewhere. It is a very small clearing.\nYou think you see something moving in there...\n",
+         "altitude" : null
+      },
       "camelot258@camelot" : {
          "exits" : {
             "w" : "camelot261",
@@ -2408,7 +2622,7 @@
       },
       "camelot52@camelot" : {
          "exits" : {
-            "w" : "camelot52",
+            "w" : "balhar92@balharbor",
             "e" : "camelot52",
             "n" : "camelot53",
             "s" : "camelot52"
@@ -2419,7 +2633,7 @@
          "zone" : "camelot",
          "title" : "Deep in the forest",
          "id" : "camelot52",
-         "description" : "\nThe woods are quiet, dark and deep, and you have miles to go before\nyou sleep.\n",
+         "description" : "\nThe woods are quiet, dark and deep, and you have miles to go before\nyou sleep.  There's some semblance of a trail leading out to the west,\nthe forest continues with a path between the trees north.\n",
          "altitude" : "850"
       },
       "camelot63@camelot" : {
@@ -2467,6 +2681,22 @@
          "id" : "camelot299",
          "description" : "\nAt first glance, Yeenoghu resembles a human. But his head is that\nof a hyena, his chest is rather canine in form, his feet are paws,\nand his hands are clawed. He is thin to the point of being\nskeletal, and his only body hair is a putrid yellow crest running\nto mid-back. His skin is dead gray, and his amber eyes glow evilly\nin the darkness.\n",
          "altitude" : null
+      },
+      "camelot152@camelot" : {
+         "exits" : {
+            "w" : "camelot152",
+            "e" : "camelot152",
+            "n" : "camelot153",
+            "s" : "camelot152"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "camelot",
+         "title" : "Deep in the forest",
+         "id" : "camelot152",
+         "description" : "\nThe woods are quiet, dark and deep, and you have miles to go before\nyou sleep.\n",
+         "altitude" : "850"
       },
       "camelot57@camelot" : {
          "exits" : {
@@ -2598,6 +2828,7 @@
       },
       "camelot72@camelot" : {
          "exits" : {
+            "e" : "enchanter1@enchanter",
             "w" : "camelot59",
             "n" : "camelot214",
             "s" : "camelot73"
@@ -2608,7 +2839,7 @@
          "zone" : "camelot",
          "title" : "Paved Road",
          "id" : "camelot72",
-         "description" : "\nThe road you are on leads east, west towards the main village, and\nsouth to a small village square.\n",
+         "description" : "\nThe road you are on leads eastward to a mountain, west towards the main \nvillage, and south to a small village square.\n",
          "altitude" : "850"
       },
       "camelot284@camelot" : {
@@ -2692,6 +2923,22 @@
          "description" : "\nYou are walking down an apparently endless east-west tunnel. The\nfloor is covered by loose gravel and dirt, but it is not possible\nto tell if others have come this way. Or if they returned.\n",
          "altitude" : null
       },
+      "camelot304@camelot" : {
+         "exits" : {
+            "u" : "^busheswest"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon",
+            "soundproof",
+            "noat"
+         ],
+         "zone" : "camelot",
+         "title" : "&+cHidden Somewhere",
+         "id" : "camelot304",
+         "description" : "     \nGuess where you are. Hidden somewhere. It is a very small clearing.\nYou think you see something moving in there...\n",
+         "altitude" : null
+      },
       "camelot295@camelot" : {
          "exits" : {
             "w" : "camelot294",
@@ -2750,6 +2997,19 @@
          "id" : "camelot97",
          "description" : "\nYou struggle along a tiny ledge, moving slowly up the face of the\ncliff. You examine the rock face carefully, knowing that if you\nmake the slightest error, you will plunge to your death.\n",
          "altitude" : "2700"
+      },
+      "camlearn@camelot" : {
+         "exits" : {
+            "w" : "camelot65"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "camelot",
+         "title" : "Alchemists Academy",
+         "id" : "CamLearn",
+         "description" : "\n   The bottles, hides, hooves, and assorted stuff are here also, but there\nis also a large rack of scrolls.  You can see through the figure who hovers\nin mid air.  Can he really teach you?  Maybe a lot.  Try \"learn info\" to\nsee what he offers, and his fees...\n",
+         "altitude" : null
       },
       "camelot271@camelot" : {
          "exits" : {
@@ -3220,6 +3480,7 @@
          "exits" : {
             "e" : "camelot264",
             "n" : "camelot232",
+            "d" : "^bushes",
             "s" : "camelot230"
          },
          "flags" : [
@@ -3228,7 +3489,7 @@
          "zone" : "camelot",
          "title" : "Vegetable Garden",
          "id" : "camelot231",
-         "description" : "\nYou are standing in a huge vegetable garden. The crops are\ncarefully tended, and you would estimate that they would be ample\nto provide food for a long seige. Obviously, the owners here don't\nwant to suffer in an invasion.\n",
+         "description" : "\nYou are standing in a huge vegetable garden surrounded by bushes.\nThe crops are carefully tended, and you would estimate that they\nwould be ample to provide food for a long seige. Obviously, the \nowners here don't want to suffer in an invasion.\n",
          "altitude" : "850"
       },
       "camelot60@camelot" : {
@@ -3295,6 +3556,22 @@
          "id" : "camelot266",
          "description" : "\nThis small room, tucked under the staircase, seems to be intended\nas the entry to the cellars below the castle. Though the rooms\nbelow are lit by torches, still you feel uneasy at the thought og\nentering without an invitation.\n",
          "altitude" : null
+      },
+      "camelot153@camelot" : {
+         "exits" : {
+            "w" : "camelot153",
+            "e" : "camelot154",
+            "n" : "camelot153",
+            "s" : "camelot153"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "camelot",
+         "title" : "Deep in the forest",
+         "id" : "camelot153",
+         "description" : "\nThe woods are quiet, dark and deep, and you have miles to go before\nyou sleep.\n",
+         "altitude" : "850"
       },
       "camelot94@camelot" : {
          "exits" : {
@@ -3364,7 +3641,7 @@
          "zone" : "camelot",
          "title" : "Cave Bears Lair",
          "id" : "camelot150",
-         "description" : "\nBones and scraps lie scattered all around the cave. It is obvious\ntha tthe creature who lives here is not terribly fastidious. But\nit's a safe bet he won't like finding you here...\n",
+         "description" : "\nBones and scraps lie scattered all around the cave. It is obvious\ntha the creature who lives here is not terribly fastidious. But\nit's a safe bet he won't like finding you here...\n",
          "altitude" : null
       },
       "camelot244@camelot" : {
@@ -3447,6 +3724,18 @@
          "title" : "The Southwest Tower",
          "id" : "camelot220",
          "description" : "\nThe guardroom you are in has arrow slits allowing coverage of the\nsouth and west sides of the castle. There are a few chairs and\ntables here, so that guards may rest in their off hours.\n",
+         "altitude" : null
+      },
+      "camstudy@camelot" : {
+         "exits" : {},
+         "flags" : [
+            "Peaceful",
+            "SoundProof"
+         ],
+         "zone" : "camelot",
+         "title" : "Alchemists Study Quarters",
+         "id" : "CamStudy",
+         "description" : "\n    This is tough stuff.  You study and study, practice and practice,\nand where do you get.  Right back here.  The ghostly figure points out\na scroll every now and then, or motions towards a practical exercise.\nSurely you will get it eventually...\n",
          "altitude" : null
       },
       "camelot13@camelot" : {
@@ -3545,7 +3834,8 @@
       },
       "camelot135@camelot" : {
          "exits" : {
-            "w" : "camelot134"
+            "w" : "camelot134",
+            "d" : "^door6"
          },
          "flags" : [
             "Dark"
@@ -3553,7 +3843,7 @@
          "zone" : "camelot",
          "title" : "The Tunnel Ends",
          "id" : "camelot135",
-         "description" : "\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n             Oh dear, you seem to be slightly dead...\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\nConnection closed by remote host.\n%\nHA! Fooled you! It's not really a death room!\n",
+         "description" : "\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n             Oh dear, you seem to be slightly dead...\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\nConnection closed by remote host.\n%\nHA! Fooled you! It's not really a death room! It's only a magic room.\n",
          "altitude" : null
       },
       "camelot3@camelot" : {
@@ -3862,6 +4152,22 @@
          "description" : "\nMarilith could almost pass as human, if you stopped looking after\nseeing her lovely face and bare torso (be honest, you did, didn't\nyou?). But looking further reveals that her body is serpantine, and\nshe has 6 arms. When armed, she is capable of wielding a weapon\nwith each hand.\n",
          "altitude" : null
       },
+      "camelot305@camelot" : {
+         "exits" : {
+            "u" : "^door3"
+         },
+         "flags" : [
+            "nosummon",
+            "cantsummon",
+            "soundproof",
+            "noat"
+         ],
+         "zone" : "camelot",
+         "title" : "&+cHidden Somewhere",
+         "id" : "camelot305",
+         "description" : "\nGuess where you are. Hidden somewhere. It is a very small clearing.\nYou think you see something moving in there...\n",
+         "altitude" : null
+      },
       "camelot132@camelot" : {
          "exits" : {
             "w" : "camelot133",
@@ -4101,6 +4407,11 @@
          "strength" : "75"
       },
       "keijo@camelot" : {
+         "eflags" : [
+            "ImmCripple",
+            "ImmBlind",
+            "Missile"
+         ],
          "damage" : "15",
          "location" : "camelot226",
          "speed" : "2",
@@ -4123,6 +4434,12 @@
          "strength" : "75"
       },
       "tapi@camelot" : {
+         "eflags" : [
+            "IceStorm",
+            "Frost",
+            "ImmCripple",
+            "ImmDeaf"
+         ],
          "damage" : "15",
          "location" : "camelot224",
          "speed" : "2",
@@ -4134,17 +4451,27 @@
          "strength" : "250"
       },
       "tristam@camelot" : {
+         "eflags" : [
+            "Vtouch",
+            "NegVTouch",
+            "FearMissile"
+         ],
          "damage" : "15",
          "location" : "camelot19",
          "speed" : "0",
          "aggression" : "92",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Tristam",
          "name" : "tristam",
          "description" : "Sir Tristam of Lyoness is here, thinking about his Lady, Isolde.",
          "strength" : "190"
       },
       "bultsi@camelot" : {
+         "eflags" : [
+            "Damage",
+            "Blur",
+            "Shock"
+         ],
          "damage" : "15",
          "location" : "camelot250",
          "speed" : "2",
@@ -4160,7 +4487,7 @@
          "location" : "camelot4",
          "speed" : "0",
          "aggression" : "90",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Ector",
          "name" : "ector",
          "description" : "Sir Ector has a new sword. He wants to try it out on you!",
@@ -4178,6 +4505,11 @@
          "strength" : "100"
       },
       "pomo@camelot" : {
+         "eflags" : [
+            "Shock",
+            "ImmShock",
+            "ImmMissile"
+         ],
          "damage" : "15",
          "location" : "camelot218",
          "speed" : "2",
@@ -4189,6 +4521,11 @@
          "strength" : "250"
       },
       "vesa@camelot" : {
+         "eflags" : [
+            "Shock",
+            "ImmShock",
+            "Damage"
+         ],
          "damage" : "15",
          "location" : "camelot248",
          "speed" : "2",
@@ -4200,15 +4537,24 @@
          "strength" : "250"
       },
       "mira@camelot" : {
+         "eflags" : [
+            "Bhands"
+         ],
          "damage" : "15",
          "location" : "camelot246",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Mira",
          "name" : "mira",
          "description" : "Mira looks at you and growls 'What're you doing in here bub?'",
-         "strength" : "250"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "2",
+         "pname" : "Mira",
+         "aggression" : "25",
+         "pflags" : [
+            "Nomagic"
+         ]
       },
       "titivilus@camelot" : {
          "eflags" : [
@@ -4303,7 +4649,9 @@
       },
       "jeeves@camelot" : {
          "eflags" : [
-            "Shock"
+            "ImmShock",
+            "FearFireball",
+            "Missile"
          ],
          "damage" : "15",
          "location" : "camelot255",
@@ -4327,15 +4675,23 @@
          "strength" : "225"
       },
       "helius@camelot" : {
-         "damage" : "15",
+         "eflags" : [
+            "ImmBhands",
+            "Deaf",
+            "ImmDeaf"
+         ],
+         "damage" : "10",
          "location" : "camelot68",
-         "speed" : "0",
-         "aggression" : "45",
-         "armor" : "0",
-         "pname" : "Helius",
+         "armor" : "10",
          "name" : "helius",
          "description" : "Sir Helius has had a bit much to drink. Such a nasty drunk too!",
-         "strength" : "210"
+         "sflags" : [
+            "Drunk"
+         ],
+         "strength" : "210",
+         "speed" : "0",
+         "pname" : "Helius",
+         "aggression" : "45"
       },
       "fang@camelot" : {
          "damage" : "15",
@@ -4366,6 +4722,11 @@
          "pname" : "Helsa"
       },
       "aki@camelot" : {
+         "eflags" : [
+            "IceStorm",
+            "ImmMissile",
+            "ImmFrost"
+         ],
          "damage" : "15",
          "location" : "camelot240",
          "speed" : "2",
@@ -4377,11 +4738,16 @@
          "strength" : "250"
       },
       "pinell@camelot" : {
+         "eflags" : [
+            "ImmShock",
+            "Shock",
+            "Frost"
+         ],
          "damage" : "15",
          "location" : "camelot72",
          "speed" : "0",
          "aggression" : "50",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Pinell",
          "name" : "pinell",
          "description" : "Sir Pinell has wandered in.",
@@ -4402,6 +4768,11 @@
          "aggression" : "83"
       },
       "hannu@camelot" : {
+         "eflags" : [
+            "Fireball",
+            "NegBhands",
+            "ImmFireball"
+         ],
          "damage" : "15",
          "location" : "camelot225",
          "speed" : "2",
@@ -4413,19 +4784,27 @@
          "strength" : "250"
       },
       "kalle@camelot" : {
+         "eflags" : [
+            "Missile"
+         ],
          "damage" : "15",
          "location" : "camelot219",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Kalle",
          "name" : "kalle",
          "description" : "Kalle looks at you in suprise.",
-         "strength" : "250"
+         "strength" : "250",
+         "speed" : "2",
+         "pname" : "Kalle",
+         "aggression" : "25",
+         "pflags" : [
+            "Nomagic"
+         ]
       },
       "percy@camelot" : {
          "eflags" : [
-            "Shock"
+            "Shock",
+            "ImmCripple",
+            "ImmBlind"
          ],
          "damage" : "15",
          "location" : "camelot265",
@@ -4438,6 +4817,9 @@
          "aggression" : "25"
       },
       "centipede@camelot" : {
+         "eflags" : [
+            "Fireball"
+         ],
          "damage" : "15",
          "location" : "camelot148",
          "speed" : "0",
@@ -4449,17 +4831,28 @@
          "strength" : "250"
       },
       "mordred@camelot" : {
+         "eflags" : [
+            "Damage",
+            "Bhands",
+            "Fireball",
+            "ImmBlind"
+         ],
          "damage" : "15",
          "location" : "camelot6",
          "speed" : "0",
          "aggression" : "75",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Mordred",
          "name" : "mordred",
          "description" : "Sir Mordred wants Arthurs Crown. He thinks you may have it.",
          "strength" : "350"
       },
       "tomi@camelot" : {
+         "eflags" : [
+            "NegVTouch",
+            "Shock",
+            "Protect"
+         ],
          "damage" : "15",
          "location" : "camelot253",
          "speed" : "2",
@@ -4471,15 +4864,23 @@
          "strength" : "250"
       },
       "jussy@camelot" : {
+         "eflags" : [
+            "Cripple",
+            "Deaf",
+            "Frost"
+         ],
          "damage" : "15",
          "location" : "camelot252",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Jussy",
          "name" : "jussy",
          "description" : "Jussy is on patrol here. He doesn't seem to trust you.",
-         "strength" : "250"
+         "strength" : "250",
+         "speed" : "2",
+         "pname" : "Jussy",
+         "aggression" : "25",
+         "pflags" : [
+            "Nomagic"
+         ]
       },
       "juba@camelot" : {
          "damage" : "15",
@@ -4493,20 +4894,33 @@
          "strength" : "250"
       },
       "someone@camelot" : {
+         "eflags" : [
+            "Missile",
+            "Shock",
+            "NegFrost"
+         ],
+         "visibility" : "21",
          "damage" : "15",
          "location" : "camelot3",
-         "armor" : "0",
+         "armor" : "15",
          "name" : "someone",
          "description" : "Sir Garlon the invisible knight has just disappeared!",
          "strength" : "200",
          "speed" : "0",
-         "pname" : "Someone",
+         "pname" : "Garlon",
          "aggression" : "98",
          "mflags" : [
             "BarN"
          ]
       },
       "kamu@camelot" : {
+         "eflags" : [
+            "Blind",
+            "Deaf",
+            "ImmCripple",
+            "ImmMissile",
+            "Shock"
+         ],
          "damage" : "15",
          "location" : "camelot254",
          "speed" : "2",
@@ -4518,6 +4932,11 @@
          "strength" : "250"
       },
       "bankguard@camelot" : {
+         "eflags" : [
+            "VTouch",
+            "Missile",
+            "NegVTouch"
+         ],
          "damage" : "15",
          "location" : "camelot70",
          "speed" : "0",
@@ -4540,6 +4959,12 @@
          "strength" : "200"
       },
       "kuppi@camelot" : {
+         "eflags" : [
+            "Fireball",
+            "Bhands",
+            "NegFireball",
+            "NegBhands"
+         ],
          "damage" : "15",
          "location" : "camelot244",
          "speed" : "2",
@@ -4551,6 +4976,11 @@
          "strength" : "250"
       },
       "pallo@camelot" : {
+         "eflags" : [
+            "Cripple",
+            "Blur",
+            "Shock"
+         ],
          "damage" : "15",
          "location" : "camelot242",
          "speed" : "2",
@@ -4562,7 +4992,12 @@
          "strength" : "250"
       },
       "launcelot@camelot" : {
-         "damage" : "15",
+         "eflags" : [
+            "NegMissile",
+            "ImmShock",
+            "Frost"
+         ],
+         "damage" : "30",
          "location" : "camelot20",
          "speed" : "0",
          "aggression" : "91",
@@ -4570,7 +5005,7 @@
          "pname" : "Launcelot",
          "name" : "launcelot",
          "description" : "Sir Launcelot Du Lake is here, ready to defend his King against all comers.",
-         "strength" : "400"
+         "strength" : "200"
       },
       "chef@camelot" : {
          "damage" : "15",
@@ -4584,11 +5019,16 @@
          "strength" : "150"
       },
       "lamorak@camelot" : {
+         "eflags" : [
+            "Bhands",
+            "FearShock",
+            "ImmFireball"
+         ],
          "damage" : "15",
          "location" : "camelot14",
          "speed" : "0",
          "aggression" : "95",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Lamorak",
          "name" : "lamorak",
          "description" : "Sir Lamorak stands before you, ready to do battle.",
@@ -4645,15 +5085,24 @@
          "aggression" : "83"
       },
       "koorina@camelot" : {
+         "eflags" : [
+            "Missile"
+         ],
          "damage" : "15",
          "location" : "camelot229",
-         "speed" : "0",
-         "aggression" : "11",
          "armor" : "0",
-         "pname" : "Koorina",
          "name" : "koorina",
          "description" : "Koorina the Groundskeeper says 'Hey, watch your big feet!'",
-         "strength" : "200"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Koorina",
+         "aggression" : "11",
+         "pflags" : [
+            "Nomagic"
+         ]
       },
       "nalfeshnee@camelot" : {
          "eflags" : [
@@ -4674,13 +5123,19 @@
          "location" : "camelot1",
          "speed" : "100",
          "aggression" : "0",
-         "armor" : "99",
+         "armor" : "50",
          "pname" : "Armadillo",
          "name" : "armadillo",
          "description" : "A Spanish armadillo is here, looking for pickles.",
          "strength" : "200"
       },
       "reisi@camelot" : {
+         "eflags" : [
+            "FearMissile",
+            "ImmShock",
+            "ImmFrost",
+            "Bhands"
+         ],
          "damage" : "15",
          "location" : "camelot243",
          "speed" : "2",
@@ -4714,28 +5169,45 @@
          "strength" : "200"
       },
       "andred@camelot" : {
+         "eflags" : [
+            "Protect",
+            "NegShock",
+            "Shock"
+         ],
          "damage" : "15",
          "location" : "camelot59",
          "speed" : "0",
          "aggression" : "50",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Andred",
          "name" : "andred",
          "description" : "Sir Andred wants to go pillage the village. He'll start with you!",
          "strength" : "250"
       },
       "vuno@camelot" : {
+         "eflags" : [
+            "Shock",
+            "Bhands"
+         ],
          "damage" : "15",
          "location" : "camelot221",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Vuno",
          "name" : "vuno",
          "description" : "Vuno takes this guard job seriously, doesn't he...",
-         "strength" : "250"
+         "strength" : "250",
+         "speed" : "2",
+         "pname" : "Vuno",
+         "aggression" : "25",
+         "pflags" : [
+            "Nomagic"
+         ]
       },
       "jyri@camelot" : {
+         "eflags" : [
+            "NegBHands",
+            "ImmFireball",
+            "BHands"
+         ],
          "damage" : "15",
          "location" : "camelot233",
          "speed" : "0",
@@ -4760,6 +5232,25 @@
          "pname" : "Balor",
          "aggression" : "83"
       },
+      "katriina@camelot" : {
+         "eflags" : [
+            "Missile",
+            "ImmShock",
+            "ImmBhands"
+         ],
+         "damage" : "15",
+         "location" : "camelot223",
+         "armor" : "0",
+         "name" : "katriina",
+         "description" : "Katriina leaps to bar your way and asks 'What do you think you're doing?'.",
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "2",
+         "pname" : "Katriina",
+         "aggression" : "25"
+      },
       "cara@camelot" : {
          "damage" : "15",
          "location" : "camelot113",
@@ -4770,17 +5261,6 @@
          "name" : "cara",
          "description" : "Cara the baby kobold lies here. He thinks your fingers look yummy.",
          "strength" : "10"
-      },
-      "katriina@camelot" : {
-         "damage" : "15",
-         "location" : "camelot223",
-         "speed" : "2",
-         "aggression" : "25",
-         "armor" : "0",
-         "pname" : "Katriina",
-         "name" : "katriina",
-         "description" : "Katriina leaps to bar your way and asks 'What do you think you're doing?'.",
-         "strength" : "250"
       },
       "cavebear@camelot" : {
          "damage" : "15",
@@ -4816,15 +5296,15 @@
          "strength" : "100"
       },
       "kay@camelot" : {
-         "damage" : "15",
+         "damage" : "25",
          "location" : "camelot1",
-         "armor" : "0",
+         "armor" : "30",
          "name" : "kay",
          "description" : "Sir Kay, Seneschal, bids you welcome and asks your business here.",
-         "strength" : "275",
+         "strength" : "150",
          "speed" : "0",
          "pname" : "Kay",
-         "aggression" : "87",
+         "aggression" : "0",
          "mflags" : [
             "BarN",
             "BarE",
@@ -4832,28 +5312,45 @@
          ]
       },
       "hector@camelot" : {
+         "eflags" : [
+            "NegIceStorm",
+            "ImmMissile",
+            "Frost",
+            "Shock"
+         ],
          "damage" : "15",
          "location" : "camelot28",
          "speed" : "0",
          "aggression" : "88",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Hector",
          "name" : "hector",
-         "description" : "Sir Hector hates it when people interupt his meditations.",
+         "description" : "Sir Hector hates it when people interrupt his meditations.",
          "strength" : "220"
       },
       "gringamore@camelot" : {
+         "eflags" : [
+            "FearIceStorm",
+            "NegFireball",
+            "BHands"
+         ],
          "damage" : "15",
          "location" : "camelot63",
          "speed" : "0",
          "aggression" : "45",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Gringamore",
          "name" : "gringamore",
          "description" : "Sir Gringamore is here, and man does he look mean!",
          "strength" : "200"
       },
       "vaino@camelot" : {
+         "eflags" : [
+            "FearShock",
+            "Missile",
+            "ImmMissile",
+            "NegFrost"
+         ],
          "damage" : "15",
          "location" : "camelot247",
          "speed" : "2",
@@ -4865,15 +5362,22 @@
          "strength" : "250"
       },
       "seapas@camelot" : {
+         "eflags" : [
+            "Frost",
+            "IceStorm"
+         ],
          "damage" : "15",
          "location" : "camelot251",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Seapas",
          "name" : "seapas",
          "description" : "Seapas woke up in a really bad mood today. Don't bug him.",
-         "strength" : "250"
+         "strength" : "250",
+         "speed" : "2",
+         "pname" : "Seapas",
+         "aggression" : "25",
+         "pflags" : [
+            "Nomagic"
+         ]
       },
       "crusher@camelot" : {
          "eflags" : [
@@ -4890,17 +5394,28 @@
          "aggression" : "0"
       },
       "galahad@camelot" : {
-         "damage" : "15",
+         "eflags" : [
+            "Frost",
+            "Blind",
+            "ImmFrost",
+            "ImmIcestorm"
+         ],
+         "damage" : "30",
          "location" : "camelot13",
          "speed" : "0",
          "aggression" : "96",
-         "armor" : "0",
+         "armor" : "30",
          "pname" : "Galahad",
          "name" : "galahad",
          "description" : "Sir Galahad, the White Knight, is here.",
-         "strength" : "140"
+         "strength" : "150"
       },
       "talonen@camelot" : {
+         "eflags" : [
+            "ImmFrost",
+            "ImmShock",
+            "Missile"
+         ],
          "damage" : "15",
          "location" : "camelot231",
          "speed" : "0",
@@ -4926,6 +5441,11 @@
          "aggression" : "83"
       },
       "kirsi@camelot" : {
+         "eflags" : [
+            "Protect",
+            "Blind",
+            "NegMissile"
+         ],
          "damage" : "15",
          "location" : "camelot237",
          "speed" : "2",
@@ -4937,15 +5457,31 @@
          "strength" : "250"
       },
       "phelot@camelot" : {
+         "eflags" : [
+            "FearFrost",
+            "ImmShock",
+            "Blur"
+         ],
          "damage" : "15",
          "location" : "camelot73",
          "speed" : "0",
          "aggression" : "40",
-         "armor" : "0",
+         "armor" : "15",
          "pname" : "Phelot",
          "name" : "phelot",
          "description" : "Sir Phelot has a hangover, and the icy water is not helping any!",
          "strength" : "200"
+      },
+      "buddy@camelot" : {
+         "damage" : "30",
+         "location" : "camelot304",
+         "speed" : "0",
+         "aggression" : "0",
+         "armor" : "30",
+         "name" : "buddy",
+         "examine" : "He looks friendly and very powerful at the same time.\nYou can't believe what you are seeing. It is Arthur himself! He is looking\nfor something, perhaps you could help him...",
+         "description" : "The mighty King Arthur is here. He says''You can call me\nbuddy.'",
+         "strength" : "1000"
       },
       "marilith@camelot" : {
          "eflags" : [
@@ -4965,6 +5501,11 @@
          "pname" : "Marilith"
       },
       "jallu@camelot" : {
+         "eflags" : [
+            "ImmBlind",
+            "NegBHands",
+            "FearMissile"
+         ],
          "damage" : "15",
          "location" : "camelot248",
          "speed" : "2",
@@ -4987,6 +5528,11 @@
          "strength" : "125"
       },
       "pelle@camelot" : {
+         "eflags" : [
+            "ImmFireball",
+            "Missile",
+            "Shock"
+         ],
          "damage" : "15",
          "location" : "camelot218",
          "speed" : "2",
@@ -4998,6 +5544,14 @@
          "strength" : "250"
       },
       "firedemon@camelot" : {
+         "eflags" : [
+            "Fireball",
+            "Bhands",
+            "NegFireball",
+            "NegBhands",
+            "FearFrost",
+            "FearIceStorm"
+         ],
          "damage" : "15",
          "location" : "camelot142",
          "speed" : "0",
@@ -5009,6 +5563,11 @@
          "strength" : "280"
       },
       "mika@camelot" : {
+         "eflags" : [
+            "ImmCripple",
+            "Missile",
+            "ImmMissile"
+         ],
          "damage" : "15",
          "location" : "camelot217",
          "speed" : "2",
@@ -5020,6 +5579,12 @@
          "strength" : "250"
       },
       "teuvo@camelot" : {
+         "eflags" : [
+            "ImmCripple",
+            "NegFrost",
+            "ImmShock",
+            "Bhands"
+         ],
          "damage" : "15",
          "location" : "camelot239",
          "speed" : "2",
@@ -5031,6 +5596,12 @@
          "strength" : "250"
       },
       "hoppari@camelot" : {
+         "eflags" : [
+            "Vtouch",
+            "Bhands",
+            "NegFireball",
+            "NegShock"
+         ],
          "damage" : "15",
          "location" : "camelot228",
          "speed" : "2",
@@ -5040,17 +5611,6 @@
          "name" : "hoppari",
          "description" : "Hoppari thinks you look like a wandering bum, and wants to throw you out.",
          "strength" : "250"
-      },
-      "arrow@camelot" : {
-         "damage" : "15",
-         "location" : "camelot236",
-         "speed" : "0",
-         "aggression" : "67",
-         "armor" : "0",
-         "pname" : "Arrow",
-         "name" : "arrow",
-         "description" : "Arrow, Merlin's favorite bird, dives at your face.",
-         "strength" : "60"
       },
       "questor@camelot" : {
          "damage" : "15",
@@ -5064,6 +5624,11 @@
          "strength" : "450"
       },
       "mikka@camelot" : {
+         "eflags" : [
+            "FearIceStorm",
+            "Missile",
+            "ImmMissile"
+         ],
          "damage" : "15",
          "location" : "camelot251",
          "speed" : "2",
@@ -5089,6 +5654,11 @@
          "aggression" : "83"
       },
       "dumbar@camelot" : {
+         "eflags" : [
+            "NegBHands",
+            "Bhands",
+            "ImmMissile"
+         ],
          "damage" : "15",
          "location" : "camelot64",
          "speed" : "0",
@@ -5100,39 +5670,68 @@
          "strength" : "250"
       },
       "jalovoara@camelot" : {
+         "eflags" : [
+            "Bhands",
+            "NegMissile",
+            "NegFrost"
+         ],
          "damage" : "15",
          "location" : "camelot230",
-         "speed" : "0",
-         "aggression" : "11",
          "armor" : "0",
-         "pname" : "Jalovoara",
          "name" : "jalovoara",
          "description" : "Jalovoara the Orcharder is picking fresh fruit for dessert tonight.",
-         "strength" : "200"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "200",
+         "speed" : "0",
+         "pname" : "Jalovoara",
+         "aggression" : "11"
       },
       "gareth@camelot" : {
+         "eflags" : [
+            "ImmBlind",
+            "Missile",
+            "ImmShock"
+         ],
          "damage" : "15",
          "location" : "camelot10",
-         "speed" : "0",
-         "aggression" : "98",
-         "armor" : "0",
-         "pname" : "Gareth",
+         "armor" : "25",
          "name" : "gareth",
          "description" : "Sir Gareth says 'Why have you disturbed my rest?'",
-         "strength" : "125"
+         "strength" : "125",
+         "speed" : "0",
+         "pname" : "Gareth",
+         "aggression" : "98"
       },
       "tiina@camelot" : {
+         "eflags" : [
+            "Bhands",
+            "Fireball"
+         ],
          "damage" : "15",
          "location" : "camelot238",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Tiina",
          "name" : "tiina",
          "description" : "Tiina is standing vigilant watch here.",
-         "strength" : "250"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "2",
+         "pname" : "Tiina",
+         "aggression" : "25",
+         "pflags" : [
+            "Nomagic"
+         ]
       },
       "mirlyn@camelot" : {
+         "eflags" : [
+            "Frost",
+            "Shock",
+            "ImmShock",
+            "ImmFrost"
+         ],
          "damage" : "15",
          "location" : "camelot65",
          "speed" : "0",
@@ -5144,17 +5743,29 @@
          "strength" : "75"
       },
       "kati@camelot" : {
+         "eflags" : [
+            "FearFrost",
+            "ImmCripple",
+            "Shock"
+         ],
          "damage" : "15",
          "location" : "camelot247",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Kati",
          "name" : "kati",
          "description" : "You have interrupted Kati's coffee break.",
-         "strength" : "250"
+         "sflags" : [
+            "Female"
+         ],
+         "strength" : "250",
+         "speed" : "2",
+         "pname" : "Kati",
+         "aggression" : "25"
       },
       "corledge@camelot" : {
+         "eflags" : [
+            "VTouch",
+            "NegVtouch"
+         ],
          "damage" : "15",
          "location" : "camelot151",
          "speed" : "0",
@@ -5166,6 +5777,11 @@
          "strength" : "500"
       },
       "jarmo@camelot" : {
+         "eflags" : [
+            "VTouch",
+            "NegFrost",
+            "Missile"
+         ],
          "damage" : "15",
          "location" : "camelot228",
          "speed" : "2",
@@ -5177,9 +5793,15 @@
          "strength" : "250"
       },
       "morgana@camelot" : {
+         "eflags" : [
+            "Mute",
+            "Cripple",
+            "NegBHands",
+            "NegFireball"
+         ],
          "damage" : "15",
          "location" : "camelot25",
-         "armor" : "0",
+         "armor" : "10",
          "name" : "morgana",
          "description" : "You have interupted Morgana Le Fay in one of her plots against Arthur!",
          "sflags" : [
@@ -5205,6 +5827,11 @@
          "aggression" : "25"
       },
       "katar@camelot" : {
+         "eflags" : [
+            "Fireball",
+            "NegFireball",
+            "Bhands"
+         ],
          "damage" : "15",
          "location" : "camelot62",
          "speed" : "0",
@@ -5216,11 +5843,17 @@
          "strength" : "100"
       },
       "uwaine@camelot" : {
+         "eflags" : [
+            "FearMissile",
+            "ImmFrost",
+            "NegFireball",
+            "Shock"
+         ],
          "damage" : "15",
          "location" : "camelot29",
          "speed" : "0",
          "aggression" : "84",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Uwaine",
          "name" : "uwaine",
          "description" : "Sir Uwaine sits here quietly, lost in his thoughts.",
@@ -5249,17 +5882,29 @@
          "strength" : "75"
       },
       "palomides@camelot" : {
+         "eflags" : [
+            "NegVTouch",
+            "NegFrost",
+            "Missile",
+            "Frost"
+         ],
          "damage" : "15",
          "location" : "camelot16",
          "speed" : "0",
          "aggression" : "94",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Palomides",
          "name" : "palomides",
          "description" : "Sir Palomides the Saracen draws his scimitar and turns to meet you.",
          "strength" : "155"
       },
       "millionaire@camelot" : {
+         "eflags" : [
+            "Blind",
+            "Mute",
+            "ImmMissile",
+            "NegShock"
+         ],
          "damage" : "15",
          "location" : "camelot69",
          "speed" : "0",
@@ -5275,7 +5920,7 @@
          "location" : "camelot5",
          "speed" : "0",
          "aggression" : "86",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Lionel",
          "name" : "lionel",
          "description" : "Sir Lionel is practicing his swordplay. Would you like to play?",
@@ -5293,6 +5938,11 @@
          "strength" : "425"
       },
       "kirtesnie@camelot" : {
+         "eflags" : [
+            "NegMissile",
+            "NegShock",
+            "Frost"
+         ],
          "damage" : "15",
          "location" : "camelot232",
          "speed" : "0",
@@ -5304,6 +5954,11 @@
          "strength" : "200"
       },
       "eki@camelot" : {
+         "eflags" : [
+            "VTouch",
+            "ImmVtouch",
+            "Shock"
+         ],
          "damage" : "15",
          "location" : "camelot234",
          "speed" : "0",
@@ -5315,6 +5970,11 @@
          "strength" : "200"
       },
       "himo@camelot" : {
+         "eflags" : [
+            "ImmBlind",
+            "NegBhands",
+            "Missile"
+         ],
          "damage" : "15",
          "location" : "camelot217",
          "speed" : "2",
@@ -5326,6 +5986,11 @@
          "strength" : "250"
       },
       "ensio@camelot" : {
+         "eflags" : [
+            "VTouch",
+            "NegIceStorm",
+            "ImmMissile"
+         ],
          "damage" : "15",
          "location" : "camelot222",
          "speed" : "2",
@@ -5336,7 +6001,24 @@
          "description" : "Ensio thinks you look mighty suspicious.",
          "strength" : "250"
       },
+      "fletching@camelot" : {
+         "damage" : "15",
+         "location" : "camelot236",
+         "speed" : "0",
+         "aggression" : "67",
+         "armor" : "0",
+         "pname" : "Fletching",
+         "name" : "fletching",
+         "description" : "Fletching, Merlin's favorite bird, dives at your face.",
+         "strength" : "60"
+      },
       "koski@camelot" : {
+         "eflags" : [
+            "Mute",
+            "Deaf",
+            "Frost",
+            "ImmShock"
+         ],
          "damage" : "15",
          "location" : "camelot227",
          "speed" : "2",
@@ -5348,6 +6030,11 @@
          "strength" : "250"
       },
       "naaras@camelot" : {
+         "eflags" : [
+            "Vtouch",
+            "NegVtouch",
+            "FearMissile"
+         ],
          "damage" : "15",
          "location" : "camelot237",
          "speed" : "2",
@@ -5359,17 +6046,29 @@
          "strength" : "250"
       },
       "hue@camelot" : {
+         "eflags" : [
+            "ImmMute",
+            "Missile",
+            "NegMissile"
+         ],
          "damage" : "15",
          "location" : "camelot67",
          "speed" : "0",
          "aggression" : "90",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Hue",
          "name" : "hue",
          "description" : "Sir Hue raises a hue and cry about the lack of provisions!",
          "strength" : "190"
       },
       "make@camelot" : {
+         "eflags" : [
+            "Deaf",
+            "Mute",
+            "Frost",
+            "NegFrost",
+            "NegMissile"
+         ],
          "damage" : "15",
          "location" : "camelot249",
          "speed" : "2",
@@ -5381,6 +6080,12 @@
          "strength" : "250"
       },
       "mikko@camelot" : {
+         "eflags" : [
+            "Fireball",
+            "Bhands",
+            "NegFireball",
+            "ImmBhands"
+         ],
          "damage" : "15",
          "location" : "camelot250",
          "speed" : "2",
@@ -5403,6 +6108,11 @@
          "strength" : "80"
       },
       "erkki@camelot" : {
+         "eflags" : [
+            "NegFrost",
+            "Frost",
+            "ImmShock"
+         ],
          "damage" : "15",
          "location" : "camelot217",
          "speed" : "2",
@@ -5414,17 +6124,29 @@
          "strength" : "250"
       },
       "pellinore@camelot" : {
-         "damage" : "15",
+         "eflags" : [
+            "NegMissile",
+            "FearFireball",
+            "Cripple",
+            "Frost"
+         ],
+         "damage" : "25",
          "location" : "camelot17",
          "speed" : "0",
          "aggression" : "93",
-         "armor" : "0",
+         "armor" : "30",
          "pname" : "Pellinore",
          "name" : "pellinore",
          "description" : "King Pellinore is looking for Questor, The Questing Beast.",
          "strength" : "185"
       },
       "spede@camelot" : {
+         "eflags" : [
+            "NegFireball",
+            "NegBHands",
+            "Frost",
+            "Icestorm"
+         ],
          "damage" : "15",
          "location" : "camelot252",
          "speed" : "2",
@@ -5449,24 +6171,34 @@
       "leech@camelot" : {
          "damage" : "15",
          "location" : "camelot144",
-         "speed" : "0",
-         "aggression" : "75",
          "armor" : "0",
-         "pname" : "Leech",
          "name" : "leech",
          "description" : "Gross! There's a huge disgusting leech in here!",
-         "strength" : "175"
+         "sflags" : [
+            "NoArms",
+            "NoLegs"
+         ],
+         "strength" : "175",
+         "speed" : "0",
+         "pname" : "Leech",
+         "aggression" : "75"
       },
       "jussi@camelot" : {
+         "eflags" : [
+            "Frost"
+         ],
          "damage" : "15",
          "location" : "camelot220",
-         "speed" : "2",
-         "aggression" : "25",
          "armor" : "0",
-         "pname" : "Jussi",
          "name" : "jussi",
          "description" : "Jussi wonders what you are doing in here.",
-         "strength" : "250"
+         "strength" : "250",
+         "speed" : "2",
+         "pname" : "Jussi",
+         "aggression" : "25",
+         "pflags" : [
+            "Nomagic"
+         ]
       },
       "bartender@camelot" : {
          "damage" : "15",
@@ -5480,17 +6212,28 @@
          "strength" : "125"
       },
       "damas@camelot" : {
+         "eflags" : [
+            "Missile",
+            "Frost",
+            "NegFireball",
+            "ImmShock"
+         ],
          "damage" : "15",
          "location" : "camelot61",
          "speed" : "0",
          "aggression" : "25",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Damas",
          "name" : "damas",
          "description" : "Sir Damas is here, checking on his horse.",
          "strength" : "225"
       },
       "panu@camelot" : {
+         "eflags" : [
+            "ImmVtouch",
+            "Fireball",
+            "NegBhands"
+         ],
          "damage" : "15",
          "location" : "camelot241",
          "speed" : "2",
@@ -5502,6 +6245,11 @@
          "strength" : "250"
       },
       "poro@camelot" : {
+         "eflags" : [
+            "FearBhands",
+            "Missile",
+            "NegMissile"
+         ],
          "damage" : "15",
          "location" : "camelot245",
          "speed" : "2",
@@ -5515,7 +6263,7 @@
       "ewaine@camelot" : {
          "damage" : "15",
          "location" : "camelot8",
-         "armor" : "0",
+         "armor" : "25",
          "name" : "ewaine",
          "description" : "Duke Ewaine says 'Stop! None may pass save with the Kings leave!'",
          "strength" : "225",
@@ -5528,17 +6276,28 @@
          ]
       },
       "gawaine@camelot" : {
-         "damage" : "15",
+         "eflags" : [
+            "ImmMissile",
+            "Frost",
+            "ImmBHands"
+         ],
+         "damage" : "30",
          "location" : "camelot11",
          "speed" : "0",
          "aggression" : "97",
-         "armor" : "0",
+         "armor" : "30",
          "pname" : "Gawaine",
          "name" : "gawaine",
          "description" : "Sir Gawaine has been sharpening his sword. He would like to test it now.",
          "strength" : "150"
       },
       "asko@camelot" : {
+         "eflags" : [
+            "Missile",
+            "Frost",
+            "NegMissile",
+            "ImmFrost"
+         ],
          "damage" : "15",
          "location" : "camelot254",
          "speed" : "2",
@@ -5550,11 +6309,16 @@
          "strength" : "250"
       },
       "percivale@camelot" : {
+         "eflags" : [
+            "Deaf",
+            "ImmCripple",
+            "VTouch"
+         ],
          "damage" : "15",
          "location" : "camelot7",
          "speed" : "0",
          "aggression" : "85",
-         "armor" : "0",
+         "armor" : "25",
          "pname" : "Percivale",
          "name" : "percivale",
          "description" : "Sir Percivale is here, thinking about the Grail Quest.",

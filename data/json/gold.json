@@ -1,0 +1,594 @@
+{
+   "obj" : {
+      "cornerstone@gold" : {
+         "desc[1]" : "\nThere is a cornerstone one the edge of the church.  It looks as if it may \nbe loose.",
+         "location" : "IN_ROOM:churchsteps",
+         "oflags" : [
+            "NoGet",
+            "Pushtoggle"
+         ],
+         "altname" : "stone",
+         "name" : "cornerstone",
+         "examine" : "It is a normal conerstone. What did you expect? A secret \nmessage??   Geez!",
+         "state" : "1",
+         "pname" : "cornerstone",
+         "maxstate" : "1",
+         "desc[0]" : "\nThere is a cornerstone here that has been rotated on it's axis.  \nThe inscription on it reads:\n                            +-------------------+\n                            | Built in the name |\n                            |  of King Arthur   |\n                            |       1650        |\n                            +-------------------+"
+      },
+      "pinhole_b@gold" : {
+         "desc[1]" : "There is a pinhole in the ceiling.",
+         "location" : "IN_ROOM:2@catacomb",
+         "oflags" : [
+            "Noget"
+         ],
+         "name" : "pinhole_b",
+         "linked" : "pinhole_a",
+         "state" : "1",
+         "pname" : "pinhole",
+         "maxstate" : "1",
+         "desc[0]" : "There is a hole in the ceiling above you and a pile of dirt on the floor.  \nThe hole is not accessible to you."
+      },
+      "door_sanctuary@gold" : {
+         "desc[1]" : "You can see the faint outline of a doorway in the floor here.\nHowever, you can figure no way to open it!",
+         "location" : "IN_ROOM:sanctuary",
+         "oflags" : [
+            "Noget"
+         ],
+         "altname" : "trapdoor",
+         "name" : "door_sanctuary",
+         "examine" : "You can't figure out the trapdoor opens!",
+         "linked" : "door_passage",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1",
+         "desc[0]" : "There is an open passageway leading down here."
+      },
+      "door_passage@gold" : {
+         "location" : "IN_ROOM:passage1",
+         "oflags" : [
+            "Noget"
+         ],
+         "altname" : "trapdoor",
+         "name" : "door_passage",
+         "examine" : "An entrance into this dark, cold passageway lies above you.",
+         "linked" : "door_sanctuary",
+         "state" : "1",
+         "pname" : "door",
+         "maxstate" : "1"
+      },
+      "gold_gates_outside@gold" : {
+         "desc[1]" : "The gates are closed.",
+         "location" : "IN_ROOM:goldgates",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "gold_gates_outside",
+         "examine" : "There is a Ribbon tied to one pillar of the gates, the other is \nvoid of decorations.",
+         "linked" : "gold_gates_inside",
+         "state" : "1",
+         "pname" : "gates",
+         "maxstate" : "1",
+         "desc[0]" : "The gates are open."
+      },
+      "machine@gold" : {
+         "location" : "IN_ROOM:basement",
+         "oflags" : [
+            "NoGet",
+            "Container"
+         ],
+         "name" : "machine",
+         "examine" : "\nThere is a light on the side of this machine, and it is blinking green.  \nYou see a sign on the nearest end which reads 'INPUT' and a sign on the far \nend which reads 'OUTPUT'. Hmmmm....you wonder what to PUT INTO the machine!!  \nThere is a small sign on the side of the machine near the light which reads:\n           _____________________________________________\n          |         Eastern Alchemy Corporation         |\n          |             1654 Sir Robin Lane             |\n          |           Castle Camelot, England           |\n          |                                             |\n          |                 **WARNING**                 |\n          |        Be Cautious and ensure you are       |\n          |        properly protected and trained       |\n          |           while using this machine          |\n          |_____________________________________________|",
+         "maxstate" : "1",
+         "state" : "0",
+         "desc[0]" : "There is a machine here which takes up most of the space \nin this basement."
+      },
+      "ribbon@gold" : {
+         "location" : "IN_CONTAINER:bundle",
+         "oflags" : [
+            "Wearable"
+         ],
+         "altname" : "yellow",
+         "name" : "ribbon",
+         "examine" : "What? Ya think I lie? It's yellow I said!",
+         "size" : "1",
+         "pname" : "ribbon",
+         "weight" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "There is a &+Yyellow &+wribbon here."
+      },
+      "treasure@gold" : {
+         "desc[1]" : "A large and valuable treasure is gathering dust in a dark corner.",
+         "location" : "IN_ROOM:passage4",
+         "weight" : "20",
+         "oflags" : [
+            "Getflips"
+         ],
+         "name" : "treasure",
+         "examine" : "It consists entirely of gold items shaped as small knights!",
+         "bvalue" : "400",
+         "desc[0]" : "A large and valuable treasure has been stacked here!",
+         "size" : "20"
+      },
+      "jacket@gold" : {
+         "location" : "IN_ROOM:gold2",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "35",
+         "name" : "jacket",
+         "examine" : "It has a very tight weave to it, perhaps designed to \nreject blows from a weapon.",
+         "size" : "8",
+         "weight" : "5",
+         "bvalue" : "100",
+         "aflags" : [
+            "Chest",
+            "Back"
+         ],
+         "desc[0]" : "There is a heavy jacket laying here on the ground, lost \nby a previously unsuccessful explorer."
+      },
+      "bundle@gold" : {
+         "desc[1]" : "There is a ruined bundle of hay laying here, tied with a yellow ribbon.",
+         "location" : "IN_ROOM:gold3",
+         "oflags" : [
+            "Container"
+         ],
+         "altname" : "hay",
+         "name" : "bundle",
+         "examine" : "This hay has been rejected by it's pickers because it has \nlost its golden shine.",
+         "state" : "1",
+         "size" : "4",
+         "weight" : "3",
+         "maxstate" : "1",
+         "bvalue" : "20",
+         "desc[0]" : "The ribbon tying the hay together has been removed, and the hay is scattered."
+      },
+      "gold_gates_inside@gold" : {
+         "desc[1]" : "The gates are closed.",
+         "location" : "IN_ROOM:pathtochurch",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "gold_gates_inside",
+         "linked" : "gold_gates_outside",
+         "state" : "1",
+         "pname" : "gates",
+         "maxstate" : "1",
+         "desc[0]" : "The gate stands open to the west."
+      },
+      "shrubbery@gold" : {
+         "location" : "IN_ROOM:gold3",
+         "oflags" : [
+            "Wearable"
+         ],
+         "armor" : "0",
+         "altname" : "shrub",
+         "name" : "shrubbery",
+         "examine" : "This shrubbery can be picked up.  It is loose in the roots \nand seems to be dying.",
+         "size" : "5",
+         "pname" : "shrubbery",
+         "weight" : "5",
+         "bvalue" : "40",
+         "aflags" : [
+            "Head"
+         ],
+         "desc[0]" : "There is a shrubbery growing here."
+      },
+      "huge_doors_inside@gold" : {
+         "desc[1]" : "The huge oak doors are closed.",
+         "location" : "IN_ROOM:entryway",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "oak",
+         "name" : "huge_doors_inside",
+         "desc[2]" : "The huge oak doors are locked.",
+         "linked" : "huge_doors_outside",
+         "state" : "1",
+         "pname" : "doors",
+         "maxstate" : "2",
+         "desc[0]" : "The huge oak doors are open."
+      },
+      "ingot@gold" : {
+         "location" : "IN_ROOM:limbo@limbo",
+         "oflags" : "{ }",
+         "name" : "ingot",
+         "examine" : "This is a solid gold ingot! And it's HEAVY!",
+         "size" : "10",
+         "pname" : "ingot",
+         "weight" : "10",
+         "bvalue" : "175",
+         "desc[0]" : "There is a brilliant gold ingot here!"
+      },
+      "switch@gold" : {
+         "desc[1]" : "There is a switch on the wall here in the ON position.",
+         "location" : "IN_ROOM:basement",
+         "oflags" : [
+            "NoGet",
+            "PushToggle"
+         ],
+         "name" : "switch",
+         "examine" : "It is a normal Light switch!",
+         "state" : "0",
+         "maxstate" : "1",
+         "desc[0]" : "There is a switch on the wall here in the OFF position."
+      },
+      "bones@gold" : {
+         "location" : "IN_ROOM:passage4",
+         "oflags" : [
+            "Noget"
+         ],
+         "altname" : "bones",
+         "pname" : "bones",
+         "name" : "bones",
+         "examine" : "It is the remains of some unfortunate adventurer."
+      },
+      "mask@gold" : {
+         "location" : "IN_ROOM:basement",
+         "oflags" : [
+            "Wearable",
+            "Armor"
+         ],
+         "armor" : "56",
+         "name" : "mask",
+         "examine" : "It has a very thick shield and blinder on it. It doesn't \nlook as though you could even see through the shield!",
+         "size" : "10",
+         "weight" : "10",
+         "bvalue" : "75",
+         "aflags" : [
+            "Face"
+         ],
+         "desc[0]" : "There is a welder's mask laying here."
+      },
+      "pinhole_a@gold" : {
+         "desc[1]" : "There is a pinhole in the floor.",
+         "location" : "IN_ROOM:passage4",
+         "oflags" : [
+            "Noget"
+         ],
+         "altname" : "hole",
+         "name" : "pinhole_a",
+         "examine" : "You can see a glimmer of light through the hole.",
+         "linked" : "pinhole_b",
+         "state" : "1",
+         "pname" : "pinhole",
+         "maxstate" : "1",
+         "desc[0]" : "A hole has been widened in the floor! "
+      },
+      "huge_doors_outside@gold" : {
+         "desc[1]" : "The huge oak doors are closed.",
+         "location" : "IN_ROOM:churchsteps",
+         "oflags" : [
+            "Openable",
+            "NoGet"
+         ],
+         "altname" : "oak",
+         "name" : "huge_doors_outside",
+         "desc[2]" : "The huge oak doors are locked.",
+         "linked" : "huge_doors_inside",
+         "state" : "1",
+         "pname" : "doors",
+         "maxstate" : "2",
+         "desc[0]" : "The huge oak doors are open."
+      },
+      "scythe@gold" : {
+         "damage" : "15",
+         "location" : "WIELDED_BY:Lancelot",
+         "oflags" : [
+            "Weapon"
+         ],
+         "name" : "scythe",
+         "examine" : "It is a scythe used for cutting patches of hay. This one \nlooks well used, however, and has a tint of gold to it.",
+         "size" : "8",
+         "weight" : "8",
+         "bvalue" : "100",
+         "desc[0]" : "There is a sharp scythe here!"
+      }
+   },
+   "loc" : {
+      "sanctuary@gold" : {
+         "exits" : {
+            "w" : "entryway",
+            "u" : "altar",
+            "d" : "^door_sanctuary"
+         },
+         "flags" : [],
+         "zone" : "gold",
+         "title" : "Sanctuary",
+         "id" : "sanctuary",
+         "description" : "\n   As you enter the Sanctuary, you stand in absolute amazement at the sights \nlaid out before you.  There are rows upon rows of pews, on your left and \nright.  As you look up, there appears to be no top to the cathedral, and it \nis open to the skies above you.  You can feel the weather from outside, \nhowever, it does not affect the health of the sanctuary.  There is a stairway \nto the left of the room which appears to lead to the altar.\n",
+         "altitude" : null
+      },
+      "entryway@gold" : {
+         "exits" : {
+            "w" : "^huge_doors_inside",
+            "e" : "sanctuary",
+            "d" : "basement"
+         },
+         "flags" : [],
+         "zone" : "gold",
+         "title" : "Entryway",
+         "id" : "entryway",
+         "description" : "\n   What a beautiful work of art.  There's a large archway leading into the \ncenter aisle of an incredible sanctuary. You wonder how anyone could have \nbuilt this place. All walls, doors and floors are trimmed in pure gold, and \nit peaks your interest as to where the gold came from!\n",
+         "altitude" : null
+      },
+      "passage2@gold" : {
+         "exits" : {
+            "n" : "passage1",
+            "s" : "Passage3"
+         },
+         "flags" : [],
+         "zone" : "gold",
+         "title" : "Passage Out!",
+         "id" : "passage2",
+         "description" : "\n   You are in a North <-> South passageway which runs underground.  There are \nthree pictures on the wall in this room.  The first is of a man with the word \nNED inscribed on his coat of arms.  The second depicts NED feeding a needy \nperson who is lying on the ground.  The third shows NED battling a mighty \nwarrior with a strong weapon and defense.  It looks as if there may be a \nchalice of some sort in the background of the painting, though the paint has \nfaded somewhat, and it is hard to tell.\n",
+         "altitude" : null
+      },
+      "altar@gold" : {
+         "exits" : {
+            "d" : "sanctuary"
+         },
+         "flags" : [
+            "Peaceful"
+         ],
+         "zone" : "gold",
+         "title" : "Altar",
+         "id" : "altar",
+         "description" : "\n   You are standing at the altar facing the pews of the church.  You notice \nthat the number of pews as perceived from here is much less than you thought \nas you walked through them.\n",
+         "altitude" : null
+      },
+      "gold2@gold" : {
+         "exits" : {
+            "s" : "goldgates"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "gold",
+         "title" : "I wouldn't do that!!",
+         "id" : "gold2",
+         "description" : "\n   But YOU did!  This is a death trap that has been converted by someone as a \nhideaway for precious items.  I guess they figured no one would be stupid \nenough to come in here with the name he gave it!!\n",
+         "altitude" : null
+      },
+      "basement@gold" : {
+         "exits" : {
+            "u" : "entryway"
+         },
+         "flags" : [],
+         "zone" : "gold",
+         "title" : "Basement",
+         "id" : "basement",
+         "description" : "\n   This is a bright and lovely basement. In fact, this is the cleanest \nbasement you have ever seen!  There is a large machine taking up most of the \nroom in this basement.\n",
+         "altitude" : null
+      },
+      "pathtochurch@gold" : {
+         "exits" : {
+            "w" : "^gold_gates_inside",
+            "e" : "churchpath"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "gold",
+         "title" : "Path to Church",
+         "id" : "pathtochurch",
+         "description" : "\n   In the distance, you can make out the outline of a steeple standing amidst \na carefully groomed lines of trees.  This path continues East and West.\n",
+         "altitude" : null
+      },
+      "gold3@gold" : {
+         "exits" : {
+            "n" : "goldgates"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "gold",
+         "title" : "Rolling Fields",
+         "id" : "gold3",
+         "description" : "\n   These fields are the result of the work of many little people, each of \nwhich sneers at you as you enter.  They seem to be working very hard.  You \nnotice while glancing around that these people are half your height!!!\n",
+         "altitude" : null
+      },
+      "gold1b@gold" : {
+         "exits" : {
+            "e" : "goldgates",
+            "w" : "ildharas01@ildharas"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "gold",
+         "title" : "On The Path",
+         "id" : "gold1b",
+         "description" : "\n   You are following a small path that is leading you along golden coloured\nfields of grass and wheat.\nTo the west you see the path dissapear between two large boulders, and a huge\nmound rises above them.\n",
+         "altitude" : null
+      },
+      "passage4@gold" : {
+         "exits" : {
+            "d" : "^pinhole_a"
+         },
+         "flags" : [],
+         "zone" : "gold",
+         "title" : "Finally! The Exit!",
+         "id" : "passage4",
+         "description" : "\n   You have finally reached it! However, you see NO EXITS!!  There are piles \nof bones here too, so your outlook doesn't look too good!\n",
+         "altitude" : null
+      },
+      "churchpath@gold" : {
+         "exits" : {
+            "w" : "pathtochurch",
+            "e" : "churchsteps"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "gold",
+         "title" : "Church Path",
+         "id" : "churchpath",
+         "description" : "\n   You are travelling along a well groomed line of trees. The steeple you saw \nbefore is now closer to you, and appears to be more beautiful the closer you \nget to it.\n",
+         "altitude" : null
+      },
+      "passage1@gold" : {
+         "exits" : {
+            "s" : "Passage2"
+         },
+         "flags" : [],
+         "zone" : "gold",
+         "title" : "Passage Out!",
+         "id" : "passage1",
+         "description" : "\n   You are in a North <-> South passageway which runs underground.  You see \na picture on the wall of a man near water blowing into a mighty horn, and a \nhand reaching out of the water with a gleaming sword grasped firmly.  Could \nthis be the way to the famed sword Excalibur!?\n",
+         "altitude" : null
+      },
+      "passage3@gold" : {
+         "exits" : {
+            "n" : "passage2",
+            "s" : "passage4"
+         },
+         "flags" : [],
+         "zone" : "gold",
+         "title" : "Passage Out?",
+         "id" : "Passage3",
+         "description" : "\n   You are in another passageway under the ground which travels North and \nSouth. The drawings on the walls here are of a large table which has been \nsquared off to be The Square Table, as the drawing is titled. It has names \nlike Lancelot, Graham and Robin inscribed on it in an order of seating. What \nlooks like the Holy Grail is standing in the center of the table, surrounded \nby never fading flowers! At one end of the table must be King Arthur's seat, \nfor painted there is a majestic crown and the sword of glory, Excalibur. You \nsuddenly realise that the knights of the square table are no more!\n",
+         "altitude" : null
+      },
+      "gold1a@gold" : {
+         "exits" : {
+            "e" : "ildharas01@ildharas",
+            "w" : "N_Barrow@church"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "gold",
+         "title" : "Below The North Barrow",
+         "id" : "gold1a",
+         "description" : "\n   A small path is winding its way down from the top of the large mound.\nIt leads eastward between two large boulders, and you can see some rolling\nfields with yellow, almost golden, crops in the far distance.\n",
+         "altitude" : null
+      },
+      "goldgates@gold" : {
+         "exits" : {
+            "e" : "^gold_gates_outside",
+            "w" : "gold1b",
+            "n" : "gold2",
+            "s" : "gold3"
+         },
+         "flags" : [
+            "Nomobiles",
+            "Outdoors"
+         ],
+         "zone" : "gold",
+         "title" : "Gold Gates",
+         "id" : "goldgates",
+         "description" : "\n   There is a pair of golden gates here.  You see no possible way to open \nthem, and it is frustrating you because you realize there is no other way \nout.  There is a large bright exit to the south, and a dark hole that it \nlooks like you could *just* squeeze through to the north.\n",
+         "altitude" : null
+      },
+      "churchsteps@gold" : {
+         "exits" : {
+            "w" : "churchpath",
+            "e" : "^huge_doors_outside"
+         },
+         "flags" : [],
+         "zone" : "gold",
+         "title" : "Golden Church Steps",
+         "id" : "churchsteps",
+         "description" : "\n   There are two massive doors here.  You find it hard to believe that this \nchurch is built by people!  The doors alone are at least 100 feet in height \nand the church itself towers far above you.  There is a large cornerstone on \nthe church.  You notice it has some kind of lettering on it.  The doors are \nhuge oak doors.\n",
+         "altitude" : null
+      }
+   },
+   "mob" : {
+      "goldpriest@gold" : {
+         "eflags" : [
+            "Blind"
+         ],
+         "damage" : "8",
+         "location" : "altar",
+         "name" : "GoldPriest",
+         "examine" : "This Priest looks like he couldn't hurt a fly.",
+         "description" : "There is a peaceful golden-skinned Priest here with an \noffering plate in his hands.  He asks 'Will you help us with a donation?'",
+         "strength" : "1000",
+         "speed" : "0",
+         "pname" : "The Golden Priest",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise",
+            "NoSummon",
+            "NoSteal",
+            "NoMagic",
+            "NoHassle",
+            "NoAlias"
+         ],
+         "mflags" : [
+            "NoGrab"
+         ]
+      },
+      "robin@gold" : {
+         "damage" : "8",
+         "location" : "pathtochurch",
+         "armor" : "5",
+         "name" : "Robin",
+         "examine" : "Robin is just a harmless idiot knight.",
+         "description" : "Sir Robin, the knight of the Square Table is here.  He looks like an Idiot!",
+         "strength" : "50",
+         "speed" : "0",
+         "aggression" : "10",
+         "pname" : "Sir Robin",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise",
+            "NoSummon",
+            "NoSteal"
+         ],
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "graham@gold" : {
+         "eflags" : [
+            "NegFireball",
+            "NegMissile"
+         ],
+         "damage" : "8",
+         "location" : "pathtochurch",
+         "armor" : "5",
+         "name" : "Graham",
+         "examine" : "This guy looks MEAN.",
+         "description" : "Sir Graham, the Knight of the Square Table is here.\nIt does not look as if you can pass him!",
+         "strength" : "200",
+         "speed" : "0",
+         "aggression" : "75",
+         "pname" : "Sir Graham",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise",
+            "NoSummon",
+            "NoSteal"
+         ],
+         "mflags" : [
+            "BarEast"
+         ]
+      },
+      "lancelot@gold" : {
+         "damage" : "8",
+         "location" : "entryway",
+         "armor" : "15",
+         "name" : "Lancelot",
+         "examine" : "Lancelot looks as if he COULD tear you limb from limb! \nI wouldn't mess with him if I were you.",
+         "description" : "Sir Lancelot is waiting here to rip you apart!",
+         "strength" : "350",
+         "speed" : "0",
+         "aggression" : "40",
+         "pname" : "Sir Lancelot",
+         "pflags" : [
+            "NoZap",
+            "NoExorcise",
+            "NoSummon",
+            "NoSteal",
+            "NoMagic"
+         ],
+         "mflags" : [
+            "BarEast",
+            "BarDown"
+         ]
+      }
+   }
+}

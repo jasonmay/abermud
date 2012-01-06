@@ -14,6 +14,19 @@
          "bvalue" : "50",
          "desc[0]" : "A sharp shortsword has been dropped here."
       },
+      "wall_stone@castle" : {
+         "desc[1]" : "A stairway leading down here ends in a stone wall.",
+         "location" : "IN_ROOM:torture",
+         "oflags" : [
+            "NoGet"
+         ],
+         "name" : "wall_stone",
+         "linked" : "bar_stone@kastle",
+         "state" : "1",
+         "pname" : "wall",
+         "maxstate" : "1",
+         "desc[0]" : "There is a stairway leading down here."
+      },
       "lever@castle" : {
          "location" : "IN_ROOM:Port",
          "oflags" : [
@@ -22,6 +35,20 @@
          "name" : "lever",
          "examine" : "\nThis is a very solid looking lever, jutting out from the wall, which would\nseem to work the portcullis system, but you never know till you try!\n",
          "desc[0]" : "There is a large iron lever on the east wall."
+      },
+      "horseshoe@castle" : {
+         "location" : "IN_ROOM:Stables",
+         "armor" : "3",
+         "oflags" : [
+            "Hitchance"
+         ],
+         "altname" : "shoe",
+         "name" : "horseshoe",
+         "examine" : "\nThis looks really lucky, though not for the horse whose lower leg is still\nattached to it!\n",
+         "size" : "3",
+         "weight" : "2",
+         "bvalue" : "10",
+         "desc[0]" : "An old horseshoe lies nearby."
       },
       "port_inside@castle" : {
          "desc[1]" : "The heavy iron portcullis bars the way north.",
@@ -36,17 +63,6 @@
          "pname" : "portcullis",
          "maxstate" : "1",
          "desc[0]" : "The portcullis is raised."
-      },
-      "horseshoe@castle" : {
-         "location" : "IN_ROOM:Stables",
-         "armor" : "3",
-         "altname" : "shoe",
-         "name" : "horseshoe",
-         "examine" : "\nThis looks really lucky, though not for the horse whose lower leg is still\nattached to it!\n",
-         "size" : "3",
-         "weight" : "2",
-         "bvalue" : "10",
-         "desc[0]" : "An old horseshoe lies nearby."
       },
       "maiden@castle" : {
          "desc[1]" : "The iron maiden is closed.",
@@ -82,11 +98,13 @@
          "oflags" : [
             "GetFlips",
             "Lit",
-            "Weapon"
+            "Weapon",
+            "Cursed",
+            "NoSummon"
          ],
          "altname" : "sword",
          "name" : "runesword",
-         "examine" : "\nThe sword is covered with runes which form a curse.  The black,faintly glowing\nblade also seems to hum quietly.\n",
+         "examine" : "\nThe sword is covered with runes which form a curse.  The black, faintly \nglowing blade also seems to hum quietly.\n",
          "size" : "20",
          "state" : "1",
          "weight" : "30",
@@ -101,7 +119,7 @@
          ],
          "altname" : "food",
          "name" : "peppers",
-         "examine" : "\nThe peppers are about an inch long, red, and wicked looking.  They might give\nyou a heartburn if you ate them.  Or, remember what happened in \"Alien\"?",
+         "examine" : "\nThe peppers are about an inch long, red, and wicked looking.  They might give\nyou heartburn if you ate them.  Or, remember what happened in \"Alien\"?",
          "size" : "1",
          "weight" : "1",
          "bvalue" : "30",
@@ -175,6 +193,20 @@
          "desc[0]" : "A small brass key has been left here.",
          "size" : "1"
       },
+      "rock_wall@castle" : {
+         "desc[1]" : "The passage seems to end in a brick wall to the south.",
+         "location" : "IN_ROOM:escape",
+         "oflags" : [
+            "PushToggle",
+            "NoGet"
+         ],
+         "name" : "rock_wall",
+         "linked" : "rock_wall@kastle",
+         "state" : "1",
+         "pname" : "wall",
+         "maxstate" : "1",
+         "desc[0]" : "\nA panel has been opened in the rock wall allowing passage south."
+      },
       "dagger@castle" : {
          "damage" : "5",
          "location" : "IN_ROOM:Guard",
@@ -212,7 +244,7 @@
          ],
          "altname" : "tunnel",
          "name" : "Escape_Throne",
-         "examine" : "\nThe back of the throne is no less impressive than the front,though it's wooden\nsurface is now covered with rough grafitti reading:\n\n        \"Argh!  Who closed the bloody throne?!?\"",
+         "examine" : "\nThe back of the throne is no less impressive than the front,though it's wooden\nsurface is now covered with rough grafitti reading:\n\n        \\\"Argh!  Who closed the bloody throne?!?\\\"",
          "linked" : "Castle_Throne",
          "state" : "1",
          "pname" : "throne",
@@ -223,13 +255,14 @@
    "loc" : {
       "escape@castle" : {
          "exits" : {
-            "n" : "^Escape_Throne"
+            "n" : "^Escape_Throne",
+            "s" : "^rock_wall"
          },
          "flags" : [],
          "zone" : "castle",
          "title" : "Escape Passage",
          "id" : "Escape",
-         "description" : "\n   This is a passageway which would be used by the King and his court if the\ncastle defense was ever penetrated, to escape from the attackers, and looking\nat the lack of dust and cobwebs it would seem to have been used recently.  The\npassage is small and dark, but probably more inviting than the wrong end of a\nsword.\n   At the end of the passage is a sparkling portal which would lead to Xanadu,\nbut is currently closed for contruction.\n",
+         "description" : "\n   This is a passageway which would be used by the King and his court if the\ncastle defense was ever penetrated, to escape from the attackers, and looking\nat the lack of dust and cobwebs it would seem to have been used recently.  The\npassage is small and dark, but probably more inviting than the wrong end of a\nsword.\n",
          "altitude" : null
       },
       "stables@castle" : {
@@ -306,7 +339,8 @@
       "torture@castle" : {
          "exits" : {
             "w" : "Chamber",
-            "e" : "^Maiden"
+            "e" : "^Maiden",
+            "s" : "^wall_stone"
          },
          "flags" : [],
          "zone" : "castle",

@@ -17,19 +17,19 @@
          "desc[0]" : "A large basalt door opens south into an entryway."
       },
       "garage_door_1@cottage" : {
-         "desc[1]" : "The garage door is closed.",
+         "desc[1]" : "The barn door is closed.",
          "location" : "IN_ROOM:cottage8",
          "oflags" : [
             "Openable",
             "NoGet"
          ],
-         "altname" : "garage",
+         "altname" : "barn",
          "name" : "garage_door_1",
          "linked" : "garage_door",
          "state" : "1",
          "pname" : "door",
          "maxstate" : "1",
-         "desc[0]" : "The garage door is open."
+         "desc[0]" : "The barn door is open."
       },
       "skiff@cottage" : {
          "location" : "IN_ROOM:cottage18",
@@ -59,7 +59,7 @@
          ],
          "pname" : "runes",
          "name" : "runes_1",
-         "examine" : "\t\t\"You see me now a veteran,\n\t       of a thousand giantish wars.\n\t  I've been living on the edge too long,\n\t      where the winds of limbo roar.\n\t     And, I'm young enough to look at,\n\t\t  and far too old to see,\n\t    all the scars are on the inside...\n\t\t\t KEEP OUT!\"\n"
+         "examine" : "\n\t\t\"You see me now a veteran,\n\t       of a thousand giantish wars.\n\t  I've been living on the edge too long,\n\t      where the winds of limbo roar.\n\t     And, I'm young enough to look at,\n\t\t  and far too old to see,\n\t    all the scars are on the inside...\n\t\t\t KEEP OUT!\"\n"
       },
       "memoirs_tome@cottage" : {
          "desc[1]" : "There is a huge tome of memoirs on the desk.",
@@ -69,7 +69,7 @@
          ],
          "altname" : "memoirs",
          "name" : "memoirs_tome",
-         "examine" : "These memoirs are scrawled out in the giantish scrip and are unreadable.\n",
+         "examine" : "These memoirs are scrawled out in the giantish script and are unreadable.\n",
          "state" : "1",
          "size" : "12",
          "pname" : "tome",
@@ -122,19 +122,19 @@
          "desc[0]" : "A beautiful scarab has been placed here."
       },
       "garage_door@cottage" : {
-         "desc[1]" : "The garage door is closed.",
+         "desc[1]" : "The barn door is closed.",
          "location" : "IN_ROOM:cottage7",
          "oflags" : [
             "Openable",
             "NoGet"
          ],
-         "altname" : "garage",
+         "altname" : "barn",
          "name" : "garage_door",
          "linked" : "garage_door_1",
          "state" : "1",
          "pname" : "door",
          "maxstate" : "1",
-         "desc[0]" : "The garage door is open."
+         "desc[0]" : "The barn door is open."
       },
       "door_wheel@cottage" : {
          "location" : "IN_ROOM:cottage21",
@@ -149,7 +149,8 @@
          "linked" : "door_wheel_1",
          "state" : "1",
          "pname" : "wheel",
-         "maxstate" : "1"
+         "maxstate" : "1",
+         "desc[0]" : "With a lot of effort, the gate has been opened, draining the resevoir."
       },
       "crowbar@cottage" : {
          "desc[1]" : "A heavy crowbar lies here bracing the kitchen door.",
@@ -203,7 +204,7 @@
          "desc[1]" : "A small golden sphere winks up at you.",
          "location" : "IN_CONTAINER:sarcophagus",
          "oflags" : [
-            "Lit",
+            "Glowing",
             "GetFlips"
          ],
          "name" : "sphere",
@@ -234,6 +235,7 @@
             "Container",
             "NoGet"
          ],
+         "altname" : "coffin",
          "name" : "sarcophagus",
          "examine" : "You are strnangely drawn to this ancient coffin, but despite your\ncuriosity, the fear of some unknown curse lingers in the back of your mind.\n"
       },
@@ -357,7 +359,7 @@
          "zone" : "cottage",
          "title" : "Driveway",
          "id" : "cottage7",
-         "description" : "\n   You are currently standing on a short, asphalt driveway.  A short path\nconnects it with the porch to the west.  In front of you stands a large\ngarage door.\n",
+         "description" : "\n   You are currently standing on a short, cobblestone driveway.  A short path\nconnects it with the porch to the west.  In front of you stands a large\nbarn door.\n",
          "altitude" : null
       },
       "cottage12@cottage" : {
@@ -440,7 +442,7 @@
          "zone" : "cottage",
          "title" : "Collapsing Ledge",
          "id" : "cottage10",
-         "description" : "\n   The ledge narrows here to an untraversable width.  As you attempt to\nturn and make your way back up to the west, the ledge collapses.  You are\nwondeirng how deep the chasm truly is when the sudden stop enlightens you.\n",
+         "description" : "\n   The ledge narrows here to an untraversable width.  As you attempt to\nturn and make your way back up to the west, the ledge collapses.  You are\nwondering how deep the chasm truly is when the sudden stop enlightens you.\n",
          "altitude" : null
       },
       "cottage21@cottage" : {
@@ -463,7 +465,9 @@
             "d" : "cottage9",
             "s" : "cottage1"
          },
-         "flags" : [],
+         "flags" : [
+            "Outdoors"
+         ],
          "zone" : "cottage",
          "title" : "Peaceful Valley",
          "id" : "cottage2",
@@ -523,7 +527,7 @@
          "zone" : "cottage",
          "title" : "Living Room",
          "id" : "cottage4",
-         "description" : "\n   You have entered the living room of the quaint cottage, the housewife\nis here busily sweeping.  A family sized color television sits here opposite\na comfy, blue sofa with enormous cushions.  the smell of baking wafts from\na tiny kitchen to the east, and you may also return south to the porch.\n",
+         "description" : "\n   You have entered the living room of the quaint cottage, the housewife\nis here busily sweeping.  A family sized crystal ball sits here opposite\na comfy, blue sofa with enormous cushions.  The smell of baking wafts from\na tiny kitchen to the east, and you may also return south to the porch.\n",
          "altitude" : null
       },
       "cottage8@cottage" : {
@@ -533,9 +537,9 @@
          },
          "flags" : [],
          "zone" : "cottage",
-         "title" : "Garage",
+         "title" : "Inside the Barn",
          "id" : "cottage8",
-         "description" : "\n   This is a clean, well kept garage.  A large, cherry-red, Plymouth Fury\nsits here; it seems to be leering at you.  On its license plate you can\nmake out a set of runes spelling \"Christine\".  There are a few dozen\ndifferent tools hanging here, but their purposes are beyond your\nexperience.\n",
+         "description" : "\n   This is a clean, well kept barn.  A large, cherry-red, horse-buggy\nsits here; it seems to be leering at you.  On its plate you can\nmake out a set of runes spelling \"Christine\".  There are a few dozen\ndifferent tools hanging here, but their purposes are beyond your\nexperience.\n",
          "altitude" : null
       },
       "cottage17@cottage" : {
@@ -590,7 +594,9 @@
             "n" : "cottage4",
             "s" : "^gate_door_1"
          },
-         "flags" : [],
+         "flags" : [
+            "Outdoors"
+         ],
          "zone" : "cottage",
          "title" : "Front Porch",
          "id" : "cottage3",
@@ -606,7 +612,7 @@
          "zone" : "cottage",
          "title" : "Petite Kitchen",
          "id" : "cottage5",
-         "description" : "\n   You are surrounded by the smells of baking and the cheery warmth of a\nsmall electric stove.  there has obviously been some cooking done here\nrecently.  You can hear the sounds of cleaning coming from the west and\na small door leads east.\n",
+         "description" : "\n   You are surrounded by the smells of baking and the cheery warmth of a\nsmall wood stove.  There has obviously been some cooking done here\nrecently.  You can hear the sounds of cleaning coming from the west and\na small door leads east.\n",
          "altitude" : null
       },
       "cottage6@cottage" : {
@@ -657,7 +663,7 @@
          "speed" : "0",
          "aggression" : "99",
          "armor" : "0",
-         "pname" : "Cousin",
+         "pname" : "Cousin Joe",
          "name" : "cousin",
          "description" : "Cousin Joe has a very shifty look in his eye as he listens to John.",
          "strength" : "150"
@@ -670,7 +676,7 @@
          "armor" : "0",
          "pname" : "Vet",
          "name" : "vet",
-         "description" : "Vet, the veteran, is here mumbling \"Kill! Kill! Kill!\".",
+         "description" : "Vet, the veteran, is here mumbling 'Kill! Kill! Kill!'",
          "strength" : "500"
       },
       "kitty@cottage" : {
@@ -706,7 +712,7 @@
          "armor" : "0",
          "pname" : "Prowler",
          "name" : "prowler",
-         "description" : "Yikes!!!  A prowler is here trying to steal the car.",
+         "description" : "Yikes!!!  A prowler is here trying to steal the buggy.",
          "strength" : "300"
       },
       "brother@cottage" : {
@@ -715,7 +721,7 @@
          "speed" : "0",
          "aggression" : "99",
          "armor" : "0",
-         "pname" : "Brother",
+         "pname" : "Brother John",
          "name" : "brother",
          "description" : "Brother John is here with his cousin plotting to kill the dog.",
          "strength" : "150"
@@ -756,7 +762,7 @@
          ],
          "strength" : "150",
          "speed" : "5",
-         "pname" : "Sister",
+         "pname" : "Sister Kate",
          "aggression" : "90"
       },
       "ramses@cottage" : {

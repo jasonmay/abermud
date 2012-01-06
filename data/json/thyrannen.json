@@ -25,7 +25,7 @@
          "weight" : "7",
          "altname" : "Ore",
          "name" : "Iron",
-         "examine" : "This is a large piece of Iron ore, in this form, it looks quite useless, but in the hands of others, could be magical!",
+         "examine" : "\nThis is a large piece of Iron ore, in this form, it looks quite useless, but in\nthe hands of others, could be magical!",
          "bvalue" : "150",
          "desc[0]" : "A large piece of red crumbly stone is here.",
          "size" : "7"
@@ -58,10 +58,10 @@
             "Armor"
          ],
          "name" : "Hood",
-         "examine" : "This power cloak does more than protect one from the suns bright rays, \nit is also magically enhanced somehow, making it a valuble peice of armor.",
+         "examine" : "\nThis power cloak does more than protect one from the suns bright rays, \nit is also magically enhanced somehow, making it a valuble peice of armor.",
          "size" : "5",
          "weight" : "5",
-         "bvalue" : "1000",
+         "bvalue" : "500",
          "aflags" : [
             "Head",
             "Face"
@@ -97,7 +97,7 @@
          "size" : "0",
          "weight" : "0",
          "maxstate" : "1",
-         "bvalue" : "1000",
+         "bvalue" : "500",
          "desc[0]" : "There is a large cauldron bubbling with a green liquid here."
       },
       "charm@thyrannen" : {
@@ -109,14 +109,25 @@
             "Lit"
          ],
          "name" : "Charm",
-         "examine" : "this is a silvery charm, with powerful magical runes of warding etched into it.  The charm glows a bright magical light, filling you with a sen\n protection...But Protection from  what?",
+         "examine" : "\nThis is a silvery charm, with powerful magical runes of warding etched into \nit.  The charm glows a bright magical light, filling you with a sense of\nprotection...but protection from what?",
          "size" : "3",
          "weight" : "3",
-         "bvalue" : "1250",
+         "bvalue" : "1000",
          "aflags" : [
             "Neck"
          ],
          "desc[0]" : "A wonderful Charm neclace is here, emanating magic."
+      },
+      "volume@thyrannen" : {
+         "location" : "IN_ROOM:thyrannen42",
+         "oflags" : [
+            "Noget"
+         ],
+         "pname" : "Volume_XVII",
+         "name" : "volume",
+         "examine" : "\nVtouch is a short form of vampiric touch.  The spell is a special\nattack spell which drains 10 strength from the victim and increases\nyour strength by an equal amount.  It requires 6 mana, and\nbecomes certain for knowledge 16.",
+         "desc[0]" : "&+YVolume XVII&N of the &+WBook of Knowledge&N lies here.",
+         "size" : "17"
       },
       "spade@thyrannen" : {
          "location" : "IN_ROOM:thyrannen10",
@@ -124,7 +135,7 @@
          "name" : "spade",
          "examine" : "This is a small spade, it looks perfect for growing flowers.",
          "bvalue" : "100",
-         "desc[0]" : "A collapsable spade is suck in the ground here.",
+         "desc[0]" : "A collapsable spade is stuck in the ground here.",
          "size" : "10"
       },
       "axe@thyrannen" : {
@@ -137,7 +148,7 @@
          "name" : "Axe",
          "size" : "6",
          "weight" : "6",
-         "bvalue" : "1000",
+         "bvalue" : "500",
          "desc[0]" : "A very well made ancient dwarven axe is here."
       },
       "soil@thyrannen" : {
@@ -155,7 +166,7 @@
             "NoGet"
          ],
          "name" : "sign",
-         "examine" : "This zone is brought to you by Landshark, If you like it mail me, I would\nlike to hear some feedback. I like a good story, and tried to make this zone\nvery quest/puzzle oriented as well as very hard mobile wise.  This zone is\ngonna be pretty tough, so I suggest you come in with a friend, or with alot\nof good equipment. Have fun!",
+         "examine" : "\nThis zone is brought to you by Landshark, If you like it mail me, I would\nlike to hear some feedback. I like a good story, and tried to make this zone\nvery quest/puzzle oriented as well as very hard mobile wise.  This zone is\ngonna be pretty tough, so I suggest you come in with a friend, or with alot\nof good equipment. Have fun!",
          "bvalue" : "0",
          "desc[0]" : "There is a large flashy sign here, maybe you should read it.",
          "size" : "0"
@@ -172,7 +183,7 @@
          "zone" : "thyrannen",
          "title" : "Dwarven mine",
          "id" : "thyrannen64",
-         "description" : "\nYou have reached a dead-end. the only exit is back to the west. This is a\nlarge room, the result of heavy mining in the past few years, there are\npiles of rocks in several places around the room, as well as a birdcage\nlocated in the center of the room.  The bird looks as if it has been dead\nfor some time, making you wonder about the quality of the air in this\ncavernous room.\n",
+         "description" : "\nYou have reached a dead-end. The only exit is back to the west. This is a\nlarge room, the result of heavy mining in the past few years, there are\npiles of rocks in several places around the room, as well as a birdcage\nlocated in the center of the room.  The bird looks as if it has been dead\nfor some time, making you wonder about the quality of the air in this\ncavernous room.\n",
          "altitude" : null
       },
       "thyrannen6@thyrannen" : {
@@ -200,7 +211,7 @@
          "zone" : "thyrannen",
          "title" : "Barren road to the mesa",
          "id" : "thyrannen46",
-         "description" : "\nThe base of the mesa is just ahead, you can see a distorted gate swinging back\nand forth in the breeze. As the gate swings is makes a load, high pitched\nwailing sound, almost as if to scream for the figure in the mesa...\n",
+         "description" : "\nThe base of the mesa is just ahead, you can see a distorted gate swinging back\nand forth in the breeze. As the gate swings it makes a load, high pitched\nwailing sound, almost as if to scream for the figure in the mesa...\n",
          "altitude" : "800"
       },
       "thyrannen48@thyrannen" : {
@@ -241,7 +252,7 @@
          "zone" : "thyrannen",
          "title" : "Redwood Forest",
          "id" : "thyrannen19",
-         "description" : "\nYou are traveling in a north-south path in the forest, the trees, usally alive\nand almost human, are now still and silent, watching.\n",
+         "description" : "\nYou are traveling in a north-south path in the forest. The trees, usually alive\nand almost human, are now still and silent, watching.\n",
          "altitude" : "800"
       },
       "thyrannen54@thyrannen" : {
@@ -271,7 +282,7 @@
          "zone" : "thyrannen",
          "title" : "Crossways",
          "id" : "thyrannen22",
-         "description" : "\n>From here there is a giant mesa towing high into the sky, the mesa looks\nperverted, and twisted, with evil, looking closely at it, you can make out a\ndisfigured face, seemingly frozen in a silent agonizing scream.\n",
+         "description" : "\nFrom here there is a giant mesa towerng high into the sky. The mesa looks\nperverted, and twisted with evil. Looking closely at it, you can make out a\ndisfigured face, seemingly frozen in a silent agonizing scream.\n",
          "altitude" : "800"
       },
       "thyrannen60@thyrannen" : {
@@ -299,7 +310,7 @@
          "zone" : "thyrannen",
          "title" : "Marsh",
          "id" : "thyrannen32",
-         "description" : "\nHoping that you have made at least a little bit of progress througth this\nthick marsh, you try to remember just how long you have been making your way\nthrough it's mucky waters, unsure, you dismiss the question and push on.\n",
+         "description" : "\nHoping that you have made at least a little bit of progress through this\nthick marsh, you try to remember just how long you have been making your way\nthrough it's mucky waters. Unsure, you dismiss the question and push on.\n",
          "altitude" : "800"
       },
       "thyrannen41@thyrannen" : {
@@ -313,7 +324,7 @@
          "zone" : "thyrannen",
          "title" : "Cave",
          "id" : "thyrannen41",
-         "description" : "\nThis is a dark damp cave, the amonia smell is still knoticeable, but much less\nstrong than in the entrance, there are two exits, one west, back to the start\nof the cave, and one, to the south deeper into the cave.\n",
+         "description" : "\nThis is a dark damp cave, the ammonia smell is still noticeable, but much less\nstrong than in the entrance. There are two exits, one west, back to the start\nof the cave, and one, to the south deeper into the cave.\n",
          "altitude" : null
       },
       "thyrannen16@thyrannen" : {
@@ -340,7 +351,7 @@
          "zone" : "thyrannen",
          "title" : "Dwarven mine",
          "id" : "thyrannen63",
-         "description" : "\nThe Mine tunnel turns east from here, looking et the room, moisture drips down\nfrom above, and you can also see a streak of ore leading east, you figure the\nminer, whoever he may be, is following this vein of ore.\n",
+         "description" : "\nThe mine tunnel turns east from here, looking et the room, moisture drips down\nfrom above, and you can also see a streak of ore leading east. You figure the\nminer, whoever he may be, is following this vein of ore.\n",
          "altitude" : null
       },
       "thyrannen49@thyrannen" : {
@@ -367,7 +378,7 @@
          "zone" : "thyrannen",
          "title" : "Outside the Marsh",
          "id" : "thyrannen23",
-         "description" : "\nYou are traveling into what is slowly becoming a thick marsh, flys buzz around\nyour head, clouding you vision.  Filled with hopes of great adventure, you\npush onward.\n",
+         "description" : "\nYou are traveling into what is slowly becoming a thick marsh. Flys buzz around\nyour head, clouding you vision.  Filled with hopes of great adventure, you\npush onward.\n",
          "altitude" : "800"
       },
       "thyrannen21@thyrannen" : {
@@ -378,7 +389,7 @@
          "zone" : "thyrannen",
          "title" : "Inside the battered cottage",
          "id" : "thyrannen21",
-         "description" : "\nYou are inside a dimly lit cottage, there is a fire in the fireplace, and\npots and pans line the walls, though battered, and old, the cottage still\nhas a clean feeling of being someones 'home.'\n",
+         "description" : "\nYou are inside a dimly lit cottage. There is a fire in the fireplace, and\npots and pans line the walls. Though battered and old, the cottage still\nhas a clean feeling of being someones 'home.'\n",
          "altitude" : null
       },
       "thyrannen11@thyrannen" : {
@@ -392,7 +403,7 @@
          "zone" : "thyrannen",
          "title" : "Redwood Forest",
          "id" : "thyrannen11",
-         "description" : "\nYou have reached the center of this strrange forest.  The trees still loom\nhigh above you, and seem to almost be aware of your presence.\n",
+         "description" : "\nYou have reached the center of this strange forest.  The trees still loom\nhigh above you, and seem to almost be aware of your presence.\n",
          "altitude" : "800"
       },
       "thyrannen1@thyrannen" : {
@@ -421,7 +432,7 @@
          "zone" : "thyrannen",
          "title" : "Marsh",
          "id" : "thyrannen24",
-         "description" : "\nThis is the beginning of a thick gloopy marsh, traveling becomes trudging\nin this thick marsh, you think to yourself if this is the beginning, what\nis the end like?\n",
+         "description" : "\nThis is the beginning of a thick gloopy marsh, where traveling becomes \ntrudging.  In this thick marsh, you think to yourself if this is the\nbeginning, what is the end like?\n",
          "altitude" : "800"
       },
       "thyrannen51@thyrannen" : {
@@ -464,7 +475,7 @@
          "zone" : "thyrannen",
          "title" : "The Marsh",
          "id" : "thyrannen34",
-         "description" : "\n   As you clumsily move into this area, you breath a huge sigh of relief,\nthere about 20 feet in front of you, is the beautiful sight of land!\nGlorious trees, and small bushes create a circle around a large cauldron.\nRelieved that you will at least have a chance to rest, you push on...\n",
+         "description" : "\n   As you clumsily move into this area, you breathe a huge sigh of relief.\nThere about 20 feet in front of you, is the beautiful sight of land!\nGlorious trees, and small bushes create a circle around a large cauldron.\nRelieved that you will at least have a chance to rest, you push on...\n",
          "altitude" : "800"
       },
       "thyrannen10@thyrannen" : {
@@ -491,7 +502,7 @@
          "zone" : "thyrannen",
          "title" : "Marsh",
          "id" : "thyrannen25",
-         "description" : "\nThis thick marsh is really getting on your nerves, your feet are cold and wet,\nand you legs are covered in thick slimy mud. there are exits to the south, and\neast.\n",
+         "description" : "\nThis thick marsh is really getting on your nerves. Your feet are cold and wet,\nand you legs are covered in thick slimy mud. There are exits to the south, and\neast.\n",
          "altitude" : "800"
       },
       "thyrannen27@thyrannen" : {
@@ -505,7 +516,7 @@
          "zone" : "thyrannen",
          "title" : "Marsh",
          "id" : "thyrannen27",
-         "description" : "\nThe marsh is sapping you energy and your will, never have you traveled in such\na terrible, desolate place, more and more, you thoughts turn to home...\n",
+         "description" : "\nThe marsh is sapping you energy and your will, never have you traveled in such\na terrible, desolate place. More and more, your thoughts turn to home...\n",
          "altitude" : "800"
       },
       "thyrannen37@thyrannen" : {
@@ -519,7 +530,7 @@
          "zone" : "thyrannen",
          "title" : "Marsh",
          "id" : "thyrannen37",
-         "description" : "\nThe marsh waters here are as unforgiving as the rest of the marsh, you are\nTired and weary, and the marsh seems to be pulling you deeper into its waters.\nTo the north is what looks to be a cave entrance.\n",
+         "description" : "\nThe marsh waters here are as unforgiving as the rest of the marsh. You are\ntired and weary, and the marsh seems to be pulling you deeper into its waters.\nTo the north is what looks to be a cave entrance.\n",
          "altitude" : "800"
       },
       "thyrannen58@thyrannen" : {
@@ -546,7 +557,7 @@
          "zone" : "thyrannen",
          "title" : "Barren road to the mesa",
          "id" : "thyrannen43",
-         "description" : "\nYou are on a barren nodescript road, that leads right up to the base of the\nterrifying mesa ahead, who know's what challenges lie ahead?  Who know's what\nyou face?  You could be marching proudly to your death, or if luck, and wisdom\nare on your side, you could be proudly marching on...to victory, good luck...\n",
+         "description" : "\nYou are on a barren nodescript road, that leads right up to the base of the\nterrifying mesa ahead. Who knows what challenges lie ahead?  Who knows what\nyou face?  You could be marching proudly to your death, or if luck, and wisdom\nare on your side, you could be proudly marching on...to victory, good luck...\n",
          "altitude" : "800"
       },
       "thyrannen59@thyrannen" : {
@@ -560,7 +571,7 @@
          "zone" : "thyrannen",
          "title" : "Marsh",
          "id" : "thyrannen59",
-         "description" : "\nThis marsh, like the forest seems almost alive and aware of your presence,\nyou only wish it would help you along, as the murky waters make you travel\nvery slow, and rigorous work.\n",
+         "description" : "\nThis marsh, like the forest seems almost alive and aware of your presence.\nYou only wish it would help you along, as the murky waters make you travel\nvery slow, and rigorous work.\n",
          "altitude" : "800"
       },
       "thyrannen12@thyrannen" : {
@@ -617,7 +628,7 @@
          "zone" : "thyrannen",
          "title" : "Cave",
          "id" : "thyrannen39",
-         "description" : "\nDescending the small hole the smell of amonia overtakes you lungs, gasping\nfor breath, and folding you stomach at bay, you lower you head and push on.\n",
+         "description" : "\nDescending the small hole the smell of ammonia overtakes your lungs. Gasping\nfor breath, and folding you stomach at bay, you lower you head and push on.\n",
          "altitude" : null
       },
       "thyrannen4@thyrannen" : {
@@ -659,7 +670,7 @@
          "zone" : "thyrannen",
          "title" : "Cave",
          "id" : "thyrannen42",
-         "description" : "\nYou have reached another dead end in the cave, the air in here is very clean,\nand pleasurable to breathe, you consider resting, and wiping the slime off\nyour body. Readying yourself to face the challenges ahead, you begin anew.\n",
+         "description" : "\nYou have reached another dead end in the cave. The air in here is very clean,\nand pleasurable to breathe. You consider resting, and wiping the slime off\nyour body. Readying yourself to face the challenges ahead, you begin anew.\n",
          "altitude" : null
       },
       "thyrannen9@thyrannen" : {
@@ -674,7 +685,7 @@
          "zone" : "thyrannen",
          "title" : "Redwood Forest",
          "id" : "thyrannen9",
-         "description" : "\n   You seem to be heading towards a dead end in the forest, to to south the\ntrees begin to grow to thick to pass.  There is also a passage to the east\nthat could make for easier travel.\n",
+         "description" : "\n   You seem to be heading towards a dead end in the forest, to south the\ntrees begin to grow to thick to pass.  There is also a passage to the east\nthat could make for easier travel.\n",
          "altitude" : "800"
       },
       "thyrannen14@thyrannen" : {
@@ -688,7 +699,7 @@
          "zone" : "thyrannen",
          "title" : "Redwood Forest",
          "id" : "thyrannen14",
-         "description" : "\nThe Trees seem to take a lessened interest in you here, yet you still feel as\nif some strange presence is watching you...\nyou can go north or west from here\n",
+         "description" : "\nThe Trees seem to take a lessened interest in you here, yet you still feel as\nif some strange presence is watching you.  You can go north or west from here.\n",
          "altitude" : "800"
       },
       "thyrannen5@thyrannen" : {
@@ -717,7 +728,7 @@
          "zone" : "thyrannen",
          "title" : "Marsh",
          "id" : "thyrannen33",
-         "description" : "\nThe windy, murky waters of the marsh have made you disoriented, you don't know\nwhere you are, but you don't care at this point, exhaustion is taking over,\nmaking you see creatures that aren't there, you continue on, somehow, each step\nagonizing pain.\n",
+         "description" : "\nThe windy, murky waters of the marsh have made you disoriented. You don't know\nwhere you are, but you don't care at this point. Exhaustion is taking over,\nmaking you see creatures that aren't there, yet you continue on, somehow, each \nstep agonizing pain.\n",
          "altitude" : "800"
       },
       "thyrannen15@thyrannen" : {
@@ -731,7 +742,7 @@
          "zone" : "thyrannen",
          "title" : "Redwood Forest",
          "id" : "thyrannen15",
-         "description" : "\nYou are in the northern part of this vast forest, you look over your shoulder\noften sensceing that somone is watching you, no one is there. It's just you,\nand the trees\n",
+         "description" : "\nYou are in the northern part of this vast forest, you look over your shoulder\noften sensing that someone is watching you, no one is there. It's just you,\nand the trees.\n",
          "altitude" : "800"
       },
       "thyrannen7@thyrannen" : {
@@ -820,7 +831,7 @@
          "zone" : "thyrannen",
          "title" : "Marsh",
          "id" : "thyrannen28",
-         "description" : "\nThe marsh here is just as bad as the rest of surrounding area, the awfull smell\nof raw sewage permeates the air, the waters are thick and hard to move through,\nand your body is fighting you at every step, you know you must find dry land\nsoon, or will collapse of utter exhaustion\n",
+         "description" : "\nThe marsh here is just as bad as the rest of surrounding area. The awful smell\nof raw sewage permeates the air, the waters are thick and hard to move through,\nand your body is fighting you at every step. You know you must find dry land\nsoon, or you will collapse of utter exhaustion.\n",
          "altitude" : "800"
       },
       "thyrannen20@thyrannen" : {
@@ -834,7 +845,7 @@
          "zone" : "thyrannen",
          "title" : "Redwood Forest",
          "id" : "thyrannen20",
-         "description" : "\nThis is the South-western corner of the forest, ahead to the west you can see\na small hut, and to the north is the large expanse of the forest.\nThere is a large garden here, filled with many different vegetables, all\nrather large. The garden is larger than any other you have seen in your\nlife, whoever has taken the time to sow this wonderful garden must be\nan expert gardener.\n",
+         "description" : "\nThis is the south-western corner of the forest, ahead to the west you can see\na small hut, and to the north is the large expanse of the forest.\nThere is a large garden here, filled with many different vegetables, all\nrather large. The garden is larger than any other you have seen in your\nlife, whoever has taken the time to sow this wonderful garden must be\nan expert gardener.\n",
          "altitude" : "800"
       },
       "thyrannen45@thyrannen" : {
@@ -863,7 +874,7 @@
          "zone" : "thyrannen",
          "title" : "Cave",
          "id" : "thyrannen38",
-         "description" : "\nYou have entered a dark, vast, cavernous cave, a putrid amonia like smell\nemminates from an exit leaving downward. maybe the marsh, which is still to\nthe south, was safer...\n",
+         "description" : "\nYou have entered a dark, vast, cavernous cave, a putrid ammonia like smell\nemminates from an exit leaving downward. Maybe the marsh, which is still to\nthe south, was safer...\n",
          "altitude" : null
       },
       "thyrannen62@thyrannen" : {
@@ -992,7 +1003,7 @@
          "zone" : "thyrannen",
          "title" : "Redwood Forest",
          "id" : "thyrannen18",
-         "description" : "\nHere the forest seems to gasp in anticipation, and you think you can sence it\nlean forward, urging you on, but urging you toward what?\n",
+         "description" : "\nHere the forest seems to gasp in anticipation, and you think you can sense it\nlean forward, urging you on, but urging you toward what?\n",
          "altitude" : "800"
       },
       "thyrannen61@thyrannen" : {
@@ -1006,7 +1017,7 @@
          "zone" : "thyrannen",
          "title" : "Dwarven mine",
          "id" : "thyrannen61",
-         "description" : "\nYou stand in what seems to be the entry way to a vast system of mine tunnels.\nThe air is cool and damp. you squint to make up for the lack of light\nand can make out scars from where the walls have been blasted away.\n",
+         "description" : "\nYou stand in what seems to be the entry way to a vast system of mine tunnels.\nThe air is cool and damp. You squint to make up for the lack of light\nand can make out scars from where the walls have been blasted away.\n",
          "altitude" : null
       },
       "thyrannen47@thyrannen" : {
@@ -1020,7 +1031,7 @@
          "zone" : "thyrannen",
          "title" : "The Gate",
          "id" : "thyrannen47",
-         "description" : "\nYou have reached a large iron gate leading to the heart of the mesa.  The\ngate is open, as no one comes this way very often and those who do wish they\nhadn't.  Looking inside the mesa, you see a still blackness that seems very\nmuch alive.\n",
+         "description" : "\nYou have reached a large iron gate leading to the heart of the mesa.  The\ngate is open, yet no one goes this way very often and those who do wish they\nhadn't.  Looking inside the mesa, you see a still blackness that seems very\nmuch alive.\n",
          "altitude" : "800"
       },
       "thyrannen52@thyrannen" : {
@@ -1049,7 +1060,7 @@
          "zone" : "thyrannen",
          "title" : "Marsh",
          "id" : "thyrannen36",
-         "description" : "\nYou still trudging in this thick, slimy, marsh.  Bubbles of of grotesque color\nrise to the surface and splatter your face with goop, making you question just\nwhy you push farther.\n",
+         "description" : "\nYou still trudging in this thick, slimy, marsh.  Bubbles of grotesque color\nrise to the surface and splatter your face with goop, making you question just\nwhy you push farther.\n",
          "altitude" : "800"
       },
       "thyrannen40@thyrannen" : {
@@ -1068,24 +1079,17 @@
    },
    "mob" : {
       "lazz@thyrannen" : {
-         "damage" : "3",
+         "damage" : "20",
          "location" : "thyrannen41",
          "speed" : "0",
-         "aggression" : "75",
-         "armor" : "0",
+         "aggression" : "0",
+         "armor" : "10",
          "name" : "Lazz",
-         "description" : "Lazz the huge mutant vampire bat swoops down from the ceiling, flying straight\nfor your neck!",
-         "strength" : "60"
-      },
-      "gaaz@thyrannen" : {
-         "damage" : "5",
-         "location" : "thyrannen40",
-         "speed" : "0",
-         "aggression" : "5",
-         "armor" : "0",
-         "name" : "Gaaz",
-         "description" : "Gazz the Mutant Vampire bat, Swoops down from the ceiling, begging for\nforgiveness",
-         "strength" : "60"
+         "description" : "\nLazz the huge mutant vampire bat swoops down from the ceiling, flying \naround you at a distance.",
+         "strength" : "500",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "miner@thyrannen" : {
          "damage" : "5",
@@ -1095,7 +1099,7 @@
          "armor" : "0",
          "pname" : "Hairy",
          "name" : "miner",
-         "description" : "Hairy is here, mining his ages old mine, with of all things,his age old axe.",
+         "description" : "Hairy is here, mining his ages old mine, with of all things, his age old axe.",
          "strength" : "200"
       },
       "fred@thyrannen" : {
@@ -1115,7 +1119,7 @@
          "aggression" : "100",
          "armor" : "0",
          "name" : "Bill",
-         "description" : "Bill the undead fisherman, summoned at Draknor's command stands here, wishing\nhe was fishing.",
+         "description" : "\nBill the undead fisherman, summoned at Draknor's command stands here, wishing\nhe was fishing.",
          "strength" : "80"
       },
       "adam@thyrannen" : {
@@ -1131,12 +1135,18 @@
       "puddle@thyrannen" : {
          "damage" : "8",
          "location" : "thyrannen46",
-         "speed" : "0",
-         "aggression" : "100",
          "armor" : "0",
          "name" : "Puddle",
-         "description" : "At your feet lies a puddle of black goo, another failed attempt by Draknor at\ncreating life.",
-         "strength" : "90"
+         "description" : "\nAt your feet lies a puddle of black goo, another failed attempt by Draknor at\ncreating life.",
+         "sflags" : [
+            "NoBody"
+         ],
+         "strength" : "90",
+         "speed" : "0",
+         "aggression" : "100",
+         "mflags" : [
+            "NoCorpse"
+         ]
       },
       "ghouly@thyrannen" : {
          "damage" : "8",
@@ -1145,7 +1155,7 @@
          "aggression" : "100",
          "armor" : "0",
          "name" : "Ghouly",
-         "description" : "Ghouly the undead, summoned at Draknor's command stands here, hungering for\nyour heart.",
+         "description" : "\nGhouly the undead, summoned at Draknor's command stands here, hungering for\nyour heart.",
          "strength" : "60"
       },
       "bugbear@thyrannen" : {
@@ -1186,19 +1196,22 @@
          "armor" : "0",
          "pname" : "Alchemist",
          "name" : "Brother2",
-         "examine" : "As you look at this old man, he speaks only one sentence.  'Please tell me\nyou have brought me the components to make you the charm, Draknor even now\nspreads his evil deeper into the land!'",
+         "examine" : "\nAs you look at this old man, he speaks only one sentence.  'Please tell me\nyou have brought me the components to make you the charm, Draknor even now\nspreads his evil deeper into the land!'",
          "description" : "Standing near the cauldron, is an old alchemist, smiling.",
          "strength" : "60"
       },
       "razmataz@thyrannen" : {
          "damage" : "5",
          "location" : "thyrannen40",
-         "speed" : "0",
-         "aggression" : "75",
          "armor" : "0",
          "name" : "RazMataz",
          "description" : "RazMataz the Mutant Vampire bat is here, putting on a show.",
-         "strength" : "60"
+         "strength" : "60",
+         "speed" : "0",
+         "aggression" : "75",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "jason@thyrannen" : {
          "damage" : "4",
@@ -1213,12 +1226,16 @@
       "grog@thyrannen" : {
          "damage" : "10",
          "location" : "thyrannen5",
-         "speed" : "0",
-         "aggression" : "45",
          "armor" : "0",
          "name" : "Grog",
          "description" : "Grog the ugly Tree Giant stands here, glaring down at you.",
-         "strength" : "250"
+         "sflags" : [
+            "NoHead",
+            "NoLegs"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "45"
       },
       "callous@thyrannen" : {
          "damage" : "5",
@@ -1227,18 +1244,22 @@
          "aggression" : "100",
          "armor" : "0",
          "name" : "Callous",
-         "description" : "Callous the undead creature, summoned at Draknor's command stands here,\nthirsting your blood.",
+         "description" : "\nCallous the undead creature, summoned at Draknor's command stands here,\nthirsting your blood.",
          "strength" : "80"
       },
       "flog@thyrannen" : {
          "damage" : "10",
          "location" : "thyrannen13",
-         "speed" : "0",
-         "aggression" : "45",
          "armor" : "0",
          "name" : "Flog",
          "description" : "Flog the ugly Tree Giant stands here, looking at you, his breakfast.",
-         "strength" : "250"
+         "sflags" : [
+            "NoHead",
+            "NoLegs"
+         ],
+         "strength" : "250",
+         "speed" : "0",
+         "aggression" : "45"
       },
       "brother1@thyrannen" : {
          "damage" : "5",
@@ -1248,29 +1269,35 @@
          "armor" : "0",
          "pname" : "Haggardly",
          "name" : "Brother1",
-         "examine" : "This is a gentle old man in his late 60's, as you look at him he speaks.\n'A long time ago, I had two brothers.  I loved to grow plants and herbs, but\nmy other two brothers were more interested in the arcane.  One found long\nhours spent practicing alchemy brought out his passion, while the other,\nDraknor prefered much darker, more powerful magics.  My good brother and I\nhave kept Draknor from destroying this land.  But we grow old and tired, and\ncan no longer stand up to his powerful magics.  Will you help us defeat him?\nWe cannot journey with you, but if you bring me the means necessary to grow\nthe flower of life, and then take it along with a few small components to\nmy good brother at the end of the marsh, he will make you a charm that will\nsave you from Draknor's spell of death.  Please help us!'",
+         "examine" : "\nThis is a gentle old man in his late 60's, as you look at him he speaks.\n'A long time ago, I had two brothers.  I loved to grow plants and herbs, but\nmy other two brothers were more interested in the arcane.  One found long\nhours spent practicing alchemy brought out his passion, while the other,\nDraknor prefered much darker, more powerful magics.  My good brother and I\nhave kept Draknor from destroying this land.  But we grow old and tired, and\ncan no longer stand up to his powerful magics.  Will you help us defeat him?\nWe cannot journey with you, but if you bring me the means necessary to grow\nthe flower of life, and then take it along with a few small components to\nmy good brother at the end of the marsh, he will make you a charm that will\nsave you from Draknor's spell of death.  Please help us!'",
          "description" : "A Haggardly old man looks up at your entrance, and smiles",
          "strength" : "60"
       },
       "waaz@thyrannen" : {
          "damage" : "3",
          "location" : "thyrannen38",
-         "speed" : "0",
-         "aggression" : "75",
          "armor" : "0",
          "name" : "Waaz",
-         "description" : "Waaz the mutant vampire bat swoops down from the ceiling, flying straight\nfor your neck!",
-         "strength" : "40"
+         "description" : "\nWaaz the mutant vampire bat swoops down from the ceiling, flying straight\nfor your neck!",
+         "strength" : "40",
+         "speed" : "0",
+         "aggression" : "75",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "spaz@thyrannen" : {
          "damage" : "3",
          "location" : "thyrannen38",
-         "speed" : "0",
-         "aggression" : "75",
          "armor" : "0",
          "name" : "Spaz",
-         "description" : "Spaz the mutant vampire bat swoops down from the ceiling, flying straight\nfor your neck!",
-         "strength" : "40"
+         "description" : "\nSpaz the mutant vampire bat swoops down from the ceiling, flying straight\nfor your neck!",
+         "strength" : "40",
+         "speed" : "0",
+         "aggression" : "75",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "grimy@thyrannen" : {
          "damage" : "8",
@@ -1279,18 +1306,21 @@
          "aggression" : "100",
          "armor" : "0",
          "name" : "Grimy",
-         "description" : "Grimy the undead creature, summoned at Draknor's command stands here, licking\nhis chops.",
+         "description" : "\nGrimy the undead creature, summoned at Draknor's command stands here, licking\nhis chops.",
          "strength" : "90"
       },
       "craz@thyrannen" : {
          "damage" : "3",
          "location" : "thyrannen38",
-         "speed" : "0",
-         "aggression" : "75",
          "armor" : "0",
          "name" : "Craz",
-         "description" : "Craz the  mutant vampire bat swoops down from the ceiling, flying straight\nfor your neck!",
-         "strength" : "60"
+         "description" : "\nCraz the mutant vampire bat swoops down from the ceiling, flying straight\nfor your neck!",
+         "strength" : "60",
+         "speed" : "0",
+         "aggression" : "75",
+         "mflags" : [
+            "Flyer"
+         ]
       },
       "slart@thyrannen" : {
          "damage" : "8",
@@ -1299,7 +1329,7 @@
          "aggression" : "100",
          "armor" : "0",
          "name" : "Slart",
-         "description" : "Slart the undead creature, summoned at Draknor's command stands here, looking\nat you, confused.",
+         "description" : "\nSlart the undead creature, summoned at Draknor's command stands here, looking\nat you, confused.",
          "strength" : "50"
       },
       "daniel@thyrannen" : {
@@ -1309,23 +1339,22 @@
          "aggression" : "100",
          "armor" : "0",
          "name" : "Daniel",
-         "description" : "Daniel the undead creature, summoned at Draknor's command stands here, asking\nyou for a hit.",
+         "description" : "\nDaniel the undead creature, summoned at Draknor's command stands here, asking\nyou for a hit.",
          "strength" : "70"
       },
       "draknor@thyrannen" : {
          "eflags" : [
-            "Fireball",
-            "Blind"
+            "Blind",
+            "Fireball"
          ],
          "damage" : "8",
          "location" : "thyrannen58",
-         "armor" : "5",
-         "name" : "Draknor",
-         "description" : "The evil wizard Draknor slips into view, and asks you, 'And what brings you\nto visit me puny mortal?' without moving his lips.",
-         "strength" : "250",
          "speed" : "0",
          "aggression" : "10",
-         "mflags" : "{}"
+         "armor" : "5",
+         "name" : "Draknor",
+         "description" : "\nThe evil wizard Draknor slips into view, and asks you, 'And what brings you\nto visit me puny mortal?' without moving his lips.",
+         "strength" : "250"
       },
       "slimy@thyrannen" : {
          "damage" : "4",
@@ -1334,7 +1363,7 @@
          "aggression" : "100",
          "armor" : "0",
          "name" : "Slimy",
-         "description" : "One of Draknor's failed experiments, Slimy is here asking you to end the pain\nof life.",
+         "description" : "\nOne of Draknor's failed experiments, Slimy is here asking you to end the pain\nof life.",
          "strength" : "100"
       },
       "plato@thyrannen" : {
@@ -1344,7 +1373,7 @@
          "aggression" : "100",
          "armor" : "0",
          "name" : "Plato",
-         "description" : "Plato the philosophically undead creature, summoned at Draknor's command\nstands here, pondering the moral benefit of tearing you limb from limb.",
+         "description" : "\nPlato the philosophically undead creature, summoned at Draknor's command\nstands here, pondering the moral benefit of tearing you limb from limb.",
          "strength" : "50"
       },
       "ghastly@thyrannen" : {
@@ -1354,7 +1383,7 @@
          "aggression" : "100",
          "armor" : "0",
          "name" : "Ghastly",
-         "description" : "Ghastly the undead creature, summoned at Draknor's command stands here,\nthirsting your blood.",
+         "description" : "\nGhastly the undead creature, summoned at Draknor's command stands here,\nthirsting your blood.",
          "strength" : "80"
       },
       "conrad@thyrannen" : {
@@ -1370,12 +1399,28 @@
       "jazz@thyrannen" : {
          "damage" : "5",
          "location" : "thyrannen39",
-         "speed" : "0",
-         "aggression" : "75",
          "armor" : "0",
          "name" : "Jazz",
-         "description" : "Jazz the huge mutant vampire bat swoops down from the ceiling, flying straight\nfor your neck!",
-         "strength" : "65"
+         "description" : "\nJazz the huge mutant vampire bat swoops down from the ceiling, flying straight\nfor your neck!",
+         "strength" : "65",
+         "speed" : "0",
+         "aggression" : "75",
+         "mflags" : [
+            "Flyer"
+         ]
+      },
+      "gazz@thyrannen" : {
+         "damage" : "5",
+         "location" : "thyrannen40",
+         "armor" : "0",
+         "name" : "Gazz",
+         "description" : "\nGazz the Mutant Vampire bat, swoops down from the ceiling, begging for\nforgiveness.",
+         "strength" : "60",
+         "speed" : "0",
+         "aggression" : "5",
+         "mflags" : [
+            "Flyer"
+         ]
       }
    }
 }
