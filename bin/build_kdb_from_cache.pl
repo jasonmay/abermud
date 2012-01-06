@@ -3,7 +3,6 @@ use strict;
 use warnings;
 # PODNAME: build_kdb_from_cache.pl
 
-use Regexp::Grammars;
 use JSON;
 use File::Slurp;
 use File::Basename;
@@ -24,215 +23,31 @@ use AberMUD::Storage;
 
 use constant DEFAULT_START_LOC => 'church@start';
 
-my $parser = qr{
-#<logfile:debug.log>
-#        <debug:run>
-    (
-        <.ZoneDirective>?
-        <[ZoneData]>*
-        <Zone>?
-    )+
-
-    ############################################
-    ############################################
-    ############################################
-
-    <token: eol>
-        \n
-
-    <token: ws>
-        \s*
-
-    <rule: ZoneDirective>
-        %zone: <ZoneName=Word>
-
-    <rule: ZoneData>
-        %<zone_key=ZoneFields> : <zone_value=Word>
-
-    <token: ZoneFields>
-        rainfall | latitude
-
-    <rule: Zone>
-        (?: <Mobiles> | <Objects> | <Locations> )+
-
-    <rule: Mobiles>
-        %(?i:mobiles)
-        <[Mobile]>+
-
-    <rule: Objects>
-        %(?i:objects)
-        <[Object]>+
-
-    <rule: Locations>
-        %(?i:locations)
-        <[Location]>+
-
-    # MOBILES
-    #################################################
-    <rule: Mobile>
-        <[Statement]>+
-        [Ee]nd = <StmtValue>
-
-    <rule: Statement>
-    <key=Keyword> =? (?: <value=StmtValue> | <value=Flag> )
-
-    <token: Keyword>
-        (?![Ee]nd)<.Word>
-
-    <token: StmtValue>
-        <.Number> | <.FullLocID> | <.Word> | <Quoted>
-
-    <token: Flag>
-        \{<.ws>?<[FlagItem]>*<.ws>?\}
-
-    <token: FlagItem>
-        <Word> <.ws>?
-
-    <token: Word>
-        [\w\[\]]+
-
-    <token: Quoted>
-           <ApostropheString> | <QuoteString> | <CaretString>
-
-    <token: ApostropheString>
-        ' <Inside=ApostropheInside> '
-
-    <token: ApostropheInside>
-        (?: <.escape> | <.NonApostrophe> )*
-
-    <token: NonApostrophe>
-        [^']
-
-    <token: QuoteString>
-        " <Inside=QuoteInside> "
-
-    <token: QuoteInside>
-        (?: <.escape> | <.NonQuote> )*
-
-    <token: NonQuote>
-        [^"]
-
-    <token: CaretString>
-        \^ <Inside=CaretInside> \^
-
-    <token: CaretInside>
-        (?: <.escape> | <.NonCaret>)*
-
-    <token: NonCaret>
-        [^^]+
-
-    <token: escape>
-        \\ .
-
-    # OBJECTS
-    #################################################
-    <rule: Object>
-        <[ObjectStatement]>+
-        [Ee]nd = <StmtValue>
-
-    <rule: ObjectStatement>
-        <key=Keyword> =? (?: <value=ObjectStmtValue> | <value=Flag> )
-
-    <token: ObjectStmtValue>
-        <.Number> | <.ObjectLocation> | <.Word> | <Quoted>
-
-    <token: ObjectLocation>
-        (?: <.LocationOptions> : )? <.FullLocID>
-
-    <token: ObjectID>
-        <.Word> (?: @ <.Word> )?
-
-    <token: LocationOptions>
-        IN_ROOM | CARRIED_BY | WIELDED_BY | WORN_BY | BOTH_BY | IN_CONTAINER
-
-    # LOCATIONS
-    #################################################
-    <rule: Location>
-        <Map>
-        <AltitudeLine>?
-        <LocFlags>
-        <LocTitle> <LocDescription>
-
-    <rule: Map>
-        <LocID> <[Exit]>* ;
-
-    <rule: AltitudeLine>
-        (?i:Altitude) = <alt=Number>
-
-    <rule: LocFlags>
-        (?i:lflags?) <lflags=Flag>
-
-    <rule: Exit>
-        <ExitLetter> : (?: <exit_dest=Door> | <exit_dest=FullLocID> )
-
-    <token: ExitLetter>
-        (?i:[nsewud]|n[ew]|s[we])
-
-    <token: LocID>
-        <.Word>
-
-    <token: FullLocID>
-        (?: <.Word> @ )? <.LocID>
-
-    <token: Door>
-        \^ <.ObjectID>
-
-    <rule: LocTitle>
-        <.NonCaret>
-
-    <rule: LocDescription>
-        <CaretString>
-
-    <token: Number>
-        [-\d]+
-
-}xs;
-
-no Regexp::Grammars;
-
 ###########################################
 ###########################################
 ###########################################
-
-my @zone_files;
-
-@zone_files = @ARGV
-    or @zone_files = get_all_zone_files();
 
 my $json = JSON->new->pretty or die $!;
 my (%expanded, %info);
-foreach my $file (@zone_files) {
+foreach my $file (<data/json/*.json>) {
     my $contents = read_file($file);
     print STDERR "$file... ";
-    $contents =~ s{/\* .*? \*/}{}gmsx;
 
-    (my $zone_name = lc $file) =~ s{zones/(.+?)\.zone}{$1}s or die "invalid zone";
+    (my $zone_name = lc $file) =~ s{data/json/(.+?)\.json}{$1}s or die "invalid zone";
     my $zone_info;
 
-    print STDERR "parsing... ";
+    print STDERR "decoding... ";
+    my $json_string = read_file "data/json/$zone_name.json";
+    $zone_info = $json->decode($json_string);
 
-    if ( -e "data/json/$zone_name.json") {
-        my $json_string = read_file "data/json/$zone_name.json";
-        $zone_info = $json->decode($json_string);
-
-        # since we don't accumulate info this way, we must do it manually
-        for (qw/mob obj loc/) {
-            if ($info{$_}) {
-                %{$info{$_}} = (%{$info{$_}}, %{$zone_info->{$_}});
-            }
-            else {
-                $info{$_} = $zone_info->{$_};
-            }
+    # since we don't accumulate info this way, we must do it manually
+    for (qw/mob obj loc/) {
+        if ($info{$_}) {
+            %{$info{$_}} = (%{$info{$_}}, %{$zone_info->{$_}});
         }
-
-    }
-    elsif ($contents =~ $parser) {
-        my %results = %/;
-
-        $zone_info = construct_info_from_parsed(\%info, \%results, $zone_name);
-
-        print STDERR "caching... ";
-        write_file("data/json/$zone_name.json", $json->encode($zone_info));
+        else {
+            $info{$_} = $zone_info->{$_};
+        }
     }
 
     print STDERR "expanding... ";
@@ -251,13 +66,6 @@ store_zone_data(\%expanded);
 ###########################################
 ###########################################
 ###########################################
-
-sub get_all_zone_files {
-    opendir(my $dh, 'zones');
-    my @dirs = map { "zones/$_" } grep { substr($_,-5) eq '.zone' and -f "zones/$_" } readdir($dh);
-    closedir($dh);
-    return @dirs;
-}
 
 sub write_pretty_json {
     my $file = shift;
