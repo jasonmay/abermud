@@ -25,7 +25,7 @@ use AberMUD::Storage;
 use constant DEFAULT_START_LOC => 'church@start';
 
 my $parser = qr{
-    <logfile:debug.log>
+#<logfile:debug.log>
 #        <debug:run>
     (
         <.ZoneDirective>?
