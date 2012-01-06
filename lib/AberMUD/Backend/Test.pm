@@ -44,8 +44,8 @@ sub new_player {
     my $universe = $self->storage->lookup('config')->universe;
     my $game_state = AberMUD::Input::State::Game->new(
         universe          => $universe,
-        command_composite => $command_composite,
-        special           => $special,
+        command_composite => $params{command_composite} || $command_composite,
+        special           => $params{special} || $special,
     );
 
     my $conn = $self->new_connection(

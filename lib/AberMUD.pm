@@ -2,6 +2,8 @@ package AberMUD;
 use Moose;
 use Bread::Board::Declare;
 
+use AberMUD::Special;
+
 our $VERSION = '0.01';
 
 has backend_class => (
@@ -63,6 +65,11 @@ has command_composite => (
 has special => (
     is        => 'ro',
     isa       => 'AberMUD::Special',
+    block     => sub {
+        my $special = AberMUD::Special->new;
+        $special->load_plugins;
+        return $special;
+    },
     lifecycle => 'Singleton',
 );
 

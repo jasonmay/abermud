@@ -36,7 +36,7 @@ sub call_hooks {
     return ($final_interrupt, @results);
 }
 
-sub BUILD {
+sub load_plugins {
     my $self = shift;
 
     my $wself = $self; weaken $wself;
