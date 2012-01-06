@@ -728,6 +728,7 @@ sub link_object_locations {
 
         my ($loctype, $odest) = split /:/, $full_oloc;
 
+        $odest ||= '';
         $odest =~ /@/ or $odest .= '@' . $obj->zone->name;
 
         if ($loctype eq 'IN_ROOM') {
