@@ -1,5 +1,203 @@
 {
-   "obj" : {},
-   "loc" : {},
+   "obj" : {
+      "white_flame@lost" : {
+         "location" : "IN_ROOM:lost1",
+         "oflags" : [
+            "Lit",
+            "NoGet"
+         ],
+         "altname" : "white",
+         "pname" : "flame",
+         "name" : "white_flame",
+         "examine" : "The pure white flame hovers over the shimmering pit suspended in mid-air.\nIt burns nothing, and never goes out.\n"
+      },
+      "shimmering_pit@lost" : {
+         "location" : "IN_ROOM:lost1",
+         "oflags" : [
+            "NoGet"
+         ],
+         "altname" : "shimmering",
+         "pname" : "pit",
+         "name" : "shimmering_pit"
+      }
+   },
+   "loc" : {
+      "lost2@lost" : {
+         "exits" : {
+            "w" : "lost1",
+            "s" : "lost3"
+         },
+         "flags" : [
+            "Outdoors",
+            "Peaceful",
+            "NoMobiles"
+         ],
+         "zone" : "lost",
+         "title" : "Garden",
+         "id" : "lost2",
+         "description" : "\n  When time was young and people still worshiped at the wooden altar this\ngarden was planned and created for the enjoyment of their goddess. Painstaking\ncare was taken to create a garden of surpassing beauty. The people who created\nand tended the garden have long since passed from the world, but the garden\nand it's peaceful beauty remain.  The garden acts as an enterway into the\nholy grove, and many roads converge here.\n",
+         "altitude" : null
+      },
+      "lost9@lost" : {
+         "exits" : {
+            "s" : "lost8"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "lost",
+         "title" : "Northern Road",
+         "id" : "lost9",
+         "description" : "\n   This road which leads up to the Hold appears to be well used.  The Hold\nbefore you must still be inhabited.  The land around you looks blighted\nand destroyed, as if the ancient evil had swept through here too, leaving\nthe land in it's path barren.\n",
+         "altitude" : null
+      },
+      "lost4@lost" : {
+         "exits" : {
+            "w" : "lost5",
+            "e" : "lost3",
+            "n" : "lost7",
+            "s" : "lost10"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "lost",
+         "title" : "Long Path",
+         "id" : "lost4",
+         "description" : "\n   The path continues for a long way both east and west.  To the west lies\nthe land bridge which the peoples of this continent used in ancient times\nto escape the great evil which had invaded their homeland.  The great evil\neven their goddess could not defend them from.  It was the goddess who\ncreated the land bridge, and sealed the Evil deep within their holes, under\nthe village.\n",
+         "altitude" : null
+      },
+      "lost6@lost" : {
+         "exits" : {
+            "e" : "lost5",
+            "u" : "RBend@eastcoast"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "lost",
+         "title" : "Rocky Climb",
+         "id" : "lost6",
+         "description" : "\n   The path turns into a muddy but rocky ground here as the ocean meets the\ncliff.  The abandoned path climbs upward to the top of the cliff, or goes\neastward across the sound to a faintly seen land.\n",
+         "altitude" : null
+      },
+      "lost12@lost" : {
+         "exits" : {
+            "w" : "Mou1@mountain",
+            "d" : "lost11",
+            "s" : "lost11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "lost",
+         "title" : "Mountain Crest",
+         "id" : "lost12",
+         "description" : "\n   It is a difficult climb down in any direction, but some are actually\nnavigatable.  The trail continues down to the forest to the north, and\neast there is a rockfall covering a once cut pass, and west through some\nbush there is also a small path.\n",
+         "altitude" : null
+      },
+      "lost11@lost" : {
+         "exits" : {
+            "n" : "lost10",
+            "s" : "lost12"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "lost",
+         "title" : "Foothills",
+         "id" : "lost11",
+         "description" : "\n   These are the foothills for the great mountains beyond.  It is still humid\nenough that trees and grass grow thickly on the hills. The mountains rise\nstark from the hills, barren of life almost entirely.\n",
+         "altitude" : null
+      },
+      "lost10@lost" : {
+         "exits" : {
+            "n" : "lost4",
+            "s" : "lost11"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "lost",
+         "title" : "Dusty Trail",
+         "id" : "lost10",
+         "description" : "\n   As you travel further down this road, the climate gets hotter and dustier.\nYou notice a mountain chain in the distance ahead.\n",
+         "altitude" : null
+      },
+      "lost1@lost" : {
+         "exits" : {
+            "e" : "lost2"
+         },
+         "flags" : [
+            "Outdoors",
+            "Party",
+            "Peaceful",
+            "NoMobiles"
+         ],
+         "zone" : "lost",
+         "title" : "Sacred Grove",
+         "id" : "lost1",
+         "description" : "\n   A sense of peace marks this place.  A carven wooden structure which might\nhave at one time been an altar remains, untouched by time.  A pure white flame,\nflickering at your presense floats above the side of the altar.  Beneath the\nflame is a hole filled with shimmering energy.  Sunlight filters down through\ntree limbs, reflected by the enegry and shattered into a myriad of tiny\nrainbows.\n",
+         "altitude" : null
+      },
+      "lost8@lost" : {
+         "exits" : {
+            "n" : "lost9",
+            "s" : "lost7"
+         },
+         "flags" : [
+            "Outdoors",
+            "Cold"
+         ],
+         "zone" : "lost",
+         "title" : "Mountain Pass",
+         "id" : "lost8",
+         "description" : "\n   This passageway over  the northern mountains was kept by the dwarves\na long time ago, but the dwarves  have long since vanished.  Their skill\nat working with the rock remains as a  testimony to their prowess, as the\npass remains clear after  centuries of neglect.  To the north you can see\na building, small with the distance.\n",
+         "altitude" : null
+      },
+      "lost3@lost" : {
+         "exits" : {
+            "w" : "lost4",
+            "n" : "lost2"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "lost",
+         "title" : "Crossway",
+         "id" : "lost3",
+         "description" : "\n   Grassy trails which were once roads lead off to the east and west.  Rolling\nhills and giant trees show no mark of human inhabitants.  To the north lies\na lovely garden.\n",
+         "altitude" : null
+      },
+      "lost5@lost" : {
+         "exits" : {
+            "w" : "lost6",
+            "e" : "lost4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "lost",
+         "title" : "Land Bridge",
+         "id" : "lost5",
+         "description" : "\n   Ocean waters lap at either side of this narrow trail, yet somehow never\nover-run it.  The earth is still mucky though, for the ocean only recently\nreliquished it as dry land.  The people of the forgotten continent had fled\nacross this narrow strip of earth centuries of years before, and their\ngoddess had closed it behind them.  The time has come to vanquish the evil\nwhich waits, trapped within the great tree.\n",
+         "altitude" : null
+      },
+      "lost7@lost" : {
+         "exits" : {
+            "n" : "lost8",
+            "s" : "lost4"
+         },
+         "flags" : [
+            "Outdoors"
+         ],
+         "zone" : "lost",
+         "title" : "Ancient Road",
+         "id" : "lost7",
+         "description" : "\n   A long time ago there used to be a prosperous trade route between the\nnorthern kingdoms and the people who dwelt in the forest.  Now all  that\nremains is a barely distinguishably trail leading to the north.\n",
+         "altitude" : null
+      }
+   },
    "mob" : {}
 }
