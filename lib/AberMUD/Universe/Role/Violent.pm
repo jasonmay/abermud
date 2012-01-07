@@ -174,12 +174,11 @@ sub attack {
     }
 
     my $show_hook_results = sub {
-        if (@hook_results and $attacker->isa('AberMUD::Player')) {
-            $attacker->append_output_buffer(
+        if (@hook_results and $_[0]->isa('AberMUD::Player')) {
+            $_[0]->append_output_buffer(
                 join('', map { "$_\n" } @hook_results)
             );
         }
-
     };
 
     if (!$interrupt) {
@@ -190,7 +189,7 @@ sub attack {
 
         $victim->death(universe => $self) if $death;
 
-        $show_hook_results->();
+        $show_hook_results->($attacker);
 
         $self->send_to_location(
             $attacker, $final_messages{bystander},
@@ -217,14 +216,14 @@ sub attack {
                     victim   => $victim,
                 ],
             );
-            return \@hook_results;
+            $show_hook_results->($attacker);
         }
     }
     else {
         if ($death) {
             $victim->dead(0);
             $victim->current_strength(1);
-            $show_hook_results->();
+            $show_hook_results->($attacker);
         }
     }
 
