@@ -30,8 +30,8 @@ sub call_hooks {
         my ($interrupt, $result) = $hook->call($when, @$hook_args);
         if ($interrupt) {
             $final_interrupt = 1;
-            push @results, $result if defined $result;
         }
+        push @results, $result if defined $result;
     }
 
     return ($final_interrupt, @results);
