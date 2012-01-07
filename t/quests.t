@@ -9,12 +9,7 @@ use AberMUD::Test::Sugar qw(build_preset_game);
 use AberMUD::Special;
 use AberMUD::Special::Hook::Command;
 
-my ($c, $locations) = build_preset_game(
-    'two_wide',
-    container_args => {
-        special => AberMUD::Special->new, # override to prevent ->load_plugins
-    },
-);
+my ($c, $locations) = build_preset_game('two_wide');
 
 $c->special->hooks->{command} = [
     AberMUD::Special::Hook::Command->new(

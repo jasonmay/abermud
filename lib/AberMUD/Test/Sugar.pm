@@ -18,6 +18,7 @@ use AberMUD::Config;
 use AberMUD::Storage;
 use AberMUD::Zone;
 use AberMUD::Universe;
+use AberMUD::Special;
 
 use base 'Exporter';
 our @EXPORT_OK = qw(build_container build_game build_preset_game);
@@ -31,6 +32,7 @@ sub build_container {
         backend_class  => 'AberMUD::Backend::Test',
         backend_params => ['input_states', 'storage'],
         storage        => AberMUD::Storage->new(dsn => $dsn),
+        special        => AberMUD::Special->new,
         %args,
     );
 
