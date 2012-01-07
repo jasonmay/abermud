@@ -22,6 +22,12 @@ my ($c, $locations) = build_preset_game(
                             examine      => 'very metallic',
                             basestrength => 100,
                         },
+                        monster => {
+                            description  => 'A monster is standing here.',
+                            pname        => 'Monster',
+                            examine      => 'very monstrous',
+                            basestrength => 100,
+                        },
                     },
                 },
             },
@@ -45,6 +51,10 @@ $c->special->hooks->{death} = [
         victim => $mobiles{knight},
         before_block => sub { (1, "DEATH TRIGGER") },
     ),
+    AberMUD::Special::Hook::Death->new(
+        victim => $mobiles{monster},
+        after_block => sub { (0, "MONSTER TRIGGER") },
+    ),
 ];
 
 my ($one, $conn_one) = $b->new_player('playerone', special => $c->special);
@@ -65,5 +75,21 @@ my @messages = split("\n", $conn_one->get_output);
 is($messages[0], 'DEATH TRIGGER');
 
 ok(!$mobiles{knight}->dead);
+
+$u->attack(
+    attacker => $one,
+    victim   => $mobiles{monster},
+    damage   => $mobiles{monster}->current_strength,
+    bodypart => 'head',
+    message  => "%a deliver%s a mighty blow to %p %b!",
+);
+
+$conn_one->flush_output;
+@messages = grep { length($_) } split("\n", $conn_one->get_output);
+is($messages[0], "You deliver a mighty blow to Monster's &+Rhead&N!");
+is($messages[1], 'Monster falls to the ground.');
+is($messages[2], 'MONSTER TRIGGER');
+
+ok($mobiles{monster}->dead);
 
 done_testing();
