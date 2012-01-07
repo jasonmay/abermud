@@ -129,19 +129,24 @@ sub total_damage {
     return $damage;
 }
 
+sub reduce_strength {
+    my $self = shift;
+    my $amount = shift;
+
+    my $prev_strength = $self->current_strength;
+    my $new_strength  = $self->current_strength - $amount;
+    $self->current_strength($new_strength > 0 ? $new_strength : 0);
+
+    return $prev_strength;
+}
+
 sub take_damage {
     my $self           = shift;
     my $universe       = shift;
     my $damage         = shift;
     my $predeath_block = shift;
 
-    my $prev_strength = $self->current_strength;
-    my $new_strength  = $self->current_strength - $damage;
-
-    $new_strength = 0 if $new_strength < 0;
-
-    $self->current_strength($new_strength)
-        if $self->current_strength;
+    my $prev_strength = $self->reduce_strength($damage);
 
     if ($self->fighting and $self->fighting->isa('AberMUD::Player')) {
         my $xp = $prev_strength - $new_strength;
