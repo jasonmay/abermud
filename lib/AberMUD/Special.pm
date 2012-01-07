@@ -4,6 +4,7 @@ use Module::Pluggable search_path => ['AberMUD::Special::Plugin'];
 
 use AberMUD::Special::Hook;
 use AberMUD::Special::Hook::Command;
+use AberMUD::Special::Hook::Death;
 
 use Scalar::Util 'weaken';
 
@@ -38,6 +39,7 @@ sub call_hooks {
 
 sub load_plugins {
     my $self = shift;
+    my %args = @_;
 
     my $wself = $self; weaken $wself;
     my $command_block = sub {
@@ -53,6 +55,19 @@ sub load_plugins {
         };
     };
 
+    my $death_block = sub {
+        my $when = shift;
+        return sub {
+            my ($victim, $block) = @_;
+            my $hook = AberMUD::Special::Hook::Death->new(
+                victim          => $victim,
+                "${when}_block" => $block,
+            );
+            $self->hooks->{death} ||= [];
+            push @{$self->hooks->{death}}, $hook;
+        };
+    };
+
     foreach my $special_class (__PACKAGE__->plugins) {
         Class::MOP::load_class($special_class);
         no strict 'refs';
@@ -60,7 +75,12 @@ sub load_plugins {
             = $command_block->('before');
         local *{"${special_class}::after_command"}
             = $command_block->('after');
-        $special_class->setup();
+        local *{"${special_class}::before_death"}
+            = $death_block->('before');
+        local *{"${special_class}::after_death"}
+            = $death_block->('after');
+
+        $special_class->setup(%args);
     }
 }
 

@@ -150,9 +150,6 @@ sub attack {
         } qw(attacker victim bystander)
     );
 
-    $attacker->append_output_buffer($final_messages{attacker})
-        if $attacker->isa('AberMUD::Player');
-
     my $prev_strength = $victim->reduce_strength($damage);
 
     if ($attacker->isa('AberMUD::Player')) {
@@ -160,57 +157,75 @@ sub attack {
         $self->change_score($attacker, $xp);
     }
 
-    $victim->append_output_buffer($final_messages{victim})
-        if $victim->isa('AberMUD::Player');
-
-
+    my $interrupt = 0;
     my @hook_results = ();
+    my $death = ($victim->current_strength <= 0);
+
     if ($victim->current_strength <= 0) {
         my $special = $self->special;
 
-        (my $interrupt, @hook_results) = $special->call_hooks(
+        ($interrupt, @hook_results) = $special->call_hooks(
             type => 'death',
             when => 'before',
             arguments => [
                 victim  => $victim,
             ],
         );
-
-        $victim->death(universe => $self) unless $interrupt;
     }
 
-    if (@hook_results and $attacker->isa('AberMUD::Player')) {
-        $attacker->append_output_buffer(
-            join('', map { "$_\n" } @hook_results)
-        );
-    }
+    my $show_hook_results = sub {
+        if (@hook_results and $attacker->isa('AberMUD::Player')) {
+            $attacker->append_output_buffer(
+                join('', map { "$_\n" } @hook_results)
+            );
+        }
 
-    $self->send_to_location(
-        $attacker, $final_messages{bystander},
-        except => [$attacker, $victim],
-    );
+    };
 
-    # if this attack killed the victim
-    if ($victim->dead) {
+    if (!$interrupt) {
+        $attacker->append_output_buffer($final_messages{attacker})
+            if $attacker->isa('AberMUD::Player');
+        $victim->append_output_buffer($final_messages{victim})
+            if $victim->isa('AberMUD::Player');
+
+        $victim->death(universe => $self) if $death;
+
+        $show_hook_results->();
+
         $self->send_to_location(
-            $attacker,
-            sprintf(
-                qq[%s falls to the ground.\n],
-                $victim->formatted_name,
-            ),
-            except => [$victim],
+            $attacker, $final_messages{bystander},
+            except => [$attacker, $victim],
         );
 
-        # call the death hook after all the death messages
-        (undef, @hook_results) = $self->special->call_hooks(
-            type => 'death',
-            when => 'after',
-            arguments => [
-                attacker => $attacker,
-                victim   => $victim,
-            ],
-        );
-        return \@hook_results;
+        # if this attack killed the victim
+        if ($death) {
+            $self->send_to_location(
+                $attacker,
+                sprintf(
+                    qq[%s falls to the ground.\n],
+                    $victim->formatted_name,
+                ),
+                except => [$victim],
+            );
+
+            # call the death hook after all the death messages
+            (undef, @hook_results) = $self->special->call_hooks(
+                type => 'death',
+                when => 'after',
+                arguments => [
+                    attacker => $attacker,
+                    victim   => $victim,
+                ],
+            );
+            return \@hook_results;
+        }
+    }
+    else {
+        if ($death) {
+            $victim->dead(0);
+            $victim->current_strength(1);
+            $show_hook_results->();
+        }
     }
 
     return;

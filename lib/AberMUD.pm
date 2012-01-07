@@ -66,11 +66,15 @@ has special => (
     is        => 'ro',
     isa       => 'AberMUD::Special',
     block     => sub {
+        my $service = shift;
         my $special = AberMUD::Special->new;
-        $special->load_plugins;
+        $special->load_plugins(
+            universe => $service->param('universe'),
+        );
         return $special;
     },
     lifecycle => 'Singleton',
+    dependencies => ['universe'],
 );
 
 1;

@@ -7,8 +7,8 @@ BEGIN {
         after_command
         before_change_location
         after_change_location
-        before_kill_mobile
-        after_kill_mobile
+        before_death
+        after_death
     );
     our @EXPORT = @functions;
     for (@functinos) {
