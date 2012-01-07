@@ -16,6 +16,7 @@ my $c = build_preset_game(
                             description => 'A knight is standing here.',
                             pname => 'Knight',
                             examine => 'very metallic',
+                            basestrength => 100,
                         },
                     },
                 },

@@ -203,27 +203,21 @@ sub _handle_mobile {
     my ($mob_name, $mob_data) = @_;
     my @mobiles;
 
-    my $description = $mob_data->{description};
-    #                || "Here stands a normal $mob_name";
+    my $sflags = delete $mob_data->{sflags} || [];
+    my $pflags = delete $mob_data->{pflags} || [];
+    my @spells = (@$sflags, @$pflags);
 
-    my $examine = $mob_data->{examine};
-    #|| "They look just like a normal $mob_name!";
-
-    my @spells = (@{$mob_data->{sflags}||[]}, @{$mob_data->{pflags}||[]});
+    $mob_data->{examine_description} ||=
+        delete $mob_data->{examine};
 
     my %params = (
         name                => $mob_name,
-        display_name        => $mob_data->{pname},
-        description         => $description,
-        examine_description => $examine,
-        aggression          => $mob_data->{open_description},
-        damage              => $mob_data->{closed_description},
-        armor               => $mob_data->{locked_description},
-        speed               => $mob_data->{speed},
         spells              => { map {; $_ => 1 } @spells },
-        gender              => $mob_data->{gender},
+        display_name        => delete $mob_data->{pname},
+        %$mob_data,
     );
 
+    delete $params{$_} for 'carrying', 'wielding', 'wearing';
     # delete all undef values (for default fallback)
     delete $params{$_} for grep {not defined $params{$_}} keys %params;
 

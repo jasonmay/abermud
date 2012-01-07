@@ -45,7 +45,4 @@ $u->change_score($one, 1);
 $conn_one->flush_output;
 like($conn_one->get_output, qr{congratulations! you made it to level .*3}i);
 
-$one->take_damage($u, $one->max_strength);
-ok($one->dead);
-
 done_testing();

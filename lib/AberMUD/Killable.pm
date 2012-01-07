@@ -10,7 +10,6 @@ use List::Util qw(first);
 
 use AberMUD::Location::Util qw(directions);
 use AberMUD::Object::Util qw(bodyparts);
-use AberMUD::Messages;
 
 has fighting => (
     is      => 'rw',
@@ -140,26 +139,6 @@ sub reduce_strength {
     return $prev_strength;
 }
 
-sub take_damage {
-    my $self           = shift;
-    my $universe       = shift;
-    my $damage         = shift;
-    my $predeath_block = shift;
-
-    my $prev_strength = $self->reduce_strength($damage);
-
-    if ($self->fighting and $self->fighting->isa('AberMUD::Player')) {
-        my $xp = $prev_strength - $new_strength;
-        $universe->change_score($self->fighting, $xp);
-    }
-
-    $predeath_block->($self, $damage) if $predeath_block;
-
-    if ($self->current_strength <= 0) {
-        $self->death(universe => $universe);
-    }
-}
-
 sub show_inventory {
     my $self = shift;
 
@@ -234,84 +213,6 @@ sub start_fighting {
     my $victim = shift;
     $self->fighting($victim);
     $victim->fighting($self);
-}
-
-sub attack {
-    my $self = shift;
-    my %args = @_;
-
-    my $universe = $args{universe};
-
-    my $victim = $self->fighting
-        or return;
-
-    my $bodypart = ( bodyparts() )[ rand scalar( bodyparts() ) ];
-
-    my $damage = int rand($self->total_damage);
-
-    my $perc = $damage * 100 / $self->total_damage;
-
-    my $spans = Array::IntSpan->new(
-        [(0, 0) => 'futile'],
-        [(1, 33) => 'weak'],
-        [(34, 66) => 'med'],
-        [(67, 100) => 'strong'],
-    );
-
-    my $damage_level = $spans->lookup(int $perc);
-
-    # keep reading as Shit_type and is making me laugh
-    my $hit_type = $self->wielding ? 'WeaponHit' : 'BareHit';
-
-    my %hits = %{ AberMUD::Messages->$hit_type };
-
-    my @messages = @{ $hits{$damage_level} };
-
-    my $message = $messages[rand @messages];
-
-    my %final_messages = (
-        map {
-            $_ => AberMUD::Messages::format_fight_message(
-                $message,
-                attacker    => $self,
-                victim      => $self->fighting,
-                bodypart    => $bodypart,
-                perspective => $_,
-            ) . "\n";
-        } qw(attacker victim bystander)
-    );
-
-    $self->append_output_buffer($final_messages{attacker})
-        if $self->isa('AberMUD::Player');
-
-    $victim->take_damage(
-        $universe, $damage, sub {
-            my $self = shift;
-
-            # send the (potentially) final message right
-            # before death. this displays the prompt
-            # at the right time and stuff
-            $victim->append_output_buffer($final_messages{victim})
-                if $victim->isa('AberMUD::Player');
-        }
-    );
-
-    $universe->send_to_location(
-        $self, $final_messages{bystander},
-        except => [$self, $victim],
-    );
-
-    # if this attack killed the victim
-    if ($victim->dead) {
-        $universe->send_to_location(
-            $self,
-            sprintf(
-                qq[%s falls to the ground.\n],
-                $victim->formatted_name,
-            ),
-            except => [$victim],
-        );
-    }
 }
 
 sub death {

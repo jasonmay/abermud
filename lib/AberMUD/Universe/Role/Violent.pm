@@ -3,6 +3,10 @@ package AberMUD::Universe::Role::Violent;
 use Moose::Role;
 use namespace::autoclean;
 
+use AberMUD::Object::Util 'bodyparts';
+
+use AberMUD::Messages;
+
 around advance => sub {
     my $orig = shift;
     my $self = shift;
@@ -33,6 +37,36 @@ sub roll_to_start_fight {
     return $go;
 }
 
+sub generate_random_fight_data {
+    my $self     = shift;
+    my $attacker = shift;
+
+    my $damage   = int rand($attacker->total_damage);
+    my $bodypart = ( bodyparts() )[ rand scalar( bodyparts() ) ];
+
+    my $spans = Array::IntSpan->new(
+        [(0, 0) => 'futile'],
+        [(1, 33) => 'weak'],
+        [(34, 66) => 'med'],
+        [(67, 100) => 'strong'],
+    );
+    my $hit_type = $attacker->wielding ? 'WeaponHit' : 'BareHit';
+    my %hits = %{ AberMUD::Messages->$hit_type };
+
+    my $perc = $damage * 100 / $attacker->total_damage;
+    my $damage_level = $spans->lookup(int $perc);
+    my @messages = @{ $hits{$damage_level} };
+    my $message = $messages[rand @messages];
+
+    my %data = (
+        damage   => $damage,
+        bodypart => $bodypart,
+        message  => $message,
+    );
+
+    return %data;
+}
+
 sub fight_iteration {
     my $self = shift;
     my $type = shift || '';
@@ -54,9 +88,23 @@ sub fight_iteration {
             }
             $player->fighting->fighting($player)
                 if $player->fighting->fighting != $player;
-            $player->attack(universe => $self);
-            if ($player->fighting) { #could have killed
-                $player->fighting->attack(universe => $self);
+
+            my %data;
+
+            %data = $self->generate_random_fight_data($player);
+            $self->attack(
+                attacker => $player,
+                victim   => $player->fighting,
+                %data,
+            );
+
+            if ($player->fighting) { # could have killed
+                %data = $self->generate_random_fight_data($player->fighting);
+                $self->attack(
+                    attacker => $player->fighting,
+                    victim   => $player,
+                    %data,
+                );
             }
         }
     }
