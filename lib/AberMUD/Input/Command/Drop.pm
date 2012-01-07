@@ -6,14 +6,50 @@ command drop => sub {
     my ($self, $e) = @_;
     my @args = split ' ', $e->arguments;
 
+    my @objects = $e->universe->get_objects;
+    my $pit;
+    # XXX eventually hardcode a pit into the universe
+    for my $obj (@objects) {
+        next unless $obj->zone->name eq 'start';
+        next unless $obj->name eq 'pit';
+        $pit = $obj;
+    }
+
+    my $at_pit = $pit && $e->player->in($pit->location);
+
+    my ($interrupt, @hook_results);
+    my $drop_block = sub {
+        my $object = shift;
+        my $drop_object = sub {
+            $e->player->drop($object);
+            $object->dropped(1) if $object->flags->{getflips};
+        };
+        #$object->dropped(1) if $objects->dropped_description; #XXX in 'drop foo'
+        if ($at_pit) {
+            $object->change_location($e->universe->pit_location);
+            ($interrupt, @hook_results) = $self->special->call_hooks(
+                type => 'sacrifice',
+                when => 'before',
+                arguments => [
+                    object => $object,
+                ],
+            );
+            unless ($interrupt) {
+                $drop_object->();
+            }
+        }
+        else {
+            $e->universe->change_location($object, $e->player->location);
+            $drop_object->();
+        }
+    };
+
     if (!@args) {
         return "Drop what?";
     }
     elsif ($args[0] eq 'all') {
         for ($e->player->carrying_loosely) {
-            $e->universe->change_location($_, $e->player->location);
-            $e->player->drop($_);
-            $_->dropped(1) if $_->flags->{getflips};
+            $drop_block->($_);
         }
 
         $e->universe->send_to_location(
@@ -24,19 +60,19 @@ command drop => sub {
             ),
             except => $e->player,
         );
-        return "You drop everything you can.";
+        return $at_pit ?
+            "You drop all you can into the pit." :
+            "You drop everything you can.";
     }
     else {
         my @matching_objects = grep {
             $_->can('held_by') and $_->held_by
             and $_->held_by == $e->player
             and lc($_->name) eq lc($args[0])
-        } $e->universe->get_objects;
+        } $e->player->carrying;
 
         if (@matching_objects) {
-            $e->player->drop($matching_objects[0]);
-            $matching_objects[0]->dropped(1) if $matching_objects[0]->dropped_description;
-            $e->universe->change_location($matching_objects[0], $e->player->location);
+            $drop_block->($matching_objects[0]);
             $e->universe->send_to_location(
                 $e->player,
                 sprintf(

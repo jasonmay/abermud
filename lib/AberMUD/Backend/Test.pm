@@ -27,8 +27,9 @@ sub new_connection {
 require AberMUD::Input::State::Game;
 require AberMUD::Input::Command::Composite;
 require AberMUD::Special;
-my $command_composite = AberMUD::Input::Command::Composite->new;
 my $special           = AberMUD::Special->new;
+my $command_composite =
+    AberMUD::Input::Command::Composite->new(special => $special);
 sub new_player {
     my $self = shift;
     my $name = shift;

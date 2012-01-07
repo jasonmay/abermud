@@ -168,7 +168,9 @@ sub attack {
             type => 'death',
             when => 'before',
             arguments => [
-                victim  => $victim,
+                attacker => $attacker,
+                victim   => $victim,
+                universe => $self,
             ],
         );
     }
@@ -214,6 +216,7 @@ sub attack {
                 arguments => [
                     attacker => $attacker,
                     victim   => $victim,
+                    universe => $self,
                 ],
             );
             $show_hook_results->($attacker);
