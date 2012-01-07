@@ -23,6 +23,13 @@ command become => sub {
         return sprintf("Your base strength is now %s.",
             $e->player->max_strength);
     }
+
+    if ($args eq 'powerful') {
+        $e->player->basestrength(10000);
+        $e->player->damage(500);
+        $e->player->current_strength($e->player->max_strength);
+        return "You are powerful!";
+    }
 };
 
 __PACKAGE__->meta->make_immutable;
