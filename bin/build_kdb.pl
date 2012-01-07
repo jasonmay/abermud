@@ -22,6 +22,8 @@ use AberMUD::Location;
 use AberMUD::Object;
 use AberMUD::Storage;
 
+use File::Basename;
+
 use constant DEFAULT_START_LOC => 'church@start';
 
 my $parser = qr{
@@ -206,7 +208,7 @@ foreach my $file (@zone_files) {
     print STDERR "$file... ";
     $contents =~ s{/\* .*? \*/}{}gmsx;
 
-    (my $zone_name = lc $file) =~ s{zones/(.+?)\.zone}{$1}s or die "invalid zone";
+    (my $zone_name = lc basename($file)) =~ s{(.+?)\.zone}{$1}s or die "invalid zone";
     my $zone_info;
 
     print STDERR "parsing... ";
@@ -253,8 +255,11 @@ store_zone_data(\%expanded);
 ###########################################
 
 sub get_all_zone_files {
-    opendir(my $dh, 'zones');
-    my @dirs = map { "zones/$_" } grep { substr($_,-5) eq '.zone' and -f "zones/$_" } readdir($dh);
+    defined(my $dir = $ENV{ABERMUD_ZONE_DIR})
+        or die "ABERMUD_ZONE_DIR env var must be set\n";
+
+    opendir(my $dh, $dir);
+    my @dirs = map { "$dir/$_" } grep { substr($_,-5) eq '.zone' and -f "$dir/$_" } readdir($dh);
     closedir($dh);
     return @dirs;
 }
