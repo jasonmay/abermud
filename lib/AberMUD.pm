@@ -60,6 +60,7 @@ has command_composite => (
     is        => 'ro',
     isa       => 'AberMUD::Input::Command::Composite',
     lifecycle => 'Singleton',
+    dependencies => ['special'],
 );
 
 has special => (

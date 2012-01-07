@@ -9,6 +9,12 @@ except      => [__PACKAGE__],
 sub_name    => 'commands',
 require     => 1;
 
+has special => (
+    is       => 'ro',
+    isa      => 'AberMUD::Special',
+    required => 1,
+);
+
 sub get_command_methods {
     my @methods;
     foreach my $command_class (__PACKAGE__->commands) {
