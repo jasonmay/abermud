@@ -39,6 +39,7 @@ sub build_container {
     return $c;
 }
 
+my $ZONE;
 sub build_game {
     my %args = @_;
     my %data = %{ $args{config} || {} };
@@ -48,13 +49,13 @@ sub build_game {
     my $dsn = $data{dsn} || 'hash';
     my $zone_name = $data{zone};
 
-    my $zone = AberMUD::Zone->new(name => $zone_name);
+    $ZONE = AberMUD::Zone->new(name => $zone_name);
     my (%all_objects, @all_mobiles, %all_locations);
     foreach my $loc (keys %$locs) {
         my %loc_params = (
             title       => $locs->{$loc}{title},
             description => $locs->{$loc}{description},
-            zone        => $zone,
+            zone        => $ZONE,
             moniker     => $loc,
             %{ $locs->{$loc}{extra_params} || {} }
         );
@@ -167,6 +168,7 @@ sub _handle_object {
         name                => $obj_name,
         description         => $description,
         examine_description => $examine,
+        zone                => $ZONE,
         open_description    => $obj_data->{open_description},
         closed_description  => $obj_data->{closed_description},
         locked_description  => $obj_data->{locked_description},
@@ -212,6 +214,7 @@ sub _handle_mobile {
 
     my %params = (
         name                => $mob_name,
+        zone                => $ZONE,
         spells              => { map {; $_ => 1 } @spells },
         display_name        => delete $mob_data->{pname},
         %$mob_data,
