@@ -23,14 +23,23 @@ has storage => (
     required => 1,
 );
 
+has data_buffer => (
+    is      => 'rw',
+    isa     => 'Str',
+    default => '',
+);
+
 sub on_data {
     my ($self, $event) = @_;
 
-    my $data = $event->octets;
-    my $response = $self->data_cb->($self, $data);
-    $self->put($response);
-    if ($self->has_post_response_hook) {
-        $self->post_response_hook->($self, $data, $response);
+    $self->{data_buffer} .=  $event->octets;
+    while ($self->{data_buffer} =~ s/(.*)\n//) {
+        my $data = $1;
+        my $response = $self->data_cb->($self, $data);
+        $self->put($response);
+        if ($self->has_post_response_hook) {
+            $self->post_response_hook->($self, $data, $response);
+        }
     }
 }
 
