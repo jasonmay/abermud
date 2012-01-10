@@ -1,5 +1,355 @@
 {
-   "obj" : {},
-   "loc" : {},
+   "obj" : {
+      "sword@system" : {
+         "damage" : "17",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "weapon",
+            "nopit"
+         ],
+         "altname" : "longsword",
+         "name" : "sword",
+         "size" : "5",
+         "weight" : "10",
+         "bvalue" : "0",
+         "desc[0]" : "A newly crafted longsword has been left here."
+      },
+      "potion4@system" : {
+         "desc[1]" : "&+GA green potion bubbles here.",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "GetFlips",
+            "Potion",
+            "Scatter"
+         ],
+         "altname" : "Flask",
+         "name" : "Potion4",
+         "examine" : "Upon closer inspection, you see that the flask contains some sort\nof very bright bubbling &+Ggreen&N liquid.  On the top of the flask there\nis an emblem of some sort, perhaps to signify that the potion itself is\nof godly creation.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Potion",
+         "weight" : "7",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "&+GSomeone has left a potion here."
+      },
+      "potion9@system" : {
+         "desc[1]" : "&+mA purple potion bubbles here.",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "GetFlips",
+            "Potion",
+            "Scatter"
+         ],
+         "altname" : "Flask",
+         "name" : "Potion9",
+         "examine" : "Upon closer inspection, you see that the flask contains some sort\nof very bright bubbling &+mpurple&N liquid.  On the top of the flask there\nis an emblem of some sort, perhaps to signify that the potion itself is\nof godly creation.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Potion",
+         "weight" : "7",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "&+mSomeone has left a potion here."
+      },
+      "wildgame@system" : {
+         "location" : "IN_ROOM:system",
+         "weight" : "2",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "wildgame",
+         "examine" : "Perhaps rabburkey.",
+         "bvalue" : "0",
+         "desc[0]" : "Some wild game lies here.",
+         "size" : "2"
+      },
+      "mush@system" : {
+         "location" : "IN_ROOM:system",
+         "weight" : "10",
+         "oflags" : [
+            "Food"
+         ],
+         "name" : "mush",
+         "examine" : "This food was purchased at the General Store.",
+         "bvalue" : "0",
+         "desc[0]" : "A pint of fine grade mush has been left here.",
+         "size" : "10"
+      },
+      "potion3@system" : {
+         "desc[1]" : "&+BA blue potion bubbles here.",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "GetFlips",
+            "Potion",
+            "Scatter"
+         ],
+         "altname" : "Flask",
+         "name" : "Potion3",
+         "examine" : "Upon closer inspection, you see that the flask contains some sort\nof very bright bubbling &+Bblue&N liquid.  On the top of the flask there\nis an emblem of some sort, perhaps to signify that the potion itself is\nof godly creation.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Potion",
+         "weight" : "7",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "&+BSomeone has left a blue potion here."
+      },
+      "potion5@system" : {
+         "desc[1]" : "&+WA white potion bubbles here.",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "GetFlips",
+            "Potion",
+            "Scatter"
+         ],
+         "altname" : "Flask",
+         "name" : "Potion5",
+         "examine" : "Upon closer inspection, you see that the flask contains some sort\nof very bright bubbling &+Wwhite&N liquid.  On the top of the flask there\nis an emblem of some sort, perhaps to signify that the potion itself is\nof godly creation.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Potion",
+         "weight" : "7",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "&+WSomeone has left a potion here."
+      },
+      "potion7@system" : {
+         "desc[1]" : "&+yA brown potion bubbles here.",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "GetFlips",
+            "Potion",
+            "Scatter"
+         ],
+         "altname" : "Flask",
+         "name" : "Potion7",
+         "examine" : "Upon closer inspection, you see that the flask contains some sort\nof very dark bubbling &+ybrown&N liquid.  On the top of the flask there\nis an emblem of some sort, perhaps to signify that the potion itself is\nof godly creation.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Potion",
+         "weight" : "7",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "&+ySomeone has left a potion here."
+      },
+      "armor@system" : {
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "Armor",
+            "Wearable"
+         ],
+         "armor" : "30",
+         "altname" : "suit",
+         "name" : "armor",
+         "size" : "20",
+         "weight" : "20",
+         "bvalue" : "0",
+         "desc[0]" : "A newly crafted suit of armor has been left here.",
+         "aflags" : [
+            "Head",
+            "Face",
+            "Back",
+            "Arms",
+            "Legs",
+            "Chest"
+         ]
+      },
+      "ethersword@system" : {
+         "damage" : "20",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "Weapon",
+            "NoGive"
+         ],
+         "altname" : "sword",
+         "name" : "ethersword",
+         "examine" : "Only a god could make a sword like this.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "0"
+      },
+      "etherarmor@system" : {
+         "location" : "IN_ROOM:system",
+         "armor" : "20",
+         "oflags" : [
+            "Armor",
+            "Wearable",
+            "NoGive"
+         ],
+         "altname" : "armor",
+         "name" : "etherarmor",
+         "examine" : "Only a god could make armor like this.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "0",
+         "aflags" : [
+            "Legs",
+            "Back",
+            "Chest",
+            "Feet",
+            "Arms",
+            "Hands",
+            "Face",
+            "Head",
+            "Neck"
+         ]
+      },
+      "torch@system" : {
+         "location" : "IN_ROOM:system",
+         "weight" : "5",
+         "oflags" : [
+            "Lightable",
+            "Lit"
+         ],
+         "name" : "torch",
+         "examine" : "This torch was sold at the General Store.",
+         "bvalue" : "0",
+         "desc[0]" : "A torch is on the ground here.",
+         "size" : "10"
+      },
+      "potion@system" : {
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "Potion",
+            "NoPit"
+         ],
+         "altname" : "yellow",
+         "name" : "potion",
+         "examine" : "This potion looks like it was home brewed.",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A yellow liquid in a vial is on the ground here."
+      },
+      "potion8@system" : {
+         "desc[1]" : "&+YA yellow potion bubbles here.",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "GetFlips",
+            "Potion",
+            "Scatter"
+         ],
+         "altname" : "Flask",
+         "name" : "Potion8",
+         "examine" : "Upon closer inspection, you see that the flask contains some sort\nof very bright bubbling &+Yyellow&N liquid.  On the top of the flask there\nis an emblem of some sort, perhaps to signify that the potion itself is\nof godly creation.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Potion",
+         "weight" : "7",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "&+YSomeone has left a potion here."
+      },
+      "potion2@system" : {
+         "desc[1]" : "&+RA red potion is here.",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "GetFlips",
+            "Potion",
+            "Scatter"
+         ],
+         "altname" : "Flask",
+         "name" : "Potion2",
+         "examine" : "Upon closer inspection, you see that the flask contains some sort\nof very bright bubbling &+Rred&N liquid.  On the top of the flask there\nis an emblem of some sort, perhaps to signify that the potion itself is\nof godly creation.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Potion",
+         "weight" : "7",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "&+RSomeone has left a potion here."
+      },
+      "key@system" : {
+         "location" : "IN_ROOM:system",
+         "weight" : "1",
+         "oflags" : [
+            "Key"
+         ],
+         "name" : "key",
+         "examine" : "This is a key from the General Store.",
+         "bvalue" : "0",
+         "desc[0]" : "A small skeleton key has been left here.",
+         "size" : "1"
+      },
+      "potion6@system" : {
+         "desc[1]" : "&+CA cyan potion bubbles here.",
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "GetFlips",
+            "Potion",
+            "Scatter"
+         ],
+         "altname" : "Flask",
+         "name" : "Potion6",
+         "examine" : "Upon closer inspection, you see that the flask contains some sort\nof very bright bubbling &+Ccyan&N liquid.  On the top of the flask there\nis an emblem of some sort, perhaps to signify that the potion itself is\nof godly creation.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Potion",
+         "weight" : "7",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "&+MSomeone has left a potion here."
+      },
+      "recall@system" : {
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "Recall",
+            "Nopit"
+         ],
+         "altname" : "scroll",
+         "name" : "recall",
+         "size" : "1",
+         "weight" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A scroll of recall has been left here, read recall to cast."
+      },
+      "potion1@system" : {
+         "desc[1]" : "&+MA pink potion bubbles here.",
+         "location" : "IN_ROOM:system",
+         "altname" : "Flask",
+         "oflags" : [
+            "GetFlips",
+            "Potion",
+            "Scatter"
+         ],
+         "name" : "Potion1",
+         "examine" : "Upon closer inspection, you see that the flask contains some sort\nof very bright bubbling &+Mpink&N liquid.  On the top of the flask there \nis an emblem of some sort, perhaps to signify that the potion itself is \nof godly creation.",
+         "state" : "1",
+         "size" : "5",
+         "pname" : "Potion",
+         "weight" : "7",
+         "maxstate" : "1",
+         "bvalue" : "1000",
+         "desc[0]" : "&+MSomeone has left a potion here."
+      },
+      "curepoison@system" : {
+         "location" : "IN_ROOM:system",
+         "oflags" : [
+            "Curepoison",
+            "Nopit",
+            "Food"
+         ],
+         "altname" : "purple",
+         "name" : "curepoison",
+         "examine" : "This potion was especially made to cure the move lethal poisons.",
+         "size" : "1",
+         "pname" : "vial",
+         "weight" : "1",
+         "bvalue" : "0",
+         "desc[0]" : "A purple liquid in a vial is on the ground here."
+      }
+   },
+   "loc" : {
+      "system@system" : {
+         "exits" : {},
+         "flags" : [],
+         "zone" : "system",
+         "title" : "The System Room",
+         "id" : "system",
+         "description" : "\n   Here's where objects to be cloned are kept.  Also potions originate here.\n",
+         "altitude" : null
+      }
+   },
    "mob" : {}
 }
