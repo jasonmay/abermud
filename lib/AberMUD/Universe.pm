@@ -31,6 +31,7 @@ has players => (
 with qw(
     AberMUD::Universe::Role::Mobile
     AberMUD::Universe::Role::Violent
+    AberMUD::Universe::Role::WithSystemData
 );
 
 has locations => (
@@ -88,61 +89,6 @@ sub _build_revealing_gateway_cache {
 
     my $set = Set::Object::Weak->new(@objs);
     return $set;
-}
-
-has corpse_location => (
-    is        => 'ro',
-    isa       => 'AberMUD::Location',
-    builder   => '_build_corpse_location',
-    lazy      => 1,
-    #weak_ref => 1,
-);
-
-sub _build_corpse_location {
-    my $self = shift;
-
-    return AberMUD::Location->new(
-        universe    => $self,
-        title       => 'Dead Zone',
-        description => q[This is the zone for corpses. ] .
-                       q[Mortals do not belong here.],
-    );
-}
-
-has eaten_location => (
-    is        => 'ro',
-    isa       => 'AberMUD::Location',
-    builder   => '_build_eaten_location',
-    lazy      => 1,
-    #weak_ref => 1,
-);
-
-sub _build_eaten_location {
-    my $self = shift;
-
-    return AberMUD::Location->new(
-        title       => 'Eaten Zone',
-        description => q[This is the zone for eaten food. ] .
-                       q[Mortals do not belong here.],
-    );
-}
-
-has pit_location => (
-    is        => 'ro',
-    isa       => 'AberMUD::Location',
-    builder   => '_build_pit_location',
-    lazy      => 1,
-    #weak_ref => 1,
-);
-
-sub _build_pit_location {
-    my $self = shift;
-
-    return AberMUD::Location->new(
-        title       => 'The Sacrificial Pit',
-        description => q[This is the sacrificial pit. ] .
-                       q[Mortals do not belong here.],
-    );
 }
 
 has special => (
