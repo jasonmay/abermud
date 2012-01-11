@@ -10,12 +10,12 @@ command drop => sub {
     my $pit;
     # XXX eventually hardcode a pit into the universe
     for my $obj (@objects) {
-        next unless $obj->zone->name eq 'start';
-        next unless $obj->name eq 'pit';
+        next unless $obj->flags->{pit};
+        next unless $e->player->in($obj->location);
+        next unless $obj->on_the_ground;
         $pit = $obj;
+        last;
     }
-
-    my $at_pit = $pit && $e->player->in($pit->location);
 
     my ($interrupt, @hook_results);
     my $drop_block = sub {
@@ -25,17 +25,28 @@ command drop => sub {
             $object->dropped(1) if $object->flags->{getflips};
         };
         #$object->dropped(1) if $objects->dropped_description; #XXX in 'drop foo'
-        if ($at_pit) {
-            $object->change_location($e->universe->pit_location);
+        if ($pit) {
             ($interrupt, @hook_results) = $self->special->call_hooks(
                 type => 'sacrifice',
                 when => 'before',
                 arguments => [
-                    object => $object,
+                    object   => $object,
+                    player   => $e->player,
+                    universe => $e->universe,
                 ],
             );
             unless ($interrupt) {
                 $drop_object->();
+                $object->change_location($e->universe->pit_location);
+                (undef, @hook_results) = $self->special->call_hooks(
+                    type => 'sacrifice',
+                    when => 'after',
+                    arguments => [
+                        object   => $object,
+                        player   => $e->player,
+                        universe => $e->universe,
+                    ],
+                );
             }
         }
         else {
@@ -60,7 +71,7 @@ command drop => sub {
             ),
             except => $e->player,
         );
-        return $at_pit ?
+        return $pit ?
             "You drop all you can into the pit." :
             "You drop everything you can.";
     }
