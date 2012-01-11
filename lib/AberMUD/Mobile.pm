@@ -8,7 +8,6 @@ extends 'AberMUD::Killable';
 use AberMUD::Location::Util qw(directions);
 
 with qw(
-    AberMUD::Role::InGame
     AberMUD::Role::Humanoid
     AberMUD::Mobile::Role::Hostile
 );

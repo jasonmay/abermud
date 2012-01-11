@@ -11,6 +11,8 @@ use List::Util qw(first);
 use AberMUD::Location::Util qw(directions);
 use AberMUD::Object::Util qw(bodyparts);
 
+extends 'AberMUD::InGame';
+
 has fighting => (
     is      => 'rw',
     does    => __PACKAGE__,

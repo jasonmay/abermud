@@ -7,8 +7,6 @@ use DateTime;
 use AberMUD::Location;
 use AberMUD::Data::Levels;
 
-with qw(AberMUD::Role::InGame);
-
 has death_time => (
     is => 'rw',
     isa => 'DateTime',

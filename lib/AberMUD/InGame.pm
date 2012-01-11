@@ -1,8 +1,5 @@
-#!/usr/bin/env perl
-package AberMUD::Role::InGame;
-use Moose::Role;
-use namespace::autoclean;
-
+package AberMUD::InGame;
+use Moose;
 use AberMUD::Location;
 use AberMUD::Location::Util qw(directions);
 use List::MoreUtils qw(any);
@@ -65,5 +62,8 @@ sub change_location {
 
     $self->location($location);
 }
+
+__PACKAGE__->meta->make_immutable;
+no Moose;
 
 1;

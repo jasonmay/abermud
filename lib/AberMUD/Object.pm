@@ -4,9 +4,10 @@ use KiokuDB::Class;
 use Moose::Util qw(apply_all_roles);;
 use namespace::autoclean;
 
+extends 'AberMUD::InGame';
+
 with qw(
     MooseX::Traits
-    AberMUD::Role::InGame
 );
 
 has '+_trait_namespace' => (
