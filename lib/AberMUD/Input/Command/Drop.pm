@@ -92,7 +92,10 @@ command drop => sub {
                 ),
                 except => $e->player,
             );
-            return sprintf("You drop the %s.", $matching_objects[0]->name);
+            return sprintf(
+                $pit ? "You drop the %s into the pit." : "You drop the %s.",
+                $matching_objects[0]->name
+            );
         }
 
         return "No object of that name is here.";
