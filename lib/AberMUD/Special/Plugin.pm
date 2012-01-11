@@ -9,6 +9,8 @@ BEGIN {
         after_change_location
         before_death
         after_death
+        before_sacrifice
+        after_sacrifice
     );
     our @EXPORT = @functions;
     for (@functinos) {
