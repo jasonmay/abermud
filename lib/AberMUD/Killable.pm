@@ -111,6 +111,13 @@ has wielding => (
     clearer => '_stop_wielding',
 );
 
+after change_location => sub {
+    my $self = shift;
+    for my $carrying ($self->carrying) {
+        $carrying->change_location($self->location);
+    }
+};
+
 sub max_strength {
     my $self = shift;
     my $level = $self->can('level') ? $self->level : 0;
