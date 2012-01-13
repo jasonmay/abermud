@@ -187,7 +187,8 @@ sub identify_object {
     my $self     = shift;
     my ($location, $word) = @_;
 
-    $self->identify_from_list($location, $word, $self->get_objects);
+    my @objects = grep { defined() } $location->objects_in_room->members;
+    $self->identify_from_list($location, $word, @objects);
 }
 
 sub identify_mobile {
