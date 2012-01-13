@@ -172,7 +172,7 @@ like($b->inject_input($conn_one, 'look'),      qr{chest});
 like($b->inject_input($conn_one, 'take rock'), qr{You take the rock\.});
 like($conn_two->get_output,            qr{playerone picks up a rock\.}i);
 
-is($objects{'rock@room1'}->held_by, $one);
+$u->carry($one, $objects{'rock@room1'});
 
 unlike($b->inject_input($conn_one, 'look'),    qr{A rock is laying on the ground here\.});
 
@@ -226,12 +226,13 @@ $b->inject_input($conn_one, 'take sword');      $conn_two->get_output;
 like($b->inject_input($conn_two, 'take rock'),  qr{You take the rock\.});
 
 my @objects_for_two = grep { $_->can('held_by') and not $_->contained_by } @o;
-$_->held_by($two) for @objects_for_two;
+$one->_carrying->remove($objects{'sword@room2'});
+$u->carry($two, $_) for @objects_for_two;
 $two->_carrying->insert(@objects_for_two);
 
 $b->inject_input($conn_two, 'drop sword');
 like($b->inject_input($conn_two, 'look'),       qr{sword laying on the ground});
-$objects{'sword@room2'}->held_by($two);
+$u->carry($two, $objects{'sword@room2'});
 
 # examine
 like($b->inject_input($conn_two, 'examine sign'), qr{Why do you care});
@@ -300,7 +301,7 @@ like($b->inject_input($conn_two, 'wield sword'),         qr{you wield the sword}
 like($b->inject_input($conn_two, 'wear helmet'),         qr{you put on the helmet}i);
 
 
-$objects{$_}->held_by($one) for qw/shoes@room1 boots@room1/;
+$u->carry($one, $objects{$_}) for qw/shoes@room1 boots@room1/;
 $one->_carrying->insert(@objects{qw/shoes@room1 boots@room1/});
 like($b->inject_input($conn_one, 'wear shoes'),          qr{you put on the shoes}i);
 like($b->inject_input($conn_one, 'wear boots'),          qr{remove your shoes first}i);

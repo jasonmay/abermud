@@ -465,6 +465,15 @@ sub close {
     $self->_set_opened($object, 0);
 }
 
+sub carry {
+    my $self = shift;
+    my ($killable, $object) = @_;
+    $killable->_carrying->insert($object);
+    $self->change_location($object, $killable->location)
+        if $killable;
+    $object->held_by($killable);
+}
+
 sub _set_opened {
     my $self = shift;
     my ($object, $open, $only_this_object) = @_;
