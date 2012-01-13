@@ -55,6 +55,13 @@ sub name_matches {
     return 0;
 };
 
+sub name_zone_is {
+    my $self = shift;
+    my ($name, $zone) = @_;
+
+    return ($self->name eq $name and $self->zone->name eq $zone);
+};
+
 # separate layer for cache updates, etc.
 sub change_location {
     my $self     = shift;
