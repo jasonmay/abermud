@@ -18,4 +18,6 @@ BEGIN {
     }
 }
 
+our $UNIVERSE;
+
 1;

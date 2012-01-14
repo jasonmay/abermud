@@ -85,6 +85,7 @@ sub load_plugins {
     foreach my $special_class (__PACKAGE__->plugins) {
         Class::MOP::load_class($special_class);
         no strict 'refs';
+        local ${"${special_class}::UNIVERSE"} = $args{universe};
         local *{"${special_class}::before_command"}
             = $command_block->('before');
         local *{"${special_class}::after_command"}
