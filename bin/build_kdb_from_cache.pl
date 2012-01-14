@@ -539,15 +539,17 @@ sub link_object_locations {
         $odest ||= '';
         $odest =~ /@/ or $odest .= '@' . $obj->zone->name;
 
+        my $not_on_ground = 0;
+        my $location;
         if ($loctype eq 'IN_ROOM') {
             do { warn "no loc for $odest"; next }
                 unless $expanded->{loc}{lc $odest};
 
-            $obj->location($expanded->{loc}{lc $odest});
-            $obj->location->objects_in_room->insert($obj);
+            $location = $expanded->{loc}{lc $odest};
         }
         elsif ($loctype eq 'IN_CONTAINER') {
             $expanded->{obj}{lc $odest}->put_in($obj);
+            $location = $expanded->{obj}{lc $odest}->location;
         }
         elsif (
             $loctype eq 'CARRIED_BY'
@@ -570,7 +572,17 @@ sub link_object_locations {
 
             if ($loctype eq 'WIELDED_BY' or $loctype eq 'BOTH_BY') {
                 $obj->wielded(1);
+                $expanded->{mob}{lc $odest}->wielding($obj);
             }
+
+            $not_on_ground = 1;
+            $location = $expanded->{mob}{lc $odest}->location;
+        }
+
+        if (defined $location) {
+            $obj->location($location);
+            warn $obj->location->title if $obj->name_zone_is('sponge', 'eforest');
+            $location->objects_in_room->insert($obj);
         }
     }
 }
