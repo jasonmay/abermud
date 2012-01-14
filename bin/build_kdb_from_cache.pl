@@ -531,58 +531,82 @@ sub link_location_exits {
 sub link_object_locations {
     my ($expanded, $info) = @_;
 
-    while (my ($obj_id, $obj) = each %{ $expanded->{obj} }) {
-        my $full_oloc = $info->{obj}{$obj_id}{location} or next;
+    my %not_linked = map {; $_ => 1 } keys %{ $expanded->{obj} };
 
-        my ($loctype, $odest) = split /:/, $full_oloc;
-
-        $odest ||= '';
-        $odest =~ /@/ or $odest .= '@' . $obj->zone->name;
-
-        my $not_on_ground = 0;
-        my $location;
-        if ($loctype eq 'IN_ROOM') {
-            do { warn "no loc for $odest"; next }
-                unless $expanded->{loc}{lc $odest};
-
-            $location = $expanded->{loc}{lc $odest};
+    # extremely naive elimination loop
+    my $prev = -1;
+    while (scalar keys %not_linked) {
+        my $at_loop = 0;
+        if ($prev == scalar keys %not_linked) {
+            $at_loop = 1;
         }
-        elsif ($loctype eq 'IN_CONTAINER') {
-            $expanded->{obj}{lc $odest}->put_in($obj);
-            $location = $expanded->{obj}{lc $odest}->location;
-        }
-        elsif (
-            $loctype eq 'CARRIED_BY'
-                or $loctype eq 'WIELDED_BY'
-                or $loctype eq 'WORN_BY'
-                or $loctype eq 'BOTH_BY'
-        ) {
+        $prev = scalar keys %not_linked;
+        for my $obj_id (keys %not_linked) {
+            my $obj = $expanded->{obj}{$obj_id};
+            if ($at_loop) {
+                warn scalar(keys %not_linked);
+                die "Hit a loop at $obj_id";
+            }
+            my $full_oloc = $info->{obj}{$obj_id}{location} or next;
 
-            do { warn "$odest can't be carried"; next }
-                unless $obj->can('held_by');
+            my ($loctype, $odest) = split /:/, $full_oloc;
 
-            do { warn "no mob called $odest"; next }
-                unless $expanded->{mob}{lc $odest};
+            $odest ||= '';
+            $odest =~ /@/ or $odest .= '@' . $obj->zone->name;
 
-            $expanded->{mob}{lc $odest}->take($obj);
+            my $location;
+            if ($loctype eq 'IN_ROOM') {
+                do { warn "no loc for $odest"; next }
+                    unless $expanded->{loc}{lc $odest};
 
-            if ($loctype eq 'WORN_BY' or $loctype eq 'BOTH_BY') {
-                $obj->worn(1);
+                $location = $expanded->{loc}{lc $odest};
+            }
+            elsif ($loctype eq 'IN_CONTAINER') {
+                $expanded->{obj}{lc $odest}->put_in($obj);
+                $location = $expanded->{obj}{lc $odest}->location;
+            }
+            elsif (
+                $loctype eq 'CARRIED_BY'
+                    or $loctype eq 'WIELDED_BY'
+                    or $loctype eq 'WORN_BY'
+                    or $loctype eq 'BOTH_BY'
+            ) {
+
+                do { warn "$odest can't be carried"; next }
+                    unless $obj->can('held_by');
+
+                do { warn "no mob called $odest"; next }
+                    unless $expanded->{mob}{lc $odest};
+
+                $expanded->{mob}{lc $odest}->take($obj);
+
+                if ($loctype eq 'WORN_BY' or $loctype eq 'BOTH_BY') {
+                    $obj->worn(1);
+                }
+
+                if ($loctype eq 'WIELDED_BY' or $loctype eq 'BOTH_BY') {
+                    $obj->wielded(1);
+                    $expanded->{mob}{lc $odest}->wielding($obj);
+                }
+
+                $location = $expanded->{mob}{lc $odest}->location;
+            }
+            elsif ($expanded->{loc}{lc $loctype}) {
+                do { warn "no loc for $odest"; next }
+                    unless $expanded->{loc}{lc $loctype};
+
+                $location = $expanded->{loc}{lc $loctype};
+            }
+            else {
+                # unsupported type or just no loc
+                delete $not_linked{$obj_id};
             }
 
-            if ($loctype eq 'WIELDED_BY' or $loctype eq 'BOTH_BY') {
-                $obj->wielded(1);
-                $expanded->{mob}{lc $odest}->wielding($obj);
+            if (defined $location) {
+                $obj->location($location);
+                $location->objects_in_room->insert($obj);
+                delete $not_linked{$obj_id};
             }
-
-            $not_on_ground = 1;
-            $location = $expanded->{mob}{lc $odest}->location;
-        }
-
-        if (defined $location) {
-            $obj->location($location);
-            warn $obj->location->title if $obj->name_zone_is('sponge', 'eforest');
-            $location->objects_in_room->insert($obj);
         }
     }
 }
