@@ -458,8 +458,8 @@ sub link_zone_data {
     # locations
     link_to_zones($expanded, $info);
     link_location_exits($expanded, $info);  # L->dir = L
-    link_object_locations($expanded, $info); # O->location = L
     link_mobile_locations($expanded, $info); # M->location = L
+    link_object_locations($expanded, $info); # O->location = L
 }
 
 sub link_to_zones {
