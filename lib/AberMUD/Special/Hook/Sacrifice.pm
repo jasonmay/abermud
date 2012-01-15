@@ -10,7 +10,7 @@ has object => (
 
 around call => sub {
     my ($orig, $self) = (shift, shift);
-    my ($when, %args) = @_;
+    my ($when, $universe, %args) = @_;
     return unless $self->object eq $args{object};
 
     return $self->$orig($when, %args);

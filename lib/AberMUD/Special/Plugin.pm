@@ -1,7 +1,15 @@
 package AberMUD::Special::Plugin;
-use base 'Exporter';
+use strict;
+use warnings;
 
-BEGIN {
+our $UNIVERSE;
+
+require Package::Stash;
+sub import {
+    my ($caller) = caller();
+    my $stash = Package::Stash->new($caller);
+    $stash->add_symbol('&identify_object', sub { $UNIVERSE->identify_object(@_) });
+
     my @functions = qw(
         before_command
         after_command
@@ -12,12 +20,11 @@ BEGIN {
         before_sacrifice
         after_sacrifice
     );
-    our @EXPORT = @functions;
-    for (@functinos) {
-        *$_ = sub {};
+    for (@functions) {
+        $stash->add_symbol("&$_", sub {});
     }
 }
-
-our $UNIVERSE;
+#sub identify_object { $UNIVERSE->identify_object(@_) }
+#sub identify_object { $UNIVERSE->identify_object(@_) }
 
 1;

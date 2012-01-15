@@ -19,8 +19,9 @@ sub call_hooks {
     my $self = shift;
     my %args = @_;
 
-    my $type = $args{type};
-    my $when = $args{when};
+    my $type     = $args{type};
+    my $when     = $args{when};
+    my $universe = $args{universe};
 
     my $hook_args = $args{arguments};
     my @hooks = @{ $self->hooks->{$type} || [] };
@@ -28,7 +29,7 @@ sub call_hooks {
     my $final_interrupt = 0;
     my @results = ();
     foreach my $hook (@hooks) {
-        my ($interrupt, $result) = $hook->call($when, @$hook_args);
+        my ($interrupt, $result) = $hook->call($when, $universe, @$hook_args);
         if ($interrupt) {
             $final_interrupt = 1;
         }
@@ -47,9 +48,11 @@ sub load_plugins {
         my $when = shift;
         return sub {
             my ($name, $block) = @_;
+            my ($caller) = caller();
             my $hook = AberMUD::Special::Hook::Command->new(
                 command_name    => $name,
                 "${when}_block" => $block,
+                plugin_class    => $caller,
             );
             $self->hooks->{command} ||= [];
             push @{$self->hooks->{command}}, $hook;
@@ -60,9 +63,11 @@ sub load_plugins {
         my $when = shift;
         return sub {
             my ($victim, $block) = @_;
+            my ($caller) = caller();
             my $hook = AberMUD::Special::Hook::Death->new(
                 victim          => $victim,
                 "${when}_block" => $block,
+                plugin_class    => $caller,
             );
             $self->hooks->{death} ||= [];
             push @{$self->hooks->{death}}, $hook;
@@ -73,9 +78,11 @@ sub load_plugins {
         my $when = shift;
         return sub {
             my ($object, $block) = @_;
+            my ($caller) = caller();
             my $hook = AberMUD::Special::Hook::Sacrifice->new(
                 object          => $object,
                 "${when}_block" => $block,
+                plugin_class    => $caller,
             );
             $self->hooks->{sacrifice} ||= [];
             push @{$self->hooks->{sacrifice}}, $hook;
@@ -85,6 +92,7 @@ sub load_plugins {
     foreach my $special_class (__PACKAGE__->plugins) {
         Class::MOP::load_class($special_class);
         no strict 'refs';
+        no warnings 'redefine';
         local ${"${special_class}::UNIVERSE"} = $args{universe};
         local *{"${special_class}::before_command"}
             = $command_block->('before');

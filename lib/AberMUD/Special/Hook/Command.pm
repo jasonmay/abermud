@@ -10,7 +10,7 @@ has command_name => (
 
 around call => sub {
     my ($orig, $self) = (shift, shift);
-    my ($when, %args) = @_;
+    my ($when, $universe, %args) = @_;
     return unless $self->command_name eq $args{name};
 
     return $self->$orig($when, %args);

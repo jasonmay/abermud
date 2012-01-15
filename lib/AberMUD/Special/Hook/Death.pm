@@ -10,7 +10,7 @@ has victim => (
 
 around call => sub {
     my ($orig, $self) = (shift, shift);
-    my ($when, %args) = @_;
+    my ($when, $universe, %args) = @_;
     return unless $self->victim eq $args{victim};
 
     return $self->$orig($when, %args);

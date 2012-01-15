@@ -92,6 +92,7 @@ sub run {
     my ($interrupt, @hook_results) = $self->special->call_hooks(
         type => 'command',
         when => 'before',
+        universe  => $self->universe,
         arguments => [
             name  => $match->rule->command_name,
             event => $event,
@@ -105,6 +106,7 @@ sub run {
     (undef, @hook_results) = $self->special->call_hooks(
         type => 'command',
         when => 'after',
+        universe  => $self->universe,
         arguments => [
             name  => $match->rule->command_name,
             event => $event,

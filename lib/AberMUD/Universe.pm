@@ -403,6 +403,7 @@ sub change_location {
         my ($interrupt, @results) = $self->special->call_hooks(
             type => 'change_location',
             when => 'before',
+            universe  => $self,
             arguments => [
                 src => $previous_location,
                 dest => $location,
@@ -421,6 +422,7 @@ sub change_location {
         (undef, my @results) = $self->special->call_hooks(
             type      => 'change_location',
             when      => 'after',
+            universe  => $self,
             arguments => [
                 src => $previous_location,
                 dest => $location,

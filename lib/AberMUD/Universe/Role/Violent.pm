@@ -167,6 +167,7 @@ sub attack {
         ($interrupt, @hook_results) = $special->call_hooks(
             type => 'death',
             when => 'before',
+            universe => $self,
             arguments => [
                 attacker => $attacker,
                 victim   => $victim,
@@ -213,6 +214,7 @@ sub attack {
             (undef, @hook_results) = $self->special->call_hooks(
                 type => 'death',
                 when => 'after',
+                universe => $self,
                 arguments => [
                     attacker => $attacker,
                     victim   => $victim,
